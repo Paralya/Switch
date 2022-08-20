@@ -25,6 +25,7 @@ scoreboard players set #vote_game_2 switch.data 0
 scoreboard players set #vote_game_3 switch.data 0
 scoreboard players set #vote_game_4 switch.data 0
 scoreboard players set #vote_game_5 switch.data 0
+scoreboard players set @a switch.trigger.game_vote 0
 execute as @a run function switch:engine/voting_time/message
 
 schedule function switch:engine/voting_time/tick 1t

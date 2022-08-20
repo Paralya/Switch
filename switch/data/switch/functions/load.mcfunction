@@ -5,7 +5,7 @@ scoreboard objectives add switch.money dummy
 
 scoreboard objectives add switch.data dummy
 scoreboard objectives add switch.money dummy
-scoreboard objectives add switch.last_game_id dummy
+scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.leave minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add switch.trigger.help trigger
@@ -34,19 +34,20 @@ data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aq
 
 scoreboard players set #-1 switch.data -1
 scoreboard players set #1 switch.data 1
+scoreboard players set #20 switch.data 20
 
 
 ##Define mini-games list
 data modify storage switch:main minigames set value []
-data modify storage switch:main minigames append value {id:"pitch_creep",Name:"Pitch Creep",Lore:'[{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée en expulsant les\\n"},{"text":"creepers qui vous attaquent.\\n"}'}
-data modify storage switch:main minigames append value {id:"none_2",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_3",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_4",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_5",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_6",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_7",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_8",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
-data modify storage switch:main minigames append value {id:"none_9",Name:"Rien de spécial",Lore:'[{"text":"Vraiment rien ici"}]'}
+data modify storage switch:main minigames append value {id:"pitch_creep",Name:"Pitch Creep",Lore:'["",{"text":"[Pitch Creep]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée en expulsant les\\n"},{"text":"creepers qui vous attaquent."}]'}
+data modify storage switch:main minigames append value {id:"none_2",Name:"None 2",Lore:'[{"text":"Lore du None 2"}]'}
+data modify storage switch:main minigames append value {id:"none_3",Name:"None 3",Lore:'[{"text":"Lore du None 3"}]'}
+data modify storage switch:main minigames append value {id:"none_4",Name:"None 4",Lore:'[{"text":"Lore du None 4"}]'}
+data modify storage switch:main minigames append value {id:"none_5",Name:"None 5",Lore:'[{"text":"Lore du None 5"}]'}
+data modify storage switch:main minigames append value {id:"none_6",Name:"None 6",Lore:'[{"text":"Lore du None 6"}]'}
+data modify storage switch:main minigames append value {id:"none_7",Name:"None 7",Lore:'[{"text":"Lore du None 7"}]'}
+data modify storage switch:main minigames append value {id:"none_8",Name:"None 8",Lore:'[{"text":"Lore du None 8"}]'}
+data modify storage switch:main minigames append value {id:"none_9",Name:"None 9",Lore:'[{"text":"Lore du None 9"}]'}
 
 
 ##States
