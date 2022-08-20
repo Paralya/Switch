@@ -12,6 +12,9 @@ scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger
 
+team add switch.no_pvp
+team modify switch.no_pvp friendlyFire false
+
 scoreboard players set switch load.status 1000
 forceload add 0 0
 
