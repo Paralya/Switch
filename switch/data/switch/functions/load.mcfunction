@@ -26,6 +26,8 @@ forceload add 0 0
 #define score_holder #pos
 
 gamerule spectatorsGenerateChunks false
+gamerule announceAdvancements false
+gamerule doImmediateRespawn true
 gamerule doTraderSpawning false
 
 ##Storage

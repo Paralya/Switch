@@ -2,7 +2,6 @@
 scoreboard players set #state switch.data 3
 scoreboard players add #total_games switch.data 1
 
-say launch game
 function switch:engine/voting_time/update_votes
 
 scoreboard players set #max switch.data 0

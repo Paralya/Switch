@@ -3,5 +3,5 @@
 
 scoreboard players add #pitch_creep_seconds switch.data 1
 
-execute if score #pitch_creep_seconds switch.data matches 5.. run summon creeper 100 99 110
+execute if score #pitch_creep_seconds switch.data matches 0.. as @a run summon creeper 100 100.69 110 {AbsorptionAmount:2048f}
 

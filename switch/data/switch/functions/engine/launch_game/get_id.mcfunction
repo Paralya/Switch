@@ -1,5 +1,4 @@
 
-execute if score #index switch.data = #random switch.data run say set current_game
 execute if score #index switch.data = #random switch.data run data modify storage switch:main current_game set from storage switch:main voted_games[0]
 
 scoreboard players add #index switch.data 1

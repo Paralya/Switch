@@ -4,4 +4,5 @@ kill @e[type=creeper]
 kill @e[type=item]
 kill @e[type=experience_orb]
 
-say pitch creep stopped
+scoreboard objectives remove switch.temp.deathCount
+
