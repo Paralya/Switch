@@ -47,7 +47,7 @@ scoreboard players set #20 switch.data 20
 ##Define mini-games list
 data modify storage switch:main minigames set value []
 data modify storage switch:main minigames append value {index:0,id:"pitch_creep",Name:"Pitch Creep",Lore:'["",{"text":"[Pitch Creep]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée en expulsant les\\n"},{"text":"creepers qui vous attaquent."}]'}
-data modify storage switch:main minigames append value {index:1,id:"none_2",Name:"None 2",Lore:'[{"text":"Lore du None 2"}]'}
+data modify storage switch:main minigames append value {index:1,id:"laser_game",Name:"Laser Game",Lore:'["",{"text":"[Laser Game]\\n","color":"yellow"},{"text":"Affrontez l\'équipe adverse grâce à vos fusils-laser\\n"},{"text":"et faites le plus d\'élimination possible !"}]'}
 data modify storage switch:main minigames append value {index:2,id:"none_3",Name:"None 3",Lore:'[{"text":"Lore du None 3"}]'}
 data modify storage switch:main minigames append value {index:3,id:"none_4",Name:"None 4",Lore:'[{"text":"Lore du None 4"}]'}
 data modify storage switch:main minigames append value {index:4,id:"none_5",Name:"None 5",Lore:'[{"text":"Lore du None 5"}]'}

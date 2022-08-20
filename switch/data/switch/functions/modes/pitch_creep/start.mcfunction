@@ -24,6 +24,7 @@ execute as @a at @s run function switch:modes/pitch_creep/give_items
 
 
 gamerule mobGriefing false
+gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 

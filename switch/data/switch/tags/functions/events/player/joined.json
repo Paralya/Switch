@@ -1,5 +1,6 @@
 {
 	"values": [
-		"switch:modes/pitch_creep/calls/joined"
+		"switch:modes/pitch_creep/calls/joined",
+		"switch:modes/laser_game/calls/joined"
 	]
 }

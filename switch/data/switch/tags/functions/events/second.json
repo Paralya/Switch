@@ -1,5 +1,6 @@
 {
 	"values": [
-		"switch:modes/pitch_creep/calls/second"
+		"switch:modes/pitch_creep/calls/second",
+		"switch:modes/laser_game/calls/second"
 	]
 }
