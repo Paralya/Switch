@@ -9,4 +9,4 @@ kill @e[type=experience_orb]
 execute as @a[scores={switch.temp.deathCount=1..}] run function switch:modes/pitch_creep/death
 
 execute unless entity @a[tag=switch.alive] run function switch:modes/pitch_creep/process_end
-execute if score #pitch_creep_seconds switch.data matches 90.. run function switch:modes/pitch_creep/process_end
+execute if score #pitch_creep_seconds switch.data matches 100.. run function switch:modes/pitch_creep/process_end

@@ -5,5 +5,4 @@
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
 function switch:modes/pitch_creep/death
-function switch:modes/pitch_creep/death
 

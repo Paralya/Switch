@@ -6,18 +6,22 @@ effect clear @a
 gamemode adventure @a
 team join switch.no_pvp @a
 tag @a add switch.alive
-tp @a 100 100 100 0 0
 
 kill @e[type=creeper]
 kill @e[type=item]
 kill @e[type=arrow]
-execute as @a at @s run function switch:modes/pitch_creep/give_items
 
 effect give @a saturation 99999 255 true
 effect give @a regeneration 5 255 true
 effect give @a weakness 99999 2 true
 difficulty normal
 weather clear
+
+##Téléportation des joueurs dans les quatres coins
+scoreboard players set #count switch.data 0
+execute as @a run function switch:modes/pitch_creep/teleport_players
+execute as @a at @s run function switch:modes/pitch_creep/give_items
+
 
 gamerule mobGriefing false
 gamerule naturalRegeneration false
