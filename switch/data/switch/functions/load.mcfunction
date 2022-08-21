@@ -7,6 +7,7 @@ scoreboard objectives add switch.data dummy
 scoreboard objectives add switch.money dummy
 scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.leave minecraft.custom:minecraft.leave_game
+scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives setdisplay list switch.money
 
 scoreboard objectives add switch.trigger.help trigger
@@ -26,7 +27,6 @@ forceload add 0 0
 #define score_holder #temp
 #define score_holder #pos
 
-gamerule spectatorsGenerateChunks false
 gamerule announceAdvancements false
 gamerule doImmediateRespawn true
 gamerule doTraderSpawning false
@@ -40,6 +40,7 @@ data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aq
 
 scoreboard players set #-1 switch.data -1
 scoreboard players set #1 switch.data 1
+scoreboard players set #2 switch.data 2
 scoreboard players set #4 switch.data 4
 scoreboard players set #20 switch.data 20
 

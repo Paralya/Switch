@@ -19,7 +19,7 @@ weather clear
 
 ##Téléportation des joueurs dans les quatres coins
 scoreboard players set #count switch.data 0
-execute as @a run function switch:modes/pitch_creep/teleport_players
+execute as @a[sort=random] run function switch:modes/pitch_creep/teleport_players
 execute as @a at @s run function switch:modes/pitch_creep/give_items
 
 
