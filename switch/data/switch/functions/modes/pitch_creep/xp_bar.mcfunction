@@ -1,7 +1,8 @@
 
-#i=-90
+#t=90
+#i=-t
 #while i <= 0:
-#    print('execute if score #pitch_creep_seconds switch.data matches '+str(i+90)+' run xp set @a '+str(int(8.22222*(i+90))))
+#    print('execute if score #pitch_creep_seconds switch.data matches '+str(i+t)+' run xp set @a '+str(int((740/t)*(i+t))))
 #    i += 1
 
 execute if score #pitch_creep_seconds switch.data matches 0 run xp set @a 0

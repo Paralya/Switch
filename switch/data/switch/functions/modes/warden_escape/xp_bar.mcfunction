@@ -1,7 +1,8 @@
 
-#i=-60
+#t=60
+#i=-t
 #while i <= 0:
-#    print('execute if score #warden_escape_seconds switch.data matches '+str(i+60)+' run xp set @a '+str(int(12.33333*(i+60))))
+#    print('execute if score #warden_escape_seconds switch.data matches '+str(i+t)+' run xp set @a '+str(int((740/t)*(i+t))))
 #    i += 1
 
 execute if score #warden_escape_seconds switch.data matches 0 run xp set @a 0

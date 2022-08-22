@@ -1,7 +1,8 @@
 
-#i=-100
+#t=100
+#i=-t
 #while i <= 0:
-#    print('xp set @s[scores={switch.temp.dead_cooldown='+str(i)+'}] '+str(int(740+7.4*i)))
+#    print('xp set @s[scores={switch.temp.dead_cooldown='+str(i)+'}] '+str(int(740+(740/t)*i)))
 #    i += 1
 
 scoreboard players add @s switch.temp.dead_cooldown 1
