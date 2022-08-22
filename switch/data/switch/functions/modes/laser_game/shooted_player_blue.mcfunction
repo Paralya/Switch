@@ -1,12 +1,8 @@
 
-tag @s add global.ignore
 playsound entity.player.hurt player @s
 execute as @a[tag=switch.temp] at @s run playsound entity.arrow.hit_player player @s
-tellraw @s [{"selector":"@a[tag=switch.temp]"},{"text":" vous a tiré dessus ! Vous êtes désactivé pendant 5 secondes.","color":"gray"}]
-tellraw @a[tag=switch.temp] [{"text":"Vous avez tué ","color":"gray"},{"selector":"@s"},{"text":" ! [+10 points]"}]
+function switch:modes/laser_game/shooted_both
 
-scoreboard players set @s switch.temp.dead_cooldown -100
-
-scoreboard players add #red_points switch.data 10
-function switch:modes/laser_game/update_sidebar/red_points
+execute unless score @s switch.temp.shield matches 1.. run scoreboard players add #red_points switch.data 10
+execute unless score @s switch.temp.shield matches 1.. run function switch:modes/laser_game/update_sidebar/red_points
 
