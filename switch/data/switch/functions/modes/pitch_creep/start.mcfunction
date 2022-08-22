@@ -15,13 +15,13 @@ effect give @a saturation 99999 255 true
 effect give @a regeneration 5 255 true
 effect give @a weakness 99999 2 true
 difficulty normal
+time set 18000
 weather clear
 
 ##Téléportation des joueurs dans les quatres coins
 scoreboard players set #count switch.data 0
 execute as @a[sort=random] run function switch:modes/pitch_creep/teleport_players
 execute as @a at @s run function switch:modes/pitch_creep/give_items
-
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
