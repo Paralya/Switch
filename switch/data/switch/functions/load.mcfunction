@@ -49,7 +49,7 @@ scoreboard players set #20 switch.data 20
 data modify storage switch:main minigames set value []
 data modify storage switch:main minigames append value {index:0,min_players:1,id:"pitch_creep",Name:"Pitch Creep",Lore:'["",{"text":"[Pitch Creep]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée en expulsant les\\n"},{"text":"creepers qui vous attaquent."}]'}
 data modify storage switch:main minigames append value {index:1,min_players:1,id:"laser_game",Name:"Laser Game",Lore:'["",{"text":"[Laser Game]\\n","color":"yellow"},{"text":"Affrontez l\'équipe adverse grâce à vos fusils-laser\\n"},{"text":"et faites le plus d\'élimination possible !"}]'}
-data modify storage switch:main minigames append value {index:2,min_players:1,id:"none_3",Name:"None 3",Lore:'[{"text":"Lore du None 3"}]'}
+data modify storage switch:main minigames append value {index:2,min_players:1,id:"warden_escape",Name:"Warden Escape",Lore:'[{"text":"Lore du None 3"}]'}
 data modify storage switch:main minigames append value {index:3,min_players:1,id:"none_4",Name:"None 4",Lore:'[{"text":"Lore du None 4"}]'}
 data modify storage switch:main minigames append value {index:4,min_players:1,id:"none_5",Name:"None 5",Lore:'[{"text":"Lore du None 5"}]'}
 data modify storage switch:main minigames append value {index:5,min_players:1,id:"none_6",Name:"None 6",Lore:'[{"text":"Lore du None 6"}]'}

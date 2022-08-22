@@ -1,6 +1,7 @@
 {
 	"values": [
 		"switch:modes/pitch_creep/calls/stop",
-		"switch:modes/laser_game/calls/stop"
+		"switch:modes/laser_game/calls/stop",
+		"switch:modes/warden_escape/calls/stop"
 	]
 }

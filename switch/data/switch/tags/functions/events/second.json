@@ -1,6 +1,7 @@
 {
 	"values": [
 		"switch:modes/pitch_creep/calls/second",
-		"switch:modes/laser_game/calls/second"
+		"switch:modes/laser_game/calls/second",
+		"switch:modes/warden_escape/calls/second"
 	]
 }
