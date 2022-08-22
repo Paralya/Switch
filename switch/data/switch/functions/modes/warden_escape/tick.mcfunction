@@ -11,4 +11,5 @@ effect clear @a[predicate=!switch:is_sneaking] wither
 effect give @a[predicate=switch:is_sneaking] wither 1 1 true
 
 execute unless entity @a[tag=switch.alive] run function switch:modes/warden_escape/process_end
-execute if score #warden_escape_seconds switch.data matches 90.. run function switch:modes/warden_escape/process_end
+execute if score #warden_escape_seconds switch.data matches 60.. run function switch:modes/warden_escape/process_end
+

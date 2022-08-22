@@ -17,8 +17,7 @@ difficulty normal
 time set 18000
 weather clear
 
-##Téléportation des joueurs dans les quatres coins
-scoreboard players set #count switch.data 0
+##Téléportation des joueurs
 tp @a 520 101.69 520
 execute as @a at @s run function switch:modes/warden_escape/give_items
 
