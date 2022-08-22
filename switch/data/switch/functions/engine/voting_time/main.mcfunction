@@ -11,14 +11,16 @@ scoreboard players set #game_2 switch.data 0
 scoreboard players set #game_3 switch.data 0
 scoreboard players set #game_4 switch.data 0
 scoreboard players set #game_5 switch.data 0
-scoreboard players set #index switch.data 2
+scoreboard players set #index switch.data 1
 
+scoreboard players set #player_count switch.data 0
+execute store result score #player_count switch.data if entity @a
 function switch:engine/voting_time/select_random_games
 
 data modify storage switch:main selections set value []
 
 scoreboard players set #index switch.data 1
-function switch:engine/voting_time/get_information
+function switch:engine/voting_time/get/information
 
 scoreboard players set #vote_game_1 switch.data 0
 scoreboard players set #vote_game_2 switch.data 0

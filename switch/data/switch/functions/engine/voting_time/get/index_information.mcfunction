@@ -8,5 +8,5 @@ execute if score #index switch.data matches 5 if score #list_index switch.data =
 
 data remove storage switch:main copy[0]
 scoreboard players add #list_index switch.data 1
-execute if score #success switch.data matches 0 if data storage switch:main copy[0] run function switch:engine/voting_time/get_index_information
+execute if score #success switch.data matches 0 if data storage switch:main copy[0] run function switch:engine/voting_time/get/index_information
 
