@@ -19,8 +19,8 @@ weather clear
 
 ##Téléportation des joueurs dans quatres coins + give d'items
 scoreboard players set #count switch.data 0
-execute as @a[sort=random] run function switch:modes/_free_slot_5/teleport_players
-execute as @a at @s run function switch:modes/_free_slot_5/give_items
+execute as @a[sort=random] run function switch:modes/_free_slot_6/teleport_players
+execute as @a at @s run function switch:modes/_free_slot_6/give_items
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
@@ -29,8 +29,8 @@ gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Free Slot, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 
-scoreboard players set #_free_slot_5_seconds switch.data -5
-scoreboard players set #_free_slot_5_ticks switch.data 0
+scoreboard players set #_free_slot_6_seconds switch.data -5
+scoreboard players set #_free_slot_6_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount

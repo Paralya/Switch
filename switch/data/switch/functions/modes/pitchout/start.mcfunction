@@ -12,9 +12,11 @@ tag @a add switch.third_life
 kill @e[type=item]
 kill @e[type=arrow]
 
+effect give @a speed 99999 0 true
+effect give @a jump_boost 99999 2 true
 effect give @a saturation 99999 255 true
+effect give @a resistance 99999 255 true
 effect give @a regeneration 5 255 true
-effect give @a weakness 99999 2 true
 difficulty normal
 time set 18000
 weather clear
@@ -23,13 +25,17 @@ weather clear
 scoreboard players set #spawn_count switch.data 0
 execute as @a[sort=random] run function switch:modes/pitchout/teleport_players
 execute as @a at @s run function switch:modes/pitchout/give_items
+execute as @a run function switch:modes/pitchout/xp_bar
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitch Creep, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, exterminez les autres !"}]
+
+scoreboard objectives add switch.temp.cooldown dummy
+scoreboard players set @a switch.temp.cooldown 100
 
 scoreboard players set #pitchout_seconds switch.data -5
 scoreboard players set #pitchout_ticks switch.data 0
