@@ -2,6 +2,21 @@
 	"values": [
 		"switch:modes/pitch_creep/calls/start",
 		"switch:modes/laser_game/calls/start",
-		"switch:modes/warden_escape/calls/start"
+		"switch:modes/warden_escape/calls/start",
+		"switch:modes/pitchout/calls/start",
+		"switch:modes/_free_slot_5/calls/start",
+		"switch:modes/_free_slot_6/calls/start",
+		"switch:modes/_free_slot_7/calls/start",
+		"switch:modes/_free_slot_8/calls/start",
+		"switch:modes/_free_slot_9/calls/start",
+		"switch:modes/_free_slot_10/calls/start",
+		"switch:modes/_free_slot_11/calls/start",
+		"switch:modes/_free_slot_12/calls/start",
+		"switch:modes/_free_slot_13/calls/start",
+		"switch:modes/_free_slot_14/calls/start",
+		"switch:modes/_free_slot_15/calls/start",
+		"switch:modes/_free_slot_16/calls/start",
+		"switch:modes/_free_slot_17/calls/start",
+		"switch:modes/_free_slot_18/calls/start"
 	]
 }

@@ -2,6 +2,21 @@
 	"values": [
 		"switch:modes/pitch_creep/calls/joined",
 		"switch:modes/laser_game/calls/joined",
-		"switch:modes/warden_escape/calls/joined"
+		"switch:modes/warden_escape/calls/joined",
+		"switch:modes/pitchout/calls/joined",
+		"switch:modes/_free_slot_5/calls/joined",
+		"switch:modes/_free_slot_6/calls/joined",
+		"switch:modes/_free_slot_7/calls/joined",
+		"switch:modes/_free_slot_8/calls/joined",
+		"switch:modes/_free_slot_9/calls/joined",
+		"switch:modes/_free_slot_10/calls/joined",
+		"switch:modes/_free_slot_11/calls/joined",
+		"switch:modes/_free_slot_12/calls/joined",
+		"switch:modes/_free_slot_13/calls/joined",
+		"switch:modes/_free_slot_14/calls/joined",
+		"switch:modes/_free_slot_15/calls/joined",
+		"switch:modes/_free_slot_16/calls/joined",
+		"switch:modes/_free_slot_17/calls/joined",
+		"switch:modes/_free_slot_18/calls/joined"
 	]
 }

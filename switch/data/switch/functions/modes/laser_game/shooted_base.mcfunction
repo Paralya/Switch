@@ -1,7 +1,4 @@
 
-##Il y a aussi une "Base" sur la map dans un endroit bien exposé qui se recharge toutes les 30 secondes
-##et qui permet d'obtenir un de ces effets au hasard :
-
 scoreboard players set #color switch.data 0
 execute store success score #color switch.data if entity @s[tag=switch.laser_game.red]
 
@@ -40,3 +37,4 @@ execute if score #color switch.data matches 1 run function switch:modes/laser_ga
 
 scoreboard players set #base_reload switch.data 30
 setblock 516 104 523 dark_oak_trapdoor[powered=true,open=true]
+

@@ -21,10 +21,10 @@ team add switch.laser_game.blue
 team add switch.laser_game.red
 team modify switch.laser_game.blue color blue
 team modify switch.laser_game.blue seeFriendlyInvisibles true
-team modify switch.laser_game.blue nametagVisibility hideForOtherTeams
+team modify switch.laser_game.blue nametagVisibility never
 team modify switch.laser_game.red color red
 team modify switch.laser_game.red seeFriendlyInvisibles true
-team modify switch.laser_game.red nametagVisibility hideForOtherTeams
+team modify switch.laser_game.red nametagVisibility never
 
 effect give @a saturation 99999 255 true
 effect give @a regeneration 5 255 true
