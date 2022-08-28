@@ -4,7 +4,7 @@
 		"switch:modes/laser_game/calls/stop",
 		"switch:modes/warden_escape/calls/stop",
 		"switch:modes/pitchout/calls/stop",
-		"switch:modes/_free_slot_5/calls/stop",
+		"switch:modes/glassrunner/calls/stop",
 		"switch:modes/_free_slot_6/calls/stop",
 		"switch:modes/_free_slot_7/calls/stop",
 		"switch:modes/_free_slot_8/calls/stop",

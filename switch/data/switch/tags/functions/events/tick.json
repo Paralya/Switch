@@ -4,7 +4,7 @@
 		"switch:modes/laser_game/calls/tick",
 		"switch:modes/warden_escape/calls/tick",
 		"switch:modes/pitchout/calls/tick",
-		"switch:modes/_free_slot_5/calls/tick",
+		"switch:modes/glassrunner/calls/tick",
 		"switch:modes/_free_slot_6/calls/tick",
 		"switch:modes/_free_slot_7/calls/tick",
 		"switch:modes/_free_slot_8/calls/tick",

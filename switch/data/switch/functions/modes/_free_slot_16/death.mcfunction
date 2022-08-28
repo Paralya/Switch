@@ -1,5 +1,5 @@
 
-execute if score @s switch.temp.deathCount matches 1.. run tellraw @a [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#_free_slot_5_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+execute if score @s switch.temp.deathCount matches 1.. run tellraw @a [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#glassrunner_seconds","objective":"switch.data"}},{"text":" secondes !"}]
 
 scoreboard players reset @s switch.temp.deathCount
 tag @s remove switch.alive

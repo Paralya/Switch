@@ -4,7 +4,7 @@
 		"switch:modes/laser_game/calls/second",
 		"switch:modes/warden_escape/calls/second",
 		"switch:modes/pitchout/calls/second",
-		"switch:modes/_free_slot_5/calls/second",
+		"switch:modes/glassrunner/calls/second",
 		"switch:modes/_free_slot_6/calls/second",
 		"switch:modes/_free_slot_7/calls/second",
 		"switch:modes/_free_slot_8/calls/second",
