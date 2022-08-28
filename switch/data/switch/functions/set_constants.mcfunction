@@ -1,11 +1,10 @@
 
 #min=-100
 #max=100
-#f = open("set_constants.txt", "a")
 #while min <= max:
-#    f.write('scoreboard players set #'+str(min)+' switch.data '+str(min)+'\n')
+#    print('scoreboard players set #'+str(min)+' switch.data '+str(min))
 #    min += 1
-#f.close()
+
 
 scoreboard players set #negative_max switch.data -2147483648
 scoreboard players set #-2147483648 switch.data -2147483648

@@ -5,18 +5,6 @@
 		"switch:modes/warden_escape/calls/stop",
 		"switch:modes/pitchout/calls/stop",
 		"switch:modes/glassrunner/calls/stop",
-		"switch:modes/_free_slot_6/calls/stop",
-		"switch:modes/_free_slot_7/calls/stop",
-		"switch:modes/_free_slot_8/calls/stop",
-		"switch:modes/_free_slot_9/calls/stop",
-		"switch:modes/_free_slot_10/calls/stop",
-		"switch:modes/_free_slot_11/calls/stop",
-		"switch:modes/_free_slot_12/calls/stop",
-		"switch:modes/_free_slot_13/calls/stop",
-		"switch:modes/_free_slot_14/calls/stop",
-		"switch:modes/_free_slot_15/calls/stop",
-		"switch:modes/_free_slot_16/calls/stop",
-		"switch:modes/_free_slot_17/calls/stop",
-		"switch:modes/_free_slot_18/calls/stop"
+		"switch:modes/a_template/calls/stop"
 	]
 }

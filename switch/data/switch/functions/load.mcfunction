@@ -48,19 +48,19 @@ data modify storage switch:main minigames append value {index:1	,min_players:1,i
 data modify storage switch:main minigames append value {index:2	,min_players:1,id:"warden_escape"	,Name:"Warden Escape"	,Lore:'["",{"text":"[Warden Escape]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée avec 5 wardens\\n"},{"text":"cherchant à vous tuer."}]'}
 data modify storage switch:main minigames append value {index:3	,min_players:1,id:"pitchout"		,Name:"Pitchout"		,Lore:'["",{"text":"[Pitchout]\\n","color":"yellow"},{"text":"Affrontez les autres joueurs grâce à vos armes repoussantes\\n"},{"text":"et soyez le dernier survivant !"}]'}
 data modify storage switch:main minigames append value {index:4	,min_players:1,id:"glassrunner"		,Name:"GlassRunner"		,Lore:'["",{"text":"[GlassRunner]\\n","color":"yellow"},{"text":"Affrontez l\'équipe adverse dans le ciel, dans un Capture the Point\\n"}]'}
-data modify storage switch:main minigames append value {index:5	,min_players:1,id:"_free_slot_6"	,Name:"Free Slot 6"		,Lore:'[{"text":"Lore du Slot 6"}]'}
-data modify storage switch:main minigames append value {index:6	,min_players:1,id:"_free_slot_7"	,Name:"Free Slot 7"		,Lore:'[{"text":"Lore du Slot 7"}]'}
-data modify storage switch:main minigames append value {index:7	,min_players:1,id:"_free_slot_8"	,Name:"Free Slot 8"		,Lore:'[{"text":"Lore du Slot 8"}]'}
-data modify storage switch:main minigames append value {index:8	,min_players:1,id:"_free_slot_9"	,Name:"Free Slot 9"		,Lore:'[{"text":"Lore du Slot 9"}]'}
-data modify storage switch:main minigames append value {index:9	,min_players:1,id:"_free_slot_10"	,Name:"Free Slot 10"	,Lore:'[{"text":"Lore du Slot 10"}]'}
-data modify storage switch:main minigames append value {index:10,min_players:1,id:"_free_slot_11"	,Name:"Free Slot 11"	,Lore:'[{"text":"Lore du Slot 11"}]'}
-data modify storage switch:main minigames append value {index:11,min_players:1,id:"_free_slot_12"	,Name:"Free Slot 12"	,Lore:'[{"text":"Lore du Slot 12"}]'}
-data modify storage switch:main minigames append value {index:12,min_players:1,id:"_free_slot_13"	,Name:"Free Slot 13"	,Lore:'[{"text":"Lore du Slot 13"}]'}
-data modify storage switch:main minigames append value {index:13,min_players:1,id:"_free_slot_14"	,Name:"Free Slot 14"	,Lore:'[{"text":"Lore du Slot 14"}]'}
-data modify storage switch:main minigames append value {index:14,min_players:1,id:"_free_slot_15"	,Name:"Free Slot 15"	,Lore:'[{"text":"Lore du Slot 15"}]'}
-data modify storage switch:main minigames append value {index:15,min_players:1,id:"_free_slot_16"	,Name:"Free Slot 16"	,Lore:'[{"text":"Lore du Slot 16"}]'}
-data modify storage switch:main minigames append value {index:16,min_players:1,id:"_free_slot_17"	,Name:"Free Slot 17"	,Lore:'[{"text":"Lore du Slot 17"}]'}
-data modify storage switch:main minigames append value {index:17,min_players:1,id:"_free_slot_18"	,Name:"Free Slot 18"	,Lore:'[{"text":"Lore du Slot 18"}]'}
+data modify storage switch:main minigames append value {index:5	,min_players:1,id:"a_template"		,Name:"Free Slot 6"		,Lore:'[{"text":"Lore du Slot 6"}]'}
+data modify storage switch:main minigames append value {index:6	,min_players:1,id:"a_template"		,Name:"Free Slot 7"		,Lore:'[{"text":"Lore du Slot 7"}]'}
+data modify storage switch:main minigames append value {index:7	,min_players:1,id:"a_template"		,Name:"Free Slot 8"		,Lore:'[{"text":"Lore du Slot 8"}]'}
+data modify storage switch:main minigames append value {index:8	,min_players:1,id:"a_template"		,Name:"Free Slot 9"		,Lore:'[{"text":"Lore du Slot 9"}]'}
+data modify storage switch:main minigames append value {index:9	,min_players:1,id:"a_template"		,Name:"Free Slot 10"	,Lore:'[{"text":"Lore du Slot 10"}]'}
+data modify storage switch:main minigames append value {index:10,min_players:1,id:"a_template"		,Name:"Free Slot 11"	,Lore:'[{"text":"Lore du Slot 11"}]'}
+data modify storage switch:main minigames append value {index:11,min_players:1,id:"a_template"		,Name:"Free Slot 12"	,Lore:'[{"text":"Lore du Slot 12"}]'}
+data modify storage switch:main minigames append value {index:12,min_players:1,id:"a_template"		,Name:"Free Slot 13"	,Lore:'[{"text":"Lore du Slot 13"}]'}
+data modify storage switch:main minigames append value {index:13,min_players:1,id:"a_template"		,Name:"Free Slot 14"	,Lore:'[{"text":"Lore du Slot 14"}]'}
+data modify storage switch:main minigames append value {index:14,min_players:1,id:"a_template"		,Name:"Free Slot 15"	,Lore:'[{"text":"Lore du Slot 15"}]'}
+data modify storage switch:main minigames append value {index:15,min_players:1,id:"a_template"		,Name:"Free Slot 16"	,Lore:'[{"text":"Lore du Slot 16"}]'}
+data modify storage switch:main minigames append value {index:16,min_players:1,id:"a_template"		,Name:"Free Slot 17"	,Lore:'[{"text":"Lore du Slot 17"}]'}
+data modify storage switch:main minigames append value {index:17,min_players:1,id:"a_template"		,Name:"Free Slot 18"	,Lore:'[{"text":"Lore du Slot 18"}]'}
 
 
 ##Liens vers leur dossier respectif
@@ -69,19 +69,7 @@ execute if score $NONE switch.data matches 1 run function switch:modes/laser_gam
 execute if score $NONE switch.data matches 1 run function switch:modes/warden_escape/start
 execute if score $NONE switch.data matches 1 run function switch:modes/pitchout/start
 execute if score $NONE switch.data matches 1 run function switch:modes/glassrunner/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_6/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_7/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_8/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_9/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_10/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_11/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_12/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_13/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_14/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_15/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_16/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_17/start
-execute if score $NONE switch.data matches 1 run function switch:modes/_free_slot_18/start
+execute if score $NONE switch.data matches 1 run function switch:modes/a_template/start
 
 
 ##States

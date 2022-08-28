@@ -5,18 +5,6 @@
 		"switch:modes/warden_escape/calls/tick",
 		"switch:modes/pitchout/calls/tick",
 		"switch:modes/glassrunner/calls/tick",
-		"switch:modes/_free_slot_6/calls/tick",
-		"switch:modes/_free_slot_7/calls/tick",
-		"switch:modes/_free_slot_8/calls/tick",
-		"switch:modes/_free_slot_9/calls/tick",
-		"switch:modes/_free_slot_10/calls/tick",
-		"switch:modes/_free_slot_11/calls/tick",
-		"switch:modes/_free_slot_12/calls/tick",
-		"switch:modes/_free_slot_13/calls/tick",
-		"switch:modes/_free_slot_14/calls/tick",
-		"switch:modes/_free_slot_15/calls/tick",
-		"switch:modes/_free_slot_16/calls/tick",
-		"switch:modes/_free_slot_17/calls/tick",
-		"switch:modes/_free_slot_18/calls/tick"
+		"switch:modes/a_template/calls/tick"
 	]
 }
