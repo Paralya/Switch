@@ -58,7 +58,6 @@ data modify storage switch:main minigames append value {index:13,min_players:1,i
 data modify storage switch:main minigames append value {index:14,min_players:1,id:"a_template"		,Name:"Free Slot 15"	,Lore:'[{"text":"Lore du Slot 15"}]'}
 data modify storage switch:main minigames append value {index:15,min_players:1,id:"a_template"		,Name:"Free Slot 16"	,Lore:'[{"text":"Lore du Slot 16"}]'}
 data modify storage switch:main minigames append value {index:16,min_players:1,id:"a_template"		,Name:"Free Slot 17"	,Lore:'[{"text":"Lore du Slot 17"}]'}
-data modify storage switch:main minigames append value {index:17,min_players:1,id:"a_template"		,Name:"Free Slot 18"	,Lore:'[{"text":"Lore du Slot 18"}]'}
 
 
 ##Liens vers leur dossier respectif
