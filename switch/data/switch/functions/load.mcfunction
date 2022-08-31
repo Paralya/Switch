@@ -46,7 +46,7 @@ data modify storage switch:main minigames append value {index:1	,min_players:1,i
 data modify storage switch:main minigames append value {index:2	,min_players:1,id:"warden_escape"	,Name:"Warden Escape"	,Lore:'["",{"text":"[Warden Escape]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée avec 5 wardens\\n"},{"text":"cherchant à vous tuer."}]'}
 data modify storage switch:main minigames append value {index:3	,min_players:1,id:"pitchout"		,Name:"Pitchout"		,Lore:'["",{"text":"[Pitchout]\\n","color":"yellow"},{"text":"Affrontez les autres joueurs grâce à vos armes repoussantes\\n"},{"text":"et soyez le dernier survivant !"}]'}
 data modify storage switch:main minigames append value {index:4	,min_players:1,id:"glassrunner"		,Name:"GlassRunner"		,Lore:'["",{"text":"[GlassRunner]\\n","color":"yellow"},{"text":"Affrontez l\'équipe adverse dans le ciel, dans un Capture the Point\\n"}]'}
-data modify storage switch:main minigames append value {index:5	,min_players:1,id:"a_template"		,Name:"Free Slot 6"		,Lore:'[{"text":"Lore du Slot 6"}]'}
+data modify storage switch:main minigames append value {index:5	,min_players:1,id:"border_run"		,Name:"Border Run"		,Lore:'[{"text":"Lore du Slot 6"}]'}
 data modify storage switch:main minigames append value {index:6	,min_players:1,id:"a_template"		,Name:"Free Slot 7"		,Lore:'[{"text":"Lore du Slot 7"}]'}
 data modify storage switch:main minigames append value {index:7	,min_players:1,id:"a_template"		,Name:"Free Slot 8"		,Lore:'[{"text":"Lore du Slot 8"}]'}
 data modify storage switch:main minigames append value {index:8	,min_players:1,id:"a_template"		,Name:"Free Slot 9"		,Lore:'[{"text":"Lore du Slot 9"}]'}
@@ -67,6 +67,7 @@ execute if score $NONE switch.data matches 1 run function switch:modes/laser_gam
 execute if score $NONE switch.data matches 1 run function switch:modes/warden_escape/start
 execute if score $NONE switch.data matches 1 run function switch:modes/pitchout/start
 execute if score $NONE switch.data matches 1 run function switch:modes/glassrunner/start
+execute if score $NONE switch.data matches 1 run function switch:modes/border_run/start
 execute if score $NONE switch.data matches 1 run function switch:modes/a_template/start
 
 

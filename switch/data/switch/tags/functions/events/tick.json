@@ -5,6 +5,7 @@
 		"switch:modes/warden_escape/calls/tick",
 		"switch:modes/pitchout/calls/tick",
 		"switch:modes/glassrunner/calls/tick",
+		"switch:modes/border_run/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
 }
