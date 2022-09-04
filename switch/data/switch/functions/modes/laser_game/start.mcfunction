@@ -14,6 +14,8 @@
 ##Changement de couleur (seulement visuelement donc pour brain l'ennemi: 30 secondes),
 ##Effet glowing sur une team (pendant 5 secondes)
 
+##Classement des points rapportés par les joueurs //TODO
+
 clear @a
 effect clear @a
 gamemode adventure @a
