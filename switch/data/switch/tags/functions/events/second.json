@@ -5,6 +5,7 @@
 		"switch:modes/warden_escape/calls/second",
 		"switch:modes/pitchout/calls/second",
 		"switch:modes/glassrunner/calls/second",
+		"switch:modes/border_run/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }

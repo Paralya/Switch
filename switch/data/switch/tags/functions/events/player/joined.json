@@ -5,6 +5,7 @@
 		"switch:modes/warden_escape/calls/joined",
 		"switch:modes/pitchout/calls/joined",
 		"switch:modes/glassrunner/calls/joined",
+		"switch:modes/border_run/calls/joined",
 		"switch:modes/a_template/calls/joined"
 	]
 }

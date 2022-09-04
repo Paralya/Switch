@@ -5,6 +5,7 @@
 		"switch:modes/warden_escape/calls/start",
 		"switch:modes/pitchout/calls/start",
 		"switch:modes/glassrunner/calls/start",
+		"switch:modes/border_run/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }
