@@ -1,9 +1,6 @@
 
 tag @s add switch.temp
 
-loot spawn ~ ~ ~ loot stardust:i/original_stardust_sword
-loot spawn ~ ~ ~ loot stardust:i/stardust_bow
-summon item ~ ~ ~ {Item:{id:"minecraft:arrow",Count:64b}}
 
 attribute @s generic.attack_speed base set 1024
 xp set @s 100 levels
