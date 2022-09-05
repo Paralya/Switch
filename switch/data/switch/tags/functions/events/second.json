@@ -6,6 +6,8 @@
 		"switch:modes/pitchout/calls/second",
 		"switch:modes/glassrunner/calls/second",
 		"switch:modes/border_run/calls/second",
+		"switch:modes/creeper_apocalypse/calls/second",
+		"switch:modes/traitors_game/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }
