@@ -9,5 +9,8 @@ execute if score #process_end switch.data matches 1 run gamemode spectator @a
 execute if score #process_end switch.data matches 1 run effect clear @a
 execute if score #process_end switch.data matches 1 run clear @a
 
+execute if score #process_end switch.data matches 1 run scoreboard players operation @a switch.temp.kills *= #10 switch.data
+execute if score #process_end switch.data matches 1 run scoreboard objectives setdisplay sidebar switch.temp.kills
+
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 
