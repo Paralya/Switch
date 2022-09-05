@@ -24,7 +24,6 @@ weather clear
 ##Téléportation des joueurs dans les quatres coins
 scoreboard players set #spawn_count switch.data 0
 execute as @a[sort=random] run function switch:modes/pitchout/teleport_players
-execute as @a at @s run function switch:modes/pitchout/give_items
 execute as @a run function switch:modes/pitchout/xp_bar
 
 gamerule mobGriefing false

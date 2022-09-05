@@ -3,6 +3,7 @@ tag @s add switch.temp
 
 loot spawn ~ ~ ~ loot stardust:i/original_stardust_sword
 loot spawn ~ ~ ~ loot stardust:i/stardust_bow
+summon item ~ ~ ~ {Item:{id:"minecraft:ender_pearl",Count:3b}}
 summon item ~ ~ ~ {Item:{id:"minecraft:arrow",Count:1b}}
 
 attribute @s generic.attack_speed base set 1024
