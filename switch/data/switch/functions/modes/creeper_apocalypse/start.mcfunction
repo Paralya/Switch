@@ -33,4 +33,5 @@ scoreboard players set #creeper_apocalypse_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount
+scoreboard objectives add switch.temp.duplication dummy
 
