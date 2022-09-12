@@ -47,8 +47,10 @@ scoreboard objectives add switch.temp.posX dummy
 scoreboard objectives add switch.temp.posY dummy
 scoreboard objectives add switch.temp.posZ dummy
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard objectives add switch.temp.death deathCount
+scoreboard objectives add switch.temp.deathCount deathCount
 
+team add switch.temp.detective
+team modify switch.temp.detective color green
 
 #Choix des rôles
 scoreboard players set #next_role switch.data 0

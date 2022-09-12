@@ -3,7 +3,7 @@
 
 scoreboard players add #traitors_game_ticks switch.data 1
 
-execute as @a[tag=switch.alive,scores={switch.temp.death=1..}] run function switch:modes/traitors_game/death/player
+execute as @a[tag=switch.alive,scores={switch.temp.deathCount=1..}] run function switch:modes/traitors_game/death/player
 execute as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/traitors_game/death/detect
 execute as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/process
 
