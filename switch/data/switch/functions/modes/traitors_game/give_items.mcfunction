@@ -14,7 +14,7 @@ item replace entity @s hotbar.4 with arrow 32
 
 #Random start bonus items
 execute if predicate switch:chance/0.1 run give @s ender_pearl
-execute if predicate switch:chance/0.1 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],Damage:31}
+execute if predicate switch:chance/0.1 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],display:{Name:'{"text":"Baseball Bat","color":"gold","italic":false}',Lore:['{"text":"Excitant n\'est-ce pas ?","color":"gray","italic":false}']},Damage:31}
 execute if predicate switch:chance/0.1 run give @s golden_apple 2
 execute if predicate switch:chance/0.1 run give @s diamond 4
 execute if predicate switch:chance/0.1 run give @s trident
@@ -22,6 +22,13 @@ execute if predicate switch:chance/0.1 run give @s fishing_rod
 execute if predicate switch:chance/0.1 run give @s creeper_spawn_egg 4
 execute if predicate switch:chance/0.1 run give @s zombie_spawn_egg 5
 execute if predicate switch:chance/0.1 run give @s chorus_fruit 2
+execute if predicate switch:chance/0.1 run give @s elytra{Damage:420}
+execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:protection",lvl:2s}]}
+execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:sharpness",lvl:3s}]}
+execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:projectile_protection",lvl:4s}]}
+execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:fire_aspect",lvl:1s}]}
+execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
+
 
 attribute @s generic.attack_speed base set 1024
 xp set @s 100 levels

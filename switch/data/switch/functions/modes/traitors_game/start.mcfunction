@@ -25,6 +25,8 @@ difficulty normal
 time set 18000
 weather clear
 
+##TODO : /place la map
+
 ##Téléportation des joueurs dans quatres coins + give d'items
 scoreboard players set #count switch.data 0
 execute as @a[sort=random] run function switch:modes/traitors_game/teleport_players

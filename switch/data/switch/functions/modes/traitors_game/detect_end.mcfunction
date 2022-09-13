@@ -1,0 +1,37 @@
+
+scoreboard players set #game_state switch.data 0
+execute if entity @a[tag=switch.alive,tag=!switch.traitors_game.traitor] run scoreboard players add #game_state switch.data 1
+execute if entity @a[tag=switch.alive,tag=switch.traitors_game.traitor,tag=!switch.traitors_game.big_traitor] run scoreboard players add #game_state switch.data 2
+execute if entity @a[tag=switch.alive,tag=switch.traitors_game.big_traitor] run scoreboard players add #game_state switch.data 4
+
+#1 = que des innocents
+#2 = que des traitres normaux
+#3 = Innocents et traitres
+#4 = que le gros traitre
+#5 = gros traitre + innocent
+#6 = gros traitre + traitres normaux
+#7 = encore tous les camps
+
+#Cas de fin de partie
+execute if score #game_state switch.data matches 1 run scoreboard players set #traitors_game_seconds switch.data 100000
+execute if score #game_state switch.data matches 2 run scoreboard players set #traitors_game_seconds switch.data 100000
+execute if score #game_state switch.data matches 4 run scoreboard players set #traitors_game_seconds switch.data 100000
+
+#Cas des vainqueurs
+execute if score #game_state switch.data matches 1 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"innocents","color":"green"},{"text":" ! GG à vous "},{"selector":"@a[tag=switch.alive,tag=!switch.traitors_game.traitor]"}]
+execute if score #game_state switch.data matches 2 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"traitres","color":"red"},{"text":" ! GG à vous "},{"selector":"@a[tag=switch.alive,tag=switch.traitors_game.traitor]"}]
+execute if score #game_state switch.data matches 4 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire du "},{"text":"gros traitre","color":"dark_red"},{"text":" ! GG "},{"selector":"@a[tag=switch.alive,tag=switch.traitors_game.big_traitor]"}]
+execute if score #traitors_game_seconds switch.data matches 600 if score #game_state switch.data matches 6 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Victoire des "},{"text":"traitres normaux","color":"red"},{"text":" car il ne reste aucun innocent et que le gros traitre n'a pas su trahir ! GG à vous "},{"selector":"@a[tag=switch.alive,tag=switch.traitors_game.traitor]"}]
+execute if score #game_state switch.data matches 1 run scoreboard players add @a[tag=switch.alive,tag=!switch.traitors_game.traitor] switch.money 1
+execute if score #game_state switch.data matches 2 run scoreboard players add @a[tag=switch.alive,tag=switch.traitors_game.traitor,tag=!switch.traitors_game.big_traitor] switch.money 1
+execute if score #game_state switch.data matches 4 run scoreboard players add @a[tag=switch.alive,tag=switch.traitors_game.big_traitor] switch.money 1
+execute if score #traitors_game_seconds switch.data matches 600 if score #game_state switch.data matches 1 run scoreboard players add @a[tag=switch.alive,tag=!switch.traitors_game.traitor] switch.money 1
+
+#Cas des égalités
+execute if score #traitors_game_seconds switch.data matches 600 if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
+execute if score #traitors_game_seconds switch.data matches 600 if score #game_state switch.data matches 5 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
+execute if score #traitors_game_seconds switch.data matches 600 if score #game_state switch.data matches 7 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
+
+#Visuel de fin de partie
+execute if score #traitors_game_seconds switch.data matches 600.. as @a at @s run playsound item.totem.use ambient @s
+
