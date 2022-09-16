@@ -1,0 +1,28 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "crazy_adventure:i/storm_stick"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "crazy_adventure:i/uranium_banana",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": 2
+						}
+					]
+				}
+			]
+		}
+	]
+}
