@@ -22,23 +22,6 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "simplenergy:i/simplunium_axe",
-					"functions": [
-						{
-							"function": "minecraft:set_enchantments",
-							"enchantments": {
-								"minecraft:efficiency": 1
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "minecraft:loot_table",
 					"name": "smithed.crafter:blocks/table"
 				}
 			]

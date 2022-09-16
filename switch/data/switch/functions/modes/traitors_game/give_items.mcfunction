@@ -1,11 +1,12 @@
 
 #Starter kit
-item replace entity @s armor.head with iron_helmet
-item replace entity @s armor.chest with diamond_chestplate
-item replace entity @s armor.legs with iron_leggings
-item replace entity @s armor.feet with diamond_boots
+item replace entity @s armor.head with iron_helmet{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s armor.chest with diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
 item replace entity @s hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:3s}]}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
+item replace entity @s hotbar.3 with stone_axe
 item replace entity @s hotbar.4 with golden_apple 5
 item replace entity @s hotbar.6 with arrow 32
 item replace entity @s hotbar.7 with water_bucket
