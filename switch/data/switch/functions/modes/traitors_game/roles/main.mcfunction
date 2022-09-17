@@ -16,6 +16,7 @@ execute if score #next_role switch.data matches 5 run tag @s add switch.traitors
 execute if score #next_role switch.data matches 6 run tag @s add switch.traitors_game.innocent
 execute if score #next_role switch.data matches 7 run tag @s add switch.traitors_game.traitor
 execute if score #next_role switch.data matches 7 run tag @s add switch.traitors_game.big_traitor
+execute if score #next_role switch.data matches 7 run attribute @s generic.max_health modifier add 1-1-1-1-2 "Gros Traitre" 0.5 multiply_base
 execute if score #next_role switch.data matches 8 run tag @s add switch.traitors_game.innocent
 execute if score #next_role switch.data matches 9 run tag @s add switch.traitors_game.innocent
 execute if score #next_role switch.data matches 10 run tag @s add switch.traitors_game.traitor

@@ -3,7 +3,7 @@
 
 scoreboard players add #creeper_apocalypse_ticks switch.data 1
 
-execute as @a[scores={switch.temp.deathCount=1..},sort=random] run function switch:modes/creeper_apocalypse/death
+execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/creeper_apocalypse/death
 
 effect give @e[type=creeper] resistance 99999 0 true
 execute as @e[type=area_effect_cloud] at @s run function switch:modes/creeper_apocalypse/creeper_exploded

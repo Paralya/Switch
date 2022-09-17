@@ -15,9 +15,11 @@ loot give @s loot switch:traitors_game/all_starter
 
 
 #Random start bonus items
+execute if predicate switch:chance/0.1 run give @s enchanted_golden_apple
+execute if predicate switch:chance/0.1 run give @s totem_of_undying
 execute if predicate switch:chance/0.1 run give @s ender_pearl
 execute if predicate switch:chance/0.1 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],display:{Name:'{"text":"Baseball Bat","color":"gold","italic":false}',Lore:['{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}']},Damage:31}
-execute if predicate switch:chance/0.1 run give @s golden_apple 2
+execute if predicate switch:chance/0.1 run give @s golden_apple 6
 execute if predicate switch:chance/0.1 run give @s diamond 4
 execute if predicate switch:chance/0.1 run give @s trident
 execute if predicate switch:chance/0.1 run give @s fishing_rod
@@ -30,7 +32,7 @@ execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantm
 execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:fire_aspect",lvl:1s}]}
 execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/simplunium_ore_x2
-execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/deepslate_simplunium_ore_x2
+execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/deepslate_simplunium_ore_x8
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/ender_stardust_ore
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stardust_essence_x9
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stardust_sniper_and_bullets
@@ -38,15 +40,16 @@ execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_gam
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/lucky_artifact_bag
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/item_magnet
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stoup_egg
-execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stardust_pillar
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/ultimate_spawner
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/quarry_pack
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/fireball_stick
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/storm_stick
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/shield_stick
-execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/bomber_man
+execute if predicate switch:chance/0.33 run loot give @s loot switch:traitors_game/bomber_man
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/banana_man
 
+item replace entity @s[tag=switch.traitors_game.traitor] inventory.26 with potion{CustomPotionEffects:[{Id:1,Duration:1200},{Id:5,Duration:200},{Id:6},{Id:11,Duration:300}],CustomPotionColor:7505152,display:{Name:'{"text":"Potion de Traître","color":"white","italic":false}'}}
+scoreboard players set @s crazy_adventure.radiation 400
 
 attribute @s generic.attack_speed base set 1024
 xp set @s 100 levels

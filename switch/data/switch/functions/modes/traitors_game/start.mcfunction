@@ -22,7 +22,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Placement de la map
-data modify storage switch:main maps_to_choose set value ["traitor_original","zone_51"]
+data modify storage switch:main maps_to_choose set value ["traitor_original"]
 function switch:engine/maps/load
 
 
