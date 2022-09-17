@@ -22,18 +22,9 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Placement de la map
-forceload add 1409 1424 1591 1577
-schedule function switch:modes/traitors_game/clones/10 40t
-schedule function switch:modes/traitors_game/clones/20 41t
-schedule function switch:modes/traitors_game/clones/30 42t
-schedule function switch:modes/traitors_game/clones/40 43t
-schedule function switch:modes/traitors_game/clones/50 44t
-schedule function switch:modes/traitors_game/clones/60 45t
-schedule function switch:modes/traitors_game/clones/70 46t
-schedule function switch:modes/traitors_game/clones/80 47t
-schedule function switch:modes/traitors_game/clones/90 48t
-schedule function switch:modes/traitors_game/clones/95 49t
-schedule function switch:modes/traitors_game/clones/100 50t
+data modify storage switch:main maps_to_choose set value ["traitor_original","zone_51"]
+function switch:engine/maps/load
+
 
 ##Téléportation des joueurs + give d'items
 tp @a[sort=random] 1500 150 1500 
