@@ -37,7 +37,7 @@ schedule function switch:modes/traitors_game/clones/100 50t
 
 ##Téléportation des joueurs + give d'items
 tp @a[sort=random] 1500 150 1500 
-execute as @a at @a run function switch:modes/traitors_game/give_items
+execute as @a at @s run function switch:modes/traitors_game/give_items
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
@@ -68,5 +68,5 @@ tag @a remove switch.traitors_game.second_life
 tag @a remove switch.traitors_game.innocent
 tag @a remove switch.traitors_game.traitor
 tag @a remove switch.traitors_game.big_traitor
-execute as @a at @s run function switch:modes/traitors_game/roles/main
+execute as @a[sort=random] at @s run function switch:modes/traitors_game/roles/main
 
