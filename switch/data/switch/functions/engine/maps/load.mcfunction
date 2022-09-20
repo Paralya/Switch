@@ -11,6 +11,15 @@ execute unless score #random switch.data matches 0 run function switch:engine/ma
 
 scoreboard players set #map_generated switch.data 0
 data modify storage switch:main map set from storage switch:main maps_to_choose[0]
-execute if data storage switch:main {map:"traitor_original"} run function switch:engine/maps/traitor_original/main
-execute if data storage switch:main {map:"zone_51"} run function switch:engine/maps/zone_51/main
+
+#Maps that regenerate (gamemode survival):
+execute if data storage switch:main {map:"traitor_original"} run function switch:engine/maps/survival/traitor_original/main
+execute if data storage switch:main {map:"zone_51"} run function switch:engine/maps/survival/zone_51/main
+
+#Maps that doesn't (gamemode adventure):
+execute if data storage switch:main {map:"pitch_creep_1"} run function switch:engine/maps/adventure/pitch_creep_1/main
+execute if data storage switch:main {map:"pitchout_1"} run function switch:engine/maps/adventure/pitchout_1/main
+
+
+
 

@@ -18,9 +18,9 @@ difficulty normal
 time set 18000
 weather clear
 
-##Téléportation des joueurs dans les quatres coins
-scoreboard players set #count switch.data 0
-execute as @a[sort=random] run function switch:modes/pitch_creep/teleport_players
+##Placement de la map et des joueurs + give d'items
+data modify storage switch:main maps_to_choose set value ["pitch_creep_1"]
+function switch:engine/maps/load
 execute as @a at @s run function switch:modes/pitch_creep/give_items
 
 gamerule mobGriefing false

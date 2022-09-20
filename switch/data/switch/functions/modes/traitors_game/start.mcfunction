@@ -21,13 +21,9 @@ execute if predicate switch:chance/0.33 run time add 6000
 execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
-##Placement de la map
+##Placement de la map et des joueurs + give d'items
 data modify storage switch:main maps_to_choose set value ["traitor_original"]
 function switch:engine/maps/load
-
-
-##Téléportation des joueurs + give d'items
-tp @a[sort=random] 1500 150 1500 
 execute as @a at @s run function switch:modes/traitors_game/give_items
 
 gamerule mobGriefing true
