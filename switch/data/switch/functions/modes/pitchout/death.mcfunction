@@ -9,7 +9,7 @@ tag @s[tag=switch.third_life] remove switch.third_life
 execute if entity @s[tag=switch.first_life] run function switch:modes/pitchout/teleport_players
 
 gamemode spectator @s[tag=!switch.first_life]
-tp @s[tag=!switch.first_life] 1000 110 1000
+execute if entity @s[tag=!switch.first_life] at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 effect clear @s[tag=!switch.first_life]
 clear @s[tag=!switch.first_life]
 
