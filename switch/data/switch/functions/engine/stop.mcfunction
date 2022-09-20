@@ -9,6 +9,7 @@ xp set @a 0 points
 xp set @a 0 levels
 attribute @s generic.attack_speed base set 4.0
 kill @e[type=marker,tag=switch.selected_map]
+function switch:engine/maps/regenerate_map
 
 function #switch:events/stop
 

@@ -1,9 +1,11 @@
 
 ##Fonction executée lors du lancement de la partie
 
+kill @e[type=!player,type=!marker]
+
 clear @a
 effect clear @a
-gamemode spectator @a
+gamemode survival @a
 team leave @a
 tag @a add switch.alive
 
@@ -24,6 +26,8 @@ weather clear
 ##Placement de la map et des joueurs + give d'items
 data modify storage switch:main maps_to_choose set value ["traitor_original"]
 function switch:engine/maps/load
+execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @a
+execute if data storage switch:main {map:"zone_51"} run spreadplayers 1500 1500 1 100 under 160 false @a
 execute as @a at @s run function switch:modes/traitors_game/give_items
 
 gamerule mobGriefing true
@@ -32,7 +36,8 @@ gamerule fallDamage true
 gamerule naturalRegeneration true
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Traitors Game, préparation du terrain..."}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Traitors Game, tenez-vous prêt !"}]
+execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #traitors_game_seconds switch.data -10
 scoreboard players set #traitors_game_ticks switch.data 0
