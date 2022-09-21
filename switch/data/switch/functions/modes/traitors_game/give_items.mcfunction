@@ -48,7 +48,6 @@ execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_gam
 execute if predicate switch:chance/0.33 run loot give @s loot switch:traitors_game/bomber_man
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/banana_man
 
-item replace entity @s[tag=switch.traitors_game.traitor] inventory.26 with potion{CustomPotionEffects:[{Id:1,Duration:1200},{Id:5,Duration:200},{Id:6},{Id:11,Duration:300}],CustomPotionColor:7505152,display:{Name:'{"text":"Potion de Traître","color":"white","italic":false}'}}
 scoreboard players set @s crazy_adventure.radiation 400
 
 attribute @s generic.attack_speed base set 1024
