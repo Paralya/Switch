@@ -16,12 +16,12 @@ difficulty normal
 time set 18000
 weather clear
 
-##Téléportation des joueurs dans quatres coins + give d'items
-scoreboard players set #count switch.data 0
-execute as @a[sort=random] run function switch:modes/creeper_apocalypse/teleport_players
+##Téléportation des joueurs + give d'items
+data modify storage switch:main maps_to_choose set value ["enchanting_island"]
+function switch:engine/maps/load
 execute as @a at @s run function switch:modes/creeper_apocalypse/give_items
 
-gamerule mobGriefing false
+gamerule mobGriefing true
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
