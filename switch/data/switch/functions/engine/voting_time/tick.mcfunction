@@ -18,6 +18,6 @@ scoreboard players add #remaining switch.data 1
 execute if score #remaining switch.data matches 2.. run title @a actionbar [{"text":"Fin de la période de vote dans ","color":"aqua"},{"score":{"name":"#remaining","objective":"switch.data"},"color":"yellow"},{"text":" secondes."}]
 execute if score #remaining switch.data matches 1 run title @a actionbar [{"text":"Fin de la période de vote dans ","color":"aqua"},{"score":{"name":"#remaining","objective":"switch.data"},"color":"yellow"},{"text":" seconde."}]
 
-execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/main
+execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/
 execute if score #voting_timer switch.data matches 1.. run schedule function switch:engine/voting_time/tick 1t
 

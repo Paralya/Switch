@@ -60,5 +60,5 @@ tag @a remove switch.traitors_game.second_life
 tag @a remove switch.traitors_game.innocent
 tag @a remove switch.traitors_game.traitor
 tag @a remove switch.traitors_game.big_traitor
-execute as @a[sort=random] at @s run function switch:modes/traitors_game/roles/main
+execute as @a[sort=random] at @s run function switch:modes/traitors_game/roles/
 
