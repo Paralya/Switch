@@ -20,7 +20,7 @@ execute if predicate switch:chance/0.1 run give @s totem_of_undying
 execute if predicate switch:chance/0.1 run give @s ender_pearl
 execute if predicate switch:chance/0.1 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],display:{Name:'{"text":"Baseball Bat","color":"gold","italic":false}',Lore:['{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}']},Damage:31}
 execute if predicate switch:chance/0.1 run give @s golden_apple 6
-execute if predicate switch:chance/0.1 run give @s diamond 4
+execute if predicate switch:chance/0.1 run give @s diamond 5
 execute if predicate switch:chance/0.1 run give @s trident
 execute if predicate switch:chance/0.1 run give @s fishing_rod
 execute if predicate switch:chance/0.1 run give @s creeper_spawn_egg 4
