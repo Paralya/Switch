@@ -15,7 +15,6 @@ loot give @s loot switch:traitors_game/all_starter
 
 
 #Random start bonus items
-execute if predicate switch:chance/0.1 run give @s enchanted_golden_apple
 execute if predicate switch:chance/0.1 run give @s totem_of_undying
 execute if predicate switch:chance/0.1 run give @s ender_pearl
 execute if predicate switch:chance/0.1 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],display:{Name:'{"text":"Baseball Bat","color":"gold","italic":false}',Lore:['{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}']},Damage:31}
