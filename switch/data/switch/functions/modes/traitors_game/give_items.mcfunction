@@ -30,7 +30,7 @@ execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantm
 execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:projectile_protection",lvl:4s}]}
 execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:fire_aspect",lvl:1s}]}
 execute if predicate switch:chance/0.1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
-execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/simplunium_ore_x2
+execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/simplunium_ore_x8
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/deepslate_simplunium_ore_x8
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/ender_stardust_ore
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stardust_essence_x9
