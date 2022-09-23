@@ -49,7 +49,7 @@ data modify storage switch:main minigames append value {index:4	,min_players:1,i
 data modify storage switch:main minigames append value {index:5	,min_players:1,id:"border_run"			,Name:"Border Run"			,Lore:'["",{"text":"[Border Run]\\n","color":"yellow"},{"text":"Survivez jusqu\'à la fin en trouvant\\n"},{"text":"le centre de la bordure !"}]'}
 data modify storage switch:main minigames append value {index:6	,min_players:1,id:"creeper_apocalypse"	,Name:"Creeper Apocalypse"	,Lore:'["",{"text":"[Creeper Apocalypse]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée avec des creepers\\n"},{"text":"qui se multiplient sans cesse."}]'}
 data modify storage switch:main minigames append value {index:7	,min_players:1,id:"traitors_game"		,Name:"Traitors Game"		,Lore:'["",{"text":"[Traitors Game]\\n","color":"yellow"},{"text":"Innocents contre Traitres,\\n"},{"text":"quel camp va-t-il gagner ?"}]'}
-data modify storage switch:main minigames append value {index:8	,min_players:1,id:"a_template"			,Name:"Free Slot 9"			,Lore:'[{"text":"Lore du Slot 9"}]'}
+data modify storage switch:main minigames append value {index:8	,min_players:1,id:"boat_race"			,Name:"Boat Race"			,Lore:'[{"text":"Lore du Slot 9"}]'}
 data modify storage switch:main minigames append value {index:9	,min_players:1,id:"a_template"			,Name:"Free Slot 10"		,Lore:'[{"text":"Lore du Slot 10"}]'}
 data modify storage switch:main minigames append value {index:10,min_players:1,id:"a_template"			,Name:"Free Slot 11"		,Lore:'[{"text":"Lore du Slot 11"}]'}
 data modify storage switch:main minigames append value {index:11,min_players:1,id:"a_template"			,Name:"Free Slot 12"		,Lore:'[{"text":"Lore du Slot 12"}]'}
