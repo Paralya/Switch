@@ -34,4 +34,8 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 
 scoreboard objectives add switch.temp.engine dummy
+scoreboard objectives add switch.temp.motion_x dummy
+scoreboard objectives add switch.temp.motion_z dummy
+
+
 
