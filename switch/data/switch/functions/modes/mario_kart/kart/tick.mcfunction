@@ -1,9 +1,7 @@
 
-#Slow down engine (-6,777%)
-scoreboard players remove @s[scores={switch.temp.engine=1..}] switch.temp.engine 1
-scoreboard players operation @s[scores={switch.temp.engine=1..}] switch.temp.engine *= #14 switch.data
-scoreboard players operation @s[scores={switch.temp.engine=1..}] switch.temp.engine /= #15 switch.data
-
+#Slow down & Speed up engine
+execute if score @s switch.temp.engine matches 1.. run function switch:modes/mario_kart/kart/speed_down
+execute if entity @s[tag=switch.speed_up] run function switch:modes/mario_kart/kart/speed_up
 
 #Update motion if it hasn't be done yet
 execute if entity @s[tag=!switch.calculated] run function switch:modes/mario_kart/kart/update_motion

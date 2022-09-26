@@ -1,8 +1,8 @@
 
 #Define multiplier depending on engine speed
-scoreboard players set #multiplier switch.data 100
+scoreboard players set #multiplier switch.data 5
 scoreboard players operation #engine switch.data = @s switch.temp.engine
-scoreboard players operation #engine switch.data /= #10 switch.data
+scoreboard players operation #engine switch.data /= #50 switch.data
 scoreboard players operation #multiplier switch.data += #engine switch.data
 
 
@@ -25,10 +25,13 @@ scoreboard players reset #motion_z switch.data
 #Apply new motion & update old motion (75% of new motion)
 data modify entity @s Motion[0] set from storage switch:main Motion[0]
 data modify entity @s Motion[2] set from storage switch:main Motion[2]
-execute store result score @s switch.temp.motion_x run data get entity @s Motion[0] 750000
-execute store result score @s switch.temp.motion_z run data get entity @s Motion[2] 750000
+execute store result score @s switch.temp.motion_x run data get entity @s Motion[0] 9000000
+execute store result score @s switch.temp.motion_z run data get entity @s Motion[2] 9000000
 data remove storage switch:main Motion
 
 #Add tag to avoid double calculation
 tag @s add switch.calculated
+
+
+tellraw @a [{"text":"Engine speed ","color":"yellow"},{"score":{"name":"@s","objective":"switch.temp.engine"},"color":"aqua"},{"text":"/1000 | Motion : ("},{"score":{"name":"@s","objective":"switch.temp.motion_x"},"color":"aqua"},{"text":", 0, "},{"score":{"name":"@s","objective":"switch.temp.motion_z"},"color":"aqua"},{"text":")"}]
 
