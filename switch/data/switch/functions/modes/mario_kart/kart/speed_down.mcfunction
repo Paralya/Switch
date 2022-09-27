@@ -1,6 +1,5 @@
 
-#Slow down engine (-6,777%)
-scoreboard players remove @s switch.temp.engine 1
-scoreboard players operation @s switch.temp.engine *= #14 switch.data
-scoreboard players operation @s switch.temp.engine /= #15 switch.data
+#Slow down engine (5/2000)
+scoreboard players remove @s switch.temp.engine 5
+scoreboard players set @s[scores={switch.temp.engine=..-1}] switch.temp.engine 0
 

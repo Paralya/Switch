@@ -1,6 +1,10 @@
 {
 	"values": [
 		"sand",
-		"soul_sand"
+		"soul_sand",
+		"mud",
+		"mud_brick_slab",
+		"mud_brick_stairs",
+		"mud_brick_wall"
 	]
 }
