@@ -13,10 +13,22 @@ scoreboard players operation @s switch.temp.pos_z = #new_pos_z switch.data
 ##############This is the code for the new motion v v v v v
 
 
-#Define multiplier depending on engine speed
-scoreboard players set #multiplier switch.data 5
+#Define multiplier depending on engine speed & block stepping on
+#Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow
+scoreboard players set #surface switch.data 0
+execute if block ~ ~-1 ~ #switch:kart_surfaces/fast run scoreboard players set #surface switch.data 1
+execute if block ~ ~-1 ~ #switch:kart_surfaces/slippery run scoreboard players set #surface switch.data 2
+execute if block ~ ~-1 ~ #switch:kart_surfaces/slow run scoreboard players set #surface switch.data 3
+execute if block ~ ~ ~ cobweb run scoreboard players set #surface switch.data 3
+
 scoreboard players operation #engine switch.data = @s switch.temp.engine
-scoreboard players operation #engine switch.data /= #50 switch.data
+execute if score #surface switch.data matches 0..1 run scoreboard players set #multiplier switch.data 10
+execute if score #surface switch.data matches 2 run scoreboard players set #multiplier switch.data 3
+execute if score #surface switch.data matches 3 run scoreboard players set #multiplier switch.data 1
+execute if score #surface switch.data matches 0 run scoreboard players operation #engine switch.data /= #20 switch.data
+execute if score #surface switch.data matches 1 run scoreboard players operation #engine switch.data /= #15 switch.data
+execute if score #surface switch.data matches 2 run scoreboard players operation #engine switch.data /= #60 switch.data
+execute if score #surface switch.data matches 3 run scoreboard players operation #engine switch.data /= #500 switch.data
 scoreboard players operation #multiplier switch.data += #engine switch.data
 
 
@@ -37,10 +49,15 @@ scoreboard players reset #motion_z switch.data
 
 
 #Apply new motion & update old motion (75% of new motion)
+#Depending on the surface, the kart will slide or not
 data modify entity @s Motion[0] set from storage switch:main Motion[0]
 data modify entity @s Motion[2] set from storage switch:main Motion[2]
-execute store result score @s switch.temp.motion_x run data get storage switch:main Motion[0] 9000000
-execute store result score @s switch.temp.motion_z run data get storage switch:main Motion[2] 9000000
+execute if score #surface switch.data matches 0..1 store result score @s switch.temp.motion_x run data get storage switch:main Motion[0] 8000000
+execute if score #surface switch.data matches 0..1 store result score @s switch.temp.motion_z run data get storage switch:main Motion[2] 8000000
+execute if score #surface switch.data matches 2 store result score @s switch.temp.motion_x run data get storage switch:main Motion[0] 9333333
+execute if score #surface switch.data matches 2 store result score @s switch.temp.motion_z run data get storage switch:main Motion[2] 9333333
+execute if score #surface switch.data matches 3 store result score @s switch.temp.motion_x run data get storage switch:main Motion[0] 2000000
+execute if score #surface switch.data matches 3 store result score @s switch.temp.motion_z run data get storage switch:main Motion[2] 2000000
 data remove storage switch:main Motion
 
 
