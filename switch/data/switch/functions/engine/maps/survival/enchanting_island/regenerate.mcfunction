@@ -85,12 +85,10 @@ execute if score #regeneration_ticks switch.data matches 148 run clone 6970 64 6
 execute if score #regeneration_ticks switch.data matches 150 run clone 6970 65 6970 7030 65 7030 6970 139 6970 replace force
 execute if score #regeneration_ticks switch.data matches 152 run clone 6970 66 6970 7030 66 7030 6970 140 6970 replace force
 execute if score #regeneration_ticks switch.data matches 154 run clone 6970 67 6970 7030 67 7030 6970 141 6970 replace force
-execute if score #regeneration_ticks switch.data matches 156 run clone 6970 68 6970 7030 68 7030 6970 142 6970 replace force
-execute if score #regeneration_ticks switch.data matches 158 run clone 6970 69 6970 7030 69 7030 6970 143 6970 replace force
 
-execute if score #regeneration_ticks switch.data matches 158 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 158 run forceload remove 6969 6969 7031 7031
-execute if score #regeneration_ticks switch.data matches 158 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 156 run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 156 run forceload remove 6969 6969 7031 7031
+execute if score #regeneration_ticks switch.data matches 156 run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:engine/maps/survival/enchanting_island/regenerate 1t
 
