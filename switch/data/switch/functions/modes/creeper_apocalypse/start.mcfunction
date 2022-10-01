@@ -4,16 +4,17 @@
 clear @a
 effect clear @a
 gamemode adventure @a
-team join switch.no_pvp @a
+team empty switch.no_pvp
 tag @a add switch.alive
 
 kill @e[type=item]
 kill @e[type=arrow]
 
+effect give @a night_vision 99999 255 true
 effect give @a saturation 99999 255 true
 effect give @a regeneration 5 255 true
 difficulty normal
-time set 18000
+time set 6000
 weather clear
 
 ##Téléportation des joueurs + give d'items

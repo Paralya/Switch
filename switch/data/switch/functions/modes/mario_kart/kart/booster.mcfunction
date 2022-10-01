@@ -12,7 +12,7 @@ execute unless score #new switch.data matches -2500000..2500000 run scoreboard p
 execute unless score #new switch.data matches -2500000..2500000 if score @s switch.temp.engine > @s switch.temp.max_engine run scoreboard players operation @s switch.temp.engine = @s switch.temp.max_engine
 execute if score @s switch.temp.booster_timer matches 0 if score #new switch.data matches -2500000..2500000 run scoreboard players operation @s switch.temp.engine /= #2 switch.data
 scoreboard players set @s switch.temp.booster_timer 50
-playsound block.note_block.harp block @a
+playsound block.note_block.harp block @a[predicate=switch:has_vehicle_with_tag]
 
 #tellraw @a [{"text":"Old / New : ","color":"yellow"},{"score":{"name":"#old","objective":"switch.data"},"color":"aqua"},{"text":" / "},{"score":{"name":"#new","objective":"switch.data"},"color":"aqua"}]
 
