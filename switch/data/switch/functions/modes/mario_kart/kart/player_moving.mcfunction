@@ -9,8 +9,7 @@ data modify storage switch:main Rotation set from entity @s Rotation[0]
 scoreboard players set #instant_engine_max switch.data 0
 execute store success score #instant_engine_max switch.data run scoreboard players reset @s[scores={right=1..}] right
 execute as @e[tag=switch.kart,predicate=switch:have_player_passenger] at @s run function switch:modes/mario_kart/kart/called_by_player
+
 data remove storage switch:main Rotation
-
-
 tag @s remove switch.temp
 
