@@ -1,16 +1,28 @@
 
 tag @s add switch.temp
 
+#Water specification
+execute if entity @s[tag=switch.in_water,scores={switch.temp.engine=1000..}] run data modify entity @s Motion[1] set value 0.65d
+execute unless block ~ ~ ~ water run tag @s remove switch.in_water
+execute if block ~ ~ ~ water run tag @s add switch.in_water
+execute if entity @s[tag=switch.in_water,scores={switch.temp.engine=100..}] if block ~ ~ ~ water run data modify entity @s Motion[1] set value -0.5d
+
+#Run into a banana
+scoreboard players set #banana switch.data 0
+execute as @e[tag=switch.banana,distance=..1] run function switch:modes/mario_kart/items/banana/run_into
+execute if score #banana switch.data matches 1 run scoreboard players set @s switch.temp.engine 100
+execute if score #banana switch.data matches 1 run particle lava ~ ~ ~ 1 1 1 0 50 force @a[distance=..50]
+execute if score #banana switch.data matches 1 run playsound block.anvil.land block @a ~ ~ ~ 1 0.1
+
+
 #Define multiplier depending on engine speed & block stepping on
 #Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow
 scoreboard players set #surface switch.data 0
-execute if block ~ ~-.1 ~ #switch:kart_surfaces/fast run scoreboard players set #surface switch.data 1
-execute if block ~ ~-.1 ~ #switch:kart_surfaces/slippery run scoreboard players set #surface switch.data 2
-execute if block ~ ~-.1 ~ #switch:kart_surfaces/slow run scoreboard players set #surface switch.data 3
-execute if block ~ ~ ~ cobweb run scoreboard players set #surface switch.data 3
-execute if block ~ ~ ~ water run scoreboard players set #surface switch.data 0
+execute if entity @s[tag=!switch.in_water] if block ~ ~-.1 ~ #switch:kart_surfaces/fast run scoreboard players set #surface switch.data 1
+execute if entity @s[tag=!switch.in_water] if block ~ ~-.1 ~ #switch:kart_surfaces/slippery run scoreboard players set #surface switch.data 2
+execute if entity @s[tag=!switch.in_water] if block ~ ~-.1 ~ #switch:kart_surfaces/slow run scoreboard players set #surface switch.data 3
 
-execute if score #instant_engine_max switch.data matches 1 run scoreboard players set @s switch.temp.engine 3000
+execute if score #instant_engine_max switch.data matches 1 run scoreboard players operation @s switch.temp.engine = @s switch.temp.max_engine
 scoreboard players operation #engine switch.data = @s switch.temp.engine
 execute if score #surface switch.data matches 0..1 run scoreboard players set #multiplier switch.data 10
 execute if score #surface switch.data matches 2 run scoreboard players set #multiplier switch.data 3
@@ -20,6 +32,10 @@ execute if score #surface switch.data matches 1 run scoreboard players operation
 execute if score #surface switch.data matches 2 run scoreboard players operation #engine switch.data /= #120 switch.data
 execute if score #surface switch.data matches 3 run scoreboard players operation #engine switch.data /= #30 switch.data
 scoreboard players operation #multiplier switch.data += #engine switch.data
+execute if score #mushroom switch.data matches 1 run scoreboard players operation #multiplier switch.data *= #2 switch.data
+execute if score #mushroom switch.data matches 1 run scoreboard players operation @s switch.temp.engine *= #2 switch.data
+execute if score #mushroom switch.data matches 1 if score @s switch.temp.engine > @s switch.temp.max_engine run scoreboard players operation @s switch.temp.engine = @s switch.temp.max_engine
+execute if block ~ ~-1 ~ air run scoreboard players operation #multiplier switch.data /= #2 switch.data
 
 #Stop motion when predicted position isn't reached
 execute store result score #new_pos_x switch.data run data get entity @s Pos[0] 10000
