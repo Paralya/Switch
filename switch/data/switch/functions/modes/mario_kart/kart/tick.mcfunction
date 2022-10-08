@@ -9,7 +9,7 @@ execute if entity @s[tag=switch.speed_up] run function switch:modes/mario_kart/k
 scoreboard players remove @s[scores={switch.temp.booster_timer=1..}] switch.temp.booster_timer 1
 
 
-#Update motion if it hasn't be done yet
-execute if entity @s[tag=!switch.calculated] run function switch:modes/mario_kart/kart/update_motion
+#Tick calculations
+execute if entity @s[tag=!switch.calculated] run function switch:modes/mario_kart/kart/tick_calculations
 tag @s remove switch.calculated
 
