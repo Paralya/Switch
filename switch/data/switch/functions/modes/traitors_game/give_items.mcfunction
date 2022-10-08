@@ -12,6 +12,7 @@ item replace entity @s hotbar.6 with arrow 32
 item replace entity @s hotbar.7 with water_bucket
 item replace entity @s hotbar.8 with carrot 42
 loot give @s loot switch:traitors_game/all_starter
+give @s oak_planks 128
 
 
 #Random start bonus items
@@ -34,7 +35,6 @@ execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_gam
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/deepslate_simplunium_ore_x8
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/ender_stardust_ore
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stardust_essence_x9
-execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stardust_sniper_and_bullets
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/wormhole_potion_x2
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/lucky_artifact_bag
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/item_magnet

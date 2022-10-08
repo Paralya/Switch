@@ -27,7 +27,7 @@ weather clear
 data modify storage switch:main maps_to_choose set value ["traitor_original", "zone_51", "spectre_original", "mushroom_plains"]
 function switch:engine/maps/load
 execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @a
-execute if data storage switch:main {map:"zone_51"} run spreadplayers 2000 2000 1 100 under 170 false @a
+execute if data storage switch:main {map:"zone_51"} run spreadplayers 2000 2000 1 50 under 170 false @a
 execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
 execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
 execute as @a at @s run function switch:modes/traitors_game/give_items
