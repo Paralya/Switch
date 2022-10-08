@@ -40,6 +40,7 @@ scoreboard players operation @s switch.temp.predicted_pos_x = #new_pos_x switch.
 scoreboard players operation @s switch.temp.predicted_pos_z = #new_pos_z switch.data
 
 
+
 ##Calculate new motion : motion = (player_motion * multiplier) + old_motion + booster
 #If player_motion is null : motion = old_motion
 scoreboard players set #booster switch.data 0
@@ -47,6 +48,7 @@ execute if score #booster switch.data matches 0 if block ~ ~-1 ~ magenta_glazed_
 execute if score #booster switch.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=east] run scoreboard players set #booster switch.data 2
 execute if score #booster switch.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=north] run scoreboard players set #booster switch.data 3
 execute if score #booster switch.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=south] run scoreboard players set #booster switch.data 4
+
 
 
 ##Store calculated motion into storage switch:main Motion[0] & Motion[2]
@@ -62,3 +64,4 @@ execute store result storage switch:main Motion[0] double 0.0000001 run scoreboa
 execute store result storage switch:main Motion[2] double 0.0000001 run scoreboard players get #new_motion_z switch.data
 scoreboard players set #motion_x switch.data 0
 scoreboard players set #motion_z switch.data 0
+
