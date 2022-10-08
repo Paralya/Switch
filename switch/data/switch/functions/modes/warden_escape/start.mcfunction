@@ -18,7 +18,8 @@ time set 18000
 weather clear
 
 ##Téléportation des joueurs
-tp @a 520 101.69 520
+data modify storage switch:main maps_to_choose set value ["laser_game", "prison"]
+function switch:engine/maps/load
 execute as @a at @s run function switch:modes/warden_escape/give_items
 
 gamerule mobGriefing false

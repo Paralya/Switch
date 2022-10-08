@@ -6,5 +6,6 @@ execute if data storage switch:main {map:"zone_51"} run function switch:engine/m
 execute if data storage switch:main {map:"spectre_original"} run function switch:engine/maps/survival/spectre_original/regenerate
 execute if data storage switch:main {map:"mushroom_plains"} run function switch:engine/maps/survival/mushroom_plains/regenerate
 execute if data storage switch:main {map:"enchanting_island"} run function switch:engine/maps/survival/enchanting_island/regenerate
+execute if data storage switch:main {map:"friends_cube_lobby"} run function switch:engine/maps/survival/friends_cube_lobby/regenerate
 data remove storage switch:main map
 

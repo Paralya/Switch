@@ -18,7 +18,7 @@ time set 6000
 weather clear
 
 ##Téléportation des joueurs + give d'items
-data modify storage switch:main maps_to_choose set value ["enchanting_island", "spectre_original"]
+data modify storage switch:main maps_to_choose set value ["enchanting_island", "spectre_original", "friends_cube_lobby"]
 function switch:engine/maps/load
 execute as @a at @s run function switch:modes/creeper_apocalypse/give_items
 

@@ -3,6 +3,7 @@
 
 scoreboard players add #creeper_apocalypse_ticks switch.data 1
 
+execute as @a at @s if block ~ ~-1 ~ barrier run kill @s
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/creeper_apocalypse/death
 
 effect give @e[type=creeper] resistance 99999 0 true
@@ -14,3 +15,4 @@ execute as @e[type=creeper] at @s if block ~ ~-1 ~ barrier run tp @s 0 -10000 0
 #Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
 execute unless entity @a[tag=switch.alive] run function switch:modes/creeper_apocalypse/process_end
 execute if score #creeper_apocalypse_seconds switch.data matches 100.. run function switch:modes/creeper_apocalypse/process_end
+

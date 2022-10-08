@@ -17,11 +17,14 @@ execute if data storage switch:main {map:"zone_51"} run function switch:engine/m
 execute if data storage switch:main {map:"spectre_original"} run function switch:engine/maps/survival/spectre_original/
 execute if data storage switch:main {map:"mushroom_plains"} run function switch:engine/maps/survival/mushroom_plains/
 execute if data storage switch:main {map:"enchanting_island"} run function switch:engine/maps/survival/enchanting_island/
+execute if data storage switch:main {map:"friends_cube_lobby"} run function switch:engine/maps/survival/friends_cube_lobby/
 
 #Maps that doesn't (gamemode adventure):
 execute if data storage switch:main {map:"pitch_creep_1"} run function switch:engine/maps/adventure/pitch_creep_1/
 execute if data storage switch:main {map:"pitchout_1"} run function switch:engine/maps/adventure/pitchout_1/
 execute if data storage switch:main {map:"boat_race_1"} run function switch:engine/maps/adventure/boat_race_1/
+execute if data storage switch:main {map:"laser_game"} run function switch:engine/maps/adventure/laser_game/
+execute if data storage switch:main {map:"prison"} run function switch:engine/maps/adventure/prison/
 
 
 
