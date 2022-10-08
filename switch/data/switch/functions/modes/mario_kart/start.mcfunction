@@ -40,6 +40,7 @@ scoreboard objectives add switch.temp.motion_z dummy
 scoreboard objectives add switch.temp.predicted_pos_x dummy
 scoreboard objectives add switch.temp.predicted_pos_z dummy
 scoreboard objectives add switch.temp.old_pos_x dummy
+scoreboard objectives add switch.temp.old_pos_y dummy
 scoreboard objectives add switch.temp.old_pos_z dummy
 scoreboard objectives add switch.temp.booster_timer dummy
 
