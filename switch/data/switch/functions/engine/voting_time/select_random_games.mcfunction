@@ -4,13 +4,15 @@ execute as @e[tag=switch.random] run function switch:engine/voting_time/get/rand
 
 scoreboard players set #wrong switch.data 0
 function switch:engine/voting_time/get/min_players
-execute if score #index switch.data matches 1 if score #player_count switch.data < #min_players switch.data run say wrong
+function switch:engine/voting_time/get/max_players
 execute if score #index switch.data matches 1 if score #player_count switch.data < #min_players switch.data run scoreboard players add #wrong switch.data 1
+execute if score #index switch.data matches 1 if score #player_count switch.data > #max_players switch.data run scoreboard players add #wrong switch.data 1
 execute if score #index switch.data matches 2.. if score #random switch.data = #game_1 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #index switch.data matches 3.. if score #random switch.data = #game_2 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #index switch.data matches 4.. if score #random switch.data = #game_3 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #index switch.data matches 5.. if score #random switch.data = #game_4 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #wrong switch.data matches 0 if score #player_count switch.data < #min_players switch.data run scoreboard players add #wrong switch.data 1
+execute if score #wrong switch.data matches 0 if score #player_count switch.data > #max_players switch.data run scoreboard players add #wrong switch.data 1
 
 execute if score #wrong switch.data matches 1 if score #index switch.data matches 1 run scoreboard players operation #game_1 switch.data = #random switch.data
 execute if score #wrong switch.data matches 0 if score #index switch.data matches 2 run scoreboard players operation #game_2 switch.data = #random switch.data
