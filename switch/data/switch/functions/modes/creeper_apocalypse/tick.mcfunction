@@ -9,7 +9,7 @@ effect give @e[type=creeper] resistance 99999 0 true
 execute as @e[type=area_effect_cloud] at @s run function switch:modes/creeper_apocalypse/creeper_exploded
 scoreboard players add @e[type=creeper] switch.temp.duplication 1
 execute as @e[type=creeper,scores={switch.temp.duplication=200}] run data modify entity @s ignited set value 1b
-execute as @e[type=creeper] at @s if block ~ ~-4 ~ black_concrete run tp @s 0 -10000 0
+execute as @e[type=creeper] at @s if block ~ ~-1 ~ barrier run tp @s 0 -10000 0
 
 #Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
 execute unless entity @a[tag=switch.alive] run function switch:modes/creeper_apocalypse/process_end
