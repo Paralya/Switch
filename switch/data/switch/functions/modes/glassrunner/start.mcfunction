@@ -1,4 +1,12 @@
 
+##Item custom
+#define storage switch:glassrunner
+data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b}}}
+data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b}}}
+
+data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:punch",lvl:5s}]}}
+
+
 ##Fonction executée lors du lancement de la partie
 
 clear @a
@@ -9,9 +17,11 @@ team empty switch.no_pvp
 
 team add switch.glassrunner.red
 team modify switch.glassrunner.red color red
+team modify switch.glassrunner.red friendlyFire false
 
 team add switch.glassrunner.blue
 team modify switch.glassrunner.blue color blue
+team modify switch.glassrunner.blue friendlyFire false
 
 
 
@@ -44,4 +54,6 @@ scoreboard players set #glassrunner_seconds switch.data 0
 
 scoreboard objectives add switch.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add switch.glassrunner.deathCount deathCount
+
+
 
