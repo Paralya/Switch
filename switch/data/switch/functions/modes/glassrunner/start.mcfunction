@@ -4,7 +4,7 @@
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b}}}
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b}}}
 
-data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:punch",lvl:5s}]}}
+data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s}],CanDestroy:["minecraft:glass","minecraft:red_stained_glass","minecraft:blue_stained_glass","minecraft:pink_stained_glass","minecraft:light_blue_stained_glass"]}}
 
 
 ##Fonction executée lors du lancement de la partie
