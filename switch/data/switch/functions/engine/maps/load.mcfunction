@@ -15,6 +15,7 @@ data modify storage switch:main map set from storage switch:main maps_to_choose[
 execute if data storage switch:main {map:"traitor_original"} run function switch:engine/maps/survival/traitor_original/
 execute if data storage switch:main {map:"zone_51"} run function switch:engine/maps/survival/zone_51/
 execute if data storage switch:main {map:"spectre_original"} run function switch:engine/maps/survival/spectre_original/
+execute if data storage switch:main {map:"mushroom_plains"} run function switch:engine/maps/survival/mushroom_plains/
 execute if data storage switch:main {map:"enchanting_island"} run function switch:engine/maps/survival/enchanting_island/
 
 #Maps that doesn't (gamemode adventure):
