@@ -5,5 +5,5 @@
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
 #Ici : dans tous les cas, tuer la personne qui join
-function switch:modes/a_template/death
+function switch:modes/boat_race/death
 
