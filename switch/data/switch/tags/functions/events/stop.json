@@ -8,6 +8,7 @@
 		"switch:modes/border_run/calls/stop",
 		"switch:modes/creeper_apocalypse/calls/stop",
 		"switch:modes/traitors_game/calls/stop",
+		"switch:modes/boat_race/calls/stop",
 		"switch:modes/a_template/calls/stop"
 	]
 }
