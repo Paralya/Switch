@@ -5,7 +5,6 @@ scoreboard players add #mario_kart_ticks switch.data 1
 
 #execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/mario_kart/death
 
-execute as @e[tag=switch.kart.init] run function switch:modes/mario_kart/kart/init
 execute as @a[gamemode=!spectator,predicate=switch:has_vehicle,nbt=!{Motion:[0.00d,0.00d,0.00d]}] run function switch:modes/mario_kart/kart/player_moving
 execute as @e[tag=switch.kart] at @s run function switch:modes/mario_kart/kart/tick
 
