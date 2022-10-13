@@ -43,7 +43,6 @@ execute if score #booster switch.data matches 0 if block ~ ~-1 ~ magenta_glazed_
 execute if score #booster switch.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=south] run scoreboard players set #booster switch.data 4
 
 
-
 ##Store calculated motion into storage switch:main Motion[0] & Motion[2]
 data modify storage switch:main Motion set value [0.0d, 0.0d, 0.0d]
 scoreboard players operation #new_motion_x switch.data = #motion_x switch.data

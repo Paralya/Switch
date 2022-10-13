@@ -9,9 +9,11 @@ execute if score @s switch.temp.booster_timer matches 0 if score #booster switch
 execute if score @s switch.temp.booster_timer matches 0 if score #booster switch.data matches 3..4 run scoreboard players operation #new switch.data = #new_motion_z switch.data
 execute unless score #new switch.data matches -2500000..2500000 run scoreboard players operation @s switch.temp.engine *= #100 switch.data
 execute unless score #new switch.data matches -2500000..2500000 run scoreboard players operation @s switch.temp.engine /= #95 switch.data
+execute unless score #new switch.data matches -2500000..2500000 run particle happy_villager ~ ~.5 ~ 1 1 1 0 10
 execute unless score #new switch.data matches -2500000..2500000 if score @s switch.temp.engine > @s switch.temp.max_engine run scoreboard players operation @s switch.temp.engine = @s switch.temp.max_engine
 execute if score #new switch.data matches -2500000..2500000 run scoreboard players operation @s switch.temp.engine *= #95 switch.data
 execute if score #new switch.data matches -2500000..2500000 run scoreboard players operation @s switch.temp.engine /= #100 switch.data
+execute if score #new switch.data matches -2500000..2500000 run particle angry_villager ~ ~.5 ~ 1 1 1 0 10
 execute if score @s switch.temp.booster_timer matches 0 if score #new switch.data matches -2500000..2500000 run scoreboard players set @s switch.temp.booster_timer 20
 playsound block.note_block.harp block @a[predicate=switch:has_vehicle_with_tag]
 
