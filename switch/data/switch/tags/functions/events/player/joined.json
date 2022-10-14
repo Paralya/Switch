@@ -8,6 +8,8 @@
 		"switch:modes/border_run/calls/joined",
 		"switch:modes/creeper_apocalypse/calls/joined",
 		"switch:modes/traitors_game/calls/joined",
+		"switch:modes/boat_race/calls/joined",
+		"switch:modes/spectres_game/calls/joined",
 		"switch:modes/a_template/calls/joined"
 	]
 }

@@ -4,7 +4,7 @@ tag @s add switch.temp
 #Role selection
 scoreboard players add #next_player_id switch.data 1
 scoreboard players add #next_role switch.data 1
-execute if score #next_role switch.data matches 1 run team join switch.temp.detective @s
+execute if score #next_role switch.data matches 1 run team join switch.temp.visible @s
 execute if score #next_role switch.data matches 1 run tag @s add switch.traitors_game.detective
 execute if score #next_role switch.data matches 1 run attribute @s generic.max_health modifier add 1-1-1-1-2 "Inspecteur" -0.2 multiply_base
 execute if score #next_role switch.data matches 2 run tag @s add switch.traitors_game.traitor

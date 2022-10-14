@@ -14,7 +14,7 @@ tag @a remove switch.traitors_game.innocent
 tag @a remove switch.traitors_game.traitor
 tag @a remove switch.traitors_game.big_traitor
 tag @a remove switch.alive
-team remove switch.temp.detective
+team remove switch.temp.visible
 
 scoreboard objectives remove switch.temp.id
 scoreboard objectives remove switch.temp.cooldown

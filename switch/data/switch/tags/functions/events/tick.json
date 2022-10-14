@@ -9,6 +9,7 @@
 		"switch:modes/creeper_apocalypse/calls/tick",
 		"switch:modes/traitors_game/calls/tick",
 		"switch:modes/boat_race/calls/tick",
+		"switch:modes/spectres_game/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
 }

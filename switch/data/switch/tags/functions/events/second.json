@@ -9,6 +9,7 @@
 		"switch:modes/creeper_apocalypse/calls/second",
 		"switch:modes/traitors_game/calls/second",
 		"switch:modes/boat_race/calls/second",
+		"switch:modes/spectres_game/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }

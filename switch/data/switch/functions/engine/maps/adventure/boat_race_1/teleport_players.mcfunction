@@ -13,3 +13,4 @@ execute if score #count switch.data matches 10 in overworld run tp @s 5030.5 100
 
 scoreboard players add #count switch.data 1
 scoreboard players operation #count switch.data %= #11 switch.data
+
