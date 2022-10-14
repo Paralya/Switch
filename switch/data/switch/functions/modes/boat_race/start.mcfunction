@@ -23,7 +23,7 @@ difficulty normal
 time set 13475
 weather clear
 
-##give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
+##Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
 execute as @a at @s run function switch:modes/boat_race/give_items
 
 gamerule mobGriefing false
@@ -31,10 +31,12 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Boat Race.\nÀ vos Marques, Prêt, Partez.\nFaites Chauffer les bateaux.\nVous avez 8 minutes maximum pour finir la course:)"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Boat Race. Vous avez 8 secondes pour placer votre bateau et y rentrer ainsi que 8 minutes maximum pour finir la course !"}]
 
-scoreboard players set #boat_race_seconds switch.data -5
+scoreboard players set #boat_race_seconds switch.data -8
 scoreboard players set #boat_race_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #detect_end switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount
+

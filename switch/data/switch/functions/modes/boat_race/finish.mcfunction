@@ -1,13 +1,16 @@
+
 tag @s add switch.boat_race.finished
 
-scoreboard players operation #boat_race.player_time.minutes switch.data = #boat_race_seconds switch.data
-scoreboard players operation #boat_race.player_time.minutes switch.data /= #60 switch.data
-scoreboard players operation #boat_race.player_time.seconds switch.data = #boat_race_seconds switch.data
-scoreboard players operation #boat_race.player_time.seconds_to_remove switch.data = #boat_race.player_time.minutes switch.data
-scoreboard players operation #boat_race.player_time.seconds_to_remove switch.data *= #60 switch.data
-scoreboard players operation #boat_race.player_time.seconds switch.data -= #boat_race.player_time.seconds_to_remove switch.data
+scoreboard players operation #minutes switch.data = #boat_race_seconds switch.data
+scoreboard players operation #minutes switch.data /= #60 switch.data
+scoreboard players operation #seconds switch.data = #boat_race_seconds switch.data
+scoreboard players operation #seconds_to_remove switch.data = #minutes switch.data
+scoreboard players operation #seconds_to_remove switch.data *= #60 switch.data
+scoreboard players operation #seconds switch.data -= #seconds_to_remove switch.data
 
-tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"selector":"@s"},{"text":" a fini la course, il a mis "},{"score":{"name":"#boat_race.player_time.minutes","objective":"switch.data"}},{"text":":"},{"score":{"name":"#boat_race.player_time.seconds","objective":"switch.data"}},{"text":" !"}]
+tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"selector":"@s","color":"yellow"},{"text":" a fini la course, il a effectué un temps de "},{"score":{"name":"#minutes","objective":"switch.data"},"color":"aqua"},{"text":"m"},{"score":{"name":"#seconds","objective":"switch.data"},"color":"aqua"},{"text":"s !"}]
+execute as @a at @s run playsound entity.player.levelup ambient @s
 
-gamemode spectator
+gamemode spectator @s
 kill @e[type=chest_boat,distance=..1.25]
+

@@ -4,9 +4,11 @@
 scoreboard players add #boat_race_seconds switch.data 1
 
 execute if score #boat_race_seconds switch.data matches 0.. run function switch:modes/boat_race/xp_bar
-
-execute as @a[tag=!switch.boat_race.finished,x=5033,y=105,z=5000,dx=3,dy=4,dz=4] at @s run function switch:modes/boat_race/finish
+execute if score #boat_race_seconds switch.data matches 0 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Ouverture de la barrière ! GOOOOOO !"}]
+execute if score #boat_race_seconds switch.data matches 0 run fill 5026 100 5007 5026 100 4997 air
+execute if score #boat_race_seconds switch.data matches ..-1 run fill 5026 100 5007 5026 100 4997 quartz_slab
 
 #Clear des anciens mobs si il y en a
-execute if score #boat_race_seconds switch.data matches ..-1 run tp @e[type=chest_boat] 0 -10000 0
-execute if score #boat_race_seconds switch.data matches ..-1 run kill @e[type=chest_boat]
+execute if score #boat_race_seconds switch.data matches ..-7 run tp @e[type=chest_boat] 0 -10000 0
+execute if score #boat_race_seconds switch.data matches ..-7 run kill @e[type=chest_boat]
+
