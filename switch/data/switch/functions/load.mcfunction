@@ -1,6 +1,7 @@
 
 tag Stoupy51 add convention.debug
 
+scoreboard objectives add switch.id dummy
 scoreboard objectives add switch.data dummy
 scoreboard objectives add switch.money dummy
 scoreboard objectives add switch.last_total_games dummy
