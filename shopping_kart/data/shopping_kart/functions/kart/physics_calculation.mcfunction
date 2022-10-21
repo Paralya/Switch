@@ -1,7 +1,7 @@
 
 #Define multiplier depending on engine speed & block stepping on
 #Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow
-#When in air : surface = 0 & multiplier divided by 2
+#When in air : surface = 0
 scoreboard players set #surface shopping_kart.data 0
 execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/fast run scoreboard players set #surface shopping_kart.data 1
 execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/slippery run scoreboard players set #surface shopping_kart.data 2
@@ -19,7 +19,6 @@ scoreboard players operation #multiplier shopping_kart.data += #engine shopping_
 execute if score #mushroom shopping_kart.data matches 1 run scoreboard players operation #multiplier shopping_kart.data *= #2 shopping_kart.data
 execute if score #mushroom shopping_kart.data matches 1 run scoreboard players operation @s shopping_kart.engine *= #2 shopping_kart.data
 execute if score #mushroom shopping_kart.data matches 1 if score @s shopping_kart.engine > @s shopping_kart.max_engine run scoreboard players operation @s shopping_kart.engine = @s shopping_kart.max_engine
-execute if block ~ ~-.1 ~ air run scoreboard players operation #multiplier shopping_kart.data /= #2 shopping_kart.data
 
 
 
