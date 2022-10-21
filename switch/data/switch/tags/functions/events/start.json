@@ -10,6 +10,7 @@
 		"switch:modes/traitors_game/calls/start",
 		"switch:modes/boat_race/calls/start",
 		"switch:modes/spectres_game/calls/start",
+		"switch:modes/kart_racer/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }

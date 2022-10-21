@@ -6,5 +6,5 @@
 
 #Ici : dans tous les cas, tuer la personne qui join
 tag @s remove switch.playing
-function switch:modes/mario_kart/complete
+function switch:modes/kart_racer/complete
 

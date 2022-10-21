@@ -8,9 +8,6 @@ function shopping_kart:kart/visual_passenger
 ##Water specification
 function shopping_kart:kart/physics_water
 
-##Run into a banana
-function shopping_kart:kart/physics_banana
-
 ##Physics calculation depending on engine speed, surface, old motion, booster, etc.
 function shopping_kart:kart/physics_calculation
 

@@ -10,6 +10,7 @@
 		"switch:modes/traitors_game/calls/stop",
 		"switch:modes/boat_race/calls/stop",
 		"switch:modes/spectres_game/calls/stop",
+		"switch:modes/kart_racer/calls/stop",
 		"switch:modes/a_template/calls/stop"
 	]
 }

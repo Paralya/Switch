@@ -17,9 +17,9 @@ time set 18000
 weather clear
 
 ##Téléportation des joueurs + give d'items
-data modify storage switch:main maps_to_choose set value ["mario_kart_1"]
+data modify storage switch:main maps_to_choose set value ["kart_racer_1"]
 function switch:engine/maps/load
-execute as @a at @s run function switch:modes/mario_kart/give_items
+execute as @a at @s run function switch:modes/kart_racer/give_items
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
@@ -28,8 +28,8 @@ gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Mario Kart, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
 
-scoreboard players set #mario_kart_seconds switch.data -10
-scoreboard players set #mario_kart_ticks switch.data 0
+scoreboard players set #kart_racer_seconds switch.data -10
+scoreboard players set #kart_racer_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 

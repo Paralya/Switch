@@ -10,6 +10,7 @@
 		"switch:modes/traitors_game/calls/joined",
 		"switch:modes/boat_race/calls/joined",
 		"switch:modes/spectres_game/calls/joined",
+		"switch:modes/kart_racer/calls/joined",
 		"switch:modes/a_template/calls/joined"
 	]
 }
