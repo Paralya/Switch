@@ -1,5 +1,8 @@
 
-xp set @s[tag=switch.first_life] 246
-xp set @s[tag=switch.second_life] 493
-xp set @s[tag=switch.third_life] 740
+##XP from 0 to 100 points
+#points > 0 && points < 100
+execute if entity @s[tag=switch.first_life] run scoreboard players set #points switch.data 33
+execute if entity @s[tag=switch.second_life] run scoreboard players set #points switch.data 66
+execute if entity @s[tag=switch.third_life] run scoreboard players set #points switch.data 100
+function switch:engine/xp_bar_at_s
 

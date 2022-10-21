@@ -7,7 +7,7 @@ item replace entity @s hotbar.2 with ender_pearl 3
 item replace entity @s hotbar.2 with arrow
 
 attribute @s generic.attack_speed base set 1024
-xp set @s 100 levels
+xp set @s 0 levels
 xp set @s 0 points
 
 execute as @e[type=item,tag=!switch.done,nbt={Item:{id:"minecraft:diamond_sword"}}] run data modify entity @s Item.tag.Enchantments append value {id:"minecraft:knockback",lvl:3}
