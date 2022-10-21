@@ -33,4 +33,10 @@ scoreboard players set #kart_racer_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 
+##TODO :
+#Ajouter un système de préparation
+#Système de checkpoint
+#Système de respawn
+#Système de tours
+#Système de victoire
 
