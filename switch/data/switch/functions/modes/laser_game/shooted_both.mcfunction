@@ -1,7 +1,7 @@
 
 playsound entity.player.hurt player @s
 execute as @a[tag=switch.temp] at @s run playsound entity.arrow.hit_player player @s
-scoreboard players add @a[tag=switch.temp] switch.temp.kills 1
+scoreboard players add @a[tag=switch.temp] switch.temp.individual_points 10
 
 execute if score @s switch.temp.shield matches 1.. run scoreboard players remove @s switch.temp.shield 1
 execute if score @s switch.temp.shield matches 1.. run tellraw @s [{"selector":"@a[tag=switch.temp]"},{"text":" vous a tiré dessus ! Plus que ","color":"gray"},{"score":{"name":"@s","objective":"switch.temp.shield"},"color":"green"},{"text":" points de bouclier.","color":"gray"}]

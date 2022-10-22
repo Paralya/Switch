@@ -41,7 +41,7 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 
 data modify storage iris:input TargetEntities set value true
 data modify storage iris:input MaxRecursionDepth set value 50
-scoreboard objectives add switch.temp.kills dummy {"text":"Nombre de Kills","color":"yellow"}
+scoreboard objectives add switch.temp.individual_points dummy {"text":"Nombre de Kills","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.dead_cooldown dummy
@@ -54,7 +54,7 @@ scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
 scoreboard players set #remaining_time switch.data 150
 scoreboard players set #process_end switch.data 0
-scoreboard players set #base_reload switch.data 30
+scoreboard players set #base_reload switch.data 15
 
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
