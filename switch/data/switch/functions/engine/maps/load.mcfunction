@@ -1,6 +1,5 @@
 
-##Maps disponibles :
-#data modify storage switch:main maps_to_choose set value ["pitch_creep_1","pitchout_1","traitor_original","zone_51"]
+##Maps disponibles listées ici
 
 scoreboard players set #list_length switch.data 0
 execute store result score #list_length switch.data run data get storage switch:main maps_to_choose
