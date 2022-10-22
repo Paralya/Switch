@@ -41,7 +41,7 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 
 data modify storage iris:input TargetEntities set value true
 data modify storage iris:input MaxRecursionDepth set value 50
-scoreboard objectives add switch.temp.kills dummy
+scoreboard objectives add switch.temp.kills dummy {"text":"Nombre de Kills","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.dead_cooldown dummy
@@ -52,14 +52,14 @@ scoreboard players set #laser_game_seconds switch.data 0
 scoreboard players set #laser_game_ticks switch.data 0
 scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
-scoreboard players set #remaining_time switch.data 300
+scoreboard players set #remaining_time switch.data 150
 scoreboard players set #process_end switch.data 0
 scoreboard players set #base_reload switch.data 30
 
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
 team add switch.temp.sidebar.1
-team modify switch.temp.sidebar.3 suffix [{"text":"emps restant : "},{"text":"5","color":"yellow"},{"text":"m"},{"text":"0","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"emps restant : "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
 team modify switch.temp.sidebar.2 suffix [{"text":"quipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.1 suffix [{"text":"uipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 color blue

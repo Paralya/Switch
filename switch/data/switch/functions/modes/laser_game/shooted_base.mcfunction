@@ -35,6 +35,6 @@ execute if score #color switch.data matches 0 run function switch:modes/laser_ga
 execute if score #color switch.data matches 1 run scoreboard players add #red_points switch.data 20
 execute if score #color switch.data matches 1 run function switch:modes/laser_game/update_sidebar/red_points
 
-scoreboard players set #base_reload switch.data 30
+scoreboard players set #base_reload switch.data 15
 setblock 516 104 523 dark_oak_trapdoor[powered=true,open=true]
 
