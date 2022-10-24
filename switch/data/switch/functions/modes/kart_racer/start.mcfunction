@@ -33,6 +33,28 @@ scoreboard players set #kart_racer_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 
+scoreboard objectives add switch.temp.dx dummy
+scoreboard objectives add switch.temp.dy dummy
+scoreboard objectives add switch.temp.dz dummy
+scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.checkpoint dummy
+scoreboard objectives add switch.lap dummy
+scoreboard players set @a switch.checkpoint 0
+scoreboard players set @a switch.lap 0
+
+#Checkpoint remember kart state (for respawn)
+data modify storage switch:main respawn_states set value [{id:0,Pos:[0.d,0.d,0.d],Rotation:[0.f,0.f],Motion:[0.d,0.d,0.d],Tags:[],scores:{cp_id:0,shopping_kart:{engine:0,max_engine:0,motion_x:0,motion_z:0,predicted_pos_x:0,predicted_pos_z:0,old_pos_x:0,old_pos_y:0,old_pos_z:0,booster_timer:0}}}]
+
+##Number of checkpoints and laps per map
+scoreboard players set #total_laps switch.data 3
+scoreboard players set #total_checkpoints switch.data 1
+execute if data storage switch:main {map:"kart_racer_1"} run scoreboard players set #total_checkpoints switch.data 4
+
+#summon marker 1 1 1 {Tags:["switch.checkpoint"],data:{cp:0, height:5, length:5, width:3}}
+#summon marker 1 1 1 {Tags:["switch.checkpoint"],data:{cp:1, facing:1b, height:5, length:5, width:3}}
+scoreboard players set #next_id switch.temp.id 0
+execute as @e[type=marker,tag=switch.checkpoint] run function switch:modes/kart_racer/checkpoints_setup
+
 ##TODO :
 #Ajouter un système de préparation
 #Système de checkpoint
