@@ -4,7 +4,8 @@
 #execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-#Ici : dans tous les cas, tuer la personne qui join
+#Ici : dans tous les cas, mettre la personne qui join en spec
 tag @s remove switch.playing
+tag @s remove switch.completed
 function switch:modes/kart_racer/complete
 
