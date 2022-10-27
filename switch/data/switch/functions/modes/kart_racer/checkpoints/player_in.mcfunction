@@ -1,0 +1,17 @@
+
+#Switch to next checkpoint
+scoreboard players add @s switch.checkpoint 1
+scoreboard players operation @s switch.checkpoint %= #modulo switch.data
+execute if score @s switch.checkpoint matches 0 run scoreboard players add @s switch.lap 1
+
+
+#Playsounds & messages
+execute if score @s switch.checkpoint matches 0 if score @s switch.lap < #total_laps switch.data run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" passe au tour n°"},{"score":{"name":"@s","objective":"switch.lap"},"color":"aqua"},{"text":"/"},{"score":{"name":"#total_laps","objective":"switch.data"},"color":"aqua"}]
+execute if score @s switch.checkpoint matches 0 at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 1 1
+execute unless score @s switch.checkpoint matches 0 if score @s switch.lap < #total_laps switch.data run tellraw @s ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Checkpoint n°"},{"score":{"name":"@s","objective":"switch.checkpoint"},"color":"aqua"},{"text":"/"},{"score":{"name":"#total_checkpoints","objective":"switch.data"},"color":"aqua"}]
+execute unless score @s switch.checkpoint matches 0 at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 1 2
+execute if score @s switch.checkpoint matches 0 if score @s switch.lap >= #total_laps switch.data run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" a terminé la course !\n"}]
+
+#Checkpoint remember
+function switch:modes/kart_racer/checkpoints/remember/
+
