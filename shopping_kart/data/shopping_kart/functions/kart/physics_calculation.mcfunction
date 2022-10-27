@@ -1,20 +1,18 @@
 
 #Define multiplier depending on engine speed & block stepping on
-#Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow
+#Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
 #When in air : surface = 0
-scoreboard players set #surface shopping_kart.data 0
-execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/fast run scoreboard players set #surface shopping_kart.data 1
-execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/slippery run scoreboard players set #surface shopping_kart.data 2
-execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/slow run scoreboard players set #surface shopping_kart.data 3
+function shopping_kart:kart/physics_get_surface
 
 scoreboard players operation #engine shopping_kart.data = @s shopping_kart.engine
 execute if score #surface shopping_kart.data matches 0..1 run scoreboard players set #multiplier shopping_kart.data 10
 execute if score #surface shopping_kart.data matches 2 run scoreboard players set #multiplier shopping_kart.data 3
-execute if score #surface shopping_kart.data matches 3 run scoreboard players set #multiplier shopping_kart.data 1
+execute if score #surface shopping_kart.data matches 3..4 run scoreboard players set #multiplier shopping_kart.data 1
 execute if score #surface shopping_kart.data matches 0 run scoreboard players operation #engine shopping_kart.data /= #20 shopping_kart.data
 execute if score #surface shopping_kart.data matches 1 run scoreboard players operation #engine shopping_kart.data /= #15 shopping_kart.data
 execute if score #surface shopping_kart.data matches 2 run scoreboard players operation #engine shopping_kart.data /= #120 shopping_kart.data
 execute if score #surface shopping_kart.data matches 3 run scoreboard players operation #engine shopping_kart.data /= #30 shopping_kart.data
+execute if score #surface shopping_kart.data matches 4 run scoreboard players operation #engine shopping_kart.data /= #60 shopping_kart.data
 scoreboard players operation #multiplier shopping_kart.data += #engine shopping_kart.data
 execute if score #mushroom shopping_kart.data matches 1 run scoreboard players operation #multiplier shopping_kart.data *= #2 shopping_kart.data
 execute if score #mushroom shopping_kart.data matches 1 run scoreboard players operation @s shopping_kart.engine *= #2 shopping_kart.data

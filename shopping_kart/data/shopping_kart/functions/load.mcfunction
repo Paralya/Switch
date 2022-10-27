@@ -13,7 +13,7 @@ scoreboard objectives add shopping_kart.old_pos_z dummy
 scoreboard objectives add shopping_kart.booster_timer dummy
 
 scoreboard players set ShoppingKart load.status 1000
-scoreboard players set #default_max_engine shopping_kart.data 1500
+scoreboard players set #default_max_engine shopping_kart.data 1750
 
 #define storage shopping_kart:main
 #define score_holder #success
@@ -28,7 +28,7 @@ scoreboard players set #10 shopping_kart.data 10
 scoreboard players set #15 shopping_kart.data 15
 scoreboard players set #20 shopping_kart.data 20
 scoreboard players set #30 shopping_kart.data 30
-scoreboard players set #95 shopping_kart.data 95
+scoreboard players set #60 shopping_kart.data 60
 scoreboard players set #99 shopping_kart.data 99
 scoreboard players set #100 shopping_kart.data 100
 scoreboard players set #120 shopping_kart.data 120
