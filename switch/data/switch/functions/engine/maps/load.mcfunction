@@ -26,6 +26,7 @@ execute if data storage switch:main {map:"laser_game"} run function switch:engin
 execute if data storage switch:main {map:"prison"} run function switch:engine/maps/adventure/prison/
 
 execute if data storage switch:main {map:"bowser_castle"} run function switch:engine/maps/adventure/bowser_castle/
+execute if data storage switch:main {map:"trackmania_stadium_1"} run function switch:engine/maps/adventure/trackmania_stadium_1/
 
 
 

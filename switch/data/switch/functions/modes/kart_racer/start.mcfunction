@@ -49,15 +49,9 @@ scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 
 ##Téléportation des joueurs + give d'items
-data modify storage switch:main maps_to_choose set value ["bowser_castle"]
+data modify storage switch:main maps_to_choose set value ["bowser_castle", "trackmania_stadium_1"]
 function switch:engine/maps/load
 execute as @a at @s run function switch:modes/kart_racer/give_items
-scoreboard players operation #modulo switch.data = #total_checkpoints switch.data
-scoreboard players add #modulo switch.data 1
 
-#Checkpoint remember kart state (for respawn)
-data modify storage switch:main respawn_states set value []
-scoreboard players set #next_id switch.temp.id 0
-execute as @e[type=marker,tag=switch.checkpoint] run function switch:modes/kart_racer/checkpoints/setup
-execute as @a run function switch:modes/kart_racer/player_setup_id
+schedule function switch:modes/kart_racer/post_load 5s
 
