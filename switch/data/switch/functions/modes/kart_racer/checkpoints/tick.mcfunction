@@ -12,3 +12,6 @@ execute if score #checkpoint switch.data matches -1 run scoreboard players opera
 
 execute as @a[predicate=switch:has_same_checkpoint] run function switch:modes/kart_racer/checkpoints/check_player_pos
 
+particle wax_on ~ ~2 ~ 2 2 2 0 2
+particle wax_off ~ ~2 ~ 2 2 2 0 2
+

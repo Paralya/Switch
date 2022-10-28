@@ -8,3 +8,5 @@ summon marker 0 0 0 {UUID:[I;0,538116096,0,0]}
 execute as 00000000-2013-0000-0000-000000000000 run function switch:modes/kart_racer/checkpoints/respawn/from_marker
 tag @s remove shopping_kart.temp
 
+tag @s add switch.playsound
+

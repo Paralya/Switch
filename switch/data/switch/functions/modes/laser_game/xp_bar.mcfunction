@@ -8,8 +8,8 @@ tag @s[tag=global.ignore,scores={switch.temp.dead_cooldown=0}] remove global.ign
 scoreboard players set #is_alive switch.data 0
 execute if score @s switch.temp.dead_cooldown matches 0 run scoreboard players set #is_alive switch.data 1
 
-##XP from 0 to 100 points
-#points > 0 && points < 100
+##XP from 0 to 1000 points
+#points > 0 && points < 1000
 ##When the player is alive: switch.temp.cooldown (Shoot cooldown)
 #-20 ticks = 100%
 #0 ticks = 0%
