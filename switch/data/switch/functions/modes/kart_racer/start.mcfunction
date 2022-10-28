@@ -36,9 +36,11 @@ scoreboard objectives add switch.temp.dz dummy
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.checkpoint dummy {"text":"Checkpoints passés","color":"dark_purple"}
 scoreboard objectives add switch.respawn_cp_id dummy
+scoreboard objectives add switch.hard_respawn_cp_id dummy
 scoreboard objectives add switch.checkpoint dummy
 scoreboard objectives add switch.lap dummy
 scoreboard players set @a switch.respawn_cp_id -1
+scoreboard players set @a switch.hard_respawn_cp_id -1
 scoreboard players set @a switch.temp.checkpoint 0
 scoreboard players set @a switch.checkpoint 0
 scoreboard players set @a switch.lap 1

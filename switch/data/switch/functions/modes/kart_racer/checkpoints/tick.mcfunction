@@ -10,6 +10,8 @@ scoreboard players operation #checkpoint switch.data = @s switch.checkpoint
 scoreboard players remove #checkpoint switch.data 1
 execute if score #checkpoint switch.data matches -1 run scoreboard players operation #checkpoint switch.data = #total_checkpoints switch.data
 
+scoreboard players set #can_hard_reset switch.data 0
+execute if entity @s[tag=switch.can_hard_reset] run scoreboard players set #can_hard_reset switch.data 1
 execute as @a[predicate=switch:has_same_checkpoint] run function switch:modes/kart_racer/checkpoints/check_player_pos
 
 particle wax_on ~ ~2 ~ 2 2 2 0 2
