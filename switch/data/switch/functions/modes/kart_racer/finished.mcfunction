@@ -6,7 +6,7 @@ scoreboard players operation @s switch.temp.checkpoint -= #kart_racer_ticks swit
 tag @s add switch.completed
 
 tag @s add shopping_kart.temp
-tp @e[tag=shopping_kart.kart,predicate=shopping_kart:have_player_passenger] 0 -10000 0
 kill @e[tag=shopping_kart.kart,predicate=shopping_kart:have_player_passenger]
+kill @e[type=item]
 tag @s remove shopping_kart.temp
 

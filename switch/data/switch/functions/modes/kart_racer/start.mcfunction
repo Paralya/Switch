@@ -23,7 +23,7 @@ gamerule fallDamage false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
 
-scoreboard players set #remaining_time switch.data 300
+scoreboard players set #remaining_time switch.data 310
 scoreboard players set #kart_racer_seconds switch.data -10
 scoreboard players set #kart_racer_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
@@ -57,24 +57,24 @@ team add switch.temp.8
 team add switch.temp.9
 team add switch.temp.10
 team add switch.temp.10+
-team modify switch.temp.1 prefix {"text":"[1er] ","color":"#FFE700"}
-team modify switch.temp.2 prefix {"text":"[2ème] ","color":"#C0C0C0"}
-team modify switch.temp.3 prefix {"text":"[3ème] ","color":"#CD7F32"}
-team modify switch.temp.4 prefix {"text":"[4ème] ","color":"#696969"}
-team modify switch.temp.5 prefix {"text":"[5ème] ","color":"#696969"}
-team modify switch.temp.6 prefix {"text":"[6ème] ","color":"#696969"}
-team modify switch.temp.7 prefix {"text":"[7ème] ","color":"#696969"}
-team modify switch.temp.8 prefix {"text":"[8ème] ","color":"#696969"}
-team modify switch.temp.9 prefix {"text":"[9ème] ","color":"#696969"}
-team modify switch.temp.10 prefix {"text":"[10ème] ","color":"#696969"}
-team modify switch.temp.10+ prefix {"text":"[Trop Nul] ","color":"#9200DF"}
+team modify switch.temp.1 suffix {"text":" [1er]","color":"#FFE700"}
+team modify switch.temp.2 suffix {"text":" [2ème]","color":"#C0C0C0"}
+team modify switch.temp.3 suffix {"text":" [3ème]","color":"#CD7F32"}
+team modify switch.temp.4 suffix {"text":" [4ème]","color":"#696969"}
+team modify switch.temp.5 suffix {"text":" [5ème]","color":"#696969"}
+team modify switch.temp.6 suffix {"text":" [6ème]","color":"#696969"}
+team modify switch.temp.7 suffix {"text":" [7ème]","color":"#696969"}
+team modify switch.temp.8 suffix {"text":" [8ème]","color":"#696969"}
+team modify switch.temp.9 suffix {"text":" [9ème]","color":"#696969"}
+team modify switch.temp.10 suffix {"text":" [10ème]","color":"#696969"}
+team modify switch.temp.10+ suffix {"text":" [Trop Nul]","color":"#9200DF"}
 
 ##Number of checkpoints and laps per map
 scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 
 ##Téléportation des joueurs + give d'items
-data modify storage switch:main maps_to_choose set value ["bowser_castle", "trackmania_stadium_1", "snow_travel"]
+data modify storage switch:main maps_to_choose set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "baby_park"]
 function switch:engine/maps/load
 execute as @a at @s run function switch:modes/kart_racer/give_items
 
