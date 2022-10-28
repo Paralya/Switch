@@ -14,10 +14,7 @@ execute if score #surface shopping_kart.data matches 2 run scoreboard players op
 execute if score #surface shopping_kart.data matches 3 run scoreboard players operation #engine shopping_kart.data /= #30 shopping_kart.data
 execute if score #surface shopping_kart.data matches 4 run scoreboard players operation #engine shopping_kart.data /= #60 shopping_kart.data
 scoreboard players operation #multiplier shopping_kart.data += #engine shopping_kart.data
-execute if score #mushroom shopping_kart.data matches 1 run scoreboard players operation #multiplier shopping_kart.data *= #2 shopping_kart.data
-execute if score #mushroom shopping_kart.data matches 1 run scoreboard players operation @s shopping_kart.engine *= #2 shopping_kart.data
-execute if score #mushroom shopping_kart.data matches 1 if score @s shopping_kart.engine > @s shopping_kart.max_engine run scoreboard players operation @s shopping_kart.engine = @s shopping_kart.max_engine
-
+execute if entity @s[tag=shopping_kart.reactor_boost] run scoreboard players operation #multiplier shopping_kart.data *= #2 shopping_kart.data
 
 
 ##Stop motion when predicted position isn't reached

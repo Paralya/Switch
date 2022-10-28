@@ -1,6 +1,7 @@
 
 tag @s add shopping_kart.speed_up
-data modify entity @s Rotation[0] set from storage shopping_kart:main Rotation
+execute if entity @s[tag=!shopping_kart.no_steering] run data modify entity @s Rotation[0] set from storage shopping_kart:main Rotation
+execute if entity @s[tag=shopping_kart.no_steering] run function shopping_kart:kart/no_steering
 
 function shopping_kart:kart/tick_calculations
 
