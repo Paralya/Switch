@@ -39,11 +39,13 @@ execute if score #booster shopping_kart.data matches 0 if block ~ ~-1 ~ magenta_
 
 ##Store calculated motion into storage shopping_kart:main Motion[0] & Motion[2]
 data modify storage shopping_kart:main Motion set value [0.0d, 0.0d, 0.0d]
-scoreboard players operation #new_motion_x shopping_kart.data = #motion_x shopping_kart.data
-scoreboard players operation #new_motion_x shopping_kart.data *= #multiplier shopping_kart.data
+scoreboard players set #new_motion_x shopping_kart.data 0
+scoreboard players set #new_motion_z shopping_kart.data 0
+execute unless score @s shopping_kart.engine matches 0 run scoreboard players operation #new_motion_x shopping_kart.data = #motion_x shopping_kart.data
+execute unless score @s shopping_kart.engine matches 0 run scoreboard players operation #new_motion_x shopping_kart.data *= #multiplier shopping_kart.data
 scoreboard players operation #new_motion_x shopping_kart.data += @s shopping_kart.motion_x
-scoreboard players operation #new_motion_z shopping_kart.data = #motion_z shopping_kart.data
-scoreboard players operation #new_motion_z shopping_kart.data *= #multiplier shopping_kart.data
+execute unless score @s shopping_kart.engine matches 0 run scoreboard players operation #new_motion_z shopping_kart.data = #motion_z shopping_kart.data
+execute unless score @s shopping_kart.engine matches 0 run scoreboard players operation #new_motion_z shopping_kart.data *= #multiplier shopping_kart.data
 scoreboard players operation #new_motion_z shopping_kart.data += @s shopping_kart.motion_z
 execute unless score #booster shopping_kart.data matches 0 run function shopping_kart:kart/booster
 execute store result storage shopping_kart:main Motion[0] double 0.0000001 run scoreboard players get #new_motion_x shopping_kart.data
