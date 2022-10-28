@@ -1,5 +1,5 @@
 
-
+scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 3
 
 summon marker 22961 88 22948 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:7}}
