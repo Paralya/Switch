@@ -4,7 +4,6 @@
 clear @a
 effect clear @a
 gamemode adventure @a
-team join switch.no_pvp @a
 tag @a add switch.playing
 
 kill @e[type=!player]
@@ -34,7 +33,8 @@ scoreboard objectives add switch.temp.dx dummy
 scoreboard objectives add switch.temp.dy dummy
 scoreboard objectives add switch.temp.dz dummy
 scoreboard objectives add switch.temp.id dummy
-scoreboard objectives add switch.temp.checkpoint dummy {"text":"Checkpoints passés","color":"dark_purple"}
+scoreboard objectives add switch.temp.checkpoint dummy
+scoreboard objectives add switch.temp.classement dummy {"text":"Classement","color":"dark_purple"}
 scoreboard objectives add switch.respawn_cp_id dummy
 scoreboard objectives add switch.hard_respawn_cp_id dummy
 scoreboard objectives add switch.checkpoint dummy
@@ -44,7 +44,30 @@ scoreboard players set @a switch.hard_respawn_cp_id -1
 scoreboard players set @a switch.temp.checkpoint 0
 scoreboard players set @a switch.checkpoint 0
 scoreboard players set @a switch.lap 1
-scoreboard objectives setdisplay sidebar switch.temp.checkpoint
+scoreboard objectives setdisplay sidebar switch.temp.classement
+
+team add switch.temp.1
+team add switch.temp.2
+team add switch.temp.3
+team add switch.temp.4
+team add switch.temp.5
+team add switch.temp.6
+team add switch.temp.7
+team add switch.temp.8
+team add switch.temp.9
+team add switch.temp.10
+team add switch.temp.10+
+team modify switch.temp.1 prefix {"text":"[1er] ","color":"#FFE700"}
+team modify switch.temp.2 prefix {"text":"[2ème] ","color":"#C0C0C0"}
+team modify switch.temp.3 prefix {"text":"[3ème] ","color":"#CD7F32"}
+team modify switch.temp.4 prefix {"text":"[4ème] ","color":"#696969"}
+team modify switch.temp.5 prefix {"text":"[5ème] ","color":"#696969"}
+team modify switch.temp.6 prefix {"text":"[6ème] ","color":"#696969"}
+team modify switch.temp.7 prefix {"text":"[7ème] ","color":"#696969"}
+team modify switch.temp.8 prefix {"text":"[8ème] ","color":"#696969"}
+team modify switch.temp.9 prefix {"text":"[9ème] ","color":"#696969"}
+team modify switch.temp.10 prefix {"text":"[10ème] ","color":"#696969"}
+team modify switch.temp.10+ prefix {"text":"[Trop Nul] ","color":"#9200DF"}
 
 ##Number of checkpoints and laps per map
 scoreboard players set #total_laps switch.data 3

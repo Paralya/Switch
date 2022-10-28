@@ -6,3 +6,4 @@ execute store success score #reconnect switch.data if score @s last_total_games 
 
 execute if score #state switch.data matches 2 run function switch:engine/voting_time/player_join
 execute if score #state switch.data matches 3 run function #switch:events/player/joined
+
