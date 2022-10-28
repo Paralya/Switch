@@ -24,6 +24,7 @@ scoreboard players set #default_max_engine shopping_kart.data 1750
 
 scoreboard players set #-1 shopping_kart.data -1
 scoreboard players set #2 shopping_kart.data 2
+scoreboard players set #3 shopping_kart.data 3
 scoreboard players set #10 shopping_kart.data 10
 scoreboard players set #15 shopping_kart.data 15
 scoreboard players set #20 shopping_kart.data 20
