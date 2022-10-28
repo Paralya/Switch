@@ -25,6 +25,7 @@ execute if data storage switch:main {map:"boat_race_1"} run function switch:engi
 execute if data storage switch:main {map:"laser_game"} run function switch:engine/maps/adventure/laser_game/
 execute if data storage switch:main {map:"prison"} run function switch:engine/maps/adventure/prison/
 
+execute if data storage switch:main {map:"epsilon_circuit"} run function switch:engine/maps/adventure/epsilon_circuit/
 execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"baby_park"} run function switch:engine/maps/adventure/baby_park/
 execute if data storage switch:main {map:"bowser_castle"} run function switch:engine/maps/adventure/bowser_castle/
