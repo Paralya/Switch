@@ -30,6 +30,7 @@ gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitch Creep, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 
+scoreboard players set #remaining_time switch.data 95
 scoreboard players set #pitch_creep_seconds switch.data -5
 scoreboard players set #pitch_creep_ticks switch.data 0
 scoreboard players set #process_end switch.data 0

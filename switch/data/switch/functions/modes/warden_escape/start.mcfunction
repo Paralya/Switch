@@ -29,6 +29,7 @@ gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Warden Escape, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
 
+scoreboard players set #remaining_time switch.data 70
 scoreboard players set #warden_escape_seconds switch.data -10
 scoreboard players set #warden_escape_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
