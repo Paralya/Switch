@@ -37,5 +37,5 @@ team join switch.temp.10+ @a[scores={switch.temp.classement=11..}]
 scoreboard players set #max switch.temp.classement 0
 scoreboard players operation #max switch.temp.classement > @a switch.temp.classement
 scoreboard players operation @a switch.temp.classement -= #max switch.temp.classement
-scoreboard players operation @a switch.temp.classement *= #-1 switch.temp.classement
+scoreboard players operation @a switch.temp.classement *= #-1 switch.data
 
