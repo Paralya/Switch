@@ -2,6 +2,7 @@
 ##Fonction executée toutes les secondes lorsque le mode de jeu est activé
 
 scoreboard players add #boat_race_seconds switch.data 1
+execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
 execute if score #boat_race_seconds switch.data matches 0.. run function switch:modes/boat_race/xp_bar
 execute if score #boat_race_seconds switch.data matches 0 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Ouverture de la barrière ! GOOOOOO !"}]

@@ -2,7 +2,7 @@
 ##Fonction executée toutes les secondes lorsque le mode de jeu est activé
 
 scoreboard players add #kart_racer_seconds switch.data 1
-scoreboard players remove #remaining_time switch.data 1
+execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
 execute if score #kart_racer_seconds switch.data matches -5 run title @a title {"text":"5","color":"red"}
 execute if score #kart_racer_seconds switch.data matches -4 run title @a title {"text":"4","color":"red"}

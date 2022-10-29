@@ -33,6 +33,7 @@ gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Boat Race. Vous avez 8 secondes pour placer votre bateau et y rentrer ainsi que 8 minutes maximum pour finir la course !"}]
 
+scoreboard players set #remaining_time switch.data 488
 scoreboard players set #boat_race_seconds switch.data -8
 scoreboard players set #boat_race_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
