@@ -1,14 +1,13 @@
 
-##Maps disponibles listées ici
-
+##Choix d'une map random de la liste maps_to_choose
+##Avec 5 essaies de choisir une map différente de la précédente
+data modify storage switch:main previous_map set from storage switch:main map
+scoreboard players set #try switch.data 5
 scoreboard players set #list_length switch.data 0
 execute store result score #list_length switch.data run data get storage switch:main maps_to_choose
+function switch:engine/maps/find_map
 
-summon marker 0 0 0 {Tags:["switch.random"]}
-execute as @e[tag=switch.random] run function switch:engine/voting_time/get/random
-execute unless score #random switch.data matches 0 run function switch:engine/maps/choose_loop
-
-data modify storage switch:main map set from storage switch:main maps_to_choose[0]
+data modify storage switch:main map set from storage switch:main copy[0]
 
 #Maps that regenerate (gamemode survival):
 execute if data storage switch:main {map:"traitor_original"} run function switch:engine/maps/survival/traitor_original/
@@ -24,7 +23,6 @@ execute if data storage switch:main {map:"pitchout_1"} run function switch:engin
 execute if data storage switch:main {map:"boat_race_1"} run function switch:engine/maps/adventure/boat_race_1/
 execute if data storage switch:main {map:"laser_game"} run function switch:engine/maps/adventure/laser_game/
 execute if data storage switch:main {map:"prison"} run function switch:engine/maps/adventure/prison/
-
 execute if data storage switch:main {map:"epsilon_circuit"} run function switch:engine/maps/adventure/epsilon_circuit/
 execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"baby_park"} run function switch:engine/maps/adventure/baby_park/
