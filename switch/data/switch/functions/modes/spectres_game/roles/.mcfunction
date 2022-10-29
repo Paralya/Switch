@@ -8,7 +8,7 @@ execute if score #next_role switch.data matches 1 run team join switch.temp.visi
 execute if score #next_role switch.data matches 1 run tag @s add switch.spectres_game.visible
 execute if score #next_role switch.data matches 2 run team join switch.temp.spectre @s
 execute if score #next_role switch.data matches 2 run tag @s add switch.spectres_game.spectre
-execute if score #next_role switch.data matches 3 run scoreboard players set #next_role switch.data 1
+execute if score #next_role switch.data matches 2 run scoreboard players set #next_role switch.data 0
 
 
 #Linked marker for offline players
