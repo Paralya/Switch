@@ -1,6 +1,7 @@
 
 execute at @e[tag=switch.checkpoint] run forceload remove ~ ~
 
+kill @e[tag=shopping_kart.kart]
 tp @e[type=!player] 0 -10000 0
 kill @e[type=!player]
 
@@ -11,6 +12,7 @@ scoreboard objectives remove switch.temp.dx
 scoreboard objectives remove switch.temp.dy
 scoreboard objectives remove switch.temp.dz
 scoreboard objectives remove switch.temp.id
+scoreboard objectives remove switch.temp.change_map
 scoreboard objectives remove switch.temp.checkpoint
 scoreboard objectives remove switch.temp.classement
 scoreboard objectives remove switch.respawn_cp_id

@@ -7,6 +7,7 @@ gamemode adventure @a
 tag @a add switch.playing
 
 kill @e[type=!player]
+kill @e[type=!player]
 
 effect give @a saturation 99999 255 true
 effect give @a regeneration 99999 255 true
@@ -33,6 +34,7 @@ scoreboard objectives add switch.temp.dx dummy
 scoreboard objectives add switch.temp.dy dummy
 scoreboard objectives add switch.temp.dz dummy
 scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.temp.change_map dummy
 scoreboard objectives add switch.temp.checkpoint dummy
 scoreboard objectives add switch.temp.classement dummy {"text":"Classement","color":"dark_purple"}
 scoreboard objectives add switch.respawn_cp_id dummy
