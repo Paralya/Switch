@@ -21,6 +21,8 @@ effect give @s[tag=switch.spectres_game.spectre] invisibility 99999 255 true
 give @s[tag=switch.spectres_game.spectre] potion{Potion:"minecraft:strong_healing"} 2
 give @s potion{Potion:"minecraft:strong_healing"} 2
 give @s oak_planks 128
+give @s tnt 2
+give @s flint_and_steel
 
 attribute @s generic.attack_speed base set 1024
 xp set @s 100 levels
