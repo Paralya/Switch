@@ -39,12 +39,11 @@ execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_gam
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/lucky_artifact_bag
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/item_magnet
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/stoup_egg
-execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/ultimate_spawner
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/quarry_pack
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/fireball_stick
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/storm_stick
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/shield_stick
-execute if predicate switch:chance/0.33 run loot give @s loot switch:traitors_game/bomber_man
+execute if predicate switch:chance/0.25 run loot give @s loot switch:traitors_game/bomber_man
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/banana_man
 
 scoreboard players set @s crazy_adventure.radiation 0
