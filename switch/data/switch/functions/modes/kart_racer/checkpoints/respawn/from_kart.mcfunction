@@ -1,7 +1,4 @@
 
-data modify storage switch:main copy set from storage switch:main respawn_states
-function switch:modes/kart_racer/checkpoints/respawn/get_storage_loop
-
 #copy[0] is the respawn state
 tp @s ~ ~ ~ ~ ~
 data modify entity @s Pos set from storage switch:main copy[0].Pos
