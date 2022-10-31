@@ -47,7 +47,7 @@ execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_gam
 execute if predicate switch:chance/0.33 run loot give @s loot switch:traitors_game/bomber_man
 execute if predicate switch:chance/0.1 run loot give @s loot switch:traitors_game/banana_man
 
-scoreboard players set @s crazy_adventure.radiation 400
+scoreboard players set @s crazy_adventure.radiation 0
 
 attribute @s generic.attack_speed base set 1024
 xp set @s 100 levels

@@ -8,6 +8,7 @@ execute store result score #list_length switch.data run data get storage switch:
 function switch:engine/maps/find_map
 
 data modify storage switch:main map set from storage switch:main copy[0]
+data modify storage switch:main previous_map set from storage switch:main map
 
 #Maps that regenerate (gamemode survival):
 execute if data storage switch:main {map:"traitor_original"} run function switch:engine/maps/survival/traitor_original/
