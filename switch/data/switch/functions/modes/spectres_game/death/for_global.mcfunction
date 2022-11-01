@@ -1,7 +1,9 @@
 
 scoreboard players operation #player_id switch.temp.id = @s switch.temp.id
 clear @a[predicate=switch:has_same_temp_id]
-execute at @s run function switch:modes/spectres_game/death/drop_inventory
+
+function switch:modes/spectres_game/death/inventory_filter
+execute at @s run function switch:modes/spectres_game/death/inventory_drop
 
 scoreboard players set #success switch.data 0
 execute store success score #success switch.data if predicate switch:chance/0.5
