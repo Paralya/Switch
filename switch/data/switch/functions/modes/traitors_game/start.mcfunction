@@ -15,7 +15,7 @@ kill @e[type=arrow]
 effect give @a resistance 10 255 true
 effect give @a saturation 10 255 true
 effect give @a regeneration 10 255 true
-effect give @a weakness 10 2 true
+effect give @a weakness 10 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000

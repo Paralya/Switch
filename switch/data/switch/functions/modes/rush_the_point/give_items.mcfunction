@@ -1,0 +1,30 @@
+
+#Starter kit
+item replace entity @s[tag=switch.rush_the_point.red] armor.head with iron_helmet
+item replace entity @s[tag=switch.rush_the_point.red] armor.chest with diamond_chestplate
+item replace entity @s[tag=switch.rush_the_point.red] armor.legs with iron_leggings
+item replace entity @s[tag=switch.rush_the_point.red] armor.feet with diamond_boots
+item replace entity @s[tag=switch.rush_the_point.red] hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s}]}
+item replace entity @s[tag=switch.rush_the_point.red] hotbar.1 with bow
+item replace entity @s[tag=switch.rush_the_point.red] hotbar.3 with stone_axe
+item replace entity @s[tag=switch.rush_the_point.red] hotbar.6 with arrow 32
+item replace entity @s[tag=switch.rush_the_point.red] hotbar.7 with water_bucket
+item replace entity @s[tag=switch.rush_the_point.red] hotbar.8 with carrot 42
+
+item replace entity @s[tag=switch.rush_the_point.blue] hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s},{id:"minecraft:fire_aspect",lvl:1s}]}
+item replace entity @s[tag=switch.rush_the_point.blue] hotbar.2 with bow
+item replace entity @s[tag=switch.rush_the_point.blue] hotbar.6 with arrow 2
+item replace entity @s[tag=switch.rush_the_point.blue] hotbar.7 with water_bucket
+item replace entity @s[tag=switch.rush_the_point.blue] hotbar.8 with carrot 42
+effect give @s[tag=switch.rush_the_point.blue] invisibility 99999 255 true
+effect give @s[tag=switch.rush_the_point.blue] resistance 10 255 true
+
+give @s potion{Potion:"minecraft:strong_healing"} 4
+give @s oak_planks 128
+give @s tnt 2
+give @s flint_and_steel
+
+attribute @s generic.attack_speed base set 1024
+xp set @s 100 levels
+xp set @s 0 points
+

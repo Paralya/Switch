@@ -53,7 +53,10 @@ data modify storage switch:main minigames append value {index:7	,min_players:1	,
 data modify storage switch:main minigames append value {index:8	,min_players:1	,max_players:-1		,id:"boat_race"				,Name:"Boat Race"			,Lore:'["",{"text":"[Boat Race]\\n","color":"yellow"},{"text":"Battez-vous pour atteindre la ligne d\'arrivée\\n"},{"text":"en premier pour remporter la partie !"}]'}
 data modify storage switch:main minigames append value {index:9	,min_players:1	,max_players:-1		,id:"spectres_game"			,Name:"Spectres Game"		,Lore:'["",{"text":"[Spectres Game]\\n","color":"yellow"},{"text":"Visibles contre Spectres,\\n"},{"text":"quel camp va-t-il gagner ?"}]'}
 data modify storage switch:main minigames append value {index:10,min_players:1	,max_players:-1		,id:"kart_racer"			,Name:"Kart Racer"			,Lore:'["",{"text":"[Kart Racer]\\n","color":"yellow"},{"text":"Affrontez les autres joueurs sur des\\n"},{"text":"circuits et soyez le premier arrivé !"}]'}
-#data modify storage switch:main minigames append value {index:11,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'[{"text":"Lore du TEMPLATE"}]'}
+data modify storage switch:main minigames append value {index:11,min_players:1	,max_players:-1		,id:"rush_the_point"		,Name:"Rush The Point"		,Lore:'["",{"text":"[Rush The Point]\\n","color":"yellow"},{"text":"Deux teams doivent s\'affronter pour capturer\\n"},{"text":"un point au centre du vide grâce\\n"},{"text":"à des classes spécifiques différentes"}]'}
+data modify storage switch:main minigames append value {index:12,min_players:1	,max_players:-1		,id:"spleef"				,Name:"Spleef"				,Lore:'["",{"text":"[Spleef]\\n","color":"yellow"},{"text":"Soyez le dernier en vie en faisant tomber\\n"},{"text":"tous vos adversaires grâce à votre équipement"}]'}
+data modify storage switch:main minigames append value {index:13,min_players:1	,max_players:-1		,id:"dé_à_coudre"			,Name:"Dé à coudre"			,Lore:'["",{"text":"[Dé à coudre]\\n","color":"yellow"},{"text":"Affrontez les autres joueurs dans un saut,\\n"},{"text":"dans une piscine, iconique de Minecraft !"}]'}
+#data modify storage switch:main minigames append value {index:14,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'["",{"text":"[TEMPLATE]\\n","color":"yellow"},{"text":"TEMPLATE\\n"},{"text":"TEMPLATE"}]'}
 
 
 ##States
