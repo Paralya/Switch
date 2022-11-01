@@ -3,8 +3,7 @@ scoreboard players set #votes switch.data 0
 scoreboard players set #votes_max switch.data 0
 execute store result score #votes switch.data if entity @a[scores={switch.temp.change_map=1}]
 execute store result score #votes_max switch.data if entity @a[gamemode=!spectator]
-scoreboard players operation #votes_max switch.data *= #3 switch.data
-scoreboard players operation #votes_max switch.data /= #4 switch.data
+scoreboard players operation #votes_max switch.data /= #2 switch.data
 scoreboard players add #votes switch.data 1
 scoreboard players add #votes_max switch.data 1
 
