@@ -17,7 +17,6 @@ data remove block 0 0 0 Items[3].tag.AttributeModifiers[{AttributeName:"generic.
 data remove block 0 0 0 Items[4].tag.AttributeModifiers[{AttributeName:"generic.movement_speed"}]
 data modify block 0 0 0 Items[6].tag.Enchantments append value {id:"minecraft:infinity",lvl:1s}
 data modify block 0 0 0 Items[7].Count set value 42b
-execute if entity @s[team=switch.rush_the_point.red] run say red
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].tag.display.color set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].tag.display.color set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].tag.display.color set value 16731469
