@@ -4,6 +4,7 @@
 scoreboard players add #rush_the_point_ticks switch.data 1
 
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/rush_the_point/items_check
+execute as @e[type=tnt,nbt={Fuse:1s}] at @s run function switch:modes/rush_the_point/explode_tnt
 
 #Class System
 execute as @a[scores={switch.temp.choosen_class=0}] run function switch:modes/rush_the_point/classes/
