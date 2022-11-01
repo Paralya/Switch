@@ -25,7 +25,7 @@ execute if score #list_length switch.data matches 1 run data modify storage swit
 execute if score #list_length switch.data matches 1 store result score #game_1 switch.data run data get storage switch:main voted_games[0].index
 execute if score #list_length switch.data matches 2.. run function switch:engine/launch_game/get_random_max
 
-
+spawnpoint @a 0 69 0
 function #switch:events/start
 
 execute as @e[limit=8] as @a at @s run playsound ui.toast.in ambient @s

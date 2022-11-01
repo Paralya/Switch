@@ -13,13 +13,13 @@ item replace entity @s[tag=switch.spectres_game.visible] hotbar.8 with carrot 42
 
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s},{id:"minecraft:fire_aspect",lvl:1s}]}
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.2 with bow
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.6 with arrow 8
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.6 with arrow 2
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.7 with water_bucket
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.8 with carrot 42
 effect give @s[tag=switch.spectres_game.spectre] invisibility 99999 255 true
+effect give @s[tag=switch.spectres_game.spectre] resistance 10 255 true
 
-give @s[tag=switch.spectres_game.spectre] potion{Potion:"minecraft:strong_healing"} 2
-give @s potion{Potion:"minecraft:strong_healing"} 2
+give @s potion{Potion:"minecraft:strong_healing"} 4
 give @s oak_planks 128
 give @s tnt 2
 give @s flint_and_steel

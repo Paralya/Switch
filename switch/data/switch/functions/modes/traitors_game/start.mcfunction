@@ -41,6 +41,7 @@ gamerule keepInventory true
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Traitors Game, tenez-vous prêt !"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
+scoreboard players set #remaining_time switch.data 1210
 scoreboard players set #traitors_game_seconds switch.data -10
 scoreboard players set #traitors_game_ticks switch.data 0
 scoreboard players set #process_end switch.data 0

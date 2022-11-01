@@ -34,9 +34,10 @@ gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spectres Game, tenez-vous prêt !"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spectres Game, tenez-vous prêt vous avez 10 secondes de resistance !"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
+scoreboard players set #remaining_time switch.data 901
 scoreboard players set #spectres_game_seconds switch.data -1
 scoreboard players set #spectres_game_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
@@ -44,6 +45,8 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.deathCount deathCount
+scoreboard objectives add switch.temp.playerKillCount playerKillCount {"text":" Nombre de Kills ","color":"aqua"}
+scoreboard objectives setdisplay sidebar switch.temp.playerKillCount
 
 #Choix des rôles + give d'items
 team add switch.temp.visible
