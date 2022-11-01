@@ -7,5 +7,3 @@ execute if score @s switch.temp.choosen_class matches 1 run function switch:mode
 execute if score @s switch.temp.choosen_class matches 2 run function switch:modes/rush_the_point/classes/archer
 execute if score @s switch.temp.choosen_class matches 3 run function switch:modes/rush_the_point/classes/kamikaze
 
-
-
