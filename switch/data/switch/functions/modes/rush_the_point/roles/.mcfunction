@@ -4,10 +4,8 @@ tag @s add switch.temp
 #Role selection
 scoreboard players add #next_player_id switch.data 1
 scoreboard players add #next_role switch.data 1
-execute if score #next_role switch.data matches 1 run team join switch.temp.visible @s
-execute if score #next_role switch.data matches 1 run tag @s add switch.rush_the_point.red
-execute if score #next_role switch.data matches 2 run team join switch.temp.spectre @s
-execute if score #next_role switch.data matches 2 run tag @s add switch.rush_the_point.blue
+execute if score #next_role switch.data matches 1 run team join switch.rush_the_point.red @s
+execute if score #next_role switch.data matches 2 run team join switch.rush_the_point.blue @s
 execute if score #next_role switch.data matches 2 run scoreboard players set #next_role switch.data 0
 
 
@@ -20,4 +18,7 @@ scoreboard players operation @s switch.temp.id = #next_player_id switch.data
 setblock 0 0 0 air
 
 tag @s remove switch.temp
+
+function switch:modes/rush_the_point/teleport_to_spawn
+execute at @s run playsound entity.player.levelup ambient @s
 

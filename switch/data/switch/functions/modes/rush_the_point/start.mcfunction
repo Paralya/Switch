@@ -40,16 +40,15 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.deathCount deathCount
+scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives setdisplay sidebar switch.temp.playerKillCount
 
 #Choix des rôles + give d'items
-team add switch.temp.red
-team add switch.temp.blue
-team modify switch.temp.red color red
-team modify switch.temp.blue color blue
+team add switch.rush_the_point.red
+team add switch.rush_the_point.blue
+team modify switch.rush_the_point.red color red
+team modify switch.rush_the_point.blue color blue
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/rush_the_point/roles/
-execute as @a at @s run function switch:modes/rush_the_point/give_items
-execute as @a at @s run playsound entity.player.levelup ambient @s
 
