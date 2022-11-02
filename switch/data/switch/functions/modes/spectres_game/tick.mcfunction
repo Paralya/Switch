@@ -7,7 +7,7 @@ execute as @a[tag=switch.to_tp] run function switch:modes/spectres_game/teleport
 
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5] run function switch:modes/spectres_game/death/player
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/spectres_game/death/detect
-execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/process
+execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/for_global
 
 clear @a[tag=switch.spectres_game.spectre] #switch:spectres_game
 clear @a[tag=!switch.spectres_game.spectre] diamond_sword

@@ -1,29 +1,31 @@
 
 #Starter kit
-item replace entity @s[tag=switch.spectres_game.visible] armor.head with iron_helmet
-item replace entity @s[tag=switch.spectres_game.visible] armor.chest with diamond_chestplate
-item replace entity @s[tag=switch.spectres_game.visible] armor.legs with iron_leggings
-item replace entity @s[tag=switch.spectres_game.visible] armor.feet with diamond_boots
+clear @s
+item replace entity @s[tag=switch.spectres_game.visible] armor.head with iron_helmet{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s[tag=switch.spectres_game.visible] armor.chest with diamond_chestplate{Enchantments:[{id:"minecraft:fire_protection",lvl:2s}]}
+item replace entity @s[tag=switch.spectres_game.visible] armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s[tag=switch.spectres_game.visible] armor.feet with diamond_boots{Enchantments:[{id:"minecraft:fire_protection",lvl:2s}]}
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s}]}
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.1 with bow
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.3 with stone_axe
-item replace entity @s[tag=switch.spectres_game.visible] hotbar.6 with arrow 32
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.7 with water_bucket
-item replace entity @s[tag=switch.spectres_game.visible] hotbar.8 with carrot 42
+item replace entity @s[tag=switch.spectres_game.visible] hotbar.8 with golden_apple 4
 
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s},{id:"minecraft:fire_aspect",lvl:1s}]}
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.2 with bow
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.6 with arrow 2
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.7 with water_bucket
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.8 with carrot 42
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.1 with stone_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:2s},{id:"minecraft:fire_aspect",lvl:1s}]}
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.3 with bow{Enchantments:[{id:"minecraft:punch",lvl:1s}]}
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.5 with water_bucket
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.7 with golden_apple 7
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.8 with oak_planks 64
+item replace entity @s[tag=switch.spectres_game.spectre] inventory.1 with stone_axe
 effect give @s[tag=switch.spectres_game.spectre] invisibility 99999 255 true
-effect give @s[tag=switch.spectres_game.spectre] resistance 10 255 true
+effect give @s[tag=switch.spectres_game.spectre] resistance 99999 0 true
+effect give @s[tag=switch.spectres_game.spectre] speed 99999 0 true
 
-give @s potion{Potion:"minecraft:strong_healing"} 4
-give @s oak_planks 128
-give @s tnt 3
-give @s flint_and_steel
+item replace entity @s inventory.0 with arrow 28
+item replace entity @s inventory.25 with flint_and_steel
+item replace entity @s inventory.26 with tnt 3
 
+effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
