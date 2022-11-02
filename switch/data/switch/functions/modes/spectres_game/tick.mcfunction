@@ -9,8 +9,7 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5] run
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/spectres_game/death/detect
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/for_global
 
-clear @a[tag=switch.spectres_game.spectre] #switch:spectres_game
-clear @a[tag=!switch.spectres_game.spectre] diamond_sword
+execute at @a[tag=switch.spectres_game.spectre,gamemode=!spectator] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 10 normal
 
 #Détection de fin de partie
 execute if score #spectres_game_seconds switch.data matches 1..900 run function switch:modes/spectres_game/detect_end
