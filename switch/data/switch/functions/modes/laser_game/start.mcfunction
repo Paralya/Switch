@@ -41,7 +41,7 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 
 data modify storage iris:input TargetEntities set value true
 data modify storage iris:input MaxRecursionDepth set value 50
-scoreboard objectives add switch.temp.individual_points dummy {"text":"Nombre de Kills","color":"yellow"}
+scoreboard objectives add switch.temp.individual_points dummy {"text":"Points Individuels","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.dead_cooldown dummy

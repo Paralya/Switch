@@ -6,7 +6,7 @@ kill @e[type=!player]
 
 clear @a
 effect clear @a
-gamemode survival @a
+gamemode adventure @a
 team leave @a
 
 effect give @a resistance 10 255 true
@@ -70,9 +70,4 @@ team modify switch.rush_the_point.blue color blue
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/rush_the_point/roles/
-
-##TODO pour terminer:
-#Système de capture
-#Système de victoire
-#Scoreboard à droite
 

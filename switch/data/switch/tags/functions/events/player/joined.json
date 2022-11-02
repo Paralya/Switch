@@ -11,6 +11,7 @@
 		"switch:modes/boat_race/calls/joined",
 		"switch:modes/spectres_game/calls/joined",
 		"switch:modes/kart_racer/calls/joined",
+		"switch:modes/rush_the_point/calls/joined",
 		"switch:modes/a_template/calls/joined"
 	]
 }

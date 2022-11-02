@@ -7,9 +7,9 @@ loot insert 0 0 0 loot stardust:i/original_stardust_helmet
 loot insert 0 0 0 loot stardust:i/original_stardust_leggings
 loot insert 0 0 0 loot stardust:i/original_stardust_boots
 loot insert 0 0 0 loot crazy_adventure:i/banana
-data modify block 0 0 0 Items[0].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:fire"]
+data modify block 0 0 0 Items[0].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:fire","minecraft:tnt"]
 data remove block 0 0 0 Items[1].tag.Enchantments
-data modify block 0 0 0 Items[1].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:fire"]
+data modify block 0 0 0 Items[1].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:fire","minecraft:tnt"]
 data remove block 0 0 0 Items[2].tag.AttributeModifiers[{AttributeName:"generic.max_health"}]
 data remove block 0 0 0 Items[3].tag.AttributeModifiers[{AttributeName:"generic.movement_speed"}]
 data modify block 0 0 0 Items[5].Count set value 42b
