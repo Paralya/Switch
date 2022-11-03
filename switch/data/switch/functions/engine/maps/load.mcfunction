@@ -29,7 +29,7 @@ execute if data storage switch:main {map:"epsilon_circuit"} run function switch:
 execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"fast_circuit"} run function switch:engine/maps/adventure/fast_circuit/
 execute if data storage switch:main {map:"city_race"} run function switch:engine/maps/adventure/city_race/
-execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
+execute if data storage switch:main {map:"sakura_land"} run function switch:engine/maps/adventure/sakura_land/
 execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"baby_park"} run function switch:engine/maps/adventure/baby_park/

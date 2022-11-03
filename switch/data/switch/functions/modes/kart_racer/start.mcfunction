@@ -79,7 +79,7 @@ scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 
 ##Téléportation des joueurs + give d'items
-data modify storage switch:main maps_to_choose set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "baby_park", "mario_circuit", "fast_circuit", "city_race", "epsilon_circuit"]
+data modify storage switch:main maps_to_choose set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "baby_park", "mario_circuit", "fast_circuit", "city_race", "sakura_land", "epsilon_circuit"]
 function switch:engine/maps/load
 execute as @a at @s run function switch:modes/kart_racer/give_items
 
