@@ -16,6 +16,7 @@ kill @e[type=item]
 
 #Maps tick for special events
 execute if data storage switch:main {map:"airship_fortress"} run function switch:modes/kart_racer/map_tick/airship_fortress
+execute if data storage switch:main {map:"dk_mountain"} run function switch:modes/kart_racer/map_tick/dk_mountain
 
 
 ##Fin de la partie
