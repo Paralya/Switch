@@ -31,6 +31,7 @@ execute if data storage switch:main {map:"baby_park"} run function switch:engine
 execute if data storage switch:main {map:"bowser_castle"} run function switch:engine/maps/adventure/bowser_castle/
 execute if data storage switch:main {map:"snow_travel"} run function switch:engine/maps/adventure/snow_travel/
 execute if data storage switch:main {map:"trackmania_stadium_1"} run function switch:engine/maps/adventure/trackmania_stadium_1/
+execute if data storage switch:main {map:"cathedrale_liege"} run function switch:engine/maps/adventure/cathedrale_liege/
 
 #snow_drive à faire
 

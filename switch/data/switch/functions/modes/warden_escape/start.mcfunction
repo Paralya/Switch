@@ -18,7 +18,7 @@ time set 18000
 weather clear
 
 ##Téléportation des joueurs
-data modify storage switch:main maps_to_choose set value ["laser_game", "prison"]
+data modify storage switch:main maps_to_choose set value ["laser_game", "prison", "cathedrale_liege"]
 function switch:engine/maps/load
 execute as @a at @s run function switch:modes/warden_escape/give_items
 

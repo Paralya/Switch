@@ -12,6 +12,12 @@ execute if score #warden_escape_seconds switch.data matches 0 if data storage sw
 execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} run summon warden 548 101.69 548
 execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"prison"} run summon warden 10000 101.69 10052
 execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"prison"} run summon warden 10000 101.69 10000
+execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"cathedrale_liege"} run summon warden 26000 100 26018
+execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"cathedrale_liege"} run summon warden 26000 100 25981
+execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"cathedrale_liege"} run summon warden 25982 100 26000
+execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"cathedrale_liege"} run summon warden 26032 100 25990
+execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"cathedrale_liege"} run summon warden 26032 100 25610
+execute if score #warden_escape_seconds switch.data matches 0 if data storage switch:main {map:"cathedrale_liege"} run summon warden 26064 100 26000
 execute if score #warden_escape_seconds switch.data matches 0 run effect give @e[type=warden] glowing 2 255 true
 execute if score #warden_escape_seconds switch.data matches ..-1 run tp @e[type=warden] 0 -10000 0
 execute if score #warden_escape_seconds switch.data matches ..-1 run kill @e[type=warden]
