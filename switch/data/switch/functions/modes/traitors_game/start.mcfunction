@@ -2,15 +2,13 @@
 ##Fonction executée lors du lancement de la partie
 
 kill @e[type=!player,type=!marker]
+kill @e[type=!player,type=!marker]
 
 clear @a
 effect clear @a
 gamemode survival @a
 team leave @a
 tag @a add switch.alive
-
-kill @e[type=item]
-kill @e[type=arrow]
 
 effect give @a resistance 10 255 true
 effect give @a saturation 10 255 true

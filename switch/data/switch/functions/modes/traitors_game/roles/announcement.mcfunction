@@ -1,4 +1,5 @@
 
+item replace entity @s[tag=switch.traitors_game.detective] hotbar.1 with bow{HideFlags:2,Enchantments:[{id:"minecraft:power",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.01,Operation:0,UUID:[I;4096,4096,4096,4096]}]} 1
 
 execute as @a at @s run playsound entity.wither.spawn ambient @s ~ ~ ~ 0.25
 tellraw @a[tag=switch.traitors_game.innocent] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous êtes "},{"text":"innocent","color":"green"},{"text":" ! Vous devez trouver tous les traitres et leur faire cracher leur entrailles pour gagner la partie !"}]
