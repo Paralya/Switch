@@ -11,7 +11,7 @@ scoreboard players add #votes_max switch.data 1
 tellraw @a [{"selector":"@s","color":"red"},{"text":" a voté pour activer les collisions joueurs ["},{"score":{"name":"#votes","objective":"switch.data"},"color":"aqua"},{"text":"/"},{"score":{"name":"#votes_max","objective":"switch.data"},"color":"aqua"},{"text":"]"}]
 
 execute if score #votes switch.data >= #votes_max switch.data run scoreboard players set @a switch.temp.vote_collisions 1
-execute if score #votes switch.data >= #votes_max switch.data run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Collisions entre joueurs activées !\n"}]
+execute if score #votes switch.data >= #votes_max switch.data run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Collisions entre joueurs activées !\n"}]
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.kart collisionRule always
 
 
