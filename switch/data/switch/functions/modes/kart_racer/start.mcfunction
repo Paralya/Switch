@@ -34,6 +34,7 @@ scoreboard objectives add switch.temp.dx dummy
 scoreboard objectives add switch.temp.dy dummy
 scoreboard objectives add switch.temp.dz dummy
 scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.temp.vote_collisions dummy
 scoreboard objectives add switch.temp.change_map dummy
 scoreboard objectives add switch.temp.checkpoint dummy
 scoreboard objectives add switch.temp.classement dummy {"text":"Classement","color":"dark_purple"}
@@ -48,6 +49,7 @@ scoreboard players set @a switch.checkpoint 0
 scoreboard players set @a switch.lap 1
 scoreboard objectives setdisplay sidebar switch.temp.classement
 
+team add switch.temp.kart
 team add switch.temp.1
 team add switch.temp.2
 team add switch.temp.3
@@ -59,6 +61,7 @@ team add switch.temp.8
 team add switch.temp.9
 team add switch.temp.10
 team add switch.temp.10+
+team modify switch.temp.kart collisionRule never
 team modify switch.temp.1 suffix {"text":" [1er]","color":"#FFE700"}
 team modify switch.temp.2 suffix {"text":" [2ème]","color":"#C0C0C0"}
 team modify switch.temp.3 suffix {"text":" [3ème]","color":"#CD7F32"}

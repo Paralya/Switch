@@ -12,6 +12,7 @@ scoreboard objectives remove switch.temp.dx
 scoreboard objectives remove switch.temp.dy
 scoreboard objectives remove switch.temp.dz
 scoreboard objectives remove switch.temp.id
+scoreboard objectives remove switch.temp.vote_collisions
 scoreboard objectives remove switch.temp.change_map
 scoreboard objectives remove switch.temp.checkpoint
 scoreboard objectives remove switch.temp.classement
@@ -20,6 +21,7 @@ scoreboard objectives remove switch.hard_respawn_cp_id
 scoreboard objectives remove switch.checkpoint
 scoreboard objectives remove switch.lap
 
+team remove switch.temp.kart
 team remove switch.temp.1
 team remove switch.temp.2
 team remove switch.temp.3
