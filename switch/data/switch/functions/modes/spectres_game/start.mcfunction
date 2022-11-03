@@ -41,6 +41,7 @@ scoreboard players set #remaining_time switch.data 901
 scoreboard players set #spectres_game_seconds switch.data -1
 scoreboard players set #spectres_game_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #cut_clean switch.data 1
 
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.cooldown dummy
