@@ -47,6 +47,8 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
+##
+
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Glass Runner, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 
 scoreboard players set #glassrunner_ticks switch.data 0

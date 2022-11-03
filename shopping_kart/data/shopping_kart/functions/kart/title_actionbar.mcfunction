@@ -16,7 +16,7 @@ scoreboard players operation @s shopping_kart.old_pos_z = #output shopping_kart.
 scoreboard players operation @s shopping_kart.old_pos_x /= #10000 shopping_kart.data
 scoreboard players operation @s shopping_kart.old_pos_z %= #10000 shopping_kart.data
 scoreboard players operation @s shopping_kart.old_pos_z /= #1000 shopping_kart.data
-title @a[predicate=shopping_kart:has_vehicle_with_tag] actionbar [{"text":"Moteur : ","color":"yellow"},{"score":{"name":"@s","objective":"shopping_kart.engine"},"color":"aqua"},{"text":" tr/min | Vitesse : "},{"score":{"name":"@s","objective":"shopping_kart.old_pos_x"},"color":"aqua"},{"text":","},{"score":{"name":"@s","objective":"shopping_kart.old_pos_z"},"color":"aqua"},{"text":" blocks/s "}]
+execute positioned ~ ~1 ~ run title @a[distance=..1,predicate=shopping_kart:has_vehicle_with_tag] actionbar [{"text":"Moteur : ","color":"yellow"},{"score":{"name":"@s","objective":"shopping_kart.engine"},"color":"aqua"},{"text":" tr/min | Vitesse : "},{"score":{"name":"@s","objective":"shopping_kart.old_pos_x"},"color":"aqua"},{"text":","},{"score":{"name":"@s","objective":"shopping_kart.old_pos_z"},"color":"aqua"},{"text":" blocks/s "}]
 scoreboard players operation @s shopping_kart.old_pos_x = #new_pos_x shopping_kart.data
 scoreboard players operation @s shopping_kart.old_pos_z = #new_pos_z shopping_kart.data
 
