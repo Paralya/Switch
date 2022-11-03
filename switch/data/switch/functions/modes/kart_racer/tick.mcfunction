@@ -13,6 +13,11 @@ execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_ka
 execute as @a run function switch:modes/kart_racer/player_tick
 kill @e[type=item]
 
+
+#Maps tick for special events
+execute if data storage switch:main {map:"airship_fortress"} run function switch:modes/kart_racer/map_tick/airship_fortress
+
+
 ##Fin de la partie
 execute if score #detect_end switch.data matches 1.. run function switch:modes/kart_racer/process_end
 

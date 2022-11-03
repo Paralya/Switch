@@ -31,7 +31,7 @@ execute if data storage switch:main {map:"fast_circuit"} run function switch:eng
 execute if data storage switch:main {map:"city_race"} run function switch:engine/maps/adventure/city_race/
 execute if data storage switch:main {map:"sakura_land"} run function switch:engine/maps/adventure/sakura_land/
 execute if data storage switch:main {map:"hills_land"} run function switch:engine/maps/adventure/hills_land/
-execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
+execute if data storage switch:main {map:"airship_fortress"} run function switch:engine/maps/adventure/airship_fortress/
 execute if data storage switch:main {map:"baby_park"} run function switch:engine/maps/adventure/baby_park/
 execute if data storage switch:main {map:"bowser_castle"} run function switch:engine/maps/adventure/bowser_castle/
 execute if data storage switch:main {map:"snow_travel"} run function switch:engine/maps/adventure/snow_travel/
