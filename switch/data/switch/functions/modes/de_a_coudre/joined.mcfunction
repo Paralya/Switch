@@ -5,5 +5,5 @@
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
 gamemode spectator @s
-function switch:modes/spleef/death
+function switch:modes/de_a_coudre/death
 

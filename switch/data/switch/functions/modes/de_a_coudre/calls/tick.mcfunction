@@ -1,2 +1,2 @@
 
-execute if data storage switch:main {current_game:"spleef"} run function switch:modes/spleef/tick
+execute if data storage switch:main {current_game:"de_a_coudre"} run function switch:modes/de_a_coudre/tick
