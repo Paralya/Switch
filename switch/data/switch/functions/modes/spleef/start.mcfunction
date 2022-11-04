@@ -3,40 +3,30 @@
 
 clear @a
 effect clear @a
-gamemode adventure @a
+gamemode survival @a
 team leave @a
-tag @a add switch.first_life
-tag @a add switch.second_life
-tag @a add switch.third_life
 
 kill @e[type=item]
-kill @e[type=arrow]
 
-effect give @a speed 99999 0 true
-effect give @a jump_boost 99999 2 true
+effect give @a mining_fatigue 5 255 true
+effect give @a weakness 99999 255 true
 effect give @a saturation 99999 255 true
 effect give @a resistance 99999 255 true
 effect give @a regeneration 5 255 true
 difficulty normal
-time set 18000
+time set 6000
 weather clear
 
 ##Téléportation des joueurs
 data modify storage switch:main maps_to_choose set value ["spleef_1"]
 function switch:engine/maps/load
-scoreboard players set #spawn_count switch.data 0
-execute if data storage switch:main {map:"spleef_1"} as @a[sort=random] run function switch:modes/spleef/map_1/teleport_players
-execute as @a run function switch:modes/spleef/xp_bar
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de spleef, exterminez les autres !"}]
-
-scoreboard objectives add switch.temp.cooldown dummy
-scoreboard players set @a switch.temp.cooldown 100
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spleef, 5 secondes de préparation et soyez le dernier en vie !"}]
 
 scoreboard players set #spleef_seconds switch.data -5
 scoreboard players set #spleef_ticks switch.data 0
