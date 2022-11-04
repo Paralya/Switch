@@ -69,6 +69,8 @@ team modify switch.rush_the_point.red color red
 team modify switch.rush_the_point.blue color blue
 team modify switch.rush_the_point.red nametagVisibility hideForOtherTeams
 team modify switch.rush_the_point.blue nametagVisibility hideForOtherTeams
+team modify switch.rush_the_point.red friendlyFire false
+team modify switch.rush_the_point.blue friendlyFire false
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/rush_the_point/roles/
