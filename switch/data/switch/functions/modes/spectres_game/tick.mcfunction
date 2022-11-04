@@ -9,7 +9,8 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5] run
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/spectres_game/death/detect
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/for_global
 
-execute at @a[tag=switch.spectres_game.spectre,gamemode=!spectator] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 10 normal
+execute at @a[tag=switch.spectres_game.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
+execute as @a[nbt={ActiveEffects:[{Id:22,ShowParticles:1b}]}] run function switch:modes/spectres_game/absorption
 
 #Détection de fin de partie
 execute if score #spectres_game_seconds switch.data matches 1..900 run function switch:modes/spectres_game/detect_end

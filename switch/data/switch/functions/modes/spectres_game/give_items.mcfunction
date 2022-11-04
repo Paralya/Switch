@@ -7,7 +7,8 @@ item replace entity @s[tag=switch.spectres_game.visible] armor.legs with iron_le
 item replace entity @s[tag=switch.spectres_game.visible] armor.feet with diamond_boots{Enchantments:[{id:"minecraft:fire_protection",lvl:2s}]}
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s}]}
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.1 with bow
-item replace entity @s[tag=switch.spectres_game.visible] hotbar.3 with stone_axe
+item replace entity @s[tag=switch.spectres_game.visible] hotbar.2 with stone_axe
+item replace entity @s[tag=switch.spectres_game.visible] hotbar.3 with oak_planks 64
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.7 with water_bucket
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.8 with golden_apple 4
 
