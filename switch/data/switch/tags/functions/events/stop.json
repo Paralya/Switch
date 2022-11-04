@@ -12,6 +12,8 @@
 		"switch:modes/spectres_game/calls/stop",
 		"switch:modes/kart_racer/calls/stop",
 		"switch:modes/rush_the_point/calls/stop",
+		"switch:modes/spleef/calls/stop",
+		"switch:modes/de_a_coudre/calls/stop",
 		"switch:modes/a_template/calls/stop"
 	]
 }
