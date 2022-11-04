@@ -10,12 +10,9 @@ execute if score #kart_racer_seconds switch.data matches -7..-1 as @e[tag=shoppi
 execute if score #kart_racer_seconds switch.data matches ..-1 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
 execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 0b
 
+team join switch.temp.kart @e[tag=shopping_kart.kart]
 execute as @a run function switch:modes/kart_racer/player_tick
 kill @e[type=item]
-
-##Classement
-function switch:modes/kart_racer/classement/
-
 
 #Maps tick for special events
 execute if data storage switch:main {map:"airship_fortress"} run function switch:modes/kart_racer/map_tick/airship_fortress

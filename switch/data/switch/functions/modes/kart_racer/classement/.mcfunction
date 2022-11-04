@@ -5,8 +5,8 @@ execute as @a at @a if score @s switch.temp.checkpoint < @p switch.temp.checkpoi
 
 
 #Amélioration du classement selon leur distance du prochain checkpoint si des joueurs ont le même nombre de checkpoints
-execute as @a at @a[distance=0.0000001..] if score @s switch.temp.classement = @p switch.temp.classement run tag @s add switch.temp.classement
-execute as @a[tag=switch.temp.classement] at @s[tag=switch.temp.classement] run function switch:modes/kart_racer/classement/has_same_classement
+execute as @a run function switch:modes/kart_racer/classement/find_anyone_in_same_cp
+execute as @a run function switch:modes/kart_racer/classement/try
 
 
 #Attribution des places

@@ -30,6 +30,7 @@ scoreboard players set #kart_racer_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 
+scoreboard objectives add switch.temp dummy
 scoreboard objectives add switch.temp.compteur dummy
 scoreboard objectives add switch.temp.dx dummy
 scoreboard objectives add switch.temp.dy dummy
@@ -63,6 +64,17 @@ team add switch.temp.9
 team add switch.temp.10
 team add switch.temp.10+
 team modify switch.temp.kart collisionRule never
+team modify switch.temp.1 collisionRule never
+team modify switch.temp.2 collisionRule never
+team modify switch.temp.3 collisionRule never
+team modify switch.temp.4 collisionRule never
+team modify switch.temp.5 collisionRule never
+team modify switch.temp.6 collisionRule never
+team modify switch.temp.7 collisionRule never
+team modify switch.temp.8 collisionRule never
+team modify switch.temp.9 collisionRule never
+team modify switch.temp.10 collisionRule never
+team modify switch.temp.10+ collisionRule never
 team modify switch.temp.1 suffix {"text":" [1er]","color":"#FFE700"}
 team modify switch.temp.2 suffix {"text":" [2ème]","color":"#C0C0C0"}
 team modify switch.temp.3 suffix {"text":" [3ème]","color":"#CD7F32"}
