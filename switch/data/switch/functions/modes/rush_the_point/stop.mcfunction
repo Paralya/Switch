@@ -10,4 +10,5 @@ scoreboard objectives remove switch.temp.id
 scoreboard objectives remove switch.temp.cooldown
 scoreboard objectives remove switch.temp.deathCount
 scoreboard objectives remove switch.temp.choosen_class
+scoreboard objectives remove switch.temp.sidebar
 

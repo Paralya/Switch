@@ -21,6 +21,7 @@ execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[5].tag.display.color set value 13369344
 
 clear @s
+effect clear @s
 item replace entity @s armor.head from block 0 0 0 container.2 switch:enchant_protection_2
 item replace entity @s armor.chest from block 0 0 0 container.3 switch:enchant_protection_2
 item replace entity @s armor.legs from block 0 0 0 container.4 switch:enchant_protection_2
