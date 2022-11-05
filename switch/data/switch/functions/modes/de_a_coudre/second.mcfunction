@@ -3,5 +3,7 @@
 
 scoreboard players add #de_a_coudre_seconds switch.data 1
 
-execute if score #de_a_coudre_seconds switch.data matches 0 as @a at @s run function switch:modes/de_a_coudre/give_items
+function switch:modes/de_a_coudre/xp_bar
+execute if score #remaining_time switch.data matches 0.. run scoreboard players remove #remaining_time switch.data 1
+execute if score #remaining_time switch.data matches 0 run kill @a[gamemode=adventure]
 

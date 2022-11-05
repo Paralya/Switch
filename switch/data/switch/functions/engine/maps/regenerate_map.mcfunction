@@ -9,5 +9,6 @@ execute if data storage switch:main {map:"enchanting_island"} run function switc
 execute if data storage switch:main {map:"friends_cube_lobby"} run function switch:engine/maps/survival/friends_cube_lobby/regenerate
 execute if data storage switch:main {map:"rush_the_point_1"} run function switch:engine/maps/survival/rush_the_point_1/regenerate
 execute if data storage switch:main {map:"spleef_1"} run function switch:engine/maps/survival/spleef_1/regenerate
+execute if data storage switch:main {map:"de_a_coudre_1"} run function switch:engine/maps/survival/de_a_coudre_1/regenerate
 data remove storage switch:main map
 

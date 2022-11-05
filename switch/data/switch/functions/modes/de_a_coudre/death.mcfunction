@@ -1,8 +1,11 @@
 
-execute if entity @s[gamemode=survival] run tellraw @a [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#de_a_coudre_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+execute if score @s switch.temp.lives matches 1.. run scoreboard players remove @s switch.temp.lives 1
+execute if score @s switch.temp.lives matches 1 run tellraw @a [{"selector":"@s","color":"red"},{"text":" a raté son saut mais il lui reste une vie !"}]
+execute if score @s switch.temp.lives matches 0 run tellraw @a [{"selector":"@s","color":"red"},{"text":" a raté son saut, il a terminé "},{"score":{"name":"#position","objective":"switch.data"}},{"text":"ème !"}]
+execute if score @s switch.temp.lives matches 0 run scoreboard players reset @s switch.temp.lives
 
 gamemode spectator @s
-execute if entity @s at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
+execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 effect clear @s
 clear @s
 

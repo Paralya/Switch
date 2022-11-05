@@ -10,6 +10,7 @@ function switch:engine/maps/find_map
 data modify storage switch:main map set from storage switch:main copy[0]
 data modify storage switch:main previous_map set from storage switch:main map
 
+
 #Maps that regenerate (gamemode survival, may be adventure):
 execute if data storage switch:main {map:"traitor_original"} run function switch:engine/maps/survival/traitor_original/
 execute if data storage switch:main {map:"zone_51"} run function switch:engine/maps/survival/zone_51/
@@ -19,6 +20,8 @@ execute if data storage switch:main {map:"enchanting_island"} run function switc
 execute if data storage switch:main {map:"friends_cube_lobby"} run function switch:engine/maps/survival/friends_cube_lobby/
 execute if data storage switch:main {map:"rush_the_point_1"} run function switch:engine/maps/survival/rush_the_point_1/
 execute if data storage switch:main {map:"spleef_1"} run function switch:engine/maps/survival/spleef_1/
+execute if data storage switch:main {map:"de_a_coudre_1"} run function switch:engine/maps/survival/de_a_coudre_1/
+
 
 #Maps that doesn't (always gamemode adventure):
 execute if data storage switch:main {map:"pitch_creep_1"} run function switch:engine/maps/adventure/pitch_creep_1/

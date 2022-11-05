@@ -3,15 +3,12 @@
 
 clear @a
 effect clear @a
-gamemode survival @a
+gamemode spectator @a
 team leave @a
 
 kill @e[type=item]
 
-effect give @a mining_fatigue 5 255 true
-effect give @a weakness 99999 255 true
 effect give @a saturation 99999 255 true
-effect give @a resistance 99999 255 true
 effect give @a regeneration 5 255 true
 difficulty normal
 time set 6000
@@ -26,9 +23,20 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de de_a_coudre, 5 secondes de préparation et soyez le dernier en vie !"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Dé à Coudre, on commence direct !"}]
 
-scoreboard players set #de_a_coudre_seconds switch.data -5
+scoreboard players set #de_a_coudre_seconds switch.data 0
 scoreboard players set #de_a_coudre_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #detect_end switch.data 0
+scoreboard objectives add switch.temp.order dummy
+scoreboard objectives add switch.temp.lives dummy {"text":"Vies Restantes","color":"red"}
+scoreboard objectives add switch.temp.deathCount deathCount
+scoreboard objectives setdisplay sidebar switch.temp.lives
+
+##Order selection
+scoreboard players set #position switch.data 0
+scoreboard players set #next switch.data 0
+execute as @a[sort=random] run function switch:modes/de_a_coudre/define_order
+scoreboard players operation #max switch.data = #position switch.data
 
