@@ -1,14 +1,22 @@
 
 ##Item custom
 #define storage switch:glassrunner
-data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b}}}
-data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b}}}
+data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b},display:{Name:'{"text":"Snowball Bridge Red","color":"red","italic":false}'}}}
+data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b},display:{Name:'{"text":"Snowball Bridge Blue","color":"blue","italic":false}'}}}
+
+data modify storage switch:glassrunner ItemsNBT.renforced_snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,renforced_glass_bridge_red:1b},display:{Name:'{"text":"Renforced Snowball Bridge","color":"red","italic":false}'}}}
+data modify storage switch:glassrunner ItemsNBT.renforced_snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,renforced_glass_bridge_blue:1b},display:{Name:'{"text":"Renforced Snowball Bridge","color":"blue","italic":false}'}}}
+
+#Destroying Crossbow
+data modify storage switch:glassrunner ItemsNBT.destroying_crossbow set value {id:"minecraft:crossbow",Count:1b,tag:{glassrunner:{destroying_crossbow:1b},display:{Name:'{"text":"Destroying Crossbow","color":"dark_red","italic":false}'},ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}}],Charged:1b}}
 
 data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s}],CanDestroy:["minecraft:glass","minecraft:red_stained_glass","minecraft:blue_stained_glass","minecraft:pink_stained_glass","minecraft:light_blue_stained_glass"]}}
 
 
 ##Fonction executée lors du lancement de la partie
 
+xp set @a 0 levels
+xp set @a 0 points
 clear @a
 effect clear @a
 gamemode adventure @a
@@ -54,8 +62,25 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 scoreboard players set #glassrunner_ticks switch.data 0
 scoreboard players set #glassrunner_seconds switch.data 0
 
+scoreboard players set #glassrunner_point_to_win switch.data 15
+
 scoreboard objectives add switch.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add switch.glassrunner.deathCount deathCount
 
+scoreboard objectives add switch.glassrunner.money dummy
+scoreboard players add @a switch.glassrunner.money 0
+
+scoreboard objectives add switch.glassrunner.display dummy [{"text":"Glass","color":"red"},{"text":"Runner","color":"blue"}]
+scoreboard objectives setdisplay sidebar switch.glassrunner.display
+scoreboard players set §P§R§r switch.glassrunner.display 1
+scoreboard players set §P§B§r switch.glassrunner.display 0
+
+team add switch.glassrunner.p_red
+team add switch.glassrunner.p_blue
+team join switch.glassrunner.p_red §P§R§r
+team join switch.glassrunner.p_blue §P§B§r
+
+scoreboard players set #glassrunner.points.red switch.data 0
+scoreboard players set #glassrunner.points.blue switch.data 0
 
 

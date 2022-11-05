@@ -1,2 +1,9 @@
 scoreboard players set #glassrunner.ctp.center.red.timer switch.data 0
-say CAPTURE RED
+
+scoreboard players add #glassrunner.points.red switch.data 2
+scoreboard players add @a[team=switch.glassrunner.red] switch.glassrunner.money 2
+xp add @a[team=switch.glassrunner.red] 2 levels
+
+
+execute as @a[team=switch.glassrunner.red] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
+

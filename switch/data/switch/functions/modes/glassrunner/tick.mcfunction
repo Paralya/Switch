@@ -20,4 +20,6 @@ fill 3074 129 2924 3076 131 2926 air replace #switch:glassrunner/glass
 fill 2924 131 3076 2926 129 3074 air replace #switch:glassrunner/glass
 
 #Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute if score #glassrunner_seconds switch.data matches 3600.. run function switch:modes/glassrunner/process_end
+execute if score #glassrunner_seconds switch.data matches 3600.. run function switch:modes/glassrunner/end/null
+execute if score #glassrunner.points.red switch.data > #glassrunner_point_to_win switch.data run function switch:modes/glassrunner/end/red
+execute if score #glassrunner.points.blue switch.data > #glassrunner_point_to_win switch.data run function switch:modes/glassrunner/end/blue
