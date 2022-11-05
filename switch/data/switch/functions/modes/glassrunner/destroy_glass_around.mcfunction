@@ -1,6 +1,3 @@
-
-
-
 #Tier 1 to Air
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace #switch:glassrunner/tier_1
 
@@ -63,9 +60,3 @@ fill ~-2 ~ ~-1 ~-2 ~ ~1 light_blue_stained_glass replace blue_stained_glass
 
 fill ~ ~2 ~-1 ~ ~2 ~1 light_blue_stained_glass replace blue_stained_glass
 fill ~ ~-2 ~-1 ~ ~-2 ~1 light_blue_stained_glass replace blue_stained_glass
-
-
-playsound minecraft:entity.generic.explode block @a ~ ~ ~
-particle minecraft:explosion ~ ~ ~ 1 1 1 .1 5 
-
-kill @s

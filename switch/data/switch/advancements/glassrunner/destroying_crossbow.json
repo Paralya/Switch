@@ -1,11 +1,19 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:shot_crossbow"
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "nbt": "{glassrunner:{destroying_crossbow:1b}}"
+            }
+          }
+        }
       }
-    },
-    "rewards": {
-      "function": "switch:modes/glassrunner/crossbow/use"
     }
+  },
+  "rewards": {
+    "function": "switch:modes/glassrunner/calls/crossbow"
   }
-  
+}

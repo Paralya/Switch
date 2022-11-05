@@ -12,6 +12,8 @@ data modify storage switch:glassrunner ItemsNBT.destroying_crossbow set value {i
 
 data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s}],CanDestroy:["minecraft:glass","minecraft:red_stained_glass","minecraft:blue_stained_glass","minecraft:pink_stained_glass","minecraft:light_blue_stained_glass"]}}
 
+#warped_fungus_on_a_stick
+data modify storage switch:glassrunner ItemsNBT.fireball_wand set value {id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:4220108,glassrunner:{fireball_wand:1b},display:{Name:'{"text":"Fireball Wand","color":"dark_red","italic":false}'}}}
 
 ##Fonction executée lors du lancement de la partie
 
