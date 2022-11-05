@@ -14,7 +14,10 @@ effect give @a night_vision 99999 255 true
 effect give @a saturation 99999 255 true
 effect give @a regeneration 5 255 true
 difficulty normal
-time set 6000
+time set 0
+execute if predicate switch:chance/0.33 run time add 6000
+execute if predicate switch:chance/0.33 run time add 6000
+execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Téléportation des joueurs + give d'items
