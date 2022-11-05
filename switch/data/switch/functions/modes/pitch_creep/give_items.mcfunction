@@ -16,3 +16,4 @@ execute as @e[type=item,tag=!switch.done,distance=..1] run data modify entity @s
 execute as @e[type=item,tag=!switch.done,distance=..1] run tag @s add switch.done
 
 tag @s remove switch.temp
+

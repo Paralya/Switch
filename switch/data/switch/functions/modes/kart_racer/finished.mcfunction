@@ -1,7 +1,7 @@
 
 scoreboard players operation #digit switch.data = #kart_racer_ticks switch.data
-scoreboard players operation #digit switch.data *= #50 switch.data
-scoreboard players operation #digit switch.data %= #1000 switch.data
+scoreboard players operation #digit switch.data *= #5 switch.data
+scoreboard players operation #digit switch.data %= #100 switch.data
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" a terminé la course en "},{"score":{"name":"#kart_racer_seconds","objective":"switch.data"}},{"text":","},{"score":{"name":"#digit","objective":"switch.data"}},{"text":" secondes !\n"}]
 execute if score #remaining_time switch.data matches 61.. run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous n'avez plus que 60 secondes pour terminer la course !\n"}]
