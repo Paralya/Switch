@@ -1,5 +1,9 @@
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" a terminé la course en "},{"score":{"name":"#kart_racer_seconds","objective":"switch.data"}},{"text":" secondes !\n"}]
+scoreboard players operation #digit switch.data = #kart_racer_ticks switch.data
+scoreboard players operation #digit switch.data *= #50 switch.data
+scoreboard players operation #digit switch.data %= #1000 switch.data
+
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" a terminé la course en "},{"score":{"name":"#kart_racer_seconds","objective":"switch.data"}},{"text":","},{"score":{"name":"#digit","objective":"switch.data"}},{"text":" secondes !\n"}]
 execute if score #remaining_time switch.data matches 61.. run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous n'avez plus que 60 secondes pour terminer la course !\n"}]
 execute if score #remaining_time switch.data matches 61.. run scoreboard players set #remaining_time switch.data 60
 scoreboard players add @s switch.temp.checkpoint 1000000
