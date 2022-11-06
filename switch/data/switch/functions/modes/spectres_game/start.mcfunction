@@ -13,9 +13,9 @@ kill @e[type=item]
 kill @e[type=arrow]
 
 effect give @a saturation 999999 255 true
-effect give @a resistance 10 255 true
+effect give @a resistance 15 255 true
 effect give @a regeneration 10 255 true
-effect give @a weakness 10 255 true
+effect give @a weakness 15 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
@@ -34,7 +34,7 @@ gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spectres Game, tenez-vous prêt vous avez 10 secondes de resistance !"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spectres Game, tenez-vous prêt vous avez 15 secondes de resistance !"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901
