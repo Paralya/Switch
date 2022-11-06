@@ -5,5 +5,5 @@
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
 #Ici : dans tous les cas, tuer la personne qui join
-function switch:modes/glassrunner/death
+function switch:modes/glassrunner/death/death
 

@@ -2,7 +2,7 @@
 
 scoreboard players add #glassrunner_ticks switch.data 1
 
-execute as @a[scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/glassrunner/death
+execute as @a[scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/glassrunner/death/death
 
 execute as @a at @s run function switch:modes/glassrunner/tick_player
 
@@ -18,7 +18,7 @@ fill 2927 129 2927 2923 131 2923 air replace #switch:glassrunner/glass
 fill 3074 129 2924 3076 131 2926 air replace #switch:glassrunner/glass
 fill 2924 131 3076 2926 129 3074 air replace #switch:glassrunner/glass
 
-execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=5..}] at @s run function switch:modes/glassrunner/fireball/use
+execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=10..}] at @s run function switch:modes/glassrunner/fireball/use
 execute at @e[tag=switch.glassrunner.fireball] run function switch:modes/glassrunner/fireball/explosion
 
 #Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
