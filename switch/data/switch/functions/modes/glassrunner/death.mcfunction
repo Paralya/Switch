@@ -5,6 +5,7 @@ execute if entity @s[team=switch.glassrunner.blue] run function switch:modes/gla
 
 execute if score #success switch.data matches 0 run function switch:modes/glassrunner/death_2
 
+loot give @s loot switch:glassrunner/fireball_wand
 loot give @s loot switch:glassrunner/bow
 give @s arrow 8
 spreadplayers 2925 2925 0 2 true @s[team=switch.glassrunner.red]

@@ -20,7 +20,7 @@
 							},
 							"ops": [
 								{
-									"source": "ItemsNBT.snowball_bridge_blue.tag",
+									"source": "ItemsNBT.renforced_snowball_bridge_blue.tag",
 									"target": "{}",
 									"op": "merge"
 								}

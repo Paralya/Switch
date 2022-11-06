@@ -16,6 +16,8 @@ effect give @a saturation 999999 255 true
 effect give @a resistance 15 255 true
 effect give @a regeneration 10 255 true
 effect give @a weakness 15 255 true
+effect give @a blindness 10 255 true
+effect give @a slowness 8 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
