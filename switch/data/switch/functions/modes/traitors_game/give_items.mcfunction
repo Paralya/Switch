@@ -6,6 +6,7 @@ item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"minecraf
 item replace entity @s armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:1s}]}
 item replace entity @s hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:3s}]}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
+item replace entity @s[tag=switch.traitors_game.detective] hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Amount:0.15,Operation:2,UUID:[I;4096,4096,4096,4096]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"offhand",Amount:0.15,Operation:2,UUID:[I;4096,4096,4096,4096]}]}
 item replace entity @s hotbar.3 with stone_axe
 item replace entity @s hotbar.4 with golden_apple 5
 item replace entity @s hotbar.6 with arrow 32

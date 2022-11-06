@@ -18,9 +18,12 @@ time set 18000
 weather clear
 
 ##Téléportation des joueurs
-data modify storage switch:main maps_to_choose set value ["laser_game", "prison", "cathedrale_liege"]
+execute unless data storage switch:main warden_maps[0] run data modify storage switch:main warden_maps set value ["laser_game", "prison", "cathedrale_liege"]
+data modify storage switch:main maps_to_choose set from storage switch:main warden_maps
 function switch:engine/maps/load
-execute as @a at @s run function switch:modes/warden_escape/give_items
+data modify storage switch:main copy set from storage switch:main warden_maps
+function switch:engine/maps/storage_map_list/remove_from_storage
+data modify storage switch:main warden_maps set from storage switch:main new
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
@@ -35,4 +38,6 @@ scoreboard players set #warden_escape_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount
+
+execute as @a at @s run function switch:modes/warden_escape/give_items
 
