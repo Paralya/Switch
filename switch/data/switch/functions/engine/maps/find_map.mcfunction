@@ -1,8 +1,7 @@
 
 scoreboard players remove #try switch.data 1
 
-summon marker 0 0 0 {Tags:["switch.random"]}
-execute as @e[tag=switch.random] run function switch:engine/voting_time/get/random
+function switch:math/get_random/
 
 data modify storage switch:main copy set from storage switch:main maps_to_choose
 execute unless score #random switch.data matches 0 run function switch:engine/maps/choose_loop

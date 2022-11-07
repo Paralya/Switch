@@ -3,8 +3,8 @@ scoreboard players set #state switch.data 2
 
 scoreboard players set #voting_timer switch.data 300
 
-scoreboard players set #list_length switch.data 0
-execute store result score #list_length switch.data run data get storage switch:main minigames
+scoreboard players set #modulo_rand switch.data 0
+execute store result score #modulo_rand switch.data run data get storage switch:main minigames
 
 scoreboard players add #game_1 switch.data 0
 scoreboard players set #game_2 switch.data 0

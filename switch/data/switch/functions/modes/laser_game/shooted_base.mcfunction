@@ -6,9 +6,8 @@ execute if score #color switch.data matches 0 run tellraw @a[tag=switch.laser_ga
 execute if score #color switch.data matches 1 run tellraw @a[tag=switch.laser_game.blue] [{"selector":"@s"},{"text":" a tiré sur la base de bonus !","color":"green"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
-summon marker 0 0 0 {Tags:["switch.random"]}
-scoreboard players set #list_length switch.data 6
-execute as @e[tag=switch.random] run function switch:engine/voting_time/get/random
+scoreboard players set #modulo_rand switch.data 6
+function switch:math/get_random/
 
 execute if score #color switch.data matches 0 run tag @a[tag=!switch.laser_game.red] add switch.message
 execute if score #color switch.data matches 1 run tag @a[tag=!switch.laser_game.blue] add switch.message

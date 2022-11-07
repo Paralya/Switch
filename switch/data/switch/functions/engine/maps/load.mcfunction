@@ -3,8 +3,8 @@
 ##Avec 5 essaies de choisir une map différente de la précédente
 data modify storage switch:main previous_map set from storage switch:main map
 scoreboard players set #try switch.data 5
-scoreboard players set #list_length switch.data 0
-execute store result score #list_length switch.data run data get storage switch:main maps_to_choose
+scoreboard players set #modulo_rand switch.data 0
+execute store result score #modulo_rand switch.data run data get storage switch:main maps_to_choose
 function switch:engine/maps/find_map
 
 data modify storage switch:main map set from storage switch:main copy[0]
