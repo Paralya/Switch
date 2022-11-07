@@ -1,19 +1,20 @@
 
 #Starter kit
-item replace entity @s armor.head with iron_helmet{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
-item replace entity @s armor.chest with diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:1s}]}
-item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
-item replace entity @s armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:1s}]}
-item replace entity @s hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:3s}]}
+item replace entity @s armor.head with iron_helmet{Enchantments:[{id:"minecraft:projectile_protection",lvl:3s}]}
+item replace entity @s armor.chest with iron_chestplate{Enchantments:[{id:"minecraft:protection",lvl:3s}]}
+item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:3s}]}
+item replace entity @s armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
-item replace entity @s[tag=switch.traitors_game.detective] hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Amount:0.15,Operation:2,UUID:[I;4096,4096,4096,4096]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"offhand",Amount:0.15,Operation:2,UUID:[I;4096,4096,4096,4096]}]}
+item replace entity @s[tag=switch.traitors_game.detective] hotbar.1 with bow{Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.movement_speed",Amount:0.16,Name:"generic.movement_speed",UUID:[I;-122107,15380,185414,-30760]}],Enchantments:[{id:power,lvl:2}]}
 item replace entity @s hotbar.3 with stone_axe
-item replace entity @s hotbar.4 with golden_apple 5
-item replace entity @s hotbar.6 with arrow 32
+item replace entity @s hotbar.4 with golden_apple 6
+item replace entity @s hotbar.6 with arrow 28
 item replace entity @s hotbar.7 with water_bucket
-item replace entity @s hotbar.8 with apple 42
+item replace entity @s hotbar.8 with apple 16
+item replace entity @s hotbar.9 with cooked_chicken 28
 loot give @s loot switch:traitors_game/all_starter
-give @s oak_planks 128
+give @s oak_planks 100
 give @s anvil
 
 

@@ -11,7 +11,6 @@ team leave @a
 tag @a add switch.alive
 
 effect give @a resistance 10 255 true
-effect give @a saturation 10 255 true
 effect give @a regeneration 10 255 true
 effect give @a weakness 10 255 true
 difficulty normal
