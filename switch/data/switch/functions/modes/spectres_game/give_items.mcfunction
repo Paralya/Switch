@@ -12,9 +12,9 @@ item replace entity @s[tag=switch.spectres_game.visible] hotbar.3 with oak_plank
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.7 with water_bucket
 item replace entity @s[tag=switch.spectres_game.visible] hotbar.8 with golden_apple 4
 
+item replace entity @s[tag=switch.spectres_game.spectre] hotbar.0 with water_bucket
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.1 with stone_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:2s},{id:"minecraft:fire_aspect",lvl:1s}]}
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.3 with bow{Enchantments:[{id:"minecraft:punch",lvl:1s}]}
-item replace entity @s[tag=switch.spectres_game.spectre] hotbar.5 with water_bucket
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.7 with golden_apple 8
 item replace entity @s[tag=switch.spectres_game.spectre] hotbar.8 with oak_planks 64
 item replace entity @s[tag=switch.spectres_game.spectre] inventory.1 with stone_axe
