@@ -1,6 +1,6 @@
 
 #Starter kit
-item replace entity @s armor.head with iron_helmet{Enchantments:[{id:"minecraft:projectile_protection",lvl:3s}]}
+item replace entity @s armor.head with iron_helmet{Enchantments:[{id:"minecraft:projectile_protection",lvl:1s}]}
 item replace entity @s armor.chest with iron_chestplate{Enchantments:[{id:"minecraft:protection",lvl:3s}]}
 item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:3s}]}
 item replace entity @s armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
