@@ -25,7 +25,7 @@ execute if predicate switch:chance/0.05 run give @s diamond_ore 3
 execute if predicate switch:chance/0.05 run give @s spyglass
 execute if predicate switch:chance/0.05 run give @s ender_pearl
 execute if predicate switch:chance/0.05 run give @s ender_pearl
-execute if predicate switch:chance/0.05 run give @s netherite_shovel{Enchantments:[{id:"minecraft:efficiency",lvl:5s}],display:{Name:'{"text":"Teuse","color":"gold","italic":false}',Lore:['{"text":"C\'est la pelle Teuse MDR !","color":"white","italic":false}']}}
+execute if predicate switch:chance/0.05 run give @s netherite_shovel{Enchantments:[{id:"minecraft:efficiency",lvl:10s}],display:{Name:'{"text":"Teuse","color":"gold","italic":false}',Lore:['{"text":"C\'est la pelle Teuse MDR !","color":"white","italic":false}']}}
 execute if predicate switch:chance/0.05 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],display:{Name:'{"text":"Baseball Bat","color":"gold","italic":false}',Lore:['{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}']},Damage:30}
 execute if predicate switch:chance/0.05 run give @s golden_apple 6
 execute if predicate switch:chance/0.05 run give @s golden_apple 4
