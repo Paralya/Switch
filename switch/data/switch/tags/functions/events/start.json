@@ -14,6 +14,7 @@
 		"switch:modes/rush_the_point/calls/start",
 		"switch:modes/spleef/calls/start",
 		"switch:modes/de_a_coudre/calls/start",
+		"switch:modes/feed_fast/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }
