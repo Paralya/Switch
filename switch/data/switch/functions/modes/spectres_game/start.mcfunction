@@ -26,7 +26,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Placement de la map et des joueurs
-execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["spectre_original"]
+execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["spectre_original", "mushroom_plains"]
 data modify storage switch:main maps_to_choose set from storage switch:main spectres_game_maps
 function switch:engine/maps/load
 data modify storage switch:main copy set from storage switch:main spectres_game_maps
