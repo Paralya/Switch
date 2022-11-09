@@ -1,0 +1,51 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:apple"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:dried_kelp"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:golden_apple"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:golden_carrot"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cookie"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_beef"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:rabbit_stew"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "crazy_adventure:i/banana"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "crazy_adventure:i/uranium_banana"
+				}
+			]
+		}
+	],
+	"functions": [
+		{
+			"function": "minecraft:set_nbt",
+			"tag": "{switch:{}}"
+		}
+	]
+}

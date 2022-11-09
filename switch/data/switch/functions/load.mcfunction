@@ -7,7 +7,6 @@ scoreboard objectives add switch.money dummy
 scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
-scoreboard objectives add switch.jump minecraft.custom:minecraft.jump
 scoreboard objectives setdisplay list switch.money
 
 scoreboard objectives add switch.trigger.help trigger
@@ -57,7 +56,7 @@ data modify storage switch:main minigames append value {index:10,min_players:1	,
 data modify storage switch:main minigames append value {index:11,min_players:1	,max_players:-1		,id:"rush_the_point"		,Name:"Rush The Point"		,Lore:'["",{"text":"[Rush The Point]\\n","color":"yellow"},{"text":"Deux teams doivent s\'affronter pour capturer\\n"},{"text":"un point au centre du vide grâce à des\\n"},{"text":"classes spécifiques différentes"}]'}
 data modify storage switch:main minigames append value {index:12,min_players:1	,max_players:-1		,id:"spleef"				,Name:"Spleef"				,Lore:'["",{"text":"[Spleef]\\n","color":"yellow"},{"text":"Soyez le dernier en vie en faisant tomber\\n"},{"text":"tous vos adversaires grâce à votre équipement"}]'}
 data modify storage switch:main minigames append value {index:13,min_players:1	,max_players:-1		,id:"de_a_coudre"			,Name:"Dé à coudre"			,Lore:'["",{"text":"[Dé à coudre]\\n","color":"yellow"},{"text":"Affrontez les autres joueurs dans un saut,\\n"},{"text":"dans une piscine, iconique de Minecraft !"}]'}
-data modify storage switch:main minigames append value {index:14,min_players:1	,max_players:-1		,id:"feed_fast"			,Name:"Feed Fast"			,Lore:'["",{"text":"[Feed Fast]\\n","color":"yellow"},{"text":"Trouvez de la nourriture\\n"},{"text":"autour de vous et manger la\\n"},{"text":"pour ne pas subir un funeste destin"}]'}
+data modify storage switch:main minigames append value {index:14,min_players:1	,max_players:-1		,id:"feed_fast"				,Name:"Feed Fast"			,Lore:'["",{"text":"[Feed Fast]\\n","color":"yellow"},{"text":"Trouvez de la nourriture autour de vous\\n"},{"text":" et mangez-la pour ne pas subir un funeste destin"}]'}
 #data modify storage switch:main minigames append value {index:15,min_players:1	,max_players:-1		,id:"layers_team"			,Name:"Layers 2 Teams"		,Lore:'["",{"text":"[Layers 2 Teams]\\n","color":"yellow"},{"text":"Soyez le plus rapide à vous équiper afin de\\n"},{"text":"transpercer le mur d\'obsidienne pour exterminer l\'ennemi !"}]'}
 #data modify storage switch:main minigames append value {index:16,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'["",{"text":"[TEMPLATE]\\n","color":"yellow"},{"text":"TEMPLATE\\n"},{"text":"TEMPLATE"}]'}
 
