@@ -1,4 +1,4 @@
 
-summon marker 0 0 0 {Tags:["switch.random"]}
-execute as @e[type=marker,x=0,y=0,z=0,distance=..1,tag=switch.random] run function switch:math/get_random/marker
+execute if score #modulo_rand switch.data matches ..128 run function switch:math/get_random/base_2
+execute if score #modulo_rand switch.data matches 129.. run function switch:math/get_random/uuid
 

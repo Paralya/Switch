@@ -10,4 +10,5 @@
 	execute unless entity @a run function switch:engine/stop
 	execute if score #cut_clean switch.data matches 1 as @e[type=item,tag=!switch.item.checked] run function switch:cut_clean
 	scoreboard players reset @a switch.right_click
+	#function switch:profiling/start
 
