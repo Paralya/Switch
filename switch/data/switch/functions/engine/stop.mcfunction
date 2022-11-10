@@ -12,7 +12,8 @@ attribute @s generic.attack_speed base set 4.0
 kill @e[type=marker,tag=switch.selected_map]
 worldborder set 59999968
 worldborder center 0 0
-spawnpoint @a 0 74 0
+spawnpoint @a 0 75 0
+scoreboard objectives setdisplay list switch.money
 function switch:engine/maps/regenerate_map
 
 function #switch:events/stop

@@ -32,6 +32,7 @@ execute if data storage switch:main {map:"prison"} run function switch:engine/ma
 execute if data storage switch:main {map:"epsilon_circuit"} run function switch:engine/maps/adventure/epsilon_circuit/
 execute if data storage switch:main {map:"mario_circuit"} run function switch:engine/maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"fast_circuit"} run function switch:engine/maps/adventure/fast_circuit/
+execute if data storage switch:main {map:"plains_routine"} run function switch:engine/maps/adventure/plains_routine/
 execute if data storage switch:main {map:"city_race"} run function switch:engine/maps/adventure/city_race/
 execute if data storage switch:main {map:"sakura_land"} run function switch:engine/maps/adventure/sakura_land/
 execute if data storage switch:main {map:"hills_land"} run function switch:engine/maps/adventure/hills_land/
