@@ -21,6 +21,7 @@ execute if data storage switch:main {map:"friends_cube_lobby"} run function swit
 execute if data storage switch:main {map:"rush_the_point_1"} run function switch:engine/maps/survival/rush_the_point_1/
 execute if data storage switch:main {map:"spleef_1"} run function switch:engine/maps/survival/spleef_1/
 execute if data storage switch:main {map:"de_a_coudre_1"} run function switch:engine/maps/survival/de_a_coudre_1/
+execute if data storage switch:main {map:"mlg_a_coudre_1"} run function switch:engine/maps/survival/mlg_a_coudre_1/
 
 
 #Maps that doesn't (always gamemode adventure):
