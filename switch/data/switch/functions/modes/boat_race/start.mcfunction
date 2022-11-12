@@ -3,7 +3,7 @@
 
 #Map
 data modify storage switch:main maps_to_choose set value ["boat_race_1"]
-function switch:engine/maps/load
+function switch:maps/load
 
 clear @a
 effect clear @a

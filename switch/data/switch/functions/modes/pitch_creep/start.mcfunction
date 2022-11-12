@@ -20,7 +20,7 @@ weather clear
 
 ##Placement de la map et des joueurs + give d'items
 data modify storage switch:main maps_to_choose set value ["pitch_creep_1"]
-function switch:engine/maps/load
+function switch:maps/load
 
 gamerule mobGriefing false
 gamerule showDeathMessages false

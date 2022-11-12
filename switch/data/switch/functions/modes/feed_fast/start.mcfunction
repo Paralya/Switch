@@ -22,9 +22,9 @@ weather clear
 ##Placement de la map et des joueurs + give d'items
 execute unless data storage switch:main feed_fast_maps[0] run data modify storage switch:main feed_fast_maps set value ["traitor_original", "spectre_original", "mushroom_plains", "enchanting_island", "friends_cube_lobby", "laser_game", "mario_circuit", "fast_circuit", "city_race", "sakura_land", "hills_land", "baby_park", "cathedrale_liege"]
 data modify storage switch:main maps_to_choose set from storage switch:main feed_fast_maps
-function switch:engine/maps/load
+function switch:maps/load
 data modify storage switch:main copy set from storage switch:main feed_fast_maps
-function switch:engine/maps/storage_map_list/remove_from_storage
+function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main feed_fast_maps set from storage switch:main new
 
 gamerule mobGriefing false

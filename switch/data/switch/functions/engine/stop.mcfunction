@@ -14,7 +14,7 @@ worldborder set 59999968
 worldborder center 0 0
 spawnpoint @a 0 75 0
 scoreboard objectives setdisplay list switch.money
-function switch:engine/maps/regenerate_map
+function switch:maps/regenerate_map
 
 function #switch:events/stop
 

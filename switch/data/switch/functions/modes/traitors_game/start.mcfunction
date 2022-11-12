@@ -23,9 +23,9 @@ weather clear
 ##Placement de la map et des joueurs + give d'items
 execute unless data storage switch:main traitors_game_maps[0] run data modify storage switch:main traitors_game_maps set value ["traitor_original", "zone_51", "spectre_original", "mushroom_plains"]
 data modify storage switch:main maps_to_choose set from storage switch:main traitors_game_maps
-function switch:engine/maps/load
+function switch:maps/load
 data modify storage switch:main copy set from storage switch:main traitors_game_maps
-function switch:engine/maps/storage_map_list/remove_from_storage
+function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main traitors_game_maps set from storage switch:main new
 execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @a
 execute if data storage switch:main {map:"zone_51"} run spreadplayers 2000 2000 1 50 under 170 false @a

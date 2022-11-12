@@ -28,9 +28,9 @@ weather clear
 ##Placement de la map et des joueurs
 execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["spectre_original", "mushroom_plains"]
 data modify storage switch:main maps_to_choose set from storage switch:main spectres_game_maps
-function switch:engine/maps/load
+function switch:maps/load
 data modify storage switch:main copy set from storage switch:main spectres_game_maps
-function switch:engine/maps/storage_map_list/remove_from_storage
+function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main spectres_game_maps set from storage switch:main new
 execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
 
