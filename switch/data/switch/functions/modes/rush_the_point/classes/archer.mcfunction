@@ -15,7 +15,6 @@ data modify block 0 0 0 Items[1].tag.CanDestroy set value ["minecraft:cut_sandst
 data remove block 0 0 0 Items[2].tag.AttributeModifiers[{AttributeName:"generic.max_health"}]
 data remove block 0 0 0 Items[3].tag.AttributeModifiers[{AttributeName:"generic.knockback_resistance"}]
 data remove block 0 0 0 Items[4].tag.AttributeModifiers[{AttributeName:"generic.movement_speed"}]
-data modify block 0 0 0 Items[6].tag.Enchantments append value {id:"minecraft:infinity",lvl:1s}
 data modify block 0 0 0 Items[7].Count set value 42b
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].tag.display.color set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].tag.display.color set value 16731469
@@ -36,7 +35,7 @@ item replace entity @s hotbar.4 with cut_sandstone{CanPlaceOn:["#switch:rush_the
 item replace entity @s hotbar.5 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.6 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.8 from block 0 0 0 container.7
-item replace entity @s inventory.0 with arrow
+item replace entity @s inventory.0 with arrow 12
 
 attribute @s generic.attack_speed base set 1024
 setblock 0 0 0 air
