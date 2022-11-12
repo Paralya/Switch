@@ -5,50 +5,73 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:apple"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:dried_kelp"
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 2,
 					"name": "minecraft:golden_apple"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:golden_carrot"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:cookie"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:cooked_beef"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:rabbit_stew"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 2,
+					"weight": 4,
 					"name": "crazy_adventure:i/banana"
 				},
 				{
 					"type": "minecraft:loot_table",
+					"weight": 2,
 					"name": "crazy_adventure:i/uranium_banana"
 				},
 				{
 					"type": "minecraft:loot_table",
+					"weight": 2,
 					"name": "stardust:i/stardust_apple"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{CustomPotionEffects:[{Id:6,Amplifier:9b}],CustomPotionColor:16711680,display:{Name:'{\"text\":\"Potion de soin\",\"italic\":false}'}}"
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{CustomPotionEffects:[{Id:23,Amplifier:4b}],CustomPotionColor:10569486,display:{Name:'{\"text\":\"Potion de saturation\",\"italic\":false}'}}"
+						}
+					]
 				}
 			]
 		}
