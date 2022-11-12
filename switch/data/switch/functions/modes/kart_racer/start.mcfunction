@@ -47,6 +47,8 @@ scoreboard objectives add switch.respawn_cp_id dummy
 scoreboard objectives add switch.hard_respawn_cp_id dummy
 scoreboard objectives add switch.checkpoint dummy
 scoreboard objectives add switch.lap dummy
+scoreboard objectives add switch.effects.last dummy
+scoreboard objectives add switch.effects.timer dummy
 scoreboard players set @a switch.respawn_cp_id -1
 scoreboard players set @a switch.hard_respawn_cp_id -1
 scoreboard players set @a switch.temp.checkpoint 0
