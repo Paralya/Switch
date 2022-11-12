@@ -13,7 +13,7 @@ execute if score #surface shopping_kart.data matches 4 run scoreboard players se
 ##Inspired from trackmania
 execute unless score @s shopping_kart.engine matches 0 if entity @s[tag=shopping_kart.engine_off] run scoreboard players set #add shopping_kart.engine 22
 execute if score @s shopping_kart.engine matches 0 if entity @s[tag=shopping_kart.engine_off] run scoreboard players set #add shopping_kart.engine 0
-execute if entity @s[tag=shopping_kart.reactor_boost] run scoreboard players set #add shopping_kart.engine 56
+execute if score @s shopping_kart.reactor_boost matches 1.. run scoreboard players set #add shopping_kart.engine 56
 execute if entity @s[tag=shopping_kart.cruise_control] run scoreboard players set #add shopping_kart.engine 28
 
 scoreboard players operation @s shopping_kart.engine += #add shopping_kart.engine

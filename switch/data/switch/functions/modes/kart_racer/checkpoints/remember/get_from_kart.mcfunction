@@ -17,4 +17,5 @@ execute store result storage switch:main temp.scores.shopping_kart.old_pos_x int
 execute store result storage switch:main temp.scores.shopping_kart.old_pos_y int 1 run scoreboard players get @s shopping_kart.old_pos_y
 execute store result storage switch:main temp.scores.shopping_kart.old_pos_z int 1 run scoreboard players get @s shopping_kart.old_pos_z
 execute store result storage switch:main temp.scores.shopping_kart.booster_timer int 1 run scoreboard players get @s shopping_kart.booster_timer
+execute store result storage switch:main temp.scores.shopping_kart.reactor_boost int 1 run scoreboard players get @s shopping_kart.reactor_boost
 
