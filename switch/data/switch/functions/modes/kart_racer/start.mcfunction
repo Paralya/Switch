@@ -97,7 +97,7 @@ scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 
 ##Téléportation des joueurs + give d'items
-execute unless data storage switch:main kart_racer_maps[0] run data modify storage switch:main kart_racer_maps set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "baby_park", "mario_circuit", "fast_circuit", "plains_routine", "city_race", "sakura_land", "hills_land", "airship_fortress", "dk_mountain", "clock_circuit", "epsilon_circuit"]
+execute unless data storage switch:main kart_racer_maps[0] run data modify storage switch:main kart_racer_maps set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "baby_park", "mario_circuit", "fast_circuit", "plains_routine", "city_race", "sakura_land", "hills_land", "airship_fortress", "dk_mountain", "clock_circuit", "epsilon_circuit", "dishorreur"]
 data modify storage switch:main maps_to_choose set from storage switch:main kart_racer_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main kart_racer_maps
