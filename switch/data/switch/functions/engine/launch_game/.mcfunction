@@ -22,6 +22,7 @@ execute if score #vote_game_5 switch.data = #max switch.data run data modify sto
 scoreboard players set #modulo_rand switch.data 0
 execute store result score #modulo_rand switch.data run data get storage switch:main voted_games
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game set from storage switch:main voted_games[0].id
+execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game_name set from storage switch:main voted_games[0].Name
 execute if score #modulo_rand switch.data matches 1 store result score #game_1 switch.data run data get storage switch:main voted_games[0].index
 execute if score #modulo_rand switch.data matches 2.. run function switch:engine/launch_game/get_random_max
 
