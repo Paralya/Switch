@@ -18,7 +18,7 @@ effect give @a saturation 99999 255 true
 effect give @a resistance 99999 255 true
 effect give @a regeneration 5 255 true
 difficulty normal
-time set 18000
+time set 6000
 weather clear
 
 ##Téléportation des joueurs
