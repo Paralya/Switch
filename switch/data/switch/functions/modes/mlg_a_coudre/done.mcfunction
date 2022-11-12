@@ -21,7 +21,7 @@ execute if score #block switch.data matches 15 run setblock ~ ~ ~ red_wool
 execute if score #block switch.data matches 16 run setblock ~ ~ ~ black_wool
 
 scoreboard players set #success switch.data 0
-execute unless block ~1 ~ ~ water unless block ~-1 ~ ~ water unless block ~ ~ ~1 water unless block ~ ~ ~-1 water run function switch:modes/de_a_coudre/de_a_coudre
+execute unless block ~1 ~ ~ water unless block ~-1 ~ ~ water unless block ~ ~ ~1 water unless block ~ ~ ~-1 water run function switch:modes/mlg_a_coudre/mlg_a_coudre
 execute if score #success switch.data matches 0 run tellraw @a [{"selector":"@s","color":"dark_gray"},{"text":" valide son saut."}]
 
 execute as @a at @s run playsound entity.player.levelup ambient @s

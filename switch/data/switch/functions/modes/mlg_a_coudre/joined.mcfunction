@@ -4,6 +4,7 @@
 #execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-#Ici : dans tous les cas, tuer la personne qui join
-function switch:modes/feed_fast/death
+scoreboard players reset @s switch.temp.order
+scoreboard players reset @s switch.temp.lives
+function switch:modes/mlg_a_coudre/death
 

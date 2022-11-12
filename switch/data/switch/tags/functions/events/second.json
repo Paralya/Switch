@@ -15,6 +15,7 @@
 		"switch:modes/spleef/calls/second",
 		"switch:modes/de_a_coudre/calls/second",
 		"switch:modes/feed_fast/calls/second",
+		"switch:modes/mlg_a_coudre/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }
