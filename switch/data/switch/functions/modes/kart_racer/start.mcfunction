@@ -90,7 +90,7 @@ team modify switch.temp.7 suffix {"text":" [7ème]","color":"#696969"}
 team modify switch.temp.8 suffix {"text":" [8ème]","color":"#696969"}
 team modify switch.temp.9 suffix {"text":" [9ème]","color":"#696969"}
 team modify switch.temp.10 suffix {"text":" [10ème]","color":"#696969"}
-team modify switch.temp.10+ suffix {"text":" [Trop Nul]","color":"#9200DF"}
+team modify switch.temp.10+ suffix {"text":" [Pas Ouf]","color":"#9200DF"}
 
 ##Number of checkpoints and laps per map
 scoreboard players set #total_laps switch.data 3

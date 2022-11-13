@@ -22,3 +22,5 @@ execute if score #success switch.data matches 1 if entity @s[tag=switch.traitors
 
 kill @s
 
+function switch:modes/traitors_game/update_sidebar
+

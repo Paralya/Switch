@@ -33,6 +33,7 @@ data modify storage switch:main copy set from storage switch:main spectres_game_
 function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main spectres_game_maps set from storage switch:main new
 execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
+execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
@@ -66,4 +67,9 @@ tag @a remove switch.spectres_game.visible
 tag @a remove switch.spectres_game.spectre
 execute as @a[sort=random] at @s run function switch:modes/spectres_game/roles/
 execute as @a at @s run function switch:modes/spectres_game/give_items
+
+give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:4,Duration:400,ShowParticles:0b},{Id:7,ShowParticles:0b},{Id:15,Duration:80,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:4,Duration:400,ShowParticles:0b},{Id:7,ShowParticles:0b},{Id:15,Duration:80,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:9,Duration:200,ShowParticles:0b},{Id:19,Duration:220,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:9,Duration:200,ShowParticles:0b},{Id:19,Duration:220,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
 

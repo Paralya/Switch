@@ -39,7 +39,7 @@ scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-scoreboard players set #remaining_time switch.data 610
+scoreboard players set #remaining_time switch.data 310
 scoreboard players set #rush_the_point_seconds switch.data -10
 scoreboard players set #rush_the_point_ticks switch.data 0
 scoreboard players set #blue_points switch.data 0
