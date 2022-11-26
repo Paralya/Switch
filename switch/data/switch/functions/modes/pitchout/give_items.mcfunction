@@ -8,7 +8,12 @@ execute if score #random switch.data matches 1 run loot spawn ~ ~ ~ loot stardus
 execute if score #random switch.data matches 2 run loot spawn ~ ~ ~ loot stardust:i/solarium_sword
 execute if score #random switch.data matches 3 run loot spawn ~ ~ ~ loot stardust:i/darkium_sword
 
-loot spawn ~ ~ ~ loot stardust:i/stardust_bow
+scoreboard players set #modulo_rand switch.data 3
+function switch:math/get_random/
+execute if score #random switch.data matches 0 run loot spawn ~ ~ ~ loot stardust:i/stardust_bow
+execute if score #random switch.data matches 1 run loot spawn ~ ~ ~ loot stardust:i/awakened_stardust_bow
+execute if score #random switch.data matches 2 run loot spawn ~ ~ ~ loot stardust:i/ultimate_bow
+
 item replace entity @s hotbar.2 with ender_pearl 3
 item replace entity @s hotbar.2 with arrow
 
