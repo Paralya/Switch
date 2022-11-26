@@ -15,7 +15,8 @@ effect give @s night_vision 99999 250 true
 effect give @s darkness 99999 250 true
 gamemode adventure @s
 scoreboard players set @s switch.temp.choosen_class 0
-item replace entity @s hotbar.2 with diamond_sword{switch:{class_item:1b},CustomModelData:2013118,display:{Name:'{"text":"Guerrier","color":"red","italic":false}'}}
-item replace entity @s hotbar.4 with bow{switch:{class_item:1b},CustomModelData:2013149,display:{Name:'{"text":"Archer","color":"red","italic":false}'}}
-item replace entity @s hotbar.6 with elytra{switch:{class_item:1b},CustomModelData:2013143,display:{Name:'{"text":"Kamikaze","color":"red","italic":false}'}}
+item replace entity @s hotbar.1 with diamond_sword{switch:{class_item:1b},CustomModelData:2013118,display:{Name:'{"text":"Guerrier","color":"red","italic":false}'}}
+item replace entity @s hotbar.3 with bow{switch:{class_item:1b},CustomModelData:2013149,display:{Name:'{"text":"Archer","color":"red","italic":false}'}}
+item replace entity @s hotbar.5 with elytra{switch:{class_item:1b},CustomModelData:2013143,display:{Name:'{"text":"Kamikaze","color":"red","italic":false}'}}
+item replace entity @s hotbar.7 with bricks{switch:{class_item:1b},display:{Name:'{"text":"Builder","color":"red","italic":false}'}}
 
