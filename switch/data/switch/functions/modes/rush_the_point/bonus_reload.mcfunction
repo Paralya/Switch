@@ -13,3 +13,4 @@ execute as @a at @s run playsound entity.villager.hurt ambient @s
 execute as @a at @s run playsound entity.villager.hurt ambient @s
 execute as @a at @s run playsound entity.villager.hurt ambient @s
 
+scoreboard players set #bonus_reload switch.data 0

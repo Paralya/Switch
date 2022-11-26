@@ -10,6 +10,9 @@ execute if score #rush_the_point_seconds switch.data matches ..-1 run effect giv
 execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a blindness 100 250 true
 execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a night_vision 100 250 true
 execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a darkness 100 250 true
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 13925 air
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14000 air
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14075 air
 execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a
 
 execute if score #remaining_time switch.data matches 1.. run function switch:modes/rush_the_point/xp_bar
