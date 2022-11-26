@@ -9,9 +9,7 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5] run
 execute if score #detect_end switch.data matches 0 unless entity @a[gamemode=adventure] run function switch:modes/de_a_coudre/next_player
 
 ##Fin de partie
-scoreboard players set #position switch.data 0
-execute store result score #position switch.data if entity @a[scores={switch.temp.lives=1..}]
-execute if score #detect_end switch.data matches 0 if score #position switch.data matches ..1 run scoreboard players set #detect_end switch.data 1
+execute if score #detect_end switch.data matches 0 if score #rounds switch.data matches 0 run scoreboard players set #detect_end switch.data 1
 execute if score #detect_end switch.data matches 0 if score #de_a_coudre_seconds switch.data matches 600.. run scoreboard players set #detect_end switch.data 1
 execute if score #detect_end switch.data matches 1 run function switch:modes/de_a_coudre/process_end
 

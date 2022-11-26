@@ -4,7 +4,8 @@
 #execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 #execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-scoreboard players reset @s switch.temp.order
-scoreboard players reset @s switch.temp.lives
-function switch:modes/de_a_coudre/death
+gamemode spectator @s
+execute if score #reconnect switch.data matches 0 run scoreboard players add #max switch.data 1
+execute if score #reconnect switch.data matches 0 run scoreboard players operation @s switch.temp.color = #max switch.data
+execute if score #reconnect switch.data matches 1 run function switch:modes/de_a_coudre/death
 
