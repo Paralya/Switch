@@ -27,8 +27,8 @@ execute if score #regeneration_ticks switch.data matches 40 positioned 28000 90 
 execute if score #regeneration_ticks switch.data matches 41 positioned 28000 91 28000 run fill ~-30 ~ ~-30 ~30 ~ ~30 lava
 execute if score #regeneration_ticks switch.data matches 42 positioned 28000 92 28000 run fill ~-30 ~ ~-30 ~30 ~ ~30 lava
 execute if score #regeneration_ticks switch.data matches 43 positioned 28000 93 28000 run fill ~-30 ~ ~-30 ~30 ~ ~30 lava
-execute if score #regeneration_ticks switch.data matches 44 positioned 28000 96 28000 run fill ~-30 ~ ~-30 ~30 ~ ~30 snow_block
-execute if score #regeneration_ticks switch.data matches 45 positioned 28000 99 28000 run fill ~-30 ~ ~-30 ~30 ~ ~30 snow_block
+execute if score #regeneration_ticks switch.data matches 44 positioned 28000 96 28000 run fill ~-20 ~ ~-20 ~20 ~ ~20 snow_block
+execute if score #regeneration_ticks switch.data matches 45 positioned 28000 99 28000 run fill ~-20 ~ ~-20 ~20 ~ ~20 snow_block
 
 execute if score #regeneration_ticks switch.data matches 46 run kill @e[type=item]
 execute if score #regeneration_ticks switch.data matches 46 run forceload remove 27970 27970 28030 28030

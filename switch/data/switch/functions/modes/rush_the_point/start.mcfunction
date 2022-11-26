@@ -40,7 +40,7 @@ scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.o
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-scoreboard players set #bonus_reload switch.data 0
+scoreboard players set #bonus_reload switch.data 30
 scoreboard players set #remaining_time switch.data 610
 scoreboard players set #rush_the_point_seconds switch.data -10
 scoreboard players set #rush_the_point_ticks switch.data 0
