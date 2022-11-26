@@ -4,7 +4,7 @@
 scoreboard players add #creeper_apocalypse_ticks switch.data 1
 
 execute as @a[gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier run kill @s
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/creeper_apocalypse/death
+execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/creeper_apocalypse/death
 
 #Creeper stuff
 effect give @e[type=creeper] resistance 99999 0 true

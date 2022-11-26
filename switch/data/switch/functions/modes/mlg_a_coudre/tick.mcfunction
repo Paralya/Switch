@@ -5,7 +5,7 @@ scoreboard players add #mlg_a_coudre_ticks switch.data 1
 
 ##Global tick
 execute as @e[type=player,gamemode=adventure,predicate=switch:in_water] at @s run function switch:modes/mlg_a_coudre/done
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5] run function switch:modes/mlg_a_coudre/death
+execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10] run function switch:modes/mlg_a_coudre/death
 execute if score #detect_end switch.data matches 0 unless entity @a[gamemode=adventure] run function switch:modes/mlg_a_coudre/next_player
 
 ##Fin de partie

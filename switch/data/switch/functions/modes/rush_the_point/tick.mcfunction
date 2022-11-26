@@ -13,7 +13,7 @@ execute as @a[scores={switch.temp.choosen_class=0}] run function switch:modes/ru
 
 #Death System
 execute as @e[type=player,tag=switch.to_tp] run function switch:modes/rush_the_point/teleport_to_death
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..5] run function switch:modes/rush_the_point/death/player
+execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10] run function switch:modes/rush_the_point/death/player
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/rush_the_point/death/detect
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function switch:modes/rush_the_point/death/for_global
 

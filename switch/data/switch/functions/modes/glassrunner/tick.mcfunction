@@ -2,7 +2,7 @@
 
 scoreboard players add #glassrunner_ticks switch.data 1
 
-execute as @a[scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..5,sort=random] run function switch:modes/glassrunner/death/death
+execute as @a[scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/glassrunner/death/death
 
 execute as @a at @s run function switch:modes/glassrunner/tick_player
 
