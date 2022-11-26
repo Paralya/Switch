@@ -16,6 +16,7 @@ execute if entity @a[tag=switch.alive,tag=switch.traitors_game.big_traitor] run 
 execute if score #game_state switch.data matches 1 run scoreboard players set #traitors_game_seconds switch.data 100000
 execute if score #game_state switch.data matches 2 run scoreboard players set #traitors_game_seconds switch.data 100000
 execute if score #game_state switch.data matches 4 run scoreboard players set #traitors_game_seconds switch.data 100000
+execute if score #traitors_game_seconds switch.data matches 100000 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/for_global
 
 #Cas des vainqueurs
 execute if score #game_state switch.data matches 1 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"innocents","color":"green"},{"text":" ! GG à "},{"selector":"@a[tag=switch.alive,tag=!switch.traitors_game.traitor]"}]
@@ -28,9 +29,10 @@ execute if score #game_state switch.data matches 4 run scoreboard players add @a
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 1 run scoreboard players add @a[tag=switch.alive,tag=!switch.traitors_game.traitor] switch.money 1
 
 #Cas des égalités
-execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
-execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 5 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
-execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 7 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
+execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]
+execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 5 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]
+execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 7 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]
+
 
 #Visuel de fin de partie
 execute if score #traitors_game_seconds switch.data matches 1200.. as @a at @s run playsound item.totem.use ambient @s

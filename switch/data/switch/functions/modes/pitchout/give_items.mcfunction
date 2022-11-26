@@ -15,12 +15,13 @@ execute if score #random switch.data matches 1 run loot spawn ~ ~ ~ loot stardus
 execute if score #random switch.data matches 2 run loot spawn ~ ~ ~ loot stardust:i/ultimate_bow
 
 item replace entity @s hotbar.2 with ender_pearl 3
-item replace entity @s hotbar.2 with arrow
+item replace entity @s hotbar.3 with arrow
 
 attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
 
+execute as @e[type=item,tag=!switch.done,nbt=!{Item:{id:"minecraft:bow"}}] run data remove entity @s Item.tag.stardust
 execute as @e[type=item,tag=!switch.done,nbt=!{Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:knockback",lvl:3}]
 execute as @e[type=item,tag=!switch.done,nbt={Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:infinity",lvl:1},{id:"minecraft:punch",lvl:2}]
 execute as @e[type=item,tag=!switch.done] run data modify entity @s Item.tag.Unbreakable set value 1b
