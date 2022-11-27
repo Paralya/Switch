@@ -42,7 +42,8 @@ scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.vote_collisions dummy
 scoreboard objectives add switch.temp.change_map dummy
 scoreboard objectives add switch.temp.checkpoint dummy
-scoreboard objectives add switch.temp.classement dummy {"text":"Classement","color":"dark_purple"}
+scoreboard objectives add switch.temp.classement dummy
+scoreboard objectives add switch.temp.sidebar dummy {"text":" Classement ","color":"dark_purple"}
 scoreboard objectives add switch.respawn_cp_id dummy
 scoreboard objectives add switch.hard_respawn_cp_id dummy
 scoreboard objectives add switch.checkpoint dummy
@@ -54,7 +55,7 @@ scoreboard players set @a switch.hard_respawn_cp_id -1
 scoreboard players set @a switch.temp.checkpoint 0
 scoreboard players set @a switch.checkpoint 0
 scoreboard players set @a switch.lap 1
-scoreboard objectives setdisplay sidebar switch.temp.classement
+scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
 team add switch.temp.kart
 team add switch.temp.1

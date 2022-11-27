@@ -29,3 +29,6 @@ scoreboard players operation #max switch.temp.classement > @a switch.temp.classe
 scoreboard players operation @a switch.temp.classement -= #max switch.temp.classement
 scoreboard players operation @a switch.temp.classement *= #-1 switch.data
 
+#Application des changements à droite
+execute as @a run scoreboard players operation @s switch.temp.sidebar = @s switch.temp.classement
+

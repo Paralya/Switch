@@ -23,7 +23,7 @@ xp set @s 0 points
 
 execute as @e[type=item,tag=!switch.done,nbt=!{Item:{id:"minecraft:bow"}}] run data remove entity @s Item.tag.stardust
 execute as @e[type=item,tag=!switch.done,nbt=!{Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:knockback",lvl:3}]
-execute as @e[type=item,tag=!switch.done,nbt={Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:infinity",lvl:1},{id:"minecraft:punch",lvl:2}]
+execute as @e[type=item,tag=!switch.done,nbt={Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:infinity",lvl:1s},{id:"minecraft:punch",lvl:2s}]
 execute as @e[type=item,tag=!switch.done] run data modify entity @s Item.tag.Unbreakable set value 1b
 execute as @e[type=item,tag=!switch.done] run data modify entity @s Owner set from entity @p[tag=switch.temp] UUID
 execute as @e[type=item,tag=!switch.done] run data modify entity @s PickupDelay set value 0s
