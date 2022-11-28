@@ -39,9 +39,7 @@ gamerule fallDamage false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Laser Game, tuez le plus d'ennemis possible !"}]
 
-data modify storage iris:input TargetEntities set value true
-data modify storage iris:input MaxRecursionDepth set value 50
-scoreboard objectives add switch.temp.individual_points dummy {"text":"Points Individuels","color":"yellow"}
+scoreboard objectives add switch.temp.individual_points dummy {"text":" Points Individuels ","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.dead_cooldown dummy

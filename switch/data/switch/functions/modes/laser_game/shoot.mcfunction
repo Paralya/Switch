@@ -15,5 +15,7 @@ execute if entity @s[tag=switch.laser_game.red] as @e[tag=iris.target,tag=switch
 execute at @e[tag=iris.ray] if block ~ ~ ~.01 iron_trapdoor run function switch:modes/laser_game/shooted_base
 execute as @e[tag=iris.ray] at @s run function switch:modes/laser_game/shoot_particles
 
+kill @e[type=marker, tag=iris.ray]
+tag @e[type=!#iris:ignore] remove iris.target
 tag @s remove switch.temp
 
