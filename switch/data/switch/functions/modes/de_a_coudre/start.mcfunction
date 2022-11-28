@@ -44,10 +44,12 @@ scoreboard players operation #max switch.data = #position switch.data
 execute as @a run scoreboard players operation @s switch.temp.color = @s switch.temp.order
 
 #Nombre de rounds
-scoreboard players set #rounds switch.data 6
+scoreboard players set #rounds switch.data 8
+execute if score #max switch.data matches 5..8 run scoreboard players set #rounds switch.data 6
 execute if score #max switch.data matches 9..16 run scoreboard players set #rounds switch.data 4
 execute if score #max switch.data matches 17..24 run scoreboard players set #rounds switch.data 3
 execute if score #max switch.data matches 25..32 run scoreboard players set #rounds switch.data 2
 execute if score #max switch.data matches 33.. run scoreboard players set #rounds switch.data 1
-tellraw @a [{"text":"Total de "},{"score":{"name":"#rounds","objective":"switch.data"},"color":"aqua"},{"text":" rounds !"}]
+scoreboard players operation #max_rounds switch.data = #rounds switch.data
+tellraw @a [{"text":"Démarrage d'un nouveau round ! [","color":"yellow"},{"text":"0","color":"gold"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"gold"},{"text":"]"}]
 

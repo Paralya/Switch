@@ -26,6 +26,11 @@ execute positioned ~ ~ ~-1 unless block ~ ~ ~ water unless block ~ ~ ~ air run s
 execute positioned ~ ~ ~1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
 execute positioned ~1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
 
+execute if score #points switch.data matches 5 run setblock ~ ~ ~ emerald_block
+execute if score #points switch.data matches 5 run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;3789123]}]}}}}
+execute if score #points switch.data matches 1..4 run summon firework_rocket ~ ~1 ~ {LifeTime:10,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;5631]}]}}}}
+
+execute if score #points switch.data matches 5 run scoreboard players set #points switch.data 6
 execute if score #points switch.data matches 1 run tellraw @a [{"selector":"@s","color":"green"},{"text":" valide son saut et fait "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" point !"}]
 execute if score #points switch.data matches 2.. run tellraw @a [{"selector":"@s","color":"green"},{"text":" valide son saut et fait "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" points !"}]
 scoreboard players operation @s switch.temp.points += #points switch.data
