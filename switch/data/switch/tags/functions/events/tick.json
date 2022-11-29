@@ -16,6 +16,7 @@
 		"switch:modes/de_a_coudre/calls/tick",
 		"switch:modes/feed_fast/calls/tick",
 		"switch:modes/mlg_a_coudre/calls/tick",
+		"switch:modes/protect_the_king/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
 }

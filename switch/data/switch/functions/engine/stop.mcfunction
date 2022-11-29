@@ -16,6 +16,8 @@ worldborder center 0 0
 spawnpoint @a 0 74 0
 scoreboard objectives setdisplay list switch.money
 function switch:maps/regenerate_map
+execute as @a run attribute @s generic.attack_speed base set 4.0
+execute as @a run attribute @s generic.max_health base set 20.0
 
 function #switch:events/stop
 
