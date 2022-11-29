@@ -1,8 +1,8 @@
 
 tag Stoupy51 add convention.debug
 
-scoreboard objectives add shopping_kart.id dummy
 scoreboard objectives add switch.data dummy
+scoreboard objectives add switch.health health
 scoreboard objectives add switch.money dummy
 scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.leave minecraft.custom:minecraft.leave_game

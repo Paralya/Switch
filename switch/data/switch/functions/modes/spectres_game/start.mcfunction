@@ -26,15 +26,16 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Placement de la map et des joueurs
-execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["spectre_original", "mushroom_plains", "jayl_dark_forest"]
+execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["traitor_original", "spectre_original", "mushroom_plains", "jayl_dark_forest"]
 data modify storage switch:main maps_to_choose set from storage switch:main spectres_game_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main spectres_game_maps
 function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main spectres_game_maps set from storage switch:main new
+execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @a
 execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
 execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
-execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33817 33858 1 100 under 150 false @a
+execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33931 33923 1 30 under 180 false @a
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
@@ -56,6 +57,7 @@ scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.damages dummy {"text":" Nombre de coups infligés ","color":"aqua"}
 scoreboard objectives setdisplay sidebar switch.temp.damages
+scoreboard objectives setdisplay list switch.health
 
 #Choix des rôles + give d'items
 team add switch.temp.visible

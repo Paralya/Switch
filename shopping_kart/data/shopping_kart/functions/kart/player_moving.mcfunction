@@ -1,5 +1,4 @@
 
-advancement revoke @s only shopping_kart:player_tick
 tag @s add shopping_kart.temp
 
 #Store player motion and call function to the vehicle
