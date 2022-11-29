@@ -26,7 +26,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Placement de la map et des joueurs
-execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["spectre_original", "mushroom_plains"]
+execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["spectre_original", "mushroom_plains", "jayl_dark_forest"]
 data modify storage switch:main maps_to_choose set from storage switch:main spectres_game_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main spectres_game_maps
@@ -34,6 +34,7 @@ function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main spectres_game_maps set from storage switch:main new
 execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
 execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
+execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33817 33858 1 100 under 150 false @a
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
