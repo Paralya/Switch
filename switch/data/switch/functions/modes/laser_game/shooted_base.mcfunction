@@ -41,5 +41,7 @@ scoreboard players add @s switch.temp.individual_points 20
 
 scoreboard players set #base_reload switch.data 15
 setblock 516 104 523 dark_oak_trapdoor[powered=true,open=true]
-data modify entity @e[tag=switch.laser_game.base,limit=1] Item set value {id:""}
+setblock 36041 122 36011 dark_oak_trapdoor[powered=true,open=true,facing=east]
+setblock 36041 122 36012 dark_oak_trapdoor[powered=true,open=true,facing=east]
+execute as @e[tag=switch.laser_game.base] run data modify entity @s Item set value {id:""}
 

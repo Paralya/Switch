@@ -48,6 +48,7 @@ execute if data storage switch:main {map:"snow_travel"} run function switch:maps
 execute if data storage switch:main {map:"trackmania_stadium_1"} run function switch:maps/adventure/trackmania_stadium_1/
 execute if data storage switch:main {map:"cathedrale_liege"} run function switch:maps/adventure/cathedrale_liege/
 execute if data storage switch:main {map:"dishorreur"} run function switch:maps/adventure/dishorreur/
+execute if data storage switch:main {map:"operation_pigclaw"} run function switch:maps/adventure/operation_pigclaw/
 
 #snow_drive à faire
 
