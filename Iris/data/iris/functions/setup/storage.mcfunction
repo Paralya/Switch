@@ -6,6 +6,7 @@
 #	storage iris:data
 #		is_setup: bool Whether storage has already been setup
 
-data merge storage iris:data {is_setup: 1b}
-data merge storage iris:input {TargetEntities: true, MaxRecursionDepth: 64}
+data modify storage iris:data is_setup set value true
+data modify storage iris:input TargetEntities set value true
+data modify storage iris:input MaxRecursionDepth set value 256
 

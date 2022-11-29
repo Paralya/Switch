@@ -12,6 +12,6 @@ execute if data storage switch:main {map:"spleef_1"} run function switch:maps/su
 execute if data storage switch:main {map:"de_a_coudre_1"} run function switch:maps/survival/de_a_coudre_1/regenerate
 execute if data storage switch:main {map:"mlg_a_coudre_1"} run function switch:maps/survival/mlg_a_coudre_1/regenerate
 execute if data storage switch:main {map:"zonweeb_main"} run function switch:maps/survival/zonweeb_main/regenerate
-execute if data storage switch:main {map:"jayl_dark_forest"} run function switch:maps/survival/jayl_dark_forest/regenerate
+#execute if data storage switch:main {map:"jayl_dark_forest"} run function switch:maps/survival/jayl_dark_forest/regenerate
 data remove storage switch:main map
 

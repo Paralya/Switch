@@ -47,9 +47,7 @@ scoreboard players set #protect_the_king_seconds switch.data -1
 scoreboard players set #protect_the_king_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
-
 scoreboard objectives add switch.temp.deathCount deathCount
-scoreboard objectives setdisplay sidebar switch.temp.damages
 
 #Choix des rôles + give d'items
 team add switch.temp.red_king
