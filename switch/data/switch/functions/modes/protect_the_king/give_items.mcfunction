@@ -25,10 +25,10 @@ give @s anvil
 
 effect give @s[tag=switch.king] glowing 99999 255 true
 effect give @s[tag=switch.king] glowing 99999 255 true
-item replace entity @s[tag=switch.king] armor.head with netherite_helmet{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
-item replace entity @s[tag=switch.king] armor.chest with netherite_chestplate{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
-item replace entity @s[tag=switch.king] armor.legs with netherite_leggings{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
-item replace entity @s[tag=switch.king] armor.feet with netherite_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s[tag=switch.king] armor.head with iron_helmet{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s[tag=switch.king] armor.chest with diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s[tag=switch.king] armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
+item replace entity @s[tag=switch.king] armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
 item replace entity @s[tag=switch.king] hotbar.0 with netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
 attribute @s[tag=switch.king] generic.max_health base set 40.0
 

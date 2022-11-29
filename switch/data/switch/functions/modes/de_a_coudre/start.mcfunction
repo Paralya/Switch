@@ -51,5 +51,5 @@ execute if score #max switch.data matches 17..24 run scoreboard players set #rou
 execute if score #max switch.data matches 25..32 run scoreboard players set #rounds switch.data 2
 execute if score #max switch.data matches 33.. run scoreboard players set #rounds switch.data 1
 scoreboard players operation #max_rounds switch.data = #rounds switch.data
-tellraw @a [{"text":"Démarrage d'un nouveau round ! [","color":"yellow"},{"text":"0","color":"gold"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"gold"},{"text":"]"}]
+tellraw @a [{"text":"Démarrage d'un nouveau round ! [","color":"yellow"},{"text":"1","color":"gold"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"gold"},{"text":"]"}]
 

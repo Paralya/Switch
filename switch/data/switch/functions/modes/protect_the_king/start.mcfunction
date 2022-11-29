@@ -34,7 +34,7 @@ execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 40
 execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33931 33923 1 30 under 180 false @a
 
 gamerule mobGriefing true
-gamerule showDeathMessages false
+gamerule showDeathMessages true
 gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory false
