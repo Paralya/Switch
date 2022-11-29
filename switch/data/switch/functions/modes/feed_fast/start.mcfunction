@@ -41,5 +41,5 @@ scoreboard players set #feed_fast_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount
-scoreboard objectives setdisplay list health
+scoreboard objectives setdisplay list switch.health
 

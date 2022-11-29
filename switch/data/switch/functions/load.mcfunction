@@ -7,7 +7,6 @@ scoreboard objectives add switch.money dummy
 scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
-scoreboard objectives setdisplay list switch.money
 
 scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
