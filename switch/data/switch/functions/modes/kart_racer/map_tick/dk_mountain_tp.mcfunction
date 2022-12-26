@@ -8,6 +8,7 @@
 #for i in range(0,total+1):
 #    print('tp @s[scores={switch.temp.compteur='+str(i+1)+'}]', round(l1[0] + i*dx, 4), round(l1[1] + i*dy, 4), round(l1[2] + i*dz, 4))
 
+execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine
 execute if score @s switch.temp.compteur matches 1 run particle explosion 19982 117 20542 2 2 2 0 10 force
 execute if score @s switch.temp.compteur matches 1 run playsound entity.generic.explode block @a 19982 117 20542
 
@@ -94,5 +95,6 @@ tp @s[scores={switch.temp.compteur=80}] 19735.125 163.4125 20544.9625
 tp @s[scores={switch.temp.compteur=81}] 19732.0 164.0 20545.0
 
 scoreboard players add @s switch.temp.compteur 1
+execute if score @s switch.temp.compteur matches 82.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
 scoreboard players reset @s[scores={switch.temp.compteur=82..}] switch.temp.compteur
 

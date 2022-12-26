@@ -9,6 +9,7 @@ tag @a remove switch.playing
 tag @a remove switch.completed
 
 scoreboard objectives remove switch.temp
+scoreboard objectives remove switch.temp.old_speed
 scoreboard objectives remove switch.temp.compteur
 scoreboard objectives remove switch.temp.dx
 scoreboard objectives remove switch.temp.dy
