@@ -12,6 +12,7 @@ kill @e[type=!player]
 effect give @a saturation 99999 255 true
 effect give @a regeneration 99999 255 true
 effect give @a resistance 99999 255 true
+effect give @a levitation 15 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
@@ -98,7 +99,7 @@ scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 
 ##Téléportation des joueurs + give d'items
-execute unless data storage switch:main kart_racer_maps[0] run data modify storage switch:main kart_racer_maps set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "baby_park", "mario_circuit", "fast_circuit", "plains_routine", "city_race", "sakura_land", "hills_land", "airship_fortress", "dk_mountain", "clock_circuit", "epsilon_circuit", "dishorreur"]
+execute unless data storage switch:main kart_racer_maps[0] run data modify storage switch:main kart_racer_maps set value ["bowser_castle", "trackmania_stadium_1", "snow_travel", "mario_circuit", "plains_routine", "sakura_land", "hills_land", "airship_fortress", "dk_mountain", "clock_circuit"]
 data modify storage switch:main maps_to_choose set from storage switch:main kart_racer_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main kart_racer_maps

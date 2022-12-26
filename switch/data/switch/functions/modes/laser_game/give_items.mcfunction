@@ -1,4 +1,6 @@
 
+##TO ADVANCEMENT
+
 clear @s[nbt=!{Inventory:[{Slot:0b}]}] warped_fungus_on_a_stick
 clear @s[nbt=!{Inventory:[{Slot:102b}]}] leather_chestplate
 clear @s[nbt=!{Inventory:[{Slot:103b}]}] leather_helmet

@@ -8,6 +8,7 @@ execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=s
 ##Items to choose a class
 tag @s remove switch.to_tp
 clear @s
+effect give @s resistance 99999 250 true
 effect give @s jump_boost 99999 250 true
 effect give @s slowness 99999 250 true
 effect give @s blindness 99999 250 true
