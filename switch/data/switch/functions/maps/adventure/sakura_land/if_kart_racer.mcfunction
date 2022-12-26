@@ -12,3 +12,15 @@ forceload add 19989 20137
 forceload add 19915 20157
 forceload add 19885 20085
 
+summon marker 19943 108 20152 {Tags:["switch.effect_block","switch.kart_racer.cruise_control_block"]}
+summon marker 19941 108 20151 {Tags:["switch.effect_block","switch.kart_racer.cruise_control_block"]}
+summon marker 19880 114 20124 {Tags:["switch.effect_block","switch.kart_racer.no_steering_block"]}
+summon marker 19884 114 20124 {Tags:["switch.effect_block","switch.kart_racer.no_steering_block"]}
+summon marker 19888 114 20124 {Tags:["switch.effect_block","switch.kart_racer.no_steering_block"]}
+
+forceload add 19943 20152
+forceload add 19941 20151
+forceload add 19880 20124
+forceload add 19884 20124
+forceload add 19888 20124
+

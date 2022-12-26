@@ -14,3 +14,11 @@ forceload add 23038 22984
 forceload add 23011 23031
 forceload add 22936 23014
 
+summon marker 22963 88 22946 {Tags:["switch.effect_block","switch.kart_racer.reactor_boost_block"]}
+summon marker 22963 88 22950 {Tags:["switch.effect_block","switch.kart_racer.reactor_boost_block"]}
+summon marker 23039 84 23007 {Tags:["switch.effect_block","switch.kart_racer.reactor_boost_block"]}
+
+forceload add 22963 22946
+forceload add 22963 22950
+forceload add 23039 23007
+
