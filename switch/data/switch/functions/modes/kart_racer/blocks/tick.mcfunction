@@ -1,4 +1,9 @@
 
+## Out of map
+execute if block ~ ~-1 ~ barrier if block ~ ~-2 ~ structure_void run function switch:modes/kart_racer/out_of_map
+
+
+## Trackmania blocks
 execute if score @s switch.effects.timer matches 1.. run scoreboard players remove @s switch.effects.timer 1
 
 #Reset Block

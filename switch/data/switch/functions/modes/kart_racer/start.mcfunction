@@ -12,7 +12,7 @@ kill @e[type=!player]
 effect give @a saturation 99999 255 true
 effect give @a regeneration 99999 255 true
 effect give @a resistance 99999 255 true
-effect give @a levitation 15 255 true
+effect give @a levitation 10 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
