@@ -26,3 +26,7 @@ execute if score @s switch.effects.last matches 4 unless score @s switch.effects
 execute unless score @s switch.effects.last matches 5 if entity @e[tag=switch.kart_racer.reactor_boost_block,distance=..4] at @s if block ~ ~-1 ~ orange_wool run function switch:modes/kart_racer/blocks/reactor_boost
 execute if score @s switch.effects.last matches 5 unless score @s switch.effects.timer matches 1.. if entity @e[tag=switch.kart_racer.reactor_boost_block,distance=..4] at @s if block ~ ~-1 ~ orange_wool run function switch:modes/kart_racer/blocks/reactor_boost
 
+#No Grip Block
+execute unless score @s switch.effects.last matches 6 if entity @e[tag=switch.kart_racer.no_grip_block,distance=..4] at @s if block ~ ~-1 ~ light_blue_wool run function switch:modes/kart_racer/blocks/no_grip
+execute if score @s switch.effects.last matches 6 unless score @s switch.effects.timer matches 1.. if entity @e[tag=switch.kart_racer.no_grip_block,distance=..4] at @s if block ~ ~-1 ~ light_blue_wool run function switch:modes/kart_racer/blocks/no_grip
+

@@ -7,4 +7,5 @@ execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_ka
 execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/slippery run scoreboard players set #surface shopping_kart.data 2
 execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/slow run scoreboard players set #surface shopping_kart.data 3
 execute if entity @s[tag=!shopping_kart.in_water] if block ~ ~-.1 ~ #shopping_kart:kart_surfaces/very_slow run scoreboard players set #surface shopping_kart.data 4
+execute if entity @s[tag=shopping_kart.no_grip] run scoreboard players set #surface shopping_kart.data 2
 

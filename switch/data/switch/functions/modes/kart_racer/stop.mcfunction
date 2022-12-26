@@ -1,5 +1,6 @@
 
 execute at @e[tag=switch.checkpoint] run forceload remove ~ ~
+execute at @e[tag=switch.effect_block] run forceload remove ~ ~
 
 kill @e[tag=shopping_kart.kart]
 tp @e[type=!player] 0 -10000 0

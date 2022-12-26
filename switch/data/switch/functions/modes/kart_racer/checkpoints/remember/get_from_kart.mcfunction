@@ -1,4 +1,6 @@
 
+function switch:modes/kart_racer/blocks/reset_checkpoint
+
 data modify storage switch:main temp.Pos set from entity @s Pos
 data modify storage switch:main temp.Rotation set from entity @s Rotation
 data modify storage switch:main temp.Motion set from entity @s Motion
@@ -18,4 +20,5 @@ execute store result storage switch:main temp.scores.shopping_kart.old_pos_y int
 execute store result storage switch:main temp.scores.shopping_kart.old_pos_z int 1 run scoreboard players get @s shopping_kart.old_pos_z
 execute store result storage switch:main temp.scores.shopping_kart.booster_timer int 1 run scoreboard players get @s shopping_kart.booster_timer
 execute store result storage switch:main temp.scores.shopping_kart.reactor_boost int 1 run scoreboard players get @s shopping_kart.reactor_boost
+execute store result storage switch:main temp.scores.shopping_kart.cruise_control int 1 run scoreboard players get @s shopping_kart.cruise_control
 
