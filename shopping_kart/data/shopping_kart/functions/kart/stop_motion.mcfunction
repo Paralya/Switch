@@ -21,5 +21,5 @@ execute if score #collision_type shopping_kart.data matches 1 run scoreboard pla
 execute if score #collision_type shopping_kart.data matches 1 run scoreboard players operation @s shopping_kart.motion_z /= #100 shopping_kart.data
 execute if score #collision_type shopping_kart.data matches 1 run scoreboard players set @s shopping_kart.engine 100
 execute if score #collision_type shopping_kart.data matches 1 run particle lava ~ ~ ~ 1 1 1 0 50 force @a[distance=..50]
-execute if score #collision_type shopping_kart.data matches 1 run playsound block.anvil.land block @a ~ ~ ~ 1 0.1
+execute if score #collision_type shopping_kart.data matches 1 run playsound block.anvil.land block @a ~ ~ ~ 0.25 0.1
 

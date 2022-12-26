@@ -9,6 +9,7 @@ tag @a add switch.playing
 kill @e[type=!player]
 kill @e[type=!player]
 
+title @a times 5 20 5
 effect give @a saturation 99999 255 true
 effect give @a regeneration 99999 255 true
 effect give @a resistance 99999 255 true
