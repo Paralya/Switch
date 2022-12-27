@@ -1,6 +1,7 @@
 {
 	"values": [
 		"dirt",
+		"rooted_dirt",
 		"sand",
 		"snow_block",
 		"snow"
