@@ -19,6 +19,7 @@ execute if data storage switch:main {map:"plains_routine"} run function switch:m
 execute if data storage switch:main {map:"airship_fortress"} run function switch:modes/kart_racer/map_tick/airship_fortress
 execute if data storage switch:main {map:"dk_mountain"} run function switch:modes/kart_racer/map_tick/dk_mountain
 execute if data storage switch:main {map:"clock_circuit"} run function switch:modes/kart_racer/map_tick/clock_circuit
+execute if data storage switch:main {map:"trackmania_stadium_2"} run function switch:modes/kart_racer/map_tick/trackmania_stadium_2
 
 
 ##Fin de la partie

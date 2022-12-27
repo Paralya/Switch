@@ -46,6 +46,7 @@ execute if data storage switch:main {map:"baby_park"} run function switch:maps/a
 execute if data storage switch:main {map:"bowser_castle"} run function switch:maps/adventure/bowser_castle/
 execute if data storage switch:main {map:"snow_travel"} run function switch:maps/adventure/snow_travel/
 execute if data storage switch:main {map:"trackmania_stadium_1"} run function switch:maps/adventure/trackmania_stadium_1/
+execute if data storage switch:main {map:"trackmania_stadium_2"} run function switch:maps/adventure/trackmania_stadium_2/
 execute if data storage switch:main {map:"cathedrale_liege"} run function switch:maps/adventure/cathedrale_liege/
 execute if data storage switch:main {map:"dishorreur"} run function switch:maps/adventure/dishorreur/
 execute if data storage switch:main {map:"operation_pigclaw"} run function switch:maps/adventure/operation_pigclaw/
