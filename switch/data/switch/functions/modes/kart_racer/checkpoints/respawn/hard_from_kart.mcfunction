@@ -11,4 +11,5 @@ scoreboard players set @s shopping_kart.reactor_boost 0
 scoreboard players set @s shopping_kart.cruise_control 0
 scoreboard players remove @s shopping_kart.old_pos_y 100000
 scoreboard players reset @s shopping_kart.temp.compteur
+scoreboard players reset @s switch.effects.timer
 
