@@ -28,6 +28,7 @@ execute if data storage switch:main {map:"jayl_dark_forest"} run function switch
 
 #Maps that doesn't (always gamemode adventure):
 execute if data storage switch:main {map:"pitch_creep_1"} run function switch:maps/adventure/pitch_creep_1/
+execute if data storage switch:main {map:"pitch_creep_2"} run function switch:maps/adventure/pitch_creep_2/
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/adventure/pitchout_1/
 execute if data storage switch:main {map:"boat_race_1"} run function switch:maps/adventure/boat_race_1/
 execute if data storage switch:main {map:"laser_game"} run function switch:maps/adventure/laser_game/
@@ -50,6 +51,4 @@ execute if data storage switch:main {map:"trackmania_stadium_2"} run function sw
 execute if data storage switch:main {map:"cathedrale_liege"} run function switch:maps/adventure/cathedrale_liege/
 execute if data storage switch:main {map:"dishorreur"} run function switch:maps/adventure/dishorreur/
 execute if data storage switch:main {map:"operation_pigclaw"} run function switch:maps/adventure/operation_pigclaw/
-
-#snow_drive à faire
 

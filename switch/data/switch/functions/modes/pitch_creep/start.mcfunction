@@ -18,14 +18,19 @@ difficulty normal
 time set 18000
 weather clear
 
-##Placement de la map et des joueurs + give d'items
-data modify storage switch:main maps_to_choose set value ["pitch_creep_1"]
-function switch:maps/load
-
 gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
+
+##Placement de la map et des joueurs + give d'items
+execute unless data storage switch:main pitch_creep_maps[0] run data modify storage switch:main pitch_creep_maps set value ["pitch_creep_1", "pitch_creep_2"]
+data modify storage switch:main maps_to_choose set from storage switch:main pitch_creep_maps
+function switch:maps/load
+data modify storage switch:main copy set from storage switch:main pitch_creep_maps
+function switch:maps/storage_map_list/remove_from_storage
+data modify storage switch:main pitch_creep_maps set from storage switch:main new
+
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitch Creep, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 
