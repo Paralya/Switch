@@ -21,7 +21,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ##Placement de la map et des joueurs + give d'items
-execute unless data storage switch:main traitors_game_maps[0] run data modify storage switch:main traitors_game_maps set value ["traitor_original", "zone_51", "spectre_original", "mushroom_plains", "jayl_dark_forest"]
+execute unless data storage switch:main traitors_game_maps[0] run data modify storage switch:main traitors_game_maps set value ["traitor_original", "zone_51", "spectre_original", "mushroom_plains", "jayl_dark_forest", "dark_forest_hills"]
 data modify storage switch:main maps_to_choose set from storage switch:main traitors_game_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main traitors_game_maps
