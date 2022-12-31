@@ -1,5 +1,5 @@
 
-gamerule sendCommandFeedback false
+gamerule sendCommandFeedback true
 
 scoreboard players set #state switch.data 3
 scoreboard players add #total_games switch.data 1
