@@ -19,13 +19,13 @@ attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
 
-execute as @e[type=item,tag=!switch.done,distance=..1,nbt=!{Item:{id:"minecraft:bow"}}] run data remove entity @s Item.tag.stardust
-execute as @e[type=item,tag=!switch.done,distance=..1,nbt=!{Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:knockback",lvl:3}]
-execute as @e[type=item,tag=!switch.done,distance=..1,nbt={Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:punch",lvl:3}]
-execute as @e[type=item,tag=!switch.done,distance=..1] run data modify entity @s Owner set from entity @p[tag=switch.temp] UUID
-execute as @e[type=item,tag=!switch.done,distance=..1] run data modify entity @s PickupDelay set value 0s
+execute as @e[type=item,tag=!switch.done,nbt=!{Item:{id:"minecraft:bow"}}] run data remove entity @s Item.tag.stardust
+execute as @e[type=item,tag=!switch.done,nbt=!{Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:knockback",lvl:3}]
+execute as @e[type=item,tag=!switch.done,nbt={Item:{id:"minecraft:bow"}}] run data modify entity @s Item.tag.Enchantments set value [{id:"minecraft:punch",lvl:3}]
+execute as @e[type=item,tag=!switch.done] run data modify entity @s Owner set from entity @p[tag=switch.temp] UUID
+execute as @e[type=item,tag=!switch.done] run data modify entity @s PickupDelay set value 0s
 tp @e[type=item,tag=!switch.done] @s
-execute as @e[type=item,tag=!switch.done,distance=..1] run tag @s add switch.done
+execute as @e[type=item,tag=!switch.done] run tag @s add switch.done
 
 tag @s remove switch.temp
 
