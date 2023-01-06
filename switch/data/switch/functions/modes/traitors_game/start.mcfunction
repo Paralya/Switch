@@ -32,6 +32,7 @@ execute if data storage switch:main {map:"zone_51"} run spreadplayers 2000 2000 
 execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
 execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
 execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33931 33923 1 30 under 180 false @a
+execute if data storage switch:main {map:"dark_forest_hills"} run spreadplayers 39069 39111 1 50 under 160 false @a
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
