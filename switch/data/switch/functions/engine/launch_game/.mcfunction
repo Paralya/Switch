@@ -27,6 +27,7 @@ execute if score #modulo_rand switch.data matches 1 run data modify storage swit
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game_name set from storage switch:main voted_games[0].Name
 execute if score #modulo_rand switch.data matches 1 store result score #game_1 switch.data run data get storage switch:main voted_games[0].index
 execute if score #modulo_rand switch.data matches 2.. run function switch:engine/launch_game/get_random_max
+execute if score #modulo_rand switch.data matches 2.. run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Égalité entre plusieurs mode de jeux, choix aléatoire !\n"}]
 
 spawnpoint @a 0 74 0
 function #switch:events/start

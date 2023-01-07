@@ -1,4 +1,6 @@
 
+tellraw @s {"text":"Item random reçu !","color":"dark_purple"}
+
 scoreboard players set #modulo_rand switch.data 57
 function switch:math/get_random/
 

@@ -61,6 +61,7 @@ team modify switch.temp.blue_king color dark_blue
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 scoreboard players set #next_role switch.data 0
+tag @a remove switch.king
 execute as @a[sort=random] at @s run function switch:modes/protect_the_king/roles
 tp @a[team=switch.temp.red] @p[team=switch.temp.red_king]
 tp @a[team=switch.temp.blue] @p[team=switch.temp.blue_king]
