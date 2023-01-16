@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "switch:player/joined"
+		"function": "switch:player/very_first_join"
 	}
 }

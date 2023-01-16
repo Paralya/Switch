@@ -4,6 +4,7 @@ tag Stoupy51 add convention.debug
 scoreboard objectives add switch.data dummy
 scoreboard objectives add switch.health health
 scoreboard objectives add switch.money dummy
+scoreboard objectives add switch.money_bonus dummy
 scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
@@ -11,6 +12,8 @@ scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fun
 scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger
+
+scoreboard objectives add switch.stats.victories dummy
 
 team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
