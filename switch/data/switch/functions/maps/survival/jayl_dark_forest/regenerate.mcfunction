@@ -22,7 +22,7 @@
 #    minY += 1
 
 scoreboard players add #regeneration_ticks switch.data 1
-execute if score #regeneration_ticks switch.data matches 1 run forceload add 33813 33873 33859 34000
+execute if score #regeneration_ticks switch.data matches 1 run forceload add 33813 33873 34000 34000
 
 execute if score #regeneration_ticks switch.data matches 20 run clone 33813 0 33873 33906 0 34000 33813 100 33873 replace force
 execute if score #regeneration_ticks switch.data matches 22 run clone 33906 0 33873 34000 0 34000 33906 100 33873 replace force
@@ -206,7 +206,7 @@ execute if score #regeneration_ticks switch.data matches 376 run clone 33813 89 
 execute if score #regeneration_ticks switch.data matches 378 run clone 33906 89 33873 34000 89 34000 33906 189 33873 replace force
 
 execute if score #regeneration_ticks switch.data matches 378 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 378 run forceload remove 33813 33873 33859 34000
+execute if score #regeneration_ticks switch.data matches 378 run forceload remove 33813 33873 34000 34000
 execute if score #regeneration_ticks switch.data matches 378 run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/jayl_dark_forest/regenerate 1t
