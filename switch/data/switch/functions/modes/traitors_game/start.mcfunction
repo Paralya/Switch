@@ -88,7 +88,6 @@ scoreboard players set Gro switch.temp.sidebar 1
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 tag @a remove switch.traitors_game.detective
-tag @a remove switch.traitors_game.traitor
 tag @a remove switch.traitors_game.ninja
 tag @a remove switch.traitors_game.second_life
 tag @a remove switch.traitors_game.innocent
