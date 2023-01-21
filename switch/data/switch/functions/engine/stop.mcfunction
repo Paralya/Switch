@@ -14,7 +14,7 @@ kill @e[type=marker,tag=switch.selected_map]
 worldborder set 59999968
 worldborder center 0 0
 spawnpoint @a 0 74 0
-scoreboard objectives setdisplay list switch.money
+scoreboard objectives setdisplay list switch.stats.victories
 function switch:maps/regenerate_map
 execute as @a run attribute @s generic.attack_speed base set 4.0
 execute as @a run attribute @s generic.max_health base set 20.0
