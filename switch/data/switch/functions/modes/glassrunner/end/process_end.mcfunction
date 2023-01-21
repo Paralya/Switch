@@ -1,7 +1,7 @@
 
 scoreboard players add #process_end switch.data 1
 
-execute if score #process_end switch.data matches 1 run scoreboard players add @a[tag=switch.alive] switch.money 1
+execute if score #process_end switch.data matches 1 as @a[tag=switch.alive] at @s run function switch:engine/add_money
 
 
 

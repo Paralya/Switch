@@ -15,3 +15,5 @@ execute if score #random switch.data matches 5 run tellraw @s [{"nbt":"ParalyaMo
 execute if score #random switch.data matches 6 run tellraw @s [{"nbt":"ParalyaMoney","storage":"switch:main","interpret":true},{"text":" Grâce à votre victoire, vous avez maintenant un total de "},{"score":{"name":"@s","objective":"switch.data"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":" ("},{"text":" +","color":"light_purple"},{"score":{"name":"#add","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":")"}]
 execute if score #random switch.data matches 7 run tellraw @s [{"nbt":"ParalyaMoney","storage":"switch:main","interpret":true},{"text":" Car vous êtes le meilleur, votre moula actuelle est de "},{"score":{"name":"@s","objective":"switch.data"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":" ("},{"text":" +","color":"light_purple"},{"score":{"name":"#add","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":")"}]
 
+playsound entity.player.levelup ambient @s ^ ^ ^1000 100000
+

@@ -17,10 +17,10 @@ execute if score #game_state switch.data matches 1 run tellraw @a ["\n",{"nbt":"
 execute if score #game_state switch.data matches 2 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"bleus","color":"blue"},{"text":" ! GG à "},{"selector":"@a[team=switch.temp.blue_king]"},{"text":", "},{"selector":"@a[team=switch.temp.blue]"}]
 execute if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 
-execute if score #game_state switch.data matches 1 run scoreboard players add @a[gamemode=survival,team=switch.temp.red_king] switch.money 1
-execute if score #game_state switch.data matches 1 run scoreboard players add @a[gamemode=survival,team=switch.temp.red] switch.money 1
-execute if score #game_state switch.data matches 2 run scoreboard players add @a[gamemode=survival,team=switch.temp.blue_king] switch.money 1
-execute if score #game_state switch.data matches 2 run scoreboard players add @a[gamemode=survival,team=switch.temp.blue] switch.money 1
+execute if score #game_state switch.data matches 1 as @a[gamemode=survival,team=switch.temp.red_king] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 1 as @a[gamemode=survival,team=switch.temp.red] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 2 as @a[gamemode=survival,team=switch.temp.blue_king] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 2 as @a[gamemode=survival,team=switch.temp.blue] at @s run function switch:engine/add_money
 
 #Visuel de fin de partie
 execute if score #protect_the_king_seconds switch.data matches 900.. as @a at @s run playsound item.totem.use ambient @s

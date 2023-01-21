@@ -17,8 +17,8 @@ execute if score #game_state switch.data matches 1 run tellraw @a ["\n",{"nbt":"
 execute if score #game_state switch.data matches 2 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"spectres","color":"yellow"},{"text":" ! GG à "},{"selector":"@a[tag=switch.alive,tag=switch.spectres_game.spectre]"}]
 execute if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 
-execute if score #game_state switch.data matches 1 run scoreboard players add @a[tag=switch.alive,tag=switch.spectres_game.visible] switch.money 1
-execute if score #game_state switch.data matches 2 run scoreboard players add @a[tag=switch.alive,tag=switch.spectres_game.spectre] switch.money 1
+execute if score #game_state switch.data matches 1 as @a[tag=switch.alive,tag=switch.spectres_game.visible] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 2 as @a[tag=switch.alive,tag=switch.spectres_game.spectre] at @s run function switch:engine/add_money
 
 #Visuel de fin de partie
 execute if score #spectres_game_seconds switch.data matches 900.. as @a at @s run playsound item.totem.use ambient @s
