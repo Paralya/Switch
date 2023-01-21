@@ -12,7 +12,7 @@ execute if score #random switch.data matches 4 run give @s ender_pearl
 execute if score #random switch.data matches 5 run give @s ender_pearl
 execute if score #random switch.data matches 6 run give @s netherite_shovel{Enchantments:[{id:"minecraft:efficiency",lvl:10s}],display:{Name:'{"text":"Teuse","color":"gold","italic":false}',Lore:['{"text":"C\'est la pelle Teuse MDR !","color":"white","italic":false}']}}
 execute if score #random switch.data matches 7 run give @s golden_sword{Enchantments:[{id:"minecraft:knockback",lvl:10s}],display:{Name:'{"text":"Baseball Bat","color":"gold","italic":false}',Lore:['{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}']},Damage:30}
-execute if score #random switch.data matches 8 run give @s golden_apple 6
+execute if score #random switch.data matches 8 run give @s lava_bucket 2
 execute if score #random switch.data matches 9 run give @s golden_apple 4
 execute if score #random switch.data matches 10 run give @s golden_apple 2
 execute if score #random switch.data matches 11 run give @s arrow 12
