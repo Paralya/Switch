@@ -29,11 +29,7 @@ function switch:maps/load
 data modify storage switch:main copy set from storage switch:main protect_the_king_maps
 function switch:maps/storage_map_list/remove_from_storage
 data modify storage switch:main protect_the_king_maps set from storage switch:main new
-execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @a
-execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
-execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33931 33923 1 30 under 180 false @a
-execute if data storage switch:main {map:"dark_forest_hills"} run spreadplayers 39069 39111 1 50 under 160 false @a
-
+execute as @a run function switch:modes/protect_the_king/random_tp
 
 gamerule mobGriefing true
 gamerule showDeathMessages true
@@ -63,6 +59,7 @@ team modify switch.temp.blue color blue
 scoreboard players set #next_role switch.data 0
 tag @a remove switch.king
 execute as @a[sort=random] at @s run function switch:modes/protect_the_king/roles
+function switch:modes/protect_the_king/better_tp
 tp @a[team=switch.temp.red] @p[team=switch.temp.red_king]
 tp @a[team=switch.temp.blue] @p[team=switch.temp.blue_king]
 execute as @a at @s run function switch:modes/protect_the_king/give_items
