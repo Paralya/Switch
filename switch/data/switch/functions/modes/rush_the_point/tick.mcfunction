@@ -6,6 +6,9 @@ scoreboard players add #rush_the_point_ticks switch.data 1
 execute as @e[type=!marker] at @s run kill @s[y=0,dy=20]
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/rush_the_point/items_check
 execute as @e[type=tnt,nbt={Fuse:1s}] at @s run function switch:modes/rush_the_point/explode_tnt
+execute as @a[scores={switch.right_click=1..},nbt={SelectedItem:{tag:{switch:{fireball_stick:1b}}}}] if score @s crazy_adventure.cooldown matches 1.. at @s run function switch:modes/rush_the_point/fireball/no_cooldown
+execute as @a[scores={switch.right_click=1..},nbt={SelectedItem:{tag:{switch:{fireball_stick:1b}}}}] if score @s crazy_adventure.cooldown matches 0 at @s run function switch:modes/rush_the_point/fireball/right_click
+execute as @e[type=armor_stand,tag=switch.fireball,predicate=!shopping_kart:has_vehicle] at @s positioned ~ ~-1 ~ run function switch:modes/rush_the_point/explode_tnt
 kill @e[type=arrow,nbt={inGround:1b}]
 
 #Class System
