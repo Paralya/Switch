@@ -8,7 +8,7 @@ data modify storage switch:glassrunner ItemsNBT.renforced_snowball_bridge_red se
 data modify storage switch:glassrunner ItemsNBT.renforced_snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,renforced_glass_bridge_blue:1b},display:{Name:'{"text":"Renforced Snowball Bridge","color":"blue","italic":false}'}}}
 
 #Destroying Crossbow
-data modify storage switch:glassrunner ItemsNBT.destroying_crossbow set value {id:"minecraft:crossbow",Count:1b,tag:{glassrunner:{destroying_crossbow:1b},display:{Name:'{"text":"Destroying Crossbow","color":"dark_red","italic":false}'},ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}}],Charged:1b,Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s},{id:"minecraft:multishot",lvl:1s}],Damage:433}}
+data modify storage switch:glassrunner ItemsNBT.destroying_crossbow set value {id:"minecraft:crossbow",Count:1b,tag:{glassrunner:{destroying_crossbow:1b},display:{Name:'{"text":"Destroying Crossbow","color":"dark_red","italic":false}'},ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}}],Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s},{id:"minecraft:multishot",lvl:1s}],Damage:450}}
 
 data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s}],CanDestroy:["minecraft:glass","minecraft:red_stained_glass","minecraft:blue_stained_glass","minecraft:pink_stained_glass","minecraft:light_blue_stained_glass"]}}
 
@@ -51,6 +51,7 @@ scoreboard players set #count switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a at @s run function switch:modes/glassrunner/death/death
 
+advancement revoke @a only switch:glassrunner/destroying_crossbow
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
@@ -64,7 +65,7 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 scoreboard players set #glassrunner_ticks switch.data 0
 scoreboard players set #glassrunner_seconds switch.data 0
 
-scoreboard players set #glassrunner_point_to_win switch.data 15
+scoreboard players set #glassrunner_point_to_win switch.data 40
 
 scoreboard objectives add switch.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add switch.glassrunner.deathCount deathCount
