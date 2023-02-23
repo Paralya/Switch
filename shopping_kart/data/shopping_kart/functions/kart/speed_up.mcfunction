@@ -1,10 +1,10 @@
 
 ##Speed up engine progressively depending on surface
-#Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
-#When in air : surface = 0
+# Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
+# When in air : surface = 0
 function shopping_kart:kart/physics_get_surface
 
-#Real gain is (add - 28) cause of speed_down.mcfunction
+# Real gain is (add - 28) cause of speed_down.mcfunction
 scoreboard players set #add shopping_kart.engine 36
 execute if score #surface shopping_kart.data matches 0 if block ~ ~-.1 ~ air run scoreboard players set #add shopping_kart.engine 26
 execute if score #surface shopping_kart.data matches 1..2 run scoreboard players set #add shopping_kart.engine 34

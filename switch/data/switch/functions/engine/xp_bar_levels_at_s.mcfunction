@@ -1,11 +1,11 @@
 
-#t=1000
-#i=-t
-#while i <= 0:
+# t=1000
+# i=-t
+# while i <= 0:
 #    print('execute if score #levels switch.data matches '+str(i+t)+' run xp set @s '+str((t+i))+' levels')
 #    i += 1
 
-#XP from 0 to 1000 levels
+# XP from 0 to 1000 levels
 execute if score #levels switch.data matches ..0 run xp set @s 0 levels
 execute if score #levels switch.data matches 1 run xp set @s 1 levels
 execute if score #levels switch.data matches 2 run xp set @s 2 levels

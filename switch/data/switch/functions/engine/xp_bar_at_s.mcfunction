@@ -1,14 +1,14 @@
 
-#t=1000
-#i=-t
-#while i <= 0:
+# t=1000
+# i=-t
+# while i <= 0:
 #    print('execute if score #points switch.data matches '+str(i+t)+' run xp set @s '+str((t+i)))
 #    i += 1
 
 scoreboard players operation #points switch.data /= #divide switch.data
 scoreboard players set #divide switch.data 1
 
-#XP from 0 to 1000 points
+# XP from 0 to 1000 points
 xp set @s 130 levels
 execute if score #points switch.data matches ..0 run xp set @s 0
 execute if score #points switch.data matches 1 run xp set @s 1

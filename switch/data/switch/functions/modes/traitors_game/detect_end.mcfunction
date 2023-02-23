@@ -4,21 +4,21 @@ execute if entity @a[tag=switch.alive,tag=!switch.traitors_game.traitor] run sco
 execute if entity @a[tag=switch.alive,tag=switch.traitors_game.traitor,tag=!switch.traitors_game.big_traitor] run scoreboard players add #game_state switch.data 2
 execute if entity @a[tag=switch.alive,tag=switch.traitors_game.big_traitor] run scoreboard players add #game_state switch.data 4
 
-#1 = que des innocents
-#2 = que des traitres normaux
-#3 = Innocents et traitres
-#4 = que le gros traitre
-#5 = gros traitre + innocent
-#6 = gros traitre + traitres normaux
-#7 = encore tous les camps
+# 1 = que des innocents
+# 2 = que des traitres normaux
+# 3 = Innocents et traitres
+# 4 = que le gros traitre
+# 5 = gros traitre + innocent
+# 6 = gros traitre + traitres normaux
+# 7 = encore tous les camps
 
-#Cas de fin de partie
+# Cas de fin de partie
 execute if score #game_state switch.data matches 1 run scoreboard players set #traitors_game_seconds switch.data 100000
 execute if score #game_state switch.data matches 2 run scoreboard players set #traitors_game_seconds switch.data 100000
 execute if score #game_state switch.data matches 4 run scoreboard players set #traitors_game_seconds switch.data 100000
 execute if score #traitors_game_seconds switch.data matches 100000 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/for_global
 
-#Cas des vainqueurs
+# Cas des vainqueurs
 execute if score #game_state switch.data matches 1 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"innocents","color":"green"},{"text":" ! GG à "},{"selector":"@a[tag=switch.alive,tag=!switch.traitors_game.traitor]"}]
 execute if score #game_state switch.data matches 2 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"traitres","color":"red"},{"text":" ! GG à "},{"selector":"@a[tag=switch.alive,tag=switch.traitors_game.traitor]"}]
 execute if score #game_state switch.data matches 4 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire du "},{"text":"gros traitre","color":"dark_red"},{"text":" ! GG "},{"selector":"@a[tag=switch.alive,tag=switch.traitors_game.big_traitor]"}]
@@ -28,12 +28,12 @@ execute if score #game_state switch.data matches 2 as @a[tag=switch.alive,tag=sw
 execute if score #game_state switch.data matches 4 as @a[tag=switch.alive,tag=switch.traitors_game.big_traitor] at @s run function switch:engine/add_money
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 1 as @a[tag=switch.alive,tag=!switch.traitors_game.traitor] at @s run function switch:engine/add_money
 
-#Cas des égalités
+# Cas des égalités
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 5 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 7 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]
 
 
-#Visuel de fin de partie
+# Visuel de fin de partie
 execute if score #traitors_game_seconds switch.data matches 1200.. as @a at @s run playsound item.totem.use ambient @s
 

@@ -1,6 +1,6 @@
 
 ##Maps spawn
-#Map Rush The Point 1
+# Map Rush The Point 1
 execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.red] run tp @s 13930 100.69 14000 -90 0
 execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.blue] run tp @s 14070 100.69 14000 90 0
 

@@ -1,5 +1,5 @@
 #> iris:get_hitbox/block/trapdoors
-#
+# 
 # @within iris:get_hitbox/block
 
 # open=false

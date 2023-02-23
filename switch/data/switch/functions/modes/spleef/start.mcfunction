@@ -9,10 +9,10 @@ team leave @a
 kill @e[type=item]
 
 effect give @a mining_fatigue 5 255 true
-effect give @a weakness 99999 255 true
+effect give @a weakness 5 255 true
 effect give @a saturation 99999 255 true
 effect give @a resistance 99999 255 true
-effect give @a regeneration 5 255 true
+effect give @a regeneration 99999 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
@@ -20,7 +20,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
-##Téléportation des joueurs
+## Téléportation des joueurs
 data modify storage switch:main maps_to_choose set value ["spleef_1"]
 function switch:maps/load
 

@@ -1,5 +1,5 @@
 
-#Role selection
+# Role selection
 scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1..2 run tag @s add switch.king
 execute if score #next_role switch.data matches 1 run team join switch.temp.red_king @s

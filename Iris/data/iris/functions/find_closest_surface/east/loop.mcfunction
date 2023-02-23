@@ -1,7 +1,7 @@
 #> iris:find_closest_surface/east/loop
-#
+# 
 # Determines if the ray hits the current surface
-#
+# 
 # @within iris:find_closest_surface/east/main
 # @within iris:find_closest_surface/east/loop
 

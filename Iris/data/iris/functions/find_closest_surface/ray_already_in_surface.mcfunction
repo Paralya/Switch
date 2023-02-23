@@ -1,8 +1,8 @@
 #> iris:find_closest_surface/ray_already_in_surface
-#
+# 
 # Establishes the current surface as the first the ray will hit.
 # This function only runs if the ray is already within a surface, guaranteeing that this surface is the contact surface.
-#
+# 
 # @within iris:find_closest_surface/bottom/loop
 # @within iris:find_closest_surface/east/loop
 # @within iris:find_closest_surface/north/loop

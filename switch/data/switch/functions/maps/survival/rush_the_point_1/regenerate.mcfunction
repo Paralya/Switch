@@ -1,13 +1,13 @@
 
-#m = 14000
-#x1 = 13901
-#z1 = 13901
-#x2 = 14099
-#z2 = 14099
-#y = 1
-#i = 20
-#maxY = 255
-#while y <= maxY:
+# m = 14000
+# x1 = 13901
+# z1 = 13901
+# x2 = 14099
+# z2 = 14099
+# y = 1
+# i = 20
+# maxY = 255
+# while y <= maxY:
 #    print('execute if score #regeneration_ticks switch.data matches '+str(i)+' run fill '+str(x1)+' '+str(y)+' '+str(z1)+' '+str(x2)+' '+str(y)+' '+str(m)+' air replace #switch:rush_the_point/placed')
 #    print('execute if score #regeneration_ticks switch.data matches '+str(i)+' run fill '+str(x1)+' '+str(y)+' '+str(m)+' '+str(x2)+' '+str(y)+' '+str(z2)+' air replace #switch:rush_the_point/placed')
 #    i += 1

@@ -9,7 +9,7 @@ execute if score #laser_game_seconds switch.data matches 10 if data storage swit
 execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"operation_pigclaw"} run summon item_frame 36041 122 36012 {Tags:["switch.laser_game.base"],Facing:5b,Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Glowing:1b}
 
 
-#Base reload
+# Base reload
 scoreboard players remove #base_reload switch.data 1
 execute if score #base_reload switch.data matches 0 run tellraw @a [{"text":"La base de bonus vient de se recharger !","color":"yellow"}]
 execute if score #base_reload switch.data matches 0 run setblock 516 104 523 iron_trapdoor[powered=true,open=true]
@@ -21,7 +21,7 @@ execute if score #base_reload switch.data matches 1.. run setblock 36041 122 360
 execute if score #base_reload switch.data matches 1.. run setblock 36041 122 36012 dark_oak_trapdoor[powered=true,open=true,facing=east]
 
 
-#Bonus mitraillette + change color
+# Bonus mitraillette + change color
 scoreboard players remove #mitraillette switch.data 1
 scoreboard players remove #change_color switch.data 1
 execute if score #mitraillette switch.data matches ..0 run tag @a[tag=switch.bonus.fast] remove switch.bonus.fast

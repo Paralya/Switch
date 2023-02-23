@@ -6,6 +6,6 @@ execute if score #process_end switch.data matches 1 if entity @a[tag=switch.aliv
 execute if score #process_end switch.data matches 1 unless entity @a[tag=switch.alive] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin du mini-jeu ! Il n'y a eu aucun gagnant ;("}]
 execute if score #process_end switch.data matches 1 as @a[sort=random] run function switch:modes/creeper_apocalypse/death
 
-#Obligatoire
+# Obligatoire
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

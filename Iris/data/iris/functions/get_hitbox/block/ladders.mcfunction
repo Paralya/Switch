@@ -1,5 +1,5 @@
 #> iris:get_hitbox/block/ladders
-#
+# 
 # @within iris:get_hitbox/block
 
 execute if block ~ ~ ~ minecraft:ladder[facing=east] run data modify storage iris:data Surfaces set value {Top: [[0, 1000000, 0, 125000, 1000000, 1000000]], Bottom: [[0, 0, 0, 125000, 0, 1000000]], West: [[0, 0, 0, 0, 1000000, 1000000]], East: [[125000, 0, 0, 125000, 1000000, 1000000]], North: [[0, 0, 0, 125000, 1000000, 0]], South: [[0, 0, 1000000, 125000, 1000000, 1000000]]}

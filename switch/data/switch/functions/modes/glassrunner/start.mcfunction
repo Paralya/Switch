@@ -1,18 +1,18 @@
 
 ##Item custom
-#define storage switch:glassrunner
+# define storage switch:glassrunner
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b},display:{Name:'{"text":"Snowball Bridge Red","color":"red","italic":false}'}}}
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b},display:{Name:'{"text":"Snowball Bridge Blue","color":"blue","italic":false}'}}}
 
 data modify storage switch:glassrunner ItemsNBT.renforced_snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,renforced_glass_bridge_red:1b},display:{Name:'{"text":"Renforced Snowball Bridge","color":"red","italic":false}'}}}
 data modify storage switch:glassrunner ItemsNBT.renforced_snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,renforced_glass_bridge_blue:1b},display:{Name:'{"text":"Renforced Snowball Bridge","color":"blue","italic":false}'}}}
 
-#Destroying Crossbow
+# Destroying Crossbow
 data modify storage switch:glassrunner ItemsNBT.destroying_crossbow set value {id:"minecraft:crossbow",Count:1b,tag:{glassrunner:{destroying_crossbow:1b},display:{Name:'{"text":"Destroying Crossbow","color":"dark_red","italic":false}'},ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:"minecraft:arrow",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}}],Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s},{id:"minecraft:multishot",lvl:1s}],Damage:450}}
 
 data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:5s},{id:"minecraft:punch",lvl:5s}],CanDestroy:["minecraft:glass","minecraft:red_stained_glass","minecraft:blue_stained_glass","minecraft:pink_stained_glass","minecraft:light_blue_stained_glass"]}}
 
-#warped_fungus_on_a_stick
+# warped_fungus_on_a_stick
 data modify storage switch:glassrunner ItemsNBT.fireball_wand set value {id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:4220108,glassrunner:{fireball_wand:1b},display:{Name:'{"text":"Fireball Wand","color":"dark_red","italic":false}',Lore:['{"text":"Fait spawn une fireball devant vous qui détruit tout sur son passage","color":"gray","italic":false}','[{"text":"Coût : ","color":"dark_gray","italic":false},{"text":"5 pièces","color":"gold","italic":false}]']}}}
 
 ##Fonction executée lors du lancement de la parties
@@ -46,7 +46,7 @@ difficulty normal
 time set 6000
 weather clear
 
-##Téléportation des joueurs dans quatres coins + give d'items
+## Téléportation des joueurs dans quatres coins + give d'items
 scoreboard players set #count switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a at @s run function switch:modes/glassrunner/death/death

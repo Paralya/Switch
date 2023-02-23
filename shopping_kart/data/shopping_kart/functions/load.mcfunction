@@ -17,13 +17,13 @@ scoreboard objectives add shopping_kart.cruise_control dummy
 scoreboard players set ShoppingKart load.status 1000
 scoreboard players set #default_max_engine shopping_kart.data 1500
 
-#define storage shopping_kart:main
-#define storage shopping_kart:temp
-#define score_holder #success
-#define score_holder #valid
-#define score_holder #count
-#define score_holder #temp
-#define score_holder #pos
+# define storage shopping_kart:main
+# define storage shopping_kart:temp
+# define score_holder #success
+# define score_holder #valid
+# define score_holder #count
+# define score_holder #temp
+# define score_holder #pos
 
 scoreboard players set #-1 shopping_kart.data -1
 scoreboard players set #2 shopping_kart.data 2

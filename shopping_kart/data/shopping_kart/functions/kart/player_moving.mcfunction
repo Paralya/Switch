@@ -1,13 +1,13 @@
 
 tag @s add shopping_kart.temp
 
-#Store player motion and call function to the vehicle
+# Store player motion and call function to the vehicle
 execute store result score #motion_x shopping_kart.data run data get entity @s Motion[0] 1000000
 execute store result score #motion_z shopping_kart.data run data get entity @s Motion[2] 1000000
 
 data modify storage shopping_kart:main Rotation set from entity @s Rotation[0]
 scoreboard players set #instant_engine_max shopping_kart.data 0
-#execute store success score #instant_engine_max shopping_kart.data run scoreboard players reset @s[scores={right=1..}] right
+# execute store success score #instant_engine_max shopping_kart.data run scoreboard players reset @s[scores={right=1..}] right
 
 execute positioned ~ ~-1 ~ as @e[tag=shopping_kart.kart,distance=..1,predicate=shopping_kart:have_player_passenger] at @s run function shopping_kart:kart/called_by_player
 

@@ -1,8 +1,8 @@
 #> iris:find_closest_surface/ray_intersects_with_surface
-#
+# 
 # Establishes the current surface as the first the ray will hit.
 # This function only runs if the ray is closer to this surface than it is to any other surface analysed so far, but there is no guarantee that this is the surface the ray will eventually hit first.
-#
+# 
 # @within iris:find_closest_surface/bottom/find_intersection
 # @within iris:find_closest_surface/east/find_intersection
 # @within iris:find_closest_surface/north/find_intersection

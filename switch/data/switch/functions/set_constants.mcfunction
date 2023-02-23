@@ -1,7 +1,7 @@
 
-#min=-100
-#max=100
-#while min <= max:
+# min=-100
+# max=100
+# while min <= max:
 #    print('scoreboard players set #'+str(min)+' switch.data '+str(min))
 #    min += 1
 

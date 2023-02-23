@@ -1,5 +1,5 @@
 #> iris:get_hitbox/block/stairs
-#
+# 
 # @within iris:get_hitbox/block
 
 # half=bottom, shape=straight

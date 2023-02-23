@@ -1,5 +1,5 @@
 #> iris:get_hitbox/entity/vex
-#
+# 
 # @within iris:get_hitbox/entity
 
 scoreboard players set $entity_half_width iris 200000

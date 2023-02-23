@@ -1,5 +1,5 @@
 #> iris:get_hitbox/block/fence_gates
-#
+# 
 # @within iris:get_hitbox/block
 
 # in_wall=false

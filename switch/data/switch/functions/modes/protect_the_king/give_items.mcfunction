@@ -1,5 +1,5 @@
 
-#Starter kit
+# Starter kit
 scoreboard players set #armor switch.data 0
 scoreboard players set #sword switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #armor switch.data 1

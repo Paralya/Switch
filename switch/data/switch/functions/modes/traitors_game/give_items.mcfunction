@@ -1,5 +1,5 @@
 
-#Starter kit
+# Starter kit
 scoreboard players set #armor switch.data 0
 scoreboard players set #sword switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #armor switch.data 1
@@ -25,7 +25,7 @@ loot give @s loot switch:traitors_game/all_starter
 give @s oak_planks 100
 give @s anvil
 
-#Random items (0 or 1 or 2)
+# Random items (0 or 1 or 2)
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 

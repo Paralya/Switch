@@ -1,5 +1,5 @@
 
-#Detect if linked player is missing
+# Detect if linked player is missing
 
 scoreboard players set #success switch.data 0
 scoreboard players operation #player_id switch.temp.id = @s switch.temp.id

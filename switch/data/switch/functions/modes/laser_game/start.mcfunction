@@ -31,7 +31,7 @@ effect give @a regeneration 5 255 true
 effect give @a weakness 99999 255 true
 time set 18000
 
-##Traitement des joueurs
+## Traitement des joueurs
 execute unless data storage switch:main laser_game_maps[0] run data modify storage switch:main laser_game_maps set value ["laser_game", "operation_pigclaw"]
 data modify storage switch:main maps_to_choose set from storage switch:main laser_game_maps
 function switch:maps/load

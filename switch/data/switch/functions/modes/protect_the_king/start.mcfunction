@@ -48,7 +48,7 @@ scoreboard players set #cut_clean switch.data 1
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
 
-#Choix des rôles + give d'items
+# Choix des rôles + give d'items
 team add switch.temp.red_king
 team add switch.temp.blue_king
 team add switch.temp.red

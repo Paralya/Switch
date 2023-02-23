@@ -1,7 +1,7 @@
 #> iris:find_closest_surface/west/find_intersection
-#
+# 
 # Get position of the intersection, and see if that position is within the current surface
-#
+# 
 # @within iris:find_closest_surface/west/get_distance
 
 # Get x position of the intersection

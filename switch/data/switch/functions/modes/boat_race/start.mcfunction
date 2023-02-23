@@ -1,7 +1,7 @@
 
 ##Fonction executée lors du lancement de la partie
 
-#Map
+# Map
 data modify storage switch:main maps_to_choose set value ["boat_race_1"]
 function switch:maps/load
 

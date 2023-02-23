@@ -16,7 +16,7 @@ execute if score #creeper_apocalypse_seconds switch.data matches 0 if data stora
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"zonweeb_main"} as @e[limit=2] run summon creeper 32033 133 32000 {AbsorptionAmount:2048f}
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"zonweeb_main"} as @e[limit=2] run summon creeper 32000 138 32027 {AbsorptionAmount:2048f}
 
-#Clear des anciens mobs si il y en a
+# Clear des anciens mobs si il y en a
 execute if score #creeper_apocalypse_seconds switch.data matches ..-1 run tp @e[type=creeper] 0 -10000 0
 execute if score #creeper_apocalypse_seconds switch.data matches ..-1 run kill @e[type=creeper]
 

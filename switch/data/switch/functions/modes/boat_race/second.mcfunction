@@ -9,7 +9,7 @@ execute if score #boat_race_seconds switch.data matches 0 run tellraw @a ["\n",{
 execute if score #boat_race_seconds switch.data matches 0 run fill 5026 100 5007 5026 100 4997 air
 execute if score #boat_race_seconds switch.data matches ..-1 run fill 5026 100 5007 5026 100 4997 quartz_slab
 
-#Clear des anciens mobs si il y en a
+# Clear des anciens mobs si il y en a
 execute if score #boat_race_seconds switch.data matches ..-7 run tp @e[type=chest_boat] 0 -10000 0
 execute if score #boat_race_seconds switch.data matches ..-7 run kill @e[type=chest_boat]
 

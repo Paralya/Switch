@@ -69,7 +69,7 @@ scoreboard players set É switch.temp.sidebar 2
 scoreboard players set Éq switch.temp.sidebar 1
 
 
-#Choix des rôles + give d'items
+# Choix des rôles + give d'items
 team add switch.rush_the_point.red
 team add switch.rush_the_point.blue
 team modify switch.rush_the_point.red color red

@@ -1,5 +1,5 @@
 
-##Teleport players
+## Teleport players
 summon marker 0 0 0 {Tags:["switch.selected_map"]}
 execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value [20443.5d, 100.0d, 20073.0d]
 

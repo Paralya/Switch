@@ -1,5 +1,5 @@
 
-#Apply ID for Respawn
+# Apply ID for Respawn
 scoreboard players add #next_id switch.temp.id 1
 scoreboard players operation @s switch.temp.id = #next_id switch.temp.id
 

@@ -1,29 +1,29 @@
 #> iris:find_next_block/main
-#
+# 
 # Calculates the position of the ray when it hits the next block
-#
+# 
 # @within iris:raycast/loop
 # @output
-#	score $[x] iris
-#		The integer x coordinate of the next position
-#	score $[y] iris
-#		The integer y coordinate of the next position
-#	score $[z] iris
-#		The integer z coordinate of the next position
-#	score ${x} iris
-#		The fractional x coordinate of the next position, represented by an integer between 0 and 1000000
-#	score ${y} iris
-#		The fractional y coordinate of the next position, represented by an integer between 0 and 1000000
-#	score ${z} iris
-#		The fractional z coordinate of the next position, represented by an integer between 0 and 1000000
-#	score $previous_[x] iris
-#		The integer x coordinate of the position before it is updated by this function
-#	score $previous_[y] iris
-#		The integer y coordinate of the position before it is updated by this function
-#	score $previous_[z] iris
-#		The integer z coordinate of the position before it is updated by this function
+# 	score $[x] iris
+# 		The integer x coordinate of the next position
+# 	score $[y] iris
+# 		The integer y coordinate of the next position
+# 	score $[z] iris
+# 		The integer z coordinate of the next position
+# 	score ${x} iris
+# 		The fractional x coordinate of the next position, represented by an integer between 0 and 1000000
+# 	score ${y} iris
+# 		The fractional y coordinate of the next position, represented by an integer between 0 and 1000000
+# 	score ${z} iris
+# 		The fractional z coordinate of the next position, represented by an integer between 0 and 1000000
+# 	score $previous_[x] iris
+# 		The integer x coordinate of the position before it is updated by this function
+# 	score $previous_[y] iris
+# 		The integer y coordinate of the position before it is updated by this function
+# 	score $previous_[z] iris
+# 		The integer z coordinate of the position before it is updated by this function
 
-#> Find whether the next block is adjacent on the X axis, on the Y axis or on the Z axis
+# > Find whether the next block is adjacent on the X axis, on the Y axis or on the Z axis
 
 # See what distance the ray needs to travel to hit the next block on the X axis
 execute if score $dx iris matches 0.. run scoreboard players set $distance_to_next_block_on_x_axis iris 1000000000
@@ -54,7 +54,7 @@ execute if score $distance_to_next_block_on_x_axis iris <= $distance_to_next_blo
 execute if score $distance_to_next_block_on_y_axis iris <= $distance_to_next_block_on_x_axis iris if score $distance_to_next_block_on_y_axis iris <= $distance_to_next_block_on_z_axis iris run data merge storage iris:data {ShortestDistanceAxis: "y"}
 execute if score $distance_to_next_block_on_z_axis iris <= $distance_to_next_block_on_x_axis iris if score $distance_to_next_block_on_z_axis iris <= $distance_to_next_block_on_y_axis iris run data merge storage iris:data {ShortestDistanceAxis: "z"}
 
-#> Update position to the next block
+# > Update position to the next block
 
 # Save previous coordinates
 scoreboard players operation $previous_[x] iris = $[x] iris

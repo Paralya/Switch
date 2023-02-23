@@ -1,18 +1,18 @@
 
-#c1 = [39000,39000,39143,39221]
-#divider = 2
-#d = (c1[2] - c1[0]) / divider
+# c1 = [39000,39000,39143,39221]
+# divider = 2
+# d = (c1[2] - c1[0]) / divider
 
-#c = []
-#for i in range(divider):
+# c = []
+# for i in range(divider):
 #    c.append([ round(c1[0] + d*i), c1[1], round(c1[0] + d*(i+1)), c1[3] ])
 
-#y = 0
-#minY = 100
-#maxY = 169
-#i = 20
-#j = y
-#while minY <= maxY:
+# y = 0
+# minY = 100
+# maxY = 169
+# i = 20
+# j = y
+# while minY <= maxY:
 #    z = 0
 #    for k in c:
 #        print('execute if score #regeneration_ticks switch.data matches '+str(i+z)+' run clone '+str(k[0])+' '+str(j)+' '+str(k[1])+' '+str(k[2])+' '+str(j)+' '+str(k[3])+' '+str(k[0])+' '+str(minY)+' '+str(k[1])+' replace force')

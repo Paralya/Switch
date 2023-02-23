@@ -12,7 +12,7 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10] ru
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/traitors_game/death/detect
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/process
 
-#Détection de fin de partie
+# Détection de fin de partie
 execute if score #traitors_game_seconds switch.data matches 1..1200 run function switch:modes/traitors_game/detect_end
 execute if score #traitors_game_seconds switch.data matches 1201.. run function switch:modes/traitors_game/process_end
 

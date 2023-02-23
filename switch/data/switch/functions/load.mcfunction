@@ -22,19 +22,19 @@ scoreboard players set Switch load.status 1000
 scoreboard players set _RANDOM_PRIME switch.data 6978869
 forceload add 0 0
 
-#define storage switch:main
-#define score_holder #success
-#define score_holder #valid
-#define score_holder #count
-#define score_holder #temp
-#define score_holder #pos
+# define storage switch:main
+# define score_holder #success
+# define score_holder #valid
+# define score_holder #count
+# define score_holder #temp
+# define score_holder #pos
 
 gamerule announceAdvancements false
 gamerule doImmediateRespawn true
 gamerule doTraderSpawning false
 
 ##Storage
-#tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
+# tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'
 data modify storage switch:main ParalyaMoney set value '[{"text":"[ParalyaMoney]","color":"dark_purple"}]'
 data modify storage switch:main ParalyaError set value '[{"text":"[ParalyaError]","color":"red"}]'
@@ -63,8 +63,8 @@ data modify storage switch:main minigames append value {index:13,min_players:1	,
 data modify storage switch:main minigames append value {index:14,min_players:1	,max_players:-1		,id:"feed_fast"				,Name:"Feed Fast"			,Lore:'["",{"text":"[Feed Fast]\\n","color":"yellow"},{"text":"Trouvez de la nourriture autour de vous\\n"},{"text":"et mangez-la pour ne pas subir un funeste destin"}]'}
 data modify storage switch:main minigames append value {index:15,min_players:1	,max_players:-1		,id:"mlg_a_coudre"			,Name:"MLG à Coudre"		,Lore:'["",{"text":"[MLG à Coudre]\\n","color":"yellow"},{"text":"Affrontez les autres joueurs dans un saut,\\n"},{"text":"iconique de Minecraft mais pas comme les autres !"}]'}
 data modify storage switch:main minigames append value {index:16,min_players:1	,max_players:-1		,id:"protect_the_king"		,Name:"Protect The King"	,Lore:'["",{"text":"[Protect The King]\\n","color":"yellow"},{"text":"Deux teams doivent s\'affronter pour tuer le roi\\n"},{"text":"ennemi afin de gagner la partie"}]'}
-#data modify storage switch:main minigames append value {index:17,min_players:1	,max_players:-1		,id:"layers_team"			,Name:"Layers 2 Teams"		,Lore:'["",{"text":"[Layers 2 Teams]\\n","color":"yellow"},{"text":"Soyez le plus rapide à vous équiper afin de\\n"},{"text":"transpercer le mur d\'obsidienne pour exterminer l\'ennemi !"}]'}
-#data modify storage switch:main minigames append value {index:18,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'["",{"text":"[TEMPLATE]\\n","color":"yellow"},{"text":"TEMPLATE\\n"},{"text":"TEMPLATE"}]'}
+# data modify storage switch:main minigames append value {index:17,min_players:1	,max_players:-1		,id:"layers_team"			,Name:"Layers 2 Teams"		,Lore:'["",{"text":"[Layers 2 Teams]\\n","color":"yellow"},{"text":"Soyez le plus rapide à vous équiper afin de\\n"},{"text":"transpercer le mur d\'obsidienne pour exterminer l\'ennemi !"}]'}
+# data modify storage switch:main minigames append value {index:18,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'["",{"text":"[TEMPLATE]\\n","color":"yellow"},{"text":"TEMPLATE\\n"},{"text":"TEMPLATE"}]'}
 
 
 ##States

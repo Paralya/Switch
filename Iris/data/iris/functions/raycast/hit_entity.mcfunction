@@ -1,7 +1,7 @@
 #> iris:raycast/hit_entity
-#
+# 
 # Runs when the ray hits an entity and outputs all available information to storage
-#
+# 
 # @within iris:raycast/loop
 
 # Target type

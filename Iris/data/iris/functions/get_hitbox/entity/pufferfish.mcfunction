@@ -1,5 +1,5 @@
 #> iris:get_hitbox/entity/pufferfish
-#
+# 
 # @within iris:get_hitbox/entity
 
 execute store result score $pufferfish_puffstate iris run data get entity @s PuffState

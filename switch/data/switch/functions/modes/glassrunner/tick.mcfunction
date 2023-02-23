@@ -21,7 +21,7 @@ fill 2924 131 3076 2926 129 3074 air replace #switch:glassrunner/glass
 execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=10..}] at @s run function switch:modes/glassrunner/fireball/use
 execute at @e[tag=switch.glassrunner.fireball] run function switch:modes/glassrunner/fireball/explosion
 
-#Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
+# Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
 execute if score #glassrunner_seconds switch.data matches 3600.. run function switch:modes/glassrunner/end/null
 execute if score #glassrunner.points.red switch.data > #glassrunner_point_to_win switch.data run function switch:modes/glassrunner/end/red
 execute if score #glassrunner.points.blue switch.data > #glassrunner_point_to_win switch.data run function switch:modes/glassrunner/end/blue

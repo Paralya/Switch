@@ -7,7 +7,7 @@ execute if score #a_template_seconds switch.data matches 0.. run function switch
 execute if score #a_template_seconds switch.data matches 0.. run summon creeper 100 110 110 {AbsorptionAmount:2048f}
 execute if score #a_template_seconds switch.data matches 0.. run summon creeper 100 110 110 {AbsorptionAmount:2048f}
 
-#Clear des anciens mobs si il y en a
+# Clear des anciens mobs si il y en a
 execute if score #a_template_seconds switch.data matches ..-1 run tp @e[type=creeper] 0 -10000 0
 execute if score #a_template_seconds switch.data matches ..-1 run kill @e[type=creeper]
 

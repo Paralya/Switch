@@ -1,5 +1,5 @@
 #> iris:get_hitbox/entity/item_frame
-#
+# 
 # @within iris:get_hitbox/entity
 
 execute store result score $item_frame_facing iris run data get entity @s Facing

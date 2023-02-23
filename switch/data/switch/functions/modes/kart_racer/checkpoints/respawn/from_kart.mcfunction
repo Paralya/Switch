@@ -1,5 +1,5 @@
 
-#copy[0] is the respawn state
+# copy[0] is the respawn state
 tp @s ~ ~ ~ ~ ~
 data modify entity @s Pos set from storage switch:main copy[0].Pos
 data modify entity @s Rotation set from storage switch:main copy[0].Rotation

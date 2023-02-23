@@ -14,7 +14,7 @@ difficulty normal
 time set 6000
 weather clear
 
-##Téléportation des joueurs
+## Téléportation des joueurs
 data modify storage switch:main maps_to_choose set value ["mlg_a_coudre_1"]
 function switch:maps/load
 

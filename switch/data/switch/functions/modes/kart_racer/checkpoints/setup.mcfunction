@@ -1,5 +1,5 @@
 
-#Apply Checkpoint ID for Respawn
+# Apply Checkpoint ID for Respawn
 scoreboard players add #next_id switch.temp.id 1
 scoreboard players operation @s switch.temp.id = #next_id switch.temp.id
 

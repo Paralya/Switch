@@ -1,25 +1,25 @@
 #> iris:set_coordinates
-#
+# 
 # Teleports the executing entity at a given position from six scores.
 # Meant to be executed as the ray marker after raycasting, scores are then set to the player's targeted position:
-#	execute as @p at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
-#	execute as @e[type=marker, tag=iris.ray] run function iris:set_coordinates
-#
+# 	execute as @p at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
+# 	execute as @e[type=marker, tag=iris.ray] run function iris:set_coordinates
+# 
 # @public
 # @context an entity other than a player
 # @input
-#	score $[x] iris
-#		The integer value of the new X position
-#	score $[y] iris
-#		The integer value of the new Y position
-#	score $[z] iris
-#		The integer value of the new Z position
-#	score ${x} iris
-#		The fractional value of the new X position, a number between 0 and 1000000
-#	score ${y} iris
-#		The fractional value of the new Y position, a number between 0 and 1000000
-#	score ${z} iris
-#		The fractional value of the new Z position, a number between 0 and 1000000
+# 	score $[x] iris
+# 		The integer value of the new X position
+# 	score $[y] iris
+# 		The integer value of the new Y position
+# 	score $[z] iris
+# 		The integer value of the new Z position
+# 	score ${x} iris
+# 		The fractional value of the new X position, a number between 0 and 1000000
+# 	score ${y} iris
+# 		The fractional value of the new Y position, a number between 0 and 1000000
+# 	score ${z} iris
+# 		The fractional value of the new Z position, a number between 0 and 1000000
 
 # Teleports the executing entity to the current coordinates
 

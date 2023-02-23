@@ -8,6 +8,6 @@ execute if score #process_end switch.data matches 1 run tag @a remove switch.pla
 execute if score #process_end switch.data matches 1 run tag @a remove switch.completed
 execute if score #process_end switch.data matches 1 as @a[sort=random] run function switch:modes/kart_racer/complete
 
-#Obligatoire
+# Obligatoire
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

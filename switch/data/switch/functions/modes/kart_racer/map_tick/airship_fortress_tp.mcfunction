@@ -1,11 +1,11 @@
 
-#l1 = [20662, 110, 20382]
-#l2 = [20732, 138, 20382]
-#total = 40
-#dx = (l2[0] - l1[0]) / total
-#dy = (l2[1] - l1[1]) / total
-#dz = (l2[2] - l1[2]) / total
-#for i in range(0,total+1):
+# l1 = [20662, 110, 20382]
+# l2 = [20732, 138, 20382]
+# total = 40
+# dx = (l2[0] - l1[0]) / total
+# dy = (l2[1] - l1[1]) / total
+# dz = (l2[2] - l1[2]) / total
+# for i in range(0,total+1):
 #    print('tp @s[scores={switch.temp.compteur='+str(i+1)+'}]', round(l1[0] + i*dx, 4), round(l1[1] + i*dy, 4), round(l1[2] + i*dz, 4))
 
 execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine

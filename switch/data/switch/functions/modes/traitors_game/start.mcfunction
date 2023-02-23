@@ -84,7 +84,7 @@ scoreboard players set Inn switch.temp.sidebar 3
 scoreboard players set Tra switch.temp.sidebar 2
 scoreboard players set Gro switch.temp.sidebar 1
 
-#Choix des rôles
+# Choix des rôles
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 tag @a remove switch.traitors_game.detective

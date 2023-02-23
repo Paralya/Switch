@@ -60,7 +60,7 @@ scoreboard objectives add switch.temp.damages dummy {"text":" Nombre de coups in
 scoreboard objectives setdisplay sidebar switch.temp.damages
 scoreboard objectives setdisplay list switch.health
 
-#Choix des rôles + give d'items
+# Choix des rôles + give d'items
 team add switch.temp.visible
 team add switch.temp.spectre
 team modify switch.temp.visible color green

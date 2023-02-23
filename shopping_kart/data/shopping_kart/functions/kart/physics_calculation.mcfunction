@@ -1,7 +1,7 @@
 
-#Define multiplier depending on engine speed & block stepping on
-#Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
-#When in air : surface = 0
+# Define multiplier depending on engine speed & block stepping on
+# Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
+# When in air : surface = 0
 function shopping_kart:kart/physics_get_surface
 
 scoreboard players operation #engine shopping_kart.data = @s shopping_kart.engine
@@ -29,7 +29,7 @@ scoreboard players operation @s shopping_kart.predicted_pos_z = #new_pos_z shopp
 
 
 ##Calculate new motion : motion = (player_motion * multiplier) + old_motion + booster
-#If player_motion is null : motion = old_motion
+# If player_motion is null : motion = old_motion
 scoreboard players set #booster shopping_kart.data 0
 execute if score #booster shopping_kart.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=west] run scoreboard players set #booster shopping_kart.data 1
 execute if score #booster shopping_kart.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=east] run scoreboard players set #booster shopping_kart.data 2

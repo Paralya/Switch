@@ -1,5 +1,5 @@
 
-#Starter kit
+# Starter kit
 clear @s
 item replace entity @s[tag=switch.spectres_game.visible] armor.head with chainmail_helmet{Enchantments:[{id:"minecraft:protection",lvl:1s}]}
 item replace entity @s[tag=switch.spectres_game.visible] armor.chest with iron_chestplate{Enchantments:[{id:"minecraft:fire_protection",lvl:1s}]}

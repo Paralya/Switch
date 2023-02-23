@@ -1,5 +1,5 @@
 #> iris:get_hitbox/entity/armor_stand
-#
+# 
 # @within iris:get_hitbox/entity
 
 data modify storage iris:data EntityTag set from entity @s

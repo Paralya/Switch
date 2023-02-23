@@ -1,7 +1,7 @@
 #> iris:get_coordinates/as_marker
-#
+# 
 # Gets the current coordinates and rotation using a marker.
-#
+# 
 # @context a marker entity at context position and a rotation
 # @within iris:get_coordinates/main
 

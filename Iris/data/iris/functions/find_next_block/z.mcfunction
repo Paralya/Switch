@@ -1,7 +1,7 @@
 #> iris:find_next_block/z
-#
+# 
 # Calculates the position of the ray when it hits the next block, assuming that the next block is north or south of the current block
-#
+# 
 # @within iris:find_next_block/main
 
 # Set the distance to the next block on the z axis as the distance to the next block

@@ -1,7 +1,7 @@
 #> iris:raycast/hit_block
-#
+# 
 # Runs when the ray hits a solid block surface and outputs all available information to storage
-#
+# 
 # @within iris:raycast/loop
 
 # Target type

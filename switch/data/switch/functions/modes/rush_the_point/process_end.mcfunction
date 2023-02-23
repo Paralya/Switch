@@ -10,6 +10,6 @@ execute if score #process_end switch.data matches 1 if score #red_points switch.
 execute if score #process_end switch.data matches 1 as @a at @s run playsound item.totem.use ambient @s
 execute if score #process_end switch.data matches 1 run tag @a remove switch.to_tp
 
-#Obligatoire
+# Obligatoire
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

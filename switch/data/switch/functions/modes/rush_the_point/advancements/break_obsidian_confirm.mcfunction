@@ -9,11 +9,11 @@ execute if score #color switch.data matches 0 run function switch:modes/rush_the
 execute if score #color switch.data matches 1 run scoreboard players add #blue_points switch.data 100
 execute if score #color switch.data matches 1 run function switch:modes/rush_the_point/update_sidebar/blue_points/
 
-#Random
+# Random
 scoreboard players set #modulo_rand switch.data 10
 function switch:math/get_predictable_random/
 
-#Color red
+# Color red
 execute if score #random switch.data matches 0 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.red] absorption 60 4 true
 execute if score #random switch.data matches 1 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.red] speed 60 0 true
 execute if score #random switch.data matches 2 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.red] strength 60 0 true
@@ -25,7 +25,7 @@ execute if score #random switch.data matches 7 if score #color switch.data match
 execute if score #random switch.data matches 8 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.blue] poison 60 0 true
 execute if score #random switch.data matches 9 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.blue] weakness 60 0 true
 
-#Color blue
+# Color blue
 execute if score #random switch.data matches 0 if score #color switch.data matches 1 run effect give @a[team=switch.rush_the_point.blue] absorption 60 4 true
 execute if score #random switch.data matches 1 if score #color switch.data matches 1 run effect give @a[team=switch.rush_the_point.blue] speed 60 0 true
 execute if score #random switch.data matches 2 if score #color switch.data matches 1 run effect give @a[team=switch.rush_the_point.blue] strength 60 0 true
@@ -37,7 +37,7 @@ execute if score #random switch.data matches 7 if score #color switch.data match
 execute if score #random switch.data matches 8 if score #color switch.data matches 1 run effect give @a[team=switch.rush_the_point.red] poison 60 0 true
 execute if score #random switch.data matches 9 if score #color switch.data matches 1 run effect give @a[team=switch.rush_the_point.red] weakness 60 0 true
 
-#Messages
+# Messages
 execute if score #random switch.data matches 0 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" a récuperé le bonus, cela donne l'effet Absorption à son équipe [+100 points]\n"}]
 execute if score #random switch.data matches 1 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" a récuperé le bonus, cela donne l'effet Speed à son équipe [+100 points]\n"}]
 execute if score #random switch.data matches 2 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" a récuperé le bonus, cela donne l'effet Strength à son équipe [+100 points]\n"}]

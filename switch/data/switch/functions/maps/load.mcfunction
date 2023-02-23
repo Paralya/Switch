@@ -11,7 +11,7 @@ data modify storage switch:main map set from storage switch:main copy[0]
 data modify storage switch:main previous_map set from storage switch:main map
 
 
-#Maps that regenerate (gamemode survival, may be adventure):
+# Maps that regenerate (gamemode survival, may be adventure):
 execute if data storage switch:main {map:"traitor_original"} run function switch:maps/survival/traitor_original/
 execute if data storage switch:main {map:"zone_51"} run function switch:maps/survival/zone_51/
 execute if data storage switch:main {map:"spectre_original"} run function switch:maps/survival/spectre_original/
@@ -27,7 +27,7 @@ execute if data storage switch:main {map:"jayl_dark_forest"} run function switch
 execute if data storage switch:main {map:"dark_forest_hills"} run function switch:maps/survival/dark_forest_hills/
 
 
-#Maps that doesn't (always gamemode adventure):
+# Maps that doesn't (always gamemode adventure):
 execute if data storage switch:main {map:"pitch_creep_1"} run function switch:maps/adventure/pitch_creep_1/
 execute if data storage switch:main {map:"pitch_creep_2"} run function switch:maps/adventure/pitch_creep_2/
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/adventure/pitchout_1/

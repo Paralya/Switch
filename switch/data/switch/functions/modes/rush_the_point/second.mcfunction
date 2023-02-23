@@ -21,7 +21,7 @@ execute if score #remaining_time switch.data matches 1.. if score #color switch.
 execute if score #remaining_time switch.data matches 1.. if score #color switch.data matches 1 run function switch:modes/rush_the_point/update_sidebar/red_points/
 execute if score #remaining_time switch.data matches 1.. if score #color switch.data matches 2 run function switch:modes/rush_the_point/update_sidebar/blue_points/
 
-#Bonus
+# Bonus
 scoreboard players add #bonus_reload switch.data 1
 execute if score #bonus_reload switch.data matches 60.. run function switch:modes/rush_the_point/bonus_reload
 

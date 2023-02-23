@@ -14,7 +14,7 @@ difficulty normal
 time set 6000
 weather clear
 
-##Téléportation des joueurs
+## Téléportation des joueurs
 data modify storage switch:main maps_to_choose set value ["de_a_coudre_1"]
 function switch:maps/load
 
@@ -43,7 +43,7 @@ execute as @a[sort=random] run function switch:modes/de_a_coudre/define_order
 scoreboard players operation #max switch.data = #position switch.data
 execute as @a run scoreboard players operation @s switch.temp.color = @s switch.temp.order
 
-#Nombre de rounds
+# Nombre de rounds
 scoreboard players set #rounds switch.data 8
 execute if score #max switch.data matches 5..8 run scoreboard players set #rounds switch.data 6
 execute if score #max switch.data matches 9..16 run scoreboard players set #rounds switch.data 4

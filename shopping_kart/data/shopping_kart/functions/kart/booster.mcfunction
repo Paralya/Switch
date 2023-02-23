@@ -17,5 +17,5 @@ execute if score #new shopping_kart.data matches -2500000..2500000 run particle 
 execute if score @s shopping_kart.booster_timer matches 0 if score #new shopping_kart.data matches -2500000..2500000 run scoreboard players set @s shopping_kart.booster_timer 20
 execute positioned ~ ~1 ~ run playsound block.note_block.harp block @a[distance=..1,predicate=shopping_kart:has_vehicle_with_tag]
 
-#tellraw @a [{"text":"Old / New : ","color":"yellow"},{"score":{"name":"#old","objective":"shopping_kart.data"},"color":"aqua"},{"text":" / "},{"score":{"name":"#new","objective":"shopping_kart.data"},"color":"aqua"}]
+# tellraw @a [{"text":"Old / New : ","color":"yellow"},{"score":{"name":"#old","objective":"shopping_kart.data"},"color":"aqua"},{"text":" / "},{"score":{"name":"#new","objective":"shopping_kart.data"},"color":"aqua"}]
 

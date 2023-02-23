@@ -1,14 +1,14 @@
 
-#x1 = 1409
-#z1 = 1424
-#x2 = 1591
-#z2 = 1577
-#y = 1
-#minY = 115
-#maxY = 178
-#i = 10
-#j = y
-#while minY <= maxY:
+# x1 = 1409
+# z1 = 1424
+# x2 = 1591
+# z2 = 1577
+# y = 1
+# minY = 115
+# maxY = 178
+# i = 10
+# j = y
+# while minY <= maxY:
 #    print('execute if score #regeneration_ticks switch.data matches '+str(i*2)+' run clone '+str(x1)+' '+str(j)+' '+str(z1)+' '+str(x2)+' '+str(j)+' '+str(z2)+' '+str(x1)+' '+str(minY)+' '+str(z1)+' replace force')
 #    i += 1
 #    j += 1

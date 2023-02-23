@@ -15,7 +15,7 @@ execute if score #process_end switch.data matches 1..399 as @e[tag=switch.glassr
 execute if score #process_end switch.data matches 399 positioned 3000 -64 3000 run function switch:modes/glassrunner/reset/end
 
 
-#Obligatoire
+# Obligatoire
 execute if score #process_end switch.data matches 400.. run function switch:engine/restart
 
 execute if score #process_end switch.data matches 400.. run scoreboard players set #process_end switch.data 0

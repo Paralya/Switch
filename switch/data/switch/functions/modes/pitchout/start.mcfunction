@@ -21,7 +21,7 @@ difficulty normal
 time set 6000
 weather clear
 
-##Téléportation des joueurs
+## Téléportation des joueurs
 execute unless data storage switch:main pitchout_maps[0] run data modify storage switch:main pitchout_maps set value ["pitchout_1"]
 data modify storage switch:main maps_to_choose set from storage switch:main pitchout_maps
 function switch:maps/load
