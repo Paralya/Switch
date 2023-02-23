@@ -1,5 +1,5 @@
 
-##Stop motion when predicted position isn't reached
+## Stop motion when predicted position isn't reached
 scoreboard players operation @s shopping_kart.predicted_pos_x -= #new_pos_x shopping_kart.data
 scoreboard players operation @s shopping_kart.predicted_pos_z -= #new_pos_z shopping_kart.data
 scoreboard players operation @s shopping_kart.predicted_pos_x *= #10 shopping_kart.data

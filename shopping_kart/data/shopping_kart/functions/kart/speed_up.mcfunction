@@ -1,5 +1,5 @@
 
-##Speed up engine progressively depending on surface
+## Speed up engine progressively depending on surface
 # Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
 # When in air : surface = 0
 function shopping_kart:kart/physics_get_surface
@@ -10,7 +10,7 @@ execute if score #surface shopping_kart.data matches 0 if block ~ ~-.1 ~ air run
 execute if score #surface shopping_kart.data matches 1..2 run scoreboard players set #add shopping_kart.engine 34
 execute if score #surface shopping_kart.data matches 3 run scoreboard players set #add shopping_kart.engine 32
 execute if score #surface shopping_kart.data matches 4 run scoreboard players set #add shopping_kart.engine 30
-##Inspired from trackmania
+## Inspired from trackmania
 execute unless score @s shopping_kart.engine matches 0 if entity @s[tag=shopping_kart.engine_off] run scoreboard players set #add shopping_kart.engine 22
 execute if score @s shopping_kart.engine matches 0 if entity @s[tag=shopping_kart.engine_off] run scoreboard players set #add shopping_kart.engine 0
 execute if score @s shopping_kart.reactor_boost matches 1.. run scoreboard players set #add shopping_kart.engine 56

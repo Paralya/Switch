@@ -1,18 +1,18 @@
 
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
-##Explication du MDJ :
-##Dans une map de laser game, les joueurs possèdent une arme capable de tirer instantanément.
-##Enfin bref, tout comme au LaserGame dans la vraie vie.
-##Il n'y a pas de respawn, vous voyez les pseudos de votre équipe, une fois touché, vous devenez de couleur foncée
-##aux yeux des autres pendant 5 secondes et vous ne pouvez pas tirer, donc à vous de vous déplacer.
-##Il y a aussi une "Base" sur la map dans un endroit bien exposé qui se recharge toutes les 30 secondes
-##et qui permet d'obtenir un de ces effets au hasard :
-##Bouclier (-20% de vie du bouclier par coup dessus),
-##Mitrailette (vous tirez 5 fois par secondes),
-##Darkness (à la team ennemie pendant 5 secondes),
-##Changement de couleur (seulement visuelement donc pour brain l'ennemi: 30 secondes),
-##Effet glowing sur une team (pendant 5 secondes)
+## Explication du MDJ :
+## Dans une map de laser game, les joueurs possèdent une arme capable de tirer instantanément.
+## Enfin bref, tout comme au LaserGame dans la vraie vie.
+## Il n'y a pas de respawn, vous voyez les pseudos de votre équipe, une fois touché, vous devenez de couleur foncée
+## aux yeux des autres pendant 5 secondes et vous ne pouvez pas tirer, donc à vous de vous déplacer.
+## Il y a aussi une "Base" sur la map dans un endroit bien exposé qui se recharge toutes les 30 secondes
+## et qui permet d'obtenir un de ces effets au hasard :
+## Bouclier (-20% de vie du bouclier par coup dessus),
+## Mitrailette (vous tirez 5 fois par secondes),
+## Darkness (à la team ennemie pendant 5 secondes),
+## Changement de couleur (seulement visuelement donc pour brain l'ennemi: 30 secondes),
+## Effet glowing sur une team (pendant 5 secondes)
 
 clear @a
 effect clear @a

@@ -1,5 +1,5 @@
 
-##Item custom
+## Item custom
 # define storage switch:glassrunner
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b},display:{Name:'{"text":"Snowball Bridge Red","color":"red","italic":false}'}}}
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b},display:{Name:'{"text":"Snowball Bridge Blue","color":"blue","italic":false}'}}}
@@ -15,7 +15,7 @@ data modify storage switch:glassrunner ItemsNBT.bow set value {id:"minecraft:bow
 # warped_fungus_on_a_stick
 data modify storage switch:glassrunner ItemsNBT.fireball_wand set value {id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:4220108,glassrunner:{fireball_wand:1b},display:{Name:'{"text":"Fireball Wand","color":"dark_red","italic":false}',Lore:['{"text":"Fait spawn une fireball devant vous qui détruit tout sur son passage","color":"gray","italic":false}','[{"text":"Coût : ","color":"dark_gray","italic":false},{"text":"5 pièces","color":"gold","italic":false}]']}}}
 
-##Fonction executée lors du lancement de la parties
+## Fonction executée lors du lancement de la parties
 
 xp set @a 0 levels
 xp set @a 0 points
@@ -58,7 +58,7 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-##
+## 
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Glass Runner, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 

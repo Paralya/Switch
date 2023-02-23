@@ -1,5 +1,5 @@
 
-##Fonction executée tous les ticks lorsque le mode de jeu est activé
+## Fonction executée tous les ticks lorsque le mode de jeu est activé
 
 scoreboard players add #kart_racer_ticks switch.data 1
 
@@ -22,6 +22,6 @@ execute if data storage switch:main {map:"clock_circuit"} run function switch:mo
 execute if data storage switch:main {map:"trackmania_stadium_2"} run function switch:modes/kart_racer/map_tick/trackmania_stadium_2
 
 
-##Fin de la partie
+## Fin de la partie
 execute if score #detect_end switch.data matches 1.. run function switch:modes/kart_racer/process_end
 

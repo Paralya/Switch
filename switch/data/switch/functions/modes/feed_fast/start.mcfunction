@@ -1,4 +1,4 @@
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
 clear @a
 effect clear @a
@@ -19,7 +19,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
-##Placement de la map et des joueurs + give d'items
+## Placement de la map et des joueurs + give d'items
 execute unless data storage switch:main feed_fast_maps[0] run data modify storage switch:main feed_fast_maps set value ["mario_circuit", "fast_circuit", "plains_routine", "city_race", "sakura_land", "hills_land", "snow_travel", "trackmania_stadium_1", "trackmania_stadium_2", "cathedrale_liege", "operation_pigclaw"]
 data modify storage switch:main maps_to_choose set from storage switch:main feed_fast_maps
 function switch:maps/load

@@ -33,7 +33,7 @@ gamerule announceAdvancements false
 gamerule doImmediateRespawn true
 gamerule doTraderSpawning false
 
-##Storage
+## Storage
 # tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'
 data modify storage switch:main ParalyaMoney set value '[{"text":"[ParalyaMoney]","color":"dark_purple"}]'
@@ -44,7 +44,7 @@ data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aq
 function switch:set_constants
 
 
-##Define mini-games list
+## Define mini-games list
 data modify storage switch:main minigames set value []
 data modify storage switch:main minigames append value {index:0	,min_players:1	,max_players:-1		,id:"pitch_creep"			,Name:"Pitch Creep"			,Lore:'["",{"text":"[Pitch Creep]\\n","color":"yellow"},{"text":"Vous devez survivre le plus longtemps dans\\n"},{"text":"une map enfermée en expulsant les\\n"},{"text":"creepers qui vous attaquent."}]'}
 data modify storage switch:main minigames append value {index:1	,min_players:1	,max_players:-1		,id:"laser_game"			,Name:"Laser Game"			,Lore:'["",{"text":"[Laser Game]\\n","color":"yellow"},{"text":"Affrontez l\'équipe adverse grâce à vos fusils-laser\\n"},{"text":"et faites le plus d\'élimination possible !"}]'}
@@ -67,7 +67,7 @@ data modify storage switch:main minigames append value {index:16,min_players:1	,
 # data modify storage switch:main minigames append value {index:18,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'["",{"text":"[TEMPLATE]\\n","color":"yellow"},{"text":"TEMPLATE\\n"},{"text":"TEMPLATE"}]'}
 
 
-##States
+## States
 execute if score #state switch.data matches -1 run tell none désactivé
 execute if score #state switch.data matches 0 run tell none à l'arrêt
 execute if score #state switch.data matches 1 run tell none engine start

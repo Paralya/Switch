@@ -1,5 +1,5 @@
 
-##Fonction executée tous les ticks lorsque le mode de jeu est activé
+## Fonction executée tous les ticks lorsque le mode de jeu est activé
 
 scoreboard players add #feed_fast_ticks switch.data 1
 

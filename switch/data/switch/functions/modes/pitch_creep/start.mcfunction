@@ -1,5 +1,5 @@
 
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
 clear @a
 effect clear @a
@@ -23,7 +23,7 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-##Placement de la map et des joueurs + give d'items
+## Placement de la map et des joueurs + give d'items
 execute unless data storage switch:main pitch_creep_maps[0] run data modify storage switch:main pitch_creep_maps set value ["pitch_creep_1", "pitch_creep_2"]
 data modify storage switch:main maps_to_choose set from storage switch:main pitch_creep_maps
 function switch:maps/load

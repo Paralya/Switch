@@ -1,6 +1,6 @@
 
-##Choix d'une map random de la liste maps_to_choose
-##Avec 5 essaies de choisir une map différente de la précédente
+## Choix d'une map random de la liste maps_to_choose
+## Avec 5 essaies de choisir une map différente de la précédente
 data modify storage switch:main previous_map set from storage switch:main map
 scoreboard players set #try switch.data 5
 scoreboard players set #modulo_rand switch.data 0

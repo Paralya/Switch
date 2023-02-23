@@ -1,5 +1,5 @@
 
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
 clear @a
 effect clear @a
@@ -35,7 +35,7 @@ scoreboard objectives add switch.temp.lives dummy {"text":" Vies Restantes ","co
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay sidebar switch.temp.lives
 
-##Order selection
+## Order selection
 scoreboard players set #position switch.data 0
 scoreboard players set #next switch.data 0
 execute as @a[sort=random] run function switch:modes/mlg_a_coudre/define_order

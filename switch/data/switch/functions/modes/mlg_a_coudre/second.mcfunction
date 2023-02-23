@@ -1,5 +1,5 @@
 
-##Fonction executée toutes les secondes lorsque le mode de jeu est activé
+## Fonction executée toutes les secondes lorsque le mode de jeu est activé
 
 scoreboard players add #mlg_a_coudre_seconds switch.data 1
 

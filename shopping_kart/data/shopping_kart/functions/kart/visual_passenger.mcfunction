@@ -1,5 +1,5 @@
 
-##Conditions if the vehicle have a passenger
+## Conditions if the vehicle have a passenger
 scoreboard players set #have_passenger shopping_kart.data 0
 execute store success score #have_passenger shopping_kart.data if predicate shopping_kart:have_passenger
 execute if score #have_passenger shopping_kart.data matches 0 if entity @a[distance=..5] run data modify entity @s Saddle set value 1b

@@ -1,5 +1,5 @@
 
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
 # Map
 data modify storage switch:main maps_to_choose set value ["boat_race_1"]
@@ -23,7 +23,7 @@ difficulty normal
 time set 13475
 weather clear
 
-##Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
+## Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
 execute as @a at @s run function switch:modes/boat_race/give_items
 
 gamerule mobGriefing false

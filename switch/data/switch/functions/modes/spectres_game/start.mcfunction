@@ -1,5 +1,5 @@
 
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
 kill @e[type=!player,type=!marker]
 
@@ -25,7 +25,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
-##Placement de la map et des joueurs
+## Placement de la map et des joueurs
 execute unless data storage switch:main spectres_game_maps[0] run data modify storage switch:main spectres_game_maps set value ["traitor_original", "spectre_original", "mushroom_plains", "jayl_dark_forest", "dark_forest_hills"]
 data modify storage switch:main maps_to_choose set from storage switch:main spectres_game_maps
 function switch:maps/load

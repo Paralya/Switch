@@ -1,5 +1,5 @@
 
-##XP from 0 to 1000 points
+## XP from 0 to 1000 points
 # points > 0 && points < 1000
 # 45 seconds = 100%
 # 0 seconds = 0%

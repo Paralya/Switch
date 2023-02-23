@@ -1,5 +1,5 @@
 
-##XP from 0 to 1000 points
+## XP from 0 to 1000 points
 # points > 0 && points < 1000
 # 90 seconds = 100%
 # 1 seconds = 1,111%

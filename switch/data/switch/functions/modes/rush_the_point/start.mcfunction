@@ -1,5 +1,5 @@
 
-##Fonction executée lors du lancement de la partie
+## Fonction executée lors du lancement de la partie
 
 kill @e[type=!player]
 kill @e[type=!player]
@@ -20,7 +20,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
-##Placement de la map et des joueurs
+## Placement de la map et des joueurs
 data modify storage switch:main maps_to_choose set value ["rush_the_point_1"]
 function switch:maps/load
 

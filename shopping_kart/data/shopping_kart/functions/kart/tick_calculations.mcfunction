@@ -2,16 +2,16 @@
 tag @s add shopping_kart.temp
 execute if score #instant_engine_max shopping_kart.data matches 1 run scoreboard players operation @s shopping_kart.engine = @s shopping_kart.max_engine
 
-##Conditions if the vehicle have a passenger
+## Conditions if the vehicle have a passenger
 function shopping_kart:kart/visual_passenger
 
-##Water specification
+## Water specification
 function shopping_kart:kart/physics_water
 
-##Physics calculation depending on engine speed, surface, old motion, booster, etc.
+## Physics calculation depending on engine speed, surface, old motion, booster, etc.
 function shopping_kart:kart/physics_calculation
 
-##Apply new motion & update old motion
+## Apply new motion & update old motion
 function shopping_kart:kart/physics_apply_motion
 
 ## Try to predict position after 1 tick (new_pos = old_pos + new_motion)

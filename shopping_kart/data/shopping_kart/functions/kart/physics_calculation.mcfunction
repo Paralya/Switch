@@ -17,7 +17,7 @@ scoreboard players operation #multiplier shopping_kart.data += #engine shopping_
 execute if score @s shopping_kart.reactor_boost matches 1.. run scoreboard players operation #multiplier shopping_kart.data *= #2 shopping_kart.data
 
 
-##Stop motion when predicted position isn't reached
+## Stop motion when predicted position isn't reached
 execute store result score #new_pos_x shopping_kart.data run data get entity @s Pos[0] 10000
 execute store result score #new_pos_z shopping_kart.data run data get entity @s Pos[2] 10000
 execute store result score #pos_y shopping_kart.data run data get entity @s Pos[1] 10
@@ -28,7 +28,7 @@ scoreboard players operation @s shopping_kart.predicted_pos_z = #new_pos_z shopp
 
 
 
-##Calculate new motion : motion = (player_motion * multiplier) + old_motion + booster
+## Calculate new motion : motion = (player_motion * multiplier) + old_motion + booster
 # If player_motion is null : motion = old_motion
 scoreboard players set #booster shopping_kart.data 0
 execute if score #booster shopping_kart.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=west] run scoreboard players set #booster shopping_kart.data 1
@@ -37,7 +37,7 @@ execute if score #booster shopping_kart.data matches 0 if block ~ ~-1 ~ magenta_
 execute if score #booster shopping_kart.data matches 0 if block ~ ~-1 ~ magenta_glazed_terracotta[facing=south] run scoreboard players set #booster shopping_kart.data 4
 
 
-##Store calculated motion into storage shopping_kart:main Motion[0] & Motion[2]
+## Store calculated motion into storage shopping_kart:main Motion[0] & Motion[2]
 data modify storage shopping_kart:main Motion set value [0.0d, 0.0d, 0.0d]
 scoreboard players set #new_motion_x shopping_kart.data 0
 scoreboard players set #new_motion_z shopping_kart.data 0
