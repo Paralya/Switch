@@ -1,7 +1,7 @@
 
 #Random
 scoreboard players set #modulo_rand switch.data 3
-function switch:math/get_random/
+function switch:math/get_predictable_random/
 
 #Place
 execute if score #random switch.data matches 0 run setblock 14000 100 13925 obsidian

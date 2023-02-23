@@ -2,7 +2,7 @@
 tellraw @s {"text":"Item random reçu !","color":"dark_purple"}
 
 scoreboard players set #modulo_rand switch.data 57
-function switch:math/get_random/
+function switch:math/get_predictable_random/
 
 execute if score #random switch.data matches 0 run give @s iron_ore 32
 execute if score #random switch.data matches 1 run give @s gold_ore 32

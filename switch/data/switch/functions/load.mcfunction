@@ -19,6 +19,7 @@ team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
 
 scoreboard players set Switch load.status 1000
+scoreboard players set _RANDOM_PRIME switch.data 6978869
 forceload add 0 0
 
 #define storage switch:main
