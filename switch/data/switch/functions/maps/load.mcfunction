@@ -33,7 +33,7 @@ execute if data storage switch:main {map:"pitch_creep_2"} run function switch:ma
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/adventure/pitchout_1/
 execute if data storage switch:main {map:"boat_race_1"} run function switch:maps/adventure/boat_race_1/
 execute if data storage switch:main {map:"laser_game"} run function switch:maps/adventure/laser_game/
-execute if data storage switch:main {map:"prison"} run function switch:maps/adventure/prison/
+execute if data storage switch:main {map:"warden_forest"} run function switch:maps/adventure/warden_forest/
 execute if data storage switch:main {map:"epsilon_circuit"} run function switch:maps/adventure/epsilon_circuit/
 execute if data storage switch:main {map:"mario_circuit"} run function switch:maps/adventure/mario_circuit/
 execute if data storage switch:main {map:"fast_circuit"} run function switch:maps/adventure/fast_circuit/

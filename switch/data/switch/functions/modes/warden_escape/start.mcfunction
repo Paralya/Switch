@@ -18,7 +18,7 @@ time set 18000
 weather clear
 
 ##Téléportation des joueurs
-execute unless data storage switch:main warden_maps[0] run data modify storage switch:main warden_maps set value ["laser_game", "prison", "cathedrale_liege"]
+execute unless data storage switch:main warden_maps[0] run data modify storage switch:main warden_maps set value ["laser_game", "warden_forest", "cathedrale_liege"]
 data modify storage switch:main maps_to_choose set from storage switch:main warden_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main warden_maps
