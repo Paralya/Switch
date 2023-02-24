@@ -12,6 +12,7 @@ scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fun
 scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger
+scoreboard objectives add switch.trigger.stats trigger
 
 scoreboard objectives add switch.stats.victories dummy
 
@@ -36,6 +37,7 @@ gamerule doTraderSpawning false
 ## Storage
 # tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'
+data modify storage switch:main ParalyaStats set value '[{"text":"[ParalyaStats]","color":"yellow"}]'
 data modify storage switch:main ParalyaMoney set value '[{"text":"[ParalyaMoney]","color":"dark_purple"}]'
 data modify storage switch:main ParalyaError set value '[{"text":"[ParalyaError]","color":"red"}]'
 data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'

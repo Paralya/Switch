@@ -6,3 +6,4 @@ tellraw @s[scores={switch.trigger.help=-11..}] [{"text":" - "},{"text":"/help [<
 tellraw @s ""
 
 scoreboard players set @s switch.trigger.help 0
+
