@@ -30,6 +30,6 @@ execute if score #modulo_rand switch.data matches 2.. run function switch:engine
 execute if score #modulo_rand switch.data matches 2.. run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Égalité entre plusieurs mode de jeux, choix aléatoire !\n"}]
 
 spawnpoint @a 0 74 0
-function #switch:events/start
+function #switch:signals/start
 
 execute as @e[limit=8] as @a at @s run playsound ui.toast.in ambient @s
