@@ -1,5 +1,5 @@
 
-execute unless score #state switch.data matches 3 run time set 18000
+execute unless score #state switch.data matches 3 unless score #disable switch.data matches 1 run time set 18000
 execute unless score #state switch.data matches 3 unless score #disable switch.data matches 1 run tp @a 0 0 0
 scoreboard players set #state switch.data 0
 scoreboard players set #cut_clean switch.data 0
