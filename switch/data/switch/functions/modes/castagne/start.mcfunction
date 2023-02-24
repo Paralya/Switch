@@ -21,8 +21,12 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Téléportation des joueurs
-data modify storage switch:main maps_to_choose set value ["operation_pigclaw", "friends_oneforall", "friends_pvpbox_ice", "friends_pvpbox_hills", "friends_pvpbox_end", "paralya_lobby_noel", "ghost_town", "abandoned_city", "taroatlas_soviet_prison", "desert_grand_library", "new_grounds", "snow_hills", "vilarles_castillo", "zonweeb_highschool"]
+execute unless data storage switch:main castagne_maps[0] run data modify storage switch:main castagne_maps set value ["operation_pigclaw", "friends_oneforall", "friends_pvpbox_ice", "friends_pvpbox_hills", "friends_pvpbox_end", "paralya_lobby_noel", "ghost_town", "abandoned_city", "taroatlas_soviet_prison", "desert_grand_library", "new_grounds", "snow_hills", "vilarles_castillo", "zonweeb_highschool"]
+data modify storage switch:main maps_to_choose set from storage switch:main castagne_maps
 function switch:maps/load
+data modify storage switch:main copy set from storage switch:main castagne_maps
+function switch:maps/storage_map_list/remove_from_storage
+data modify storage switch:main castagne_maps set from storage switch:main new
 
 gamerule mobGriefing false
 gamerule showDeathMessages true

@@ -2,8 +2,12 @@
 ## Fonction executée lors du lancement de la partie
 
 # Map
-data modify storage switch:main maps_to_choose set value ["boat_race_1", "boat_race_2"]
+execute unless data storage switch:main boat_race_maps[0] run data modify storage switch:main boat_race_maps set value ["boat_race_1", "boat_race_2"]
+data modify storage switch:main maps_to_choose set from storage switch:main boat_race_maps
 function switch:maps/load
+data modify storage switch:main copy set from storage switch:main boat_race_maps
+function switch:maps/storage_map_list/remove_from_storage
+data modify storage switch:main boat_race_maps set from storage switch:main new
 
 clear @a
 effect clear @a

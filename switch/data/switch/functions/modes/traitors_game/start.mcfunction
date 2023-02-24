@@ -37,7 +37,7 @@ execute if data storage switch:main {map:"dark_forest_hills"} run spreadplayers 
 gamerule mobGriefing true
 gamerule showDeathMessages false
 gamerule fallDamage true
-gamerule naturalRegeneration true
+gamerule naturalRegeneration false
 gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Traitors Game, tenez-vous prêt !"}]
