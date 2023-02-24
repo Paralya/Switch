@@ -22,12 +22,12 @@ scoreboard players set Switch load.status 1000
 scoreboard players set _RANDOM_PRIME switch.data 6978869
 forceload add 0 0
 
-# define storage switch:main
-# define score_holder #success
-# define score_holder #valid
-# define score_holder #count
-# define score_holder #temp
-# define score_holder #pos
+#define storage switch:main
+#define score_holder #success
+#define score_holder #valid
+#define score_holder #count
+#define score_holder #temp
+#define score_holder #pos
 
 gamerule announceAdvancements false
 gamerule doImmediateRespawn true

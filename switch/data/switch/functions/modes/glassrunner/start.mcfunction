@@ -1,6 +1,6 @@
 
 ## Item custom
-# define storage switch:glassrunner
+#define storage switch:glassrunner
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_red set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_red:1b},display:{Name:'{"text":"Snowball Bridge Red","color":"red","italic":false}'}}}
 data modify storage switch:glassrunner ItemsNBT.snowball_bridge_blue set value {id:"minecraft:snowball",Count:1b,tag:{glassrunner:{glass_bridge:1b,glass_bridge_blue:1b},display:{Name:'{"text":"Snowball Bridge Blue","color":"blue","italic":false}'}}}
 
