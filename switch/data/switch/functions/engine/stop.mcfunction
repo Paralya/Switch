@@ -9,7 +9,6 @@ effect clear @a
 gamemode spectator @a
 xp set @a 0 points
 xp set @a 0 levels
-attribute @s generic.attack_speed base set 4.0
 kill @e[type=marker,tag=switch.selected_map]
 worldborder set 59999968
 worldborder center 0 0

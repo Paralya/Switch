@@ -17,6 +17,7 @@
 		"switch:modes/feed_fast/calls/second",
 		"switch:modes/mlg_a_coudre/calls/second",
 		"switch:modes/protect_the_king/calls/second",
+		"switch:modes/castagne/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }
