@@ -20,7 +20,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Placement de la map et des joueurs + give d'items
-execute unless data storage switch:main feed_fast_maps[0] run data modify storage switch:main feed_fast_maps set value ["mario_circuit", "fast_circuit", "plains_routine", "city_race", "sakura_land", "hills_land", "snow_travel", "trackmania_stadium_1", "trackmania_stadium_2", "cathedrale_liege", "operation_pigclaw"]
+execute unless data storage switch:main feed_fast_maps[0] run data modify storage switch:main feed_fast_maps set value ["mario_circuit", "fast_circuit", "plains_routine", "city_race", "sakura_land", "hills_land", "snow_travel", "trackmania_stadium_1", "trackmania_stadium_2", "cathedrale_liege", "operation_pigclaw", "friends_pvpbox_ice", "friends_pvpbox_hills", "friends_pvpbox_end", "paralya_lobby_noel", "ghost_town", "abandoned_city", "new_grounds", "vilarles_castillo", "zonweeb_highschool"]
 data modify storage switch:main maps_to_choose set from storage switch:main feed_fast_maps
 function switch:maps/load
 data modify storage switch:main copy set from storage switch:main feed_fast_maps

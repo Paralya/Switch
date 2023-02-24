@@ -14,6 +14,7 @@ execute store result score #finished switch.data if entity @a[tag=switch.boat_ra
 execute if score #alives switch.data = #finished switch.data run scoreboard players set #detect_end switch.data 1
 
 execute as @a[gamemode=!spectator,tag=!switch.boat_race.finished,x=5033,y=105,z=5000,dx=3,dy=4,dz=4] at @s run function switch:modes/boat_race/finish
+execute as @a[gamemode=!spectator,tag=!switch.boat_race.finished,x=50997,y=92,z=50964,dx=6,dy=4,dz=5] at @s run function switch:modes/boat_race/finish
 
 # Fin de la partie si le temps est écoulé, ou qu'ils ont tous finis
 execute if score #boat_race_seconds switch.data matches 480.. run scoreboard players set #detect_end switch.data 1

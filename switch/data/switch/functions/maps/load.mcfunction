@@ -32,6 +32,7 @@ execute if data storage switch:main {map:"pitch_creep_1"} run function switch:ma
 execute if data storage switch:main {map:"pitch_creep_2"} run function switch:maps/adventure/pitch_creep_2/
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/adventure/pitchout_1/
 execute if data storage switch:main {map:"boat_race_1"} run function switch:maps/adventure/boat_race_1/
+execute if data storage switch:main {map:"boat_race_2"} run function switch:maps/adventure/boat_race_2/
 execute if data storage switch:main {map:"laser_game"} run function switch:maps/adventure/laser_game/
 execute if data storage switch:main {map:"warden_forest"} run function switch:maps/adventure/warden_forest/
 execute if data storage switch:main {map:"epsilon_circuit"} run function switch:maps/adventure/epsilon_circuit/
@@ -52,4 +53,26 @@ execute if data storage switch:main {map:"trackmania_stadium_2"} run function sw
 execute if data storage switch:main {map:"cathedrale_liege"} run function switch:maps/adventure/cathedrale_liege/
 execute if data storage switch:main {map:"dishorreur"} run function switch:maps/adventure/dishorreur/
 execute if data storage switch:main {map:"operation_pigclaw"} run function switch:maps/adventure/operation_pigclaw/
+execute if data storage switch:main {map:"friends_black_ball"} run function switch:maps/adventure/friends_black_ball/
+execute if data storage switch:main {map:"friends_oneforall"} run function switch:maps/adventure/friends_oneforall/
+execute if data storage switch:main {map:"friends_cube_jump"} run function switch:maps/adventure/friends_cube_jump/
+execute if data storage switch:main {map:"friends_pvpbox_ice"} run function switch:maps/adventure/friends_pvpbox_ice/
+execute if data storage switch:main {map:"friends_pvpbox_hills"} run function switch:maps/adventure/friends_pvpbox_hills/
+execute if data storage switch:main {map:"friends_pvpbox_end"} run function switch:maps/adventure/friends_pvpbox_end/
+execute if data storage switch:main {map:"friends_skywars_1"} run function switch:maps/adventure/friends_skywars_1/
+execute if data storage switch:main {map:"friends_skywars_2"} run function switch:maps/adventure/friends_skywars_2/
+execute if data storage switch:main {map:"rainbow_road"} run function switch:maps/adventure/rainbow_road/
+execute if data storage switch:main {map:"arti_mansion"} run function switch:maps/adventure/arti_mansion/
+execute if data storage switch:main {map:"paralya_lobby_noel"} run function switch:maps/adventure/paralya_lobby_noel/
+execute if data storage switch:main {map:"huge_cargo"} run function switch:maps/adventure/huge_cargo/
+execute if data storage switch:main {map:"ghost_town"} run function switch:maps/adventure/ghost_town/
+execute if data storage switch:main {map:"abandoned_city_spawn_circle"} run function switch:maps/adventure/abandoned_city_spawn_circle/
+execute if data storage switch:main {map:"abandoned_city"} run function switch:maps/adventure/abandoned_city/
+execute if data storage switch:main {map:"taroatlas_soviet_prison"} run function switch:maps/adventure/taroatlas_soviet_prison/
+execute if data storage switch:main {map:"desert_grand_library"} run function switch:maps/adventure/desert_grand_library/
+execute if data storage switch:main {map:"new_grounds"} run function switch:maps/adventure/new_grounds/
+execute if data storage switch:main {map:"cookie_wars"} run function switch:maps/adventure/cookie_wars/
+execute if data storage switch:main {map:"snow_hills"} run function switch:maps/adventure/snow_hills/
+execute if data storage switch:main {map:"vilarles_castillo"} run function switch:maps/adventure/vilarles_castillo/
+execute if data storage switch:main {map:"zonweeb_highschool"} run function switch:maps/adventure/zonweeb_highschool/
 

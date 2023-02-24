@@ -3,6 +3,10 @@ tag @s remove switch.laser_game.blue
 tag @s remove switch.laser_game.red
 tag @s remove global.ignore
 
+gamemode adventure @a[gamemode=survival]
+effect give @s saturation 99999 255 true
+effect give @s regeneration 5 255 true
+effect give @s weakness 99999 255 true
 attribute @s generic.attack_speed base set 1024
 xp set @s 130 levels
 xp set @s 1000 points
