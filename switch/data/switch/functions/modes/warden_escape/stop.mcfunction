@@ -1,8 +1,6 @@
 
-tp @e[type=warden] 0 -10000 0
-kill @e[type=warden]
-kill @e[type=item]
-kill @e[type=experience_orb]
+tp @e[type=!player] 0 -10000 0
+kill @e[type=!player]
 
 tag @a remove switch.alive
 
