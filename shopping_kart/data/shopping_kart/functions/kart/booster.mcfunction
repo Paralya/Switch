@@ -15,7 +15,7 @@ execute if score #new shopping_kart.data matches -2500000..2500000 run scoreboar
 execute if score #new shopping_kart.data matches -2500000..2500000 run scoreboard players operation @s shopping_kart.engine /= #3 shopping_kart.data
 execute if score #new shopping_kart.data matches -2500000..2500000 run particle angry_villager ~ ~.5 ~ 1 1 1 0 10
 execute if score @s shopping_kart.booster_timer matches 0 if score #new shopping_kart.data matches -2500000..2500000 run scoreboard players set @s shopping_kart.booster_timer 20
-execute positioned ~ ~1 ~ run playsound block.note_block.harp block @a[distance=..1,predicate=shopping_kart:has_vehicle_with_tag]
+execute positioned ~ ~1 ~ run playsound block.note_block.harp block @a[distance=..1,predicate=shopping_kart:has_vehicle_with_tag] ~ ~ ~ .5
 
 # tellraw @a [{"text":"Old / New : ","color":"yellow"},{"score":{"name":"#old","objective":"shopping_kart.data"},"color":"aqua"},{"text":" / "},{"score":{"name":"#new","objective":"shopping_kart.data"},"color":"aqua"}]
 
