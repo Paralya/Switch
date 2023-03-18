@@ -56,7 +56,7 @@ scoreboard players set #cut_clean switch.data 1
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.deathCount deathCount
-scoreboard objectives add switch.temp.damages dummy {"text":" Nombre de coups infligés ","color":"aqua"}
+scoreboard objectives add switch.temp.damages dummy {"text":" Coups infligés ","color":"aqua"}
 scoreboard objectives setdisplay sidebar switch.temp.damages
 scoreboard objectives setdisplay list switch.health
 
