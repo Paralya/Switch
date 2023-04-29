@@ -31,5 +31,5 @@ execute if score #change_color switch.data matches ..0 run tag @a[tag=switch.bon
 
 
 scoreboard players remove #remaining_time switch.data 1
-function switch:modes/laser_game/update_sidebar/timer
+function switch:modes/laser_game/update_sidebar/timer/
 

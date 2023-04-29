@@ -64,16 +64,16 @@ scoreboard players set #base_reload switch.data 15
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
 team add switch.temp.sidebar.1
-team modify switch.temp.sidebar.3 suffix [{"text":"emps restant : "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"quipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"uipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
-team join switch.temp.sidebar.3 T
-team join switch.temp.sidebar.2 É
-team join switch.temp.sidebar.1 Éq
-scoreboard players set T switch.temp.sidebar 3
-scoreboard players set É switch.temp.sidebar 2
-scoreboard players set Éq switch.temp.sidebar 1
+team join switch.temp.sidebar.3 §3
+team join switch.temp.sidebar.2 §2
+team join switch.temp.sidebar.1 §1
+scoreboard players set §3 switch.temp.sidebar 3
+scoreboard players set §2 switch.temp.sidebar 2
+scoreboard players set §1 switch.temp.sidebar 1
 
 
