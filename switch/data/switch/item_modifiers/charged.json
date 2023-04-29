@@ -1,7 +1,7 @@
 [
     {
       "function": "minecraft:set_nbt",
-      "tag": "{Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}}]}"
+      "tag": "{Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:\"minecraft:arrow\",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}},{id:\"minecraft:arrow\",Count:1b,tag:{glassrunner:{destroying_arrow:1b}}}]}"
     }
   ]
   

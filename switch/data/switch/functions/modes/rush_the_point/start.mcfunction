@@ -52,21 +52,21 @@ team add switch.temp.sidebar.5
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
 team add switch.temp.sidebar.1
-team modify switch.temp.sidebar.5 suffix [{"text":"bjectif : "},{"text":"2000","color":"yellow"},{"text":" points"}]
-team modify switch.temp.sidebar.3 suffix [{"text":"emps restant : "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"quipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"uipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.5 suffix [{"text":"Objectif : "},{"text":"2000","color":"yellow"},{"text":" points"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
-team join switch.temp.sidebar.5 O
-team join switch.temp.sidebar.3 T
-team join switch.temp.sidebar.2 É
-team join switch.temp.sidebar.1 Éq
-scoreboard players set O switch.temp.sidebar 3
+team join switch.temp.sidebar.5 §3
+team join switch.temp.sidebar.3 §5
+team join switch.temp.sidebar.2 §2
+team join switch.temp.sidebar.1 §1
+scoreboard players set §5 switch.temp.sidebar 5
 scoreboard players set §r switch.temp.sidebar 4
-scoreboard players set T switch.temp.sidebar 5
-scoreboard players set É switch.temp.sidebar 2
-scoreboard players set Éq switch.temp.sidebar 1
+scoreboard players set §3 switch.temp.sidebar 3
+scoreboard players set §2 switch.temp.sidebar 2
+scoreboard players set §1 switch.temp.sidebar 1
 
 
 # Choix des rôles + give d'items

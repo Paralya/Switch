@@ -4,6 +4,10 @@ scoreboard players add #glassrunner_ticks switch.data 1
 
 execute as @a[scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/glassrunner/death/death
 
+
+execute if score #glassrunner.apocalypse switch.data matches 1.. run function switch:modes/glassrunner/apocalypse
+execute if score #glassrunner.apocalypse switch.data matches 100.. run scoreboard players set #glassrunner.apocalypse switch.data 0
+
 execute as @a at @s run function switch:modes/glassrunner/tick_player
 
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
@@ -25,3 +29,8 @@ execute at @e[tag=switch.glassrunner.fireball] run function switch:modes/glassru
 execute if score #glassrunner_seconds switch.data matches 3600.. run function switch:modes/glassrunner/end/null
 execute if score #glassrunner.points.red switch.data > #glassrunner_point_to_win switch.data run function switch:modes/glassrunner/end/red
 execute if score #glassrunner.points.blue switch.data > #glassrunner_point_to_win switch.data run function switch:modes/glassrunner/end/blue
+
+# to uncomment
+#execute unless entity @a[team=switch.glassrunner.blue] run function switch:modes/glassrunner/end/red
+#execute unless entity @a[team=switch.glassrunner.red] run function switch:modes/glassrunner/end/blue
+

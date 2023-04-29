@@ -38,9 +38,9 @@ team modify switch.glassrunner.blue friendlyFire false
 kill @e[type=item]
 kill @e[type=arrow]
 
-effect give @a saturation 999999 255 true
-effect give @a resistance 999999 255 true
-effect give @a jump_boost 999999 3 true
+effect give @a saturation infinite 255 true
+effect give @a resistance infinite 255 true
+effect give @a jump_boost infinite 3 true
 
 difficulty normal
 time set 6000
@@ -51,7 +51,6 @@ scoreboard players set #count switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a at @s run function switch:modes/glassrunner/death/death
 
-advancement revoke @a only switch:glassrunner/destroying_crossbow
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
@@ -65,7 +64,7 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 scoreboard players set #glassrunner_ticks switch.data 0
 scoreboard players set #glassrunner_seconds switch.data 0
 
-scoreboard players set #glassrunner_point_to_win switch.data 40
+scoreboard players set #glassrunner_point_to_win switch.data 32
 
 scoreboard objectives add switch.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add switch.glassrunner.deathCount deathCount

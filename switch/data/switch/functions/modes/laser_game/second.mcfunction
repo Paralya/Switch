@@ -29,7 +29,7 @@ execute if score #change_color switch.data matches ..0 run team join switch.lase
 execute if score #change_color switch.data matches ..0 run team join switch.laser_game.red @a[tag=switch.bonus.color,tag=switch.laser_game.red]
 execute if score #change_color switch.data matches ..0 run tag @a[tag=switch.bonus.color] remove switch.bonus.color
 
-
+# Temps restant
 scoreboard players remove #remaining_time switch.data 1
 function switch:modes/laser_game/update_sidebar/timer/
 

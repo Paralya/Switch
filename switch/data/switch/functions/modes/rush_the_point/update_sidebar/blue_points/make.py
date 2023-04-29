@@ -1,31 +1,86 @@
 
+# Stop if the execution is not in the same folder as the script
+import os
+if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
+	print("Please execute this script in the same folder as the script")
+	exit()
+
+# Import
 import math
 
-score = 'execute if score #blue_points switch.data matches '
+# Constantes
 max = 2000
-min = 0
-
+color = "blue"
+colorFull = "Bleue"
+namespace = "switch"
+base_path = f"{namespace}:modes/rush_the_point/update_sidebar/{color}_points/"
+base_score = f"execute if score #{color}_points {namespace}.data matches "
 files = int(math.sqrt(max))
 split = max / files
-for i in range(1, files+1):
-	f = open(str(i)+".mcfunction", "a")
+sidebar_number = 2	# DON'T FORGET TO CHANGE THIS
+step = 1
+
+# Variables (don't change)
+temp = 0
+min = 0
+
+# Delete old files (ending with .mcfunction)
+for file in os.listdir():
+	if file.endswith(".mcfunction"):
+		os.remove(file)
+
+# Loop for each file
+for i in range(1, files + 1):
+
+	# Create the file and write the first line (replace the old file if it exists)
+	f = open(str(i) + ".mcfunction", "w")
 	f.write('\n')
+
+	# While there are remaining lines to write
 	temp = 0
 	while temp <= split and min <= max:
-		f.write(score+str(min)+' run team modify switch.temp.sidebar.2 suffix [{"text":"quipe Bleue : ","color":"blue"},{"text":"'+str(min)+'","color":"yellow"}]\n')
+
+		# Write the base path and the score
+		f.write(base_score + str(min * step))
+
+		# Write the command until the JSON part
+		f.write(f" run team modify {namespace}.temp.sidebar.{sidebar_number} suffix ")
+
+		# Write the JSON part
+		f.write('[{"text":"Équipe ' + colorFull + ' : ","color":"' + color + '"},{"text":"' + str(min * step) + '","color":"yellow"}]\n')
+
+		# Increment the variables
 		min += 1
 		temp += 1
+
+	# Close the file
 	f.write('\n')
 	f.close()
 
-f = open(".mcfunction", "a")
+# Create the .mcfunction file that links all the files
+f = open(".mcfunction", "w")
 f.write('\n')
+
+# Reset the variables
 temp = 0
 i = 1
+
+# While there are remaining lines to write
 while temp <= max:
-	f.write(score+str(temp)+'..'+str(temp+split)+' run function switch:modes/rush_the_point/update_sidebar/blue_points/'+str(i)+'\n')
-	temp += split+1
+
+	# Write the base path and the score
+	from_score = int(temp * step)
+	to_score = int((temp + split) * step)
+	f.write(f"{base_score}{from_score}..{to_score}")
+
+	# Write the command until the end of the line
+	f.write(f" run function {base_path}{i}\n")
+
+	# Increment the variables
+	temp += split + 1
 	i += 1
+
+# Close the file
 f.write('\n')
 f.close()
 

@@ -39,8 +39,6 @@ for i in range(1, files + 1):
 
 		# Prepare minute string
 		minute = str((min // 60) % 60)
-		if len(minute) == 1:
-			minute = '0' + minute
 
 		# Prepare second string
 		second = str(min % 60)
