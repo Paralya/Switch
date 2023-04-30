@@ -5,5 +5,11 @@ execute if predicate switch:holding_destroying_crossbow run item modify entity @
 
 
 
-execute if score #glassrunner.apocalypse switch.data matches 1.. run function switch:modes/glassrunner/apocalypse_player
+
+data remove storage switch:glassrunner temp.Inventory
+data modify storage switch:glassrunner temp.Inventory set from entity @s Inventory
+
+execute unless data storage switch:glassrunner temp.Inventory[{Slot:19b}] run function switch:modes/glassrunner/shop/snowball
+
+execute unless data storage switch:glassrunner temp.Inventory[{Slot:21b}] run function switch:modes/glassrunner/shop/arrow
 

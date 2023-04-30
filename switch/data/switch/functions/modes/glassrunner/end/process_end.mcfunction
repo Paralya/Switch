@@ -1,5 +1,5 @@
 
-scoreboard players add #process_end switch.data 1
+
 
 execute if score #process_end switch.data matches 1 as @a[tag=switch.alive] at @s run function switch:engine/add_money
 
@@ -18,4 +18,4 @@ execute if score #process_end switch.data matches 399 positioned 3000 -64 3000 r
 # Obligatoire
 execute if score #process_end switch.data matches 400.. run function switch:engine/restart
 
-execute if score #process_end switch.data matches 400.. run scoreboard players set #process_end switch.data 0
+scoreboard players add #process_end switch.data 1
