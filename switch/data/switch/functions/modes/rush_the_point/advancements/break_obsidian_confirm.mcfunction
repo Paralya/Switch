@@ -11,7 +11,7 @@ execute if score #color switch.data matches 1 run function switch:modes/rush_the
 
 # Random
 scoreboard players set #modulo_rand switch.data 10
-function switch:math/get_predictable_random/
+function switch:math/get_random/
 
 # Color red
 execute if score #random switch.data matches 0 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.red] absorption 60 4 true
