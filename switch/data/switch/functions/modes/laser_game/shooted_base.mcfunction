@@ -34,9 +34,9 @@ execute if score #random switch.data matches 5 if score #color switch.data match
 execute if score #random switch.data matches 5 if score #color switch.data matches 1 run effect give @a[tag=switch.laser_game.red] speed 15 1 true
 
 execute if score #color switch.data matches 0 run scoreboard players add #blue_points switch.data 20
-execute if score #color switch.data matches 0 run function switch:modes/laser_game/update_sidebar/blue_points
+execute if score #color switch.data matches 0 run function switch:modes/laser_game/update_sidebar/blue_points/
 execute if score #color switch.data matches 1 run scoreboard players add #red_points switch.data 20
-execute if score #color switch.data matches 1 run function switch:modes/laser_game/update_sidebar/red_points
+execute if score #color switch.data matches 1 run function switch:modes/laser_game/update_sidebar/red_points/
 scoreboard players add @s switch.temp.individual_points 20
 
 scoreboard players set #base_reload switch.data 15
