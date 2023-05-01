@@ -6,7 +6,8 @@ effect clear @a
 gamemode adventure @a
 team leave @a
 
-kill @e[type=item]
+kill @e[type=!player,type=!marker]
+kill @e[type=!player,type=!marker]
 
 effect give @a blindness 10 255 true
 effect give @a weakness 10 255 true

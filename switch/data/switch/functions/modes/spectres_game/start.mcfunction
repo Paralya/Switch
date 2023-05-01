@@ -63,7 +63,7 @@ scoreboard objectives setdisplay list switch.health
 # Choix des rôles + give d'items
 team add switch.temp.visible
 team add switch.temp.spectre
-team modify switch.temp.visible color green
+team modify switch.temp.visible color dark_green
 team modify switch.temp.spectre color yellow
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
