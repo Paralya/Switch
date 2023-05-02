@@ -7,7 +7,6 @@ execute if predicate switch:chance/0.5 run scoreboard players add #random switch
 execute if predicate switch:chance/0.5 run scoreboard players add #random switch.data 8
 execute if predicate switch:chance/0.5 run scoreboard players add #random switch.data 16
 execute if predicate switch:chance/0.5 run scoreboard players add #random switch.data 32
-execute if predicate switch:chance/0.5 run scoreboard players add #random switch.data 64
 
 scoreboard players operation #random switch.data %= #modulo_rand switch.data
 
