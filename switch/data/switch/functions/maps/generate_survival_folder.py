@@ -22,9 +22,26 @@ def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_po
 	Returns:
 		None
 	"""
+	## Check the arguments
+	# Check tp_coords
+	if tp_coords[0] != "[" or tp_coords[-1] != "]":
+		raise ValueError("tp_coords should be a string that looks like this: \"[x, y, z]\" where x,y,z are doubles")
+	
+	# Check start_pos
+	if len(start_pos) != 3:
+		raise ValueError("start_pos should be a tuple with 3 elements")
+	
+	# Check end_pos
+	if len(end_pos) != 3:
+		raise ValueError("end_pos should be a tuple with 3 elements")
+	
+	# Check if the end_pos are valid
+	if end_pos[1] >= 100:
+		raise ValueError("end_pos should have y < 100")
 
-	## Create the folder in the survival folder
-	os.mkdir(f"survival/{name}")
+	## Create the folder in the survival folder if it doesn't exist
+	if not os.path.exists(f"survival/{name}"):
+		os.mkdir(f"survival/{name}")
 
 	## Create the ".mcfunction" file
 	f = open(f"survival/{name}/.mcfunction", "w")
@@ -43,29 +60,6 @@ def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_po
 	f.close()
 
 	## Create the "regenerate.mcfunction" file
-	"""
-	# c1 = [39000,39000,39143,39221]
-# divider = 2
-# d = (c1[2] - c1[0]) / divider
-
-# c = []
-# for i in range(divider):
-#    c.append([ round(c1[0] + d*i), c1[1], round(c1[0] + d*(i+1)), c1[3] ])
-
-# y = 0
-# minY = 100
-# maxY = 169
-# i = 20
-# j = y
-# while minY <= maxY:
-#    z = 0
-#    for k in c:
-#        print('execute if score #regeneration_ticks switch.data matches '+str(i+z)+' run clone '+str(k[0])+' '+str(j)+' '+str(k[1])+' '+str(k[2])+' '+str(j)+' '+str(k[3])+' '+str(k[0])+' '+str(minY)+' '+str(k[1])+' replace force')
-#        z += 2
-#    i += 4
-#    j += 1
-#    minY += 1
-	"""
 	# Write the first lines
 	f = open(f"survival/{name}/regenerate.mcfunction", "w")
 	f.write("\n")
@@ -101,12 +95,41 @@ def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_po
 
 	# Create the clone commands
 	while minY <= maxY:
-		# TODO
+		
+		# Reset the split coordinates iterator
+		z = 0
 
+		# Create the clone commands
+		for k in c:
 
+			# Write the clone command
+			f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
 
+			# Increment the split coordinates iterator
+			z += divider
+		
+		# Increment the regeneration tick (x2 for every two ticks)
+		i += divider * 2
 
+		# Increment the y coordinate of the clones commands
+		minY += 1
+		j += 1
+	
+	# Write the last lines
+	f.write("\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i} run kill @e[type=item]\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i} run forceload remove {start_pos[0]} {start_pos[2]} {end_pos[0]} {end_pos[2]}\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i} run scoreboard players reset #regeneration_ticks switch.data\n")
+	f.write("\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
+	f.write("\n")
+	f.close()
 
+	# Return
+	return None
+
+# Execute the function
+generate_survival_folder("dark_forest_hills_test", "[39069.0d, 150.0d, 39111.0d]", (39000, 0, 39000), (39143, 69, 39221))
 
 
 
