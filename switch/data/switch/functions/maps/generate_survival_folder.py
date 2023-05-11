@@ -132,6 +132,11 @@ def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_po
 generate_survival_folder("dark_forest_hills_test", "[39069.0d, 150.0d, 39111.0d]", (39000, 0, 39000), (39143, 69, 39221), 100)
 generate_survival_folder("laser_game", "[520.0d, 103.0d, 520.0d]", (499, 0, 499), (551, 43, 551), 91)
 generate_survival_folder("pitchout_1", "[1000.0d, 110.0d, 1000.0d]", (950, 0, 1050), (1050, 44, 1150), 95)
-
+#1408 0 1423 1592 99 1578
+generate_survival_folder("traitor_original", "[1500.0d, 150.0d, 1500.0d]", (1408, 0, 1423), (1592, 99, 1578), 114)
+#1947 0 1937 2055 70 2063
+generate_survival_folder("zone_51", "[2000.0d, 150.0d, 2000.0d]", (1947, 0, 1937), (2055, 70, 2063), 100)
+#2459 0 2452 2545 85 2547
+generate_survival_folder("spectre_original", "[2500.0d, 150.0d, 2500.0d]", (2459, 0, 2452), (2545, 85, 2547), 100)
 
 

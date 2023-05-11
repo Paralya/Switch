@@ -1,90 +1,211 @@
 
-# x1 = 1409
-# z1 = 1424
-# x2 = 1591
-# z2 = 1577
-# y = 1
-# minY = 115
-# maxY = 178
-# i = 10
-# j = y
-# while minY <= maxY:
-#    print('execute if score #regeneration_ticks switch.data matches '+str(i*2)+' run clone '+str(x1)+' '+str(j)+' '+str(z1)+' '+str(x2)+' '+str(j)+' '+str(z2)+' '+str(x1)+' '+str(minY)+' '+str(z1)+' replace force')
-#    i += 1
-#    j += 1
-#    minY += 1
-
 scoreboard players add #regeneration_ticks switch.data 1
-execute if score #regeneration_ticks switch.data matches 1 run forceload add 1409 1424 1591 1577
+execute if score #regeneration_ticks switch.data matches 1 run forceload add 1408 1423 1592 1578
 
-execute if score #regeneration_ticks switch.data matches 20 run clone 1409 1 1424 1591 1 1577 1409 115 1424 replace force
-execute if score #regeneration_ticks switch.data matches 22 run clone 1409 2 1424 1591 2 1577 1409 116 1424 replace force
-execute if score #regeneration_ticks switch.data matches 24 run clone 1409 3 1424 1591 3 1577 1409 117 1424 replace force
-execute if score #regeneration_ticks switch.data matches 26 run clone 1409 4 1424 1591 4 1577 1409 118 1424 replace force
-execute if score #regeneration_ticks switch.data matches 28 run clone 1409 5 1424 1591 5 1577 1409 119 1424 replace force
-execute if score #regeneration_ticks switch.data matches 30 run clone 1409 6 1424 1591 6 1577 1409 120 1424 replace force
-execute if score #regeneration_ticks switch.data matches 32 run clone 1409 7 1424 1591 7 1577 1409 121 1424 replace force
-execute if score #regeneration_ticks switch.data matches 34 run clone 1409 8 1424 1591 8 1577 1409 122 1424 replace force
-execute if score #regeneration_ticks switch.data matches 36 run clone 1409 9 1424 1591 9 1577 1409 123 1424 replace force
-execute if score #regeneration_ticks switch.data matches 38 run clone 1409 10 1424 1591 10 1577 1409 124 1424 replace force
-execute if score #regeneration_ticks switch.data matches 40 run clone 1409 11 1424 1591 11 1577 1409 125 1424 replace force
-execute if score #regeneration_ticks switch.data matches 42 run clone 1409 12 1424 1591 12 1577 1409 126 1424 replace force
-execute if score #regeneration_ticks switch.data matches 44 run clone 1409 13 1424 1591 13 1577 1409 127 1424 replace force
-execute if score #regeneration_ticks switch.data matches 46 run clone 1409 14 1424 1591 14 1577 1409 128 1424 replace force
-execute if score #regeneration_ticks switch.data matches 48 run clone 1409 15 1424 1591 15 1577 1409 129 1424 replace force
-execute if score #regeneration_ticks switch.data matches 50 run clone 1409 16 1424 1591 16 1577 1409 130 1424 replace force
-execute if score #regeneration_ticks switch.data matches 52 run clone 1409 17 1424 1591 17 1577 1409 131 1424 replace force
-execute if score #regeneration_ticks switch.data matches 54 run clone 1409 18 1424 1591 18 1577 1409 132 1424 replace force
-execute if score #regeneration_ticks switch.data matches 56 run clone 1409 19 1424 1591 19 1577 1409 133 1424 replace force
-execute if score #regeneration_ticks switch.data matches 58 run clone 1409 20 1424 1591 20 1577 1409 134 1424 replace force
-execute if score #regeneration_ticks switch.data matches 60 run clone 1409 21 1424 1591 21 1577 1409 135 1424 replace force
-execute if score #regeneration_ticks switch.data matches 62 run clone 1409 22 1424 1591 22 1577 1409 136 1424 replace force
-execute if score #regeneration_ticks switch.data matches 64 run clone 1409 23 1424 1591 23 1577 1409 137 1424 replace force
-execute if score #regeneration_ticks switch.data matches 66 run clone 1409 24 1424 1591 24 1577 1409 138 1424 replace force
-execute if score #regeneration_ticks switch.data matches 68 run clone 1409 25 1424 1591 25 1577 1409 139 1424 replace force
-execute if score #regeneration_ticks switch.data matches 70 run clone 1409 26 1424 1591 26 1577 1409 140 1424 replace force
-execute if score #regeneration_ticks switch.data matches 72 run clone 1409 27 1424 1591 27 1577 1409 141 1424 replace force
-execute if score #regeneration_ticks switch.data matches 74 run clone 1409 28 1424 1591 28 1577 1409 142 1424 replace force
-execute if score #regeneration_ticks switch.data matches 76 run clone 1409 29 1424 1591 29 1577 1409 143 1424 replace force
-execute if score #regeneration_ticks switch.data matches 78 run clone 1409 30 1424 1591 30 1577 1409 144 1424 replace force
-execute if score #regeneration_ticks switch.data matches 80 run clone 1409 31 1424 1591 31 1577 1409 145 1424 replace force
-execute if score #regeneration_ticks switch.data matches 82 run clone 1409 32 1424 1591 32 1577 1409 146 1424 replace force
-execute if score #regeneration_ticks switch.data matches 84 run clone 1409 33 1424 1591 33 1577 1409 147 1424 replace force
-execute if score #regeneration_ticks switch.data matches 86 run clone 1409 34 1424 1591 34 1577 1409 148 1424 replace force
-execute if score #regeneration_ticks switch.data matches 88 run clone 1409 35 1424 1591 35 1577 1409 149 1424 replace force
-execute if score #regeneration_ticks switch.data matches 90 run clone 1409 36 1424 1591 36 1577 1409 150 1424 replace force
-execute if score #regeneration_ticks switch.data matches 92 run clone 1409 37 1424 1591 37 1577 1409 151 1424 replace force
-execute if score #regeneration_ticks switch.data matches 94 run clone 1409 38 1424 1591 38 1577 1409 152 1424 replace force
-execute if score #regeneration_ticks switch.data matches 96 run clone 1409 39 1424 1591 39 1577 1409 153 1424 replace force
-execute if score #regeneration_ticks switch.data matches 98 run clone 1409 40 1424 1591 40 1577 1409 154 1424 replace force
-execute if score #regeneration_ticks switch.data matches 100 run clone 1409 41 1424 1591 41 1577 1409 155 1424 replace force
-execute if score #regeneration_ticks switch.data matches 102 run clone 1409 42 1424 1591 42 1577 1409 156 1424 replace force
-execute if score #regeneration_ticks switch.data matches 104 run clone 1409 43 1424 1591 43 1577 1409 157 1424 replace force
-execute if score #regeneration_ticks switch.data matches 106 run clone 1409 44 1424 1591 44 1577 1409 158 1424 replace force
-execute if score #regeneration_ticks switch.data matches 108 run clone 1409 45 1424 1591 45 1577 1409 159 1424 replace force
-execute if score #regeneration_ticks switch.data matches 110 run clone 1409 46 1424 1591 46 1577 1409 160 1424 replace force
-execute if score #regeneration_ticks switch.data matches 112 run clone 1409 47 1424 1591 47 1577 1409 161 1424 replace force
-execute if score #regeneration_ticks switch.data matches 114 run clone 1409 48 1424 1591 48 1577 1409 162 1424 replace force
-execute if score #regeneration_ticks switch.data matches 116 run clone 1409 49 1424 1591 49 1577 1409 163 1424 replace force
-execute if score #regeneration_ticks switch.data matches 118 run clone 1409 50 1424 1591 50 1577 1409 164 1424 replace force
-execute if score #regeneration_ticks switch.data matches 120 run clone 1409 51 1424 1591 51 1577 1409 165 1424 replace force
-execute if score #regeneration_ticks switch.data matches 122 run clone 1409 52 1424 1591 52 1577 1409 166 1424 replace force
-execute if score #regeneration_ticks switch.data matches 124 run clone 1409 53 1424 1591 53 1577 1409 167 1424 replace force
-execute if score #regeneration_ticks switch.data matches 126 run clone 1409 54 1424 1591 54 1577 1409 168 1424 replace force
-execute if score #regeneration_ticks switch.data matches 128 run clone 1409 55 1424 1591 55 1577 1409 169 1424 replace force
-execute if score #regeneration_ticks switch.data matches 130 run clone 1409 56 1424 1591 56 1577 1409 170 1424 replace force
-execute if score #regeneration_ticks switch.data matches 132 run clone 1409 57 1424 1591 57 1577 1409 171 1424 replace force
-execute if score #regeneration_ticks switch.data matches 134 run clone 1409 58 1424 1591 58 1577 1409 172 1424 replace force
-execute if score #regeneration_ticks switch.data matches 136 run clone 1409 59 1424 1591 59 1577 1409 173 1424 replace force
-execute if score #regeneration_ticks switch.data matches 138 run clone 1409 60 1424 1591 60 1577 1409 174 1424 replace force
-execute if score #regeneration_ticks switch.data matches 140 run clone 1409 61 1424 1591 61 1577 1409 175 1424 replace force
-execute if score #regeneration_ticks switch.data matches 142 run clone 1409 62 1424 1591 62 1577 1409 176 1424 replace force
-execute if score #regeneration_ticks switch.data matches 144 run clone 1409 63 1424 1591 63 1577 1409 177 1424 replace force
-execute if score #regeneration_ticks switch.data matches 146 run clone 1409 64 1424 1591 64 1577 1409 178 1424 replace force
+execute if score #regeneration_ticks switch.data matches 20 run clone 1408 0 1423 1500 0 1578 1408 114 1423 replace force
+execute if score #regeneration_ticks switch.data matches 22 run clone 1500 0 1423 1592 0 1578 1500 114 1423 replace force
+execute if score #regeneration_ticks switch.data matches 24 run clone 1408 1 1423 1500 1 1578 1408 115 1423 replace force
+execute if score #regeneration_ticks switch.data matches 26 run clone 1500 1 1423 1592 1 1578 1500 115 1423 replace force
+execute if score #regeneration_ticks switch.data matches 28 run clone 1408 2 1423 1500 2 1578 1408 116 1423 replace force
+execute if score #regeneration_ticks switch.data matches 30 run clone 1500 2 1423 1592 2 1578 1500 116 1423 replace force
+execute if score #regeneration_ticks switch.data matches 32 run clone 1408 3 1423 1500 3 1578 1408 117 1423 replace force
+execute if score #regeneration_ticks switch.data matches 34 run clone 1500 3 1423 1592 3 1578 1500 117 1423 replace force
+execute if score #regeneration_ticks switch.data matches 36 run clone 1408 4 1423 1500 4 1578 1408 118 1423 replace force
+execute if score #regeneration_ticks switch.data matches 38 run clone 1500 4 1423 1592 4 1578 1500 118 1423 replace force
+execute if score #regeneration_ticks switch.data matches 40 run clone 1408 5 1423 1500 5 1578 1408 119 1423 replace force
+execute if score #regeneration_ticks switch.data matches 42 run clone 1500 5 1423 1592 5 1578 1500 119 1423 replace force
+execute if score #regeneration_ticks switch.data matches 44 run clone 1408 6 1423 1500 6 1578 1408 120 1423 replace force
+execute if score #regeneration_ticks switch.data matches 46 run clone 1500 6 1423 1592 6 1578 1500 120 1423 replace force
+execute if score #regeneration_ticks switch.data matches 48 run clone 1408 7 1423 1500 7 1578 1408 121 1423 replace force
+execute if score #regeneration_ticks switch.data matches 50 run clone 1500 7 1423 1592 7 1578 1500 121 1423 replace force
+execute if score #regeneration_ticks switch.data matches 52 run clone 1408 8 1423 1500 8 1578 1408 122 1423 replace force
+execute if score #regeneration_ticks switch.data matches 54 run clone 1500 8 1423 1592 8 1578 1500 122 1423 replace force
+execute if score #regeneration_ticks switch.data matches 56 run clone 1408 9 1423 1500 9 1578 1408 123 1423 replace force
+execute if score #regeneration_ticks switch.data matches 58 run clone 1500 9 1423 1592 9 1578 1500 123 1423 replace force
+execute if score #regeneration_ticks switch.data matches 60 run clone 1408 10 1423 1500 10 1578 1408 124 1423 replace force
+execute if score #regeneration_ticks switch.data matches 62 run clone 1500 10 1423 1592 10 1578 1500 124 1423 replace force
+execute if score #regeneration_ticks switch.data matches 64 run clone 1408 11 1423 1500 11 1578 1408 125 1423 replace force
+execute if score #regeneration_ticks switch.data matches 66 run clone 1500 11 1423 1592 11 1578 1500 125 1423 replace force
+execute if score #regeneration_ticks switch.data matches 68 run clone 1408 12 1423 1500 12 1578 1408 126 1423 replace force
+execute if score #regeneration_ticks switch.data matches 70 run clone 1500 12 1423 1592 12 1578 1500 126 1423 replace force
+execute if score #regeneration_ticks switch.data matches 72 run clone 1408 13 1423 1500 13 1578 1408 127 1423 replace force
+execute if score #regeneration_ticks switch.data matches 74 run clone 1500 13 1423 1592 13 1578 1500 127 1423 replace force
+execute if score #regeneration_ticks switch.data matches 76 run clone 1408 14 1423 1500 14 1578 1408 128 1423 replace force
+execute if score #regeneration_ticks switch.data matches 78 run clone 1500 14 1423 1592 14 1578 1500 128 1423 replace force
+execute if score #regeneration_ticks switch.data matches 80 run clone 1408 15 1423 1500 15 1578 1408 129 1423 replace force
+execute if score #regeneration_ticks switch.data matches 82 run clone 1500 15 1423 1592 15 1578 1500 129 1423 replace force
+execute if score #regeneration_ticks switch.data matches 84 run clone 1408 16 1423 1500 16 1578 1408 130 1423 replace force
+execute if score #regeneration_ticks switch.data matches 86 run clone 1500 16 1423 1592 16 1578 1500 130 1423 replace force
+execute if score #regeneration_ticks switch.data matches 88 run clone 1408 17 1423 1500 17 1578 1408 131 1423 replace force
+execute if score #regeneration_ticks switch.data matches 90 run clone 1500 17 1423 1592 17 1578 1500 131 1423 replace force
+execute if score #regeneration_ticks switch.data matches 92 run clone 1408 18 1423 1500 18 1578 1408 132 1423 replace force
+execute if score #regeneration_ticks switch.data matches 94 run clone 1500 18 1423 1592 18 1578 1500 132 1423 replace force
+execute if score #regeneration_ticks switch.data matches 96 run clone 1408 19 1423 1500 19 1578 1408 133 1423 replace force
+execute if score #regeneration_ticks switch.data matches 98 run clone 1500 19 1423 1592 19 1578 1500 133 1423 replace force
+execute if score #regeneration_ticks switch.data matches 100 run clone 1408 20 1423 1500 20 1578 1408 134 1423 replace force
+execute if score #regeneration_ticks switch.data matches 102 run clone 1500 20 1423 1592 20 1578 1500 134 1423 replace force
+execute if score #regeneration_ticks switch.data matches 104 run clone 1408 21 1423 1500 21 1578 1408 135 1423 replace force
+execute if score #regeneration_ticks switch.data matches 106 run clone 1500 21 1423 1592 21 1578 1500 135 1423 replace force
+execute if score #regeneration_ticks switch.data matches 108 run clone 1408 22 1423 1500 22 1578 1408 136 1423 replace force
+execute if score #regeneration_ticks switch.data matches 110 run clone 1500 22 1423 1592 22 1578 1500 136 1423 replace force
+execute if score #regeneration_ticks switch.data matches 112 run clone 1408 23 1423 1500 23 1578 1408 137 1423 replace force
+execute if score #regeneration_ticks switch.data matches 114 run clone 1500 23 1423 1592 23 1578 1500 137 1423 replace force
+execute if score #regeneration_ticks switch.data matches 116 run clone 1408 24 1423 1500 24 1578 1408 138 1423 replace force
+execute if score #regeneration_ticks switch.data matches 118 run clone 1500 24 1423 1592 24 1578 1500 138 1423 replace force
+execute if score #regeneration_ticks switch.data matches 120 run clone 1408 25 1423 1500 25 1578 1408 139 1423 replace force
+execute if score #regeneration_ticks switch.data matches 122 run clone 1500 25 1423 1592 25 1578 1500 139 1423 replace force
+execute if score #regeneration_ticks switch.data matches 124 run clone 1408 26 1423 1500 26 1578 1408 140 1423 replace force
+execute if score #regeneration_ticks switch.data matches 126 run clone 1500 26 1423 1592 26 1578 1500 140 1423 replace force
+execute if score #regeneration_ticks switch.data matches 128 run clone 1408 27 1423 1500 27 1578 1408 141 1423 replace force
+execute if score #regeneration_ticks switch.data matches 130 run clone 1500 27 1423 1592 27 1578 1500 141 1423 replace force
+execute if score #regeneration_ticks switch.data matches 132 run clone 1408 28 1423 1500 28 1578 1408 142 1423 replace force
+execute if score #regeneration_ticks switch.data matches 134 run clone 1500 28 1423 1592 28 1578 1500 142 1423 replace force
+execute if score #regeneration_ticks switch.data matches 136 run clone 1408 29 1423 1500 29 1578 1408 143 1423 replace force
+execute if score #regeneration_ticks switch.data matches 138 run clone 1500 29 1423 1592 29 1578 1500 143 1423 replace force
+execute if score #regeneration_ticks switch.data matches 140 run clone 1408 30 1423 1500 30 1578 1408 144 1423 replace force
+execute if score #regeneration_ticks switch.data matches 142 run clone 1500 30 1423 1592 30 1578 1500 144 1423 replace force
+execute if score #regeneration_ticks switch.data matches 144 run clone 1408 31 1423 1500 31 1578 1408 145 1423 replace force
+execute if score #regeneration_ticks switch.data matches 146 run clone 1500 31 1423 1592 31 1578 1500 145 1423 replace force
+execute if score #regeneration_ticks switch.data matches 148 run clone 1408 32 1423 1500 32 1578 1408 146 1423 replace force
+execute if score #regeneration_ticks switch.data matches 150 run clone 1500 32 1423 1592 32 1578 1500 146 1423 replace force
+execute if score #regeneration_ticks switch.data matches 152 run clone 1408 33 1423 1500 33 1578 1408 147 1423 replace force
+execute if score #regeneration_ticks switch.data matches 154 run clone 1500 33 1423 1592 33 1578 1500 147 1423 replace force
+execute if score #regeneration_ticks switch.data matches 156 run clone 1408 34 1423 1500 34 1578 1408 148 1423 replace force
+execute if score #regeneration_ticks switch.data matches 158 run clone 1500 34 1423 1592 34 1578 1500 148 1423 replace force
+execute if score #regeneration_ticks switch.data matches 160 run clone 1408 35 1423 1500 35 1578 1408 149 1423 replace force
+execute if score #regeneration_ticks switch.data matches 162 run clone 1500 35 1423 1592 35 1578 1500 149 1423 replace force
+execute if score #regeneration_ticks switch.data matches 164 run clone 1408 36 1423 1500 36 1578 1408 150 1423 replace force
+execute if score #regeneration_ticks switch.data matches 166 run clone 1500 36 1423 1592 36 1578 1500 150 1423 replace force
+execute if score #regeneration_ticks switch.data matches 168 run clone 1408 37 1423 1500 37 1578 1408 151 1423 replace force
+execute if score #regeneration_ticks switch.data matches 170 run clone 1500 37 1423 1592 37 1578 1500 151 1423 replace force
+execute if score #regeneration_ticks switch.data matches 172 run clone 1408 38 1423 1500 38 1578 1408 152 1423 replace force
+execute if score #regeneration_ticks switch.data matches 174 run clone 1500 38 1423 1592 38 1578 1500 152 1423 replace force
+execute if score #regeneration_ticks switch.data matches 176 run clone 1408 39 1423 1500 39 1578 1408 153 1423 replace force
+execute if score #regeneration_ticks switch.data matches 178 run clone 1500 39 1423 1592 39 1578 1500 153 1423 replace force
+execute if score #regeneration_ticks switch.data matches 180 run clone 1408 40 1423 1500 40 1578 1408 154 1423 replace force
+execute if score #regeneration_ticks switch.data matches 182 run clone 1500 40 1423 1592 40 1578 1500 154 1423 replace force
+execute if score #regeneration_ticks switch.data matches 184 run clone 1408 41 1423 1500 41 1578 1408 155 1423 replace force
+execute if score #regeneration_ticks switch.data matches 186 run clone 1500 41 1423 1592 41 1578 1500 155 1423 replace force
+execute if score #regeneration_ticks switch.data matches 188 run clone 1408 42 1423 1500 42 1578 1408 156 1423 replace force
+execute if score #regeneration_ticks switch.data matches 190 run clone 1500 42 1423 1592 42 1578 1500 156 1423 replace force
+execute if score #regeneration_ticks switch.data matches 192 run clone 1408 43 1423 1500 43 1578 1408 157 1423 replace force
+execute if score #regeneration_ticks switch.data matches 194 run clone 1500 43 1423 1592 43 1578 1500 157 1423 replace force
+execute if score #regeneration_ticks switch.data matches 196 run clone 1408 44 1423 1500 44 1578 1408 158 1423 replace force
+execute if score #regeneration_ticks switch.data matches 198 run clone 1500 44 1423 1592 44 1578 1500 158 1423 replace force
+execute if score #regeneration_ticks switch.data matches 200 run clone 1408 45 1423 1500 45 1578 1408 159 1423 replace force
+execute if score #regeneration_ticks switch.data matches 202 run clone 1500 45 1423 1592 45 1578 1500 159 1423 replace force
+execute if score #regeneration_ticks switch.data matches 204 run clone 1408 46 1423 1500 46 1578 1408 160 1423 replace force
+execute if score #regeneration_ticks switch.data matches 206 run clone 1500 46 1423 1592 46 1578 1500 160 1423 replace force
+execute if score #regeneration_ticks switch.data matches 208 run clone 1408 47 1423 1500 47 1578 1408 161 1423 replace force
+execute if score #regeneration_ticks switch.data matches 210 run clone 1500 47 1423 1592 47 1578 1500 161 1423 replace force
+execute if score #regeneration_ticks switch.data matches 212 run clone 1408 48 1423 1500 48 1578 1408 162 1423 replace force
+execute if score #regeneration_ticks switch.data matches 214 run clone 1500 48 1423 1592 48 1578 1500 162 1423 replace force
+execute if score #regeneration_ticks switch.data matches 216 run clone 1408 49 1423 1500 49 1578 1408 163 1423 replace force
+execute if score #regeneration_ticks switch.data matches 218 run clone 1500 49 1423 1592 49 1578 1500 163 1423 replace force
+execute if score #regeneration_ticks switch.data matches 220 run clone 1408 50 1423 1500 50 1578 1408 164 1423 replace force
+execute if score #regeneration_ticks switch.data matches 222 run clone 1500 50 1423 1592 50 1578 1500 164 1423 replace force
+execute if score #regeneration_ticks switch.data matches 224 run clone 1408 51 1423 1500 51 1578 1408 165 1423 replace force
+execute if score #regeneration_ticks switch.data matches 226 run clone 1500 51 1423 1592 51 1578 1500 165 1423 replace force
+execute if score #regeneration_ticks switch.data matches 228 run clone 1408 52 1423 1500 52 1578 1408 166 1423 replace force
+execute if score #regeneration_ticks switch.data matches 230 run clone 1500 52 1423 1592 52 1578 1500 166 1423 replace force
+execute if score #regeneration_ticks switch.data matches 232 run clone 1408 53 1423 1500 53 1578 1408 167 1423 replace force
+execute if score #regeneration_ticks switch.data matches 234 run clone 1500 53 1423 1592 53 1578 1500 167 1423 replace force
+execute if score #regeneration_ticks switch.data matches 236 run clone 1408 54 1423 1500 54 1578 1408 168 1423 replace force
+execute if score #regeneration_ticks switch.data matches 238 run clone 1500 54 1423 1592 54 1578 1500 168 1423 replace force
+execute if score #regeneration_ticks switch.data matches 240 run clone 1408 55 1423 1500 55 1578 1408 169 1423 replace force
+execute if score #regeneration_ticks switch.data matches 242 run clone 1500 55 1423 1592 55 1578 1500 169 1423 replace force
+execute if score #regeneration_ticks switch.data matches 244 run clone 1408 56 1423 1500 56 1578 1408 170 1423 replace force
+execute if score #regeneration_ticks switch.data matches 246 run clone 1500 56 1423 1592 56 1578 1500 170 1423 replace force
+execute if score #regeneration_ticks switch.data matches 248 run clone 1408 57 1423 1500 57 1578 1408 171 1423 replace force
+execute if score #regeneration_ticks switch.data matches 250 run clone 1500 57 1423 1592 57 1578 1500 171 1423 replace force
+execute if score #regeneration_ticks switch.data matches 252 run clone 1408 58 1423 1500 58 1578 1408 172 1423 replace force
+execute if score #regeneration_ticks switch.data matches 254 run clone 1500 58 1423 1592 58 1578 1500 172 1423 replace force
+execute if score #regeneration_ticks switch.data matches 256 run clone 1408 59 1423 1500 59 1578 1408 173 1423 replace force
+execute if score #regeneration_ticks switch.data matches 258 run clone 1500 59 1423 1592 59 1578 1500 173 1423 replace force
+execute if score #regeneration_ticks switch.data matches 260 run clone 1408 60 1423 1500 60 1578 1408 174 1423 replace force
+execute if score #regeneration_ticks switch.data matches 262 run clone 1500 60 1423 1592 60 1578 1500 174 1423 replace force
+execute if score #regeneration_ticks switch.data matches 264 run clone 1408 61 1423 1500 61 1578 1408 175 1423 replace force
+execute if score #regeneration_ticks switch.data matches 266 run clone 1500 61 1423 1592 61 1578 1500 175 1423 replace force
+execute if score #regeneration_ticks switch.data matches 268 run clone 1408 62 1423 1500 62 1578 1408 176 1423 replace force
+execute if score #regeneration_ticks switch.data matches 270 run clone 1500 62 1423 1592 62 1578 1500 176 1423 replace force
+execute if score #regeneration_ticks switch.data matches 272 run clone 1408 63 1423 1500 63 1578 1408 177 1423 replace force
+execute if score #regeneration_ticks switch.data matches 274 run clone 1500 63 1423 1592 63 1578 1500 177 1423 replace force
+execute if score #regeneration_ticks switch.data matches 276 run clone 1408 64 1423 1500 64 1578 1408 178 1423 replace force
+execute if score #regeneration_ticks switch.data matches 278 run clone 1500 64 1423 1592 64 1578 1500 178 1423 replace force
+execute if score #regeneration_ticks switch.data matches 280 run clone 1408 65 1423 1500 65 1578 1408 179 1423 replace force
+execute if score #regeneration_ticks switch.data matches 282 run clone 1500 65 1423 1592 65 1578 1500 179 1423 replace force
+execute if score #regeneration_ticks switch.data matches 284 run clone 1408 66 1423 1500 66 1578 1408 180 1423 replace force
+execute if score #regeneration_ticks switch.data matches 286 run clone 1500 66 1423 1592 66 1578 1500 180 1423 replace force
+execute if score #regeneration_ticks switch.data matches 288 run clone 1408 67 1423 1500 67 1578 1408 181 1423 replace force
+execute if score #regeneration_ticks switch.data matches 290 run clone 1500 67 1423 1592 67 1578 1500 181 1423 replace force
+execute if score #regeneration_ticks switch.data matches 292 run clone 1408 68 1423 1500 68 1578 1408 182 1423 replace force
+execute if score #regeneration_ticks switch.data matches 294 run clone 1500 68 1423 1592 68 1578 1500 182 1423 replace force
+execute if score #regeneration_ticks switch.data matches 296 run clone 1408 69 1423 1500 69 1578 1408 183 1423 replace force
+execute if score #regeneration_ticks switch.data matches 298 run clone 1500 69 1423 1592 69 1578 1500 183 1423 replace force
+execute if score #regeneration_ticks switch.data matches 300 run clone 1408 70 1423 1500 70 1578 1408 184 1423 replace force
+execute if score #regeneration_ticks switch.data matches 302 run clone 1500 70 1423 1592 70 1578 1500 184 1423 replace force
+execute if score #regeneration_ticks switch.data matches 304 run clone 1408 71 1423 1500 71 1578 1408 185 1423 replace force
+execute if score #regeneration_ticks switch.data matches 306 run clone 1500 71 1423 1592 71 1578 1500 185 1423 replace force
+execute if score #regeneration_ticks switch.data matches 308 run clone 1408 72 1423 1500 72 1578 1408 186 1423 replace force
+execute if score #regeneration_ticks switch.data matches 310 run clone 1500 72 1423 1592 72 1578 1500 186 1423 replace force
+execute if score #regeneration_ticks switch.data matches 312 run clone 1408 73 1423 1500 73 1578 1408 187 1423 replace force
+execute if score #regeneration_ticks switch.data matches 314 run clone 1500 73 1423 1592 73 1578 1500 187 1423 replace force
+execute if score #regeneration_ticks switch.data matches 316 run clone 1408 74 1423 1500 74 1578 1408 188 1423 replace force
+execute if score #regeneration_ticks switch.data matches 318 run clone 1500 74 1423 1592 74 1578 1500 188 1423 replace force
+execute if score #regeneration_ticks switch.data matches 320 run clone 1408 75 1423 1500 75 1578 1408 189 1423 replace force
+execute if score #regeneration_ticks switch.data matches 322 run clone 1500 75 1423 1592 75 1578 1500 189 1423 replace force
+execute if score #regeneration_ticks switch.data matches 324 run clone 1408 76 1423 1500 76 1578 1408 190 1423 replace force
+execute if score #regeneration_ticks switch.data matches 326 run clone 1500 76 1423 1592 76 1578 1500 190 1423 replace force
+execute if score #regeneration_ticks switch.data matches 328 run clone 1408 77 1423 1500 77 1578 1408 191 1423 replace force
+execute if score #regeneration_ticks switch.data matches 330 run clone 1500 77 1423 1592 77 1578 1500 191 1423 replace force
+execute if score #regeneration_ticks switch.data matches 332 run clone 1408 78 1423 1500 78 1578 1408 192 1423 replace force
+execute if score #regeneration_ticks switch.data matches 334 run clone 1500 78 1423 1592 78 1578 1500 192 1423 replace force
+execute if score #regeneration_ticks switch.data matches 336 run clone 1408 79 1423 1500 79 1578 1408 193 1423 replace force
+execute if score #regeneration_ticks switch.data matches 338 run clone 1500 79 1423 1592 79 1578 1500 193 1423 replace force
+execute if score #regeneration_ticks switch.data matches 340 run clone 1408 80 1423 1500 80 1578 1408 194 1423 replace force
+execute if score #regeneration_ticks switch.data matches 342 run clone 1500 80 1423 1592 80 1578 1500 194 1423 replace force
+execute if score #regeneration_ticks switch.data matches 344 run clone 1408 81 1423 1500 81 1578 1408 195 1423 replace force
+execute if score #regeneration_ticks switch.data matches 346 run clone 1500 81 1423 1592 81 1578 1500 195 1423 replace force
+execute if score #regeneration_ticks switch.data matches 348 run clone 1408 82 1423 1500 82 1578 1408 196 1423 replace force
+execute if score #regeneration_ticks switch.data matches 350 run clone 1500 82 1423 1592 82 1578 1500 196 1423 replace force
+execute if score #regeneration_ticks switch.data matches 352 run clone 1408 83 1423 1500 83 1578 1408 197 1423 replace force
+execute if score #regeneration_ticks switch.data matches 354 run clone 1500 83 1423 1592 83 1578 1500 197 1423 replace force
+execute if score #regeneration_ticks switch.data matches 356 run clone 1408 84 1423 1500 84 1578 1408 198 1423 replace force
+execute if score #regeneration_ticks switch.data matches 358 run clone 1500 84 1423 1592 84 1578 1500 198 1423 replace force
+execute if score #regeneration_ticks switch.data matches 360 run clone 1408 85 1423 1500 85 1578 1408 199 1423 replace force
+execute if score #regeneration_ticks switch.data matches 362 run clone 1500 85 1423 1592 85 1578 1500 199 1423 replace force
+execute if score #regeneration_ticks switch.data matches 364 run clone 1408 86 1423 1500 86 1578 1408 200 1423 replace force
+execute if score #regeneration_ticks switch.data matches 366 run clone 1500 86 1423 1592 86 1578 1500 200 1423 replace force
+execute if score #regeneration_ticks switch.data matches 368 run clone 1408 87 1423 1500 87 1578 1408 201 1423 replace force
+execute if score #regeneration_ticks switch.data matches 370 run clone 1500 87 1423 1592 87 1578 1500 201 1423 replace force
+execute if score #regeneration_ticks switch.data matches 372 run clone 1408 88 1423 1500 88 1578 1408 202 1423 replace force
+execute if score #regeneration_ticks switch.data matches 374 run clone 1500 88 1423 1592 88 1578 1500 202 1423 replace force
+execute if score #regeneration_ticks switch.data matches 376 run clone 1408 89 1423 1500 89 1578 1408 203 1423 replace force
+execute if score #regeneration_ticks switch.data matches 378 run clone 1500 89 1423 1592 89 1578 1500 203 1423 replace force
+execute if score #regeneration_ticks switch.data matches 380 run clone 1408 90 1423 1500 90 1578 1408 204 1423 replace force
+execute if score #regeneration_ticks switch.data matches 382 run clone 1500 90 1423 1592 90 1578 1500 204 1423 replace force
+execute if score #regeneration_ticks switch.data matches 384 run clone 1408 91 1423 1500 91 1578 1408 205 1423 replace force
+execute if score #regeneration_ticks switch.data matches 386 run clone 1500 91 1423 1592 91 1578 1500 205 1423 replace force
+execute if score #regeneration_ticks switch.data matches 388 run clone 1408 92 1423 1500 92 1578 1408 206 1423 replace force
+execute if score #regeneration_ticks switch.data matches 390 run clone 1500 92 1423 1592 92 1578 1500 206 1423 replace force
+execute if score #regeneration_ticks switch.data matches 392 run clone 1408 93 1423 1500 93 1578 1408 207 1423 replace force
+execute if score #regeneration_ticks switch.data matches 394 run clone 1500 93 1423 1592 93 1578 1500 207 1423 replace force
+execute if score #regeneration_ticks switch.data matches 396 run clone 1408 94 1423 1500 94 1578 1408 208 1423 replace force
+execute if score #regeneration_ticks switch.data matches 398 run clone 1500 94 1423 1592 94 1578 1500 208 1423 replace force
+execute if score #regeneration_ticks switch.data matches 400 run clone 1408 95 1423 1500 95 1578 1408 209 1423 replace force
+execute if score #regeneration_ticks switch.data matches 402 run clone 1500 95 1423 1592 95 1578 1500 209 1423 replace force
+execute if score #regeneration_ticks switch.data matches 404 run clone 1408 96 1423 1500 96 1578 1408 210 1423 replace force
+execute if score #regeneration_ticks switch.data matches 406 run clone 1500 96 1423 1592 96 1578 1500 210 1423 replace force
+execute if score #regeneration_ticks switch.data matches 408 run clone 1408 97 1423 1500 97 1578 1408 211 1423 replace force
+execute if score #regeneration_ticks switch.data matches 410 run clone 1500 97 1423 1592 97 1578 1500 211 1423 replace force
+execute if score #regeneration_ticks switch.data matches 412 run clone 1408 98 1423 1500 98 1578 1408 212 1423 replace force
+execute if score #regeneration_ticks switch.data matches 414 run clone 1500 98 1423 1592 98 1578 1500 212 1423 replace force
+execute if score #regeneration_ticks switch.data matches 416 run clone 1408 99 1423 1500 99 1578 1408 213 1423 replace force
+execute if score #regeneration_ticks switch.data matches 418 run clone 1500 99 1423 1592 99 1578 1500 213 1423 replace force
 
-execute if score #regeneration_ticks switch.data matches 146 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 146 run forceload remove 1409 1424 1591 1577
-execute if score #regeneration_ticks switch.data matches 146 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 420 run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 420 run forceload remove 1408 1423 1592 1578
+execute if score #regeneration_ticks switch.data matches 420 run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/traitor_original/regenerate 1t
 
