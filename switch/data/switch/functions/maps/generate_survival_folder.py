@@ -11,7 +11,7 @@ if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 # TODO
 
 # Create the function
-def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_pos: tuple):
+def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_pos: tuple, paste_start_height: int):
 	""" Generates a folder for a gamemode
 	Args:
 		name		(str)	: The name of the gamemode
@@ -88,7 +88,7 @@ def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_po
 	
 	# More variables
 	y = start_pos[1]			# The first y coordinate
-	minY = 100					# The y coordinate where the regeneration starts
+	minY = paste_start_height	# The y coordinate where the regeneration starts
 	maxY = minY + end_pos[1]	# The y coordinate where the regeneration ends
 	i = 20						# The first regeneration tick
 	j = y						# The first y coordinate of the clone command (iterator)
@@ -129,8 +129,9 @@ def generate_survival_folder(name: str, tp_coords: str, start_pos: tuple, end_po
 	return None
 
 # Execute the function
-generate_survival_folder("dark_forest_hills_test", "[39069.0d, 150.0d, 39111.0d]", (39000, 0, 39000), (39143, 69, 39221))
-
+generate_survival_folder("dark_forest_hills_test", "[39069.0d, 150.0d, 39111.0d]", (39000, 0, 39000), (39143, 69, 39221), 100)
+generate_survival_folder("laser_game", "[520.0d, 103.0d, 520.0d]", (499, 0, 499), (551, 43, 551), 91)
+generate_survival_folder("pitchout_1", "[1000.0d, 110.0d, 1000.0d]", (950, 0, 1050), (1050, 44, 1150), 95)
 
 
 
