@@ -47,9 +47,9 @@ execute if score #regeneration_ticks switch.data matches 102 run clone 499 41 49
 execute if score #regeneration_ticks switch.data matches 104 run clone 499 42 499 551 42 551 499 133 499 replace force
 execute if score #regeneration_ticks switch.data matches 106 run clone 499 43 499 551 43 551 499 134 499 replace force
 
-execute if score #regeneration_ticks switch.data matches 106 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 106 run forceload remove 499 499 551 551
-execute if score #regeneration_ticks switch.data matches 106 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 108.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 108.. run forceload remove 499 499 551 551
+execute if score #regeneration_ticks switch.data matches 108.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/laser_game/regenerate 1t
 

@@ -74,9 +74,9 @@ execute if score #regeneration_ticks switch.data matches 156 run clone 1947 68 1
 execute if score #regeneration_ticks switch.data matches 158 run clone 1947 69 1937 2055 69 2063 1947 169 1937 replace force
 execute if score #regeneration_ticks switch.data matches 160 run clone 1947 70 1937 2055 70 2063 1947 170 1937 replace force
 
-execute if score #regeneration_ticks switch.data matches 160 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 160 run forceload remove 1947 1937 2055 2063
-execute if score #regeneration_ticks switch.data matches 160 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 162.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 162.. run forceload remove 1947 1937 2055 2063
+execute if score #regeneration_ticks switch.data matches 162.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/zone_51/regenerate 1t
 

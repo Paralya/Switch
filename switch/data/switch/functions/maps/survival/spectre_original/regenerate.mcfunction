@@ -89,9 +89,9 @@ execute if score #regeneration_ticks switch.data matches 186 run clone 2459 83 2
 execute if score #regeneration_ticks switch.data matches 188 run clone 2459 84 2452 2545 84 2547 2459 184 2452 replace force
 execute if score #regeneration_ticks switch.data matches 190 run clone 2459 85 2452 2545 85 2547 2459 185 2452 replace force
 
-execute if score #regeneration_ticks switch.data matches 190 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 190 run forceload remove 2459 2452 2545 2547
-execute if score #regeneration_ticks switch.data matches 190 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 192.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 192.. run forceload remove 2459 2452 2545 2547
+execute if score #regeneration_ticks switch.data matches 192.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/spectre_original/regenerate 1t
 

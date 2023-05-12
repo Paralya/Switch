@@ -73,9 +73,9 @@ execute if score #regeneration_ticks switch.data matches 154 run clone 39000 67 
 execute if score #regeneration_ticks switch.data matches 156 run clone 39000 68 39000 39143 68 39221 39000 168 39000 replace force
 execute if score #regeneration_ticks switch.data matches 158 run clone 39000 69 39000 39143 69 39221 39000 169 39000 replace force
 
-execute if score #regeneration_ticks switch.data matches 158 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 158 run forceload remove 39000 39000 39143 39221
-execute if score #regeneration_ticks switch.data matches 158 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 160.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 160.. run forceload remove 39000 39000 39143 39221
+execute if score #regeneration_ticks switch.data matches 160.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/dark_forest_hills_test/regenerate 1t
 

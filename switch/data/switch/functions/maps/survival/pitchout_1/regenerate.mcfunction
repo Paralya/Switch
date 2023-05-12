@@ -48,9 +48,9 @@ execute if score #regeneration_ticks switch.data matches 104 run clone 950 42 10
 execute if score #regeneration_ticks switch.data matches 106 run clone 950 43 1050 1050 43 1150 950 138 1050 replace force
 execute if score #regeneration_ticks switch.data matches 108 run clone 950 44 1050 1050 44 1150 950 139 1050 replace force
 
-execute if score #regeneration_ticks switch.data matches 108 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 108 run forceload remove 950 1050 1050 1150
-execute if score #regeneration_ticks switch.data matches 108 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 110.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 110.. run forceload remove 950 1050 1050 1150
+execute if score #regeneration_ticks switch.data matches 110.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/pitchout_1/regenerate 1t
 

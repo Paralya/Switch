@@ -103,28 +103,25 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 		for k in c:
 
 			# Write the clone command
-			f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
-
-			# Increment the split coordinates iterator
-			z += divider
+			f.write(f"execute if score #regeneration_ticks switch.data matches {i} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
+			z += 1
 
 		# Increment the regeneration tick (x2 for every two ticks)
-		i += divider * 2
+		i += 2
 
 		# Increment the y coordinate of the clones commands
 		minY += 1
 		j += 1
 
-	# Correct z and i (because of the last incrementation)
-	z -= divider
-	i -= divider * 2
+	# Fix the i variable
+	i += len(c) - 1
 
 	# Write the last lines
 	f.write("\n")
-	f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run kill @e[type=item]\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i}.. run kill @e[type=item]\n")
 	for x1, x2, z1, z2 in c:
-		f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run forceload remove {x1} {x2} {z1} {z2}\n")
-	f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run scoreboard players reset #regeneration_ticks switch.data\n")
+		f.write(f"execute if score #regeneration_ticks switch.data matches {i}.. run forceload remove {x1} {x2} {z1} {z2}\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i}.. run scoreboard players reset #regeneration_ticks switch.data\n")
 	f.write("\n")
 	f.write(f"execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
 	f.write("\n")
@@ -218,32 +215,24 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	# Create the clone commands
 	while minY <= maxY:
 
-		# Reset the split coordinates iterator & Create the clone commands
-		z = 0
+		# Create the clone commands
 		for k in c:
 
 			# Write the fill command
-			f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run fill {k[0]} {minY} {k[1]} {k[2]} {minY} {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
-
-			# Increment the split coordinates iterator
-			z += divider
+			f.write(f"execute if score #regeneration_ticks switch.data matches {i} run fill {k[0]} {minY} {k[1]} {k[2]} {minY} {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
 
 		# Increment the regeneration tick (x1 because /fill is faster than /clone)
-		i += divider
+		i += 1
 
 		# Increment the y coordinate of the fill command
 		minY += 1
 
-	# Correct z and i (because of the last incrementation)
-	z -= divider
-	i -= divider
-
 	# Write the last lines
 	f.write("\n")
-	f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run kill @e[type=item]\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i}.. run kill @e[type=item]\n")
 	for x1, x2, z1, z2 in c:
-		f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run forceload remove {x1} {x2} {z1} {z2}\n")
-	f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run scoreboard players reset #regeneration_ticks switch.data\n")
+		f.write(f"execute if score #regeneration_ticks switch.data matches {i}.. run forceload remove {x1} {x2} {z1} {z2}\n")
+	f.write(f"execute if score #regeneration_ticks switch.data matches {i}.. run scoreboard players reset #regeneration_ticks switch.data\n")
 	f.write("\n")
 	f.write(f"execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
 	f.write("\n")

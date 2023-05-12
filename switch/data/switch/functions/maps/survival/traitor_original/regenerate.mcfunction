@@ -103,9 +103,9 @@ execute if score #regeneration_ticks switch.data matches 214 run clone 1408 97 1
 execute if score #regeneration_ticks switch.data matches 216 run clone 1408 98 1423 1592 98 1578 1408 212 1423 replace force
 execute if score #regeneration_ticks switch.data matches 218 run clone 1408 99 1423 1592 99 1578 1408 213 1423 replace force
 
-execute if score #regeneration_ticks switch.data matches 218 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 218 run forceload remove 1408 1423 1592 1578
-execute if score #regeneration_ticks switch.data matches 218 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 220.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 220.. run forceload remove 1408 1423 1592 1578
+execute if score #regeneration_ticks switch.data matches 220.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/traitor_original/regenerate 1t
 
