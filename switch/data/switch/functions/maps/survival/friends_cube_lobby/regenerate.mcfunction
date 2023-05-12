@@ -1,19 +1,4 @@
 
-# x1 = 16960
-# z1 = 16960
-# x2 = 17040
-# z2 = 17040
-# y = 0
-# minY = 100
-# maxY = 146
-# i = 10
-# j = y
-# while minY <= maxY:
-#    print('execute if score #regeneration_ticks switch.data matches '+str(i*2)+' run clone '+str(x1)+' '+str(j)+' '+str(z1)+' '+str(x2)+' '+str(j)+' '+str(z2)+' '+str(x1)+' '+str(minY)+' '+str(z1)+' replace force')
-#    i += 1
-#    j += 1
-#    minY += 1
-
 scoreboard players add #regeneration_ticks switch.data 1
 execute if score #regeneration_ticks switch.data matches 1 run forceload add 16960 16960 17040 17040
 
@@ -63,11 +48,10 @@ execute if score #regeneration_ticks switch.data matches 104 run clone 16960 42 
 execute if score #regeneration_ticks switch.data matches 106 run clone 16960 43 16960 17040 43 17040 16960 143 16960 replace force
 execute if score #regeneration_ticks switch.data matches 108 run clone 16960 44 16960 17040 44 17040 16960 144 16960 replace force
 execute if score #regeneration_ticks switch.data matches 110 run clone 16960 45 16960 17040 45 17040 16960 145 16960 replace force
-execute if score #regeneration_ticks switch.data matches 112 run clone 16960 46 16960 17040 46 17040 16960 146 16960 replace force
 
-execute if score #regeneration_ticks switch.data matches 112 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 112 run forceload remove 16960 16960 17040 17040
-execute if score #regeneration_ticks switch.data matches 112 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 112.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 112.. run forceload remove 16960 16960 17040 17040
+execute if score #regeneration_ticks switch.data matches 112.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/friends_cube_lobby/regenerate 1t
 

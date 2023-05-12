@@ -1,19 +1,4 @@
 
-# x1 = 3939
-# z1 = 3939
-# x2 = 4061
-# z2 = 4061
-# y = 0
-# minY = 100
-# maxY = 151
-# i = 10
-# j = y
-# while minY <= maxY:
-#    print('execute if score #regeneration_ticks switch.data matches '+str(i*2)+' run clone '+str(x1)+' '+str(j)+' '+str(z1)+' '+str(x2)+' '+str(j)+' '+str(z2)+' '+str(x1)+' '+str(minY)+' '+str(z1)+' replace force')
-#    i += 1
-#    j += 1
-#    minY += 1
-
 scoreboard players add #regeneration_ticks switch.data 1
 execute if score #regeneration_ticks switch.data matches 1 run forceload add 3939 3939 4061 4061
 
@@ -68,11 +53,10 @@ execute if score #regeneration_ticks switch.data matches 114 run clone 3939 47 3
 execute if score #regeneration_ticks switch.data matches 116 run clone 3939 48 3939 4061 48 4061 3939 148 3939 replace force
 execute if score #regeneration_ticks switch.data matches 118 run clone 3939 49 3939 4061 49 4061 3939 149 3939 replace force
 execute if score #regeneration_ticks switch.data matches 120 run clone 3939 50 3939 4061 50 4061 3939 150 3939 replace force
-execute if score #regeneration_ticks switch.data matches 122 run clone 3939 51 3939 4061 51 4061 3939 151 3939 replace force
 
-execute if score #regeneration_ticks switch.data matches 122 run kill @e[type=item]
-execute if score #regeneration_ticks switch.data matches 122 run forceload remove 3939 3939 4061 4061
-execute if score #regeneration_ticks switch.data matches 122 run scoreboard players reset #regeneration_ticks switch.data
+execute if score #regeneration_ticks switch.data matches 122.. run kill @e[type=item]
+execute if score #regeneration_ticks switch.data matches 122.. run forceload remove 3939 3939 4061 4061
+execute if score #regeneration_ticks switch.data matches 122.. run scoreboard players reset #regeneration_ticks switch.data
 
 execute if score #regeneration_ticks switch.data matches 1.. run schedule function switch:maps/survival/mushroom_plains/regenerate 1t
 

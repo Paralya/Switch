@@ -247,7 +247,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 
 
 # Execute the function
-generate_clone_survival_folder("dark_forest_hills_test", (39000, 0, 39000), (39143, 69, 39221), 100)
+generate_clone_survival_folder("dark_forest_hills_test", (39000, 0, 39000), (39143, 69, 39221), 100, divider = 5)
 generate_clone_survival_folder("laser_game", (499, 0, 499), (551, 43, 551), 91)
 generate_clone_survival_folder("pitchout_1", (950, 0, 1050), (1050, 44, 1150), 95)
 #1408 0 1423 1592 99 1578
@@ -256,6 +256,37 @@ generate_clone_survival_folder("traitor_original", (1408, 0, 1423), (1592, 99, 1
 generate_clone_survival_folder("zone_51", (1947, 0, 1937), (2055, 70, 2063), 100)
 #2459 0 2452 2545 85 2547
 generate_clone_survival_folder("spectre_original", (2459, 0, 2452), (2545, 85, 2547), 100)
-generate_fill_survival_folder("glass_runner", (2750, -64, 2750), (3250, 384, 3250), "air", "#switch:glassrunner/glass", 10)
+generate_fill_survival_folder("glass_runner", (2750, -64, 2750), (3250, 384, 3250), "air", "#switch:glassrunner/glass", divider = 10)
+#3939 0 3939 4061 50 4061
+generate_clone_survival_folder("mushroom_plains", (3939, 0, 3939), (4061, 50, 4061), 100)
+#5934 0 5933 6063 73 6067
+generate_clone_survival_folder("friends_black_ball", (5934, 0, 5933), (6063, 73, 6067), 100, divider = 4)
+#6970 0 6970 7030 49 7030
+generate_clone_survival_folder("enchanting_island", (6970, 0, 6970), (7030, 49, 7030), 100)
+#7977 0 7976 8025 31 8024
+generate_clone_survival_folder("friends_oneforall", (7977, 0, 7976), (8025, 31, 8024), 100)
+#9940 0 9940 10060 64 10060
+generate_clone_survival_folder("warden_forest", (9940, 0, 9940), (10060, 64, 10060), 100)
+#10964 0 10968 11029 42 11033
+generate_clone_survival_folder("friends_pvpbox_ice", (10964, 0, 10968), (11029, 42, 11033), 100)
+#11957 0 11965 12047 67 12055
+generate_clone_survival_folder("friends_pvpbox_hills", (11957, 0, 11965), (12047, 67, 12055), 100)
+#12955 0 12955 13046 33 13045
+generate_clone_survival_folder("friends_pvpbox_end", (12955, 0, 12955), (13046, 33, 13045), 100)
+#13901 0 13901 14099 255 14099
+generate_fill_survival_folder("rush_the_point_1", (13901, 0, 13901), (14099, 255, 14099), "air", "#switch:rush_the_point/placed", divider = 2)
+#16960 0 16960 17040 45 17040
+generate_clone_survival_folder("friends_cube_lobby", (16960, 0, 16960), (17040, 45, 17040), 100)
+#20862 0 20908 21132 95 21099
+generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100, divider = 5)
+
+
+
+
+
+
+
+
+
 
 

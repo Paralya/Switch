@@ -30,6 +30,7 @@ execute if data storage switch:main {map:"rush_the_point_1"} run function switch
 # execute if data storage switch:main {map:"friends_skywars_1"} run function switch:maps/adventure/friends_skywars_1/
 # execute if data storage switch:main {map:"friends_skywars_2"} run function switch:maps/adventure/friends_skywars_2/
 execute if data storage switch:main {map:"friends_cube_lobby"} run function switch:maps/survival/friends_cube_lobby/
+execute if data storage switch:main {map:"baby_park"} run function switch:maps/adventure/baby_park/
 execute if data storage switch:main {map:"bowser_castle"} run function switch:maps/adventure/bowser_castle/
 execute if data storage switch:main {map:"snow_travel"} run function switch:maps/adventure/snow_travel/
 execute if data storage switch:main {map:"cathedrale_liege"} run function switch:maps/adventure/cathedrale_liege/
@@ -112,7 +113,6 @@ execute if data storage switch:main {map:"hills_land"} run function switch:maps/
 execute if data storage switch:main {map:"airship_fortress"} run function switch:maps/adventure/airship_fortress/
 execute if data storage switch:main {map:"dk_mountain"} run function switch:maps/adventure/dk_mountain/
 execute if data storage switch:main {map:"clock_circuit"} run function switch:maps/adventure/clock_circuit/
-execute if data storage switch:main {map:"baby_park"} run function switch:maps/adventure/baby_park/
 execute if data storage switch:main {map:"rainbow_road"} run function switch:maps/adventure/rainbow_road/
 execute if data storage switch:main {map:"trackmania_stadium_1"} run function switch:maps/adventure/trackmania_stadium_1/
 execute if data storage switch:main {map:"dishorreur"} run function switch:maps/adventure/dishorreur/
