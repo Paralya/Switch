@@ -31,10 +31,6 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	if len(end_pos) != 3:
 		raise ValueError("end_pos should be a tuple with 3 elements")
 
-	# Check if the end_pos are valid
-	if end_pos[1] >= 100:
-		raise ValueError("end_pos should have y < 100")
-
 	## Create the folder in the survival folder if it doesn't exist
 	if not os.path.exists(f"survival/{name}"):
 		os.mkdir(f"survival/{name}")
@@ -103,7 +99,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 		for k in c:
 
 			# Write the clone command
-			f.write(f"execute if score #regeneration_ticks switch.data matches {i} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
+			f.write(f"execute if score #regeneration_ticks switch.data matches {i+z} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
 			z += 1
 
 		# Increment the regeneration tick (x2 for every two ticks)
@@ -247,7 +243,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 
 
 # Execute the function
-generate_clone_survival_folder("dark_forest_hills_test", (39000, 0, 39000), (39143, 69, 39221), 100, divider = 5)
+generate_clone_survival_folder("dark_forest_hills_test", (39000, 0, 39000), (39143, 69, 39221), 100, divider = 4)
 generate_clone_survival_folder("laser_game", (499, 0, 499), (551, 43, 551), 91)
 generate_clone_survival_folder("pitchout_1", (950, 0, 1050), (1050, 44, 1150), 95)
 #1408 0 1423 1592 99 1578
@@ -278,11 +274,17 @@ generate_fill_survival_folder("rush_the_point_1", (13901, 0, 13901), (14099, 255
 #16960 0 16960 17040 45 17040
 generate_clone_survival_folder("friends_cube_lobby", (16960, 0, 16960), (17040, 45, 17040), 100)
 #20862 0 20908 21132 95 21099
-generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100, divider = 5)
-
-
-
-
+generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100, divider = 4)
+#21888 0 21888 22114 81 22133
+generate_clone_survival_folder("bowser_castle", (21888, 0, 21888), (22114, 81, 22133), 100, divider = 2)
+#22896 0 22904 23103 86 23109
+generate_clone_survival_folder("snow_travel", (22896, 0, 22904), (23103, 86, 23109), 100, divider = 4)
+#25961 -64 25944 26099 100 26028
+generate_clone_survival_folder("cathedrale_liege", (25961, -64, 25944), (26099, 100, 26028), 100, divider = 2)
+#26982 0 26969 27018 61 27031
+generate_clone_survival_folder("layers_1", (26982, 0, 26969), (27018, 61, 27031), 100)
+#27969 63 27969 28031 82 28031
+generate_clone_survival_folder("spleef_1", (27969, 63, 27969), (28031, 82, 28031), 87)
 
 
 
