@@ -419,6 +419,7 @@ execute if score #rg_traitor_original switch.data matches 420.. run forceload re
 execute if score #rg_traitor_original switch.data matches 420.. run forceload remove 1454 1423 1500 1578
 execute if score #rg_traitor_original switch.data matches 420.. run forceload remove 1500 1423 1546 1578
 execute if score #rg_traitor_original switch.data matches 420.. run forceload remove 1546 1423 1592 1578
+execute if score #rg_traitor_original switch.data matches 420.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'traitor_original' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_traitor_original switch.data matches 420.. run scoreboard players reset #rg_traitor_original switch.data
 
 execute if score #rg_traitor_original switch.data matches 1.. run schedule function switch:maps/survival/traitor_original/regenerate 1t

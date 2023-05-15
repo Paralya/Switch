@@ -141,6 +141,7 @@ execute if score #rg_friends_oneforall switch.data matches 148.. run forceload r
 execute if score #rg_friends_oneforall switch.data matches 148.. run forceload remove 7989 7976 8001 8024
 execute if score #rg_friends_oneforall switch.data matches 148.. run forceload remove 8001 7976 8013 8024
 execute if score #rg_friends_oneforall switch.data matches 148.. run forceload remove 8013 7976 8025 8024
+execute if score #rg_friends_oneforall switch.data matches 148.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_oneforall' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_oneforall switch.data matches 148.. run scoreboard players reset #rg_friends_oneforall switch.data
 
 execute if score #rg_friends_oneforall switch.data matches 1.. run schedule function switch:maps/survival/friends_oneforall/regenerate 1t

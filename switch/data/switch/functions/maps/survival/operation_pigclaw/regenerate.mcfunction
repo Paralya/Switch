@@ -8467,6 +8467,7 @@ execute if score #rg_operation_pigclaw switch.data matches 8220.. run forceload 
 execute if score #rg_operation_pigclaw switch.data matches 8220.. run forceload remove 36309 35668 36319 36180
 execute if score #rg_operation_pigclaw switch.data matches 8220.. run forceload remove 36319 35668 36330 36180
 execute if score #rg_operation_pigclaw switch.data matches 8220.. run forceload remove 36330 35668 36340 36180
+execute if score #rg_operation_pigclaw switch.data matches 8220.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'operation_pigclaw' vient de finir de se régénérer en ","color":"yellow"},{"text":"6","color":"gold"},{"text":"m","color":"yellow"},{"text":"51","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_operation_pigclaw switch.data matches 8220.. run scoreboard players reset #rg_operation_pigclaw switch.data
 
 execute if score #rg_operation_pigclaw switch.data matches 1.. run schedule function switch:maps/survival/operation_pigclaw/regenerate 1t

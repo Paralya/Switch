@@ -941,6 +941,7 @@ execute if score #rg_jayl_dark_forest switch.data matches 920.. run forceload re
 execute if score #rg_jayl_dark_forest switch.data matches 920.. run forceload remove 33944 33873 33963 34000
 execute if score #rg_jayl_dark_forest switch.data matches 920.. run forceload remove 33963 33873 33981 34000
 execute if score #rg_jayl_dark_forest switch.data matches 920.. run forceload remove 33981 33873 34000 34000
+execute if score #rg_jayl_dark_forest switch.data matches 920.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'jayl_dark_forest' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"46","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_jayl_dark_forest switch.data matches 920.. run scoreboard players reset #rg_jayl_dark_forest switch.data
 
 execute if score #rg_jayl_dark_forest switch.data matches 1.. run schedule function switch:maps/survival/jayl_dark_forest/regenerate 1t

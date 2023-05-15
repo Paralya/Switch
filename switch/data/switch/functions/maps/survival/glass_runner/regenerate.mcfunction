@@ -4513,6 +4513,7 @@ execute if score #rg_glass_runner switch.data matches 469.. run forceload remove
 execute if score #rg_glass_runner switch.data matches 469.. run forceload remove 3100 2750 3150 3250
 execute if score #rg_glass_runner switch.data matches 469.. run forceload remove 3150 2750 3200 3250
 execute if score #rg_glass_runner switch.data matches 469.. run forceload remove 3200 2750 3250 3250
+execute if score #rg_glass_runner switch.data matches 469.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'glass_runner' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_glass_runner switch.data matches 469.. run scoreboard players reset #rg_glass_runner switch.data
 
 execute if score #rg_glass_runner switch.data matches 1.. run schedule function switch:maps/survival/glass_runner/regenerate 1t

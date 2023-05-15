@@ -684,6 +684,7 @@ execute if score #rg_cathedrale_liege switch.data matches 680.. run forceload re
 execute if score #rg_cathedrale_liege switch.data matches 680.. run forceload remove 25996 25944 26030 26028
 execute if score #rg_cathedrale_liege switch.data matches 680.. run forceload remove 26030 25944 26064 26028
 execute if score #rg_cathedrale_liege switch.data matches 680.. run forceload remove 26064 25944 26099 26028
+execute if score #rg_cathedrale_liege switch.data matches 680.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'cathedrale_liege' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_cathedrale_liege switch.data matches 680.. run scoreboard players reset #rg_cathedrale_liege switch.data
 
 execute if score #rg_cathedrale_liege switch.data matches 1.. run schedule function switch:maps/survival/cathedrale_liege/regenerate 1t

@@ -195,6 +195,7 @@ execute if score #rg_zonweeb_main switch.data matches 200.. run forceload remove
 execute if score #rg_zonweeb_main switch.data matches 200.. run forceload remove 31975 31950 32000 32050
 execute if score #rg_zonweeb_main switch.data matches 200.. run forceload remove 32000 31950 32025 32050
 execute if score #rg_zonweeb_main switch.data matches 200.. run forceload remove 32025 31950 32050 32050
+execute if score #rg_zonweeb_main switch.data matches 200.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'zonweeb_main' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_zonweeb_main switch.data matches 200.. run scoreboard players reset #rg_zonweeb_main switch.data
 
 execute if score #rg_zonweeb_main switch.data matches 1.. run schedule function switch:maps/survival/zonweeb_main/regenerate 1t

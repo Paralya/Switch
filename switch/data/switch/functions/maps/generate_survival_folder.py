@@ -118,23 +118,27 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 		minY += 1
 		j += 1
 
+	# Print how long it will take to regenerate the map
+	secs = i // 20
+	mins = ""
+	if secs >= 60:
+		if (secs % 60) < 10:
+			mins = f" ({secs // 60}m0{secs % 60}s)"
+		else:
+			mins = f" ({secs // 60}m{secs % 60}s)"
+	print(f"{colors.YELLOW}'{name}'{colors.GREEN} will take {colors.RED}{i}{colors.GREEN} ticks to regenerate {colors.RED}({secs} seconds{mins}){colors.RESET} [/clone]")
+
 	# Write the last lines
 	f.write("\n")
 	f.write(f"{base} {i}.. run kill @e[type=item]\n")
 	for x1, x2, z1, z2 in c:
 		f.write(f"{base} {i}.. run forceload remove {x1} {x2} {z1} {z2}\n")
+	f.write(f"{base} {i}.. run tellraw @a[tag=convention.debug] " + '["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map \'' + name + '\' vient de finir de se régénérer en ","color":"yellow"},{"text":"' + str(secs // 60) + '","color":"gold"},{"text":"m","color":"yellow"},{"text":"' + str(secs % 60) + '","color":"gold"},{"text":"s","color":"yellow"}]\n')
 	f.write(f"{base} {i}.. run scoreboard players reset #rg_{name} switch.data\n")
 	f.write("\n")
 	f.write(f"{base} 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
 	f.write("\n")
 	f.close()
-
-	# Print how long it will take to regenerate the map
-	secs = i // 20
-	mins = ""
-	if secs >= 60:
-		mins = f" ({secs // 60}m{secs % 60}s)"
-	print(f"{colors.YELLOW}'{name}'{colors.GREEN} will take {colors.RED}{i}{colors.GREEN} ticks to regenerate {colors.RED}({secs} seconds{mins}){colors.RESET} [/clone]")
 
 	# Return
 	return None
@@ -239,24 +243,27 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 		# Increment the y coordinate of the fill command
 		minY += 1
 
+	# Print how long it will take to regenerate the map
+	secs = i // 20
+	mins = ""
+	if secs >= 60:
+		if (secs % 60) < 10:
+			mins = f" ({secs // 60}m0{secs % 60}s)"
+		else:
+			mins = f" ({secs // 60}m{secs % 60}s)"
+	print(f"{colors.YELLOW}'{name}'{colors.GREEN} will take {colors.RED}{i}{colors.GREEN} ticks to regenerate {colors.RED}({secs} seconds{mins}){colors.RESET} [/fill]")
+
 	# Write the last lines
 	f.write("\n")
 	f.write(f"{base} {i}.. run kill @e[type=item]\n")
 	for x1, x2, z1, z2 in c:
 		f.write(f"{base} {i}.. run forceload remove {x1} {x2} {z1} {z2}\n")
+	f.write(f"{base} {i}.. run tellraw @a[tag=convention.debug] " + '["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map \'' + name + '\' vient de finir de se régénérer en ","color":"yellow"},{"text":"' + str(secs // 60) + '","color":"gold"},{"text":"m","color":"yellow"},{"text":"' + str(secs % 60) + '","color":"gold"},{"text":"s","color":"yellow"}]\n')
 	f.write(f"{base} {i}.. run scoreboard players reset #rg_{name} switch.data\n")
 	f.write("\n")
 	f.write(f"{base} 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
 	f.write("\n")
 	f.close()
-
-	# Print how long it will take to regenerate the map
-	secs = i // 20
-	mins = ""
-	if secs >= 60:
-		secs %= 60
-		mins = f" ({secs // 60}m{secs % 60}s)"
-	print(f"{colors.YELLOW}'{name}'{colors.GREEN} will take {colors.RED}{i}{colors.GREEN} ticks to regenerate {colors.RED}({secs} seconds{mins}){colors.RESET} [/fill]")
 
 	# Return
 	return None
@@ -320,11 +327,14 @@ generate_clone_survival_folder("pitch_creep_2", (37986, 0, 37974), (38014, 16, 3
 generate_clone_survival_folder("dark_forest_hills", (39000, 0, 39000), (39143, 69, 39221), 100, divider = 10)
 #39900 -64 39900 40100 100 40100
 generate_clone_survival_folder("paralya_lobby_noel", (39900, -64, 39900), (40100, 100, 40100), 100, divider = 10)
-
-
-
-
-
+#41000 -63 40892 41267 89 41000
+generate_clone_survival_folder("huge_cargo", (41000, -64, 40892), (41267, 89, 41000), 100, divider = 8)
+#41935 0 41942 42065 38 42058
+generate_clone_survival_folder("ghost_town", (41935, 0, 41942), (42065, 38, 42058), 100, divider = 2)
+#45788 -64 45849 46136 126 46187
+generate_clone_survival_folder("taroatlas_soviet_prison", (45788, -64, 45849), (46136, 126, 46187), 128, divider = 25)
+#46971 0 46971 47036 42 47042
+generate_clone_survival_folder("desert_grand_library", (46971, 0, 46971), (47036, 42, 47042), 100, divider = 2)
 
 
 

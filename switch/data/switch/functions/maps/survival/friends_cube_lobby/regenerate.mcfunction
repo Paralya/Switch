@@ -199,6 +199,7 @@ execute if score #rg_friends_cube_lobby switch.data matches 204.. run forceload 
 execute if score #rg_friends_cube_lobby switch.data matches 204.. run forceload remove 16980 16960 17000 17040
 execute if score #rg_friends_cube_lobby switch.data matches 204.. run forceload remove 17000 16960 17020 17040
 execute if score #rg_friends_cube_lobby switch.data matches 204.. run forceload remove 17020 16960 17040 17040
+execute if score #rg_friends_cube_lobby switch.data matches 204.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_cube_lobby' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_cube_lobby switch.data matches 204.. run scoreboard players reset #rg_friends_cube_lobby switch.data
 
 execute if score #rg_friends_cube_lobby switch.data matches 1.. run schedule function switch:maps/survival/friends_cube_lobby/regenerate 1t

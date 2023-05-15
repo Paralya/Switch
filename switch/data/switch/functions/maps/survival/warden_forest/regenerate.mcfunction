@@ -276,6 +276,7 @@ execute if score #rg_warden_forest switch.data matches 280.. run forceload remov
 execute if score #rg_warden_forest switch.data matches 280.. run forceload remove 9970 9940 10000 10060
 execute if score #rg_warden_forest switch.data matches 280.. run forceload remove 10000 9940 10030 10060
 execute if score #rg_warden_forest switch.data matches 280.. run forceload remove 10030 9940 10060 10060
+execute if score #rg_warden_forest switch.data matches 280.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'warden_forest' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"14","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_warden_forest switch.data matches 280.. run scoreboard players reset #rg_warden_forest switch.data
 
 execute if score #rg_warden_forest switch.data matches 1.. run schedule function switch:maps/survival/warden_forest/regenerate 1t

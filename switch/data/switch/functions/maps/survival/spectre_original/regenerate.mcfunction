@@ -362,6 +362,7 @@ execute if score #rg_spectre_original switch.data matches 364.. run forceload re
 execute if score #rg_spectre_original switch.data matches 364.. run forceload remove 2480 2452 2502 2547
 execute if score #rg_spectre_original switch.data matches 364.. run forceload remove 2502 2452 2524 2547
 execute if score #rg_spectre_original switch.data matches 364.. run forceload remove 2524 2452 2545 2547
+execute if score #rg_spectre_original switch.data matches 364.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'spectre_original' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_spectre_original switch.data matches 364.. run scoreboard players reset #rg_spectre_original switch.data
 
 execute if score #rg_spectre_original switch.data matches 1.. run schedule function switch:maps/survival/spectre_original/regenerate 1t

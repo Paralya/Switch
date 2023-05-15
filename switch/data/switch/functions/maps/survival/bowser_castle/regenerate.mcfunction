@@ -345,6 +345,7 @@ execute if score #rg_bowser_castle switch.data matches 348.. run forceload remov
 execute if score #rg_bowser_castle switch.data matches 348.. run forceload remove 21944 21888 22001 22133
 execute if score #rg_bowser_castle switch.data matches 348.. run forceload remove 22001 21888 22058 22133
 execute if score #rg_bowser_castle switch.data matches 348.. run forceload remove 22058 21888 22114 22133
+execute if score #rg_bowser_castle switch.data matches 348.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'bowser_castle' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_bowser_castle switch.data matches 348.. run scoreboard players reset #rg_bowser_castle switch.data
 
 execute if score #rg_bowser_castle switch.data matches 1.. run schedule function switch:maps/survival/bowser_castle/regenerate 1t

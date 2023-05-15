@@ -99,6 +99,7 @@ execute if score #rg_pitchout_1 switch.data matches 109 run clone 1000 44 1050 1
 execute if score #rg_pitchout_1 switch.data matches 110.. run kill @e[type=item]
 execute if score #rg_pitchout_1 switch.data matches 110.. run forceload remove 950 1050 1000 1150
 execute if score #rg_pitchout_1 switch.data matches 110.. run forceload remove 1000 1050 1050 1150
+execute if score #rg_pitchout_1 switch.data matches 110.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'pitchout_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_pitchout_1 switch.data matches 110.. run scoreboard players reset #rg_pitchout_1 switch.data
 
 execute if score #rg_pitchout_1 switch.data matches 1.. run schedule function switch:maps/survival/pitchout_1/regenerate 1t
