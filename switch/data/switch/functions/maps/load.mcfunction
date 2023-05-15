@@ -48,7 +48,6 @@ execute if data storage switch:main {map:"dark_forest_hills"} run function switc
 execute if data storage switch:main {map:"paralya_lobby_noel"} run function switch:maps/adventure/paralya_lobby_noel/
 execute if data storage switch:main {map:"huge_cargo"} run function switch:maps/adventure/huge_cargo/
 # execute if data storage switch:main {map:"ghost_town"} run function switch:maps/adventure/ghost_town/
-execute if data storage switch:main {map:"abandoned_city_spawn_circle"} run function switch:maps/adventure/abandoned_city_spawn_circle/
 execute if data storage switch:main {map:"taroatlas_soviet_prison"} run function switch:maps/adventure/taroatlas_soviet_prison/
 # execute if data storage switch:main {map:"desert_grand_library"} run function switch:maps/adventure/desert_grand_library/
 execute if data storage switch:main {map:"new_grounds"} run function switch:maps/adventure/new_grounds/
@@ -118,6 +117,7 @@ execute if data storage switch:main {map:"rainbow_road"} run function switch:map
 execute if data storage switch:main {map:"trackmania_stadium_1"} run function switch:maps/adventure/trackmania_stadium_1/
 execute if data storage switch:main {map:"dishorreur"} run function switch:maps/adventure/dishorreur/
 execute if data storage switch:main {map:"trackmania_stadium_2"} run function switch:maps/adventure/trackmania_stadium_2/
+execute if data storage switch:main {map:"abandoned_city_spawn_circle"} run function switch:maps/adventure/abandoned_city_spawn_circle/
 execute if data storage switch:main {map:"abandoned_city"} run function switch:maps/adventure/abandoned_city/
 execute if data storage switch:main {map:"boat_race_2"} run function switch:maps/adventure/boat_race_2/
 
