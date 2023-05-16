@@ -335,11 +335,16 @@ generate_clone_survival_folder("ghost_town", (41935, 0, 41942), (42065, 38, 4205
 generate_clone_survival_folder("taroatlas_soviet_prison", (45788, -64, 45849), (46136, 126, 46187), 128, divider = 25)
 #46971 0 46971 47036 42 47042
 generate_clone_survival_folder("desert_grand_library", (46971, 0, 46971), (47036, 42, 47042), 100, divider = 2)
-
-
-
-
-
+#47930 0 47930 48070 84 48070
+generate_clone_survival_folder("new_grounds", (47930, 0, 47930), (48070, 84, 48070), 100, divider = 4)
+#48900 0 48900 49100 47 49100
+generate_clone_survival_folder("cookie_wars", (48900, 0, 48900), (49100, 47, 49100), 100, divider = 4)
+#49906 0 49918 50145 60 50103
+generate_clone_survival_folder("snow_hills", (49906, 0, 49918), (50145, 60, 50103), 100, divider = 8)
+#51899 -64 51853 52115 92 52071
+generate_clone_survival_folder("vilarles_castillo", (51899, -64, 51853), (52115, 92, 52071), 100, divider = 10)
+#52915 0 52876 53040 57 53094
+generate_clone_survival_folder("zonweeb_highschool", (52915, 0, 52876), (53040, 57, 53094), 100, divider = 4)
 
 
 
