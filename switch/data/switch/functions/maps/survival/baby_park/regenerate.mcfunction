@@ -1002,7 +1002,7 @@ execute if score #rg_baby_park switch.data matches 980.. run forceload remove 21
 execute if score #rg_baby_park switch.data matches 980.. run forceload remove 21051 20908 21078 21099
 execute if score #rg_baby_park switch.data matches 980.. run forceload remove 21078 20908 21105 21099
 execute if score #rg_baby_park switch.data matches 980.. run forceload remove 21105 20908 21132 21099
-execute if score #rg_baby_park switch.data matches 980.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'baby_park' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"49","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_baby_park switch.data matches 980.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'baby_park' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"49","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_baby_park switch.data matches 980.. run scoreboard players reset #rg_baby_park switch.data
 
 execute if score #rg_baby_park switch.data matches 1.. run schedule function switch:maps/survival/baby_park/regenerate 1t

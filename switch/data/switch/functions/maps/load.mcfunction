@@ -57,46 +57,6 @@ execute if data storage switch:main {map:"cookie_wars"} run function switch:maps
 # execute if data storage switch:main {map:"zonweeb_highschool"} run function switch:maps/adventure/zonweeb_highschool/
 # EnigmaLab 1 (54000)
 # Sumo Lawef (55000)
-# CSGO Map, faut trouver le nom (56000)
-# Find the shulker (57000)
-# Scartmania (58000)
-# Colliseum (59000)
-# Scary Labyrinth (60000)
-# SNK Tower (61000)
-# Blindtest (62000)
-# Drive the pig (63000)
-# Kart Racer relai (64000)
-# Orange rings (65000)
-# Find the wool (66000)
-# SNK Lab s9 (67000)
-# Zoo enter (68000)
-# Warden Escape Statue (69000)
-# Giant Zoo (70000)
-# Hider mansion (71000)
-# Nuketown (72000)
-# EnigmaLab 2 (73000)
-# Layers 2 (74000)
-# SNK Lab s11 (75000)
-# Fish the pig (76000)
-# Sky Island Tower (77000)
-# Sprucy Village (78000)
-# Survival Boat (79000)
-# Sky Tower (80000)
-# Purple Sky Island (81000)
-# Sea Artificial Island (82000)
-# Lava Castle (83000)
-# Spruce Dojo (84000)
-# Highland Mansion (85000)
-# Sakura House (86000)
-# Red Temple (87000)
-# Nature House (88000)
-# Flower Village (89000)
-# Japanese Village (90000)
-# Whity Lab (91000)
-# Snowy Village (92000)
-# Werewolf Village (93000)
-# Wyvern Towers (94000)
-
 
 
 # Maps that doesn't (always gamemode adventure):
@@ -120,5 +80,6 @@ execute if data storage switch:main {map:"trackmania_stadium_2"} run function sw
 execute if data storage switch:main {map:"abandoned_city_spawn_circle"} run function switch:maps/adventure/abandoned_city_spawn_circle/
 execute if data storage switch:main {map:"abandoned_city"} run function switch:maps/adventure/abandoned_city/
 execute if data storage switch:main {map:"boat_race_2"} run function switch:maps/adventure/boat_race_2/
+# CSGO Map, faut trouver le nom (56000)
 
 

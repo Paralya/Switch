@@ -1,72 +1,114 @@
 
-# generate_survival_folder.py
-
 # Stop if the execution is not in the same folder as the script
 import os
 if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 	print("Please execute this script in the same folder as the script")
 	exit()
 
-class colors:
-	RED = "\033[31m"
-	GREEN = "\033[32m"
-	YELLOW = "\033[33m"
-	BLUE = "\033[34m"
-	RESET = "\033[39m"
+# Create the the colors variables
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+RESET = "\033[39m"
 
+def convert_tick_to_strings(tick: int, name: str) -> tuple:
+	""" Converts "tick" in entry to formatted strings
+	such as "XX seconds (XXmXXs)" or "XX seconds"
+	if the tick is less than 60
+	and a tellraw command to display the time
 
-# Create the function that generates a folder for a gamemode with regeneration using /clone
-def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, divider: int = 1):
-	""" Generates a folder for a gamemode using /clone for regeneration
 	Args:
-		name				(str)	: The name of the gamemode
-		start_pos			(tuple)	: The coordinates of the start position (y should be 0)
-		end_pos				(tuple)	: The coordinates of the end position (y should be < 100)
-		paste_start_height	(int)	: The y coordinate where the regeneration starts
-		divider				(int)	: How the coordinates are splitted (default: 1)
-
+		tick (int)	: The tick to convert
+		name (str)	: The name of the map
 	Returns:
-		None
+		(str, str)	: The formatted strings
 	"""
-	## Check the arguments
-	# Check start_pos
-	if len(start_pos) != 3:
-		raise ValueError("start_pos should be a tuple with 3 elements")
 
-	# Check end_pos
-	if len(end_pos) != 3:
-		raise ValueError("end_pos should be a tuple with 3 elements")
+	# Get variables
+	secs = tick // 20
+	isec = secs % 60
+	imin = secs // 60
 
-	## Create the folder in the survival folder if it doesn't exist
-	if not os.path.exists(f"survival/{name}"):
-		os.mkdir(f"survival/{name}")
+	# Convert the tick to a string
+	secsString = str(isec)
+	if isec < 10:
+		secsString = f"0{isec}"
+	minsString = str(imin)
+	if imin < 10:
+		minsString = f"0{imin}"
 
-	## Create tp_coords variable
-	x = int((start_pos[0] + end_pos[0] + 1000) / 2 - 500)
-	y = int(((start_pos[1] + end_pos[1] + 1000) / 2 - 500) + paste_start_height)
-	z = int((start_pos[2] + end_pos[2] + 1000) / 2 - 500)
-	tp_coords = f"[{x}.0d, {y}.0d, {z}.0d]"
+	# Create the parenthesis string
+	parenthesis = ""
+	if secs >= 60:
+		parenthesis = f" ({minsString}m{secsString}s)"
+	
+	# Create the tellraw string
+	tellraw = "tellraw @a " + '["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map \'' + name + '\' vient de finir de se régénérer en ","color":"yellow"},{"text":"' + minsString + '","color":"gold"},{"text":"m","color":"yellow"},{"text":"' + secsString + '","color":"gold"},{"text":"s","color":"yellow"}]\n'
 
-	## Create the base variable
-	base = f"execute if score #rg_{name} switch.data matches"
+	# Return
+	return (f"{secs} seconds{parenthesis}", tellraw)
 
-	## Create the ".mcfunction" file
+def createFolderIfNotExists(folder_path: str):
+	if not os.path.exists(folder_path):
+		os.mkdir(folder_path)
+	return None
+
+def createTpCoordsString(start_pos: tuple, end_pos: tuple, paste_start_height:int = 0) -> tuple:
+	""" Creates a string with the tp coordinates
+	Args:
+		start_pos (tuple)		: The start position of the regeneration area
+		end_pos (tuple)			: The end position of the regeneration area
+	Returns:
+		(str, int, int, int)	: The tp coordinates string and the x, y and z coordinates
+	"""
+	x = int((start_pos[0] + end_pos[0]) / 2)
+	y = int((start_pos[1] + end_pos[1]) / 2 + paste_start_height)
+	z = int((start_pos[2] + end_pos[2]) / 2)
+	return f"[{x}.0d, {y}.0d, {z}.0d]", x, y, z
+
+def createMainFile(name: str) -> None:
+	""" Creates the ".mcfunction" file
+	Args:
+		name (str)	: The name of the map
+	Returns:
+		(str)		: The content of the file
+	"""
 	f = open(f"survival/{name}/.mcfunction", "w")
 	f.write("\n")
 	f.write('summon marker 0 0 0 {Tags:["switch.selected_map"]}\n')
 	f.write(f'execute as @e[type=marker,tag=switch.selected_map] at @s run function switch:maps/survival/{name}/teleport_players\n')
 	f.write("\n")
 	f.close()
+	return None
 
-	## Create the "teleport_players.mcfunction" file
+def createTeleportPlayersFile(name: str, tp_coords: str) -> None:
+	""" Creates the "teleport_players.mcfunction" file
+	Args:
+		name (str)		: The name of the map
+		tp_coords (str)	: The tp coordinates string
+	Returns:
+		(str)			: The content of the file
+	"""
 	f = open(f"survival/{name}/teleport_players.mcfunction", "w")
 	f.write("\n")
 	f.write(f'data modify entity @s Pos set value {tp_coords}\n')
 	f.write(f'execute at @s run tp @a ~ ~ ~\n')
 	f.write("\n")
 	f.close()
+	return None
 
-	## Create the "regenerate.mcfunction" file
+def createSplittedCoordinates(start_pos: tuple, end_pos: tuple, divider: int) -> list:
+	""" Creates a list with the splitted coordinates of
+	the regeneration area depending on the divider argument
+
+	Args:
+		start_pos (tuple)	: The start position of the regeneration area
+		end_pos (tuple)		: The end position of the regeneration area
+		divider (int)		: How the coordinates are splitted (default: 1)
+	Returns:
+		(list)				: The splitted coordinates
+	"""
 	# Prepare the start and end coordinates
 	c1 = [start_pos[0], start_pos[2], end_pos[0], end_pos[2]]
 	d = (c1[2] - c1[0]) / divider
@@ -84,6 +126,43 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 
 		# Append the coordinates to the list
 		c.append([ x1, x2, z1, z2 ])
+
+	# Return
+	return c
+
+# Create the function that generates a folder for a gamemode with regeneration using /clone
+def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, divider: int = 1):
+	""" Generates a folder for a gamemode using /clone for regeneration
+	Args:
+		name				(str)	: The name of the gamemode
+		start_pos			(tuple)	: The coordinates of the start position (y should be 0)
+		end_pos				(tuple)	: The coordinates of the end position (y should be < 100)
+		paste_start_height	(int)	: The y coordinate where the regeneration starts
+		divider				(int)	: How the coordinates are splitted (default: 1)
+
+	Returns:
+		None
+	"""
+	## Check the arguments
+	if len(start_pos) != 3:
+		raise ValueError("start_pos should be a tuple with 3 elements")
+	if len(end_pos) != 3:
+		raise ValueError("end_pos should be a tuple with 3 elements")
+
+	## Create the folder in the survival folder if it doesn't exist
+	createFolderIfNotExists(f"survival/{name}")
+
+	## Create the base variable
+	base = f"execute if score #rg_{name} switch.data matches"
+
+	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
+	createMainFile(name)
+	tp_coords, x, y, z = createTpCoordsString(start_pos, end_pos, paste_start_height)
+	createTeleportPlayersFile(name, tp_coords)
+
+	## Create the "regenerate.mcfunction" file
+	# Create the splitted coordinates
+	c = createSplittedCoordinates(start_pos, end_pos, divider)
 
 	# Write the first lines
 	f = open(f"survival/{name}/regenerate.mcfunction", "w")
@@ -119,21 +198,15 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 		j += 1
 
 	# Print how long it will take to regenerate the map
-	secs = i // 20
-	mins = ""
-	if secs >= 60:
-		if (secs % 60) < 10:
-			mins = f" ({secs // 60}m0{secs % 60}s)"
-		else:
-			mins = f" ({secs // 60}m{secs % 60}s)"
-	print(f"{colors.YELLOW}'{name}'{colors.GREEN} will take {colors.RED}{i}{colors.GREEN} ticks to regenerate {colors.RED}({secs} seconds{mins}){colors.RESET} [/clone]")
+	timeStr, tellraw = convert_tick_to_strings(i, name)
+	print(f"{YELLOW}'{name}'{GREEN} will take {RED}{i}{GREEN} ticks to regenerate {RED}[{timeStr}]{RESET} [/clone]")
 
 	# Write the last lines
 	f.write("\n")
 	f.write(f"{base} {i}.. run kill @e[type=item]\n")
 	for x1, x2, z1, z2 in c:
 		f.write(f"{base} {i}.. run forceload remove {x1} {x2} {z1} {z2}\n")
-	f.write(f"{base} {i}.. run tellraw @a[tag=convention.debug] " + '["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map \'' + name + '\' vient de finir de se régénérer en ","color":"yellow"},{"text":"' + str(secs // 60) + '","color":"gold"},{"text":"m","color":"yellow"},{"text":"' + str(secs % 60) + '","color":"gold"},{"text":"s","color":"yellow"}]\n')
+	f.write(f"{base} {i}.. run {tellraw}")
 	f.write(f"{base} {i}.. run scoreboard players reset #rg_{name} switch.data\n")
 	f.write("\n")
 	f.write(f"{base} 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
@@ -167,52 +240,19 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 		raise ValueError("end_pos should be a tuple with 3 elements")
 
 	## Create the folder in the survival folder if it doesn't exist
-	if not os.path.exists(f"survival/{name}"):
-		os.mkdir(f"survival/{name}")
-
-	## Create tp_coords variable
-	x = int((start_pos[0] + end_pos[0] + 1000) / 2 - 500)
-	y = int((start_pos[1] + end_pos[1] + 1000) / 2 - 500)
-	z = int((start_pos[2] + end_pos[2] + 1000) / 2 - 500)
-	tp_coords = f"[{x}.0d, {y}.0d, {z}.0d]"
+	createFolderIfNotExists(f"survival/{name}")
 
 	## Create the base variable
 	base = f"execute if score #rg_{name} switch.data matches"
 
-	## Create the ".mcfunction" file
-	f = open(f"survival/{name}/.mcfunction", "w")
-	f.write("\n")
-	f.write('summon marker 0 0 0 {Tags:["switch.selected_map"]}\n')
-	f.write(f'execute as @e[type=marker,tag=switch.selected_map] at @s run function switch:maps/survival/{name}/teleport_players\n')
-	f.write("\n")
-	f.close()
-
-	## Create the "teleport_players.mcfunction" file
-	f = open(f"survival/{name}/teleport_players.mcfunction", "w")
-	f.write("\n")
-	f.write(f'data modify entity @s Pos set value {tp_coords}\n')
-	f.write(f'execute at @s run tp @a ~ ~ ~\n')
-	f.write("\n")
-	f.close()
+	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
+	createMainFile(name)
+	tp_coords, x, y, z = createTpCoordsString(start_pos, end_pos)
+	createTeleportPlayersFile(name, tp_coords)
 
 	## Create the "regenerate.mcfunction" file
-	# Prepare the start and end coordinates
-	c1 = [start_pos[0], start_pos[2], end_pos[0], end_pos[2]]
-	d = (c1[2] - c1[0]) / divider
-
 	# Create the splitted coordinates
-	c = []
-	for i in range(divider):
-
-		# Calculate x1 (the first x coordinate of the clone command)
-		x1 = round(c1[0] + d*i)
-		# Calculate x2, z1 and z2
-		x2 = c1[1]
-		z1 = round(c1[0] + d*(i+1))
-		z2 = c1[3]
-
-		# Append the coordinates to the list
-		c.append([ x1, x2, z1, z2 ])
+	c = createSplittedCoordinates(start_pos, end_pos, divider)
 
 	# Write the first lines
 	f = open(f"survival/{name}/regenerate.mcfunction", "w")
@@ -244,21 +284,15 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 		minY += 1
 
 	# Print how long it will take to regenerate the map
-	secs = i // 20
-	mins = ""
-	if secs >= 60:
-		if (secs % 60) < 10:
-			mins = f" ({secs // 60}m0{secs % 60}s)"
-		else:
-			mins = f" ({secs // 60}m{secs % 60}s)"
-	print(f"{colors.YELLOW}'{name}'{colors.GREEN} will take {colors.RED}{i}{colors.GREEN} ticks to regenerate {colors.RED}({secs} seconds{mins}){colors.RESET} [/fill]")
+	timeStr, tellraw = convert_tick_to_strings(i, name)
+	print(f"{YELLOW}'{name}'{GREEN} will take {RED}{i}{GREEN} ticks to regenerate {RED}[{timeStr}]{RESET} [/fill]")
 
 	# Write the last lines
 	f.write("\n")
 	f.write(f"{base} {i}.. run kill @e[type=item]\n")
 	for x1, x2, z1, z2 in c:
 		f.write(f"{base} {i}.. run forceload remove {x1} {x2} {z1} {z2}\n")
-	f.write(f"{base} {i}.. run tellraw @a[tag=convention.debug] " + '["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map \'' + name + '\' vient de finir de se régénérer en ","color":"yellow"},{"text":"' + str(secs // 60) + '","color":"gold"},{"text":"m","color":"yellow"},{"text":"' + str(secs % 60) + '","color":"gold"},{"text":"s","color":"yellow"}]\n')
+	f.write(f"{base} {i}.. run {tellraw}")
 	f.write(f"{base} {i}.. run scoreboard players reset #rg_{name} switch.data\n")
 	f.write("\n")
 	f.write(f"{base} 1.. run schedule function switch:maps/survival/{name}/regenerate 1t\n")
@@ -267,7 +301,6 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 
 	# Return
 	return None
-
 
 # Execute the function
 generate_clone_survival_folder("laser_game", (499, 0, 499), (551, 43, 551), 91, divider = 2)
@@ -345,7 +378,49 @@ generate_clone_survival_folder("snow_hills", (49906, 0, 49918), (50145, 60, 5010
 generate_clone_survival_folder("vilarles_castillo", (51899, -64, 51853), (52115, 92, 52071), 100, divider = 10)
 #52915 0 52876 53040 57 53094
 generate_clone_survival_folder("zonweeb_highschool", (52915, 0, 52876), (53040, 57, 53094), 100, divider = 4)
+#53977 0 53994 54008 40 54100
+generate_clone_survival_folder("enigma_lab_1", (53977, 0, 53994), (54008, 40, 54100), 100, divider = 2)
+#54979 0 54996 55020 39 55037
+generate_clone_survival_folder("sumo_lawef", (54979, 0, 54996), (55020, 39, 55037), 100, divider = 2)
 
 
 
+# Find the shulker (57000)
+# Scartmania (58000)
+# Colliseum (59000)
+# Scary Labyrinth (60000)
+# SNK Tower (61000)
+# Blindtest (62000)
+# Drive the pig (63000)
+# Kart Racer relai (64000)
+# Orange rings (65000)
+# Find the wool (66000)
+# SNK Lab s9 (67000)
+# Zoo enter (68000)
+# Warden Escape Statue (69000)
+# Giant Zoo (70000)
+# Hider mansion (71000)
+# Nuketown (72000)
+# EnigmaLab 2 (73000)
+# Layers 2 (74000)
+# SNK Lab s11 (75000)
+# Fish the pig (76000)
+# Sky Island Tower (77000)
+# Sprucy Village (78000)
+# Survival Boat (79000)
+# Sky Tower (80000)
+# Purple Sky Island (81000)
+# Sea Artificial Island (82000)
+# Lava Castle (83000)
+# Spruce Dojo (84000)
+# Highland Mansion (85000)
+# Sakura House (86000)
+# Red Temple (87000)
+# Nature House (88000)
+# Flower Village (89000)
+# Japanese Village (90000)
+# Whity Lab (91000)
+# Snowy Village (92000)
+# Werewolf Village (93000)
+# Wyvern Towers (94000)
 

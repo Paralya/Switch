@@ -313,7 +313,7 @@ execute if score #rg_friends_black_ball switch.data matches 316.. run forceload 
 execute if score #rg_friends_black_ball switch.data matches 316.. run forceload remove 5966 5933 5998 6067
 execute if score #rg_friends_black_ball switch.data matches 316.. run forceload remove 5998 5933 6031 6067
 execute if score #rg_friends_black_ball switch.data matches 316.. run forceload remove 6031 5933 6063 6067
-execute if score #rg_friends_black_ball switch.data matches 316.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_black_ball' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_black_ball switch.data matches 316.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_black_ball' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_black_ball switch.data matches 316.. run scoreboard players reset #rg_friends_black_ball switch.data
 
 execute if score #rg_friends_black_ball switch.data matches 1.. run schedule function switch:maps/survival/friends_black_ball/regenerate 1t

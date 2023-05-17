@@ -248,7 +248,7 @@ execute if score #rg_zonweeb_highschool switch.data matches 252.. run forceload 
 execute if score #rg_zonweeb_highschool switch.data matches 252.. run forceload remove 52946 52876 52978 53094
 execute if score #rg_zonweeb_highschool switch.data matches 252.. run forceload remove 52978 52876 53009 53094
 execute if score #rg_zonweeb_highschool switch.data matches 252.. run forceload remove 53009 52876 53040 53094
-execute if score #rg_zonweeb_highschool switch.data matches 252.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'zonweeb_highschool' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zonweeb_highschool switch.data matches 252.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'zonweeb_highschool' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_zonweeb_highschool switch.data matches 252.. run scoreboard players reset #rg_zonweeb_highschool switch.data
 
 execute if score #rg_zonweeb_highschool switch.data matches 1.. run schedule function switch:maps/survival/zonweeb_highschool/regenerate 1t

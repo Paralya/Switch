@@ -95,7 +95,7 @@ execute if score #rg_desert_grand_library switch.data matches 105 run clone 4700
 execute if score #rg_desert_grand_library switch.data matches 106.. run kill @e[type=item]
 execute if score #rg_desert_grand_library switch.data matches 106.. run forceload remove 46971 46971 47004 47042
 execute if score #rg_desert_grand_library switch.data matches 106.. run forceload remove 47004 46971 47036 47042
-execute if score #rg_desert_grand_library switch.data matches 106.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'desert_grand_library' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_desert_grand_library switch.data matches 106.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'desert_grand_library' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_desert_grand_library switch.data matches 106.. run scoreboard players reset #rg_desert_grand_library switch.data
 
 execute if score #rg_desert_grand_library switch.data matches 1.. run schedule function switch:maps/survival/desert_grand_library/regenerate 1t

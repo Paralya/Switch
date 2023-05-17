@@ -48,7 +48,7 @@ execute if score #rg_spleef_1 switch.data matches 59 run clone 28000 82 27969 28
 execute if score #rg_spleef_1 switch.data matches 60.. run kill @e[type=item]
 execute if score #rg_spleef_1 switch.data matches 60.. run forceload remove 27969 27969 28000 28031
 execute if score #rg_spleef_1 switch.data matches 60.. run forceload remove 28000 27969 28031 28031
-execute if score #rg_spleef_1 switch.data matches 60.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'spleef_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_spleef_1 switch.data matches 60.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'spleef_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"03","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_spleef_1 switch.data matches 60.. run scoreboard players reset #rg_spleef_1 switch.data
 
 execute if score #rg_spleef_1 switch.data matches 1.. run schedule function switch:maps/survival/spleef_1/regenerate 1t

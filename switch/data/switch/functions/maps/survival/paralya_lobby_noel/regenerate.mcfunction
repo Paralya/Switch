@@ -1706,7 +1706,7 @@ execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run forceload
 execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run forceload remove 40040 39900 40060 40100
 execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run forceload remove 40060 39900 40080 40100
 execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run forceload remove 40080 39900 40100 40100
-execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'paralya_lobby_noel' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'paralya_lobby_noel' vient de finir de se régénérer en ","color":"yellow"},{"text":"01","color":"gold"},{"text":"m","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_paralya_lobby_noel switch.data matches 1670.. run scoreboard players reset #rg_paralya_lobby_noel switch.data
 
 execute if score #rg_paralya_lobby_noel switch.data matches 1.. run schedule function switch:maps/survival/paralya_lobby_noel/regenerate 1t

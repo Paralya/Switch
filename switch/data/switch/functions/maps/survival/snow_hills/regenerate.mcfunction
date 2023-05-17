@@ -517,7 +517,7 @@ execute if score #rg_snow_hills switch.data matches 508.. run forceload remove 5
 execute if score #rg_snow_hills switch.data matches 508.. run forceload remove 50055 49918 50085 50103
 execute if score #rg_snow_hills switch.data matches 508.. run forceload remove 50085 49918 50115 50103
 execute if score #rg_snow_hills switch.data matches 508.. run forceload remove 50115 49918 50145 50103
-execute if score #rg_snow_hills switch.data matches 508.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'snow_hills' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"25","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_hills switch.data matches 508.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'snow_hills' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"25","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_snow_hills switch.data matches 508.. run scoreboard players reset #rg_snow_hills switch.data
 
 execute if score #rg_snow_hills switch.data matches 1.. run schedule function switch:maps/survival/snow_hills/regenerate 1t

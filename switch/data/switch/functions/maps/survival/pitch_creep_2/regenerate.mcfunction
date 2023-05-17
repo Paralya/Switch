@@ -42,7 +42,7 @@ execute if score #rg_pitch_creep_2 switch.data matches 53 run clone 38000 16 379
 execute if score #rg_pitch_creep_2 switch.data matches 54.. run kill @e[type=item]
 execute if score #rg_pitch_creep_2 switch.data matches 54.. run forceload remove 37986 37974 38000 38026
 execute if score #rg_pitch_creep_2 switch.data matches 54.. run forceload remove 38000 37974 38014 38026
-execute if score #rg_pitch_creep_2 switch.data matches 54.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'pitch_creep_2' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"2","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_pitch_creep_2 switch.data matches 54.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'pitch_creep_2' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"02","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_pitch_creep_2 switch.data matches 54.. run scoreboard players reset #rg_pitch_creep_2 switch.data
 
 execute if score #rg_pitch_creep_2 switch.data matches 1.. run schedule function switch:maps/survival/pitch_creep_2/regenerate 1t

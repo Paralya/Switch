@@ -86,7 +86,7 @@ execute if score #rg_ghost_town switch.data matches 97 run clone 42000 38 41942 
 execute if score #rg_ghost_town switch.data matches 98.. run kill @e[type=item]
 execute if score #rg_ghost_town switch.data matches 98.. run forceload remove 41935 41942 42000 42058
 execute if score #rg_ghost_town switch.data matches 98.. run forceload remove 42000 41942 42065 42058
-execute if score #rg_ghost_town switch.data matches 98.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'ghost_town' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ghost_town switch.data matches 98.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'ghost_town' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"04","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ghost_town switch.data matches 98.. run scoreboard players reset #rg_ghost_town switch.data
 
 execute if score #rg_ghost_town switch.data matches 1.. run schedule function switch:maps/survival/ghost_town/regenerate 1t

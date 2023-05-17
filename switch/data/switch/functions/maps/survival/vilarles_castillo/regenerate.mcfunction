@@ -1624,7 +1624,7 @@ execute if score #rg_vilarles_castillo switch.data matches 1590.. run forceload 
 execute if score #rg_vilarles_castillo switch.data matches 1590.. run forceload remove 52050 51853 52072 52071
 execute if score #rg_vilarles_castillo switch.data matches 1590.. run forceload remove 52072 51853 52093 52071
 execute if score #rg_vilarles_castillo switch.data matches 1590.. run forceload remove 52093 51853 52115 52071
-execute if score #rg_vilarles_castillo switch.data matches 1590.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'vilarles_castillo' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_vilarles_castillo switch.data matches 1590.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'vilarles_castillo' vient de finir de se régénérer en ","color":"yellow"},{"text":"01","color":"gold"},{"text":"m","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_vilarles_castillo switch.data matches 1590.. run scoreboard players reset #rg_vilarles_castillo switch.data
 
 execute if score #rg_vilarles_castillo switch.data matches 1.. run schedule function switch:maps/survival/vilarles_castillo/regenerate 1t

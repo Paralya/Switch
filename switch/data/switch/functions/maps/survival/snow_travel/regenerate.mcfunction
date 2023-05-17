@@ -910,7 +910,7 @@ execute if score #rg_snow_travel switch.data matches 890.. run forceload remove 
 execute if score #rg_snow_travel switch.data matches 890.. run forceload remove 23041 22904 23062 23109
 execute if score #rg_snow_travel switch.data matches 890.. run forceload remove 23062 22904 23082 23109
 execute if score #rg_snow_travel switch.data matches 890.. run forceload remove 23082 22904 23103 23109
-execute if score #rg_snow_travel switch.data matches 890.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'snow_travel' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"44","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_travel switch.data matches 890.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'snow_travel' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"44","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_snow_travel switch.data matches 890.. run scoreboard players reset #rg_snow_travel switch.data
 
 execute if score #rg_snow_travel switch.data matches 1.. run schedule function switch:maps/survival/snow_travel/regenerate 1t

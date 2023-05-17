@@ -111,7 +111,7 @@ execute if score #rg_mushroom_plains switch.data matches 121 run clone 4000 50 3
 execute if score #rg_mushroom_plains switch.data matches 122.. run kill @e[type=item]
 execute if score #rg_mushroom_plains switch.data matches 122.. run forceload remove 3939 3939 4000 4061
 execute if score #rg_mushroom_plains switch.data matches 122.. run forceload remove 4000 3939 4061 4061
-execute if score #rg_mushroom_plains switch.data matches 122.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'mushroom_plains' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_mushroom_plains switch.data matches 122.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'mushroom_plains' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_mushroom_plains switch.data matches 122.. run scoreboard players reset #rg_mushroom_plains switch.data
 
 execute if score #rg_mushroom_plains switch.data matches 1.. run schedule function switch:maps/survival/mushroom_plains/regenerate 1t

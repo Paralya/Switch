@@ -133,7 +133,7 @@ execute if score #rg_layers_1 switch.data matches 143 run clone 27000 61 26969 2
 execute if score #rg_layers_1 switch.data matches 144.. run kill @e[type=item]
 execute if score #rg_layers_1 switch.data matches 144.. run forceload remove 26982 26969 27000 27031
 execute if score #rg_layers_1 switch.data matches 144.. run forceload remove 27000 26969 27018 27031
-execute if score #rg_layers_1 switch.data matches 144.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'layers_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_layers_1 switch.data matches 144.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'layers_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"07","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_layers_1 switch.data matches 144.. run scoreboard players reset #rg_layers_1 switch.data
 
 execute if score #rg_layers_1 switch.data matches 1.. run schedule function switch:maps/survival/layers_1/regenerate 1t

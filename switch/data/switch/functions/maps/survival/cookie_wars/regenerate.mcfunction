@@ -207,7 +207,7 @@ execute if score #rg_cookie_wars switch.data matches 212.. run forceload remove 
 execute if score #rg_cookie_wars switch.data matches 212.. run forceload remove 48950 48900 49000 49100
 execute if score #rg_cookie_wars switch.data matches 212.. run forceload remove 49000 48900 49050 49100
 execute if score #rg_cookie_wars switch.data matches 212.. run forceload remove 49050 48900 49100 49100
-execute if score #rg_cookie_wars switch.data matches 212.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'cookie_wars' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_cookie_wars switch.data matches 212.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'cookie_wars' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_cookie_wars switch.data matches 212.. run scoreboard players reset #rg_cookie_wars switch.data
 
 execute if score #rg_cookie_wars switch.data matches 1.. run schedule function switch:maps/survival/cookie_wars/regenerate 1t

@@ -358,7 +358,7 @@ execute if score #rg_new_grounds switch.data matches 360.. run forceload remove 
 execute if score #rg_new_grounds switch.data matches 360.. run forceload remove 47965 47930 48000 48070
 execute if score #rg_new_grounds switch.data matches 360.. run forceload remove 48000 47930 48035 48070
 execute if score #rg_new_grounds switch.data matches 360.. run forceload remove 48035 47930 48070 48070
-execute if score #rg_new_grounds switch.data matches 360.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'new_grounds' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_new_grounds switch.data matches 360.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'new_grounds' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_new_grounds switch.data matches 360.. run scoreboard players reset #rg_new_grounds switch.data
 
 execute if score #rg_new_grounds switch.data matches 1.. run schedule function switch:maps/survival/new_grounds/regenerate 1t

@@ -737,7 +737,7 @@ execute if score #rg_dark_forest_hills switch.data matches 720.. run forceload r
 execute if score #rg_dark_forest_hills switch.data matches 720.. run forceload remove 39100 39000 39114 39221
 execute if score #rg_dark_forest_hills switch.data matches 720.. run forceload remove 39114 39000 39129 39221
 execute if score #rg_dark_forest_hills switch.data matches 720.. run forceload remove 39129 39000 39143 39221
-execute if score #rg_dark_forest_hills switch.data matches 720.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'dark_forest_hills' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"36","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_dark_forest_hills switch.data matches 720.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'dark_forest_hills' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"36","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_dark_forest_hills switch.data matches 720.. run scoreboard players reset #rg_dark_forest_hills switch.data
 
 execute if score #rg_dark_forest_hills switch.data matches 1.. run schedule function switch:maps/survival/dark_forest_hills/regenerate 1t

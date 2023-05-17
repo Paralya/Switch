@@ -1276,7 +1276,7 @@ execute if score #rg_huge_cargo switch.data matches 1252.. run forceload remove 
 execute if score #rg_huge_cargo switch.data matches 1252.. run forceload remove 41167 40892 41200 41000
 execute if score #rg_huge_cargo switch.data matches 1252.. run forceload remove 41200 40892 41234 41000
 execute if score #rg_huge_cargo switch.data matches 1252.. run forceload remove 41234 40892 41267 41000
-execute if score #rg_huge_cargo switch.data matches 1252.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'huge_cargo' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"2","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_huge_cargo switch.data matches 1252.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'huge_cargo' vient de finir de se régénérer en ","color":"yellow"},{"text":"01","color":"gold"},{"text":"m","color":"yellow"},{"text":"02","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_huge_cargo switch.data matches 1252.. run scoreboard players reset #rg_huge_cargo switch.data
 
 execute if score #rg_huge_cargo switch.data matches 1.. run schedule function switch:maps/survival/huge_cargo/regenerate 1t

@@ -519,7 +519,7 @@ execute if score #rg_rush_the_point_1 switch.data matches 275 run fill 14000 255
 execute if score #rg_rush_the_point_1 switch.data matches 276.. run kill @e[type=item]
 execute if score #rg_rush_the_point_1 switch.data matches 276.. run forceload remove 13901 13901 14000 14099
 execute if score #rg_rush_the_point_1 switch.data matches 276.. run forceload remove 14000 13901 14099 14099
-execute if score #rg_rush_the_point_1 switch.data matches 276.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'rush_the_point_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_rush_the_point_1 switch.data matches 276.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'rush_the_point_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_rush_the_point_1 switch.data matches 276.. run scoreboard players reset #rg_rush_the_point_1 switch.data
 
 execute if score #rg_rush_the_point_1 switch.data matches 1.. run schedule function switch:maps/survival/rush_the_point_1/regenerate 1t

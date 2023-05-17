@@ -186,7 +186,7 @@ execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run forceload 
 execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run forceload remove 10980 10968 10996 11033
 execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run forceload remove 10996 10968 11013 11033
 execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run forceload remove 11013 10968 11029 11033
-execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_pvpbox_ice' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_pvpbox_ice' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"09","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_pvpbox_ice switch.data matches 192.. run scoreboard players reset #rg_friends_pvpbox_ice switch.data
 
 execute if score #rg_friends_pvpbox_ice switch.data matches 1.. run schedule function switch:maps/survival/friends_pvpbox_ice/regenerate 1t

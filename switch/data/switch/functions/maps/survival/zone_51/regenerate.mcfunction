@@ -301,7 +301,7 @@ execute if score #rg_zone_51 switch.data matches 304.. run forceload remove 1947
 execute if score #rg_zone_51 switch.data matches 304.. run forceload remove 1974 1937 2001 2063
 execute if score #rg_zone_51 switch.data matches 304.. run forceload remove 2001 1937 2028 2063
 execute if score #rg_zone_51 switch.data matches 304.. run forceload remove 2028 1937 2055 2063
-execute if score #rg_zone_51 switch.data matches 304.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'zone_51' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zone_51 switch.data matches 304.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'zone_51' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_zone_51 switch.data matches 304.. run scoreboard players reset #rg_zone_51 switch.data
 
 execute if score #rg_zone_51 switch.data matches 1.. run schedule function switch:maps/survival/zone_51/regenerate 1t

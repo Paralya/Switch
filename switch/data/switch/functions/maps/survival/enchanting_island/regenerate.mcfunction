@@ -109,7 +109,7 @@ execute if score #rg_enchanting_island switch.data matches 119 run clone 7000 49
 execute if score #rg_enchanting_island switch.data matches 120.. run kill @e[type=item]
 execute if score #rg_enchanting_island switch.data matches 120.. run forceload remove 6970 6970 7000 7030
 execute if score #rg_enchanting_island switch.data matches 120.. run forceload remove 7000 6970 7030 7030
-execute if score #rg_enchanting_island switch.data matches 120.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'enchanting_island' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_enchanting_island switch.data matches 120.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'enchanting_island' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_enchanting_island switch.data matches 120.. run scoreboard players reset #rg_enchanting_island switch.data
 
 execute if score #rg_enchanting_island switch.data matches 1.. run schedule function switch:maps/survival/enchanting_island/regenerate 1t

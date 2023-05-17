@@ -4923,7 +4923,7 @@ execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run forc
 execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run forceload remove 46094 45849 46108 46187
 execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run forceload remove 46108 45849 46122 46187
 execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run forceload remove 46122 45849 46136 46187
-execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'taroatlas_soviet_prison' vient de finir de se régénérer en ","color":"yellow"},{"text":"3","color":"gold"},{"text":"m","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'taroatlas_soviet_prison' vient de finir de se régénérer en ","color":"yellow"},{"text":"03","color":"gold"},{"text":"m","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_taroatlas_soviet_prison switch.data matches 4795.. run scoreboard players reset #rg_taroatlas_soviet_prison switch.data
 
 execute if score #rg_taroatlas_soviet_prison switch.data matches 1.. run schedule function switch:maps/survival/taroatlas_soviet_prison/regenerate 1t
