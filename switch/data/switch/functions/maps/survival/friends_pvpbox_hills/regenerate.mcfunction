@@ -288,7 +288,7 @@ execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run forceloa
 execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run forceload remove 11980 11965 12002 12055
 execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run forceload remove 12002 11965 12024 12055
 execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run forceload remove 12024 11965 12047 12055
-execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'friends_pvpbox_hills' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"14","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"friends_pvpbox_hills","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"14","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_pvpbox_hills switch.data matches 292.. run scoreboard players reset #rg_friends_pvpbox_hills switch.data
 
 execute if score #rg_friends_pvpbox_hills switch.data matches 1.. run schedule function switch:maps/survival/friends_pvpbox_hills/regenerate 1t

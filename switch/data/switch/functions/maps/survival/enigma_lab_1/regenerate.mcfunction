@@ -91,7 +91,7 @@ execute if score #rg_enigma_lab_1 switch.data matches 101 run clone 53992 40 539
 execute if score #rg_enigma_lab_1 switch.data matches 102.. run kill @e[type=item]
 execute if score #rg_enigma_lab_1 switch.data matches 102.. run forceload remove 53977 53994 53992 54100
 execute if score #rg_enigma_lab_1 switch.data matches 102.. run forceload remove 53992 53994 54008 54100
-execute if score #rg_enigma_lab_1 switch.data matches 102.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'enigma_lab_1' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_enigma_lab_1 switch.data matches 102.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"enigma_lab_1","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_enigma_lab_1 switch.data matches 102.. run scoreboard players reset #rg_enigma_lab_1 switch.data
 
 execute if score #rg_enigma_lab_1 switch.data matches 1.. run schedule function switch:maps/survival/enigma_lab_1/regenerate 1t

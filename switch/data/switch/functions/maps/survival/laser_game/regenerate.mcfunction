@@ -97,7 +97,7 @@ execute if score #rg_laser_game switch.data matches 107 run clone 525 43 499 551
 execute if score #rg_laser_game switch.data matches 108.. run kill @e[type=item]
 execute if score #rg_laser_game switch.data matches 108.. run forceload remove 499 499 525 551
 execute if score #rg_laser_game switch.data matches 108.. run forceload remove 525 499 551 551
-execute if score #rg_laser_game switch.data matches 108.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'laser_game' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_laser_game switch.data matches 108.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"laser_game","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_laser_game switch.data matches 108.. run scoreboard players reset #rg_laser_game switch.data
 
 execute if score #rg_laser_game switch.data matches 1.. run schedule function switch:maps/survival/laser_game/regenerate 1t

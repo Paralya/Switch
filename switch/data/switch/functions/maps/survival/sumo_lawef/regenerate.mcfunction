@@ -89,7 +89,7 @@ execute if score #rg_sumo_lawef switch.data matches 100 run kill @e[type=item,x=
 execute if score #rg_sumo_lawef switch.data matches 100.. run kill @e[type=item]
 execute if score #rg_sumo_lawef switch.data matches 100.. run forceload remove 54979 54996 55000 55037
 execute if score #rg_sumo_lawef switch.data matches 100.. run forceload remove 55000 54996 55020 55037
-execute if score #rg_sumo_lawef switch.data matches 100.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map 'sumo_lawef' vient de finir de se régénérer en ","color":"yellow"},{"text":"00","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sumo_lawef switch.data matches 100.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"sumo_lawef","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_sumo_lawef switch.data matches 100.. run scoreboard players reset #rg_sumo_lawef switch.data
 
 execute if score #rg_sumo_lawef switch.data matches 1.. run schedule function switch:maps/survival/sumo_lawef/regenerate 1t
