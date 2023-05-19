@@ -57,6 +57,9 @@ execute if data storage switch:main {map:"snk_lab_s9"} run function switch:maps/
 execute if data storage switch:main {map:"plucky_penguins"} run function switch:maps/survival/plucky_penguins/regenerate
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/regenerate
 execute if data storage switch:main {map:"giant_zoo"} run function switch:maps/survival/giant_zoo/regenerate
+execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/regenerate
+execute if data storage switch:main {map:"nuketown"} run function switch:maps/survival/nuketown/regenerate
+execute if data storage switch:main {map:"enigma_lab_2"} run function switch:maps/survival/enigma_lab_2/regenerate
 
 # Remove the map from the storage
 data remove storage switch:main map

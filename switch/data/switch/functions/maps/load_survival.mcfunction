@@ -57,4 +57,7 @@ execute if data storage switch:main {map:"snk_lab_s9"} run function switch:maps/
 execute if data storage switch:main {map:"plucky_penguins"} run function switch:maps/survival/plucky_penguins/
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/
 execute if data storage switch:main {map:"giant_zoo"} run function switch:maps/survival/giant_zoo/
+execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/
+execute if data storage switch:main {map:"nuketown"} run function switch:maps/survival/nuketown/
+execute if data storage switch:main {map:"enigma_lab_2"} run function switch:maps/survival/enigma_lab_2/
 

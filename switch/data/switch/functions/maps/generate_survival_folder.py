@@ -6,7 +6,11 @@ if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 	exit()
 
 # Imports
+import time
 from utils_functions import *
+
+# Get start time to calculate the execution time
+start_time = time.time()
 
 # List of the maps that have been generated
 generated_maps = []
@@ -72,6 +76,9 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	# Write the last lines
 	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, i, divider, "[/clone]")
 
+	# Write the spread_players file
+	createSpreadPlayersFile(name, start_pos, end_pos, paste_start_height)
+
 	# Add the map to the list of the generated maps and return
 	generated_maps.append(name)
 	return None
@@ -133,6 +140,9 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 
 	# Write the last lines
 	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, i, divider, "[/fill]")
+
+	# Write the spread_players file
+	createSpreadPlayersFile(name, start_pos, end_pos, paste_start_height = y)
 
 	# Add the map to the list of the generated maps and return
 	generated_maps.append(name)
@@ -249,13 +259,17 @@ generate_clone_survival_folder("plucky_penguins", (68000, 0, 68000), (68024, 20,
 generate_clone_survival_folder("warden_escape_statue", (69000, -64, 69000), (69148, 60, 69106), 100)
 #70000 0 70000 70303 64 70287
 generate_clone_survival_folder("giant_zoo", (70000, 0, 70000), (70303, 64, 70287), 100)
+#71000 0 71000 71170 70 71160
+generate_clone_survival_folder("hider_mansion", (71000, 0, 71000), (71170, 70, 71160), 100)
+#72000 0 72000 72207 51 72220
+generate_clone_survival_folder("nuketown", (72000, 0, 72000), (72207, 51, 72220), 100)
+#73000 0 73000 73076 29 73083
+generate_clone_survival_folder("enigma_lab_2", (73000, 0, 73000), (73076, 29, 73083), 100)
 
 
-# TODO : Add files for "spreadplayers", "if_kart_racer"
 
-# Hider mansion (71000)
-# Nuketown (72000)
-# EnigmaLab 2 (73000)
+# //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel stone
+
 # Layers 2 (74000)
 # SNK Lab s11 (75000)
 # Fish the pig (76000)
@@ -313,4 +327,7 @@ regenerate_file.write("\ndata remove storage switch:main map\n")
 # Close the file
 regenerate_file.write("\n")
 regenerate_file.close()
+
+## Print the execution time
+print(f"\n{GREEN}Execution time of the script: {RED}{round(time.time() - start_time, 5)}{GREEN} seconds{RESET}\n")
 
