@@ -18,6 +18,8 @@
 		"switch:modes/mlg_a_coudre/calls/tick",
 		"switch:modes/protect_the_king/calls/tick",
 		"switch:modes/castagne/calls/tick",
+		"switch:modes/layers_2_teams/calls/tick",
+		"switch:modes/layers_4_teams/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
 }

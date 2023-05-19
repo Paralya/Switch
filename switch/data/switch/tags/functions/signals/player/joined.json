@@ -18,6 +18,8 @@
 		"switch:modes/mlg_a_coudre/calls/joined",
 		"switch:modes/protect_the_king/calls/joined",
 		"switch:modes/castagne/calls/joined",
+		"switch:modes/layers_2_teams/calls/joined",
+		"switch:modes/layers_4_teams/calls/joined",
 		"switch:modes/a_template/calls/joined"
 	]
 }

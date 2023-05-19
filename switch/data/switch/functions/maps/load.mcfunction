@@ -11,7 +11,6 @@ function switch:maps/find_map
 data modify storage switch:main map set from storage switch:main copy[0]
 data modify storage switch:main previous_map set from storage switch:main map
 
-
 # Maps that regenerate (gamemode survival, may be adventure):
 function switch:maps/load_survival
 

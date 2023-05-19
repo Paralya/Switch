@@ -23,7 +23,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "simplenergy:i/elite_battery_creative"
+					"name": "simplenergy:i/elite_creative_battery"
 				}
 			]
 		}

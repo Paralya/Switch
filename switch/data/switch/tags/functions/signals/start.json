@@ -18,6 +18,8 @@
 		"switch:modes/mlg_a_coudre/calls/start",
 		"switch:modes/protect_the_king/calls/start",
 		"switch:modes/castagne/calls/start",
+		"switch:modes/layers_2_teams/calls/start",
+		"switch:modes/layers_4_teams/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }

@@ -18,6 +18,8 @@
 		"switch:modes/mlg_a_coudre/calls/stop",
 		"switch:modes/protect_the_king/calls/stop",
 		"switch:modes/castagne/calls/stop",
+		"switch:modes/layers_2_teams/calls/stop",
+		"switch:modes/layers_4_teams/calls/stop",
 		"switch:modes/a_template/calls/stop"
 	]
 }
