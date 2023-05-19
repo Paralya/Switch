@@ -11,9 +11,9 @@ kill @e[type=creeper]
 kill @e[type=item]
 kill @e[type=arrow]
 
-effect give @a saturation 99999 255 true
+effect give @a saturation infinite 255 true
 effect give @a regeneration 5 255 true
-effect give @a weakness 99999 2 true
+effect give @a weakness infinite 2 true
 difficulty normal
 time set 18000
 weather clear

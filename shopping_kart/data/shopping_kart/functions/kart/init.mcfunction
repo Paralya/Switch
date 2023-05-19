@@ -9,5 +9,5 @@ scoreboard players add #next_id shopping_kart.id 1
 summon armor_stand ~ ~ ~ {Tags:["shopping_kart.init"],Invulnerable:1b,Marker:1b,NoGravity:1b,Invisible:1b}
 execute as @e[type=armor_stand,tag=shopping_kart.init] run function shopping_kart:kart/init_visual
 scoreboard players operation @s shopping_kart.id = #next_id shopping_kart.id
-effect give @s invisibility 999999 0 true
+effect give @s invisibility infinite 0 true
 

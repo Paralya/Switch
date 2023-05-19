@@ -10,9 +10,9 @@ kill @e[type=!player]
 kill @e[type=!player]
 
 title @a times 5 20 5
-effect give @a saturation 99999 255 true
-effect give @a regeneration 99999 255 true
-effect give @a resistance 99999 255 true
+effect give @a saturation infinite 255 true
+effect give @a regeneration infinite 255 true
+effect give @a resistance infinite 255 true
 effect give @a levitation 10 255 true
 difficulty normal
 time set 0

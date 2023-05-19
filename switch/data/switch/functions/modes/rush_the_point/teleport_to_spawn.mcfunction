@@ -8,12 +8,12 @@ execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=s
 ## Items to choose a class
 tag @s remove switch.to_tp
 clear @s
-effect give @s resistance 99999 250 true
-effect give @s jump_boost 99999 250 true
-effect give @s slowness 99999 250 true
-effect give @s blindness 99999 250 true
-effect give @s night_vision 99999 250 true
-effect give @s darkness 99999 250 true
+effect give @s resistance infinite 250 true
+effect give @s jump_boost infinite 250 true
+effect give @s slowness infinite 250 true
+effect give @s blindness infinite 250 true
+effect give @s night_vision infinite 250 true
+effect give @s darkness infinite 250 true
 gamemode adventure @s
 scoreboard players set @s switch.temp.choosen_class 0
 item replace entity @s hotbar.0 with diamond_sword{switch:{class_item:1b},CustomModelData:2013118,display:{Name:'{"text":"Guerrier","color":"red","italic":false}'}}

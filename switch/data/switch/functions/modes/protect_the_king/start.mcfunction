@@ -9,7 +9,7 @@ effect clear @a
 gamemode survival @a
 team leave @a
 
-effect give @a saturation 999999 255 true
+effect give @a saturation infinite 255 true
 effect give @a resistance 15 255 true
 effect give @a regeneration 10 255 true
 effect give @a weakness 15 255 true

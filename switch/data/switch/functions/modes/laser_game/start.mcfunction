@@ -26,9 +26,9 @@ team modify switch.laser_game.red color red
 team modify switch.laser_game.red seeFriendlyInvisibles true
 team modify switch.laser_game.red nametagVisibility never
 
-effect give @a saturation 99999 255 true
+effect give @a saturation infinite 255 true
 effect give @a regeneration 5 255 true
-effect give @a weakness 99999 255 true
+effect give @a weakness infinite 255 true
 time set 18000
 
 ## Traitement des joueurs

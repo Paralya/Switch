@@ -8,7 +8,7 @@ team leave @a
 
 kill @e[type=item]
 
-effect give @a saturation 99999 255 true
+effect give @a saturation infinite 255 true
 effect give @a regeneration 5 255 true
 difficulty normal
 time set 6000

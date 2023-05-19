@@ -7,7 +7,7 @@ execute as @a[gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ bar
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/creeper_apocalypse/death
 
 # Creeper stuff
-effect give @e[type=creeper] resistance 99999 0 true
+effect give @e[type=creeper] resistance infinite 0 true
 execute as @e[type=area_effect_cloud] at @s run function switch:modes/creeper_apocalypse/creeper_exploded
 execute as @e[type=creeper] run scoreboard players add @e[type=creeper,sort=random,limit=1] switch.temp.duplication 1
 execute as @e[type=creeper,scores={switch.temp.duplication=200}] run data modify entity @s ignited set value 1b

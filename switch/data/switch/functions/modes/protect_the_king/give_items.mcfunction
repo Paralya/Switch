@@ -21,7 +21,7 @@ item replace entity @s hotbar.8 with apple 16
 give @s oak_planks 100
 give @s anvil
 
-effect give @s[tag=switch.king] glowing 99999 255 true
+effect give @s[tag=switch.king] glowing infinite 255 true
 item replace entity @s[tag=switch.king] armor.chest with diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
 item replace entity @s[tag=switch.king] armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
 item replace entity @s[tag=switch.king] armor.feet with diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
