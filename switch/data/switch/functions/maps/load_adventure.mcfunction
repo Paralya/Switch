@@ -24,4 +24,5 @@ execute if data storage switch:main {map:"abandoned_city_spawn_circle"} run func
 execute if data storage switch:main {map:"abandoned_city"} run function switch:maps/adventure/abandoned_city/
 execute if data storage switch:main {map:"boat_race_2"} run function switch:maps/adventure/boat_race_2/
 # CSGO Map, faut trouver le nom (56000)
+# Fish the pig (76000)
 

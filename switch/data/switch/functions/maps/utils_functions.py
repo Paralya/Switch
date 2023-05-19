@@ -8,7 +8,7 @@ if __name__ == "__main__":
 from io import TextIOWrapper
 import os
 
-## Create the the colors variables
+## Create the colors variables
 RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
@@ -65,7 +65,7 @@ def createFolderIfNotExists(folder_path: str):
 def calculateDivider(start_pos: tuple, end_pos: tuple) -> int:
 	""" Calculates the divider of the regeneration area depending on the area
 	The more the area is big, the more the divider is big
-	The divider is calculated so that the area is divided into 4000 blocks
+	The divider is calculated so that the area is divided into 3200 blocks
 
 	Args:
 		start_pos (tuple)	: The start position of the regeneration area
@@ -74,7 +74,7 @@ def calculateDivider(start_pos: tuple, end_pos: tuple) -> int:
 		(int)				: The divider
 	"""
 	area = (end_pos[0] - start_pos[0]) * (end_pos[2] - start_pos[2])
-	return (area // 4000 + 2)
+	return (area // 3200 + 2)
 
 
 def createTpCoordsString(start_pos: tuple, end_pos: tuple, paste_start_height:int = 0) -> tuple:

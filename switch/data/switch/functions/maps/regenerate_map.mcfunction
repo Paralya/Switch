@@ -23,7 +23,7 @@ execute if data storage switch:main {map:"baby_park"} run function switch:maps/s
 execute if data storage switch:main {map:"bowser_castle"} run function switch:maps/survival/bowser_castle/regenerate
 execute if data storage switch:main {map:"snow_travel"} run function switch:maps/survival/snow_travel/regenerate
 execute if data storage switch:main {map:"cathedrale_liege"} run function switch:maps/survival/cathedrale_liege/regenerate
-execute if data storage switch:main {map:"layers_1"} run function switch:maps/survival/layers_1/regenerate
+execute if data storage switch:main {map:"layers_2_teams"} run function switch:maps/survival/layers_2_teams/regenerate
 execute if data storage switch:main {map:"spleef_1"} run function switch:maps/survival/spleef_1/regenerate
 execute if data storage switch:main {map:"de_a_coudre_1"} run function switch:maps/survival/de_a_coudre_1/regenerate
 execute if data storage switch:main {map:"mlg_a_coudre_1"} run function switch:maps/survival/mlg_a_coudre_1/regenerate
@@ -53,13 +53,32 @@ execute if data storage switch:main {map:"blindtest"} run function switch:maps/s
 execute if data storage switch:main {map:"kart_racer_relai"} run function switch:maps/survival/kart_racer_relai/regenerate
 execute if data storage switch:main {map:"orange_rings"} run function switch:maps/survival/orange_rings/regenerate
 execute if data storage switch:main {map:"find_the_wool"} run function switch:maps/survival/find_the_wool/regenerate
-execute if data storage switch:main {map:"snk_lab_s9"} run function switch:maps/survival/snk_lab_s9/regenerate
+execute if data storage switch:main {map:"snk_lab_s11"} run function switch:maps/survival/snk_lab_s11/regenerate
 execute if data storage switch:main {map:"plucky_penguins"} run function switch:maps/survival/plucky_penguins/regenerate
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/regenerate
 execute if data storage switch:main {map:"giant_zoo"} run function switch:maps/survival/giant_zoo/regenerate
 execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/regenerate
 execute if data storage switch:main {map:"nuketown"} run function switch:maps/survival/nuketown/regenerate
 execute if data storage switch:main {map:"enigma_lab_2"} run function switch:maps/survival/enigma_lab_2/regenerate
+execute if data storage switch:main {map:"layers_4_teams"} run function switch:maps/survival/layers_4_teams/regenerate
+execute if data storage switch:main {map:"snk_lab_s9"} run function switch:maps/survival/snk_lab_s9/regenerate
+execute if data storage switch:main {map:"sky_island_tower"} run function switch:maps/survival/sky_island_tower/regenerate
+execute if data storage switch:main {map:"sprucy_village"} run function switch:maps/survival/sprucy_village/regenerate
+execute if data storage switch:main {map:"survival_boat"} run function switch:maps/survival/survival_boat/regenerate
+execute if data storage switch:main {map:"sky_tower"} run function switch:maps/survival/sky_tower/regenerate
+execute if data storage switch:main {map:"purple_sky_island"} run function switch:maps/survival/purple_sky_island/regenerate
+execute if data storage switch:main {map:"lava_castle"} run function switch:maps/survival/lava_castle/regenerate
+execute if data storage switch:main {map:"spruce_dojo"} run function switch:maps/survival/spruce_dojo/regenerate
+execute if data storage switch:main {map:"highland_mansion"} run function switch:maps/survival/highland_mansion/regenerate
+execute if data storage switch:main {map:"sakura_house"} run function switch:maps/survival/sakura_house/regenerate
+execute if data storage switch:main {map:"red_temple"} run function switch:maps/survival/red_temple/regenerate
+execute if data storage switch:main {map:"nature_house"} run function switch:maps/survival/nature_house/regenerate
+execute if data storage switch:main {map:"flower_village"} run function switch:maps/survival/flower_village/regenerate
+execute if data storage switch:main {map:"japanese_village"} run function switch:maps/survival/japanese_village/regenerate
+execute if data storage switch:main {map:"whity_lab"} run function switch:maps/survival/whity_lab/regenerate
+execute if data storage switch:main {map:"snowy_village"} run function switch:maps/survival/snowy_village/regenerate
+execute if data storage switch:main {map:"werewolf_village"} run function switch:maps/survival/werewolf_village/regenerate
+execute if data storage switch:main {map:"wyvern_towers"} run function switch:maps/survival/wyvern_towers/regenerate
 
 # Remove the map from the storage
 data remove storage switch:main map
