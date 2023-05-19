@@ -251,6 +251,7 @@ generate_clone_survival_folder("warden_escape_statue", (69000, -64, 69000), (691
 generate_clone_survival_folder("giant_zoo", (70000, 0, 70000), (70303, 64, 70287), 100)
 
 
+# TODO : Add files for "spreadplayers", "if_kart_racer"
 
 # Hider mansion (71000)
 # Nuketown (72000)
