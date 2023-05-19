@@ -54,4 +54,7 @@ execute if data storage switch:main {map:"kart_racer_relai"} run function switch
 execute if data storage switch:main {map:"orange_rings"} run function switch:maps/survival/orange_rings/
 execute if data storage switch:main {map:"find_the_wool"} run function switch:maps/survival/find_the_wool/
 execute if data storage switch:main {map:"snk_lab_s9"} run function switch:maps/survival/snk_lab_s9/
+execute if data storage switch:main {map:"plucky_penguins"} run function switch:maps/survival/plucky_penguins/
+execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/
+execute if data storage switch:main {map:"giant_zoo"} run function switch:maps/survival/giant_zoo/
 

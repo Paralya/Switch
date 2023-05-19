@@ -243,14 +243,15 @@ generate_clone_survival_folder("orange_rings", (65000, 0, 65000), (65099, 94, 65
 generate_clone_survival_folder("find_the_wool", (66000, 0, 66000), (66085, 56, 66080), 100)
 #67000 0 67000 67065 33 67073
 generate_clone_survival_folder("snk_lab_s9", (67000, 0, 67000), (67065, 33, 67073), 100)
+#68000 0 68000 68024 20 68031
+generate_clone_survival_folder("plucky_penguins", (68000, 0, 68000), (68024, 20, 68031), 100)
+#69000 -63 69000 69148 60 69106
+generate_clone_survival_folder("warden_escape_statue", (69000, -64, 69000), (69148, 60, 69106), 100)
+#70000 0 70000 70303 64 70287
+generate_clone_survival_folder("giant_zoo", (70000, 0, 70000), (70303, 64, 70287), 100)
 
 
 
-
-# SNK Lab s9 (67000)
-# Zoo enter (68000)
-# Warden Escape Statue (69000)
-# Giant Zoo (70000)
 # Hider mansion (71000)
 # Nuketown (72000)
 # EnigmaLab 2 (73000)
