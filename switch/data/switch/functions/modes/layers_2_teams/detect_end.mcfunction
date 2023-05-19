@@ -1,8 +1,8 @@
 
 # On regarde l'état de la partie
 scoreboard players set #game_state switch.data 0
-execute if entity @a[gamemode=!spectator,team=switch.temp.red] unless entity @a[gamemode=!spectator,team=switch.temp.blue] run scoreboard players add #game_state switch.data 1
-execute if entity @a[gamemode=!spectator,team=switch.temp.blue] unless entity @a[gamemode=!spectator,team=switch.temp.red] run scoreboard players add #game_state switch.data 2
+execute if entity @a[gamemode=!spectator,team=switch.temp.red] unless entity @a[gamemode=!spectator,team=!switch.temp.red] run scoreboard players add #game_state switch.data 1
+execute if entity @a[gamemode=!spectator,team=switch.temp.blue] unless entity @a[gamemode=!spectator,team=!switch.temp.blue] run scoreboard players add #game_state switch.data 2
 execute unless entity @a[gamemode=!spectator] run scoreboard players add #game_state switch.data 3
 
 # 1 = Victoire Rouge

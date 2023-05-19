@@ -14,4 +14,3 @@ give @s apple 12
 give @s tnt 2
 give @s flint_and_steel 1
 
-
