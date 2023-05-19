@@ -19,13 +19,14 @@ createFolderIfNotExists("survival")
 generated_maps = []
 
 # Create the function that generates a folder for a gamemode with regeneration using /clone
-def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int):
+def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, kart_racer: list = []):
 	""" Generates a folder for a gamemode using /clone for regeneration
 	Args:
 		name				(str)	: The name of the gamemode
 		start_pos			(tuple)	: The coordinates of the start position (y should be 0)
 		end_pos				(tuple)	: The coordinates of the end position (y should be < 100)
 		paste_start_height	(int)	: The y coordinate where the regeneration starts
+		kart_racer			(list)	: Start position (tuple), orientation (int), and count (int) for the kart racer start line (optional)
 
 	Returns:
 		None
@@ -40,9 +41,9 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	base_condition = f"execute if score #rg_{name} switch.data matches"
 
 	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
-	createMainFile(name)
 	tp_coords, x, y, z = createTpCoordsString(start_pos, end_pos, paste_start_height)
-	createTeleportPlayersFile(name, tp_coords)
+	createMainFile(name, kart_racer + [tp_coords])
+	createTeleportPlayersFile(name, tp_coords, kart_racer)
 
 	## Create the "regenerate.mcfunction" file
 	# Create the splitted coordinates
@@ -172,9 +173,9 @@ generate_clone_survival_folder("friends_pvpbox_hills", (11957, 0, 11965), (12047
 generate_clone_survival_folder("friends_pvpbox_end", (12955, 0, 12955), (13046, 33, 13045), 100)
 generate_fill_survival_folder("rush_the_point_1", (13901, 0, 13901), (14099, 255, 14099), "air", "#switch:rush_the_point/placed")
 generate_clone_survival_folder("friends_cube_lobby", (16960, 0, 16960), (17040, 45, 17040), 100)
-generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100)
-generate_clone_survival_folder("bowser_castle", (21888, 0, 21888), (22114, 81, 22133), 100)
-generate_clone_survival_folder("snow_travel", (22896, 0, 22904), (23103, 86, 23109), 100)
+generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100, kart_racer = [(21003.5, 131.69, 21014.5), 90, 20])
+generate_clone_survival_folder("bowser_castle", (21888, 0, 21888), (22114, 81, 22133), 100, kart_racer = [(21953.5, 130.69, 22056.5), 180, 20])
+generate_clone_survival_folder("snow_travel", (22896, 0, 22904), (23103, 86, 23109), 100, kart_racer = [(22958.5, 136.69, 22945.5), 270, 20])
 generate_clone_survival_folder("cathedrale_liege", (25961, -64, 25944), (26099, 100, 26028), 100)
 generate_clone_survival_folder("layers_2_teams", (26982, 0, 26969), (27018, 61, 27031), 100)
 generate_clone_survival_folder("spleef_1", (27969, 63, 27969), (28031, 82, 28031), 87)

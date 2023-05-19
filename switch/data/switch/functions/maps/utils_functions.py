@@ -90,33 +90,90 @@ def createTpCoordsString(start_pos: tuple, end_pos: tuple, paste_start_height:in
 	z = int((start_pos[2] + end_pos[2]) / 2)
 	return f"[{x}.0d, {y}.0d, {z}.0d]", x, y, z
 
-def createMainFile(name: str) -> None:
+def createMainFile(name: str, kart_racer: list = []) -> None:
 	""" Creates the ".mcfunction" file
 	Args:
 		name (str)	: The name of the map
+		kart_racer	(list)	: Start position (tuple), orientation (int), and count (int) for the kart racer start line (optional)
+
 	Returns:
 		(str)		: The content of the file
 	"""
+	# Create the file
 	f = open(f"survival/{name}/.mcfunction", "w")
 	f.write("\n")
+
+	# Write the first line
 	f.write('summon marker 0 0 0 {Tags:["switch.selected_map"]}\n')
-	f.write(f'execute as @e[type=marker,tag=switch.selected_map] at @s run function switch:maps/survival/{name}/teleport_players\n')
+
+	# If there is no kart racer
+	if len(kart_racer) < 2:
+		f.write(f"execute as @e[type=marker,tag=switch.selected_map] at @s run function switch:maps/survival/{name}/teleport_players\n")
+	else:
+		f.write(f"execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value {kart_racer[-1]}\n\n")
+		f.write(f"scoreboard players set #count switch.data 0\n")
+		f.write(f"execute as @a[sort=random] run function switch:maps/survival/{name}/teleport_players\n\n")
+		f.write(f"execute if data storage switch:main {{current_game:\"kart_racer\"}} run function switch:maps/survival/{name}/if_kart_racer\n")
+
+		# Warning if the if_kart_racer file doesn't exist
+		if not os.path.exists(f"survival/{name}/if_kart_racer.mcfunction"):
+			print(f"{RED}Warning: {YELLOW}'{name}'{RED} doesn't have a {YELLOW}'if_kart_racer.mcfunction'{RED} file{RESET}")
+
+	# Close the file and return
 	f.write("\n")
 	f.close()
 	return None
 
-def createTeleportPlayersFile(name: str, tp_coords: str) -> None:
+def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) -> None:
 	""" Creates the "teleport_players.mcfunction" file
 	Args:
-		name (str)		: The name of the map
-		tp_coords (str)	: The tp coordinates string
+		name 		(str)	: The name of the map
+		tp_coords 	(str)	: The tp coordinates string
+		kart_racer	(list)	: Start position (tuple), orientation (int), and count (int) for the kart racer start line (optional)
+
 	Returns:
 		(str)			: The content of the file
 	"""
+	# Create the file
 	f = open(f"survival/{name}/teleport_players.mcfunction", "w")
 	f.write("\n")
-	f.write(f'data modify entity @s Pos set value {tp_coords}\n')
-	f.write(f'execute at @s run tp @a ~ ~ ~\n')
+
+	# If there is no kart racer
+	if len(kart_racer) == 0:
+		f.write(f'data modify entity @s Pos set value {tp_coords}\n')
+		f.write(f'execute at @s run tp @a ~ ~ ~\n')
+	else:
+
+		# Get variables
+		x, y, z = kart_racer[0]
+		orientation = kart_racer[1]
+		count = kart_racer[2]
+
+		# Write the lines
+		for i in range(count):
+
+			# Calculate the coordinates
+			j = i % 4
+			k = i // 4
+			coords = ""
+			if orientation == 0:
+				coords = f"~{j*2} ~ ~-{k*2}"
+			elif orientation == 90:
+				coords = f"~{k*2} ~ ~-{j*2}"
+			elif orientation == 180:
+				coords = f"~{j*2} ~ ~{k*2}"
+			elif orientation == 270:
+				coords = f"~-{k*2} ~ ~{j*2}"
+
+			# Write the line
+			f.write(f'execute if score #count switch.data matches {i} in overworld positioned {x} {y} {z} run tp @s {coords} {orientation} 0\n')
+
+		# Write the last lines
+		f.write("\n")
+		f.write("scoreboard players add #count switch.data 1\n")
+		f.write(f"scoreboard players operation #count switch.data %= #{count} switch.data\n")
+
+	# Close the file and return
 	f.write("\n")
 	f.close()
 	return None

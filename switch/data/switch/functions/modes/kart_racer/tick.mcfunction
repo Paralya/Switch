@@ -16,7 +16,7 @@ execute if score #kart_racer_seconds switch.data matches ..-1 run scoreboard pla
 execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 0b
 
 # Force riding the kart
-execute as @a at @s run ride @s mount @e[type=pig,predicate=!switch:has_vehicle,sort=nearest,limit=1]
+execute as @a[gamemode=adventure] at @s run ride @s mount @e[type=pig,predicate=!switch:has_vehicle,sort=nearest,limit=1]
 
 # Remove items
 kill @e[type=item]
