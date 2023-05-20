@@ -20,7 +20,7 @@
 ##	15000	(undefined)	: skywars_1		(not done yet)
 ##	16000	(undefined)	: skywars_2		(not done yet)
 #	17000	(survival)	: friends_cube_lobby
-##	18000	(adventure)	: epsilon_circuit
+##	18000	(adventure)	: epsilon_lthc_circuit
 ##	20000	(adventure)	: mario_circuit
 ##	20000	(adventure)	: fast_circuit
 ##	20000	(adventure)	: plains_routine
