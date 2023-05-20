@@ -23,12 +23,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Placement de la map et des joueurs
-execute unless data storage switch:main protect_the_king_maps[0] run data modify storage switch:main protect_the_king_maps set value ["traitor_original", "mushroom_plains", "jayl_dark_forest", "dark_forest_hills"]
-data modify storage switch:main maps_to_choose set from storage switch:main protect_the_king_maps
-function switch:maps/load
-data modify storage switch:main copy set from storage switch:main protect_the_king_maps
-function switch:maps/storage_map_list/remove_from_storage
-data modify storage switch:main protect_the_king_maps set from storage switch:main new
+function switch:choose_map_for/protect_the_king
 execute as @a run function switch:modes/protect_the_king/random_tp
 
 gamerule mobGriefing true
@@ -47,6 +42,18 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
+
+# Mise en place des deux bossbars
+bossbar add switch.temp.red_king "Roi Rouge"
+bossbar add switch.temp.blue_king "Roi Bleu"
+bossbar set switch.temp.red_king color red
+bossbar set switch.temp.blue_king color blue
+bossbar set switch.temp.red_king max 40
+bossbar set switch.temp.blue_king max 40
+bossbar set switch.temp.red_king value 40
+bossbar set switch.temp.blue_king value 40
+bossbar set switch.temp.red_king players @a
+bossbar set switch.temp.blue_king players @a
 
 # Choix des rôles + give d'items
 team add switch.temp.red_king

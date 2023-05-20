@@ -152,8 +152,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	generated_maps.append(name)
 	return None
 
-# TODO : Override the 'teleport_players' function
-# TODO : 'if_kart_racer' function
+
 
 ## Execute the functions
 # Generate the folders for the survival maps
