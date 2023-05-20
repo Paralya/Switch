@@ -161,7 +161,7 @@ generate_clone_survival_folder("pitchout_1", (950, 0, 1050), (1050, 44, 1150), 9
 generate_clone_survival_folder("traitor_original", (1408, 0, 1423), (1592, 99, 1578), 114)
 generate_clone_survival_folder("zone_51", (1947, 0, 1937), (2055, 70, 2063), 100)
 generate_clone_survival_folder("spectre_original", (2459, 0, 2452), (2545, 85, 2547), 100)
-generate_fill_survival_folder("glass_runner", (2750, -64, 2750), (3250, 384, 3250), "air", "#switch:glassrunner/glass")
+generate_fill_survival_folder("glassrunner", (2750, -64, 2750), (3250, 384, 3250), "air", "#switch:glassrunner/glass")
 generate_clone_survival_folder("mushroom_plains", (3939, 0, 3939), (4061, 50, 4061), 100)
 generate_clone_survival_folder("friends_black_ball", (5934, 0, 5933), (6063, 73, 6067), 100)
 generate_clone_survival_folder("enchanting_island", (6970, 0, 6970), (7030, 49, 7030), 100)

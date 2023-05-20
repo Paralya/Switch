@@ -1,10 +1,12 @@
 
+## Liste des maps maintenue manuellement !
+
 #	500		(survival)	: laser_game
 #	1000	(survival)	: pitchout_1
 #	1500	(survival)	: traitor_original
 #	2000	(survival)	: zone_51
 #	2500	(survival)	: spectre_original
-#	3000	(survival)	: glass_runner
+#	3000	(survival)	: glassrunner			[ /fill ]
 ##	3500	(adventure)	: pitch_creep_1
 #	4000	(survival)	: mushroom_plains
 ##	5000	(adventure)	: boat_race_1
@@ -16,7 +18,7 @@
 #	11000	(survival)	: friends_pvpbox_ice
 #	12000	(survival)	: friends_pvpbox_hills
 #	13000	(survival)	: friends_pvpbox_end
-#	14000	(survival)	: rush_the_point_1
+#	14000	(survival)	: rush_the_point_1		[ /fill ]
 ##	15000	(undefined)	: skywars_1		(not done yet)
 ##	16000	(undefined)	: skywars_2		(not done yet)
 #	17000	(survival)	: friends_cube_lobby
@@ -38,11 +40,11 @@
 #	26000	(survival)	: cathedrale_liege
 #	27000	(survival)	: layers_2_teams
 #	28000	(survival)	: spleef_1
-#	29000	(survival)	: de_a_coudre_1
+#	29000	(survival)	: de_a_coudre_1			[ /fill ]
 ##	30000	(undefined)	: Build Arobaze			(not done yet)
-#	31000	(survival)	: mlg_a_coudre_1
+#	31000	(survival)	: mlg_a_coudre_1		[ /fill ]
 #	32000	(survival)	: zonweeb_main
-#	33000	(survival)	: dishorreur
+##	33000	(adventure)	: dishorreur
 #	34000	(survival)	: jayl_dark_forest
 ##	35000	(undefined)	: arti_mansion			(not done yet)
 #	36000	(survival)	: operation_pigclaw
@@ -89,7 +91,7 @@
 #	78000	(survival)	: sprucy_village
 #	79000	(survival)	: survival_boat
 #	80000	(survival)	: sky_tower				(Problème de hauteur à fixer)
-#	81000	(survival)	: purple_sky_island
+#	81000	(survival)	: purple_sky_island		[ /fill ]
 ##	82000	(undefined)	: _
 #	83000	(survival)	: lava_castle
 #	84000	(survival)	: spruce_dojo

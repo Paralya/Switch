@@ -8,7 +8,7 @@ execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/
 execute if data storage switch:main {map:"traitor_original"} run function switch:maps/survival/traitor_original/
 execute if data storage switch:main {map:"zone_51"} run function switch:maps/survival/zone_51/
 execute if data storage switch:main {map:"spectre_original"} run function switch:maps/survival/spectre_original/
-execute if data storage switch:main {map:"glass_runner"} run function switch:maps/survival/glass_runner/
+execute if data storage switch:main {map:"glassrunner"} run function switch:maps/survival/glassrunner/
 execute if data storage switch:main {map:"mushroom_plains"} run function switch:maps/survival/mushroom_plains/
 execute if data storage switch:main {map:"friends_black_ball"} run function switch:maps/survival/friends_black_ball/
 execute if data storage switch:main {map:"enchanting_island"} run function switch:maps/survival/enchanting_island/

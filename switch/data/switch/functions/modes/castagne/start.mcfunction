@@ -3,7 +3,7 @@
 
 clear @a
 effect clear @a
-gamemode adventure @a
+gamemode survival @a
 team leave @a
 
 kill @e[type=!player,type=!marker]
