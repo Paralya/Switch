@@ -1,0 +1,107 @@
+
+#	500		(survival)	: laser_game
+#	1000	(survival)	: pitchout_1
+#	1500	(survival)	: traitor_original
+#	2000	(survival)	: zone_51
+#	2500	(survival)	: spectre_original
+#	3000	(survival)	: glass_runner
+##	3500	(adventure)	: pitch_creep_1
+#	4000	(survival)	: mushroom_plains
+##	5000	(adventure)	: boat_race_1
+#	6000	(survival)	: friends_black_ball
+#	7000	(survival)	: enchanting_island
+#	8000	(survival)	: friends_oneforall
+##	9000	(adventure)	: friends_cube_jump
+#	10000	(survival)	: warden_forest
+#	11000	(survival)	: friends_pvpbox_ice
+#	12000	(survival)	: friends_pvpbox_hills
+#	13000	(survival)	: friends_pvpbox_end
+#	14000	(survival)	: rush_the_point_1
+##	15000	(undefined)	: skywars_1		(not done yet)
+##	16000	(undefined)	: skywars_2		(not done yet)
+#	17000	(survival)	: friends_cube_lobby
+##	18000	(adventure)	: epsilon_circuit
+##	20000	(adventure)	: mario_circuit
+##	20000	(adventure)	: fast_circuit
+##	20000	(adventure)	: plains_routine
+##	20000	(adventure)	: city_race
+##	20000	(adventure)	: sakura_land
+##	20000	(adventure)	: hills_land
+##	20000	(adventure)	: airship_fortress
+##	20000	(adventure)	: dk_mountain
+##	20000	(adventure)	: clock_circuit
+#	21000	(survival)	: baby_park
+#	22000	(survival)	: bowser_castle
+#	23000	(survival)	: snow_travel
+##	24000	(adventure)	: rainbow_road
+##	25000	(adventure)	: trackmania_stadium_1
+#	26000	(survival)	: cathedrale_liege
+#	27000	(survival)	: layers_2_teams
+#	28000	(survival)	: spleef_1
+#	29000	(survival)	: de_a_coudre_1
+##	30000	(undefined)	: Build Arobaze			(not done yet)
+#	31000	(survival)	: mlg_a_coudre_1
+#	32000	(survival)	: zonweeb_main
+#	33000	(survival)	: dishorreur
+#	34000	(survival)	: jayl_dark_forest
+##	35000	(undefined)	: arti_mansion			(not done yet)
+#	36000	(survival)	: operation_pigclaw
+##	37000	(adventure)	: trackmania_stadium_2
+#	38000	(survival)	: pitch_creep_2
+#	39000	(survival)	: dark_forest_hills
+#	40000	(survival)	: paralya_lobby_noel
+#	41000	(survival)	: huge_cargo
+#	42000	(survival)	: ghost_town
+##	43000	(adventure)	: abandoned_city_spawn_circle
+##	44500	(adventure)	: abandoned_city
+#	46000	(survival)	: taroatlas_soviet_prison
+#	47000	(survival)	: desert_grand_library
+#	48000	(survival)	: new_grounds
+#	49000	(survival)	: cookie_wars
+#	50000	(survival)	: snow_hills
+##	51000	(adventure)	: boat_race_2
+#	52000	(survival)	: vilarles_castillo
+#	53000	(survival)	: zonweeb_highschool
+#	54000	(survival)	: enigma_lab_1
+#	55000	(survival)	: sumo_lawef
+##	56000	(undefined)	: CSGO Map, faut trouver le nom	(not done yet)
+#	57000	(survival)	: find_the_shulker
+#	58000	(survival)	: scartmania
+#	59000	(survival)	: colliseum
+#	60000	(survival)	: scary_labyrinth
+#	61000	(survival)	: snk_tower
+#	62000	(survival)	: blindtest
+#	63000	(survival)	: VIDE (pas de map)
+#	64000	(survival)	: kart_racer_relai
+#	65000	(survival)	: orange_rings
+#	66000	(survival)	: find_the_wool
+#	67000	(survival)	: snk_lab_s11
+#	68000	(survival)	: plucky_penguins
+#	69000	(survival)	: warden_escape_statue
+#	70000	(survival)	: giant_zoo
+#	71000	(survival)	: hider_mansion
+#	72000	(survival)	: nuketown
+#	73000	(survival)	: enigma_lab_2
+#	74000	(survival)	: layers_4_teams
+#	75000	(survival)	: snk_lab_s9
+##	76000	(undefined)	: Fish the pig			(not done yet)
+#	77000	(survival)	: sky_island_tower
+#	78000	(survival)	: sprucy_village
+#	79000	(survival)	: survival_boat
+#	80000	(survival)	: sky_tower				(Problème de hauteur à fixer)
+#	81000	(survival)	: purple_sky_island
+##	82000	(undefined)	: _
+#	83000	(survival)	: lava_castle
+#	84000	(survival)	: spruce_dojo
+#	85000	(survival)	: highland_mansion
+#	86000	(survival)	: sakura_house
+#	87000	(survival)	: red_temple
+#	88000	(survival)	: nature_house
+#	89000	(survival)	: flower_village
+#	90000	(survival)	: japanese_village
+#	91000	(survival)	: whity_lab
+#	92000	(survival)	: snowy_village
+#	93000	(survival)	: werewolf_village
+#	94000	(survival)	: wyvern_towers
+
+
