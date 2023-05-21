@@ -21,8 +21,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Téléportation des joueurs
-data modify storage switch:main maps_to_choose set value ["spleef_1"]
-function switch:maps/load
+function switch:choose_map_for/spleef
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
