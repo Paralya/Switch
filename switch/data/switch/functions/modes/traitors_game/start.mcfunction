@@ -21,18 +21,8 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Placement de la map et des joueurs + give d'items
-execute unless data storage switch:main traitors_game_maps[0] run data modify storage switch:main traitors_game_maps set value ["traitor_original", "zone_51", "spectre_original", "mushroom_plains", "jayl_dark_forest", "dark_forest_hills"]
-data modify storage switch:main maps_to_choose set from storage switch:main traitors_game_maps
-function switch:maps/load
-data modify storage switch:main copy set from storage switch:main traitors_game_maps
-function switch:maps/storage_map_list/remove_from_storage
-data modify storage switch:main traitors_game_maps set from storage switch:main new
-execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @a
-execute if data storage switch:main {map:"zone_51"} run spreadplayers 2000 2000 1 50 under 170 false @a
-execute if data storage switch:main {map:"spectre_original"} run spreadplayers 2500 2500 1 30 under 185 false @a
-execute if data storage switch:main {map:"mushroom_plains"} run spreadplayers 4000 4000 1 50 under 150 false @a
-execute if data storage switch:main {map:"jayl_dark_forest"} run spreadplayers 33931 33923 1 30 under 180 false @a
-execute if data storage switch:main {map:"dark_forest_hills"} run spreadplayers 39069 39111 1 50 under 160 false @a
+scoreboard players set #do_spreadplayers switch.data 1
+function switch:choose_map_for/traitors_game
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
