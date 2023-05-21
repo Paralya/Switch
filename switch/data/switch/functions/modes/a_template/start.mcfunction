@@ -17,9 +17,9 @@ difficulty normal
 time set 18000
 weather clear
 
-## Téléportation des joueurs dans quatres coins + give d'items
-scoreboard players set #count switch.data 0
-execute as @a[sort=random] run function switch:modes/a_template/teleport_players
+## Téléportation des joueurs + give d'items
+scoreboard players set #do_spreadplayers switch.data 1
+function switch:choose_map_for/a_template
 execute as @a at @s run function switch:modes/a_template/give_items
 
 gamerule mobGriefing false
