@@ -6,23 +6,43 @@ spreadplayers 8001 8000 1 12 under 130 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 8001 8000 1 12 under 130 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 8001 8000 1 12 under 130 false @s
 

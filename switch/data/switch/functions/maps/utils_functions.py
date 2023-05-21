@@ -313,8 +313,9 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	f.write("## Assurance commands\n")
 	y = start_pos[1]
 	dy = paste_start_height - 1
-	for i in range(20):
+	for _ in range(20):
 		f.write(f"execute as @a at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file and return
 	f.write("\n")

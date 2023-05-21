@@ -6,23 +6,43 @@ spreadplayers 36083 35924 12 128 under 198 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 36083 35924 12 128 under 198 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 36083 35924 12 128 under 198 false @s
 

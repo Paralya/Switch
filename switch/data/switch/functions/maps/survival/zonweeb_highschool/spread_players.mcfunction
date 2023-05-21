@@ -6,23 +6,43 @@ spreadplayers 52977 52985 3 31 under 156 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 52977 52985 3 31 under 156 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 52977 52985 3 31 under 156 false @s
 

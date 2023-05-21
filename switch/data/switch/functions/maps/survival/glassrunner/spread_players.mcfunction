@@ -6,23 +6,43 @@ spreadplayers 3000 3000 12 125 under 319 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 execute as @a at @s if entity @s[y=-64,dy=-65] run spreadplayers 3000 3000 12 125 under 319 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 3000 3000 12 125 under 319 false @s
 

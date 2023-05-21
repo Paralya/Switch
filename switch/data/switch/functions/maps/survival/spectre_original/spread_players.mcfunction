@@ -6,23 +6,43 @@ spreadplayers 2502 2499 2 21 under 184 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 2502 2499 2 21 under 184 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 2502 2499 2 21 under 184 false @s
 

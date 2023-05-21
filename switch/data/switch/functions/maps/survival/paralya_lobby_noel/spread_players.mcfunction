@@ -6,23 +6,43 @@ spreadplayers 40000 40000 5 50 under 199 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 execute as @a at @s if entity @s[y=-64,dy=99] run spreadplayers 40000 40000 5 50 under 199 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 40000 40000 5 50 under 199 false @s
 

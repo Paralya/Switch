@@ -6,23 +6,43 @@ spreadplayers 81021 81002 9 90 under 234 false @a
 
 ## Assurance commands
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 execute as @a at @s if entity @s[y=0,dy=-1] run spreadplayers 81021 81002 9 90 under 234 false @s
+execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 81021 81002 9 90 under 234 false @s
 
