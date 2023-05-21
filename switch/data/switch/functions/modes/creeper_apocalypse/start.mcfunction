@@ -21,12 +21,8 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Téléportation des joueurs + give d'items
-execute unless data storage switch:main creeper_apocalypse_maps[0] run data modify storage switch:main creeper_apocalypse_maps set value ["enchanting_island", "friends_cube_lobby", "zonweeb_main"]
-data modify storage switch:main maps_to_choose set from storage switch:main creeper_apocalypse_maps
-function switch:maps/load
-data modify storage switch:main copy set from storage switch:main creeper_apocalypse_maps
-function switch:maps/storage_map_list/remove_from_storage
-data modify storage switch:main creeper_apocalypse_maps set from storage switch:main new
+scoreboard players set #do_spreadplayers switch.data 1
+function switch:choose_map_for/creeper_apocalypse
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
