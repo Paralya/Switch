@@ -19,12 +19,7 @@ effect give @a weakness infinite 255 true
 time set 18000
 
 ## Traitement des joueurs
-execute unless data storage switch:main laser_game_maps[0] run data modify storage switch:main laser_game_maps set value ["laser_game", "operation_pigclaw"]
-data modify storage switch:main maps_to_choose set from storage switch:main laser_game_maps
-function switch:maps/load
-data modify storage switch:main copy set from storage switch:main laser_game_maps
-function switch:maps/storage_map_list/remove_from_storage
-data modify storage switch:main laser_game_maps set from storage switch:main new
+function switch:choose_map_for/laser_game
 
 scoreboard players set #team_boolean switch.data 0
 execute as @a[sort=random] run function switch:modes/laser_game/teleport_players
