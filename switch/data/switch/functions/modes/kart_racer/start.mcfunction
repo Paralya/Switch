@@ -103,7 +103,6 @@ scoreboard players set #total_checkpoints switch.data 1
 ## Téléportation des joueurs + give d'items
 function switch:choose_map_for/kart_racer
 
-
 execute as @a at @s run function switch:modes/kart_racer/give_items
 
 schedule function switch:modes/kart_racer/post_load 9s

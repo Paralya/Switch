@@ -47,6 +47,7 @@ time set 6000
 weather clear
 
 ## Téléportation des joueurs dans quatres coins + give d'items
+function switch:choose_map_for/glassrunner
 scoreboard players set #count switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a at @s run function switch:modes/glassrunner/death/death
