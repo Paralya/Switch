@@ -22,12 +22,7 @@ time set 6000
 weather clear
 
 ## Téléportation des joueurs
-execute unless data storage switch:main pitchout_maps[0] run data modify storage switch:main pitchout_maps set value ["pitchout_1"]
-data modify storage switch:main maps_to_choose set from storage switch:main pitchout_maps
-function switch:maps/load
-data modify storage switch:main copy set from storage switch:main pitchout_maps
-function switch:maps/storage_map_list/remove_from_storage
-data modify storage switch:main pitchout_maps set from storage switch:main new
+function switch:choose_map_for/pitchout
 scoreboard players set #spawn_count switch.data 0
 execute if data storage switch:main {map:"pitchout_1"} as @a[sort=random] run function switch:modes/pitchout/map_1/teleport_players
 execute as @a run function switch:modes/pitchout/xp_bar
