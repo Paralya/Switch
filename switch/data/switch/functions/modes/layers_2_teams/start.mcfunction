@@ -20,8 +20,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Chargement de la map
-data modify storage switch:main maps_to_choose set value ["layers_2_teams"]
-function switch:maps/load
+function switch:choose_map_for/layers_2_teams
 
 gamerule showDeathMessages true
 gamerule fallDamage true
