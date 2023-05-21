@@ -101,6 +101,7 @@ scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 
 ## Téléportation des joueurs + give d'items
+scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/kart_racer
 
 execute as @a at @s run function switch:modes/kart_racer/give_items

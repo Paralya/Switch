@@ -2,6 +2,7 @@
 ## Fonction executée lors du lancement de la partie
 
 # Map
+scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/boat_race
 
 clear @a

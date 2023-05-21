@@ -19,6 +19,7 @@ effect give @a weakness infinite 255 true
 time set 18000
 
 ## Traitement des joueurs
+scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/laser_game
 
 scoreboard players set #team_boolean switch.data 0

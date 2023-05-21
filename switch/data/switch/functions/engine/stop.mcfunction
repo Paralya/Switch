@@ -15,7 +15,8 @@ worldborder set 59999968
 worldborder center 0 0
 spawnpoint @a 0 74 0
 scoreboard objectives setdisplay list switch.stats.victories
-execute unless score #regeneration_ticks switch.data matches 1.. run function switch:maps/regenerate_map
+execute unless score #is_adventure switch.data matches 1 run function switch:maps/regenerate_map
+scoreboard players reset #is_adventure switch.data
 execute as @a run attribute @s generic.attack_speed base set 4.0
 execute as @a run attribute @s generic.max_health base set 20.0
 

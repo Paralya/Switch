@@ -21,6 +21,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Téléportation des joueurs + give d'items
+scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/creeper_apocalypse
 

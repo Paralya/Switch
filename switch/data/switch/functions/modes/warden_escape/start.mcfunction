@@ -18,6 +18,7 @@ time set 18000
 weather clear
 
 ## Téléportation des joueurs
+scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/warden_escape
 
 gamerule mobGriefing false
