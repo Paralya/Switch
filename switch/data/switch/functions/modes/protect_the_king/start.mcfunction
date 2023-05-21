@@ -24,7 +24,6 @@ weather clear
 
 ## Placement de la map et des joueurs
 function switch:choose_map_for/protect_the_king
-execute as @a run function switch:modes/protect_the_king/random_tp
 
 gamerule mobGriefing true
 gamerule showDeathMessages true
