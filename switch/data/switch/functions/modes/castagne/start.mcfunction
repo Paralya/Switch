@@ -22,12 +22,8 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Téléportation des joueurs
-execute unless data storage switch:main castagne_maps[0] run data modify storage switch:main castagne_maps set value ["operation_pigclaw", "friends_oneforall", "friends_pvpbox_ice", "friends_pvpbox_hills", "friends_pvpbox_end", "paralya_lobby_noel", "ghost_town", "abandoned_city", "taroatlas_soviet_prison", "desert_grand_library", "new_grounds", "snow_hills", "vilarles_castillo", "zonweeb_highschool"]
-data modify storage switch:main maps_to_choose set from storage switch:main castagne_maps
-function switch:maps/load
-data modify storage switch:main copy set from storage switch:main castagne_maps
-function switch:maps/storage_map_list/remove_from_storage
-data modify storage switch:main castagne_maps set from storage switch:main new
+scoreboard players set #do_spreadplayers switch.data 1
+function switch:choose_map_for/castagne
 
 gamerule mobGriefing false
 gamerule showDeathMessages true
@@ -44,14 +40,6 @@ scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
 
 
-## Give Items & Spreadplayers
+## Give Items
 execute as @a run function switch:modes/castagne/give_items
-scoreboard players set #success switch.data 0
-execute if score #success switch.data matches 0 store success score #success switch.data if data storage switch:main {map:"operation_pigclaw"} run spreadplayers 36000 36000 10 50 under 300 false @a
-execute if score #success switch.data matches 0 store success score #success switch.data if data storage switch:main {map:"friends_oneforall"} run spreadplayers 8000 8000 10 20 under 115 false @a
-execute if score #success switch.data matches 0 store success score #success switch.data if data storage switch:main {map:"taroatlas_soviet_prison"}
-execute if score #success switch.data matches 0 store success score #success switch.data if data storage switch:main {map:"desert_grand_library"} run spreadplayers 47000 47000 1 10 under 115 false @a
-execute if score #success switch.data matches 0 store success score #success switch.data if data storage switch:main {map:"new_grounds"} run spreadplayers 48000 48000 1 20 under 101 false @a
-execute if score #success switch.data matches 0 store success score #success switch.data if data storage switch:main {map:"vilarles_castillo"} run spreadplayers 52000 52000 1 5 under 101 false @a
-execute if score #success switch.data matches 0 at @r run spreadplayers ~ ~ 10 100 false @a
 
