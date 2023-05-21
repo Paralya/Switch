@@ -15,8 +15,7 @@ time set 6000
 weather clear
 
 ## Téléportation des joueurs
-data modify storage switch:main maps_to_choose set value ["mlg_a_coudre_1"]
-function switch:maps/load
+function switch:choose_map_for/mlg_a_coudre
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
