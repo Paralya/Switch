@@ -21,8 +21,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Placement de la map et des joueurs
-data modify storage switch:main maps_to_choose set value ["rush_the_point_1"]
-function switch:maps/load
+function switch:choose_map_for/rush_the_point
 
 gamerule mobGriefing false
 gamerule showDeathMessages true
