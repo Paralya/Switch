@@ -77,7 +77,7 @@ def calculateDivider(start_pos: tuple, end_pos: tuple) -> int:
 	return (area // 3200 + 2)
 
 
-def createTpCoordsString(start_pos: tuple, end_pos: tuple, paste_start_height:int = 0) -> tuple:
+def createTpCoordsStringFromStartAndEnd(start_pos: tuple, end_pos: tuple, paste_start_height: int = 0) -> tuple:
 	""" Creates a string with the tp coordinates
 	Args:
 		start_pos (tuple)		: The start position of the regeneration area
@@ -89,6 +89,18 @@ def createTpCoordsString(start_pos: tuple, end_pos: tuple, paste_start_height:in
 	y = int((start_pos[1] + end_pos[1]) / 2 + paste_start_height)
 	z = int((start_pos[2] + end_pos[2]) / 2)
 	return f"[{x}.0d, {y}.0d, {z}.0d]", x, y, z
+
+def createTpCoordsStringFromXYZ(xyz: tuple) -> tuple:
+	""" Creates a string with the tp coordinates
+	Args:
+		x (int)		: The x coordinate
+		y (int)		: The y coordinate
+		z (int)		: The z coordinate
+	Returns:
+		(str)		: The tp coordinates string
+	"""
+	x, y, z = xyz
+	return f"[{x}.0d, {y}.0d, {z}.0d]"
 
 def createMainFile(name: str, kart_racer: list = []) -> None:
 	""" Creates the ".mcfunction" file
@@ -290,7 +302,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 		None
 	"""
 	## Get variables
-	_, x, _, z = createTpCoordsString(start_pos, end_pos, paste_start_height)
+	_, x, _, z = createTpCoordsStringFromStartAndEnd(start_pos, end_pos, paste_start_height)
 	dx = end_pos[0] - x
 	dz = end_pos[2] - z
 	maxRange = min(dx, dz) // 2
