@@ -19,7 +19,7 @@ createFolderIfNotExists("survival")
 generated_maps = []
 
 # Create the function that generates a folder for a gamemode with regeneration using /clone
-def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, kart_racer: list = [], override_tp_coords: tuple = (None)):
+def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, kart_racer: list = [], override_tp_coords: tuple = None):
 	""" Generates a folder for a gamemode using /clone for regeneration
 	Args:
 		name				(str)	: The name of the gamemode
@@ -43,7 +43,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 
 	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
 	tp_coords, x, y, z = createTpCoordsStringFromStartAndEnd(start_pos, end_pos, paste_start_height)
-	if override_tp_coords[0] != None:
+	if override_tp_coords != None:
 		tp_coords = createTpCoordsStringFromXYZ(override_tp_coords)
 	createMainFile(name, kart_racer + [tp_coords])
 	createTeleportPlayersFile(name, tp_coords, kart_racer)
@@ -91,7 +91,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	return None
 
 # Create the function that generates a folder for a gamemode with regeneration using the fill command
-def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, block_that_replace: str, block_tag_to_replace: str, override_tp_coords: tuple = (None)):
+def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, block_that_replace: str, block_tag_to_replace: str, override_tp_coords: tuple = None):
 	""" Generate a folder for a gamemode with regeneration using the fill command
 	Args:
 		name					(str)	: The name of the gamemode
@@ -115,7 +115,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 
 	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
 	tp_coords, _, y, _ = createTpCoordsStringFromStartAndEnd(start_pos, end_pos)
-	if override_tp_coords[0] != None:
+	if override_tp_coords != None:
 		tp_coords = createTpCoordsStringFromXYZ(override_tp_coords)
 	createMainFile(name)
 	createTeleportPlayersFile(name, tp_coords)
@@ -192,56 +192,56 @@ generate_clone_survival_folder("operation_pigclaw", (35827, -64, 35668), (36340,
 generate_clone_survival_folder("pitch_creep_2", (37986, 0, 37974), (38014, 16, 38026), 100, override_tp_coords = (38000, 108, 38000))
 generate_clone_survival_folder("dark_forest_hills", (39000, 0, 39000), (39143, 69, 39221), 100, override_tp_coords = (39076, 138, 39134))
 # TODO : override_tp_coords pour le reste
-generate_clone_survival_folder("paralya_lobby_noel", (39900, -64, 39900), (40100, 100, 40100), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("huge_cargo", (41000, -64, 40892), (41267, 89, 41000), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("ghost_town", (41935, 0, 41942), (42065, 38, 42058), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("taroatlas_soviet_prison", (45788, -64, 45849), (46136, 126, 46187), 128, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("desert_grand_library", (46971, 0, 46971), (47036, 42, 47042), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("new_grounds", (47930, 0, 47930), (48070, 84, 48070), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("cookie_wars", (48900, 0, 48900), (49100, 47, 49100), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("snow_hills", (49906, 0, 49918), (50145, 60, 50103), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("vilarles_castillo", (51899, -64, 51853), (52115, 92, 52071), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("zonweeb_highschool", (52915, 0, 52876), (53040, 57, 53094), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("enigma_lab_1", (53977, 0, 53994), (54008, 40, 54100), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("sumo_lawef", (54979, 0, 54996), (55020, 39, 55037), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("find_the_shulker", (57000, 0, 57000), (57074, 55, 57113), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("scartmania", (58000, 0, 58000), (58160, 91, 58188), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("colliseum", (59000, 0, 59000), (59160, 47, 59124), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("scary_labyrinth", (60000, 0, 60000), (60184, 73, 60066), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("snk_tower", (61000, 0, 61000), (61084, 88, 61049), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("blindtest", (62000, 0, 62000), (62088, 59, 62093), 100, override_tp_coords = (524, 102, 523))
-# Drive the pig (63000, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("kart_racer_relai", (64000, 0, 64000), (64101, 53, 64126), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("orange_rings", (65000, 0, 65000), (65099, 94, 65103), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("find_the_wool", (66000, 0, 66000), (66085, 56, 66080), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("snk_lab_s11", (67000, 0, 67000), (67065, 33, 67073), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("plucky_penguins", (68000, 0, 68000), (68024, 20, 68031), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("warden_escape_statue", (69000, -64, 69000), (69148, 60, 69106), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("giant_zoo", (70000, 0, 70000), (70303, 64, 70287), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("hider_mansion", (71000, 0, 71000), (71170, 70, 71160), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("nuketown", (72000, 0, 72000), (72207, 51, 72220), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("enigma_lab_2", (73000, 0, 73000), (73076, 29, 73083), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("layers_4_teams", (74000, 0, 74000), (74036, 61, 74062), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("snk_lab_s9", (75000, 0, 75000), (75089, 35, 75076), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("sky_island_tower", (77000, -64, 77000), (77097, 81, 77094), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("sprucy_village", (78000, 0, 78000), (78171, 81, 78112), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("survival_boat", (79000, 0, 79000), (79126, 99, 79102), 100, override_tp_coords = (524, 102, 523))
+generate_clone_survival_folder("paralya_lobby_noel", (39900, -64, 39900), (40100, 100, 40100), 100, override_tp_coords = (40000, 186, 40000))
+generate_clone_survival_folder("huge_cargo", (41000, -64, 40892), (41267, 89, 41000), 100, override_tp_coords = (41155, 173, 40945))
+generate_clone_survival_folder("ghost_town", (41935, 0, 41942), (42065, 38, 42058), 100, override_tp_coords = (42000, 112, 42000))
+generate_clone_survival_folder("taroatlas_soviet_prison", (45788, -64, 45849), (46136, 126, 46187), 128, override_tp_coords = (None))
+generate_clone_survival_folder("desert_grand_library", (46971, 0, 46971), (47036, 42, 47042), 100, override_tp_coords = (None))
+generate_clone_survival_folder("new_grounds", (47930, 0, 47930), (48070, 84, 48070), 100, override_tp_coords = (None))
+generate_clone_survival_folder("cookie_wars", (48900, 0, 48900), (49100, 47, 49100), 100, override_tp_coords = (None))
+generate_clone_survival_folder("snow_hills", (49906, 0, 49918), (50145, 60, 50103), 100, override_tp_coords = (None))
+generate_clone_survival_folder("vilarles_castillo", (51899, -64, 51853), (52115, 92, 52071), 100, override_tp_coords = (None))
+generate_clone_survival_folder("zonweeb_highschool", (52915, 0, 52876), (53040, 57, 53094), 100, override_tp_coords = (None))
+generate_clone_survival_folder("enigma_lab_1", (53977, 0, 53994), (54008, 40, 54100), 100, override_tp_coords = (None))
+generate_clone_survival_folder("sumo_lawef", (54979, 0, 54996), (55020, 39, 55037), 100, override_tp_coords = (None))
+generate_clone_survival_folder("find_the_shulker", (57000, 0, 57000), (57074, 55, 57113), 100, override_tp_coords = (None))
+generate_clone_survival_folder("scartmania", (58000, 0, 58000), (58160, 91, 58188), 100, override_tp_coords = (None))
+generate_clone_survival_folder("colliseum", (59000, 0, 59000), (59160, 47, 59124), 100, override_tp_coords = (None))
+generate_clone_survival_folder("scary_labyrinth", (60000, 0, 60000), (60184, 73, 60066), 100, override_tp_coords = (None))
+generate_clone_survival_folder("snk_tower", (61000, 0, 61000), (61084, 88, 61049), 100, override_tp_coords = (None))
+generate_clone_survival_folder("blindtest", (62000, 0, 62000), (62088, 59, 62093), 100, override_tp_coords = (None))
+# Drive the pig (63000, override_tp_coords = (None))
+generate_clone_survival_folder("kart_racer_relai", (64000, 0, 64000), (64101, 53, 64126), 100, override_tp_coords = (None))
+generate_clone_survival_folder("orange_rings", (65000, 0, 65000), (65099, 94, 65103), 100, override_tp_coords = (None))
+generate_clone_survival_folder("find_the_wool", (66000, 0, 66000), (66085, 56, 66080), 100, override_tp_coords = (None))
+generate_clone_survival_folder("snk_lab_s11", (67000, 0, 67000), (67065, 33, 67073), 100, override_tp_coords = (None))
+generate_clone_survival_folder("plucky_penguins", (68000, 0, 68000), (68024, 20, 68031), 100, override_tp_coords = (None))
+generate_clone_survival_folder("warden_escape_statue", (69000, -64, 69000), (69148, 60, 69106), 100, override_tp_coords = (None))
+generate_clone_survival_folder("giant_zoo", (70000, 0, 70000), (70303, 64, 70287), 100, override_tp_coords = (None))
+generate_clone_survival_folder("hider_mansion", (71000, 0, 71000), (71170, 70, 71160), 100, override_tp_coords = (None))
+generate_clone_survival_folder("nuketown", (72000, 0, 72000), (72207, 51, 72220), 100, override_tp_coords = (None))
+generate_clone_survival_folder("enigma_lab_2", (73000, 0, 73000), (73076, 29, 73083), 100, override_tp_coords = (None))
+generate_clone_survival_folder("layers_4_teams", (74000, 0, 74000), (74036, 61, 74062), 100, override_tp_coords = (None))
+generate_clone_survival_folder("snk_lab_s9", (75000, 0, 75000), (75089, 35, 75076), 100, override_tp_coords = (None))
+generate_clone_survival_folder("sky_island_tower", (77000, -64, 77000), (77097, 81, 77094), 100, override_tp_coords = (None))
+generate_clone_survival_folder("sprucy_village", (78000, 0, 78000), (78171, 81, 78112), 100, override_tp_coords = (None))
+generate_clone_survival_folder("survival_boat", (79000, 0, 79000), (79126, 99, 79102), 100, override_tp_coords = (None))
 # Sky Tower (80000) #TODO : Malaise c'est trop grand
-generate_clone_survival_folder("sky_tower", (80000, -64, 80000), (80142, 147, 80142), 150, override_tp_coords = (524, 102, 523))
-generate_fill_survival_folder("purple_sky_island", (80824, 0, 80822), (81219, 235, 81182), "air", "#switch:purple_sky_island", override_tp_coords = (524, 102, 523))
-# Sea Artificial Island (82000, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("lava_castle", (83000, 0, 83000), (83063, 85, 83063), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("spruce_dojo", (84000, 0, 84000), (84083, 46, 84069), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("highland_mansion", (85000, 0, 85000), (85150, 72, 85142), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("sakura_house", (86000, 0, 86000), (86121, 94, 86135), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("red_temple", (87000, 0, 87000), (87045, 40, 87094), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("nature_house", (88000, 0, 88000), (88068, 32, 88068), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("flower_village", (89000, 0, 89000), (89422, 94, 89532), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("japanese_village", (90000, 0, 90000), (90224, 85, 90286), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("whity_lab", (91000, 0, 91000), (91102, 35, 91102), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("snowy_village", (92000, 0, 92000), (92200, 70, 92229), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("werewolf_village", (93000, 0, 93000), (93122, 64, 93122), 100, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("wyvern_towers", (94000, 0, 94000), (94076, 99, 94076), 100, override_tp_coords = (524, 102, 523))
+generate_clone_survival_folder("sky_tower", (80000, -64, 80000), (80142, 147, 80142), 150, override_tp_coords = (None))
+generate_fill_survival_folder("purple_sky_island", (80824, 0, 80822), (81219, 235, 81182), "air", "#switch:purple_sky_island", override_tp_coords = (None))
+# Sea Artificial Island (82000, override_tp_coords = (None))
+generate_clone_survival_folder("lava_castle", (83000, 0, 83000), (83063, 85, 83063), 100, override_tp_coords = (None))
+generate_clone_survival_folder("spruce_dojo", (84000, 0, 84000), (84083, 46, 84069), 100, override_tp_coords = (None))
+generate_clone_survival_folder("highland_mansion", (85000, 0, 85000), (85150, 72, 85142), 100, override_tp_coords = (None))
+generate_clone_survival_folder("sakura_house", (86000, 0, 86000), (86121, 94, 86135), 100, override_tp_coords = (None))
+generate_clone_survival_folder("red_temple", (87000, 0, 87000), (87045, 40, 87094), 100, override_tp_coords = (None))
+generate_clone_survival_folder("nature_house", (88000, 0, 88000), (88068, 32, 88068), 100, override_tp_coords = (None))
+generate_clone_survival_folder("flower_village", (89000, 0, 89000), (89422, 94, 89532), 100, override_tp_coords = (None))
+generate_clone_survival_folder("japanese_village", (90000, 0, 90000), (90224, 85, 90286), 100, override_tp_coords = (None))
+generate_clone_survival_folder("whity_lab", (91000, 0, 91000), (91102, 35, 91102), 100, override_tp_coords = (None))
+generate_clone_survival_folder("snowy_village", (92000, 0, 92000), (92200, 70, 92229), 100, override_tp_coords = (None))
+generate_clone_survival_folder("werewolf_village", (93000, 0, 93000), (93122, 64, 93122), 100, override_tp_coords = (None))
+generate_clone_survival_folder("wyvern_towers", (94000, 0, 94000), (94076, 99, 94076), 100, override_tp_coords = (None))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air

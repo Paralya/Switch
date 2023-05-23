@@ -1,6 +1,6 @@
 
 summon marker 0 0 0 {Tags:["switch.selected_map"]}
-execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value [22001.0d, 140.0d, 22010.0d]
+execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value [21956.5d, 131.5d, 22056.5d]
 
 scoreboard players set #count switch.data 0
 execute as @a[sort=random] run function switch:maps/survival/bowser_castle/teleport_players

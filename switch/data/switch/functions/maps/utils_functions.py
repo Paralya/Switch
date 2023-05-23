@@ -85,10 +85,19 @@ def createTpCoordsStringFromStartAndEnd(start_pos: tuple, end_pos: tuple, paste_
 	Returns:
 		(str, int, int, int)	: The tp coordinates string and the x, y and z coordinates
 	"""
+	# x and z
 	x = int((start_pos[0] + end_pos[0]) / 2)
-	y = int((start_pos[1] + end_pos[1]) / 2 + paste_start_height)
 	z = int((start_pos[2] + end_pos[2]) / 2)
-	return f"[{x}.0d, {y}.0d, {z}.0d]", x, y, z
+
+	# Calculate the y coordinate
+	decal = paste_start_height - start_pos[1]
+	a = start_pos[1] + decal
+	b = end_pos[1] + decal
+	middle_y = (a + b) / 2
+	y = int(middle_y)
+
+	# Return
+	return f"[{x}.5d, {y}.5d, {z}.5d]", x, y, z
 
 def createTpCoordsStringFromXYZ(xyz: tuple) -> tuple:
 	""" Creates a string with the tp coordinates
@@ -100,7 +109,7 @@ def createTpCoordsStringFromXYZ(xyz: tuple) -> tuple:
 		(str)		: The tp coordinates string
 	"""
 	x, y, z = xyz
-	return f"[{x}.0d, {y}.0d, {z}.0d]"
+	return f"[{x}.5d, {y}.5d, {z}.5d]"
 
 def createMainFile(name: str, kart_racer: list = []) -> None:
 	""" Creates the ".mcfunction" file

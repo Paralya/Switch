@@ -1,4 +1,4 @@
 
-data modify entity @s Pos set value [39071.0d, 134.0d, 39110.0d]
+data modify entity @s Pos set value [39076.5d, 138.5d, 39134.5d]
 execute at @s run tp @a ~ ~ ~
 
