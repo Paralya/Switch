@@ -25,6 +25,7 @@ gamerule keepInventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
+scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/pitch_creep
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitch Creep, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]

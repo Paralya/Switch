@@ -163,6 +163,8 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 	if len(kart_racer) == 0:
 		f.write(f'data modify entity @s Pos set value {tp_coords}\n')
 		f.write(f'execute at @s run tp @a ~ ~ ~\n')
+		f.write(f'execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/{name}/spread_players\n')
+		f.write(f'scoreboard players reset #do_spreadplayers switch.data\n')
 	else:
 
 		# Get variables

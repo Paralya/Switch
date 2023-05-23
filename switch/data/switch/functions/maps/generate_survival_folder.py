@@ -191,7 +191,6 @@ generate_clone_survival_folder("jayl_dark_forest", (33813, 0, 33873), (34000, 89
 generate_clone_survival_folder("operation_pigclaw", (35827, -64, 35668), (36340, 99, 36180), 100, override_tp_coords = (36041, 151, 36013))
 generate_clone_survival_folder("pitch_creep_2", (37986, 0, 37974), (38014, 16, 38026), 100, override_tp_coords = (38000, 108, 38000))
 generate_clone_survival_folder("dark_forest_hills", (39000, 0, 39000), (39143, 69, 39221), 100, override_tp_coords = (39076, 138, 39134))
-# TODO : override_tp_coords pour le reste
 generate_clone_survival_folder("paralya_lobby_noel", (39900, -64, 39900), (40100, 100, 40100), 100, override_tp_coords = (40000, 186, 40000))
 generate_clone_survival_folder("huge_cargo", (41000, -64, 40892), (41267, 89, 41000), 100, override_tp_coords = (41155, 173, 40945))
 generate_clone_survival_folder("ghost_town", (41935, 0, 41942), (42065, 38, 42058), 100, override_tp_coords = (42000, 112, 42000))
