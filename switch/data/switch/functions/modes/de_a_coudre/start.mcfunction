@@ -15,7 +15,7 @@ time set 6000
 weather clear
 
 ## Téléportation des joueurs
-function switch:choose_map_for/de_a_coudre_1
+function switch:choose_map_for/de_a_coudre
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
