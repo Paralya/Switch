@@ -3667,210 +3667,32 @@ execute if score #rg_japanese_village switch.data matches 1822 run particle clou
 execute if score #rg_japanese_village switch.data matches 1822 run clone 90204 81 90000 90214 81 90286 90204 181 90000 replace force
 execute if score #rg_japanese_village switch.data matches 1823 run particle cloud 90219 181.5 90143 5 0 71 0 2500 force
 execute if score #rg_japanese_village switch.data matches 1823 run clone 90214 81 90000 90224 81 90286 90214 181 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1824 run particle cloud 90005 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1824 run clone 90000 82 90000 90010 82 90286 90000 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1825 run particle cloud 90015 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1825 run clone 90010 82 90000 90020 82 90286 90010 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1826 run particle cloud 90025 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1826 run clone 90020 82 90000 90031 82 90286 90020 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1827 run particle cloud 90036 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1827 run clone 90031 82 90000 90041 82 90286 90031 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1828 run particle cloud 90046 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1828 run clone 90041 82 90000 90051 82 90286 90041 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1829 run particle cloud 90056 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1829 run clone 90051 82 90000 90061 82 90286 90051 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1830 run particle cloud 90066 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1830 run clone 90061 82 90000 90071 82 90286 90061 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1831 run particle cloud 90076 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1831 run clone 90071 82 90000 90081 82 90286 90071 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1832 run particle cloud 90086 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1832 run clone 90081 82 90000 90092 82 90286 90081 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1833 run particle cloud 90097 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1833 run clone 90092 82 90000 90102 82 90286 90092 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1834 run particle cloud 90107 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1834 run clone 90102 82 90000 90112 82 90286 90102 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1835 run particle cloud 90117 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1835 run clone 90112 82 90000 90122 82 90286 90112 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1836 run particle cloud 90127 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1836 run clone 90122 82 90000 90132 82 90286 90122 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1837 run particle cloud 90137 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1837 run clone 90132 82 90000 90143 82 90286 90132 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1838 run particle cloud 90148 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1838 run clone 90143 82 90000 90153 82 90286 90143 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1839 run particle cloud 90158 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1839 run clone 90153 82 90000 90163 82 90286 90153 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1840 run particle cloud 90168 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1840 run clone 90163 82 90000 90173 82 90286 90163 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1841 run particle cloud 90178 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1841 run clone 90173 82 90000 90183 82 90286 90173 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1842 run particle cloud 90188 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1842 run clone 90183 82 90000 90193 82 90286 90183 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1843 run particle cloud 90198 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1843 run clone 90193 82 90000 90204 82 90286 90193 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1844 run particle cloud 90209 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1844 run clone 90204 82 90000 90214 82 90286 90204 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1845 run particle cloud 90219 182.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1845 run clone 90214 82 90000 90224 82 90286 90214 182 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1846 run particle cloud 90005 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1846 run clone 90000 83 90000 90010 83 90286 90000 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1847 run particle cloud 90015 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1847 run clone 90010 83 90000 90020 83 90286 90010 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1848 run particle cloud 90025 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1848 run clone 90020 83 90000 90031 83 90286 90020 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1849 run particle cloud 90036 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1849 run clone 90031 83 90000 90041 83 90286 90031 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1850 run kill @e[type=item,x=90112,y=0,z=90143,distance=..1000]
-execute if score #rg_japanese_village switch.data matches 1850 run particle cloud 90046 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1850 run clone 90041 83 90000 90051 83 90286 90041 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1851 run particle cloud 90056 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1851 run clone 90051 83 90000 90061 83 90286 90051 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1852 run particle cloud 90066 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1852 run clone 90061 83 90000 90071 83 90286 90061 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1853 run particle cloud 90076 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1853 run clone 90071 83 90000 90081 83 90286 90071 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1854 run particle cloud 90086 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1854 run clone 90081 83 90000 90092 83 90286 90081 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1855 run particle cloud 90097 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1855 run clone 90092 83 90000 90102 83 90286 90092 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1856 run particle cloud 90107 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1856 run clone 90102 83 90000 90112 83 90286 90102 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1857 run particle cloud 90117 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1857 run clone 90112 83 90000 90122 83 90286 90112 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1858 run particle cloud 90127 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1858 run clone 90122 83 90000 90132 83 90286 90122 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1859 run particle cloud 90137 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1859 run clone 90132 83 90000 90143 83 90286 90132 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1860 run particle cloud 90148 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1860 run clone 90143 83 90000 90153 83 90286 90143 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1861 run particle cloud 90158 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1861 run clone 90153 83 90000 90163 83 90286 90153 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1862 run particle cloud 90168 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1862 run clone 90163 83 90000 90173 83 90286 90163 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1863 run particle cloud 90178 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1863 run clone 90173 83 90000 90183 83 90286 90173 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1864 run particle cloud 90188 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1864 run clone 90183 83 90000 90193 83 90286 90183 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1865 run particle cloud 90198 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1865 run clone 90193 83 90000 90204 83 90286 90193 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1866 run particle cloud 90209 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1866 run clone 90204 83 90000 90214 83 90286 90204 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1867 run particle cloud 90219 183.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1867 run clone 90214 83 90000 90224 83 90286 90214 183 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1868 run particle cloud 90005 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1868 run clone 90000 84 90000 90010 84 90286 90000 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1869 run particle cloud 90015 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1869 run clone 90010 84 90000 90020 84 90286 90010 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1870 run particle cloud 90025 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1870 run clone 90020 84 90000 90031 84 90286 90020 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1871 run particle cloud 90036 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1871 run clone 90031 84 90000 90041 84 90286 90031 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1872 run particle cloud 90046 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1872 run clone 90041 84 90000 90051 84 90286 90041 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1873 run particle cloud 90056 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1873 run clone 90051 84 90000 90061 84 90286 90051 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1874 run particle cloud 90066 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1874 run clone 90061 84 90000 90071 84 90286 90061 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1875 run particle cloud 90076 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1875 run clone 90071 84 90000 90081 84 90286 90071 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1876 run particle cloud 90086 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1876 run clone 90081 84 90000 90092 84 90286 90081 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1877 run particle cloud 90097 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1877 run clone 90092 84 90000 90102 84 90286 90092 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1878 run particle cloud 90107 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1878 run clone 90102 84 90000 90112 84 90286 90102 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1879 run particle cloud 90117 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1879 run clone 90112 84 90000 90122 84 90286 90112 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1880 run particle cloud 90127 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1880 run clone 90122 84 90000 90132 84 90286 90122 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1881 run particle cloud 90137 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1881 run clone 90132 84 90000 90143 84 90286 90132 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1882 run particle cloud 90148 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1882 run clone 90143 84 90000 90153 84 90286 90143 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1883 run particle cloud 90158 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1883 run clone 90153 84 90000 90163 84 90286 90153 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1884 run particle cloud 90168 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1884 run clone 90163 84 90000 90173 84 90286 90163 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1885 run particle cloud 90178 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1885 run clone 90173 84 90000 90183 84 90286 90173 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1886 run particle cloud 90188 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1886 run clone 90183 84 90000 90193 84 90286 90183 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1887 run particle cloud 90198 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1887 run clone 90193 84 90000 90204 84 90286 90193 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1888 run particle cloud 90209 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1888 run clone 90204 84 90000 90214 84 90286 90204 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1889 run particle cloud 90219 184.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1889 run clone 90214 84 90000 90224 84 90286 90214 184 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1890 run particle cloud 90005 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1890 run clone 90000 85 90000 90010 85 90286 90000 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1891 run particle cloud 90015 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1891 run clone 90010 85 90000 90020 85 90286 90010 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1892 run particle cloud 90025 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1892 run clone 90020 85 90000 90031 85 90286 90020 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1893 run particle cloud 90036 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1893 run clone 90031 85 90000 90041 85 90286 90031 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1894 run particle cloud 90046 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1894 run clone 90041 85 90000 90051 85 90286 90041 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1895 run particle cloud 90056 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1895 run clone 90051 85 90000 90061 85 90286 90051 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1896 run particle cloud 90066 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1896 run clone 90061 85 90000 90071 85 90286 90061 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1897 run particle cloud 90076 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1897 run clone 90071 85 90000 90081 85 90286 90071 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1898 run particle cloud 90086 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1898 run clone 90081 85 90000 90092 85 90286 90081 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1899 run particle cloud 90097 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1899 run clone 90092 85 90000 90102 85 90286 90092 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1900 run kill @e[type=item,x=90112,y=0,z=90143,distance=..1000]
-execute if score #rg_japanese_village switch.data matches 1900 run particle cloud 90107 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1900 run clone 90102 85 90000 90112 85 90286 90102 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1901 run particle cloud 90117 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1901 run clone 90112 85 90000 90122 85 90286 90112 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1902 run particle cloud 90127 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1902 run clone 90122 85 90000 90132 85 90286 90122 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1903 run particle cloud 90137 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1903 run clone 90132 85 90000 90143 85 90286 90132 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1904 run particle cloud 90148 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1904 run clone 90143 85 90000 90153 85 90286 90143 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1905 run particle cloud 90158 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1905 run clone 90153 85 90000 90163 85 90286 90153 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1906 run particle cloud 90168 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1906 run clone 90163 85 90000 90173 85 90286 90163 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1907 run particle cloud 90178 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1907 run clone 90173 85 90000 90183 85 90286 90173 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1908 run particle cloud 90188 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1908 run clone 90183 85 90000 90193 85 90286 90183 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1909 run particle cloud 90198 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1909 run clone 90193 85 90000 90204 85 90286 90193 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1910 run particle cloud 90209 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1910 run clone 90204 85 90000 90214 85 90286 90204 185 90000 replace force
-execute if score #rg_japanese_village switch.data matches 1911 run particle cloud 90219 185.5 90143 5 0 71 0 2500 force
-execute if score #rg_japanese_village switch.data matches 1911 run clone 90214 85 90000 90224 85 90286 90214 185 90000 replace force
 
-execute if score #rg_japanese_village switch.data matches 1912.. run kill @e[type=item]
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90000 90000 90010 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90010 90000 90020 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90020 90000 90031 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90031 90000 90041 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90041 90000 90051 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90051 90000 90061 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90061 90000 90071 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90071 90000 90081 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90081 90000 90092 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90092 90000 90102 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90102 90000 90112 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90112 90000 90122 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90122 90000 90132 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90132 90000 90143 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90143 90000 90153 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90153 90000 90163 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90163 90000 90173 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90173 90000 90183 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90183 90000 90193 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90193 90000 90204 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90204 90000 90214 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run forceload remove 90214 90000 90224 90286
-execute if score #rg_japanese_village switch.data matches 1912.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"japanese_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_japanese_village switch.data matches 1912.. run scoreboard players reset #rg_japanese_village switch.data
+execute if score #rg_japanese_village switch.data matches 1824.. run kill @e[type=item]
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90000 90000 90010 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90010 90000 90020 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90020 90000 90031 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90031 90000 90041 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90041 90000 90051 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90051 90000 90061 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90061 90000 90071 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90071 90000 90081 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90081 90000 90092 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90092 90000 90102 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90102 90000 90112 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90112 90000 90122 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90122 90000 90132 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90132 90000 90143 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90143 90000 90153 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90153 90000 90163 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90163 90000 90173 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90173 90000 90183 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90183 90000 90193 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90193 90000 90204 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90204 90000 90214 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run forceload remove 90214 90000 90224 90286
+execute if score #rg_japanese_village switch.data matches 1824.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"japanese_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"31","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_japanese_village switch.data matches 1824.. run scoreboard players reset #rg_japanese_village switch.data
 
 execute if score #rg_japanese_village switch.data matches 1.. run schedule function switch:maps/survival/japanese_village/regenerate 1t
 
