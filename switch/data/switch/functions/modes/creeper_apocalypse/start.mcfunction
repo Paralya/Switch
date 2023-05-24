@@ -13,7 +13,7 @@ kill @e[type=arrow]
 effect give @a night_vision infinite 255 true
 effect give @a saturation infinite 255 true
 effect give @a regeneration 5 255 true
-effect give @a resistance 5 255 true
+effect give @a resistance 12 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
