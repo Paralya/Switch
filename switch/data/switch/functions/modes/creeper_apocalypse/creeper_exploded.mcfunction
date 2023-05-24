@@ -5,3 +5,4 @@ execute if predicate switch:chance/0.5 run summon creeper ~1 ~ ~.5 {AbsorptionAm
 execute if predicate switch:chance/0.5 run summon creeper ~-1 ~ ~.5 {AbsorptionAmount:2048f,Motion:[-0.4d,0.40d,0.2d]}
 
 kill @s
+
