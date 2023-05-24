@@ -227,7 +227,9 @@ def createSplittedCoordinates(start_pos: tuple, end_pos: tuple, divider: int) ->
 		z1 = round(c1[0] + d*(i+1))
 		z2 = c1[3]
 
-		# Append the coordinates to the list
+		# Append the coordinates to the list and
+		dx = x2 - x1
+		dz = z2 - z1
 		c.append([ x1, x2, z1, z2 ])
 
 	# Return

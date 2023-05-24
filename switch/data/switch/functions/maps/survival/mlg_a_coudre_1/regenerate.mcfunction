@@ -3,13 +3,21 @@ scoreboard players add #rg_mlg_a_coudre_1 switch.data 1
 execute if score #rg_mlg_a_coudre_1 switch.data matches 1 run forceload add 30987 30987 30999 31013
 execute if score #rg_mlg_a_coudre_1 switch.data matches 1 run forceload add 30999 30987 31011 31013
 
+execute if score #rg_mlg_a_coudre_1 switch.data matches 20 run particle cloud 30993 101 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 20 run fill 30987 100 30987 30999 100 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 20 run particle cloud 31005 101 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 20 run fill 30999 100 30987 31011 100 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 21 run particle cloud 30993 102 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 21 run fill 30987 101 30987 30999 101 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 21 run particle cloud 31005 102 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 21 run fill 30999 101 30987 31011 101 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 22 run particle cloud 30993 103 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 22 run fill 30987 102 30987 30999 102 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 22 run particle cloud 31005 103 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 22 run fill 30999 102 30987 31011 102 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 23 run particle cloud 30993 104 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 23 run fill 30987 103 30987 30999 103 31013 air replace #switch:de_a_coudre
+execute if score #rg_mlg_a_coudre_1 switch.data matches 23 run particle cloud 31005 104 31000 6 0 6 0 1000 force
 execute if score #rg_mlg_a_coudre_1 switch.data matches 23 run fill 30999 103 30987 31011 103 31013 air replace #switch:de_a_coudre
 
 execute if score #rg_mlg_a_coudre_1 switch.data matches 24.. run kill @e[type=item]
