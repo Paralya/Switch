@@ -12,6 +12,7 @@ execute if score #vote_game_2 switch.data > #max switch.data run scoreboard play
 execute if score #vote_game_3 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_3 switch.data
 execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_4 switch.data
 execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_5 switch.data
+execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_6 switch.data
 
 data modify storage switch:main voted_games set value []
 data modify storage switch:main current_game set value ""
@@ -20,6 +21,7 @@ execute if score #vote_game_2 switch.data = #max switch.data run data modify sto
 execute if score #vote_game_3 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[2]
 execute if score #vote_game_4 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[3]
 execute if score #vote_game_5 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[4]
+execute if score #vote_game_6 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[5]
 
 scoreboard players set #modulo_rand switch.data 0
 execute store result score #modulo_rand switch.data run data get storage switch:main voted_games
@@ -34,5 +36,5 @@ execute as @a run attribute @s generic.attack_speed base set 4.0
 execute as @a run attribute @s generic.max_health base set 20.0
 function #switch:signals/start
 
-execute as @e[limit=8] as @a at @s run playsound ui.toast.in ambient @s
+execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a at @s run playsound ui.toast.in ambient @s
 
