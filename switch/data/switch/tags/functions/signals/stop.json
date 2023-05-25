@@ -20,6 +20,7 @@
 		"switch:modes/castagne/calls/stop",
 		"switch:modes/layers_2_teams/calls/stop",
 		"switch:modes/layers_4_teams/calls/stop",
+		"switch:modes/thunder_spear/calls/stop",
 		"switch:modes/a_template/calls/stop"
 	]
 }

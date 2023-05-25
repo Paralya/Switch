@@ -20,6 +20,7 @@
 		"switch:modes/castagne/calls/second",
 		"switch:modes/layers_2_teams/calls/second",
 		"switch:modes/layers_4_teams/calls/second",
+		"switch:modes/thunder_spear/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }
