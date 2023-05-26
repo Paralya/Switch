@@ -6,16 +6,16 @@ execute if score #instant_engine_max shopping_kart.data matches 1 run scoreboard
 function shopping_kart:kart/visual_passenger
 
 ## Water specification
-function shopping_kart:kart/physics_water
+function shopping_kart:kart/physics/water
 
 ## Physics calculation depending on engine speed, surface, old motion, booster, etc.
-function shopping_kart:kart/physics_calculation
+function shopping_kart:kart/physics/calculation
 
 ## Apply new motion & update old motion
-function shopping_kart:kart/physics_apply_motion
+function shopping_kart:kart/physics/apply_motion
 
 ## Try to predict position after 1 tick (new_pos = old_pos + new_motion)
-function shopping_kart:kart/physics_predict_position
+function shopping_kart:kart/physics/predict_position
 
 ## Title actionbar
 execute if score #have_passenger shopping_kart.data matches 1 run function shopping_kart:kart/title_actionbar

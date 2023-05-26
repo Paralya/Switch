@@ -2,7 +2,7 @@
 ## Speed up engine progressively depending on surface
 # Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
 # When in air : surface = 0
-function shopping_kart:kart/physics_get_surface
+function shopping_kart:kart/physics/get_surface
 
 # Real gain is (add - 28) cause of speed_down.mcfunction
 scoreboard players set #add shopping_kart.engine 36

@@ -2,7 +2,7 @@
 # Define multiplier depending on engine speed & block stepping on
 # Surface : 0 = normal, 1 = fast, 2 = slippery, 3 = slow, 4 = very slow
 # When in air : surface = 0
-function shopping_kart:kart/physics_get_surface
+function shopping_kart:kart/physics/get_surface
 
 scoreboard players operation #engine shopping_kart.data = @s shopping_kart.engine
 execute if score #surface shopping_kart.data matches 0..1 run scoreboard players set #multiplier shopping_kart.data 10
@@ -21,7 +21,7 @@ execute if score @s shopping_kart.reactor_boost matches 1.. run scoreboard playe
 execute store result score #new_pos_x shopping_kart.data run data get entity @s Pos[0] 10000
 execute store result score #new_pos_z shopping_kart.data run data get entity @s Pos[2] 10000
 execute store result score #pos_y shopping_kart.data run data get entity @s Pos[1] 10
-execute if score #pos_y shopping_kart.data = @s shopping_kart.old_pos_y run function shopping_kart:kart/physics_check_predictions
+execute if score #pos_y shopping_kart.data = @s shopping_kart.old_pos_y run function shopping_kart:kart/physics/check_predictions
 scoreboard players operation @s shopping_kart.old_pos_y = #pos_y shopping_kart.data
 scoreboard players operation @s shopping_kart.predicted_pos_x = #new_pos_x shopping_kart.data
 scoreboard players operation @s shopping_kart.predicted_pos_z = #new_pos_z shopping_kart.data
@@ -47,7 +47,7 @@ scoreboard players operation #new_motion_x shopping_kart.data += @s shopping_kar
 execute unless score @s shopping_kart.engine matches 0 run scoreboard players operation #new_motion_z shopping_kart.data = #motion_z shopping_kart.data
 execute unless score @s shopping_kart.engine matches 0 run scoreboard players operation #new_motion_z shopping_kart.data *= #multiplier shopping_kart.data
 scoreboard players operation #new_motion_z shopping_kart.data += @s shopping_kart.motion_z
-execute unless score #booster shopping_kart.data matches 0 run function shopping_kart:kart/booster
+execute unless score #booster shopping_kart.data matches 0 run function shopping_kart:kart/effects/booster
 execute store result storage shopping_kart:main Motion[0] double 0.0000001 run scoreboard players get #new_motion_x shopping_kart.data
 execute store result storage shopping_kart:main Motion[2] double 0.0000001 run scoreboard players get #new_motion_z shopping_kart.data
 scoreboard players set #motion_x shopping_kart.data 0

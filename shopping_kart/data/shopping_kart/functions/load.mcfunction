@@ -13,6 +13,7 @@ scoreboard objectives add shopping_kart.old_pos_z dummy
 scoreboard objectives add shopping_kart.booster_timer dummy
 scoreboard objectives add shopping_kart.reactor_boost dummy
 scoreboard objectives add shopping_kart.cruise_control dummy
+scoreboard objectives add shopping_kart.model trigger
 
 scoreboard players set ShoppingKart load.status 1010
 scoreboard players set #default_max_engine shopping_kart.data 1500
