@@ -30,7 +30,7 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 
 scoreboard players set #thunder_spear_seconds switch.data -5
 scoreboard players set #thunder_spear_ticks switch.data 0
-scoreboard players set #remaining_time switch.data 250
+scoreboard players set #remaining_time switch.data 155
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.kills playerKillCount {"text":" Joueurs tués ","color":"red"}
