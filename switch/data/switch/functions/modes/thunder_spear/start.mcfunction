@@ -28,7 +28,7 @@ gamerule fallDamage false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Thunder Spear, 10 secondes de préparation et tuez le plus de gens !"}]
 
-scoreboard players set #thunder_spear_seconds switch.data -10
+scoreboard players set #thunder_spear_seconds switch.data -5
 scoreboard players set #thunder_spear_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 250
 scoreboard players set #process_end switch.data 0
@@ -41,9 +41,9 @@ scoreboard players set @a switch.temp.kills 0
 
 ## Give Items
 execute as @a run function switch:modes/thunder_spear/give_and_teleport
-effect give @a blindness 10 255 true
-effect give @a weakness 10 255 true
-effect give @a saturation 10 255 true
-effect give @a resistance 10 255 true
-effect give @a regeneration 10 255 true
+effect give @a blindness 5 255 true
+effect give @a weakness 5 255 true
+effect give @a saturation 5 255 true
+effect give @a resistance 5 255 true
+effect give @a regeneration 5 255 true
 

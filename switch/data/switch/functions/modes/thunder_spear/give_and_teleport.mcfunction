@@ -6,6 +6,8 @@ effect clear @s
 effect give @s speed infinite 1 true
 effect give @s jump_boost infinite 4 true
 effect give @s resistance 5 255 true
+gamemode survival @s
+scoreboard players add @s switch.temp.kills 0
 
 # Give items
 setblock 0 0 0 yellow_shulker_box

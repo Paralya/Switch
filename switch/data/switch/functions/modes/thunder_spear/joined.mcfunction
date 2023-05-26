@@ -4,5 +4,5 @@
 # execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-function switch:modes/thunder_spear/death
+function switch:modes/thunder_spear/give_and_teleport
 

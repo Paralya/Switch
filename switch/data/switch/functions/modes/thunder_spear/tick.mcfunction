@@ -10,9 +10,7 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sor
 item replace entity @a inventory.0 with arrow 64
 
 # Summon tnt to arrows on ground and remove them
-# TODO : Owner of the explosion should be the player who shot the arrow
-execute at @e[type=arrow,nbt={inBlockState:{}}] run summon tnt
-kill @e[type=arrow,nbt={inBlockState:{}}]
+execute as @e[type=arrow,nbt={inBlockState:{}}] at @s run function switch:modes/thunder_spear/explode_arrow
 
 ## Fin de partie
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/thunder_spear/process_end
