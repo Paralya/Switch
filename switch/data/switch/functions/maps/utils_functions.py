@@ -260,7 +260,7 @@ def writeFirstLinesOfRegenerate(name: str, base_condition: str, splitted_coordin
 	f.write("\n")
 	return f
 
-def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str, splitted_coordinates: list, last_tick: int, divider: int, suffix: str = "") -> None:
+def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str, splitted_coordinates: list, xyz: tuple, last_tick: int, divider: int, suffix: str = "") -> None:
 	""" Writes the last lines of the "regenerate.mcfunction" file
 	Args:
 		f (TextIOWrapper)			: The file
@@ -283,7 +283,8 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	f.write("\n")
 
 	# Write the kill command
-	f.write(f"{base_condition} {last_tick}.. run kill @e[type=item]\n")
+	x, y, z = xyz
+	f.write(f"{base_condition} {last_tick}.. run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:

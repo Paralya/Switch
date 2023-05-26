@@ -63,6 +63,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	j = y										# The first y coordinate of the clone command (iterator)
 
 	# Create the clone commands
+	particle_count = 1000
 	while minY <= maxY:
 
 		# Reset the split coordinates iterator & Create the clone commands
@@ -71,7 +72,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 			# Write the particle command
 			dx = (k[2] - k[0]) // 2
 			dz = (k[3] - k[1]) // 2
-			f.write(f"{base_condition} {i} run particle cloud {k[0] + dx} {minY + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 2500 force\n")
+			f.write(f"{base_condition} {i} run particle cloud {k[0] + dx} {minY + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
 
 			# Write the clone command
 			f.write(f"{base_condition} {i} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
@@ -86,7 +87,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 		j += 1
 
 	# Write the last lines
-	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, i, divider, "[/clone]")
+	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
 
 	# Write the spread_players file
 	createSpreadPlayersFile(name, start_pos, end_pos, paste_start_height)
@@ -119,7 +120,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	base_condition = f"execute if score #rg_{name} switch.data matches"
 
 	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
-	tp_coords, _, y, _ = createTpCoordsStringFromStartAndEnd(start_pos, end_pos)
+	tp_coords, x, y, z = createTpCoordsStringFromStartAndEnd(start_pos, end_pos)
 	if override_tp_coords != None:
 		tp_coords = createTpCoordsStringFromXYZ(override_tp_coords)
 	createMainFile(name)
@@ -139,6 +140,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	i = 20										# The first regeneration tick
 
 	# Create the clone commands
+	particle_count = int(1000 / len(splitted_coordinates)) + 1
 	while minY <= maxY:
 
 		# Create the clone commands
@@ -147,7 +149,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 			# Write the particle command
 			dx = (k[2] - k[0]) // 2
 			dz = (k[3] - k[1]) // 2
-			f.write(f"{base_condition} {i} run particle cloud {k[0] + dx} {minY + 1} {k[1] + dz} {dx} 0 {dz // 2} 0 1000 force\n")
+			f.write(f"{base_condition} {i} run particle cloud {k[0] + dx} {minY + 1} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
 
 			# Write the fill command
 			f.write(f"{base_condition} {i} run fill {k[0]} {minY} {k[1]} {k[2]} {minY} {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
@@ -159,7 +161,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 		minY += 1
 
 	# Write the last lines
-	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, i, divider, "[/fill]")
+	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
 
 	# Write the spread_players file
 	createSpreadPlayersFile(name, start_pos, end_pos, paste_start_height = y)
