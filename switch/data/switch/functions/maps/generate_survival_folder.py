@@ -176,7 +176,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 # Generate the folders for the survival maps
 generate_clone_survival_folder("laser_game", (499, 0, 499), (551, 43, 551), 91, override_tp_coords = (524, 102, 523))
 generate_clone_survival_folder("pitchout_1", (950, 0, 1050), (1050, 44, 1150), 95, override_tp_coords = (1000, 105, 1000))
-generate_clone_survival_folder("traitor_original", (1408, 0, 1423), (1592, 99, 1578), 114, override_tp_coords = (1500, 121, 1500))
+generate_clone_survival_folder("traitor_original", (1408, 0, 1423), (1592, 63, 1578), 114, override_tp_coords = (1500, 121, 1500))
 generate_clone_survival_folder("zone_51", (1947, 0, 1937), (2055, 70, 2063), 100, override_tp_coords = (2000, 158, 2000))
 generate_clone_survival_folder("spectre_original", (2459, 0, 2452), (2545, 85, 2547), 100, override_tp_coords = (2500, 127, 2500))
 generate_fill_survival_folder("glassrunner", (2750, -64, 2750), (3250, 384, 3250), "air", "#switch:glassrunner/glass", override_tp_coords = (3000, 130, 3000))
