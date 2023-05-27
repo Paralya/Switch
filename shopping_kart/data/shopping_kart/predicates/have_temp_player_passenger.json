@@ -3,7 +3,8 @@
 	"entity": "this",
 	"predicate": {
 		"passenger": {
-			"type": "minecraft:player"
+			"type": "minecraft:player",
+			"nbt": "{Tags:[\"shopping_kart.temp\"]}"
 		}
 	}
 }

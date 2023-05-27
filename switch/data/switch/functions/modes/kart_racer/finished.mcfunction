@@ -11,7 +11,7 @@ scoreboard players add @s switch.temp.checkpoint 1000000
 scoreboard players operation @s switch.temp.checkpoint -= #kart_racer_ticks switch.data
 
 tag @s add shopping_kart.temp
-kill @e[tag=shopping_kart.kart,predicate=shopping_kart:have_player_passenger]
+kill @e[tag=shopping_kart.kart,predicate=shopping_kart:have_temp_player_passenger]
 kill @e[type=item]
 tag @s remove shopping_kart.temp
 

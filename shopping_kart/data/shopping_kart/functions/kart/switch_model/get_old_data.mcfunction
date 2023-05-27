@@ -25,4 +25,5 @@ execute store result storage shopping_kart:main temp.scores.shopping_kart.old_po
 execute store result storage shopping_kart:main temp.scores.shopping_kart.booster_timer int 1 run scoreboard players get @s shopping_kart.booster_timer
 execute store result storage shopping_kart:main temp.scores.shopping_kart.reactor_boost int 1 run scoreboard players get @s shopping_kart.reactor_boost
 execute store result storage shopping_kart:main temp.scores.shopping_kart.cruise_control int 1 run scoreboard players get @s shopping_kart.cruise_control
+execute store result storage shopping_kart:main temp.scores.switch.temp.compteur int 1 run scoreboard players get @s switch.temp.compteur
 
