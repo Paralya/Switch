@@ -9,7 +9,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "mushroom_plains"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_ice"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_hills"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_end"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "baby_park"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "snow_travel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "cathedrale_liege"
