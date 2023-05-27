@@ -15,6 +15,6 @@ execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=swi
 
 # Starter kit
 give @s apple 12
-give @s tnt 2
+give @s tnt 6
 give @s flint_and_steel 1
 
