@@ -9,14 +9,15 @@ execute if score #detect_end switch.data matches 0 as @e[tag=shopping_kart.kart]
 execute if score #detect_end switch.data matches 0 as @e[type=marker,tag=switch.checkpoint] at @s run function switch:modes/kart_racer/checkpoints/tick
 execute if score #detect_end switch.data matches 0 as @a[scores={switch.right_click=1..}] run function switch:modes/kart_racer/right_click
 
-# Start fixes
+# Start fixes -7
 execute if score #kart_racer_seconds switch.data matches -7..-1 run team join switch.temp.kart @e[tag=shopping_kart.kart]
 execute if score #kart_racer_seconds switch.data matches -7..-1 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 1b
-execute if score #kart_racer_seconds switch.data matches ..-1 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
+execute if score #kart_racer_seconds switch.data matches ..-8 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
+execute if score #kart_racer_seconds switch.data matches -7..-1 run scoreboard players set @e[tag=shopping_kart.kart,scores={shopping_kart.engine=200..}] shopping_kart.engine 200
 execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 0b
 
 # Force riding the kart
-execute as @a[gamemode=adventure] at @s run ride @s mount @e[type=pig,predicate=!switch:has_vehicle,sort=nearest,limit=1]
+execute as @a[gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!switch:has_vehicle,sort=nearest,limit=1]
 
 # Remove items
 kill @e[type=item]
