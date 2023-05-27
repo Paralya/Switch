@@ -13,7 +13,9 @@ scoreboard objectives add shopping_kart.old_pos_z dummy
 scoreboard objectives add shopping_kart.booster_timer dummy
 scoreboard objectives add shopping_kart.reactor_boost dummy
 scoreboard objectives add shopping_kart.cruise_control dummy
-scoreboard objectives add shopping_kart.model trigger
+
+scoreboard objectives add shopping_kart.trigger_model trigger
+scoreboard objectives add shopping_kart.current_model dummy
 
 scoreboard players set ShoppingKart load.status 1010
 scoreboard players set #default_max_engine shopping_kart.data 1500
@@ -25,6 +27,11 @@ scoreboard players set #default_max_engine shopping_kart.data 1500
 #define score_holder #count
 #define score_holder #temp
 #define score_holder #pos
+
+## Setup tellraw prefix
+# tellraw @a ["\n",{"nbt":"ShoppingKart","storage":"shopping_kart:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
+data modify storage shopping_kart:main ShoppingKart set value '[{"text":"[ShoppingKart]","color":"green"}]'
+
 
 scoreboard players set #-1 shopping_kart.data -1
 scoreboard players set #2 shopping_kart.data 2
