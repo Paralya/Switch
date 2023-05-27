@@ -323,7 +323,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	spread_distance = maxRange // 10
 	max_height = end_pos[1] + paste_start_height - 1
 	y = start_pos[1]
-	dy = paste_start_height - 1
+	dy = paste_start_height - 1 - y
 
 	## Spread players file
 	# Create the file

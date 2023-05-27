@@ -5,84 +5,84 @@
 spreadplayers 28000 28000 1 15 under 168 false @s
 
 ## Assurance commands
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
-execute at @s if entity @s[y=63,dy=86] run spreadplayers 28000 28000 1 15 under 168 false @s
+execute at @s if entity @s[y=63,dy=23] run spreadplayers 28000 28000 1 15 under 168 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 28000 28000 1 15 under 168 false @s
 

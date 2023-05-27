@@ -5,84 +5,84 @@
 spreadplayers 30999 31000 0 6 under 202 false @s
 
 ## Assurance commands
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
-execute at @s if entity @s[y=100,dy=99] run spreadplayers 30999 31000 0 6 under 202 false @s
+execute at @s if entity @s[y=100,dy=-1] run spreadplayers 30999 31000 0 6 under 202 false @s
 execute at @s if block ~ ~-1 ~ barrier run spreadplayers 30999 31000 0 6 under 202 false @s
 
