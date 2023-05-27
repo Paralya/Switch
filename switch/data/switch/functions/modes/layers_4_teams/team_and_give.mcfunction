@@ -18,3 +18,6 @@ give @s apple 12
 give @s tnt 6
 give @s flint_and_steel 1
 
+# Set attack speed
+attribute @s generic.attack_speed base set 1024
+
