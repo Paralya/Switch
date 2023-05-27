@@ -16,7 +16,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "dark_forest_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "paralya_lobby_noel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "ghost_town"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "new_grounds"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "vilarles_castillo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "zonweeb_highschool"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "kart_racer_relai"

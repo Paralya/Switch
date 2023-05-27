@@ -33,6 +33,7 @@ gamerule fallDamage true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la Castagne, 10 secondes de préparation et soyez le dernier en vie !"}]
 
+scoreboard players set #remaining_time switch.data 910
 scoreboard players set #castagne_seconds switch.data -10
 scoreboard players set #castagne_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
