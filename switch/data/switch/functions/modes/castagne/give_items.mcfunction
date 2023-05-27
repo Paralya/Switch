@@ -9,7 +9,8 @@ item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl
 item replace entity @s hotbar.2 with water_bucket
 item replace entity @s hotbar.3 with iron_pickaxe{Enchantments:[{id:"minecraft:efficiency",lvl:1s}]}
 item replace entity @s hotbar.4 with iron_axe{Enchantments:[{id:"minecraft:efficiency",lvl:1s}]}
-item replace entity @s hotbar.7 with arrow 6
+item replace entity @s hotbar.6 with arrow 6
+item replace entity @s hotbar.7 with oak_planks 64
 item replace entity @s hotbar.8 with golden_apple 12
 
 attribute @s generic.attack_speed base set 1024
