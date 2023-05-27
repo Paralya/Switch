@@ -4,6 +4,8 @@
 		"minecraft:cave_air",
 		"minecraft:void_air",
 		"minecraft:glow_lichen",
-		"minecraft:dead_bush"
+		"minecraft:dead_bush",
+		"minecraft:glass",
+		"minecraft:barrier"
 	]
 }
