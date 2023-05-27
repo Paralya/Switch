@@ -63,7 +63,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	j = y										# The first y coordinate of the clone command (iterator)
 
 	# Create the clone commands
-	particle_count = 1000
+	particle_count = 250
 	while minY <= maxY:
 
 		# Reset the split coordinates iterator & Create the clone commands
@@ -140,7 +140,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	i = 20										# The first regeneration tick
 
 	# Create the clone commands
-	particle_count = int(1000 / len(splitted_coordinates)) + 1
+	particle_count = int(250 / len(splitted_coordinates)) + 1
 	while minY <= maxY:
 
 		# Create the clone commands
