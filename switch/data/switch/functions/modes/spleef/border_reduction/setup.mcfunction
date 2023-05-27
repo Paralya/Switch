@@ -1,6 +1,6 @@
 
 # Message d'annonce
-tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" 60 secondes sont passées, réduction de la bordure !"}]
+tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" 30 secondes sont passées, réduction de la bordure !"}]
 execute as @a at @s run playsound entity.experience_orb.pickup ambient @s
 
 # Summon entity depending on map
