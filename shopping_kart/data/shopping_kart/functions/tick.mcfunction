@@ -10,6 +10,6 @@ execute as @e[tag=shopping_kart.kart_visual] run function shopping_kart:kart/tic
 
 # Detect model change
 scoreboard players enable @a shopping_kart.trigger_model
-execute as @a unless score @s shopping_kart.trigger_model matches 0 run function shopping_kart:kart/switch_model/trigger
+execute as @a unless score @s shopping_kart.trigger_model matches 0 at @s run function shopping_kart:kart/switch_model/trigger
 
 
