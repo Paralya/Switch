@@ -2,8 +2,11 @@
 # Add kart nbt
 tag @s add shopping_kart.kart
 data modify entity @s Silent set value 1b
-data modify entity @s Invulnerable set value 1b
+execute unless score #is_vulnerable shopping_kart.data matches 1 run data modify entity @s Invulnerable set value 1b
 data modify entity @s DeathLootTable set value "none"
+
+# Can Fly tag
+execute if score #can_fly shopping_kart.data matches 1 run tag @s add shopping_kart.can_fly
 
 # Add kart scoreboard
 scoreboard players operation @s shopping_kart.max_engine = #default_max_engine shopping_kart.data
