@@ -1,5 +1,7 @@
 
-clear @s
+clear @s snowball
+clear @s arrow
+
 effect clear @s
 
 execute if entity @s[team=!switch.glassrunner.red,team=!switch.glassrunner.blue] run function switch:modes/glassrunner/death/random
@@ -16,6 +18,8 @@ scoreboard players set @s switch.glassrunner.deathCount 0
 
 effect give @s resistance infinite 255 true
 effect give @s jump_boost infinite 3 true
+effect give @s saturation infinite 255 true
+effect give @s speed infinite 3 true
 
 gamemode adventure @s
 

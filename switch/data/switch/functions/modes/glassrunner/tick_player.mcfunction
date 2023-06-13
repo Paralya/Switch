@@ -2,7 +2,8 @@
 execute if score @s switch.glassrunner.use_snowball matches 1.. run function switch:modes/glassrunner/snowball/use
 
 execute if predicate switch:holding_destroying_crossbow run item modify entity @s weapon.mainhand switch:charged
-
+execute if predicate switch:holding_destroying_crossbow run effect give @s slowness 1 3 true
+execute if predicate switch:holding_destroying_crossbow run effect give @s minecraft:jump_boost 1 250 true
 
 
 
