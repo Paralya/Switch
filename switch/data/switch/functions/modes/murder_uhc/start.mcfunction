@@ -22,7 +22,7 @@ weather clear
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:choose_map_for/traitors_game
+function switch:choose_map_for/murder_uhc
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
@@ -34,8 +34,8 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 1210
-scoreboard players set #traitors_game_seconds switch.data -10
-scoreboard players set #traitors_game_ticks switch.data 0
+scoreboard players set #murder_uhc_seconds switch.data -10
+scoreboard players set #murder_uhc_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
 
@@ -77,13 +77,13 @@ scoreboard players set Gro switch.temp.sidebar 1
 # Choix des rôles
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-tag @a remove switch.traitors_game.detective
-tag @a remove switch.traitors_game.ninja
-tag @a remove switch.traitors_game.second_life
-tag @a remove switch.traitors_game.innocent
-tag @a remove switch.traitors_game.traitor
-tag @a remove switch.traitors_game.big_traitor
-execute as @a[sort=random] at @s run function switch:modes/traitors_game/roles/
-execute as @a at @s run function switch:modes/traitors_game/give_items
-function switch:modes/traitors_game/update_sidebar
+tag @a remove switch.murder_uhc.detective
+tag @a remove switch.murder_uhc.ninja
+tag @a remove switch.murder_uhc.second_life
+tag @a remove switch.murder_uhc.innocent
+tag @a remove switch.murder_uhc.traitor
+tag @a remove switch.murder_uhc.big_traitor
+execute as @a[sort=random] at @s run function switch:modes/murder_uhc/roles/
+execute as @a at @s run function switch:modes/murder_uhc/give_items
+function switch:modes/murder_uhc/update_sidebar
 

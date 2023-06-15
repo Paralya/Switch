@@ -1,10 +1,2 @@
 
-## Fonction executée quand un joueur se connecte sur le serveur et lorsque le mode de jeu est activé
-## Le score #reconnect dans switch.data prend une valeur de 0 ou de 1 selon si il s'est reconnecté dans la même partie
-# execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
-# execute if score #reconnect switch.data matches 1 run tell none reconnected
-
-# Ici : dans tous les cas, tuer la personne qui join
-tag @s remove switch.traitors_game.second_life
-function switch:modes/traitors_game/death/player
-
+execute if data storage switch:main {current_game:"murder_uhc"} run function switch:modes/murder_uhc/joined
