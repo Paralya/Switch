@@ -16,6 +16,7 @@ Ensuite, je vous conseille d'utiliser VSCode (Visual Studio Code) pour modifier 
 - [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server)
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 - [language-mcfunction](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
 <br>
 
