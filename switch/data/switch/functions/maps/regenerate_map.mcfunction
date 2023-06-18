@@ -89,6 +89,7 @@ execute if data storage switch:main {map:"stardust_spawn"} run function switch:m
 execute if data storage switch:main {map:"stardust_boss_zone"} run function switch:maps/survival/stardust_boss_zone/regenerate
 execute if data storage switch:main {map:"stardust_boss_zone_nether"} run function switch:maps/survival/stardust_boss_zone_nether/regenerate
 execute if data storage switch:main {map:"stardust_pvp_zone"} run function switch:maps/survival/stardust_pvp_zone/regenerate
+execute if data storage switch:main {map:"stardust_prison"} run function switch:maps/survival/stardust_prison/regenerate
 
 # Remove the map from the storage
 data remove storage switch:main map

@@ -116,6 +116,7 @@
 #	103000	(survival)	: stardust_boss_zone
 #	104000	(survival)	: stardust_boss_zone_nether
 #	105000	(survival)	: stardust_pvp_zone
+#	106000	(survival)	: stardust_prison
 
 
 
