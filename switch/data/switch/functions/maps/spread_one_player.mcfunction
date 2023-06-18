@@ -79,4 +79,5 @@ execute if data storage switch:main {map:"whity_lab"} run function switch:maps/s
 execute if data storage switch:main {map:"snowy_village"} run function switch:maps/survival/snowy_village/spread_one_player
 execute if data storage switch:main {map:"werewolf_village"} run function switch:maps/survival/werewolf_village/spread_one_player
 execute if data storage switch:main {map:"wyvern_towers"} run function switch:maps/survival/wyvern_towers/spread_one_player
+execute if data storage switch:main {map:"lg_medieval"} run function switch:maps/survival/lg_medieval/spread_one_player
 

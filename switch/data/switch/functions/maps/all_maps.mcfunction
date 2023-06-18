@@ -92,7 +92,7 @@
 #	79000	(survival)	: survival_boat
 #	80000	(survival)	: sky_tower				(Problème de hauteur à fixer)
 #	81000	(survival)	: purple_sky_island		[ /fill ]
-##	82000	(undefined)	: _
+##	82000	(undefined)	: Maps Infinitri customs à fusionner	(not done yet) [Infinitri Pack]
 #	83000	(survival)	: lava_castle
 #	84000	(survival)	: spruce_dojo
 #	85000	(survival)	: highland_mansion
@@ -105,5 +105,6 @@
 #	92000	(survival)	: snowy_village
 #	93000	(survival)	: werewolf_village
 #	94000	(survival)	: wyvern_towers
+#	95000	(survival)	: lg_medieval
 
 
