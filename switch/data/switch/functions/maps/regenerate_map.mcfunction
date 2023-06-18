@@ -88,6 +88,7 @@ execute if data storage switch:main {map:"sheepwars_dirigeables"} run function s
 execute if data storage switch:main {map:"stardust_spawn"} run function switch:maps/survival/stardust_spawn/regenerate
 execute if data storage switch:main {map:"stardust_boss_zone"} run function switch:maps/survival/stardust_boss_zone/regenerate
 execute if data storage switch:main {map:"stardust_boss_zone_nether"} run function switch:maps/survival/stardust_boss_zone_nether/regenerate
+execute if data storage switch:main {map:"stardust_pvp_zone"} run function switch:maps/survival/stardust_pvp_zone/regenerate
 
 # Remove the map from the storage
 data remove storage switch:main map

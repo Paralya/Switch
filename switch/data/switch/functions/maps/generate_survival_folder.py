@@ -270,7 +270,8 @@ generate_clone_survival_folder("stardust_spawn", (101000, 0, 101000), (101120, 9
 generate_clone_survival_folder("stardust_boss_zone", (103000, -64, 103000), (103132, 49, 103165), 100, override_tp_coords = (103057, 154, 103095))
 # 104000 -63 104000 104132 65 104165 "stardust_boss_zone_nether"
 generate_clone_survival_folder("stardust_boss_zone_nether", (104000, -63, 104000), (104132, 65, 104165), 100, override_tp_coords = (104057, 159, 104095))
-
+# 105000 -63 105000 105291 79 105314 "stardust_pvp_zone"
+generate_clone_survival_folder("stardust_pvp_zone", (105000, -63, 105000), (105291, 79, 105314), 100, override_tp_coords = (105164, 158, 105165))
 
 
 

@@ -88,4 +88,5 @@ execute if data storage switch:main {map:"sheepwars_dirigeables"} run function s
 execute if data storage switch:main {map:"stardust_spawn"} run function switch:maps/survival/stardust_spawn/
 execute if data storage switch:main {map:"stardust_boss_zone"} run function switch:maps/survival/stardust_boss_zone/
 execute if data storage switch:main {map:"stardust_boss_zone_nether"} run function switch:maps/survival/stardust_boss_zone_nether/
+execute if data storage switch:main {map:"stardust_pvp_zone"} run function switch:maps/survival/stardust_pvp_zone/
 
