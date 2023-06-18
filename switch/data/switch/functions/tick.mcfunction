@@ -13,7 +13,7 @@ execute unless score #state switch.data matches 0 unless entity @a run function 
 execute if score #cut_clean switch.data matches 1 as @e[type=item,tag=!switch.item.checked] run function switch:cut_clean
 
 # Kill players out of the map
-execute if score #state switch.data matches 3 as @a[gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ black_concrete run function switch:player/kill_out_of_map
+execute if score #state switch.data matches 3 as @a[gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ #switch:out_of_map run function switch:player/kill_out_of_map
 
 # Right click reset
 scoreboard players reset @a switch.right_click
