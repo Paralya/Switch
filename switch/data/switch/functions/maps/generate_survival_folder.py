@@ -249,7 +249,7 @@ generate_clone_survival_folder("red_temple", (87000, 0, 87000), (87045, 40, 8709
 generate_clone_survival_folder("nature_house", (88000, 0, 88000), (88068, 32, 88068), 100, override_tp_coords = (88039, 110, 88033))
 generate_clone_survival_folder("flower_village", (89000, 0, 89000), (89422, 94, 89532), 100, override_tp_coords = (89311, 116, 89291))
 generate_clone_survival_folder("japanese_village", (90000, 0, 90000), (90224, 81, 90286), 100, override_tp_coords = (90106, 116, 90167))
-generate_clone_survival_folder("whity_lab", (91000, 0, 91000), (91102, 35, 91102), 100, override_tp_coords = (91051, 112, 91051))
+generate_clone_survival_folder("whity_lab", (91000, 0, 91000), (91102, 87, 91102), 100, override_tp_coords = (91051, 112, 91051))
 generate_clone_survival_folder("snowy_village", (92000, 0, 92000), (92200, 70, 92229), 100, override_tp_coords = (92108, 123, 92090))
 generate_clone_survival_folder("werewolf_village", (93000, 0, 93000), (93122, 64, 93122), 100, override_tp_coords = (93061, 115, 93061))
 generate_clone_survival_folder("wyvern_towers", (94000, 0, 94000), (94076, 99, 94076), 100, override_tp_coords = (94036, 157, 94037))
