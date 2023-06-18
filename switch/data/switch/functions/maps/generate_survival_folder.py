@@ -254,6 +254,11 @@ generate_clone_survival_folder("snowy_village", (92000, 0, 92000), (92200, 70, 9
 generate_clone_survival_folder("werewolf_village", (93000, 0, 93000), (93122, 64, 93122), 100, override_tp_coords = (93061, 115, 93061))
 generate_clone_survival_folder("wyvern_towers", (94000, 0, 94000), (94076, 99, 94076), 100, override_tp_coords = (94036, 157, 94037))
 generate_clone_survival_folder("lg_medieval", (95000, -63, 95000), (95219, 41, 95203), 100, override_tp_coords = (95126, 120, 95100))
+# 96000 -63 96000 96246 50 96239
+generate_clone_survival_folder("lg_village", (96000, -63, 96000), (96246, 50, 96239), 100, override_tp_coords = (96128, 113, 96118))
+
+
+
 
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore stone

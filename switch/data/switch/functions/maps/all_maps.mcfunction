@@ -106,5 +106,6 @@
 #	93000	(survival)	: werewolf_village
 #	94000	(survival)	: wyvern_towers
 #	95000	(survival)	: lg_medieval
+#	96000	(survival)	: lg_village
 
 
