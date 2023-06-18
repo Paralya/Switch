@@ -83,4 +83,5 @@ execute if data storage switch:main {map:"lg_medieval"} run function switch:maps
 execute if data storage switch:main {map:"lg_village"} run function switch:maps/survival/lg_village/spread_one_player
 execute if data storage switch:main {map:"lightium_spawn"} run function switch:maps/survival/lightium_spawn/spread_one_player
 execute if data storage switch:main {map:"paralya_uhc_lobbies"} run function switch:maps/survival/paralya_uhc_lobbies/spread_one_player
+execute if data storage switch:main {map:"paralya_lobby"} run function switch:maps/survival/paralya_lobby/spread_one_player
 

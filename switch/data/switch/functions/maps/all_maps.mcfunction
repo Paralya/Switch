@@ -109,5 +109,6 @@
 #	96000	(survival)	: lg_village
 #	97000	(survival)	: lightium_spawn
 #	98000	(survival)	: paralya_uhc_lobbies
+#	99000	(survival)	: paralya_lobby
 
 
