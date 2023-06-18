@@ -91,4 +91,5 @@ execute if data storage switch:main {map:"stardust_boss_zone_nether"} run functi
 execute if data storage switch:main {map:"stardust_pvp_zone"} run function switch:maps/survival/stardust_pvp_zone/
 execute if data storage switch:main {map:"stardust_prison"} run function switch:maps/survival/stardust_prison/
 execute if data storage switch:main {map:"stardust_vip_zone"} run function switch:maps/survival/stardust_vip_zone/
+execute if data storage switch:main {map:"end_factory"} run function switch:maps/survival/end_factory/
 
