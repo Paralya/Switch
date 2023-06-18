@@ -108,5 +108,6 @@
 #	95000	(survival)	: lg_medieval
 #	96000	(survival)	: lg_village
 #	97000	(survival)	: lightium_spawn
+#	98000	(survival)	: paralya_uhc_lobbies
 
 

@@ -82,6 +82,7 @@ execute if data storage switch:main {map:"wyvern_towers"} run function switch:ma
 execute if data storage switch:main {map:"lg_medieval"} run function switch:maps/survival/lg_medieval/regenerate
 execute if data storage switch:main {map:"lg_village"} run function switch:maps/survival/lg_village/regenerate
 execute if data storage switch:main {map:"lightium_spawn"} run function switch:maps/survival/lightium_spawn/regenerate
+execute if data storage switch:main {map:"paralya_uhc_lobbies"} run function switch:maps/survival/paralya_uhc_lobbies/regenerate
 
 # Remove the map from the storage
 data remove storage switch:main map

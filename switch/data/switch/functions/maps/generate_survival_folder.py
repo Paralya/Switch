@@ -258,7 +258,8 @@ generate_clone_survival_folder("lg_medieval", (95000, -63, 95000), (95219, 41, 9
 generate_clone_survival_folder("lg_village", (96000, -63, 96000), (96246, 50, 96239), 100, override_tp_coords = (96128, 113, 96118))
 # 97000 0 97000 97129 43 97129 "lightium_spawn"
 generate_clone_survival_folder("lightium_spawn", (97000, 0, 97000), (97129, 43, 97129), 100, override_tp_coords = (97065, 111, 97065))
-
+# 98000 0 98000 98090 93 98090 "paralya_uhc_lobbies"
+generate_clone_survival_folder("paralya_uhc_lobbies", (98000, 0, 98000), (98090, 93, 98090), 100, override_tp_coords = (98037, 154, 98046))
 
 
 
