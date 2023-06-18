@@ -86,4 +86,5 @@ execute if data storage switch:main {map:"paralya_uhc_lobbies"} run function swi
 execute if data storage switch:main {map:"paralya_lobby"} run function switch:maps/survival/paralya_lobby/
 execute if data storage switch:main {map:"sheepwars_dirigeables"} run function switch:maps/survival/sheepwars_dirigeables/
 execute if data storage switch:main {map:"stardust_spawn"} run function switch:maps/survival/stardust_spawn/
+execute if data storage switch:main {map:"stardust_boss_zone"} run function switch:maps/survival/stardust_boss_zone/
 

@@ -266,7 +266,8 @@ generate_clone_survival_folder("paralya_lobby", (99000, -63, 99000), (99200, 98,
 generate_clone_survival_folder("sheepwars_dirigeables", (100000, -63, 100000), (100192, 69, 100158), 100, override_tp_coords = (100156, 163, 100122))
 # 101000 0 101000 101120 90 101120 "stardust_spawn"
 generate_clone_survival_folder("stardust_spawn", (101000, 0, 101000), (101120, 90, 101120), 100, override_tp_coords = (101060, 156, 101060))
-
+# 103000 -64 103000 103132 49 103165 "stardust_boss_zone"
+generate_clone_survival_folder("stardust_boss_zone", (103000, -64, 103000), (103132, 49, 103165), 100, override_tp_coords = (103057, 154, 103095))
 
 
 
