@@ -264,6 +264,10 @@ generate_clone_survival_folder("paralya_uhc_lobbies", (98000, 0, 98000), (98090,
 generate_clone_survival_folder("paralya_lobby", (99000, -63, 99000), (99200, 98, 99200), 100, override_tp_coords = (99100, 181, 99100))
 # 100000 -63 100000 100192 69 100158 "sheepwars_dirigeables"
 generate_clone_survival_folder("sheepwars_dirigeables", (100000, -63, 100000), (100192, 69, 100158), 100, override_tp_coords = (100156, 163, 100122))
+# 101000 0 101000 101120 90 101120 "stardust_spawn"
+generate_clone_survival_folder("stardust_spawn", (101000, 0, 101000), (101120, 90, 101120), 100, override_tp_coords = (101060, 156, 101060))
+
+
 
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore stone
