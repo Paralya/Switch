@@ -268,10 +268,14 @@ generate_clone_survival_folder("sheepwars_dirigeables", (100000, -63, 100000), (
 generate_clone_survival_folder("stardust_spawn", (101000, 0, 101000), (101120, 90, 101120), 100, override_tp_coords = (101060, 156, 101060))
 # 103000 -64 103000 103132 49 103165 "stardust_boss_zone"
 generate_clone_survival_folder("stardust_boss_zone", (103000, -64, 103000), (103132, 49, 103165), 100, override_tp_coords = (103057, 154, 103095))
+# 104000 -63 104000 104132 65 104165 "stardust_boss_zone_nether"
+generate_clone_survival_folder("stardust_boss_zone_nether", (104000, -63, 104000), (104132, 65, 104165), 100, override_tp_coords = (104057, 159, 104095))
 
 
 
-# //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore stone
+
+
+# //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air
 # //replace chest,barrel,dropper,trapped_chest air
 
