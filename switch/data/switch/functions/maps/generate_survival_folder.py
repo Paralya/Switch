@@ -256,7 +256,8 @@ generate_clone_survival_folder("wyvern_towers", (94000, 0, 94000), (94076, 99, 9
 generate_clone_survival_folder("lg_medieval", (95000, -63, 95000), (95219, 41, 95203), 100, override_tp_coords = (95126, 120, 95100))
 # 96000 -63 96000 96246 50 96239
 generate_clone_survival_folder("lg_village", (96000, -63, 96000), (96246, 50, 96239), 100, override_tp_coords = (96128, 113, 96118))
-
+# 97000 0 97000 97129 43 97129 "lightium_spawn"
+generate_clone_survival_folder("lightium_spawn", (97000, 0, 97000), (97129, 43, 97129), 100, override_tp_coords = (97065, 111, 97065))
 
 
 

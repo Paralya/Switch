@@ -107,5 +107,6 @@
 #	94000	(survival)	: wyvern_towers
 #	95000	(survival)	: lg_medieval
 #	96000	(survival)	: lg_village
+#	97000	(survival)	: lightium_spawn
 
 

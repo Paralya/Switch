@@ -81,4 +81,5 @@ execute if data storage switch:main {map:"werewolf_village"} run function switch
 execute if data storage switch:main {map:"wyvern_towers"} run function switch:maps/survival/wyvern_towers/spread_one_player
 execute if data storage switch:main {map:"lg_medieval"} run function switch:maps/survival/lg_medieval/spread_one_player
 execute if data storage switch:main {map:"lg_village"} run function switch:maps/survival/lg_village/spread_one_player
+execute if data storage switch:main {map:"lightium_spawn"} run function switch:maps/survival/lightium_spawn/spread_one_player
 
