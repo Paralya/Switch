@@ -21,6 +21,7 @@
 		"switch:modes/layers_2_teams/calls/start",
 		"switch:modes/layers_4_teams/calls/start",
 		"switch:modes/thunder_spear/calls/start",
+		"switch:modes/replicate_the_build/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }

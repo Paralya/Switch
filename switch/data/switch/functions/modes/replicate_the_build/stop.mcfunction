@@ -7,5 +7,8 @@ kill @e[type=experience_orb]
 
 tag @a remove switch.alive
 
+gamerule doTileDrops true
+scoreboard objectives remove switch.rtb.id dummy
+
 scoreboard objectives remove switch.temp.deathCount
 
