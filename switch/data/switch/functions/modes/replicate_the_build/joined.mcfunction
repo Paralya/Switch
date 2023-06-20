@@ -5,5 +5,7 @@
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
 # Ici : dans tous les cas, tuer la personne qui join
-function switch:modes/replicate_the_build/death
+gamemode spectator @s
+tag @s remove switch.alive
+tp @s 102000 100 102000
 

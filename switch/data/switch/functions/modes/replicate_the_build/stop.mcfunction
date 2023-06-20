@@ -7,8 +7,17 @@ kill @e[type=experience_orb]
 
 tag @a remove switch.alive
 
-gamerule doTileDrops true
-scoreboard objectives remove switch.rtb.id dummy
-
+scoreboard objectives remove switch.rtb.id
+scoreboard objectives remove switch.rtb.time
+scoreboard objectives remove switch.rtb.points
 scoreboard objectives remove switch.temp.deathCount
+scoreboard objectives remove switch.rtb.data
+
+execute as @e[type=marker,tag=switch.rtb.island] run function switch:modes/replicate_the_build/structure/destroy
+execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/replicate_the_build/structure/destroy
+
+gamerule doTileDrops true
+gamerule mobGriefing true
+
+bossbar remove rtb.all
 
