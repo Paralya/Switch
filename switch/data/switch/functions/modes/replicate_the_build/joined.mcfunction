@@ -4,7 +4,7 @@
 # execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-# Ici : dans tous les cas, tuer la personne qui join
+# Ici : dans tous les cas, la personne passe en spectateur
 gamemode spectator @s
 tag @s remove switch.alive
 tp @s 102000 100 102000

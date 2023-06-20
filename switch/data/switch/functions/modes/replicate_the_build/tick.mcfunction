@@ -12,7 +12,7 @@ execute if score #rtb_round_state switch.rtb.data matches 5 run function switch:
 execute if score #rtb_round_state switch.rtb.data matches 4 run function switch:modes/replicate_the_build/round/4
 
 
-
+execute as @a[scores={switch.temp.deathCount=1..}] run function switch:modes/replicate_the_build/death
 
 
 
