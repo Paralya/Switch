@@ -52,9 +52,6 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	# Create the splitted coordinates
 	splitted_coordinates = createSplittedCoordinates(start_pos, end_pos, divider)
 
-	# Write the first lines
-	f = writeRegenerateFile(name, base_condition, splitted_coordinates)
-
 	# More variables
 	y = start_pos[1]							# The first y coordinate
 	minY = paste_start_height					# The y coordinate where the regeneration starts
@@ -62,31 +59,46 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	i = 20										# The first regeneration tick
 	j = y										# The first y coordinate of the clone command (iterator)
 
-	# Create the clone commands
+	# Write the first lines
+	f = writeFirstLinesOfRegenerate(name, base_condition, splitted_coordinates)
+
+	## Write the marker part for the regeneration
+	# Open the file
+	marker_file = open(f"survival/{name}/regeneration_on_marker.mcfunction", "w")
+
+	# Write the first line
+	marker_file.write("\n")
+	marker_file.write(f"execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{name}_y switch.data\n\n")
+
+	# Write the clone and particle commands
+	i = 0
 	particle_count = 250
-	while minY <= maxY:
+	dy = paste_start_height - start_pos[1]
+	for k in splitted_coordinates:
+		dx = (k[2] - k[0]) // 2
+		dz = (k[3] - k[1]) // 2
+		marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
+		marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s run clone {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {k[0]} ~{dy} {k[1]} replace force\n")
+		i += 1
+	
+	# Write kill item entities command
+	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
+	
+	# Write the scoreboard commands
+	marker_file.write("\n")
+	marker_file.write(f"scoreboard players add #rg_{name}_mod switch.data 1\n")
+	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players add #rg_{name}_y switch.data 1\n")
+	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players set #rg_{name}_mod switch.data 0\n")
 
-		# Reset the split coordinates iterator & Create the clone commands
-		for k in splitted_coordinates:
+	# Write the kill command
+	marker_file.write("\n")
+	marker_file.write("kill @s\n")
+	marker_file.write("\n")
+	marker_file.close()
 
-			# Write the particle command
-			dx = (k[2] - k[0]) // 2
-			dz = (k[3] - k[1]) // 2
-			f.write(f"{base_condition} {i} run particle cloud {k[0] + dx} {minY + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
-
-			# Write the clone command
-			f.write(f"{base_condition} {i} run clone {k[0]} {j} {k[1]} {k[2]} {j} {k[3]} {k[0]} {minY} {k[1]} replace force\n")
-			i += 1
-
-			# Write item kill command every 50 clone commands
-			if i % 50 == 0:
-				f.write(f"{base_condition} {i} run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
-
-		# Increment the y coordinate of the clones commands
-		minY += 1
-		j += 1
 
 	# Write the last lines
+	i = (maxY - minY) * len(splitted_coordinates) + 1
 	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
 
 	# Write the spread_players file
@@ -130,37 +142,37 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	# Create the splitted coordinates
 	splitted_coordinates = createSplittedCoordinates(start_pos, end_pos, divider)
 
-	# Write the first lines
-	f = writeRegenerateFile(name, base_condition, splitted_coordinates)
-
 	# More variables
 	y = start_pos[1]							# The first y coordinate
 	minY = y									# The y coordinate where the regeneration starts
-	maxY = minY - start_pos[1] + end_pos[1]		# The y coordinate where the regeneration ends
-	i = 20										# The first regeneration tick
 
-	# Create the clone commands
+	# Write the first lines
+	f = writeFirstLinesOfRegenerate(name, base_condition, splitted_coordinates)
+
+	## Write the marker part for the regeneration
+	# Open the file
+	marker_file = open(f"survival/{name}/regeneration_on_marker.mcfunction", "w")
+
+	# Write the first line
+	marker_file.write("\n")
+	marker_file.write(f"execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{name}_y switch.data\n\n")
+
+	# Write the clone and particle commands
 	particle_count = int(250 / len(splitted_coordinates)) + 1
-	while minY <= maxY:
-
-		# Create the clone commands
-		for k in splitted_coordinates:
-
-			# Write the particle command
-			dx = (k[2] - k[0]) // 2
-			dz = (k[3] - k[1]) // 2
-			f.write(f"{base_condition} {i} run particle cloud {k[0] + dx} {minY + 1} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
-
-			# Write the fill command
-			f.write(f"{base_condition} {i} run fill {k[0]} {minY} {k[1]} {k[2]} {minY} {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
-
-		# Increment the regeneration tick (x1 because /fill is faster than /clone)
-		i += 1
-
-		# Increment the y coordinate of the fill command
-		minY += 1
+	for k in splitted_coordinates:
+		dx = (k[2] - k[0]) // 2
+		dz = (k[3] - k[1]) // 2
+		marker_file.write(f"execute at @s run particle cloud {k[0] + dx} ~1 {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
+		marker_file.write(f"execute at @s run fill {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
+	
+	# Write the kill command
+	marker_file.write("\n")
+	marker_file.write("kill @s\n")
+	marker_file.write("\n")
+	marker_file.close()
 
 	# Write the last lines
+	i = (end_pos[1] - minY) + 1
 	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
 
 	# Write the spread_players file
@@ -193,7 +205,7 @@ generate_clone_survival_folder("friends_cube_lobby", (16960, 0, 16960), (17040, 
 generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100, kart_racer = [(21003.5, 131.69, 21014.5), 90, 20], override_tp_coords = (21003, 132, 21011))
 generate_clone_survival_folder("bowser_castle", (21888, 0, 21888), (22114, 81, 22133), 100, kart_racer = [(21953.5, 130.69, 22056.5), 180, 20], override_tp_coords = (21956, 131, 22056))
 generate_clone_survival_folder("snow_travel", (22896, 0, 22904), (23103, 86, 23109), 100, kart_racer = [(22958.5, 136.69, 22945.5), 270, 20], override_tp_coords = (22958, 137, 22948))
-generate_clone_survival_folder("cathedrale_liege", (25961, -64, 25944), (26099, 100, 26028), 100, override_tp_coords = (26000, 120, 26000))
+generate_clone_survival_folder("cathedrale_liege", (25961, -64, 25944), (26099, 99, 26028), 100, override_tp_coords = (26000, 120, 26000))
 generate_clone_survival_folder("layers_2_teams", (26982, 0, 26969), (27018, 61, 27031), 100, override_tp_coords = (27000, 157, 27000))
 generate_clone_survival_folder("spleef_1", (27969, 63, 27969), (28031, 82, 28031), 87, override_tp_coords = (28000, 100, 28000))
 generate_fill_survival_folder("de_a_coudre_1", (28987, 100, 28987), (29031, 155, 29013), "water", "#switch:de_a_coudre", override_tp_coords = (29000, 101, 29000))

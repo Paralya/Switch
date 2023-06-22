@@ -236,7 +236,7 @@ def createSplittedCoordinates(start_pos: tuple, end_pos: tuple, divider: int) ->
 	return c
 
 
-def writeRegenerateFile(name: str, base_condition: str, splitted_coordinates: list) -> TextIOWrapper:
+def writeFirstLinesOfRegenerate(name: str, base_condition: str, splitted_coordinates: list) -> TextIOWrapper:
 	""" Writes the "regenerate.mcfunction" file
 	Args:
 		name (str)					: The name of the map
@@ -244,31 +244,6 @@ def writeRegenerateFile(name: str, base_condition: str, splitted_coordinates: li
 		splitted_coordinates (list)	: The splitted coordinates
 	Returns:
 		(TextIOWrapper)				: The file
-	"""
-	"""
-	
-scoreboard players add #rg_cathedrale_liege switch.data 1
-execute if score #rg_cathedrale_liege switch.data matches 1 run forceload add 25961 25944 25989 26028
-execute if score #rg_cathedrale_liege switch.data matches 1 run forceload add 25989 25944 26016 26028
-execute if score #rg_cathedrale_liege switch.data matches 1 run forceload add 26016 25944 26044 26028
-execute if score #rg_cathedrale_liege switch.data matches 1 run forceload add 26044 25944 26071 26028
-execute if score #rg_cathedrale_liege switch.data matches 1 run forceload add 26071 25944 26099 26028
-
-execute if score #rg_cathedrale_liege switch.data matches 1 run scoreboard players set #rg_cathedrale_liege_y switch.data -64
-execute if score #rg_cathedrale_liege switch.data matches 1 run scoreboard players set #rg_cathedrale_liege_mod switch.data 0
-execute if score #rg_cathedrale_liege switch.data matches 20..839 summon marker run function switch:maps/survival/cathedrale_liege/regenerate_on_marker
-
-execute if score #rg_cathedrale_liege switch.data matches 840.. run kill @e[type=item,x=26030,y=-64,z=25986,distance=..1000]
-execute if score #rg_cathedrale_liege switch.data matches 840.. run forceload remove 25961 25944 25989 26028
-execute if score #rg_cathedrale_liege switch.data matches 840.. run forceload remove 25989 25944 26016 26028
-execute if score #rg_cathedrale_liege switch.data matches 840.. run forceload remove 26016 25944 26044 26028
-execute if score #rg_cathedrale_liege switch.data matches 840.. run forceload remove 26044 25944 26071 26028
-execute if score #rg_cathedrale_liege switch.data matches 840.. run forceload remove 26071 25944 26099 26028
-execute if score #rg_cathedrale_liege switch.data matches 840.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"cathedrale_liege","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"42","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_cathedrale_liege switch.data matches 840.. run scoreboard players reset #rg_cathedrale_liege switch.data
-
-execute if score #rg_cathedrale_liege switch.data matches 1.. run schedule function switch:maps/survival/cathedrale_liege/regenerate 1t
-
 	"""
 	# Create the file
 	f = open(f"survival/{name}/regenerate.mcfunction", "w")
@@ -280,8 +255,6 @@ execute if score #rg_cathedrale_liege switch.data matches 1.. run schedule funct
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
 		f.write(f"{base_condition} 1 run forceload add {x1} {x2} {z1} {z2}\n")
-	
-	# Write the scoreboard commands set
 
 	# Add a blank line and return the TextIOWrapper
 	f.write("\n")
@@ -307,6 +280,10 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	print(f"{YELLOW}'{name}'{GREEN} will take {RED}{last_tick}{GREEN} ticks to regenerate {RED}[{timeStr}]{GREEN} with a divider of {YELLOW}{divider}{RESET} {suffix}")
 
 	## Write the last lines
+	# Write the scoreboard and summon commands
+	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_y switch.data -64\n")
+	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_mod switch.data 0\n")
+	f.write(f"{base_condition} ..{last_tick - 1} summon marker run function switch:maps/survival/{name}/regeneration_on_marker\n")
 	f.write("\n")
 
 	# Write the kill command
