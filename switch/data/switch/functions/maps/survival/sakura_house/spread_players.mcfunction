@@ -29,20 +29,4 @@ execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 u
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 86060 86067 3 30 under 193 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 86060 86067 3 30 under 193 false @s
 

@@ -29,20 +29,4 @@ execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 u
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
 execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if entity @s[y=0,dy=99] run spreadplayers 42000 42000 2 29 under 137 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 42000 42000 2 29 under 137 false @s
 

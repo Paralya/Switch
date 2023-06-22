@@ -29,20 +29,4 @@ execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 2
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
 execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if entity @s[y=-64,dy=163] run spreadplayers 26030 25986 2 21 under 198 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 26030 25986 2 21 under 198 false @s
 

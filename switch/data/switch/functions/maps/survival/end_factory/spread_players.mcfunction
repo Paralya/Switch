@@ -29,20 +29,4 @@ execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
 execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
 execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if entity @s[y=-63,dy=162] run spreadplayers 108089 108064 3 32 under 139 false @s
-execute as @a at @s if block ~ ~-1 ~ barrier run spreadplayers 108089 108064 3 32 under 139 false @s
 
