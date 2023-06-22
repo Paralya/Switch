@@ -53,7 +53,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	splitted_coordinates = createSplittedCoordinates(start_pos, end_pos, divider)
 
 	# Write the first lines
-	f = writeFirstLinesOfRegenerate(name, base_condition, splitted_coordinates)
+	f = writeRegenerateFile(name, base_condition, splitted_coordinates)
 
 	# More variables
 	y = start_pos[1]							# The first y coordinate
@@ -131,7 +131,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 	splitted_coordinates = createSplittedCoordinates(start_pos, end_pos, divider)
 
 	# Write the first lines
-	f = writeFirstLinesOfRegenerate(name, base_condition, splitted_coordinates)
+	f = writeRegenerateFile(name, base_condition, splitted_coordinates)
 
 	# More variables
 	y = start_pos[1]							# The first y coordinate
