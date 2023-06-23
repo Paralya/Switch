@@ -11,8 +11,8 @@ execute if score #rg_stardust_vip_zone_mod switch.data matches 3 at @s run parti
 execute if score #rg_stardust_vip_zone_mod switch.data matches 3 at @s run clone 107068 ~ 107000 107090 ~ 107085 107068 ~100 107000 replace force
 execute if score #rg_stardust_vip_zone_mod switch.data matches 4 at @s run particle cloud 107101 ~100.5 107042 11 0 21 0 250 force
 execute if score #rg_stardust_vip_zone_mod switch.data matches 4 at @s run clone 107090 ~ 107000 107113 ~ 107085 107090 ~100 107000 replace force
-execute if score #rg_stardust_vip_zone_mod switch.data matches 5 run kill @e[type=item,x=107056,y=0,z=107042,distance=..1000]
 
+execute if score #rg_stardust_vip_zone_mod switch.data matches 5 run kill @e[type=item,x=107056,y=0,z=107042,distance=..1000]
 scoreboard players add #rg_stardust_vip_zone_mod switch.data 1
 execute if score #rg_stardust_vip_zone_mod switch.data matches 5 run scoreboard players add #rg_stardust_vip_zone_y switch.data 1
 execute if score #rg_stardust_vip_zone_mod switch.data matches 5 run scoreboard players set #rg_stardust_vip_zone_mod switch.data 0

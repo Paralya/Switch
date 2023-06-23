@@ -77,8 +77,8 @@ execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 36 at @s ru
 execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 36 at @s run clone 46118 ~ 45849 46127 ~ 46187 46118 ~192 45849 replace force
 execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 37 at @s run particle cloud 46131 ~192.5 46018 4 0 84 0 250 force
 execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 37 at @s run clone 46127 ~ 45849 46136 ~ 46187 46127 ~192 45849 replace force
-execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 38 run kill @e[type=item,x=45962,y=-64,z=46018,distance=..1000]
 
+execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 38 run kill @e[type=item,x=45962,y=-64,z=46018,distance=..1000]
 scoreboard players add #rg_taroatlas_soviet_prison_mod switch.data 1
 execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 38 run scoreboard players add #rg_taroatlas_soviet_prison_y switch.data 1
 execute if score #rg_taroatlas_soviet_prison_mod switch.data matches 38 run scoreboard players set #rg_taroatlas_soviet_prison_mod switch.data 0

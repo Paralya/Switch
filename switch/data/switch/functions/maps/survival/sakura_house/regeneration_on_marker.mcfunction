@@ -15,8 +15,8 @@ execute if score #rg_sakura_house_mod switch.data matches 5 at @s run particle c
 execute if score #rg_sakura_house_mod switch.data matches 5 at @s run clone 86086 ~ 86000 86104 ~ 86135 86086 ~100 86000 replace force
 execute if score #rg_sakura_house_mod switch.data matches 6 at @s run particle cloud 86112 ~100.5 86067 8 0 33 0 250 force
 execute if score #rg_sakura_house_mod switch.data matches 6 at @s run clone 86104 ~ 86000 86121 ~ 86135 86104 ~100 86000 replace force
-execute if score #rg_sakura_house_mod switch.data matches 7 run kill @e[type=item,x=86060,y=0,z=86067,distance=..1000]
 
+execute if score #rg_sakura_house_mod switch.data matches 7 run kill @e[type=item,x=86060,y=0,z=86067,distance=..1000]
 scoreboard players add #rg_sakura_house_mod switch.data 1
 execute if score #rg_sakura_house_mod switch.data matches 7 run scoreboard players add #rg_sakura_house_y switch.data 1
 execute if score #rg_sakura_house_mod switch.data matches 7 run scoreboard players set #rg_sakura_house_mod switch.data 0

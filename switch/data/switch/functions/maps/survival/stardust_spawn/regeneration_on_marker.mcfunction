@@ -13,8 +13,8 @@ execute if score #rg_stardust_spawn_mod switch.data matches 4 at @s run particle
 execute if score #rg_stardust_spawn_mod switch.data matches 4 at @s run clone 101080 ~ 101000 101100 ~ 101120 101080 ~100 101000 replace force
 execute if score #rg_stardust_spawn_mod switch.data matches 5 at @s run particle cloud 101110 ~100.5 101060 10 0 30 0 250 force
 execute if score #rg_stardust_spawn_mod switch.data matches 5 at @s run clone 101100 ~ 101000 101120 ~ 101120 101100 ~100 101000 replace force
-execute if score #rg_stardust_spawn_mod switch.data matches 6 run kill @e[type=item,x=101060,y=0,z=101060,distance=..1000]
 
+execute if score #rg_stardust_spawn_mod switch.data matches 6 run kill @e[type=item,x=101060,y=0,z=101060,distance=..1000]
 scoreboard players add #rg_stardust_spawn_mod switch.data 1
 execute if score #rg_stardust_spawn_mod switch.data matches 6 run scoreboard players add #rg_stardust_spawn_y switch.data 1
 execute if score #rg_stardust_spawn_mod switch.data matches 6 run scoreboard players set #rg_stardust_spawn_mod switch.data 0

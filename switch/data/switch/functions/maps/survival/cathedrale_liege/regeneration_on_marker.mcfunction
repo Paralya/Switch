@@ -11,8 +11,8 @@ execute if score #rg_cathedrale_liege_mod switch.data matches 3 at @s run partic
 execute if score #rg_cathedrale_liege_mod switch.data matches 3 at @s run clone 26044 ~ 25944 26071 ~ 26028 26044 ~164 25944 replace force
 execute if score #rg_cathedrale_liege_mod switch.data matches 4 at @s run particle cloud 26085 ~164.5 25986 14 0 21 0 250 force
 execute if score #rg_cathedrale_liege_mod switch.data matches 4 at @s run clone 26071 ~ 25944 26099 ~ 26028 26071 ~164 25944 replace force
-execute if score #rg_cathedrale_liege_mod switch.data matches 5 run kill @e[type=item,x=26030,y=-64,z=25986,distance=..1000]
 
+execute if score #rg_cathedrale_liege_mod switch.data matches 5 run kill @e[type=item,x=26030,y=-64,z=25986,distance=..1000]
 scoreboard players add #rg_cathedrale_liege_mod switch.data 1
 execute if score #rg_cathedrale_liege_mod switch.data matches 5 run scoreboard players add #rg_cathedrale_liege_y switch.data 1
 execute if score #rg_cathedrale_liege_mod switch.data matches 5 run scoreboard players set #rg_cathedrale_liege_mod switch.data 0

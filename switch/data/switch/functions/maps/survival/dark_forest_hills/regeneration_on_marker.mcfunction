@@ -23,8 +23,8 @@ execute if score #rg_dark_forest_hills_mod switch.data matches 9 at @s run parti
 execute if score #rg_dark_forest_hills_mod switch.data matches 9 at @s run clone 39117 ~ 39000 39130 ~ 39221 39117 ~100 39000 replace force
 execute if score #rg_dark_forest_hills_mod switch.data matches 10 at @s run particle cloud 39136 ~100.5 39110 6 0 55 0 250 force
 execute if score #rg_dark_forest_hills_mod switch.data matches 10 at @s run clone 39130 ~ 39000 39143 ~ 39221 39130 ~100 39000 replace force
-execute if score #rg_dark_forest_hills_mod switch.data matches 11 run kill @e[type=item,x=39071,y=0,z=39110,distance=..1000]
 
+execute if score #rg_dark_forest_hills_mod switch.data matches 11 run kill @e[type=item,x=39071,y=0,z=39110,distance=..1000]
 scoreboard players add #rg_dark_forest_hills_mod switch.data 1
 execute if score #rg_dark_forest_hills_mod switch.data matches 11 run scoreboard players add #rg_dark_forest_hills_y switch.data 1
 execute if score #rg_dark_forest_hills_mod switch.data matches 11 run scoreboard players set #rg_dark_forest_hills_mod switch.data 0

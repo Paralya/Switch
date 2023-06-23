@@ -13,8 +13,8 @@ execute if score #rg_zone_51_mod switch.data matches 4 at @s run particle cloud 
 execute if score #rg_zone_51_mod switch.data matches 4 at @s run clone 2019 ~ 1937 2037 ~ 2063 2019 ~100 1937 replace force
 execute if score #rg_zone_51_mod switch.data matches 5 at @s run particle cloud 2046 ~100.5 2000 9 0 31 0 250 force
 execute if score #rg_zone_51_mod switch.data matches 5 at @s run clone 2037 ~ 1937 2055 ~ 2063 2037 ~100 1937 replace force
-execute if score #rg_zone_51_mod switch.data matches 6 run kill @e[type=item,x=2001,y=0,z=2000,distance=..1000]
 
+execute if score #rg_zone_51_mod switch.data matches 6 run kill @e[type=item,x=2001,y=0,z=2000,distance=..1000]
 scoreboard players add #rg_zone_51_mod switch.data 1
 execute if score #rg_zone_51_mod switch.data matches 6 run scoreboard players add #rg_zone_51_y switch.data 1
 execute if score #rg_zone_51_mod switch.data matches 6 run scoreboard players set #rg_zone_51_mod switch.data 0

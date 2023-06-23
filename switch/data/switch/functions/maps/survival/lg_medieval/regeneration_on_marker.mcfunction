@@ -31,8 +31,8 @@ execute if score #rg_lg_medieval_mod switch.data matches 13 at @s run particle c
 execute if score #rg_lg_medieval_mod switch.data matches 13 at @s run clone 95190 ~ 95000 95204 ~ 95203 95190 ~163 95000 replace force
 execute if score #rg_lg_medieval_mod switch.data matches 14 at @s run particle cloud 95211 ~163.5 95101 7 0 50 0 250 force
 execute if score #rg_lg_medieval_mod switch.data matches 14 at @s run clone 95204 ~ 95000 95219 ~ 95203 95204 ~163 95000 replace force
-execute if score #rg_lg_medieval_mod switch.data matches 15 run kill @e[type=item,x=95109,y=-63,z=95101,distance=..1000]
 
+execute if score #rg_lg_medieval_mod switch.data matches 15 run kill @e[type=item,x=95109,y=-63,z=95101,distance=..1000]
 scoreboard players add #rg_lg_medieval_mod switch.data 1
 execute if score #rg_lg_medieval_mod switch.data matches 15 run scoreboard players add #rg_lg_medieval_y switch.data 1
 execute if score #rg_lg_medieval_mod switch.data matches 15 run scoreboard players set #rg_lg_medieval_mod switch.data 0

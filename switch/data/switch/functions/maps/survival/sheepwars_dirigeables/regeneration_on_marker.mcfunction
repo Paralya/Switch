@@ -23,8 +23,8 @@ execute if score #rg_sheepwars_dirigeables_mod switch.data matches 9 at @s run p
 execute if score #rg_sheepwars_dirigeables_mod switch.data matches 9 at @s run clone 100157 ~ 100000 100175 ~ 100158 100157 ~163 100000 replace force
 execute if score #rg_sheepwars_dirigeables_mod switch.data matches 10 at @s run particle cloud 100183 ~163.5 100079 8 0 39 0 250 force
 execute if score #rg_sheepwars_dirigeables_mod switch.data matches 10 at @s run clone 100175 ~ 100000 100192 ~ 100158 100175 ~163 100000 replace force
-execute if score #rg_sheepwars_dirigeables_mod switch.data matches 11 run kill @e[type=item,x=100096,y=-63,z=100079,distance=..1000]
 
+execute if score #rg_sheepwars_dirigeables_mod switch.data matches 11 run kill @e[type=item,x=100096,y=-63,z=100079,distance=..1000]
 scoreboard players add #rg_sheepwars_dirigeables_mod switch.data 1
 execute if score #rg_sheepwars_dirigeables_mod switch.data matches 11 run scoreboard players add #rg_sheepwars_dirigeables_y switch.data 1
 execute if score #rg_sheepwars_dirigeables_mod switch.data matches 11 run scoreboard players set #rg_sheepwars_dirigeables_mod switch.data 0

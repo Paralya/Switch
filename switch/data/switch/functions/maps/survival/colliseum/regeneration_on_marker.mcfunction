@@ -17,8 +17,8 @@ execute if score #rg_colliseum_mod switch.data matches 6 at @s run particle clou
 execute if score #rg_colliseum_mod switch.data matches 6 at @s run clone 59120 ~ 59000 59140 ~ 59124 59120 ~100 59000 replace force
 execute if score #rg_colliseum_mod switch.data matches 7 at @s run particle cloud 59150 ~100.5 59062 10 0 31 0 250 force
 execute if score #rg_colliseum_mod switch.data matches 7 at @s run clone 59140 ~ 59000 59160 ~ 59124 59140 ~100 59000 replace force
-execute if score #rg_colliseum_mod switch.data matches 8 run kill @e[type=item,x=59080,y=0,z=59062,distance=..1000]
 
+execute if score #rg_colliseum_mod switch.data matches 8 run kill @e[type=item,x=59080,y=0,z=59062,distance=..1000]
 scoreboard players add #rg_colliseum_mod switch.data 1
 execute if score #rg_colliseum_mod switch.data matches 8 run scoreboard players add #rg_colliseum_y switch.data 1
 execute if score #rg_colliseum_mod switch.data matches 8 run scoreboard players set #rg_colliseum_mod switch.data 0

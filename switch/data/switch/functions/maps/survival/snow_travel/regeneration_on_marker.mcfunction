@@ -31,8 +31,8 @@ execute if score #rg_snow_travel_mod switch.data matches 13 at @s run particle c
 execute if score #rg_snow_travel_mod switch.data matches 13 at @s run clone 23075 ~ 22904 23089 ~ 23109 23075 ~100 22904 replace force
 execute if score #rg_snow_travel_mod switch.data matches 14 at @s run particle cloud 23096 ~100.5 23006 7 0 51 0 250 force
 execute if score #rg_snow_travel_mod switch.data matches 14 at @s run clone 23089 ~ 22904 23103 ~ 23109 23089 ~100 22904 replace force
-execute if score #rg_snow_travel_mod switch.data matches 15 run kill @e[type=item,x=22999,y=0,z=23006,distance=..1000]
 
+execute if score #rg_snow_travel_mod switch.data matches 15 run kill @e[type=item,x=22999,y=0,z=23006,distance=..1000]
 scoreboard players add #rg_snow_travel_mod switch.data 1
 execute if score #rg_snow_travel_mod switch.data matches 15 run scoreboard players add #rg_snow_travel_y switch.data 1
 execute if score #rg_snow_travel_mod switch.data matches 15 run scoreboard players set #rg_snow_travel_mod switch.data 0

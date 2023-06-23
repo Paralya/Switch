@@ -267,6 +267,7 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 		name (str)					: The name of the map
 		base_condition (str)		: The base_condition condition of the command
 		splitted_coordinates (list)	: The splitted coordinates
+		xyz (tuple)					: The coordinates of the regeneration area
 		last_tick (int)				: The last tick
 		divider (int)				: The divider of the regeneration area
 		suffix (str)				: The suffix of the print function (like "[/clone]" or "[/fill]")
@@ -281,13 +282,14 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 
 	## Write the last lines
 	# Write the scoreboard and summon commands
-	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_y switch.data -64\n")
+	x, y, z = xyz
+	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_y switch.data {y}\n")
 	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_mod switch.data 0\n")
-	f.write(f"{base_condition} ..{last_tick - 1} summon marker run function switch:maps/survival/{name}/regeneration_on_marker\n")
+	f.write(f"{base_condition} ..{last_tick} summon marker run function switch:maps/survival/{name}/regeneration_on_marker\n")
 	f.write("\n")
 
 	# Write the kill command
-	x, y, z = xyz
+	last_tick += 1
 	f.write(f"{base_condition} {last_tick}.. run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 
 	# Write the forceload commands

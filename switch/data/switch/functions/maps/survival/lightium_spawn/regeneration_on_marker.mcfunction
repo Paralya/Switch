@@ -15,8 +15,8 @@ execute if score #rg_lightium_spawn_mod switch.data matches 5 at @s run particle
 execute if score #rg_lightium_spawn_mod switch.data matches 5 at @s run clone 97092 ~ 97000 97111 ~ 97129 97092 ~100 97000 replace force
 execute if score #rg_lightium_spawn_mod switch.data matches 6 at @s run particle cloud 97120 ~100.5 97064 9 0 32 0 250 force
 execute if score #rg_lightium_spawn_mod switch.data matches 6 at @s run clone 97111 ~ 97000 97129 ~ 97129 97111 ~100 97000 replace force
-execute if score #rg_lightium_spawn_mod switch.data matches 7 run kill @e[type=item,x=97064,y=0,z=97064,distance=..1000]
 
+execute if score #rg_lightium_spawn_mod switch.data matches 7 run kill @e[type=item,x=97064,y=0,z=97064,distance=..1000]
 scoreboard players add #rg_lightium_spawn_mod switch.data 1
 execute if score #rg_lightium_spawn_mod switch.data matches 7 run scoreboard players add #rg_lightium_spawn_y switch.data 1
 execute if score #rg_lightium_spawn_mod switch.data matches 7 run scoreboard players set #rg_lightium_spawn_mod switch.data 0

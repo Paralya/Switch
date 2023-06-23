@@ -33,8 +33,8 @@ execute if score #rg_nuketown_mod switch.data matches 14 at @s run particle clou
 execute if score #rg_nuketown_mod switch.data matches 14 at @s run clone 72181 ~ 72000 72194 ~ 72220 72181 ~100 72000 replace force
 execute if score #rg_nuketown_mod switch.data matches 15 at @s run particle cloud 72200 ~100.5 72110 6 0 55 0 250 force
 execute if score #rg_nuketown_mod switch.data matches 15 at @s run clone 72194 ~ 72000 72207 ~ 72220 72194 ~100 72000 replace force
-execute if score #rg_nuketown_mod switch.data matches 16 run kill @e[type=item,x=72103,y=0,z=72110,distance=..1000]
 
+execute if score #rg_nuketown_mod switch.data matches 16 run kill @e[type=item,x=72103,y=0,z=72110,distance=..1000]
 scoreboard players add #rg_nuketown_mod switch.data 1
 execute if score #rg_nuketown_mod switch.data matches 16 run scoreboard players add #rg_nuketown_y switch.data 1
 execute if score #rg_nuketown_mod switch.data matches 16 run scoreboard players set #rg_nuketown_mod switch.data 0

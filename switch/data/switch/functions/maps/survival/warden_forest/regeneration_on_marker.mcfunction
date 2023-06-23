@@ -13,8 +13,8 @@ execute if score #rg_warden_forest_mod switch.data matches 4 at @s run particle 
 execute if score #rg_warden_forest_mod switch.data matches 4 at @s run clone 10020 ~ 9940 10040 ~ 10060 10020 ~100 9940 replace force
 execute if score #rg_warden_forest_mod switch.data matches 5 at @s run particle cloud 10050 ~100.5 10000 10 0 30 0 250 force
 execute if score #rg_warden_forest_mod switch.data matches 5 at @s run clone 10040 ~ 9940 10060 ~ 10060 10040 ~100 9940 replace force
-execute if score #rg_warden_forest_mod switch.data matches 6 run kill @e[type=item,x=10000,y=0,z=10000,distance=..1000]
 
+execute if score #rg_warden_forest_mod switch.data matches 6 run kill @e[type=item,x=10000,y=0,z=10000,distance=..1000]
 scoreboard players add #rg_warden_forest_mod switch.data 1
 execute if score #rg_warden_forest_mod switch.data matches 6 run scoreboard players add #rg_warden_forest_y switch.data 1
 execute if score #rg_warden_forest_mod switch.data matches 6 run scoreboard players set #rg_warden_forest_mod switch.data 0

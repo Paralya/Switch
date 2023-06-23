@@ -19,8 +19,8 @@ execute if score #rg_end_factory_mod switch.data matches 7 at @s run particle cl
 execute if score #rg_end_factory_mod switch.data matches 7 at @s run clone 108138 ~ 108000 108158 ~ 108129 108138 ~163 108000 replace force
 execute if score #rg_end_factory_mod switch.data matches 8 at @s run particle cloud 108168 ~163.5 108064 10 0 32 0 250 force
 execute if score #rg_end_factory_mod switch.data matches 8 at @s run clone 108158 ~ 108000 108178 ~ 108129 108158 ~163 108000 replace force
-execute if score #rg_end_factory_mod switch.data matches 9 run kill @e[type=item,x=108089,y=-63,z=108064,distance=..1000]
 
+execute if score #rg_end_factory_mod switch.data matches 9 run kill @e[type=item,x=108089,y=-63,z=108064,distance=..1000]
 scoreboard players add #rg_end_factory_mod switch.data 1
 execute if score #rg_end_factory_mod switch.data matches 9 run scoreboard players add #rg_end_factory_y switch.data 1
 execute if score #rg_end_factory_mod switch.data matches 9 run scoreboard players set #rg_end_factory_mod switch.data 0

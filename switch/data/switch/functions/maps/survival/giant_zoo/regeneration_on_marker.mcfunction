@@ -59,8 +59,8 @@ execute if score #rg_giant_zoo_mod switch.data matches 27 at @s run particle clo
 execute if score #rg_giant_zoo_mod switch.data matches 27 at @s run clone 70282 ~ 70000 70293 ~ 70287 70282 ~100 70000 replace force
 execute if score #rg_giant_zoo_mod switch.data matches 28 at @s run particle cloud 70298 ~100.5 70143 5 0 71 0 250 force
 execute if score #rg_giant_zoo_mod switch.data matches 28 at @s run clone 70293 ~ 70000 70303 ~ 70287 70293 ~100 70000 replace force
-execute if score #rg_giant_zoo_mod switch.data matches 29 run kill @e[type=item,x=70151,y=0,z=70143,distance=..1000]
 
+execute if score #rg_giant_zoo_mod switch.data matches 29 run kill @e[type=item,x=70151,y=0,z=70143,distance=..1000]
 scoreboard players add #rg_giant_zoo_mod switch.data 1
 execute if score #rg_giant_zoo_mod switch.data matches 29 run scoreboard players add #rg_giant_zoo_y switch.data 1
 execute if score #rg_giant_zoo_mod switch.data matches 29 run scoreboard players set #rg_giant_zoo_mod switch.data 0

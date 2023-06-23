@@ -33,8 +33,8 @@ execute if score #rg_snowy_village_mod switch.data matches 14 at @s run particle
 execute if score #rg_snowy_village_mod switch.data matches 14 at @s run clone 92175 ~ 92000 92188 ~ 92229 92175 ~100 92000 replace force
 execute if score #rg_snowy_village_mod switch.data matches 15 at @s run particle cloud 92194 ~100.5 92114 6 0 57 0 250 force
 execute if score #rg_snowy_village_mod switch.data matches 15 at @s run clone 92188 ~ 92000 92200 ~ 92229 92188 ~100 92000 replace force
-execute if score #rg_snowy_village_mod switch.data matches 16 run kill @e[type=item,x=92100,y=0,z=92114,distance=..1000]
 
+execute if score #rg_snowy_village_mod switch.data matches 16 run kill @e[type=item,x=92100,y=0,z=92114,distance=..1000]
 scoreboard players add #rg_snowy_village_mod switch.data 1
 execute if score #rg_snowy_village_mod switch.data matches 16 run scoreboard players add #rg_snowy_village_y switch.data 1
 execute if score #rg_snowy_village_mod switch.data matches 16 run scoreboard players set #rg_snowy_village_mod switch.data 0

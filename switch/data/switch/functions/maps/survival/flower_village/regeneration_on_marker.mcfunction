@@ -145,8 +145,8 @@ execute if score #rg_flower_village_mod switch.data matches 70 at @s run particl
 execute if score #rg_flower_village_mod switch.data matches 70 at @s run clone 89410 ~ 89000 89416 ~ 89532 89410 ~100 89000 replace force
 execute if score #rg_flower_village_mod switch.data matches 71 at @s run particle cloud 89419 ~100.5 89266 3 0 133 0 250 force
 execute if score #rg_flower_village_mod switch.data matches 71 at @s run clone 89416 ~ 89000 89422 ~ 89532 89416 ~100 89000 replace force
-execute if score #rg_flower_village_mod switch.data matches 72 run kill @e[type=item,x=89211,y=0,z=89266,distance=..1000]
 
+execute if score #rg_flower_village_mod switch.data matches 72 run kill @e[type=item,x=89211,y=0,z=89266,distance=..1000]
 scoreboard players add #rg_flower_village_mod switch.data 1
 execute if score #rg_flower_village_mod switch.data matches 72 run scoreboard players add #rg_flower_village_y switch.data 1
 execute if score #rg_flower_village_mod switch.data matches 72 run scoreboard players set #rg_flower_village_mod switch.data 0

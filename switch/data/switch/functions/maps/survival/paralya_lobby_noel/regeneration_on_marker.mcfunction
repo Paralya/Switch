@@ -29,8 +29,8 @@ execute if score #rg_paralya_lobby_noel_mod switch.data matches 12 at @s run par
 execute if score #rg_paralya_lobby_noel_mod switch.data matches 12 at @s run clone 40071 ~ 39900 40086 ~ 40100 40071 ~164 39900 replace force
 execute if score #rg_paralya_lobby_noel_mod switch.data matches 13 at @s run particle cloud 40093 ~164.5 40000 7 0 50 0 250 force
 execute if score #rg_paralya_lobby_noel_mod switch.data matches 13 at @s run clone 40086 ~ 39900 40100 ~ 40100 40086 ~164 39900 replace force
-execute if score #rg_paralya_lobby_noel_mod switch.data matches 14 run kill @e[type=item,x=40000,y=-64,z=40000,distance=..1000]
 
+execute if score #rg_paralya_lobby_noel_mod switch.data matches 14 run kill @e[type=item,x=40000,y=-64,z=40000,distance=..1000]
 scoreboard players add #rg_paralya_lobby_noel_mod switch.data 1
 execute if score #rg_paralya_lobby_noel_mod switch.data matches 14 run scoreboard players add #rg_paralya_lobby_noel_y switch.data 1
 execute if score #rg_paralya_lobby_noel_mod switch.data matches 14 run scoreboard players set #rg_paralya_lobby_noel_mod switch.data 0

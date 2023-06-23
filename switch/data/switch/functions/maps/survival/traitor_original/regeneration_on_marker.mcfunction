@@ -21,8 +21,8 @@ execute if score #rg_traitor_original_mod switch.data matches 8 at @s run partic
 execute if score #rg_traitor_original_mod switch.data matches 8 at @s run clone 1555 ~ 1423 1574 ~ 1578 1555 ~114 1423 replace force
 execute if score #rg_traitor_original_mod switch.data matches 9 at @s run particle cloud 1583 ~114.5 1500 9 0 38 0 250 force
 execute if score #rg_traitor_original_mod switch.data matches 9 at @s run clone 1574 ~ 1423 1592 ~ 1578 1574 ~114 1423 replace force
-execute if score #rg_traitor_original_mod switch.data matches 10 run kill @e[type=item,x=1500,y=0,z=1500,distance=..1000]
 
+execute if score #rg_traitor_original_mod switch.data matches 10 run kill @e[type=item,x=1500,y=0,z=1500,distance=..1000]
 scoreboard players add #rg_traitor_original_mod switch.data 1
 execute if score #rg_traitor_original_mod switch.data matches 10 run scoreboard players add #rg_traitor_original_y switch.data 1
 execute if score #rg_traitor_original_mod switch.data matches 10 run scoreboard players set #rg_traitor_original_mod switch.data 0

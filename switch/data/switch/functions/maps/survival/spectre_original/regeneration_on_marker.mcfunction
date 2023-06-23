@@ -9,8 +9,8 @@ execute if score #rg_spectre_original_mod switch.data matches 2 at @s run partic
 execute if score #rg_spectre_original_mod switch.data matches 2 at @s run clone 2502 ~ 2452 2524 ~ 2547 2502 ~100 2452 replace force
 execute if score #rg_spectre_original_mod switch.data matches 3 at @s run particle cloud 2534 ~100.5 2499 10 0 23 0 250 force
 execute if score #rg_spectre_original_mod switch.data matches 3 at @s run clone 2524 ~ 2452 2545 ~ 2547 2524 ~100 2452 replace force
-execute if score #rg_spectre_original_mod switch.data matches 4 run kill @e[type=item,x=2502,y=0,z=2499,distance=..1000]
 
+execute if score #rg_spectre_original_mod switch.data matches 4 run kill @e[type=item,x=2502,y=0,z=2499,distance=..1000]
 scoreboard players add #rg_spectre_original_mod switch.data 1
 execute if score #rg_spectre_original_mod switch.data matches 4 run scoreboard players add #rg_spectre_original_y switch.data 1
 execute if score #rg_spectre_original_mod switch.data matches 4 run scoreboard players set #rg_spectre_original_mod switch.data 0

@@ -45,8 +45,8 @@ execute if score #rg_japanese_village_mod switch.data matches 20 at @s run parti
 execute if score #rg_japanese_village_mod switch.data matches 20 at @s run clone 90204 ~ 90000 90214 ~ 90286 90204 ~100 90000 replace force
 execute if score #rg_japanese_village_mod switch.data matches 21 at @s run particle cloud 90219 ~100.5 90143 5 0 71 0 250 force
 execute if score #rg_japanese_village_mod switch.data matches 21 at @s run clone 90214 ~ 90000 90224 ~ 90286 90214 ~100 90000 replace force
-execute if score #rg_japanese_village_mod switch.data matches 22 run kill @e[type=item,x=90112,y=0,z=90143,distance=..1000]
 
+execute if score #rg_japanese_village_mod switch.data matches 22 run kill @e[type=item,x=90112,y=0,z=90143,distance=..1000]
 scoreboard players add #rg_japanese_village_mod switch.data 1
 execute if score #rg_japanese_village_mod switch.data matches 22 run scoreboard players add #rg_japanese_village_y switch.data 1
 execute if score #rg_japanese_village_mod switch.data matches 22 run scoreboard players set #rg_japanese_village_mod switch.data 0

@@ -17,8 +17,8 @@ execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 6 at @s r
 execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 6 at @s run clone 104099 ~ 104000 104116 ~ 104165 104099 ~163 104000 replace force
 execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 7 at @s run particle cloud 104124 ~163.5 104082 8 0 41 0 250 force
 execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 7 at @s run clone 104116 ~ 104000 104132 ~ 104165 104116 ~163 104000 replace force
-execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 8 run kill @e[type=item,x=104066,y=-63,z=104082,distance=..1000]
 
+execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 8 run kill @e[type=item,x=104066,y=-63,z=104082,distance=..1000]
 scoreboard players add #rg_stardust_boss_zone_nether_mod switch.data 1
 execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 8 run scoreboard players add #rg_stardust_boss_zone_nether_y switch.data 1
 execute if score #rg_stardust_boss_zone_nether_mod switch.data matches 8 run scoreboard players set #rg_stardust_boss_zone_nether_mod switch.data 0

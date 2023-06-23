@@ -23,8 +23,8 @@ execute if score #rg_scartmania_mod switch.data matches 9 at @s run particle clo
 execute if score #rg_scartmania_mod switch.data matches 9 at @s run clone 58131 ~ 58000 58145 ~ 58188 58131 ~100 58000 replace force
 execute if score #rg_scartmania_mod switch.data matches 10 at @s run particle cloud 58152 ~100.5 58094 7 0 47 0 250 force
 execute if score #rg_scartmania_mod switch.data matches 10 at @s run clone 58145 ~ 58000 58160 ~ 58188 58145 ~100 58000 replace force
-execute if score #rg_scartmania_mod switch.data matches 11 run kill @e[type=item,x=58080,y=0,z=58094,distance=..1000]
 
+execute if score #rg_scartmania_mod switch.data matches 11 run kill @e[type=item,x=58080,y=0,z=58094,distance=..1000]
 scoreboard players add #rg_scartmania_mod switch.data 1
 execute if score #rg_scartmania_mod switch.data matches 11 run scoreboard players add #rg_scartmania_y switch.data 1
 execute if score #rg_scartmania_mod switch.data matches 11 run scoreboard players set #rg_scartmania_mod switch.data 0

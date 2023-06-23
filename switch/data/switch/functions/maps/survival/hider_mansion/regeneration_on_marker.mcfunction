@@ -21,8 +21,8 @@ execute if score #rg_hider_mansion_mod switch.data matches 8 at @s run particle 
 execute if score #rg_hider_mansion_mod switch.data matches 8 at @s run clone 71136 ~ 71000 71153 ~ 71160 71136 ~100 71000 replace force
 execute if score #rg_hider_mansion_mod switch.data matches 9 at @s run particle cloud 71161 ~100.5 71080 8 0 40 0 250 force
 execute if score #rg_hider_mansion_mod switch.data matches 9 at @s run clone 71153 ~ 71000 71170 ~ 71160 71153 ~100 71000 replace force
-execute if score #rg_hider_mansion_mod switch.data matches 10 run kill @e[type=item,x=71085,y=0,z=71080,distance=..1000]
 
+execute if score #rg_hider_mansion_mod switch.data matches 10 run kill @e[type=item,x=71085,y=0,z=71080,distance=..1000]
 scoreboard players add #rg_hider_mansion_mod switch.data 1
 execute if score #rg_hider_mansion_mod switch.data matches 10 run scoreboard players add #rg_hider_mansion_y switch.data 1
 execute if score #rg_hider_mansion_mod switch.data matches 10 run scoreboard players set #rg_hider_mansion_mod switch.data 0

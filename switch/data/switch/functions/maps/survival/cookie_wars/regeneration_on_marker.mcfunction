@@ -29,8 +29,8 @@ execute if score #rg_cookie_wars_mod switch.data matches 12 at @s run particle c
 execute if score #rg_cookie_wars_mod switch.data matches 12 at @s run clone 49071 ~ 48900 49086 ~ 49100 49071 ~100 48900 replace force
 execute if score #rg_cookie_wars_mod switch.data matches 13 at @s run particle cloud 49093 ~100.5 49000 7 0 50 0 250 force
 execute if score #rg_cookie_wars_mod switch.data matches 13 at @s run clone 49086 ~ 48900 49100 ~ 49100 49086 ~100 48900 replace force
-execute if score #rg_cookie_wars_mod switch.data matches 14 run kill @e[type=item,x=49000,y=0,z=49000,distance=..1000]
 
+execute if score #rg_cookie_wars_mod switch.data matches 14 run kill @e[type=item,x=49000,y=0,z=49000,distance=..1000]
 scoreboard players add #rg_cookie_wars_mod switch.data 1
 execute if score #rg_cookie_wars_mod switch.data matches 14 run scoreboard players add #rg_cookie_wars_y switch.data 1
 execute if score #rg_cookie_wars_mod switch.data matches 14 run scoreboard players set #rg_cookie_wars_mod switch.data 0

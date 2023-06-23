@@ -29,8 +29,8 @@ execute if score #rg_paralya_lobby_mod switch.data matches 12 at @s run particle
 execute if score #rg_paralya_lobby_mod switch.data matches 12 at @s run clone 99171 ~ 99000 99186 ~ 99200 99171 ~163 99000 replace force
 execute if score #rg_paralya_lobby_mod switch.data matches 13 at @s run particle cloud 99193 ~163.5 99100 7 0 50 0 250 force
 execute if score #rg_paralya_lobby_mod switch.data matches 13 at @s run clone 99186 ~ 99000 99200 ~ 99200 99186 ~163 99000 replace force
-execute if score #rg_paralya_lobby_mod switch.data matches 14 run kill @e[type=item,x=99100,y=-63,z=99100,distance=..1000]
 
+execute if score #rg_paralya_lobby_mod switch.data matches 14 run kill @e[type=item,x=99100,y=-63,z=99100,distance=..1000]
 scoreboard players add #rg_paralya_lobby_mod switch.data 1
 execute if score #rg_paralya_lobby_mod switch.data matches 14 run scoreboard players add #rg_paralya_lobby_y switch.data 1
 execute if score #rg_paralya_lobby_mod switch.data matches 14 run scoreboard players set #rg_paralya_lobby_mod switch.data 0

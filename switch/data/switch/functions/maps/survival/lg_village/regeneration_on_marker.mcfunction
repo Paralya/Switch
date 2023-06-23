@@ -41,8 +41,8 @@ execute if score #rg_lg_village_mod switch.data matches 18 at @s run particle cl
 execute if score #rg_lg_village_mod switch.data matches 18 at @s run clone 96221 ~ 96000 96234 ~ 96239 96221 ~163 96000 replace force
 execute if score #rg_lg_village_mod switch.data matches 19 at @s run particle cloud 96240 ~163.5 96119 6 0 59 0 250 force
 execute if score #rg_lg_village_mod switch.data matches 19 at @s run clone 96234 ~ 96000 96246 ~ 96239 96234 ~163 96000 replace force
-execute if score #rg_lg_village_mod switch.data matches 20 run kill @e[type=item,x=96123,y=-63,z=96119,distance=..1000]
 
+execute if score #rg_lg_village_mod switch.data matches 20 run kill @e[type=item,x=96123,y=-63,z=96119,distance=..1000]
 scoreboard players add #rg_lg_village_mod switch.data 1
 execute if score #rg_lg_village_mod switch.data matches 20 run scoreboard players add #rg_lg_village_y switch.data 1
 execute if score #rg_lg_village_mod switch.data matches 20 run scoreboard players set #rg_lg_village_mod switch.data 0

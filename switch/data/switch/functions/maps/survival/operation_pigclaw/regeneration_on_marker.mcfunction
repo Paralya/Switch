@@ -169,8 +169,8 @@ execute if score #rg_operation_pigclaw_mod switch.data matches 82 at @s run part
 execute if score #rg_operation_pigclaw_mod switch.data matches 82 at @s run clone 36328 ~ 35668 36334 ~ 36180 36328 ~164 35668 replace force
 execute if score #rg_operation_pigclaw_mod switch.data matches 83 at @s run particle cloud 36337 ~164.5 35924 3 0 128 0 250 force
 execute if score #rg_operation_pigclaw_mod switch.data matches 83 at @s run clone 36334 ~ 35668 36340 ~ 36180 36334 ~164 35668 replace force
-execute if score #rg_operation_pigclaw_mod switch.data matches 84 run kill @e[type=item,x=36083,y=-64,z=35924,distance=..1000]
 
+execute if score #rg_operation_pigclaw_mod switch.data matches 84 run kill @e[type=item,x=36083,y=-64,z=35924,distance=..1000]
 scoreboard players add #rg_operation_pigclaw_mod switch.data 1
 execute if score #rg_operation_pigclaw_mod switch.data matches 84 run scoreboard players add #rg_operation_pigclaw_y switch.data 1
 execute if score #rg_operation_pigclaw_mod switch.data matches 84 run scoreboard players set #rg_operation_pigclaw_mod switch.data 0

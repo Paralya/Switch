@@ -37,8 +37,8 @@ execute if score #rg_baby_park_mod switch.data matches 16 at @s run particle clo
 execute if score #rg_baby_park_mod switch.data matches 16 at @s run clone 21102 ~ 20908 21117 ~ 21099 21102 ~100 20908 replace force
 execute if score #rg_baby_park_mod switch.data matches 17 at @s run particle cloud 21124 ~100.5 21003 7 0 47 0 250 force
 execute if score #rg_baby_park_mod switch.data matches 17 at @s run clone 21117 ~ 20908 21132 ~ 21099 21117 ~100 20908 replace force
-execute if score #rg_baby_park_mod switch.data matches 18 run kill @e[type=item,x=20997,y=0,z=21003,distance=..1000]
 
+execute if score #rg_baby_park_mod switch.data matches 18 run kill @e[type=item,x=20997,y=0,z=21003,distance=..1000]
 scoreboard players add #rg_baby_park_mod switch.data 1
 execute if score #rg_baby_park_mod switch.data matches 18 run scoreboard players add #rg_baby_park_y switch.data 1
 execute if score #rg_baby_park_mod switch.data matches 18 run scoreboard players set #rg_baby_park_mod switch.data 0

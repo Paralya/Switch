@@ -56,8 +56,6 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	y = start_pos[1]							# The first y coordinate
 	minY = paste_start_height					# The y coordinate where the regeneration starts
 	maxY = minY - start_pos[1] + end_pos[1]		# The y coordinate where the regeneration ends
-	i = 20										# The first regeneration tick
-	j = y										# The first y coordinate of the clone command (iterator)
 
 	# Write the first lines
 	f = writeFirstLinesOfRegenerate(name, base_condition, splitted_coordinates)
@@ -80,12 +78,10 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 		marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
 		marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s run clone {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {k[0]} ~{dy} {k[1]} replace force\n")
 		i += 1
-	
-	# Write kill item entities command
-	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
-	
-	# Write the scoreboard commands
+
+	# Write kill item entities command & the scoreboard commands
 	marker_file.write("\n")
+	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 	marker_file.write(f"scoreboard players add #rg_{name}_mod switch.data 1\n")
 	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players add #rg_{name}_y switch.data 1\n")
 	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players set #rg_{name}_mod switch.data 0\n")
@@ -98,7 +94,7 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 
 
 	# Write the last lines
-	i = (maxY - minY) * len(splitted_coordinates) + 1
+	i = (maxY - minY + 1) * len(splitted_coordinates)
 	writeLastLinesOfRegenerate(f, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
 
 	# Write the spread_players file
@@ -254,7 +250,7 @@ generate_clone_survival_folder("sky_tower", (80000, -64, 80000), (80142, 147, 80
 generate_fill_survival_folder("purple_sky_island", (80824, 0, 80822), (81219, 235, 81182), "air", "#switch:purple_sky_island", override_tp_coords = (81000, 101, 81000))
 # Sea Artificial Island (82000)
 generate_clone_survival_folder("lava_castle", (83000, 0, 83000), (83063, 85, 83063), 100, override_tp_coords = (83032, 132, 83039))
-generate_clone_survival_folder("spruce_dojo", (84000, 0, 84000), (84083, 46, 84069), 100, override_tp_coords = (84041, 109, 84035))
+generate_clone_survival_folder("spruce_dojo", (84000, 0, 84000), (84083, 35, 84069), 100, override_tp_coords = (84041, 109, 84035))
 generate_clone_survival_folder("highland_mansion", (85000, 0, 85000), (85150, 72, 85142), 100, override_tp_coords = (None))
 generate_clone_survival_folder("sakura_house", (86000, 0, 86000), (86121, 94, 86135), 100, override_tp_coords = (86072, 117, 86100))
 generate_clone_survival_folder("red_temple", (87000, 0, 87000), (87045, 40, 87094), 100, override_tp_coords = (87023, 110, 87058))

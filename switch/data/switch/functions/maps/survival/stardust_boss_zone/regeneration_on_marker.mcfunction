@@ -17,8 +17,8 @@ execute if score #rg_stardust_boss_zone_mod switch.data matches 6 at @s run part
 execute if score #rg_stardust_boss_zone_mod switch.data matches 6 at @s run clone 103099 ~ 103000 103116 ~ 103165 103099 ~164 103000 replace force
 execute if score #rg_stardust_boss_zone_mod switch.data matches 7 at @s run particle cloud 103124 ~164.5 103082 8 0 41 0 250 force
 execute if score #rg_stardust_boss_zone_mod switch.data matches 7 at @s run clone 103116 ~ 103000 103132 ~ 103165 103116 ~164 103000 replace force
-execute if score #rg_stardust_boss_zone_mod switch.data matches 8 run kill @e[type=item,x=103066,y=-64,z=103082,distance=..1000]
 
+execute if score #rg_stardust_boss_zone_mod switch.data matches 8 run kill @e[type=item,x=103066,y=-64,z=103082,distance=..1000]
 scoreboard players add #rg_stardust_boss_zone_mod switch.data 1
 execute if score #rg_stardust_boss_zone_mod switch.data matches 8 run scoreboard players add #rg_stardust_boss_zone_y switch.data 1
 execute if score #rg_stardust_boss_zone_mod switch.data matches 8 run scoreboard players set #rg_stardust_boss_zone_mod switch.data 0

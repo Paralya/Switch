@@ -15,8 +15,8 @@ execute if score #rg_sprucy_village_mod switch.data matches 5 at @s run particle
 execute if score #rg_sprucy_village_mod switch.data matches 5 at @s run clone 78122 ~ 78000 78147 ~ 78112 78122 ~100 78000 replace force
 execute if score #rg_sprucy_village_mod switch.data matches 6 at @s run particle cloud 78159 ~100.5 78056 12 0 28 0 250 force
 execute if score #rg_sprucy_village_mod switch.data matches 6 at @s run clone 78147 ~ 78000 78171 ~ 78112 78147 ~100 78000 replace force
-execute if score #rg_sprucy_village_mod switch.data matches 7 run kill @e[type=item,x=78085,y=0,z=78056,distance=..1000]
 
+execute if score #rg_sprucy_village_mod switch.data matches 7 run kill @e[type=item,x=78085,y=0,z=78056,distance=..1000]
 scoreboard players add #rg_sprucy_village_mod switch.data 1
 execute if score #rg_sprucy_village_mod switch.data matches 7 run scoreboard players add #rg_sprucy_village_y switch.data 1
 execute if score #rg_sprucy_village_mod switch.data matches 7 run scoreboard players set #rg_sprucy_village_mod switch.data 0

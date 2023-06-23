@@ -17,8 +17,8 @@ execute if score #rg_new_grounds_mod switch.data matches 6 at @s run particle cl
 execute if score #rg_new_grounds_mod switch.data matches 6 at @s run clone 48035 ~ 47930 48052 ~ 48070 48035 ~100 47930 replace force
 execute if score #rg_new_grounds_mod switch.data matches 7 at @s run particle cloud 48061 ~100.5 48000 9 0 35 0 250 force
 execute if score #rg_new_grounds_mod switch.data matches 7 at @s run clone 48052 ~ 47930 48070 ~ 48070 48052 ~100 47930 replace force
-execute if score #rg_new_grounds_mod switch.data matches 8 run kill @e[type=item,x=48000,y=0,z=48000,distance=..1000]
 
+execute if score #rg_new_grounds_mod switch.data matches 8 run kill @e[type=item,x=48000,y=0,z=48000,distance=..1000]
 scoreboard players add #rg_new_grounds_mod switch.data 1
 execute if score #rg_new_grounds_mod switch.data matches 8 run scoreboard players add #rg_new_grounds_y switch.data 1
 execute if score #rg_new_grounds_mod switch.data matches 8 run scoreboard players set #rg_new_grounds_mod switch.data 0

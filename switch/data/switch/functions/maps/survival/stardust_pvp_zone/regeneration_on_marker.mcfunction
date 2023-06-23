@@ -61,8 +61,8 @@ execute if score #rg_stardust_pvp_zone_mod switch.data matches 28 at @s run part
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 28 at @s run clone 105272 ~ 105000 105281 ~ 105314 105272 ~163 105000 replace force
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 29 at @s run particle cloud 105286 ~163.5 105157 5 0 78 0 250 force
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 29 at @s run clone 105281 ~ 105000 105291 ~ 105314 105281 ~163 105000 replace force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 run kill @e[type=item,x=105145,y=-63,z=105157,distance=..1000]
 
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 run kill @e[type=item,x=105145,y=-63,z=105157,distance=..1000]
 scoreboard players add #rg_stardust_pvp_zone_mod switch.data 1
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 run scoreboard players add #rg_stardust_pvp_zone_y switch.data 1
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 run scoreboard players set #rg_stardust_pvp_zone_mod switch.data 0

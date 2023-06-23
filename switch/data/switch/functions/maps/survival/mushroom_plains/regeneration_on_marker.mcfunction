@@ -13,8 +13,8 @@ execute if score #rg_mushroom_plains_mod switch.data matches 4 at @s run particl
 execute if score #rg_mushroom_plains_mod switch.data matches 4 at @s run clone 4020 ~ 3939 4041 ~ 4061 4020 ~100 3939 replace force
 execute if score #rg_mushroom_plains_mod switch.data matches 5 at @s run particle cloud 4051 ~100.5 4000 10 0 30 0 250 force
 execute if score #rg_mushroom_plains_mod switch.data matches 5 at @s run clone 4041 ~ 3939 4061 ~ 4061 4041 ~100 3939 replace force
-execute if score #rg_mushroom_plains_mod switch.data matches 6 run kill @e[type=item,x=4000,y=0,z=4000,distance=..1000]
 
+execute if score #rg_mushroom_plains_mod switch.data matches 6 run kill @e[type=item,x=4000,y=0,z=4000,distance=..1000]
 scoreboard players add #rg_mushroom_plains_mod switch.data 1
 execute if score #rg_mushroom_plains_mod switch.data matches 6 run scoreboard players add #rg_mushroom_plains_y switch.data 1
 execute if score #rg_mushroom_plains_mod switch.data matches 6 run scoreboard players set #rg_mushroom_plains_mod switch.data 0

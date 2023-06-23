@@ -11,8 +11,8 @@ execute if score #rg_scary_labyrinth_mod switch.data matches 3 at @s run particl
 execute if score #rg_scary_labyrinth_mod switch.data matches 3 at @s run clone 60110 ~ 60000 60147 ~ 60066 60110 ~100 60000 replace force
 execute if score #rg_scary_labyrinth_mod switch.data matches 4 at @s run particle cloud 60165 ~100.5 60033 18 0 16 0 250 force
 execute if score #rg_scary_labyrinth_mod switch.data matches 4 at @s run clone 60147 ~ 60000 60184 ~ 60066 60147 ~100 60000 replace force
-execute if score #rg_scary_labyrinth_mod switch.data matches 5 run kill @e[type=item,x=60092,y=0,z=60033,distance=..1000]
 
+execute if score #rg_scary_labyrinth_mod switch.data matches 5 run kill @e[type=item,x=60092,y=0,z=60033,distance=..1000]
 scoreboard players add #rg_scary_labyrinth_mod switch.data 1
 execute if score #rg_scary_labyrinth_mod switch.data matches 5 run scoreboard players add #rg_scary_labyrinth_y switch.data 1
 execute if score #rg_scary_labyrinth_mod switch.data matches 5 run scoreboard players set #rg_scary_labyrinth_mod switch.data 0

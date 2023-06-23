@@ -21,8 +21,8 @@ execute if score #rg_zonweeb_highschool_mod switch.data matches 8 at @s run part
 execute if score #rg_zonweeb_highschool_mod switch.data matches 8 at @s run clone 53015 ~ 52876 53028 ~ 53094 53015 ~100 52876 replace force
 execute if score #rg_zonweeb_highschool_mod switch.data matches 9 at @s run particle cloud 53034 ~100.5 52985 6 0 54 0 250 force
 execute if score #rg_zonweeb_highschool_mod switch.data matches 9 at @s run clone 53028 ~ 52876 53040 ~ 53094 53028 ~100 52876 replace force
-execute if score #rg_zonweeb_highschool_mod switch.data matches 10 run kill @e[type=item,x=52977,y=0,z=52985,distance=..1000]
 
+execute if score #rg_zonweeb_highschool_mod switch.data matches 10 run kill @e[type=item,x=52977,y=0,z=52985,distance=..1000]
 scoreboard players add #rg_zonweeb_highschool_mod switch.data 1
 execute if score #rg_zonweeb_highschool_mod switch.data matches 10 run scoreboard players add #rg_zonweeb_highschool_y switch.data 1
 execute if score #rg_zonweeb_highschool_mod switch.data matches 10 run scoreboard players set #rg_zonweeb_highschool_mod switch.data 0

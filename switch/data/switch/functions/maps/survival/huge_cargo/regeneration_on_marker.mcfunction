@@ -23,8 +23,8 @@ execute if score #rg_huge_cargo_mod switch.data matches 9 at @s run particle clo
 execute if score #rg_huge_cargo_mod switch.data matches 9 at @s run clone 41218 ~ 40892 41243 ~ 41000 41218 ~164 40892 replace force
 execute if score #rg_huge_cargo_mod switch.data matches 10 at @s run particle cloud 41255 ~164.5 40946 12 0 27 0 250 force
 execute if score #rg_huge_cargo_mod switch.data matches 10 at @s run clone 41243 ~ 40892 41267 ~ 41000 41243 ~164 40892 replace force
-execute if score #rg_huge_cargo_mod switch.data matches 11 run kill @e[type=item,x=41133,y=-64,z=40946,distance=..1000]
 
+execute if score #rg_huge_cargo_mod switch.data matches 11 run kill @e[type=item,x=41133,y=-64,z=40946,distance=..1000]
 scoreboard players add #rg_huge_cargo_mod switch.data 1
 execute if score #rg_huge_cargo_mod switch.data matches 11 run scoreboard players add #rg_huge_cargo_y switch.data 1
 execute if score #rg_huge_cargo_mod switch.data matches 11 run scoreboard players set #rg_huge_cargo_mod switch.data 0

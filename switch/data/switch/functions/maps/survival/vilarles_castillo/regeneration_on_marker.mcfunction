@@ -33,8 +33,8 @@ execute if score #rg_vilarles_castillo_mod switch.data matches 14 at @s run part
 execute if score #rg_vilarles_castillo_mod switch.data matches 14 at @s run clone 52088 ~ 51853 52102 ~ 52071 52088 ~164 51853 replace force
 execute if score #rg_vilarles_castillo_mod switch.data matches 15 at @s run particle cloud 52108 ~164.5 51962 6 0 54 0 250 force
 execute if score #rg_vilarles_castillo_mod switch.data matches 15 at @s run clone 52102 ~ 51853 52115 ~ 52071 52102 ~164 51853 replace force
-execute if score #rg_vilarles_castillo_mod switch.data matches 16 run kill @e[type=item,x=52007,y=-64,z=51962,distance=..1000]
 
+execute if score #rg_vilarles_castillo_mod switch.data matches 16 run kill @e[type=item,x=52007,y=-64,z=51962,distance=..1000]
 scoreboard players add #rg_vilarles_castillo_mod switch.data 1
 execute if score #rg_vilarles_castillo_mod switch.data matches 16 run scoreboard players add #rg_vilarles_castillo_y switch.data 1
 execute if score #rg_vilarles_castillo_mod switch.data matches 16 run scoreboard players set #rg_vilarles_castillo_mod switch.data 0

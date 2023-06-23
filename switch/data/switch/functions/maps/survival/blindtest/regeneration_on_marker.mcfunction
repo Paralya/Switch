@@ -9,8 +9,8 @@ execute if score #rg_blindtest_mod switch.data matches 2 at @s run particle clou
 execute if score #rg_blindtest_mod switch.data matches 2 at @s run clone 62044 ~ 62000 62066 ~ 62093 62044 ~100 62000 replace force
 execute if score #rg_blindtest_mod switch.data matches 3 at @s run particle cloud 62077 ~100.5 62046 11 0 23 0 250 force
 execute if score #rg_blindtest_mod switch.data matches 3 at @s run clone 62066 ~ 62000 62088 ~ 62093 62066 ~100 62000 replace force
-execute if score #rg_blindtest_mod switch.data matches 4 run kill @e[type=item,x=62044,y=0,z=62046,distance=..1000]
 
+execute if score #rg_blindtest_mod switch.data matches 4 run kill @e[type=item,x=62044,y=0,z=62046,distance=..1000]
 scoreboard players add #rg_blindtest_mod switch.data 1
 execute if score #rg_blindtest_mod switch.data matches 4 run scoreboard players add #rg_blindtest_y switch.data 1
 execute if score #rg_blindtest_mod switch.data matches 4 run scoreboard players set #rg_blindtest_mod switch.data 0

@@ -31,8 +31,8 @@ execute if score #rg_snow_hills_mod switch.data matches 13 at @s run particle cl
 execute if score #rg_snow_hills_mod switch.data matches 13 at @s run clone 50113 ~ 49918 50129 ~ 50103 50113 ~100 49918 replace force
 execute if score #rg_snow_hills_mod switch.data matches 14 at @s run particle cloud 50137 ~100.5 50010 8 0 46 0 250 force
 execute if score #rg_snow_hills_mod switch.data matches 14 at @s run clone 50129 ~ 49918 50145 ~ 50103 50129 ~100 49918 replace force
-execute if score #rg_snow_hills_mod switch.data matches 15 run kill @e[type=item,x=50025,y=0,z=50010,distance=..1000]
 
+execute if score #rg_snow_hills_mod switch.data matches 15 run kill @e[type=item,x=50025,y=0,z=50010,distance=..1000]
 scoreboard players add #rg_snow_hills_mod switch.data 1
 execute if score #rg_snow_hills_mod switch.data matches 15 run scoreboard players add #rg_snow_hills_y switch.data 1
 execute if score #rg_snow_hills_mod switch.data matches 15 run scoreboard players set #rg_snow_hills_mod switch.data 0

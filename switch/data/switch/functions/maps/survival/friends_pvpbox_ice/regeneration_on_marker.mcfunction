@@ -7,8 +7,8 @@ execute if score #rg_friends_pvpbox_ice_mod switch.data matches 1 at @s run part
 execute if score #rg_friends_pvpbox_ice_mod switch.data matches 1 at @s run clone 10986 ~ 10968 11007 ~ 11033 10986 ~100 10968 replace force
 execute if score #rg_friends_pvpbox_ice_mod switch.data matches 2 at @s run particle cloud 11018 ~100.5 11000 11 0 16 0 250 force
 execute if score #rg_friends_pvpbox_ice_mod switch.data matches 2 at @s run clone 11007 ~ 10968 11029 ~ 11033 11007 ~100 10968 replace force
-execute if score #rg_friends_pvpbox_ice_mod switch.data matches 3 run kill @e[type=item,x=10996,y=0,z=11000,distance=..1000]
 
+execute if score #rg_friends_pvpbox_ice_mod switch.data matches 3 run kill @e[type=item,x=10996,y=0,z=11000,distance=..1000]
 scoreboard players add #rg_friends_pvpbox_ice_mod switch.data 1
 execute if score #rg_friends_pvpbox_ice_mod switch.data matches 3 run scoreboard players add #rg_friends_pvpbox_ice_y switch.data 1
 execute if score #rg_friends_pvpbox_ice_mod switch.data matches 3 run scoreboard players set #rg_friends_pvpbox_ice_mod switch.data 0

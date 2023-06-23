@@ -19,8 +19,8 @@ execute if score #rg_stardust_prison_mod switch.data matches 7 at @s run particl
 execute if score #rg_stardust_prison_mod switch.data matches 7 at @s run clone 106103 ~ 106000 106117 ~ 106178 106103 ~100 106000 replace force
 execute if score #rg_stardust_prison_mod switch.data matches 8 at @s run particle cloud 106124 ~100.5 106089 7 0 44 0 250 force
 execute if score #rg_stardust_prison_mod switch.data matches 8 at @s run clone 106117 ~ 106000 106132 ~ 106178 106117 ~100 106000 replace force
-execute if score #rg_stardust_prison_mod switch.data matches 9 run kill @e[type=item,x=106066,y=0,z=106089,distance=..1000]
 
+execute if score #rg_stardust_prison_mod switch.data matches 9 run kill @e[type=item,x=106066,y=0,z=106089,distance=..1000]
 scoreboard players add #rg_stardust_prison_mod switch.data 1
 execute if score #rg_stardust_prison_mod switch.data matches 9 run scoreboard players add #rg_stardust_prison_y switch.data 1
 execute if score #rg_stardust_prison_mod switch.data matches 9 run scoreboard players set #rg_stardust_prison_mod switch.data 0

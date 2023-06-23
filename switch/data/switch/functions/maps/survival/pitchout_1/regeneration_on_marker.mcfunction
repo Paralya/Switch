@@ -11,8 +11,8 @@ execute if score #rg_pitchout_1_mod switch.data matches 3 at @s run particle clo
 execute if score #rg_pitchout_1_mod switch.data matches 3 at @s run clone 1010 ~ 1050 1030 ~ 1150 1010 ~95 1050 replace force
 execute if score #rg_pitchout_1_mod switch.data matches 4 at @s run particle cloud 1040 ~95.5 1100 10 0 25 0 250 force
 execute if score #rg_pitchout_1_mod switch.data matches 4 at @s run clone 1030 ~ 1050 1050 ~ 1150 1030 ~95 1050 replace force
-execute if score #rg_pitchout_1_mod switch.data matches 5 run kill @e[type=item,x=1000,y=0,z=1100,distance=..1000]
 
+execute if score #rg_pitchout_1_mod switch.data matches 5 run kill @e[type=item,x=1000,y=0,z=1100,distance=..1000]
 scoreboard players add #rg_pitchout_1_mod switch.data 1
 execute if score #rg_pitchout_1_mod switch.data matches 5 run scoreboard players add #rg_pitchout_1_y switch.data 1
 execute if score #rg_pitchout_1_mod switch.data matches 5 run scoreboard players set #rg_pitchout_1_mod switch.data 0

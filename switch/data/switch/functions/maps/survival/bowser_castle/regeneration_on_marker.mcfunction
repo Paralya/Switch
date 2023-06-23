@@ -39,8 +39,8 @@ execute if score #rg_bowser_castle_mod switch.data matches 17 at @s run particle
 execute if score #rg_bowser_castle_mod switch.data matches 17 at @s run clone 22090 ~ 21888 22102 ~ 22133 22090 ~100 21888 replace force
 execute if score #rg_bowser_castle_mod switch.data matches 18 at @s run particle cloud 22108 ~100.5 22010 6 0 61 0 250 force
 execute if score #rg_bowser_castle_mod switch.data matches 18 at @s run clone 22102 ~ 21888 22114 ~ 22133 22102 ~100 21888 replace force
-execute if score #rg_bowser_castle_mod switch.data matches 19 run kill @e[type=item,x=22001,y=0,z=22010,distance=..1000]
 
+execute if score #rg_bowser_castle_mod switch.data matches 19 run kill @e[type=item,x=22001,y=0,z=22010,distance=..1000]
 scoreboard players add #rg_bowser_castle_mod switch.data 1
 execute if score #rg_bowser_castle_mod switch.data matches 19 run scoreboard players add #rg_bowser_castle_y switch.data 1
 execute if score #rg_bowser_castle_mod switch.data matches 19 run scoreboard players set #rg_bowser_castle_mod switch.data 0
