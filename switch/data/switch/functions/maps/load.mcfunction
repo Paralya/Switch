@@ -18,6 +18,6 @@ function switch:maps/load_survival
 function switch:maps/load_adventure
 
 # Log message of which map is loaded
-data modify storage switch:main MessageToLog set value '[{"text": "Map selectionnée : `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"` !"}]'
+data modify storage switch:main MessageToLog set value '[{"text": "Map selectionnee : `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"` !"}]'
 function switch:engine/log_message/apply
 
