@@ -25,6 +25,15 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main p
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "japanese_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "snowy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "werewolf_village"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "lg_medieval"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "lightium_spawn"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "paralya_lobby"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "sheepwars_dirigeables"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_spawn"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_boss_zone"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_boss_zone_nether"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_pvp_zone"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "end_factory"
 
 
 

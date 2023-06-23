@@ -17,6 +17,8 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "sky_island_tower"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "lava_castle"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "nature_house"
+execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "paralya_uhc_lobbies"
+execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "stardust_spawn"
 
 
 

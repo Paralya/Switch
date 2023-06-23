@@ -23,6 +23,11 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main t
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "sakura_house"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "japanese_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "snowy_village"
+execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "lightium_spawn"
+execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "paralya_lobby"
+execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "sheepwars_dirigeables"
+execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "stardust_pvp_zone"
+execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "end_factory"
 
 
 

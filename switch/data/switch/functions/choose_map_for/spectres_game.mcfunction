@@ -20,6 +20,9 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main s
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "japanese_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "werewolf_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "wyvern_towers"
+execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "paralya_lobby"
+execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "sheepwars_dirigeables"
+execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "stardust_pvp_zone"
 
 
 
