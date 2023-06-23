@@ -1,5 +1,6 @@
 {
 	"values": [
+		"switch:engine/signals/start",
 		"switch:modes/pitch_creep/calls/start",
 		"switch:modes/laser_game/calls/start",
 		"switch:modes/warden_escape/calls/start",

@@ -17,3 +17,7 @@ function switch:maps/load_survival
 # Maps that doesn't (always gamemode adventure):
 function switch:maps/load_adventure
 
+# Log message of which map is loaded
+data modify storage switch:main MessageToLog set value '[{"text": "Map selectionnée : `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"` !"}]'
+function switch:engine/log_message/apply
+

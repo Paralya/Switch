@@ -21,3 +21,4 @@ scoreboard players reset @a switch.right_click
 ## Profiling
 #function switch:profiling/start
 
+
