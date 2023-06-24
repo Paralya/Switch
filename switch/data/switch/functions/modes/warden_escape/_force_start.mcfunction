@@ -1,6 +1,6 @@
 
 # Stop everything
-function switch:engine/stop
+function switch:engine/disable
 
 # Set the current game
 data modify storage switch:main current_game set value "warden_escape"
