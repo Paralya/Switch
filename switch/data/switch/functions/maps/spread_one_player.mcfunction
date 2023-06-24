@@ -92,4 +92,5 @@ execute if data storage switch:main {map:"stardust_pvp_zone"} run function switc
 execute if data storage switch:main {map:"stardust_prison"} run function switch:maps/survival/stardust_prison/spread_one_player
 execute if data storage switch:main {map:"stardust_vip_zone"} run function switch:maps/survival/stardust_vip_zone/spread_one_player
 execute if data storage switch:main {map:"end_factory"} run function switch:maps/survival/end_factory/spread_one_player
+execute if data storage switch:main {map:"tnt_run_futuristic"} run function switch:maps/survival/tnt_run_futuristic/spread_one_player
 

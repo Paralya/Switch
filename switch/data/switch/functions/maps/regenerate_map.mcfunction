@@ -92,6 +92,7 @@ execute if data storage switch:main {map:"stardust_pvp_zone"} run function switc
 execute if data storage switch:main {map:"stardust_prison"} run function switch:maps/survival/stardust_prison/regenerate
 execute if data storage switch:main {map:"stardust_vip_zone"} run function switch:maps/survival/stardust_vip_zone/regenerate
 execute if data storage switch:main {map:"end_factory"} run function switch:maps/survival/end_factory/regenerate
+execute if data storage switch:main {map:"tnt_run_futuristic"} run function switch:maps/survival/tnt_run_futuristic/regenerate
 
 # Remove the map from the storage
 data remove storage switch:main map

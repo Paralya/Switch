@@ -248,7 +248,7 @@ generate_clone_survival_folder("survival_boat", (79000, 0, 79000), (79126, 99, 7
 # Sky Tower (80000) #TODO : Malaise c'est trop grand
 generate_clone_survival_folder("sky_tower", (80000, -64, 80000), (80142, 147, 80142), 150, override_tp_coords = (80071, 320, 80071))
 generate_fill_survival_folder("purple_sky_island", (80824, 0, 80822), (81219, 235, 81182), "air", "#switch:purple_sky_island", override_tp_coords = (81000, 101, 81000))
-# Sea Artificial Island (82000)
+# Maps Infinitri customs à fusionner (82000)
 generate_clone_survival_folder("lava_castle", (83000, 0, 83000), (83063, 85, 83063), 100, override_tp_coords = (83032, 132, 83039))
 generate_clone_survival_folder("spruce_dojo", (84000, 0, 84000), (84083, 35, 84069), 100, override_tp_coords = (84041, 109, 84035))
 generate_clone_survival_folder("highland_mansion", (85000, 0, 85000), (85150, 72, 85142), 100, override_tp_coords = (None))
@@ -262,30 +262,19 @@ generate_clone_survival_folder("snowy_village", (92000, 0, 92000), (92200, 70, 9
 generate_clone_survival_folder("werewolf_village", (93000, 0, 93000), (93122, 64, 93122), 100, override_tp_coords = (93061, 115, 93061))
 generate_clone_survival_folder("wyvern_towers", (94000, 0, 94000), (94076, 99, 94076), 100, override_tp_coords = (94036, 157, 94037))
 generate_clone_survival_folder("lg_medieval", (95000, -63, 95000), (95219, 41, 95203), 100, override_tp_coords = (95126, 120, 95100))
-# 96000 -63 96000 96246 50 96239
 generate_clone_survival_folder("lg_village", (96000, -63, 96000), (96246, 50, 96239), 100, override_tp_coords = (96128, 113, 96118))
-# 97000 0 97000 97129 43 97129 "lightium_spawn"
 generate_clone_survival_folder("lightium_spawn", (97000, 0, 97000), (97129, 43, 97129), 100, override_tp_coords = (97065, 111, 97065))
-# 98000 0 98000 98090 93 98090 "paralya_uhc_lobbies"
 generate_clone_survival_folder("paralya_uhc_lobbies", (98000, 0, 98000), (98090, 93, 98090), 100, override_tp_coords = (98037, 154, 98046))
-# 99000 -63 99000 99200 98 99200 "paralya_lobby"
 generate_clone_survival_folder("paralya_lobby", (99000, -63, 99000), (99200, 98, 99200), 100, override_tp_coords = (99100, 181, 99100))
-# 100000 -63 100000 100192 69 100158 "sheepwars_dirigeables"
 generate_clone_survival_folder("sheepwars_dirigeables", (100000, -63, 100000), (100192, 69, 100158), 100, override_tp_coords = (100156, 163, 100122))
-# 101000 0 101000 101120 90 101120 "stardust_spawn"
 generate_clone_survival_folder("stardust_spawn", (101000, 0, 101000), (101120, 90, 101120), 100, override_tp_coords = (101060, 156, 101060))
-# 103000 -64 103000 103132 49 103165 "stardust_boss_zone"
 generate_clone_survival_folder("stardust_boss_zone", (103000, -64, 103000), (103132, 49, 103165), 100, override_tp_coords = (103057, 154, 103095))
-# 104000 -63 104000 104132 65 104165 "stardust_boss_zone_nether"
 generate_clone_survival_folder("stardust_boss_zone_nether", (104000, -63, 104000), (104132, 65, 104165), 100, override_tp_coords = (104057, 159, 104095))
-# 105000 -63 105000 105291 79 105314 "stardust_pvp_zone"
 generate_clone_survival_folder("stardust_pvp_zone", (105000, -63, 105000), (105291, 79, 105314), 100, override_tp_coords = (105164, 158, 105165))
-# 106000 0 106000 106132 57 106178 "stardust_prison"
 generate_clone_survival_folder("stardust_prison", (106000, 0, 106000), (106132, 57, 106178), 100, override_tp_coords = (106067, 115 ,106064))
-# 107000 0 107000 107113 50 107085 "stardust_vip_zone"
 generate_clone_survival_folder("stardust_vip_zone", (107000, 0, 107000), (107113, 50, 107085), 100, override_tp_coords = (107056, 116, 107017))
-# 108000 -63 108000 108178 40 108129 "end_factory"
 generate_clone_survival_folder("end_factory", (108000, -63, 108000), (108178, 40, 108129), 100, override_tp_coords = (108146, 133, 108076))
+generate_clone_survival_folder("tnt_run_futuristic", (109000, 0, 109000), (109059, 68, 109046), 100, override_tp_coords = (109029, 148, 109022))
 
 
 

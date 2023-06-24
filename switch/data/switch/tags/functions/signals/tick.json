@@ -21,6 +21,7 @@
 		"switch:modes/layers_2_teams/calls/tick",
 		"switch:modes/layers_4_teams/calls/tick",
 		"switch:modes/thunder_spear/calls/tick",
+		"switch:modes/tnt_run/calls/tick",
 		"switch:modes/replicate_the_build/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
