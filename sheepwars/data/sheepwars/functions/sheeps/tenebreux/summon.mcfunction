@@ -8,7 +8,7 @@
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.tenebreux","sheepwars.in_air","sheepwars.new"],Color:14}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.tenebreux","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:15,DeathLootTable:"sheepwars:i/tenebreux"}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation

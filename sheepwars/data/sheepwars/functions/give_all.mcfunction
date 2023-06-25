@@ -8,17 +8,17 @@
 #
 
 # Give all sheeps
-loot give @s loot sheepwars:i/1_explosif
-loot give @s loot sheepwars:i/2_incendiaire
-loot give @s loot sheepwars:i/3_fragmentation
-loot give @s loot sheepwars:i/4_glouton
-loot give @s loot sheepwars:i/5_chercheur
-loot give @s loot sheepwars:i/6_glace
-loot give @s loot sheepwars:i/7_foudroyant
-loot give @s loot sheepwars:i/8_distorsion
-loot give @s loot sheepwars:i/9_tenebreux
-loot give @s loot sheepwars:i/10_sismique
-loot give @s loot sheepwars:i/11_soutien
-loot give @s loot sheepwars:i/12_abordage
-loot give @s loot sheepwars:i/13_intergalactique
+loot give @s loot sheepwars:i/explosif
+loot give @s loot sheepwars:i/incendiaire
+loot give @s loot sheepwars:i/fragmentation
+loot give @s loot sheepwars:i/glouton
+loot give @s loot sheepwars:i/chercheur
+loot give @s loot sheepwars:i/glace
+loot give @s loot sheepwars:i/foudroyant
+loot give @s loot sheepwars:i/distorsion
+loot give @s loot sheepwars:i/tenebreux
+loot give @s loot sheepwars:i/sismique
+loot give @s loot sheepwars:i/soutien
+loot give @s loot sheepwars:i/abordage
+loot give @s loot sheepwars:i/intergalactique
 

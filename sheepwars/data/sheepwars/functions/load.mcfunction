@@ -41,7 +41,7 @@ data modify storage sheepwars:items all.glace set value {Slot:16b			,id:"minecra
 data modify storage sheepwars:items all.foudroyant set value {Slot:16b		,id:"minecraft:yellow_wool"		,Count:1b,tag:{sheepwars:{foudroyant:1b}		,display:{Lore:['{"translate":"SheepWars","color":"blue","italic":true}'],Name:'[{"text":"Mouton Foudroyant","italic":false,"color":"yellow"}]'}}}
 # Mouton Distorsion (purple)
 data modify storage sheepwars:items all.distorsion set value {Slot:16b		,id:"minecraft:purple_wool"		,Count:1b,tag:{sheepwars:{distorsion:1b}		,display:{Lore:['{"translate":"SheepWars","color":"blue","italic":true}'],Name:'[{"text":"Mouton Distorsion","italic":false,"color":"dark_purple"}]'}}}
-# Mouton Ténébreux (dark_gray)
+# Mouton Ténébreux (black)
 data modify storage sheepwars:items all.tenebreux set value {Slot:16b		,id:"minecraft:black_wool"		,Count:1b,tag:{sheepwars:{tenebreux:1b}			,display:{Lore:['{"translate":"SheepWars","color":"blue","italic":true}'],Name:'[{"text":"Mouton Ténébreux","italic":false,"color":"dark_gray"}]'}}}
 # Mouton Sismique (brown)
 data modify storage sheepwars:items all.sismique set value {Slot:16b		,id:"minecraft:brown_wool"		,Count:1b,tag:{sheepwars:{sismique:1b}			,display:{Lore:['{"translate":"SheepWars","color":"blue","italic":true}'],Name:'[{"text":"Mouton Sismique","italic":false,"color":"#5B3C11"}]'}}}
