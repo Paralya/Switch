@@ -42,4 +42,3 @@ execute if score @s sheepwars.data matches 149 store result entity @s Color byte
 
 # Do nothing at 150 ticks in this function
 
-
