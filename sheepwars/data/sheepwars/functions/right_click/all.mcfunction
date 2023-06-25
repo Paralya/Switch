@@ -23,8 +23,9 @@ execute if score #success sheepwars.data matches 0 store success score #success 
 execute if score #success sheepwars.data matches 0 store success score #success sheepwars.data if data entity @s SelectedItem.tag.sheepwars.abordage run function sheepwars:sheeps/abordage/summon
 execute if score #success sheepwars.data matches 0 store success score #success sheepwars.data if data entity @s SelectedItem.tag.sheepwars.intergalactique run function sheepwars:sheeps/intergalactique/summon
 
+# If success is 1, then remove one count of the item in the player's hand
+execute if score #success sheepwars.data matches 1 run item modify entity @s weapon.mainhand sheepwars:remove_one
+
 # Reset right click score
 scoreboard players reset @s sheepwars.right_click
-
-
 
