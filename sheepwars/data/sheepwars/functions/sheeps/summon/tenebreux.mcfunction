@@ -1,14 +1,14 @@
 
-#> sheepwars:sheeps/explosif/summon
+#> sheepwars:sheeps/summon/tenebreux
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
 #
-# @description		Summons a sheep with tag "explosif" and launches it in the direction the player is looking at.
+# @description		Summons a sheep with tag "tenebreux" and launches it in the direction the player is looking at.
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.explosif","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:14,DeathLootTable:"sheepwars:i/explosif"}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.tenebreux","sheepwars.in_air","sheepwars.new"],Color:15,DeathLootTable:"sheepwars:i/tenebreux"}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation

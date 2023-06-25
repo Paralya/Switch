@@ -1,14 +1,14 @@
 
-#> sheepwars:sheeps/intergalactique/summon
+#> sheepwars:sheeps/summon/sismique
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
 #
-# @description		Summons a sheep with tag "intergalactique" and launches it in the direction the player is looking at.
+# @description		Summons a sheep with tag "sismique" and launches it in the direction the player is looking at.
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.intergalactique","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:11}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.sismique","sheepwars.in_air","sheepwars.new"],Color:12,DeathLootTable:"sheepwars:i/sismique"}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation

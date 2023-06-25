@@ -1,14 +1,14 @@
 
-#> sheepwars:sheeps/glouton/summon
+#> sheepwars:sheeps/summon/incendiaire
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
 #
-# @description		Summons a sheep with tag "glouton" and launches it in the direction the player is looking at.
+# @description		Summons a sheep with tag "incendiaire" and launches it in the direction the player is looking at.
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.glouton","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:13,DeathLootTable:"sheepwars:i/glouton"}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.incendiaire","sheepwars.in_air","sheepwars.new"],Color:1,DeathLootTable:"sheepwars:i/incendiaire"}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation

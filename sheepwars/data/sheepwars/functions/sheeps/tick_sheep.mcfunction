@@ -30,6 +30,7 @@ execute store success score #success sheepwars.data if score #success sheepwars.
 execute store success score #success sheepwars.data if score #success sheepwars.data matches 0 if entity @s[tag=sheepwars.abordage] run function sheepwars:sheeps/abordage/tick
 execute store success score #success sheepwars.data if score #success sheepwars.data matches 0 if entity @s[tag=sheepwars.intergalactique] run function sheepwars:sheeps/intergalactique/tick
 
-
+## Manages sheep blinking for sheeps that can explode
+execute if score @s[tag=sheepwars.explode] sheepwars.data matches 50.. run function sheepwars:sheeps/blink
 
 

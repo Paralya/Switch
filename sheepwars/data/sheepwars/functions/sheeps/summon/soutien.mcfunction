@@ -1,14 +1,14 @@
 
-#> sheepwars:sheeps/sismique/summon
+#> sheepwars:sheeps/summon/soutien
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
 #
-# @description		Summons a sheep with tag "sismique" and launches it in the direction the player is looking at.
+# @description		Summons a sheep with tag "soutien" and launches it in the direction the player is looking at.
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.sismique","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:12,DeathLootTable:"sheepwars:i/sismique"}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.soutien","sheepwars.in_air","sheepwars.new"],Color:6}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation

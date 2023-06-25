@@ -1,5 +1,5 @@
 
-#> sheepwars:sheeps/abordage/summon
+#> sheepwars:sheeps/summon/abordage
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
@@ -8,11 +8,16 @@
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.abordage","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:0,DeathLootTable:"sheepwars:i/abordage"}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.abordage","sheepwars.in_air","sheepwars.new","sheepwars.to_ride"],Color:0}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation
 
 # Execute as the sheep the function that will launch it
 execute as @e[tag=sheepwars.new] at @s run function sheepwars:utils/launch_entity_in_direction
+
+# Ride the sheep and remove the "to_ride" tag
+ride @s dismount
+ride @s mount @e[tag=sheepwars.to_ride,limit=1]
+tag @e[tag=sheepwars.to_ride] remove sheepwars.to_ride
 

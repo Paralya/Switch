@@ -1,0 +1,80 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 1,
+				"max": {
+					"min": 1,
+					"max": 2
+				}
+			},
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"weight": 20,
+					"name": "sheepwars:i/explosif"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 12,
+					"name": "sheepwars:i/tenebreux"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 12,
+					"name": "sheepwars:i/glouton"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 12,
+					"name": "sheepwars:i/sismique"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 12,
+					"name": "sheepwars:i/foudroyant"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 12,
+					"name": "sheepwars:i/incendiaire"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 12,
+					"name": "sheepwars:i/glace"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 8,
+					"name": "sheepwars:i/fragmentation"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 8,
+					"name": "sheepwars:i/chercheur"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 8,
+					"name": "sheepwars:i/distorsion"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 8,
+					"name": "sheepwars:i/soutien"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "sheepwars:i/abordage"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 2,
+					"name": "sheepwars:i/intergalactique"
+				}
+			]
+		}
+	]
+}

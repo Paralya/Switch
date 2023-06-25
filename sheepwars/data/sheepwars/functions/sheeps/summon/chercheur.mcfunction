@@ -1,5 +1,5 @@
 
-#> sheepwars:sheeps/chercheur/summon
+#> sheepwars:sheeps/summon/chercheur
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
@@ -8,9 +8,9 @@
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.chercheur","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:5,DeathLootTable:"sheepwars:i/chercheur"}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.chercheur","sheepwars.in_air","sheepwars.new"],Color:5,DeathLootTable:"sheepwars:i/chercheur"}
 
-# Store player's rotation
+# Store player's rotation and UUID
 data modify storage sheepwars:main Rotation set from entity @s Rotation
 
 # Execute as the sheep the function that will launch it

@@ -1,14 +1,14 @@
 
-#> sheepwars:sheeps/glace/summon
+#> sheepwars:sheeps/summon/fragmentation
 #
 # @within			sheepwars:right_click/all
 # @executed			as & at the player
 #
-# @description		Summons a sheep with tag "glace" and launches it in the direction the player is looking at.
+# @description		Summons a sheep with tag "fragmentation" and launches it in the direction the player is looking at.
 #
 
 # Summon the sheep
-summon sheep ~ ~1 ~ {Tags:["sheepwars.glace","sheepwars.sheep","sheepwars.in_air","sheepwars.new"],Color:3,DeathLootTable:"sheepwars:i/glace"}
+summon sheep ~ ~1 ~ {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.fragmentation","sheepwars.in_air","sheepwars.new"],Color:8,DeathLootTable:"sheepwars:i/foudroyant"}
 
 # Store player's rotation
 data modify storage sheepwars:main Rotation set from entity @s Rotation

@@ -4,8 +4,13 @@
 # @within			sheepwars:tick
 # @executed			as & at a player that right clicked
 #
+# @output storage	sheepwars:main UUID : UUID of the player that right clicked
+#
 # @description		Handles all right click events such as summoning a sheep depending on the item in the player's hand.
 #
+
+# Copy the player's UUID to the main storage
+data modify storage sheepwars:main UUID set from entity @s UUID
 
 ## All Sheeps
 scoreboard players set #success sheepwars.data 0
