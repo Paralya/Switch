@@ -22,8 +22,10 @@ data modify entity @s ArmorItems[0].tag.UUID set from storage sheepwars:main UUI
 
 ## Launch the entity
 # Get the motion of the entity by summoning a temporary marker
-execute positioned 0 0 0 summon marker at @s run function sheepwars:utils/get_marker_motion
+execute at @s positioned 0 0 0 summon marker at @s run function sheepwars:utils/get_marker_motion
 
 # Apply the motion to the entity
-data modify entity @s Motion set from storage sheepwars:main Motion
+execute store result entity @s Motion[0] double 0.03 run data get storage sheepwars:main Motion[0]
+execute store result entity @s Motion[1] double 0.03 run data get storage sheepwars:main Motion[1]
+execute store result entity @s Motion[2] double 0.03 run data get storage sheepwars:main Motion[2]
 

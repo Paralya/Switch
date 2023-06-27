@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.explosif",
+									"source": "all.explosif.tag",
 									"target": "{}",
 									"op": "merge"
 								}

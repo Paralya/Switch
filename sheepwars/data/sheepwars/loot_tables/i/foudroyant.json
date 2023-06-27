@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.foudroyant",
+									"source": "all.foudroyant.tag",
 									"target": "{}",
 									"op": "merge"
 								}

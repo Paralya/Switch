@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.abordage",
+									"source": "all.abordage.tag",
 									"target": "{}",
 									"op": "merge"
 								}

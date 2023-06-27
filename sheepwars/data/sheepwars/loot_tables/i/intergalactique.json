@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.intergalactique",
+									"source": "all.intergalactique.tag",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.glace",
+									"source": "all.glace.tag",
 									"target": "{}",
 									"op": "merge"
 								}

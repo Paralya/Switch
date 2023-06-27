@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.fragmentation",
+									"source": "all.fragmentation.tag",
 									"target": "{}",
 									"op": "merge"
 								}

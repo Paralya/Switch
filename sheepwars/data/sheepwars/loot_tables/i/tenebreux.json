@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.tenebreux",
+									"source": "all.tenebreux.tag",
 									"target": "{}",
 									"op": "merge"
 								}

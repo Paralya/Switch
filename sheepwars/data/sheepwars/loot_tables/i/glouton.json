@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.glouton",
+									"source": "all.glouton.tag",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.soutien",
+									"source": "all.soutien.tag",
 									"target": "{}",
 									"op": "merge"
 								}

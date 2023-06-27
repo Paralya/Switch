@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.distorsion",
+									"source": "all.distorsion.tag",
 									"target": "{}",
 									"op": "merge"
 								}

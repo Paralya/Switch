@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.incendiaire",
+									"source": "all.incendiaire.tag",
 									"target": "{}",
 									"op": "merge"
 								}

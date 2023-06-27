@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.chercheur",
+									"source": "all.chercheur.tag",
 									"target": "{}",
 									"op": "merge"
 								}

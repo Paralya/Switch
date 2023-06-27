@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.sismique",
+									"source": "all.sismique.tag",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -9,7 +9,7 @@
 
 # If the sheep has the tag in "air", remove it if it is not in the air anymore
 execute if entity @s[tag=sheepwars.in_air] store result score #motion_y sheepwars.data run data get entity @s Motion[1] 100
-execute if entity @s[tag=sheepwars.in_air] if score #motion_y sheepwars.data matches 8 run tag @s remove sheepwars.in_air
+execute if entity @s[tag=sheepwars.in_air] if score #motion_y sheepwars.data matches -8 run tag @s remove sheepwars.in_air
 
 # Increment the sheep timer
 scoreboard players add @s[tag=!sheepwars.in_air] sheepwars.data 1
