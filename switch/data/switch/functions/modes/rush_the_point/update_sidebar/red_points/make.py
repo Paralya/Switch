@@ -9,78 +9,72 @@ if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 import math
 
 # Constantes
+min = 0
 max = 2000
 color = "red"
 colorFull = "Rouge"
 namespace = "switch"
 base_path = f"{namespace}:modes/rush_the_point/update_sidebar/{color}_points/"
-base_score = f"execute if score #{color}_points {namespace}.data matches "
-files = int(math.sqrt(max))
-split = max / files
+base_score_points = f"execute if score #{color}_points {namespace}.data matches "
+base_score_suffix = f"execute if score #score_for_suffix {namespace}.data matches "
 sidebar_number = 1	# DON'T FORGET TO CHANGE THIS
 step = 1
 
-# Variables (don't change)
-temp = 0
-min = 0
+
 
 # Delete old files (ending with .mcfunction)
 for file in os.listdir():
 	if file.endswith(".mcfunction"):
 		os.remove(file)
 
-# Loop for each file
-for i in range(1, files + 1):
 
-	# Create the file and write the first line (replace the old file if it exists)
-	f = open(str(i) + ".mcfunction", "w")
-	f.write('\n')
 
-	# While there are remaining lines to write
-	temp = 0
-	while temp <= split and min <= max:
-
-		# Write the base path and the score
-		f.write(base_score + str(min * step))
-
-		# Write the command until the JSON part
-		f.write(f" run team modify {namespace}.temp.sidebar.{sidebar_number} suffix ")
-
-		# Write the JSON part
-		f.write('[{"text":"Équipe ' + colorFull + ' : ","color":"' + color + '"},{"text":"' + str(min * step) + '","color":"yellow"}]\n')
-
-		# Increment the variables
-		min += 1
-		temp += 1
-
-	# Close the file
-	f.write('\n')
-	f.close()
-
-# Create the .mcfunction file that links all the files
+# Create the .mcfunction file that contains all the prefixes and suffixes
 f = open(".mcfunction", "w")
-f.write('\n')
+f.write("\n")
 
-# Reset the variables
-temp = 0
-i = 1
+# Write the first prefix
+f.write(f"{base_score_points}..99 run team modify {namespace}.temp.sidebar.{sidebar_number} prefix ")
+f.write(f"[{{\"text\":\"Équipe {colorFull} : \",\"color\":\"{color}\"}}]\n")
 
-# While there are remaining lines to write
-while temp <= max:
+# Loop for prefixes (100 lines will be written for suffixes later)
+for i in range(min + 100, max, 100):
 
-	# Write the base path and the score
-	from_score = int(temp * step)
-	to_score = int((temp + split) * step)
-	f.write(f"{base_score}{from_score}..{to_score}")
+	# Condition for the score
+	f.write(f"{base_score_points}{i}..{i + 99} run ")
 
-	# Write the command until the end of the line
-	f.write(f" run function {base_path}{i}\n")
+	# Write the command
+	f.write(f"team modify {namespace}.temp.sidebar.{sidebar_number} prefix ")
+	f.write(f"[{{\"text\":\"Équipe {colorFull} : \",\"color\":\"{color}\"}},{{\"text\":\"{i // 100}\",\"color\":\"yellow\"}}]\n")
 
-	# Increment the variables
-	temp += split + 1
-	i += 1
+# Write the last prefix
+f.write(f"{base_score_points}{max}.. run team modify {namespace}.temp.sidebar.{sidebar_number} prefix ")
+f.write(f"[{{\"text\":\"Équipe {colorFull} : \",\"color\":\"{color}\"}},{{\"text\":\"{max // 100}\",\"color\":\"yellow\"}}]\n")
+
+
+# Write scoreboard operation for the suffixes
+f.write("\n")
+f.write(f"scoreboard players operation #score_for_suffix {namespace}.data = #{color}_points {namespace}.data\n")
+f.write(f"scoreboard players operation #score_for_suffix {namespace}.data %= #100 {namespace}.data\n\n")
+
+
+# Loop for suffixes
+for i in range(0, 100, step):
+
+	# Condition for the score
+	f.write(f"{base_score_suffix}{i} run ")
+
+	# Récupération de la valeur du score sous forme de texte à 2 chiffres
+	value = str(i)
+	if len(value) == 1:
+		value = "0" + value
+
+	# Write the command
+	f.write(f"team modify {namespace}.temp.sidebar.{sidebar_number} suffix ")
+	f.write(f"[{{\"text\":\"{value}\",\"color\":\"yellow\"}}]\n")
+
 
 # Close the file
-f.write('\n')
+f.write("\n")
 f.close()
 
