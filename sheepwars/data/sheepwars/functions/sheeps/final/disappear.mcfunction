@@ -8,7 +8,7 @@
 #
 
 # Unride any rider
-execute on passengers run ride @s dismount
+execute on passengers run ride @s[type=player] dismount
 
 # Remove the sheep
 tp ~ -10000 ~

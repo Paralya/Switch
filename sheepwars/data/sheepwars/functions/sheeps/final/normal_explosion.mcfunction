@@ -1,5 +1,5 @@
 
-#> sheepwars:sheeps/final/explosif
+#> sheepwars:sheeps/final/normal_explosion
 #
 # @within			sheepwars:sheeps/final_action
 # @executed			as & at the sheep

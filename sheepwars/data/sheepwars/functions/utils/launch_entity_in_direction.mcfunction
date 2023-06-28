@@ -10,15 +10,8 @@
 # @description		Handles the launch of an entity in a direction, remove "new" tag and store launcher's UUID.
 #
 
-# Remove "new" tag
-tag @s remove sheepwars.new
-
-# Apply rotation to the entity
-data modify entity @s Rotation set from storage sheepwars:main Rotation
-
-# Store the launcher's UUID
-data merge entity @s {ArmorItems:[{id:"minecraft:stone",Count:1b},{},{},{}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
-data modify entity @s ArmorItems[0].tag.UUID set from storage sheepwars:main UUID
+# Remove the "new" tag and store the launcher's UUID
+function sheepwars:utils/new_sheep
 
 ## Launch the entity
 # Get the motion of the entity by summoning a temporary marker
