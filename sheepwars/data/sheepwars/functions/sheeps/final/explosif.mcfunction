@@ -38,9 +38,8 @@ execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] run damage @s
 # For each player, check if the damage killed him
 execute as @a[tag=sheepwars.damaged] run function sheepwars:utils/player_damaged
 
-## Break blocks
-function sheepwars:utils/break_blocks
-
+## Break blocks using Realistic Explosion Library
+function realistic_explosion:explode
 
 # Remove the tag from the owner
 tag @a[tag=sheepwars.owner] remove sheepwars.owner
