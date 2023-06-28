@@ -20,4 +20,6 @@ execute if score @s[tag=sheepwars.explode] sheepwars.data matches 50.. run funct
 # Final action of the sheep (Explosion, fire, disappear, etc.)
 execute if score @s sheepwars.data matches 150.. run function sheepwars:sheeps/final_action
 
+# Remove fall damage
+data modify entity @s FallDistance set value 0.0
 
