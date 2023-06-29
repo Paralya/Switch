@@ -43,7 +43,7 @@ execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=64}] at @a[gamem
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=68}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=8] replace snow[layers=7]
 
 # Chercheur
-execute if entity @s[tag=sheepwars.chercheur] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
+execute if entity @s[tag=sheepwars.chercheur,scores={sheepwars.data=40..}] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
 
 # Distorsion
 execute if entity @s[tag=sheepwars.distorsion,scores={sheepwars.data=50}] positioned ~ ~1 ~ run function realistic_explosion:explode
