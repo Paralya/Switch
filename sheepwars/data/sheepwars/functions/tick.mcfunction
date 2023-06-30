@@ -13,7 +13,6 @@ execute as @e[tag=sheepwars.chercheur_rider,predicate=!sheepwars:has_vehicle] ru
 # Right click detection
 execute as @a[scores={sheepwars.right_click=1..},sort=random] at @s run function sheepwars:right_click/all
 
-
 # Remove levitation effect if no sheep is nearby
 execute as @a[gamemode=!spectator,nbt={ActiveEffects:[{Id:25}]}] at @s unless entity @e[tag=sheepwars.sismique,distance=..6] run effect clear @s
 

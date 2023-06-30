@@ -11,6 +11,6 @@
 execute on passengers run ride @s[type=player] dismount
 
 # Remove the sheep
-tp ~ -10000 ~
+tp @s 0 -10000 0
 kill @s
 

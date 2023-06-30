@@ -44,14 +44,15 @@ execute if score #c_abordage sheepwars.data matches 1.. run tellraw @s [{"text":
 execute if score #c_soutien sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"#FF69B4"},{"score":{"name":"#c_soutien","objective":"sheepwars.data"}},{"text":" Mouton de Soutien"}]
 execute if score #c_distorsion sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"dark_purple"},{"score":{"name":"#c_distorsion","objective":"sheepwars.data"}},{"text":" Mouton Distorsion"}]
 execute if score #c_chercheur sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"green"},{"score":{"name":"#c_chercheur","objective":"sheepwars.data"}},{"text":" Mouton Chercheur"}]
-execute if score #c_fragmentation sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"red"},{"score":{"name":"#c_fragmentation","objective":"sheepwars.data"}},{"text":" Mouton Fragmentation"}]
+execute if score #c_fragmentation sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"gray"},{"score":{"name":"#c_fragmentation","objective":"sheepwars.data"}},{"text":" Mouton Fragmentation"}]
 execute if score #c_glace sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"aqua"},{"score":{"name":"#c_glace","objective":"sheepwars.data"}},{"text":" Mouton Glace"}]
 execute if score #c_incendiaire sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"gold"},{"score":{"name":"#c_incendiaire","objective":"sheepwars.data"}},{"text":" Mouton Incendiaire"}]
 execute if score #c_foudroyant sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"yellow"},{"score":{"name":"#c_foudroyant","objective":"sheepwars.data"}},{"text":" Mouton Foudroyant"}]
 execute if score #c_sismique sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"#B37520"},{"score":{"name":"#c_sismique","objective":"sheepwars.data"}},{"text":" Mouton Sismique"}]
-execute if score #c_glouton sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"green"},{"score":{"name":"#c_glouton","objective":"sheepwars.data"}},{"text":" Mouton Glouton"}]
+execute if score #c_glouton sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"dark_green"},{"score":{"name":"#c_glouton","objective":"sheepwars.data"}},{"text":" Mouton Glouton"}]
 execute if score #c_tenebreux sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"dark_gray"},{"score":{"name":"#c_tenebreux","objective":"sheepwars.data"}},{"text":" Mouton Ténébreux"}]
 execute if score #c_explosif sheepwars.data matches 1.. run tellraw @s [{"text":"- x","color":"red"},{"score":{"name":"#c_explosif","objective":"sheepwars.data"}},{"text":" Mouton Explosif"}]
+tellraw @s ""
 
 # Reset the counters
 scoreboard players reset #c_intergalactique sheepwars.data

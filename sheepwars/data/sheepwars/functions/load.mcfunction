@@ -23,6 +23,10 @@ scoreboard objectives add sheepwars.right_click minecraft.used:minecraft.warped_
 # Previous color reminder
 scoreboard objectives add sheepwars.previous_color dummy
 
+# Team with no collision
+team add sheepwars.sheeps
+team modify sheepwars.sheeps collisionRule never
+
 #define storage sheepwars:main
 #define storage sheepwars:items
 

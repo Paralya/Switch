@@ -9,9 +9,13 @@ effect clear @a
 gamemode adventure @a
 team leave @a
 
-effect give @a saturation 15 255 true
-effect give @a resistance 60 255 true
+effect give @a saturation 10 255 true
 effect give @a regeneration 10 255 true
+effect give @a weakness 10 255 true
+effect give @a blindness 10 255 true
+effect give @a darkness 10 255 true
+effect give @a jump_boost 10 250 true
+effect give @a slowness 10 255 true
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.5 run time add 6000
@@ -26,11 +30,11 @@ gamerule fallDamage true
 gamerule naturalRegeneration true
 gamerule keepInventory false
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt !\n"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt car vous avez 10 secondes !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 90500
-scoreboard players set #sheepwars_seconds switch.data -5
+scoreboard players set #sheepwars_seconds switch.data -10
 scoreboard players set #sheepwars_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.deathCount deathCount

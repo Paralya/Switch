@@ -18,8 +18,8 @@ execute if entity @s[team=switch.temp.red] run item replace entity @s armor.feet
 execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.chest with leather_chestplate{display:{color:255}}
 execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.legs with leather_leggings{display:{color:255}}
 execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.feet with leather_boots{display:{color:255}}
-item replace entity @s hotbar.0 with stone_sword
-item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
+item replace entity @s hotbar.0 with stone_sword{CanDestroy:["#realistic_explosion:all"],HideFlags:8}
+item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:infinity",lvl:1s}],CanDestroy:["#realistic_explosion:all"],HideFlags:8}
 item replace entity @s inventory.0 with arrow
 
 

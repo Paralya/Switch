@@ -21,3 +21,6 @@ data modify entity @s Rotation set from storage sheepwars:main Rotation
 data merge entity @s {ArmorItems:[{id:"minecraft:stone",Count:1b},{},{},{}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
 data modify entity @s ArmorItems[0].tag.UUID set from storage sheepwars:main UUID
 
+# Join the sheepwars.sheeps team (no collisions)
+team join sheepwars.sheeps
+

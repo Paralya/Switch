@@ -13,6 +13,9 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sor
 # Tick du sheepwars
 function sheepwars:tick
 
+# Kill too low entities
+execute as @e[type=!player] at @s if entity @s[y=100,dy=10] run function sheepwars:sheeps/final/disappear
+
 ## Détection de fin de partie
 #execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/sheepwars/process_end

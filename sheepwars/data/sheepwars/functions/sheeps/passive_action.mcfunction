@@ -31,7 +31,7 @@ execute if entity @s[tag=sheepwars.foudroyant,scores={sheepwars.data=100}] run s
 execute if entity @s[tag=sheepwars.foudroyant,scores={sheepwars.data=160}] run summon lightning_bolt ~ ~-9 ~
 
 # Glace
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=40..}] run effect give @a[gamemode=!spectator,distance=..6] slowness 1 2 true
+execute if entity @s[tag=sheepwars.glace] run effect give @a[gamemode=!spectator,distance=..6] slowness 1 2 true
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=41}] run function sheepwars:sheeps/active/glace/main
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=44}] run function sheepwars:sheeps/active/glace/main
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=48}] run function sheepwars:sheeps/active/glace/main
@@ -42,7 +42,7 @@ execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=64}] run functio
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=68}] run function sheepwars:sheeps/active/glace/main
 
 # Chercheur
-execute if entity @s[tag=sheepwars.chercheur,scores={sheepwars.data=40..}] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
+execute if entity @s[tag=sheepwars.chercheur] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
 
 # Distorsion
 execute if entity @s[tag=sheepwars.distorsion,scores={sheepwars.data=50}] positioned ~ ~1 ~ run function realistic_explosion:explode
