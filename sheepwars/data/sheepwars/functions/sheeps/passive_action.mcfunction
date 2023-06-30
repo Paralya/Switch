@@ -31,16 +31,15 @@ execute if entity @s[tag=sheepwars.foudroyant,scores={sheepwars.data=100}] run s
 execute if entity @s[tag=sheepwars.foudroyant,scores={sheepwars.data=160}] run summon lightning_bolt ~ ~-9 ~
 
 # Glace
-execute if entity @s[tag=sheepwars.glace] run effect give @a[gamemode=!spectator,distance=..6] slowness 1 2 true
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=41..68}] at @a[gamemode=!spectator,distance=..6] run particle block ice ~ ~ ~ 6 .5 6 0 10
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=41}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=1] replace air
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=44}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=2] replace snow[layers=1]
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=48}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=3] replace snow[layers=2]
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=52}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=4] replace snow[layers=3]
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=56}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=5] replace snow[layers=4]
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=60}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=6] replace snow[layers=5]
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=64}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=7] replace snow[layers=6]
-execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=68}] at @a[gamemode=!spectator,distance=..6] run fill ~6 ~ ~6 ~-6 ~ ~-6 snow[layers=8] replace snow[layers=7]
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=40..}] run effect give @a[gamemode=!spectator,distance=..6] slowness 1 2 true
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=41}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=44}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=48}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=52}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=56}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=60}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=64}] run function sheepwars:sheeps/active/glace/main
+execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=68}] run function sheepwars:sheeps/active/glace/main
 
 # Chercheur
 execute if entity @s[tag=sheepwars.chercheur,scores={sheepwars.data=40..}] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
