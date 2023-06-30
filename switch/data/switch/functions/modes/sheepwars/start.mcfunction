@@ -29,7 +29,7 @@ gamerule keepInventory false
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #remaining_time switch.data 905
+scoreboard players set #remaining_time switch.data 90500
 scoreboard players set #sheepwars_seconds switch.data -5
 scoreboard players set #sheepwars_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
@@ -48,4 +48,6 @@ team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/sheepwars/team_and_give
 
+# Load du sheepwars
+function sheepwars:load
 
