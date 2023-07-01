@@ -22,3 +22,7 @@ execute as @e[type=sheep,tag=sheepwars.sheep] at @s run function sheepwars:sheep
 # Intergalactique markers
 execute as @e[type=marker,tag=sheepwars.intergalactique_marker] at @s run function sheepwars:sheeps/active/intergalactique/marker_tick
 
+# Magic wools
+execute as @e[type=marker,tag=sheepwars.magic_wool] at @s run function sheepwars:magic_wool/tick
+
+

@@ -4,16 +4,17 @@
 # Timer
 scoreboard players add #sheepwars_ticks switch.data 1
 
-# Reduce arrow damage and kill every unexcepted items
-execute as @e[type=arrow,nbt={damage:2.0d}] run data modify entity @s damage set value 1.0d
-kill @e[type=item,nbt=!{Item:{tag:{}}}]
+# Arrow tick
+execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
-execute as @a[gamemode=!spectator] run item modify entity @s weapon.mainhand switch:adventure_destroy_anything
 
 # Tick du sheepwars
 function sheepwars:tick
+kill @e[type=item,nbt=!{Item:{tag:{}}}]
+execute as @a[nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
+
 
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear
@@ -31,6 +32,6 @@ execute if score #sheepwars_night switch.data matches 3 run scoreboard players s
 
 
 ## Détection de fin de partie
-#execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
+execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/sheepwars/process_end
 

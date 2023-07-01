@@ -9,7 +9,7 @@ effect clear @a
 gamemode adventure @a
 team leave @a
 
-effect give @a saturation 5 255 true
+effect give @a hunger 5 255 true
 effect give @a regeneration 5 255 true
 effect give @a weakness 5 255 true
 effect give @a blindness 5 255 true
@@ -37,8 +37,14 @@ scoreboard players set #remaining_time switch.data 90500
 scoreboard players set #sheepwars_seconds switch.data -5
 scoreboard players set #sheepwars_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #blue_fire_arrows switch.data 0
+scoreboard players set #blue_explosive_arrows switch.data 0
+scoreboard players set #red_fire_arrows switch.data 0
+scoreboard players set #red_explosive_arrows switch.data 0
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
+
+# Apocalypse
 scoreboard players set #APOCALYPSE_GAME switch.data 0
 execute if predicate switch:chance/0.05 run scoreboard players set #APOCALYPSE_GAME switch.data 1
 execute if score #APOCALYPSE_GAME switch.data matches 1 run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" PARTIE APOCALYPTIQUE (1 chance sur 20) !\n"}]
@@ -49,8 +55,8 @@ team add switch.temp.red
 team add switch.temp.blue
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
-team modify switch.temp.red friendlyFire false
-team modify switch.temp.blue friendlyFire false
+team modify switch.temp.red friendlyFire true
+team modify switch.temp.blue friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0

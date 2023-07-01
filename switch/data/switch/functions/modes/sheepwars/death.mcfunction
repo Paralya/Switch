@@ -5,3 +5,9 @@ execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 gamemode spectator @s
 effect clear @s
 
+
+
+
+function switch:modes/engine/utils/death_tp
+
+

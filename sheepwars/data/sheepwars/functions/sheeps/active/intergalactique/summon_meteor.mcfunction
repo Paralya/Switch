@@ -34,9 +34,9 @@ scoreboard players remove #z sheepwars.data 10
 scoreboard players operation #x sheepwars.data += #x_rand sheepwars.data
 scoreboard players operation #z sheepwars.data += #z_rand sheepwars.data
 scoreboard players operation #y sheepwars.data += #y_rand sheepwars.data
-execute store result entity @s Pos[0] double 1.0 run scoreboard players get #x sheepwars.data
-execute store result entity @s Pos[1] double 1.0 run scoreboard players get #y sheepwars.data
-execute store result entity @s Pos[2] double 1.0 run scoreboard players get #z sheepwars.data
+execute store result entity @s Pos[0] double 1 run scoreboard players get #x sheepwars.data
+execute store result entity @s Pos[1] double 1 run scoreboard players get #y sheepwars.data
+execute store result entity @s Pos[2] double 1 run scoreboard players get #z sheepwars.data
 
 # Rotation to look at the sheep
 execute at @s run tp @s ~ ~ ~ facing entity @e[type=sheep,tag=sheepwars.aim_for_meteor,limit=1,sort=nearest] feet
