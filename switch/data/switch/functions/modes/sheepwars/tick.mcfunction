@@ -9,11 +9,13 @@ execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
+effect give @a[predicate=switch:in_water] wither 1 0 true
 
 # Tick du sheepwars
 function sheepwars:tick
 kill @e[type=item,nbt=!{Item:{tag:{}}}]
 execute as @a[nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
+
 
 
 # Kill too low entities
