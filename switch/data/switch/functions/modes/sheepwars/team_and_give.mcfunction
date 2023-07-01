@@ -13,15 +13,15 @@ execute if data storage switch:main {map:"survival_boat"} if entity @s[team=swit
 
 # Starter kit
 clear @s
-item replace entity @s weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003}
-execute if entity @s[team=switch.temp.red] run item replace entity @s armor.chest with leather_chestplate{display:{color:16711680}}
-execute if entity @s[team=switch.temp.red] run item replace entity @s armor.legs with leather_leggings{display:{color:16711680}}
-execute if entity @s[team=switch.temp.red] run item replace entity @s armor.feet with leather_boots{display:{color:16711680}}
-execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.chest with leather_chestplate{display:{color:255}}
-execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.legs with leather_leggings{display:{color:255}}
-execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.feet with leather_boots{display:{color:255}}
-item replace entity @s hotbar.0 with stone_sword{CanDestroy:["#realistic_explosion:all"],HideFlags:8}
-item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:infinity",lvl:1s}],CanDestroy:["#realistic_explosion:all"],HideFlags:8}
+item replace entity @s weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
+execute if entity @s[team=switch.temp.red] run item replace entity @s armor.chest with leather_chestplate{display:{color:16711680},Unbreakable:1b}
+execute if entity @s[team=switch.temp.red] run item replace entity @s armor.legs with leather_leggings{display:{color:16711680},Unbreakable:1b}
+execute if entity @s[team=switch.temp.red] run item replace entity @s armor.feet with leather_boots{display:{color:16711680},Unbreakable:1b}
+execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.chest with leather_chestplate{display:{color:255},Unbreakable:1b}
+execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.legs with leather_leggings{display:{color:255},Unbreakable:1b}
+execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.feet with leather_boots{display:{color:255},Unbreakable:1b}
+item replace entity @s hotbar.0 with stone_sword{CanDestroy:["#realistic_explosion:all"],Unbreakable:1b,HideFlags:8}
+item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:infinity",lvl:1s}],Unbreakable:1b,CanDestroy:["#realistic_explosion:all"],HideFlags:8}
 item replace entity @s inventory.0 with arrow{CanDestroy:["#realistic_explosion:all"],HideFlags:8}
 
 

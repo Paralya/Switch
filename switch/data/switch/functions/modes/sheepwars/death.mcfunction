@@ -8,6 +8,6 @@ effect clear @s
 
 
 
-function switch:modes/engine/utils/death_tp
+function switch:engine/utils/death_tp
 
 
