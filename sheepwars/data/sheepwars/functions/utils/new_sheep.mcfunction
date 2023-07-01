@@ -1,5 +1,5 @@
 
-#> sheepwars:utils/launch_entity_in_direction
+#> sheepwars:utils/new_sheep
 #
 # @within			sheepwars:utils/launch_entity_in_direction
 # @within			sheepwars:sheeps/summon/soutien

@@ -41,6 +41,13 @@ execute as @a[tag=sheepwars.damaged] run function sheepwars:utils/player_damaged
 ## Break blocks using Realistic Explosion Library
 function realistic_explosion:explode
 
+## Summon 4 new sheeps
+summon sheep ~1 ~ ~1 {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.fragmentation_part","sheepwars.new"],Color:8,DeathLootTable:"none",Age:-1200s}
+summon sheep ~1 ~ ~-1 {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.fragmentation_part","sheepwars.new"],Color:8,DeathLootTable:"none",Age:-1200s}
+summon sheep ~-1 ~ ~1 {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.fragmentation_part","sheepwars.new"],Color:8,DeathLootTable:"none",Age:-1200s}
+summon sheep ~-1 ~ ~-1 {Tags:["sheepwars.sheep","sheepwars.explode","sheepwars.fragmentation_part","sheepwars.new"],Color:8,DeathLootTable:"none",Age:-1200s}
+execute as @e[tag=sheepwars.new] run function sheepwars:utils/new_sheep
+
 # Remove the tag from the owner
 tag @a[tag=sheepwars.owner] remove sheepwars.owner
 
