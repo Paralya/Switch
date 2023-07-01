@@ -41,9 +41,6 @@ execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=60}] run functio
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=64}] run function sheepwars:sheeps/active/glace/main
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=68}] run function sheepwars:sheeps/active/glace/main
 
-# Fragmentation parts
-execute if entity @s[tag=sheepwars.fragmentation_part] run function sheepwars:sheeps/final/normal_explosion
-
 # Chercheur
 execute if entity @s[tag=sheepwars.chercheur] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
 

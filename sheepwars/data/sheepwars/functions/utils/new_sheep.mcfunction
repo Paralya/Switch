@@ -24,3 +24,6 @@ data modify entity @s ArmorItems[0].tag.UUID set from storage sheepwars:main UUI
 # Join the sheepwars.sheeps team (no collisions)
 team join sheepwars.sheeps
 
+# Give fire resistance
+effect give @s fire_resistance infinite 0 true
+
