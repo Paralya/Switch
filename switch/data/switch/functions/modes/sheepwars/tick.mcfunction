@@ -10,6 +10,7 @@ kill @e[type=item,nbt=!{Item:{tag:{}}}]
 
 # Détection des morts
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
+execute as @a[gamemode=!spectator] run item modify entity @s weapon.mainhand switch:adventure_destroy_anything
 
 # Tick du sheepwars
 function sheepwars:tick
