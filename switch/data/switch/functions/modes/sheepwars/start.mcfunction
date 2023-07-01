@@ -39,6 +39,10 @@ scoreboard players set #sheepwars_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
+scoreboard players set #APOCALYPSE_GAME switch.data 0
+execute if predicate switch:chance/0.05 run scoreboard players set #APOCALYPSE_GAME switch.data 1
+execute if score #APOCALYPSE_GAME switch.data matches 1 run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" PARTIE APOCALYPTIQUE (1 chance sur 20) !\n"}]
+execute if score #APOCALYPSE_GAME switch.data matches 1 as @a at @s run playsound entity.wither.death ambient @s
 
 # Choix des teams + give d'items
 team add switch.temp.red

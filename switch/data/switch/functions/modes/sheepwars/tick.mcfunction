@@ -4,8 +4,9 @@
 # Timer
 scoreboard players add #sheepwars_ticks switch.data 1
 
-# Reduce arrow damage
+# Reduce arrow damage and kill every unexcepted items
 execute as @e[type=arrow,nbt={damage:2.0d}] run data modify entity @s damage set value 1.0d
+kill @e[type=item,nbt=!{Item:{tag:{}}}]
 
 # Détection des morts
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death

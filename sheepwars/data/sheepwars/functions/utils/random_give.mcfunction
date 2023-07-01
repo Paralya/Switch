@@ -73,4 +73,6 @@ scoreboard players reset #c_explosif sheepwars.data
 loot give @s mine 0 0 0 air{drop_contents:1b}
 setblock 0 0 0 air
 
+# Reset input score
+scoreboard players reset #number_of_drops sheepwars.data
 
