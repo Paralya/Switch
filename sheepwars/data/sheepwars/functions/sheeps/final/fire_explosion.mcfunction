@@ -48,6 +48,7 @@ execute positioned ~1 ~-1 ~1 run function realistic_explosion:explode
 execute positioned ~-1 ~-1 ~1 run function realistic_explosion:explode
 execute positioned ~1 ~-1 ~-1 run function realistic_explosion:explode
 execute positioned ~-1 ~-1 ~-1 run function realistic_explosion:explode
+scoreboard players reset #falling_fire realistic_explosion.data
 
 # Remove the tag from the owner
 tag @a[tag=sheepwars.owner] remove sheepwars.owner
