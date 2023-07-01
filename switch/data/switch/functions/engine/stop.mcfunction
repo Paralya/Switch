@@ -7,7 +7,7 @@ scoreboard players set #process_end switch.data 0
 
 execute unless score #disable switch.data matches 1 run clear @a[tag=!convention.debug]
 effect clear @a
-gamemode spectator @a
+gamemode spectator @a[tag=!convention.debug]
 xp set @a 0 points
 xp set @a 0 levels
 kill @e[type=marker,tag=switch.selected_map]
