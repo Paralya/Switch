@@ -57,7 +57,7 @@ execute if entity @s[tag=sheepwars.soutien] run effect give @a[gamemode=!spectat
 execute if entity @s[tag=sheepwars.soutien] run particle heart ~ ~ ~ 3 3 3 0 5
 
 # Intergalactique
-# TODO meteores
+execute if entity @s[tag=sheepwars.intergalactique,scores={sheepwars.data=50}] run function sheepwars:sheeps/active/intergalactique/main
 
 
 

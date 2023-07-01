@@ -16,6 +16,18 @@ function sheepwars:tick
 # Kill too low entities
 execute as @e[type=!player,type=!marker] at @s if entity @s[y=100,dy=10] run function sheepwars:sheeps/final/disappear
 
+# Night if intergalactique
+scoreboard players add #sheepwars_night switch.data 0
+execute if score #sheepwars_night switch.data matches 0 if entity @e[type=sheep,tag=sheepwars.intergalactique] run scoreboard players set #sheepwars_night switch.data 1
+execute if score #sheepwars_night switch.data matches 1 run tellraw @a [{"text":"[SheepWars] ","color":"yellow"},{"text":"Une nuit intergalactique commence !","color":"blue"}]
+execute if score #sheepwars_night switch.data matches 1 as @a at @s run playsound entity.wither.spawn ambient @s
+execute if score #sheepwars_night switch.data matches 1 run time set 18000
+execute if score #sheepwars_night switch.data matches 1 run scoreboard players set #sheepwars_night switch.data 2
+execute if score #sheepwars_night switch.data matches 2 unless entity @e[tag=sheepwars.intergalactique] run scoreboard players set #sheepwars_night switch.data 3
+execute if score #sheepwars_night switch.data matches 3 run time set 6000
+execute if score #sheepwars_night switch.data matches 3 run scoreboard players set #sheepwars_night switch.data 0
+
+
 ## Détection de fin de partie
 #execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/sheepwars/process_end

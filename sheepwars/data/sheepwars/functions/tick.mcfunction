@@ -8,7 +8,7 @@
 #
 
 # Make disappear vehicle less "chercheur_rider"
-execute as @e[tag=sheepwars.chercheur_rider,predicate=!sheepwars:has_vehicle] run function sheepwars:sheeps/final/disappear
+execute as @e[type=husk,tag=sheepwars.chercheur_rider,predicate=!sheepwars:has_vehicle] run function sheepwars:sheeps/final/disappear
 
 # Right click detection
 execute as @a[scores={sheepwars.right_click=1..},sort=random] at @s run function sheepwars:right_click/all
@@ -17,6 +17,8 @@ execute as @a[scores={sheepwars.right_click=1..},sort=random] at @s run function
 execute as @a[gamemode=!spectator,nbt={ActiveEffects:[{Id:25}]}] at @s unless entity @e[tag=sheepwars.sismique,distance=..6] run effect clear @s
 
 # Sheep management
-execute as @e[tag=sheepwars.sheep] at @s run function sheepwars:sheeps/tick_sheep
+execute as @e[type=sheep,tag=sheepwars.sheep] at @s run function sheepwars:sheeps/tick_sheep
 
+# Intergalactique markers
+execute as @e[type=marker,tag=sheepwars.intergalactique_marker] at @s run function sheepwars:sheeps/active/intergalactique/marker_tick
 
