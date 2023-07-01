@@ -14,7 +14,7 @@ execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sor
 function sheepwars:tick
 
 # Kill too low entities
-execute as @e[type=!player,type=!marker] at @s if entity @s[y=100,dy=10] run function sheepwars:sheeps/final/disappear
+execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear
 
 # Night if intergalactique
 scoreboard players add #sheepwars_night switch.data 0

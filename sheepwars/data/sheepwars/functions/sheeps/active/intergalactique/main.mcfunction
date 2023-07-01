@@ -10,13 +10,7 @@
 # Add a temporary tag for markers to rotate on the sheep
 tag @s add sheepwars.aim_for_meteor
 
-# Summon the meteors (x10)
-execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
-execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
-execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
-execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
-execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
-execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
+# Summon the meteors (x4)
 execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
 execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor
 execute summon marker run function sheepwars:sheeps/active/intergalactique/summon_meteor

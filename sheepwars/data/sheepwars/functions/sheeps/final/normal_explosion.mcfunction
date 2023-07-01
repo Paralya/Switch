@@ -34,6 +34,13 @@ execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run damage @s
 execute as @a[gamemode=!creative,gamemode=!spectator,distance=..4] run damage @s 8 player_explosion by @p[tag=sheepwars.owner] from @p[tag=sheepwars.owner]
 execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] run damage @s 4 player_explosion by @p[tag=sheepwars.owner] from @p[tag=sheepwars.owner]
 execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] run damage @s 2 player_explosion by @p[tag=sheepwars.owner] from @p[tag=sheepwars.owner]
+execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1] run damage @s[tag=sheepwars.owner] 28 explosion
+execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run damage @s[tag=sheepwars.owner] 20 explosion
+execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run damage @s[tag=sheepwars.owner] 12 explosion
+execute as @a[gamemode=!creative,gamemode=!spectator,distance=..4] run damage @s[tag=sheepwars.owner] 8 explosion
+execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] run damage @s[tag=sheepwars.owner] 4 explosion
+execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] run damage @s[tag=sheepwars.owner] 2 explosion
+
 
 # For each player, check if the damage killed him
 execute as @a[tag=sheepwars.damaged] run function sheepwars:utils/player_damaged

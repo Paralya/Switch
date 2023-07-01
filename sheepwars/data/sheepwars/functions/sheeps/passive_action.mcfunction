@@ -42,7 +42,7 @@ execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=64}] run functio
 execute if entity @s[tag=sheepwars.glace,scores={sheepwars.data=68}] run function sheepwars:sheeps/active/glace/main
 
 # Chercheur
-execute if entity @s[tag=sheepwars.chercheur] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 150
+execute if entity @s[tag=sheepwars.chercheur] if entity @p[gamemode=!spectator,distance=..2] run scoreboard players set @s sheepwars.data 100000
 
 # Distorsion
 execute if entity @s[tag=sheepwars.distorsion,scores={sheepwars.data=50}] positioned ~ ~1 ~ run function realistic_explosion:explode
@@ -53,13 +53,14 @@ execute if entity @s[tag=sheepwars.distorsion,scores={sheepwars.data=170}] posit
 execute if entity @s[tag=sheepwars.distorsion] run particle dust .5 0 .5 1 ~ ~ ~ 2 2 2 0 10
 
 # Soutien
-execute if entity @s[tag=sheepwars.soutien] run effect give @a[gamemode=!spectator,distance=..3] regeneration 1 0 true
+execute if entity @s[tag=sheepwars.soutien] run effect give @a[gamemode=!spectator,distance=..3,nbt=!{ActiveEffects:[{Id:10}]}] regeneration 4 2 true
 execute if entity @s[tag=sheepwars.soutien] run particle heart ~ ~ ~ 3 3 3 0 5
 
 # Intergalactique
 execute if entity @s[tag=sheepwars.intergalactique,scores={sheepwars.data=50}] run function sheepwars:sheeps/active/intergalactique/main
-
-
-
+execute if entity @s[tag=sheepwars.intergalactique,scores={sheepwars.data=70}] run function sheepwars:sheeps/active/intergalactique/main
+execute if entity @s[tag=sheepwars.intergalactique,scores={sheepwars.data=90}] run function sheepwars:sheeps/active/intergalactique/main
+execute if entity @s[tag=sheepwars.intergalactique,scores={sheepwars.data=110}] run function sheepwars:sheeps/active/intergalactique/main
+execute if entity @s[tag=sheepwars.intergalactique,scores={sheepwars.data=130}] run function sheepwars:sheeps/active/intergalactique/main
 
 
