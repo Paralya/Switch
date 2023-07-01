@@ -1,10 +1,10 @@
 
-#> sheepwars:sheeps/final/normal_explosion
+#> sheepwars:sheeps/final/fragmentation
 #
 # @within			sheepwars:sheeps/final_action
 # @executed			as & at the sheep
 #
-# @description		Explode the sheep with a normal explosion
+# @description		Explode the sheep with a normal explosion and summon 4 new sheeps that will explode after 1 second.
 #
 
 # Particles and sound
