@@ -15,5 +15,5 @@ execute if score #s_dirig_blue switch.data matches 11 run tp @s 100093 143 10006
 execute if score #s_dirig_blue switch.data matches 12 run tp @s 100058 149 100067 180 0
 execute if score #s_dirig_blue switch.data matches 13 run tp @s 100119 160 100048 180 0
 
-execute if score #s_dirig_blue switch.data matches 13 run scoreboard players set #s_dirig_blue switch.data 0
+execute if score #s_dirig_blue switch.data matches 13.. run scoreboard players set #s_dirig_blue switch.data 0
 
