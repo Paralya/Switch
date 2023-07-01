@@ -23,7 +23,7 @@ execute if score #remaining_time switch.data matches 1200..1259 run team modify 
 
 
 scoreboard players operation #remaining_seconds switch.data = #remaining_time switch.data
-scoreboard players operation #remaining_seconds switch.data %= 60
+scoreboard players operation #remaining_seconds switch.data %= #60 switch.data
 execute if score #remaining_seconds switch.data matches 0 run team modify switch.temp.sidebar.3 suffix [{"text":"00","color":"yellow"},{"text":"s"}]
 execute if score #remaining_seconds switch.data matches 1 run team modify switch.temp.sidebar.3 suffix [{"text":"01","color":"yellow"},{"text":"s"}]
 execute if score #remaining_seconds switch.data matches 2 run team modify switch.temp.sidebar.3 suffix [{"text":"02","color":"yellow"},{"text":"s"}]

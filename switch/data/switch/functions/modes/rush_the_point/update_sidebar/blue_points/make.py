@@ -17,7 +17,7 @@ namespace = "switch"
 base_path = f"{namespace}:modes/rush_the_point/update_sidebar/{color}_points/"
 base_score_points = f"execute if score #{color}_points {namespace}.data matches "
 base_score_suffix = f"execute if score #score_for_suffix {namespace}.data matches "
-sidebar_number = 1	# DON'T FORGET TO CHANGE THIS
+sidebar_number = 2	# DON'T FORGET TO CHANGE THIS
 step = 1
 
 
