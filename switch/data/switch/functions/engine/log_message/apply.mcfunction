@@ -11,8 +11,8 @@
 
 # Put the message into a sign
 execute in overworld run setblock 0 0 0 oak_sign
-execute in overworld run data modify block 0 0 0 Text1 set value '{"nbt":"MessageToLog","storage":"switch:main","interpret":true}'
-execute in overworld run data modify storage switch:main MessageToLog set from block 0 0 0 Text1
+execute in overworld run data modify block 0 0 0 front_text.messages[0] set value '{"nbt":"MessageToLog","storage":"switch:main","interpret":true}'
+execute in overworld run data modify storage switch:main MessageToLog set from block 0 0 0 front_text.messages[0]
 execute in overworld run setblock 0 0 0 air
 
 # Summon wolf
