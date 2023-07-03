@@ -26,9 +26,9 @@ weather clear
 function switch:choose_map_for/sheepwars
 
 gamerule showDeathMessages true
-gamerule fallDamage true
 gamerule naturalRegeneration true
-gamerule keepInventory false
+gamerule fallDamage true
+gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt car vous avez 5 secondes !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
