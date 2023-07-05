@@ -295,7 +295,7 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
 		f.write(f"{base_condition} {last_tick}.. run forceload remove {x1} {x2} {z1} {z2}\n")
-	
+
 	# Write the tellraw command
 	f.write(f"{base_condition} {last_tick}.. run {tellraw}")
 	f.write(f"{base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\": \"La map `{name}` a fini sa régénération !\"}}'\n")

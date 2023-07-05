@@ -25,4 +25,5 @@ execute if data storage switch:main {map:"abandoned_city"} run function switch:m
 execute if data storage switch:main {map:"boat_race_2"} run function switch:maps/adventure/boat_race_2/
 # CSGO Map, faut trouver le nom (56000)
 # Fish the pig (76000)
+execute if data storage switch:main {map:"block_party"} run function switch:maps/adventure/block_party/
 
