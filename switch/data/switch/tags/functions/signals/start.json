@@ -24,6 +24,7 @@
 		"switch:modes/thunder_spear/calls/start",
 		"switch:modes/tnt_run/calls/start",
 		"switch:modes/sheepwars/calls/start",
+		"switch:modes/block_party/calls/start",
 		"switch:modes/replicate_the_build/calls/start",
 		"switch:modes/a_template/calls/start"
 	]

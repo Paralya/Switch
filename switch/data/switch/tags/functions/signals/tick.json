@@ -23,6 +23,7 @@
 		"switch:modes/thunder_spear/calls/tick",
 		"switch:modes/tnt_run/calls/tick",
 		"switch:modes/sheepwars/calls/tick",
+		"switch:modes/block_party/calls/tick",
 		"switch:modes/replicate_the_build/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
