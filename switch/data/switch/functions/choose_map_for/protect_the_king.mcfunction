@@ -28,7 +28,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main p
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "lg_medieval"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "lightium_spawn"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "paralya_lobby"
-execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "sheepwars_dirigeables"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_spawn"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_boss_zone"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_boss_zone_nether"

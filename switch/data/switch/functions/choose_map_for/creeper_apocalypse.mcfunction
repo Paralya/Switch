@@ -11,7 +11,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "friends_pvpbox_end"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "friends_cube_lobby"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "zonweeb_main"
-execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "sumo_lawef"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "find_the_shulker"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "blindtest"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "sky_island_tower"
