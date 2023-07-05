@@ -160,7 +160,12 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 		dz = (k[3] - k[1]) // 2
 		marker_file.write(f"execute at @s run particle cloud {k[0] + dx} ~1 {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
 		marker_file.write(f"execute at @s run fill {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
-	
+
+	# Write kill item entities command & the scoreboard commands
+	marker_file.write("\n")
+	marker_file.write(f"kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
+	marker_file.write(f"scoreboard players add #rg_{name}_y switch.data 1\n")
+
 	# Write the kill command
 	marker_file.write("\n")
 	marker_file.write("kill @s\n")
@@ -187,7 +192,7 @@ generate_clone_survival_folder("pitchout_1", (950, 0, 1050), (1050, 44, 1150), 9
 generate_clone_survival_folder("traitor_original", (1408, 0, 1423), (1592, 63, 1578), 114, override_tp_coords = (1500, 121, 1500))
 generate_clone_survival_folder("zone_51", (1947, 0, 1937), (2055, 70, 2063), 100, override_tp_coords = (2000, 158, 2000))
 generate_clone_survival_folder("spectre_original", (2459, 0, 2452), (2545, 85, 2547), 100, override_tp_coords = (2500, 127, 2500))
-generate_fill_survival_folder("glassrunner", (2750, -64, 2750), (3250, 384, 3250), "air", "#switch:glassrunner/glass", override_tp_coords = (3000, 130, 3000))
+generate_fill_survival_folder("glassrunner", (2750, -64, 2750), (3250, 320, 3250), "air", "#switch:glassrunner/glass", override_tp_coords = (3000, 130, 3000))
 generate_clone_survival_folder("mushroom_plains", (3939, 0, 3939), (4061, 50, 4061), 100, override_tp_coords = (3992, 126, 4000))
 generate_clone_survival_folder("friends_black_ball", (5934, 0, 5933), (6063, 73, 6067), 100, override_tp_coords = (6000, 105, 6000))
 generate_clone_survival_folder("enchanting_island", (6970, 0, 6970), (7030, 49, 7030), 100, override_tp_coords = (7000, 136, 7000))

@@ -30,5 +30,8 @@ execute at @s run fill 14071 ~ 13901 14085 ~ 14099 air replace #switch:rush_the_
 execute at @s run particle cloud 14092 ~1 14000 7 0 49 0 18 force
 execute at @s run fill 14085 ~ 13901 14099 ~ 14099 air replace #switch:rush_the_point/placed
 
+kill @e[type=item,x=14000,y=0,z=14000,distance=..1000]
+scoreboard players add #rg_rush_the_point_1_y switch.data 1
+
 kill @s
 

@@ -94,5 +94,8 @@ execute at @s run fill 81202 ~ 80822 81210 ~ 81182 air replace #switch:purple_sk
 execute at @s run particle cloud 81214 ~1 81002 4 0 90 0 6 force
 execute at @s run fill 81210 ~ 80822 81219 ~ 81182 air replace #switch:purple_sky_island
 
+kill @e[type=item,x=81021,y=0,z=81002,distance=..1000]
+scoreboard players add #rg_purple_sky_island_y switch.data 1
+
 kill @s
 

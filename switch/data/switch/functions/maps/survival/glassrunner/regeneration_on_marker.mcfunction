@@ -162,5 +162,8 @@ execute at @s run fill 3238 ~ 2750 3244 ~ 3250 air replace #switch:glassrunner/g
 execute at @s run particle cloud 3247 ~1 3000 3 0 125 0 4 force
 execute at @s run fill 3244 ~ 2750 3250 ~ 3250 air replace #switch:glassrunner/glass
 
+kill @e[type=item,x=3000,y=-64,z=3000,distance=..1000]
+scoreboard players add #rg_glassrunner_y switch.data 1
+
 kill @s
 
