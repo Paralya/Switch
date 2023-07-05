@@ -25,6 +25,8 @@ execute if score #rg_stardust_prison switch.data matches 523.. run forceload rem
 execute if score #rg_stardust_prison switch.data matches 523.. run forceload remove 106103 106000 106117 106178
 execute if score #rg_stardust_prison switch.data matches 523.. run forceload remove 106117 106000 106132 106178
 execute if score #rg_stardust_prison switch.data matches 523.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"stardust_prison","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_prison switch.data matches 523.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_prison` a fini sa régénération !"}'
+execute if score #rg_stardust_prison switch.data matches 523.. run function switch:engine/log_message/apply
 execute if score #rg_stardust_prison switch.data matches 523.. run scoreboard players reset #rg_stardust_prison switch.data
 
 execute if score #rg_stardust_prison switch.data matches 1.. run schedule function switch:maps/survival/stardust_prison/regenerate 1t

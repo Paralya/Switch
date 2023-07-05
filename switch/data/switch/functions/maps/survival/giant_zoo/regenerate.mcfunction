@@ -65,6 +65,8 @@ execute if score #rg_giant_zoo switch.data matches 1886.. run forceload remove 7
 execute if score #rg_giant_zoo switch.data matches 1886.. run forceload remove 70282 70000 70293 70287
 execute if score #rg_giant_zoo switch.data matches 1886.. run forceload remove 70293 70000 70303 70287
 execute if score #rg_giant_zoo switch.data matches 1886.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"giant_zoo","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_giant_zoo switch.data matches 1886.. run data modify storage switch:main MessageToLog set value '{"text": "La map `giant_zoo` a fini sa régénération !"}'
+execute if score #rg_giant_zoo switch.data matches 1886.. run function switch:engine/log_message/apply
 execute if score #rg_giant_zoo switch.data matches 1886.. run scoreboard players reset #rg_giant_zoo switch.data
 
 execute if score #rg_giant_zoo switch.data matches 1.. run schedule function switch:maps/survival/giant_zoo/regenerate 1t

@@ -51,6 +51,8 @@ execute if score #rg_japanese_village switch.data matches 1805.. run forceload r
 execute if score #rg_japanese_village switch.data matches 1805.. run forceload remove 90204 90000 90214 90286
 execute if score #rg_japanese_village switch.data matches 1805.. run forceload remove 90214 90000 90224 90286
 execute if score #rg_japanese_village switch.data matches 1805.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"japanese_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"30","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_japanese_village switch.data matches 1805.. run data modify storage switch:main MessageToLog set value '{"text": "La map `japanese_village` a fini sa régénération !"}'
+execute if score #rg_japanese_village switch.data matches 1805.. run function switch:engine/log_message/apply
 execute if score #rg_japanese_village switch.data matches 1805.. run scoreboard players reset #rg_japanese_village switch.data
 
 execute if score #rg_japanese_village switch.data matches 1.. run schedule function switch:maps/survival/japanese_village/regenerate 1t

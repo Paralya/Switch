@@ -19,6 +19,8 @@ execute if score #rg_warden_escape_statue switch.data matches 751.. run forceloa
 execute if score #rg_warden_escape_statue switch.data matches 751.. run forceload remove 69099 69000 69123 69106
 execute if score #rg_warden_escape_statue switch.data matches 751.. run forceload remove 69123 69000 69148 69106
 execute if score #rg_warden_escape_statue switch.data matches 751.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"warden_escape_statue","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"37","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_warden_escape_statue switch.data matches 751.. run data modify storage switch:main MessageToLog set value '{"text": "La map `warden_escape_statue` a fini sa régénération !"}'
+execute if score #rg_warden_escape_statue switch.data matches 751.. run function switch:engine/log_message/apply
 execute if score #rg_warden_escape_statue switch.data matches 751.. run scoreboard players reset #rg_warden_escape_statue switch.data
 
 execute if score #rg_warden_escape_statue switch.data matches 1.. run schedule function switch:maps/survival/warden_escape_statue/regenerate 1t

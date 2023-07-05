@@ -17,6 +17,8 @@ execute if score #rg_stardust_vip_zone switch.data matches 256.. run forceload r
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run forceload remove 107068 107000 107090 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run forceload remove 107090 107000 107113 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"stardust_vip_zone","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_vip_zone switch.data matches 256.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_vip_zone` a fini sa régénération !"}'
+execute if score #rg_stardust_vip_zone switch.data matches 256.. run function switch:engine/log_message/apply
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run scoreboard players reset #rg_stardust_vip_zone switch.data
 
 execute if score #rg_stardust_vip_zone switch.data matches 1.. run schedule function switch:maps/survival/stardust_vip_zone/regenerate 1t

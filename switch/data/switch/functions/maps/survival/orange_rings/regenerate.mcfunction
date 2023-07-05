@@ -17,6 +17,8 @@ execute if score #rg_orange_rings switch.data matches 476.. run forceload remove
 execute if score #rg_orange_rings switch.data matches 476.. run forceload remove 65059 65000 65079 65103
 execute if score #rg_orange_rings switch.data matches 476.. run forceload remove 65079 65000 65099 65103
 execute if score #rg_orange_rings switch.data matches 476.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"orange_rings","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_orange_rings switch.data matches 476.. run data modify storage switch:main MessageToLog set value '{"text": "La map `orange_rings` a fini sa régénération !"}'
+execute if score #rg_orange_rings switch.data matches 476.. run function switch:engine/log_message/apply
 execute if score #rg_orange_rings switch.data matches 476.. run scoreboard players reset #rg_orange_rings switch.data
 
 execute if score #rg_orange_rings switch.data matches 1.. run schedule function switch:maps/survival/orange_rings/regenerate 1t

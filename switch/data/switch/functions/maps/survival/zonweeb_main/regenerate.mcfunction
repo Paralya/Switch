@@ -17,6 +17,8 @@ execute if score #rg_zonweeb_main switch.data matches 226.. run forceload remove
 execute if score #rg_zonweeb_main switch.data matches 226.. run forceload remove 32010 31950 32030 32050
 execute if score #rg_zonweeb_main switch.data matches 226.. run forceload remove 32030 31950 32050 32050
 execute if score #rg_zonweeb_main switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"zonweeb_main","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zonweeb_main switch.data matches 226.. run data modify storage switch:main MessageToLog set value '{"text": "La map `zonweeb_main` a fini sa régénération !"}'
+execute if score #rg_zonweeb_main switch.data matches 226.. run function switch:engine/log_message/apply
 execute if score #rg_zonweeb_main switch.data matches 226.. run scoreboard players reset #rg_zonweeb_main switch.data
 
 execute if score #rg_zonweeb_main switch.data matches 1.. run schedule function switch:maps/survival/zonweeb_main/regenerate 1t

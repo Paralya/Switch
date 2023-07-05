@@ -19,6 +19,8 @@ execute if score #rg_survival_boat switch.data matches 601.. run forceload remov
 execute if score #rg_survival_boat switch.data matches 601.. run forceload remove 79084 79000 79105 79102
 execute if score #rg_survival_boat switch.data matches 601.. run forceload remove 79105 79000 79126 79102
 execute if score #rg_survival_boat switch.data matches 601.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"survival_boat","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"30","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_survival_boat switch.data matches 601.. run data modify storage switch:main MessageToLog set value '{"text": "La map `survival_boat` a fini sa régénération !"}'
+execute if score #rg_survival_boat switch.data matches 601.. run function switch:engine/log_message/apply
 execute if score #rg_survival_boat switch.data matches 601.. run scoreboard players reset #rg_survival_boat switch.data
 
 execute if score #rg_survival_boat switch.data matches 1.. run schedule function switch:maps/survival/survival_boat/regenerate 1t

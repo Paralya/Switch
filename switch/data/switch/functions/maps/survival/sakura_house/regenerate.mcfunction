@@ -21,6 +21,8 @@ execute if score #rg_sakura_house switch.data matches 666.. run forceload remove
 execute if score #rg_sakura_house switch.data matches 666.. run forceload remove 86086 86000 86104 86135
 execute if score #rg_sakura_house switch.data matches 666.. run forceload remove 86104 86000 86121 86135
 execute if score #rg_sakura_house switch.data matches 666.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"sakura_house","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"33","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sakura_house switch.data matches 666.. run data modify storage switch:main MessageToLog set value '{"text": "La map `sakura_house` a fini sa régénération !"}'
+execute if score #rg_sakura_house switch.data matches 666.. run function switch:engine/log_message/apply
 execute if score #rg_sakura_house switch.data matches 666.. run scoreboard players reset #rg_sakura_house switch.data
 
 execute if score #rg_sakura_house switch.data matches 1.. run schedule function switch:maps/survival/sakura_house/regenerate 1t

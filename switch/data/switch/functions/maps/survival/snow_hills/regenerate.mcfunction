@@ -37,6 +37,8 @@ execute if score #rg_snow_hills switch.data matches 916.. run forceload remove 5
 execute if score #rg_snow_hills switch.data matches 916.. run forceload remove 50113 49918 50129 50103
 execute if score #rg_snow_hills switch.data matches 916.. run forceload remove 50129 49918 50145 50103
 execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"snow_hills","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_hills switch.data matches 916.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snow_hills` a fini sa régénération !"}'
+execute if score #rg_snow_hills switch.data matches 916.. run function switch:engine/log_message/apply
 execute if score #rg_snow_hills switch.data matches 916.. run scoreboard players reset #rg_snow_hills switch.data
 
 execute if score #rg_snow_hills switch.data matches 1.. run schedule function switch:maps/survival/snow_hills/regenerate 1t

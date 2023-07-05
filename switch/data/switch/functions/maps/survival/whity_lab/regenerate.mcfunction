@@ -17,6 +17,8 @@ execute if score #rg_whity_lab switch.data matches 441.. run forceload remove 91
 execute if score #rg_whity_lab switch.data matches 441.. run forceload remove 91061 91000 91082 91102
 execute if score #rg_whity_lab switch.data matches 441.. run forceload remove 91082 91000 91102 91102
 execute if score #rg_whity_lab switch.data matches 441.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"whity_lab","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_whity_lab switch.data matches 441.. run data modify storage switch:main MessageToLog set value '{"text": "La map `whity_lab` a fini sa régénération !"}'
+execute if score #rg_whity_lab switch.data matches 441.. run function switch:engine/log_message/apply
 execute if score #rg_whity_lab switch.data matches 441.. run scoreboard players reset #rg_whity_lab switch.data
 
 execute if score #rg_whity_lab switch.data matches 1.. run schedule function switch:maps/survival/whity_lab/regenerate 1t

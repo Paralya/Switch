@@ -27,6 +27,8 @@ execute if score #rg_traitor_original switch.data matches 641.. run forceload re
 execute if score #rg_traitor_original switch.data matches 641.. run forceload remove 1555 1423 1574 1578
 execute if score #rg_traitor_original switch.data matches 641.. run forceload remove 1574 1423 1592 1578
 execute if score #rg_traitor_original switch.data matches 641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"traitor_original","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"32","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_traitor_original switch.data matches 641.. run data modify storage switch:main MessageToLog set value '{"text": "La map `traitor_original` a fini sa régénération !"}'
+execute if score #rg_traitor_original switch.data matches 641.. run function switch:engine/log_message/apply
 execute if score #rg_traitor_original switch.data matches 641.. run scoreboard players reset #rg_traitor_original switch.data
 
 execute if score #rg_traitor_original switch.data matches 1.. run schedule function switch:maps/survival/traitor_original/regenerate 1t

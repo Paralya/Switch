@@ -39,6 +39,8 @@ execute if score #rg_vilarles_castillo switch.data matches 2513.. run forceload 
 execute if score #rg_vilarles_castillo switch.data matches 2513.. run forceload remove 52088 51853 52102 52071
 execute if score #rg_vilarles_castillo switch.data matches 2513.. run forceload remove 52102 51853 52115 52071
 execute if score #rg_vilarles_castillo switch.data matches 2513.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"vilarles_castillo","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_vilarles_castillo switch.data matches 2513.. run data modify storage switch:main MessageToLog set value '{"text": "La map `vilarles_castillo` a fini sa régénération !"}'
+execute if score #rg_vilarles_castillo switch.data matches 2513.. run function switch:engine/log_message/apply
 execute if score #rg_vilarles_castillo switch.data matches 2513.. run scoreboard players reset #rg_vilarles_castillo switch.data
 
 execute if score #rg_vilarles_castillo switch.data matches 1.. run schedule function switch:maps/survival/vilarles_castillo/regenerate 1t

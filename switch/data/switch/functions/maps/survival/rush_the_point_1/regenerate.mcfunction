@@ -35,6 +35,8 @@ execute if score #rg_rush_the_point_1 switch.data matches 257.. run forceload re
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run forceload remove 14071 13901 14085 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run forceload remove 14085 13901 14099 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"rush_the_point_1","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_rush_the_point_1 switch.data matches 257.. run data modify storage switch:main MessageToLog set value '{"text": "La map `rush_the_point_1` a fini sa régénération !"}'
+execute if score #rg_rush_the_point_1 switch.data matches 257.. run function switch:engine/log_message/apply
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run scoreboard players reset #rg_rush_the_point_1 switch.data
 
 execute if score #rg_rush_the_point_1 switch.data matches 1.. run schedule function switch:maps/survival/rush_the_point_1/regenerate 1t

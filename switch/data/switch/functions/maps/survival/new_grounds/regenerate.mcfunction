@@ -23,6 +23,8 @@ execute if score #rg_new_grounds switch.data matches 681.. run forceload remove 
 execute if score #rg_new_grounds switch.data matches 681.. run forceload remove 48035 47930 48052 48070
 execute if score #rg_new_grounds switch.data matches 681.. run forceload remove 48052 47930 48070 48070
 execute if score #rg_new_grounds switch.data matches 681.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"new_grounds","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_new_grounds switch.data matches 681.. run data modify storage switch:main MessageToLog set value '{"text": "La map `new_grounds` a fini sa régénération !"}'
+execute if score #rg_new_grounds switch.data matches 681.. run function switch:engine/log_message/apply
 execute if score #rg_new_grounds switch.data matches 681.. run scoreboard players reset #rg_new_grounds switch.data
 
 execute if score #rg_new_grounds switch.data matches 1.. run schedule function switch:maps/survival/new_grounds/regenerate 1t

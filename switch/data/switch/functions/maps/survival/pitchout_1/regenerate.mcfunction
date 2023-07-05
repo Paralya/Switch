@@ -17,6 +17,8 @@ execute if score #rg_pitchout_1 switch.data matches 226.. run forceload remove 9
 execute if score #rg_pitchout_1 switch.data matches 226.. run forceload remove 1010 1050 1030 1150
 execute if score #rg_pitchout_1 switch.data matches 226.. run forceload remove 1030 1050 1050 1150
 execute if score #rg_pitchout_1 switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"pitchout_1","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_pitchout_1 switch.data matches 226.. run data modify storage switch:main MessageToLog set value '{"text": "La map `pitchout_1` a fini sa régénération !"}'
+execute if score #rg_pitchout_1 switch.data matches 226.. run function switch:engine/log_message/apply
 execute if score #rg_pitchout_1 switch.data matches 226.. run scoreboard players reset #rg_pitchout_1 switch.data
 
 execute if score #rg_pitchout_1 switch.data matches 1.. run schedule function switch:maps/survival/pitchout_1/regenerate 1t

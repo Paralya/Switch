@@ -39,6 +39,8 @@ execute if score #rg_snowy_village switch.data matches 1137.. run forceload remo
 execute if score #rg_snowy_village switch.data matches 1137.. run forceload remove 92175 92000 92188 92229
 execute if score #rg_snowy_village switch.data matches 1137.. run forceload remove 92188 92000 92200 92229
 execute if score #rg_snowy_village switch.data matches 1137.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"snowy_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"56","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snowy_village switch.data matches 1137.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snowy_village` a fini sa régénération !"}'
+execute if score #rg_snowy_village switch.data matches 1137.. run function switch:engine/log_message/apply
 execute if score #rg_snowy_village switch.data matches 1137.. run scoreboard players reset #rg_snowy_village switch.data
 
 execute if score #rg_snowy_village switch.data matches 1.. run schedule function switch:maps/survival/snowy_village/regenerate 1t

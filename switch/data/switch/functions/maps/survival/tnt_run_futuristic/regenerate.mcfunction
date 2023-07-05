@@ -11,6 +11,8 @@ execute if score #rg_tnt_run_futuristic switch.data matches 139.. run kill @e[ty
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. run forceload remove 109000 109000 109030 109046
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. run forceload remove 109030 109000 109059 109046
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"tnt_run_futuristic","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_tnt_run_futuristic switch.data matches 139.. run data modify storage switch:main MessageToLog set value '{"text": "La map `tnt_run_futuristic` a fini sa régénération !"}'
+execute if score #rg_tnt_run_futuristic switch.data matches 139.. run function switch:engine/log_message/apply
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. run scoreboard players reset #rg_tnt_run_futuristic switch.data
 
 execute if score #rg_tnt_run_futuristic switch.data matches 1.. run schedule function switch:maps/survival/tnt_run_futuristic/regenerate 1t

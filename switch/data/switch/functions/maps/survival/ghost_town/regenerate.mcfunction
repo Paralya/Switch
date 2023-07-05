@@ -19,6 +19,8 @@ execute if score #rg_ghost_town switch.data matches 235.. run forceload remove 4
 execute if score #rg_ghost_town switch.data matches 235.. run forceload remove 42022 41942 42043 42058
 execute if score #rg_ghost_town switch.data matches 235.. run forceload remove 42043 41942 42065 42058
 execute if score #rg_ghost_town switch.data matches 235.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"ghost_town","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ghost_town switch.data matches 235.. run data modify storage switch:main MessageToLog set value '{"text": "La map `ghost_town` a fini sa régénération !"}'
+execute if score #rg_ghost_town switch.data matches 235.. run function switch:engine/log_message/apply
 execute if score #rg_ghost_town switch.data matches 235.. run scoreboard players reset #rg_ghost_town switch.data
 
 execute if score #rg_ghost_town switch.data matches 1.. run schedule function switch:maps/survival/ghost_town/regenerate 1t

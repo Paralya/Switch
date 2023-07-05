@@ -23,6 +23,8 @@ execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run fo
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run forceload remove 104099 104000 104116 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run forceload remove 104116 104000 104132 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"stardust_boss_zone_nether","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"51","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_boss_zone_nether` a fini sa régénération !"}'
+execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run function switch:engine/log_message/apply
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run scoreboard players reset #rg_stardust_boss_zone_nether switch.data
 
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1.. run schedule function switch:maps/survival/stardust_boss_zone_nether/regenerate 1t

@@ -39,6 +39,8 @@ execute if score #rg_nuketown switch.data matches 833.. run forceload remove 721
 execute if score #rg_nuketown switch.data matches 833.. run forceload remove 72181 72000 72194 72220
 execute if score #rg_nuketown switch.data matches 833.. run forceload remove 72194 72000 72207 72220
 execute if score #rg_nuketown switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"nuketown","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_nuketown switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text": "La map `nuketown` a fini sa régénération !"}'
+execute if score #rg_nuketown switch.data matches 833.. run function switch:engine/log_message/apply
 execute if score #rg_nuketown switch.data matches 833.. run scoreboard players reset #rg_nuketown switch.data
 
 execute if score #rg_nuketown switch.data matches 1.. run schedule function switch:maps/survival/nuketown/regenerate 1t

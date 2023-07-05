@@ -19,6 +19,8 @@ execute if score #rg_mushroom_plains switch.data matches 307.. run forceload rem
 execute if score #rg_mushroom_plains switch.data matches 307.. run forceload remove 4020 3939 4041 4061
 execute if score #rg_mushroom_plains switch.data matches 307.. run forceload remove 4041 3939 4061 4061
 execute if score #rg_mushroom_plains switch.data matches 307.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"mushroom_plains","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_mushroom_plains switch.data matches 307.. run data modify storage switch:main MessageToLog set value '{"text": "La map `mushroom_plains` a fini sa régénération !"}'
+execute if score #rg_mushroom_plains switch.data matches 307.. run function switch:engine/log_message/apply
 execute if score #rg_mushroom_plains switch.data matches 307.. run scoreboard players reset #rg_mushroom_plains switch.data
 
 execute if score #rg_mushroom_plains switch.data matches 1.. run schedule function switch:maps/survival/mushroom_plains/regenerate 1t

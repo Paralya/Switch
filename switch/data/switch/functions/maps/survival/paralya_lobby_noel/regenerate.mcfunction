@@ -35,6 +35,8 @@ execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run forceload
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run forceload remove 40071 39900 40086 40100
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run forceload remove 40086 39900 40100 40100
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"paralya_lobby_noel","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"55","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run data modify storage switch:main MessageToLog set value '{"text": "La map `paralya_lobby_noel` a fini sa régénération !"}'
+execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run function switch:engine/log_message/apply
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run scoreboard players reset #rg_paralya_lobby_noel switch.data
 
 execute if score #rg_paralya_lobby_noel switch.data matches 1.. run schedule function switch:maps/survival/paralya_lobby_noel/regenerate 1t

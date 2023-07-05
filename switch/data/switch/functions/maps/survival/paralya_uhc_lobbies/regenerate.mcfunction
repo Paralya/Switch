@@ -15,6 +15,8 @@ execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run forceload
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run forceload remove 98045 98000 98068 98090
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run forceload remove 98068 98000 98090 98090
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"paralya_uhc_lobbies","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run data modify storage switch:main MessageToLog set value '{"text": "La map `paralya_uhc_lobbies` a fini sa régénération !"}'
+execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run function switch:engine/log_message/apply
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run scoreboard players reset #rg_paralya_uhc_lobbies switch.data
 
 execute if score #rg_paralya_uhc_lobbies switch.data matches 1.. run schedule function switch:maps/survival/paralya_uhc_lobbies/regenerate 1t

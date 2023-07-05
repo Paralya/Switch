@@ -23,6 +23,8 @@ execute if score #rg_sky_tower switch.data matches 1697.. run forceload remove 8
 execute if score #rg_sky_tower switch.data matches 1697.. run forceload remove 80106 80000 80124 80142
 execute if score #rg_sky_tower switch.data matches 1697.. run forceload remove 80124 80000 80142 80142
 execute if score #rg_sky_tower switch.data matches 1697.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"sky_tower","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"24","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sky_tower switch.data matches 1697.. run data modify storage switch:main MessageToLog set value '{"text": "La map `sky_tower` a fini sa régénération !"}'
+execute if score #rg_sky_tower switch.data matches 1697.. run function switch:engine/log_message/apply
 execute if score #rg_sky_tower switch.data matches 1697.. run scoreboard players reset #rg_sky_tower switch.data
 
 execute if score #rg_sky_tower switch.data matches 1.. run schedule function switch:maps/survival/sky_tower/regenerate 1t
