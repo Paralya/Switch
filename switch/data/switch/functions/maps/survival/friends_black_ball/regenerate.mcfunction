@@ -21,7 +21,7 @@ execute if score #rg_friends_black_ball switch.data matches 519.. run forceload 
 execute if score #rg_friends_black_ball switch.data matches 519.. run forceload remove 6026 5933 6045 6067
 execute if score #rg_friends_black_ball switch.data matches 519.. run forceload remove 6045 5933 6063 6067
 execute if score #rg_friends_black_ball switch.data matches 519.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"friends_black_ball","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"25","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_friends_black_ball switch.data matches 519.. run data modify storage switch:main MessageToLog set value '{"text": "La map `friends_black_ball` a fini sa régénération !"}'
+execute if score #rg_friends_black_ball switch.data matches 519.. run data modify storage switch:main MessageToLog set value '{"text": "La map `friends_black_ball` a fini sa regeneration !"}'
 execute if score #rg_friends_black_ball switch.data matches 519.. run function switch:engine/log_message/apply
 execute if score #rg_friends_black_ball switch.data matches 519.. run scoreboard players reset #rg_friends_black_ball switch.data
 

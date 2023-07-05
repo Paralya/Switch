@@ -45,7 +45,7 @@ execute if score #rg_bowser_castle switch.data matches 1559.. run forceload remo
 execute if score #rg_bowser_castle switch.data matches 1559.. run forceload remove 22090 21888 22102 22133
 execute if score #rg_bowser_castle switch.data matches 1559.. run forceload remove 22102 21888 22114 22133
 execute if score #rg_bowser_castle switch.data matches 1559.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"bowser_castle","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_bowser_castle switch.data matches 1559.. run data modify storage switch:main MessageToLog set value '{"text": "La map `bowser_castle` a fini sa régénération !"}'
+execute if score #rg_bowser_castle switch.data matches 1559.. run data modify storage switch:main MessageToLog set value '{"text": "La map `bowser_castle` a fini sa regeneration !"}'
 execute if score #rg_bowser_castle switch.data matches 1559.. run function switch:engine/log_message/apply
 execute if score #rg_bowser_castle switch.data matches 1559.. run scoreboard players reset #rg_bowser_castle switch.data
 

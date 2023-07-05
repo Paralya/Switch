@@ -15,7 +15,7 @@ execute if score #rg_snk_lab_s9 switch.data matches 145.. run forceload remove 7
 execute if score #rg_snk_lab_s9 switch.data matches 145.. run forceload remove 75044 75000 75067 75076
 execute if score #rg_snk_lab_s9 switch.data matches 145.. run forceload remove 75067 75000 75089 75076
 execute if score #rg_snk_lab_s9 switch.data matches 145.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"snk_lab_s9","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"07","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_snk_lab_s9 switch.data matches 145.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snk_lab_s9` a fini sa régénération !"}'
+execute if score #rg_snk_lab_s9 switch.data matches 145.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snk_lab_s9` a fini sa regeneration !"}'
 execute if score #rg_snk_lab_s9 switch.data matches 145.. run function switch:engine/log_message/apply
 execute if score #rg_snk_lab_s9 switch.data matches 145.. run scoreboard players reset #rg_snk_lab_s9 switch.data
 

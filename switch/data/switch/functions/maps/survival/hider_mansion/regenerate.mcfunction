@@ -27,7 +27,7 @@ execute if score #rg_hider_mansion switch.data matches 711.. run forceload remov
 execute if score #rg_hider_mansion switch.data matches 711.. run forceload remove 71136 71000 71153 71160
 execute if score #rg_hider_mansion switch.data matches 711.. run forceload remove 71153 71000 71170 71160
 execute if score #rg_hider_mansion switch.data matches 711.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"hider_mansion","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_hider_mansion switch.data matches 711.. run data modify storage switch:main MessageToLog set value '{"text": "La map `hider_mansion` a fini sa régénération !"}'
+execute if score #rg_hider_mansion switch.data matches 711.. run data modify storage switch:main MessageToLog set value '{"text": "La map `hider_mansion` a fini sa regeneration !"}'
 execute if score #rg_hider_mansion switch.data matches 711.. run function switch:engine/log_message/apply
 execute if score #rg_hider_mansion switch.data matches 711.. run scoreboard players reset #rg_hider_mansion switch.data
 

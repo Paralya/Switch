@@ -13,7 +13,7 @@ execute if score #rg_wyvern_towers switch.data matches 301.. run forceload remov
 execute if score #rg_wyvern_towers switch.data matches 301.. run forceload remove 94025 94000 94051 94076
 execute if score #rg_wyvern_towers switch.data matches 301.. run forceload remove 94051 94000 94076 94076
 execute if score #rg_wyvern_towers switch.data matches 301.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"wyvern_towers","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_wyvern_towers switch.data matches 301.. run data modify storage switch:main MessageToLog set value '{"text": "La map `wyvern_towers` a fini sa régénération !"}'
+execute if score #rg_wyvern_towers switch.data matches 301.. run data modify storage switch:main MessageToLog set value '{"text": "La map `wyvern_towers` a fini sa regeneration !"}'
 execute if score #rg_wyvern_towers switch.data matches 301.. run function switch:engine/log_message/apply
 execute if score #rg_wyvern_towers switch.data matches 301.. run scoreboard players reset #rg_wyvern_towers switch.data
 

@@ -29,7 +29,7 @@ execute if score #rg_huge_cargo switch.data matches 1695.. run forceload remove 
 execute if score #rg_huge_cargo switch.data matches 1695.. run forceload remove 41218 40892 41243 41000
 execute if score #rg_huge_cargo switch.data matches 1695.. run forceload remove 41243 40892 41267 41000
 execute if score #rg_huge_cargo switch.data matches 1695.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"huge_cargo","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"24","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_huge_cargo switch.data matches 1695.. run data modify storage switch:main MessageToLog set value '{"text": "La map `huge_cargo` a fini sa régénération !"}'
+execute if score #rg_huge_cargo switch.data matches 1695.. run data modify storage switch:main MessageToLog set value '{"text": "La map `huge_cargo` a fini sa regeneration !"}'
 execute if score #rg_huge_cargo switch.data matches 1695.. run function switch:engine/log_message/apply
 execute if score #rg_huge_cargo switch.data matches 1695.. run scoreboard players reset #rg_huge_cargo switch.data
 

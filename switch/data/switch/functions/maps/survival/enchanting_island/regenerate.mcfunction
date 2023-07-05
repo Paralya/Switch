@@ -13,7 +13,7 @@ execute if score #rg_enchanting_island switch.data matches 151.. run forceload r
 execute if score #rg_enchanting_island switch.data matches 151.. run forceload remove 6990 6970 7010 7030
 execute if score #rg_enchanting_island switch.data matches 151.. run forceload remove 7010 6970 7030 7030
 execute if score #rg_enchanting_island switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"enchanting_island","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"07","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_enchanting_island switch.data matches 151.. run data modify storage switch:main MessageToLog set value '{"text": "La map `enchanting_island` a fini sa régénération !"}'
+execute if score #rg_enchanting_island switch.data matches 151.. run data modify storage switch:main MessageToLog set value '{"text": "La map `enchanting_island` a fini sa regeneration !"}'
 execute if score #rg_enchanting_island switch.data matches 151.. run function switch:engine/log_message/apply
 execute if score #rg_enchanting_island switch.data matches 151.. run scoreboard players reset #rg_enchanting_island switch.data
 

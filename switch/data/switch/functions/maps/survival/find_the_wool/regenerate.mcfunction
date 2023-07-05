@@ -15,7 +15,7 @@ execute if score #rg_find_the_wool switch.data matches 229.. run forceload remov
 execute if score #rg_find_the_wool switch.data matches 229.. run forceload remove 66042 66000 66064 66080
 execute if score #rg_find_the_wool switch.data matches 229.. run forceload remove 66064 66000 66085 66080
 execute if score #rg_find_the_wool switch.data matches 229.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"find_the_wool","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_find_the_wool switch.data matches 229.. run data modify storage switch:main MessageToLog set value '{"text": "La map `find_the_wool` a fini sa régénération !"}'
+execute if score #rg_find_the_wool switch.data matches 229.. run data modify storage switch:main MessageToLog set value '{"text": "La map `find_the_wool` a fini sa regeneration !"}'
 execute if score #rg_find_the_wool switch.data matches 229.. run function switch:engine/log_message/apply
 execute if score #rg_find_the_wool switch.data matches 229.. run scoreboard players reset #rg_find_the_wool switch.data
 

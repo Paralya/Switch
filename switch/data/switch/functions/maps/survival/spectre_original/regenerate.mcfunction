@@ -15,7 +15,7 @@ execute if score #rg_spectre_original switch.data matches 345.. run forceload re
 execute if score #rg_spectre_original switch.data matches 345.. run forceload remove 2502 2452 2524 2547
 execute if score #rg_spectre_original switch.data matches 345.. run forceload remove 2524 2452 2545 2547
 execute if score #rg_spectre_original switch.data matches 345.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"spectre_original","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_spectre_original switch.data matches 345.. run data modify storage switch:main MessageToLog set value '{"text": "La map `spectre_original` a fini sa régénération !"}'
+execute if score #rg_spectre_original switch.data matches 345.. run data modify storage switch:main MessageToLog set value '{"text": "La map `spectre_original` a fini sa regeneration !"}'
 execute if score #rg_spectre_original switch.data matches 345.. run function switch:engine/log_message/apply
 execute if score #rg_spectre_original switch.data matches 345.. run scoreboard players reset #rg_spectre_original switch.data
 

@@ -83,7 +83,7 @@ execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run forc
 execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run forceload remove 46118 45849 46127 46187
 execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run forceload remove 46127 45849 46136 46187
 execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"taroatlas_soviet_prison","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"6","color":"gold"},{"text":"m","color":"yellow"},{"text":"02","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run data modify storage switch:main MessageToLog set value '{"text": "La map `taroatlas_soviet_prison` a fini sa régénération !"}'
+execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run data modify storage switch:main MessageToLog set value '{"text": "La map `taroatlas_soviet_prison` a fini sa regeneration !"}'
 execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run function switch:engine/log_message/apply
 execute if score #rg_taroatlas_soviet_prison switch.data matches 7259.. run scoreboard players reset #rg_taroatlas_soviet_prison switch.data
 

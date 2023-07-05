@@ -11,7 +11,7 @@ execute if score #rg_pitch_creep_2 switch.data matches 35.. run kill @e[type=ite
 execute if score #rg_pitch_creep_2 switch.data matches 35.. run forceload remove 37986 37974 38000 38026
 execute if score #rg_pitch_creep_2 switch.data matches 35.. run forceload remove 38000 37974 38014 38026
 execute if score #rg_pitch_creep_2 switch.data matches 35.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"pitch_creep_2","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"01","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_pitch_creep_2 switch.data matches 35.. run data modify storage switch:main MessageToLog set value '{"text": "La map `pitch_creep_2` a fini sa régénération !"}'
+execute if score #rg_pitch_creep_2 switch.data matches 35.. run data modify storage switch:main MessageToLog set value '{"text": "La map `pitch_creep_2` a fini sa regeneration !"}'
 execute if score #rg_pitch_creep_2 switch.data matches 35.. run function switch:engine/log_message/apply
 execute if score #rg_pitch_creep_2 switch.data matches 35.. run scoreboard players reset #rg_pitch_creep_2 switch.data
 

@@ -167,7 +167,7 @@ execute if score #rg_glassrunner switch.data matches 386.. run forceload remove 
 execute if score #rg_glassrunner switch.data matches 386.. run forceload remove 3238 2750 3244 3250
 execute if score #rg_glassrunner switch.data matches 386.. run forceload remove 3244 2750 3250 3250
 execute if score #rg_glassrunner switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"glassrunner","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_glassrunner switch.data matches 386.. run data modify storage switch:main MessageToLog set value '{"text": "La map `glassrunner` a fini sa régénération !"}'
+execute if score #rg_glassrunner switch.data matches 386.. run data modify storage switch:main MessageToLog set value '{"text": "La map `glassrunner` a fini sa regeneration !"}'
 execute if score #rg_glassrunner switch.data matches 386.. run function switch:engine/log_message/apply
 execute if score #rg_glassrunner switch.data matches 386.. run scoreboard players reset #rg_glassrunner switch.data
 

@@ -37,7 +37,7 @@ execute if score #rg_lg_medieval switch.data matches 1576.. run forceload remove
 execute if score #rg_lg_medieval switch.data matches 1576.. run forceload remove 95190 95000 95204 95203
 execute if score #rg_lg_medieval switch.data matches 1576.. run forceload remove 95204 95000 95219 95203
 execute if score #rg_lg_medieval switch.data matches 1576.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"lg_medieval","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_lg_medieval switch.data matches 1576.. run data modify storage switch:main MessageToLog set value '{"text": "La map `lg_medieval` a fini sa régénération !"}'
+execute if score #rg_lg_medieval switch.data matches 1576.. run data modify storage switch:main MessageToLog set value '{"text": "La map `lg_medieval` a fini sa regeneration !"}'
 execute if score #rg_lg_medieval switch.data matches 1576.. run function switch:engine/log_message/apply
 execute if score #rg_lg_medieval switch.data matches 1576.. run scoreboard players reset #rg_lg_medieval switch.data
 

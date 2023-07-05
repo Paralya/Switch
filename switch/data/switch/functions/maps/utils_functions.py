@@ -298,7 +298,7 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 
 	# Write the tellraw command
 	f.write(f"{base_condition} {last_tick}.. run {tellraw}")
-	f.write(f"{base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\": \"La map `{name}` a fini sa régénération !\"}}'\n")
+	f.write(f"{base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\": \"La map `{name}` a fini sa regeneration !\"}}'\n")
 	f.write(f"{base_condition} {last_tick}.. run function switch:engine/log_message/apply\n")
 
 	# Write the reset command

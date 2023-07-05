@@ -17,7 +17,7 @@ execute if score #rg_kart_racer_relai switch.data matches 271.. run forceload re
 execute if score #rg_kart_racer_relai switch.data matches 271.. run forceload remove 64061 64000 64081 64126
 execute if score #rg_kart_racer_relai switch.data matches 271.. run forceload remove 64081 64000 64101 64126
 execute if score #rg_kart_racer_relai switch.data matches 271.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"kart_racer_relai","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_kart_racer_relai switch.data matches 271.. run data modify storage switch:main MessageToLog set value '{"text": "La map `kart_racer_relai` a fini sa régénération !"}'
+execute if score #rg_kart_racer_relai switch.data matches 271.. run data modify storage switch:main MessageToLog set value '{"text": "La map `kart_racer_relai` a fini sa regeneration !"}'
 execute if score #rg_kart_racer_relai switch.data matches 271.. run function switch:engine/log_message/apply
 execute if score #rg_kart_racer_relai switch.data matches 271.. run scoreboard players reset #rg_kart_racer_relai switch.data
 

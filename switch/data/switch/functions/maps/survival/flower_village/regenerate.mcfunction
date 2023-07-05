@@ -151,7 +151,7 @@ execute if score #rg_flower_village switch.data matches 6841.. run forceload rem
 execute if score #rg_flower_village switch.data matches 6841.. run forceload remove 89410 89000 89416 89532
 execute if score #rg_flower_village switch.data matches 6841.. run forceload remove 89416 89000 89422 89532
 execute if score #rg_flower_village switch.data matches 6841.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"flower_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"5","color":"gold"},{"text":"m","color":"yellow"},{"text":"42","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_flower_village switch.data matches 6841.. run data modify storage switch:main MessageToLog set value '{"text": "La map `flower_village` a fini sa régénération !"}'
+execute if score #rg_flower_village switch.data matches 6841.. run data modify storage switch:main MessageToLog set value '{"text": "La map `flower_village` a fini sa regeneration !"}'
 execute if score #rg_flower_village switch.data matches 6841.. run function switch:engine/log_message/apply
 execute if score #rg_flower_village switch.data matches 6841.. run scoreboard players reset #rg_flower_village switch.data
 

@@ -43,7 +43,7 @@ execute if score #rg_baby_park switch.data matches 1729.. run forceload remove 2
 execute if score #rg_baby_park switch.data matches 1729.. run forceload remove 21102 20908 21117 21099
 execute if score #rg_baby_park switch.data matches 1729.. run forceload remove 21117 20908 21132 21099
 execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"baby_park","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_baby_park switch.data matches 1729.. run data modify storage switch:main MessageToLog set value '{"text": "La map `baby_park` a fini sa régénération !"}'
+execute if score #rg_baby_park switch.data matches 1729.. run data modify storage switch:main MessageToLog set value '{"text": "La map `baby_park` a fini sa regeneration !"}'
 execute if score #rg_baby_park switch.data matches 1729.. run function switch:engine/log_message/apply
 execute if score #rg_baby_park switch.data matches 1729.. run scoreboard players reset #rg_baby_park switch.data
 

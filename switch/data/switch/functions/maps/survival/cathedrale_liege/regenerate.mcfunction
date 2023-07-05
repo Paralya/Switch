@@ -17,7 +17,7 @@ execute if score #rg_cathedrale_liege switch.data matches 821.. run forceload re
 execute if score #rg_cathedrale_liege switch.data matches 821.. run forceload remove 26044 25944 26071 26028
 execute if score #rg_cathedrale_liege switch.data matches 821.. run forceload remove 26071 25944 26099 26028
 execute if score #rg_cathedrale_liege switch.data matches 821.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"cathedrale_liege","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_cathedrale_liege switch.data matches 821.. run data modify storage switch:main MessageToLog set value '{"text": "La map `cathedrale_liege` a fini sa régénération !"}'
+execute if score #rg_cathedrale_liege switch.data matches 821.. run data modify storage switch:main MessageToLog set value '{"text": "La map `cathedrale_liege` a fini sa regeneration !"}'
 execute if score #rg_cathedrale_liege switch.data matches 821.. run function switch:engine/log_message/apply
 execute if score #rg_cathedrale_liege switch.data matches 821.. run scoreboard players reset #rg_cathedrale_liege switch.data
 

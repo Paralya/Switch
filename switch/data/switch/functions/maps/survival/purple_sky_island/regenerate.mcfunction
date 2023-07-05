@@ -99,7 +99,7 @@ execute if score #rg_purple_sky_island switch.data matches 237.. run forceload r
 execute if score #rg_purple_sky_island switch.data matches 237.. run forceload remove 81202 80822 81210 81182
 execute if score #rg_purple_sky_island switch.data matches 237.. run forceload remove 81210 80822 81219 81182
 execute if score #rg_purple_sky_island switch.data matches 237.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"purple_sky_island","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_purple_sky_island switch.data matches 237.. run data modify storage switch:main MessageToLog set value '{"text": "La map `purple_sky_island` a fini sa régénération !"}'
+execute if score #rg_purple_sky_island switch.data matches 237.. run data modify storage switch:main MessageToLog set value '{"text": "La map `purple_sky_island` a fini sa regeneration !"}'
 execute if score #rg_purple_sky_island switch.data matches 237.. run function switch:engine/log_message/apply
 execute if score #rg_purple_sky_island switch.data matches 237.. run scoreboard players reset #rg_purple_sky_island switch.data
 

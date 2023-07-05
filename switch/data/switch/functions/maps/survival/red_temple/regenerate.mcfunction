@@ -13,7 +13,7 @@ execute if score #rg_red_temple switch.data matches 124.. run forceload remove 8
 execute if score #rg_red_temple switch.data matches 124.. run forceload remove 87015 87000 87030 87094
 execute if score #rg_red_temple switch.data matches 124.. run forceload remove 87030 87000 87045 87094
 execute if score #rg_red_temple switch.data matches 124.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"red_temple","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_red_temple switch.data matches 124.. run data modify storage switch:main MessageToLog set value '{"text": "La map `red_temple` a fini sa régénération !"}'
+execute if score #rg_red_temple switch.data matches 124.. run data modify storage switch:main MessageToLog set value '{"text": "La map `red_temple` a fini sa regeneration !"}'
 execute if score #rg_red_temple switch.data matches 124.. run function switch:engine/log_message/apply
 execute if score #rg_red_temple switch.data matches 124.. run scoreboard players reset #rg_red_temple switch.data
 

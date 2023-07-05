@@ -19,7 +19,7 @@ execute if score #rg_warden_forest switch.data matches 391.. run forceload remov
 execute if score #rg_warden_forest switch.data matches 391.. run forceload remove 10020 9940 10040 10060
 execute if score #rg_warden_forest switch.data matches 391.. run forceload remove 10040 9940 10060 10060
 execute if score #rg_warden_forest switch.data matches 391.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"warden_forest","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_warden_forest switch.data matches 391.. run data modify storage switch:main MessageToLog set value '{"text": "La map `warden_forest` a fini sa régénération !"}'
+execute if score #rg_warden_forest switch.data matches 391.. run data modify storage switch:main MessageToLog set value '{"text": "La map `warden_forest` a fini sa regeneration !"}'
 execute if score #rg_warden_forest switch.data matches 391.. run function switch:engine/log_message/apply
 execute if score #rg_warden_forest switch.data matches 391.. run scoreboard players reset #rg_warden_forest switch.data
 

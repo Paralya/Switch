@@ -23,7 +23,7 @@ execute if score #rg_highland_mansion switch.data matches 585.. run forceload re
 execute if score #rg_highland_mansion switch.data matches 585.. run forceload remove 85112 85000 85131 85142
 execute if score #rg_highland_mansion switch.data matches 585.. run forceload remove 85131 85000 85150 85142
 execute if score #rg_highland_mansion switch.data matches 585.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"highland_mansion","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"29","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_highland_mansion switch.data matches 585.. run data modify storage switch:main MessageToLog set value '{"text": "La map `highland_mansion` a fini sa régénération !"}'
+execute if score #rg_highland_mansion switch.data matches 585.. run data modify storage switch:main MessageToLog set value '{"text": "La map `highland_mansion` a fini sa regeneration !"}'
 execute if score #rg_highland_mansion switch.data matches 585.. run function switch:engine/log_message/apply
 execute if score #rg_highland_mansion switch.data matches 585.. run scoreboard players reset #rg_highland_mansion switch.data
 

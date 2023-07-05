@@ -25,7 +25,7 @@ execute if score #rg_end_factory switch.data matches 937.. run forceload remove 
 execute if score #rg_end_factory switch.data matches 937.. run forceload remove 108138 108000 108158 108129
 execute if score #rg_end_factory switch.data matches 937.. run forceload remove 108158 108000 108178 108129
 execute if score #rg_end_factory switch.data matches 937.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"end_factory","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"46","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_end_factory switch.data matches 937.. run data modify storage switch:main MessageToLog set value '{"text": "La map `end_factory` a fini sa régénération !"}'
+execute if score #rg_end_factory switch.data matches 937.. run data modify storage switch:main MessageToLog set value '{"text": "La map `end_factory` a fini sa regeneration !"}'
 execute if score #rg_end_factory switch.data matches 937.. run function switch:engine/log_message/apply
 execute if score #rg_end_factory switch.data matches 937.. run scoreboard players reset #rg_end_factory switch.data
 

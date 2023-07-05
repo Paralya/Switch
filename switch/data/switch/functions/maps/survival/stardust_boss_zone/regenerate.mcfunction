@@ -23,7 +23,7 @@ execute if score #rg_stardust_boss_zone switch.data matches 913.. run forceload 
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run forceload remove 103099 103000 103116 103165
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run forceload remove 103116 103000 103132 103165
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"stardust_boss_zone","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_stardust_boss_zone switch.data matches 913.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_boss_zone` a fini sa régénération !"}'
+execute if score #rg_stardust_boss_zone switch.data matches 913.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_boss_zone` a fini sa regeneration !"}'
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run function switch:engine/log_message/apply
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run scoreboard players reset #rg_stardust_boss_zone switch.data
 

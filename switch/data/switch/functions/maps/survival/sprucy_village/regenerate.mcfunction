@@ -21,7 +21,7 @@ execute if score #rg_sprucy_village switch.data matches 575.. run forceload remo
 execute if score #rg_sprucy_village switch.data matches 575.. run forceload remove 78122 78000 78147 78112
 execute if score #rg_sprucy_village switch.data matches 575.. run forceload remove 78147 78000 78171 78112
 execute if score #rg_sprucy_village switch.data matches 575.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"sprucy_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_sprucy_village switch.data matches 575.. run data modify storage switch:main MessageToLog set value '{"text": "La map `sprucy_village` a fini sa régénération !"}'
+execute if score #rg_sprucy_village switch.data matches 575.. run data modify storage switch:main MessageToLog set value '{"text": "La map `sprucy_village` a fini sa regeneration !"}'
 execute if score #rg_sprucy_village switch.data matches 575.. run function switch:engine/log_message/apply
 execute if score #rg_sprucy_village switch.data matches 575.. run scoreboard players reset #rg_sprucy_village switch.data
 

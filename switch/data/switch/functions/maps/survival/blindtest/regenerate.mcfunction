@@ -15,7 +15,7 @@ execute if score #rg_blindtest switch.data matches 241.. run forceload remove 62
 execute if score #rg_blindtest switch.data matches 241.. run forceload remove 62044 62000 62066 62093
 execute if score #rg_blindtest switch.data matches 241.. run forceload remove 62066 62000 62088 62093
 execute if score #rg_blindtest switch.data matches 241.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"blindtest","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_blindtest switch.data matches 241.. run data modify storage switch:main MessageToLog set value '{"text": "La map `blindtest` a fini sa régénération !"}'
+execute if score #rg_blindtest switch.data matches 241.. run data modify storage switch:main MessageToLog set value '{"text": "La map `blindtest` a fini sa regeneration !"}'
 execute if score #rg_blindtest switch.data matches 241.. run function switch:engine/log_message/apply
 execute if score #rg_blindtest switch.data matches 241.. run scoreboard players reset #rg_blindtest switch.data
 

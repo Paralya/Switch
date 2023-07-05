@@ -13,7 +13,7 @@ execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run forceload 
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run forceload remove 10986 10968 11007 11033
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run forceload remove 11007 10968 11029 11033
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"friends_pvpbox_ice","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run data modify storage switch:main MessageToLog set value '{"text": "La map `friends_pvpbox_ice` a fini sa régénération !"}'
+execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run data modify storage switch:main MessageToLog set value '{"text": "La map `friends_pvpbox_ice` a fini sa regeneration !"}'
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run function switch:engine/log_message/apply
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run scoreboard players reset #rg_friends_pvpbox_ice switch.data
 

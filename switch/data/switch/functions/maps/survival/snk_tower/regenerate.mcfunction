@@ -13,7 +13,7 @@ execute if score #rg_snk_tower switch.data matches 268.. run forceload remove 61
 execute if score #rg_snk_tower switch.data matches 268.. run forceload remove 61028 61000 61056 61049
 execute if score #rg_snk_tower switch.data matches 268.. run forceload remove 61056 61000 61084 61049
 execute if score #rg_snk_tower switch.data matches 268.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"snk_tower","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_snk_tower switch.data matches 268.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snk_tower` a fini sa régénération !"}'
+execute if score #rg_snk_tower switch.data matches 268.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snk_tower` a fini sa regeneration !"}'
 execute if score #rg_snk_tower switch.data matches 268.. run function switch:engine/log_message/apply
 execute if score #rg_snk_tower switch.data matches 268.. run scoreboard players reset #rg_snk_tower switch.data
 

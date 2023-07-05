@@ -35,7 +35,7 @@ execute if score #rg_cookie_wars switch.data matches 673.. run forceload remove 
 execute if score #rg_cookie_wars switch.data matches 673.. run forceload remove 49071 48900 49086 49100
 execute if score #rg_cookie_wars switch.data matches 673.. run forceload remove 49086 48900 49100 49100
 execute if score #rg_cookie_wars switch.data matches 673.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"cookie_wars","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"33","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_cookie_wars switch.data matches 673.. run data modify storage switch:main MessageToLog set value '{"text": "La map `cookie_wars` a fini sa régénération !"}'
+execute if score #rg_cookie_wars switch.data matches 673.. run data modify storage switch:main MessageToLog set value '{"text": "La map `cookie_wars` a fini sa regeneration !"}'
 execute if score #rg_cookie_wars switch.data matches 673.. run function switch:engine/log_message/apply
 execute if score #rg_cookie_wars switch.data matches 673.. run scoreboard players reset #rg_cookie_wars switch.data
 

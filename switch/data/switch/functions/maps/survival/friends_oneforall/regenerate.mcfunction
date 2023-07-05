@@ -11,7 +11,7 @@ execute if score #rg_friends_oneforall switch.data matches 65.. run kill @e[type
 execute if score #rg_friends_oneforall switch.data matches 65.. run forceload remove 7977 7976 8001 8024
 execute if score #rg_friends_oneforall switch.data matches 65.. run forceload remove 8001 7976 8025 8024
 execute if score #rg_friends_oneforall switch.data matches 65.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"friends_oneforall","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"03","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_friends_oneforall switch.data matches 65.. run data modify storage switch:main MessageToLog set value '{"text": "La map `friends_oneforall` a fini sa régénération !"}'
+execute if score #rg_friends_oneforall switch.data matches 65.. run data modify storage switch:main MessageToLog set value '{"text": "La map `friends_oneforall` a fini sa regeneration !"}'
 execute if score #rg_friends_oneforall switch.data matches 65.. run function switch:engine/log_message/apply
 execute if score #rg_friends_oneforall switch.data matches 65.. run scoreboard players reset #rg_friends_oneforall switch.data
 

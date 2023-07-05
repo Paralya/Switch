@@ -11,7 +11,7 @@ execute if score #rg_laser_game switch.data matches 89.. run kill @e[type=item,x
 execute if score #rg_laser_game switch.data matches 89.. run forceload remove 499 499 525 551
 execute if score #rg_laser_game switch.data matches 89.. run forceload remove 525 499 551 551
 execute if score #rg_laser_game switch.data matches 89.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"laser_game","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"04","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_laser_game switch.data matches 89.. run data modify storage switch:main MessageToLog set value '{"text": "La map `laser_game` a fini sa régénération !"}'
+execute if score #rg_laser_game switch.data matches 89.. run data modify storage switch:main MessageToLog set value '{"text": "La map `laser_game` a fini sa regeneration !"}'
 execute if score #rg_laser_game switch.data matches 89.. run function switch:engine/log_message/apply
 execute if score #rg_laser_game switch.data matches 89.. run scoreboard players reset #rg_laser_game switch.data
 

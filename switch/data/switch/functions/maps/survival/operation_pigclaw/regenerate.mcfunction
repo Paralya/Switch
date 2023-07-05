@@ -175,7 +175,7 @@ execute if score #rg_operation_pigclaw switch.data matches 13777.. run forceload
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run forceload remove 36328 35668 36334 36180
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run forceload remove 36334 35668 36340 36180
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"operation_pigclaw","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"11","color":"gold"},{"text":"m","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_operation_pigclaw switch.data matches 13777.. run data modify storage switch:main MessageToLog set value '{"text": "La map `operation_pigclaw` a fini sa régénération !"}'
+execute if score #rg_operation_pigclaw switch.data matches 13777.. run data modify storage switch:main MessageToLog set value '{"text": "La map `operation_pigclaw` a fini sa regeneration !"}'
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run function switch:engine/log_message/apply
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run scoreboard players reset #rg_operation_pigclaw switch.data
 

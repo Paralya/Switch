@@ -67,7 +67,7 @@ execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run forceload 
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run forceload remove 105272 105000 105281 105314
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run forceload remove 105281 105000 105291 105314
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"stardust_pvp_zone","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"3","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_pvp_zone` a fini sa régénération !"}'
+execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_pvp_zone` a fini sa regeneration !"}'
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run function switch:engine/log_message/apply
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run scoreboard players reset #rg_stardust_pvp_zone switch.data
 

@@ -11,7 +11,7 @@ execute if score #rg_plucky_penguins switch.data matches 43.. run kill @e[type=i
 execute if score #rg_plucky_penguins switch.data matches 43.. run forceload remove 68000 68000 68012 68031
 execute if score #rg_plucky_penguins switch.data matches 43.. run forceload remove 68012 68000 68024 68031
 execute if score #rg_plucky_penguins switch.data matches 43.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"plucky_penguins","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"02","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_plucky_penguins switch.data matches 43.. run data modify storage switch:main MessageToLog set value '{"text": "La map `plucky_penguins` a fini sa régénération !"}'
+execute if score #rg_plucky_penguins switch.data matches 43.. run data modify storage switch:main MessageToLog set value '{"text": "La map `plucky_penguins` a fini sa regeneration !"}'
 execute if score #rg_plucky_penguins switch.data matches 43.. run function switch:engine/log_message/apply
 execute if score #rg_plucky_penguins switch.data matches 43.. run scoreboard players reset #rg_plucky_penguins switch.data
 

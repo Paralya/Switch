@@ -19,7 +19,7 @@ execute if score #rg_stardust_spawn switch.data matches 547.. run forceload remo
 execute if score #rg_stardust_spawn switch.data matches 547.. run forceload remove 101080 101000 101100 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. run forceload remove 101100 101000 101120 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"stardust_spawn","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"27","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_stardust_spawn switch.data matches 547.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_spawn` a fini sa régénération !"}'
+execute if score #rg_stardust_spawn switch.data matches 547.. run data modify storage switch:main MessageToLog set value '{"text": "La map `stardust_spawn` a fini sa regeneration !"}'
 execute if score #rg_stardust_spawn switch.data matches 547.. run function switch:engine/log_message/apply
 execute if score #rg_stardust_spawn switch.data matches 547.. run scoreboard players reset #rg_stardust_spawn switch.data
 

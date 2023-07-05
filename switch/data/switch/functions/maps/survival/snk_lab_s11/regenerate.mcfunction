@@ -13,7 +13,7 @@ execute if score #rg_snk_lab_s11 switch.data matches 103.. run forceload remove 
 execute if score #rg_snk_lab_s11 switch.data matches 103.. run forceload remove 67022 67000 67043 67073
 execute if score #rg_snk_lab_s11 switch.data matches 103.. run forceload remove 67043 67000 67065 67073
 execute if score #rg_snk_lab_s11 switch.data matches 103.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"snk_lab_s11","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_snk_lab_s11 switch.data matches 103.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snk_lab_s11` a fini sa régénération !"}'
+execute if score #rg_snk_lab_s11 switch.data matches 103.. run data modify storage switch:main MessageToLog set value '{"text": "La map `snk_lab_s11` a fini sa regeneration !"}'
 execute if score #rg_snk_lab_s11 switch.data matches 103.. run function switch:engine/log_message/apply
 execute if score #rg_snk_lab_s11 switch.data matches 103.. run scoreboard players reset #rg_snk_lab_s11 switch.data
 

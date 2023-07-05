@@ -19,7 +19,7 @@ execute if score #rg_zone_51 switch.data matches 427.. run forceload remove 2001
 execute if score #rg_zone_51 switch.data matches 427.. run forceload remove 2019 1937 2037 2063
 execute if score #rg_zone_51 switch.data matches 427.. run forceload remove 2037 1937 2055 2063
 execute if score #rg_zone_51 switch.data matches 427.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"zone_51","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_zone_51 switch.data matches 427.. run data modify storage switch:main MessageToLog set value '{"text": "La map `zone_51` a fini sa régénération !"}'
+execute if score #rg_zone_51 switch.data matches 427.. run data modify storage switch:main MessageToLog set value '{"text": "La map `zone_51` a fini sa regeneration !"}'
 execute if score #rg_zone_51 switch.data matches 427.. run function switch:engine/log_message/apply
 execute if score #rg_zone_51 switch.data matches 427.. run scoreboard players reset #rg_zone_51 switch.data
 

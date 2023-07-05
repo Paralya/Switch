@@ -13,7 +13,7 @@ execute if score #rg_spruce_dojo switch.data matches 109.. run forceload remove 
 execute if score #rg_spruce_dojo switch.data matches 109.. run forceload remove 84028 84000 84055 84069
 execute if score #rg_spruce_dojo switch.data matches 109.. run forceload remove 84055 84000 84083 84069
 execute if score #rg_spruce_dojo switch.data matches 109.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"spruce_dojo","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_spruce_dojo switch.data matches 109.. run data modify storage switch:main MessageToLog set value '{"text": "La map `spruce_dojo` a fini sa régénération !"}'
+execute if score #rg_spruce_dojo switch.data matches 109.. run data modify storage switch:main MessageToLog set value '{"text": "La map `spruce_dojo` a fini sa regeneration !"}'
 execute if score #rg_spruce_dojo switch.data matches 109.. run function switch:engine/log_message/apply
 execute if score #rg_spruce_dojo switch.data matches 109.. run scoreboard players reset #rg_spruce_dojo switch.data
 

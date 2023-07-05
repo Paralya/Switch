@@ -19,7 +19,7 @@ execute if score #rg_werewolf_village switch.data matches 391.. run forceload re
 execute if score #rg_werewolf_village switch.data matches 391.. run forceload remove 93081 93000 93102 93122
 execute if score #rg_werewolf_village switch.data matches 391.. run forceload remove 93102 93000 93122 93122
 execute if score #rg_werewolf_village switch.data matches 391.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" La map '","color":"yellow"},{"text":"werewolf_village","color":"gold"},{"text":"' vient de finir de se régénérer en ","color":"yellow"},{"text":"0","color":"gold"},{"text":"m","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_werewolf_village switch.data matches 391.. run data modify storage switch:main MessageToLog set value '{"text": "La map `werewolf_village` a fini sa régénération !"}'
+execute if score #rg_werewolf_village switch.data matches 391.. run data modify storage switch:main MessageToLog set value '{"text": "La map `werewolf_village` a fini sa regeneration !"}'
 execute if score #rg_werewolf_village switch.data matches 391.. run function switch:engine/log_message/apply
 execute if score #rg_werewolf_village switch.data matches 391.. run scoreboard players reset #rg_werewolf_village switch.data
 
