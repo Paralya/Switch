@@ -3,7 +3,6 @@
 
 # Classic timer
 scoreboard players add #tnt_run_seconds switch.data 1
-execute if score #tnt_run_seconds switch.data matches 0 as @a at @s run function switch:modes/tnt_run/give_items
 function switch:modes/tnt_run/xp_bar
 
 # Start countdown

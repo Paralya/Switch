@@ -12,6 +12,7 @@ effect give @a weakness infinite 255 true
 effect give @a saturation infinite 255 true
 effect give @a resistance infinite 255 true
 effect give @a regeneration infinite 255 true
+execute as @a at @s run function switch:modes/tnt_run/give_items
 difficulty normal
 time set 0
 execute if predicate switch:chance/0.33 run time add 6000
