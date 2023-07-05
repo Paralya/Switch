@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../../../var/opt/minecraft/crafty/crafty-4"
+		},
+		{
+			"path": "../../../.."
 		}
 	],
 	"settings": {

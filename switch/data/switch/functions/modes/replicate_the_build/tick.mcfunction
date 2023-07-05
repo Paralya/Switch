@@ -7,7 +7,11 @@ scoreboard players add #replicate_the_build_ticks switch.rtb.data 1
 execute if score #rtb_round_state switch.rtb.data matches 9 run function switch:modes/replicate_the_build/process_end
 execute if score #rtb_round_state switch.rtb.data matches 8 run function switch:modes/replicate_the_build/round/8
 execute if score #rtb_round_state switch.rtb.data matches 7 run function switch:modes/replicate_the_build/round/7
+
 execute if score #rtb_round_state switch.rtb.data matches 6 run function switch:modes/replicate_the_build/round/6
+execute if score #rtb_round_state switch.rtb.data matches 6 run function switch:modes/replicate_the_build/round/6
+execute if score #rtb_round_state switch.rtb.data matches 6 run function switch:modes/replicate_the_build/round/6
+
 execute if score #rtb_round_state switch.rtb.data matches 5 run function switch:modes/replicate_the_build/round/5
 execute if score #rtb_round_state switch.rtb.data matches 4 run function switch:modes/replicate_the_build/round/4
 

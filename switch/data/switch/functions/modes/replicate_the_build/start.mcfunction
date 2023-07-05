@@ -28,8 +28,14 @@ gamerule doTileDrops false
 gamerule mobGriefing false
 
 #Reset de la map
+
+
+
 execute as @e[type=marker,tag=switch.rtb.island] run function switch:modes/replicate_the_build/structure/destroy
 execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/replicate_the_build/structure/destroy
+
+kill @e[type=marker,tag=switch.rtb.island]
+kill @e[type=marker,tag=switch.rtb.center]
 
 
 ## Téléportation des joueurs
