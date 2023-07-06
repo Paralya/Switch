@@ -28,7 +28,6 @@ scoreboard players set #spawn_count switch.data 0
 execute if data storage switch:main {map:"pitchout_1"} as @a[sort=random] run function switch:modes/pitchout/map_1/teleport_players
 execute as @a run function switch:modes/pitchout/xp_bar
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

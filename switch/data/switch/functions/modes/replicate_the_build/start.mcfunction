@@ -20,12 +20,10 @@ time set 6000
 weather clear
 
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 gamerule doTileDrops false
-gamerule mobGriefing false
 
 #Reset de la map
 

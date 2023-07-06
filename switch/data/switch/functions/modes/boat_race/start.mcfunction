@@ -26,7 +26,6 @@ weather clear
 ## Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
 execute as @a at @s run function switch:modes/boat_race/give_items
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

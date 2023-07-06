@@ -23,9 +23,7 @@ weather clear
 ## Téléportation des joueurs
 function switch:choose_map_for/spleef
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
-gamerule naturalRegeneration false
 gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spleef, 5 secondes de préparation et soyez le dernier en vie !"}]

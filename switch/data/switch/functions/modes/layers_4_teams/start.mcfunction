@@ -22,11 +22,6 @@ weather clear
 ## Chargement de la map
 function switch:choose_map_for/layers_4_teams
 
-gamerule showDeathMessages true
-gamerule fallDamage true
-gamerule naturalRegeneration true
-gamerule keepInventory false
-
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Layers, tenez-vous prêt !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 

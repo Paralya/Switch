@@ -30,10 +30,6 @@ forceload add 0 0
 #define score_holder #temp
 #define score_holder #pos
 
-gamerule announceAdvancements false
-gamerule doImmediateRespawn true
-gamerule doTraderSpawning false
-
 ## Storage
 # tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'

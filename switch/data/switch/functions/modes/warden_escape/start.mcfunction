@@ -21,7 +21,6 @@ weather clear
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/warden_escape
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

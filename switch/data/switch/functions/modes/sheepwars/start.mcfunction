@@ -25,9 +25,6 @@ weather clear
 ## Chargement de la map
 function switch:choose_map_for/sheepwars
 
-gamerule showDeathMessages true
-gamerule naturalRegeneration true
-gamerule fallDamage true
 gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt car vous avez 5 secondes !\n"}]

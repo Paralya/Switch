@@ -16,8 +16,5 @@ scoreboard objectives remove switch.rtb.data
 execute as @e[type=marker,tag=switch.rtb.island] run function switch:modes/replicate_the_build/structure/destroy
 execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/replicate_the_build/structure/destroy
 
-gamerule doTileDrops true
-gamerule mobGriefing true
-
 bossbar remove rtb.all
 

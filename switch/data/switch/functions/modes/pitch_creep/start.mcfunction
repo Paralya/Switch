@@ -18,7 +18,6 @@ difficulty normal
 time set 18000
 weather clear
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

@@ -23,9 +23,6 @@ weather clear
 ## Placement de la map et des joueurs
 function switch:choose_map_for/rush_the_point
 
-gamerule mobGriefing false
-gamerule showDeathMessages true
-gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 

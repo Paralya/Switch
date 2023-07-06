@@ -53,7 +53,6 @@ execute as @a[sort=random] at @s run function switch:modes/glassrunner/start/tea
 execute as @a at @s run function switch:modes/glassrunner/death/death
 
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

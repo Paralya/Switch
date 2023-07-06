@@ -20,7 +20,6 @@ weather clear
 ## Téléportation des joueurs
 function switch:choose_map_for/block_party
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

@@ -23,7 +23,6 @@ weather clear
 ## Téléportation des joueurs
 function switch:choose_map_for/tnt_run
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

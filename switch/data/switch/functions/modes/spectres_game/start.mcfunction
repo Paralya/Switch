@@ -31,7 +31,6 @@ function switch:choose_map_for/spectres_game
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
-gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 

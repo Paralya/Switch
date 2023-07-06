@@ -20,9 +20,6 @@ weather clear
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/thunder_spear
 
-gamerule mobGriefing false
-gamerule showDeathMessages true
-gamerule naturalRegeneration true
 gamerule keepInventory true
 gamerule fallDamage false
 

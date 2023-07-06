@@ -22,6 +22,21 @@ execute as @a run attribute @s generic.max_health base set 20.0
 
 scoreboard players reset #disable switch.data
 gamerule sendCommandFeedback true
+gamerule mobGriefing false
+gamerule showDeathMessages true
+gamerule naturalRegeneration true
+gamerule keepInventory false
+gamerule fallDamage true
+gamerule doDaylightCycle false
+gamerule doWeatherCycle false
+gamerule doMobSpawning false
+gamerule doFireTick false
+gamerule doTileDrops true
+gamerule doEntityDrops true
+gamerule doImmediateRespawn true
+gamerule announceAdvancements false
+gamerule doTraderSpawning false
+
 
 function #switch:signals/stop
 

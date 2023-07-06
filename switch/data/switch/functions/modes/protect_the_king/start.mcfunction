@@ -26,10 +26,7 @@ weather clear
 function switch:choose_map_for/protect_the_king
 
 gamerule mobGriefing true
-gamerule showDeathMessages true
-gamerule fallDamage true
 gamerule naturalRegeneration false
-gamerule keepInventory false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Protect The King, tenez-vous prêt !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
