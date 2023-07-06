@@ -10,7 +10,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main t
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "baby_park"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "snow_travel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "jayl_dark_forest"
-execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "operation_pigclaw"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "dark_forest_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "paralya_lobby_noel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "vilarles_castillo"

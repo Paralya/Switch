@@ -10,13 +10,10 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_ice"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "baby_park"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "snow_travel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "cathedrale_liege"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "jayl_dark_forest"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "dark_forest_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "paralya_lobby_noel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "ghost_town"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "vilarles_castillo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "zonweeb_highschool"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "kart_racer_relai"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "hider_mansion"
@@ -33,11 +30,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "lg_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "lightium_spawn"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "paralya_lobby"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "sheepwars_dirigeables"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "stardust_boss_zone"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "stardust_boss_zone_nether"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "stardust_pvp_zone"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "end_factory"
 
 
 
