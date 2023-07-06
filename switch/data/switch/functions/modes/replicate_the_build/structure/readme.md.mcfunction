@@ -17,9 +17,9 @@
 
 # Va dans le fichier ``datapacks/switch/data/switch/functions/modes/replicate_the_build/structure/place.mcfunction``
 
-#Ajoute une ligne avec le nom de la structure et en incrémentant le ``if score #rtb.random switch.rtb.data matches X`` de 1.
+#Ajoute une ligne avec le nom de la structure et en incrémentant le ``if score #random switch.data matches X`` de 1.
 
-# Incrémente aussi dans ``datapacks/switch/data/switch/functions/modes/replicate_the_build/round/3.mcfunction`` le ``scoreboard players set #rtb.number_of_structure switch.rtb.data X`` de 1.
+# Incrémente aussi dans ``datapacks/switch/data/switch/functions/modes/replicate_the_build/round/3.mcfunction`` le ``scoreboard players set #modulo_rand switch.data X`` de 1.
 
 ## Etape 4 : Ajoute des items composants la structure et indique le temps voulu
 

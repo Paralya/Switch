@@ -1,6 +1,6 @@
 
 scoreboard players add #process_end switch.data 1
-scoreboard players set #rtb_round_state switch.rtb.data 9
+scoreboard players set #rtb_round_state switch.data 9
 
 execute if score #process_end switch.data matches 1 as @a[tag=switch.alive] at @s run function switch:engine/add_money
 execute if score #process_end switch.data matches 1 if entity @a[tag=switch.alive] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin du mini-jeu ! Les joueurs suivants ont remporté la partie : "},{"selector":"@a[tag=switch.alive,sort=random]"}]

@@ -11,7 +11,6 @@ scoreboard objectives remove switch.rtb.id
 scoreboard objectives remove switch.rtb.time
 scoreboard objectives remove switch.rtb.points
 scoreboard objectives remove switch.temp.deathCount
-scoreboard objectives remove switch.rtb.data
 
 execute as @e[type=marker,tag=switch.rtb.island] run function switch:modes/replicate_the_build/structure/destroy
 execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/replicate_the_build/structure/destroy

@@ -1,5 +1,5 @@
-scoreboard players remove #rtb_build_time switch.rtb.data 1
-execute store result bossbar minecraft:rtb.all value run scoreboard players get #rtb_build_time switch.rtb.data
+scoreboard players remove #rtb_build_time switch.data 1
+execute store result bossbar rtb:all value run scoreboard players get #rtb_build_time switch.data
 
 
 
@@ -9,7 +9,7 @@ say t
 
 scoreboard players add @a[tag=switch.alive,gamemode=survival] switch.rtb.time 1
 
-execute if score #rtb_build_time switch.rtb.data matches ..0 run function switch:modes/replicate_the_build/round/5_end
+execute if score #rtb_build_time switch.data matches ..0 run function switch:modes/replicate_the_build/round/5_end
 execute unless entity @a[gamemode=!spectator,tag=switch.alive] run function switch:modes/replicate_the_build/round/5_end
 
 
