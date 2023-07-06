@@ -340,6 +340,38 @@ for name in generated_maps:
 spread_file.write("\n")
 spread_file.close()
 
+
+
+## Zip compress the survival folder
+# Create the zip file (compression 9)
+import zipfile
+zip_file = zipfile.ZipFile("../../../../../../switch_survival_maps.zip", "w", zipfile.ZIP_DEFLATED, 9)
+
+# Write the files
+# for name in generated_maps:
+# 	zip_file.write(f"survival/{name}/.mcfunction", f"switch/data/switch/functions/maps/survival/{name}/.mcfunction")
+# 	zip_file.write(f"survival/{name}/regenerate.mcfunction", f"switch/data/switch/functions/maps/survival/{name}/regenerate.mcfunction")
+# 	zip_file.write(f"survival/{name}/regeneration_on_marker.mcfunction", f"switch/data/switch/functions/maps/survival/{name}/regeneration_on_marker.mcfunction")
+# 	zip_file.write(f"survival/{name}/spread_one_player.mcfunction", f"switch/data/switch/functions/maps/survival/{name}/spread_one_player.mcfunction")
+# 	zip_file.write(f"survival/{name}/spread_players.mcfunction", f"switch/data/switch/functions/maps/survival/{name}/spread_players.mcfunction")
+# 	zip_file.write(f"survival/{name}/teleport_players.mcfunction", f"switch/data/switch/functions/maps/survival/{name}/teleport_players.mcfunction")
+
+# Write every .mcfunction files in this folder
+internal_zip_path_base = "switch/data/switch/functions/maps/"
+for root, dirs, files in os.walk("."):
+	for file in files:
+		if file.endswith(".mcfunction"):
+
+			# Write the file
+			zip_file.write(os.path.join(root, file), os.path.join(internal_zip_path_base, root, file))
+
+			# Delete the file
+			os.remove(os.path.join(root, file))
+
+# Close the zip file
+zip_file.close()
+
+
 ## Print the execution time
 print(f"\n{GREEN}Execution time of the script: {RED}{round(time.time() - start_time, 5)}{GREEN} seconds{RESET}\n")
 
