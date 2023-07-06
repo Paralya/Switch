@@ -14,7 +14,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main t
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "giant_zoo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "hider_mansion"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "nuketown"
-execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "sprucy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "lightium_spawn"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "paralya_lobby"
 
