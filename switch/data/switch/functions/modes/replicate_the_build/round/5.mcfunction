@@ -1,5 +1,5 @@
 scoreboard players remove #rtb_build_time switch.data 1
-execute store result bossbar rtb:all value run scoreboard players get #rtb_build_time switch.data
+execute store result bossbar rtb.all value run scoreboard players get #rtb_build_time switch.data
 
 
 

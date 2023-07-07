@@ -42,7 +42,7 @@ tp @a 102000 100 102000
 
 
 
-
+#define bossbar rtb.all
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Replicate the build, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 
@@ -56,7 +56,7 @@ scoreboard objectives add switch.rtb.points dummy
 
 bossbar remove rtb.all 
 bossbar add rtb.all "Début du prochain round..."
-bossbar set rtb:all players @a
+bossbar set rtb.all players @a
 
 
 # Initialisation des scores du round

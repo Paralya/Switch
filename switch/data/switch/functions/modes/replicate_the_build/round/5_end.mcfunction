@@ -22,10 +22,10 @@ scoreboard players set #rtb_dz switch.data 0
 scoreboard players set @a[tag=switch.alive] switch.rtb.points 0
 
 
-bossbar set rtb:all name "Calcul des scores ..."
-bossbar set rtb:all max 343
-bossbar set rtb:all value 0
-bossbar set rtb:all color green
+bossbar set rtb.all name "Calcul des scores ..."
+bossbar set rtb.all max 343
+bossbar set rtb.all value 0
+bossbar set rtb.all color green
 scoreboard players set #rtb_calcul_time switch.data 343
 
 

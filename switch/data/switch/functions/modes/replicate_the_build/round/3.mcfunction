@@ -27,24 +27,23 @@ execute as @e[tag=switch.rtb.island,type=marker,sort=random] run function switch
 
 
 scoreboard players set #rtbteam switch.data 0
-execute as @a[sort=random] run function switch:modes/replicate_the_build/start/select_teams
+execute as @a[tag=switch.alive,sort=random] run function switch:modes/replicate_the_build/start/select_teams
 
 gamemode adventure @a[tag=switch.alive]
 
 
 # Tirage au sort de la structure
-execute summon marker run function switch:modes/replicate_the_build/utils/randomizer
 scoreboard players set #modulo_rand switch.data 11
 function switch:math/get_random/
 
 execute as @e[type=marker,tag=switch.rtb.island] at @s positioned ~-3 ~ ~1 run function switch:modes/replicate_the_build/structure/place
 
 
-bossbar set rtb:all name "Mémorisez !"
-bossbar set rtb:all color green
+bossbar set rtb.all name "Mémorisez !"
+bossbar set rtb.all color green
 scoreboard players set #rtb_memorize_time switch.data 140
-execute store result bossbar rtb:all max run scoreboard players get #rtb_memorize_time switch.data
-execute store result bossbar rtb:all value run scoreboard players get #rtb_memorize_time switch.data
+execute store result bossbar rtb.all max run scoreboard players get #rtb_memorize_time switch.data
+execute store result bossbar rtb.all value run scoreboard players get #rtb_memorize_time switch.data
 
 
 execute at @a run playsound minecraft:block.note_block.harp ambient @a ~ ~ ~ 1 1.5
