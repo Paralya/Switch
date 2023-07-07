@@ -14,10 +14,10 @@ execute as @e[type=marker,tag=switch.rtb.island] run function switch:modes/repli
 
 bossbar set rtb.all name "Répliquez"
 bossbar set rtb.all color red
+scoreboard players set #rtb_build_time switch.data 600
 execute store result bossbar rtb.all max run scoreboard players get #rtb_build_time switch.data
 execute store result bossbar rtb.all value run scoreboard players get #rtb_build_time switch.data
 
-scoreboard players set #rtb_build_time switch.data 400
 
 execute positioned -29999997 24 1603 run fill ~ ~ ~ ~6 ~6 ~6 air
 execute positioned -29999997 24 1603 run function switch:modes/replicate_the_build/structure/place
