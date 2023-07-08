@@ -27,3 +27,9 @@ execute if score #remaining_time switch.data matches 1.. if score #color switch.
 scoreboard players add #bonus_reload switch.data 1
 execute if score #bonus_reload switch.data matches 60.. run function switch:modes/rush_the_point/bonus_reload
 
+# Bridge snowballs
+execute if score #bonus_reload switch.data matches 0 run summon item 14063 100 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b}
+execute if score #bonus_reload switch.data matches 0 run summon item 13937 100 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b}
+execute if score #bonus_reload switch.data matches 30 run summon item 14063 100 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b}
+execute if score #bonus_reload switch.data matches 30 run summon item 13937 100 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b}
+
