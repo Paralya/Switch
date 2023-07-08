@@ -15,10 +15,35 @@ scoreboard objectives add switch.trigger.game_vote trigger
 scoreboard objectives add switch.trigger.stats trigger
 
 scoreboard objectives add switch.stats.victories dummy
+scoreboard objectives add switch.stats.played.pitch_creep dummy
+scoreboard objectives add switch.stats.played.laser_game dummy
+scoreboard objectives add switch.stats.played.warden_escape dummy
+scoreboard objectives add switch.stats.played.pitchout dummy
+scoreboard objectives add switch.stats.played.glassrunner dummy
+scoreboard objectives add switch.stats.played.creeper_apocalypse dummy
+scoreboard objectives add switch.stats.played.traitors_game dummy
+scoreboard objectives add switch.stats.played.boat_race dummy
+scoreboard objectives add switch.stats.played.spectres_game dummy
+scoreboard objectives add switch.stats.played.kart_racer dummy
+scoreboard objectives add switch.stats.played.rush_the_point dummy
+scoreboard objectives add switch.stats.played.spleef dummy
+scoreboard objectives add switch.stats.played.de_a_coudre dummy
+scoreboard objectives add switch.stats.played.feed_fast dummy
+scoreboard objectives add switch.stats.played.mlg_a_coudre dummy
+scoreboard objectives add switch.stats.played.protect_the_king dummy
+scoreboard objectives add switch.stats.played.castagne dummy
+scoreboard objectives add switch.stats.played.layers_2_teams dummy
+scoreboard objectives add switch.stats.played.layers_4_teams dummy
+scoreboard objectives add switch.stats.played.thunder_spear dummy
+scoreboard objectives add switch.stats.played.tnt_run dummy
+scoreboard objectives add switch.stats.played.sheepwars dummy
+scoreboard objectives add switch.stats.played.block_party dummy
+scoreboard objectives add switch.stats.played.replicate_the_build dummy
 
 team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
 
+gamerule maxCommandChainLength 1048576
 scoreboard players set Switch load.status 1000
 scoreboard players set _RANDOM_PRIME switch.data 6978869
 forceload add 0 0
@@ -63,7 +88,7 @@ data modify storage switch:main minigames append value {index:15,min_players:4	,
 data modify storage switch:main minigames append value {index:16,min_players:2	,max_players:-1		,id:"castagne"				,Name:"Castagne"			,Lore:'["",{"text":"[Castagne]\\n","color":"yellow"},{"text":"Vous êtes là pour castagner les gens et rester\\n"},{"text":"le dernier en vie afin de gagner la partie"},{"text":"\\n\\n[Estimation : 2-4 mins]","color":"gold"},{"text":"\\n[Proposé par JustNoob / Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:17,min_players:2	,max_players:-1		,id:"layers_2_teams"		,Name:"Layers 2 Teams"		,Lore:'["",{"text":"[Layers 2 Teams]\\n","color":"yellow"},{"text":"Soyez le plus rapide à vous équiper afin de\\n"},{"text":"transpercer le mur d\'obsidienne pour exterminer l\'ennemi !"},{"text":"\\n\\n[Estimation : 7-15 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:18,min_players:4	,max_players:-1		,id:"layers_4_teams"		,Name:"Layers 4 Teams"		,Lore:'["",{"text":"[Layers 4 Teams]\\n","color":"yellow"},{"text":"Affrontez 3 autres équipes à une course\\n"},{"text":"d\'équipements anéantir vos ennemis !"},{"text":"\\n\\n[Estimation : 7-15 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
-data modify storage switch:main minigames append value {index:29,min_players:2	,max_players:-1		,id:"thunder_spear"			,Name:"Thunder Spear"		,Lore:'["",{"text":"[Thunder Spear]\\n","color":"yellow"},{"text":"Éliminez le maximum de joueurs à l\'aide de votre équipement\\n"},{"text":"tridimensionnel et vos lances foudroyantes !"},{"text":"\\n\\n[Estimation : 4m00s]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
+data modify storage switch:main minigames append value {index:19,min_players:2	,max_players:-1		,id:"thunder_spear"			,Name:"Thunder Spear"		,Lore:'["",{"text":"[Thunder Spear]\\n","color":"yellow"},{"text":"Éliminez le maximum de joueurs à l\'aide de votre équipement\\n"},{"text":"tridimensionnel et vos lances foudroyantes !"},{"text":"\\n\\n[Estimation : 4m00s]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:20,min_players:2	,max_players:-1		,id:"tnt_run"				,Name:"TNT Run"				,Lore:'["",{"text":"[TNT Run]\\n","color":"yellow"},{"text":"Soyez le dernier en vie en restant le plus\\n"},{"text":"longtemps en mouvement pour ne pas tomber"},{"text":"\\n\\n[Estimation : 1-4 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:21,min_players:2	,max_players:-1		,id:"sheepwars"				,Name:"SheepWars"			,Lore:'["",{"text":"[SheepWars]\\n","color":"yellow"},{"text":"Envoyez sur l\'équipe ennemie vos moutons les plus puissants\\n"},{"text":"afin de les exterminer jusqu\'au dernier pour gagner !"},{"text":"\\n\\n[Estimation : 2-6 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:22,min_players:2	,max_players:-1		,id:"block_party"			,Name:"Block Party"			,Lore:'["",{"text":"[Block Party]\\n","color":"yellow"},{"text":"Dès que la musique s\'arrête, dirigez-vous\\n"},{"text":"sur la couleur indiquée pour ne pas tomber !"},{"text":"\\n\\n[Estimation : 1-4 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
