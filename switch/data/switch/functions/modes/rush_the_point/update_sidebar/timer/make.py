@@ -10,7 +10,7 @@ import math
 
 # Constantes
 min = 0
-max = 1200
+max = 390	# 6 minutes and 30 seconds
 namespace = "switch"
 base_path = f"{namespace}:modes/rush_the_point/update_sidebar/timer/"
 base_score_time = f"execute if score #remaining_time {namespace}.data matches "
