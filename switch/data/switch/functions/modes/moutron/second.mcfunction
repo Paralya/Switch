@@ -15,5 +15,5 @@ execute if score #moutron_seconds switch.data matches -1 run title @a title {"te
 execute if score #moutron_seconds switch.data matches 0 run title @a title {"text":"GO !","color":"red"}
 
 # Increase markers life_time
-execute if score #moutron_seconds switch.data matches 0.. run scoreboard players add #life_time switch.data 1
+execute if score #moutron_seconds switch.data matches 0.. run scoreboard players add #life_time switch.data 2
 

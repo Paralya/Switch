@@ -8,7 +8,7 @@ item replace entity @s hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
 item replace entity @s hotbar.2 with water_bucket
 item replace entity @s hotbar.3 with iron_pickaxe{Enchantments:[{id:"minecraft:efficiency",lvl:1s}]}
-item replace entity @s hotbar.4 with iron_axe{Enchantments:[{id:"minecraft:efficiency",lvl:1s}]}
+item replace entity @s hotbar.4 with iron_axe{Enchantments:[{id:"minecraft:efficiency",lvl:1s}],AttributeModifiers:[{AttributeName:"minecraft:generic.attack_damage",Name:"minecraft:generic.attack_damage",Slot:"mainhand",Amount:5,Operation:0,UUID:[I;2012000,-2012000,-2012000,2012000]}]}
 item replace entity @s hotbar.6 with arrow 6
 item replace entity @s hotbar.7 with oak_planks 64
 item replace entity @s hotbar.8 with golden_apple 12
