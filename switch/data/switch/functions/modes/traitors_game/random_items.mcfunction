@@ -1,7 +1,7 @@
 
 tellraw @s {"text":"Item random reçu !","color":"dark_purple"}
 
-scoreboard players set #modulo_rand switch.data 57
+scoreboard players set #modulo_rand switch.data 48
 function switch:math/get_random/
 
 execute if score #random switch.data matches 0 run give @s iron_ore 32
@@ -50,15 +50,6 @@ execute if score #random switch.data matches 42 run give @s enchanted_book{Store
 execute if score #random switch.data matches 43 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:punch",lvl:2s}]}
 execute if score #random switch.data matches 44 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:10s}]} 4
 execute if score #random switch.data matches 45 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:vanishing_curse",lvl:10s}]} 4
-execute if score #random switch.data matches 46 run loot give @s loot switch:traitors_game/simplunium_ore_x8
-execute if score #random switch.data matches 47 run loot give @s loot switch:traitors_game/deepslate_simplunium_ore_x8
-execute if score #random switch.data matches 48 run loot give @s loot switch:traitors_game/wormhole_potion_x2
-execute if score #random switch.data matches 49 run loot give @s loot switch:traitors_game/lucky_artifact_bag
-execute if score #random switch.data matches 50 run loot give @s loot switch:traitors_game/item_magnet
-execute if score #random switch.data matches 51 run loot give @s loot switch:traitors_game/stoup_egg
-execute if score #random switch.data matches 52 run loot give @s loot switch:traitors_game/fireball_stick
-execute if score #random switch.data matches 53 run loot give @s loot switch:traitors_game/storm_stick
-execute if score #random switch.data matches 54 run loot give @s loot switch:traitors_game/bomber_man
-execute if score #random switch.data matches 55 run loot give @s loot switch:traitors_game/banana_man
-execute if score #random switch.data matches 56 run loot give @s loot switch:traitors_game/netherite
+execute if score #random switch.data matches 46 run loot give @s loot switch:traitors_game/bomber_man
+execute if score #random switch.data matches 47 run loot give @s loot switch:traitors_game/banana_man
 
