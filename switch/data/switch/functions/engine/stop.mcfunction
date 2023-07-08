@@ -21,7 +21,7 @@ execute as @a run attribute @s generic.attack_speed base set 4.0
 execute as @a run attribute @s generic.max_health base set 20.0
 
 scoreboard players reset #disable switch.data
-gamerule maxCommandChainLength 1048576
+gamerule maxCommandChainLength 65536
 gamerule sendCommandFeedback true
 gamerule mobGriefing false
 gamerule showDeathMessages true
