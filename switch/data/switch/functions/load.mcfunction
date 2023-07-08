@@ -39,6 +39,7 @@ scoreboard objectives add switch.stats.played.tnt_run dummy
 scoreboard objectives add switch.stats.played.sheepwars dummy
 scoreboard objectives add switch.stats.played.block_party dummy
 scoreboard objectives add switch.stats.played.replicate_the_build dummy
+scoreboard objectives add switch.stats.played.moutron dummy
 
 team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
@@ -94,6 +95,7 @@ data modify storage switch:main minigames append value {index:20,min_players:2	,
 data modify storage switch:main minigames append value {index:21,min_players:2	,max_players:-1		,id:"sheepwars"				,Name:"SheepWars"			,Lore:'["",{"text":"[SheepWars]\\n","color":"yellow"},{"text":"Envoyez sur l\'équipe ennemie vos moutons les plus puissants\\n"},{"text":"afin de les exterminer jusqu\'au dernier pour gagner !"},{"text":"\\n\\n[Estimation : 2-6 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:22,min_players:2	,max_players:-1		,id:"block_party"			,Name:"Block Party"			,Lore:'["",{"text":"[Block Party]\\n","color":"yellow"},{"text":"Dès que la musique s\'arrête, dirigez-vous\\n"},{"text":"sur la couleur indiquée pour ne pas tomber !"},{"text":"\\n\\n[Estimation : 1-4 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {index:23,min_players:2	,max_players:-1		,id:"replicate_the_build"	,Name:"Replicate The Build"	,Lore:'["",{"text":"[Replicate The Build]\\n","color":"yellow"},{"text":"Refaites le build donné le plus rapidement possible, et sans vous tromper !"},{"text":"\\n\\n[Estimation : 1-6 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par AirDox_]","color":"aqua"}]'}
+data modify storage switch:main minigames append value {index:24,min_players:1	,max_players:-1		,id:"moutron"				,Name:"Moutron"				,Lore:'["",{"text":"[Moutron]\\n","color":"yellow"},{"text":"Avancez sans cesse à dos d\'un mouton spécial qui\\n"},{"text":"créer une trainée mortelle derrière lui !"},{"text":"\\n\\n[Estimation : 1-3 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 
 # data modify storage switch:main minigames append value {index:XX	,min_players:1	,max_players:-1		,id:"border_run"			,Name:"Border Run PAS DISPO"			,Lore:'["",{"text":"[Border Run]\\n","color":"yellow"},{"text":"Survivez jusqu\'à la fin en trouvant\\n"},{"text":"le centre de la bordure !"},{"text":"\\n\\n[Estimation : 1-2 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par Luxio]","color":"aqua"}]'}
 # data modify storage switch:main minigames append value {index:XX,min_players:1	,max_players:-1		,id:"murder_uhc"			,Name:"Murder UHC"			,Lore:'["",{"text":"[Murder UHC]\\n","color":"yellow"},{"text":"---LORE 1---\\n"},{"text":"---LORE 2---"},{"text":"\\n\\n[Estimation : 4-10 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par XXXXXX]","color":"aqua"}]'}

@@ -25,6 +25,7 @@
 		"switch:modes/sheepwars/calls/second",
 		"switch:modes/block_party/calls/second",
 		"switch:modes/replicate_the_build/calls/second",
+		"switch:modes/moutron/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }

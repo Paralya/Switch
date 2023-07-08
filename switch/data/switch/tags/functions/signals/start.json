@@ -26,6 +26,7 @@
 		"switch:modes/sheepwars/calls/start",
 		"switch:modes/block_party/calls/start",
 		"switch:modes/replicate_the_build/calls/start",
+		"switch:modes/moutron/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }

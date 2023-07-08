@@ -27,6 +27,7 @@ tellraw @s[scores={switch.stats.played.tnt_run=1..}] [{"text":"➤ ","color":"go
 tellraw @s[scores={switch.stats.played.sheepwars=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.sheepwars"},"color":"yellow"},{"text":" parties jouées de SheepWars"}]
 tellraw @s[scores={switch.stats.played.block_party=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.block_party"},"color":"yellow"},{"text":" parties jouées de Block Party"}]
 tellraw @s[scores={switch.stats.played.replicate_the_build=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.replicate_the_build"},"color":"yellow"},{"text":" parties jouées de Replicate The Build"}]
+tellraw @s[scores={switch.stats.played.moutron=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.moutron"},"color":"yellow"},{"text":" parties jouées de Moutron"}]
 
 # Total victories (all games)
 tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.victories"},"color":"yellow"},{"text":" victoires au total"}]

@@ -26,6 +26,7 @@
 		"switch:modes/sheepwars/calls/stop",
 		"switch:modes/block_party/calls/stop",
 		"switch:modes/replicate_the_build/calls/stop",
+		"switch:modes/moutron/calls/stop",
 		"switch:modes/a_template/calls/stop"
 	]
 }
