@@ -3,7 +3,7 @@
 tag @s add shopping_kart.owner
 
 # Summon the kart depending on model score
-scoreboard players set #next_model switch.data 1
+scoreboard players add #next_model switch.data 1
 execute if score #next_model switch.data matches 1 run summon sheep ~ ~ ~ {Tags:["shopping_kart.new_kart","shopping_kart.forced_acceleration"],Color:1}
 execute if score #next_model switch.data matches 2 run summon sheep ~ ~ ~ {Tags:["shopping_kart.new_kart","shopping_kart.forced_acceleration"],Color:2}
 execute if score #next_model switch.data matches 3 run summon sheep ~ ~ ~ {Tags:["shopping_kart.new_kart","shopping_kart.forced_acceleration"],Color:3}
