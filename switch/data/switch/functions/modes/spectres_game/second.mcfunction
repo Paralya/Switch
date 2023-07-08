@@ -8,3 +8,6 @@ execute if score #spectres_game_seconds switch.data matches 0.. run function swi
 execute if score #spectres_game_seconds switch.data matches 0.. run effect give @a[tag=switch.spectres_game.spectre] resistance infinite 0 true
 execute if score #spectres_game_seconds switch.data matches 0 run function switch:modes/spectres_game/roles/announcement
 
+execute if score #spectres_game_seconds switch.data matches 30 run tellraw @a[tag=switch.spectres_game.spectre] ["",{"nbt":"ParalyaAstuce","storage":"switch:main","interpret":true},{"text":" Utilisez votre arc pour drainer la vie des joueurs !"}]
+execute if score #spectres_game_seconds switch.data matches 30 as @a[tag=switch.spectres_game.spectre] at @s run playsound entity.experience_orb.pickup ambient @s
+
