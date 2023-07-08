@@ -14,6 +14,8 @@ execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=swi
 execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.yellow] run tp @s 74009 158.69 74047
 
 # Starter kit
+give @s stone_pickaxe
+give @s stone_axe
 give @s apple 12
 give @s tnt 6
 give @s flint_and_steel 1
