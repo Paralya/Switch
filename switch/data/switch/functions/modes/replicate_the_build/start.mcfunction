@@ -26,6 +26,7 @@ gamerule keepInventory true
 gamerule doTileDrops false
 
 #Reset de la map
+scoreboard players set #is_adventure switch.data 1
 
 
 
