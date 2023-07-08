@@ -16,6 +16,7 @@ scoreboard players set #index switch.data 1
 
 scoreboard players set #player_count switch.data 0
 execute store result score #player_count switch.data if entity @a
+scoreboard players set #max_tries switch.data 100
 function switch:engine/voting_time/select_random_games
 
 data modify storage switch:main selections set value []

@@ -22,3 +22,4 @@ scoreboard players reset @a switch.right_click
 #function switch:profiling/start
 
 
+gamerule maxCommandChainLength 65536
