@@ -13,9 +13,9 @@ effect give @a[predicate=switch:in_water,nbt=!{ActiveEffects:[{Id:20}]}] wither 
 
 # Tick du sheepwars
 function sheepwars:tick
+kill @e[type=arrow,nbt={inGround:1b}]
 kill @e[type=item,nbt=!{Item:{tag:{}}}]
 execute as @a[nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
-
 
 
 # Kill too low entities
