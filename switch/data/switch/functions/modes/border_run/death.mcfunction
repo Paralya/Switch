@@ -1,10 +1,7 @@
 
-execute if score @s switch.temp.deathCount matches 1.. run tellraw @a [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#border_run_seconds","objective":"switch.data"}},{"text":" secondes !"}]
-
-scoreboard players reset @s switch.temp.deathCount
-tag @s remove switch.alive
+attribute @s generic.attack_speed base set 4.0
 gamemode spectator @s
-tp @s 100 110 100
+execute if entity @s at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 effect clear @s
 clear @s
 

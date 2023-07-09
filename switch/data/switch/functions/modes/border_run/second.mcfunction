@@ -1,9 +1,8 @@
 
 ## Fonction executée toutes les secondes lorsque le mode de jeu est activé
 
-# Timer
+# Classic timer
 scoreboard players add #border_run_seconds switch.data 1
-
-# XP Bar
-execute if score #border_run_seconds switch.data matches 0.. run function switch:modes/border_run/xp_bar
+scoreboard players remove #remaining_time switch.data 1
+function switch:modes/border_run/xp_bar
 
