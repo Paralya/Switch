@@ -1,6 +1,6 @@
 
 # Reduce damage
-data modify entity @s damage set value 1.5d
+data modify entity @s damage set value 1.0d
 
 # If fire arrows are enabled, set the arrow on fire
 scoreboard players set #success switch.data 0
