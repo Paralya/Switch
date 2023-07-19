@@ -1,6 +1,5 @@
 
 ## Fonction executée lors du lancement de la partie
-
 clear @a
 effect clear @a
 gamemode spectator @a
@@ -36,6 +35,8 @@ execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/repli
 kill @e[type=marker,tag=switch.rtb.island]
 kill @e[type=marker,tag=switch.rtb.center]
 
+kill @e[type=item]
+kill @e[type=arrow]
 
 ## Téléportation des joueurs
 tp @a 102000 100 102000

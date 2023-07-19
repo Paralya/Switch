@@ -1,9 +1,6 @@
 
 tp @e[type=creeper] 0 -10000 0
-kill @e[type=arrow]
-kill @e[type=creeper]
-kill @e[type=item]
-kill @e[type=experience_orb]
+
 
 tag @a remove switch.alive
 
@@ -17,3 +14,7 @@ execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/repli
 
 bossbar remove rtb.all
 
+kill @e[type=arrow]
+kill @e[type=creeper]
+kill @e[type=item]
+kill @e[type=experience_orb]

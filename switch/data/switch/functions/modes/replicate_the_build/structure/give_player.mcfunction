@@ -1,3 +1,10 @@
+
+give @s diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
+give @s diamond_axe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
+give @s diamond_shovel{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
+
+
+
 loot give @a[tag=switch.alive] mine ~0 ~0 ~0 diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
 loot give @a[tag=switch.alive] mine ~0 ~0 ~1 diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}
 loot give @a[tag=switch.alive] mine ~0 ~0 ~2 diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}

@@ -9,3 +9,6 @@ execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/repli
 execute at @a run playsound minecraft:block.note_block.harp ambient @a ~ ~ ~ 1 0.5
 
 
+kill @e[type=item]
+kill @e[type=arrow]
+kill @e[tag=switch.rtb.verify,type=marker]

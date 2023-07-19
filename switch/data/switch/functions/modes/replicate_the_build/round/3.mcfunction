@@ -1,9 +1,17 @@
+kill @e[type=item]
+kill @e[type=arrow]
+kill @e[tag=switch.rtb.verify,type=marker]
+
+
 title @a times 0t 20t 0
 title @a title {"text":" Mémorisez !","color":"green"}
 scoreboard players add #rtb_round_state switch.data 1
 
+scoreboard objectives remove switch.rtb.id
 scoreboard objectives add switch.rtb.id dummy
-scoreboard players set #rtbteam switch.data 0
+
+kill @e[type=marker,tag=switch.rtb.island]
+kill @e[type=marker,tag=switch.rtb.center]
 
 summon marker 102000 98 101996 {Tags:["switch.rtb.center"]}
 
@@ -22,7 +30,7 @@ summon marker 102014 98 101982 {Tags:["switch.rtb.island"]}
 
 
 
-
+scoreboard players set #rtbteam switch.data 0
 execute as @e[tag=switch.rtb.island,type=marker,sort=random] run function switch:modes/replicate_the_build/start/random_island
 
 
