@@ -4,7 +4,7 @@
 
 ## Death system
 execute as @a[gamemode=!spectator,sort=random] at @s if block ~ ~ ~ moving_piston run function switch:modes/block_party/death
-
+kill @e[type=item]
 
 ## Game on the line
 # Basic timer & particles
