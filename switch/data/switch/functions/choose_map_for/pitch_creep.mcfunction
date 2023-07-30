@@ -7,7 +7,6 @@ execute store result score #mc switch.data run data get storage switch:main pitc
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main pitch_creep_maps append value "pitch_creep_1"
 execute if score #mc switch.data matches 0 run data modify storage switch:main pitch_creep_maps append value "pitch_creep_2"
-execute if score #mc switch.data matches 0 run data modify storage switch:main pitch_creep_maps append value "abandoned_city_spawn_circle"
 
 
 
