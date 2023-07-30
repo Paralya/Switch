@@ -6,6 +6,10 @@ execute if score #remaining_time switch.data matches 180..239 run team modify sw
 execute if score #remaining_time switch.data matches 240..299 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"4","color":"yellow"},{"text":"m"}]
 execute if score #remaining_time switch.data matches 300..359 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"5","color":"yellow"},{"text":"m"}]
 execute if score #remaining_time switch.data matches 360..419 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"6","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 420..479 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"7","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 480..539 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"8","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 540..599 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"9","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 600..659 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"}]
 
 
 scoreboard players operation #score_for_suffix switch.data = #remaining_time switch.data
