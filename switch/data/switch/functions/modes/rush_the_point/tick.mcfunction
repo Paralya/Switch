@@ -14,7 +14,7 @@ execute as @a[scores={switch.right_click=1..},nbt={SelectedItem:{tag:{switch:{fi
 execute as @e[type=armor_stand,tag=switch.fireball,predicate=!shopping_kart:has_vehicle] at @s positioned ~ ~-1 ~ run function switch:modes/rush_the_point/explode_tnt
 
 # Kill all arrows in ground & Manage snowballs
-execute at @e[type=snowball] positioned ~ ~-2 ~ if block ~ ~ ~ air run setblock ~ ~ ~ cut_sandstone replace
+execute at @e[type=snowball] positioned ~ ~-2 ~ run fill ~-0.25 ~ ~-0.25 ~0.25 ~ ~0.25 cut_sandstone replace air
 kill @e[type=arrow,nbt={inGround:1b}]
 
 # Class System
@@ -31,7 +31,7 @@ scoreboard players set #color switch.data 0
 execute if score #remaining_time switch.data matches 1.. if data storage switch:main {map:"rush_the_point_1"} run function switch:modes/rush_the_point/maps/rush_the_point_1
 
 # Détection de fin de partie
-execute if score #remaining_time switch.data matches 1.. if score #red_points switch.data matches 2000.. run scoreboard players set #remaining_time switch.data 0
-execute if score #remaining_time switch.data matches 1.. if score #blue_points switch.data matches 2000.. run scoreboard players set #remaining_time switch.data 0
+execute if score #remaining_time switch.data matches 1.. if score #red_points switch.data matches 5000.. run scoreboard players set #remaining_time switch.data 0
+execute if score #remaining_time switch.data matches 1.. if score #blue_points switch.data matches 5000.. run scoreboard players set #remaining_time switch.data 0
 execute if score #remaining_time switch.data matches 0 run function switch:modes/rush_the_point/process_end
 

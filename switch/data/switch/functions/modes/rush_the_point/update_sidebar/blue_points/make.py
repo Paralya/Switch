@@ -10,7 +10,7 @@ import math
 
 # Constantes
 min = 0
-max = 2000
+max = 5000
 color = "blue"
 colorFull = "Bleue"
 namespace = "switch"

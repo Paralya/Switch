@@ -34,8 +34,9 @@ item replace entity @s hotbar.0 from block 0 0 0 container.0
 item replace entity @s hotbar.1 with smooth_sandstone_stairs{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 64
 item replace entity @s hotbar.2 from block 0 0 0 container.1
 item replace entity @s hotbar.3 with cut_sandstone{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 64
-item replace entity @s hotbar.5 with potion{Potion:"minecraft:strong_healing"}
+item replace entity @s hotbar.5 with ravager_spawn_egg{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 1
 item replace entity @s hotbar.6 with potion{Potion:"minecraft:strong_healing"}
+item replace entity @s hotbar.7 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.8 from block 0 0 0 container.6
 
 attribute @s generic.attack_speed base set 1024
