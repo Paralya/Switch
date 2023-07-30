@@ -25,7 +25,7 @@ weather clear
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/pitchout
 scoreboard players set #spawn_count switch.data 0
-execute if data storage switch:main {map:"pitchout_1"} as @a[sort=random] run function switch:modes/pitchout/map_1/teleport_players
+execute if data storage switch:main {map:"pitchout_1"} as @a[sort=random] run function switch:modes/pitchout/map_1/tp_give
 execute as @a run function switch:modes/pitchout/xp_bar
 
 gamerule showDeathMessages false
