@@ -17,6 +17,10 @@ kill @e[type=arrow,nbt={inGround:1b}]
 kill @e[type=item,nbt=!{Item:{tag:{}}}]
 execute as @a[nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
+# Force offhand item
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] run item replace entity @s[nbt={Inventory:[{Slot:-106b}]}] hotbar.8 from entity @s weapon.offhand
+item replace entity @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
+
 
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear
