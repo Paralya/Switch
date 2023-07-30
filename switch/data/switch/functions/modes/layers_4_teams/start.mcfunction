@@ -9,6 +9,7 @@ effect clear @a
 gamemode adventure @a
 team leave @a
 
+effect give @a night_vision infinite 255 true
 effect give @a saturation 15 255 true
 effect give @a resistance 60 255 true
 effect give @a regeneration 10 255 true
@@ -25,7 +26,7 @@ function switch:choose_map_for/layers_4_teams
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Layers, tenez-vous prêt !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #remaining_time switch.data 910
+scoreboard players set #remaining_time switch.data 610
 scoreboard players set #layers_4_teams_seconds switch.data -10
 scoreboard players set #layers_4_teams_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
