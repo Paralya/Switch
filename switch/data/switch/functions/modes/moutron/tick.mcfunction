@@ -6,7 +6,7 @@
 #execute as @a[gamemode=!spectator,sort=random] at @s if block ~ ~ ~ moving_piston run function switch:modes/moutron/death
 
 # At each shopping kart, summon a new marker
-execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart] at @s run function switch:modes/moutron/summon_marker
+execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart] at @s positioned ~ ~.5 ~ run function switch:modes/moutron/summon_marker
 
 # For each marker, increase their score, place a block and remove it after "life_time" ticks
 execute as @e[type=marker,tag=switch.moutron_marker] at @s run function switch:modes/moutron/marker_tick

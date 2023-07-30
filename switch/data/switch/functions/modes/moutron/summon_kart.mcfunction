@@ -23,9 +23,7 @@ execute if score #next_model switch.data matches 15 run scoreboard players set #
 
 # Apply init functions to new kart
 scoreboard players reset #model shopping_kart.data
-scoreboard players set #default_max_engine shopping_kart.data 1000
 execute as @e[tag=shopping_kart.new_kart] at @s run function shopping_kart:kart/switch_model/init_functions
-scoreboard players set #default_max_engine shopping_kart.data 1500
 
 # Remove the temporary player tag
 tag @s remove shopping_kart.owner
