@@ -12,14 +12,7 @@ execute if score #creeper_apocalypse_seconds switch.data matches 0 if data stora
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"friends_pvpbox_end"} as @e[limit=8] summon creeper run function switch:maps/spread_one_player
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"friends_cube_lobby"} as @e[limit=6] summon creeper run function switch:maps/spread_one_player
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"zonweeb_main"} as @e[limit=24] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"sumo_lawef"} as @e[limit=2] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"find_the_shulker"} as @e[limit=24] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"blindtest"} as @e[limit=8] summon creeper run function switch:maps/spread_one_player
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"sky_island_tower"} as @e[limit=24] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"lava_castle"} as @e[limit=24] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"nature_house"} as @e[limit=8] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"werewolf_village"} as @e[limit=24] summon creeper run function switch:maps/spread_one_player
-execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"paralya_uhc_lobbies"} as @e[limit=12] summon creeper run function switch:maps/spread_one_player
 execute if score #creeper_apocalypse_seconds switch.data matches 0 if data storage switch:main {map:"stardust_spawn"} as @e[limit=24] summon creeper run function switch:maps/spread_one_player
 
 

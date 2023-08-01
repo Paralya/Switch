@@ -34,6 +34,7 @@ gamerule doMobSpawning false
 gamerule doFireTick false
 gamerule doTileDrops true
 gamerule doEntityDrops true
+gamerule doMobLoot true
 gamerule doImmediateRespawn true
 gamerule announceAdvancements false
 gamerule doTraderSpawning false
