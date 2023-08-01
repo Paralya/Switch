@@ -17,7 +17,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "zonweeb_highschool"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "kart_racer_relai"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "hider_mansion"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "nuketown"
+execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "nuketown_no_barrier"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "sky_island_tower"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "sprucy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "highland_mansion"

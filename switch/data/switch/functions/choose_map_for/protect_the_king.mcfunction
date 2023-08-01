@@ -16,7 +16,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main p
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "paralya_lobby_noel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "zonweeb_highschool"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "hider_mansion"
-execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "nuketown"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "nuketown_no_barrier"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "sprucy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "highland_mansion"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "japanese_village"

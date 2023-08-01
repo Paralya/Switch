@@ -121,6 +121,7 @@
 #	108000	(survival)	: end_factory
 #	109000	(survival)	: tnt_run_futuristic
 ##	110000	(adventure)	: block_party
+#	111000	(survival)	: nuketown_no_barrier
 
 
 
