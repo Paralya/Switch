@@ -6,7 +6,7 @@ execute if score #tick switch.data matches 20.. run function switch:second
 
 # Engine : games ticks, start, stop
 execute if score #state switch.data matches 3 run function #switch:signals/tick
-execute if score #state switch.data matches 0 if entity @a run function switch:engine/start
+#execute if score #state switch.data matches 0 if entity @a run function switch:engine/start
 execute unless score #state switch.data matches 0 unless entity @a run function switch:engine/stop
 
 # Cut Clean support

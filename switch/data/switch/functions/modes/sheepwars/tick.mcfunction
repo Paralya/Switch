@@ -19,6 +19,7 @@ execute as @a[nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
 # Force offhand item
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] run item replace entity @s[nbt={Inventory:[{Slot:-106b}]}] hotbar.8 from entity @s weapon.offhand
+clear @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] warped_fungus_on_a_stick
 item replace entity @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
 
 
