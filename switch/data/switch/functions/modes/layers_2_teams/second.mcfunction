@@ -21,6 +21,6 @@ execute if score #mins switch.data matches ..4 as @a[gamemode=survival] at @s un
 # Destruction des blocs de haut en bas à partir de 5 minutes restantes
 execute if score #mins switch.data matches 5 if score #secs switch.data matches 0 run summon marker 0 160 0 {Tags:["switch.layers_2_teams.marker"]}
 execute if score #mins switch.data matches ..4 at @e[tag=switch.layers_2_teams.marker] run fill 26983 ~ 26970 27017 ~10 27030 air replace #realistic_explosion:equal_and_below_1200
-execute if score #mins switch.data matches ..4 as @e[tag=switch.layers_2_teams.marker] at @s run tp @s ~ ~-0.35 ~
-execute if score #mins switch.data matches ..4 as @e[tag=switch.layers_2_teams.marker] at @s if entity @s[y=100,dy=5] run kill @s
+execute if score #mins switch.data matches ..4 as @e[tag=switch.layers_2_teams.marker] at @s run tp @s ~ ~-0.5 ~
+execute if score #mins switch.data matches ..4 as @e[tag=switch.layers_2_teams.marker] at @s if entity @s[y=100,dy=8] run kill @s
 
