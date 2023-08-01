@@ -10,8 +10,10 @@ execute unless score #rounds switch.data matches 0 if score #detect_end switch.d
 
 # XP bar
 function switch:modes/de_a_coudre/xp_bar
-execute if score #remaining_time switch.data matches 0.. run scoreboard players remove #remaining_time switch.data 1
-execute if score #remaining_time switch.data matches 0 run kill @a[gamemode=adventure]
+execute if score #remaining_time switch.data matches -120.. run scoreboard players remove #remaining_time switch.data 1
+execute if score #remaining_time switch.data matches 0 as @a[gamemode=adventure] at @s if entity @s[y=190,dy=100] run kill @s
+execute if score #remaining_time switch.data matches -120 run kill @a[gamemode=adventure]
+
 
 ## Fin de partie
 execute if score #detect_end switch.data matches 0 if score #rounds switch.data matches 0 run scoreboard players set #detect_end switch.data 1
