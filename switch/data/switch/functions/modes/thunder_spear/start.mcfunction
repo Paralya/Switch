@@ -29,6 +29,7 @@ scoreboard players set #thunder_spear_seconds switch.data -5
 scoreboard players set #thunder_spear_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 155
 scoreboard players set #process_end switch.data 0
+scoreboard objectives add switch.temp.reload dummy
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.kills playerKillCount {"text":" Joueurs tués ","color":"red"}
 scoreboard objectives setdisplay sidebar switch.temp.kills
