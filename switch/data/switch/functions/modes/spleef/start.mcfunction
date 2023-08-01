@@ -9,7 +9,7 @@ team leave @a
 kill @e[type=item]
 
 effect give @a mining_fatigue 5 255 true
-effect give @a weakness 5 255 true
+effect give @a weakness infinite 255 true
 effect give @a saturation infinite 255 true
 effect give @a resistance infinite 255 true
 effect give @a regeneration infinite 255 true
