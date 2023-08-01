@@ -35,7 +35,7 @@ gamerule keepInventory true
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, exterminez les autres !"}]
 
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard players set @a switch.temp.cooldown 100
+scoreboard players set @a switch.temp.cooldown 120
 
 scoreboard players set #pitchout_seconds switch.data -5
 scoreboard players set #pitchout_ticks switch.data 0
