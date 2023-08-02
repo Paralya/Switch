@@ -12,7 +12,7 @@ effect give @a weakness infinite 255 true
 effect give @a saturation infinite 255 true
 effect give @a resistance infinite 255 true
 effect give @a regeneration infinite 255 true
-effect give @a speed infinite 1 true
+effect give @a speed infinite 3 true
 difficulty normal
 time set 18000
 weather clear
