@@ -13,8 +13,9 @@ execute as @e[type=arrow] run data modify entity @s damage set value 100.0d
 kill @e[type=item]
 
 # Auto reload system
+item replace entity @a inventory.0 with arrow 1
 scoreboard players add @a switch.temp.reload 1
-execute as @a[scores={switch.temp.reload=40..}] run item replace entity @s weapon.mainhand with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
+execute as @a[scores={switch.temp.reload=40..}] run item replace entity @s hotbar.0 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
 scoreboard players reset @a[scores={switch.temp.reload=40..}] switch.temp.reload
 
 # Summon tnt to arrows on ground and remove them
