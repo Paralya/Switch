@@ -281,6 +281,7 @@ generate_clone_survival_folder("stardust_vip_zone", (107000, 0, 107000), (107113
 generate_clone_survival_folder("end_factory", (108000, -63, 108000), (108178, 40, 108129), 100, override_tp_coords = (108146, 133, 108076))
 generate_clone_survival_folder("tnt_run_futuristic", (109000, 0, 109000), (109059, 68, 109046), 100, override_tp_coords = (109029, 148, 109022))
 generate_clone_survival_folder("nuketown_no_barrier", (111000, 0, 111000), (111207, 51, 111220), 100, override_tp_coords = (111109, 111, 111109))
+generate_clone_survival_folder("snowball_painter", (112000, 0, 112000), (112043, 33, 112042), 100, override_tp_coords = (112022, 110, 112006))
 
 
 
