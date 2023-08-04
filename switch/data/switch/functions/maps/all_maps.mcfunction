@@ -123,6 +123,8 @@
 ##	110000	(adventure)	: block_party
 #	111000	(survival)	: nuketown_no_barrier
 #	112000	(survival)	: snowball_painter
+#	113000	(survival)	: sytoshiro_island		(not done yet)
+##	114000	(adventure)	: gay_shooter
 
 
 
