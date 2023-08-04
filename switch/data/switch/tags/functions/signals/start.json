@@ -27,6 +27,7 @@
 		"switch:modes/block_party/calls/start",
 		"switch:modes/replicate_the_build/calls/start",
 		"switch:modes/moutron/calls/start",
+		"switch:modes/snowball_painter/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }
