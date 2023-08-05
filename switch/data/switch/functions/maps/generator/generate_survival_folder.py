@@ -75,10 +75,10 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 	for k in splitted_coordinates:
 		dx = (k[2] - k[0]) // 2
 		dz = (k[3] - k[1]) // 2
-		if has_doors:
-			marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s positioned {k[0] + dx} ~{dy} {k[1] + dz} run function door_fixer:fix_door\n")
 		marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
 		marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s run clone {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {k[0]} ~{dy} {k[1]} replace force\n")
+		if has_doors:
+			marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {i} at @s positioned {k[0] + dx} ~{dy} {k[1] + dz} run function door_fixer:fix_door\n")
 		i += 1
 
 	# Write kill item entities command & the scoreboard commands

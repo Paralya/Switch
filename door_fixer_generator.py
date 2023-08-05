@@ -36,7 +36,7 @@ file_content = """
 for door_type in door_types:
 	for facing in door_states["facing"]:
 		for half in door_states["half"]:
-			file_content += f"""fill ~-40 ~ ~-40 ~40 ~ ~40 command_block{{Command:"function door_fixer:fix_door_{door_type}_{facing}_{half}",auto:1b}} replace {door_type}[facing={facing},half={half}]\n"""
+			file_content += f"""fill ~-10 ~ ~-80 ~10 ~ ~80 command_block{{Command:"function door_fixer:fix_door_{door_type}_{facing}_{half}",auto:1b}} replace {door_type}[facing={facing},half={half}]\n"""
 
 # Create the data pack
 with zipfile.ZipFile("door_fixer.zip", "w") as zip_file:
