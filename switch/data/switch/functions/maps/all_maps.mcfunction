@@ -125,6 +125,7 @@
 #	112000	(survival)	: snowball_painter
 #	113000	(survival)	: sytoshiro_island		(not done yet)
 ##	114000	(adventure)	: gay_shooter
+#	115000	(survival)	: the_four_elements
 
 
 

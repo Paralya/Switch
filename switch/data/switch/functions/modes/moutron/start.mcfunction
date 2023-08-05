@@ -19,9 +19,9 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 ## Téléportation des joueurs
-scoreboard players set #do_spreadplayers switch.data 0
+scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/moutron
-function switch:modes/moutron/spread_players
+execute if data storage switch:main {map:"whity_lab"} run function switch:modes/moutron/spread_players/whity_lab
 
 gamerule showDeathMessages false
 gamerule keepInventory true
