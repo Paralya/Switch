@@ -28,6 +28,7 @@
 		"switch:modes/moutron/calls/second",
 		"switch:modes/snowball_painter/calls/second",
 		"switch:modes/gay_shooter/calls/second",
+		"switch:modes/build_battle/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }
