@@ -16,9 +16,6 @@ execute if score #moutron_seconds switch.data matches 0 run title @a title {"tex
 
 # Increase markers life_time
 execute if score #moutron_seconds switch.data matches 0.. run scoreboard players add #life_time switch.data 3
-scoreboard players operation #temp switch.data = #life_time switch.data
-scoreboard players operation #temp switch.data /= #20 switch.data
-title @a actionbar [{"text":"Durée des trainées : ","color":"aqua"},{"score":{"name":"#temp","objective":"switch.data"},"color":"yellow"},{"text":"s","color":"aqua"}]
 
 # XP bar
 function switch:modes/moutron/xp_bar

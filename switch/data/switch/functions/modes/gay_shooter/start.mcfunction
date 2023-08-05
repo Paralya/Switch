@@ -47,6 +47,8 @@ team modify switch.temp.gays color light_purple
 team modify switch.temp.shooters color gray
 team modify switch.temp.gays friendlyFire false
 team modify switch.temp.shooters friendlyFire false
+team modify switch.temp.gays collisionRule never
+team modify switch.temp.shooters collisionRule never
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 tag @a remove switch.gay_shooter.gay

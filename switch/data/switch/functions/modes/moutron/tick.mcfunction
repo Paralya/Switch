@@ -1,10 +1,7 @@
 
 ## Fonction executée tous les ticks lorsque le mode de jeu est activé
 
-
 ## Death system
-#execute as @a[gamemode=!spectator,sort=random] at @s if block ~ ~ ~ moving_piston run function switch:modes/moutron/death
-
 # At each shopping kart, summon a new marker
 execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart] at @s positioned ~ ~.5 ~ run function switch:modes/moutron/summon_marker
 
@@ -16,6 +13,11 @@ execute as @a[gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.k
 
 # If a kart is below 300 for engine, kill it and the player
 execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart,scores={shopping_kart.engine=..300}] run function switch:modes/moutron/kill_kart
+
+# Durée des trainées
+scoreboard players operation #temp switch.data = #life_time switch.data
+scoreboard players operation #temp switch.data /= #20 switch.data
+title @a actionbar [{"text":"Durée des trainées : ","color":"aqua"},{"score":{"name":"#temp","objective":"switch.data"},"color":"yellow"},{"text":"s","color":"aqua"}]
 
 ## Fin de partie
 scoreboard players set #remaining_players switch.data 0
