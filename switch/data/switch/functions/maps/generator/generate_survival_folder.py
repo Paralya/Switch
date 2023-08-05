@@ -226,7 +226,7 @@ generate_clone_survival_folder("desert_grand_library", (46971, 0, 46971), (47036
 generate_clone_survival_folder("new_grounds", (47930, 0, 47930), (48070, 84, 48070), 100, override_tp_coords = (48000, 113, 48000))
 generate_clone_survival_folder("cookie_wars", (48900, 0, 48900), (49100, 47, 49100), 100, override_tp_coords = (49000, 123, 49000))
 generate_clone_survival_folder("snow_hills", (49906, 0, 49918), (50145, 60, 50103), 100, override_tp_coords = (50025, 120, 50010))
-generate_clone_survival_folder("vilarles_castillo", (51899, -64, 51853), (52115, 92, 52071), 100, override_tp_coords = (52000, 135, 52000), has_doors = True)
+generate_clone_survival_folder("vilarles_castillo", (51899, -64, 51853), (52076, 92, 52071), 100, override_tp_coords = (52000, 135, 52000), has_doors = True)
 generate_clone_survival_folder("zonweeb_highschool", (52915, 0, 52876), (53040, 57, 53094), 100, override_tp_coords = (53000, 112, 53000))
 generate_clone_survival_folder("enigma_lab_1", (53977, 0, 53994), (54008, 40, 54100), 100, override_tp_coords = (None), has_doors = True)
 generate_clone_survival_folder("sumo_lawef", (54979, 0, 54996), (55020, 39, 55037), 100, override_tp_coords = (54999, 112, 55016), has_doors = True)
