@@ -29,6 +29,7 @@
 		"switch:modes/snowball_painter/calls/tick",
 		"switch:modes/gay_shooter/calls/tick",
 		"switch:modes/build_battle/calls/tick",
+		"switch:modes/beat_the_kings/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
 }

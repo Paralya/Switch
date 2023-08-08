@@ -30,6 +30,7 @@
 		"switch:modes/snowball_painter/calls/start",
 		"switch:modes/gay_shooter/calls/start",
 		"switch:modes/build_battle/calls/start",
+		"switch:modes/beat_the_kings/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }
