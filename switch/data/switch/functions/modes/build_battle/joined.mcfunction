@@ -4,9 +4,5 @@
 # execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-# Nouveau joueur :
 execute if score #reconnect switch.data matches 0 run gamemode spectator @s
-execute if score #reconnect switch.data matches 0 run tp @s @r
-execute if score #reconnect switch.data matches 0 run tp @s @r
-execute if score #reconnect switch.data matches 0 run tp @s @r
 
