@@ -25,6 +25,9 @@ execute store result score #total switch.data run data get entity @p[team=switch
 scoreboard players operation #total switch.data += #health switch.data
 execute store result bossbar switch.temp.blue_king value run scoreboard players get #total switch.data
 
+# Affichage des bossbars
+bossbar set switch.temp.red_king players @a
+bossbar set switch.temp.blue_king players @a
 
 # Détection de fin de partie
 execute if score #protect_the_king_seconds switch.data matches 1..900 run function switch:modes/protect_the_king/detect_end

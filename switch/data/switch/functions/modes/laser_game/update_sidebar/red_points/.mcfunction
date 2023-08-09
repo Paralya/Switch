@@ -1,33 +1,37 @@
 
-execute if score #red_points switch.data matches 0..161 run function switch:modes/laser_game/update_sidebar/red_points/1
-execute if score #red_points switch.data matches 166..327 run function switch:modes/laser_game/update_sidebar/red_points/2
-execute if score #red_points switch.data matches 332..493 run function switch:modes/laser_game/update_sidebar/red_points/3
-execute if score #red_points switch.data matches 498..660 run function switch:modes/laser_game/update_sidebar/red_points/4
-execute if score #red_points switch.data matches 665..826 run function switch:modes/laser_game/update_sidebar/red_points/5
-execute if score #red_points switch.data matches 831..992 run function switch:modes/laser_game/update_sidebar/red_points/6
-execute if score #red_points switch.data matches 997..1159 run function switch:modes/laser_game/update_sidebar/red_points/7
-execute if score #red_points switch.data matches 1164..1325 run function switch:modes/laser_game/update_sidebar/red_points/8
-execute if score #red_points switch.data matches 1330..1491 run function switch:modes/laser_game/update_sidebar/red_points/9
-execute if score #red_points switch.data matches 1496..1657 run function switch:modes/laser_game/update_sidebar/red_points/10
-execute if score #red_points switch.data matches 1662..1824 run function switch:modes/laser_game/update_sidebar/red_points/11
-execute if score #red_points switch.data matches 1829..1990 run function switch:modes/laser_game/update_sidebar/red_points/12
-execute if score #red_points switch.data matches 1995..2156 run function switch:modes/laser_game/update_sidebar/red_points/13
-execute if score #red_points switch.data matches 2161..2323 run function switch:modes/laser_game/update_sidebar/red_points/14
-execute if score #red_points switch.data matches 2328..2489 run function switch:modes/laser_game/update_sidebar/red_points/15
-execute if score #red_points switch.data matches 2494..2655 run function switch:modes/laser_game/update_sidebar/red_points/16
-execute if score #red_points switch.data matches 2660..2821 run function switch:modes/laser_game/update_sidebar/red_points/17
-execute if score #red_points switch.data matches 2826..2988 run function switch:modes/laser_game/update_sidebar/red_points/18
-execute if score #red_points switch.data matches 2993..3154 run function switch:modes/laser_game/update_sidebar/red_points/19
-execute if score #red_points switch.data matches 3159..3320 run function switch:modes/laser_game/update_sidebar/red_points/20
-execute if score #red_points switch.data matches 3325..3487 run function switch:modes/laser_game/update_sidebar/red_points/21
-execute if score #red_points switch.data matches 3492..3653 run function switch:modes/laser_game/update_sidebar/red_points/22
-execute if score #red_points switch.data matches 3658..3819 run function switch:modes/laser_game/update_sidebar/red_points/23
-execute if score #red_points switch.data matches 3824..3985 run function switch:modes/laser_game/update_sidebar/red_points/24
-execute if score #red_points switch.data matches 3990..4152 run function switch:modes/laser_game/update_sidebar/red_points/25
-execute if score #red_points switch.data matches 4157..4318 run function switch:modes/laser_game/update_sidebar/red_points/26
-execute if score #red_points switch.data matches 4323..4484 run function switch:modes/laser_game/update_sidebar/red_points/27
-execute if score #red_points switch.data matches 4489..4651 run function switch:modes/laser_game/update_sidebar/red_points/28
-execute if score #red_points switch.data matches 4656..4817 run function switch:modes/laser_game/update_sidebar/red_points/29
-execute if score #red_points switch.data matches 4822..4983 run function switch:modes/laser_game/update_sidebar/red_points/30
-execute if score #red_points switch.data matches 4988..5150 run function switch:modes/laser_game/update_sidebar/red_points/31
+execute if score #red_points switch.data matches ..99 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"}]
+execute if score #red_points switch.data matches 100..199 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"1","color":"yellow"}]
+execute if score #red_points switch.data matches 200..299 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"2","color":"yellow"}]
+execute if score #red_points switch.data matches 300..399 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"3","color":"yellow"}]
+execute if score #red_points switch.data matches 400..499 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"4","color":"yellow"}]
+execute if score #red_points switch.data matches 500..599 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"5","color":"yellow"}]
+execute if score #red_points switch.data matches 600..699 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"6","color":"yellow"}]
+execute if score #red_points switch.data matches 700..799 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"7","color":"yellow"}]
+execute if score #red_points switch.data matches 800..899 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"8","color":"yellow"}]
+execute if score #red_points switch.data matches 900..999 run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"9","color":"yellow"}]
+execute if score #red_points switch.data matches 1000.. run team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"},{"text":"10","color":"yellow"}]
+
+scoreboard players operation #score_for_suffix switch.data = #red_points switch.data
+scoreboard players operation #score_for_suffix switch.data %= #100 switch.data
+
+execute if score #score_for_suffix switch.data matches 0 run team modify switch.temp.sidebar.1 suffix [{"text":"00","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 5 run team modify switch.temp.sidebar.1 suffix [{"text":"05","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 10 run team modify switch.temp.sidebar.1 suffix [{"text":"10","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 15 run team modify switch.temp.sidebar.1 suffix [{"text":"15","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 20 run team modify switch.temp.sidebar.1 suffix [{"text":"20","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 25 run team modify switch.temp.sidebar.1 suffix [{"text":"25","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 30 run team modify switch.temp.sidebar.1 suffix [{"text":"30","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 35 run team modify switch.temp.sidebar.1 suffix [{"text":"35","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 40 run team modify switch.temp.sidebar.1 suffix [{"text":"40","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 45 run team modify switch.temp.sidebar.1 suffix [{"text":"45","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 50 run team modify switch.temp.sidebar.1 suffix [{"text":"50","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 55 run team modify switch.temp.sidebar.1 suffix [{"text":"55","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 60 run team modify switch.temp.sidebar.1 suffix [{"text":"60","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 65 run team modify switch.temp.sidebar.1 suffix [{"text":"65","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 70 run team modify switch.temp.sidebar.1 suffix [{"text":"70","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 75 run team modify switch.temp.sidebar.1 suffix [{"text":"75","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 80 run team modify switch.temp.sidebar.1 suffix [{"text":"80","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 85 run team modify switch.temp.sidebar.1 suffix [{"text":"85","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 90 run team modify switch.temp.sidebar.1 suffix [{"text":"90","color":"yellow"}]
+execute if score #score_for_suffix switch.data matches 95 run team modify switch.temp.sidebar.1 suffix [{"text":"95","color":"yellow"}]
 

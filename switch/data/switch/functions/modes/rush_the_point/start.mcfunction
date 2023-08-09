@@ -23,9 +23,6 @@ weather clear
 ## Placement de la map et des joueurs
 function switch:choose_map_for/rush_the_point
 
-gamerule mobGriefing false
-gamerule showDeathMessages true
-gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
@@ -51,10 +48,13 @@ team add switch.temp.sidebar.5
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
 team add switch.temp.sidebar.1
-team modify switch.temp.sidebar.5 suffix [{"text":"Objectif : "},{"text":"2000","color":"yellow"},{"text":" points"}]
-team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.5 suffix [{"text":"Objectif : "},{"text":"5000","color":"yellow"},{"text":" points"}]
+team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"}]
+team modify switch.temp.sidebar.2 prefix [{"text":"Équipe Bleue : ","color":"blue"}]
+team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"00","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
 team join switch.temp.sidebar.5 §3

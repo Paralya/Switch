@@ -1,36 +1,88 @@
 
-execute if score #remaining_time switch.data matches 0..35 run function switch:modes/laser_game/update_sidebar/timer/1
-execute if score #remaining_time switch.data matches 36..71 run function switch:modes/laser_game/update_sidebar/timer/2
-execute if score #remaining_time switch.data matches 72..107 run function switch:modes/laser_game/update_sidebar/timer/3
-execute if score #remaining_time switch.data matches 108..144 run function switch:modes/laser_game/update_sidebar/timer/4
-execute if score #remaining_time switch.data matches 145..180 run function switch:modes/laser_game/update_sidebar/timer/5
-execute if score #remaining_time switch.data matches 181..216 run function switch:modes/laser_game/update_sidebar/timer/6
-execute if score #remaining_time switch.data matches 217..253 run function switch:modes/laser_game/update_sidebar/timer/7
-execute if score #remaining_time switch.data matches 254..289 run function switch:modes/laser_game/update_sidebar/timer/8
-execute if score #remaining_time switch.data matches 290..325 run function switch:modes/laser_game/update_sidebar/timer/9
-execute if score #remaining_time switch.data matches 326..361 run function switch:modes/laser_game/update_sidebar/timer/10
-execute if score #remaining_time switch.data matches 362..398 run function switch:modes/laser_game/update_sidebar/timer/11
-execute if score #remaining_time switch.data matches 399..434 run function switch:modes/laser_game/update_sidebar/timer/12
-execute if score #remaining_time switch.data matches 435..470 run function switch:modes/laser_game/update_sidebar/timer/13
-execute if score #remaining_time switch.data matches 471..507 run function switch:modes/laser_game/update_sidebar/timer/14
-execute if score #remaining_time switch.data matches 508..543 run function switch:modes/laser_game/update_sidebar/timer/15
-execute if score #remaining_time switch.data matches 544..579 run function switch:modes/laser_game/update_sidebar/timer/16
-execute if score #remaining_time switch.data matches 580..616 run function switch:modes/laser_game/update_sidebar/timer/17
-execute if score #remaining_time switch.data matches 617..652 run function switch:modes/laser_game/update_sidebar/timer/18
-execute if score #remaining_time switch.data matches 653..688 run function switch:modes/laser_game/update_sidebar/timer/19
-execute if score #remaining_time switch.data matches 689..724 run function switch:modes/laser_game/update_sidebar/timer/20
-execute if score #remaining_time switch.data matches 725..761 run function switch:modes/laser_game/update_sidebar/timer/21
-execute if score #remaining_time switch.data matches 762..797 run function switch:modes/laser_game/update_sidebar/timer/22
-execute if score #remaining_time switch.data matches 798..833 run function switch:modes/laser_game/update_sidebar/timer/23
-execute if score #remaining_time switch.data matches 834..870 run function switch:modes/laser_game/update_sidebar/timer/24
-execute if score #remaining_time switch.data matches 871..906 run function switch:modes/laser_game/update_sidebar/timer/25
-execute if score #remaining_time switch.data matches 907..942 run function switch:modes/laser_game/update_sidebar/timer/26
-execute if score #remaining_time switch.data matches 943..978 run function switch:modes/laser_game/update_sidebar/timer/27
-execute if score #remaining_time switch.data matches 979..1015 run function switch:modes/laser_game/update_sidebar/timer/28
-execute if score #remaining_time switch.data matches 1016..1051 run function switch:modes/laser_game/update_sidebar/timer/29
-execute if score #remaining_time switch.data matches 1052..1087 run function switch:modes/laser_game/update_sidebar/timer/30
-execute if score #remaining_time switch.data matches 1088..1124 run function switch:modes/laser_game/update_sidebar/timer/31
-execute if score #remaining_time switch.data matches 1125..1160 run function switch:modes/laser_game/update_sidebar/timer/32
-execute if score #remaining_time switch.data matches 1161..1196 run function switch:modes/laser_game/update_sidebar/timer/33
-execute if score #remaining_time switch.data matches 1197..1232 run function switch:modes/laser_game/update_sidebar/timer/34
+execute if score #remaining_time switch.data matches 0..59 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"0","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 60..119 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"1","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 120..179 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"2","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 180..239 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"3","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 240..299 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"4","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 300..359 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"5","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 360..419 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"6","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 420..479 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"7","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 480..539 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"8","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 540..599 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"9","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 600..659 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 660..719 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"11","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 720..779 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"12","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 780..839 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"13","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 840..899 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"14","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 900..959 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"15","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 960..1019 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"16","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 1020..1079 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"17","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 1080..1139 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"18","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 1140..1199 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"19","color":"yellow"},{"text":"m"}]
+execute if score #remaining_time switch.data matches 1200..1259 run team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"20","color":"yellow"},{"text":"m"}]
+
+
+scoreboard players operation #score_for_suffix switch.data = #remaining_time switch.data
+scoreboard players operation #score_for_suffix switch.data %= #60 switch.data
+
+execute if score #score_for_suffix switch.data matches 0 run team modify switch.temp.sidebar.3 suffix [{"text":"00","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 1 run team modify switch.temp.sidebar.3 suffix [{"text":"01","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 2 run team modify switch.temp.sidebar.3 suffix [{"text":"02","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 3 run team modify switch.temp.sidebar.3 suffix [{"text":"03","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 4 run team modify switch.temp.sidebar.3 suffix [{"text":"04","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 5 run team modify switch.temp.sidebar.3 suffix [{"text":"05","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 6 run team modify switch.temp.sidebar.3 suffix [{"text":"06","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 7 run team modify switch.temp.sidebar.3 suffix [{"text":"07","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 8 run team modify switch.temp.sidebar.3 suffix [{"text":"08","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 9 run team modify switch.temp.sidebar.3 suffix [{"text":"09","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 10 run team modify switch.temp.sidebar.3 suffix [{"text":"10","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 11 run team modify switch.temp.sidebar.3 suffix [{"text":"11","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 12 run team modify switch.temp.sidebar.3 suffix [{"text":"12","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 13 run team modify switch.temp.sidebar.3 suffix [{"text":"13","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 14 run team modify switch.temp.sidebar.3 suffix [{"text":"14","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 15 run team modify switch.temp.sidebar.3 suffix [{"text":"15","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 16 run team modify switch.temp.sidebar.3 suffix [{"text":"16","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 17 run team modify switch.temp.sidebar.3 suffix [{"text":"17","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 18 run team modify switch.temp.sidebar.3 suffix [{"text":"18","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 19 run team modify switch.temp.sidebar.3 suffix [{"text":"19","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 20 run team modify switch.temp.sidebar.3 suffix [{"text":"20","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 21 run team modify switch.temp.sidebar.3 suffix [{"text":"21","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 22 run team modify switch.temp.sidebar.3 suffix [{"text":"22","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 23 run team modify switch.temp.sidebar.3 suffix [{"text":"23","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 24 run team modify switch.temp.sidebar.3 suffix [{"text":"24","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 25 run team modify switch.temp.sidebar.3 suffix [{"text":"25","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 26 run team modify switch.temp.sidebar.3 suffix [{"text":"26","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 27 run team modify switch.temp.sidebar.3 suffix [{"text":"27","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 28 run team modify switch.temp.sidebar.3 suffix [{"text":"28","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 29 run team modify switch.temp.sidebar.3 suffix [{"text":"29","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 30 run team modify switch.temp.sidebar.3 suffix [{"text":"30","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 31 run team modify switch.temp.sidebar.3 suffix [{"text":"31","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 32 run team modify switch.temp.sidebar.3 suffix [{"text":"32","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 33 run team modify switch.temp.sidebar.3 suffix [{"text":"33","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 34 run team modify switch.temp.sidebar.3 suffix [{"text":"34","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 35 run team modify switch.temp.sidebar.3 suffix [{"text":"35","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 36 run team modify switch.temp.sidebar.3 suffix [{"text":"36","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 37 run team modify switch.temp.sidebar.3 suffix [{"text":"37","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 38 run team modify switch.temp.sidebar.3 suffix [{"text":"38","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 39 run team modify switch.temp.sidebar.3 suffix [{"text":"39","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 40 run team modify switch.temp.sidebar.3 suffix [{"text":"40","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 41 run team modify switch.temp.sidebar.3 suffix [{"text":"41","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 42 run team modify switch.temp.sidebar.3 suffix [{"text":"42","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 43 run team modify switch.temp.sidebar.3 suffix [{"text":"43","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 44 run team modify switch.temp.sidebar.3 suffix [{"text":"44","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 45 run team modify switch.temp.sidebar.3 suffix [{"text":"45","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 46 run team modify switch.temp.sidebar.3 suffix [{"text":"46","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 47 run team modify switch.temp.sidebar.3 suffix [{"text":"47","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 48 run team modify switch.temp.sidebar.3 suffix [{"text":"48","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 49 run team modify switch.temp.sidebar.3 suffix [{"text":"49","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 50 run team modify switch.temp.sidebar.3 suffix [{"text":"50","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 51 run team modify switch.temp.sidebar.3 suffix [{"text":"51","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 52 run team modify switch.temp.sidebar.3 suffix [{"text":"52","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 53 run team modify switch.temp.sidebar.3 suffix [{"text":"53","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 54 run team modify switch.temp.sidebar.3 suffix [{"text":"54","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 55 run team modify switch.temp.sidebar.3 suffix [{"text":"55","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 56 run team modify switch.temp.sidebar.3 suffix [{"text":"56","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 57 run team modify switch.temp.sidebar.3 suffix [{"text":"57","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 58 run team modify switch.temp.sidebar.3 suffix [{"text":"58","color":"yellow"},{"text":"s"}]
+execute if score #score_for_suffix switch.data matches 59 run team modify switch.temp.sidebar.3 suffix [{"text":"59","color":"yellow"},{"text":"s"}]
 

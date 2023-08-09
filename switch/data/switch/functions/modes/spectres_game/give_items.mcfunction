@@ -22,6 +22,7 @@ item replace entity @s[tag=switch.spectres_game.spectre] inventory.0 with arrow 
 item replace entity @s[tag=switch.spectres_game.spectre] inventory.1 with stone_axe{AttributeModifiers:[{AttributeName:"minecraft:generic.attack_damage",Name:"minecraft:generic.attack_damage",Slot:"mainhand",Amount:4,Operation:0,UUID:[I;2012000,-2012000,-2012000,2012000]}]}
 effect give @s[tag=switch.spectres_game.spectre] invisibility infinite 255 true
 effect give @s[tag=switch.spectres_game.spectre] resistance infinite 0 true
+effect give @s[tag=switch.spectres_game.spectre] resistance 30 1 true
 effect give @s[tag=switch.spectres_game.spectre] speed infinite 0 true
 
 item replace entity @s inventory.25 with flint_and_steel
@@ -31,3 +32,4 @@ effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
+

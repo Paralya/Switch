@@ -6,5 +6,5 @@ function switch:modes/rush_the_point/death/inventory_filter
 execute if data entity @s data.Inventory[0] at @s run function switch:modes/rush_the_point/death/inventory_drop
 
 tag @s add switch.processed
-tp @s 0 0 0
+tp @s 0 74 0
 

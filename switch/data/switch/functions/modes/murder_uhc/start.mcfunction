@@ -26,7 +26,6 @@ function switch:choose_map_for/murder_uhc
 
 gamerule mobGriefing true
 gamerule showDeathMessages false
-gamerule fallDamage true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 

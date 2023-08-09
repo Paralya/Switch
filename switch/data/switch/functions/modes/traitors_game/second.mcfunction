@@ -9,3 +9,5 @@ execute if score #traitors_game_seconds switch.data matches 0 run function switc
 execute if score #traitors_game_seconds switch.data matches 120 run tellraw @a[tag=switch.traitors_game.detective] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Voici l'identité d'un traitre : "},{"selector":"@a[gamemode=!spectator,tag=switch.traitors_game.traitor,sort=random,limit=1]","color":"green"},{"text":" !"}]
 execute if score #traitors_game_seconds switch.data matches 240 run tellraw @a[tag=switch.traitors_game.detective] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Voici l'identité d'un traitre : "},{"selector":"@a[gamemode=!spectator,tag=switch.traitors_game.traitor,sort=random,limit=1]","color":"green"},{"text":" !"}]
 
+execute as @a[gamemode=survival] at @s unless entity @a[gamemode=survival,distance=0.1..50] run effect give @s glowing 2 0 true
+

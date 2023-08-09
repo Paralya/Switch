@@ -14,7 +14,7 @@ execute unless entity @a[gamemode=!spectator] run scoreboard players set #game_s
 # 5 = Plus personne
 
 # Cas de fin de partie
-execute if score #game_state switch.data matches 1..3 run scoreboard players set #remaining_time switch.data 0
+execute if score #game_state switch.data matches 1..4 run scoreboard players set #remaining_time switch.data 0
 
 # Cas des vainqueurs
 execute if score #remaining_time switch.data matches 0 if score #game_state switch.data matches 0 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 12 minutes !"}]
@@ -22,7 +22,7 @@ execute if score #game_state switch.data matches 1 run tellraw @a ["\n",{"nbt":"
 execute if score #game_state switch.data matches 2 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"bleus","color":"blue"},{"text":" ! GG à "},{"selector":"@a[gamemode=!spectator,team=switch.temp.blue]"}]
 execute if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"verts","color":"green"},{"text":" ! GG à "},{"selector":"@a[gamemode=!spectator,team=switch.temp.green]"}]
 execute if score #game_state switch.data matches 4 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"jaunes","color":"yellow"},{"text":" ! GG à "},{"selector":"@a[gamemode=!spectator,team=switch.temp.yellow]"}]
-execute if score #game_state switch.data matches 3 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
+execute if score #game_state switch.data matches 5 run tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 
 execute if score #game_state switch.data matches 1 as @a[gamemode=!spectator,team=switch.temp.red] at @s run function switch:engine/add_money
 execute if score #game_state switch.data matches 2 as @a[gamemode=!spectator,team=switch.temp.blue] at @s run function switch:engine/add_money

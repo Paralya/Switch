@@ -92,7 +92,7 @@
 #	79000	(survival)	: survival_boat
 #	80000	(survival)	: sky_tower				(Problème de hauteur à fixer)
 #	81000	(survival)	: purple_sky_island		[ /fill ]
-##	82000	(undefined)	: _
+##	82000	(undefined)	: Maps Infinitri customs à fusionner	(not done yet) [Infinitri Pack]
 #	83000	(survival)	: lava_castle
 #	84000	(survival)	: spruce_dojo
 #	85000	(survival)	: highland_mansion
@@ -105,5 +105,28 @@
 #	92000	(survival)	: snowy_village
 #	93000	(survival)	: werewolf_village
 #	94000	(survival)	: wyvern_towers
+#	95000	(survival)	: lg_medieval
+#	96000	(survival)	: lg_village
+#	97000	(survival)	: lightium_spawn
+#	98000	(survival)	: paralya_uhc_lobbies
+#	99000	(survival)	: paralya_lobby
+#	100000	(survival)	: sheepwars_dirigeables
+#	101000	(survival)	: stardust_spawn
+##	102000	(adventure)	: replicate_the_build
+#	103000	(survival)	: stardust_boss_zone
+#	104000	(survival)	: stardust_boss_zone_nether
+#	105000	(survival)	: stardust_pvp_zone
+#	106000	(survival)	: stardust_prison
+#	107000	(survival)	: stardust_vip_zone
+#	108000	(survival)	: end_factory
+#	109000	(survival)	: tnt_run_futuristic
+##	110000	(adventure)	: block_party
+#	111000	(survival)	: nuketown_no_barrier
+#	112000	(survival)	: snowball_painter
+#	113000	(survival)	: sytoshiro_island		(not done yet)
+##	114000	(adventure)	: gay_shooter
+#	115000	(survival)	: the_four_elements
+
+
 
 

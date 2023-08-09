@@ -3,7 +3,7 @@ tag @s remove switch.laser_game.blue
 tag @s remove switch.laser_game.red
 tag @s remove global.ignore
 
-gamemode adventure @a[gamemode=survival]
+gamemode adventure @a[gamemode=!adventure]
 effect give @s saturation infinite 255 true
 effect give @s regeneration 5 255 true
 effect give @s weakness infinite 255 true

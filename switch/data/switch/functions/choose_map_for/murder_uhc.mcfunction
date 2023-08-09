@@ -17,7 +17,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main m
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "zonweeb_highschool"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "giant_zoo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "hider_mansion"
-execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "nuketown"
+execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "nuketown_no_barrier"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "sprucy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "highland_mansion"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_uhc_maps append value "sakura_house"

@@ -9,83 +9,62 @@ if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 import math
 
 # Constantes
+min = 0
 max = 1200
 namespace = "switch"
 base_path = f"{namespace}:modes/laser_game/update_sidebar/timer/"
-base_score = f"execute if score #remaining_time {namespace}.data matches "
-files = int(math.sqrt(max))
-split = max / files
+base_score_time = f"execute if score #remaining_time {namespace}.data matches "
+base_score_suffix = f"execute if score #score_for_suffix {namespace}.data matches "
 sidebar_number = 3	# DON'T FORGET TO CHANGE THIS
 
-# Variables (don't change)
-temp = 0
-min = 0
+
 
 # Delete old files (ending with .mcfunction)
 for file in os.listdir():
 	if file.endswith(".mcfunction"):
 		os.remove(file)
 
-# Loop for each file
-for i in range(1, files + 1):
 
-	# Create the file and write the first line (replace the old file if it exists)
-	f = open(str(i) + ".mcfunction", "w")
-	f.write('\n')
 
-	# While there are remaining lines to write
-	temp = 0
-	while temp <= split and min <= max:
-
-		# Prepare minute string
-		minute = str((min // 60) % 60)
-
-		# Prepare second string
-		second = str(min % 60)
-		if len(second) == 1:
-			second = '0' + second
-
-		# Write the base path and the score
-		f.write(base_score + str(min))
-
-		# Write the command until the JSON part
-		f.write(f" run team modify {namespace}.temp.sidebar.{sidebar_number} suffix ")
-
-		# Write the JSON part
-		f.write('[{"text":"Temps restant : "},{"text":"' + minute + '","color":"yellow"},{"text":"m"},{"text":"' + second + '","color":"yellow"},{"text":"s"}]\n')
-
-		# Increment the variables
-		min += 1
-		temp += 1
-
-	# Close the file
-	f.write('\n')
-	f.close()
-
-# Create the .mcfunction file that links all the files
+# Create the .mcfunction file that contains all the prefixes and suffixes
 f = open(".mcfunction", "w")
-f.write('\n')
+f.write("\n")
 
-# Reset the variables
-temp = 0
-i = 1
 
-# While there are remaining lines to write
-while temp <= max:
+# Loop for prefixes
+for minutes in range(min, (max // 60) + 1):
 
-	# Write the base path and the score
-	from_score = int(temp)
-	to_score = int((temp + split))
-	f.write(f"{base_score}{from_score}..{to_score}")
+	# Condition for the score
+	f.write(f"{base_score_time}{minutes * 60}..{minutes * 60 + 59} run ")
 
-	# Write the command until the end of the line
-	f.write(f" run function {base_path}{i}\n")
+	# Write the command
+	f.write(f"team modify {namespace}.temp.sidebar.{sidebar_number} prefix ")
+	f.write(f"[{{\"text\":\"Temps restant : \"}},{{\"text\":\"{minutes}\",\"color\":\"yellow\"}},{{\"text\":\"m\"}}]\n")
 
-	# Increment the variables
-	temp += split + 1
-	i += 1
+
+# Write scoreboard operation for the suffixes
+f.write("\n\n")
+f.write(f"scoreboard players operation #score_for_suffix {namespace}.data = #remaining_time {namespace}.data\n")
+f.write(f"scoreboard players operation #score_for_suffix {namespace}.data %= #60 {namespace}.data\n\n")
+
+
+# Loop for suffixes
+for seconds in range(0, 60):
+
+	# Prepare the second string
+	secs = str(seconds)
+	if seconds < 10:
+		secs = "0" + secs
+	
+	# Condition for the score
+	f.write(f"{base_score_suffix}{seconds} run ")
+
+	# Write the command
+	f.write(f"team modify {namespace}.temp.sidebar.{sidebar_number} suffix ")
+	f.write(f"[{{\"text\":\"{secs}\",\"color\":\"yellow\"}},{{\"text\":\"s\"}}]\n")
+
 
 # Close the file
-f.write('\n')
+f.write("\n")
 f.close()
 

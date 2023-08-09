@@ -21,6 +21,15 @@
 		"switch:modes/layers_2_teams/calls/joined",
 		"switch:modes/layers_4_teams/calls/joined",
 		"switch:modes/thunder_spear/calls/joined",
+		"switch:modes/tnt_run/calls/joined",
+		"switch:modes/sheepwars/calls/joined",
+		"switch:modes/block_party/calls/joined",
+		"switch:modes/replicate_the_build/calls/joined",
+		"switch:modes/moutron/calls/joined",
+		"switch:modes/snowball_painter/calls/joined",
+		"switch:modes/gay_shooter/calls/joined",
+		"switch:modes/build_battle/calls/joined",
+		"switch:modes/beat_the_kings/calls/joined",
 		"switch:modes/a_template/calls/joined"
 	]
 }

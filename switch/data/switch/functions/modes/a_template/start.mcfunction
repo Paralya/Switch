@@ -23,7 +23,6 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/a_template
 execute as @a at @s run function switch:modes/a_template/give_items
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true

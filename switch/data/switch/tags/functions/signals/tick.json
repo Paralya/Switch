@@ -21,6 +21,15 @@
 		"switch:modes/layers_2_teams/calls/tick",
 		"switch:modes/layers_4_teams/calls/tick",
 		"switch:modes/thunder_spear/calls/tick",
+		"switch:modes/tnt_run/calls/tick",
+		"switch:modes/sheepwars/calls/tick",
+		"switch:modes/block_party/calls/tick",
+		"switch:modes/replicate_the_build/calls/tick",
+		"switch:modes/moutron/calls/tick",
+		"switch:modes/snowball_painter/calls/tick",
+		"switch:modes/gay_shooter/calls/tick",
+		"switch:modes/build_battle/calls/tick",
+		"switch:modes/beat_the_kings/calls/tick",
 		"switch:modes/a_template/calls/tick"
 	]
 }

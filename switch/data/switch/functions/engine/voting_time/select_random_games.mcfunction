@@ -23,6 +23,6 @@ execute if score #wrong switch.data matches 0 if score #index switch.data matche
 execute if score #index switch.data matches 2.. if score #wrong switch.data matches 0 run scoreboard players add #index switch.data 1
 execute if score #index switch.data matches 1 run scoreboard players add #index switch.data 1
 
-
-execute if score #index switch.data matches ..6 run function switch:engine/voting_time/select_random_games
+scoreboard players remove #max_tries switch.data 1
+execute if score #max_tries switch.data matches 1.. if score #index switch.data matches ..6 run function switch:engine/voting_time/select_random_games
 

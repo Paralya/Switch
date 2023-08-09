@@ -3,9 +3,16 @@
 
 scoreboard players add #border_run_ticks switch.data 1
 
-# execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/border_run/death
+## Death system
+execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/border_run/death
 
+# Glowing
+execute as @a[gamemode=survival] at @s unless entity @a[distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true
+execute as @a[gamemode=survival] at @s if entity @a[distance=0.001..25,gamemode=survival] run effect clear @s glowing
 
-# Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute unless entity @a[tag=switch.alive] run function switch:modes/border_run/process_end
-execute if score #border_run_seconds switch.data matches 150.. run function switch:modes/border_run/process_end
+## Fin de partie
+scoreboard players set #remaining_players switch.data 0
+execute store result score #remaining_players switch.data if entity @a[gamemode=survival]
+execute if score #remaining_players switch.data matches ..1 run function switch:modes/border_run/process_end
+execute if score #remaining_time switch.data matches ..0 run function switch:modes/border_run/process_end
+

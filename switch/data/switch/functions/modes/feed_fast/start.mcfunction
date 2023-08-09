@@ -24,11 +24,8 @@ scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/feed_fast
 
-gamerule mobGriefing false
 gamerule showDeathMessages false
 gamerule keepInventory true
-gamerule fallDamage true
-gamerule naturalRegeneration true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Feed Fast, vous avez 5 secondes pour vous préparer à devoir manger pour éviter un funeste destin !"}]
 

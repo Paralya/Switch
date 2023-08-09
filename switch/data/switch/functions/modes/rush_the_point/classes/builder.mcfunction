@@ -25,6 +25,7 @@ execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0
 
 clear @s
 effect clear @s
+item replace entity @s weapon.offhand with cut_sandstone{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 64
 item replace entity @s armor.head from block 0 0 0 container.2 switch:enchant_protection_2
 item replace entity @s armor.chest from block 0 0 0 container.3 switch:enchant_protection_2
 item replace entity @s armor.legs from block 0 0 0 container.4 switch:enchant_protection_2
@@ -33,9 +34,9 @@ item replace entity @s hotbar.0 from block 0 0 0 container.0
 item replace entity @s hotbar.1 with smooth_sandstone_stairs{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 64
 item replace entity @s hotbar.2 from block 0 0 0 container.1
 item replace entity @s hotbar.3 with cut_sandstone{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 64
-item replace entity @s hotbar.4 with cut_sandstone{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 64
-item replace entity @s hotbar.5 with potion{Potion:"minecraft:strong_healing"}
+item replace entity @s hotbar.5 with ravager_spawn_egg{CanPlaceOn:["#switch:rush_the_point/can_place_on"]} 1
 item replace entity @s hotbar.6 with potion{Potion:"minecraft:strong_healing"}
+item replace entity @s hotbar.7 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.8 from block 0 0 0 container.6
 
 attribute @s generic.attack_speed base set 1024

@@ -1,5 +1,6 @@
 {
 	"values": [
+		"switch:engine/signals/start",
 		"switch:modes/pitch_creep/calls/start",
 		"switch:modes/laser_game/calls/start",
 		"switch:modes/warden_escape/calls/start",
@@ -21,6 +22,15 @@
 		"switch:modes/layers_2_teams/calls/start",
 		"switch:modes/layers_4_teams/calls/start",
 		"switch:modes/thunder_spear/calls/start",
+		"switch:modes/tnt_run/calls/start",
+		"switch:modes/sheepwars/calls/start",
+		"switch:modes/block_party/calls/start",
+		"switch:modes/replicate_the_build/calls/start",
+		"switch:modes/moutron/calls/start",
+		"switch:modes/snowball_painter/calls/start",
+		"switch:modes/gay_shooter/calls/start",
+		"switch:modes/build_battle/calls/start",
+		"switch:modes/beat_the_kings/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }

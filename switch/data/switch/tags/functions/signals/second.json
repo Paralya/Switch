@@ -21,6 +21,15 @@
 		"switch:modes/layers_2_teams/calls/second",
 		"switch:modes/layers_4_teams/calls/second",
 		"switch:modes/thunder_spear/calls/second",
+		"switch:modes/tnt_run/calls/second",
+		"switch:modes/sheepwars/calls/second",
+		"switch:modes/block_party/calls/second",
+		"switch:modes/replicate_the_build/calls/second",
+		"switch:modes/moutron/calls/second",
+		"switch:modes/snowball_painter/calls/second",
+		"switch:modes/gay_shooter/calls/second",
+		"switch:modes/build_battle/calls/second",
+		"switch:modes/beat_the_kings/calls/second",
 		"switch:modes/a_template/calls/second"
 	]
 }
