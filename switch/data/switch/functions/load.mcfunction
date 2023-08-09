@@ -105,6 +105,12 @@ data modify storage switch:main minigames append value {index:28,min_players:1	,
 # data modify storage switch:main minigames append value {index:XX,min_players:1	,max_players:-1		,id:"murder_uhc"			,Name:"Murder UHC"			,Lore:'["",{"text":"[Murder UHC]\\n","color":"yellow"},{"text":"---LORE 1---\\n"},{"text":"---LORE 2---\\n"},{"text":"\\n[Estimation : 4-10 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par XXXXXX]","color":"aqua"}]'}
 # data modify storage switch:main minigames append value {index:XX,min_players:1	,max_players:-1		,id:"a_template"			,Name:"TEMPLATE"			,Lore:'["",{"text":"[TEMPLATE]\\n","color":"yellow"},{"text":"TEMPLATE\\n"},{"text":"TEMPLATE\\n"},{"text":"\\n[Estimation : 1-2 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par XXXXXX]","color":"aqua"}]'}
 
+# Auto index
+data modify storage switch:main indexed_minigames set value []
+scoreboard players set #index switch.data 0
+function switch:auto_index
+data modify storage switch:main minigames set from storage switch:main indexed_minigames
+data remove storage switch:main temp
 
 ## States
 execute if score #state switch.data matches -1 run tell none désactivé
