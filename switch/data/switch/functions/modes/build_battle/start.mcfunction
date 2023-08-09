@@ -12,6 +12,11 @@ kill @e[type=!player]
 time set 6000
 weather clear
 
+## Téléportation des joueurs
+function switch:choose_map_for/build_battle
+execute if data storage switch:main {map:"build_battle"} run function switch:modes/build_battle/preparation/build_battle
+
+
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Build Battle !"}]
 
 scoreboard players set #build_battle_state switch.data 0
