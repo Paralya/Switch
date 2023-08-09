@@ -3,5 +3,4 @@
 
 scoreboard players add #build_battle_seconds switch.data 1
 
-execute as @a[gamemode=adventure] run function switch:modes/build_battle/color/actionbar
 
