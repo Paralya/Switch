@@ -17,9 +17,11 @@ execute if score #block_party_ticks switch.data matches -100 summon marker run f
 # Give the block needed for everyone
 execute if score #block_party_ticks switch.data matches 0 run function switch:modes/block_party/core/give_block
 
-# Timer depending on rounds
+
+# Timer depending on rounds + stop sound
 execute if score #block_party_ticks switch.data matches 0.. run function switch:modes/block_party/core/timer_per_round
 execute if score #block_party_ticks switch.data matches 1000.. run function switch:modes/block_party/core/remove_blocks
+execute if score #block_party_ticks switch.data matches 1000.. run stopsound @a record
 function switch:modes/block_party/xp_bar
 
 

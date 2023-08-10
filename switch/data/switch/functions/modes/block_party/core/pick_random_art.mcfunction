@@ -48,3 +48,19 @@ clear @a[gamemode=adventure]
 # Kill marker
 kill @s
 
+# Play random music
+scoreboard players set #modulo_rand switch.data 12
+function switch:math/get_random/
+execute if score #random switch.data matches 0 as @a at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 1 as @a at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 2 as @a at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 3 as @a at @s run playsound music_disc.far record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 4 as @a at @s run playsound music_disc.mall record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 5 as @a at @s run playsound music_disc.mellohi record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 6 as @a at @s run playsound music_disc.stal record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 7 as @a at @s run playsound music_disc.strad record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 8 as @a at @s run playsound music_disc.wait record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 9 as @a at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 10 as @a at @s run playsound music_disc.11 record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 11 as @a at @s run playsound music_disc.13 record @s ~ ~ ~ 10000 1 1
+
