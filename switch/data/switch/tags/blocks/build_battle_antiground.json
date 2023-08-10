@@ -1,0 +1,19 @@
+{
+	"values": [
+		"#minecraft:all_signs",
+		"#iris:chests",
+		"barrel",
+		"calibrated_sculk_sensor",
+		"campfire",
+		"dragon_egg",
+		"furnace",
+		"blast_furnace",
+		"smoker",
+		"soul_campfire",
+		"sculk_sensor",
+		"sculk_shrieker",
+		"spawner",
+		"stonecutter",
+		"respawn_anchor"
+	]
+}

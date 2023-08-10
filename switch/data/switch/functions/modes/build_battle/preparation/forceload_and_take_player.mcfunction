@@ -1,7 +1,6 @@
 
 # Forceload
 forceload add ~ ~ ~48 ~48
-say @s
 
 # Take a random player, teleport him and apply ID
 tag @r[scores={switch.temp.id=-1}] add switch.temp

@@ -5,7 +5,12 @@ scoreboard players add #build_battle_ticks switch.data 1
 
 ## Global tick
 # For each marker, place the correct template
-execute if data storage switch:main {map:"build_battle"} at @e[tag=switch.build_battle_marker] run place template switch:build_battle
+execute as @e[tag=switch.build_battle_marker] at @s run function switch:modes/build_battle/tick_marker
+
+# Kill unexpected entities
+kill @e[type=end_crystal]
+kill @e[type=fireball]
+kill @e[type=tnt]
 
 
 ## Fin de partie
