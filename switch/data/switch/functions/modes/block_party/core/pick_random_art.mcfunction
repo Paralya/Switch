@@ -45,11 +45,8 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 execute as @a at @s run playsound entity.villager.ambient ambient @s
 clear @a[gamemode=adventure]
 
-# Kill marker
-kill @s
-
 # Play random music
-scoreboard players set #modulo_rand switch.data 12
+scoreboard players set #modulo_rand switch.data 10
 function switch:math/get_random/
 execute if score #random switch.data matches 0 as @a at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 1 as @a at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
@@ -61,6 +58,13 @@ execute if score #random switch.data matches 6 as @a at @s run playsound music_d
 execute if score #random switch.data matches 7 as @a at @s run playsound music_disc.strad record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 8 as @a at @s run playsound music_disc.wait record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 9 as @a at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 10 as @a at @s run playsound music_disc.11 record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 11 as @a at @s run playsound music_disc.13 record @s ~ ~ ~ 10000 1 1
+
+# Summon a paint cow randomly (1/3 chance)
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Paint Cow","color":"yellow"}',CustomNameVisible:1b,Tags:["switch.paint_cow"],DeathLootTable:"none",Attributes:[{Name:"generic.movement_speed",Base:1.0d}]}
+
+# Summon ravager (1/4 chance)
+execute if predicate switch:chance/0.25 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Vache Folle","color":"red"}',CustomNameVisible:1b,Tags:["switch.ravager"],DeathLootTable:"none"}
+
+# Kill marker
+kill @s
 
