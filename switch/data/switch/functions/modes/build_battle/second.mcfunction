@@ -3,4 +3,10 @@
 
 scoreboard players add #build_battle_seconds switch.data 1
 
+# Change every ground blocks to grass_block
+execute if score #build_battle_state switch.data matches 0 at @e[tag=switch.build_battle_marker] run setblock ~3 ~-2 ~3 air
+execute if score #build_battle_state switch.data matches 0 at @e[tag=switch.build_battle_marker] run setblock ~3 ~2 ~3 grass_block
+
+# Start the building time when the voting time is over
+execute if score #build_battle_state switch.data matches 0 if score #build_battle_seconds switch.data matches 0 run function switch:modes/build_battle/building_time/start
 
