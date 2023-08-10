@@ -13,12 +13,12 @@ item replace entity @s[tag=switch.beat_the_kings.civil] hotbar.8 with golden_app
 item replace entity @s[tag=switch.beat_the_kings.civil] inventory.0 with arrow 21
 
 item replace entity @s[tag=switch.beat_the_kings.king] hotbar.0 with water_bucket
-item replace entity @s[tag=switch.beat_the_kings.king] hotbar.1 with golden_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:3s},{id:"minecraft:fire_aspect",lvl:1s}]}
+item replace entity @s[tag=switch.beat_the_kings.king] hotbar.1 with golden_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:2s}]}
 item replace entity @s[tag=switch.beat_the_kings.king] hotbar.3 with bow{Enchantments:[{id:"minecraft:flame",lvl:1s}]}
 item replace entity @s[tag=switch.beat_the_kings.king] hotbar.7 with golden_apple 8
 item replace entity @s[tag=switch.beat_the_kings.king] hotbar.8 with oak_planks 64
 item replace entity @s[tag=switch.beat_the_kings.king] inventory.0 with arrow 42
-effect give @s[tag=switch.beat_the_kings.king] resistance infinite 4 true
+effect give @s[tag=switch.beat_the_kings.king] resistance infinite 3 true
 effect give @s[tag=switch.beat_the_kings.king] speed infinite 0 true
 effect give @s[tag=switch.beat_the_kings.king] health_boost infinite 1 true
 
