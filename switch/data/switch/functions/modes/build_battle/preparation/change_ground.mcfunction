@@ -10,11 +10,11 @@ execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~1 ~ ~ ~2 ~ ~ replace force
 execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~3 ~ ~ ~4 ~ ~ replace force
 execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~7 ~ ~ ~8 ~ ~ replace force
 execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~15 ~ ~ ~16 ~ ~ replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~6 ~ ~ ~32 ~ ~ replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~47 ~ ~ ~ ~ ~1 replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~47 ~ ~1 ~ ~ ~2 replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~47 ~ ~3 ~ ~ ~4 replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~47 ~ ~7 ~ ~ ~8 replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~47 ~ ~15 ~ ~ ~16 replace force
-execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~47 ~ ~6 ~ ~ ~32 replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~5 ~ ~ ~32 ~ ~ replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~38 ~ ~ ~ ~ ~1 replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~38 ~ ~1 ~ ~ ~2 replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~38 ~ ~3 ~ ~ ~4 replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~38 ~ ~7 ~ ~ ~8 replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~38 ~ ~15 ~ ~ ~16 replace force
+execute positioned ~5 ~1 ~5 run clone ~ ~ ~ ~38 ~ ~6 ~ ~ ~31 replace force
 
