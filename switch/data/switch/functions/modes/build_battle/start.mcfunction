@@ -3,7 +3,7 @@
 
 clear @a
 effect clear @a
-gamemode creative @a
+gamemode adventure @a
 team leave @a
 
 kill @e[type=!player]
@@ -16,12 +16,18 @@ weather clear
 function switch:choose_map_for/build_battle
 
 scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.temp.theme_vote dummy
 scoreboard objectives add switch.temp.points dummy
 
 scoreboard players set #build_battle_state switch.data 0
 scoreboard players set #build_battle_seconds switch.data -20
 scoreboard players set #build_battle_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #vote_theme_1 switch.data 0
+scoreboard players set #vote_theme_2 switch.data 0
+scoreboard players set #vote_theme_3 switch.data 0
+scoreboard players set #vote_theme_4 switch.data 0
+scoreboard players set #vote_theme_5 switch.data 0
 scoreboard players set @a switch.temp.id -1
 
 # Téléportation des joueurs dans leur cage

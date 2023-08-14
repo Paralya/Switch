@@ -8,8 +8,8 @@ execute if score #build_battle_state switch.data matches 0 at @e[tag=switch.buil
 execute if score #build_battle_state switch.data matches 0 at @e[tag=switch.build_battle_marker] run setblock ~3 ~2 ~3 grass_block
 
 # Start the building time when the voting time is over
-execute if score #build_battle_state switch.data matches 0 if score #build_battle_seconds switch.data matches 1000 run function switch:modes/build_battle/building_time/start
+execute if score #build_battle_state switch.data matches 0 if score #build_battle_seconds switch.data matches 100000 run function switch:modes/build_battle/building_time/start
 
 # Prevent people from leaving area
-execute if score #build_battle_state switch.data matches ..1 as @a[scores={switch.temp.id=0..}] run function switch:modes/build_battle/prevent_leaving_area
+execute if score #build_battle_state switch.data matches ..1 as @a[gamemode=!spectator,scores={switch.temp.id=0..}] run function switch:modes/build_battle/prevent_leaving_area
 
