@@ -9,6 +9,7 @@ team leave @a
 kill @e[type=!player]
 kill @e[type=!player]
 
+effect give @a saturation infinite 255 true
 time set 6000
 weather clear
 
