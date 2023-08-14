@@ -5,7 +5,7 @@ scoreboard players add #build_battle_ticks switch.data 1
 
 ## Global tick
 # For each marker, place the correct template
-execute as @e[tag=switch.build_battle_marker] at @s run function switch:modes/build_battle/tick_marker
+execute as @e[tag=switch.build_battle_marker,sort=random,limit=5] at @s run function switch:modes/build_battle/tick_marker
 
 # Kill unexpected entities
 kill @e[type=end_crystal]
