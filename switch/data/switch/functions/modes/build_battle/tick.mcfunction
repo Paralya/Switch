@@ -11,7 +11,6 @@ execute as @e[tag=switch.build_battle_marker,sort=random,limit=5] at @s run func
 execute if score #build_battle_state switch.data matches 0 as @a if data entity @s Inventory[0] run function switch:modes/build_battle/preparation/check_player_vote
 execute if score #build_battle_state switch.data matches 0 as @a in overworld run function switch:modes/build_battle/preparation/display_themes
 
-
 # Kill unexpected entities
 kill @e[type=end_crystal]
 kill @e[type=ender_pearl]

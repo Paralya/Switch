@@ -45,11 +45,11 @@ execute if score #vote_theme_5 switch.data matches ..1 run data modify block 0 1
 data modify block 0 0 0 Items[4].tag.display.Lore append from block 0 1 0 front_text.messages[0]
 
 # Enchant the paper that the player has voted for
-execute if score @s switch.temp.theme_vote matches 1 run data modify block 0 0 0 Items[0].tag.Enchantments set value [{id:"none",lvl:1s}]
-execute if score @s switch.temp.theme_vote matches 2 run data modify block 0 0 0 Items[1].tag.Enchantments set value [{id:"none",lvl:1s}]
-execute if score @s switch.temp.theme_vote matches 3 run data modify block 0 0 0 Items[2].tag.Enchantments set value [{id:"none",lvl:1s}]
-execute if score @s switch.temp.theme_vote matches 4 run data modify block 0 0 0 Items[3].tag.Enchantments set value [{id:"none",lvl:1s}]
-execute if score @s switch.temp.theme_vote matches 5 run data modify block 0 0 0 Items[4].tag.Enchantments set value [{id:"none",lvl:1s}]
+execute if score @s switch.temp.theme_vote matches 1 run data modify block 0 0 0 Items[0].id set value "minecraft:book"
+execute if score @s switch.temp.theme_vote matches 2 run data modify block 0 0 0 Items[1].id set value "minecraft:book"
+execute if score @s switch.temp.theme_vote matches 3 run data modify block 0 0 0 Items[2].id set value "minecraft:book"
+execute if score @s switch.temp.theme_vote matches 4 run data modify block 0 0 0 Items[3].id set value "minecraft:book"
+execute if score @s switch.temp.theme_vote matches 5 run data modify block 0 0 0 Items[4].id set value "minecraft:book"
 
 # Place the papers in the inventory
 clear @s
@@ -62,6 +62,5 @@ item replace entity @s inventory.15 from block 0 0 0 container.4
 # Remove blocks
 setblock 0 0 0 air
 setblock 0 1 0 air
-
 
 
