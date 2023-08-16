@@ -25,6 +25,8 @@ scoreboard objectives remove switch.respawn_cp_id
 scoreboard objectives remove switch.hard_respawn_cp_id
 scoreboard objectives remove switch.checkpoint
 scoreboard objectives remove switch.lap
+scoreboard objectives remove switch.effects.last
+scoreboard objectives remove switch.effects.timer
 
 team remove switch.temp.kart
 team remove switch.temp.1
