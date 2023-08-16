@@ -34,4 +34,6 @@ scoreboard players set @a switch.temp.id -1
 # Téléportation des joueurs dans leur cage
 function switch:modes/build_battle/preparation/
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Build Battle, votez pour le thème en ouvrant votre inventaire !"}]
+title @a title {"text":"Vote du Thème","color":"aqua"}
+title @a subtitle {"text":"(Ouvrez votre inventaire !)","color":"yellow"}
 

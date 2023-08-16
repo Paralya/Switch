@@ -8,6 +8,7 @@ scoreboard players add #build_battle_ticks switch.data 1
 execute as @e[tag=switch.build_battle_marker,sort=random,limit=5] at @s run function switch:modes/build_battle/tick_marker
 
 # While people are voting, display the themes in inventory and check their votes
+execute if score #build_battle_state switch.data matches 0 run kill @e[type=item]
 execute if score #build_battle_state switch.data matches 0 as @a if data entity @s Inventory[0] run function switch:modes/build_battle/preparation/check_player_vote
 execute if score #build_battle_state switch.data matches 0 as @a in overworld run function switch:modes/build_battle/preparation/display_themes
 
