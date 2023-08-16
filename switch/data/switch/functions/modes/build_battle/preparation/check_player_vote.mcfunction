@@ -22,4 +22,6 @@ execute if score @s switch.temp.theme_vote matches 3 run scoreboard players add 
 execute if score @s switch.temp.theme_vote matches 4 run scoreboard players add #vote_theme_4 switch.data 1
 execute if score @s switch.temp.theme_vote matches 5 run scoreboard players add #vote_theme_5 switch.data 1
 
+# Clear to remove held item
+clear @s
 

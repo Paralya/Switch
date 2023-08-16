@@ -18,7 +18,8 @@ function switch:choose_map_for/build_battle
 
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.theme_vote dummy
-scoreboard objectives add switch.temp.points dummy
+scoreboard objectives add switch.temp.rating_vote dummy
+scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"yellow"}
 
 scoreboard players set #build_battle_state switch.data 0
 scoreboard players set #build_battle_seconds switch.data -20
@@ -31,9 +32,13 @@ scoreboard players set #vote_theme_4 switch.data 0
 scoreboard players set #vote_theme_5 switch.data 0
 scoreboard players set @a switch.temp.id -1
 
+execute unless score #build_battle_save_x switch.data matches ..-76 run scoreboard players set #build_battle_save_x switch.data -76
+execute unless score #build_battle_save_z switch.data matches 0.. run scoreboard players set #build_battle_save_z switch.data 0
+
 # Téléportation des joueurs dans leur cage
 function switch:modes/build_battle/preparation/
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Build Battle, votez pour le thème en ouvrant votre inventaire !"}]
+title @a times 20 60 20
 title @a title {"text":"Vote du Thème","color":"aqua"}
 title @a subtitle {"text":"(Ouvrez votre inventaire !)","color":"yellow"}
 

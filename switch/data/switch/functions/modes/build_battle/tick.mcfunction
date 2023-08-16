@@ -12,6 +12,12 @@ execute if score #build_battle_state switch.data matches 0 run kill @e[type=item
 execute if score #build_battle_state switch.data matches 0 as @a if data entity @s Inventory[0] run function switch:modes/build_battle/preparation/check_player_vote
 execute if score #build_battle_state switch.data matches 0 as @a in overworld run function switch:modes/build_battle/preparation/display_themes
 
+# Check players that voted during rating time
+execute if score #build_battle_state switch.data matches 2 as @a[scores={switch.right_click=1..}] at @s run function switch:modes/build_battle/rating_time/right_click
+
+# Avoid build changes during rating time
+execute if score #build_battle_state switch.data matches 2 at @e[tag=switch.marker_temp,limit=1] run place template switch:temp ~5 ~ ~5
+
 # Kill unexpected entities
 kill @e[type=end_crystal]
 kill @e[type=ender_pearl]
@@ -22,7 +28,6 @@ kill @e[type=allay]
 kill @e[type=vex]
 kill @e[type=tnt]
 
-
 ## Fin de partie
-# TODO
+execute if score #process_end switch.data matches 1.. run function switch:modes/build_battle/process_end
 

@@ -52,7 +52,7 @@ execute if score @s switch.temp.theme_vote matches 4 run data modify block 0 0 0
 execute if score @s switch.temp.theme_vote matches 5 run data modify block 0 0 0 Items[4].id set value "minecraft:book"
 
 # Place the papers in the inventory
-clear @s
+execute if data entity @s Inventory[5] run clear @s
 item replace entity @s inventory.11 from block 0 0 0 container.0
 item replace entity @s inventory.12 from block 0 0 0 container.1
 item replace entity @s inventory.13 from block 0 0 0 container.2

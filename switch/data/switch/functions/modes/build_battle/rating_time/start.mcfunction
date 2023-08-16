@@ -1,35 +1,14 @@
 
-scoreboard players set #build_battle_state switch.data 1
-scoreboard players set #remaining_time switch.data 300
-effect clear @a levitation
-gamemode creative @a
+# Change game state
+scoreboard players set #build_battle_state switch.data 2
+schedule function switch:modes/build_battle/rating_time/find_player 1t replace
+execute as @a at @s run playsound block.anvil.destroy ambient @s
 clear @a
 
-# Get most voted word
-scoreboard players operation #max switch.data = #vote_theme_1 switch.data
-scoreboard players operation #max switch.data > #vote_theme_2 switch.data
-scoreboard players operation #max switch.data > #vote_theme_3 switch.data
-scoreboard players operation #max switch.data > #vote_theme_4 switch.data
-scoreboard players operation #max switch.data > #vote_theme_5 switch.data
-scoreboard players set #index switch.data 0
-execute if score #vote_theme_1 switch.data = #max switch.data run scoreboard players set #index switch.data 1
-execute if score #vote_theme_2 switch.data = #max switch.data if score #index switch.data matches 0 run scoreboard players set #index switch.data 2
-execute if score #vote_theme_3 switch.data = #max switch.data if score #index switch.data matches 0 run scoreboard players set #index switch.data 3
-execute if score #vote_theme_4 switch.data = #max switch.data if score #index switch.data matches 0 run scoreboard players set #index switch.data 4
-execute if score #vote_theme_5 switch.data = #max switch.data if score #index switch.data matches 0 run scoreboard players set #index switch.data 5
-execute if score #vote_theme_2 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 2
-execute if score #vote_theme_3 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 3
-execute if score #vote_theme_4 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 4
-execute if score #vote_theme_5 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 5
-execute if score #index switch.data matches 1 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[0]
-execute if score #index switch.data matches 2 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[1]
-execute if score #index switch.data matches 3 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[2]
-execute if score #index switch.data matches 4 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[3]
-execute if score #index switch.data matches 5 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[4]
+# Tag every players to be able to rate their build
+tag @a remove switch.to_rate
+tag @a[scores={switch.temp.id=0..}] add switch.to_rate
 
 # Tellraw start + playsound
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"aqua"},{"text":" !"}]
-title @a title {"text":"Thème choisi", "color":"yellow"}
-title @a subtitle {"nbt":"current_theme","storage":"switch:main","color":"aqua"}
-execute as @a at @s run playsound entity.player.levelup ambient @s
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]
 
