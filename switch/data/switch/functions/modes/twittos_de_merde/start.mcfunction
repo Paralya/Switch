@@ -14,7 +14,6 @@ effect give @a weakness infinite 2 true
 difficulty peaceful
 time set 18000
 weather clear
-function switch:modes/twittos_de_merde/give_items
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
@@ -28,7 +27,7 @@ function switch:choose_map_for/twittos_de_merde
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos de MERDE ! Ça commence dans 5 secondes !"}]
 tellraw @a {"text":"Ne signez surtout pas vos livres ! On ne pourra pas voir vos tweets.","color":"red"}
-scoreboard players set #remaining_time switch.data 600
+scoreboard players set #remaining_time switch.data 605
 scoreboard players set #twittos_de_merde_seconds switch.data -5
 scoreboard players set #twittos_de_merde_seconds_mdj switch.data -5
 scoreboard players set #twittos_de_merde_ticks switch.data 0

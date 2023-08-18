@@ -10,7 +10,6 @@ execute if score #twittos_de_merde_seconds switch.data matches 0.. run function 
 execute if score #twittos_de_merde_seconds switch.data matches 0 as @a at @s run function switch:modes/twittos_de_merde/give_items
 
 
-
 # Spawning creepers
 # execute if score #twittos_de_merde_seconds switch.data matches 0.. at @e[type=marker,tag=switch.selected_map,limit=1] run summon creeper ~ ~ ~ {AbsorptionAmount:2048f,Tags:["switch.new"],Attributes:[{Name:"generic.follow_range",Base:128}]}
 # execute if score #twittos_de_merde_seconds switch.data matches 0.. at @e[type=marker,tag=switch.selected_map,limit=1] run summon creeper ~ ~ ~ {AbsorptionAmount:2048f,Tags:["switch.new"],Attributes:[{Name:"generic.follow_range",Base:128}]}
