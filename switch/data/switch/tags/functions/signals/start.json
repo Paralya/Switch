@@ -31,6 +31,7 @@
 		"switch:modes/gay_shooter/calls/start",
 		"switch:modes/build_battle/calls/start",
 		"switch:modes/beat_the_kings/calls/start",
+		"switch:modes/twittos_de_merde/calls/start",
 		"switch:modes/a_template/calls/start"
 	]
 }
