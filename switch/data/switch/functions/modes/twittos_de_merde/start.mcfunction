@@ -28,7 +28,6 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/twittos_de_merde
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos de MERDE ! Ça commence dans 5 secondes !"}]
-tellraw @a {"text":"Ne signez surtout pas vos livres ! On ne pourra pas voir vos tweets.","color":"red"}
 
 #initialisation des variables
 scoreboard players set #remaining_time switch.data 605
@@ -38,5 +37,6 @@ scoreboard players set #twittos_de_merde_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #phase_de_vote switch.data 0
 
-scoreboard objectives add switch.temp.deathCount deathCount
 
+scoreboard objectives add switch.temp.deathCount deathCount
+scoreboard objectives add passage_vote dummy

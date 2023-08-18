@@ -6,4 +6,9 @@ execute if score #phase_de_vote switch.data matches 0 run scoreboard players set
 # Si passage_vote==1, votre tweet n'est pas encore passé, passage_vote==0, votre tweet passe, passage_vote==-1 votre tweet est passé. me demande pas pourquoi je fais comme ça stoupy par pitié
 # Toutes les 7 secondes un tweet apparait à l'aide d'une variable (et une possibilité de liker et disliker)
 #si timer_phase_de_vote==7 (donc 7 secondes), le timer se réinitialise et on montre un autre tweet
-execute if score #timer_phase_de_vote switch.data matches 7.. run function switch:modes/twittos_de_merde/tweet_affichage
+execute if score #timer_phase_de_vote switch.data matches 7.. if entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/tweet_affichage
+execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players reset #phase_de_vote switch.data
+execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #twittos_de_merde_seconds_mdj switch.data 0
+execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #phase_de_vote switch.data 0
+execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/give_items
+

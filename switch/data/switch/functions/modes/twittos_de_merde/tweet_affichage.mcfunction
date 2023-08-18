@@ -1,4 +1,4 @@
-
+tp @r[scores={passage_vote=0}] 1 101 1
 scoreboard players set #timer_phase_de_vote switch.data 0
 scoreboard players set @r[scores={passage_vote=0}] passage_vote -1
 scoreboard players set @r[scores={passage_vote=1}] passage_vote 0
