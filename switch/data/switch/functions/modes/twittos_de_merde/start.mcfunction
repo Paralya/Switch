@@ -14,6 +14,7 @@ effect give @a weakness infinite 2 true
 difficulty peaceful
 time set 18000
 weather clear
+function switch:modes/twittos_de_merde/give_items
 
 gamerule mobGriefing false
 gamerule showDeathMessages false
