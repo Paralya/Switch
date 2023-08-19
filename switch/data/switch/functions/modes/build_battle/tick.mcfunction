@@ -15,8 +15,6 @@ execute if score #build_battle_state switch.data matches 0 as @a in overworld ru
 # Check players that voted during rating time
 execute if score #build_battle_state switch.data matches 2 as @a[scores={switch.right_click=1..}] at @s run function switch:modes/build_battle/rating_time/right_click
 
-# Avoid build changes during rating time
-execute if score #build_battle_state switch.data matches 2 at @e[tag=switch.marker_temp,limit=1] run place template switch:temp ~5 ~ ~5
 
 # Kill unexpected entities
 kill @e[type=end_crystal]

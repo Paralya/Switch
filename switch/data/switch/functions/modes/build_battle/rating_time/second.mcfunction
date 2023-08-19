@@ -2,6 +2,9 @@
 # Show Current theme
 title @a actionbar [{"text":"Thème : ","color":"aqua"},{"nbt":"current_theme","storage":"switch:main","color":"yellow"}]
 
+# Avoid build changes during rating time
+execute at @e[tag=switch.marker_temp,limit=1] run place template switch:temp ~5 ~ ~5
+
 ## Rating
 # Equipment
 gamemode creative @a
