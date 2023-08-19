@@ -16,3 +16,4 @@ execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set 
 
 #thème aléatoire a la fin du round
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire
+execute as @a at @s run playsound entity.player.levelup ambient @s
