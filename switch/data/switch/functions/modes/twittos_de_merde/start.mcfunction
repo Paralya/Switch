@@ -31,12 +31,14 @@ tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"te
 
 #initialisation des variables
 scoreboard players set #remaining_time switch.data 605
+scoreboard players set #remaining_time_mdj switch.data 50
 scoreboard players set #twittos_de_merde_seconds switch.data -5
 scoreboard players set #twittos_de_merde_seconds_mdj switch.data -5
 scoreboard players set #twittos_de_merde_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #phase_de_vote switch.data 0
 
-
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add passage_vote dummy
+scoreboard objectives add like_compteur trigger
+scoreboard players enable @a like_compteur

@@ -1,5 +1,6 @@
 #lance la phase des votes
 #si phase_de_vote==1 la phase de vote est en cours / commence, si phase_de_vote==0, la phase de vote s'arrête / n'est pas en cours.
+execute if score #phase_de_vote switch.data matches 0 run tellraw @a {"text":"Levez les mains ! Les tweets arrivent !\n","color":"red"}
 execute if score #phase_de_vote switch.data matches 0 run scoreboard players set @a passage_vote 1
 execute if score #phase_de_vote switch.data matches 0 run scoreboard players set #phase_de_vote switch.data 1
 
@@ -11,4 +12,7 @@ execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players rese
 execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #twittos_de_merde_seconds_mdj switch.data 0
 execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #phase_de_vote switch.data 0
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/give_items
+execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #remaining_time_mdj switch.data 45
 
+#thème aléatoire a la fin du round
+execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire

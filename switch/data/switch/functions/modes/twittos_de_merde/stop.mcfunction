@@ -5,4 +5,4 @@ kill @e[type=!player]
 tag @a remove switch.alive
 
 scoreboard objectives remove switch.temp.deathCount
-
+scoreboard objectives remove like_compteur

@@ -7,5 +7,5 @@ tag @s remove switch.alive
 gamemode spectator @s
 effect clear @s
 clear @s
-tellraw @s {"text":"N'oubliez pas que vous pouvez toujours voter malgré votre mort !","color":"red"}
+tellraw @s {"text":"N'oubliez pas que vous pouvez toujours voter malgré votre mort !\n","color":"red"}
 
