@@ -42,3 +42,4 @@ scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add passage_vote dummy
 scoreboard objectives add like_compteur trigger
 scoreboard players enable @a like_compteur
+scoreboard objectives add nb_like dummy
