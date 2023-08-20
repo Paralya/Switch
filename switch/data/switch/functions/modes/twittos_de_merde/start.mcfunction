@@ -43,3 +43,6 @@ scoreboard objectives add passage_vote dummy
 scoreboard objectives add like_compteur trigger
 scoreboard players enable @a like_compteur
 scoreboard objectives add nb_like dummy
+scoreboard objectives add numero_vote dummy
+scoreboard players set @a numero_vote 0 
+scoreboard players set #cb_personne switch.data 0

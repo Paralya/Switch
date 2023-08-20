@@ -15,6 +15,11 @@ execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set 
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/give_items
 execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #remaining_time_mdj switch.data 45
 
+#reset compteur numero_vote mes couilles
+execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set #cb_personne switch.data 0
+execute unless entity @a[scores={passage_vote=0..1}] run scoreboard players set @a numero_vote 0
+
 #thème aléatoire a la fin du round
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire
-execute as @a at @s run playsound entity.player.levelup ambient @s
+
+#les voix deviennent fortes depuis que j'essaie d'appréhender comment faire le système de vote et ça ne fait que commencer
