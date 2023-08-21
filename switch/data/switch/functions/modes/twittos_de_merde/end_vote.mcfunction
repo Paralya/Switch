@@ -12,7 +12,7 @@ scoreboard players set #cb_personne switch.data 0
 scoreboard players set @a numero_vote 0
 
 #thème aléatoire a la fin du round
-function switch:modes/twittos_de_merde/theme_aleatoire
+execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire
 scoreboard players set @a switch.temp.rating_vote 0
 
 #détermine quels sont les derniers
