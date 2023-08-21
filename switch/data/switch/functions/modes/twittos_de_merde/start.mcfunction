@@ -6,7 +6,7 @@ effect clear @a
 gamemode adventure @a
 team join switch.no_pvp @a
 tag @a add switch.alive
-
+tag @a remove switch.looser
 
 effect give @a saturation infinite 255 true
 effect give @a regeneration infinite 255 true
@@ -27,7 +27,7 @@ scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/twittos_de_merde
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos de MERDE ! Ça commence dans 5 secondes !"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos Battle ! Ça commence dans 5 secondes !"}]
 
 #initialisation des variables
 scoreboard players set #remaining_time switch.data 605
@@ -41,8 +41,15 @@ scoreboard players set #phase_de_vote switch.data 0
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add passage_vote dummy
 scoreboard objectives add like_compteur trigger
-scoreboard players enable @a like_compteur
+scoreboard players enable @a switch.temp.rating_vote
 scoreboard objectives add nb_like dummy
 scoreboard objectives add numero_vote dummy
 scoreboard players set @a numero_vote 0 
 scoreboard players set #cb_personne switch.data 0
+scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.temp.rank dummy
+scoreboard players set @a switch.temp.id 1
+scoreboard objectives add switch.temp.points dummy 
+scoreboard objectives add switch.temp.rating_vote trigger
+
+#penser à reetirer la petite commande en bas c'est juste pour la phase de dev hein ça zou du balai mon gavaw sucré au sucre

@@ -1,6 +1,6 @@
 #On prend un nombre aléatoire et y'affecte un thème à afficher
 scoreboard players set #random switch.data -1
-scoreboard players set #modulo_rand switch.data 12
+scoreboard players set #modulo_rand switch.data 16
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:math/get_random/
 
 execute if score #random switch.data matches 0 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Stoupy n'aurait jamais dû...\n","color":"light_purple"}]
@@ -15,3 +15,7 @@ execute if score #random switch.data matches 8 run tellraw @a [{"text":"Le thèm
 execute if score #random switch.data matches 9 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Charly Griveaux\n","color":"light_purple"}]
 execute if score #random switch.data matches 10 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Twitter / X\n","color":"light_purple"}]
 execute if score #random switch.data matches 11 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Thème libre j'en sais rien ai de l'inspi un peu non?\n","color":"light_purple"}]
+execute if score #random switch.data matches 12 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Minecraft\n","color":"light_purple"}]
+execute if score #random switch.data matches 13 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Politique\n","color":"light_purple"}]
+execute if score #random switch.data matches 14 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Twitter si on était au Moyen-Age\n","color":"light_purple"}]
+execute if score #random switch.data matches 15 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Session vanne sur les villes de France\n","color":"light_purple"}]
