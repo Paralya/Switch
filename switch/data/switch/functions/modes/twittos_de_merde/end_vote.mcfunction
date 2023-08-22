@@ -11,6 +11,13 @@ scoreboard players enable @a switch.temp.rating_vote
 scoreboard players set #cb_personne switch.data 0
 scoreboard players set @a numero_vote 0
 
+#y'a plus de bagarre donc on remet les effets + team no_pvp
+team join switch.no_pvp @a
+effect give @a saturation infinite 255 true
+effect give @a regeneration infinite 255 true
+effect give @a weakness infinite 2 true
+effect give @a night_vision infinite 255 true
+
 #thème aléatoire a la fin du round
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire
 scoreboard players set @a switch.temp.rating_vote 0

@@ -1,5 +1,5 @@
 #On prend un nombre aléatoire et y'affecte un thème à afficher
-scoreboard players set #modulo_rand switch.data 16
+scoreboard players set #modulo_rand switch.data 18
 function switch:math/get_random/
 
 # penser à modifier les thèmes en fonction de avec qui tu joues
@@ -20,3 +20,4 @@ execute if score #random switch.data matches 13 run tellraw @a [{"text":"Le thè
 execute if score #random switch.data matches 14 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Twitter si on était au Moyen-Age\n","color":"light_purple"}]
 execute if score #random switch.data matches 15 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Session vanne sur les villes de France\n","color":"light_purple"}]
 execute if score #random switch.data matches 16 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Jeux Vidéo\n","color":"light_purple"}]
+execute if score #random switch.data matches 17 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Musique\n","color":"light_purple"}]
