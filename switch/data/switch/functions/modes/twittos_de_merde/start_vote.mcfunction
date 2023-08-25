@@ -11,6 +11,7 @@ execute if score #phase_de_vote switch.data matches 0 run scoreboard players set
 # Toutes les 10 secondes un tweet apparait à l'aide d'une variable (et une possibilité de liker et disliker)
 #si timer_phase_de_vote==10 (donc 10 secondes), le timer se réinitialise et on montre un autre tweet
 execute if score #timer_phase_de_vote switch.data matches 10.. if entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/calculation_vote
+scoreboard players set @a switch.temp.rating_vote 0
 execute if score #timer_phase_de_vote switch.data matches 10.. if entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/tweet_affichage
 execute unless entity @a[scores={passage_vote=0..1}] run function switch:modes/twittos_de_merde/get_rank
 execute if score #twittos_battle_state switch.data matches -1 run function switch:modes/twittos_de_merde/end_vote
