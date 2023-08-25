@@ -11,4 +11,5 @@ item replace entity @a[tag=switch.looser] hotbar.0 with stone_sword
 item replace entity @a[tag=switch.looser] hotbar.1 with bow
 item replace entity @a[tag=switch.looser] hotbar.7 with cooked_beef 5
 item replace entity @a[tag=switch.looser] inventory.0 with arrow 3
+attribute @s generic.attack_speed base set 1024
 team leave @a[tag=switch.looser]

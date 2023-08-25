@@ -12,4 +12,5 @@ item replace entity @a[scores={switch.temp.rank=1}] hotbar.1 with bow
 item replace entity @a[scores={switch.temp.rank=1}] hotbar.5 with golden_apple 3
 item replace entity @a[scores={switch.temp.rank=1}] hotbar.7 with cooked_beef 10
 item replace entity @a[scores={switch.temp.rank=1}] inventory.0 with arrow 15
+attribute @s generic.attack_speed base set 1024
 team leave @a[scores={switch.temp.rank=1}]

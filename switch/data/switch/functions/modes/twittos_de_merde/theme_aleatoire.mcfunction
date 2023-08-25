@@ -12,7 +12,7 @@ execute if score #random switch.data matches 5 run tellraw @a [{"text":"Le thèm
 execute if score #random switch.data matches 6 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Punchline\n","color":"light_purple"}]
 execute if score #random switch.data matches 7 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Tweet d'excuse après un drama\n","color":"light_purple"}]
 execute if score #random switch.data matches 8 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" La Douane\n","color":"light_purple"}]
-execute if score #random switch.data matches 9 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Charly Griveaux\n","color":"light_purple"}]
+execute if score #random switch.data matches 9 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Tweet comme Charly\n","color":"light_purple"}]
 execute if score #random switch.data matches 10 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Twitter / X\n","color":"light_purple"}]
 execute if score #random switch.data matches 11 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Thème libre j'en sais rien ai de l'inspi un peu non?\n","color":"light_purple"}]
 execute if score #random switch.data matches 12 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Minecraft\n","color":"light_purple"}]

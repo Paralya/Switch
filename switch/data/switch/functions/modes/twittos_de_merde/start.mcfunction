@@ -8,6 +8,7 @@ team join switch.no_pvp @a
 tag @a add switch.alive
 tag @a remove switch.looser
 
+tp @a 1 101 1
 effect give @a saturation infinite 255 true
 effect give @a regeneration infinite 255 true
 effect give @a weakness infinite 2 true
