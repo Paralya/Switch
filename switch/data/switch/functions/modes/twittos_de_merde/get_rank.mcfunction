@@ -8,6 +8,9 @@ execute as @a[scores={switch.temp.id=0..}] at @a[scores={switch.temp.id=0..}] if
 #a supprimer le ptit truc en bas la 
 scoreboard objectives setdisplay sidebar switch.temp.rank
 
+# on choppe un n°1 au hasard pour pas en prendre plusieurs (faut pas qu'être premier soit un handicap en soit) 
+scoreboard players set @r[scores={switch.temp.rank=1}] switch.temp.rank -1
+
 #on tag le looser qui a le moins de like (énorme floppeur si on me demande)
 scoreboard players set #max switch.data 0
 scoreboard players operation #max switch.data > @a switch.temp.rank

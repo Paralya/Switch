@@ -10,4 +10,4 @@ execute if score #remaining_time switch.data matches 0 run function switch:modes
 execute if entity @a[scores={passage_vote=0..1}] run scoreboard players enable @a switch.temp.rating_vote
 
 execute store result score #remaining_players switch.data if entity @a[gamemode=adventure]
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/spleef/process_end
+execute if score #remaining_players switch.data matches ..1 run function switch:modes/twittos_de_merde/process_end
