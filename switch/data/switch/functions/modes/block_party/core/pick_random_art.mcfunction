@@ -14,6 +14,7 @@ scoreboard players operation #bp_selected_art switch.data = #random switch.data
 tp @s 110008 85 110008
 scoreboard players set #y_pos switch.data 85
 scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
+scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos switch.data
 
 # Clone the selected pixel art
@@ -66,8 +67,8 @@ execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] r
 execute if predicate switch:chance/0.25 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Vache Folle","color":"red"}',CustomNameVisible:1b,Tags:["switch.ravager"],DeathLootTable:"none"}
 
 # Spreadplayers the entities
-spreadplayers 110038 110038 10 100 false @e[tag=switch.paint_cow]
-spreadplayers 110038 110038 10 100 false @e[tag=switch.ravager]
+spreadplayers 110038 110038 10 50 false @e[tag=switch.paint_cow]
+spreadplayers 110038 110038 10 50 false @e[tag=switch.ravager]
 execute as @e[tag=switch.paint_cow] run damage @s 1 arrow
 
 # Kill marker

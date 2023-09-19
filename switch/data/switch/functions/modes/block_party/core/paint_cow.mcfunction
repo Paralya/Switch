@@ -2,6 +2,7 @@
 ## Function executed as and at the paint cow
 
 # Depending on the color, change the ground
+execute if score #bp_block switch.data matches -1 run fill ~-1.69 ~-1 ~-1.69 ~1.69 ~-1 ~1.69 white_terracotta
 execute if score #bp_block switch.data matches 0 run fill ~-1.69 ~-1 ~-1.69 ~1.69 ~-1 ~1.69 white_concrete
 execute if score #bp_block switch.data matches 1 run fill ~-1.69 ~-1 ~-1.69 ~1.69 ~-1 ~1.69 orange_concrete
 execute if score #bp_block switch.data matches 2 run fill ~-1.69 ~-1 ~-1.69 ~1.69 ~-1 ~1.69 magenta_concrete
