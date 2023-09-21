@@ -6,7 +6,7 @@ execute if score #tick switch.data matches 20.. in overworld run function switch
 
 # Engine : games ticks, start, stop
 execute if score #state switch.data matches 3 in overworld run function #switch:signals/tick
-#execute if score #state switch.data matches 0 if entity @a in overworld run function switch:engine/start
+execute if score #state switch.data matches 0 if entity @a in overworld run function switch:engine/start
 execute unless score #state switch.data matches 0 unless entity @a in overworld run function switch:engine/stop
 
 # Cut Clean support
