@@ -39,6 +39,7 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
 
 scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.temp.role dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Rôles restants","color":"gold"}
@@ -62,26 +63,20 @@ team modify switch.temp.sidebar.4 color green
 team modify switch.temp.sidebar.3 color green
 team modify switch.temp.sidebar.2 color red
 team modify switch.temp.sidebar.1 color dark_red
-team join switch.temp.sidebar.5 Ins
-team join switch.temp.sidebar.4 Nin
-team join switch.temp.sidebar.3 Inn
-team join switch.temp.sidebar.2 Tra
-team join switch.temp.sidebar.1 Gro
-scoreboard players set Ins switch.temp.sidebar 5
-scoreboard players set Nin switch.temp.sidebar 4
-scoreboard players set Inn switch.temp.sidebar 3
-scoreboard players set Tra switch.temp.sidebar 2
-scoreboard players set Gro switch.temp.sidebar 1
+team join switch.temp.sidebar.5 §5
+team join switch.temp.sidebar.4 §4
+team join switch.temp.sidebar.3 §3
+team join switch.temp.sidebar.2 §2
+team join switch.temp.sidebar.1 §1
+scoreboard players set §5 switch.temp.sidebar 5
+scoreboard players set §4 switch.temp.sidebar 4
+scoreboard players set §3 switch.temp.sidebar 3
+scoreboard players set §2 switch.temp.sidebar 2
+scoreboard players set §1 switch.temp.sidebar 1
 
 # Choix des rôles
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-tag @a remove switch.traitors_game.detective
-tag @a remove switch.traitors_game.ninja
-tag @a remove switch.traitors_game.second_life
-tag @a remove switch.traitors_game.innocent
-tag @a remove switch.traitors_game.traitor
-tag @a remove switch.traitors_game.big_traitor
 execute as @a[sort=random] at @s run function switch:modes/traitors_game/roles/
 execute as @a at @s run function switch:modes/traitors_game/give_items
 function switch:modes/traitors_game/update_sidebar

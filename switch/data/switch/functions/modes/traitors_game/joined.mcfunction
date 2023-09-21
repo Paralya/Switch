@@ -4,7 +4,7 @@
 # execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-# Ici : dans tous les cas, tuer la personne qui join
-tag @s remove switch.traitors_game.second_life
+# Ici : dans tous les cas, tuer la personne qui join (+ exception pour le ninja)
+execute if score @s switch.temp.role matches 3 run scoreboard players set @s switch.temp.role 4
 function switch:modes/traitors_game/death/player
 
