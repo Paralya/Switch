@@ -3,7 +3,7 @@ execute if score @s switch.temp.deathCount matches 1.. run tellraw @a [{"selecto
 
 execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 scoreboard players reset @s switch.temp.deathCount
-tag @s remove switch.alive
+scoreboard players set @s switch.alive 0
 gamemode spectator @s
 effect clear @s
 clear @s
