@@ -4,6 +4,5 @@
 # execute if score #reconnect switch.data matches 0 run tell none new player, launch join function ?
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
-execute if score #reconnect switch.data matches 0 run function switch:modes/coin_chaser/give_items
-execute if score #reconnect switch.data matches 0 run function switch:maps/spread_one_player
+execute if score #reconnect switch.data matches 0 run function switch:modes/coin_chaser/respawn
 
