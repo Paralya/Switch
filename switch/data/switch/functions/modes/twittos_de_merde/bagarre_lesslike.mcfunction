@@ -1,4 +1,4 @@
-scoreboard players set @a[tag=switch.looser] passage_vote -2
+scoreboard players set @a[tag=switch.looser] switch.temp.passage_vote -2
 tp @a[tag=switch.looser] -25 101 1
 effect clear @a[tag=switch.looser] 
 effect give @a[tag=switch.looser] night_vision infinite 255 true

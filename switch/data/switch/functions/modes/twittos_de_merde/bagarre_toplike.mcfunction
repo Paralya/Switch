@@ -1,4 +1,4 @@
-scoreboard players set @a[scores={switch.temp.rank=-1}] passage_vote -2
+scoreboard players set @a[scores={switch.temp.rank=-1}] switch.temp.passage_vote -2
 tp @a[scores={switch.temp.rank=-1}] 25 101 1
 effect clear @a[scores={switch.temp.rank=-1}] 
 effect give @a[scores={switch.temp.rank=-1}] night_vision infinite 255 true

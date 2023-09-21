@@ -23,14 +23,14 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-## Placement de la map et des joueurs + give d'items
+## Placement de la map et des joueurs
 scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/twittos_de_merde
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos Battle ! Ça commence dans 5 secondes !"}]
 
-#initialisation des variables
+# Initialisation des variables
 scoreboard players set #remaining_time switch.data 605
 scoreboard players set #remaining_time_mdj switch.data 50
 scoreboard players set #twittos_de_merde_seconds switch.data -5
@@ -40,17 +40,19 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #phase_de_vote switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount
-scoreboard objectives add passage_vote dummy
-scoreboard objectives add like_compteur trigger
-scoreboard players enable @a switch.temp.rating_vote
-scoreboard objectives add nb_like dummy
-scoreboard objectives add numero_vote dummy
-scoreboard players set @a numero_vote 0 
-scoreboard players set #cb_personne switch.data 0
+scoreboard objectives add switch.temp.passage_vote dummy
+scoreboard objectives add switch.temp.like_compteur trigger
+scoreboard objectives add switch.temp.nb_like dummy
+scoreboard objectives add switch.temp.numero_vote dummy
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.rank dummy
-scoreboard players set @a switch.temp.id 1
 scoreboard objectives add switch.temp.points dummy 
 scoreboard objectives add switch.temp.rating_vote trigger
 
-#penser à reetirer la petite commande en bas c'est juste pour la phase de dev hein ça zou du balai mon gavaw sucré au sucre
+scoreboard players enable @a switch.temp.rating_vote
+scoreboard players set @a switch.temp.numero_vote 0 
+scoreboard players set #cb_personne switch.data 0
+scoreboard players set @a switch.temp.id 1
+
+# Penser à retirer la petite commande en bas c'est juste pour la phase de dev hein ça zou du balai mon gavaw sucré au sucre
+

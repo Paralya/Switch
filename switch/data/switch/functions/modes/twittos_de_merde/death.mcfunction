@@ -1,6 +1,6 @@
 
 execute if score @s switch.temp.deathCount matches 1.. run tellraw @a [{"selector":"@s","color":"red"},{"text":" est éliminé, j'ai pas aimé son tweet perso il me manquera pas !"}]
-scoreboard players set @s passage_vote -1
+scoreboard players set @s switch.temp.passage_vote -1
 execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 scoreboard players reset @s switch.temp.deathCount
 tag @s remove switch.alive

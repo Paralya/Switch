@@ -21,5 +21,5 @@ execute as @a if score @s switch.temp.rank = #max switch.data run tag @s add swi
 execute if score #twittos_battle_state switch.data matches 1 run function switch:modes/twittos_de_merde/bagarre_lesslike
 execute if score #twittos_battle_state switch.data matches 1 run function switch:modes/twittos_de_merde/bagarre_toplike
 execute if score #twittos_battle_state switch.data matches 1 run scoreboard players set #twittos_battle_state switch.data 2
-execute store result score #remaining_players_bagarre switch.data if entity @a[scores={passage_vote=-2}]
+execute store result score #remaining_players_bagarre switch.data if entity @a[scores={switch.temp.passage_vote=-2}]
 execute if score #remaining_players_bagarre switch.data matches ..1 run scoreboard players set #twittos_battle_state switch.data -1
