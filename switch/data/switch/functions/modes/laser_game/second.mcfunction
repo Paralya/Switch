@@ -33,7 +33,7 @@ execute if score #base_reload switch.data matches 1.. run setblock 72114 112 720
 scoreboard players remove #mitraillette switch.data 1
 scoreboard players remove #change_color switch.data 1
 execute if score #mitraillette switch.data matches ..0 run tag @a[tag=switch.bonus.fast] remove switch.bonus.fast
-execute if score #change_color switch.data matches ..0 run team join switch.laser_game.blue @a[tag=switch.bonus.color,tag=switch.laser_game.blue]
-execute if score #change_color switch.data matches ..0 run team join switch.laser_game.red @a[tag=switch.bonus.color,tag=switch.laser_game.red]
+execute if score #change_color switch.data matches ..0 run team join switch.laser_game.blue @a[tag=switch.bonus.color,scores={switch.alive=10}]
+execute if score #change_color switch.data matches ..0 run team join switch.laser_game.red @a[tag=switch.bonus.color,scores={switch.alive=11}]
 execute if score #change_color switch.data matches ..0 run tag @a[tag=switch.bonus.color] remove switch.bonus.color
 
