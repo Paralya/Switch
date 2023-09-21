@@ -52,8 +52,6 @@ team modify switch.temp.gays collisionRule never
 team modify switch.temp.shooters collisionRule never
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-tag @a remove switch.gay_shooter.gay
-tag @a remove switch.gay_shooter.shooter
 execute as @a[sort=random] at @s run function switch:modes/gay_shooter/roles
 execute as @a at @s run function switch:modes/gay_shooter/give_items
 
