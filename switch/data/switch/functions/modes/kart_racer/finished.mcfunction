@@ -3,9 +3,9 @@ scoreboard players operation #digit switch.data = #kart_racer_ticks switch.data
 scoreboard players operation #digit switch.data *= #5 switch.data
 scoreboard players operation #digit switch.data %= #100 switch.data
 
-tag @s add switch.completed
+scoreboard players set @s switch.alive 2
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" a terminé la course en "},{"score":{"name":"#kart_racer_seconds","objective":"switch.data"}},{"text":","},{"score":{"name":"#digit","objective":"switch.data"}},{"text":" secondes !\n"}]
-execute if score #remaining_time switch.data matches 61.. if entity @a[gamemode=!spectator,tag=!switch.completed] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous n'avez plus que 60 secondes pour terminer la course !\n"}]
+execute if score #remaining_time switch.data matches 61.. if entity @a[scores={switch.alive=1}] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous n'avez plus que 60 secondes pour terminer la course !\n"}]
 execute if score #remaining_time switch.data matches 61.. run scoreboard players set #remaining_time switch.data 60
 scoreboard players add @s switch.temp.checkpoint 1000000
 scoreboard players operation @s switch.temp.checkpoint -= #kart_racer_ticks switch.data

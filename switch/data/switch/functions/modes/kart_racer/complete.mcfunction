@@ -1,8 +1,7 @@
 
-execute if entity @s[tag=switch.playing] run function switch:modes/kart_racer/finished
+execute if entity @s[scores={switch.alive=1}] run function switch:modes/kart_racer/finished
 
-execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s[tag=!switch.playing] ~ ~ ~
-tag @s remove switch.playing
+execute unless score @s switch.alive matches 1.. at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 gamemode spectator @s
 effect clear @s
 clear @s

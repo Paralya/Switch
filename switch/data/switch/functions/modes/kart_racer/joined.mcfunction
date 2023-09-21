@@ -5,7 +5,6 @@
 # execute if score #reconnect switch.data matches 1 run tell none reconnected
 
 # Ici : dans tous les cas, mettre la personne qui join en spec
-tag @s remove switch.playing
-tag @s remove switch.completed
+scoreboard players reset @s switch.alive
 function switch:modes/kart_racer/complete
 

@@ -6,9 +6,6 @@ kill @e[tag=shopping_kart.kart]
 tp @e[type=!player] 0 -10000 0
 kill @e[type=!player]
 
-tag @a remove switch.playing
-tag @a remove switch.completed
-
 scoreboard objectives remove switch.temp
 scoreboard objectives remove switch.temp.old_speed
 scoreboard objectives remove switch.temp.compteur
