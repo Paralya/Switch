@@ -5,9 +5,7 @@ tag @s add switch.temp
 scoreboard players add #next_player_id switch.data 1
 scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1 run team join switch.temp.king @s
-execute if score #next_role switch.data matches 1 run tag @s add switch.beat_the_kings.king
 execute if score #next_role switch.data matches 2.. run team join switch.temp.civil @s
-execute if score #next_role switch.data matches 2.. run tag @s add switch.beat_the_kings.civil
 execute if score #next_role switch.data matches 5.. run scoreboard players set #next_role switch.data 0
 
 

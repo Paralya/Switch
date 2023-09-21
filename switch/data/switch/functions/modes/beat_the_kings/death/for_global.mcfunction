@@ -10,11 +10,11 @@ execute store success score #success switch.data if predicate switch:chance/0.5
 
 execute as @a at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 
-execute if score #success switch.data matches 0 if entity @s[tag=switch.beat_the_kings.civil] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"Civil","color":"green"},{"text":" !"}]
-execute if score #success switch.data matches 0 if entity @s[tag=switch.beat_the_kings.king] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"King","color":"yellow"},{"text":" !"}]
+execute if score #success switch.data matches 0 if entity @s[team=switch.temp.civil] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"Civil","color":"green"},{"text":" !"}]
+execute if score #success switch.data matches 0 if entity @s[team=switch.temp.king] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"King","color":"yellow"},{"text":" !"}]
 
-execute if score #success switch.data matches 1 if entity @s[tag=switch.beat_the_kings.civil] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Civil","color":"green"},{"text":" !"}]
-execute if score #success switch.data matches 1 if entity @s[tag=switch.beat_the_kings.king] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"King","color":"yellow"},{"text":" !"}]
+execute if score #success switch.data matches 1 if entity @s[team=switch.temp.civil] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Civil","color":"green"},{"text":" !"}]
+execute if score #success switch.data matches 1 if entity @s[team=switch.temp.king] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"King","color":"yellow"},{"text":" !"}]
 
 kill @s
 
