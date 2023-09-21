@@ -4,7 +4,6 @@ kill @e[type=chest_boat]
 kill @e[type=item]
 kill @e[type=experience_orb]
 
-tag @a remove switch.alive
 tag @a remove switch.boat_race.finished
 
 scoreboard objectives remove switch.temp.deathCount

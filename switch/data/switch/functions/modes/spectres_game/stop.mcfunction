@@ -4,7 +4,6 @@ kill @e[type=!player]
 
 tag @a remove switch.spectres_game.visible
 tag @a remove switch.spectres_game.spectre
-tag @a remove switch.alive
 team remove switch.temp.visible
 team remove switch.temp.spectre
 

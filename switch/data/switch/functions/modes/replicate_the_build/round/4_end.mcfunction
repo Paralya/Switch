@@ -23,5 +23,5 @@ execute positioned -29999997 24 1603 run fill ~ ~ ~ ~6 ~6 ~6 air
 execute positioned -29999997 24 1603 run fill ~ ~-1 ~ ~6 ~-1 ~6 stone
 execute positioned -29999997 24 1603 run function switch:modes/replicate_the_build/structure/place
 
-gamemode survival @a[tag=switch.alive]
+gamemode survival @a[scores={switch.alive=1..}]
 execute positioned -29999997 24 1603 run function switch:modes/replicate_the_build/structure/give_player

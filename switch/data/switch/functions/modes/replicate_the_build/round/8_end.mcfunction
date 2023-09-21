@@ -1,4 +1,4 @@
-execute store result score #nb_alive switch.data if entity @a[tag=switch.alive]
+execute store result score #nb_alive switch.data if entity @a[scores={switch.alive=1..}]
 
 execute if score #nb_alive switch.data matches 2.. run scoreboard players set #rtb_round_state switch.data 0
 execute if score #nb_alive switch.data matches ..1 run scoreboard players set #rtb_round_state switch.data 9

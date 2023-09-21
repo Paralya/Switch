@@ -8,7 +8,7 @@ clear @a
 effect clear @a
 gamemode survival @a
 team leave @a
-tag @a add switch.alive
+scoreboard players set @a switch.alive 1
 
 effect give @a resistance 10 255 true
 effect give @a regeneration 10 255 true

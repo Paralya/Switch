@@ -9,6 +9,7 @@ scoreboard objectives add switch.last_total_games dummy
 scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add switch.second_right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add switch.reconnect dummy
+scoreboard objectives add switch.alive dummy
 
 scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger

@@ -2,7 +2,7 @@
 #si phase_de_vote==1 la phase de vote est en cours / commence, si phase_de_vote==0, la phase de vote s'arrête / n'est pas en cours.
 execute if score #phase_de_vote switch.data matches 0 run tellraw @a {"text":"Levez les mains ! Les tweets arrivent !\n","color":"red"}
 execute if score #phase_de_vote switch.data matches 0 run scoreboard players set #timer_phase_de_vote switch.data 10
-execute if score #phase_de_vote switch.data matches 0 run scoreboard players set @a[tag=switch.alive] switch.temp.passage_vote 1
+execute if score #phase_de_vote switch.data matches 0 run scoreboard players set @a[scores={switch.alive=1..}] switch.temp.passage_vote 1
 execute if score #phase_de_vote switch.data matches 0 run scoreboard players set #twittos_battle_state switch.data 1
 execute if score #phase_de_vote switch.data matches 0 run execute as @a at @s run playsound entity.player.levelup ambient @s
 execute if score #phase_de_vote switch.data matches 0 run scoreboard players set #phase_de_vote switch.data 1

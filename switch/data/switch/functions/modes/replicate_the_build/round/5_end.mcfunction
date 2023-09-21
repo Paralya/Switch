@@ -2,7 +2,7 @@
 
 scoreboard players add #rtb_round_state switch.data 1
 
-gamemode spectator @a[tag=switch.alive,gamemode=!spectator]
+gamemode spectator @a[scores={switch.alive=1..},gamemode=!spectator]
 
 
 execute as @e[type=marker,tag=switch.rtb.center] at @s positioned ~-3 ~ ~1 run function switch:modes/replicate_the_build/structure/place
@@ -19,7 +19,7 @@ scoreboard players set #rtb_dx switch.data 0
 scoreboard players set #rtb_dy switch.data 0
 scoreboard players set #rtb_dz switch.data 0
 
-scoreboard players set @a[tag=switch.alive] switch.rtb.points 0
+scoreboard players set @a[scores={switch.alive=1..}] switch.rtb.points 0
 
 
 bossbar set rtb.all name "Calcul des scores ..."

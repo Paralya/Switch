@@ -4,7 +4,7 @@ clear @a
 effect clear @a
 gamemode spectator @a
 team leave @a
-tag @a add switch.alive
+scoreboard players set @a switch.alive 1
 
 kill @e[type=item]
 kill @e[type=arrow]

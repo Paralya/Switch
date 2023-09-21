@@ -35,9 +35,9 @@ execute as @e[tag=switch.rtb.island,type=marker,sort=random] run function switch
 
 
 scoreboard players set #rtbteam switch.data 0
-execute as @a[tag=switch.alive,sort=random] run function switch:modes/replicate_the_build/start/select_teams
+execute as @a[scores={switch.alive=1..},sort=random] run function switch:modes/replicate_the_build/start/select_teams
 
-gamemode adventure @a[tag=switch.alive]
+gamemode adventure @a[scores={switch.alive=1..}]
 
 
 # Tirage au sort de la structure

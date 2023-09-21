@@ -4,7 +4,7 @@ clear @a
 effect clear @a
 gamemode adventure @a
 team join switch.no_pvp @a
-tag @a add switch.alive
+scoreboard players set @a switch.alive 1
 
 kill @e[type=item]
 

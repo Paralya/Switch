@@ -3,7 +3,7 @@
 
 scoreboard players set #success switch.data 0
 scoreboard players operation #player_id switch.temp.id = @s switch.temp.id
-execute store success score #success switch.data run tag @a[tag=switch.alive,predicate=switch:has_same_temp_id] add switch.temp
+execute store success score #success switch.data run tag @a[scores={switch.alive=1..},predicate=switch:has_same_temp_id] add switch.temp
 
 execute if score #success switch.data matches 0 run tag @s add switch.player_dead
 execute if score #success switch.data matches 1 run tp @s @p[tag=switch.temp]

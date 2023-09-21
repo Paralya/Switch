@@ -2,7 +2,6 @@
 tp @e[type=creeper] 0 -10000 0
 
 
-tag @a remove switch.alive
 
 scoreboard objectives remove switch.rtb.id
 scoreboard objectives remove switch.rtb.time

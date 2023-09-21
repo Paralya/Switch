@@ -4,12 +4,12 @@
 scoreboard players add #boat_race_ticks switch.data 1
 
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/boat_race/death
-execute as @a[tag=switch.alive] at @s if entity @s[y=-64,dy=64] run function switch:modes/boat_race/death
+execute as @a[scores={switch.alive=1..}] at @s if entity @s[y=-64,dy=64] run function switch:modes/boat_race/death
 
 # Détecte si tous les joueurs ont finis
 scoreboard players set #alives switch.data 0
 scoreboard players set #finished switch.data 0
-execute store result score #alives switch.data if entity @a[tag=switch.alive]
+execute store result score #alives switch.data if entity @a[scores={switch.alive=1..}]
 execute store result score #finished switch.data if entity @a[tag=switch.boat_race.finished]
 execute if score #alives switch.data = #finished switch.data run scoreboard players set #detect_end switch.data 1
 

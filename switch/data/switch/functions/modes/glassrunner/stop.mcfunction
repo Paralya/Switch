@@ -7,7 +7,6 @@ kill @e[type=experience_orb]
 xp set @a 0 levels
 xp set @a 0 points
 
-tag @a remove switch.alive
 
 scoreboard objectives remove switch.glassrunner.money
 scoreboard objectives remove switch.glassrunner.deathCount

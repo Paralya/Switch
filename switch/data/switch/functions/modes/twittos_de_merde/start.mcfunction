@@ -5,7 +5,7 @@ clear @a
 effect clear @a
 gamemode adventure @a
 team join switch.no_pvp @a
-tag @a add switch.alive
+scoreboard players set @a switch.alive 1
 tag @a remove switch.looser
 
 tp @a 1 101 1
