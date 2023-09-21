@@ -1,5 +1,5 @@
 
-tag @s add switch.boat_race.finished
+scoreboard players set @s switch.alive -1
 
 scoreboard players operation #minutes switch.data = #boat_race_seconds switch.data
 scoreboard players operation #minutes switch.data /= #60 switch.data
@@ -12,5 +12,5 @@ tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 gamemode spectator @s
-kill @e[type=chest_boat,distance=..1.25]
+kill @e[type=chest_boat,distance=..1.25,sort=nearest,limit=1]
 
