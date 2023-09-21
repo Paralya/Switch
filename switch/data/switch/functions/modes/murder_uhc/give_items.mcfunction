@@ -15,19 +15,19 @@ execute if score #armor switch.data matches 1 run item replace entity @s armor.f
 execute if score #sword switch.data matches 1 run item replace entity @s hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s}]}
 execute if score #sword switch.data matches 0 run item replace entity @s hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
-item replace entity @s[tag=switch.traitors_game.detective] hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Amount:0.16,Operation:2,UUID:[I;4096,4096,4096,4096]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"offhand",Amount:0.16,Operation:2,UUID:[I;4096,4096,4096,4096]}]}
+item replace entity @s[tag=switch.murder_uhc.detective] hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Amount:0.16,Operation:2,UUID:[I;4096,4096,4096,4096]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"offhand",Amount:0.16,Operation:2,UUID:[I;4096,4096,4096,4096]}]}
 item replace entity @s hotbar.3 with stone_axe{AttributeModifiers:[{AttributeName:"minecraft:generic.attack_damage",Name:"minecraft:generic.attack_damage",Slot:"mainhand",Amount:4,Operation:0,UUID:[I;2012000,-2012000,-2012000,2012000]}]}
 item replace entity @s hotbar.4 with golden_apple 6
 item replace entity @s hotbar.6 with arrow 28
 item replace entity @s hotbar.7 with water_bucket
 item replace entity @s hotbar.8 with apple 16
-loot give @s loot switch:traitors_game/all_starter
+loot give @s loot switch:murder_uhc/all_starter
 give @s oak_planks 100
 give @s anvil
 
 # Random items (0 or 1 or 2)
-execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
-execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
+execute if predicate switch:chance/0.5 run function switch:modes/murder_uhc/random_items
+execute if predicate switch:chance/0.5 run function switch:modes/murder_uhc/random_items
 
 scoreboard players set @s crazy_adventure.radiation 0
 
