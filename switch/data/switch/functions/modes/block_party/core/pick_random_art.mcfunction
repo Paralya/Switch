@@ -69,7 +69,7 @@ execute if predicate switch:chance/0.25 at @e[tag=switch.selected_map,limit=1] r
 # Spreadplayers the entities
 spreadplayers 110038 110038 10 50 false @e[tag=switch.paint_cow]
 spreadplayers 110038 110038 10 50 false @e[tag=switch.ravager]
-execute as @e[tag=switch.paint_cow] run damage @s 1 arrow
+schedule function switch:modes/block_party/core/damage_cow 1s
 
 # Kill marker
 kill @s
