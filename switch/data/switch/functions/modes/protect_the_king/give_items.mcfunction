@@ -21,9 +21,9 @@ item replace entity @s hotbar.8 with apple 16
 give @s oak_planks 100
 give @s anvil
 
-effect give @s[tag=switch.king] glowing infinite 255 true
-item replace entity @s[tag=switch.king] hotbar.0 with netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
-attribute @s[tag=switch.king] generic.max_health base set 40.0
+effect give @s[team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
+item replace entity @s[team=!switch.temp.red,team=!switch.temp.blue] hotbar.0 with netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
+attribute @s[team=!switch.temp.red,team=!switch.temp.blue] generic.max_health base set 40.0
 
 # Leather cap color
 item replace entity @s[team=switch.temp.red] armor.head with leather_helmet{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;0,-1,-1,0],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2,Operation:0,UUID:[I;1,-1,-1,-1],Slot:"head"}]}

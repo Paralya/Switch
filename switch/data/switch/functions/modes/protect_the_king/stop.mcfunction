@@ -2,7 +2,6 @@
 tp @e[type=!player] 0 -10000 0
 kill @e[type=!player]
 
-tag @a remove switch.king
 team remove switch.temp.red_king
 team remove switch.temp.blue_king
 team remove switch.temp.red

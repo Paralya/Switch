@@ -10,18 +10,18 @@ kill @e[type=item,nbt={Age:200s}]
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/protect_the_king/death
 
 # Particules aux pieds des rois
-execute at @a[gamemode=!spectator,tag=switch.king] run particle glow ~ ~ ~ 0.2 0 0.2 0 5
+execute at @a[gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] run particle glow ~ ~ ~ 0.2 0 0.2 0 5
 
 ## Actualisation des bossbars
 # Red king
-execute store result score #health switch.data run data get entity @p[team=switch.temp.red_king] Health
-execute store result score #total switch.data run data get entity @p[team=switch.temp.red_king] AbsorptionAmount
+execute store result score #health switch.data run data get entity @p[gamemode=!spectator,team=switch.temp.red_king] Health
+execute store result score #total switch.data run data get entity @p[gamemode=!spectator,team=switch.temp.red_king] AbsorptionAmount
 scoreboard players operation #total switch.data += #health switch.data
 execute store result bossbar switch.temp.red_king value run scoreboard players get #total switch.data
 
 # Blue king
-execute store result score #health switch.data run data get entity @p[team=switch.temp.blue_king] Health
-execute store result score #total switch.data run data get entity @p[team=switch.temp.blue_king] AbsorptionAmount
+execute store result score #health switch.data run data get entity @p[gamemode=!spectator,team=switch.temp.blue_king] Health
+execute store result score #total switch.data run data get entity @p[gamemode=!spectator,team=switch.temp.blue_king] AbsorptionAmount
 scoreboard players operation #total switch.data += #health switch.data
 execute store result bossbar switch.temp.blue_king value run scoreboard players get #total switch.data
 
