@@ -57,13 +57,11 @@ team modify switch.temp.visible color dark_green
 team modify switch.temp.spectre color yellow
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-tag @a remove switch.spectres_game.visible
-tag @a remove switch.spectres_game.spectre
 execute as @a[sort=random] at @s run function switch:modes/spectres_game/roles/
 execute as @a at @s run function switch:modes/spectres_game/give_items
 
-give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:4,Duration:400,ShowParticles:0b},{Id:7,ShowParticles:0b},{Id:15,Duration:80,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
-give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:4,Duration:400,ShowParticles:0b},{Id:7,ShowParticles:0b},{Id:15,Duration:80,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
-give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:9,Duration:200,ShowParticles:0b},{Id:19,Duration:220,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
-give @r[tag=switch.spectres_game.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:9,Duration:200,ShowParticles:0b},{Id:19,Duration:220,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[team=switch.temp.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:4,Duration:400,ShowParticles:0b},{Id:7,ShowParticles:0b},{Id:15,Duration:80,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[team=switch.temp.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:4,Duration:400,ShowParticles:0b},{Id:7,ShowParticles:0b},{Id:15,Duration:80,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[team=switch.temp.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:9,Duration:200,ShowParticles:0b},{Id:19,Duration:220,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
+give @r[team=switch.temp.spectre] splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Duration:400,ShowParticles:0b},{Id:9,Duration:200,ShowParticles:0b},{Id:19,Duration:220,ShowParticles:0b}],display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","italic":false,"color":"white"}']}}
 

@@ -2,8 +2,6 @@
 tp @e[type=!player] 0 -10000 0
 kill @e[type=!player]
 
-tag @a remove switch.spectres_game.visible
-tag @a remove switch.spectres_game.spectre
 team remove switch.temp.visible
 team remove switch.temp.spectre
 
