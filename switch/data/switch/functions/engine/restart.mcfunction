@@ -1,3 +1,3 @@
 
-function switch:engine/stop
-function switch:engine/start
+execute in overworld run function switch:engine/stop
+execute in overworld run function switch:engine/start

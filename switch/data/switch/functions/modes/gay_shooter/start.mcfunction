@@ -30,7 +30,6 @@ scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/gay_shooter
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Gay Shooter, ça se lance direct !"}]
-execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 301
 scoreboard players set #gay_shooter_seconds switch.data 0
@@ -38,6 +37,8 @@ scoreboard players set #gay_shooter_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.deathCount deathCount
+scoreboard objectives add switch.temp.shot_player minecraft.custom:minecraft.damage_dealt {"text":" Flèches touchées ","color":"yellow"}
+scoreboard objectives setdisplay sidebar switch.temp.shot_player
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items

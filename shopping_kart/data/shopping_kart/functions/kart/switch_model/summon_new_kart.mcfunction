@@ -2,9 +2,10 @@
 # Tag the current player to ride the new kart
 tag @s add shopping_kart.owner
 
-# Copy the score of the selected model
+# Copy the score of the selected model and rotation
 scoreboard players add @s shopping_kart.current_model 0
 scoreboard players operation #model shopping_kart.data = @s shopping_kart.current_model
+data modify storage shopping_kart:data ForcedRotation set from entity @s Rotation
 
 # Summon the kart depending on the selected model
 execute if score #model shopping_kart.data matches 0 run summon frog ~ ~ ~ {Tags:["shopping_kart.new_kart"]}

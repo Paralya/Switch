@@ -11,3 +11,5 @@ function switch:engine/xp_bar
 scoreboard players operation #levels switch.data = #remaining_time switch.data
 function switch:engine/xp_bar_levels
 
+title @a actionbar [{"text":"Temps restant : ","color":"aqua"},{"score":{"name":"#remaining_time","objective":"switch.data"},"color":"yellow"},{"text":"s","color":"aqua"}]
+

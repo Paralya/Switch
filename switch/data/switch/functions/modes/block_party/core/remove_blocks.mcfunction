@@ -4,7 +4,8 @@ scoreboard players set #block_party_ticks switch.data -160
 scoreboard players add #block_party_round switch.data 1
 
 # Switch case to remove blocks (110008 100 110008 => 110072 100 110072)
-execute if score #bp_block switch.data matches 0 run fill 110008 100 110008 110072 100 110072 air replace #switch:block_party/not_white
+execute if score #bp_block switch.data matches -1 run fill 110008 100 110008 110072 100 110072 air replace #switch:block_party/not_white_terracotta
+execute if score #bp_block switch.data matches 0 run fill 110008 100 110008 110072 100 110072 air replace #switch:block_party/not_white_concrete
 execute if score #bp_block switch.data matches 1 run fill 110008 100 110008 110072 100 110072 air replace #switch:block_party/not_orange
 execute if score #bp_block switch.data matches 2 run fill 110008 100 110008 110072 100 110072 air replace #switch:block_party/not_magenta
 execute if score #bp_block switch.data matches 3 run fill 110008 100 110008 110072 100 110072 air replace #switch:block_party/not_light_blue

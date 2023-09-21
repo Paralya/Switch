@@ -1,7 +1,7 @@
 
 scoreboard players set #state switch.data 3
 scoreboard players set #disable switch.data 1
-function switch:engine/stop
+execute in overworld run function switch:engine/stop
 
 time set 6000
 

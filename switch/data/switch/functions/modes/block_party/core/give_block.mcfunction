@@ -21,6 +21,7 @@ execute if score #bp_block switch.data matches -1 if data storage switch:main It
 execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:black_concrete"} run scoreboard players set #bp_block switch.data 15
 
 # Give item with name
+execute if score #bp_block switch.data matches -1 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Beige","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 0 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"White / Blanc","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 1 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Orange","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 2 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Magenta","italic":false,"color":"aqua"}'
@@ -44,6 +45,7 @@ item replace entity @a[gamemode=adventure] hotbar.6 from block 0 0 0 container.0
 item replace entity @a[gamemode=adventure] hotbar.8 from block 0 0 0 container.0
 
 # Title players
+execute if score #bp_block switch.data matches -1 run title @a title {"text":"Beige","italic":false,"color":"#c8ad7f"}
 execute if score #bp_block switch.data matches 0 run title @a title {"text":"White / Blanc","italic":false,"color":"#ffffff"}
 execute if score #bp_block switch.data matches 1 run title @a title {"text":"Orange","italic":false,"color":"#ff7f00"}
 execute if score #bp_block switch.data matches 2 run title @a title {"text":"Magenta","italic":false,"color":"#ff00ff"}
@@ -62,6 +64,7 @@ execute if score #bp_block switch.data matches 14 run title @a title {"text":"Re
 execute if score #bp_block switch.data matches 15 run title @a title {"text":"Black / Noir","italic":false,"color":"#000000"}
 
 # Tellraw players
+execute if score #bp_block switch.data matches -1 run tellraw @a {"text":"Beige","italic":false,"color":"#c8ad7f"}
 execute if score #bp_block switch.data matches 0 run tellraw @a {"text":"White / Blanc","italic":false,"color":"#ffffff"}
 execute if score #bp_block switch.data matches 1 run tellraw @a {"text":"Orange","italic":false,"color":"#ff7f00"}
 execute if score #bp_block switch.data matches 2 run tellraw @a {"text":"Magenta","italic":false,"color":"#ff00ff"}

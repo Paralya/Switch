@@ -43,10 +43,10 @@ team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.green color green
 team modify switch.temp.yellow color yellow
-team modify switch.temp.red friendlyFire false
-team modify switch.temp.blue friendlyFire false
-team modify switch.temp.green friendlyFire false
-team modify switch.temp.yellow friendlyFire false
+team modify switch.temp.red friendlyFire true
+team modify switch.temp.blue friendlyFire true
+team modify switch.temp.green friendlyFire true
+team modify switch.temp.yellow friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 team modify switch.temp.green nametagVisibility hideForOtherTeams
