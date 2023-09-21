@@ -20,6 +20,7 @@ scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.theme_vote dummy
 scoreboard objectives add switch.temp.rating_vote dummy
 scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"yellow"}
+scoreboard objectives add switch.temp.to_rate dummy
 
 scoreboard players set #build_battle_state switch.data 0
 scoreboard players set #build_battle_seconds switch.data -20

@@ -1,8 +1,6 @@
 
-# Remove the tag and add a temporary one
-tag @s remove switch.to_rate
-tag @a remove switch.player_to_rate
-tag @s add switch.player_to_rate
+# Change the player state to rating (1 = waiting, 2 = rating)
+scoreboard players set @s switch.temp.to_rate 2
 
 # Execute a function at the linked marker
 scoreboard players operation #player_id switch.temp.id = @s switch.temp.id

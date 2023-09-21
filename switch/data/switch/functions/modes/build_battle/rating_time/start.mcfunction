@@ -6,8 +6,7 @@ execute as @a at @s run playsound block.anvil.destroy ambient @s
 clear @a
 
 # Tag every players to be able to rate their build
-tag @a remove switch.to_rate
-tag @a[scores={switch.temp.id=0..}] add switch.to_rate
+scoreboard players set @a[scores={switch.temp.id=0..}] switch.temp.to_rate 1
 
 # Tellraw start + playsound
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]

@@ -21,5 +21,5 @@ execute if score #build_battle_save_z switch.data matches 273.. run scoreboard p
 spreadplayers ~24 ~24 5 10 under 128 false @a
 title @a times 20 60 20
 title @a title {"text":"Builder","color":"yellow"}
-title @a subtitle {"selector":"@p[tag=switch.player_to_rate]","color":"aqua"}
+title @a subtitle {"selector":"@p[scores={switch.temp.to_rate=2}]","color":"aqua"}
 

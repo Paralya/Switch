@@ -5,7 +5,7 @@ scoreboard players add #build_battle_ticks switch.data 1
 
 ## Global tick
 # For each marker, place the correct template
-execute as @e[tag=switch.build_battle_marker,sort=random,limit=5] at @s run function switch:modes/build_battle/tick_marker
+execute as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=5] at @s run function switch:modes/build_battle/tick_marker
 
 # While people are voting, display the themes in inventory and check their votes
 execute if score #build_battle_state switch.data matches 0 run kill @e[type=item]

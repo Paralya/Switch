@@ -8,6 +8,7 @@ scoreboard objectives remove switch.temp.id
 scoreboard objectives remove switch.temp.theme_vote
 scoreboard objectives remove switch.temp.rating_vote
 scoreboard objectives remove switch.temp.points
+scoreboard objectives remove switch.temp.to_rate
 
 schedule clear switch:modes/build_battle/rating_time/find_player
 
