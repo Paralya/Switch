@@ -63,4 +63,9 @@ execute if data storage switch:main {current_game:"tnt_run"} run scoreboard play
 execute if data storage switch:main {current_game:"sheepwars"} run scoreboard players add @a switch.stats.played.sheepwars 1
 execute if data storage switch:main {current_game:"block_party"} run scoreboard players add @a switch.stats.played.block_party 1
 execute if data storage switch:main {current_game:"replicate_the_build"} run scoreboard players add @a switch.stats.played.replicate_the_build 1
+execute if data storage switch:main {current_game:"snowball_painter"} run scoreboard players add @a switch.stats.played.snowball_painter 1
+execute if data storage switch:main {current_game:"gay_shooter"} run scoreboard players add @a switch.stats.played.gay_shooter 1
+execute if data storage switch:main {current_game:"build_battle"} run scoreboard players add @a switch.stats.played.build_battle 1
+execute if data storage switch:main {current_game:"beat_the_kings"} run scoreboard players add @a switch.stats.played.beat_the_kings 1
+execute if data storage switch:main {current_game:"twittos_de_merde"} run scoreboard players add @a switch.stats.played.twittos_de_merde 1
 

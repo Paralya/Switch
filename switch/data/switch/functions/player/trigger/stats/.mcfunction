@@ -28,6 +28,11 @@ tellraw @s[scores={switch.stats.played.sheepwars=1..}] [{"text":"➤ ","color":"
 tellraw @s[scores={switch.stats.played.block_party=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.block_party"},"color":"yellow"},{"text":" parties jouées de Block Party"}]
 tellraw @s[scores={switch.stats.played.replicate_the_build=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.replicate_the_build"},"color":"yellow"},{"text":" parties jouées de Replicate The Build"}]
 tellraw @s[scores={switch.stats.played.moutron=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.moutron"},"color":"yellow"},{"text":" parties jouées de Moutron"}]
+tellraw @s[scores={switch.stats.played.snowball_painter=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.snowball_painter"},"color":"yellow"},{"text":" parties jouées de Snowball Painter"}]
+tellraw @s[scores={switch.stats.played.gay_shooter=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.gay_shooter"},"color":"yellow"},{"text":" parties jouées de Gay Shooter"}]
+tellraw @s[scores={switch.stats.played.build_battle=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.build_battle"},"color":"yellow"},{"text":" parties jouées de Build Battle"}]
+tellraw @s[scores={switch.stats.played.beat_the_kings=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.beat_the_kings"},"color":"yellow"},{"text":" parties jouées de Beat The Kings"}]
+tellraw @s[scores={switch.stats.played.twittos_de_merde=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.twittos_de_merde"},"color":"yellow"},{"text":" parties jouées de Twittos de Merde"}]
 
 # Total victories (all games)
 tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.victories"},"color":"yellow"},{"text":" victoires au total"}]
