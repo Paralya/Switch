@@ -24,9 +24,6 @@ scoreboard players remove #remaining_time switch.data 1
 # XP Bar
 function switch:modes/build_battle/xp_bar_rating
 
-# If the timer is equal to 1, save the build
-execute if score #remaining_time switch.data matches 1 as @e[tag=switch.build_battle_save,limit=1] at @s run function switch:modes/build_battle/rating_time/save_build
-
 # If the timer is equal to 0,
 execute if score #remaining_time switch.data matches 0 run function switch:modes/build_battle/rating_time/time_up
 
