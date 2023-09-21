@@ -30,6 +30,7 @@
 		"switch:modes/gay_shooter/calls/second",
 		"switch:modes/build_battle/calls/second",
 		"switch:modes/beat_the_kings/calls/second",
+		"switch:modes/coin_chaser/calls/second",
 		"switch:modes/twittos_de_merde/calls/second"
 	]
 }
