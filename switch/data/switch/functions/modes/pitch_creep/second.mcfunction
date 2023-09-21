@@ -14,8 +14,3 @@ execute if score #pitch_creep_seconds switch.data matches 0.. run tag @e[type=cr
 execute if score #pitch_creep_seconds switch.data matches ..-1 run tp @e[type=!player,type=!marker] 0 -10000 0
 execute if score #pitch_creep_seconds switch.data matches ..-1 run kill @e[type=!player,type=!marker]
 
-# Spawn skeleton every 5 seconds
-scoreboard players operation #temp switch.data = #pitch_creep_seconds switch.data
-scoreboard players operation #temp switch.data %= #5 switch.data
-execute if score #temp switch.data matches 0 at @e[type=marker,tag=switch.selected_map,limit=1] run summon skeleton ~ ~ ~ {AbsorptionAmount:2048f,Tags:["switch.new"],Attributes:[{Name:"generic.follow_range",Base:128}]}
-
