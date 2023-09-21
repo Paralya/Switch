@@ -5,9 +5,7 @@ clear @a
 effect clear @a
 gamemode adventure @a
 team leave @a
-tag @a add switch.first_life
-tag @a add switch.second_life
-tag @a add switch.third_life
+scoreboard players set @a switch.alive 3
 
 kill @e[type=item]
 kill @e[type=arrow]
