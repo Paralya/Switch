@@ -32,6 +32,7 @@
 		"switch:modes/build_battle/calls/start",
 		"switch:modes/beat_the_kings/calls/start",
 		"switch:modes/coin_chaser/calls/start",
+		"switch:modes/murder_mystery/calls/start",
 		"switch:modes/twittos_de_merde/calls/start"
 	]
 }

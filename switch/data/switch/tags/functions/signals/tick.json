@@ -31,6 +31,7 @@
 		"switch:modes/build_battle/calls/tick",
 		"switch:modes/beat_the_kings/calls/tick",
 		"switch:modes/coin_chaser/calls/tick",
+		"switch:modes/murder_mystery/calls/tick",
 		"switch:modes/twittos_de_merde/calls/tick"
 	]
 }
