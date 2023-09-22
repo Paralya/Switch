@@ -4,6 +4,7 @@
 # Timer
 scoreboard players add #murder_mystery_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
+function switch:modes/murder_mystery/xp_bar
 
 # Annonce des rôles
 execute if score #murder_mystery_seconds switch.data matches 0 as @a at @s run playsound entity.player.levelup ambient @s
@@ -22,8 +23,8 @@ execute store result score #gold_count switch.data if entity @e[type=item,tag=sw
 execute if score #murder_mystery_seconds switch.data matches 0.. if score #gold_count switch.data matches ..19 run function switch:modes/murder_mystery/summon_gold
 
 # Reload detective bow
-execute as @a[gamemode=!spectator,nbt={Inventory:[{switch:{detective_bow:1b}}]}] unless data entity @s Inventory[{id:"minecraft:arrow"}] run scoreboard players add #detective_reload switch.data 1
-execute if score #detective_reload switch.data matches 5 run give @a[gamemode=!spectator,nbt={Inventory:[{switch:{detective_bow:1b}}]}] arrow
+execute as @a[gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] unless data entity @s Inventory[{id:"minecraft:arrow"}] run scoreboard players add #detective_reload switch.data 1
+execute if score #detective_reload switch.data matches 5 run give @a[gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] arrow
 execute if score #detective_reload switch.data matches 5 run scoreboard players set #detective_reload switch.data 0
 
 # Give a bow with an arrow for players that have at least 10 golds
