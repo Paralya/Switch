@@ -6,8 +6,8 @@ scoreboard players add #murder_mystery_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
 # Annonce des rôles
-execute if score #murder_mystery_seconds switch.data matches 0 as @a at @s run playsound block.note_block.pling ambient @s
-execute if score #murder_mystery_seconds switch.data matches 0 run title @a title {"text":"Vous êtes..."}
+execute if score #murder_mystery_seconds switch.data matches 0 as @a at @s run playsound entity.player.levelup ambient @s
+execute if score #murder_mystery_seconds switch.data matches 0 run title @a title {"text":"Vous êtes"}
 execute if score #murder_mystery_seconds switch.data matches 0 run title @a[scores={switch.temp.role=1}] subtitle {"text":"Innocent","color":"green"}
 execute if score #murder_mystery_seconds switch.data matches 0 run title @a[scores={switch.temp.role=2}] subtitle {"text":"Detective","color":"aqua"}
 execute if score #murder_mystery_seconds switch.data matches 0 run title @a[scores={switch.temp.role=3}] subtitle {"text":"Murderer","color":"red"}
