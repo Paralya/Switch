@@ -21,6 +21,7 @@ execute if predicate switch:chance/0.33 run time add 6000
 weather clear
 
 gamerule fallDamage false
+gamerule keepInventory true
 
 ## Chargement de la map
 scoreboard players set #is_adventure switch.data 1
