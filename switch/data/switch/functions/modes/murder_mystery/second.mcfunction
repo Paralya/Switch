@@ -16,6 +16,7 @@ execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={swi
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=2}] run item replace entity @s hotbar.8 with arrow
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=3}] if data entity @s {SelectedItemSlot:0} run item replace entity @s hotbar.1 with golden_sword{HideFlags:255,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:11111111,Operation:0,UUID:[I;507326914,582437805,-1847943590,-796103056],Slot:"mainhand"}]}
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=3}] unless data entity @s {SelectedItemSlot:0} run item replace entity @s hotbar.0 with golden_sword{HideFlags:255,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:11111111,Operation:0,UUID:[I;507326914,582437805,-1847943590,-796103056],Slot:"mainhand"}]}
+execute if score #murder_mystery_seconds switch.data matches 0 run item replace entity @a weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b,display:{Name:'{"text":"Don\'t touch, right click detection","color":"gray","italic":false}'}}
 
 # Summon gold ingots if less than 20
 scoreboard players set #gold_count switch.data 0
