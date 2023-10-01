@@ -285,7 +285,8 @@ generate_clone_survival_folder("tnt_run_futuristic", (109000, 0, 109000), (10905
 generate_clone_survival_folder("nuketown_no_barrier", (111000, 0, 111000), (111207, 51, 111220), 100, override_tp_coords = (111109, 111, 111109), has_doors = True)
 generate_clone_survival_folder("snowball_painter", (112000, 0, 112000), (112043, 33, 112042), 100, override_tp_coords = (112022, 110, 112006))
 generate_clone_survival_folder("the_four_elements", (115000, 0, 115000), (115101, 33, 115101), 100, override_tp_coords = (115051, 110, 115052))
-
+generate_clone_survival_folder("winnie_city", (117000, 0, 117000), (117119, 31, 117130), 100, override_tp_coords = (117053, 110, 117052))
+generate_clone_survival_folder("remelta_cluedo", (118000, 0, 118000), (118089, 42, 118066), 100, override_tp_coords = (118032, 108, 118030))
 
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone

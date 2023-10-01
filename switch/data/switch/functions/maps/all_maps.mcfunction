@@ -126,7 +126,9 @@
 #	113000	(survival)	: sytoshiro_island		(not done yet)
 ##	114000	(adventure)	: gay_shooter
 #	115000	(survival)	: the_four_elements
-#   116000  (adventure) : twittos_de_merde_map
+#	116000	(adventure)	: twittos_de_merde_map
+#	117000	(survival)	: winnie_city
+#	118000	(survival)	: remelta_cluedo
 
 
 

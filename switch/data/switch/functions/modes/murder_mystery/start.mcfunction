@@ -30,7 +30,7 @@ function switch:choose_map_for/murder_mystery
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Murder Mystery, votre rôle va vous être donné !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #remaining_time switch.data 300005
+scoreboard players set #remaining_time switch.data 305
 scoreboard players set #murder_mystery_seconds switch.data -5
 scoreboard players set #murder_mystery_ticks switch.data 0
 scoreboard players set #detective_reload switch.data 0
@@ -49,9 +49,6 @@ team add switch.temp
 team modify switch.temp nametagVisibility never
 team join switch.temp @a
 
-# Teleport players # TODO: fix players that are in ground
-execute if data storage switch:main {map:"cathedrale_liege"} run spreadplayers 26000 26000 1 10 under 123 false @a
+# Teleport players override
 execute if data storage switch:main {map:"ghost_town"} as @a run function switch:maps/spread_one_player
-execute if data storage switch:main {map:"nuketown"} run spreadplayers 72104 72079 1 20 under 114 false @a
-execute if data storage switch:main {map:"werewolf_village"} run spreadplayers 93061 93061 1 25 under 115 false @a
 

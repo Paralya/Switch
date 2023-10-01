@@ -31,6 +31,6 @@ execute as @e[type=armor_stand,tag=switch.thrown] at @s run function switch:mode
 #execute as @a[scores={switch.right_click=1..}] at @s run function switch:modes/murder_mystery/throw/throw
 
 ## Détection de fin de partie
-#execute if score #remaining_time switch.data matches 1.. run function switch:modes/murder_mystery/detect_end
+execute if score #remaining_time switch.data matches 1.. run function switch:modes/murder_mystery/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/murder_mystery/process_end
 
