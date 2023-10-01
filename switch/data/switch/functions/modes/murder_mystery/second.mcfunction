@@ -18,10 +18,12 @@ execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={swi
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=3}] unless data entity @s {SelectedItemSlot:0} run item replace entity @s hotbar.0 with golden_sword{HideFlags:255,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:11111111,Operation:0,UUID:[I;507326914,582437805,-1847943590,-796103056],Slot:"mainhand"}]}
 execute if score #murder_mystery_seconds switch.data matches 0 run item replace entity @a weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b,display:{Name:'{"text":"Don\'t touch, right click detection","color":"gray","italic":false}'}}
 
-# Summon gold ingots if less than 20
-scoreboard players set #gold_count switch.data 0
+# Summon gold ingots if low amount (~2 gold per player)
 execute store result score #gold_count switch.data if entity @e[type=item,tag=switch.gold]
-execute if score #murder_mystery_seconds switch.data matches 0.. if score #gold_count switch.data matches ..19 run function switch:modes/murder_mystery/summon_gold
+execute store result score #player_count switch.data if entity @e[type=player,gamemode=!spectator]
+scoreboard players operation #gold_count switch.data *= #100 switch.data
+scoreboard players operation #gold_count switch.data /= #player_count switch.data
+execute if score #murder_mystery_seconds switch.data matches 0.. if score #gold_count switch.data matches ..200 run function switch:modes/murder_mystery/summon_gold
 
 # Reload detective bow
 execute as @a[gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] unless data entity @s Inventory[{id:"minecraft:arrow"}] run scoreboard players add #detective_reload switch.data 1
