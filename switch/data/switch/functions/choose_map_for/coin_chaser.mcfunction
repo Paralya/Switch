@@ -6,7 +6,6 @@ execute store result score #mc switch.data run data get storage switch:main coin
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main coin_chaser_maps append value "huge_cargo"
-execute if score #mc switch.data matches 0 run data modify storage switch:main coin_chaser_maps append value "abandoned_city"
 execute if score #mc switch.data matches 0 run data modify storage switch:main coin_chaser_maps append value "paralya_lobby"
 execute if score #mc switch.data matches 0 run data modify storage switch:main coin_chaser_maps append value "purple_sky_island"
 
