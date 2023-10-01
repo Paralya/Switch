@@ -5,7 +5,6 @@ scoreboard players set #mc switch.data 0
 execute store result score #mc switch.data run data get storage switch:main murder_mystery_maps
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
-execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "zonweeb_main"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "ghost_town"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "winnie_city"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "remelta_cluedo"
