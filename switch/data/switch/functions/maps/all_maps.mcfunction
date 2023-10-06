@@ -129,7 +129,7 @@
 #	116000	(adventure)	: twittos_de_merde_map
 #	117000	(survival)	: winnie_city
 #	118000	(survival)	: remelta_cluedo
-
+#	119000	(survival)	: arti_box
 
 
 

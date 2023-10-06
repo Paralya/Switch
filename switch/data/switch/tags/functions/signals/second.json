@@ -32,6 +32,7 @@
 		"switch:modes/beat_the_kings/calls/second",
 		"switch:modes/coin_chaser/calls/second",
 		"switch:modes/murder_mystery/calls/second",
+		"switch:modes/panic_chase/calls/second",
 		"switch:modes/twittos_de_merde/calls/second"
 	]
 }
