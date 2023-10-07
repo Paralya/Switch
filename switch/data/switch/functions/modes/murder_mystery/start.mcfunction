@@ -30,7 +30,7 @@ function switch:choose_map_for/murder_mystery
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Murder Mystery, votre rôle va vous être donné !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #remaining_time switch.data 305
+scoreboard players set #remaining_time switch.data 245
 scoreboard players set #murder_mystery_seconds switch.data -5
 scoreboard players set #murder_mystery_ticks switch.data 0
 scoreboard players set #detective_reload switch.data 0

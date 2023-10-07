@@ -7,6 +7,7 @@ scoreboard players operation @a[scores={switch.temp.to_rate=2}] switch.temp.poin
 execute as @e[type=marker,tag=switch.build_battle_save,limit=1] at @s run function switch:modes/build_battle/rating_time/save_build
 
 # If there are remaining players, start the rating
+scoreboard players set @a[scores={switch.temp.to_rate=2}] switch.temp.to_rate 3
 execute if entity @a[scores={switch.temp.to_rate=1}] run function switch:modes/build_battle/rating_time/next_rating
 
 # Else, end the game

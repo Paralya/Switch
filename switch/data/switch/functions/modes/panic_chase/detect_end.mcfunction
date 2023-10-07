@@ -24,4 +24,5 @@ execute if score #game_state switch.data matches 2 as @a[gamemode=!spectator,tea
 
 # Visuel de fin de partie
 execute if score #remaining_time switch.data matches ..0 as @a at @s run playsound item.totem.use ambient @s
+execute if score #remaining_time switch.data matches 0 run scoreboard players set #remaining_time switch.data -1
 
