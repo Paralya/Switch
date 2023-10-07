@@ -38,5 +38,5 @@ scoreboard players operation #minute switch.data /= #60 switch.data
 execute if score #remaining_time switch.data matches 0.. run title @a actionbar [{"text":"Temps restant : ","color":"aqua"},{"score":{"name":"#minute","objective":"switch.data"},"color":"yellow"},{"text":"m"},{"score":{"name":"#second","objective":"switch.data"},"color":"yellow"},{"text":"s"}]
 
 # Track nearest player with compass
-execute if score #murder_mystery_seconds switch.data matches 60.. as @a[scores={switch.temp.role=2}] at @s run function switch:modes/murder_mystery/compass
+execute if score #murder_mystery_seconds switch.data matches 60.. as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/compass
 

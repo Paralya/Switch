@@ -8,7 +8,7 @@ execute at @e[tag=switch.marker_temp,limit=1] run place template switch:temp ~5 
 ## Rating
 # Equipment
 gamemode creative @a
-execute as @a if data entity @s Inventory[6] run clear @s
+execute as @a if data entity @s Inventory[7] run clear @s
 item replace entity @a weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
 item replace entity @a hotbar.0 with brown_concrete{display:{Name:'{"text":"Super Poop","color":"#8B4513","italic":false}'}}
 item replace entity @a hotbar.1 with red_concrete{display:{Name:'{"text":"Poop","color":"red","italic":false}'}}
