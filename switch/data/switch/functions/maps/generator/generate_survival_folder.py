@@ -290,6 +290,7 @@ generate_clone_survival_folder("the_four_elements", (115000, 0, 115000), (115101
 generate_clone_survival_folder("winnie_city", (117000, 0, 117000), (117119, 31, 117130), 100, override_tp_coords = (117053, 110, 117052), has_doors = True)
 generate_clone_survival_folder("remelta_cluedo", (118000, 0, 118000), (118089, 42, 118066), 100, override_tp_coords = (118032, 108, 118030), has_doors = True)
 generate_clone_survival_folder("arti_box", (119000, 0, 119000), (119047, 34, 119047), 100, override_tp_coords = (119024, 109, 119023), has_doors = True)
+generate_clone_survival_folder("pitch_creep_nether", (120000, 0, 120000), (120037, 16, 120020), 100, override_tp_coords = (120019, 108, 120010))
 
 
 
