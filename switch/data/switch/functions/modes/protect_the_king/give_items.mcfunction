@@ -14,10 +14,9 @@ execute if score #sword switch.data matches 1 run item replace entity @s hotbar.
 execute if score #sword switch.data matches 0 run item replace entity @s hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
 item replace entity @s hotbar.3 with stone_axe
-item replace entity @s hotbar.4 with golden_apple 6
 item replace entity @s hotbar.6 with arrow 28
 item replace entity @s hotbar.7 with water_bucket
-item replace entity @s hotbar.8 with apple 16
+item replace entity @s hotbar.8 with golden_apple 6
 give @s oak_planks 100
 give @s anvil
 

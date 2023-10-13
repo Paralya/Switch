@@ -45,6 +45,8 @@ team modify switch.temp.hunter friendlyFire false
 team modify switch.temp.mouse friendlyFire false
 team modify switch.temp.hunter nametagVisibility never
 team modify switch.temp.mouse nametagVisibility never
+team modify switch.temp.hunter collisionRule never
+team modify switch.temp.mouse collisionRule never
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/panic_chase/roles
