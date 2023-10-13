@@ -10,7 +10,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main b
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "mushroom_plains"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "dark_forest_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "zonweeb_highschool"
-execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "giant_zoo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "hider_mansion"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "nuketown_no_barrier"
 
