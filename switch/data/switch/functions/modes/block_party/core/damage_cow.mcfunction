@@ -1,3 +1,3 @@
 
-execute as @e[tag=switch.paint_cow] run damage @s 1 arrow
+damage @e[tag=switch.paint_cow,limit=1] 1 arrow
 

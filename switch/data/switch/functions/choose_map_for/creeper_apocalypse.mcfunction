@@ -6,7 +6,6 @@ execute store result score #mc switch.data run data get storage switch:main cree
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "enchanting_island"
-execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "friends_pvpbox_ice"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "friends_pvpbox_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "friends_pvpbox_end"
 execute if score #mc switch.data matches 0 run data modify storage switch:main creeper_apocalypse_maps append value "friends_cube_lobby"
