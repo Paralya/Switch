@@ -8,5 +8,4 @@ execute if data storage switch:main {map:"survival_boat"} positioned 79062 128 7
 
 # Message
 tellraw @a ["",{"text":"[SheepWars] ","color":"yellow"},{"text":"Une laine magique est apparue !"}]
-execute as @a at @s run playsound entity.player.levelup ambient @s
 

@@ -26,6 +26,6 @@ execute if score #sheep_give switch.data matches 0 as @a[gamemode=!spectator] at
 # 30 seconds laines magiques
 scoreboard players operation #magic_wool switch.data = #sheepwars_seconds switch.data
 scoreboard players operation #magic_wool switch.data %= #20 switch.data
+execute if score #APOCALYPSE_GAME switch.data matches 1 if score #magic_wool switch.data matches 5 run scoreboard players set #magic_wool switch.data 15
 execute if score #magic_wool switch.data matches 15 run function switch:modes/sheepwars/magic_wool/place
-
 

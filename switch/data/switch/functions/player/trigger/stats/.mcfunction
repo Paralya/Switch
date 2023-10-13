@@ -33,6 +33,9 @@ tellraw @s[scores={switch.stats.played.gay_shooter=1..}] [{"text":"➤ ","color"
 tellraw @s[scores={switch.stats.played.build_battle=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.build_battle"},"color":"yellow"},{"text":" parties jouées de Build Battle"}]
 tellraw @s[scores={switch.stats.played.beat_the_kings=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.beat_the_kings"},"color":"yellow"},{"text":" parties jouées de Beat The Kings"}]
 tellraw @s[scores={switch.stats.played.twittos_de_merde=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.twittos_de_merde"},"color":"yellow"},{"text":" parties jouées de Twittos de Merde"}]
+tellraw @s[scores={switch.stats.played.coin_chaser=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.coin_chaser"},"color":"yellow"},{"text":" parties jouées de Coin Chaser"}]
+tellraw @s[scores={switch.stats.played.murder_mystery=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.murder_mystery"},"color":"yellow"},{"text":" parties jouées de Murder Mystery"}]
+tellraw @s[scores={switch.stats.played.panic_chase=1..}] [{"text":"➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.played.panic_chase"},"color":"yellow"},{"text":" parties jouées de Panic Chase"}]
 
 # Total victories (all games)
 tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.victories"},"color":"yellow"},{"text":" victoires au total"}]

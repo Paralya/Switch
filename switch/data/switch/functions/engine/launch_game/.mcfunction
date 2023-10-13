@@ -68,4 +68,7 @@ execute if data storage switch:main {current_game:"gay_shooter"} run scoreboard 
 execute if data storage switch:main {current_game:"build_battle"} run scoreboard players add @a switch.stats.played.build_battle 1
 execute if data storage switch:main {current_game:"beat_the_kings"} run scoreboard players add @a switch.stats.played.beat_the_kings 1
 execute if data storage switch:main {current_game:"twittos_de_merde"} run scoreboard players add @a switch.stats.played.twittos_de_merde 1
+execute if data storage switch:main {current_game:"coin_chaser"} run scoreboard players add @a switch.stats.played.coin_chaser 1
+execute if data storage switch:main {current_game:"murder_mystery"} run scoreboard players add @a switch.stats.played.murder_mystery 1
+execute if data storage switch:main {current_game:"panic_chase"} run scoreboard players add @a switch.stats.played.panic_chase 1
 
