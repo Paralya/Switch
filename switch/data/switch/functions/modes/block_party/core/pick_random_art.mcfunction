@@ -27,7 +27,7 @@ execute at @s positioned ~ ~ ~65 run function switch:modes/block_party/core/get_
 
 # Choose a random block for the pixel art
 scoreboard players operation #modulo_rand switch.data = #block_count switch.data
-function switch:math/get_random/
+function switch:utils/get_random/
 scoreboard players operation #bp_selected_block switch.data = #random switch.data
 
 # Teleport current marker to the selected block
@@ -48,7 +48,7 @@ clear @a[gamemode=adventure]
 
 # Play random music
 scoreboard players set #modulo_rand switch.data 10
-function switch:math/get_random/
+function switch:utils/get_random/
 execute if score #random switch.data matches 0 as @a at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 1 as @a at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 2 as @a at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1

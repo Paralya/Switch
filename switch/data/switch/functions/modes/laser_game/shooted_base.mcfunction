@@ -7,7 +7,7 @@ execute if score #color switch.data matches 1 run tellraw @a[scores={switch.aliv
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #modulo_rand switch.data 6
-function switch:math/get_random/
+function switch:utils/get_random/
 
 execute if score #color switch.data matches 0 run tag @a[scores={switch.alive=10}] add switch.message
 execute if score #color switch.data matches 1 run tag @a[scores={switch.alive=11}] add switch.message

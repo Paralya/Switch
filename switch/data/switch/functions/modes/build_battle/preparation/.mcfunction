@@ -16,15 +16,15 @@ execute store result score #nb_themes switch.data run data get storage switch:ma
 
 # Pick 5 random themes by getting a random number between 0 and the number of themes
 scoreboard players operation #modulo_rand switch.data = #nb_themes switch.data
-function switch:math/get_random/
+function switch:utils/get_random/
 scoreboard players operation #theme_1 switch.data = #random switch.data
-function switch:math/get_random/
+function switch:utils/get_random/
 scoreboard players operation #theme_2 switch.data = #random switch.data
-function switch:math/get_random/
+function switch:utils/get_random/
 scoreboard players operation #theme_3 switch.data = #random switch.data
-function switch:math/get_random/
+function switch:utils/get_random/
 scoreboard players operation #theme_4 switch.data = #random switch.data
-function switch:math/get_random/
+function switch:utils/get_random/
 scoreboard players operation #theme_5 switch.data = #random switch.data
 
 # Get the themes from the list

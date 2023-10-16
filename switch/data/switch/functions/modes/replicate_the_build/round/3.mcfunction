@@ -42,7 +42,7 @@ gamemode adventure @a[scores={switch.alive=1..}]
 
 # Tirage au sort de la structure
 scoreboard players set #modulo_rand switch.data 11
-function switch:math/get_random/
+function switch:utils/get_random/
 
 execute as @e[type=marker,tag=switch.rtb.island] at @s positioned ~-3 ~ ~1 run function switch:modes/replicate_the_build/structure/place
 

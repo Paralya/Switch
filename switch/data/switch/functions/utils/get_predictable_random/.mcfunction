@@ -1,5 +1,5 @@
 
-# > switch:math/get_predictable_random
+# > switch:utils/get_predictable_random
 # 
 # @input	score : #modulo_rand switch.data
 # 

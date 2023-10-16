@@ -1,7 +1,7 @@
 
 # On prend un nombre aléatoire et y'affecte un thème à afficher
 scoreboard players set #modulo_rand switch.data 18
-function switch:math/get_random/
+function switch:utils/get_random/
 
 # Penser à modifier les thèmes en fonction de avec qui tu joues
 execute if score #random switch.data matches 0 run tellraw @a [{"text":"Le thème est :","color":"dark_purple"},{"text":" Stoupy n'aurait jamais dû...\n","color":"light_purple"}]

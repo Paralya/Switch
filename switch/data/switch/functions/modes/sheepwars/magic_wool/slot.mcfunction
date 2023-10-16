@@ -9,7 +9,7 @@
 
 # Get random
 scoreboard players set #modulo_rand switch.data 8
-function switch:math/get_random/
+function switch:utils/get_random/
 
 # Random for blue team
 execute if score #random switch.data matches 0 if entity @s[team=switch.temp.blue] run effect give @a[team=switch.temp.blue] resistance 20 0 true
