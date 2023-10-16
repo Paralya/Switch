@@ -53,11 +53,11 @@ execute if score @s switch.temp.theme_vote matches 5 run data modify block 0 0 0
 
 # Place the papers in the inventory
 execute if data entity @s Inventory[5] run clear @s
-item replace entity @s inventory.11 from block 0 0 0 container.0
-item replace entity @s inventory.12 from block 0 0 0 container.1
-item replace entity @s inventory.13 from block 0 0 0 container.2
-item replace entity @s inventory.14 from block 0 0 0 container.3
-item replace entity @s inventory.15 from block 0 0 0 container.4
+item replace entity @s[nbt=!{Inventory:[{Slot:20b}]}] inventory.11 from block 0 0 0 container.0
+item replace entity @s[nbt=!{Inventory:[{Slot:21b}]}] inventory.12 from block 0 0 0 container.1
+item replace entity @s[nbt=!{Inventory:[{Slot:22b}]}] inventory.13 from block 0 0 0 container.2
+item replace entity @s[nbt=!{Inventory:[{Slot:23b}]}] inventory.14 from block 0 0 0 container.3
+item replace entity @s[nbt=!{Inventory:[{Slot:24b}]}] inventory.15 from block 0 0 0 container.4
 
 # Remove blocks
 setblock 0 0 0 air
