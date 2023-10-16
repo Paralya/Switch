@@ -17,39 +17,6 @@ scoreboard objectives add switch.trigger.game_vote trigger
 scoreboard objectives add switch.trigger.stats trigger
 
 scoreboard objectives add switch.stats.victories dummy
-scoreboard objectives add switch.stats.played.pitch_creep dummy
-scoreboard objectives add switch.stats.played.laser_game dummy
-scoreboard objectives add switch.stats.played.warden_escape dummy
-scoreboard objectives add switch.stats.played.pitchout dummy
-scoreboard objectives add switch.stats.played.glassrunner dummy
-scoreboard objectives add switch.stats.played.creeper_apocalypse dummy
-scoreboard objectives add switch.stats.played.traitors_game dummy
-scoreboard objectives add switch.stats.played.boat_race dummy
-scoreboard objectives add switch.stats.played.spectres_game dummy
-scoreboard objectives add switch.stats.played.kart_racer dummy
-scoreboard objectives add switch.stats.played.rush_the_point dummy
-scoreboard objectives add switch.stats.played.spleef dummy
-scoreboard objectives add switch.stats.played.de_a_coudre dummy
-scoreboard objectives add switch.stats.played.feed_fast dummy
-scoreboard objectives add switch.stats.played.mlg_a_coudre dummy
-scoreboard objectives add switch.stats.played.protect_the_king dummy
-scoreboard objectives add switch.stats.played.castagne dummy
-scoreboard objectives add switch.stats.played.layers_2_teams dummy
-scoreboard objectives add switch.stats.played.layers_4_teams dummy
-scoreboard objectives add switch.stats.played.thunder_spear dummy
-scoreboard objectives add switch.stats.played.tnt_run dummy
-scoreboard objectives add switch.stats.played.sheepwars dummy
-scoreboard objectives add switch.stats.played.block_party dummy
-scoreboard objectives add switch.stats.played.replicate_the_build dummy
-scoreboard objectives add switch.stats.played.moutron dummy
-scoreboard objectives add switch.stats.played.snowball_painter dummy
-scoreboard objectives add switch.stats.played.gay_shooter dummy
-scoreboard objectives add switch.stats.played.build_battle dummy
-scoreboard objectives add switch.stats.played.beat_the_kings dummy
-scoreboard objectives add switch.stats.played.twittos_de_merde dummy
-scoreboard objectives add switch.stats.played.coin_chaser dummy
-scoreboard objectives add switch.stats.played.murder_mystery dummy
-scoreboard objectives add switch.stats.played.panic_chase dummy
 
 team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
