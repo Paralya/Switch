@@ -6,11 +6,9 @@ execute if score #color switch.data matches 0 run tellraw @a[scores={switch.aliv
 execute if score #color switch.data matches 1 run tellraw @a[scores={switch.alive=10}] [{"selector":"@s"},{"text":" a tiré sur la base de bonus !","color":"green"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #modulo_rand switch.data 6
-function switch:utils/get_random/
-
 execute if score #color switch.data matches 0 run tag @a[scores={switch.alive=10}] add switch.message
 execute if score #color switch.data matches 1 run tag @a[scores={switch.alive=11}] add switch.message
+execute store result score #random switch.data run random value 0..5
 execute if score #random switch.data matches 0 run tellraw @a[tag=switch.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et obtient un Bouclier résistant à 5 tirs [+20 points]","color":"green"}]
 execute if score #random switch.data matches 1 run tellraw @a[tag=switch.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et obtient une Mitraillette pendant 15 secondes [+20 points]","color":"green"}]
 execute if score #random switch.data matches 2 run tellraw @a[tag=switch.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et donne un Effet Darkness à la team ennemie [+20 points]","color":"green"}]

@@ -10,8 +10,7 @@ execute if score #color switch.data matches 1 run scoreboard players add #blue_p
 execute if score #color switch.data matches 1 run function switch:modes/rush_the_point/update_sidebar/blue_points/
 
 # Random
-scoreboard players set #modulo_rand switch.data 10
-function switch:utils/get_random/
+execute store result score #random switch.data run random value 0..9
 
 # Color red
 execute if score #random switch.data matches 0 if score #color switch.data matches 0 run effect give @a[team=switch.rush_the_point.red] absorption 60 4 true

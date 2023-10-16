@@ -1,9 +1,6 @@
 
-# Random
-scoreboard players set #modulo_rand switch.data 4
-function switch:utils/get_random/
-
-# Place
+# Place random
+execute store result score #random switch.data run random value 0..3
 execute if score #random switch.data matches 0 run setblock 14000 100 13925 obsidian
 execute if score #random switch.data matches 1 run setblock 14000 100 14000 obsidian
 execute if score #random switch.data matches 2 run setblock 14000 100 14075 obsidian

@@ -1,7 +1,5 @@
 
-scoreboard players set #modulo_rand switch.data 9
-function switch:utils/get_random/
-
+execute store result score #random switch.data run random value 0..8
 execute if score #random switch.data matches 0 run item replace entity @s hotbar.0 with snowball
 execute if score #random switch.data matches 1 run item replace entity @s hotbar.1 with snowball
 execute if score #random switch.data matches 2 run item replace entity @s hotbar.2 with snowball
@@ -12,7 +10,7 @@ execute if score #random switch.data matches 6 run item replace entity @s hotbar
 execute if score #random switch.data matches 7 run item replace entity @s hotbar.7 with snowball
 execute if score #random switch.data matches 8 run item replace entity @s hotbar.8 with snowball
 
-function switch:utils/get_random/
+execute store result score #random switch.data run random value 0..8
 execute if score #random switch.data matches 0 run item replace entity @s hotbar.0 with snowball
 execute if score #random switch.data matches 1 run item replace entity @s hotbar.1 with snowball
 execute if score #random switch.data matches 2 run item replace entity @s hotbar.2 with snowball
@@ -23,7 +21,7 @@ execute if score #random switch.data matches 6 run item replace entity @s hotbar
 execute if score #random switch.data matches 7 run item replace entity @s hotbar.7 with snowball
 execute if score #random switch.data matches 8 run item replace entity @s hotbar.8 with snowball
 
-function switch:utils/get_random/
+execute store result score #random switch.data run random value 0..8
 execute if score #random switch.data matches 0 run item replace entity @s hotbar.0 with snowball
 execute if score #random switch.data matches 1 run item replace entity @s hotbar.1 with snowball
 execute if score #random switch.data matches 2 run item replace entity @s hotbar.2 with snowball

@@ -1,9 +1,7 @@
 
 tellraw @s {"text":"Item random reçu !","color":"dark_purple"}
 
-scoreboard players set #modulo_rand switch.data 48
-function switch:utils/get_random/
-
+execute store result score #random switch.data run random value 0..47
 execute if score #random switch.data matches 0 run give @s iron_ore 32
 execute if score #random switch.data matches 1 run give @s gold_ore 32
 execute if score #random switch.data matches 2 run give @s diamond_ore 3

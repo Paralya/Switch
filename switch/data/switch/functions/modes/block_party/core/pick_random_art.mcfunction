@@ -47,8 +47,7 @@ execute as @a at @s run playsound entity.villager.ambient ambient @s
 clear @a[gamemode=adventure]
 
 # Play random music
-scoreboard players set #modulo_rand switch.data 10
-function switch:utils/get_random/
+execute store result score #random switch.data run random value 0..10
 execute if score #random switch.data matches 0 as @a at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 1 as @a at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 2 as @a at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1

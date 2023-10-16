@@ -5,9 +5,7 @@ scoreboard players set #add switch.money 10
 scoreboard players operation #add switch.money += @s switch.money_bonus
 scoreboard players operation @s switch.money += #add switch.money
 
-scoreboard players set #modulo_rand switch.data 8
-function switch:utils/get_random/
-
+execute store result score #random switch.data run random value 0..7
 execute if score #random switch.data matches 0 run tellraw @s [{"nbt":"ParalyaMoney","storage":"switch:main","interpret":true},{"text":" +","color":"light_purple"},{"score":{"name":"#add","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":" pour avoir gagné le mini-jeu vous apportant à un total de "},{"score":{"name":"@s","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"}]
 execute if score #random switch.data matches 1 run tellraw @s [{"nbt":"ParalyaMoney","storage":"switch:main","interpret":true},{"text":" +","color":"light_purple"},{"score":{"name":"#add","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":" de par votre victoire vous apportant à un total de "},{"score":{"name":"@s","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"}]
 execute if score #random switch.data matches 2 run tellraw @s [{"nbt":"ParalyaMoney","storage":"switch:main","interpret":true},{"text":" +","color":"light_purple"},{"score":{"name":"#add","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"},{"text":" grâce à votre victoire, vous avez donc maintenant un total de "},{"score":{"name":"@s","objective":"switch.money"},"color":"light_purple"},{"text":"$","color":"light_purple"}]

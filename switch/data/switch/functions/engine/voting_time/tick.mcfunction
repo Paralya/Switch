@@ -1,4 +1,6 @@
 
+execute unless score #state switch.data matches 2 run return 1
+
 scoreboard players set #success switch.data 0
 execute if entity @a[scores={switch.trigger.game_vote=1..}] run function switch:engine/voting_time/update_votes
 execute if score #success switch.data matches 1 as @a run function switch:engine/voting_time/message

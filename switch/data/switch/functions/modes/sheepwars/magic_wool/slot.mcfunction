@@ -7,9 +7,8 @@
 # @description		Depending on the team of the shooter, apply a random bonus and print a message
 #
 
-# Get random
-scoreboard players set #modulo_rand switch.data 8
-function switch:utils/get_random/
+# Get random value
+execute store result score #random switch.data run random value 0..7
 
 # Random for blue team
 execute if score #random switch.data matches 0 if entity @s[team=switch.temp.blue] run effect give @a[team=switch.temp.blue] resistance 20 0 true
