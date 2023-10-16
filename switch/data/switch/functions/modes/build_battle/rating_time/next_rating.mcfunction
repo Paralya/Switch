@@ -1,5 +1,5 @@
 
-# Remove tags and reset scores
+# Remove tags and reset scores to make sure we don't have any leftovers
 scoreboard players reset @a[scores={switch.temp.to_rate=2}] switch.temp.to_rate
 tag @e[tag=switch.marker_temp] remove switch.marker_temp
 

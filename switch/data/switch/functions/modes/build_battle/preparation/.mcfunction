@@ -45,6 +45,14 @@ data modify storage switch:main copy set from storage switch:main build_battle_t
 scoreboard players operation #index switch.data = #theme_5 switch.data
 function switch:modes/build_battle/preparation/get_theme
 
+# Prepare a copy for macros
+data modify storage switch:main themes set value {}
+data modify storage switch:main themes.theme1 set from storage switch:main choosed_themes[0]
+data modify storage switch:main themes.theme2 set from storage switch:main choosed_themes[1]
+data modify storage switch:main themes.theme3 set from storage switch:main choosed_themes[2]
+data modify storage switch:main themes.theme4 set from storage switch:main choosed_themes[3]
+data modify storage switch:main themes.theme5 set from storage switch:main choosed_themes[4]
+
 # Display the themes in the inventory
 execute as @a in overworld run function switch:modes/build_battle/preparation/display_themes
 

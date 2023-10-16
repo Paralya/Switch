@@ -9,5 +9,5 @@ clear @a
 scoreboard players set @a[scores={switch.temp.id=0..}] switch.temp.to_rate 1
 
 # Tellraw start + playsound
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]
+tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin du temps imparti, rappel du thème : "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]
 

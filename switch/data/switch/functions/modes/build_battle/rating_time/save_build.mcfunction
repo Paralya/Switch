@@ -6,9 +6,10 @@ place template switch:temp
 scoreboard players set #max switch.data 0
 scoreboard players operation #max switch.data > @a switch.temp.points
 scoreboard players set #best switch.data 0
-execute as @a[scores={switch.temp.to_rate=2}] if score #max switch.data = @s switch.temp.points run scoreboard players set #best switch.data 1
+execute as @p[scores={switch.temp.to_rate=2}] if score #max switch.data = @s switch.temp.points run scoreboard players set #best switch.data 1
 
 # If player is not the best, remove the marker
+execute if score #best switch.data matches 0 run forceload remove ~-16 ~-16 ~48 ~48
 execute if score #best switch.data matches 0 run kill @s
 
 # Else, change marker tags
