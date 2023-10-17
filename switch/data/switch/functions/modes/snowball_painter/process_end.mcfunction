@@ -3,6 +3,7 @@ scoreboard players add #process_end switch.data 1
 
 kill @e[type=marker,tag=switch.marker]
 kill @e[type=snowball,tag=switch.marker]
+execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
 execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data 0
 execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a switch.temp.points
 execute if score #process_end switch.data matches 1 as @a if score @s switch.temp.points = #max switch.data run tag @s add switch.winner
