@@ -34,6 +34,7 @@
 		"switch:modes/coin_chaser/calls/start",
 		"switch:modes/murder_mystery/calls/start",
 		"switch:modes/panic_chase/calls/start",
+		"switch:modes/simultaneous_jump/calls/start",
 		"switch:modes/twittos_de_merde/calls/start"
 	]
 }

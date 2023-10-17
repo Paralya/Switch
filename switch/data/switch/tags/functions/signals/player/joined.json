@@ -33,6 +33,7 @@
 		"switch:modes/coin_chaser/calls/joined",
 		"switch:modes/murder_mystery/calls/joined",
 		"switch:modes/panic_chase/calls/joined",
+		"switch:modes/simultaneous_jump/calls/joined",
 		"switch:modes/twittos_de_merde/calls/joined"
 	]
 }
