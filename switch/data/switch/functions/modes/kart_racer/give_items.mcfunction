@@ -2,9 +2,9 @@
 xp set @s 0 levels
 xp set @s 0 points
 
-# Summon kart with infinite max speed
+# Summon kart with 1500 max speed
 scoreboard players operation #old switch.data = #default_max_engine shopping_kart.data
-scoreboard players set #default_max_engine shopping_kart.data 2000
+scoreboard players set #default_max_engine shopping_kart.data 1500
 function shopping_kart:kart/switch_model/summon_new_kart
 scoreboard players operation #default_max_engine shopping_kart.data = #old switch.data
 

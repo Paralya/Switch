@@ -1,9 +1,9 @@
 
 # Add NBT
 tag @s add shopping_kart.kart_visual
-data modify entity @s transformation.translation[1] set value 0.13f
+data modify entity @s transformation.translation[1] set value -0.17f
 execute if score #model shopping_kart.data matches 1 run data modify entity @s transformation.scale set value [0.75f,0.75f,0.75f]
-execute if score #model shopping_kart.data matches 1 run data modify entity @s transformation.translation[1] set value 0.0f
+execute if score #model shopping_kart.data matches 1 run data modify entity @s transformation.translation[1] set value 0.04f
 
 
 # Scoreboard + Model

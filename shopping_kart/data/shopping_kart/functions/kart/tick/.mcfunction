@@ -13,3 +13,6 @@ execute if entity @s[tag=shopping_kart.forced_acceleration] run function shoppin
 execute if entity @s[tag=!shopping_kart.calculated] run function shopping_kart:kart/tick/calculations
 tag @s remove shopping_kart.calculated
 
+# Add slowness effect
+effect give @s slowness infinite 255 true
+
