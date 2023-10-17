@@ -1,5 +1,6 @@
 
-scoreboard players add @s switch.stats.victories 1
+scoreboard players add @s switch.stats.wins 1
+function switch:engine/add_money_macro with storage switch:main
 
 scoreboard players set #add switch.money 10
 scoreboard players operation #add switch.money += @s switch.money_bonus

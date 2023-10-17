@@ -1,6 +1,6 @@
 
 # Display
-$tellraw @s [{"text":"➤ ","color":"gold"},{"text":"$(count)","color":"yellow"},{"text":" parties jouées de $(Name)"}]
+$tellraw @s [{"text":"➤ ","color":"gold"},{"text":"$(count)","color":"yellow"},{"text":" $(Name) dont "},{"text":"$(wins)","color":"yellow"},{"text":" victoires "},{"text":"($(winrate)%)","color":"green"}]
 
 # Continue loop
 data remove storage switch:main sorted_stats[0]

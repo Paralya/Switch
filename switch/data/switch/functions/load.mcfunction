@@ -15,15 +15,15 @@ scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger
 scoreboard objectives add switch.trigger.stats trigger
+scoreboard objectives add switch.trigger.changelog trigger
 
-scoreboard objectives add switch.stats.victories dummy
+scoreboard objectives add switch.stats.wins dummy
 
 team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
 
 gamerule maxCommandChainLength 1048576
 scoreboard players set Switch load.status 1000
-scoreboard players set _RANDOM_PRIME switch.data 6978869
 forceload add 0 0
 
 #define storage switch:main

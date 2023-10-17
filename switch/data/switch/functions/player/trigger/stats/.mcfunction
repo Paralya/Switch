@@ -15,7 +15,8 @@ execute if data storage switch:main stats[0] run function switch:player/trigger/
 execute if data storage switch:main sorted_stats[0] run function switch:player/trigger/stats/display_loop with storage switch:main sorted_stats[0]
 
 # Total victories (all games)
-tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.victories"},"color":"yellow"},{"text":" victoires au total"}]
+scoreboard players add @s switch.stats.wins 0
+tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"@s","objective":"switch.stats.wins"},"color":"yellow"},{"text":" victoires au total"}]
 
 # Reset trigger
 scoreboard players set @s switch.trigger.stats 0

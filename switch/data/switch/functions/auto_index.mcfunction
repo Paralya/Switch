@@ -7,8 +7,8 @@ scoreboard players add #index switch.data 1
 # Copy the temporary storage back to the new minigames list
 data modify storage switch:main indexed_minigames append from storage switch:main temp
 
-# Create the stats objective for the minigame
-function switch:utils/create_stats_objective with storage switch:main temp
+# Create the stats objectives for the minigame
+function switch:utils/create_stats_objectives with storage switch:main temp
 
 # Remove the first minigame from the list and continue
 data remove storage switch:main minigames[0]
