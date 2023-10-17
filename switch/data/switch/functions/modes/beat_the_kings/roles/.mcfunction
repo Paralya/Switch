@@ -6,7 +6,7 @@ scoreboard players add #next_player_id switch.data 1
 scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1 run team join switch.temp.king @s
 execute if score #next_role switch.data matches 2.. run team join switch.temp.civil @s
-execute if score #next_role switch.data matches 5.. run scoreboard players set #next_role switch.data 0
+execute if score #next_role switch.data matches 4.. run scoreboard players set #next_role switch.data 0
 
 
 # Linked marker for offline players

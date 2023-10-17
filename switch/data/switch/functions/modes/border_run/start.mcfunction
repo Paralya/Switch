@@ -25,7 +25,6 @@ weather clear
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/border_run
 
-gamerule showDeathMessages true
 gamerule naturalRegeneration false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement du Border Run, 10 secondes de préparation et soyez le dernier en vie !"}]

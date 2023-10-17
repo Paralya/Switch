@@ -30,7 +30,6 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/beat_the_kings
 
 gamerule mobGriefing true
-gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
