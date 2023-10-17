@@ -59,7 +59,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{CustomPotionEffects:[{Id:6,Amplifier:9b}],CustomPotionColor:16711680,display:{Name:'{\"text\":\"Potion de soin\",\"italic\":false}'}}"
+							"tag": "{custom_potion_effects:[{id:\"minecraft:instant_health\",amplifier:9b}],CustomPotionColor:16711680,display:{Name:'{\"text\":\"Potion de soin\",\"italic\":false}'}}"
 						}
 					]
 				},
@@ -69,7 +69,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{CustomPotionEffects:[{Id:23,Amplifier:4b}],CustomPotionColor:10569486,display:{Name:'{\"text\":\"Potion de saturation\",\"italic\":false}'}}"
+							"tag": "{custom_potion_effects:[{id:\"minecraft:saturation\",amplifier:4b}],CustomPotionColor:10569486,display:{Name:'{\"text\":\"Potion de saturation\",\"italic\":false}'}}"
 						}
 					]
 				}

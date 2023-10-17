@@ -5,7 +5,7 @@ data modify storage switch:main temp.Pos set from entity @s Pos
 data modify storage switch:main temp.Rotation set from entity @s Rotation
 data modify storage switch:main temp.Motion set from entity @s Motion
 data modify storage switch:main temp.Tags set from entity @s Tags
-data modify storage switch:main temp.ActiveEffects set from entity @s ActiveEffects
+data modify storage switch:main temp.active_effects set from entity @s active_effects
 data modify storage switch:main temp.Fire set from entity @s Fire
 data modify storage switch:main temp.HurtTime set from entity @s HurtTime
 data modify storage switch:main temp.Brain set from entity @s Brain

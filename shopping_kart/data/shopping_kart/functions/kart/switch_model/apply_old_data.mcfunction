@@ -4,7 +4,7 @@ data modify entity @s Pos set from storage shopping_kart:main temp.Pos
 data modify entity @s Rotation set from storage shopping_kart:main temp.Rotation
 data modify entity @s Motion set from storage shopping_kart:main temp.Motion
 data modify entity @s Tags set from storage shopping_kart:main temp.Tags
-data modify entity @s ActiveEffects set from storage shopping_kart:main temp.ActiveEffects
+data modify entity @s active_effects set from storage shopping_kart:main temp.active_effects
 data modify entity @s Fire set from storage shopping_kart:main temp.Fire
 data modify entity @s HurtTime set from storage shopping_kart:main temp.HurtTime
 data modify entity @s Brain set from storage shopping_kart:main temp.Brain

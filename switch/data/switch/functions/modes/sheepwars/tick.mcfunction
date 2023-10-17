@@ -9,7 +9,7 @@ execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
 execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
-effect give @a[predicate=switch:in_water,nbt=!{ActiveEffects:[{Id:20}]}] wither 2 2 true
+effect give @a[predicate=switch:in_water,nbt=!{active_effects:[{id:"minecraft:wither"}]}] wither 2 2 true
 
 # Tick du sheepwars
 function sheepwars:tick

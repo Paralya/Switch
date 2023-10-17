@@ -14,7 +14,7 @@ execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=m
 execute at @a[team=switch.temp.king,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 
 # On enlève les particules d'absorption
-execute as @a[nbt={ActiveEffects:[{Id:22,ShowParticles:1b}]}] run function switch:modes/beat_the_kings/absorption
+execute as @a[nbt={active_effects:[{id:"minecraft:absorption",show_particles:1b}]}] run function switch:modes/beat_the_kings/absorption
 
 # Particules sur tous les kings, pour les kings
 execute at @a[gamemode=!spectator,team=switch.temp.king] run particle dust 1 1 0.5 1 ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[team=switch.temp.king]
