@@ -24,6 +24,7 @@ execute if score #remaining_time switch.data matches ..1 if score #game_state sw
 execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 2 as @a[gamemode=!spectator,scores={switch.temp.role=1..2}] at @s run function switch:engine/add_money
 
 execute if score #remaining_time switch.data matches ..1 run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Détective : "},{"selector":"@p[scores={switch.temp.role=2}]","color":"green"},{"text":" - Murderer : "},{"selector":"@p[scores={switch.temp.role=3}]","color":"red"}]
+execute if score #remaining_time switch.data matches ..1 as @a[scores={switch.temp.role=3}] on attacker if entity @s[scores={switch.temp.role=1}] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Hero : "},{"selector":"@s","color":"blue"}]
 
 # Visuel de fin de partie
 execute if score #remaining_time switch.data matches ..1 as @a at @s run playsound item.totem.use ambient @s
