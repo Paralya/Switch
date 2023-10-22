@@ -4,7 +4,6 @@
 # Laser game seconds timer
 scoreboard players add #laser_game_seconds switch.data 1
 scoreboard players remove #remaining_time switch.data 1
-function switch:modes/laser_game/update_sidebar/timer/
 
 # Start thing
 execute if score #laser_game_seconds switch.data matches ..9 run kill @e[type=!player,type=!marker]
@@ -36,4 +35,7 @@ execute if score #mitraillette switch.data matches ..0 run tag @a[tag=switch.bon
 execute if score #change_color switch.data matches ..0 run team join switch.laser_game.blue @a[tag=switch.bonus.color,scores={switch.alive=10}]
 execute if score #change_color switch.data matches ..0 run team join switch.laser_game.red @a[tag=switch.bonus.color,scores={switch.alive=11}]
 execute if score #change_color switch.data matches ..0 run tag @a[tag=switch.bonus.color] remove switch.bonus.color
+
+# Update sidebar
+function switch:modes/laser_game/update_sidebar
 

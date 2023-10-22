@@ -4,10 +4,7 @@ execute store success score #color switch.data if entity @s[team=switch.rush_the
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 execute if score #color switch.data matches 0 run scoreboard players add #red_points switch.data 250
-execute if score #color switch.data matches 0 run function switch:modes/rush_the_point/update_sidebar/red_points/
-
 execute if score #color switch.data matches 1 run scoreboard players add #blue_points switch.data 250
-execute if score #color switch.data matches 1 run function switch:modes/rush_the_point/update_sidebar/blue_points/
 
 # Random
 execute store result score #random switch.data run random value 0..9

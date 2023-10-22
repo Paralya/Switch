@@ -47,12 +47,9 @@ scoreboard players set #base_reload switch.data 15
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
 team add switch.temp.sidebar.1
-team modify switch.temp.sidebar.3 prefix [{"text":"Temps restant : "},{"text":"2","color":"yellow"},{"text":"m"}]
-team modify switch.temp.sidebar.2 prefix [{"text":"Équipe Bleue : ","color":"blue"}]
-team modify switch.temp.sidebar.1 prefix [{"text":"Équipe Rouge : ","color":"red"}]
-team modify switch.temp.sidebar.3 suffix [{"text":"30","color":"yellow"},{"text":"s"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
 team join switch.temp.sidebar.3 §3

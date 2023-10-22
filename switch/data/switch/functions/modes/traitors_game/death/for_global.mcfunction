@@ -28,6 +28,5 @@ execute if score #success switch.data matches 2 if entity @s[scores={switch.temp
 execute if score #success switch.data matches 2 if entity @s[scores={switch.temp.role=6}] run tellraw @a ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mouru, "},{"text":"Gros Traitre","color":"dark_red"},{"text":" qu'il fût..."}]
 
 kill @s
-
 function switch:modes/traitors_game/update_sidebar
 

@@ -25,7 +25,6 @@ item replace entity @s hotbar.1 from block 0 0 0 container.1
 item replace entity @s hotbar.2 with ender_pearl 3
 item replace entity @s hotbar.3 with arrow
 
-attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
 
