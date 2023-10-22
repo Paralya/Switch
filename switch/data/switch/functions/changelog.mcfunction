@@ -21,3 +21,7 @@ tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"/stats : ajout
 tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Ajout de la commande /changelog","color":"green"}]
 tellraw @s ""
 
+# 2023/10/22
+tellraw @s [{"text":"[2023/10/22] ","color":"dark_aqua"},{"text":"Moutron : glass_pane -> glass","color":"white"}]
+tellraw @s ""
+
