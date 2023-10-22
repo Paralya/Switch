@@ -20,9 +20,9 @@ kill @e[type=item,nbt={Age:500s}]
 execute as @e[type=item_display,tag=switch.detective_bow] at @s positioned ~ ~-1 ~ run function switch:modes/murder_mystery/tick_bow
 
 # Allow the murderer to throw his knife
-scoreboard players add #rotation switch.data 18
+scoreboard players add #rotation switch.data 30
 scoreboard players remove #murderer_reload switch.data 1
-execute if score #murderer_reload switch.data matches 170 as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/throw/throw
+execute if score #murderer_reload switch.data matches 188 as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/throw/throw
 execute if score #murderer_reload switch.data matches 1..170 as @a[scores={switch.temp.role=3,switch.right_click=1..}] at @s run function switch:modes/murder_mystery/throw/error
 execute if score #murderer_reload switch.data matches ..0 as @a[scores={switch.temp.role=3,switch.right_click=1..},nbt={SelectedItem:{id:"minecraft:golden_sword"}}] run function switch:modes/murder_mystery/throw/init
 execute as @e[type=armor_stand,tag=switch.thrown] at @s run function switch:modes/murder_mystery/throw/loop
