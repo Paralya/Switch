@@ -17,8 +17,7 @@ spawnpoint @a 0 75 0
 scoreboard objectives setdisplay list switch.stats.wins
 execute unless score #is_adventure switch.data matches 1 run function switch:maps/regenerate_map
 scoreboard players reset #is_adventure switch.data
-execute as @a run attribute @s generic.attack_speed base set 4.0
-execute as @a run attribute @s generic.max_health base set 20.0
+function switch:engine/reset_attributes
 
 scoreboard players reset #disable switch.data
 scoreboard players reset * switch.alive
@@ -39,7 +38,6 @@ gamerule doMobLoot true
 gamerule doImmediateRespawn true
 gamerule announceAdvancements false
 gamerule doTraderSpawning false
-
 
 function #switch:signals/stop
 

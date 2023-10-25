@@ -35,6 +35,5 @@ item replace entity @s hotbar.4 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.5 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.8 from block 0 0 0 container.6
 
-attribute @s generic.attack_speed base set 1024
 setblock 0 0 0 air
 

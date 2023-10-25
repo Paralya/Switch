@@ -17,7 +17,6 @@ item replace entity @s hotbar.8 with golden_apple 12
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 
-attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
 

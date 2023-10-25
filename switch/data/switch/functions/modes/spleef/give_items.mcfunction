@@ -5,7 +5,6 @@ loot spawn ~ ~ ~ loot simplenergy:i/simplunium_shovel
 item replace entity @s hotbar.1 with ender_pearl
 item replace entity @s hotbar.8 with snow_block 8
 
-attribute @s generic.attack_speed base set 1024
 xp set @s 0 levels
 xp set @s 0 points
 

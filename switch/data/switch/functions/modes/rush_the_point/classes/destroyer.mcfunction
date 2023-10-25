@@ -45,6 +45,5 @@ item replace entity @s hotbar.8 from block 0 0 0 container.7
 
 scoreboard players set @s crazy_adventure.cooldown 0
 
-attribute @s generic.attack_speed base set 1024
 setblock 0 0 0 air
 

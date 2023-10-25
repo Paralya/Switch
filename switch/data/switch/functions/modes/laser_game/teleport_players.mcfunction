@@ -5,7 +5,6 @@ gamemode adventure @a[gamemode=!adventure]
 effect give @s saturation infinite 255 true
 effect give @s regeneration 5 255 true
 effect give @s weakness infinite 255 true
-attribute @s generic.attack_speed base set 1024
 xp set @s 130 levels
 xp set @s 1000 points
 
