@@ -1,6 +1,4 @@
 
-# Starter kit
-clear @s
 item replace entity @s[team=switch.temp.visible] armor.head with chainmail_helmet{Enchantments:[{id:"minecraft:protection",lvl:1s}]}
 item replace entity @s[team=switch.temp.visible] armor.chest with iron_chestplate{Enchantments:[{id:"minecraft:fire_protection",lvl:1s}]}
 item replace entity @s[team=switch.temp.visible] armor.legs with iron_leggings{Enchantments:[{id:"minecraft:protection",lvl:1s}]}
@@ -30,6 +28,4 @@ item replace entity @s inventory.26 with tnt 3
 
 effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
-xp set @s 0 levels
-xp set @s 0 points
 

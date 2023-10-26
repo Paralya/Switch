@@ -24,8 +24,5 @@ item replace entity @s hotbar.0 from block 0 0 0 container.0
 item replace entity @s hotbar.1 from block 0 0 0 container.1
 item replace entity @s hotbar.2 with arrow 64
 
-xp set @s 0 levels
-xp set @s 0 points
-
 setblock 0 0 0 air
 

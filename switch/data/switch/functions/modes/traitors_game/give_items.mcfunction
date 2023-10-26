@@ -1,5 +1,4 @@
 
-# Starter kit
 scoreboard players set #armor switch.data 0
 scoreboard players set #sword switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #armor switch.data 1
@@ -30,8 +29,5 @@ execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/r
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 
 scoreboard players set @s crazy_adventure.radiation 0
-
 attribute @s generic.attack_speed base set 1024
-xp set @s 100 levels
-xp set @s 0 points
 

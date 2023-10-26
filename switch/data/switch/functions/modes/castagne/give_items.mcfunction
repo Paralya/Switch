@@ -1,5 +1,4 @@
 
-# Starter kit
 item replace entity @s armor.head with leather_helmet
 item replace entity @s armor.chest with leather_chestplate
 item replace entity @s armor.legs with leather_leggings
@@ -12,7 +11,4 @@ item replace entity @s hotbar.4 with iron_axe{Enchantments:[{id:"minecraft:effic
 item replace entity @s hotbar.6 with arrow 8
 item replace entity @s hotbar.7 with oak_planks 64
 item replace entity @s hotbar.8 with golden_apple 12
-
-xp set @s 0 levels
-xp set @s 0 points
 
