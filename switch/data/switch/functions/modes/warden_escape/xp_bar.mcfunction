@@ -1,6 +1,4 @@
 
-## XP from 0 to 1000 points
-# points > 0 && points < 1000
 # 90 seconds = 100%
 # 0 seconds = 0%
 scoreboard players operation #points switch.data = #warden_escape_seconds switch.data

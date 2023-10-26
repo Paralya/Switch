@@ -326,9 +326,11 @@ regenerate_file.write("# Regenerate the survival maps\n")
 for name in generated_maps:
 	regenerate_file.write(f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/regenerate\n')
 
-# Write the last line
+# Write the last lines
 regenerate_file.write("\n# Remove the map from the storage")
 regenerate_file.write("\ndata remove storage switch:main map\n")
+regenerate_file.write("\n# Change score of already regenerated map")
+regenerate_file.write("\nscoreboard players set #already_regenerated switch.data 1\n")
 
 # Close the file
 regenerate_file.write("\n")

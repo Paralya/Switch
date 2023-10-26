@@ -1,6 +1,4 @@
 
-## XP from 0 to 1000 points
-# points > 0 && points < 1000
 execute if entity @s[scores={switch.alive=1}] run scoreboard players set #points switch.data 333
 execute if entity @s[scores={switch.alive=2}] run scoreboard players set #points switch.data 666
 execute if entity @s[scores={switch.alive=3}] run scoreboard players set #points switch.data 1000

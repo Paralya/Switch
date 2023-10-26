@@ -1,6 +1,4 @@
 
-## XP from 0 to 1000 points
-# points > 0 && points < 1000
 # 20 seconds = 100%
 # 0 seconds = 0%
 scoreboard players operation #points switch.data = #build_battle_seconds switch.data

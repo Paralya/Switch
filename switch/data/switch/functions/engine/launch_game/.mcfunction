@@ -34,6 +34,8 @@ execute if score #modulo_rand switch.data matches 2.. run tellraw @a[tag=!detach
 weather clear
 difficulty normal
 scoreboard players reset #set_spec switch.data
+scoreboard players reset #do_spreadplayers switch.data
+scoreboard players reset #is_adventure switch.data
 function switch:utils/reset_players
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 function #switch:signals/start

@@ -23,6 +23,7 @@ tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Ajout de la co
 tellraw @s [{"text":"[2023/10/22] ","color":"dark_aqua"},{"text":"Moutron : glass_pane -> glass","color":"white"}]
 
 # 2023/10/26
-tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : RushTheFlag","color":"green"}]
+tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Rush The Flag","color":"green"}]
+tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Bombardement","color":"white"}]
 tellraw @s ""
 
