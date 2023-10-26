@@ -1,9 +1,9 @@
 
-gamemode survival @a
-scoreboard players set @a switch.alive 1
-effect give @a resistance 10 255 true
-effect give @a regeneration 10 255 true
-effect give @a weakness 10 255 true
+gamemode survival @a[tag=!switch.detached]
+scoreboard players set @a[tag=!switch.detached] switch.alive 1
+effect give @a[tag=!switch.detached] resistance 10 255 true
+effect give @a[tag=!switch.detached] regeneration 10 255 true
+effect give @a[tag=!switch.detached] weakness 10 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs + give d'items
@@ -15,8 +15,8 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Traitors Game, tenez-vous prêt !"}]
-execute as @a at @s run playsound entity.player.levelup ambient @s
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Traitors Game, tenez-vous prêt !"}]
+execute as @a[tag=!switch.detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 1210
 scoreboard players set #traitors_game_seconds switch.data -10
@@ -61,7 +61,7 @@ scoreboard players set §1 switch.temp.sidebar 1
 # Choix des rôles
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-execute as @a[sort=random] at @s run function switch:modes/traitors_game/roles/
-execute as @a at @s run function switch:modes/traitors_game/give_items
+execute as @a[tag=!switch.detached,sort=random] at @s run function switch:modes/traitors_game/roles/
+execute as @a[tag=!switch.detached] at @s run function switch:modes/traitors_game/give_items
 function switch:modes/traitors_game/update_sidebar
 

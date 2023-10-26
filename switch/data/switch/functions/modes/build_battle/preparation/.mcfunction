@@ -3,10 +3,10 @@
 scoreboard players set #x switch.data 8
 scoreboard players set #z switch.data 8
 scoreboard players set #next_id switch.temp.id 0
-execute as @a summon marker run function switch:modes/build_battle/preparation/summon_marker
+execute as @a[tag=!switch.detached] summon marker run function switch:modes/build_battle/preparation/summon_marker
 
 # Give everyone effects
-effect give @a levitation infinite 255 true
+effect give @a[tag=!switch.detached] levitation infinite 255 true
 
 ## Choose themes
 # Themes list
@@ -54,6 +54,6 @@ data modify storage switch:main themes.theme4 set from storage switch:main choos
 data modify storage switch:main themes.theme5 set from storage switch:main choosed_themes[4]
 
 # Display the themes in the inventory
-execute as @a in overworld run function switch:modes/build_battle/preparation/display_themes
+execute as @a[tag=!switch.detached] in overworld run function switch:modes/build_battle/preparation/display_themes
 
 

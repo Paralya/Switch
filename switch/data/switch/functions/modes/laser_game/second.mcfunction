@@ -14,7 +14,7 @@ execute if score #laser_game_seconds switch.data matches 10 if data storage swit
 
 # Base reload
 scoreboard players remove #base_reload switch.data 1
-execute if score #base_reload switch.data matches 0 run tellraw @a [{"text":"La base de bonus vient de se recharger !","color":"yellow"}]
+execute if score #base_reload switch.data matches 0 run tellraw @a[tag=!switch.detached] [{"text":"La base de bonus vient de se recharger !","color":"yellow"}]
 execute if score #base_reload switch.data matches 0 run setblock 516 104 523 iron_trapdoor[powered=true,open=true]
 execute if score #base_reload switch.data matches 0 run setblock 36041 149 36011 iron_trapdoor[powered=true,open=true,facing=east]
 execute if score #base_reload switch.data matches 0 run setblock 36041 149 36012 iron_trapdoor[powered=true,open=true,facing=east]
@@ -29,10 +29,10 @@ execute if score #base_reload switch.data matches 1.. run setblock 72114 112 720
 # Bonus mitraillette + change color
 scoreboard players remove #mitraillette switch.data 1
 scoreboard players remove #change_color switch.data 1
-execute if score #mitraillette switch.data matches ..0 run tag @a[tag=switch.bonus.fast] remove switch.bonus.fast
-execute if score #change_color switch.data matches ..0 run team join switch.laser_game.blue @a[tag=switch.bonus.color,scores={switch.alive=10}]
-execute if score #change_color switch.data matches ..0 run team join switch.laser_game.red @a[tag=switch.bonus.color,scores={switch.alive=11}]
-execute if score #change_color switch.data matches ..0 run tag @a[tag=switch.bonus.color] remove switch.bonus.color
+execute if score #mitraillette switch.data matches ..0 run tag @a[tag=!switch.detached,tag=switch.bonus.fast] remove switch.bonus.fast
+execute if score #change_color switch.data matches ..0 run team join switch.laser_game.blue @a[tag=!switch.detached,tag=switch.bonus.color,scores={switch.alive=10}]
+execute if score #change_color switch.data matches ..0 run team join switch.laser_game.red @a[tag=!switch.detached,tag=switch.bonus.color,scores={switch.alive=11}]
+execute if score #change_color switch.data matches ..0 run tag @a[tag=!switch.detached,tag=switch.bonus.color] remove switch.bonus.color
 
 # Update sidebar
 function switch:modes/laser_game/update_sidebar

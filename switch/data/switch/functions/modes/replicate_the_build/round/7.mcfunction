@@ -1,6 +1,6 @@
 
 
-execute as @a run function switch:modes/replicate_the_build/utils/display_score
+execute as @a[tag=!switch.detached] run function switch:modes/replicate_the_build/utils/display_score
 
 
 scoreboard players remove #rtb_wait_score switch.data 1

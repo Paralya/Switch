@@ -10,7 +10,7 @@
 
 execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine
 execute if score @s switch.temp.compteur matches 1 run particle explosion 19982 117 20542 2 2 2 0 10 force
-execute if score @s switch.temp.compteur matches 1 run playsound entity.generic.explode block @a 19982 117 20542
+execute if score @s switch.temp.compteur matches 1 run playsound entity.generic.explode block @a[tag=!switch.detached] 19982 117 20542
 
 tp @s[scores={switch.temp.compteur=1}] 19982.0 117.0 20542.0
 tp @s[scores={switch.temp.compteur=2}] 19978.875 117.5875 20542.0375

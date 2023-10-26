@@ -6,5 +6,5 @@ scoreboard players add #modulo switch.data 1
 data modify storage switch:main respawn_states set value []
 scoreboard players set #next_id switch.temp.id 0
 execute as @e[type=marker,tag=switch.checkpoint] run function switch:modes/kart_racer/checkpoints/setup
-execute as @a run function switch:modes/kart_racer/player_setup_id
+execute as @a[tag=!switch.detached] run function switch:modes/kart_racer/player_setup_id
 

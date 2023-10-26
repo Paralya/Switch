@@ -22,10 +22,10 @@ execute if score #block switch.data matches 16 run setblock ~ ~ ~ black_wool
 
 scoreboard players set #success switch.data 0
 execute unless block ~1 ~ ~ water unless block ~-1 ~ ~ water unless block ~ ~ ~1 water unless block ~ ~ ~-1 water unless block ~1 ~ ~ air unless block ~-1 ~ ~ air unless block ~ ~ ~1 air unless block ~ ~ ~-1 air run function switch:modes/mlg_a_coudre/mlg_a_coudre
-execute if score #success switch.data matches 0 run tellraw @a [{"selector":"@s","color":"dark_gray"},{"text":" valide son saut."}]
+execute if score #success switch.data matches 0 run tellraw @a[tag=!switch.detached] [{"selector":"@s","color":"dark_gray"},{"text":" valide son saut."}]
 
 schedule function switch:modes/mlg_a_coudre/remove_water 1s
 
-execute as @a at @s run playsound entity.player.levelup ambient @s
+execute as @a[tag=!switch.detached] at @s run playsound entity.player.levelup ambient @s
 gamemode spectator @s
 

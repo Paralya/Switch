@@ -4,17 +4,17 @@ scoreboard players add #layers_4_teams_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
 # Mise en survie au début du jeu
-execute if score #layers_4_teams_seconds switch.data matches 0 run gamemode survival @a[gamemode=adventure]
+execute if score #layers_4_teams_seconds switch.data matches 0 run gamemode survival @a[tag=!switch.detached,gamemode=adventure]
 
 # Affichage du temps restants
 scoreboard players operation #mins switch.data = #remaining_time switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-title @a actionbar [{"text":"Temps restant : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
+title @a[tag=!switch.detached] actionbar [{"text":"Temps restant : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
 
 # Glowing pour les joueurs isolés au bout de 5 minutes restantes
-execute if score #mins switch.data matches ..4 as @a[gamemode=survival] at @s unless entity @a[gamemode=survival,distance=0.1..15] run effect give @s glowing 2 0 true
+execute if score #mins switch.data matches ..4 as @a[tag=!switch.detached,gamemode=survival] at @s unless entity @a[tag=!switch.detached,gamemode=survival,distance=0.1..15] run effect give @s glowing 2 0 true
 
 # Destruction des blocs de haut en bas à partir de 5 minutes restantes
 execute if score #mins switch.data matches 5 if score #secs switch.data matches 0 run summon marker 0 160 0 {Tags:["switch.layers_4_teams.marker"]}

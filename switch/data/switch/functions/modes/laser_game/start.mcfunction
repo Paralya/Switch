@@ -8,9 +8,9 @@ team modify switch.laser_game.red color red
 team modify switch.laser_game.red seeFriendlyInvisibles true
 team modify switch.laser_game.red nametagVisibility never
 
-effect give @a saturation infinite 255 true
-effect give @a regeneration 5 255 true
-effect give @a weakness infinite 255 true
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] regeneration 5 255 true
+effect give @a[tag=!switch.detached] weakness infinite 255 true
 time set 18000
 
 ## Traitement des joueurs
@@ -18,11 +18,11 @@ scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/laser_game
 
 scoreboard players set #team_boolean switch.data 0
-execute as @a[sort=random] run function switch:modes/laser_game/teleport_players
+execute as @a[tag=!switch.detached,sort=random] run function switch:modes/laser_game/teleport_players
 
 gamerule fallDamage false
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Laser Game, tuez le plus d'ennemis possible !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Laser Game, tuez le plus d'ennemis possible !"}]
 
 scoreboard objectives add switch.temp.individual_points dummy {"text":" Points Individuels ","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy

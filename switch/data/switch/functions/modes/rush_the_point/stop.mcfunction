@@ -1,5 +1,5 @@
 
-tag @a remove switch.to_tp
+tag @a[tag=!switch.detached] remove switch.to_tp
 team remove switch.rush_the_point.red
 team remove switch.rush_the_point.blue
 scoreboard objectives remove switch.temp.cooldown

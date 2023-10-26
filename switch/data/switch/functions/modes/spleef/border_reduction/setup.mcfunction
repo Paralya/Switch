@@ -1,7 +1,7 @@
 
 # Message d'annonce
-tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" 30 secondes sont passées, réduction de la bordure !"}]
-execute as @a at @s run playsound entity.experience_orb.pickup ambient @s
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" 30 secondes sont passées, réduction de la bordure !"}]
+execute as @a[tag=!switch.detached] at @s run playsound entity.experience_orb.pickup ambient @s
 
 # Summon entity depending on map
 execute if data storage switch:main {map:"spleef_1"} run summon marker 28020 106 28020 {Tags:["switch.spleef_border"],data:{border_size:41}}

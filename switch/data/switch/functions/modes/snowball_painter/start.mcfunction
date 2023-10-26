@@ -1,12 +1,12 @@
 
-effect give @a saturation infinite 255 true
-effect give @a resistance infinite 255 true
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] resistance infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 function switch:choose_map_for/snowball_painter
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Snowball Painter, vous avez 5 secondes de préparation !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Snowball Painter, vous avez 5 secondes de préparation !"}]
 
 scoreboard players set #snowball_painter_seconds switch.data -5
 scoreboard players set #snowball_painter_ticks switch.data 0
@@ -18,5 +18,5 @@ scoreboard objectives setdisplay sidebar switch.temp.points
 
 ## Order selection
 scoreboard players set #position switch.data 0
-execute as @a[sort=random] run function switch:modes/snowball_painter/define_color
+execute as @a[tag=!switch.detached,sort=random] run function switch:modes/snowball_painter/define_color
 

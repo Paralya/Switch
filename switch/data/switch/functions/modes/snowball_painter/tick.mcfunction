@@ -8,7 +8,7 @@ scoreboard players add #snowball_painter_ticks switch.data 1
 function switch:modes/snowball_painter/xp_bar
 
 # Give snowball in a random spot in inventory
-execute if score #snowball_painter_seconds switch.data matches 0.. as @a[nbt=!{Inventory:[{id:"minecraft:snowball"}]}] run function switch:modes/snowball_painter/give_snowball
+execute if score #snowball_painter_seconds switch.data matches 0.. as @a[tag=!switch.detached,nbt=!{Inventory:[{id:"minecraft:snowball"}]}] run function switch:modes/snowball_painter/give_snowball
 
 # Make a marker ride snowballs that don't have one
 execute as @e[type=snowball,tag=!switch.marker] at @s run function switch:modes/snowball_painter/ride_marker_on_snowball

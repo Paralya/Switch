@@ -1,8 +1,8 @@
 
-effect give @a weakness infinite 255 true
-effect give @a saturation infinite 255 true
-effect give @a resistance infinite 255 true
-effect give @a night_vision infinite 255 true
+effect give @a[tag=!switch.detached] weakness infinite 255 true
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] resistance infinite 255 true
+effect give @a[tag=!switch.detached] night_vision infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
@@ -12,7 +12,7 @@ execute if data storage switch:main {map:"whity_lab"} run function switch:modes/
 
 gamerule fallDamage false
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Moutron, 10 secondes de préparation et soyez le dernier en vie !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Moutron, 10 secondes de préparation et soyez le dernier en vie !"}]
 
 scoreboard objectives add switch.temp.moutron dummy
 scoreboard objectives add switch.temp.color dummy
@@ -23,5 +23,5 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #life_time switch.data 20
 
 scoreboard players set #next_model switch.data 0
-execute as @a at @s run function switch:modes/moutron/summon_kart
+execute as @a[tag=!switch.detached] at @s run function switch:modes/moutron/summon_kart
 

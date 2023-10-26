@@ -2,7 +2,7 @@
 gamerule sendCommandFeedback true
 
 scoreboard players set #state switch.data 3
-scoreboard players add #total_games switch.data 1
+scoreboard players add total_games switch.last_total_games 1
 
 function switch:engine/voting_time/update_votes
 
@@ -29,7 +29,7 @@ execute if score #modulo_rand switch.data matches 1 run data modify storage swit
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game_name set from storage switch:main voted_games[0].Name
 execute if score #modulo_rand switch.data matches 1 store result score #game_1 switch.data run data get storage switch:main voted_games[0].index
 execute if score #modulo_rand switch.data matches 2.. run function switch:engine/launch_game/get_random_max
-execute if score #modulo_rand switch.data matches 2.. run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Égalité entre plusieurs mode de jeux, choix aléatoire !\n"}]
+execute if score #modulo_rand switch.data matches 2.. run tellraw @a[tag=!switch.detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Égalité entre plusieurs mode de jeux, choix aléatoire !\n"}]
 
 weather clear
 difficulty normal
@@ -37,7 +37,7 @@ function switch:utils/reset_players
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 function #switch:signals/start
 
-execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a at @s run playsound ui.toast.in ambient @s
+execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!switch.detached] at @s run playsound ui.toast.in ambient @s
 
 # Depending on the game, add a score to the player
 function switch:engine/launch_game/add_played_stat with storage switch:main

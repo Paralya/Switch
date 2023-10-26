@@ -1,10 +1,10 @@
 
-scoreboard players set @a switch.alive 1
-tag @a remove switch.looser
-tp @a 1 101 1
-effect give @a saturation infinite 255 true
-effect give @a weakness infinite 255 true
-effect give @a night_vision infinite 255 true
+scoreboard players set @a[tag=!switch.detached] switch.alive 1
+tag @a[tag=!switch.detached] remove switch.looser
+tp @a[tag=!switch.detached] 1 101 1
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] weakness infinite 255 true
+effect give @a[tag=!switch.detached] night_vision infinite 255 true
 function switch:utils/set_dynamic_time
 
 gamerule showDeathMessages false
@@ -15,7 +15,7 @@ scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/twittos_de_merde
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos Battle ! Ça commence dans 5 secondes !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Twittos Battle ! Ça commence dans 5 secondes !"}]
 
 # Initialisation des variables
 scoreboard players set #remaining_time switch.data 605
@@ -35,10 +35,10 @@ scoreboard objectives add switch.temp.rank dummy
 scoreboard objectives add switch.temp.points dummy 
 scoreboard objectives add switch.temp.rating_vote trigger
 
-scoreboard players enable @a switch.temp.rating_vote
-scoreboard players set @a switch.temp.numero_vote 0 
+scoreboard players enable @a[tag=!switch.detached] switch.temp.rating_vote
+scoreboard players set @a[tag=!switch.detached] switch.temp.numero_vote 0 
 scoreboard players set #cb_personne switch.data 0
-scoreboard players set @a switch.temp.id 1
+scoreboard players set @a[tag=!switch.detached] switch.temp.id 1
 
 # Penser à retirer la petite commande en bas c'est juste pour la phase de dev hein ça zou du balai mon gavaw sucré au sucre
 

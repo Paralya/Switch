@@ -6,9 +6,9 @@ execute if score #points switch.data matches ..0 run scoreboard players set #poi
 execute if score #points switch.data matches 1000.. run scoreboard players set #points switch.data 1000
 
 # XP from 0 to 1000 points
-xp set @a 130 levels
-data modify storage switch:main temp set value {selector:"@a", xp:0, type:""}
+xp set @a[tag=!switch.detached] 130 levels
+data modify storage switch:main temp set value {selector:"@a[tag=!switch.detached]", xp:0, type:""}
 execute store result storage switch:main temp.xp int 1 run scoreboard players get #points switch.data
 function switch:engine/xp_bar_macro with storage switch:main temp
-xp set @a 0 levels
+xp set @a[tag=!switch.detached] 0 levels
 

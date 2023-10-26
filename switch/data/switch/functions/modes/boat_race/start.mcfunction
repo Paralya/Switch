@@ -3,17 +3,17 @@
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/boat_race
 
-scoreboard players set @a switch.alive 1
-effect give @a saturation infinite 255 true
-effect give @a weakness infinite 255 true
-effect give @a resistance infinite 255 true
+scoreboard players set @a[tag=!switch.detached] switch.alive 1
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] weakness infinite 255 true
+effect give @a[tag=!switch.detached] resistance infinite 255 true
 
 function switch:utils/set_dynamic_time
 
 ## Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
-execute as @a run function switch:modes/boat_race/give_items
+execute as @a[tag=!switch.detached] run function switch:modes/boat_race/give_items
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Boat Race. Vous avez 8 secondes pour placer votre bateau et y rentrer ainsi que 8 minutes maximum pour finir la course !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Boat Race. Vous avez 8 secondes pour placer votre bateau et y rentrer ainsi que 8 minutes maximum pour finir la course !"}]
 
 scoreboard players set #remaining_time switch.data 488
 scoreboard players set #boat_race_seconds switch.data -8

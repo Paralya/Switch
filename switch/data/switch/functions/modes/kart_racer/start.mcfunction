@@ -1,15 +1,15 @@
 
-scoreboard players set @a switch.alive 1
+scoreboard players set @a[tag=!switch.detached] switch.alive 1
 
-title @a times 5 20 5
-effect give @a saturation infinite 255 true
-effect give @a regeneration infinite 255 true
-effect give @a resistance infinite 255 true
-effect give @a levitation 10 255 true
+title @a[tag=!switch.detached] times 5 20 5
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] regeneration infinite 255 true
+effect give @a[tag=!switch.detached] resistance infinite 255 true
+effect give @a[tag=!switch.detached] levitation 10 255 true
 function switch:utils/set_dynamic_time
 gamerule fallDamage false
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
 
 scoreboard players set #remaining_time switch.data 310
 scoreboard players set #kart_racer_seconds switch.data -10
@@ -35,11 +35,11 @@ scoreboard objectives add switch.checkpoint dummy
 scoreboard objectives add switch.lap dummy
 scoreboard objectives add switch.effects.last dummy
 scoreboard objectives add switch.effects.timer dummy
-scoreboard players set @a switch.respawn_cp_id -1
-scoreboard players set @a switch.hard_respawn_cp_id -1
-scoreboard players set @a switch.temp.checkpoint 0
-scoreboard players set @a switch.checkpoint 0
-scoreboard players set @a switch.lap 1
+scoreboard players set @a[tag=!switch.detached] switch.respawn_cp_id -1
+scoreboard players set @a[tag=!switch.detached] switch.hard_respawn_cp_id -1
+scoreboard players set @a[tag=!switch.detached] switch.temp.checkpoint 0
+scoreboard players set @a[tag=!switch.detached] switch.checkpoint 0
+scoreboard players set @a[tag=!switch.detached] switch.lap 1
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
 team add switch.temp.kart
@@ -85,7 +85,7 @@ scoreboard players set #total_checkpoints switch.data 1
 ## Téléportation des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/kart_racer
-execute as @a at @s run function switch:modes/kart_racer/give_items
+execute as @a[tag=!switch.detached] at @s run function switch:modes/kart_racer/give_items
 
 schedule function switch:modes/kart_racer/post_load 9s
 

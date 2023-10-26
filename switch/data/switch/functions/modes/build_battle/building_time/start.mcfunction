@@ -2,9 +2,9 @@
 # Change game state
 scoreboard players set #build_battle_state switch.data 1
 scoreboard players set #remaining_time switch.data 300
-effect clear @a levitation
-gamemode creative @a
-clear @a
+effect clear @a[tag=!switch.detached] levitation
+gamemode creative @a[tag=!switch.detached]
+clear @a[tag=!switch.detached]
 
 # Get most voted word
 scoreboard players operation #max switch.data = #vote_theme_1 switch.data
@@ -29,9 +29,9 @@ execute if score #index switch.data matches 4 run data modify storage switch:mai
 execute if score #index switch.data matches 5 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[4]
 
 # Tellraw start + playsound
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]
-title @a times 20 60 20
-title @a title {"text":"Thème choisi", "color":"aqua"}
-title @a subtitle {"nbt":"current_theme","storage":"switch:main","color":"yellow"}
-execute as @a at @s run playsound entity.player.levelup ambient @s
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]
+title @a[tag=!switch.detached] times 20 60 20
+title @a[tag=!switch.detached] title {"text":"Thème choisi", "color":"aqua"}
+title @a[tag=!switch.detached] subtitle {"nbt":"current_theme","storage":"switch:main","color":"yellow"}
+execute as @a[tag=!switch.detached] at @s run playsound entity.player.levelup ambient @s
 

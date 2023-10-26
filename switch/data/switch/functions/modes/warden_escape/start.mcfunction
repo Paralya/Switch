@@ -1,8 +1,8 @@
 
-scoreboard players set @a switch.alive 1
-effect give @a saturation infinite 255 true
-effect give @a regeneration 5 255 true
-effect give @a weakness infinite 255 true
+scoreboard players set @a[tag=!switch.detached] switch.alive 1
+effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!switch.detached] regeneration 5 255 true
+effect give @a[tag=!switch.detached] weakness infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
@@ -13,11 +13,11 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Warden Escape, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
+tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Warden Escape, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
 
 scoreboard players set #remaining_time switch.data 100
 scoreboard players set #warden_escape_seconds switch.data -10
 scoreboard players set #warden_escape_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
-execute as @a at @s run function switch:modes/warden_escape/give_items
+execute as @a[tag=!switch.detached] at @s run function switch:modes/warden_escape/give_items
 

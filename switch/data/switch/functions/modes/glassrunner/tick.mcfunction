@@ -2,7 +2,7 @@
 
 scoreboard players add #glassrunner_ticks switch.data 1
 
-execute as @a[scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/glassrunner/death/death
+execute as @a[tag=!switch.detached,scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/glassrunner/death/death
 
 
 execute if score #glassrunner.apocalypse switch.data matches 1 run function switch:modes/glassrunner/apocalypse/start
@@ -18,7 +18,7 @@ execute if score #glassrunner.apocalypse switch.data matches 30.. run function s
 
 
 
-execute as @a at @s run function switch:modes/glassrunner/tick_player
+execute as @a[tag=!switch.detached] at @s run function switch:modes/glassrunner/tick_player
 
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
 
@@ -32,7 +32,7 @@ fill 2927 129 2927 2923 131 2923 air replace #switch:glassrunner/glass
 fill 3074 129 2924 3076 131 2926 air replace #switch:glassrunner/glass
 fill 2924 131 3076 2926 129 3074 air replace #switch:glassrunner/glass
 
-execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=15..}] at @s run function switch:modes/glassrunner/fireball/use
+execute as @a[tag=!switch.detached,predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=15..}] at @s run function switch:modes/glassrunner/fireball/use
 execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/glassrunner/fireball/explosion
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
@@ -41,8 +41,8 @@ execute if score #glassrunner.points.red switch.data >= #glassrunner_point_to_wi
 execute if score #glassrunner.points.blue switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
 
 # to uncomment
-#execute unless entity @a[team=switch.glassrunner.blue] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
-#execute unless entity @a[team=switch.glassrunner.red] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
+#execute unless entity @a[tag=!switch.detached,team=switch.glassrunner.blue] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
+#execute unless entity @a[tag=!switch.detached,team=switch.glassrunner.red] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
 
 execute if score #process_end switch.data matches 1.. run function switch:modes/glassrunner/end/process_end
 

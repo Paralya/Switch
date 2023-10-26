@@ -4,10 +4,10 @@
 scoreboard players add #protect_the_king_ticks switch.data 1
 
 # Détection de la mort
-execute as @a[x=0,y=69,z=0,distance=..10] run function switch:modes/protect_the_king/death
+execute as @a[tag=!switch.detached,x=0,y=69,z=0,distance=..10] run function switch:modes/protect_the_king/death
 
 # Particules aux pieds des rois
-execute at @a[gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] run particle glow ~ ~ ~ 0.2 0 0.2 0 5
+execute at @a[tag=!switch.detached,gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] run particle glow ~ ~ ~ 0.2 0 0.2 0 5
 
 ## Actualisation des bossbars
 # Red king
@@ -23,8 +23,8 @@ scoreboard players operation #total switch.data += #health switch.data
 execute store result bossbar switch.temp.blue_king value run scoreboard players get #total switch.data
 
 # Affichage des bossbars
-bossbar set switch.temp.red_king players @a
-bossbar set switch.temp.blue_king players @a
+bossbar set switch.temp.red_king players @a[tag=!switch.detached]
+bossbar set switch.temp.blue_king players @a[tag=!switch.detached]
 
 # Détection de fin de partie
 execute if score #protect_the_king_seconds switch.data matches 1..900 run function switch:modes/protect_the_king/detect_end
