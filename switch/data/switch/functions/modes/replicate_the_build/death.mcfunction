@@ -1,8 +1,4 @@
 
-scoreboard players set @s switch.temp.deathCount 0
-
-gamemode spectator @s 
+function switch:utils/classic_death
 tp @s 102000 100 102000
-
-
 

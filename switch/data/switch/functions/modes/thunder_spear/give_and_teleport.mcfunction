@@ -19,8 +19,3 @@ give @s crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b
 # Teleport player
 function switch:maps/spread_one_player
 
-# Clear scoreboard & xp
-scoreboard players reset @s switch.temp.deathCount
-xp set @s 0 levels
-xp set @s 0 points
-

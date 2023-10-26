@@ -18,7 +18,6 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 scoreboard objectives add switch.temp.color dummy
 scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"red"}
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay sidebar switch.temp.points
 
 ## Order selection for the color

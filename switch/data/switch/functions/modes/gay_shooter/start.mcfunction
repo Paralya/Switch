@@ -15,7 +15,6 @@ scoreboard players set #gay_shooter_seconds switch.data 0
 scoreboard players set #gay_shooter_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.shot_player minecraft.custom:minecraft.damage_dealt {"text":" Flèches touchées ","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.shot_player
 scoreboard objectives setdisplay list switch.health

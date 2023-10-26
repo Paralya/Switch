@@ -15,7 +15,6 @@ scoreboard players set #layers_2_teams_seconds switch.data -10
 scoreboard players set #layers_2_teams_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items

@@ -4,7 +4,7 @@
 scoreboard players add #panic_chase_ticks switch.data 1
 
 # Détection de la mort d'un joueur
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10] run function switch:modes/panic_chase/death
+execute as @a[x=0,y=69,z=0,distance=..10] run function switch:modes/panic_chase/death
 
 # Prevent drops
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/panic_chase/no_drop

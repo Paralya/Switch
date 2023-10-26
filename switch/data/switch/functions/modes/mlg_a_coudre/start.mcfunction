@@ -27,7 +27,6 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 scoreboard objectives add switch.temp.order dummy
 scoreboard objectives add switch.temp.lives dummy {"text":" Vies Restantes ","color":"red"}
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay sidebar switch.temp.lives
 
 ## Order selection

@@ -12,6 +12,9 @@ scoreboard objectives add switch.second_right_click minecraft.used:minecraft.war
 scoreboard objectives add switch.reconnect dummy
 scoreboard objectives add switch.alive dummy
 
+scoreboard objectives add switch.death deathCount
+scoreboard objectives add switch.last_death dummy
+
 scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger

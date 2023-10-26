@@ -5,7 +5,7 @@ scoreboard players add #beat_the_kings_ticks switch.data 1
 
 execute as @a[tag=switch.to_tp] run function switch:modes/beat_the_kings/teleport_to_death
 
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10] run function switch:modes/beat_the_kings/death/player
+execute as @a[x=0,y=69,z=0,distance=..10] run function switch:modes/beat_the_kings/death/player
 execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/beat_the_kings/death/detect
 execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/beat_the_kings/death/for_global
 

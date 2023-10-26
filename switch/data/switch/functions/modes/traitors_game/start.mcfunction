@@ -26,7 +26,6 @@ scoreboard players set #cut_clean switch.data 1
 
 scoreboard objectives add switch.temp.role dummy
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Rôles restants","color":"gold"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 

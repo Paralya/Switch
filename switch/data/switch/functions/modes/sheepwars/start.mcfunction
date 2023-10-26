@@ -23,7 +23,6 @@ scoreboard players set #blue_fire_arrows switch.data 0
 scoreboard players set #blue_explosive_arrows switch.data 0
 scoreboard players set #red_fire_arrows switch.data 0
 scoreboard players set #red_explosive_arrows switch.data 0
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
 
 # Apocalypse

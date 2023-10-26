@@ -8,7 +8,7 @@ scoreboard players add #sheepwars_ticks switch.data 1
 execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
+execute as @a[x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
 effect give @a[predicate=switch:in_water,nbt=!{active_effects:[{id:"minecraft:wither"}]}] wither 2 2 true
 
 # Tick du sheepwars

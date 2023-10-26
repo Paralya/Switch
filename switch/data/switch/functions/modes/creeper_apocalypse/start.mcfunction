@@ -22,7 +22,6 @@ scoreboard players set #creeper_apocalypse_seconds switch.data -5
 scoreboard players set #creeper_apocalypse_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.duplication dummy
 
 execute as @a at @s run function switch:modes/creeper_apocalypse/give_items

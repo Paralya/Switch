@@ -1,6 +1,5 @@
 
 # Death management
-scoreboard players reset @s switch.temp.deathCount
 execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 execute unless score @s switch.temp.role matches 3 run scoreboard players set @s switch.alive 0
 execute if score @s switch.temp.role matches 3 run scoreboard players set @s switch.temp.role 4

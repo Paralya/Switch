@@ -22,5 +22,4 @@ scoreboard players set #remaining_time switch.data 95
 scoreboard players set #pitch_creep_seconds switch.data -5
 scoreboard players set #pitch_creep_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
-scoreboard objectives add switch.temp.deathCount deathCount
 

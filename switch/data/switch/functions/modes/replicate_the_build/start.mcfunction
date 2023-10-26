@@ -18,7 +18,6 @@ scoreboard players set #replicate_the_build_seconds switch.data -5
 scoreboard players set #replicate_the_build_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.rtb.time dummy
 scoreboard objectives add switch.rtb.points dummy
 

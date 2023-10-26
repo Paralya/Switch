@@ -3,11 +3,8 @@
 
 scoreboard players add #protect_the_king_ticks switch.data 1
 
-# Kill des items au sol après 10 secondes
-kill @e[type=item,nbt={Age:200s}]
-
 # Détection de la mort
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/protect_the_king/death
+execute as @a[x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/protect_the_king/death
 
 # Particules aux pieds des rois
 execute at @a[gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] run particle glow ~ ~ ~ 0.2 0 0.2 0 5

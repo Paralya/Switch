@@ -1,7 +1,6 @@
 
 tag @a remove switch.looser
 
-scoreboard objectives remove switch.temp.deathCount
 scoreboard objectives remove switch.temp.like_compteur
 scoreboard objectives remove switch.temp.nb_like
 scoreboard objectives remove switch.temp.numero_vote

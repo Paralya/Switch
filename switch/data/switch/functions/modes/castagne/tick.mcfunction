@@ -4,7 +4,7 @@
 scoreboard players add #castagne_ticks switch.data 1
 
 ## Death system
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/castagne/death
+execute as @a[x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/castagne/death
 
 # Glowing
 execute as @a[gamemode=survival] at @s unless entity @a[distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true

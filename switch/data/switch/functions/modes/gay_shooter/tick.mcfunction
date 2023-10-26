@@ -4,7 +4,7 @@
 scoreboard players add #gay_shooter_ticks switch.data 1
 
 ## Player management
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10] run function switch:modes/gay_shooter/death
+execute as @a[x=0,y=69,z=0,distance=..10] run function switch:modes/gay_shooter/death
 execute as @a[gamemode=adventure,x=114005,y=132,z=114033,distance=..1] run function switch:modes/gay_shooter/gay_finished
 
 # Kill players in the void

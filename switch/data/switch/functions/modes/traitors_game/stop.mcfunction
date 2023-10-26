@@ -11,6 +11,5 @@ team remove switch.temp.sidebar.1
 
 scoreboard objectives remove switch.temp.role
 scoreboard objectives remove switch.temp.cooldown
-scoreboard objectives remove switch.temp.deathCount
 scoreboard objectives remove switch.temp.sidebar
 

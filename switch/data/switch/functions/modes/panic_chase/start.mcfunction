@@ -16,7 +16,6 @@ scoreboard players set #panic_chase_seconds switch.data -15
 scoreboard players set #panic_chase_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items

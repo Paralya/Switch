@@ -14,7 +14,6 @@ gamerule keepInventory true
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Rush The Point, tenez-vous prêt vous avez 10 secondes de préparation !"}]
 
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}

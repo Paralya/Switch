@@ -1,4 +1,8 @@
 
+# Last death timer
+scoreboard players set @a[scores={switch.death=1..}] switch.last_death 0
+scoreboard players set @a[scores={switch.death=1..}] switch.death 0
+
 ## Timer and tick related
 scoreboard players add #tick switch.data 1
 execute as @a[sort=random] at @s run function switch:player/tick

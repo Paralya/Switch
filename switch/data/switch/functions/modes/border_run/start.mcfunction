@@ -21,7 +21,6 @@ scoreboard players set #remaining_time switch.data 910
 scoreboard players set #border_run_seconds switch.data -10
 scoreboard players set #border_run_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives setdisplay list switch.health
 
 ## Give Items

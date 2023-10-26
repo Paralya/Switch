@@ -26,7 +26,6 @@ scoreboard players set #twittos_de_merde_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #phase_de_vote switch.data 0
 
-scoreboard objectives add switch.temp.deathCount deathCount
 scoreboard objectives add switch.temp.passage_vote dummy
 scoreboard objectives add switch.temp.like_compteur trigger
 scoreboard objectives add switch.temp.nb_like dummy
