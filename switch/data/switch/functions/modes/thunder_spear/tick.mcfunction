@@ -4,7 +4,7 @@
 scoreboard players add #thunder_spear_ticks switch.data 1
 
 ## Death system
-execute as @a[x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/thunder_spear/give_and_teleport
+execute as @a[x=0,y=69,z=0,distance=..10] run function switch:modes/thunder_spear/give_and_teleport
 
 # Modify arrow damage
 execute as @e[type=arrow] run data modify entity @s damage set value 100.0d

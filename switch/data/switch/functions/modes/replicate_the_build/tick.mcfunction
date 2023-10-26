@@ -16,7 +16,7 @@ execute if score #rtb_round_state switch.data matches 5 run function switch:mode
 execute if score #rtb_round_state switch.data matches 4 run function switch:modes/replicate_the_build/round/4
 
 
-execute as @a[x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/replicate_the_build/death
+execute as @a[x=0,y=69,z=0,distance=..10] run function switch:modes/replicate_the_build/death
 
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
