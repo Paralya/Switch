@@ -24,4 +24,3 @@ xp set @a[tag=!detached] 0 points
 effect clear @a[tag=!detached]
 team leave @a[tag=!detached]
 
-
