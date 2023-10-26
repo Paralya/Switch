@@ -8,5 +8,8 @@ $execute store result score #game_1 switch.data run data get storage switch:main
 
 # Start the game with the right state
 scoreboard players set #state switch.data 3
+scoreboard players reset #set_spec switch.data
+function switch:utils/reset_players
+function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 function #switch:signals/start
 
