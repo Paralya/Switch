@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #protect_the_king_ticks switch.data 1
 
 # Détection de la mort

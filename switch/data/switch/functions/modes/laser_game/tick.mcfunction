@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #laser_game_ticks switch.data 1
 
 execute as @a[tag=!detached] run function switch:modes/laser_game/xp_bar

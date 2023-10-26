@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #tnt_run_ticks switch.data 1
 
 # Death system (every player below y=121 is killed)

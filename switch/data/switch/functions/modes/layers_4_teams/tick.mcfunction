@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 # Timer
 scoreboard players add #layers_4_teams_ticks switch.data 1
 

@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #traitors_game_ticks switch.data 1
 
 tp @e[type=vex] 0 -10000 0

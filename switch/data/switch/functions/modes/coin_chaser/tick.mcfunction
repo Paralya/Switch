@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #coin_chaser_ticks switch.data 1
 
 ## Global tick

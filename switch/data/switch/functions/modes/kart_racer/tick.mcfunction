@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 # Timer
 scoreboard players add #kart_racer_ticks switch.data 1
 

@@ -1,5 +1,3 @@
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #glassrunner_ticks switch.data 1
 
 execute as @a[tag=!detached,scores={switch.glassrunner.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/glassrunner/death/death

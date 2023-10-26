@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #spleef_ticks switch.data 1
 
 ## No drop system / Death system / Border reduction system

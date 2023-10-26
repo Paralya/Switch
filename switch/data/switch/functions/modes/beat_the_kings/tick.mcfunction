@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #beat_the_kings_ticks switch.data 1
 
 execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/beat_the_kings/teleport_to_death

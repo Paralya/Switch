@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 ## Death system
 # At each shopping kart, summon a new marker
 execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart] at @s positioned ~ ~.5 ~ run function switch:modes/moutron/summon_marker

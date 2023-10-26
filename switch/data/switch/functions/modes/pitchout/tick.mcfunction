@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #pitchout_ticks switch.data 1
 
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/pitchout/no_drop

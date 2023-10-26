@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 function switch:modes/rush_the_point/tick_common
 
 # Maps colors capture

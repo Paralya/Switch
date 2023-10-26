@@ -1,6 +1,4 @@
 
-## Fonction executée tous les ticks lorsque le mode de jeu est activé
-
 scoreboard players add #warden_escape_ticks switch.data 1
 
 kill @e[type=item]
