@@ -1,5 +1,5 @@
 
-effect give @a[tag=!switch.detached] saturation infinite 255 true
+effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
@@ -20,15 +20,15 @@ scoreboard players set #vote_theme_2 switch.data 0
 scoreboard players set #vote_theme_3 switch.data 0
 scoreboard players set #vote_theme_4 switch.data 0
 scoreboard players set #vote_theme_5 switch.data 0
-scoreboard players set @a[tag=!switch.detached] switch.temp.id -1
+scoreboard players set @a[tag=!detached] switch.temp.id -1
 
 execute unless score #build_battle_save_x switch.data matches ..-76 run scoreboard players set #build_battle_save_x switch.data -76
 execute unless score #build_battle_save_z switch.data matches 0.. run scoreboard players set #build_battle_save_z switch.data 0
 
 # Téléportation des joueurs dans leur cage
 function switch:modes/build_battle/preparation/
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Build Battle, votez pour le thème en ouvrant votre inventaire !"}]
-title @a[tag=!switch.detached] times 20 60 20
-title @a[tag=!switch.detached] title {"text":"Vote du Thème","color":"aqua"}
-title @a[tag=!switch.detached] subtitle {"text":"(Ouvrez votre inventaire !)","color":"yellow"}
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Build Battle, votez pour le thème en ouvrant votre inventaire !"}]
+title @a[tag=!detached] times 20 60 20
+title @a[tag=!detached] title {"text":"Vote du Thème","color":"aqua"}
+title @a[tag=!detached] subtitle {"text":"(Ouvrez votre inventaire !)","color":"yellow"}
 

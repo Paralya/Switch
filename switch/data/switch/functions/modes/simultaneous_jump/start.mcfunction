@@ -1,6 +1,6 @@
 
-gamemode spectator @a[tag=!switch.detached]
-effect give @a[tag=!switch.detached] saturation infinite 255 true
+gamemode spectator @a[tag=!detached]
+effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
@@ -9,7 +9,7 @@ function switch:choose_map_for/simultaneous_jump
 gamerule showDeathMessages false
 gamerule keepInventory true
 
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Simultaneous Jump, 5 secondes de préparation !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Simultaneous Jump, 5 secondes de préparation !"}]
 
 scoreboard players set #simultaneous_jump_seconds switch.data -5
 scoreboard players set #simultaneous_jump_ticks switch.data 0
@@ -23,7 +23,7 @@ scoreboard objectives setdisplay sidebar switch.temp.points
 ## Order selection for the color
 scoreboard players set #position switch.data 0
 scoreboard players set #next switch.data 0
-execute as @a[tag=!switch.detached,sort=random] run function switch:modes/simultaneous_jump/define_color
+execute as @a[tag=!detached,sort=random] run function switch:modes/simultaneous_jump/define_color
 scoreboard players operation #max switch.data = #position switch.data
-execute as @a[tag=!switch.detached] run function switch:modes/simultaneous_jump/teleport
+execute as @a[tag=!detached] run function switch:modes/simultaneous_jump/teleport
 

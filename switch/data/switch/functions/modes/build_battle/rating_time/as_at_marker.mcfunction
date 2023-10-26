@@ -15,5 +15,5 @@ execute if score #build_battle_save_z switch.data matches 273.. run scoreboard p
 execute if score #build_battle_save_z switch.data matches 273.. run scoreboard players set #build_battle_save_z switch.data 0
 
 # Teleport every player to the current zone
-spreadplayers ~24 ~24 5 10 under 128 false @a[tag=!switch.detached]
+spreadplayers ~24 ~24 5 10 under 128 false @a[tag=!detached]
 

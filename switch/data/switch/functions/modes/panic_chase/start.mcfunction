@@ -1,6 +1,6 @@
 
-effect give @a[tag=!switch.detached] saturation infinite 255 true
-effect give @a[tag=!switch.detached] resistance 15 255 true
+effect give @a[tag=!detached] saturation infinite 255 true
+effect give @a[tag=!detached] resistance 15 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
@@ -8,8 +8,8 @@ function switch:choose_map_for/panic_chase
 
 gamerule fallDamage false
 
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 15 secondes !\n"}]
-execute as @a[tag=!switch.detached] at @s run playsound entity.player.levelup ambient @s
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 15 secondes !\n"}]
+execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 135
 scoreboard players set #panic_chase_seconds switch.data -15
@@ -31,6 +31,6 @@ team modify switch.temp.hunter collisionRule never
 team modify switch.temp.mouse collisionRule never
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-execute as @a[tag=!switch.detached,sort=random] at @s run function switch:modes/panic_chase/roles
-execute as @a[tag=!switch.detached] at @s run function switch:modes/panic_chase/give_items
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/panic_chase/roles
+execute as @a[tag=!detached] at @s run function switch:modes/panic_chase/give_items
 

@@ -3,6 +3,6 @@ execute if score #next switch.data >= #max switch.data run function switch:modes
 scoreboard players add #next switch.data 1
 
 scoreboard players set #success switch.data 0
-execute as @a[tag=!switch.detached] if score @s switch.temp.order = #next switch.data run function switch:modes/de_a_coudre/next_player_teleport
+execute as @a[tag=!detached] if score @s switch.temp.order = #next switch.data run function switch:modes/de_a_coudre/next_player_teleport
 execute if score #success switch.data matches 0 run function switch:modes/de_a_coudre/next_player
 

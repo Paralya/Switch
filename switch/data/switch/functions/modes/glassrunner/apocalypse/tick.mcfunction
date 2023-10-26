@@ -1,5 +1,5 @@
 
-execute as @a[tag=!switch.detached,gamemode=!spectator] at @s run function switch:modes/glassrunner/apocalypse/tick_player
+execute as @a[tag=!detached,gamemode=!spectator] at @s run function switch:modes/glassrunner/apocalypse/tick_player
 
 
 

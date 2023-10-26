@@ -8,5 +8,5 @@ scoreboard players add #twittos_de_merde_seconds_mdj switch.data 1
 
 execute if score #twittos_de_merde_seconds_mdj switch.data matches 45.. run function switch:modes/twittos_de_merde/start_vote
 execute if score #twittos_de_merde_seconds switch.data matches 0.. run function switch:modes/twittos_de_merde/xp_bar
-execute if score #twittos_de_merde_seconds switch.data matches 0 as @a[tag=!switch.detached] at @s run function switch:modes/twittos_de_merde/give_items
+execute if score #twittos_de_merde_seconds switch.data matches 0 as @a[tag=!detached] at @s run function switch:modes/twittos_de_merde/give_items
 execute if score #twittos_de_merde_seconds switch.data matches 0 run function switch:modes/twittos_de_merde/theme_aleatoire

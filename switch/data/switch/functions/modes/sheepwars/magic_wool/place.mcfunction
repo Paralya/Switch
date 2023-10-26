@@ -7,5 +7,5 @@ execute if data storage switch:main {map:"sheepwars_dirigeables"} positioned 100
 execute if data storage switch:main {map:"survival_boat"} positioned 79062 128 79051 run function sheepwars:magic_wool/summon
 
 # Message
-tellraw @a[tag=!switch.detached] ["",{"text":"[SheepWars] ","color":"yellow"},{"text":"Une laine magique est apparue !"}]
+tellraw @a[tag=!detached] ["",{"text":"[SheepWars] ","color":"yellow"},{"text":"Une laine magique est apparue !"}]
 

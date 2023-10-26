@@ -11,5 +11,5 @@ execute if score #build_battle_state switch.data matches 1 run function switch:m
 execute if score #build_battle_state switch.data matches 2 run function switch:modes/build_battle/rating_time/second
 
 # Prevent people from leaving area
-execute if score #build_battle_state switch.data matches ..1 as @a[tag=!switch.detached,gamemode=!spectator,scores={switch.temp.id=0..}] run function switch:modes/build_battle/prevent_leaving_area
+execute if score #build_battle_state switch.data matches ..1 as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.id=0..}] run function switch:modes/build_battle/prevent_leaving_area
 

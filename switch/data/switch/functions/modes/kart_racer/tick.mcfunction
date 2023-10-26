@@ -7,7 +7,7 @@ scoreboard players add #kart_racer_ticks switch.data 1
 # Blocks tick, checkpoints tick, right click detection
 execute if score #detect_end switch.data matches 0 as @e[tag=shopping_kart.kart] at @s run function switch:modes/kart_racer/blocks/tick
 execute if score #detect_end switch.data matches 0 as @e[type=marker,tag=switch.checkpoint] at @s run function switch:modes/kart_racer/checkpoints/tick
-execute if score #detect_end switch.data matches 0 as @a[tag=!switch.detached,scores={switch.right_click=1..}] run function switch:modes/kart_racer/right_click
+execute if score #detect_end switch.data matches 0 as @a[tag=!detached,scores={switch.right_click=1..}] run function switch:modes/kart_racer/right_click
 
 # Start fixes -7
 execute if score #kart_racer_seconds switch.data matches -7..-1 run team join switch.temp.kart @e[tag=shopping_kart.kart]
@@ -17,7 +17,7 @@ execute if score #kart_racer_seconds switch.data matches -7..-1 run scoreboard p
 execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 0b
 
 # Force riding the kart
-execute as @a[tag=!switch.detached,gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!shopping_kart:have_player_passenger,sort=nearest,limit=1]
+execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!shopping_kart:have_player_passenger,sort=nearest,limit=1]
 
 # Remove items
 kill @e[type=item]

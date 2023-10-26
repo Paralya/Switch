@@ -22,6 +22,6 @@ execute if score #bp_block switch.data matches 15 run fill ~-1.69 ~-1 ~-1.69 ~1.
 
 # Kill paint cow and explode
 particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
-playsound entity.generic.explode block @a[tag=!switch.detached]
+playsound entity.generic.explode block @a[tag=!detached]
 kill @s
 

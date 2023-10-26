@@ -18,22 +18,22 @@ team add switch.glassrunner.blue
 team modify switch.glassrunner.blue color blue
 team modify switch.glassrunner.blue friendlyFire false
 
-effect give @a[tag=!switch.detached] saturation infinite 255 true
-effect give @a[tag=!switch.detached] resistance infinite 255 true
-effect give @a[tag=!switch.detached] jump_boost infinite 3 true
+effect give @a[tag=!detached] saturation infinite 255 true
+effect give @a[tag=!detached] resistance infinite 255 true
+effect give @a[tag=!detached] jump_boost infinite 3 true
 time set 6000
 
 ## Téléportation des joueurs dans quatres coins + give d'items
 function switch:choose_map_for/glassrunner
 scoreboard players set #count switch.data 0
-execute as @a[tag=!switch.detached,sort=random] at @s run function switch:modes/glassrunner/start/team
-execute as @a[tag=!switch.detached] at @s run function switch:modes/glassrunner/death/death
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/glassrunner/start/team
+execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/death
 
 
 gamerule showDeathMessages false
 gamerule keepInventory true
 
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Glass Runner, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Glass Runner, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
 
 scoreboard players set #process_end switch.data 0
 scoreboard players set #glassrunner_ticks switch.data 0
@@ -46,7 +46,7 @@ scoreboard objectives add switch.glassrunner.deathCount deathCount
 
 scoreboard objectives add switch.glassrunner.money dummy
 scoreboard objectives setdisplay list switch.glassrunner.money
-scoreboard players add @a[tag=!switch.detached] switch.glassrunner.money 0
+scoreboard players add @a[tag=!detached] switch.glassrunner.money 0
 
 scoreboard objectives add switch.glassrunner.display dummy [{"text":"Glass","color":"red"},{"text":"Runner","color":"blue"}]
 scoreboard objectives setdisplay sidebar switch.glassrunner.display

@@ -3,8 +3,8 @@ kill @e[type=arrow]
 kill @e[tag=switch.rtb.verify,type=marker]
 
 
-title @a[tag=!switch.detached] times 0t 20t 0
-title @a[tag=!switch.detached] title {"text":" Mémorisez !","color":"green"}
+title @a[tag=!detached] times 0t 20t 0
+title @a[tag=!detached] title {"text":" Mémorisez !","color":"green"}
 scoreboard players add #rtb_round_state switch.data 1
 
 scoreboard objectives remove switch.rtb.id
@@ -35,9 +35,9 @@ execute as @e[tag=switch.rtb.island,type=marker,sort=random] run function switch
 
 
 scoreboard players set #rtbteam switch.data 0
-execute as @a[tag=!switch.detached,scores={switch.alive=1..},sort=random] run function switch:modes/replicate_the_build/start/select_teams
+execute as @a[tag=!detached,scores={switch.alive=1..},sort=random] run function switch:modes/replicate_the_build/start/select_teams
 
-gamemode adventure @a[tag=!switch.detached,scores={switch.alive=1..}]
+gamemode adventure @a[tag=!detached,scores={switch.alive=1..}]
 
 
 # Tirage au sort de la structure
@@ -53,4 +53,4 @@ execute store result bossbar rtb.all max run scoreboard players get #rtb_memoriz
 execute store result bossbar rtb.all value run scoreboard players get #rtb_memorize_time switch.data
 
 
-execute at @a[tag=!switch.detached] run playsound minecraft:block.note_block.harp ambient @a[tag=!switch.detached] ~ ~ ~ 1 1.5
+execute at @a[tag=!detached] run playsound minecraft:block.note_block.harp ambient @a[tag=!detached] ~ ~ ~ 1 1.5

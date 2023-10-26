@@ -7,7 +7,7 @@ execute at @e[type=marker,tag=switch.build_battle_marker] run setblock ~3 ~-2 ~3
 execute at @e[type=marker,tag=switch.build_battle_marker] run setblock ~3 ~2 ~3 grass_block
 execute at @e[type=marker,tag=switch.build_battle_marker] positioned ~5 ~2 ~5 run fill ~ ~ ~ ~38 ~13 ~38 air
 execute at @e[type=marker,tag=switch.build_battle_marker] positioned ~5 ~2 ~5 run fill ~ ~14 ~ ~38 ~27 ~38 air
-clear @a[tag=!switch.detached]
+clear @a[tag=!detached]
 
 # Start the building time when the voting time is over
 execute if score #build_battle_seconds switch.data matches 0.. run function switch:modes/build_battle/building_time/start

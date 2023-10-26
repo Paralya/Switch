@@ -1,19 +1,27 @@
 
-execute as @a[tag=!switch.detached] run attribute @s generic.armor base set 0.0
-execute as @a[tag=!switch.detached] run attribute @s generic.max_health base set 20.0
-execute as @a[tag=!switch.detached] run attribute @s generic.attack_speed base set 4.0
-execute as @a[tag=!switch.detached] run attribute @s generic.movement_speed base set 0.1
-execute as @a[tag=!switch.detached] run attribute @s generic.armor_toughness base set 0.0
-execute as @a[tag=!switch.detached] run attribute @s generic.attack_damage base set 1.0
-execute unless score #set_spec switch.data matches 1 run gamemode adventure @a[tag=!switch.detached]
-execute if score #set_spec switch.data matches 1 run gamemode spectator @a[tag=!switch.detached]
+# Attributes
+execute as @a[tag=!detached] run attribute @s generic.armor base set 0.0
+execute as @a[tag=!detached] run attribute @s generic.max_health base set 20.0
+execute as @a[tag=!detached] run attribute @s generic.attack_speed base set 4.0
+execute as @a[tag=!detached] run attribute @s generic.movement_speed base set 0.1
+execute as @a[tag=!detached] run attribute @s generic.armor_toughness base set 0.0
+execute as @a[tag=!detached] run attribute @s generic.attack_damage base set 1.0
+
+# Gamemode
+execute unless score #set_spec switch.data matches 1 run gamemode adventure @a[tag=!detached]
+execute if score #set_spec switch.data matches 1 run gamemode spectator @a[tag=!detached]
 scoreboard players reset #set_spec switch.data
-clear @a[tag=!switch.detached,tag=!convention.debug]
+
+# Clear inventory (if /disable, clear only players that doesn't have convention.debug tag)
+execute unless score #disable switch.data matches 1 run clear @a[tag=!detached]
+execute if score #disable switch.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
+
+# Other stuff
 team empty switch.no_pvp
-spawnpoint @a[tag=!switch.detached] 0 75 0
-xp set @a[tag=!switch.detached] 0 levels
-xp set @a[tag=!switch.detached] 0 points
-effect clear @a[tag=!switch.detached]
-team leave @a[tag=!switch.detached]
+spawnpoint @a[tag=!detached] 0 75 0
+xp set @a[tag=!detached] 0 levels
+xp set @a[tag=!detached] 0 points
+effect clear @a[tag=!detached]
+team leave @a[tag=!detached]
 
 

@@ -1,6 +1,6 @@
 
 # Playsound & Spectator
-execute as @a[tag=!switch.detached] at @s run playsound entity.player.hurt ambient @s
+execute as @a[tag=!detached] at @s run playsound entity.player.hurt ambient @s
 gamemode spectator @s
 
 # Summon dead body with username

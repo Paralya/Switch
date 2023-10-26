@@ -1,5 +1,5 @@
 
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!switch.detached] [{"selector":"@s","color":"red"},{"text":" est éliminé, j'ai pas aimé son tweet perso il me manquera pas !"}]
+execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est éliminé, j'ai pas aimé son tweet perso il me manquera pas !"}]
 scoreboard players set @s switch.temp.passage_vote -1
 function switch:utils/classic_death
 scoreboard players set @s switch.alive 0

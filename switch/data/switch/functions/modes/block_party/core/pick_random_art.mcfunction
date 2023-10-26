@@ -42,22 +42,22 @@ execute at @s run loot insert 0 0 0 mine ~ ~ ~ diamond_pickaxe
 
 ## Others
 # Tellraw, Playsound, and Clear all
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Démarrage de la manche n°"},{"score":{"name":"#block_party_round","objective":"switch.data"},"color":"aqua"},{"text":" !"}]
-execute as @a[tag=!switch.detached] at @s run playsound entity.villager.ambient ambient @s
-clear @a[tag=!switch.detached,gamemode=adventure]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Démarrage de la manche n°"},{"score":{"name":"#block_party_round","objective":"switch.data"},"color":"aqua"},{"text":" !"}]
+execute as @a[tag=!detached] at @s run playsound entity.villager.ambient ambient @s
+clear @a[tag=!detached,gamemode=adventure]
 
 # Play random music
 execute store result score #random switch.data run random value 0..10
-execute if score #random switch.data matches 0 as @a[tag=!switch.detached] at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 1 as @a[tag=!switch.detached] at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 2 as @a[tag=!switch.detached] at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 3 as @a[tag=!switch.detached] at @s run playsound music_disc.far record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 4 as @a[tag=!switch.detached] at @s run playsound music_disc.mall record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 5 as @a[tag=!switch.detached] at @s run playsound music_disc.mellohi record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 6 as @a[tag=!switch.detached] at @s run playsound music_disc.stal record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 7 as @a[tag=!switch.detached] at @s run playsound music_disc.strad record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 8 as @a[tag=!switch.detached] at @s run playsound music_disc.wait record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 9 as @a[tag=!switch.detached] at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 3 as @a[tag=!detached] at @s run playsound music_disc.far record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 4 as @a[tag=!detached] at @s run playsound music_disc.mall record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound music_disc.mellohi record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 6 as @a[tag=!detached] at @s run playsound music_disc.stal record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound music_disc.strad record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound music_disc.wait record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 9 as @a[tag=!detached] at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
 
 # Summon a paint cow randomly (1/3 chance)
 execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:'{"text":"Paint Cow","color":"yellow"}',CustomNameVisible:1b,Tags:["switch.paint_cow"],AbsorptionAmount:2048.0f,DeathLootTable:"none",Attributes:[{Name:"generic.max_absorption",Base:2048.0f},{Name:"generic.movement_speed",Base:5.0d}]}

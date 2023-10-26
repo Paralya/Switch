@@ -1,7 +1,7 @@
 
-tag @a[tag=!switch.detached] remove switch.laser_game.blue
-tag @a[tag=!switch.detached] remove switch.laser_game.red
-tag @a[tag=!switch.detached] remove global.ignore
+tag @a[tag=!detached] remove switch.laser_game.blue
+tag @a[tag=!detached] remove switch.laser_game.red
+tag @a[tag=!detached] remove global.ignore
 scoreboard objectives remove switch.temp.individual_points
 scoreboard objectives remove switch.temp.shield
 scoreboard objectives remove switch.temp.cooldown

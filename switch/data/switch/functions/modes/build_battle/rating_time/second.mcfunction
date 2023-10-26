@@ -1,14 +1,14 @@
 
 # Show Current theme
-title @a[tag=!switch.detached] actionbar [{"text":"Thème : ","color":"aqua"},{"nbt":"current_theme","storage":"switch:main","color":"yellow"}]
+title @a[tag=!detached] actionbar [{"text":"Thème : ","color":"aqua"},{"nbt":"current_theme","storage":"switch:main","color":"yellow"}]
 
 # Avoid build changes during rating time
 execute at @e[tag=switch.marker_temp,limit=1] run place template switch:temp ~5 ~ ~5
 
 ## Rating
 # Equipment
-execute as @a[tag=!switch.detached] if data entity @s Inventory[7] run function switch:modes/build_battle/rating_time/set_inventory
-execute as @a[tag=!switch.detached] unless data entity @s Inventory[6] run function switch:modes/build_battle/rating_time/set_inventory
+execute as @a[tag=!detached] if data entity @s Inventory[7] run function switch:modes/build_battle/rating_time/set_inventory
+execute as @a[tag=!detached] unless data entity @s Inventory[6] run function switch:modes/build_battle/rating_time/set_inventory
 
 ## Timer
 # Decrease remaining time

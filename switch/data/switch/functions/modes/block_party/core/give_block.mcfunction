@@ -38,52 +38,52 @@ execute if score #bp_block switch.data matches 12 run data modify block 0 0 0 It
 execute if score #bp_block switch.data matches 13 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Green / Vert","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 14 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Red / Rouge","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 15 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Black / Noir","italic":false,"color":"aqua"}'
-item replace entity @a[tag=!switch.detached,gamemode=adventure] hotbar.0 from block 0 0 0 container.0
-item replace entity @a[tag=!switch.detached,gamemode=adventure] hotbar.2 from block 0 0 0 container.0
-item replace entity @a[tag=!switch.detached,gamemode=adventure] hotbar.4 from block 0 0 0 container.0
-item replace entity @a[tag=!switch.detached,gamemode=adventure] hotbar.6 from block 0 0 0 container.0
-item replace entity @a[tag=!switch.detached,gamemode=adventure] hotbar.8 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=adventure] hotbar.0 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=adventure] hotbar.2 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=adventure] hotbar.4 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=adventure] hotbar.6 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=adventure] hotbar.8 from block 0 0 0 container.0
 
 # Title players
-execute if score #bp_block switch.data matches -1 run title @a[tag=!switch.detached] title {"text":"Beige","italic":false,"color":"#c8ad7f"}
-execute if score #bp_block switch.data matches 0 run title @a[tag=!switch.detached] title {"text":"White / Blanc","italic":false,"color":"#ffffff"}
-execute if score #bp_block switch.data matches 1 run title @a[tag=!switch.detached] title {"text":"Orange","italic":false,"color":"#ff7f00"}
-execute if score #bp_block switch.data matches 2 run title @a[tag=!switch.detached] title {"text":"Magenta","italic":false,"color":"#ff00ff"}
-execute if score #bp_block switch.data matches 3 run title @a[tag=!switch.detached] title {"text":"Light Blue / Bleu clair","italic":false,"color":"#00ffff"}
-execute if score #bp_block switch.data matches 4 run title @a[tag=!switch.detached] title {"text":"Yellow / Jaune","italic":false,"color":"#ffff00"}
-execute if score #bp_block switch.data matches 5 run title @a[tag=!switch.detached] title {"text":"Lime / Vert clair","italic":false,"color":"#00ff00"}
-execute if score #bp_block switch.data matches 6 run title @a[tag=!switch.detached] title {"text":"Pink / Rose","italic":false,"color":"#ff7faa"}
-execute if score #bp_block switch.data matches 7 run title @a[tag=!switch.detached] title {"text":"Gray / Gris","italic":false,"color":"#7f7f7f"}
-execute if score #bp_block switch.data matches 8 run title @a[tag=!switch.detached] title {"text":"Light Gray / Gris clair","italic":false,"color":"#c0c0c0"}
-execute if score #bp_block switch.data matches 9 run title @a[tag=!switch.detached] title {"text":"Cyan","italic":false,"color":"#009090"}
-execute if score #bp_block switch.data matches 10 run title @a[tag=!switch.detached] title {"text":"Purple / Violet","italic":false,"color":"#7f00ff"}
-execute if score #bp_block switch.data matches 11 run title @a[tag=!switch.detached] title {"text":"Blue / Bleu","italic":false,"color":"#0000ff"}
-execute if score #bp_block switch.data matches 12 run title @a[tag=!switch.detached] title {"text":"Brown / Marron","italic":false,"color":"#7f3f00"}
-execute if score #bp_block switch.data matches 13 run title @a[tag=!switch.detached] title {"text":"Green / Vert","italic":false,"color":"#006000"}
-execute if score #bp_block switch.data matches 14 run title @a[tag=!switch.detached] title {"text":"Red / Rouge","italic":false,"color":"#ff0000"}
-execute if score #bp_block switch.data matches 15 run title @a[tag=!switch.detached] title {"text":"Black / Noir","italic":false,"color":"#000000"}
+execute if score #bp_block switch.data matches -1 run title @a[tag=!detached] title {"text":"Beige","italic":false,"color":"#c8ad7f"}
+execute if score #bp_block switch.data matches 0 run title @a[tag=!detached] title {"text":"White / Blanc","italic":false,"color":"#ffffff"}
+execute if score #bp_block switch.data matches 1 run title @a[tag=!detached] title {"text":"Orange","italic":false,"color":"#ff7f00"}
+execute if score #bp_block switch.data matches 2 run title @a[tag=!detached] title {"text":"Magenta","italic":false,"color":"#ff00ff"}
+execute if score #bp_block switch.data matches 3 run title @a[tag=!detached] title {"text":"Light Blue / Bleu clair","italic":false,"color":"#00ffff"}
+execute if score #bp_block switch.data matches 4 run title @a[tag=!detached] title {"text":"Yellow / Jaune","italic":false,"color":"#ffff00"}
+execute if score #bp_block switch.data matches 5 run title @a[tag=!detached] title {"text":"Lime / Vert clair","italic":false,"color":"#00ff00"}
+execute if score #bp_block switch.data matches 6 run title @a[tag=!detached] title {"text":"Pink / Rose","italic":false,"color":"#ff7faa"}
+execute if score #bp_block switch.data matches 7 run title @a[tag=!detached] title {"text":"Gray / Gris","italic":false,"color":"#7f7f7f"}
+execute if score #bp_block switch.data matches 8 run title @a[tag=!detached] title {"text":"Light Gray / Gris clair","italic":false,"color":"#c0c0c0"}
+execute if score #bp_block switch.data matches 9 run title @a[tag=!detached] title {"text":"Cyan","italic":false,"color":"#009090"}
+execute if score #bp_block switch.data matches 10 run title @a[tag=!detached] title {"text":"Purple / Violet","italic":false,"color":"#7f00ff"}
+execute if score #bp_block switch.data matches 11 run title @a[tag=!detached] title {"text":"Blue / Bleu","italic":false,"color":"#0000ff"}
+execute if score #bp_block switch.data matches 12 run title @a[tag=!detached] title {"text":"Brown / Marron","italic":false,"color":"#7f3f00"}
+execute if score #bp_block switch.data matches 13 run title @a[tag=!detached] title {"text":"Green / Vert","italic":false,"color":"#006000"}
+execute if score #bp_block switch.data matches 14 run title @a[tag=!detached] title {"text":"Red / Rouge","italic":false,"color":"#ff0000"}
+execute if score #bp_block switch.data matches 15 run title @a[tag=!detached] title {"text":"Black / Noir","italic":false,"color":"#000000"}
 
 # Tellraw players
-execute if score #bp_block switch.data matches -1 run tellraw @a[tag=!switch.detached] {"text":"Beige","italic":false,"color":"#c8ad7f"}
-execute if score #bp_block switch.data matches 0 run tellraw @a[tag=!switch.detached] {"text":"White / Blanc","italic":false,"color":"#ffffff"}
-execute if score #bp_block switch.data matches 1 run tellraw @a[tag=!switch.detached] {"text":"Orange","italic":false,"color":"#ff7f00"}
-execute if score #bp_block switch.data matches 2 run tellraw @a[tag=!switch.detached] {"text":"Magenta","italic":false,"color":"#ff00ff"}
-execute if score #bp_block switch.data matches 3 run tellraw @a[tag=!switch.detached] {"text":"Light Blue / Bleu clair","italic":false,"color":"#00ffff"}
-execute if score #bp_block switch.data matches 4 run tellraw @a[tag=!switch.detached] {"text":"Yellow / Jaune","italic":false,"color":"#ffff00"}
-execute if score #bp_block switch.data matches 5 run tellraw @a[tag=!switch.detached] {"text":"Lime / Vert clair","italic":false,"color":"#00ff00"}
-execute if score #bp_block switch.data matches 6 run tellraw @a[tag=!switch.detached] {"text":"Pink / Rose","italic":false,"color":"#ff7faa"}
-execute if score #bp_block switch.data matches 7 run tellraw @a[tag=!switch.detached] {"text":"Gray / Gris","italic":false,"color":"#7f7f7f"}
-execute if score #bp_block switch.data matches 8 run tellraw @a[tag=!switch.detached] {"text":"Light Gray / Gris clair","italic":false,"color":"#c0c0c0"}
-execute if score #bp_block switch.data matches 9 run tellraw @a[tag=!switch.detached] {"text":"Cyan","italic":false,"color":"#009090"}
-execute if score #bp_block switch.data matches 10 run tellraw @a[tag=!switch.detached] {"text":"Purple / Violet","italic":false,"color":"#7f00ff"}
-execute if score #bp_block switch.data matches 11 run tellraw @a[tag=!switch.detached] {"text":"Blue / Bleu","italic":false,"color":"#0000ff"}
-execute if score #bp_block switch.data matches 12 run tellraw @a[tag=!switch.detached] {"text":"Brown / Marron","italic":false,"color":"#7f3f00"}
-execute if score #bp_block switch.data matches 13 run tellraw @a[tag=!switch.detached] {"text":"Green / Vert","italic":false,"color":"#006000"}
-execute if score #bp_block switch.data matches 14 run tellraw @a[tag=!switch.detached] {"text":"Red / Rouge","italic":false,"color":"#ff0000"}
-execute if score #bp_block switch.data matches 15 run tellraw @a[tag=!switch.detached] {"text":"Black / Noir","italic":false,"color":"#000000"}
+execute if score #bp_block switch.data matches -1 run tellraw @a[tag=!detached] {"text":"Beige","italic":false,"color":"#c8ad7f"}
+execute if score #bp_block switch.data matches 0 run tellraw @a[tag=!detached] {"text":"White / Blanc","italic":false,"color":"#ffffff"}
+execute if score #bp_block switch.data matches 1 run tellraw @a[tag=!detached] {"text":"Orange","italic":false,"color":"#ff7f00"}
+execute if score #bp_block switch.data matches 2 run tellraw @a[tag=!detached] {"text":"Magenta","italic":false,"color":"#ff00ff"}
+execute if score #bp_block switch.data matches 3 run tellraw @a[tag=!detached] {"text":"Light Blue / Bleu clair","italic":false,"color":"#00ffff"}
+execute if score #bp_block switch.data matches 4 run tellraw @a[tag=!detached] {"text":"Yellow / Jaune","italic":false,"color":"#ffff00"}
+execute if score #bp_block switch.data matches 5 run tellraw @a[tag=!detached] {"text":"Lime / Vert clair","italic":false,"color":"#00ff00"}
+execute if score #bp_block switch.data matches 6 run tellraw @a[tag=!detached] {"text":"Pink / Rose","italic":false,"color":"#ff7faa"}
+execute if score #bp_block switch.data matches 7 run tellraw @a[tag=!detached] {"text":"Gray / Gris","italic":false,"color":"#7f7f7f"}
+execute if score #bp_block switch.data matches 8 run tellraw @a[tag=!detached] {"text":"Light Gray / Gris clair","italic":false,"color":"#c0c0c0"}
+execute if score #bp_block switch.data matches 9 run tellraw @a[tag=!detached] {"text":"Cyan","italic":false,"color":"#009090"}
+execute if score #bp_block switch.data matches 10 run tellraw @a[tag=!detached] {"text":"Purple / Violet","italic":false,"color":"#7f00ff"}
+execute if score #bp_block switch.data matches 11 run tellraw @a[tag=!detached] {"text":"Blue / Bleu","italic":false,"color":"#0000ff"}
+execute if score #bp_block switch.data matches 12 run tellraw @a[tag=!detached] {"text":"Brown / Marron","italic":false,"color":"#7f3f00"}
+execute if score #bp_block switch.data matches 13 run tellraw @a[tag=!detached] {"text":"Green / Vert","italic":false,"color":"#006000"}
+execute if score #bp_block switch.data matches 14 run tellraw @a[tag=!detached] {"text":"Red / Rouge","italic":false,"color":"#ff0000"}
+execute if score #bp_block switch.data matches 15 run tellraw @a[tag=!detached] {"text":"Black / Noir","italic":false,"color":"#000000"}
 
 
 # Playsound and remove shulker box
-execute as @a[tag=!switch.detached] at @s run playsound entity.experience_orb.pickup ambient @s
+execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 setblock 0 0 0 air
 

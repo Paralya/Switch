@@ -1,6 +1,6 @@
 
-effect give @a[tag=!switch.detached] resistance infinite 255 true
-effect give @a[tag=!switch.detached] regeneration infinite 255 true
+effect give @a[tag=!detached] resistance infinite 255 true
+effect give @a[tag=!detached] regeneration infinite 255 true
 difficulty hard
 function switch:utils/set_dynamic_time
 
@@ -12,7 +12,7 @@ function switch:choose_map_for/feed_fast
 gamerule showDeathMessages false
 gamerule keepInventory true
 
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Feed Fast, vous avez 5 secondes pour vous préparer à devoir manger un maximum !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Feed Fast, vous avez 5 secondes pour vous préparer à devoir manger un maximum !"}]
 
 scoreboard players set #remaining_time switch.data 50
 scoreboard players set #feed_fast_seconds switch.data -5
@@ -23,5 +23,5 @@ scoreboard objectives add switch.temp.previous_food dummy
 scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"red"}
 scoreboard objectives setdisplay sidebar switch.temp.points
 
-scoreboard players set @a[tag=!switch.detached] switch.temp.previous_food 20
+scoreboard players set @a[tag=!detached] switch.temp.previous_food 20
 

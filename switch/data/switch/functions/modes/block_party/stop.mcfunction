@@ -1,3 +1,3 @@
 
-stopsound @a[tag=!switch.detached]
+stopsound @a[tag=!detached]
 

@@ -1,8 +1,8 @@
 
-effect give @a[tag=!switch.detached] resistance 10 255 true
-effect give @a[tag=!switch.detached] saturation 10 255 true
-effect give @a[tag=!switch.detached] regeneration 10 255 true
-effect give @a[tag=!switch.detached] weakness 10 255 true
+effect give @a[tag=!detached] resistance 10 255 true
+effect give @a[tag=!detached] saturation 10 255 true
+effect give @a[tag=!detached] regeneration 10 255 true
+effect give @a[tag=!detached] weakness 10 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
@@ -11,7 +11,7 @@ function switch:choose_map_for/rush_the_point
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!switch.detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Rush The Point, tenez-vous prêt vous avez 10 secondes de préparation !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Rush The Point, tenez-vous prêt vous avez 10 secondes de préparation !"}]
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.choosen_class dummy
@@ -57,5 +57,5 @@ team modify switch.rush_the_point.blue nametagVisibility hideForOtherTeams
 team modify switch.rush_the_point.red friendlyFire false
 team modify switch.rush_the_point.blue friendlyFire false
 scoreboard players set #next_role switch.data 0
-execute as @a[tag=!switch.detached,sort=random] at @s run function switch:modes/rush_the_point/roles/
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/rush_the_point/roles/
 

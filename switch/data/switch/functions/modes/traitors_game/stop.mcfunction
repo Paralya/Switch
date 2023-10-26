@@ -1,6 +1,6 @@
 
-execute as @a[tag=!switch.detached] run attribute @s generic.max_health modifier remove 1-1-1-1-2
-execute as @a[tag=!switch.detached] run attribute @s generic.movement_speed modifier remove 1-1-1-1-1
+execute as @a[tag=!detached] run attribute @s generic.max_health modifier remove 1-1-1-1-2
+execute as @a[tag=!detached] run attribute @s generic.movement_speed modifier remove 1-1-1-1-1
 
 team remove switch.temp.visible
 team remove switch.temp.sidebar.5

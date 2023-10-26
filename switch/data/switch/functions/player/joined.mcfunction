@@ -11,3 +11,6 @@ scoreboard players add @s switch.alive 0
 execute if score #state switch.data matches 2 run function switch:engine/voting_time/player_join
 execute if score #state switch.data matches 3 run function #switch:signals/player/joined
 
+# Prevent spam
+scoreboard players operation @s switch.reconnect = #score switch.reconnect
+

@@ -46,7 +46,7 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple:
 		parenthesis = f" ({minsString}m{secsString}s)"
 	
 	# Create the tellraw string
-	tellraw = f'tellraw @a[tag=!switch.detached] ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' vient de finir de se régénérer en ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+	tellraw = f'tellraw @a[tag=!detached] ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' vient de finir de se régénérer en ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
 
 	# Return
 	return (f"{secs} seconds{parenthesis}", tellraw)
@@ -133,7 +133,7 @@ def createMainFile(name: str, kart_racer: list = []) -> None:
 	else:
 		f.write(f"execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value {kart_racer[-1]}\n\n")
 		f.write(f"scoreboard players set #count switch.data 0\n")
-		f.write(f"execute as @a[tag=!switch.detached,sort=random] run function switch:maps/survival/{name}/teleport_players\n\n")
+		f.write(f"execute as @a[tag=!detached,sort=random] run function switch:maps/survival/{name}/teleport_players\n\n")
 		f.write(f"execute if data storage switch:main {{current_game:\"kart_racer\"}} run function switch:maps/survival/{name}/if_kart_racer\n")
 
 		# Warning if the if_kart_racer file doesn't exist
@@ -162,7 +162,7 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 	# If there is no kart racer
 	if len(kart_racer) == 0:
 		f.write(f'data modify entity @s Pos set value {tp_coords}\n')
-		f.write(f'execute at @s run tp @a[tag=!switch.detached] ~ ~ ~\n')
+		f.write(f'execute at @s run tp @a[tag=!detached] ~ ~ ~\n')
 		f.write(f'execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/{name}/spread_players\n')
 		f.write(f'scoreboard players reset #do_spreadplayers switch.data\n')
 	else:
@@ -344,14 +344,14 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	f.write("\n")
 
 	# Write the spreadplayers command
-	f.write(f"spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @a[tag=!switch.detached]\n")
+	f.write(f"spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @a[tag=!detached]\n")
 
 	# Write the assurance commands
 	f.write("\n")
 	f.write("## Assurance commands\n")
 	for _ in range(12):
-		f.write(f"execute as @a[tag=!switch.detached] at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute as @a[tag=!switch.detached] at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file
 	f.write("\n")
