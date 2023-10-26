@@ -13,6 +13,7 @@
 		"switch:modes/spectres_game/calls/start",
 		"switch:modes/kart_racer/calls/start",
 		"switch:modes/rush_the_point/calls/start",
+		"switch:modes/rush_the_flag/calls/start",
 		"switch:modes/spleef/calls/start",
 		"switch:modes/de_a_coudre/calls/start",
 		"switch:modes/feed_fast/calls/start",

@@ -1,0 +1,23 @@
+
+item replace entity @s weapon.offhand with air
+item replace entity @s[team=switch.rush_the_point.red] hotbar.0 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.1 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.2 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.3 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.4 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.5 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.6 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.7 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] hotbar.8 with red_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.red] armor.head with blue_banner
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.0 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.1 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.2 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.3 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.4 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.5 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.6 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.7 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] hotbar.8 with blue_wool{CanDestroy:["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]}
+item replace entity @s[team=switch.rush_the_point.blue] armor.head with red_banner
+

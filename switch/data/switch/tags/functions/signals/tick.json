@@ -12,6 +12,7 @@
 		"switch:modes/spectres_game/calls/tick",
 		"switch:modes/kart_racer/calls/tick",
 		"switch:modes/rush_the_point/calls/tick",
+		"switch:modes/rush_the_flag/calls/tick",
 		"switch:modes/spleef/calls/tick",
 		"switch:modes/de_a_coudre/calls/tick",
 		"switch:modes/feed_fast/calls/tick",

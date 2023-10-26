@@ -12,6 +12,7 @@
 		"switch:modes/spectres_game/calls/second",
 		"switch:modes/kart_racer/calls/second",
 		"switch:modes/rush_the_point/calls/second",
+		"switch:modes/rush_the_flag/calls/second",
 		"switch:modes/spleef/calls/second",
 		"switch:modes/de_a_coudre/calls/second",
 		"switch:modes/feed_fast/calls/second",

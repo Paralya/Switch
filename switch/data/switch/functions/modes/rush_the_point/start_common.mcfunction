@@ -1,0 +1,56 @@
+
+effect give @a[tag=!detached] resistance 10 255 true
+effect give @a[tag=!detached] saturation 10 255 true
+effect give @a[tag=!detached] regeneration 10 255 true
+effect give @a[tag=!detached] weakness 10 255 true
+function switch:utils/set_dynamic_time
+
+## Placement de la map et des joueurs
+function switch:choose_map_for/rush_the_point
+
+gamerule naturalRegeneration false
+gamerule keepInventory true
+
+scoreboard objectives add switch.temp.cooldown dummy
+scoreboard objectives add switch.temp.choosen_class dummy
+scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
+scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
+scoreboard objectives setdisplay sidebar switch.temp.sidebar
+
+scoreboard players set #bonus_reload switch.data 30
+scoreboard players set #blue_points switch.data 0
+scoreboard players set #red_points switch.data 0
+scoreboard players set #process_end switch.data 0
+
+team add switch.temp.sidebar.5
+team add switch.temp.sidebar.3
+team add switch.temp.sidebar.2
+team add switch.temp.sidebar.1
+team modify switch.temp.sidebar.5 suffix [{"text":"Objectif : "},{"text":"5000","color":"yellow"},{"text":" points"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.2 color blue
+team modify switch.temp.sidebar.1 color red
+team join switch.temp.sidebar.5 §3
+team join switch.temp.sidebar.3 §5
+team join switch.temp.sidebar.2 §2
+team join switch.temp.sidebar.1 §1
+scoreboard players set §5 switch.temp.sidebar 5
+scoreboard players set §r switch.temp.sidebar 4
+scoreboard players set §3 switch.temp.sidebar 3
+scoreboard players set §2 switch.temp.sidebar 2
+scoreboard players set §1 switch.temp.sidebar 1
+
+# Choix des rôles + give d'items
+team add switch.rush_the_point.red
+team add switch.rush_the_point.blue
+team modify switch.rush_the_point.red color red
+team modify switch.rush_the_point.blue color blue
+team modify switch.rush_the_point.red nametagVisibility hideForOtherTeams
+team modify switch.rush_the_point.blue nametagVisibility hideForOtherTeams
+team modify switch.rush_the_point.red friendlyFire false
+team modify switch.rush_the_point.blue friendlyFire false
+scoreboard players set #next_role switch.data 0
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/rush_the_point/roles/
+
