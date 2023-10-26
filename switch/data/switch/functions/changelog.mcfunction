@@ -2,7 +2,6 @@
 # 2023/10/16
 tellraw @s [{"text":"\n\n- [Début des changelogs]","color":"red"}]
 tellraw @s [{"text":"[2023/10/16] ","color":"dark_aqua"},{"text":"Passage en 1.20.2","color":"green"}]
-tellraw @s ""
 
 # 2023/10/17
 tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Build Battle : les builds se sauvegardent maintenant correctement, les items ne clignotent plus autant qu'avant pendant la phase des votes","color":"white"}]
@@ -19,9 +18,11 @@ tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Murder Mystery
 tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Kart Racer : fix du problème qui faisait que certains véhicules bougeaient tous seuls\n+ la vitesse max des véhicules a été réduite\n+ le title censé s'afficher lors du passage sur un bloc à effet s'affiche maintenant correctement\n+ certains blocs à effets ont été retirés sur plusieurs maps","color":"green"}]
 tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"/stats : ajout du nombre de victoires\n+ reset des statistiques","color":"white"}]
 tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Ajout de la commande /changelog","color":"green"}]
-tellraw @s ""
 
 # 2023/10/22
 tellraw @s [{"text":"[2023/10/22] ","color":"dark_aqua"},{"text":"Moutron : glass_pane -> glass","color":"white"}]
+
+# 2023/10/26
+tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : RushTheFlag","color":"green"}]
 tellraw @s ""
 
