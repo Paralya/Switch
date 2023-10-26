@@ -35,6 +35,7 @@
 		"switch:modes/murder_mystery/calls/tick",
 		"switch:modes/panic_chase/calls/tick",
 		"switch:modes/simultaneous_jump/calls/tick",
+		"switch:modes/bombardement/calls/tick",
 		"switch:modes/twittos_de_merde/calls/tick"
 	]
 }
