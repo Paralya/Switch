@@ -1,9 +1,4 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
 team add switch.laser_game.blue
 team add switch.laser_game.red
 team modify switch.laser_game.blue color blue
@@ -58,5 +53,4 @@ team join switch.temp.sidebar.1 §1
 scoreboard players set §3 switch.temp.sidebar 3
 scoreboard players set §2 switch.temp.sidebar 2
 scoreboard players set §1 switch.temp.sidebar 1
-
 

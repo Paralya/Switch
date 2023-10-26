@@ -1,29 +1,12 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
 scoreboard players set @a switch.alive 1
-
-kill @e[type=!player]
-kill @e[type=!player]
 
 title @a times 5 20 5
 effect give @a saturation infinite 255 true
 effect give @a regeneration infinite 255 true
 effect give @a resistance infinite 255 true
 effect give @a levitation 10 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
-
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+function switch:utils/set_dynamic_time
 gamerule fallDamage false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
@@ -102,7 +85,6 @@ scoreboard players set #total_checkpoints switch.data 1
 ## Téléportation des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/kart_racer
-
 execute as @a at @s run function switch:modes/kart_racer/give_items
 
 schedule function switch:modes/kart_racer/post_load 9s

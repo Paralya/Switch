@@ -1,4 +1,4 @@
-time set day
-scoreboard players set #glassrunner.apocalypse switch.data 0
 
+time set 6000
+scoreboard players set #glassrunner.apocalypse switch.data 0
 

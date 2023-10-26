@@ -1,6 +1,4 @@
 
-## Fonction executée toutes les secondes lorsque le mode de jeu est activé
-
 scoreboard players add #mlg_a_coudre_seconds switch.data 1
 
 function switch:modes/mlg_a_coudre/xp_bar

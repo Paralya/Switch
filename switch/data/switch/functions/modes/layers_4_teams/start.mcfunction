@@ -1,28 +1,11 @@
 
-## Fonction executée lors du lancement de la partie
-
-kill @e[type=!player,type=!marker]
-kill @e[type=!player,type=!marker]
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
-
 effect give @a night_vision infinite 255 true
 effect give @a saturation 15 255 true
 effect give @a resistance 60 255 true
-effect give @a regeneration 10 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Chargement de la map
 function switch:choose_map_for/layers_4_teams
-
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Layers, tenez-vous prêt !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
@@ -53,5 +36,4 @@ team modify switch.temp.green nametagVisibility hideForOtherTeams
 team modify switch.temp.yellow nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
 execute as @a[sort=random] at @s run function switch:modes/layers_4_teams/team_and_give
-
 

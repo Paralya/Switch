@@ -1,6 +1,6 @@
 
-scoreboard players operation #player_id switch.temp.id = @s switch.temp.id
-clear @a[predicate=switch:has_same_temp_id]
+scoreboard players operation #player_id switch.id = @s switch.id
+clear @a[predicate=switch:has_same_id]
 
 function switch:modes/spectres_game/death/inventory_filter
 execute at @s run function switch:modes/spectres_game/death/inventory_drop

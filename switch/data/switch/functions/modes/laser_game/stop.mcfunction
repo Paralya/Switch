@@ -1,6 +1,4 @@
 
-kill @e[tag=switch.laser_game.base]
-
 tag @a remove switch.laser_game.blue
 tag @a remove switch.laser_game.red
 tag @a remove global.ignore

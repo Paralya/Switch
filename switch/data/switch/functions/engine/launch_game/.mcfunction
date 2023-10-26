@@ -31,8 +31,10 @@ execute if score #modulo_rand switch.data matches 1 store result score #game_1 s
 execute if score #modulo_rand switch.data matches 2.. run function switch:engine/launch_game/get_random_max
 execute if score #modulo_rand switch.data matches 2.. run tellraw @a ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Égalité entre plusieurs mode de jeux, choix aléatoire !\n"}]
 
-spawnpoint @a 0 75 0
-function switch:engine/reset_attributes
+weather clear
+difficulty normal
+function switch:utils/reset_players
+function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 function #switch:signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a at @s run playsound ui.toast.in ambient @s

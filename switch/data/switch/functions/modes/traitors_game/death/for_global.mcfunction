@@ -1,6 +1,6 @@
 
-scoreboard players operation #player_id switch.temp.id = @s switch.temp.id
-clear @a[predicate=switch:has_same_temp_id]
+scoreboard players operation #player_id switch.id = @s switch.id
+clear @a[predicate=switch:has_same_id]
 execute at @s run function switch:modes/traitors_game/death/drop_inventory
 
 scoreboard players set #success switch.data 0

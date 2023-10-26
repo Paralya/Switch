@@ -1,24 +1,12 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
 gamemode spectator @a
-team leave @a
-
-kill @e[type=item]
-
 effect give @a saturation infinite 255 true
-effect give @a regeneration 5 255 true
-difficulty normal
-time set 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 function switch:choose_map_for/de_a_coudre
 
 gamerule showDeathMessages false
-gamerule naturalRegeneration false
 gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Dé à Coudre, on commence direct !"}]

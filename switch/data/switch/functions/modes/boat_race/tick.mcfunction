@@ -3,7 +3,7 @@
 
 scoreboard players add #boat_race_ticks switch.data 1
 
-execute as @a[scores={switch.temp.deathCount=1..},x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/boat_race/death
+# Fall in void
 execute as @a[scores={switch.alive=1..}] at @s if entity @s[y=-64,dy=64] run function switch:modes/boat_race/death
 
 # Détecte si tous les joueurs ont finis

@@ -1,17 +1,6 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
-
-kill @e[type=!player]
-kill @e[type=!player]
-
 effect give @a saturation infinite 255 true
-time set 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 function switch:choose_map_for/build_battle

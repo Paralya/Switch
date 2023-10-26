@@ -1,24 +1,10 @@
 
-## Fonction executée lors du lancement de la partie
-
-kill @e[type=!player,type=!marker]
-kill @e[type=!player,type=!marker]
-
-clear @a
-effect clear @a
 gamemode survival @a
-team leave @a
 scoreboard players set @a switch.alive 1
-
 effect give @a resistance 10 255 true
 effect give @a regeneration 10 255 true
 effect give @a weakness 10 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #do_spreadplayers switch.data 1
@@ -38,7 +24,6 @@ scoreboard players set #traitors_game_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
 
-scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.role dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.deathCount deathCount

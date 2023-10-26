@@ -1,24 +1,8 @@
 
-## Fonction executée lors du lancement de la partie
-
-kill @e[type=!player,type=!marker]
-kill @e[type=!player,type=!marker]
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
-
 effect give @a saturation infinite 255 true
-effect give @a regeneration 10 255 true
 effect give @a resistance infinite 255 true
 effect give @a weakness infinite 255 true
-
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 gamerule fallDamage false
 gamerule keepInventory true

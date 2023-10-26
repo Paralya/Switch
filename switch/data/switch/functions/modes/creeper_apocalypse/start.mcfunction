@@ -1,25 +1,10 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team empty switch.no_pvp
 scoreboard players set @a switch.alive 1
-
-kill @e[type=item]
-kill @e[type=arrow]
-
 effect give @a night_vision infinite 255 true
 effect give @a saturation infinite 255 true
 effect give @a regeneration 5 255 true
 effect give @a resistance 12 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs + give d'items
 scoreboard players set #do_spreadplayers switch.data 1

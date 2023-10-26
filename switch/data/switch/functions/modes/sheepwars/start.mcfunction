@@ -1,14 +1,4 @@
 
-## Fonction executée lors du lancement de la partie
-
-kill @e[type=!player,type=!marker]
-kill @e[type=!player,type=!marker]
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
-
 effect give @a hunger 5 255 true
 effect give @a regeneration 5 255 true
 effect give @a weakness 5 255 true
@@ -16,15 +6,10 @@ effect give @a blindness 5 255 true
 effect give @a darkness 5 255 true
 effect give @a jump_boost 5 250 true
 effect give @a slowness 5 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.5 run time add 6000
-execute if predicate switch:chance/0.5 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Chargement de la map
 function switch:choose_map_for/sheepwars
-
 gamerule keepInventory true
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt car vous avez 5 secondes !\n"}]

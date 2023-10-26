@@ -1,6 +1,4 @@
 
-## Fonction executée toutes les secondes lorsque le mode de jeu est activé
-
 scoreboard players add #coin_chaser_seconds switch.data 1
 
 # XP bar update

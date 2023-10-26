@@ -1,8 +1,4 @@
 
-tp @e[type=creeper] 0 -10000 0
-
-
-
 scoreboard objectives remove switch.rtb.id
 scoreboard objectives remove switch.rtb.time
 scoreboard objectives remove switch.rtb.points
@@ -13,7 +9,3 @@ execute as @e[type=marker,tag=switch.rtb.center] run function switch:modes/repli
 
 bossbar remove rtb.all
 
-kill @e[type=arrow]
-kill @e[type=creeper]
-kill @e[type=item]
-kill @e[type=experience_orb]

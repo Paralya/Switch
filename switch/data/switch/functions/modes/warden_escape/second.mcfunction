@@ -1,6 +1,4 @@
 
-## Fonction executée toutes les secondes lorsque le mode de jeu est activé
-
 scoreboard players add #warden_escape_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 

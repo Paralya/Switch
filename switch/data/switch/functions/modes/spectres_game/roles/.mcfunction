@@ -13,8 +13,8 @@ execute if score #next_role switch.data matches 3.. run scoreboard players set #
 setblock 0 0 0 yellow_shulker_box
 loot insert 0 0 0 loot switch:get_username
 summon marker 0 0 0 {Tags:["switch.temp.player","switch.new"]}
+scoreboard players operation #player_id switch.id = @s switch.id
 execute as @e[tag=switch.new] run function switch:modes/spectres_game/roles/marker
-scoreboard players operation @s switch.temp.id = #next_player_id switch.data
 setblock 0 0 0 air
 
 tag @s remove switch.temp

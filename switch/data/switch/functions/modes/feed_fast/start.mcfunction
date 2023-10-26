@@ -1,22 +1,8 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team join switch.no_pvp @a
-
-kill @e[type=item]
-
 effect give @a resistance infinite 255 true
 effect give @a regeneration infinite 255 true
-
 difficulty hard
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1

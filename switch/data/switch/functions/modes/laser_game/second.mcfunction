@@ -1,6 +1,4 @@
 
-## Fonction executée toutes les secondes lorsque le mode de jeu est activé
-
 # Laser game seconds timer
 scoreboard players add #laser_game_seconds switch.data 1
 scoreboard players remove #remaining_time switch.data 1

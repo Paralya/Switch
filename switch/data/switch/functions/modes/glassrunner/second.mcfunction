@@ -1,6 +1,4 @@
 
-## Fonction executée toutes les secondes lorsque le mode de jeu est activé
-
 scoreboard players add #glassrunner_seconds switch.data 1
 
 execute positioned 2997 128 2997 as @a[dx=5,dy=3,dz=5] run function switch:modes/glassrunner/ctp/center/adding_timer

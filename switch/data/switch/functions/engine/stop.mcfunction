@@ -5,19 +5,13 @@ scoreboard players set #state switch.data 0
 scoreboard players set #cut_clean switch.data 0
 scoreboard players set #process_end switch.data 0
 
-execute unless score #disable switch.data matches 1 run clear @a[tag=!convention.debug]
-effect clear @a
-gamemode spectator @a[tag=!convention.debug]
-xp set @a 0 points
-xp set @a 0 levels
-kill @e[type=marker,tag=switch.selected_map]
+scoreboard players set #set_spec switch.data 1
+function switch:utils/reset_players
 worldborder set 59999968
 worldborder center 0 0
-spawnpoint @a 0 75 0
 scoreboard objectives setdisplay list switch.stats.wins
 execute unless score #is_adventure switch.data matches 1 run function switch:maps/regenerate_map
 scoreboard players reset #is_adventure switch.data
-function switch:engine/reset_attributes
 
 scoreboard players reset #disable switch.data
 scoreboard players reset * switch.alive
@@ -40,4 +34,5 @@ gamerule announceAdvancements false
 gamerule doTraderSpawning false
 
 function #switch:signals/stop
+function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 

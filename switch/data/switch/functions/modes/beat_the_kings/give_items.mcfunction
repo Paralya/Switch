@@ -1,6 +1,5 @@
 
 # Starter kit
-clear @s
 item replace entity @s[team=switch.temp.civil] armor.head with leather_helmet{Enchantments:[{id:"minecraft:protection",lvl:5s},{id:"minecraft:unbreaking",lvl:4s}]}
 item replace entity @s[team=switch.temp.civil] armor.chest with leather_chestplate{Enchantments:[{id:"minecraft:fire_protection",lvl:4s},{id:"minecraft:unbreaking",lvl:4s}]}
 item replace entity @s[team=switch.temp.civil] armor.legs with leather_leggings{Enchantments:[{id:"minecraft:protection",lvl:4s},{id:"minecraft:unbreaking",lvl:4s}]}
@@ -22,9 +21,5 @@ effect give @s[team=switch.temp.king] resistance infinite 2 true
 effect give @s[team=switch.temp.king] speed infinite 0 true
 effect give @s[team=switch.temp.king] health_boost infinite 1 true
 
-
-effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
-xp set @s 0 levels
-xp set @s 0 points
 

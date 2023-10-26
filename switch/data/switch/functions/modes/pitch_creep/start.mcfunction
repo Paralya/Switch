@@ -1,22 +1,11 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
 team join switch.no_pvp @a
 scoreboard players set @a switch.alive 1
-
-kill @e[type=creeper]
-kill @e[type=item]
-kill @e[type=arrow]
 
 effect give @a saturation infinite 255 true
 effect give @a regeneration 5 255 true
 effect give @a weakness infinite 2 true
-difficulty normal
 time set 18000
-weather clear
 
 gamerule showDeathMessages false
 gamerule naturalRegeneration false
@@ -33,6 +22,5 @@ scoreboard players set #remaining_time switch.data 95
 scoreboard players set #pitch_creep_seconds switch.data -5
 scoreboard players set #pitch_creep_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
-
 scoreboard objectives add switch.temp.deathCount deathCount
 

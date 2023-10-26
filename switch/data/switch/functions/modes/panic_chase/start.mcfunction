@@ -1,29 +1,12 @@
 
-## Fonction executée lors du lancement de la partie
-
-kill @e[type=!player,type=!marker]
-kill @e[type=!player,type=!marker]
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
-
 effect give @a saturation infinite 255 true
 effect give @a resistance 15 255 true
-effect give @a regeneration 10 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
 function switch:choose_map_for/panic_chase
 
 gamerule fallDamage false
-gamerule naturalRegeneration false
 
 tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 15 secondes !\n"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s

@@ -1,21 +1,7 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
-
-kill @e[type=!player]
-kill @e[type=!player]
-
 effect give @a saturation infinite 255 true
 effect give @a resistance infinite 255 true
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 gamerule fallDamage false
 
@@ -34,6 +20,5 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"red"}
 scoreboard objectives setdisplay sidebar switch.temp.points
 
-# Give Items
 execute as @a run function switch:modes/coin_chaser/give_items
 

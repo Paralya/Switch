@@ -1,29 +1,8 @@
 
-## Fonction executée lors du lancement de la partie
-
-kill @e[type=!player]
-kill @e[type=!player]
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team leave @a
 scoreboard players set @a switch.alive 1
-
-kill @e[type=item]
-kill @e[type=arrow]
-
-effect give @a saturation 10 255 true
-effect give @a regeneration 10 255 true
-effect give @a weakness 5 255 true
-effect give @a blindness 5 255 true
+effect give @a saturation infinite 255 true
 effect give @a slowness 5 255 true
-difficulty normal
-time set 0
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-execute if predicate switch:chance/0.33 run time add 6000
-weather clear
+function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
 scoreboard players set #is_adventure switch.data 1

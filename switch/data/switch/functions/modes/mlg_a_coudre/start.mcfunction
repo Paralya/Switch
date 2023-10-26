@@ -1,6 +1,4 @@
 
-## Fonction executée lors du lancement de la partie
-
 clear @a
 effect clear @a
 gamemode spectator @a

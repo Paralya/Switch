@@ -1,26 +1,13 @@
 
-## Fonction executée lors du lancement de la partie
-
-clear @a
-effect clear @a
-gamemode adventure @a
-team join switch.no_pvp @a
 scoreboard players set @a switch.alive 1
 tag @a remove switch.looser
-
 tp @a 1 101 1
 effect give @a saturation infinite 255 true
-effect give @a regeneration infinite 255 true
-effect give @a weakness infinite 2 true
+effect give @a weakness infinite 255 true
 effect give @a night_vision infinite 255 true
+function switch:utils/set_dynamic_time
 
-difficulty peaceful
-time set 18000
-weather clear
-
-gamerule mobGriefing false
 gamerule showDeathMessages false
-gamerule naturalRegeneration false
 gamerule keepInventory true
 
 ## Placement de la map et des joueurs

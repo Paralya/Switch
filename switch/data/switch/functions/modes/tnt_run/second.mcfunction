@@ -1,6 +1,4 @@
 
-## Fonction executée toutes les secondes lorsque le mode de jeu est activé
-
 # Classic timer
 scoreboard players add #tnt_run_seconds switch.data 1
 function switch:modes/tnt_run/xp_bar
