@@ -14,7 +14,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main t
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "paralya_lobby_noel"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "vilarles_castillo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "zonweeb_highschool"
-execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "hider_mansion"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "nuketown_no_barrier"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "sky_island_tower"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "sprucy_village"
