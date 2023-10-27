@@ -6,6 +6,8 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
 function switch:utils/set_dynamic_time
 
+gamerule fallDamage false
+
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/pitchout
