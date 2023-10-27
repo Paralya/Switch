@@ -1,6 +1,6 @@
 
 # Go down until a block is found
-tp @s ~ ~-0.5 ~
+tp @s ~ ~-0.25 ~
 execute unless block ~ ~-1 ~ air run function switch:utils/safe_kill
 
 # If the sheep is hurt, kill it and call the reward function to the player

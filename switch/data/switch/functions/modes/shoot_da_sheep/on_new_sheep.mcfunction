@@ -27,6 +27,6 @@ execute if score #color switch.data matches 15 run data modify entity @s CustomN
 data modify entity @s CustomNameVisible set value 1b
 
 # Spreadplayer
-spreadplayers ~ ~ 20 20 false @s
+spreadplayers ~ ~ 10 10 false @s
 execute at @s run tp @s ~ ~-5 ~
 

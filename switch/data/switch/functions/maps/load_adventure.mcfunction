@@ -27,4 +27,5 @@ execute if data storage switch:main {map:"boat_race_2"} run function switch:maps
 # Fish the pig (76000)
 execute if data storage switch:main {map:"block_party"} run function switch:maps/adventure/block_party/
 execute if data storage switch:main {map:"gay_shooter"} run function switch:maps/adventure/gay_shooter/
+execute if data storage switch:main {map:"shoot_da_sheep"} run function switch:maps/adventure/shoot_da_sheep/
 
