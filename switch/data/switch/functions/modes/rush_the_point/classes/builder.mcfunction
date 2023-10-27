@@ -38,6 +38,7 @@ item replace entity @s hotbar.5 with ravager_spawn_egg{CanPlaceOn:["#switch:rush
 item replace entity @s hotbar.6 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.7 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.8 from block 0 0 0 container.6
+attribute @s generic.attack_speed base set 2048
 
 setblock 0 0 0 air
 

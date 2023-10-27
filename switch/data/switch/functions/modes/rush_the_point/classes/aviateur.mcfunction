@@ -32,6 +32,7 @@ item replace entity @s hotbar.2 with cut_sandstone{CanPlaceOn:["#switch:rush_the
 item replace entity @s hotbar.6 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.7 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.8 from block 0 0 0 container.5
+attribute @s generic.attack_speed base set 2048
 
 setblock 0 0 0 air
 
