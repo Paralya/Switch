@@ -9,7 +9,6 @@ execute if score #s_survival_boat_red switch.data matches 5 run tp @s 79055 126 
 execute if score #s_survival_boat_red switch.data matches 6 run tp @s 79059 127 79032 0 0
 execute if score #s_survival_boat_red switch.data matches 7 run tp @s 79050 126 79039 0 0
 execute if score #s_survival_boat_red switch.data matches 8 run tp @s 79073 128 79039 0 0
-execute if score #s_survival_boat_red switch.data matches 9 run tp @s 79052 155 79030 0 0
 
-execute if score #s_survival_boat_red switch.data matches 9.. run scoreboard players set #s_survival_boat_red switch.data 0
+execute if score #s_survival_boat_red switch.data matches 8.. run scoreboard players set #s_survival_boat_red switch.data 0
 
