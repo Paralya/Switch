@@ -36,6 +36,7 @@
 		"switch:modes/panic_chase/calls/joined",
 		"switch:modes/simultaneous_jump/calls/joined",
 		"switch:modes/bombardement/calls/joined",
+		"switch:modes/shoot_da_sheep/calls/joined",
 		"switch:modes/twittos_de_merde/calls/joined"
 	]
 }

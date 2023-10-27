@@ -36,6 +36,7 @@
 		"switch:modes/panic_chase/calls/second",
 		"switch:modes/simultaneous_jump/calls/second",
 		"switch:modes/bombardement/calls/second",
+		"switch:modes/shoot_da_sheep/calls/second",
 		"switch:modes/twittos_de_merde/calls/second"
 	]
 }

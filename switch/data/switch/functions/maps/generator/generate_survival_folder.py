@@ -263,7 +263,7 @@ generate_clone_survival_folder("spruce_dojo", (84000, 0, 84000), (84083, 35, 840
 generate_clone_survival_folder("highland_mansion", (85000, 0, 85000), (85150, 72, 85142), 100, override_tp_coords = (None), has_doors = True)
 generate_clone_survival_folder("sakura_house", (86000, 0, 86000), (86121, 94, 86135), 100, override_tp_coords = (86072, 117, 86100))
 generate_clone_survival_folder("red_temple", (87000, 0, 87000), (87045, 40, 87094), 100, override_tp_coords = (87023, 110, 87058), has_doors = True)
-generate_clone_survival_folder("nature_house", (88000, 0, 88000), (88068, 32, 88068), 100, override_tp_coords = (88039, 110, 88033), has_doors = True)
+generate_clone_survival_folder("nature_house", (88000, 0, 88000), (88068, 98, 88068), 100, override_tp_coords = (88039, 110, 88033), has_doors = True)
 generate_clone_survival_folder("flower_village", (89000, 0, 89000), (89422, 94, 89532), 100, override_tp_coords = (89311, 116, 89291), has_doors = True)
 generate_clone_survival_folder("japanese_village", (90000, 0, 90000), (90224, 81, 90286), 100, override_tp_coords = (90106, 116, 90167), has_doors = True)
 generate_clone_survival_folder("whity_lab", (91000, 0, 91000), (91102, 87, 91102), 100, override_tp_coords = (91051, 112, 91051))
