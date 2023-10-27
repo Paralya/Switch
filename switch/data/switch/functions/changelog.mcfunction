@@ -25,5 +25,8 @@ tellraw @s [{"text":"[2023/10/22] ","color":"dark_aqua"},{"text":"Moutron : glas
 # 2023/10/26
 tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Rush The Flag","color":"green"}]
 tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Bombardement","color":"white"}]
+
+# 2023/10/27
+tellraw @s [{"text":"[2023/10/27] ","color":"dark_aqua"},{"text":"Panic Chase : Nouvelle map 'nether_storm'","color":"green"}]
 tellraw @s ""
 

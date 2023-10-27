@@ -292,6 +292,7 @@ generate_clone_survival_folder("remelta_cluedo", (118000, 0, 118000), (118089, 4
 generate_clone_survival_folder("arti_box", (119000, 0, 119000), (119047, 34, 119047), 100, override_tp_coords = (119024, 109, 119023), has_doors = True)
 generate_clone_survival_folder("pitch_creep_nether", (120000, 0, 120000), (120037, 16, 120020), 100, override_tp_coords = (120019, 115, 120010))
 generate_clone_survival_folder("bombardement", (121000, 0, 121000), (121115, 77, 121087), 100, override_tp_coords = (121057, 110, 121064))
+generate_clone_survival_folder("nether_storm", (122000, 0, 122000), (122068, 49, 122074), 100, override_tp_coords = (122034, 119, 122037), has_doors = True)
 
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
