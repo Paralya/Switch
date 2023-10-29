@@ -42,5 +42,5 @@ execute if score #random switch.data matches 6 run tellraw @a[tag=!detached] {"t
 execute if score #random switch.data matches 7 run tellraw @a[tag=!detached] {"text":"[20s de slow falling pour son équipe]\n","color":"aqua"}
 
 # Playsound
-execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
+execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 0.5
 

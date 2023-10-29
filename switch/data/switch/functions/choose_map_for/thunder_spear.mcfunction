@@ -24,7 +24,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main t
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "sakura_house"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "japanese_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "snowy_village"
-execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "lg_medieval"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "lightium_spawn"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "paralya_lobby"
 execute if score #mc switch.data matches 0 run data modify storage switch:main thunder_spear_maps append value "sheepwars_dirigeables"
