@@ -1,6 +1,7 @@
 
 # If just died, teleport to the death pos, else teleport back to the map
-execute store success score #success switch.data if score @s switch.last_death matches ..5 if score @s switch.reconnect = #score switch.reconnect
+scoreboard players set #success switch.data 0
+execute if score @s switch.last_death matches ..5 if score @s switch.reconnect = #score switch.reconnect run function switch:utils/death_tp
 execute if score #success switch.data matches 1 run function switch:utils/death_tp
 execute unless score #success switch.data matches 1 at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 

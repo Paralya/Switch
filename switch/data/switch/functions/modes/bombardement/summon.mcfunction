@@ -11,7 +11,7 @@ execute positioned 121057 132 121026 run playsound entity.generic.explode ambien
 
 # Get a random position
 summon marker 121057 109 121064 {Tags:["switch.temp"]}
-execute as @e[type=marker,tag=switch.temp] at @s run spreadplayers ~ ~ 0 10 under 150 false @s
+execute as @e[type=marker,tag=switch.temp] at @s run spreadplayers ~ ~ 0 15 under 150 false @s
 
 # Face the random position
 execute as @e[type=armor_stand,tag=switch.new] at @s facing entity @e[type=marker,tag=switch.temp] feet run tp @s ^ ^ ^1 ~ ~

@@ -5,6 +5,7 @@ execute as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if blo
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/creeper_apocalypse/death
 
 # Creeper stuff
+stopsound @a * entity.generic.explode
 effect give @e[type=creeper] resistance infinite 0 true
 execute as @e[type=area_effect_cloud] at @s run function switch:modes/creeper_apocalypse/creeper_exploded
 execute as @e[type=creeper] run scoreboard players add @e[type=creeper,sort=random,limit=1] switch.temp.duplication 1
