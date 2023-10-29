@@ -11,5 +11,5 @@ execute as @a[tag=switch.has_red_flag] run function switch:modes/rush_the_flag/f
 # Détection de fin de partie
 execute if score #remaining_time switch.data matches 1.. if score #red_points switch.data matches 5.. run scoreboard players set #remaining_time switch.data 0
 execute if score #remaining_time switch.data matches 1.. if score #blue_points switch.data matches 5.. run scoreboard players set #remaining_time switch.data 0
-execute if score #remaining_time switch.data matches 0 run function switch:modes/rush_the_flag/process_end
+execute if score #remaining_time switch.data matches ..0 run function switch:modes/rush_the_flag/process_end
 
