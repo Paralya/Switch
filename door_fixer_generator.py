@@ -23,6 +23,8 @@ door_types = [
 door_states = {
     "facing": ["north", "east", "south", "west"],
     "half": ["upper", "lower"],
+	"hinge": ["left", "right"],
+	"open": ["true", "false"]
 }
 
 

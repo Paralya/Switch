@@ -384,4 +384,84 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	f.close()
 	return None
 
+def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, splitted_coordinates: list) -> None:
+	""" Creates the "scan_doors.mcfunction" file
+	It acts almost like the regeneration file
+	Args:
+		name (str)					: The name of the map
+		start_pos (tuple)			: The start position of the regeneration area
+		end_pos (tuple)				: The end position of the regeneration area
+		paste_start_height (int)	: The height where the map is pasted
+		splitted_coordinates (list)	: The splitted coordinates of the regeneration area
+
+	Returns:
+		None
+	"""
+	base_cond = f"execute if score #scan_{name} switch.data matches"
+	with open(f"survival/{name}/scan_doors.mcfunction", "w") as f:
+
+		# Write the first lines
+		f.write("\n")
+		f.write(f"scoreboard players add #scan_{name} switch.data 1\n")
+
+		# Write the forceload commands
+		for x1, x2, z1, z2 in splitted_coordinates:
+			f.write(f"{base_cond} 1 run forceload add {x1} {x2} {z1} {z2}\n")
+
+		# Init values
+		blocks_per_second = 5000
+		total_blocks_to_scan = (end_pos[0] - start_pos[0] - 1) * (end_pos[1] - start_pos[1] - 1) * (end_pos[2] - start_pos[2] - 1)
+		total_loops = total_blocks_to_scan // blocks_per_second
+		if (total_blocks_to_scan % blocks_per_second) > 0:
+			total_loops += 1
+		f.write(f"""
+{base_cond} 1 run data modify storage switch:maps to_regenerate.{name} set value 2b
+{base_cond} 1 run scoreboard players set #start_x_{name} switch.data {start_pos[0] + 1}
+{base_cond} 1 run scoreboard players set #start_y_{name} switch.data {start_pos[1] + 1}
+{base_cond} 1 run scoreboard players set #start_z_{name} switch.data {start_pos[2] + 1}
+{base_cond} 1 run scoreboard players set #end_x_{name} switch.data {end_pos[0] - 1}
+{base_cond} 1 run scoreboard players set #end_y_{name} switch.data {end_pos[1] - 1}
+{base_cond} 1 run scoreboard players set #end_z_{name} switch.data {end_pos[2] - 1}
+{base_cond} 1 run scoreboard players operation #curr_x_{name} switch.data = #start_x_{name} switch.data
+{base_cond} 1 run scoreboard players operation #curr_y_{name} switch.data = #start_y_{name} switch.data
+{base_cond} 1 run scoreboard players operation #curr_z_{name} switch.data = #start_z_{name} switch.data
+{base_cond} 1 run data modify storage switch:doors {name} set value []
+
+""")
+		
+		# Launch the scan on the next block
+		delay = 30
+		f.write(f"{base_cond} {delay}.. run scoreboard players set #blocks_in_loop switch.data {blocks_per_second}\n")
+		f.write(f"{base_cond} {delay}.. summon marker run function switch:maps/survival/{name}/scan_doors_on_marker\n")
+
+		# Finish scan
+		for x1, x2, z1, z2 in splitted_coordinates:
+			f.write(f"\n{base_cond} {total_loops + 30} run forceload remove {x1} {x2} {z1} {z2}")
+		f.write(f"""
+{base_cond} {total_loops + 30} run tellraw @a[tag=!detached] ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map '","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"' vient de finir de scanner ses portes en ","color":"yellow"}},{{"text":"{(total_loops + 30) // 20}","color":"gold"}},{{"text":"s","color":"yellow"}}]
+{base_cond} {total_loops + 30} run data remove storage switch:maps to_regenerate.{name}
+{base_cond} {total_loops + 30} run scoreboard players reset #scan_{name} switch.data
+
+{base_cond} 1.. run schedule function switch:maps/survival/{name}/scan_doors 1t
+
+""")
+
+	# Create the "scan_doors_on_marker.mcfunction" file
+	with open(f"survival/{name}/scan_doors_on_marker.mcfunction", "w") as f:
+		f.write(f"""
+execute store result entity @s Pos[0] double 1 run scoreboard players get #curr_x_{name} switch.data
+execute store result entity @s Pos[1] double 1 run scoreboard players get #curr_y_{name} switch.data
+execute store result entity @s Pos[2] double 1 run scoreboard players get #curr_z_{name} switch.data
+scoreboard players add #curr_x_{name} switch.data 1
+execute if score #curr_x_{name} switch.data > #end_x_{name} switch.data run scoreboard players add #curr_y_{name} switch.data 1
+execute if score #curr_x_{name} switch.data > #end_x_{name} switch.data run scoreboard players operation #curr_x_{name} switch.data = #start_x_{name} switch.data
+execute if score #curr_y_{name} switch.data > #end_y_{name} switch.data run scoreboard players add #curr_z_{name} switch.data 1
+execute if score #curr_y_{name} switch.data > #end_y_{name} switch.data run scoreboard players operation #curr_y_{name} switch.data = #start_y_{name} switch.data
+execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {{name:"{name}",additional_height:{paste_start_height - start_pos[1]}}}
+
+scoreboard players remove #blocks_in_loop switch.data 1
+execute if score #blocks_in_loop switch.data matches 1.. if score #curr_z_{name} switch.data < #end_z_{name} switch.data run function switch:maps/survival/{name}/scan_doors_on_marker
+kill @s
+
+""")
 
