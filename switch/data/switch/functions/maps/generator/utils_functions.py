@@ -301,6 +301,9 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	f.write(f"{base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\": \"La map `{name}` a fini sa regeneration !\"}}'\n")
 	f.write(f"{base_condition} {last_tick}.. run function switch:engine/log_message/apply\n")
 
+	# Write the door regeneration command
+	f.write(f"{base_condition} {last_tick}.. run function switch:maps/regenerate_doors_macro {{name:\"{name}\"}}\n")
+
 	# Write the reset command
 	f.write(f"{base_condition} {last_tick}.. run scoreboard players reset #rg_{name} switch.data\n")
 
