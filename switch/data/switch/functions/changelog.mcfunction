@@ -29,5 +29,8 @@ tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode d
 # 2023/10/27
 tellraw @s [{"text":"[2023/10/27] ","color":"dark_aqua"},{"text":"Panic Chase : Nouvelle map 'nether_storm'","color":"green"}]
 tellraw @s [{"text":"[2023/10/27] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Shoot Da'Sheep","color":"white"}]
+
+# 2023/11/01
+tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : MiniGolf","color":"green"}]
 tellraw @s ""
 

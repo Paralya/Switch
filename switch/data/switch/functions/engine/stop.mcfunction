@@ -22,6 +22,9 @@ gamerule showDeathMessages true
 gamerule naturalRegeneration true
 gamerule keepInventory false
 gamerule fallDamage true
+gamerule fireDamage true
+gamerule drowningDamage true
+gamerule freezeDamage true
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 gamerule doMobSpawning false
