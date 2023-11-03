@@ -23,10 +23,21 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.role dummy
 scoreboard objectives setdisplay list switch.health
 
+# Scoreboard permanents
+scoreboard objectives add switch.games_not_being_murderer dummy
+scoreboard objectives add switch.games_not_being_detective dummy
+execute as @a[tag=!detached] unless score @s switch.games_not_being_murderer matches 1.. run scoreboard players set @s switch.games_not_being_murderer 1
+execute as @a[tag=!detached] unless score @s switch.games_not_being_detective matches 1.. run scoreboard players set @s switch.games_not_being_detective 1
+
+# Title actionbar de leur pourcentage de chance
+scoreboard players set #total_murderer switch.data 0
+scoreboard players set #total_detective switch.data 0
+scoreboard players operation #total_murderer switch.data += @a[tag=!detached] switch.games_not_being_murderer
+scoreboard players operation #total_detective switch.data += @a[tag=!detached] switch.games_not_being_detective
+execute as @a[tag=!detached] run function switch:modes/murder_mystery/percentage/title
+
 # Choix du murder et du detective
-scoreboard players set @a[tag=!detached] switch.temp.role 1
-scoreboard players set @r[tag=!detached] switch.temp.role 2
-scoreboard players set @r[scores={switch.temp.role=1}] switch.temp.role 3
+function switch:modes/murder_mystery/percentage/select_roles
 
 # Hide nametags
 team add switch.temp
