@@ -10,9 +10,9 @@ execute as @a[scores={switch.temp.role=1}] run function switch:modes/murder_myst
 
 # Choose a random ID from the list
 data modify storage switch:temp input set value {index:0}
-execute store result #modulo_rand switch.data run data get storage switch:temp list
+execute store result score #modulo_rand switch.data run data get storage switch:temp list
 function switch:utils/get_random/
-execute store result storage switch:temp input.index run scoreboard players get #random switch.data
+execute store result storage switch:temp input.index int 1 run scoreboard players get #random switch.data
 scoreboard players set #choosen_id switch.data 0
 function switch:modes/murder_mystery/percentage/get_id_from_list with storage switch:temp input
 execute as @a[scores={switch.temp.role=1}] if score @s switch.id = #choosen_id switch.data run scoreboard players set @s switch.temp.role 2
@@ -25,9 +25,9 @@ execute as @a[scores={switch.temp.role=1}] run function switch:modes/murder_myst
 
 # Choose a random ID from the list
 data modify storage switch:temp input set value {index:0}
-execute store result #modulo_rand switch.data run data get storage switch:temp list
+execute store result score #modulo_rand switch.data run data get storage switch:temp list
 function switch:utils/get_random/
-execute store result storage switch:temp input.index run scoreboard players get #random switch.data
+execute store result storage switch:temp input.index int 1 run scoreboard players get #random switch.data
 scoreboard players set #choosen_id switch.data 0
 function switch:modes/murder_mystery/percentage/get_id_from_list with storage switch:temp input
 execute as @a[scores={switch.temp.role=1}] if score @s switch.id = #choosen_id switch.data run scoreboard players set @s switch.temp.role 3
