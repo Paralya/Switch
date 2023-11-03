@@ -8,6 +8,6 @@ execute as @a[tag=!detached,gamemode=adventure] at @s run function switch:modes/
 
 item replace entity @a[tag=!detached] hotbar.0 with snowball 16
 
-execute unless entity @a[tag=!detached,scores={switch.alive=1..}] run function switch:modes/warden_escape/process_end
+execute unless entity @a[scores={switch.alive=1..}] run function switch:modes/warden_escape/process_end
 execute if score #remaining_time switch.data matches 0 run function switch:modes/warden_escape/process_end
 

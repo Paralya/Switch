@@ -1,7 +1,7 @@
 
 
 
-execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_money
+execute if score #process_end switch.data matches 1 as @a[scores={switch.alive=1..}] at @s run function switch:engine/add_money
 
 
 

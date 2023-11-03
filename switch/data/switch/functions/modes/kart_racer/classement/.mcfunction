@@ -10,17 +10,17 @@ execute as @a[tag=!detached] run function switch:modes/kart_racer/classement/try
 
 
 # Attribution des places
-team join switch.temp.1 @a[tag=!detached,scores={switch.temp.classement=1}]
-team join switch.temp.2 @a[tag=!detached,scores={switch.temp.classement=2}]
-team join switch.temp.3 @a[tag=!detached,scores={switch.temp.classement=3}]
-team join switch.temp.4 @a[tag=!detached,scores={switch.temp.classement=4}]
-team join switch.temp.5 @a[tag=!detached,scores={switch.temp.classement=5}]
-team join switch.temp.6 @a[tag=!detached,scores={switch.temp.classement=6}]
-team join switch.temp.7 @a[tag=!detached,scores={switch.temp.classement=7}]
-team join switch.temp.8 @a[tag=!detached,scores={switch.temp.classement=8}]
-team join switch.temp.9 @a[tag=!detached,scores={switch.temp.classement=9}]
-team join switch.temp.10 @a[tag=!detached,scores={switch.temp.classement=10}]
-team join switch.temp.10+ @a[tag=!detached,scores={switch.temp.classement=11..}]
+team join switch.temp.1 @a[scores={switch.temp.classement=1}]
+team join switch.temp.2 @a[scores={switch.temp.classement=2}]
+team join switch.temp.3 @a[scores={switch.temp.classement=3}]
+team join switch.temp.4 @a[scores={switch.temp.classement=4}]
+team join switch.temp.5 @a[scores={switch.temp.classement=5}]
+team join switch.temp.6 @a[scores={switch.temp.classement=6}]
+team join switch.temp.7 @a[scores={switch.temp.classement=7}]
+team join switch.temp.8 @a[scores={switch.temp.classement=8}]
+team join switch.temp.9 @a[scores={switch.temp.classement=9}]
+team join switch.temp.10 @a[scores={switch.temp.classement=10}]
+team join switch.temp.10+ @a[scores={switch.temp.classement=11..}]
 
 
 # Repositionnement des joueurs selon leur place dans le scoreboard sidebar

@@ -3,7 +3,7 @@ scoreboard players set @s switch.temp.vote_collisions 1
 
 scoreboard players set #votes switch.data 0
 scoreboard players set #votes_max switch.data 0
-execute store result score #votes switch.data if entity @a[tag=!detached,scores={switch.temp.vote_collisions=1}]
+execute store result score #votes switch.data if entity @a[scores={switch.temp.vote_collisions=1}]
 execute store result score #votes_max switch.data if entity @a[tag=!detached,gamemode=!spectator]
 scoreboard players operation #votes_max switch.data /= #2 switch.data
 scoreboard players add #votes_max switch.data 1

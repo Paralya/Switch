@@ -18,6 +18,6 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute unless entity @a[tag=!detached,scores={switch.alive=1..}] unless score #rtb_round_state switch.data matches 9 run function switch:modes/replicate_the_build/process_end
+execute unless entity @a[scores={switch.alive=1..}] unless score #rtb_round_state switch.data matches 9 run function switch:modes/replicate_the_build/process_end
 #execute if score #replicate_the_build_seconds switch.data matches 600.. run function switch:modes/replicate_the_build/process_end
 

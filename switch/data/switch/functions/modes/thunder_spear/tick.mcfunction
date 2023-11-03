@@ -13,8 +13,8 @@ kill @e[type=item]
 # Auto reload system
 item replace entity @a[tag=!detached] inventory.0 with arrow 1
 scoreboard players add @a[tag=!detached] switch.temp.reload 1
-execute as @a[tag=!detached,scores={switch.temp.reload=40..}] run item replace entity @s hotbar.0 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
-scoreboard players reset @a[tag=!detached,scores={switch.temp.reload=40..}] switch.temp.reload
+execute as @a[scores={switch.temp.reload=40..}] run item replace entity @s hotbar.0 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
+scoreboard players reset @a[scores={switch.temp.reload=40..}] switch.temp.reload
 
 # Summon tnt to arrows on ground and remove them
 execute as @e[type=arrow,nbt={inBlockState:{}}] at @s run function switch:modes/thunder_spear/explode_arrow

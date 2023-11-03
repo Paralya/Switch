@@ -19,7 +19,7 @@ effect give @a[tag=!detached] weakness infinite 2 true
 effect give @a[tag=!detached] night_vision infinite 255 true
 
 #thème aléatoire a la fin du round
-execute unless entity @a[tag=!detached,scores={switch.temp.passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire
+execute unless entity @a[scores={switch.temp.passage_vote=0..1}] run function switch:modes/twittos_de_merde/theme_aleatoire
 scoreboard players set @a[tag=!detached] switch.temp.rating_vote 0
 
 #détermine quels sont les derniers

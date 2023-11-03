@@ -9,7 +9,7 @@ execute as @e[type=marker,tag=switch.build_battle_save,limit=1] at @s run functi
 
 # If there are remaining players, start the rating
 scoreboard players set @p[scores={switch.temp.to_rate=2}] switch.temp.to_rate 3
-execute if entity @a[tag=!detached,scores={switch.temp.to_rate=1}] run function switch:modes/build_battle/rating_time/next_rating
+execute if entity @a[scores={switch.temp.to_rate=1}] run function switch:modes/build_battle/rating_time/next_rating
 
 # Else, end the game
 execute if score #remaining_time switch.data matches 0 run function switch:modes/build_battle/process_end

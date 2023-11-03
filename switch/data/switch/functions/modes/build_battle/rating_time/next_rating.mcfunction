@@ -1,6 +1,6 @@
 
 # Remove tags and reset scores to make sure we don't have any leftovers
-scoreboard players reset @a[tag=!detached,scores={switch.temp.to_rate=2}] switch.temp.to_rate
+scoreboard players reset @a[scores={switch.temp.to_rate=2}] switch.temp.to_rate
 tag @e[tag=switch.marker_temp] remove switch.marker_temp
 
 # Find next player

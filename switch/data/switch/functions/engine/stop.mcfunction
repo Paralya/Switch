@@ -13,6 +13,7 @@ scoreboard objectives setdisplay list switch.stats.wins
 execute unless score #is_adventure switch.data matches 1 unless score #already_regenerated switch.data matches 1 run function switch:maps/regenerate_map
 scoreboard players reset #is_adventure switch.data
 
+scoreboard objectives setdisplay sidebar
 scoreboard players reset #disable switch.data
 scoreboard players reset * switch.alive
 gamerule maxCommandChainLength 1048576

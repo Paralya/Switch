@@ -20,7 +20,7 @@ execute if score #kart_racer_seconds switch.data matches 0.. run function switch
 
 # Détection de fin de partie
 execute if score #detect_end switch.data matches 0 if score #remaining_time switch.data matches 0 run scoreboard players set #detect_end switch.data 1
-execute if score #detect_end switch.data matches 0 unless entity @a[tag=!detached,scores={switch.alive=1}] run scoreboard players set #detect_end switch.data 1
+execute if score #detect_end switch.data matches 0 unless entity @a[scores={switch.alive=1}] run scoreboard players set #detect_end switch.data 1
 
 ## Classement
 function switch:modes/kart_racer/classement/
