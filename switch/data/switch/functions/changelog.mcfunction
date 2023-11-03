@@ -32,5 +32,8 @@ tellraw @s [{"text":"[2023/10/27] ","color":"dark_aqua"},{"text":"Nouveau mode d
 
 # 2023/11/01
 tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : MiniGolf","color":"green"}]
+
+# 2023/11/03
+tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : la map 'new_grounds' peut maintenant être choisie !","color":"white"}]
 tellraw @s ""
 

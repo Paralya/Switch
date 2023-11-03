@@ -25,7 +25,7 @@ scoreboard objectives setdisplay list switch.health
 
 # Choix du murder et du detective
 scoreboard players set @a[tag=!detached] switch.temp.role 1
-scoreboard players set @r switch.temp.role 2
+scoreboard players set @r[tag=!detached] switch.temp.role 2
 scoreboard players set @r[scores={switch.temp.role=1}] switch.temp.role 3
 
 # Hide nametags
