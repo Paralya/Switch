@@ -5,8 +5,8 @@ loot replace entity @s hotbar.0 loot switch:get_username
 # Get last record on the map (shots and time)
 scoreboard players set #record switch.data 100000
 scoreboard players set #time switch.data 100000
-$execute store result score #record switch.data run data get storage switch:records minigolf.$(current_map).shots
-$execute store result score #time switch.data run data get storage switch:records minigolf.$(current_map).time
+$execute if data storage switch:records minigolf.$(current_map) store result score #record switch.data run data get storage switch:records minigolf.$(current_map).shots
+$execute if data storage switch:records minigolf.$(current_map) store result score #time switch.data run data get storage switch:records minigolf.$(current_map).time
 
 # Check if it's better
 execute if score #min switch.data < #record switch.data run scoreboard players set #new_record switch.data 1

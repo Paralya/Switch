@@ -4,8 +4,8 @@ scoreboard players add #process_end switch.data 1
 # Get the winner (the player with the less shots)
 execute if score #process_end switch.data matches 1 run tag @a[tag=!detached] remove switch.winner
 execute if score #process_end switch.data matches 1 run scoreboard players set #min switch.data 1000000
-execute if score #process_end switch.data matches 1 run scoreboard players operation #min switch.data < @a[tag=!detached] golf_ball.shots
-execute if score #process_end switch.data matches 1 as @a[tag=!detached] if score @s golf_ball.shots = #min switch.data run tag @s add switch.winner
+execute if score #process_end switch.data matches 1 run scoreboard players operation #min switch.data < @a[tag=!detached,scores={golf_ball.shots=1..}] golf_ball.shots
+execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={golf_ball.shots=1..}] if score @s golf_ball.shots = #min switch.data run tag @s add switch.winner
 
 # Give the winner money and tellraw
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_money
