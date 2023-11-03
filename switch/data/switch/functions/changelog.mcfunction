@@ -36,5 +36,6 @@ tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Nouveau mode d
 # 2023/11/03
 tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : la map 'new_grounds' peut maintenant être choisie !","color":"white"}]
 tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : les rôles dépendent maintenant d'un pourcentage de chance visible en début de partie","color":"green"}]
+tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Traitors Game : des lootboxes vont apparaitres aléatoirement sur la map à certains moments de la partie","color":"green"}]
 tellraw @s ""
 

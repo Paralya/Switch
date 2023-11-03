@@ -7,5 +7,12 @@ execute if score #traitors_game_seconds switch.data matches 0 run function switc
 execute if score #traitors_game_seconds switch.data matches 90 run tellraw @a[scores={switch.temp.role=1}] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Voici l'identité d'un traitre : "},{"selector":"@a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6},sort=random,limit=1]","color":"green"},{"text":" !"}]
 execute if score #traitors_game_seconds switch.data matches 180 run tellraw @a[scores={switch.temp.role=1}] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Voici l'identité d'un traitre : "},{"selector":"@a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6},sort=random,limit=1]","color":"green"},{"text":" !"}]
 
-execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..50] run effect give @s glowing 2 0 true
+# Lootboxes summon
+execute if score #traitors_game_seconds switch.data matches 30 run function switch:modes/traitors_game/summon_lootboxes
+execute if score #traitors_game_seconds switch.data matches 90 run function switch:modes/traitors_game/summon_lootboxes
+execute if score #traitors_game_seconds switch.data matches 150 run function switch:modes/traitors_game/summon_lootboxes
+
+execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..48] run effect give @s glowing 2 0 true
+execute as @e[type=chest_minecart] at @s if entity @a[tag=!detached,gamemode=survival,distance=0.1..24] run data modify entity @s Glowing set value 0b
+execute as @e[type=chest_minecart] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..24] run data modify entity @s Glowing set value 1b
 
