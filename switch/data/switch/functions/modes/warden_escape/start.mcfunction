@@ -3,7 +3,7 @@ scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
-function switch:utils/set_dynamic_time
+time set 18000
 
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
