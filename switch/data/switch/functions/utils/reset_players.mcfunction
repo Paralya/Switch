@@ -6,6 +6,8 @@ execute as @a[tag=!detached] run attribute @s generic.attack_speed base set 4.0
 execute as @a[tag=!detached] run attribute @s generic.movement_speed base set 0.1
 execute as @a[tag=!detached] run attribute @s generic.armor_toughness base set 0.0
 execute as @a[tag=!detached] run attribute @s generic.attack_damage base set 1.0
+execute as @a[tag=!detached] run attribute @s minecraft:generic.movement_speed modifier remove 1-1-1-1-1
+execute as @a[tag=!detached] run attribute @s minecraft:generic.max_health modifier remove 1-1-1-1-2
 
 # Gamemode
 execute unless score #set_spec switch.data matches 1 run gamemode adventure @a[tag=!detached]

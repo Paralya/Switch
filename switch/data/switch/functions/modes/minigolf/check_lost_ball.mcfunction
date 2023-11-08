@@ -9,5 +9,7 @@ execute if score #finished switch.data matches 1 run scoreboard players operatio
 execute if score #finished switch.data matches 0 run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" a abandonné !"}]
 execute if score #finished switch.data matches 0 run scoreboard players reset @s golf_ball.shots
 execute if score #finished switch.data matches 0 run scoreboard players reset @s switch.alive
-execute if score #finished switch.data matches 0 run gamemode spectator @s
+
+# Spec
+gamemode spectator @s
 
