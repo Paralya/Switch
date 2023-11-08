@@ -32,3 +32,9 @@ scoreboard players set #choosen_id switch.data 0
 function switch:modes/murder_mystery/percentage/get_id_from_list with storage switch:temp input
 execute as @a[scores={switch.temp.role=1}] if score @s switch.id = #choosen_id switch.data run scoreboard players set @s switch.temp.role 3
 
+# Probabilities
+scoreboard players add @a[scores={switch.temp.role=1}] switch.games_not_being_detective 1
+scoreboard players add @a[scores={switch.temp.role=1}] switch.games_not_being_murderer 1
+scoreboard players reset @a[scores={switch.temp.role=2}] switch.games_not_being_detective 1
+scoreboard players reset @a[scores={switch.temp.role=3}] switch.games_not_being_murderer 1
+

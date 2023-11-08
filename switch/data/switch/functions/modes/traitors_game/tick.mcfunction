@@ -3,7 +3,7 @@ scoreboard players add #traitors_game_ticks switch.data 1
 
 tp @e[type=vex] 0 -10000 0
 kill @e[type=item,nbt={Item:{id:"minecraft:chest_minecart"}}]
-execute as @e[type=chest_minecart] unless data entity @s Items[0] run kill @s
+execute as @e[type=chest_minecart] unless data entity @s Items[0] unless data entity @s LootTable run kill @s
 execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/traitors_game/teleport_to_death
 execute as @a[tag=!detached,tag=switch.ninja_death] run function switch:modes/traitors_game/death/to_tp
 
