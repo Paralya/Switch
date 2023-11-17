@@ -1,5 +1,6 @@
 
 team join switch.no_pvp @a[tag=!detached]
+team modify switch.no_pvp seeFriendlyInvisibles false
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
