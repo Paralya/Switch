@@ -22,11 +22,11 @@ execute if score #vote_theme_2 switch.data = #max switch.data if score #index sw
 execute if score #vote_theme_3 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 3
 execute if score #vote_theme_4 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 4
 execute if score #vote_theme_5 switch.data = #max switch.data if score #index switch.data matches 1.. if predicate switch:chance/0.5 run scoreboard players set #index switch.data 5
-execute if score #index switch.data matches 1 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[0]
-execute if score #index switch.data matches 2 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[1]
-execute if score #index switch.data matches 3 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[2]
-execute if score #index switch.data matches 4 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[3]
-execute if score #index switch.data matches 5 run data modify storage switch:main current_theme set from storage switch:main choosed_themes[4]
+execute if score #index switch.data matches 1 run data modify storage switch:main current_theme set from storage switch:main themes.theme1
+execute if score #index switch.data matches 2 run data modify storage switch:main current_theme set from storage switch:main themes.theme2
+execute if score #index switch.data matches 3 run data modify storage switch:main current_theme set from storage switch:main themes.theme3
+execute if score #index switch.data matches 4 run data modify storage switch:main current_theme set from storage switch:main themes.theme4
+execute if score #index switch.data matches 5 run data modify storage switch:main current_theme set from storage switch:main themes.theme5
 
 # Tellraw start + playsound
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]

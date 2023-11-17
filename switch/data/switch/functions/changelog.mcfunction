@@ -36,6 +36,11 @@ tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Nouveau mode d
 # 2023/11/03
 tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : la map 'new_grounds' peut maintenant être choisie !","color":"white"}]
 tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : les rôles dépendent maintenant d'un pourcentage de chance visible en début de partie","color":"green"}]
-tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Traitors Game : des lootboxes vont apparaitres aléatoirement sur la map à certains moments de la partie","color":"green"}]
+tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Traitors Game : des lootboxes apparaissent maintenant aléatoirement sur la map à certains moments de la partie","color":"white"}]
+
+# 2023/11/17
+tellraw @s [{"text":"[2023/11/17] ","color":"dark_aqua"},{"text":"Build Battle : Affiche maintenant correctement le nombre de votes d'un thème en Lore\n+ Le même thème ne tombera plus plusieurs fois parmi les 5\n+ Les pseudos et le thème sont maintenant enregistrés avec les builds\n+ Les gens peuvent voter pour prolonger le temps de build","color":"green"}]
+
+# End of line
 tellraw @s ""
 

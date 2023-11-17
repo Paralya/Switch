@@ -17,30 +17,30 @@ execute if score #vote_theme_5 switch.data matches 1.. store result block 0 0 0 
 
 ## Change the paper Lore depending on their number of votes
 # 1
-data modify storage switch:main input set value {key1:"data modify block 0 0 0 Items[0].tag.display.Lore set value '[{\"text\":\"",key2:0,key3:"\",\"color\":\"aqua\",\"italic\":false},{\"text\":\" vote",key4:"",key5:"\",\"color\":\"gray\"}]'"}
-execute store result storage switch:main input.key2 int 1 run scoreboard players get #vote_theme_1 switch.data
-execute if score #vote_theme_1 switch.data matches 2.. run data modify storage switch:main input.key4 set value "s"
-function switch:utils/key_eval with storage switch:main input
+data modify storage switch:main input set value {Slot:0b, count:0, plurial:""}
+execute store result storage switch:main input.count int 1 run scoreboard players get #vote_theme_1 switch.data
+execute if score #vote_theme_1 switch.data matches 2.. run data modify storage switch:main input.plurial set value "s"
+function switch:modes/build_battle/preparation/display_themes_macro with storage switch:main input
 # 2
-data modify storage switch:main input set value {key1:"data modify block 0 0 0 Items[1].tag.display.Lore set value '[{\"text\":\"",key2:0,key3:"\",\"color\":\"aqua\",\"italic\":false},{\"text\":\" vote",key4:"",key5:"\",\"color\":\"gray\"}]'"}
-execute store result storage switch:main input.key2 int 1 run scoreboard players get #vote_theme_2 switch.data
-execute if score #vote_theme_2 switch.data matches 2.. run data modify storage switch:main input.key4 set value "s"
-function switch:utils/key_eval with storage switch:main input
+data modify storage switch:main input set value {Slot:1b, count:0, plurial:""}
+execute store result storage switch:main input.count int 1 run scoreboard players get #vote_theme_2 switch.data
+execute if score #vote_theme_2 switch.data matches 2.. run data modify storage switch:main input.plurial set value "s"
+function switch:modes/build_battle/preparation/display_themes_macro with storage switch:main input
 # 3
-data modify storage switch:main input set value {key1:"data modify block 0 0 0 Items[2].tag.display.Lore set value '[{\"text\":\"",key2:0,key3:"\",\"color\":\"aqua\",\"italic\":false},{\"text\":\" vote",key4:"",key5:"\",\"color\":\"gray\"}]'"}
-execute store result storage switch:main input.key2 int 1 run scoreboard players get #vote_theme_3 switch.data
-execute if score #vote_theme_3 switch.data matches 2.. run data modify storage switch:main input.key4 set value "s"
-function switch:utils/key_eval with storage switch:main input
+data modify storage switch:main input set value {Slot:2b, count:0, plurial:""}
+execute store result storage switch:main input.count int 1 run scoreboard players get #vote_theme_3 switch.data
+execute if score #vote_theme_3 switch.data matches 2.. run data modify storage switch:main input.plurial set value "s"
+function switch:modes/build_battle/preparation/display_themes_macro with storage switch:main input
 # 4
-data modify storage switch:main input set value {key1:"data modify block 0 0 0 Items[3].tag.display.Lore set value '[{\"text\":\"",key2:0,key3:"\",\"color\":\"aqua\",\"italic\":false},{\"text\":\" vote",key4:"",key5:"\",\"color\":\"gray\"}]'"}
-execute store result storage switch:main input.key2 int 1 run scoreboard players get #vote_theme_4 switch.data
-execute if score #vote_theme_4 switch.data matches 2.. run data modify storage switch:main input.key4 set value "s"
-function switch:utils/key_eval with storage switch:main input
+data modify storage switch:main input set value {Slot:3b, count:0, plurial:""}
+execute store result storage switch:main input.count int 1 run scoreboard players get #vote_theme_4 switch.data
+execute if score #vote_theme_4 switch.data matches 2.. run data modify storage switch:main input.plurial set value "s"
+function switch:modes/build_battle/preparation/display_themes_macro with storage switch:main input
 # 5
-data modify storage switch:main input set value {key1:"data modify block 0 0 0 Items[4].tag.display.Lore set value '[{\"text\":\"",key2:0,key3:"\",\"color\":\"aqua\",\"italic\":false},{\"text\":\" vote",key4:"",key5:"\",\"color\":\"gray\"}]'"}
-execute store result storage switch:main input.key2 int 1 run scoreboard players get #vote_theme_5 switch.data
-execute if score #vote_theme_5 switch.data matches 2.. run data modify storage switch:main input.key4 set value "s"
-function switch:utils/key_eval with storage switch:main input
+data modify storage switch:main input set value {Slot:4b, count:0, plurial:""}
+execute store result storage switch:main input.count int 1 run scoreboard players get #vote_theme_5 switch.data
+execute if score #vote_theme_5 switch.data matches 2.. run data modify storage switch:main input.plurial set value "s"
+function switch:modes/build_battle/preparation/display_themes_macro with storage switch:main input
 
 
 # Change the correct paper to a book

@@ -35,6 +35,6 @@ execute as @a[scores={switch.temp.role=1}] if score @s switch.id = #choosen_id s
 # Probabilities
 scoreboard players add @a[scores={switch.temp.role=1}] switch.games_not_being_detective 1
 scoreboard players add @a[scores={switch.temp.role=1}] switch.games_not_being_murderer 1
-scoreboard players reset @a[scores={switch.temp.role=2}] switch.games_not_being_detective 1
-scoreboard players reset @a[scores={switch.temp.role=3}] switch.games_not_being_murderer 1
+scoreboard players reset @a[scores={switch.temp.role=2}] switch.games_not_being_detective
+scoreboard players reset @a[scores={switch.temp.role=3}] switch.games_not_being_murderer
 
