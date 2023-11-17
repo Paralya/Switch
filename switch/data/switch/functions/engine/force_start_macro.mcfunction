@@ -13,5 +13,5 @@ scoreboard players reset #do_spreadplayers switch.data
 scoreboard players reset #is_adventure switch.data
 function switch:utils/reset_players
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
-function #switch:signals/start
+execute in minecraft:overworld run function #switch:signals/start
 
