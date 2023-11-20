@@ -41,6 +41,10 @@ tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Traitors Game 
 # 2023/11/17
 tellraw @s [{"text":"[2023/11/17] ","color":"dark_aqua"},{"text":"Build Battle : Affiche maintenant correctement le nombre de votes d'un thème en Lore\n+ Le même thème ne tombera plus plusieurs fois parmi les 5\n+ Les pseudos et le thème sont maintenant enregistrés avec les builds\n+ Les gens peuvent voter pour prolonger le temps de build","color":"green"}]
 
+# 2023/11/20
+tellraw @s [{"text":"[2023/11/20] ","color":"dark_aqua"},{"text":"Pitchout : nouvelle map type halloween","color":"white"}]
+
+
 # End of line
 tellraw @s ""
 

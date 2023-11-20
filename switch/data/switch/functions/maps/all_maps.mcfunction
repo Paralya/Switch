@@ -135,4 +135,5 @@
 #	122000	(survival)	: nether_storm
 ##	123000	(adventure)	: shoot_da_sheep
 ##	124000	(adventure)	: minigolf
+#	125000	(survival)	: pitchout_halloween
 
