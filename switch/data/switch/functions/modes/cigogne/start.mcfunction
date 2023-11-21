@@ -5,6 +5,8 @@ effect give @a[tag=!detached] weakness 10 255 true
 effect give @a[tag=!detached] saturation 10 255 true
 effect give @a[tag=!detached] resistance 10 255 true
 effect give @a[tag=!detached] regeneration 10 255 true
+effect give @a[tag=!detached] speed infinite 1 true
+effect give @a[tag=!detached] jump_boost infinite 2 true
 effect give @a[tag=!detached] invisibility infinite 255 true
 function switch:utils/set_dynamic_time
 
