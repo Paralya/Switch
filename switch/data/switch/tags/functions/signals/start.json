@@ -39,6 +39,7 @@
 		"switch:modes/bombardement/calls/start",
 		"switch:modes/shoot_da_sheep/calls/start",
 		"switch:modes/minigolf/calls/start",
+		"switch:modes/cigogne/calls/start",
 		"switch:modes/twittos_de_merde/calls/start"
 	]
 }

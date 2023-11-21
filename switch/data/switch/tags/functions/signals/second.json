@@ -38,6 +38,7 @@
 		"switch:modes/bombardement/calls/second",
 		"switch:modes/shoot_da_sheep/calls/second",
 		"switch:modes/minigolf/calls/second",
+		"switch:modes/cigogne/calls/second",
 		"switch:modes/twittos_de_merde/calls/second"
 	]
 }

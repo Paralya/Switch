@@ -295,7 +295,7 @@ generate_clone_survival_folder("pitch_creep_nether", (120000, 0, 120000), (12003
 generate_clone_survival_folder("bombardement", (121000, 0, 121000), (121115, 77, 121087), 100, override_tp_coords = (121057, 110, 121064))
 generate_clone_survival_folder("nether_storm", (122000, 0, 122000), (122068, 49, 122074), 100, override_tp_coords = (122034, 119, 122037))
 generate_clone_survival_folder("pitchout_halloween", (125000, 0, 125000), (125122, 28, 125122), 100, override_tp_coords = (125061, 112, 125061))
-
+generate_clone_survival_folder("cigogne", (126000, 0, 126000), (126108, 47, 126108), 100, override_tp_coords = (126059, 108, 126061))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air

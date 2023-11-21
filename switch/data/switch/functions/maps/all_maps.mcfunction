@@ -136,4 +136,6 @@
 ##	123000	(adventure)	: shoot_da_sheep
 ##	124000	(adventure)	: minigolf
 #	125000	(survival)	: pitchout_halloween
+#	126000	(survival)	: cigogne
+#	127000	(survival)	: infected_shoupz
 

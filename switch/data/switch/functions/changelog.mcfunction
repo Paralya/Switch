@@ -1,6 +1,6 @@
 
 # 2023/10/16
-tellraw @s [{"text":"\n\n- [Début des changelogs]","color":"red"}]
+tellraw @s [{"text":"\n\n [Début des changelogs]","color":"red"}]
 tellraw @s [{"text":"[2023/10/16] ","color":"dark_aqua"},{"text":"Passage en 1.20.2","color":"green"}]
 
 # 2023/10/17
@@ -43,6 +43,9 @@ tellraw @s [{"text":"[2023/11/17] ","color":"dark_aqua"},{"text":"Build Battle :
 
 # 2023/11/20
 tellraw @s [{"text":"[2023/11/20] ","color":"dark_aqua"},{"text":"Pitchout : nouvelle map type halloween","color":"white"}]
+
+# 2023/11/21
+tellraw @s [{"text":"[2023/11/20] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Cigogne","color":"green"}]
 
 
 # End of line
