@@ -5,6 +5,7 @@ execute if entity @s[scores={switch.alive=3}] run tellraw @a[tag=!detached] [{"s
 
 scoreboard players remove @s switch.alive 1
 execute if entity @s[scores={switch.alive=1..}] if data storage switch:main {map:"pitchout_1"} run function switch:modes/pitchout/map_1/tp_give
+execute if entity @s[scores={switch.alive=1..}] if data storage switch:main {map:"pitchout_halloween"} run function switch:modes/pitchout/map_halloween/tp_give
 
 execute unless score @s switch.alive matches 1.. run gamemode spectator @s
 execute unless score @s switch.alive matches 1.. at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~

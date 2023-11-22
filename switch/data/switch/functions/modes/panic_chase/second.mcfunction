@@ -20,3 +20,7 @@ execute if score #remaining_time switch.data matches 0.. run title @a[tag=!detac
 execute if score #second switch.data matches 0 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
 execute if score #second switch.data matches 30 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
 
+# Number of hunters
+execute store result score #hunters switch.data if entity @a[team=switch.temp.hunter]
+execute if score #hunters switch.data matches 2.. run effect give @a[team=switch.temp.hunter] glowing 2 0 true
+

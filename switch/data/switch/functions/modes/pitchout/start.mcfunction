@@ -13,6 +13,7 @@ scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/pitchout
 scoreboard players set #spawn_count switch.data 0
 execute if data storage switch:main {map:"pitchout_1"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_1/tp_give
+execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
 execute as @a[tag=!detached] run function switch:modes/pitchout/xp_bar
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, exterminez les autres !"}]
