@@ -4,6 +4,7 @@ scoreboard players add #pitchout_ticks switch.data 1
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/pitchout/no_drop
 
 execute as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] if data storage switch:main {map:"pitchout_1"} run function switch:modes/pitchout/map_1/teleport_players
+execute as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] if data storage switch:main {map:"pitchout_halloween"} run function switch:modes/pitchout/map_halloween/teleport_players
 execute as @a[scores={switch.alive=1..},predicate=switch:in_water,sort=random] run function switch:modes/pitchout/death
 execute at @a[scores={switch.alive=3}] run particle dust 0 .75 0 1 ~ ~2.4 ~ .1 .1 .1 0 1
 execute at @a[scores={switch.alive=2}] run particle dust .75 .75 0 1 ~ ~2.4 ~ .1 .1 .1 0 1
