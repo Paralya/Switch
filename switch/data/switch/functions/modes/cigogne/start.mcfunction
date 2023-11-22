@@ -15,6 +15,7 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/cigogne
 
 gamerule naturalRegeneration false
+gamerule keepInventory true
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la Cigogne, 10 secondes de préparation et soyez le dernier en vie !"}]
 
