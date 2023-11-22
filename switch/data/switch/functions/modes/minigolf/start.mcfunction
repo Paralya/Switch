@@ -22,6 +22,8 @@ scoreboard players set #remaining_time switch.data 245
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.respawn dummy
 
+scoreboard players set #default_do_collision golf_ball.data 0
+
 # Choose map
 execute if data storage switch:main {map:"gg_grass_1"} run tp @a 124021 121 124070
 execute if data storage switch:main {map:"gg_grass_2"} run tp @a 124020 124 124023
