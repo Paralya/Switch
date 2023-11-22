@@ -22,8 +22,8 @@ data modify block 0 0 0 Items[1].tag.Unbreakable set value 1b
 
 item replace entity @s hotbar.0 from block 0 0 0 container.0
 item replace entity @s hotbar.1 from block 0 0 0 container.1
-item replace entity @s hotbar.2 with ender_pearl 3
-item replace entity @s hotbar.3 with arrow
+item replace entity @s hotbar.2 with arrow
+item replace entity @s hotbar.8 with ender_pearl 3
 
 setblock 0 0 0 air
 
