@@ -20,7 +20,12 @@ scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger
 scoreboard objectives add switch.trigger.stats trigger
 scoreboard objectives add switch.trigger.changelog trigger
+scoreboard objectives add switch.trigger.detach trigger
+scoreboard objectives add switch.trigger.attach trigger
 
+scoreboard objectives add switch.stats.kills playerKillCount
+scoreboard objectives add switch.stats.deaths deathCount
+scoreboard objectives add switch.stats.played dummy
 scoreboard objectives add switch.stats.wins dummy
 
 team add switch.no_pvp
@@ -33,6 +38,7 @@ forceload add 0 0
 #define storage switch:temp
 #define storage switch:main
 #define storage switch:records
+#define storage switch:stats
 #define score_holder #success
 #define score_holder #valid
 #define score_holder #count
@@ -49,6 +55,11 @@ data modify storage switch:main ParalyaAstuce set value '[{"text":"[","color":"d
 data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 
+# Setup stats storage if needed
+execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{}}
+# ex: all = {player:{total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{pitch_creep:{total_games:0,played:[],wins:[]}, ...}}
+
+# Scoreboard constants
 function switch:set_constants
 
 
@@ -58,7 +69,7 @@ data modify storage switch:main minigames append value {min_players:1	,max_playe
 data modify storage switch:main minigames append value {min_players:4	,max_players:-1		,id:"laser_game"			,Name:"Laser Game"			,Lore:'["",{"text":"[Laser Game]\\n","color":"yellow"},				{"text":"Affrontez l\'équipe adverse grâce à vos fusils-laser\\n"},{"text":"et faites le plus d\'élimination possible !\\n"},															{"text":"\\n[Estimation : 2m30s]","color":"gold"},		{"text":"\\n[Proposé par Vigo / Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:3	,max_players:-1		,id:"warden_escape"			,Name:"Warden Escape"		,Lore:'["",{"text":"[Warden Escape]\\n","color":"yellow"},			{"text":"Vous devez survivre le plus longtemps dans une map\\n"},{"text":"fermée avec des wardens cherchant à vous tuer.\\n"},															{"text":"\\n[Estimation : 1m30s]","color":"gold"},		{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"pitchout"				,Name:"Pitchout"			,Lore:'["",{"text":"[Pitchout]\\n","color":"yellow"},				{"text":"Affrontez les autres joueurs grâce à vos armes\\n"},{"text":"repoussantes et soyez le dernier survivant !\\n"},																{"text":"\\n[Estimation : 1-5 mins]","color":"gold"},	{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
-data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"glassrunner"			,Name:"GlassRunner 90% DISPO"		,Lore:'["",{"text":"[GlassRunner]\\n","color":"yellow"},	{"text":"Affrontez l\'équipe adverse dans le ciel, dans un Capture the Point\\n"},																										{"text":"\\n[Estimation : 8-10 mins]","color":"gold"},	{"text":"\\n[Proposé/Développé par AirDox_]","color":"aqua"}]'}
+#data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"glassrunner"			,Name:"GlassRunner 90% DISPO"		,Lore:'["",{"text":"[GlassRunner]\\n","color":"yellow"},	{"text":"Affrontez l\'équipe adverse dans le ciel, dans un Capture the Point\\n"},																										{"text":"\\n[Estimation : 8-10 mins]","color":"gold"},	{"text":"\\n[Proposé/Développé par AirDox_]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:1	,max_players:-1		,id:"creeper_apocalypse"	,Name:"Creeper Apocalypse"	,Lore:'["",{"text":"[Creeper Apocalypse]\\n","color":"yellow"},		{"text":"Vous devez survivre le plus longtemps dans une map\\n"},{"text":"enfermée avec des creepers qui se multiplient et\\n"},{"text":"explosent sans cesse automatiquement.\\n"},	{"text":"\\n[Estimation : 1m30s]","color":"gold"},		{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:4	,max_players:-1		,id:"traitors_game"			,Name:"Traitors Game"		,Lore:'["",{"text":"[Traitors Game]\\n","color":"yellow"},			{"text":"Innocents contre Traitres,\\n"},{"text":"quel camp va-t-il gagner ?\\n"},																										{"text":"\\n[Estimation : 4-10 mins]","color":"gold"},	{"text":"\\n[Proposé par Luxio / Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:1	,max_players:-1		,id:"boat_race"				,Name:"Boat Race"			,Lore:'["",{"text":"[Boat Race]\\n","color":"yellow"},				{"text":"Battez-vous pour atteindre la ligne d\'arrivée\\n"},{"text":"en premier pour remporter la partie !\\n"},																		{"text":"\\n[Estimation : 3-8 mins]","color":"gold"},	{"text":"\\n[Proposé par Stoupy51 / Développé par LTHCTheMaster]","color":"aqua"}]'}

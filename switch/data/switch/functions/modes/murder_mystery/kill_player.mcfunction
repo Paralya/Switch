@@ -1,6 +1,7 @@
 
 # Playsound & Spectator
 execute as @a[tag=!detached] at @s run playsound entity.player.hurt ambient @s
+execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 gamemode spectator @s
 
 # Summon dead body with username
