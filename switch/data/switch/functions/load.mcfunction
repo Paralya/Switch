@@ -31,7 +31,7 @@ scoreboard objectives add switch.stats.wins dummy
 team add switch.no_pvp
 team modify switch.no_pvp friendlyFire false
 
-gamerule maxCommandChainLength 2147483648
+gamerule maxCommandChainLength 2147483647
 scoreboard players set Switch load.status 1000
 forceload add 0 0
 

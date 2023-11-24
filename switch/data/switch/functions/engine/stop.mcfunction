@@ -16,7 +16,7 @@ scoreboard players reset #is_adventure switch.data
 scoreboard objectives setdisplay sidebar
 scoreboard players reset #disable switch.data
 scoreboard players reset * switch.alive
-gamerule maxCommandChainLength 1048576
+gamerule maxCommandChainLength 2147483647
 gamerule sendCommandFeedback true
 gamerule mobGriefing false
 gamerule showDeathMessages true
