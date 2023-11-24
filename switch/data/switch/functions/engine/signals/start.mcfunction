@@ -6,5 +6,5 @@ function switch:engine/log_message/apply
 # Increment total games played
 data modify storage switch:main input set value {id:""}
 data modify storage switch:main input.id set from storage switch:main current_game
-function switch:engine/signals/increment_played with storage switch:main input
+function switch:stats/increment_minigame_played with storage switch:main input
 
