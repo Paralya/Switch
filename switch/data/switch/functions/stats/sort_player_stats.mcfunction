@@ -1,7 +1,7 @@
 
 ## Storage Format: all.player = {total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[]}
 
-# Copy the played and wins arrays to the temp arrays
+# Copy stats to temp storage
 data modify storage switch:temp played set from storage switch:stats all.player.total_played
 data modify storage switch:temp wins set from storage switch:stats all.player.total_wins
 data modify storage switch:temp kills set from storage switch:stats all.player.total_kills
@@ -12,6 +12,8 @@ data modify storage switch:temp new_wins set value []
 data modify storage switch:temp new_kills set value []
 data modify storage switch:temp new_deaths set value []
 data modify storage switch:temp new_money set value []
+
+# Sort stats and copy to new storage
 execute if data storage switch:temp played[0] run function switch:stats/loop_player_stats
 data modify storage switch:stats all.player.total_played set from storage switch:temp new_played
 data modify storage switch:stats all.player.total_wins set from storage switch:temp new_wins

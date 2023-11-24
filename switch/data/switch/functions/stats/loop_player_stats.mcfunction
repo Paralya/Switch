@@ -1,14 +1,12 @@
 
-## Storage Format: all.player = {total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[]}
-
-# Copy the played and wins arrays to the temp arrays
+# Copy the values from the player arrays to another temp arrays
 data modify storage switch:temp copy_played set from storage switch:temp played
 data modify storage switch:temp copy_wins set from storage switch:temp wins
 data modify storage switch:temp copy_kills set from storage switch:temp kills
 data modify storage switch:temp copy_deaths set from storage switch:temp deaths
 data modify storage switch:temp copy_money set from storage switch:temp money
 
-# Find the index of the highest value in the played and wins arrays
+# Find the index of the highest value in the arrays
 scoreboard players set #current_index switch.data 0
 scoreboard players set #max_value_played switch.data 0
 scoreboard players set #max_value_wins switch.data 0
