@@ -13,3 +13,7 @@ scoreboard players add @a switch.last_death 1
 # Second Right click reset
 scoreboard players reset @a switch.second_right_click
 
+# Stat display life
+scoreboard players add @e[type=text_display,tag=switch.stat_display] switch.data 1
+kill @e[type=text_display,tag=switch.stat_display,scores={switch.data=60..}]
+
