@@ -10,7 +10,7 @@
 # Set scoreboard values
 $scoreboard players set #mode switch.data $(mode)
 scoreboard players set #player_nearby switch.data 0
-execute if entity @a[distance=..15] run scoreboard players set #player_nearby switch.data 1
+execute if entity @a[distance=..12] run scoreboard players set #player_nearby switch.data 1
 scoreboard players set #display_nearby switch.data 0
 $execute if score #display_$(path) switch.data matches 1 if entity @e[tag=$(path),limit=1,distance=..1] run scoreboard players set #display_nearby switch.data 1
 $execute if score #display_$(path) switch.data matches 1 if score #display_nearby switch.data matches 0 run scoreboard players set #display_$(path) switch.data 0
