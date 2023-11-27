@@ -39,6 +39,7 @@
 		"switch:modes/shoot_da_sheep/calls/tick",
 		"switch:modes/minigolf/calls/tick",
 		"switch:modes/cigogne/calls/tick",
+		"switch:modes/infected/calls/tick",
 		"switch:modes/twittos_de_merde/calls/tick"
 	]
 }

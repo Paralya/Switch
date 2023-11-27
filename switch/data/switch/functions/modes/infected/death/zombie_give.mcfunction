@@ -7,7 +7,9 @@ effect clear @s
 effect give @s hunger infinite 0 true
 clear @s
 
+
 # Give stuff depending on player's upgrades
+item replace entity @s armor.head with zombie_head
 execute unless score @s switch.infected.zombie_speed matches 1.. run attribute @s generic.movement_speed base set 0.11
 execute if score @s switch.infected.zombie_speed matches 1 run attribute @s generic.movement_speed base set 0.12
 execute if score @s switch.infected.zombie_speed matches 2 run attribute @s generic.movement_speed base set 0.13

@@ -40,6 +40,7 @@
 		"switch:modes/shoot_da_sheep/calls/start",
 		"switch:modes/minigolf/calls/start",
 		"switch:modes/cigogne/calls/start",
+		"switch:modes/infected/calls/start",
 		"switch:modes/twittos_de_merde/calls/start"
 	]
 }
