@@ -17,3 +17,6 @@ scoreboard players reset @a switch.second_right_click
 scoreboard players add @e[type=text_display,tag=switch.stat_display] switch.data 1
 kill @e[type=text_display,tag=switch.stat_display,scores={switch.data=60..}]
 
+# Tutorial second loop
+execute as @a[team=switch.tutorial] run function switch:player/tutorial/second
+

@@ -3,6 +3,7 @@ tag Stoupy51 add convention.debug
 
 scoreboard objectives add switch.id dummy
 scoreboard objectives add switch.data dummy
+scoreboard objectives add switch.tutorial dummy
 scoreboard objectives add switch.health health
 scoreboard objectives add switch.money dummy
 scoreboard objectives add switch.money_bonus dummy
@@ -23,6 +24,7 @@ scoreboard objectives add switch.trigger.changelog trigger
 scoreboard objectives add switch.trigger.detach trigger
 scoreboard objectives add switch.trigger.attach trigger
 scoreboard objectives add switch.trigger.shop trigger
+scoreboard objectives add switch.trigger.tutorial trigger
 
 scoreboard objectives add switch.stats.kills playerKillCount
 scoreboard objectives add switch.stats.deaths deathCount
@@ -30,7 +32,10 @@ scoreboard objectives add switch.stats.played dummy
 scoreboard objectives add switch.stats.wins dummy
 
 team add switch.no_pvp
+team add switch.tutorial
 team modify switch.no_pvp friendlyFire false
+team modify switch.tutorial prefix {"text":"[En tutoriel] ","color":"yellow"}
+team modify switch.tutorial color gold
 
 gamerule maxCommandChainLength 2147483647
 scoreboard players set Switch load.status 1000
@@ -70,7 +75,7 @@ data modify storage switch:main minigames set value []
 data modify storage switch:main minigames append value {min_players:1	,max_players:-1		,id:"pitch_creep"			,Name:"Pitch Creep"			,Lore:'["",{"text":"[Pitch Creep]\\n","color":"yellow"},			{"text":"Survivez pendant le temps imparti dans\\n"},{"text":"une map fermée en expulsant les\\n"},{"text":"creepers qui veulent votre peau.\\n"},										{"text":"\\n[Estimation : 1m30s]","color":"gold"},		{"text":"\\n[Inspiration : Pitchout/Épicube]","color":"green"},				{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:4	,max_players:-1		,id:"laser_game"			,Name:"Laser Game"			,Lore:'["",{"text":"[Laser Game]\\n","color":"yellow"},				{"text":"Affrontez l\'équipe adverse grâce à vos fusils-laser et faites\\n"},{"text":"le plus d\'élimination possible pendant un temps imparti !\\n"},									{"text":"\\n[Estimation : 2m30s]","color":"gold"},		{"text":"\\n[Inspiration : Le monde physique]","color":"green"},			{"text":"\\n[Proposé par Vigo / Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:3	,max_players:-1		,id:"warden_escape"			,Name:"Warden Escape"		,Lore:'["",{"text":"[Warden Escape]\\n","color":"yellow"},			{"text":"Survivez pendant le temps imparti dans une map fermée\\n"},{"text":"avec des wardens cherchant à vous tuer.\\n"},																{"text":"\\n[Estimation : 1m30s]","color":"gold"},		{"text":"\\n[Inspiration : Minecraft 1.19]","color":"green"},				{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
-data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"pitchout"				,Name:"Pitchout"			,Lore:'["",{"text":"[Pitchout]\\n","color":"yellow"},				{"text":"Vous avez trois vies, un équipement vous permettant de faire\\n"},{"text":" des attaques repoussantes, soyez le dernier survivant !\\n"},										{"text":"\\n[Estimation : 1-5 mins]","color":"gold"},	{"text":"\\n[Repris de : Épicube]","color":"green"},						{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
+data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"pitchout"				,Name:"Pitchout"			,Lore:'["",{"text":"[Pitchout]\\n","color":"yellow"},				{"text":"Vous avez trois vies, un équipement vous permettant\\n"},{"text":"des attaques repoussantes, soyez le dernier survivant !\\n"},										{"text":"\\n[Estimation : 1-5 mins]","color":"gold"},	{"text":"\\n[Repris de : Épicube]","color":"green"},						{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:1	,max_players:-1		,id:"creeper_apocalypse"	,Name:"Creeper Apocalypse"	,Lore:'["",{"text":"[Creeper Apocalypse]\\n","color":"yellow"},		{"text":"Survivez pendant le temps imparti dans une map\\n"},{"text":"fermée avec des creepers qui se multiplient et\\n"},{"text":"explosent sans cesse automatiquement.\\n"},			{"text":"\\n[Estimation : 1m30s]","color":"gold"},		{"text":"\\n[Inspiration : Expiration]","color":"green"},					{"text":"\\n[Proposé/Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:4	,max_players:-1		,id:"traitors_game"			,Name:"Traitors Game"		,Lore:'["",{"text":"[Traitors Game]\\n","color":"yellow"},			{"text":"Des traitres se cachent parmi les joueurs.\\n"},{"text":"Innocents contre Traitres, quel camp va-t-il gagner ?\\n"},															{"text":"\\n[Estimation : 4-10 mins]","color":"gold"},	{"text":"\\n[Inspiration : Taupe Gun]","color":"green"},					{"text":"\\n[Proposé par Luxio / Développé par Stoupy51]","color":"aqua"}]'}
 data modify storage switch:main minigames append value {min_players:1	,max_players:-1		,id:"boat_race"				,Name:"Boat Race"			,Lore:'["",{"text":"[Boat Race]\\n","color":"yellow"},				{"text":"Battez-vous pour atteindre la ligne d\'arrivée\\n"},{"text":"en premier pour remporter la partie !\\n"},																		{"text":"\\n[Estimation : 3-8 mins]","color":"gold"},	{"text":"\\n[Inspiration : Expiration]","color":"green"},					{"text":"\\n[Proposé par Stoupy51 / Développé par LTHCTheMaster]","color":"aqua"}]'}
