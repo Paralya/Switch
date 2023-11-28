@@ -8,7 +8,6 @@ function switch:choose_map_for/infected
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie d'Infecté, vous avez 12 secondes de préparation !\n"}]
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
-function switch:modes/infected/shop_setup
 scoreboard objectives add switch.temp.infection dummy
 scoreboard objectives add switch.temp.original_zombie dummy
 scoreboard players set #remaining_time switch.data 612
