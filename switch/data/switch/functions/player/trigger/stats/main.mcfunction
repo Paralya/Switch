@@ -22,4 +22,5 @@ $tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"$(player)","obje
 
 # Reset trigger
 scoreboard players set @s switch.trigger.stats 0
+data remove storage switch:main input
 

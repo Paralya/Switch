@@ -7,6 +7,7 @@ execute unless score @s switch.trigger.stats matches 0 run function switch:playe
 execute unless score @s switch.trigger.changelog matches 0 run function switch:player/trigger/changelog/
 execute unless score @s switch.trigger.detach matches 0 run function switch:player/trigger/detach/
 execute unless score @s switch.trigger.attach matches 0 run function switch:player/trigger/attach/
+execute unless score @s switch.trigger.shop matches 0 run function switch:shop/trigger
 
 function switch:player/trigger/enable
 

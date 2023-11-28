@@ -25,5 +25,12 @@ item replace entity @s hotbar.1 from block 0 0 0 container.1
 item replace entity @s hotbar.2 with arrow
 item replace entity @s hotbar.8 with ender_pearl 3
 
+# Give boots depending on the upgrade
+execute if score @s switch.pitchout.boots matches 1 run item replace entity @s feet with leather_boots{Damage:45}
+execute if score @s switch.pitchout.boots matches 2 run item replace entity @s feet with leather_boots{Damage:35}
+execute if score @s switch.pitchout.boots matches 3 run item replace entity @s feet with leather_boots{Damage:25}
+execute if score @s switch.pitchout.boots matches 4 run item replace entity @s feet with leather_boots{Damage:15}
+execute if score @s switch.pitchout.boots matches 5 run item replace entity @s feet with leather_boots
+
 setblock 0 0 0 air
 
