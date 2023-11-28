@@ -2,8 +2,8 @@
 
 ## Placement de la map et des joueurs
 time set 18000
-team join switch.no_pvp @a[tag=!detached]
 function switch:choose_map_for/infected
+execute as @a[tag=!detached] run function switch:modes/infected/death/early_respawn
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie d'Infecté, vous avez 12 secondes de préparation !\n"}]
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
