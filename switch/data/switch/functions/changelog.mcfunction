@@ -45,7 +45,10 @@ tellraw @s [{"text":"[2023/11/17] ","color":"dark_aqua"},{"text":"Build Battle :
 tellraw @s [{"text":"[2023/11/20] ","color":"dark_aqua"},{"text":"Pitchout : nouvelle map type halloween","color":"white"}]
 
 # 2023/11/21
-tellraw @s [{"text":"[2023/11/20] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Cigogne","color":"green"}]
+tellraw @s [{"text":"[2023/11/21] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Cigogne","color":"green"}]
+
+# 2023/11/29
+tellraw @s [{"text":"[2023/11/29] ","color":"dark_aqua"},{"text":"Arrivée du Switch 2.0 : Masterclass","color":"white"}]
 
 
 # End of line

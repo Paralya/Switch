@@ -46,7 +46,7 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple:
 		parenthesis = f" ({minsString}m{secsString}s)"
 	
 	# Create the tellraw string
-	tellraw = f'tellraw @a[tag=!detached] ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' vient de finir de se régénérer en ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+	tellraw = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' vient de finir de se régénérer en ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
 
 	# Return
 	return (f"{secs} seconds{parenthesis}", tellraw)
@@ -441,7 +441,7 @@ def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_
 		for x1, x2, z1, z2 in splitted_coordinates:
 			f.write(f"\n{base_cond} {total_loops + 30} run forceload remove {x1} {x2} {z1} {z2}")
 		f.write(f"""
-{base_cond} {total_loops + 30} run tellraw @a[tag=!detached] ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map '","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"' vient de finir de scanner ses portes en ","color":"yellow"}},{{"text":"{(total_loops + 30) // 20}","color":"gold"}},{{"text":"s","color":"yellow"}}]
+{base_cond} {total_loops + 30} run tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map '","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"' vient de finir de scanner ses portes en ","color":"yellow"}},{{"text":"{(total_loops + 30) // 20}","color":"gold"}},{{"text":"s","color":"yellow"}}]
 {base_cond} {total_loops + 30} run data remove storage switch:maps to_regenerate.{name}
 {base_cond} {total_loops + 30} run scoreboard players reset #scan_{name} switch.data
 

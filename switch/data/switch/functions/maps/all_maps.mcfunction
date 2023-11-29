@@ -139,4 +139,5 @@
 #	126000	(survival)	: cigogne
 #	127000	(survival)	: infected_shoupz
 #	128000	(survival)	: ancienne_egypte_2013
+#	129000	(survival)	: old_japan_apocalypse
 

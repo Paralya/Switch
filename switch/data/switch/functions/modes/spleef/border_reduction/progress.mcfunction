@@ -1,9 +1,9 @@
 
 # Fill snow blocks with air
-execute if score #border_side switch.data matches 0 run fill ~ ~ ~ ~ ~-12 ~10 air replace snow_block
-execute if score #border_side switch.data matches 1 run fill ~ ~ ~ ~-10 ~-12 ~ air replace snow_block
-execute if score #border_side switch.data matches 2 run fill ~ ~ ~ ~ ~-12 ~-10 air replace snow_block
-execute if score #border_side switch.data matches 3 run fill ~ ~ ~ ~10 ~-12 ~ air replace snow_block
+execute if score #border_side switch.data matches 0 run fill ~ ~ ~ ~ ~-12 ~20 air replace snow_block
+execute if score #border_side switch.data matches 1 run fill ~ ~ ~ ~-20 ~-12 ~ air replace snow_block
+execute if score #border_side switch.data matches 2 run fill ~ ~ ~ ~ ~-12 ~-20 air replace snow_block
+execute if score #border_side switch.data matches 3 run fill ~ ~ ~ ~20 ~-12 ~ air replace snow_block
 scoreboard players add #border_progress switch.data 1
 particle glow ~ ~-12 ~ 0.2 6 0.2 0 200 force
 

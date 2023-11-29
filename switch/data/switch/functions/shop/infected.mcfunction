@@ -1,4 +1,8 @@
 
+# Start
+tellraw @s [{"text":"[Boutique Infecté]","color":"yellow"}]
+
+# Init scoreboard
 scoreboard players add @s switch.infected.sword 0
 scoreboard players add @s switch.infected.armor 0
 scoreboard players add @s switch.infected.antidote 0
@@ -55,15 +59,6 @@ execute if score @s switch.trigger.shop matches 211 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 211 if score #success switch.data matches 0 run tellraw @s [{"text":"Vous n'avez pas assez d'argent pour améliorer votre vitesse !","color":"red"}]
 execute if score @s switch.trigger.shop matches 211 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
-# Jump
-scoreboard players set #success switch.data 0
-execute if score @s switch.trigger.shop matches 212 if score @s switch.infected.zombie_jump matches 0 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
-execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run scoreboard players add @s switch.infected.zombie_jump 1
-execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour améliorer votre saut a bien été effectué !","color":"green"}]
-execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
-execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 0 run tellraw @s [{"text":"Vous n'avez pas assez d'argent pour améliorer votre saut !","color":"red"}]
-execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
-
 # Strength
 scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 213 if score @s switch.infected.zombie_strength matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
@@ -76,8 +71,16 @@ execute if score @s switch.trigger.shop matches 213 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 213 if score #success switch.data matches 0 run tellraw @s [{"text":"Vous n'avez pas assez d'argent pour améliorer votre force !","color":"red"}]
 execute if score @s switch.trigger.shop matches 213 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
+# Jump
+scoreboard players set #success switch.data 0
+execute if score @s switch.trigger.shop matches 212 if score @s switch.infected.zombie_jump matches 0 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
+execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run scoreboard players add @s switch.infected.zombie_jump 1
+execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour améliorer votre saut a bien été effectué !","color":"green"}]
+execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
+execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 0 run tellraw @s [{"text":"Vous n'avez pas assez d'argent pour améliorer votre saut !","color":"red"}]
+execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
+
 # Messages
-tellraw @s [{"text":"[Boutique Infecté]\n","color":"yellow"}]
 tellraw @s [{"text":"➤ ","color":"gold"},{"text":"Humain","color":"yellow"}]
 execute if score @s switch.infected.sword matches 0 run tellraw @s [{"text":"Épée","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 201"},"hoverEvent":{"action":"show_text","contents":[{"text":"Wooden Sword -> Stone Sword\n","color":"green"},{"text":"Acheter pour 50$","color":"yellow"}]}}]
 execute if score @s switch.infected.sword matches 1 run tellraw @s [{"text":"Épée","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮","color":"yellow"},{"text":"✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 201"},"hoverEvent":{"action":"show_text","contents":[{"text":"Stone Sword -> Iron Sword\n","color":"green"},{"text":"Acheter pour 100$","color":"yellow"}]}}]
@@ -97,11 +100,11 @@ execute if score @s switch.infected.zombie_speed matches 1 run tellraw @s [{"tex
 execute if score @s switch.infected.zombie_speed matches 2 run tellraw @s [{"text":"Vitesse","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮","color":"yellow"},{"text":"✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 211"},"hoverEvent":{"action":"show_text","contents":[{"text":"+40% de vitesse\n","color":"green"},{"text":"Acheter pour 200$","color":"yellow"}]}}]
 execute if score @s switch.infected.zombie_speed matches 3 run tellraw @s [{"text":"Vitesse","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮","color":"yellow"},{"text":"✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 211"},"hoverEvent":{"action":"show_text","contents":[{"text":"+50% de vitesse\n","color":"green"},{"text":"Acheter pour 400$","color":"yellow"}]}}]
 execute if score @s switch.infected.zombie_speed matches 4 run tellraw @s [{"text":"Vitesse","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮✮","color":"yellow"},{"text":" ","color":"gray"},{"text":"[+]","color":"gray"}]
-execute if score @s switch.infected.zombie_jump matches 0 run tellraw @s [{"text":"Saut","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 212"},"hoverEvent":{"action":"show_text","contents":[{"text":"Effet jump boost 2\n","color":"green"},{"text":"Acheter pour 200$","color":"yellow"}]}}]
-execute if score @s switch.infected.zombie_jump matches 1 run tellraw @s [{"text":"Saut","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮","color":"yellow"},{"text":" ","color":"gray"},{"text":"[+]","color":"gray"}]
 execute if score @s switch.infected.zombie_strength matches 0 run tellraw @s [{"text":"Force","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 213"},"hoverEvent":{"action":"show_text","contents":[{"text":"4.0 -> 4.5 dégâts par coup\n","color":"green"},{"text":"Acheter pour 50$","color":"yellow"}]}}]
 execute if score @s switch.infected.zombie_strength matches 1 run tellraw @s [{"text":"Force","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮","color":"yellow"},{"text":"✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 213"},"hoverEvent":{"action":"show_text","contents":[{"text":"4.5 -> 5.0 dégâts par coup\n","color":"green"},{"text":"Acheter pour 100$","color":"yellow"}]}}]
 execute if score @s switch.infected.zombie_strength matches 2 run tellraw @s [{"text":"Force","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮","color":"yellow"},{"text":"✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 213"},"hoverEvent":{"action":"show_text","contents":[{"text":"5.0 -> 5.5 dégâts par coup\n","color":"green"},{"text":"Acheter pour 200$","color":"yellow"}]}}]
 execute if score @s switch.infected.zombie_strength matches 3 run tellraw @s [{"text":"Force","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮","color":"yellow"},{"text":"✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 213"},"hoverEvent":{"action":"show_text","contents":[{"text":"5.5 -> 6.0 dégâts par coup\n","color":"green"},{"text":"Acheter pour 400$","color":"yellow"}]}}]
 execute if score @s switch.infected.zombie_strength matches 4 run tellraw @s [{"text":"Force","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮✮","color":"yellow"},{"text":" ","color":"gray"},{"text":"[+]","color":"gray"}]
+execute if score @s switch.infected.zombie_jump matches 0 run tellraw @s [{"text":"Saut","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 212"},"hoverEvent":{"action":"show_text","contents":[{"text":"Effet jump boost 2\n","color":"green"},{"text":"Acheter pour 200$","color":"yellow"}]}}]
+execute if score @s switch.infected.zombie_jump matches 1 run tellraw @s [{"text":"Saut","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮","color":"yellow"},{"text":" ","color":"gray"},{"text":"[+]","color":"gray"}]
 

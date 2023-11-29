@@ -9,4 +9,8 @@ scoreboard objectives add switch.infected.antidote dummy
 scoreboard objectives add switch.infected.zombie_damage dummy
 scoreboard objectives add switch.infected.zombie_speed dummy
 scoreboard objectives add switch.infected.zombie_jump dummy
+scoreboard objectives add switch.infected.zombie_strength dummy
+
+scoreboard objectives add switch.spleef.snow_block dummy
+scoreboard objectives add switch.spleef.powder_snow dummy
 

@@ -1,7 +1,9 @@
 
+# Start
+tellraw @s [{"text":"[Boutique Pitchout]","color":"yellow"}]
+
 # Tutorial stuff
 execute if score @s switch.trigger.shop matches 100 if score @s switch.tutorial matches 3 run scoreboard players set @s switch.tutorial 4
-
 
 # Boots
 scoreboard players set #success switch.data 0
@@ -30,7 +32,6 @@ execute if score @s switch.trigger.shop matches 102 if score #success switch.dat
 
 # Messages
 execute if score @s switch.trigger.shop matches 100 run playsound block.note_block.bell ambient @s
-tellraw @s [{"text":"[Boutique Pitchout]\n","color":"yellow"}]
 execute if score @s switch.pitchout.boots matches 0 run tellraw @s [{"text":"Bottes en cuir","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 101"},"hoverEvent":{"action":"show_text","contents":[{"text":"Rien -> Bottes en cuir avec 20 de durabilité\n","color":"green"},{"text":"Acheter pour 50$","color":"yellow"}]}}]
 execute if score @s switch.pitchout.boots matches 1 run tellraw @s [{"text":"Bottes en cuir","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮","color":"yellow"},{"text":"✮✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 101"},"hoverEvent":{"action":"show_text","contents":[{"text":"20 -> 30 de durabilité\n","color":"green"},{"text":"Acheter pour 100$","color":"yellow"}]}}]
 execute if score @s switch.pitchout.boots matches 2 run tellraw @s [{"text":"Bottes en cuir","color":"aqua"},{"text":" | ","bold":true,"color":"dark_gray"},{"text":"✮✮","color":"yellow"},{"text":"✮✮✮ ","color":"gray"},{"text":"[+]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.shop set 101"},"hoverEvent":{"action":"show_text","contents":[{"text":"30 -> 40 de durabilité\n","color":"green"},{"text":"Acheter pour 150$","color":"yellow"}]}}]

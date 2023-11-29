@@ -1,6 +1,7 @@
 
 team join switch.temp.human @s
 execute if data storage switch:main {map:"ancienne_egypte_2013"} run tp @s 128089 133 128095 180 0
+execute if data storage switch:main {map:"old_japan_apocalypse"} run tp @s 129013 105 129018 180 0
 attribute @s generic.attack_speed base set 2048.0
 effect clear @s
 clear @s
