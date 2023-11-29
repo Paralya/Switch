@@ -14,7 +14,6 @@ execute if score @s switch.trigger.shop matches 101 if score @s switch.pitchout.
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 1.. run scoreboard players add @s switch.pitchout.boots 1
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour les bottes en cuir a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
-execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 1.. if score @s switch.tutorial matches 4 run scoreboard players set @s switch.tutorial 5
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 0 run tellraw @s [{"text":"Vous n'avez pas assez d'argent pour améliorer vos bottes en cuir !","color":"red"}]
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
@@ -26,7 +25,6 @@ execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run scoreboard players add @s switch.pitchout.ender_pearl 1
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour les ender pearls a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
-execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. if score @s switch.tutorial matches 4 run scoreboard players set @s switch.tutorial 5
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 0 run tellraw @s [{"text":"Vous n'avez pas assez d'argent pour acheter des ender pearls supplémentaires !","color":"red"}]
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
