@@ -13,7 +13,6 @@ execute if score @s switch.trigger.shop matches 200 run playsound block.note_blo
 
 ## Humain
 # Sword
-scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 2 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
@@ -25,7 +24,6 @@ execute if score @s switch.trigger.shop matches 201 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Armor
-scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 202 if score @s switch.infected.armor matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 202 if score @s switch.infected.armor matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 202 if score @s switch.infected.armor matches 2 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
@@ -38,7 +36,6 @@ execute if score @s switch.trigger.shop matches 202 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 202 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Antidote
-scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 203 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 203 if score #success switch.data matches 1.. run scoreboard players add @s switch.infected.antidote 1
 execute if score @s switch.trigger.shop matches 203 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour acheter un antidote a bien été effectué !","color":"green"}]
@@ -48,7 +45,6 @@ execute if score @s switch.trigger.shop matches 203 if score #success switch.dat
 
 ## Zombie
 # Speed
-scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 211 if score @s switch.infected.zombie_speed matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 211 if score @s switch.infected.zombie_speed matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 211 if score @s switch.infected.zombie_speed matches 2 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
@@ -60,7 +56,6 @@ execute if score @s switch.trigger.shop matches 211 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 211 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Strength
-scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 213 if score @s switch.infected.zombie_strength matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 213 if score @s switch.infected.zombie_strength matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 213 if score @s switch.infected.zombie_strength matches 2 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
@@ -72,7 +67,6 @@ execute if score @s switch.trigger.shop matches 213 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 213 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Jump
-scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 212 if score @s switch.infected.zombie_jump matches 0 if score @s switch.money matches 200.. store success score #success switch.data run scoreboard players remove @s switch.money 200
 execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run scoreboard players add @s switch.infected.zombie_jump 1
 execute if score @s switch.trigger.shop matches 212 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour améliorer votre saut a bien été effectué !","color":"green"}]

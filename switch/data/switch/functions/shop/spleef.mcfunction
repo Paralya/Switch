@@ -3,7 +3,6 @@
 tellraw @s [{"text":"[Boutique Spleef]","color":"yellow"}]
 
 # Blocs de neige
-scoreboard players set #success switch.data 0
 scoreboard players add @s switch.spleef.snow_block 0
 execute if score @s switch.trigger.shop matches 301 if score @s switch.spleef.snow_block matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 301 if score @s switch.spleef.snow_block matches 1 if score @s switch.money matches 300.. store success score #success switch.data run scoreboard players remove @s switch.money 100
@@ -17,7 +16,6 @@ execute if score @s switch.trigger.shop matches 301 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 301 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Blocs de poudreuse
-scoreboard players set #success switch.data 0
 scoreboard players add @s switch.spleef.powder_snow 0
 execute if score @s switch.trigger.shop matches 302 if score @s switch.spleef.powder_snow matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 302 if score @s switch.spleef.powder_snow matches 1 if score @s switch.money matches 300.. store success score #success switch.data run scoreboard players remove @s switch.money 100

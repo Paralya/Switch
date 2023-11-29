@@ -6,7 +6,6 @@ tellraw @s [{"text":"[Boutique Pitchout]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 100 if score @s switch.tutorial matches 3 run scoreboard players set @s switch.tutorial 4
 
 # Boots
-scoreboard players set #success switch.data 0
 scoreboard players add @s switch.pitchout.boots 0
 execute if score @s switch.trigger.shop matches 101 if score @s switch.pitchout.boots matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 101 if score @s switch.pitchout.boots matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
@@ -20,7 +19,6 @@ execute if score @s switch.trigger.shop matches 101 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Ender Pearl
-scoreboard players set #success switch.data 0
 scoreboard players add @s switch.pitchout.ender_pearl 0
 execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 80
 execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 160
