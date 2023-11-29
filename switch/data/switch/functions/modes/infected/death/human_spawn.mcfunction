@@ -20,7 +20,6 @@ execute if score @s switch.infected.armor matches 5 run item replace entity @s a
 
 # Give the player an antidote potion
 execute if score @s switch.infected.antidote matches 1.. run give @s potion{display:{Name:'{"text":"Antidote à usage unique","color":"green","italic":false}',Lore:['{"text":"Boire seulement lorsqu\'on se transforme","color":"gray","italic":false}']},CustomModelData:2013116,switch:{antidote:1b},HideFlags:32}
-execute if score @s switch.infected.antidote matches 1.. run scoreboard players remove @s switch.infected.antidote 1
 
 # Playsound
 execute at @s run playsound entity.ender_dragon.growl ambient @s

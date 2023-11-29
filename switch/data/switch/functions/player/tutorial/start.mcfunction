@@ -3,6 +3,7 @@
 tag @s add detached
 team join switch.tutorial @s
 scoreboard players set @s switch.tutorial 0
+scoreboard players add @s switch.money 100
 
 # Teleport & Get username
 tp @s 0 69.69 0 0 0

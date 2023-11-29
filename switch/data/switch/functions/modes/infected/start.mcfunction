@@ -1,5 +1,4 @@
 
-
 ## Placement de la map et des joueurs
 time set 18000
 function switch:choose_map_for/infected
