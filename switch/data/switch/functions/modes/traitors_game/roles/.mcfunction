@@ -7,19 +7,19 @@ scoreboard players add #next_role switch.data 1
 # Inspecteur
 execute if score #next_role switch.data matches 1 run team join switch.temp.visible @s
 execute if score #next_role switch.data matches 1 run scoreboard players set @s switch.temp.role 1
-execute if score #next_role switch.data matches 1 run attribute @s generic.max_health modifier add 1-1-1-1-2 "Inspecteur" -0.2 multiply_base
+execute if score #next_role switch.data matches 1 run attribute @s generic.max_health base set 16
 # Traitre
 execute if score #next_role switch.data matches 2 run scoreboard players set @s switch.temp.role 5
 # Ninja
 execute if score #next_role switch.data matches 3 run scoreboard players set @s switch.temp.role 3
-execute if score #next_role switch.data matches 3 run attribute @s generic.movement_speed modifier add 1-1-1-1-1 "Ninja" 0.15 multiply_base
+execute if score #next_role switch.data matches 3 run attribute @s generic.movement_speed base set 0.115
 # Traitre
 execute if score #next_role switch.data matches 4 run scoreboard players set @s switch.temp.role 5
 # Innocents
 execute if score #next_role switch.data matches 5..6 run scoreboard players set @s switch.temp.role 2
 # Gros Traitre
 execute if score #next_role switch.data matches 7 run scoreboard players set @s switch.temp.role 6
-execute if score #next_role switch.data matches 7 run attribute @s generic.max_health modifier add 1-1-1-1-2 "Gros Traitre" 0.5 multiply_base
+execute if score #next_role switch.data matches 7 run attribute @s generic.max_health base set 30
 # Innocents
 execute if score #next_role switch.data matches 8..9 run scoreboard players set @s switch.temp.role 2
 # Traitre
