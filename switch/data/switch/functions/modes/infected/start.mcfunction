@@ -16,6 +16,7 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health
 
 gamerule keepInventory true
+gamerule showDeathMessages false
 
 # Choix des rôles + give d'items
 team add switch.temp.human
