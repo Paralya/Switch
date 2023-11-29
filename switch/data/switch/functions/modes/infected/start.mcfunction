@@ -15,6 +15,7 @@ scoreboard players set #infected_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health
 
+gamerule naturalRegeneration false
 gamerule keepInventory true
 gamerule showDeathMessages false
 

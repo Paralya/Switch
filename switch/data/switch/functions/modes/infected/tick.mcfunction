@@ -6,7 +6,7 @@ clear @a[tag=!detached] glass_bottle
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/infected/death/zombie_spawn
 
 # Saturation qui ne régène pas en mode OP
-execute as @a[tag=!detached] unless data entity @s {foodLevel:20} unless data entity @s {foodLevel:19} run effect give @s saturation 1 0 true
+execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
 
 # Prevent drop
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/infected/no_drop
