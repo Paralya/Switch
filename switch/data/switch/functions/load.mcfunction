@@ -12,6 +12,7 @@ scoreboard objectives add switch.right_click minecraft.used:minecraft.warped_fun
 scoreboard objectives add switch.second_right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add switch.reconnect dummy
 scoreboard objectives add switch.alive dummy
+scoreboard objectives add switch.play_time dummy
 
 scoreboard objectives add switch.death deathCount
 scoreboard objectives add switch.last_death dummy
