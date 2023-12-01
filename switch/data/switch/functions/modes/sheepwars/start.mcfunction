@@ -11,6 +11,7 @@ function switch:utils/set_dynamic_time
 ## Chargement de la map
 function switch:choose_map_for/sheepwars
 gamerule keepInventory true
+gamerule doTileDrops false
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de SheepWars, tenez-vous prêt car vous avez 5 secondes !\n"}]
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
@@ -41,6 +42,7 @@ team modify switch.temp.blue friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
+gamemode survival @a[tag=!detached]
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/sheepwars/team_and_give
 
 # Load du sheepwars

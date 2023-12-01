@@ -1,6 +1,14 @@
 
-# Reduce damage
+# Damage depending on the upgrade
 data modify entity @s damage set value 1.0d
+scoreboard players set #level switch.data 0
+execute on origin if score @s switch.sheepwars.choosen_kit matches 2 run scoreboard players operation #level switch.data = @s switch.sheepwars.kit_bow
+execute on origin if score @s switch.sheepwars.choosen_kit matches 2 run scoreboard players add #level switch.data 1
+execute if score #level switch.data matches 1 run data modify entity @s damage set value 1.1d
+execute if score #level switch.data matches 2 run data modify entity @s damage set value 1.2d
+execute if score #level switch.data matches 3 run data modify entity @s damage set value 1.3d
+execute if score #level switch.data matches 4 run data modify entity @s damage set value 1.4d
+execute if score #level switch.data matches 5 run data modify entity @s damage set value 1.5d
 
 # If fire arrows are enabled, set the arrow on fire
 scoreboard players set #success switch.data 0

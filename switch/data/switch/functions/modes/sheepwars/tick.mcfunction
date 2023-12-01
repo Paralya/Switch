@@ -24,6 +24,9 @@ item replace entity @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear
 
+# New sheeps detection
+execute as @e[type=sheep,tag=!switch.checked] run function switch:modes/sheepwars/on_new_sheeps
+
 # Night if intergalactique
 scoreboard players add #sheepwars_night switch.data 0
 execute if score #sheepwars_night switch.data matches 0 if entity @e[type=sheep,tag=sheepwars.intergalactique,tag=!sheepwars.intertag] run scoreboard players set #sheepwars_night switch.data 1
