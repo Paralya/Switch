@@ -15,6 +15,7 @@ scoreboard objectives add switch.alive dummy
 scoreboard objectives add switch.play_time dummy
 
 scoreboard objectives add switch.death deathCount
+scoreboard objectives add switch.kill playerKillCount
 scoreboard objectives add switch.last_death dummy
 
 scoreboard objectives add switch.trigger.help trigger

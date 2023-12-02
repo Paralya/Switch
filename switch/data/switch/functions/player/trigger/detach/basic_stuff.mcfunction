@@ -6,4 +6,5 @@ function switch:utils/reset_attributes
 effect give @s saturation infinite 0 true
 gamemode adventure @s
 clear @s
+team join switch.no_pvp @s
 
