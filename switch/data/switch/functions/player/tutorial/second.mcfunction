@@ -70,6 +70,7 @@ execute if score @s switch.tutorial matches 6.. run tellraw @s ["",{"text":"Tu p
 	{"text":"\n\nBref, je pense que tu as compris le principe du Switch, je vais te laisser découvrir le reste par toi-même !"}, \
 	{"text":"\nJe te souhaite un bon jeu sur l'espace Switch !","color":"gray"}]
 execute if score @s switch.tutorial matches 6.. run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Cliquez [ici] pour terminer le tutoriel !","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.tutorial set 2"}}]
+execute if score @s switch.tutorial matches 6.. run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Comme le /help le précise, faites /attach pour rejoindre les autres joueurs !","color":"green"}]
 
 # Go next dialog
 execute if score @s switch.tutorial matches 0..2 run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Cliquez [ici] pour passer au dialogue suivant !","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.tutorial set 2"}}]
