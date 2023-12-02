@@ -26,7 +26,7 @@ item replace entity @s inventory.0 with arrow{HideFlags:8}
 
 ## Shop things
 # Kit More Health
-execute if score @s switch.sheepwars.choosen_kit matches 1 run item replace entity @s armor.chest with chainmail_chestplate{Unbreakable:1b,HideFlags:8,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;20231201,1,0,0],Slot:"chest"}]}
+execute if score @s switch.sheepwars.choosen_kit matches 1 run item replace entity @s armor.chest with chainmail_chestplate{Unbreakable:1b,HideFlags:8,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;20231201,1,1,1],Slot:"chest"}]}
 execute if score @s switch.sheepwars.choosen_kit matches 1 unless score @s switch.sheepwars.kit_health matches 1.. run attribute @s generic.max_health base set 22
 execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 1 run attribute @s generic.max_health base set 24
 execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 2 run attribute @s generic.max_health base set 26

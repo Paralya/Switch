@@ -36,6 +36,7 @@ scoreboard objectives add switch.stats.wins dummy
 team add switch.no_pvp
 team add switch.tutorial
 team modify switch.no_pvp friendlyFire false
+team modify switch.no_pvp color dark_gray
 team modify switch.tutorial prefix {"text":"[En tutoriel] ","color":"yellow"}
 team modify switch.tutorial color gold
 

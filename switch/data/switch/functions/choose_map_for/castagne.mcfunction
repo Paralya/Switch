@@ -18,8 +18,6 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main c
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "sky_island_tower"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "sprucy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "highland_mansion"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "japanese_village"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "snowy_village"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "wyvern_towers"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "paralya_lobby"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "stardust_pvp_zone"
