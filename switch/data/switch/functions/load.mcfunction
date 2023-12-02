@@ -69,6 +69,7 @@ execute unless data storage switch:stats all run data modify storage switch:stat
 # Scoreboard constants and shop load
 function switch:set_constants
 function switch:shop/load
+execute unless score #can_attach switch.data matches 0.. run scoreboard players set #can_attach switch.data 1
 
 
 ## Define mini-games list

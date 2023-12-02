@@ -20,8 +20,8 @@ execute if score @s switch.trigger.shop matches 101 if score #success switch.dat
 
 # Ender Pearl
 scoreboard players add @s switch.pitchout.ender_pearl 0
-execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 80
-execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 160
+execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 0 if score @s switch.money matches 80.. store success score #success switch.data run scoreboard players remove @s switch.money 80
+execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 1 if score @s switch.money matches 160.. store success score #success switch.data run scoreboard players remove @s switch.money 160
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run scoreboard players add @s switch.pitchout.ender_pearl 1
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run tellraw @s [{"text":"Votre achat pour les ender pearls a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s

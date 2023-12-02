@@ -19,5 +19,8 @@ scoreboard players add @e[type=text_display,tag=switch.stat_display] switch.data
 kill @e[type=text_display,tag=switch.stat_display,scores={switch.data=60..}]
 
 # Tutorial second loop
-execute as @a[team=switch.tutorial] run function switch:player/tutorial/second
+execute as @a[team=switch.tutorial] at @s run function switch:player/tutorial/second
+
+# Jumps advancements
+advancement grant @a[x=22,y=88,z=0,distance=..1,gamemode=!creative,gamemode=!spectator] only switch:jump_white
 
