@@ -17,8 +17,8 @@ execute if score #game_state switch.data matches 1 run tellraw @a[tag=!detached]
 execute if score #game_state switch.data matches 2 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"spectres","color":"yellow"},{"text":" ! GG à "},{"selector":"@a[scores={switch.alive=1..},team=switch.temp.spectre]"}]
 execute if score #game_state switch.data matches 3 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 
-execute if score #game_state switch.data matches 1 as @a[scores={switch.alive=1..},team=switch.temp.visible] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 2 as @a[scores={switch.alive=1..},team=switch.temp.spectre] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] at @s run function switch:engine/add_money
 
 # Visuel de fin de partie
 execute if score #spectres_game_seconds switch.data matches 900.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
