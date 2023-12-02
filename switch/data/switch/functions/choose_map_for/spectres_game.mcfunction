@@ -7,7 +7,6 @@ execute store result score #mc switch.data run data get storage switch:main spec
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "spectre_original"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "mushroom_plains"
-execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "nuketown_no_barrier"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "sky_island_tower"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "wyvern_towers"
 
