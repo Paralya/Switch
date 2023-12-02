@@ -13,7 +13,7 @@ execute if score #zombie_attacker switch.data matches 1 on attacker if score @s 
 execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_damage matches 2 run scoreboard players set #damage switch.data 50
 execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_damage matches 3 run scoreboard players set #damage switch.data 55
 execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_damage matches 4 run scoreboard players set #damage switch.data 60
-execute if score #zombie_attacker switch.data matches 1 store result score #health switch.data run data get entity @s Health
+execute if score #zombie_attacker switch.data matches 1 store result score #health switch.data run data get entity @s Health 10
 execute if score #zombie_attacker switch.data matches 1 run scoreboard players operation #health switch.data -= #damage switch.data
 
 # If the victim's health is less than or equal to 0, launch the infection

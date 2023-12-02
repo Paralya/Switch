@@ -7,8 +7,6 @@ execute store result score #mc switch.data run data get storage switch:main cast
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "traitor_original"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "mushroom_plains"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_ice"
-execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "friends_pvpbox_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "baby_park"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "jayl_dark_forest"
 execute if score #mc switch.data matches 0 run data modify storage switch:main castagne_maps append value "paralya_lobby_noel"

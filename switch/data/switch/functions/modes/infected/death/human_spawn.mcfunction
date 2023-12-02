@@ -7,7 +7,6 @@ effect clear @s
 clear @s
 
 # Give stuff depending on player's upgrades
-item replace entity @s hotbar.1 with bow{Unbreakable:1b}
 execute unless score @s switch.infected.sword matches 1.. run item replace entity @s hotbar.0 with wooden_sword{Unbreakable:1b}
 execute if score @s switch.infected.sword matches 1 run item replace entity @s hotbar.0 with stone_sword{Unbreakable:1b}
 execute if score @s switch.infected.sword matches 2 run item replace entity @s hotbar.0 with iron_sword{Unbreakable:1b}

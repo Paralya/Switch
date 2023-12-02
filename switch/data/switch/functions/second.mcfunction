@@ -21,8 +21,3 @@ kill @e[type=text_display,tag=switch.stat_display,scores={switch.data=60..}]
 # Tutorial second loop
 execute as @a[team=switch.tutorial] at @s run function switch:player/tutorial/second
 
-# Jumps advancements
-advancement grant @a[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_green
-advancement grant @a[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_white
-advancement grant @a[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_red
-

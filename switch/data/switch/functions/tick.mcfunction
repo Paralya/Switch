@@ -22,6 +22,12 @@ execute if score #state switch.data matches 3 as @a[tag=!detached,gamemode=!spec
 # Right click reset
 scoreboard players reset @a switch.right_click
 
+# Jumps advancements
+advancement grant @a[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_green
+advancement grant @a[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_white
+advancement grant @a[x=0,y=81,z=-39,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_blue
+advancement grant @a[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_red
+
 ## Profiling
 #function switch:profiling/start
 
