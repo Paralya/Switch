@@ -7,7 +7,7 @@ execute as @a[scores={switch.alive=1..}] at @s if entity @s[y=-64,dy=64] run fun
 # Détecte si tous les joueurs ont finis
 scoreboard players set #alives switch.data 0
 scoreboard players set #finished switch.data 0
-execute store result score #alives switch.data if entity @a[scores={switch.alive=1..}]
+execute store result score #alives switch.data if entity @a[scores={switch.alive=-1..}]
 execute store result score #finished switch.data if entity @a[scores={switch.alive=-1}]
 execute if score #alives switch.data = #finished switch.data run scoreboard players set #detect_end switch.data 1
 

@@ -23,6 +23,7 @@ execute if entity @s[team=switch.temp.blue] run item replace entity @s armor.fee
 item replace entity @s hotbar.0 with stone_sword{Unbreakable:1b,HideFlags:8}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:infinity",lvl:1s}],Unbreakable:1b,HideFlags:8}
 item replace entity @s inventory.0 with arrow{HideFlags:8}
+attribute @s generic.armor base set 3.0
 
 ## Shop things
 # Kit More Health
