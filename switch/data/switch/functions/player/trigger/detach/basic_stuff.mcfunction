@@ -1,5 +1,5 @@
 
-tp @s 0 69.69 0 0 0
+execute in minecraft:overworld run tp @s 0 69.69 0 0 0
 
 effect clear @s
 function switch:utils/reset_attributes

@@ -7,5 +7,6 @@ execute unless score #can_attach switch.data matches 1 unless entity @s[team=swi
 # Selon l'état du jeu, on exécute les fonctions correspondantes
 scoreboard players add @s switch.alive 0
 execute if score #can_attach switch.data matches 1 unless entity @s[team=switch.tutorial] if score #state switch.data matches 2 run function switch:engine/voting_time/player_join
+execute if score #can_attach switch.data matches 1 unless entity @s[team=switch.tutorial] if score #state switch.data matches 3 run scoreboard players set #reconnect switch.data 0
 execute if score #can_attach switch.data matches 1 unless entity @s[team=switch.tutorial] if score #state switch.data matches 3 run function #switch:signals/player/joined
 
