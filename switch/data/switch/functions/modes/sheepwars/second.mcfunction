@@ -12,8 +12,7 @@ kill @e[type=falling_block,nbt={BlockState:{Name:"minecraft:fire"},OnGround:1b}]
 
 # 15 seconds give sheeps
 scoreboard players operation #sheep_give switch.data = #sheepwars_seconds switch.data
-execute if score #APOCALYPSE_GAME switch.data matches 0 run scoreboard players operation #sheep_give switch.data %= #15 switch.data
-
+scoreboard players operation #sheep_give switch.data %= #20 switch.data
 execute if score #sheep_give switch.data matches 0 as @a[tag=!detached,gamemode=!spectator] run function switch:modes/sheepwars/random_give
 
 # 30 seconds laines magiques

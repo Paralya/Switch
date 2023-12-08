@@ -34,9 +34,13 @@ scoreboard objectives add switch.stats.played dummy
 scoreboard objectives add switch.stats.wins dummy
 
 team add switch.no_pvp
+team add switch.detached
 team add switch.tutorial
 team modify switch.no_pvp friendlyFire false
-team modify switch.no_pvp color dark_gray
+team modify switch.no_pvp color white
+team modify switch.detached friendlyFire false
+team modify switch.detached color gray
+team modify switch.detached prefix {"text":"[Détaché] ","color":"dark_gray"}
 team modify switch.tutorial prefix {"text":"[En tutoriel] ","color":"yellow"}
 team modify switch.tutorial color gold
 

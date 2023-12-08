@@ -1,6 +1,7 @@
 
 scoreboard players set @s switch.trigger.attach 0
 execute if score #can_attach switch.data matches 1 unless entity @s[team=switch.tutorial] run tag @s remove detached
+execute if score #can_attach switch.data matches 1 unless entity @s[team=switch.tutorial] run team leave @s
 execute unless score #can_attach switch.data matches 1 unless entity @s[team=switch.tutorial] run tellraw @s [{"text":"Cette commande est désactivée pour le moment.","color":"red"}]
 
 # Selon l'état du jeu, on exécute les fonctions correspondantes
