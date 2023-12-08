@@ -9,7 +9,6 @@ execute if score @s switch.sheepwars.choosen_kit matches 4 if score @s switch.sh
 execute if score @s switch.sheepwars.choosen_kit matches 4 if score @s switch.sheepwars.kit_more_sheep matches 5 run scoreboard players set #number_of_drops sheepwars.data 2
 
 # Give sheep + playsound
-say give !
 function sheepwars:utils/random_give
 execute at @s run playsound entity.sheep.ambient ambient @s
 

@@ -13,7 +13,7 @@ execute if score #disable switch.data matches 1 run clear @a[tag=!detached,tag=!
 
 # Other stuff
 team empty switch.no_pvp
-spawnpoint @a[tag=!detached] 0 75 0
+spawnpoint @a 0 70 0
 xp set @a[tag=!detached] 0 levels
 xp set @a[tag=!detached] 0 points
 effect clear @a[tag=!detached]
