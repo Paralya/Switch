@@ -8,11 +8,11 @@ scoreboard players set #zombie_attacker switch.data 0
 execute on attacker if entity @s[team=switch.temp.zombie] store success score #zombie_attacker switch.data run tag @s add switch.temp
 
 # Take the damage points of the attacker and compare it to the health of the victim
-execute if score #zombie_attacker switch.data matches 1 run scoreboard players set #damage switch.data 15
-execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 1 run scoreboard players set #damage switch.data 20
-execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 2 run scoreboard players set #damage switch.data 25
-execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 3 run scoreboard players set #damage switch.data 30
-execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 4 run scoreboard players set #damage switch.data 35
+execute if score #zombie_attacker switch.data matches 1 run scoreboard players set #damage switch.data 30
+execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 1 run scoreboard players set #damage switch.data 35
+execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 2 run scoreboard players set #damage switch.data 40
+execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 3 run scoreboard players set #damage switch.data 45
+execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 4 run scoreboard players set #damage switch.data 50
 execute if score #zombie_attacker switch.data matches 1 store result score #health switch.data run data get entity @s Health 10
 execute if score #zombie_attacker switch.data matches 1 run scoreboard players operation #health switch.data -= #damage switch.data
 
