@@ -17,9 +17,9 @@ execute if score #creeper_apocalypse_seconds switch.data matches 0 if data stora
 # Tuer les creepers qui sont trop proches d'autres creepers
 execute if score #creeper_apocalypse_seconds switch.data matches 0.. as @e[type=creeper] at @s run function switch:modes/creeper_apocalypse/kill_creeper_if_too_close
 
-# Veillez à ce que le nombre de creepers ne dépasse pas 500
+# Veillez à ce que le nombre de creepers ne dépasse pas 200
 execute store result score #count switch.data if entity @e[type=creeper]
-execute if score #count switch.data matches 500.. run kill @e[type=creeper,limit=69,sort=random]
+execute if score #count switch.data matches 200.. run kill @e[type=creeper,limit=25,sort=random]
 
 # Clear des anciens mobs si il y en a
 execute if score #creeper_apocalypse_seconds switch.data matches ..-1 run tp @e[type=creeper] 0 -10000 0
