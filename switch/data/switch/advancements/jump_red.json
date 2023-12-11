@@ -3,8 +3,14 @@
 		"icon": {
 			"item": "minecraft:red_concrete"
 		},
-		"title": "The Red Jump",
-		"description": "Finir le jump rouge pour la première fois",
+		"title": {
+			"text": "The Red Jump",
+			"color": "yellow"
+		},
+		"description": {
+			"text": "Finir le jump rouge pour la première fois",
+			"color": "aqua"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

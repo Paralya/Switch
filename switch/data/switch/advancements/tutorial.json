@@ -3,8 +3,14 @@
 		"icon": {
 			"item": "minecraft:command_block"
 		},
-		"title": "Tutoriel Switch",
-		"description": "Compléter le tutoriel du Switch",
+		"title": {
+			"text": "Tutoriel Switch",
+			"color": "yellow"
+		},
+		"description": {
+			"text": "Compléter le tutoriel du Switch",
+			"color": "aqua"
+		},
 		"background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
 		"frame": "challenge",
 		"show_toast": true,
