@@ -33,13 +33,14 @@ gamerule doTileDrops true
 gamerule doEntityDrops true
 gamerule doMobLoot true
 gamerule doImmediateRespawn true
-gamerule announceAdvancements false
+gamerule announceAdvancements true
 gamerule doTraderSpawning false
 
 function #switch:signals/stop
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 
 # Update the stats of the minigame
+execute if score #test_mode switch.data matches 1.. run return 1
 data modify storage switch:main input set value {id:""}
 data modify storage switch:main input.id set from storage switch:main current_game
 function switch:stats/sort_minigames_stats/update_minigame with storage switch:main input

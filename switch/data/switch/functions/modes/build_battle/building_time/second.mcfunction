@@ -9,7 +9,8 @@ execute if score #second switch.data matches ..9 run title @a[tag=!detached] act
 execute if score #second switch.data matches 10.. run title @a[tag=!detached] actionbar [{"text":"Thème : ","color":"aqua"},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":", Temps restant : "},{"score":{"name":"#minute","objective":"switch.data"},"color":"yellow"},{"text":"m"},{"score":{"name":"#second","objective":"switch.data"},"color":"yellow"},{"text":"s"}]
 
 # When 4m30 remains, the players can vote to increase the time for 5 minutes (if 75% of the players vote yes), voting time is 30 seconds
-execute if score #remaining_time switch.data matches 270 run scoreboard players reset * switch.temp.theme_vote
+execute if score #remaining_time switch.data matches 270 run scoreboard players set @a[tag=!detached] switch.temp.theme_vote 0
+execute if score #remaining_time switch.data matches 270 run scoreboard players enable @a[tag=!detached] switch.temp.theme_vote
 execute if score #remaining_time switch.data matches 270 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Voulez-vous augmenter le temps de construction de 5 minutes ? (75% des joueurs doivent voter oui)","color":"green"}]
 execute if score #remaining_time switch.data matches 270 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Si oui, vous avez 30 secondes pour cliquer [ici]","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.temp.theme_vote set 1"}}]
 execute if score #remaining_time switch.data matches 270 as @a[tag=!detached] at @s run playsound block.note_block.pling ambient @s

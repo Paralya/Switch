@@ -50,6 +50,11 @@ tellraw @s [{"text":"[2023/11/21] ","color":"dark_aqua"},{"text":"Nouveau mode d
 # 2023/11/29
 tellraw @s [{"text":"[2023/11/29] ","color":"dark_aqua"},{"text":"Arrivée du Switch 2.0 : Masterclass","color":"white"}]
 
+# 2023/12/11
+tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Infected : nouvelle map 'Lost Graveyard Remastered' ajoutée\n+ les dégâts des infectés ont été réduits\n+ les parties durent maintenant 7m30 max","color":"green"}]
+tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Les joueurs qui ne se sont pas connectés depuis longtemps s'ont automatiquement détachés","color":"white"}]
+tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Build Battle : chaque participant gagne 50$ à chaque fin de partie","color":"green"}]
+
 
 # End of line
 tellraw @s ""

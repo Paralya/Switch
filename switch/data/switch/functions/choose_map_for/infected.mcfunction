@@ -7,6 +7,7 @@ execute store result score #mc switch.data run data get storage switch:main infe
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main infected_maps append value "ancienne_egypte_2013"
 execute if score #mc switch.data matches 0 run data modify storage switch:main infected_maps append value "old_japan_apocalypse"
+execute if score #mc switch.data matches 0 run data modify storage switch:main infected_maps append value "lost_graveyard_remastered"
 
 
 
