@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:bricks", "nbt": "{}"},
+		"title": {"text": "D&Cube", "color": "yellow"},
+		"description": {"text": "Faites au minimum 50 points en Build Battle", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/medium"},
+	"parent": "switch:visible/23"
+}

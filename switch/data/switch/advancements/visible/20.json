@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:minecart", "nbt": "{}"},
+		"title": {"text": "Fusée", "color": "yellow"},
+		"description": {"text": "Dépassez 5 joueurs dans le dernier tour en Kart Racer", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/medium"},
+	"parent": "switch:visible/19"
+}

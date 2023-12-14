@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:mutton", "nbt": "{}"},
+		"title": {"text": "Humm Charal !", "color": "yellow"},
+		"description": {"text": "Tuez 10 moutons en une partie de SheepWars", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/easy"},
+	"parent": "switch:visible/36"
+}

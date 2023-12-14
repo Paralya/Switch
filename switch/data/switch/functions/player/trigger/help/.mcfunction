@@ -8,8 +8,8 @@ tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"
 tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/money : ","color":"yellow"},{"text":"Affiche votre argent actuel"}]
 tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/detach : ","color":"yellow"},{"text":"Vous détache du moteur Switch"}]
 tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/attach : ","color":"yellow"},{"text":"Vous re-attache au moteur Switch"}]
-tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/stats_of <player> : ","color":"yellow"},{"text":"Affiche les statistiques du joueur"}]
-tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/money_of <player> : ","color":"yellow"},{"text":"Affiche l'argent du joueur"}]
+tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/player_stats <player> : ","color":"yellow"},{"text":"Affiche les statistiques du joueur"}]
+tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/player_money <player> : ","color":"yellow"},{"text":"Affiche l'argent du joueur"}]
 tellraw @s ""
 
 scoreboard players set @s switch.trigger.help 0

@@ -1,33 +1,15 @@
 {
 	"display": {
-		"icon": {
-			"item": "minecraft:lime_concrete"
-		},
-		"title": {
-			"text": "The Green Jump",
-			"color": "yellow"
-		},
-		"description": {
-			"text": "Finir le jump vert pour la première fois",
-			"color": "aqua"
-		},
+		"icon": {"item": "minecraft:lime_concrete"},
+		"title": {"text": "The Green Jump", "color": "yellow"},
+		"description": {"text": "Finir le jump vert pour la première fois", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "switch:tutorial",
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:impossible"
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	],
-	"rewards": {
-		"function": "switch:player/jumps/green"
-	}
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:player/jumps/green"},
+	"parent": "switch:visible/categories/jumps"
 }

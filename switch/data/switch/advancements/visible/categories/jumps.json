@@ -1,0 +1,14 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:slime_block"},
+		"title": {"text": "Jumps", "color": "yellow"},
+		"description": {"text": "Catégorie des jumps", "color": "aqua"},
+		"frame": "goal",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"parent": "switch:tutorial"
+}

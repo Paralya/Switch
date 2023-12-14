@@ -1,33 +1,15 @@
 {
 	"display": {
-		"icon": {
-			"item": "minecraft:red_concrete"
-		},
-		"title": {
-			"text": "The Red Jump",
-			"color": "yellow"
-		},
-		"description": {
-			"text": "Finir le jump rouge pour la première fois",
-			"color": "aqua"
-		},
+		"icon": {"item": "minecraft:red_concrete"},
+		"title": {"text": "The Red Jump", "color": "yellow"},
+		"description": {"text": "Finir le jump rouge pour la première fois", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "switch:tutorial",
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:impossible"
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	],
-	"rewards": {
-		"function": "switch:player/jumps/red"
-	}
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:player/jumps/red"},
+	"parent": "switch:jump_blue"
 }

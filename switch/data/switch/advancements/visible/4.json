@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:nether_star", "nbt": "{}"},
+		"title": {"text": "First Victor", "color": "yellow"},
+		"description": {"text": "Gagnez votre première partie dans n'importe quel mini-jeu", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/easy"},
+	"parent": "switch:visible/3"
+}

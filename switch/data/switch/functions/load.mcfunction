@@ -52,6 +52,7 @@ forceload add 0 0
 #define storage switch:main
 #define storage switch:records
 #define storage switch:stats
+#define storage switch:advancements
 #define score_holder #success
 #define score_holder #valid
 #define score_holder #count
@@ -72,9 +73,10 @@ data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aq
 execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{}}
 # ex: all = {player:{total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{pitch_creep:{total_games:0,played:[],wins:[]}, ...}}
 
-# Scoreboard constants and shop load
+# Scoreboard constants, shop load, and advancements load
 function switch:set_constants
-function switch:shop/load
+function switch:shop/_load
+function switch:advancements/_load {p1:"execute unless data storage switch:advancements all", p2:"run data modify storage switch:advancements all", p3:"percent:{int:0,digits:0},players:[],total:0"}
 execute unless score #can_attach switch.data matches 0.. run scoreboard players set #can_attach switch.data 1
 execute unless score #test_mode switch.data matches 0.. run scoreboard players set #test_mode switch.data 0
 

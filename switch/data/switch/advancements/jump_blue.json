@@ -1,33 +1,15 @@
 {
 	"display": {
-		"icon": {
-			"item": "minecraft:blue_concrete"
-		},
-		"title": {
-			"text": "The Blue Jump",
-			"color": "yellow"
-		},
-		"description": {
-			"text": "Finir le jump bleu pour la première fois",
-			"color": "aqua"
-		},
+		"icon": {"item": "minecraft:blue_concrete"},
+		"title": {"text": "The Blue Jump", "color": "yellow"},
+		"description": {"text": "Finir le jump bleu pour la première fois", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "switch:tutorial",
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:impossible"
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	],
-	"rewards": {
-		"function": "switch:player/jumps/blue"
-	}
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:player/jumps/blue"},
+	"parent": "switch:jump_white"
 }
