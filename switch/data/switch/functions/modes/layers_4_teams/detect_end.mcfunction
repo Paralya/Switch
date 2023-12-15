@@ -24,10 +24,10 @@ execute if score #game_state switch.data matches 3 run tellraw @a[tag=!detached]
 execute if score #game_state switch.data matches 4 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"jaunes","color":"yellow"},{"text":" ! GG à "},{"selector":"@a[tag=!detached,gamemode=!spectator,team=switch.temp.yellow]"}]
 execute if score #game_state switch.data matches 5 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 
-execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 3 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.green] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 4 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.yellow] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 3 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.green] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 4 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.yellow] at @s run function switch:engine/add_win
 
 # Visuel de fin de partie
 execute if score #remaining_time switch.data matches 0 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s

@@ -20,9 +20,9 @@ execute if score #game_state switch.data matches 2 run tellraw @a[tag=!detached]
 execute if score #game_state switch.data matches 3 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 execute if score #game_state switch.data matches 4 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Victoire des shooters ("},{"selector":"@a[tag=!detached,gamemode=adventure,team=switch.temp.shooters]"},{"text":") !"}]
 
-execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=adventure,team=switch.temp.gays] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 4 as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=adventure,team=switch.temp.gays] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 4 as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] at @s run function switch:engine/add_win
 
 # Visuel de fin de partie
 execute if score #gay_shooter_seconds switch.data matches 300.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s

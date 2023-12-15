@@ -24,10 +24,10 @@ execute if score #game_state switch.data matches 1 run tellraw @a[tag=!detached]
 execute if score #game_state switch.data matches 2 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"traitres","color":"red"},{"text":" ! GG à "},{"selector":"@a[scores={switch.alive=1..,switch.temp.role=5}]"}]
 execute if score #game_state switch.data matches 4 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire du "},{"text":"gros traitre","color":"dark_red"},{"text":" ! GG "},{"selector":"@a[scores={switch.alive=1..,switch.temp.role=6}]"}]
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 6 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Victoire des "},{"text":"traitres normaux","color":"red"},{"text":" car il ne reste aucun innocent et que le gros traitre n'a pas su trahir ! GG à "},{"selector":"@a[scores={switch.alive=1..,switch.temp.role=5}]"}]
-execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=..4}] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=5},tag=!switch.traitors_game.big_traitor] at @s run function switch:engine/add_money
-execute if score #game_state switch.data matches 4 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=6}] at @s run function switch:engine/add_money
-execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 1 as @a[scores={switch.alive=1..,switch.temp.role=..4}] at @s run function switch:engine/add_money
+execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=..4}] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=5},tag=!switch.traitors_game.big_traitor] at @s run function switch:engine/add_win
+execute if score #game_state switch.data matches 4 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=6}] at @s run function switch:engine/add_win
+execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 1 as @a[scores={switch.alive=1..,switch.temp.role=..4}] at @s run function switch:engine/add_win
 
 # Cas des égalités
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 3 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 20 minutes !"}]

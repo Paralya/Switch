@@ -1,9 +1,4 @@
 
-execute if score #test_mode switch.data matches 1.. run return 1
-
-scoreboard players add @s switch.stats.wins 1
-function switch:engine/add_money_macro with storage switch:main
-
 scoreboard players set #add switch.money 10
 execute if score #add_override switch.money matches 1.. run scoreboard players operation #add switch.money = #add_override switch.money
 execute if score #add_override switch.money matches 1.. run scoreboard players reset #add_override switch.money
