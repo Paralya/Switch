@@ -10,8 +10,8 @@ $$(p1)[{id:6}] $(p2) append value {id:6,color:"yellow",auteur:"Fhara",name:"Gay 
 $$(p1)[{id:7}] $(p2) append value {id:7,color:"red",auteur:"TreekoZ",name:"Pitch Slayer",description:"Remporter un Pitchout avec 3 vies",$(p3)}
 $$(p1)[{id:8}] $(p2) append value {id:8,color:"green",auteur:"Poppiz",name:"Fast Food",description:"Atteignez au moins 50 points en Feed Fast",$(p3)}
 $$(p1)[{id:9}] $(p2) append value {id:9,color:"red",auteur:"TreekoZ",name:"Bagarreur",description:"Tuez deux personnes dans un délai de 10 secondes en Castagne",$(p3)}
-$$(p1)[{id:10}] $(p2) append value {id:10,color:"yellow",auteur:"Stoupy",name:"Contre Courant",description:"Réussissez à faire voter au moins 8 personnes un jeu non populaire (Feed Fast, Panic Chase, etc.)",$(p3)}
-$$(p1)[{id:11}] $(p2) append value {id:11,color:"green",auteur:"Lawtank",name:"Anti Berger",description:"Gagnez une partie de SheepWars sans utiliser aucun mouton (y compris le mouton d'abordage)",$(p3)}
+$$(p1)[{id:10}] $(p2) append value {id:10,color:"yellow",auteur:"Stoupy",name:"Contre Courant",description:"Réussissez à faire voter au moins 8 personnes un jeu non populaire (Feed Fast, Laser Game, etc.)",$(p3)}
+$$(p1)[{id:11}] $(p2) append value {id:11,color:"green",auteur:"Lawtank",name:"Berger",description:"Gagnez une partie de SheepWars sans utiliser aucun mouton (y compris le mouton d'abordage)",$(p3)}
 $$(p1)[{id:12}] $(p2) append value {id:12,color:"red",auteur:"OfChara",name:"Sans Faute",description:"Gagnez une partie de Spectres Game sans perdre aucun membre de votre équipe.",$(p3)}
 $$(p1)[{id:13}] $(p2) append value {id:13,color:"green",auteur:"Axaltau",name:"Pacifiste",description:"Survivez 100 secondes en PitchOut sans mettre aucun coup",$(p3)}
 $$(p1)[{id:14}] $(p2) append value {id:14,color:"red",auteur:"Lawtank",name:"The Last King",description:"Soyez le dernier survivant en Protect The King",$(p3)}
@@ -46,6 +46,7 @@ $$(p1)[{id:42}] $(p2) append value {id:42,color:"red",auteur:"ArtiGrrr",name:"Xe
 $$(p1)[{id:43}] $(p2) append value {id:43,color:"yellow",auteur:"ArtiGrrr",name:"Avide",description:"Détruisez 5 blocs d'obsidienne en une partie de Rush The Point",$(p3)}
 $$(p1)[{id:44}] $(p2) append value {id:44,color:"yellow",auteur:"Xiaojuun",name:"C'est tout naturel",description:"Poussez un joueur vers un dé à coudre en Simultaneous Jump",$(p3)}
 $$(p1)[{id:45}] $(p2) append value {id:45,color:"green",auteur:"Lawtank",name:"Humm Charal !",description:"Tuez 10 moutons en une partie de SheepWars",$(p3)}
+$$(p1)[{id:46}] $(p2) append value {id:46,color:"green",auteur:"Stoupy",name:"Automutilation",description:"Se tuer soi-même avec un mouton en SheepWars",$(p3)}
 
 # $$(p1)[{id:_X_}] $(p2) append value {id:_X_,color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__",$(p3)}
 

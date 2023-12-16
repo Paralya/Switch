@@ -8,11 +8,17 @@ function switch:engine/voting_time/update_votes
 
 scoreboard players set #max switch.data 0
 execute if score #vote_game_1 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_1 switch.data
+execute if score #vote_game_1 switch.data > #max switch.data run scoreboard players set #max_game switch.data -1
 execute if score #vote_game_2 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_2 switch.data
+execute if score #vote_game_2 switch.data > #max switch.data run scoreboard players set #max_game switch.data -2
 execute if score #vote_game_3 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_3 switch.data
+execute if score #vote_game_3 switch.data > #max switch.data run scoreboard players set #max_game switch.data -3
 execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_4 switch.data
+execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players set #max_game switch.data -4
 execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_5 switch.data
+execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players set #max_game switch.data -5
 execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_6 switch.data
+execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players set #max_game switch.data -6
 
 data modify storage switch:main voted_games set value []
 data modify storage switch:main current_game set value ""
@@ -31,6 +37,17 @@ execute if score #modulo_rand switch.data matches 1 store result score #game_1 s
 execute if score #modulo_rand switch.data matches 2.. run function switch:engine/launch_game/get_random_max
 execute if score #modulo_rand switch.data matches 2.. run tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Égalité entre plusieurs mode de jeux, choix aléatoire !\n"}]
 
+# Advancement
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"feed_fast"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"laser_game"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"mlg_a_coudre"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"de_a_coudre"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"thunder_spear"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"snowball_painter"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"coin_chaser"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"shoot_da_sheep"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"layers_2_teams"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+
 weather clear
 difficulty normal
 scoreboard players reset #set_spec switch.data
@@ -42,6 +59,6 @@ function #switch:signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 
-# Depending on the game, add a score to the player
+# Depending on the game, add a score
 function switch:engine/launch_game/add_played_stat with storage switch:main
 

@@ -16,5 +16,8 @@ execute if score #success switch.data matches 0 if entity @s[scores={switch.aliv
 execute if score #success switch.data matches 1 if entity @s[scores={switch.alive=1}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Spectre","color":"yellow"},{"text":" !"}]
 execute if score #success switch.data matches 1 if entity @s[scores={switch.alive=2}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Visible","color":"green"},{"text":" !"}]
 
+execute if entity @s[scores={switch.alive=1}] run scoreboard players add #nb_dead_spectres switch.data 1
+execute if entity @s[scores={switch.alive=2}] run scoreboard players add #nb_dead_visibles switch.data 1
+
 kill @s
 

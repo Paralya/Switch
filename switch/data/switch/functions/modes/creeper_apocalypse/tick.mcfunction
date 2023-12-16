@@ -9,7 +9,7 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 effect give @e[type=creeper] resistance infinite 0 true
 execute as @e[type=area_effect_cloud] at @s run function switch:modes/creeper_apocalypse/creeper_exploded
 execute as @e[type=creeper] run scoreboard players add @e[type=creeper,sort=random,limit=1] switch.temp.duplication 1
-execute as @e[type=creeper,scores={switch.temp.duplication=400..}] run data modify entity @s ignited set value 1b
+execute as @e[type=creeper,scores={switch.temp.duplication=200..}] run data modify entity @s ignited set value 1b
 execute as @e[type=creeper] at @s if block ~ ~-1 ~ barrier run tp @s 0 -10000 0
 kill @e[type=item]
 

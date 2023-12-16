@@ -3,7 +3,8 @@
 tag @s add detached
 team join switch.tutorial @s
 scoreboard players set @s switch.tutorial 0
-scoreboard players add @s switch.money 100
+scoreboard players set @s switch.stats.wins 1
+scoreboard players set @s switch.money 100
 function switch:player/trigger/reset
 
 # Teleport & Get username

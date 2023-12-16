@@ -26,6 +26,8 @@ scoreboard players set #spectres_game_seconds switch.data -1
 scoreboard players set #spectres_game_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
+scoreboard players set #nb_dead_spectres switch.data 0
+scoreboard players set #nb_dead_visibles switch.data 0
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.damages dummy {"text":" Coups infligés ","color":"aqua"}

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:gold_nugget", "nbt": "{}"},
 		"title": {"text": "La moula", "color": "yellow"},
-		"description": {"text": "Ayez au moins 400$ dans votre porte-monnaie\n", "color": "aqua"},
+		"description": {"text": "Ayez au moins 400$ dans votre porte-monnaie", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

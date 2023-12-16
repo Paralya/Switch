@@ -17,3 +17,5 @@ execute if score #random switch.data matches 7 run tellraw @s [{"nbt":"ParalyaMo
 
 playsound entity.player.levelup ambient @s ^ ^ ^ .2
 
+execute if score @s switch.money matches 400.. run advancement grant @s only switch:visible/3
+

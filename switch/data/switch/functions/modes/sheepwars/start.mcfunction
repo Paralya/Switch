@@ -6,7 +6,6 @@ effect give @a[tag=!detached] blindness 5 255 true
 effect give @a[tag=!detached] darkness 5 255 true
 effect give @a[tag=!detached] jump_boost 5 250 true
 effect give @a[tag=!detached] slowness 5 255 true
-gamemode adventure @a[tag=!detached]
 function switch:utils/set_dynamic_time
 
 ## Chargement de la map
@@ -25,6 +24,7 @@ scoreboard players set #blue_fire_arrows switch.data 0
 scoreboard players set #blue_explosive_arrows switch.data 0
 scoreboard players set #red_fire_arrows switch.data 0
 scoreboard players set #red_explosive_arrows switch.data 0
+scoreboard players reset * sheepwars.launched_count
 scoreboard objectives setdisplay list switch.health
 
 # Apocalypse
@@ -43,7 +43,7 @@ team modify switch.temp.blue friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
-gamemode survival @a[tag=!detached]
+gamemode adventure @a[tag=!detached]
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/sheepwars/team_and_give
 
 # Load du sheepwars

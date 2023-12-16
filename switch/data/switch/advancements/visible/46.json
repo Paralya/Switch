@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:red_wool", "nbt": "{}"},
+		"title": {"text": "Automutilation", "color": "yellow"},
+		"description": {"text": "Se tuer soi-même en SheepWars", "color": "aqua"},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/easy"},
+	"parent": "switch:visible/45"
+}

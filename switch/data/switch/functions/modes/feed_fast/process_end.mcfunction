@@ -1,6 +1,7 @@
 
 scoreboard players add #process_end switch.data 1
 
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.points matches 50.. run advancement grant @s only switch:visible/8
 execute if score #process_end switch.data matches 1 run tag @a[tag=!detached] remove switch.winner
 execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data 0
 execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached] switch.temp.points
