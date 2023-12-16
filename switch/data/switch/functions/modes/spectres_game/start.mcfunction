@@ -31,6 +31,7 @@ scoreboard players set #nb_dead_visibles switch.data 0
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.damages dummy {"text":" Coups infligés ","color":"aqua"}
+scoreboard objectives add switch.temp.kills playerKillCount
 scoreboard objectives setdisplay sidebar switch.temp.damages
 scoreboard objectives setdisplay list switch.health
 

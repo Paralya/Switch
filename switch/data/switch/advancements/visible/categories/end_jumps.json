@@ -1,5 +1,5 @@
 {
 	"criteria": {"requirement": {"trigger": "minecraft:tick"}},
 	"requirements": [["requirement"]],
-	"parent": "switch:jump_red"
+	"parent": "switch:visible/jump_purple"
 }

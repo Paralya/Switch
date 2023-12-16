@@ -13,6 +13,8 @@ scoreboard objectives remove switch.temp.vote_collisions
 scoreboard objectives remove switch.temp.change_map
 scoreboard objectives remove switch.temp.checkpoint
 scoreboard objectives remove switch.temp.classement
+scoreboard objectives remove switch.temp.pv_classement
+scoreboard objectives remove switch.temp.pos_on_last_lap
 scoreboard objectives remove switch.temp.sidebar
 scoreboard objectives remove switch.respawn_cp_id
 scoreboard objectives remove switch.hard_respawn_cp_id

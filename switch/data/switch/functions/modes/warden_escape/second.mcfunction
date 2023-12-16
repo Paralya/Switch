@@ -10,3 +10,6 @@ execute if score #warden_escape_seconds switch.data matches 30 run function swit
 execute if score #warden_escape_seconds switch.data matches ..-1 run tp @e[type=warden] 0 -10000 0
 execute if score #warden_escape_seconds switch.data matches ..-1 run kill @e[type=warden]
 
+# Suicidaire advancement
+execute as @a[tag=!detached] run function switch:modes/warden_escape/suicidaire_advancement
+

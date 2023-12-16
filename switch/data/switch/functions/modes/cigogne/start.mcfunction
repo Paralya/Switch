@@ -23,6 +23,7 @@ scoreboard players set #remaining_time switch.data 910
 scoreboard players set #cigogne_seconds switch.data -10
 scoreboard players set #cigogne_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard objectives add switch.temp.kill playerKillCount
 scoreboard objectives setdisplay list switch.health
 
 execute as @a[tag=!detached] run function switch:modes/cigogne/give_items

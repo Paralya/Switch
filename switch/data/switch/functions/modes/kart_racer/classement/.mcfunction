@@ -21,6 +21,7 @@ team join switch.temp.8 @a[scores={switch.temp.classement=8}]
 team join switch.temp.9 @a[scores={switch.temp.classement=9}]
 team join switch.temp.10 @a[scores={switch.temp.classement=10}]
 team join switch.temp.10+ @a[scores={switch.temp.classement=11..}]
+execute as @a[tag=!detached] run scoreboard players operation @s switch.temp.pv_classement = @s switch.temp.classement
 
 
 # Repositionnement des joueurs selon leur place dans le scoreboard sidebar

@@ -19,5 +19,9 @@ execute as @a[scores={switch.temp.rank=4..}] run tellraw @s [{"text":"\n","color
 tellraw @a[tag=!detached] ""
 
 # Remove rank objective
+execute as @a[scores={switch.temp.rank=1}] at @s run function switch:engine/add_win
 scoreboard objectives remove switch.temp.rank
+
+# Advancement
+advancement grant @a[scores={switch.temp.points=50..}] only switch:visible/28
 

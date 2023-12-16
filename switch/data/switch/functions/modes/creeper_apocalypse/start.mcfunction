@@ -23,6 +23,7 @@ scoreboard players set #creeper_apocalypse_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.duplication dummy
+scoreboard objectives add switch.temp.ocelot dummy
 
 execute as @a[tag=!detached] at @s run function switch:modes/creeper_apocalypse/give_items
 

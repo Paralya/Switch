@@ -19,7 +19,7 @@ $$(p1)[{id:15}] $(p2) append value {id:15,color:"yellow",auteur:"Lawtank",name:"
 $$(p1)[{id:16}] $(p2) append value {id:16,color:"yellow",auteur:"Lawtank",name:"Héro Humanitaire",description:"Tuez au moins 5 zombies en une partie d'Infected",$(p3)}
 $$(p1)[{id:17}] $(p2) append value {id:17,color:"yellow",auteur:"Lawtank",name:"Vive la chair",description:"Infectez 4 survivants dans une partie d'Infected",$(p3)}
 $$(p1)[{id:18}] $(p2) append value {id:18,color:"red",auteur:"OfChara",name:"Roi fantôme",description:"Tuez 3 personnes en tant que spectre en Spectres Games",$(p3)}
-$$(p1)[{id:19}] $(p2) append value {id:19,color:"yellow",auteur:"Manu",name:"Wattouat",description:"Abattre un ennemi avec un moutron foudroyant en SheepWars",$(p3)}
+$$(p1)[{id:19}] $(p2) append value {id:19,color:"yellow",auteur:"Manu",name:"Wattouat",description:"Mourir à cause d'un moutron foudroyant en SheepWars",$(p3)}
 $$(p1)[{id:20}] $(p2) append value {id:20,color:"yellow",auteur:"OfChara",name:"Fusée",description:"Dépassez 5 joueurs dans le dernier tour en Kart Racer",$(p3)}
 $$(p1)[{id:21}] $(p2) append value {id:21,color:"yellow",auteur:"OfChara",name:"Plongeur Expert",description:"Complétez 3 dés à coudre dans les modes de jeu du style",$(p3)}
 $$(p1)[{id:22}] $(p2) append value {id:22,color:"red",auteur:"OfChara",name:"Homophobe",description:"Mettre au moins 42 flèches en Gay Shooter",$(p3)}

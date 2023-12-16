@@ -6,3 +6,5 @@ execute if score #pitchout_seconds switch.data matches ..-1 run kill @e[type=cre
 
 execute if score #pitchout_seconds switch.data matches -3 as @a[tag=!detached] at @s run function switch:modes/pitchout/give_items
 
+execute if score #pitchout_seconds switch.data matches 100 as @a[tag=!detached,scores={switch.lives=3}] unless score @s switch.temp.damages matches 1.. run advancement grant @s only switch:visible/13
+

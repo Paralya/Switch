@@ -21,5 +21,10 @@ scoreboard players set #castagne_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health
 
+scoreboard objectives add switch.temp.kill playerKillCount
+scoreboard objectives add switch.temp.cooldown_kill dummy
+
+data modify storage switch:temp castagne set value []
+scoreboard players set #initial_count switch.data 0
 execute as @a[tag=!detached] run function switch:modes/castagne/give_items
 

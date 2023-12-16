@@ -8,5 +8,10 @@ execute if score #process_end switch.data matches 1 if score #remaining_players 
 execute if score #process_end switch.data matches 1 unless score #remaining_players switch.data matches 1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Temps écoulé ! Il n'y a eu aucun gagnant ;("}]
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/cigogne/death
 
+# Advancement
+execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data
+execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached] switch.temp.kill
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] if score #max switch.data = @s switch.temp.kill run advancement grant @s only switch:visible/23
+
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

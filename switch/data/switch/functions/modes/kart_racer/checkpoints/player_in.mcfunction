@@ -4,6 +4,7 @@ scoreboard players add @s switch.checkpoint 1
 scoreboard players add @s switch.temp.checkpoint 1
 scoreboard players operation @s switch.checkpoint %= #modulo switch.data
 execute if score @s switch.checkpoint matches 0 run scoreboard players add @s switch.lap 1
+execute if score @s switch.checkpoint matches 0 unless score @s switch.lap > #total_laps switch.data run scoreboard players operation @s switch.temp.pos_on_last_lap = @s switch.temp.pv_classement
 
 # Playsounds & messages
 execute if score @s switch.checkpoint matches 0 if score @s switch.lap <= #total_laps switch.data run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" passe au tour n°"},{"score":{"name":"@s","objective":"switch.lap"},"color":"aqua"},{"text":"/"},{"score":{"name":"#total_laps","objective":"switch.data"},"color":"aqua"}]

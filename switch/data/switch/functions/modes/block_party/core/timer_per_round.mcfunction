@@ -10,4 +10,5 @@ execute if score #block_party_round switch.data matches 7 run scoreboard players
 execute if score #block_party_round switch.data matches 8 run scoreboard players add #block_party_ticks switch.data 24
 execute if score #block_party_round switch.data matches 9 run scoreboard players add #block_party_ticks switch.data 27
 execute if score #block_party_round switch.data matches 10.. run scoreboard players add #block_party_ticks switch.data 29
+execute if score #block_party_round switch.data matches 20 run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/24
 

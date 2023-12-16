@@ -18,6 +18,7 @@ execute as @a[tag=!detached] run function switch:modes/pitchout/xp_bar
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, exterminez les autres !"}]
 
+scoreboard objectives add switch.temp.damages dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
