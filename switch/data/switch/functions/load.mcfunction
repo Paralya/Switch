@@ -33,6 +33,8 @@ scoreboard objectives add switch.stats.deaths deathCount
 scoreboard objectives add switch.stats.played dummy
 scoreboard objectives add switch.stats.wins dummy
 
+scoreboard objectives add switch.win_streak dummy
+
 team add switch.no_pvp
 team add switch.detached
 team add switch.tutorial

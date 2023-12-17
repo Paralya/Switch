@@ -58,6 +58,8 @@ function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 function #switch:signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
+scoreboard players remove @a[tag=!detached] switch.win_streak 5
+scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5
 
 # Depending on the game, add a score
 function switch:engine/launch_game/add_played_stat with storage switch:main

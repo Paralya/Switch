@@ -28,6 +28,7 @@ execute positioned ~1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run sc
 
 execute if score #points switch.data matches 5 run setblock ~ ~ ~ emerald_block
 execute if score #points switch.data matches 5 run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1b,Colors:[I;3789123]}]}}}}
+execute if score #points switch.data matches 5 on attacker run advancement grant @s only switch:visible/44
 execute if score #points switch.data matches 1..4 run summon firework_rocket ~ ~1 ~ {LifeTime:10,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Colors:[I;5631]}]}}}}
 
 execute if score #points switch.data matches 5 run scoreboard players set #points switch.data 6

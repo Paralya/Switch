@@ -21,3 +21,6 @@ scoreboard players operation #magic_wool switch.data %= #20 switch.data
 execute if score #APOCALYPSE_GAME switch.data matches 1 if score #magic_wool switch.data matches 5 run scoreboard players set #magic_wool switch.data 15
 execute if score #magic_wool switch.data matches 15 run function switch:modes/sheepwars/magic_wool/place
 
+# Humm Charal advancement
+advancement grant @a[tag=!detached,scores={switch.temp.killed_sheep=10..}] only switch:visible/45
+

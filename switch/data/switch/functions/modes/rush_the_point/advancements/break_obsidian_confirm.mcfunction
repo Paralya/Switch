@@ -45,3 +45,6 @@ execute if score #random switch.data matches 7 run tellraw @a[tag=!detached] ["\
 execute if score #random switch.data matches 8 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" a récuperé le bonus, cela donne l'effet Wither à l'équipe ennemi [+250 points]\n"}]
 execute if score #random switch.data matches 9 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" a récuperé le bonus, cela donne l'effet Weakness à l'équipe ennemi [+250 points]\n"}]
 
+# Increment
+scoreboard players add @s switch.temp.total_obsidian 1
+execute if score @s switch.temp.total_obsidian matches 5.. run advancement grant @s only switch:visible/43

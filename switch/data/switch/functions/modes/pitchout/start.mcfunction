@@ -20,9 +20,15 @@ tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interp
 
 scoreboard objectives add switch.temp.damages dummy
 scoreboard objectives add switch.temp.cooldown dummy
+scoreboard objectives add switch.temp.old_x dummy
+scoreboard objectives add switch.temp.old_z dummy
+scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
 scoreboard players set #pitchout_seconds switch.data -5
 scoreboard players set #pitchout_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+
+data modify storage switch:temp pitchout set value []
+execute as @a[tag=!detached] run function switch:modes/pitchout/advancements/setup_player
 

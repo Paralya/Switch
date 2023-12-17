@@ -21,6 +21,7 @@ scoreboard players set #detective_reload switch.data 0
 scoreboard players set #murderer_reload switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.role dummy
+scoreboard objectives add switch.temp.nb_arrows_get dummy
 
 # Scoreboard permanents
 scoreboard objectives add switch.games_not_being_murderer dummy

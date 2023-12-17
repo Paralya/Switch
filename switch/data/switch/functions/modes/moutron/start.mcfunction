@@ -16,6 +16,7 @@ tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interp
 
 scoreboard objectives add switch.temp.moutron dummy
 scoreboard objectives add switch.temp.color dummy
+scoreboard objectives add switch.temp.kill dummy
 
 scoreboard players set #moutron_seconds switch.data -10
 scoreboard players set #moutron_ticks switch.data -100

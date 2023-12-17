@@ -14,6 +14,10 @@ scoreboard players set #layers_4_teams_seconds switch.data -10
 scoreboard players set #layers_4_teams_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
+scoreboard objectives add switch.temp.killed_red teamkill.red
+scoreboard objectives add switch.temp.killed_blue teamkill.blue
+scoreboard objectives add switch.temp.killed_green teamkill.green
+scoreboard objectives add switch.temp.killed_yellow teamkill.yellow
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
@@ -34,5 +38,9 @@ team modify switch.temp.blue nametagVisibility hideForOtherTeams
 team modify switch.temp.green nametagVisibility hideForOtherTeams
 team modify switch.temp.yellow nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
+scoreboard players set #total switch.temp.killed_red 0
+scoreboard players set #total switch.temp.killed_blue 0
+scoreboard players set #total switch.temp.killed_green 0
+scoreboard players set #total switch.temp.killed_yellow 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/layers_4_teams/team_and_give
 

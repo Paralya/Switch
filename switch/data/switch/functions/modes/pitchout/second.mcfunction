@@ -8,3 +8,6 @@ execute if score #pitchout_seconds switch.data matches -3 as @a[tag=!detached] a
 
 execute if score #pitchout_seconds switch.data matches 100 as @a[tag=!detached,scores={switch.lives=3}] unless score @s switch.temp.damages matches 1.. run advancement grant @s only switch:visible/13
 
+# 500 blocs run Pitchout
+execute as @a[tag=!detached,gamemode=adventure] run function switch:modes/pitchout/blocks_run
+

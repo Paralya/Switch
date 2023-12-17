@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:yellow_concrete"},
+		"icon": {"item": "minecraft:purple_concrete"},
 		"title": {"text": "The Purple Jump", "color": "yellow"},
 		"description": {"text": "Finir le jump violet pour la première fois", "color": "aqua"},
 		"frame": "task",

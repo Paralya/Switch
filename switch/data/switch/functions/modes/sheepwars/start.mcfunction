@@ -25,6 +25,7 @@ scoreboard players set #blue_explosive_arrows switch.data 0
 scoreboard players set #red_fire_arrows switch.data 0
 scoreboard players set #red_explosive_arrows switch.data 0
 scoreboard players reset * sheepwars.launched_count
+scoreboard objectives add switch.temp.killed_sheep minecraft.killed:minecraft.sheep
 scoreboard objectives setdisplay list switch.health
 
 # Apocalypse

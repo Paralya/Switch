@@ -47,6 +47,9 @@ $$(p1)[{id:43}] $(p2) append value {id:43,color:"yellow",auteur:"ArtiGrrr",name:
 $$(p1)[{id:44}] $(p2) append value {id:44,color:"yellow",auteur:"Xiaojuun",name:"C'est tout naturel",description:"Poussez un joueur vers un dé à coudre en Simultaneous Jump",$(p3)}
 $$(p1)[{id:45}] $(p2) append value {id:45,color:"green",auteur:"Lawtank",name:"Humm Charal !",description:"Tuez 10 moutons en une partie de SheepWars",$(p3)}
 $$(p1)[{id:46}] $(p2) append value {id:46,color:"green",auteur:"Stoupy",name:"Automutilation",description:"Se tuer soi-même avec un mouton en SheepWars",$(p3)}
+$$(p1)[{id:47}] $(p2) append value {id:47,color:"green",auteur:"luigimario12",name:"Il a rien compris lui",description:"Courir 500 blocs en une partie de Pitchout",$(p3)}
+$$(p1)[{id:48}] $(p2) append value {id:48,color:"red",auteur:"luigimario12",name:"Donald Trump",description:"Faire au maximum 5 coups en une partie de MiniGolf",$(p3)}
+$$(p1)[{id:49}] $(p2) append value {id:49,color:"yellow",auteur:"luigimario12",name:"Damidot",description:"Recevoir une note Legendary en Build Battle",$(p3)}
 
-# $$(p1)[{id:_X_}] $(p2) append value {id:_X_,color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__",$(p3)}
+#$$(p1)[{id:_X_}] $(p2) append value {id:_X_,color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__",$(p3)}
 

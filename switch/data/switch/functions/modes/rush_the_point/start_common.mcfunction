@@ -14,6 +14,7 @@ gamerule keepInventory true
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
+scoreboard objectives add switch.temp.total_obsidian dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 

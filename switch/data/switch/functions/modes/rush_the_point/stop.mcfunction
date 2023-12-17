@@ -6,6 +6,7 @@ scoreboard objectives remove switch.temp.cooldown
 scoreboard objectives remove switch.temp.choosen_class
 scoreboard objectives remove switch.temp.break_obsidian
 scoreboard objectives remove switch.temp.sidebar
+scoreboard objectives remove switch.temp.total_obsidian
 team remove switch.temp.sidebar.5
 team remove switch.temp.sidebar.4
 team remove switch.temp.sidebar.3

@@ -1,6 +1,6 @@
 
 execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" s'est pris un mur, il a survécu "},{"score":{"name":"#moutron_seconds","objective":"switch.data"}},{"text":" secondes !"}]
-execute if entity @s[gamemode=!spectator] run summon lightning_bolt ~ ~-5 ~
+execute if entity @s[gamemode=!spectator] at @s as @p[gamemode=!spectator,distance=0.001..12] run function switch:modes/moutron/adv_kill
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 
 ride @s dismount
