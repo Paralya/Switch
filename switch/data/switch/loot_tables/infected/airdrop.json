@@ -1,0 +1,76 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 4,
+				"max": 6
+			},
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:golden_apple"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 3,
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "minecraft:set_potion",
+							"id": "minecraft:healing"
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "minecraft:set_potion",
+							"id": "minecraft:regeneration"
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_lore",
+							"entity": "this",
+							"lore": [
+								{
+									"text": "Infected",
+									"color": "dark_green",
+									"italic": true
+								}
+							],
+							"replace": true
+						},
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": {
+								"text": "Élément 115",
+								"color": "white",
+								"italic": false
+							}
+						},
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{CustomModelData:2013001,infected:{115:1b}}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
