@@ -180,7 +180,6 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Égalité", \
 	"Fraternité", \
 	"Inadmissible", \
-	"La personne que tu préfères ici", \
 	"Éternité", \
 	"Nerd", \
 	"Épreuve" \
