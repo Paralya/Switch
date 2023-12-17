@@ -11,6 +11,8 @@ execute if entity @s[advancements={switch:jump_white=true}] run function switch:
 execute if entity @s[advancements={switch:jump_blue=true}] run function switch:advancements/_pre_macro {id:"jump_blue"}
 execute if entity @s[advancements={switch:visible/jump_yellow=true}] run function switch:advancements/_pre_macro {id:"jump_yellow"}
 execute if entity @s[advancements={switch:jump_red=true}] run function switch:advancements/_pre_macro {id:"jump_red"}
+execute if entity @s[advancements={switch:visible/jump_brown=true}] run function switch:advancements/_pre_macro {id:"jump_brown"}
+execute if entity @s[advancements={switch:visible/jump_purple=true}] run function switch:advancements/_pre_macro {id:"jump_purple"}
 execute if entity @s[advancements={switch:visible/1=true}] run function switch:advancements/_pre_macro {id:"1"}
 execute if entity @s[advancements={switch:visible/2=true}] run function switch:advancements/_pre_macro {id:"2"}
 execute if entity @s[advancements={switch:visible/3=true}] run function switch:advancements/_pre_macro {id:"3"}

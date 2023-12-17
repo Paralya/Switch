@@ -10,6 +10,6 @@
 	},
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/jumps/blue"},
+	"rewards": {"function": "switch:advancements/jumps/white"},
 	"parent": "switch:jump_green"
 }
