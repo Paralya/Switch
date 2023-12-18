@@ -14,3 +14,5 @@ execute if score #feed_fast_seconds switch.data matches ..-1 run kill @e[type=it
 execute if score #feed_fast_seconds switch.data matches ..-1 run scoreboard players set @a[tag=!detached,gamemode=!spectator] switch.temp.previous_food 20
 execute if score #feed_fast_seconds switch.data matches ..-1 run scoreboard players reset @a[tag=!detached,gamemode=!spectator] switch.temp.points
 
+execute as @a[tag=!detached] if score @s switch.temp.points matches 50.. run advancement grant @s only switch:visible/8
+

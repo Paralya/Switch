@@ -4,7 +4,7 @@
 #	500		(survival)	: laser_game
 #	1000	(survival)	: pitchout_1
 #	1500	(survival)	: traitor_original
-#	2000	(survival)	: zone_51
+#	2000	(survival)	: area_51
 #	2500	(survival)	: spectre_original
 #	3000	(survival)	: glassrunner			[ /fill ]
 ##	3500	(adventure)	: pitch_creep_1

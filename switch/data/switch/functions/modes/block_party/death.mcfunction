@@ -5,7 +5,7 @@ execute if entity @s[gamemode=!spectator] run summon lightning_bolt ~ ~-5 ~
 execute if entity @s[gamemode=!spectator] run tag @s add switch.temp
 execute if entity @s[gamemode=!spectator] on attacker if entity @s[type=ravager] run advancement grant @p[tag=switch.temp] only switch:visible/31
 execute if entity @s[gamemode=!spectator] run tag @s remove switch.temp
-execute if entity @s[gamemode=!spectator] if score #block_party_round switch.data matches 1 run advancement grant @s only switch:visible/35
+execute if entity @s[gamemode=!spectator] if score #block_party_round switch.data matches ..2 run advancement grant @s only switch:visible/35
 
 gamemode spectator @s
 execute if entity @s at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
