@@ -6,7 +6,6 @@ execute store result score #mc switch.data run data get storage switch:main beat
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "traitor_original"
-execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "zone_51"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "mushroom_plains"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "dark_forest_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main beat_the_kings_maps append value "zonweeb_highschool"
