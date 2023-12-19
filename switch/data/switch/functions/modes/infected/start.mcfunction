@@ -11,6 +11,7 @@ scoreboard objectives add switch.temp.infection dummy
 scoreboard objectives add switch.temp.original_zombie dummy
 scoreboard objectives add switch.temp.kills playerKillCount
 scoreboard players set #remaining_time switch.data 462
+scoreboard players set #infected_secret switch.data 0
 scoreboard players set #infected_seconds switch.data -12
 scoreboard players set #infected_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
@@ -19,6 +20,7 @@ scoreboard objectives setdisplay list switch.health
 gamerule naturalRegeneration false
 gamerule keepInventory true
 gamerule showDeathMessages false
+gamerule doTileDrops false
 
 # Choix des rôles + give d'items
 team add switch.temp.human

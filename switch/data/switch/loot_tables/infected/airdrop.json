@@ -60,13 +60,13 @@
 							"entity": "this",
 							"name": {
 								"text": "Élément 115",
-								"color": "white",
+								"color": "light_purple",
 								"italic": false
 							}
 						},
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{CustomModelData:2013001,infected:{115:1b}}"
+							"tag": "{CustomModelData:2013001,switch:{115:1b}}"
 						}
 					]
 				}
