@@ -9,9 +9,9 @@ execute if score #infected_seconds switch.data matches -10..-2 run scoreboard pl
 execute if score #infected_seconds switch.data matches -10..-2 run title @a[tag=!detached] actionbar [{"text":"Début de la partie dans ","color":"dark_purple"},{"score":{"name":"#temp","objective":"switch.data"},"color":"light_purple"},{"text":" secondes","color":"dark_purple"}]
 execute if score #infected_seconds switch.data matches -1 run title @a[tag=!detached] actionbar [{"text":"Début de la partie dans ","color":"dark_purple"},{"text":"1","color":"light_purple"},{"text":" seconde","color":"dark_purple"}]
 execute if score #infected_seconds switch.data matches -3..-1 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
-execute if score #infected_seconds switch.data matches 0 as @a[tag=!detached] at @s run function switch:modes/infected/death/human_spawn
 execute if score #infected_seconds switch.data matches 0 run tellraw @a[tag=!detached] [{"text":"La partie commence !","color":"yellow"}]
 execute if score #infected_seconds switch.data matches 0 run function switch:modes/infected/secrets/load
+execute if score #infected_seconds switch.data matches 0 as @a[tag=!detached] at @s run function switch:modes/infected/death/human_spawn
 
 # Title action bar
 execute store result score #nb_humans switch.data if entity @a[team=switch.temp.human]

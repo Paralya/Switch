@@ -10,11 +10,11 @@ clear @s
 
 # Give stuff depending on player's upgrades
 item replace entity @s armor.head with zombie_head
-execute unless score @s switch.infected.zombie_speed matches 1.. run attribute @s generic.movement_speed base set 0.11
-execute if score @s switch.infected.zombie_speed matches 1 run attribute @s generic.movement_speed base set 0.12
-execute if score @s switch.infected.zombie_speed matches 2 run attribute @s generic.movement_speed base set 0.13
-execute if score @s switch.infected.zombie_speed matches 3 run attribute @s generic.movement_speed base set 0.14
-execute if score @s switch.infected.zombie_speed matches 4 run attribute @s generic.movement_speed base set 0.15
+execute unless score @s switch.infected.zombie_speed matches 1.. run attribute @s generic.movement_speed base set 0.110
+execute if score @s switch.infected.zombie_speed matches 1 run attribute @s generic.movement_speed base set 0.115
+execute if score @s switch.infected.zombie_speed matches 2 run attribute @s generic.movement_speed base set 0.120
+execute if score @s switch.infected.zombie_speed matches 3 run attribute @s generic.movement_speed base set 0.125
+execute if score @s switch.infected.zombie_speed matches 4 run attribute @s generic.movement_speed base set 0.130
 execute unless score @s switch.infected.zombie_jump matches 1.. run effect give @s jump_boost infinite 0 true
 execute if score @s switch.infected.zombie_jump matches 1 run effect give @s jump_boost infinite 1 true
 

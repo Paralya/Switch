@@ -27,7 +27,7 @@ execute if score #infected_secret switch.data matches 13 if score #infected_radi
 execute if score #infected_secret switch.data matches 14 if score #infected_radio switch.data matches 0 run function switch:modes/infected/secrets/old_japan_apocalypse/next_state
 
 # Check for nether star
-execute if score #infected_secret switch.data matches 15 as @p[tag=!detached,team=switch.temp.human,nbt={Inventory[{id:"minecraft:nether_star"}]}] run function switch:modes/infected/secrets/old_japan_apocalypse/next_state
+execute if score #infected_secret switch.data matches 15 as @p[tag=!detached,team=switch.temp.human,nbt={Inventory:[{id:"minecraft:nether_star"}]}] run function switch:modes/infected/secrets/old_japan_apocalypse/next_state
 
 # Check for placed beacon
 execute if score #infected_secret switch.data matches 16 positioned 129018 137 129082 if block ~ ~ ~ beacon run function switch:modes/infected/secrets/old_japan_apocalypse/next_state

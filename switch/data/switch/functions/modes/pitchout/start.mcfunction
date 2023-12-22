@@ -32,3 +32,6 @@ scoreboard players set #process_end switch.data 0
 data modify storage switch:temp pitchout set value []
 execute as @a[tag=!detached] run function switch:modes/pitchout/advancements/setup_player
 
+execute as @a[tag=!detached] store result score @s switch.temp.old_x run data get entity @s Pos[0]
+execute as @a[tag=!detached] store result score @s switch.temp.old_z run data get entity @s Pos[2]
+
