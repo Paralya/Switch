@@ -16,5 +16,5 @@ execute as @e[type=arrow] run data modify entity @s damage set value 1.0d
 execute if score #infected_seconds switch.data matches 0.. run function switch:modes/infected/secrets/tick
 
 # Détection de fin de partie
-#execute if score #remaining_time switch.data matches ..0 run function switch:modes/infected/process_end
+execute if score #remaining_time switch.data matches ..0 run function switch:modes/infected/process_end
 

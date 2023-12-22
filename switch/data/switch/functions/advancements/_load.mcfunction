@@ -113,10 +113,10 @@ $$(p2)[{id:46}] merge value {color:"green",auteur:"Stoupy",name:"Automutilation"
 $$(p2)[{id:47}] merge value {color:"green",auteur:"luigimario12",name:"Il a rien compris lui",description:"Courir 500 blocs en une partie de Pitchout"}
 $$(p2)[{id:48}] merge value {color:"red",auteur:"luigimario12",name:"Donald Trump",description:"Faire au maximum 5 coups en une partie de MiniGolf"}
 $$(p2)[{id:49}] merge value {color:"yellow",auteur:"luigimario12",name:"Damidot",description:"Recevoir une note Legendary en Build Battle"}
-$$(p2)[{id:50}] merge value {color:"green",auteur:"Stoupy",name:"Zom 100",description:"Terminer le secret de la map Old Japan Apocalypse en Infected"}
-$$(p2)[{id:51}] merge value {color:"green",auteur:"Stoupy",name:"Pharaon",description:"Terminer le secret de la map Ancienne Egypte en Infected"}
-$$(p2)[{id:52}] merge value {color:"green",auteur:"Stoupy",name:"The Volcano Core",description:"Terminer le secret de la map Lost Graveyard Remastered en Infected"}
-$$(p2)[{id:53}] merge value {color:"green",auteur:"Stoupy",name:"Storm Area",description:"Terminer le secret de la map Area51 en Infected"}
-$$(p2)[{id:54}] merge value {color:"green",auteur:"Stoupy",name:"Secret Slayer",description:"Terminer les secrets de toutes les maps dans le mode de jeu Infected"}
+$$(p2)[{id:50}] merge value {color:"red",auteur:"Stoupy & Lawtank",name:"Zom 100",description:"Terminer le secret de la map Old Japan Apocalypse en Infected"}
+$$(p2)[{id:51}] merge value {color:"red",auteur:"Stoupy",name:"Pharaon",description:"Terminer le secret de la map Ancienne Egypte en Infected"}
+$$(p2)[{id:52}] merge value {color:"red",auteur:"Stoupy",name:"The Volcano Core",description:"Terminer le secret de la map Lost Graveyard Remastered en Infected"}
+$$(p2)[{id:53}] merge value {color:"red",auteur:"Stoupy",name:"Storm Area",description:"Terminer le secret de la map Area51 en Infected"}
+$$(p2)[{id:54}] merge value {color:"red",auteur:"Stoupy",name:"Secret Slayer",description:"Terminer les secrets de toutes les maps dans le mode de jeu Infected"}
 #$$(p2)[{id:X}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
 
