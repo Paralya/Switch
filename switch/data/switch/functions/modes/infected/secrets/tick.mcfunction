@@ -4,3 +4,6 @@ execute if data storage switch:main {map:"ancienne_egypte_2013"} run function sw
 execute if data storage switch:main {map:"old_japan_apocalypse"} run function switch:modes/infected/secrets/old_japan_apocalypse/_tick
 execute if data storage switch:main {map:"lost_graveyard_remastered"} run function switch:modes/infected/secrets/lost_graveyard_remastered/_tick
 
+# Zombie drop element 115
+execute as @a[tag=!detached,team=switch.temp.zombie,nbt={Inventory:[{tag:{switch:{115:1b}}}]}] at @s run function switch:modes/infected/secrets/drop_element_115
+

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:rotten_flesh", "nbt": "{}"},
 		"title": {"text": "Vive la chair", "color": "yellow"},
-		"description": {"text": "Infectez 4 survivants dans une partie d'Infected", "color": "aqua"},
+		"description": {"text": "Infectez 5 survivants dans une partie d'Infected", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -10,6 +10,6 @@
 	},
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"rewards": {"function": "switch:advancements/hard"},
 	"parent": "switch:visible/16"
 }

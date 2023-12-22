@@ -46,8 +46,8 @@ execute if score #infected_seconds switch.data matches 60 run give @a[team=switc
 execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run give @a[team=switch.temp.human] arrow 1
 
 # Advancements
-execute as @a[team=switch.temp.human] if score @s switch.temp.kills matches 5.. run advancement grant @s only switch:visible/16
-execute as @a[team=switch.temp.zombie] if score @s switch.temp.kills matches 4.. run advancement grant @s only switch:visible/17
+execute as @a[team=switch.temp.human] if score @s switch.temp.kills matches 8.. run advancement grant @s only switch:visible/16
+execute as @a[team=switch.temp.zombie] if score @s switch.temp.kills matches 5.. run advancement grant @s only switch:visible/17
 
 # Detect end of the game
 execute if score #infected_seconds switch.data matches 0.. if score #remaining_time switch.data matches 0.. run function switch:modes/infected/detect_end

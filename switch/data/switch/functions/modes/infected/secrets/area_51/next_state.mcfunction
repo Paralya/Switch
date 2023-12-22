@@ -44,6 +44,8 @@ execute if score #infected_secret switch.data matches 8 at @e[limit=24] at @e[ta
 execute if score #infected_secret switch.data matches 9 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est la merde, il n'y a plus rien sur cette terre qui peut nous sauver."}]
 execute if score #infected_secret switch.data matches 9 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> On doit donc vraiment, exterminer, tous les zombies, pour survivre..."}]
 execute if score #infected_secret switch.data matches 9 run tellraw @a[tag=!detached] [{"text":"To be continued.","color":"dark_gray","italic":true}]
+execute if score #infected_secret switch.data matches 9 as @a[team=switch.temp.human] run advancement grant @s only switch:visible/53
+execute if score #infected_secret switch.data matches 9 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
 
 # Next state
 scoreboard players add #infected_secret switch.data 1

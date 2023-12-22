@@ -79,8 +79,8 @@ $$(p2)[{id:12}] merge value {color:"red",auteur:"OfChara",name:"Sans Faute",desc
 $$(p2)[{id:13}] merge value {color:"green",auteur:"Axaltau",name:"Pacifiste",description:"Survivez 100 secondes en PitchOut sans mettre aucun coup"}
 $$(p2)[{id:14}] merge value {color:"red",auteur:"Lawtank",name:"The Last King",description:"Soyez le dernier survivant en Protect The King"}
 $$(p2)[{id:15}] merge value {color:"yellow",auteur:"Lawtank",name:"Tomahawk",description:"Tuez un joueur en lançant votre couteau en Murder Mystery"}
-$$(p2)[{id:16}] merge value {color:"yellow",auteur:"Lawtank",name:"Héro Humanitaire",description:"Tuez au moins 5 zombies en une partie d'Infected"}
-$$(p2)[{id:17}] merge value {color:"yellow",auteur:"Lawtank",name:"Vive la chair",description:"Infectez 4 survivants dans une partie d'Infected"}
+$$(p2)[{id:16}] merge value {color:"red",auteur:"Lawtank",name:"Héro Humanitaire",description:"Tuez au moins 8 zombies en une partie d'Infected"}
+$$(p2)[{id:17}] merge value {color:"red",auteur:"Lawtank",name:"Vive la chair",description:"Infectez 5 survivants dans une partie d'Infected"}
 $$(p2)[{id:18}] merge value {color:"red",auteur:"OfChara",name:"Roi fantôme",description:"Tuez 3 personnes en tant que spectre en Spectres Games"}
 $$(p2)[{id:19}] merge value {color:"yellow",auteur:"Manu",name:"Wattouat",description:"Mourir à cause d'un moutron foudroyant en SheepWars"}
 $$(p2)[{id:20}] merge value {color:"yellow",auteur:"OfChara",name:"Fusée",description:"Dépassez 5 joueurs dans le dernier tour en Kart Racer"}
@@ -113,5 +113,10 @@ $$(p2)[{id:46}] merge value {color:"green",auteur:"Stoupy",name:"Automutilation"
 $$(p2)[{id:47}] merge value {color:"green",auteur:"luigimario12",name:"Il a rien compris lui",description:"Courir 500 blocs en une partie de Pitchout"}
 $$(p2)[{id:48}] merge value {color:"red",auteur:"luigimario12",name:"Donald Trump",description:"Faire au maximum 5 coups en une partie de MiniGolf"}
 $$(p2)[{id:49}] merge value {color:"yellow",auteur:"luigimario12",name:"Damidot",description:"Recevoir une note Legendary en Build Battle"}
+$$(p2)[{id:50}] merge value {color:"green",auteur:"Stoupy",name:"Zom 100",description:"Terminer le secret de la map Old Japan Apocalypse en Infected"}
+$$(p2)[{id:51}] merge value {color:"green",auteur:"Stoupy",name:"Pharaon",description:"Terminer le secret de la map Ancienne Egypte en Infected"}
+$$(p2)[{id:52}] merge value {color:"green",auteur:"Stoupy",name:"The Volcano Core",description:"Terminer le secret de la map Lost Graveyard Remastered en Infected"}
+$$(p2)[{id:53}] merge value {color:"green",auteur:"Stoupy",name:"Storm Area",description:"Terminer le secret de la map Area51 en Infected"}
+$$(p2)[{id:54}] merge value {color:"green",auteur:"Stoupy",name:"Secret Slayer",description:"Terminer les secrets de toutes les maps dans le mode de jeu Infected"}
 #$$(p2)[{id:X}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
 

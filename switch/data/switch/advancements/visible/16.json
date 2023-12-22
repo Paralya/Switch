@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:zombie_head", "nbt": "{}"},
 		"title": {"text": "Héro Humanitaire", "color": "yellow"},
-		"description": {"text": "Tuez au moins 5 zombies en une partie d'Infected", "color": "aqua"},
+		"description": {"text": "Tuez au moins 8 zombies en une partie d'Infected", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -10,6 +10,6 @@
 	},
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
-	"parent": "switch:visible/categories/medium"
+	"rewards": {"function": "switch:advancements/hard"},
+	"parent": "switch:visible/categories/hard"
 }
