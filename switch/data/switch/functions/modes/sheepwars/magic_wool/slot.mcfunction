@@ -15,7 +15,7 @@ execute if score #random switch.data matches 0 if entity @s[team=switch.temp.blu
 execute if score #random switch.data matches 1 if entity @s[team=switch.temp.blue] run effect give @a[tag=!detached,team=switch.temp.blue] regeneration 20 0 true
 execute if score #random switch.data matches 2 if entity @s[team=switch.temp.blue] run effect give @a[tag=!detached,team=switch.temp.red] poison 5 3 true
 execute if score #random switch.data matches 3 if entity @s[team=switch.temp.blue] run effect give @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] nausea 10 0 true
-execute if score #random switch.data matches 4 if entity @s[team=switch.temp.blue] as @a[tag=!detached,team=switch.temp.blue] run function sheepwars:utils/random_give
+execute if score #random switch.data matches 4 if entity @s[team=switch.temp.blue] as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run function sheepwars:utils/random_give
 execute if score #random switch.data matches 5 if entity @s[team=switch.temp.blue] run scoreboard players set #blue_fire_arrows switch.data 10
 execute if score #random switch.data matches 6 if entity @s[team=switch.temp.blue] run scoreboard players set #blue_explosive_arrows switch.data 8
 execute if score #random switch.data matches 7 if entity @s[team=switch.temp.blue] run effect give @a[tag=!detached,team=switch.temp.blue] slow_falling 20 0 true
@@ -25,7 +25,7 @@ execute if score #random switch.data matches 0 if entity @s[team=switch.temp.red
 execute if score #random switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[tag=!detached,team=switch.temp.red] regeneration 20 0 true
 execute if score #random switch.data matches 2 if entity @s[team=switch.temp.red] run effect give @a[tag=!detached,team=switch.temp.blue] poison 5 3 true
 execute if score #random switch.data matches 3 if entity @s[team=switch.temp.red] run effect give @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] nausea 10 0 true
-execute if score #random switch.data matches 4 if entity @s[team=switch.temp.red] as @a[tag=!detached,team=switch.temp.red] run function sheepwars:utils/random_give
+execute if score #random switch.data matches 4 if entity @s[team=switch.temp.red] as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] run function sheepwars:utils/random_give
 execute if score #random switch.data matches 5 if entity @s[team=switch.temp.red] run scoreboard players set #red_fire_arrows switch.data 10
 execute if score #random switch.data matches 6 if entity @s[team=switch.temp.red] run scoreboard players set #red_explosive_arrows switch.data 8
 execute if score #random switch.data matches 7 if entity @s[team=switch.temp.red] run effect give @a[tag=!detached,team=switch.temp.red] slow_falling 20 0 true

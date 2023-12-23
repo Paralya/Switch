@@ -25,17 +25,17 @@ scoreboard objectives add switch.temp.respawn dummy
 scoreboard players set #default_do_collision golf_ball.data 0
 
 # Choose map
-execute if data storage switch:main {map:"gg_grass_1"} run tp @a 124021 121 124070
-execute if data storage switch:main {map:"gg_grass_2"} run tp @a 124020 124 124023
-execute if data storage switch:main {map:"gg_grass_3"} run tp @a 124144 125 124112
-execute if data storage switch:main {map:"gg_snow_1"} run tp @a 124068 120 124016
-execute if data storage switch:main {map:"gg_snow_2"} run tp @a 124062 125 124069
-execute if data storage switch:main {map:"gg_ice_1"} run tp @a 124103 115 124070
-execute if data storage switch:main {map:"gg_temple"} run tp @a 124103 117 124013
-execute if data storage switch:main {map:"gg_volcano"} run tp @a 124136 130 124035
-execute if data storage switch:main {map:"gg_desert_1"} run tp @a 124144 125 124069
-execute if data storage switch:main {map:"gg_end_1"} run tp @a 124102 135 124114
-execute if data storage switch:main {map:"gg_chamber"} run tp @a 124064 129 124118
+execute if data storage switch:main {map:"gg_grass_1"} run tp @a[tag=!detached] 124021 121 124070
+execute if data storage switch:main {map:"gg_grass_2"} run tp @a[tag=!detached] 124020 124 124023
+execute if data storage switch:main {map:"gg_grass_3"} run tp @a[tag=!detached] 124144 125 124112
+execute if data storage switch:main {map:"gg_snow_1"} run tp @a[tag=!detached] 124068 120 124016
+execute if data storage switch:main {map:"gg_snow_2"} run tp @a[tag=!detached] 124062 125 124069
+execute if data storage switch:main {map:"gg_ice_1"} run tp @a[tag=!detached] 124103 115 124070
+execute if data storage switch:main {map:"gg_temple"} run tp @a[tag=!detached] 124103 117 124013
+execute if data storage switch:main {map:"gg_volcano"} run tp @a[tag=!detached] 124136 130 124035
+execute if data storage switch:main {map:"gg_desert_1"} run tp @a[tag=!detached] 124144 125 124069
+execute if data storage switch:main {map:"gg_end_1"} run tp @a[tag=!detached] 124102 135 124114
+execute if data storage switch:main {map:"gg_chamber"} run tp @a[tag=!detached] 124064 129 124118
 
 # Record
 scoreboard players reset #new_record switch.data

@@ -12,6 +12,7 @@ execute if score #infected_secret switch.data matches 4 positioned 127132 113 12
 
 # Crafted TNT
 execute if score #infected_secret switch.data matches 5 run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Ok, j'ai réussi à fabriquer une TNT avec le sable et la poudre des creepers, on peut aller faire péter ce foutu minerai !"}]
+execute if score #infected_secret switch.data matches 5 run gamerule doTileDrops false
 
 # TNT exploded (end)
 execute if score #infected_secret switch.data matches 6 run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, le minerai est détruit !"}]

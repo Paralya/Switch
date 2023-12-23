@@ -13,7 +13,7 @@ execute unless score @s switch.infected.sword matches 1.. run item replace entit
 execute if score @s switch.infected.sword matches 1 run item replace entity @s hotbar.0 with stone_sword{Unbreakable:1b}
 execute if score @s switch.infected.sword matches 2 run item replace entity @s hotbar.0 with iron_sword{Unbreakable:1b}
 execute if score @s switch.infected.sword matches 3 run item replace entity @s hotbar.0 with diamond_sword{Unbreakable:1b}
-execute if score @s switch.infected.sword matches 4 run item replace entity @s hotbar.0 with netherite_sword{Unbreakable:1b,CustomModelData:2013118}
+execute if score @s switch.infected.sword matches 4 run item replace entity @s hotbar.0 with netherite_sword{Unbreakable:1b,CustomModelData:2013118,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7.25,Operation:0,UUID:[I;26112014,1,1,1],Slot:"mainhand"}]}
 execute unless score @s switch.infected.armor matches 1.. run item replace entity @s armor.chest with leather_chestplate{Unbreakable:1b		,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:4,Operation:0,UUID:[I;26112013,1,1,1],Slot:"chest"}]}
 execute if score @s switch.infected.armor matches 1 run item replace entity @s armor.chest with chainmail_chestplate{Unbreakable:1b			,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:5,Operation:0,UUID:[I;26112013,1,1,1],Slot:"chest"}]}
 execute if score @s switch.infected.armor matches 2 run item replace entity @s armor.chest with golden_chestplate{Unbreakable:1b			,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;26112013,1,1,1],Slot:"chest"}]}

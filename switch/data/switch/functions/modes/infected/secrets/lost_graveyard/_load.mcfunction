@@ -1,6 +1,7 @@
 
 scoreboard players set #infected_secret switch.data 0
 scoreboard objectives add switch.temp.secret_kills playerKillCount
+gamerule doTileDrops true
 
 # Place some stardust ore
 execute positioned 127121 113 127047 run function stardust:place/deepslate_stardust_ore/

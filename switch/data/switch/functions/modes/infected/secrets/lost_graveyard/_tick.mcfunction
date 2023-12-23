@@ -6,7 +6,7 @@ execute as @e[tag=switch.infected.item] at @s run function switch:modes/infected
 
 ## State checks
 # Check for zombie kills
-execute if score #infected_secret switch.data matches 0..4 positioned 128069 120 128084 as @a[tag=!detached,team=switch.temp.human,distance=..12,scores={switch.temp.secret_kills=1..}] run function switch:modes/infected/secrets/lost_graveyard/next_state
+execute if score #infected_secret switch.data matches 0..4 positioned 127123 113 127051 as @a[tag=!detached,team=switch.temp.human,distance=..12,scores={switch.temp.secret_kills=1..}] run function switch:modes/infected/secrets/lost_graveyard/next_state
 
 # Check for tnt
 execute if score #infected_secret switch.data matches 5 as @p[tag=!detached,team=switch.temp.human,nbt={Inventory:[{id:"minecraft:tnt"}]}] run function switch:modes/infected/secrets/lost_graveyard/next_state
@@ -19,5 +19,5 @@ execute if score #infected_secret switch.data matches 6 positioned 127131 122 12
 execute if score #infected_secret switch.data matches 4.. positioned 127132 113 127051 unless entity @e[type=creeper,distance=..20] run summon creeper
 
 # Reset secret kills
-scoreboard players reset @a[tag=!detached,team=switch.temp.human] switch.temp.secret_kills
+scoreboard players reset @a[tag=!detached] switch.temp.secret_kills
 
