@@ -4,7 +4,6 @@ effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] blindness 5 255 true
 effect give @a[tag=!detached] darkness 5 255 true
-effect give @a[tag=!detached] jump_boost 5 250 true
 effect give @a[tag=!detached] slowness 5 255 true
 function switch:utils/set_dynamic_time
 

@@ -10,7 +10,7 @@ execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect giv
 # Prevent drop + kill arrow
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/infected/no_drop
 kill @e[type=arrow,nbt={inGround:1b}]
-execute as @e[type=arrow] run data modify entity @s damage set value 1.0d
+execute as @e[type=arrow] run data modify entity @s damage set value 0.5d
 
 # Maps tick
 execute if score #infected_seconds switch.data matches 0.. run function switch:modes/infected/secrets/tick
