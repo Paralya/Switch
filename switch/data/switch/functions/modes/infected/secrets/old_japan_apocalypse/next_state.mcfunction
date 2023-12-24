@@ -30,7 +30,7 @@ execute if score #infected_secret switch.data matches 14 positioned 129027 104 1
 execute if score #infected_secret switch.data matches 15 run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Ok oui c'est vrai, on a les ressources dans ce village pour construire une balise de détresse afin de signaler notre position aux renforts !"}]
 
 # Placed beacon
-execute if score #infected_secret switch.data matches 16 run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, la balise est prête !"}]
+execute if score #infected_secret switch.data matches 16 as @p[tag=!detached,team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, la balise est prête !"}]
 execute if score #infected_secret switch.data matches 16 as @r[tag=!detached,team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Il ne reste plus qu'à attendre les renforts !"}]
 
 # Humans victory

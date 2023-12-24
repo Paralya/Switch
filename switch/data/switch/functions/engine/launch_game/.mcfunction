@@ -7,18 +7,18 @@ scoreboard players add total_games switch.last_total_games 1
 function switch:engine/voting_time/update_votes
 
 scoreboard players set #max switch.data 0
-execute if score #vote_game_1 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_1 switch.data
+scoreboard players set #max_game switch.data -10
 execute if score #vote_game_1 switch.data > #max switch.data run scoreboard players set #max_game switch.data -1
-execute if score #vote_game_2 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_2 switch.data
+execute if score #vote_game_1 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_1 switch.data
 execute if score #vote_game_2 switch.data > #max switch.data run scoreboard players set #max_game switch.data -2
-execute if score #vote_game_3 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_3 switch.data
+execute if score #vote_game_2 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_2 switch.data
 execute if score #vote_game_3 switch.data > #max switch.data run scoreboard players set #max_game switch.data -3
-execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_4 switch.data
+execute if score #vote_game_3 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_3 switch.data
 execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players set #max_game switch.data -4
-execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_5 switch.data
+execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_4 switch.data
 execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players set #max_game switch.data -5
+execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_5 switch.data
 execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_6 switch.data
-execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players set #max_game switch.data -6
 
 data modify storage switch:main voted_games set value []
 data modify storage switch:main current_game set value ""

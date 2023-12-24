@@ -7,7 +7,7 @@ execute as @e[tag=switch.infected.item] at @s run function switch:modes/infected
 
 ## State checks
 # Check for bunker opening
-execute if score #infected_secret switch.data matches 0 positioned 129035 110 129025 if block 129016 104 129021 iron_block run function switch:modes/infected/secrets/old_japan_apocalypse/next_state
+execute if score #infected_secret switch.data matches 0 positioned 129035 110 129025 if block 129016 104 129021 redstone_block run function switch:modes/infected/secrets/old_japan_apocalypse/next_state
 
 # Check for radio
 execute if score #infected_secret switch.data matches 1 positioned 129027 104 129016 if block ~ ~ ~ polished_blackstone_button[powered=true] run function switch:modes/infected/secrets/old_japan_apocalypse/next_state

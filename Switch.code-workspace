@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "mc_default_data_1.20.2.zip",
-			"uri": "zip:/root/___links___/Paralya_Switch/Switch/datapacks/mc_default_data_1.20.2.zip"
 		}
 	],
 	"settings": {

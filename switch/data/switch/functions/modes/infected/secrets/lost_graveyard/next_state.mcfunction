@@ -15,7 +15,7 @@ execute if score #infected_secret switch.data matches 5 run tellraw @a[tag=!deta
 execute if score #infected_secret switch.data matches 5 run gamerule doTileDrops false
 
 # TNT exploded (end)
-execute if score #infected_secret switch.data matches 6 run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, le minerai est détruit !"}]
+execute if score #infected_secret switch.data matches 6 as @p[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, le minerai est détruit !"}]
 execute if score #infected_secret switch.data matches 6 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Il n'y a plus qu'une seule chose à faire, c'est de survivre jusqu'à ce que nos renforts arrivent afin d'aller étudier ce minerai au méga-laboratoire !"}]
 execute if score #infected_secret switch.data matches 6 run tellraw @a[tag=!detached] [{"text":"To be continued.","color":"dark_gray","italic":true}]
 execute if score #infected_secret switch.data matches 6 run kill @e[tag=stardust.nether_stardust_ore]
