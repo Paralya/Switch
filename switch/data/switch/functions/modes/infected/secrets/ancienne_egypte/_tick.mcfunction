@@ -12,5 +12,5 @@ execute if score #infected_secret switch.data matches 0 positioned 128069 120 12
 execute if score #infected_secret switch.data matches 1 positioned 128069 115 128087 if block ~ ~ ~ redstone_torch run function switch:modes/infected/secrets/ancienne_egypte/next_state
 
 # Check for humans finishing the last parkour
-execute if score #infected_secret switch.data matches 3 positioned 128077 110 128046 as @a[tag=!detached,team=switch.temp.human,distance=..4] run function switch:modes/infected/secrets/ancienne_egypte/next_state
+execute if score #infected_secret switch.data matches 3.. positioned 128077 110 128046 as @a[tag=!detached,team=switch.temp.human,distance=..4] run function switch:modes/infected/secrets/ancienne_egypte/next_state
 
