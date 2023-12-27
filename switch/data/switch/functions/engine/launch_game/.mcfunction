@@ -48,6 +48,9 @@ execute if score #max switch.data matches 8.. if data storage switch:main {curre
 execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"shoot_da_sheep"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
 execute if score #max switch.data matches 8.. if data storage switch:main {current_game:"layers_2_teams"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
 
+# Add game to history
+data modify storage switch:main history.games prepend from storage switch:main current_game
+
 weather clear
 difficulty normal
 scoreboard players reset #set_spec switch.data

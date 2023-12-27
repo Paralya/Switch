@@ -223,7 +223,7 @@ generate_clone_survival_folder("pitch_creep_2", (37986, 0, 37974), (38014, 16, 3
 generate_clone_survival_folder("dark_forest_hills", (39000, 0, 39000), (39143, 69, 39221), 100, override_tp_coords = (39076, 138, 39134))
 generate_clone_survival_folder("paralya_lobby_noel", (39900, -64, 39900), (40100, 100, 40100), 100, override_tp_coords = (40000, 186, 40000))
 generate_clone_survival_folder("huge_cargo", (41000, -64, 40892), (41267, 89, 41000), 100, override_tp_coords = (41155, 173, 40945))
-generate_clone_survival_folder("ghost_town", (41935, 0, 41942), (42065, 38, 42058), 100, override_tp_coords = (42000, 112, 42000))
+generate_clone_survival_folder("ghost_town", (42000, 0, 42000), (42070, 25, 42056), 100, override_tp_coords = (42037, 113, 42028))
 generate_clone_survival_folder("taroatlas_soviet_prison", (45788, -64, 45849), (46136, 126, 46187), 128, override_tp_coords = (45998, 209, 45984))
 generate_clone_survival_folder("desert_grand_library", (46971, 0, 46971), (47036, 42, 47042), 100, override_tp_coords = (47003, 108, 47006))
 generate_clone_survival_folder("new_grounds", (47930, 0, 47930), (48070, 84, 48070), 100, override_tp_coords = (48000, 113, 48000))
