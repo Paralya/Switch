@@ -8,7 +8,6 @@ gamerule fallDamage false
 gamerule keepInventory true
 
 ## Chargement de la map
-scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/murder_mystery
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Murder Mystery, votre rôle va vous être donné !\n"}]
