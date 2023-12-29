@@ -299,6 +299,18 @@ generate_clone_survival_folder("cigogne", (126000, 0, 126000), (126108, 47, 1261
 generate_clone_survival_folder("ancienne_egypte_2013", (128000, 0, 128000), (128095, 76, 128113), 100, override_tp_coords = (128048, 121, 128105))
 generate_clone_survival_folder("old_japan_apocalypse", (129000, 0, 129000), (129102, 52, 129102), 100, override_tp_coords = (129041, 108, 129043))
 generate_clone_survival_folder("lost_graveyard_remastered", (127000, 0, 127000), (127150, 62, 127134), 100, override_tp_coords = (127030, 119, 127111))
+generate_clone_survival_folder("jn_nature_box", (130000, 0, 130000), (130192, 80, 130134), 100, override_tp_coords = (130098, 169, 130067))
+generate_clone_survival_folder("block_party_lobby", (131000, 0, 131000), (131222, 79, 131148), 100, override_tp_coords = (131047, 116, 131074))
+generate_clone_survival_folder("jn_countries_castle", (132000, 0, 132000), (132120, 43, 132120), 100, override_tp_coords = (132067, 119, 132060))
+generate_clone_survival_folder("jn_ice_castles", (133000, 0, 133000), (133054, 53, 133130), 100, override_tp_coords = (133027, 106, 133069))
+generate_clone_survival_folder("jn_murder_mystery", (134000, 0, 134000), (134149, 62, 134123), 100, override_tp_coords = (134095, 119, 134080))
+generate_clone_survival_folder("jn_sakura_pvpbox", (135000, 0, 135000), (135100, 38, 135100), 100, override_tp_coords = (135067, 111, 135037))
+generate_clone_survival_folder("charly_murder_2018", (136000, 0, 136000), (136052, 31, 136053), 100, override_tp_coords = (136024, 115 ,136029))
+generate_clone_survival_folder("jn_one_in_the_chamber_1", (137000, 0, 137000), (137078, 22, 137120), 100, override_tp_coords = (137045, 105, 137047))
+generate_clone_survival_folder("jn_one_in_the_chamber_2", (138000, 0, 138000), (138140, 57, 138100), 100, override_tp_coords = (138104, 104, 138042))
+generate_clone_survival_folder("overgrown_forest", (139000, 0, 139000), (139091, 50, 139103), 100, override_tp_coords = (139056, 113, 139037))
+generate_clone_survival_folder("pretty_garden", (140000, 0, 140000), (140056, 38, 140070), 100, override_tp_coords = (140034, 112, 140035))
+generate_clone_survival_folder("jn_biomes_relief", (141000, 0, 141000), (141198, 89, 141139), 100, override_tp_coords = (141137, 167, 141087))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air
