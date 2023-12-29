@@ -59,10 +59,11 @@ tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Creeper Apocal
 # 2023/12/22
 tellraw @s [{"text":"[2023/12/22] ","color":"dark_aqua"},{"text":"Infected : nouvelle map 'Area 51' ajoutée\n+ Des secrets ont été ajoutés sur chacune des maps\n+ équilibrage du jeu","color":"green"}]
 tellraw @s [{"text":"[2023/12/22] ","color":"dark_aqua"},{"text":"Arrivée des succès dans tout le serveur avec des récompenses selon les difficultés, faire /succès : Masterclass","color":"white"}]
-tellraw @s [{"text":"[2023/12/22] ","color":"dark_aqua"},{"text":"Fixes et équilibrages dans un peu tous les mini-jeux","color":"green"}]
 
-#
-
+# 2023/12/29
+tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Fixes et équilibrages dans un peu tous les mini-jeux","color":"green"}]
+tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Ajout de nouvelles maps en Murder Mystery et tweaks de certaines maps","color":"white"}]
+tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Ajout de téléporteurs aux jumps dans l'inventaire lorsqu'on est détaché","color":"green"}]
 
 # End of line
 tellraw @s ""
