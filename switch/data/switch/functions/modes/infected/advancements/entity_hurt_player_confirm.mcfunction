@@ -13,6 +13,8 @@ execute if score #zombie_attacker switch.data matches 1 on attacker if score @s 
 execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 2 run scoreboard players set #damage switch.data 30
 execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 3 run scoreboard players set #damage switch.data 32
 execute if score #zombie_attacker switch.data matches 1 on attacker if score @s switch.infected.zombie_strength matches 4 run scoreboard players set #damage switch.data 35
+execute if score #zombie_attacker switch.data matches 1 store result score #temp switch.data if entity @a[tag=!detached,team=switch.temp.zombie]
+execute if score #zombie_attacker switch.data matches 1 if score #temp switch.data matches 1 run scoreboard players operation #damage switch.data *= #3 switch.data
 execute if score #zombie_attacker switch.data matches 1 store result score #health switch.data run data get entity @s Health 10
 execute if score #zombie_attacker switch.data matches 1 run scoreboard players operation #health switch.data -= #damage switch.data
 

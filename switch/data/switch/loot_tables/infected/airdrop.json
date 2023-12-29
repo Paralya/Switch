@@ -59,7 +59,7 @@
 							"function": "minecraft:set_name",
 							"entity": "this",
 							"name": {
-								"text": "Élément 115",
+								"text": "Element 115",
 								"color": "light_purple",
 								"italic": false
 							}

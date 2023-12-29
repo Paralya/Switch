@@ -5,6 +5,7 @@ attribute @s generic.attack_damage base set 0.00001
 attribute @s generic.attack_speed base set 2048.0
 effect clear @s
 effect give @s hunger infinite 0 true
+effect give @s resistance infinite 0 true
 clear @s
 
 

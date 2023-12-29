@@ -21,6 +21,9 @@ execute in overworld run function switch:maps/load_adventure
 data modify storage switch:main MessageToLog set value '[{"text": "Map selectionnee : `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"` !"}]'
 function switch:engine/log_message/apply
 
+# Add map to history
+data modify storage switch:main history.maps prepend from storage switch:main map
+
 # As a new map is loaded, it has not been already regenerated
 scoreboard players reset #already_regenerated switch.data
 

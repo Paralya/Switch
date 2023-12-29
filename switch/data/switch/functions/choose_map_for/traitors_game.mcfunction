@@ -12,6 +12,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main t
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "hider_mansion"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "nuketown_no_barrier"
 execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "paralya_lobby"
+execute if score #mc switch.data matches 0 run data modify storage switch:main traitors_game_maps append value "jn_nature_box"
 
 
 

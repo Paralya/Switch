@@ -1,8 +1,8 @@
 
 # Role selection (1/4 kings)
 scoreboard players add #next_role switch.data 1
-execute if score #next_role switch.data matches 1 run team join switch.temp.king @s
-execute if score #next_role switch.data matches 2.. run team join switch.temp.civil @s
+execute if score #next_role switch.data matches 1..3 run team join switch.temp.civil @s
+execute if score #next_role switch.data matches 4 run team join switch.temp.king @s
 execute if score #next_role switch.data matches 4.. run scoreboard players set #next_role switch.data 0
 
 # Linked marker for offline players

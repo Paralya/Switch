@@ -3,8 +3,10 @@
 		"requirement": {
 			"trigger": "minecraft:entity_killed_player",
 			"conditions": {
-				"entity": {
-					"type": "minecraft:lightning_bolt"
+				"killing_blow": {
+					"direct_entity": {
+						"type": "minecraft:lightning_bolt"
+					}
 				}
 			}
 		}

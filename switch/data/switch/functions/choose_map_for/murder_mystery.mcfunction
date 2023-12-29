@@ -7,7 +7,9 @@ execute store result score #mc switch.data run data get storage switch:main murd
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "ghost_town"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "remelta_cluedo"
-execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "new_grounds"
+execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "jn_countries_castle"
+execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "jn_murder_mystery"
+execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "charly_murder_2018"
 
 
 

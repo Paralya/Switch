@@ -9,6 +9,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main s
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "mushroom_plains"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "sky_island_tower"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "wyvern_towers"
+execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "jn_sakura_pvpbox"
 
 
 

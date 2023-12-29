@@ -140,4 +140,16 @@
 #	127000	(survival)	: lost_graveyard_remastered
 #	128000	(survival)	: ancienne_egypte_2013
 #	129000	(survival)	: old_japan_apocalypse
+#	130000	(survival)	: jn_nature_box
+#	131000	(survival)	: block_party_lobby
+#	132000	(survival)	: jn_countries_castle
+#	133000	(survival)	: jn_ice_castles
+#	134000	(survival)	: jn_murder_mystery
+#	135000	(survival)	: jn_sakura_pvpbox
+#	136000	(survival)	: charly_murder_2018
+#	137000	(survival)	: jn_one_in_the_chamber_1
+#	138000	(survival)	: jn_one_in_the_chamber_2
+#	139000	(survival)	: overgrown_forest
+#	140000	(survival)	: pretty_garden
+#	141000	(survival)	: jn_biomes_relief
 

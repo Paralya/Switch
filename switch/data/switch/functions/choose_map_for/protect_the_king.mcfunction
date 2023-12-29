@@ -28,6 +28,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main p
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_boss_zone"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_boss_zone_nether"
 execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "stardust_pvp_zone"
+execute if score #mc switch.data matches 0 run data modify storage switch:main protect_the_king_maps append value "jn_biomes_relief"
 
 
 

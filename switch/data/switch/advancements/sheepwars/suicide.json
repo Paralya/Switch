@@ -1,29 +1,7 @@
 {
 	"criteria": {
 		"requirement": {
-			"trigger": "minecraft:player_killed_entity",
-			"conditions": {
-				"entity": [
-					{
-						"condition": "minecraft:entity_scores",
-						"entity": "this",
-						"scores": {
-							"switch.id": {
-								"min": {
-									"type": "minecraft:score",
-									"target": "killer",
-									"score": "switch.id"
-								},
-								"max": {
-									"type": "minecraft:score",
-									"target": "killer",
-									"score": "switch.id"
-								}
-							}
-						}
-					}
-				]
-			}
+			"trigger": "minecraft:entity_killed_player"
 		}
 	},
 	"rewards": {
