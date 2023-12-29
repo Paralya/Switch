@@ -15,6 +15,7 @@ execute as @a[tag=!detached,gamemode=!spectator,predicate=switch:is_sneaking] ru
 scoreboard players remove @a[tag=!detached,gamemode=!spectator,predicate=!switch:is_sneaking] switch.temp.sneak 2
 effect give @a[tag=!detached,scores={switch.temp.sneak=200..}] glowing 1 0 true
 scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=200..}] switch.temp.sneak 200
+scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=..0}] switch.temp.sneak 0
 
 
 ## Fin de partie
