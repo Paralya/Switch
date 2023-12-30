@@ -1,28 +1,12 @@
 
 scoreboard players set @s switch.trigger.succes 0
 
-## For each of the advancements, print it in order : [done:{green,yellow,red},not done:{green,yellow,red}]
-tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Liste des succès :"}]
+setblock 0 0 0 air
+setblock 0 0 0 yellow_shulker_box
+loot insert 0 0 0 loot switch:get_username
+data modify storage switch:main input set value {player:"@s"}
+data modify storage switch:main input.player set from block 0 0 0 Items[0].tag.SkullOwner.Name
+setblock 0 0 0 air
 
-# Done advancements
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"green"}]
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"yellow"}]
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"red"}]
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
-
-# Not done yet
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"green"}]
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"yellow"}]
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"red"}]
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
+function switch:player/trigger/succes/main with storage switch:main input
 

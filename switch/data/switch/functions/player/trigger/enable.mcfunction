@@ -9,4 +9,5 @@ scoreboard players enable @s switch.trigger.attach
 scoreboard players enable @s switch.trigger.shop
 scoreboard players enable @s switch.trigger.tutorial
 scoreboard players enable @s switch.trigger.succes
+scoreboard players enable @s switch.trigger.rating
 

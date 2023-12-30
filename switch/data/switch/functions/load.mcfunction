@@ -28,6 +28,7 @@ scoreboard objectives add switch.trigger.attach trigger
 scoreboard objectives add switch.trigger.shop trigger
 scoreboard objectives add switch.trigger.tutorial trigger
 scoreboard objectives add switch.trigger.succes trigger
+scoreboard objectives add switch.trigger.rating trigger
 
 scoreboard objectives add switch.stats.kills playerKillCount
 scoreboard objectives add switch.stats.deaths deathCount
@@ -55,6 +56,7 @@ forceload add 0 0
 #define storage switch:main
 #define storage switch:records
 #define storage switch:stats
+#define storage switch:ratings
 #define storage switch:advancements
 #define score_holder #success
 #define score_holder #valid
@@ -75,6 +77,9 @@ data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aq
 # Setup stats storage if needed
 execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{}}
 # ex: all = {player:{total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{pitch_creep:{total_games:0,played:[],wins:[]}, ...}}
+
+# Setup ratings storage if needed
+execute unless data storage switch:ratings all run data modify storage switch:ratings all set value []
 
 # Scoreboard constants, shop load, and advancements load
 function switch:set_constants

@@ -9,7 +9,8 @@ execute unless score @s switch.trigger.detach matches 0 run function switch:play
 execute unless score @s switch.trigger.attach matches 0 run function switch:player/trigger/attach/
 execute unless score @s switch.trigger.shop matches 0 run function switch:shop/trigger
 execute unless score @s switch.trigger.tutorial matches 0 run function switch:player/tutorial/next_dialogue
-execute unless score @s switch.trigger.succes matches 0 run function switch:player/trigger/succes/
+execute unless score @s switch.trigger.succes matches 0 in overworld run function switch:player/trigger/succes/
+execute unless score @s switch.trigger.rating matches 0 run function switch:player/trigger/rating/
 
 function switch:player/trigger/enable
 
