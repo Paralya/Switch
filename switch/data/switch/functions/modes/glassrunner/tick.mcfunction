@@ -34,13 +34,13 @@ execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=
 execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/glassrunner/fireball/explosion
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute if score #glassrunner_seconds switch.data matches 3600.. run function switch:modes/glassrunner/end/null
-execute if score #glassrunner.points.red switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
-execute if score #glassrunner.points.blue switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
+#execute if score #glassrunner_seconds switch.data matches 3600.. run function switch:modes/glassrunner/end/null
+#execute if score #glassrunner.points.red switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
+#execute if score #glassrunner.points.blue switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
 
 # to uncomment
 #execute unless entity @a[tag=!detached,team=switch.glassrunner.blue] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
 #execute unless entity @a[tag=!detached,team=switch.glassrunner.red] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
 
-execute if score #process_end switch.data matches 1.. run function switch:modes/glassrunner/end/process_end
+#execute if score #process_end switch.data matches 1.. run function switch:modes/glassrunner/end/process_end
 
