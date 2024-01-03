@@ -4,8 +4,8 @@ scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1 run team join switch.temp.king @s
 execute if score #next_role switch.data matches 2..5 run team join switch.temp.civil @s
 execute if score #next_role switch.data matches 6 run team join switch.temp.king @s
-execute if score #next_role switch.data matches 7..8 run team join switch.temp.civil @s
-execute if score #next_role switch.data matches 8.. run scoreboard players set #next_role switch.data 0
+execute if score #next_role switch.data matches 7..9 run team join switch.temp.civil @s
+execute if score #next_role switch.data matches 9.. run scoreboard players set #next_role switch.data 0
 
 # Linked marker for offline players
 setblock 0 0 0 yellow_shulker_box
