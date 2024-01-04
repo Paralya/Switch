@@ -14,7 +14,7 @@ tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interp
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 245
-scoreboard players set #murder_mystery_seconds switch.data -5
+scoreboard players set #murder_mystery_seconds switch.data -8
 scoreboard players set #murder_mystery_ticks switch.data 0
 scoreboard players set #detective_reload switch.data 0
 scoreboard players set #murderer_reload switch.data 0
@@ -45,4 +45,5 @@ team join switch.temp @a[tag=!detached]
 
 # Teleport players override
 execute if data storage switch:main {map:"ghost_town"} as @a[tag=!detached] run function switch:maps/spread_one_player
+execute if data storage switch:main {map:"jn_murder_mystery"} run scoreboard players set #remaining_time switch.data 305
 
