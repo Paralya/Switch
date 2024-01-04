@@ -9,6 +9,7 @@ data modify storage switch:main input.username set from block 0 0 0 Items[0].tag
 execute if entity @s[advancements={switch:jump_green=true}] run function switch:advancements/_pre_macro {id:"jump_green"}
 execute if entity @s[advancements={switch:jump_white=true}] run function switch:advancements/_pre_macro {id:"jump_white"}
 execute if entity @s[advancements={switch:jump_blue=true}] run function switch:advancements/_pre_macro {id:"jump_blue"}
+execute if entity @s[advancements={switch:visible/jump_dripstone=true}] run function switch:advancements/_pre_macro {id:"jump_dripstone"}
 execute if entity @s[advancements={switch:visible/jump_yellow=true}] run function switch:advancements/_pre_macro {id:"jump_yellow"}
 execute if entity @s[advancements={switch:jump_red=true}] run function switch:advancements/_pre_macro {id:"jump_red"}
 execute if entity @s[advancements={switch:visible/jump_brown=true}] run function switch:advancements/_pre_macro {id:"jump_brown"}
