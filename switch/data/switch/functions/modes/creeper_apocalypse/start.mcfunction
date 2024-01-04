@@ -22,6 +22,7 @@ scoreboard players set #creeper_apocalypse_seconds switch.data -5
 scoreboard players set #creeper_apocalypse_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
+scoreboard objectives setdisplay list switch.health
 scoreboard objectives add switch.temp.duplication dummy
 scoreboard objectives add switch.temp.ocelot dummy
 
