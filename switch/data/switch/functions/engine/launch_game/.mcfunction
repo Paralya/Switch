@@ -29,7 +29,6 @@ execute if score #vote_game_4 switch.data = #max switch.data run data modify sto
 execute if score #vote_game_5 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[4]
 execute if score #vote_game_6 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[5]
 
-scoreboard players set #modulo_rand switch.data 0
 execute store result score #modulo_rand switch.data run data get storage switch:main voted_games
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game set from storage switch:main voted_games[0].id
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game_name set from storage switch:main voted_games[0].Name

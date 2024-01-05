@@ -136,7 +136,7 @@ data modify storage switch:main minigames append value {min_players:6	,max_playe
 
 # Auto index
 data modify storage switch:main indexed_minigames set value []
-scoreboard players set #index switch.data 0
+scoreboard players set #index switch.data 1
 function switch:auto_index
 data modify storage switch:main minigames set from storage switch:main indexed_minigames
 data remove storage switch:main temp

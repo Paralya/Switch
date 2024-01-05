@@ -1,5 +1,6 @@
 
 function switch:utils/get_random/
+scoreboard players add #random switch.data 1
 
 scoreboard players set #wrong switch.data 0
 function switch:engine/voting_time/get/min_players
