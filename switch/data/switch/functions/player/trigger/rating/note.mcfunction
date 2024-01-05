@@ -4,6 +4,7 @@
 scoreboard players set #previous switch.data 0
 $execute store result score #previous switch.data run data get storage switch:ratings all[{index:$(index)}].players[{name:"$(player)"}].value
 $execute if score #previous switch.data matches 0 run data modify storage switch:ratings all[{index:$(index)}].players append value {name:"$(player)",value:$(digits)}
+$data modify storage switch:ratings all[{index:$(index)}].players[{name:"$(player)"}].value set value $(digits)
 
 ## Update game rating
 # Calculate new points
