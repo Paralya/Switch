@@ -27,5 +27,6 @@ execute if score #border_side switch.data matches 2 run tp @s ~1 ~ ~
 execute if score #border_side switch.data matches 3 run tp @s ~ ~ ~1
 
 # Stop when there are only 16 blocks left
-execute if score #border_remaining_side switch.data matches ..15 run scoreboard players set #border_remaining_side switch.data 16
+execute if score #spleef_seconds switch.data matches ..90 if score #border_remaining_side switch.data matches ..15 run scoreboard players set #border_remaining_side switch.data 16
+execute if score #spleef_seconds switch.data matches 90.. if score #border_remaining_side switch.data matches ..5 run scoreboard players set #border_remaining_side switch.data 16
 
