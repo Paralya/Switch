@@ -1,0 +1,4 @@
+
+# Macro input {index:0,index_hundred:0,digits:0}
+$tellraw @s [{"text":"[","color":"aqua"},{"nbt":"minigames[{index:$(index)}].Name","storage":"switch:main","interpret":false,"color":"aqua"},{"text":"] ","color":"aqua"},{"text":"Notez ce mode : ","color":"white"},{"text":"✮","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)01"}},{"text":"✮","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)02"}},{"text":"✮","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)03"}},{"text":"✮","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)04"}},{"text":"✮","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)05"}}]
+
