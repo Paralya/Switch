@@ -6,6 +6,7 @@ execute if score #process_end switch.data matches 1 if score #remaining_players 
 execute if score #process_end switch.data matches 1 unless score #remaining_players switch.data matches 1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" AÏE ! Il n'y a eu aucun gagnant 💀. Cruelle défaite de tous les joueurs !"}]
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/moutron/death
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

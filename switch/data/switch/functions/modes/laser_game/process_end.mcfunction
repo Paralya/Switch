@@ -12,6 +12,7 @@ execute if score #process_end switch.data matches 1 run effect clear @a[tag=!det
 execute if score #process_end switch.data matches 1 run clear @a[tag=!detached]
 
 execute if score #process_end switch.data matches 1 run scoreboard objectives setdisplay sidebar switch.temp.individual_points
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 
