@@ -38,10 +38,8 @@ execute if score #infected_seconds switch.data matches 25.. run tag @a[tag=switc
 # Regen & Arrow give
 scoreboard players operation #temp switch.data = #infected_seconds switch.data
 scoreboard players operation #temp switch.data %= #20 switch.data
-execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run effect give @a[team=switch.temp.human] regeneration 1 2 true
-execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 10 run effect give @a[team=switch.temp.human] regeneration 1 2 true
-execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run effect give @a[team=switch.temp.zombie] regeneration 1 4 true
-execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 10 run effect give @a[team=switch.temp.zombie] regeneration 1 4 true
+execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run effect give @a[tag=!detached] regeneration 1 2 true
+execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 10 run effect give @a[tag=!detached] regeneration 1 2 true
 execute if score #infected_seconds switch.data matches 60 run give @a[team=switch.temp.human] bow{Unbreakable:1b}
 execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run give @a[team=switch.temp.human] arrow 1
 
