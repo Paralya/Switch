@@ -1,10 +1,9 @@
 
-## For each of the game, print it in order
-tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Liste des mini-jeux :"}]
+# Display & Actions
+execute if score @s switch.trigger.rating matches 1 run function switch:player/trigger/rating/display
+execute if score @s switch.trigger.rating matches 100.. run function switch:player/trigger/rating/action
+playsound ui.button.click ambient @s
 
-# Done advancements
-data modify storage switch:temp copy set from storage switch:ratings all
-execute if data storage switch:temp copy[0] run function switch:player/trigger/rating/display_loop with storage switch:temp copy[0]
-
+# Reset
 scoreboard players set @s switch.trigger.rating 0
 

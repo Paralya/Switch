@@ -10,6 +10,7 @@ execute if score #process_end switch.data matches 1 if score #game_state switch.
 execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 0 as @a[tag=!detached,team=switch.temp.human] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 1 as @a[tag=!detached,team=switch.temp.zombie,scores={switch.temp.original_zombie=1}] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 # Obligatoire
 execute if score #process_end switch.data matches 100 run function switch:engine/restart

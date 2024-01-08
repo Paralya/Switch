@@ -1,5 +1,6 @@
 
-loot replace entity @s hotbar.0 loot switch:get_username
+clear @s
+loot replace entity @s armor.head loot switch:get_username
 scoreboard players set #record switch.data 0
 execute store result score #record switch.data run data get storage switch:records block_party.round
 execute if score #block_party_round switch.data > #record switch.data store result storage switch:records block_party.round int 1 run scoreboard players get #block_party_round switch.data

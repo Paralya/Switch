@@ -22,7 +22,7 @@ execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
 
 ## Choose block
 # Get the number of blocks in the pixel art
-scoreboard players set #block_count switch.data 0
+scoreboard players set #block_count switch.data -1
 execute at @s positioned ~ ~ ~65 run function switch:modes/block_party/core/get_block_count_loop
 
 # Choose a random block for the pixel art

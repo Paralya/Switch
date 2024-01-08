@@ -10,6 +10,7 @@ execute if score #process_end switch.data matches 1 run tellraw @a[tag=!detached
 execute if score #process_end switch.data matches 1 run tag @a[tag=!detached] remove switch.winner
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
 execute if score #process_end switch.data matches 1 run clear @a[tag=!detached]
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

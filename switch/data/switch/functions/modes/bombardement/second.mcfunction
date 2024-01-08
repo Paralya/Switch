@@ -31,4 +31,4 @@ execute if score #bombardement_seconds switch.data matches 180.. run function sw
 execute if score #bombardement_seconds switch.data matches 190.. run function switch:modes/bombardement/summon
 execute if score #bombardement_seconds switch.data matches 200.. run function switch:modes/bombardement/summon
 
-execute if score #bombardement_seconds switch.data matches 100 run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/37
+execute if score #bombardement_seconds switch.data matches 60 run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/37

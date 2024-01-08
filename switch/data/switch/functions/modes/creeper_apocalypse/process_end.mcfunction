@@ -7,6 +7,7 @@ execute if score #process_end switch.data matches 1 unless entity @a[scores={swi
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.ocelot=1}] run advancement grant @s only switch:visible/25
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/creeper_apocalypse/death
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 # Obligatoire
 execute if score #process_end switch.data matches 100 run function switch:engine/restart

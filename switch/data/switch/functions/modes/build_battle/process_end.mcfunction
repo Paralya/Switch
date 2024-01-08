@@ -17,6 +17,7 @@ execute if score #process_end switch.data matches 75 at @a[tag=!detached,sort=ra
 execute if score #process_end switch.data matches 100 at @a[tag=!detached,sort=random,limit=8] run summon firework_rocket ~ ~ ~ {LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1,Trail:1,Colors:[I;16711680,16776960,16711935],FadeColors:[I;16711680,16776960,16711935]}]}}}}
 execute if score #process_end switch.data matches 125 at @a[tag=!detached,sort=random,limit=8] run summon firework_rocket ~ ~ ~ {LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1,Trail:1,Colors:[I;16711680,16776960,16711935],FadeColors:[I;16711680,16776960,16711935]}]}}}}
 execute if score #process_end switch.data matches 150 at @a[tag=!detached,sort=random,limit=8] run summon firework_rocket ~ ~ ~ {LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1,Trail:1,Colors:[I;16711680,16776960,16711935],FadeColors:[I;16711680,16776960,16711935]}]}}}}
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 
