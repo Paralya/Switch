@@ -7,6 +7,6 @@ execute if score #build_battle_state switch.data matches ..1 unless block ~3 ~2 
 
 # Mob cap
 scoreboard players set #entity_count switch.data 0
-execute positioned ~1 ~ ~1 store result score #entity_count switch.data if entity @e[type=!player,type=!marker,dx=45,dy=28,dz=45]
-execute if score #entity_count switch.data matches 24.. run kill @e[type=!player,type=!marker,dx=45,dy=28,dz=45,sort=random,limit=2]
+execute positioned ~1 ~ ~1 store result score #entity_count switch.data if entity @e[type=!player,type=!marker,dx=45,dy=35,dz=45]
+execute if score #entity_count switch.data matches 24.. run kill @e[type=!player,type=!marker,dx=45,dy=35,dz=45,sort=random,limit=2]
 

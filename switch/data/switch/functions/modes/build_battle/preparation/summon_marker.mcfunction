@@ -1,7 +1,7 @@
 
 # Get coordinates of marker
 execute store result entity @s Pos[0] double 1 run scoreboard players get #x switch.data
-data modify entity @s Pos[1] set value 100.0d
+data modify entity @s Pos[1] set value 95.0d
 execute store result entity @s Pos[2] double 1 run scoreboard players get #z switch.data
 
 # Get ID and add tag
