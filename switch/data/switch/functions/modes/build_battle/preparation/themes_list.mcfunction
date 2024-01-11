@@ -12,8 +12,6 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Incendie", \
 	"Château", \
 	"Apocalypse", \
-	"Ville", \
-	"Drapeau", \
 	"Système Solaire", \
 	"Planète Terre", \
 	"Piscine", \
@@ -31,30 +29,27 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Rivière", \
 	"Volcan", \
 	"Île", \
-	"Labyrinthe", \
+	"Nature", \
 	"Tuyau", \
 	"Trésor", \
 	"Survisland", \
 	"Paralya", \
 	"Montre", \
-	"Colère", \
-	"Joie", \
-	"Tristesse", \
-	"Peur", \
-	"Amour", \
+	"Parc", \
+	"Garderie", \
+	"Dragon", \
+	"Mythologie", \
+	"Désert", \
 	"Camera", \
 	"Ordinateur", \
-	"Technologie", \
+	"Jeu-Vidéo", \
 	"Internet", \
 	"Sport", \
-	"Dragon", \
+	"Renard", \
 	"Frigo", \
-	"Pyramid", \
-	"Builder", \
 	"Librairie", \
 	"Tornade", \
 	"Tsunami", \
-	"Catastrophe Naturelle", \
 	"Centrale Nucléaire", \
 	"Virus", \
 	"Physique Quantique", \
@@ -87,13 +82,8 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Paradis Fiscal", \
 	"Pompier", \
 	"Chimie", \
-	"Hawaii", \
 	"Cabane", \
-	"Plateau", \
 	"Super Hero", \
-	"Terrain de Foot", \
-	"Ton âme soeur", \
-	"Musique", \
 	"Pêche", \
 	"Parc d'attraction", \
 	"Monument", \
@@ -101,24 +91,16 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Musculation", \
 	"Arcade", \
 	"Switch", \
-	"Mojang", \
 	"Tesla", \
-	"Elon Musk", \
-	"Apple", \
-	"Argent", \
 	"Ange", \
 	"Démon", \
 	"Enfer", \
 	"Mariage", \
 	"Poupée", \
-	"Bébé", \
 	"Ta chambre", \
 	"Programmation", \
 	"Stoupy51", \
 	"Manifestation", \
-	"Republique", \
-	"Netflix", \
-	"Animé", \
 	"Communisme", \
 	"Capitalisme", \
 	"Démocratisme", \
@@ -126,10 +108,7 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Guerre Mondiale", \
 	"Intelligence Artificielle", \
 	"Grotte", \
-	"Russie", \
 	"De la bonne grosse merde", \
-	"Plasma", \
-	"Effet Doppler", \
 	"Inceste", \
 	"Boulanger", \
 	"Artisan", \
@@ -146,41 +125,19 @@ data modify storage switch:main build_battle_themes set value [ \
 	"Hôpital", \
 	"Chocolatine", \
 	"Relativité Générale", \
-	"Espace-Temps", \
-	"Ordinateur Quantique", \
 	"Globe", \
-	"Sélection Naturelle", \
 	"Licorne", \
-	"Poudre de Perlimpinpin", \
-	"Calme", \
-	"Débilité", \
-	"Abruti", \
 	"Cafetière", \
 	"Cristaline", \
-	"Europe", \
-	"Expression", \
-	"Tablette", \
 	"Crûche / Pichet / Carafe / Broc / Pot d'eau / Pot à eau", \
 	"Trou Noir", \
-	"Trou de Ver", \
 	"Montagne Russe", \
 	"Drône", \
-	"Uranium", \
 	"Photographie", \
-	"Artiste", \
-	"Beauté", \
-	"Vieillesse", \
-	"Jeunesse", \
 	"Toilettes", \
 	"Ton repas préféré", \
-	"Le Pire Endroit sur Terre", \
 	"Meurtre", \
 	"Détective", \
-	"Liberté", \
-	"Égalité", \
-	"Fraternité", \
-	"Inadmissible", \
-	"Éternité", \
 	"Nerd", \
 	"Épreuve" \
 ]

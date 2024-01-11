@@ -10,7 +10,8 @@ effect give @a[tag=!detached] levitation infinite 255 true
 
 ## Choose themes
 # Get the themes list in storage switch:main build_battle_themes
-function switch:modes/build_battle/preparation/themes_list
+execute store success score #success switch.data run data get storage switch:main build_battle_themes[5]
+execute if score #success switch.data matches 0 run function switch:modes/build_battle/preparation/themes_list
 
 # Pick 5 random themes by getting random numbers between 0 and the number of themes
 data modify storage switch:main themes set value {theme1:"", theme2:"", theme3:"", theme4:"", theme5:""}
