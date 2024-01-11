@@ -1,6 +1,7 @@
 
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
+gamerule commandModificationBlockLimit 262144
 
 ## Téléportation des joueurs
 function switch:choose_map_for/build_battle
