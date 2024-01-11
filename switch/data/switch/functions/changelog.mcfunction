@@ -65,6 +65,9 @@ tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Fixes et équi
 tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Ajout de nouvelles maps en Murder Mystery et tweaks de certaines maps","color":"white"}]
 tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Ajout de téléporteurs aux jumps dans l'inventaire lorsqu'on est détaché","color":"green"}]
 
+# 2024/01/11
+tellraw @s [{"text":"[2024/01/11] ","color":"dark_aqua"},{"text":"Build Battle : La liste des thèmes est maintenant réinitialisée seulement quand tous les thèmes ont été proposés\n+ Une profondeur a été ajoutée pour creuser\n+ Les mobs ne sont plus dupliqués","color":"white"}]
+
 # End of line
 tellraw @s ""
 
