@@ -89,7 +89,7 @@ $$(p2)[{id:22}] merge value {color:"red",auteur:"OfChara",name:"Homophobe",descr
 $$(p2)[{id:23}] merge value {color:"yellow",auteur:"Lawtank",name:"Pélican",description:"Soyez celui ayant le plus de kills en Cigogne (sans égalité)"}
 $$(p2)[{id:24}] merge value {color:"red",auteur:"Fhara",name:"Feeling The Music",description:"Survivez 20 manches en Block Party"}
 $$(p2)[{id:25}] merge value {color:"red",auteur:"OfChara",name:"Ocelot",description:"Ne pas descendre en dessous de la moitié de vie en Creeper Apocalypse"}
-$$(p2)[{id:26}] merge value {color:"green",auteur:"Marcus",name:"Suicidaire",description:"Lancer des boules de neiges sur 8 wardens en Warden Escape"}
+$$(p2)[{id:26}] merge value {color:"green",auteur:"Marcus",name:"Suicidaire",description:"Soyez la cible de 8 wardens en Warden Escape"}
 $$(p2)[{id:27}] merge value {color:"red",auteur:"Megamat",name:"Sam Flynn",description:"Éliminer 3 joueurs avec sa traînée en Moutron"}
 $$(p2)[{id:28}] merge value {color:"yellow",auteur:"Megamat",name:"D&Cube",description:"Faites au minimum 50 points en Build Battle"}
 $$(p2)[{id:29}] merge value {color:"yellow",auteur:"Marcus",name:"Embrouilleur",description:"Tapez chaque joueur de la partie en Castagne"}
