@@ -10,4 +10,5 @@ scoreboard players enable @s switch.trigger.shop
 scoreboard players enable @s switch.trigger.tutorial
 scoreboard players enable @s switch.trigger.succes
 scoreboard players enable @s switch.trigger.rating
+scoreboard players enable @s switch.trigger.night_vision
 

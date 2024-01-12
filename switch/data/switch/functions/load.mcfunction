@@ -29,6 +29,7 @@ scoreboard objectives add switch.trigger.shop trigger
 scoreboard objectives add switch.trigger.tutorial trigger
 scoreboard objectives add switch.trigger.succes trigger
 scoreboard objectives add switch.trigger.rating trigger
+scoreboard objectives add switch.trigger.night_vision trigger
 
 scoreboard objectives add switch.stats.kills playerKillCount
 scoreboard objectives add switch.stats.deaths deathCount

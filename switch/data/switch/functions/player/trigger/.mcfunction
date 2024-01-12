@@ -11,6 +11,7 @@ execute unless score @s switch.trigger.shop matches 0 run function switch:shop/t
 execute unless score @s switch.trigger.tutorial matches 0 run function switch:player/tutorial/next_dialogue
 execute unless score @s switch.trigger.succes matches 0 in overworld run function switch:player/trigger/succes/
 execute unless score @s switch.trigger.rating matches 0 run function switch:player/trigger/rating/
+execute unless score @s switch.trigger.night_vision matches 0 run function switch:player/trigger/night_vision/
 
 function switch:player/trigger/enable
 
