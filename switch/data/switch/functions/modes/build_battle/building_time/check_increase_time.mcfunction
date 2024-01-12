@@ -12,7 +12,7 @@ execute if score #nb_yes switch.data matches 75.. run scoreboard players set #su
 scoreboard players reset * switch.temp.theme_vote
 
 # If the vote is successful, increase the time
-execute if score #success switch.data matches 1 run scoreboard players add #remaining_time switch.data 300
+execute if score #success switch.data matches 1 run scoreboard players add #remaining_time switch.data 120
 execute if score #success switch.data matches 1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" La population (plus de 75%) a voté pour augmenter le temps de construction de 5 minutes !","color":"green"}]
 execute if score #success switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.villager.yes ambient @s
 
