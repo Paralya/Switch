@@ -12,6 +12,7 @@ execute if score #traitors_game_seconds switch.data matches 30 run function swit
 execute if score #traitors_game_seconds switch.data matches 90 run function switch:modes/traitors_game/summon_lootboxes
 execute if score #traitors_game_seconds switch.data matches 150 run function switch:modes/traitors_game/summon_lootboxes
 
+# Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..48] run effect give @s glowing 2 0 true
 execute as @e[type=chest_minecart] if data entity @s Items[0] run data modify entity @s Glowing set value 0b
 execute as @e[type=chest_minecart] run data modify entity @s Glowing set value 1b
