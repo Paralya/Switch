@@ -13,7 +13,6 @@ $execute if score #success switch.data matches 0 store result score #temp switch
 execute if score #success switch.data matches 0 run scoreboard players add #temp switch.data 1
 $execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].total int 1 run scoreboard players get #temp switch.data
 execute if score #success switch.data matches 0 run scoreboard players operation #total_players switch.data = #next_id switch.id
-execute if score #success switch.data matches 0 run scoreboard players operation #total_players switch.data *= #1000 switch.data
 execute if score #success switch.data matches 0 run scoreboard players operation #temp switch.data *= #100000 switch.data
 execute if score #success switch.data matches 0 run scoreboard players operation #temp switch.data /= #total_players switch.data
 execute if score #success switch.data matches 0 run scoreboard players operation #digits switch.data = #temp switch.data

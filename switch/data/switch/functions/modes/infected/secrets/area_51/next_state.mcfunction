@@ -38,7 +38,7 @@ execute if score #infected_secret switch.data matches 7 as @a[tag=!detached] at 
 execute if score #infected_secret switch.data matches 8 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Il s'est passé quoi putain ?! Le courant s'est coupé !"}]
 execute if score #infected_secret switch.data matches 8 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> On a tout perdu, on fait quoi maintenant ?!"}]
 execute if score #infected_secret switch.data matches 8 as @e[tag=switch.giant] run data merge entity @s {NoAI:0b,Invulnerable:0b}
-execute if score #infected_secret switch.data matches 8 at @e[limit=24] at @e[tag=switch.giant] run summon zombie
+execute if score #infected_secret switch.data matches 8 at @e[limit=24] at @e[tag=switch.giant] run summon zombie ~ ~ ~ {Team:"switch.temp.zombie"}
 
 # End (killed the giant)
 execute if score #infected_secret switch.data matches 9 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est la merde, il n'y a plus rien sur cette terre qui peut nous sauver."}]
