@@ -7,7 +7,7 @@ data remove storage switch:main copy[0]
 execute if data storage switch:main copy[0] run function switch:player/trigger/stats/get_max_loop
 
 # Remove the highest value from the stats list and add it to the sorted list
-data modify storage switch:main sorted_stats append from storage switch:main max
+data modify storage switch:temp sorted_stats append from storage switch:main max
 function switch:player/trigger/stats/remove_max with storage switch:main max
 
 # Continue loop
