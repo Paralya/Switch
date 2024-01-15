@@ -1,4 +1,10 @@
 
+# Check if the ball is really lost
+execute as @e[tag=golf_ball.display] at @s run function golf_ball:ball/ride_vehicle_macro with entity @s item.tag.SkullOwner
+scoreboard players set #success switch.data 0
+execute on vehicle run scoreboard players set #success switch.data 1
+execute if score #success switch.data matches 1 run return 1
+
 # Finished
 scoreboard players set #finished switch.data 0
 execute positioned over world_surface if block ~ ~-1 ~ barrier if entity @s[distance=..5] run scoreboard players set #finished switch.data 1
