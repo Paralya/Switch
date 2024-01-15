@@ -11,6 +11,8 @@ item replace entity @s hotbar.4 with iron_axe{Enchantments:[{id:"minecraft:effic
 item replace entity @s hotbar.6 with arrow 8
 item replace entity @s hotbar.7 with oak_planks 64
 item replace entity @s hotbar.8 with golden_apple 12
+item replace entity @s inventory.25 with tnt 4
+item replace entity @s inventory.26 with flint_and_steel
 
 scoreboard players add #initial_count switch.data 1
 data modify storage switch:temp temp set value {id:0,hurt:[]}
