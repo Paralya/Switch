@@ -4,5 +4,7 @@ $tellraw @s [{"text":"[","color":"aqua"},{"nbt":"minigames[{index:$(index)}].Nam
 
 data remove storage switch:temp temp
 $data modify storage switch:temp temp set from storage switch:ratings all[{index:$(index)}].players[{name:"$(player)"}].value
-execute if data storage switch:temp temp run tellraw @s [{"text":"Votre vote actuel est de ","color":"gold"},{"nbt":"temp","storage":"switch:temp","interpret":false,"color":"yellow"},{"text":" étoiles."}]
+execute if data storage switch:temp temp if data storage switch:temp {temp:1} run tellraw @s [{"text":"Votre vote actuel est de ","color":"gold"},{"nbt":"temp","storage":"switch:temp","interpret":false,"color":"yellow"},{"text":" étoile."}]
+execute if data storage switch:temp temp unless data storage switch:temp {temp:1} run tellraw @s [{"text":"Votre vote actuel est de ","color":"gold"},{"nbt":"temp","storage":"switch:temp","interpret":false,"color":"yellow"},{"text":" étoiles."}]
+execute unless data storage switch:temp temp run tellraw @s [{"text":"Aucun vote actuel pour ce mini-jeu ","color":"gold"}]
 

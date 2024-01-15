@@ -63,7 +63,7 @@ execute if score #random switch.data matches 9 as @a[tag=!detached] at @s run pl
 execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:'{"text":"Gertrude","color":"yellow"}',CustomNameVisible:1b,Tags:["switch.paint_cow"],AbsorptionAmount:2048.0f,DeathLootTable:"none",Attributes:[{Name:"generic.max_absorption",Base:2048.0f},{Name:"generic.movement_speed",Base:5.0d}]}
 
 # Summon ravager (1/4 chance)
-execute if predicate switch:chance/0.25 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Vache Folle","color":"red"}',CustomNameVisible:1b,Tags:["switch.ravager"],DeathLootTable:"none"}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Vache Folle","color":"red"}',CustomNameVisible:1b,Tags:["switch.ravager"],DeathLootTable:"none"}
 
 # Spreadplayers the entities
 spreadplayers 110038 110038 10 20 false @e[tag=switch.paint_cow]

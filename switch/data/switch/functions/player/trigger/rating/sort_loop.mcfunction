@@ -2,6 +2,8 @@
 # Search for the highest value
 data modify storage switch:main copy set from storage switch:ratings all
 data modify storage switch:main max set from storage switch:main copy[0]
+scoreboard players set #max_int switch.data 0
+scoreboard players set #max_digits switch.data 0
 execute store result score #max_int switch.data run data get storage switch:main max.int
 execute store result score #max_digits switch.data run data get storage switch:main max.digits
 data remove storage switch:main copy[0]

@@ -19,6 +19,6 @@ execute store result score #creeper_count switch.data if entity @e[type=creeper]
 title @a[tag=!detached] actionbar [{"text":"Creepers : ","color":"dark_green"},{"score":{"name":"#creeper_count","objective":"switch.data"},"color":"green"},{"text":", Temps restant : "},{"score":{"name":"#remaining_time","objective":"switch.data"},"color":"green"},{"text":"s","color":"dark_green"}]
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute unless entity @a[scores={switch.alive=1..}] run function switch:modes/creeper_apocalypse/process_end
+execute if score #creeper_apocalypse_seconds switch.data matches ..99 unless entity @a[scores={switch.alive=1..}] run function switch:modes/creeper_apocalypse/process_end
 execute if score #creeper_apocalypse_seconds switch.data matches 100.. run function switch:modes/creeper_apocalypse/process_end
 
