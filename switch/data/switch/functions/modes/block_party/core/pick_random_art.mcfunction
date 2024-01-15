@@ -10,7 +10,7 @@ function switch:modes/block_party/core/get_random_number_loop
 scoreboard players operation #bp_previous_art switch.data = #random switch.data
 scoreboard players operation #bp_selected_art switch.data = #random switch.data
 
-# Teleport current marker to the selected pixel art
+# Teleport current marker to the selected pixel art (two minus because separated by two blocks)
 tp @s 110008 85 110008
 scoreboard players set #y_pos switch.data 85
 scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
@@ -22,7 +22,7 @@ execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
 
 ## Choose block
 # Get the number of blocks in the pixel art
-scoreboard players set #block_count switch.data -1
+scoreboard players set #block_count switch.data 0
 execute at @s positioned ~ ~ ~65 run function switch:modes/block_party/core/get_block_count_loop
 
 # Choose a random block for the pixel art
@@ -34,6 +34,7 @@ scoreboard players operation #bp_selected_block switch.data = #random switch.dat
 scoreboard players set #z_pos switch.data 110073
 scoreboard players operation #z_pos switch.data += #bp_selected_block switch.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos switch.data
+execute at @s if block ~ ~ ~ air run tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Veuillez reporter ce message à Stoupy51 : #bp_selected_block = "},{"score":{"name":"#bp_selected_block","objective":"switch.data"},"color":"aqua"},{"text":", #modulo_rand = "},{"score":{"name":"#modulo_rand","objective":"switch.data"},"color":"aqua"},{"text":", (#y_pos, z_pos) : ("},{"score":{"name":"#y_pos","objective":"switch.data"},"color":"aqua"},{"text":", "},{"score":{"name":"#z_pos","objective":"switch.data"},"color":"aqua"},{"text":")"}]
 
 # Get the block at the current marker
 setblock 0 0 0 air
