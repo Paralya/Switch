@@ -1,14 +1,7 @@
 {
 	"criteria": {
 		"requirement": {
-			"trigger": "minecraft:entity_killed_player",
-			"conditions": {
-				"killing_blow": {
-					"direct_entity": {
-						"type": "minecraft:lightning_bolt"
-					}
-				}
-			}
+			"trigger": "minecraft:lightning_strike"
 		}
 	},
 	"rewards": {
