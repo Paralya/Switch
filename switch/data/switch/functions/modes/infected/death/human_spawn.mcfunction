@@ -27,5 +27,5 @@ execute if score @s switch.infected.antidote matches 1.. run item replace entity
 # Playsound
 execute at @s run playsound entity.ender_dragon.growl ambient @s
 effect give @s blindness 3 0 true
-effect give @s regeneration 3 255 true
+effect give @s regeneration 10 255 true
 

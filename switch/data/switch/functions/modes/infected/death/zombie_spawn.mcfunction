@@ -5,5 +5,5 @@ execute if data storage switch:main {map:"old_japan_apocalypse"} run tp @s 12908
 execute if data storage switch:main {map:"lost_graveyard_remastered"} run tp @s 127009 116 127058 90 0
 function switch:modes/infected/death/zombie_give
 effect give @s blindness 10 0 true
-effect give @s regeneration 3 255 true
+effect give @s regeneration 10 255 true
 
