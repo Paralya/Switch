@@ -41,7 +41,7 @@ scoreboard players operation #temp switch.data %= #20 switch.data
 execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run effect give @a[tag=!detached] regeneration 1 2 true
 execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 10 run effect give @a[tag=!detached] regeneration 1 2 true
 execute if score #infected_seconds switch.data matches 60 run give @a[team=switch.temp.human] bow{Unbreakable:1b}
-execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 run give @a[team=switch.temp.human] arrow 1
+execute if score #infected_seconds switch.data matches 60.. if score #temp switch.data matches 0 as @a[team=switch.temp.human] run function switch:modes/infected/give_arrow/main
 
 # Advancements
 execute as @a[team=switch.temp.human] if score @s switch.temp.kills matches 8.. run advancement grant @s only switch:visible/16
