@@ -68,32 +68,6 @@ execute if entity @s[advancements={switch:visible/51=true}] run function switch:
 execute if entity @s[advancements={switch:visible/52=true}] run function switch:advancements/_pre_macro {id:"52"}
 execute if entity @s[advancements={switch:visible/53=true}] run function switch:advancements/_pre_macro {id:"53"}
 execute if entity @s[advancements={switch:visible/54=true}] run function switch:advancements/_pre_macro {id:"54"}
-execute if entity @s[advancements={switch:visible/55=true}] run function switch:advancements/_pre_macro {id:"55"}
-execute if entity @s[advancements={switch:visible/56=true}] run function switch:advancements/_pre_macro {id:"56"}
-execute if entity @s[advancements={switch:visible/57=true}] run function switch:advancements/_pre_macro {id:"57"}
-execute if entity @s[advancements={switch:visible/58=true}] run function switch:advancements/_pre_macro {id:"58"}
-execute if entity @s[advancements={switch:visible/59=true}] run function switch:advancements/_pre_macro {id:"59"}
-execute if entity @s[advancements={switch:visible/60=true}] run function switch:advancements/_pre_macro {id:"60"}
-execute if entity @s[advancements={switch:visible/61=true}] run function switch:advancements/_pre_macro {id:"61"}
-execute if entity @s[advancements={switch:visible/62=true}] run function switch:advancements/_pre_macro {id:"62"}
-execute if entity @s[advancements={switch:visible/63=true}] run function switch:advancements/_pre_macro {id:"63"}
-execute if entity @s[advancements={switch:visible/64=true}] run function switch:advancements/_pre_macro {id:"64"}
-execute if entity @s[advancements={switch:visible/65=true}] run function switch:advancements/_pre_macro {id:"65"}
-execute if entity @s[advancements={switch:visible/66=true}] run function switch:advancements/_pre_macro {id:"66"}
-execute if entity @s[advancements={switch:visible/67=true}] run function switch:advancements/_pre_macro {id:"67"}
-execute if entity @s[advancements={switch:visible/68=true}] run function switch:advancements/_pre_macro {id:"68"}
-execute if entity @s[advancements={switch:visible/69=true}] run function switch:advancements/_pre_macro {id:"69"}
-execute if entity @s[advancements={switch:visible/70=true}] run function switch:advancements/_pre_macro {id:"70"}
-execute if entity @s[advancements={switch:visible/71=true}] run function switch:advancements/_pre_macro {id:"71"}
-execute if entity @s[advancements={switch:visible/72=true}] run function switch:advancements/_pre_macro {id:"72"}
-execute if entity @s[advancements={switch:visible/73=true}] run function switch:advancements/_pre_macro {id:"73"}
-execute if entity @s[advancements={switch:visible/74=true}] run function switch:advancements/_pre_macro {id:"74"}
-execute if entity @s[advancements={switch:visible/75=true}] run function switch:advancements/_pre_macro {id:"75"}
-execute if entity @s[advancements={switch:visible/76=true}] run function switch:advancements/_pre_macro {id:"76"}
-execute if entity @s[advancements={switch:visible/77=true}] run function switch:advancements/_pre_macro {id:"77"}
-execute if entity @s[advancements={switch:visible/78=true}] run function switch:advancements/_pre_macro {id:"78"}
-execute if entity @s[advancements={switch:visible/79=true}] run function switch:advancements/_pre_macro {id:"79"}
-execute if entity @s[advancements={switch:visible/80=true}] run function switch:advancements/_pre_macro {id:"80"}
 
 setblock 0 0 0 air
 

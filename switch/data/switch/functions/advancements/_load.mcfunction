@@ -120,3 +120,6 @@ $$(p2)[{id:53}] merge value {color:"red",auteur:"Stoupy",name:"Storm Area",descr
 $$(p2)[{id:54}] merge value {color:"red",auteur:"Stoupy",name:"Secret Slayer",description:"Terminer les secrets de toutes les maps dans le mode de jeu Infected"}
 #$$(p2)[{id:X}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
 
+# Refresh percentages
+function switch:advancements/percentages_recalculations
+
