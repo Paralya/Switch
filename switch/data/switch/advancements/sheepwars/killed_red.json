@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "switch:modes/sheepwars/advancements/suicide"
+		"function": "switch:modes/sheepwars/advancements/killed_red"
 	}
 }

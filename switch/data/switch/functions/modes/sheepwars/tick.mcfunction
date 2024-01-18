@@ -20,10 +20,6 @@ execute as @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fu
 clear @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] warped_fungus_on_a_stick
 item replace entity @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
 
-# Reset killed team
-scoreboard players reset @a[tag=!detached] switch.temp.killed_red
-scoreboard players reset @a[tag=!detached] switch.temp.killed_blue
-
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear
 
@@ -44,6 +40,6 @@ execute if score #sheepwars_night switch.data matches 3 run scoreboard players s
 
 
 ## Détection de fin de partie
-execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
+#execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/sheepwars/process_end
 
