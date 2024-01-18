@@ -79,8 +79,9 @@ data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aq
 execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{}}
 # ex: all = {player:{total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{pitch_creep:{total_games:0,played:[],wins:[]}, ...}}
 
-# Setup ratings storage if needed
+# Setup storages if needed
 execute unless data storage switch:ratings all run data modify storage switch:ratings all set value []
+execute unless data storage switch:main UUIDs run data modify storage switch:main UUIDs set value []
 
 # Scoreboard constants, shop load, and advancements load
 function switch:set_constants
