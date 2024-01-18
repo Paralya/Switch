@@ -43,6 +43,7 @@ scoreboard players set #glassrunner_point_to_win switch.data 32
 
 scoreboard objectives add switch.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add switch.glassrunner.deathCount deathCount
+scoreboard objectives add switch.glassrunner.money_maker dummy
 
 scoreboard objectives add switch.glassrunner.money dummy
 scoreboard objectives setdisplay list switch.glassrunner.money
@@ -61,4 +62,9 @@ team join switch.glassrunner.p_blue §P§B§r
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0
 
+
+
+summon text_display 3000 110 3000 {Tags:["switch.glassrunner.money_maker"], text:'{"text":"3 seconds => 2 money","color":"gold","italic":false}', billboard:"vertical"}
+summon text_display 3084 131 3084 {Tags:["switch.glassrunner.money_maker"], text:'{"text":"3 seconds => 2 money","color":"gold","italic":false}', billboard:"vertical"}
+summon text_display 2916 131 2916 {Tags:["switch.glassrunner.money_maker"], text:'{"text":"3 seconds => 2 money","color":"gold","italic":false}', billboard:"vertical"}
 

@@ -10,3 +10,4 @@ team remove switch.glassrunner.p_blue
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0
 
+kill @e[tag=switch.glassrunner.money_maker]
