@@ -1,4 +1,7 @@
 
+# Check if new username
+#function switch:player/username_change/check
+
 # On détecte si c'est une reconnexion ou non
 scoreboard players set #reconnect switch.data 0
 execute store success score #reconnect switch.data if score @s switch.last_total_games = total_games switch.last_total_games
