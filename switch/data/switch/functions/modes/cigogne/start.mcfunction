@@ -17,7 +17,7 @@ function switch:choose_map_for/cigogne
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la Cigogne, 10 secondes de préparation et soyez le dernier en vie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de Cigogne, 10 secondes de préparation et soyez le dernier en vie !"}]
 
 scoreboard players set #remaining_time switch.data 910
 scoreboard players set #cigogne_seconds switch.data -10

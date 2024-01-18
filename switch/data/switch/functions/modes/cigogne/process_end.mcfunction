@@ -10,10 +10,8 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] run fun
 
 # Advancement
 execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data 0
-execute if score #process_end switch.data matches 1 run scoreboard players set #count_max switch.data 0
 execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill
-execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.temp.kill=1..}] if score #max switch.data = @s switch.temp.kill run scoreboard players add #count_max switch.data 1
-execute if score #process_end switch.data matches 1 if score #count_max switch.data matches 1 as @a[tag=!detached,scores={switch.temp.kill=1..}] if score #max switch.data = @s switch.temp.kill run advancement grant @s only switch:visible/23
+execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.temp.kill=1..}] if score #max switch.data = @s switch.temp.kill run advancement grant @s only switch:visible/23
 
 execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

@@ -86,7 +86,7 @@ $$(p2)[{id:19}] merge value {color:"yellow",auteur:"Manu",name:"Wattouat",descri
 $$(p2)[{id:20}] merge value {color:"yellow",auteur:"OfChara",name:"Fusée",description:"Dépassez 5 joueurs dans le dernier tour en Kart Racer"}
 $$(p2)[{id:21}] merge value {color:"yellow",auteur:"OfChara",name:"Plongeur Expert",description:"Complétez 3 dés à coudre dans les modes de jeu du style"}
 $$(p2)[{id:22}] merge value {color:"red",auteur:"OfChara",name:"Homophobe",description:"Mettre au moins 42 flèches en Gay Shooter"}
-$$(p2)[{id:23}] merge value {color:"yellow",auteur:"Lawtank",name:"Pélican",description:"Soyez celui ayant le plus de kills en Cigogne (sans égalité)"}
+$$(p2)[{id:23}] merge value {color:"yellow",auteur:"Lawtank",name:"Pélican",description:"Soyez celui ayant le plus de kills en Cigogne (égalité autorisée)"}
 $$(p2)[{id:24}] merge value {color:"red",auteur:"Fhara",name:"Feeling The Music",description:"Survivez 20 manches en Block Party"}
 $$(p2)[{id:25}] merge value {color:"red",auteur:"OfChara",name:"Ocelot",description:"Ne pas descendre en dessous de la moitié de vie en Creeper Apocalypse"}
 $$(p2)[{id:26}] merge value {color:"green",auteur:"Marcus",name:"Suicidaire",description:"Soyez la cible de 8 wardens en Warden Escape"}
