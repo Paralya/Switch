@@ -55,22 +55,20 @@ execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -2 70.1 
 # Fourth dialog
 execute if score @s switch.tutorial matches 4..5 run function switch:shop/pitchout
 execute if score @s switch.tutorial matches 4..5 run tellraw @s ["\n",{"text":"Voici le shop du Pitchout ! Ici est listé toutes les améliorations que tu peux acheter pour ce mini-jeu !"}, \
-	{"text":"\nComme je suis sympa, je viens de te donner 100$, essaie d'acheter une amélioration !\n","color":"gray"}]
+	{"text":"\nComme je suis sympa, je viens de te donner 100$. Essaie d'acheter une amélioration !\n","color":"gray"}]
 
 # Fifth dialog
 execute if score @s switch.tutorial matches 5..6 run tellraw @s ["",{"text":"Bien joué ! Tu viens d'acheter ta première amélioration !"}, \
-	{"text":"\nMaintenant, je vais te montrer comment obtenir de l'aide si tu es perdu ! Cela est très simple, essaie de taper la commande /help !\n","color":"gray"}]
+	{"text":"\nMaintenant, je vais te montrer comment obtenir de l'aide si tu es perdu ! Cela est très simple, essaie de taper la commande","color":"gray"},{"text":" '/help' ","color":"aqua"},{"text":"!\n","color":"gray"}]
 
 # Sixth dialog
-execute if score @s switch.tutorial matches 6.. run scoreboard players set @s switch.trigger.help 1
-execute if score @s switch.tutorial matches 6.. run function switch:player/trigger/help/
-execute if score @s switch.tutorial matches 6.. run tellraw @s ["",{"text":"Tu peux voir ici toutes les commandes que tu peux utiliser (sauf les deux dernières) !"}, \
-	{"text":"\nSi tu as bien suivi, tu verras qu'il y a deux commandes /attach et /detach, je vais t'expliquer à quoi elles servent !\n","color":"gray"}, \
-	{"text":"\nDans l'espace Switch, tu peux décider de te détacher du moteur pour retourner dans ce lobby où tu es actuellement, ou de te rattacher au moteur pour rejoindre les autres joueurs !"}, \
-	{"text":"\n\nBref, je pense que tu as compris le principe du Switch, je vais te laisser découvrir le reste par toi-même !"}, \
-	{"text":"\nJe te souhaite un bon jeu sur l'espace Switch !","color":"gray"}]
-execute if score @s switch.tutorial matches 6.. run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Cliquez [ici] pour terminer le tutoriel !","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.tutorial set 2"}}]
-execute if score @s switch.tutorial matches 6.. run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Comme le /help le précise, faites /attach pour rejoindre les autres joueurs !","color":"green"}]
+execute if score @s switch.tutorial matches 6 run scoreboard players set @s switch.trigger.help 1
+execute if score @s switch.tutorial matches 6 run function switch:player/trigger/help/
+execute if score @s switch.tutorial matches 6 run tellraw @s ["",{"text":"Tu peux voir ici toutes les commandes que tu peux utiliser (sauf les deux dernières) !"}, \
+	{"text":"\nSi tu as bien suivi, tu verras qu'il y a deux commandes '/attach' et '/detach'.","color":"gray"}, \
+	{"text":"Dans l'espace Switch, tu peux décider de te détacher du moteur pour retourner dans ce lobby où tu es actuellement, ou de te rattacher au moteur pour rejoindre les autres joueurs !"}, \
+	{"text":"\n\nBref, je pense que tu as compris le principe du Switch, je vais te laisser découvrir le reste par toi-même ! Je te souhaite un bon jeu sur l'espace Switch !","color":"gray"}]
+execute if score @s switch.tutorial matches 6 run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tapez '/attach' pour terminer le tutoriel !","color":"green"}]
 
 # Go next dialog
 execute if score @s switch.tutorial matches 0..2 run tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Cliquez [ici] pour passer au dialogue suivant !","color":"green","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.tutorial set 2"}}]
