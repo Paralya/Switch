@@ -11,6 +11,14 @@ effect give @a[team=switch.temp.spectre] blindness 3 255 true
 effect give @a[tag=!detached] slowness 8 255 true
 function switch:utils/set_dynamic_time
 
+## Partie spectror game aléatoire
+
+scoreboard objectives add switch.temp.spectror dummy
+scoreboard players set #SPECTROR_GAME switch.data 0
+execute if predicate switch:chance/0.1 run scoreboard players set #SPECTROR_GAME switch.data 1
+execute if score #SPECTROR_GAME switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"-------------------------","color":"gray"},{"text":"\n"},{"text":"\u25ba","color":"gray"},{"text":" ParalyaWarning ","bold":true,"color":"red"},{"text":":","bold":true,"color":"gray"},{"text":" La partie est un","color":"#F8DBF8"},{"text":" SpectrorGame","bold":true,"color":"light_purple"},{"text":" ! Il y'a donc un traitre parmi l'équipe des invisibles.. Il devra faire son possible pour gagner seul. Attention, si tous les visibles meurent la victoire est donnée aux spectres, il doit donc attaquer rapidement !","color":"#FBDBFB"},{"text":"\n"},{"text":"-------------------------","color":"gray"}]
+execute if score #SPECTROR_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound block.anvil.use ambient @s
+
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/spectres_game
