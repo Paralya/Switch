@@ -12,13 +12,13 @@ scoreboard players operation #digits switch.data %= #1000 switch.data
 scoreboard players operation #local_total switch.data /= #1000 switch.data
 
 # Store the results
-execute store result storage switch:advancements copy[0].percent.int int 1 run scoreboard players get #local_total switch.data
-execute store result storage switch:advancements copy[0].percent.digits int 1 run scoreboard players get #digits switch.data
+execute store result storage switch:temp copy[0].percent.int int 1 run scoreboard players get #local_total switch.data
+execute store result storage switch:temp copy[0].percent.digits int 1 run scoreboard players get #digits switch.data
 
 # Append to the new list
-data modify storage switch:temp new append from storage switch:advancements copy[0]
+data modify storage switch:temp new append from storage switch:temp copy[0]
 
 # Continue loop
 data remove storage switch:temp copy[0]
-execute if data storage switch:temp copy[0] run function switch:advancements/percentages_recalculation_loop with storage switch:temp copy[0]
+execute if data storage switch:temp copy[0] run function switch:advancements/percentages_recalculation_loop
 
