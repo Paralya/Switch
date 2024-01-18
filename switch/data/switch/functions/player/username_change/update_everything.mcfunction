@@ -1,8 +1,4 @@
 
-$say $(old_username)
-$say $(username)
-$say $(UUID)
-
 # Basic objectives
 $scoreboard players operation @s switch.id = $(old_username) switch.id
 $scoreboard players operation @s switch.tutorial = $(old_username) switch.tutorial
@@ -18,9 +14,23 @@ $scoreboard players operation @s switch.stats.played = $(old_username) switch.st
 $scoreboard players operation @s switch.stats.wins = $(old_username) switch.stats.wins
 $scoreboard players operation @s switch.stats.win_streak = $(old_username) switch.stats.win_streak
 
-## TODO
-# switch:stats => all.id.[...].players[...]
-# switch:advancements => all[...].players[...]
-# switch:ratings => all[...].players[...]
+# Stats {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[]},modes:{}}
+data modify storage switch:temp copy set from storage switch:main minigames
+data modify storage switch:temp copy[0] merge from storage switch:temp input
+execute if data storage switch:temp copy[0] run function switch:player/username_change/update_stats_loop with storage switch:temp copy[0]
+$data modify storage switch:stats all.player.total_played[{name:"$(old_username)"}].name set value "$(username)"
+$data modify storage switch:stats all.player.total_wins[{name:"$(old_username)"}].name set value "$(username)"
+$data modify storage switch:stats all.player.total_kills[{name:"$(old_username)"}].name set value "$(username)"
+$data modify storage switch:stats all.player.total_deaths[{name:"$(old_username)"}].name set value "$(username)"
+$data modify storage switch:stats all.player.total_money[{name:"$(old_username)"}].name set value "$(username)"
 
+# Advancements
+data modify storage switch:temp copy set from storage switch:advancements all
+data modify storage switch:temp copy[0] merge from storage switch:temp input
+execute if data storage switch:temp copy[0] run function switch:player/username_change/update_advancements_loop with storage switch:temp copy[0]
+
+# Ratings
+data modify storage switch:temp copy set from storage switch:ratings all
+data modify storage switch:temp copy[0] merge from storage switch:temp input
+execute if data storage switch:temp copy[0] run function switch:player/username_change/update_ratings_loop with storage switch:temp copy[0]
 
