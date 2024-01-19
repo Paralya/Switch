@@ -1,24 +1,24 @@
 
 ## Choose pixel art
-# Get the number of pixel arts for the game
+# If list is empty, remade it
 scoreboard players set #art_count switch.data 0
-execute positioned 110008 85 110008 run function switch:modes/block_party/core/get_art_count_loop
+execute store result score #art_count switch.data if data storage switch:maps block_party[]
+execute if score #art_count switch.data matches 0 run function switch:modes/block_party/core/remake_list/main
 
-# Choose a random pixel art for the game which is not the same as the previous one
-scoreboard players operation #modulo_rand switch.data = #art_count switch.data
-function switch:modes/block_party/core/get_random_number_loop
-scoreboard players operation #bp_previous_art switch.data = #random switch.data
-scoreboard players operation #bp_selected_art switch.data = #random switch.data
+# Choose a random pixel art for the game
+execute store result score #bp_selected_art switch.data run data get storage switch:maps block_party[0]
+data remove storage switch:maps block_party[0]
 
-# Teleport current marker to the selected pixel art (two minus because separated by two blocks)
+# Teleport current marker to the selected pixel art
 tp @s 110008 85 110008
 scoreboard players set #y_pos switch.data 85
-scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
 scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos switch.data
 
 # Clone the selected pixel art
 execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
+
+
 
 ## Choose block
 # Get the number of blocks in the pixel art
@@ -34,12 +34,14 @@ scoreboard players operation #bp_selected_block switch.data = #random switch.dat
 scoreboard players set #z_pos switch.data 110073
 scoreboard players operation #z_pos switch.data += #bp_selected_block switch.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos switch.data
-execute at @s if block ~ ~ ~ air run tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Veuillez reporter ce message à Stoupy51 : #bp_selected_block = "},{"score":{"name":"#bp_selected_block","objective":"switch.data"},"color":"aqua"},{"text":", #modulo_rand = "},{"score":{"name":"#modulo_rand","objective":"switch.data"},"color":"aqua"},{"text":", (#y_pos, z_pos) : ("},{"score":{"name":"#y_pos","objective":"switch.data"},"color":"aqua"},{"text":", "},{"score":{"name":"#z_pos","objective":"switch.data"},"color":"aqua"},{"text":")"}]
 
 # Get the block at the current marker
 setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
 execute at @s run loot insert 0 0 0 mine ~ ~ ~ diamond_pickaxe
+execute unless data block 0 0 0 Items[0] run tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Veuillez reporter ce message à Stoupy51 : #bp_selected_block = "},{"score":{"name":"#bp_selected_block","objective":"switch.data"},"color":"aqua"},{"text":", #modulo_rand = "},{"score":{"name":"#modulo_rand","objective":"switch.data"},"color":"aqua"},{"text":", (#y_pos, z_pos) : ("},{"score":{"name":"#y_pos","objective":"switch.data"},"color":"aqua"},{"text":", "},{"score":{"name":"#z_pos","objective":"switch.data"},"color":"aqua"},{"text":")"}]
+
+
 
 ## Others
 # Tellraw, Playsound, and Clear all
@@ -48,23 +50,26 @@ execute as @a[tag=!detached] at @s run playsound entity.villager.ambient ambient
 clear @a[tag=!detached,gamemode=adventure]
 
 # Play random music
-execute store result score #random switch.data run random value 0..10
-execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
+execute store result score #random switch.data run random value 0..13
 execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 3 as @a[tag=!detached] at @s run playsound music_disc.far record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 4 as @a[tag=!detached] at @s run playsound music_disc.mall record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound music_disc.mellohi record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 6 as @a[tag=!detached] at @s run playsound music_disc.stal record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound music_disc.strad record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound music_disc.wait record @s ~ ~ ~ 10000 1 1
-execute if score #random switch.data matches 9 as @a[tag=!detached] at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 3 as @a[tag=!detached] at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 4 as @a[tag=!detached] at @s run playsound music_disc.far record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound music_disc.mall record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 6 as @a[tag=!detached] at @s run playsound music_disc.mellohi record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound music_disc.otherside record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound music_disc.pigstep record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 9 as @a[tag=!detached] at @s run playsound music_disc.relic record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 10 as @a[tag=!detached] at @s run playsound music_disc.stal record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 11 as @a[tag=!detached] at @s run playsound music_disc.strad record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run playsound music_disc.wait record @s ~ ~ ~ 10000 1 1
+execute if score #random switch.data matches 13 as @a[tag=!detached] at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
 
 # Summon a paint cow randomly (1/3 chance)
-execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:'{"text":"Gertrude","color":"yellow"}',CustomNameVisible:1b,Tags:["switch.paint_cow"],AbsorptionAmount:2048.0f,DeathLootTable:"none",Attributes:[{Name:"generic.max_absorption",Base:2048.0f},{Name:"generic.movement_speed",Base:5.0d}]}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:'{"text":"Gertrude","color":"yellow"}',CustomNameVisible:1b,Tags:["switch.paint_cow"],AbsorptionAmount:2048.0f,DeathLootTable:"none",Attributes:[{Name:"generic.max_absorption",Base:2048.0},{Name:"generic.movement_speed",Base:5.0d}]}
 
 # Summon ravager (1/4 chance)
-execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Vache Folle","color":"red"}',CustomNameVisible:1b,Tags:["switch.ravager"],DeathLootTable:"none"}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:1b,CustomName:'{"text":"Vachette","color":"red"}',CustomNameVisible:1b,Tags:["switch.ravager"],DeathLootTable:"none"}
 
 # Spreadplayers the entities
 spreadplayers 110038 110038 10 20 false @e[tag=switch.paint_cow]

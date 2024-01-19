@@ -55,6 +55,7 @@ forceload add 0 0
 
 #define storage switch:temp
 #define storage switch:main
+#define storage switch:maps
 #define storage switch:records
 #define storage switch:stats
 #define storage switch:ratings

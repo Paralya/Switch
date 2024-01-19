@@ -38,11 +38,11 @@ execute if score #bp_block switch.data matches 12 run data modify block 0 0 0 It
 execute if score #bp_block switch.data matches 13 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Green / Vert","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 14 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Red / Rouge","italic":false,"color":"aqua"}'
 execute if score #bp_block switch.data matches 15 run data modify block 0 0 0 Items[0].tag.display.Name set value '{"text":"Black / Noir","italic":false,"color":"aqua"}'
-item replace entity @a[tag=!detached,gamemode=adventure] hotbar.0 from block 0 0 0 container.0
-item replace entity @a[tag=!detached,gamemode=adventure] hotbar.2 from block 0 0 0 container.0
-item replace entity @a[tag=!detached,gamemode=adventure] hotbar.4 from block 0 0 0 container.0
-item replace entity @a[tag=!detached,gamemode=adventure] hotbar.6 from block 0 0 0 container.0
-item replace entity @a[tag=!detached,gamemode=adventure] hotbar.8 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.0 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.2 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.4 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.6 from block 0 0 0 container.0
+item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.8 from block 0 0 0 container.0
 
 # Title players
 execute if score #bp_block switch.data matches -1 run title @a[tag=!detached] title {"text":"Beige","italic":false,"color":"#c8ad7f"}

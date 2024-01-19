@@ -16,3 +16,6 @@ scoreboard players set #block_party_ticks switch.data -200
 scoreboard players set #block_party_round switch.data 1
 scoreboard players set #process_end switch.data 0
 
+# Data storage
+execute unless data storage switch:maps block_party run data modify storage switch:maps block_party set value []
+
