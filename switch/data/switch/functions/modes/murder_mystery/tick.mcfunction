@@ -18,7 +18,7 @@ kill @e[type=item,nbt={Age:500s}]
 execute as @e[type=item_display,tag=switch.detective_bow] at @s positioned ~ ~-1 ~ run function switch:modes/murder_mystery/tick_bow
 
 # Allow the murderer to throw his knife
-scoreboard players add #rotation switch.data 45
+scoreboard players add #rotation switch.data 30
 execute as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/throw/player_tick
 execute as @e[type=armor_stand,tag=switch.thrown] at @s run function switch:modes/murder_mystery/throw/loop
 
