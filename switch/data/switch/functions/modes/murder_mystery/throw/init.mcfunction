@@ -1,4 +1,4 @@
 
-scoreboard players set #murderer_reload switch.data 200
+scoreboard players set @s switch.temp.throw_reload 200
 effect give @s slowness 2 4 true
 
