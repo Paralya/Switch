@@ -18,5 +18,5 @@ item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[scores={switch.alive=1..}]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/pitchout/process_end
-execute if score #pitchout_seconds switch.data matches 450.. run function switch:modes/pitchout/process_end
+execute if score #pitchout_seconds switch.data matches 600.. run function switch:modes/pitchout/process_end
 

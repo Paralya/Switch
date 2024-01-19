@@ -8,10 +8,6 @@ execute if score #next_role switch.data matches 1 run team join switch.temp.spec
 execute if score #next_role switch.data matches 2.. run team join switch.temp.visible @s
 execute if score #next_role switch.data matches 3.. run scoreboard players set #next_role switch.data 0
 
-# Si partie spectror game
-execute if score #SPECTROR_GAME switch.data matches 1 run team join switch.temp.spectre @r[team=switch.temp.visible]
-execute if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @r[team=switch.temp.spectre] switch.temp.spectror 1
-
 
 # Linked marker for offline players
 setblock 0 0 0 yellow_shulker_box

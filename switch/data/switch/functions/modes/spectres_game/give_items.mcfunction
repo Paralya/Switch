@@ -30,5 +30,5 @@ effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
 
 #pommes en plus pour les spectres en cas de spectror game
-execute if score #SPECTROR_GAME switch.data matches 1 run give @a[team=switch.temp.spectre] golden_apple 3
+execute if score #SPECTROR_GAME switch.data matches 1 run give @s[team=switch.temp.spectre] golden_apple 3
 
