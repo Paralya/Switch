@@ -34,3 +34,7 @@ data modify storage switch:temp copy set from storage switch:ratings all
 data modify storage switch:temp copy[0] merge from storage switch:temp input
 execute if data storage switch:temp copy[0] run function switch:player/username_change/update_ratings_loop with storage switch:temp copy[0]
 
+# Shops
+## TODO
+
+

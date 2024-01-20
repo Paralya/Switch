@@ -20,7 +20,7 @@ execute if score #infected_secret switch.data matches 4 as @r[team=switch.temp.h
 execute if score #infected_secret switch.data matches 4 run tellraw @a[tag=!detached] [{"text":"To be continued.","color":"dark_gray","italic":true}]
 execute if score #infected_secret switch.data matches 4 run kill @e[tag=stardust.nether_stardust_ore]
 execute if score #infected_secret switch.data matches 4 run function switch:modes/infected/secrets/drop_element_115
-execute if score #infected_secret switch.data matches 4 as @a[team=switch.temp.human] run advancement grant @s only switch:visible/52
+execute if score #infected_secret switch.data matches 4 run advancement grant @a[team=switch.temp.human] only switch:visible/52
 execute if score #infected_secret switch.data matches 4 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
 
 # Next state
