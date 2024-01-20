@@ -11,12 +11,12 @@ gamerule fallDamage false
 
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
-execute if data storage switch:main {map:"arti_box"} run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 15 secondes !\n"}]
-execute if data storage switch:main {map:"arti_box"} run scoreboard players set #remaining_time switch.data 135
-execute if data storage switch:main {map:"arti_box"} run scoreboard players set #panic_chase_seconds switch.data -15
-execute if data storage switch:main {map:"nether_storm"} run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 25 secondes !\n"}]
-execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #remaining_time switch.data 235
-execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #panic_chase_seconds switch.data -25
+execute if data storage switch:main {map:"arti_box"} run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 30 secondes !\n"}]
+execute if data storage switch:main {map:"arti_box"} run scoreboard players set #remaining_time switch.data 150
+execute if data storage switch:main {map:"arti_box"} run scoreboard players set #panic_chase_seconds switch.data -30
+execute if data storage switch:main {map:"nether_storm"} run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 30 secondes !\n"}]
+execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #remaining_time switch.data 240
+execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #panic_chase_seconds switch.data -30
 scoreboard players set #panic_chase_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
