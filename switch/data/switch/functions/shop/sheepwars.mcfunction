@@ -1,7 +1,7 @@
 
 # Start
 tellraw @s [{"text":"[Boutique Sheepwars]","color":"yellow"}]
-tellraw @s [{"text":"Sélectionnez un kit en cliquant sur le nom !","color":"gray"}]
+tellraw @s [{"text":"Sélectionnez un kit en cliquant sur le nom !","color":"red"}]
 
 # Kit More Health
 scoreboard players add @s switch.sheepwars.kit_health 0
