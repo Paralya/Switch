@@ -34,7 +34,28 @@ data modify storage switch:temp copy set from storage switch:ratings all
 data modify storage switch:temp copy[0] merge from storage switch:temp input
 execute if data storage switch:temp copy[0] run function switch:player/username_change/update_ratings_loop with storage switch:temp copy[0]
 
+
 # Shops
-## TODO
+$scoreboard players operation @s switch.pitchout.boots = $(old_username) switch.pitchout.boots
+$scoreboard players operation @s switch.pitchout.ender_pearl = $(old_username) switch.pitchout.ender_pearl
+
+$scoreboard players operation @s switch.infected.sword = $(old_username) switch.infected.sword
+$scoreboard players operation @s switch.infected.armor = $(old_username) switch.infected.armor
+$scoreboard players operation @s switch.infected.antidote = $(old_username) switch.infected.antidote
+$scoreboard players operation @s switch.infected.zombie_speed = $(old_username) switch.infected.zombie_speed
+$scoreboard players operation @s switch.infected.zombie_jump = $(old_username) switch.infected.zombie_jump
+$scoreboard players operation @s switch.infected.zombie_strength = $(old_username) switch.infected.zombie_strength
+
+$scoreboard players operation @s switch.spleef.snow_block = $(old_username) switch.spleef.snow_block
+$scoreboard players operation @s switch.spleef.powder_snow = $(old_username) switch.spleef.powder_snow
+
+$scoreboard players operation @s switch.sheepwars.choosen_kit = $(old_username) switch.sheepwars.choosen_kit
+$scoreboard players operation @s switch.sheepwars.kit_health = $(old_username) switch.sheepwars.kit_health
+$scoreboard players operation @s switch.sheepwars.kit_bow = $(old_username) switch.sheepwars.kit_bow
+$scoreboard players operation @s switch.sheepwars.kit_sword = $(old_username) switch.sheepwars.kit_sword
+$scoreboard players operation @s switch.sheepwars.kit_more_sheep = $(old_username) switch.sheep.more_sheep
+$scoreboard players operation @s switch.sheepwars.kit_builder = $(old_username) switch.sheepwars.kit_builder
+$scoreboard players operation @s switch.sheepwars.kit_mobility = $(old_username) switch.sheepwars.kit_mobility
+$scoreboard players operation @s switch.sheepwars.kit_armored_sheep = $(old_username) switch.sheepwars.kit_armored_sheep
 
 
