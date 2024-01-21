@@ -16,7 +16,6 @@ function switch:utils/set_dynamic_time
 scoreboard objectives add switch.temp.spectror dummy
 scoreboard players set #SPECTROR_GAME switch.data 0
 execute if predicate switch:chance/0.2 run scoreboard players set #SPECTROR_GAME switch.data 1
-scoreboard players set #SPECTROR_GAME switch.data 1
 
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
