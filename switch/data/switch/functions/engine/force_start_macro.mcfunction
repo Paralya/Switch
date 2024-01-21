@@ -16,3 +16,7 @@ function switch:utils/reset_players
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 execute in minecraft:overworld run function #switch:signals/start
 
+execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
+scoreboard players remove @a[tag=!detached] switch.win_streak 5
+scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5
+

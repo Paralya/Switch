@@ -15,7 +15,7 @@ scoreboard players set #inventory switch.data 0
 execute store result score #inventory switch.data if data storage switch:temp Inventory[].tag.switch
 
 # If lost (only) one item, check where
-execute if score #inventory switch.data matches 8 run scoreboard players set #inventory switch.data -1
+execute unless score #inventory switch.data matches 9 run scoreboard players set #inventory switch.data -1
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_green run tp @s 0 71 -10 90 0
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_white run tp @s 0 71 -10 -90 0
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_blue run tp @s 0 76 -24 180 0
@@ -25,7 +25,7 @@ execute if score #inventory switch.data matches -1 unless data storage switch:te
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_purple run tp @s -9 74 35 90 0
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_dripstone run tp @s 9 73 47 -90 0
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run tp @s -74 71 0 90 0
-execute if score #inventory switch.data matches -1 run clear @s #switch:jumps{switch:{}}
+execute if score #inventory switch.data matches -1 run clear @s
 
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 8 run item replace entity @s inventory.3 with dripstone_block{switch:{jump_dripstone:1b},display:{Name:'{"text":"Dripstone Jump","color":"gold","italic":false}'}}
