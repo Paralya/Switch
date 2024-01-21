@@ -11,6 +11,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main s
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "ghost_town"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "wyvern_towers"
 execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "jn_sakura_pvpbox"
+execute if score #mc switch.data matches 0 run data modify storage switch:main spectres_game_maps append value "luxium_spectres_remake"
 
 
 
