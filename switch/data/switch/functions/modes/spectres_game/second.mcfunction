@@ -7,41 +7,22 @@ execute if score #spectres_game_seconds switch.data matches 0.. run effect give 
 execute if score #spectres_game_seconds switch.data matches 0 run function switch:modes/spectres_game/roles/announcement
 
 ## Message Si Spectror
-## Bruit si Sprectror
-execute if score #temp switch.data matches 10 run execute if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @a[scores={switch.temp.spectror=1}] switch.alive 3
-execute if score #temp switch.data matches 10 run execute if score #SPECTROR_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.piglin.angry ambient @s
-execute if score #temp switch.data matches 10 run execute if score #SPECTROR_GAME switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"-------------------------","color":"gray"},{"text":"\n"},{"text":"\u25ba","color":"gray"},{"text":" 1 partie sur 5 ! ","bold":true,"color":"red"},{"text":":","bold":true,"color":"gray"},{"text":" La partie est un","color":"#F8DBF8"},{"text":" SpectrorGame","bold":true,"color":"light_purple"},{"text":" ! Il y'a donc un traitre parmi l'équipe des invisibles.. Il devra faire son possible pour gagner seul. Attention, si tous les visibles meurent la victoire est donnée aux spectres, il doit donc attaquer rapidement !","color":"#FBDBFB"},{"text":"\n"},{"text":"-------------------------","color":"gray"}]
-execute if score #temp switch.data matches 10 run execute if score #SPECTROR_GAME switch.data matches 1 run title @a[tag=!detached] title {"text":"Spectror Game","color":"light_purple"}
-execute if score #temp switch.data matches 15 run tellraw @a[scores={switch.temp.spectror=1}] ["",{"text":"-------------------------","color":"gray"},{"text":"\n"},{"text":"\u25ba","color":"gray"},{"text":" SpectrorsGame ","bold":true,"color":"red"},{"text":":","bold":true,"color":"gray"},{"text":" Tu es un Spectror !\nTu dois gagner seul. Pour ce faire, il faudra que tu veilles à trahir au bon moment tes compères spectres.","color":"#C991F0"},{"text":"\n"},{"text":"-------------------------","color":"gray"}]
+## Bruit si Spectror
+execute if score #spectres_game_seconds switch.data matches 6 if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @a[scores={switch.temp.spectror=1}] switch.alive 3
+execute if score #spectres_game_seconds switch.data matches 6 if score #SPECTROR_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.piglin.angry ambient @s
+execute if score #spectres_game_seconds switch.data matches 6 if score #SPECTROR_GAME switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"-------------------------","color":"gray"},{"text":"\n"},{"text":"\u25ba","color":"gray"},{"text":" 1 partie sur 5 ! ","bold":true,"color":"red"},{"text":":","bold":true,"color":"gray"},{"text":" La partie est un","color":"#F8DBF8"},{"text":" SpectrorGame","bold":true,"color":"light_purple"},{"text":" ! Il y'a donc un traitre parmi l'équipe des invisibles.. Il devra faire son possible pour gagner seul. Attention, si tous les visibles meurent la victoire est donnée aux spectres, il doit donc attaquer rapidement !","color":"#FBDBFB"},{"text":"\n"},{"text":"-------------------------","color":"gray"}]
+execute if score #spectres_game_seconds switch.data matches 6 if score #SPECTROR_GAME switch.data matches 1 run title @a[tag=!detached] title {"text":"Spectror Game","color":"light_purple"}
+execute if score #spectres_game_seconds switch.data matches 6 run tellraw @a[scores={switch.temp.spectror=1}] ["",{"text":"-------------------------","color":"gray"},{"text":"\n"},{"text":"\u25ba","color":"gray"},{"text":" SpectrorsGame ","bold":true,"color":"red"},{"text":":","bold":true,"color":"gray"},{"text":" Tu es un Spectror !\nTu dois gagner seul. Pour ce faire, il faudra que tu veilles à trahir au bon moment tes compères spectres.","color":"#C991F0"},{"text":"\n"},{"text":"-------------------------","color":"gray"}]
 
 execute if score #spectres_game_seconds switch.data matches 30 run tellraw @a[tag=!detached,team=switch.temp.spectre] ["",{"nbt":"ParalyaAstuce","storage":"switch:main","interpret":true},{"text":" Utilisez votre arc pour drainer la vie des joueurs !"}]
 execute if score #spectres_game_seconds switch.data matches 30 as @a[tag=!detached,team=switch.temp.spectre] at @s run playsound entity.experience_orb.pickup ambient @s
 
+
 # Alternance des scoreboard damage et kills
-
-# scoreboard players operation #temp switch.data = #spectres_game_seconds switch.data
-# scoreboard players operation #temp switch.data %= 20 switch.data
-
+scoreboard players operation #temp switch.data = #spectres_game_seconds switch.data
+scoreboard players operation #temp switch.data %= #20 switch.data
 execute if score #temp switch.data matches 0 run scoreboard objectives setdisplay sidebar switch.temp.damages
 execute if score #temp switch.data matches 10 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 20 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 30 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 40 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 50 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 70 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 90 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 120 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 150 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 190 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 230 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 270 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 310 run scoreboard objectives setdisplay sidebar switch.temp.kills
-execute if score #temp switch.data matches 400 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 435 run scoreboard objectives setdisplay sidebar switch.temp.kills
-
-
-
-
 
 
 # Glowing
