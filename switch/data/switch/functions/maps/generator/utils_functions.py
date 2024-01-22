@@ -121,7 +121,7 @@ def createMainFile(name: str, kart_racer: list = []) -> None:
 		(str)		: The content of the file
 	"""
 	# Create the file
-	f = open(f"survival/{name}/.mcfunction", "w")
+	f = open(f"survival/{name}/.mcfunction", "w", encoding = "utf-8")
 	f.write("\n")
 
 	# Write the first line
@@ -156,7 +156,7 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 		(str)			: The content of the file
 	"""
 	# Create the file
-	f = open(f"survival/{name}/teleport_players.mcfunction", "w")
+	f = open(f"survival/{name}/teleport_players.mcfunction", "w", encoding = "utf-8")
 	f.write("\n")
 
 	# If there is no kart racer
@@ -246,7 +246,7 @@ def writeFirstLinesOfRegenerate(name: str, base_condition: str, splitted_coordin
 		(TextIOWrapper)				: The file
 	"""
 	# Create the file
-	f = open(f"survival/{name}/regenerate.mcfunction", "w")
+	f = open(f"survival/{name}/regenerate.mcfunction", "w", encoding = "utf-8")
 
 	# Write the first lines
 	f.write("\n")
@@ -340,7 +340,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 
 	## Spread players file
 	# Create the file
-	f = open(f"survival/{name}/spread_players.mcfunction", "w")
+	f = open(f"survival/{name}/spread_players.mcfunction", "w", encoding = "utf-8")
 
 	# Write the header
 	f.write("\n")
@@ -364,7 +364,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 
 	## Spread one player file
 	# Create the file
-	f = open(f"survival/{name}/spread_one_player.mcfunction", "w")
+	f = open(f"survival/{name}/spread_one_player.mcfunction", "w", encoding = "utf-8")
 
 	# Write the header
 	f.write("\n")
@@ -401,7 +401,7 @@ def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_
 		None
 	"""
 	base_cond = f"execute if score #scan_{name} switch.data matches"
-	with open(f"survival/{name}/scan_doors.mcfunction", "w") as f:
+	with open(f"survival/{name}/scan_doors.mcfunction", "w", encoding = "utf-8") as f:
 
 		# Write the first lines
 		f.write("\n")
@@ -450,7 +450,7 @@ def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_
 """)
 
 	# Create the "scan_doors_on_marker.mcfunction" file
-	with open(f"survival/{name}/scan_doors_on_marker.mcfunction", "w") as f:
+	with open(f"survival/{name}/scan_doors_on_marker.mcfunction", "w", encoding = "utf-8") as f:
 		f.write(f"""
 execute store result entity @s Pos[0] double 1 run scoreboard players get #curr_x_{name} switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #curr_y_{name} switch.data
