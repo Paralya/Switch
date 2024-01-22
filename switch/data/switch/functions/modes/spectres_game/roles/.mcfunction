@@ -7,6 +7,7 @@ scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1 run team join switch.temp.spectre @s
 execute if score #next_role switch.data matches 2.. run team join switch.temp.visible @s
 execute if score #next_role switch.data matches 3.. run scoreboard players set #next_role switch.data 0
+scoreboard players add @s switch.temp.spectror 0
 
 
 # Linked marker for offline players

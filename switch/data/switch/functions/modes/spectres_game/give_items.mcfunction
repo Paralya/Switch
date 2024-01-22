@@ -8,8 +8,8 @@ item replace entity @s[team=switch.temp.visible] hotbar.1 with bow
 item replace entity @s[team=switch.temp.visible] hotbar.2 with stone_axe{AttributeModifiers:[{AttributeName:"minecraft:generic.attack_damage",Name:"minecraft:generic.attack_damage",Slot:"mainhand",Amount:4,Operation:0,UUID:[I;2012000,-2012000,-2012000,2012000]}]}
 item replace entity @s[team=switch.temp.visible] hotbar.3 with oak_planks 64
 item replace entity @s[team=switch.temp.visible] hotbar.7 with water_bucket
-item replace entity @s[team=switch.temp.visible] hotbar.8 with golden_apple 4
-item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 16
+item replace entity @s[team=switch.temp.visible] hotbar.8 with golden_apple 5
+item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 18
 
 item replace entity @s[team=switch.temp.spectre] hotbar.0 with water_bucket
 item replace entity @s[team=switch.temp.spectre] hotbar.1 with stone_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:3s},{id:"minecraft:fire_aspect",lvl:1s}]}
@@ -30,6 +30,6 @@ effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
 
 # Pommes en plus pour les spectres en cas de spectror game
-execute if score #SPECTROR_GAME switch.data matches 1 run give @s[team=switch.temp.spectre] golden_apple 3
+execute if score #SPECTROR_GAME switch.data matches 1 run give @s[team=switch.temp.spectre] golden_apple 2
 
 
