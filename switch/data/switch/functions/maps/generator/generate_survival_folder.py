@@ -446,7 +446,8 @@ spread_file.close()
 ## Zip compress the survival folder
 # Create the zip file (compression 9)
 import zipfile
-zip_file = zipfile.ZipFile("../../../../../../switch_survival_maps.zip", "w", zipfile.ZIP_DEFLATED, 9)
+zip_path = "../../../../../../switch_survival_maps__pycache__.zip"
+zip_file = zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, 9)
 
 # Write every .mcfunction files in this folder
 internal_zip_path_base = "data/switch/functions/maps/"
@@ -477,6 +478,11 @@ zip_file.close()
 for name in generated_maps:
 	os.rmdir(f"survival/{name}")
 os.rmdir("survival")
+
+# Duplicate zip file
+import shutil
+shutil.copyfile(zip_path, zip_path.replace("__pycache__", ""))
+os.remove(zip_path)
 
 ## Print the execution time
 print(f"\n{GREEN}Execution time of the script: {RED}{round(time.time() - start_time, 5)}{GREEN} seconds{RESET}\n")
