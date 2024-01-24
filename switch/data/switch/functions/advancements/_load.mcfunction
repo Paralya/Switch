@@ -61,9 +61,46 @@ $$(p1)[{id:57}] run $(p2) append value {id:57,$(p3)}
 $$(p1)[{id:58}] run $(p2) append value {id:58,$(p3)}
 $$(p1)[{id:59}] run $(p2) append value {id:59,$(p3)}
 $$(p1)[{id:60}] run $(p2) append value {id:60,$(p3)}
+$$(p1)[{id:61}] run $(p2) append value {id:61,$(p3)}
+$$(p1)[{id:62}] run $(p2) append value {id:62,$(p3)}
+$$(p1)[{id:63}] run $(p2) append value {id:63,$(p3)}
+$$(p1)[{id:64}] run $(p2) append value {id:64,$(p3)}
+$$(p1)[{id:65}] run $(p2) append value {id:65,$(p3)}
+$$(p1)[{id:66}] run $(p2) append value {id:66,$(p3)}
+$$(p1)[{id:67}] run $(p2) append value {id:67,$(p3)}
+$$(p1)[{id:68}] run $(p2) append value {id:68,$(p3)}
+$$(p1)[{id:69}] run $(p2) append value {id:69,$(p3)}
+$$(p1)[{id:70}] run $(p2) append value {id:70,$(p3)}
+$$(p1)[{id:71}] run $(p2) append value {id:71,$(p3)}
+$$(p1)[{id:72}] run $(p2) append value {id:72,$(p3)}
+$$(p1)[{id:73}] run $(p2) append value {id:73,$(p3)}
+$$(p1)[{id:74}] run $(p2) append value {id:74,$(p3)}
+$$(p1)[{id:75}] run $(p2) append value {id:75,$(p3)}
+$$(p1)[{id:76}] run $(p2) append value {id:76,$(p3)}
+$$(p1)[{id:77}] run $(p2) append value {id:77,$(p3)}
+$$(p1)[{id:78}] run $(p2) append value {id:78,$(p3)}
+$$(p1)[{id:79}] run $(p2) append value {id:79,$(p3)}
+$$(p1)[{id:80}] run $(p2) append value {id:80,$(p3)}
+$$(p1)[{id:81}] run $(p2) append value {id:81,$(p3)}
+$$(p1)[{id:82}] run $(p2) append value {id:82,$(p3)}
+$$(p1)[{id:83}] run $(p2) append value {id:83,$(p3)}
+$$(p1)[{id:84}] run $(p2) append value {id:84,$(p3)}
+$$(p1)[{id:85}] run $(p2) append value {id:85,$(p3)}
+$$(p1)[{id:86}] run $(p2) append value {id:86,$(p3)}
+$$(p1)[{id:87}] run $(p2) append value {id:87,$(p3)}
+$$(p1)[{id:88}] run $(p2) append value {id:88,$(p3)}
 #$$(p1)[{id:X}] run $(p2) append value {id:X,$(p3)}
 
 # Update storages
+$$(p2)[{id:"jump_green"}] merge value {color:"aqua",auteur:"Stoupy",name:"Green Jump",description:"Terminer le jump vert"}
+$$(p2)[{id:"jump_white"}] merge value {color:"aqua",auteur:"Stoupy",name:"White Jump",description:"Terminer le jump blanc"}
+$$(p2)[{id:"jump_blue"}] merge value {color:"aqua",auteur:"Stoupy",name:"Blue Jump",description:"Terminer le jump bleu"}
+$$(p2)[{id:"jump_yellow"}] merge value {color:"aqua",auteur:"ArtiGrrr",name:"Yellow Jump",description:"Terminer le jump jaune"}
+$$(p2)[{id:"jump_red"}] merge value {color:"aqua",auteur:"Stoupy",name:"Red Jump",description:"Terminer le jump rouge"}
+$$(p2)[{id:"jump_brown"}] merge value {color:"aqua",auteur:"OfChara",name:"Brown Jump",description:"Terminer le jump marron"}
+$$(p2)[{id:"jump_purple"}] merge value {color:"aqua",auteur:"AirDox",name:"Purple Jump",description:"Terminer le jump violet"}
+$$(p2)[{id:"jump_dripstone"}] merge value {color:"aqua",auteur:"AirDox",name:"Dripstone Jump",description:"Terminer le jump de dripstone"}
+$$(p2)[{id:"jump_bricks"}] merge value {color:"aqua",auteur:"Thitanas",name:"Bricks Jump",description:"Terminer le jump de briques"}
 $$(p2)[{id:1}] merge value {color:"green",auteur:"Stoupy",name:"Bénévolat",description:"Aider à la construction d'une map ou la création d'un mini-jeu"}
 $$(p2)[{id:2}] merge value {color:"green",auteur:"Stoupy",name:"Fidèle",description:"Jouez un total de 100 parties sur le Switch"}
 $$(p2)[{id:3}] merge value {color:"green",auteur:"Stoupy",name:"La moula",description:"Ayez au moins 400$ dans votre porte-monnaie"}
@@ -89,7 +126,7 @@ $$(p2)[{id:22}] merge value {color:"red",auteur:"OfChara",name:"Homophobe",descr
 $$(p2)[{id:23}] merge value {color:"yellow",auteur:"Lawtank",name:"Pélican",description:"Soyez celui ayant le plus de kills en Cigogne (égalité autorisée)"}
 $$(p2)[{id:24}] merge value {color:"red",auteur:"Fhara",name:"Feeling The Music",description:"Survivez 20 manches en Block Party"}
 $$(p2)[{id:25}] merge value {color:"red",auteur:"OfChara",name:"Ocelot",description:"Ne pas descendre en dessous de la moitié de vie en Creeper Apocalypse"}
-$$(p2)[{id:26}] merge value {color:"green",auteur:"Marcus",name:"Suicidaire",description:"Soyez la cible de 8 wardens en Warden Escape"}
+$$(p2)[{id:26}] merge value {color:"yellow",auteur:"Marcus",name:"Suicidaire",description:"Soyez la cible de 8 wardens en Warden Escape"}
 $$(p2)[{id:27}] merge value {color:"red",auteur:"Megamat",name:"Sam Flynn",description:"Éliminer 3 joueurs avec sa traînée en Moutron"}
 $$(p2)[{id:28}] merge value {color:"yellow",auteur:"Megamat",name:"D&Cube",description:"Faites au minimum 50 points en Build Battle"}
 $$(p2)[{id:29}] merge value {color:"yellow",auteur:"Marcus",name:"Embrouilleur",description:"Tapez chaque joueur de la partie en Castagne"}
@@ -118,6 +155,40 @@ $$(p2)[{id:51}] merge value {color:"red",auteur:"Stoupy",name:"Pharaon",descript
 $$(p2)[{id:52}] merge value {color:"red",auteur:"Stoupy",name:"The Volcano Core",description:"Terminer le secret de la map Lost Graveyard Remastered en Infected"}
 $$(p2)[{id:53}] merge value {color:"red",auteur:"Stoupy",name:"Storm Area",description:"Terminer le secret de la map Area51 en Infected"}
 $$(p2)[{id:54}] merge value {color:"red",auteur:"Stoupy",name:"Secret Slayer",description:"Terminer les secrets de toutes les maps dans le mode de jeu Infected"}
+$$(p2)[{id:55}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:56}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:57}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:58}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:59}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:60}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:61}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:62}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:63}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:64}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:65}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:66}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:67}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:68}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:69}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:70}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:71}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:72}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:73}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:74}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:75}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:76}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:77}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:78}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:79}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:80}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:81}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:82}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:83}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:84}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:85}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:86}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:87}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
+$$(p2)[{id:88}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
 #$$(p2)[{id:X}] merge value {color:"green",auteur:"__AUTHOR__",name:"__TITLE__",description:"__DESCRIPTION__"}
 
 # Refresh percentages
