@@ -1,8 +1,8 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:yellow_wool", "nbt": "{}"},
-		"title": {"text": "Wattouat", "color": "yellow"},
-		"description": {"text": "Mourir à cause d'un moutron foudroyant en SheepWars", "color": "aqua"},
+		"icon": {"item": "minecraft:milk_bucket"},
+		"title": {"text": "Merci Gertrude", "color": "yellow"},
+		"description": {"text": "A partir de la 10ème manche en Block Party, en survivre une grâce à Gertrude", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/medium"},
-	"parent": "switch:visible/6"
+	"parent": "switch:visible/67"
 }

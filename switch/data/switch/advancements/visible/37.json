@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/medium"},
-	"parent": "switch:visible/32"
+	"parent": "switch:visible/23"
 }

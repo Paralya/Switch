@@ -1,8 +1,8 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:white_tulip", "nbt": "{}"},
-		"title": {"text": "Pacifiste", "color": "yellow"},
-		"description": {"text": "Survivez 100 secondes en PitchOut sans mettre aucun coup", "color": "aqua"},
+		"icon": {"item": "minecraft:snowball"},
+		"title": {"text": "C'est donc ça, de se vider...", "color": "yellow"},
+		"description": {"text": "Lancer 42 boules de neige en une partie de Warden Escape", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/easy"},
-	"parent": "switch:visible/36"
+	"parent": "switch:visible/70"
 }
