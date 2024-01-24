@@ -153,4 +153,5 @@
 #	140000	(survival)	: pretty_garden
 #	141000	(survival)	: jn_biomes_relief
 #	142000	(survival)	: luxium_spectres_remake
+#	143000	(survival)	: sheepwars_bonbons
 
