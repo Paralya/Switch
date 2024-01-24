@@ -17,7 +17,7 @@ execute unless score @s switch.glassrunner.money matches 20.. run tellraw @s [""
 execute if score @s switch.glassrunner.money matches 20.. run effect give @s minecraft:levitation 1 40 true 
 execute if score @s switch.glassrunner.money matches 20.. run scoreboard players set @s switch.glassrunner.elytra 20
 
-execute if score @s switch.glassrunner.money matches 20.. run tellraw @s ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu viens d'acheter une paire d'élytra","color": "green"}]
+execute if score @s switch.glassrunner.money matches 20.. run tellraw @s ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu viens d'acheter une paire d'elytra","color": "green"}]
 
 execute if score @s switch.glassrunner.money matches 20.. run xp add @s -20 levels
 execute if score @s switch.glassrunner.money matches 20.. run scoreboard players remove @s switch.glassrunner.money 20
