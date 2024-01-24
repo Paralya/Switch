@@ -7,6 +7,9 @@ execute store result score #mc switch.data run data get storage switch:main shee
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_dirigeables"
 execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "survival_boat"
+execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_bonbons"
+execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_plateforme"
+execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_îlots"
 
 
 
