@@ -20,6 +20,7 @@ execute unless data storage switch:glassrunner temp.Inventory[{Slot:23b}] run fu
 
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:25b}] run function switch:modes/glassrunner/shop/apocalypse
 
+execute unless data storage switch:glassrunner temp.Inventory[{Slot:31b}] run function switch:modes/glassrunner/shop/elytra
 
 
 execute if score @s switch.glassrunner.apocalypse matches 1.. run function switch:modes/glassrunner/shop/apocalypse_player
@@ -29,6 +30,15 @@ item replace entity @s[scores={switch.glassrunner.turtle_helmet=1..}] armor.head
 item replace entity @s[scores={switch.glassrunner.turtle_helmet=..1}] armor.head with air
 
 scoreboard players remove @s[scores={switch.glassrunner.turtle_helmet=1..}] switch.glassrunner.turtle_helmet 1
+
+
+execute if data entity @s {OnGround:1b} if predicate switch:glassrunner/in_elytra if entity @s[team=switch.glassrunner.blue] run item replace entity @s armor.chest with leather_chestplate{display:{color:255},Unbreakable:1b,HideFlags:1,Enchantments:[{id:"minecraft:binding_curse",lvl:1s},{id:"minecraft:vanishing_curse",lvl:1s}]}
+execute if data entity @s {OnGround:1b} if predicate switch:glassrunner/in_elytra if entity @s[team=switch.glassrunner.red] run item replace entity @s armor.chest with leather_chestplate{display:{color:16711680},Unbreakable:1b,HideFlags:1,Enchantments:[{id:"minecraft:binding_curse",lvl:1s},{id:"minecraft:vanishing_curse",lvl:1s}]}
+
+execute if score @s switch.glassrunner.elytra matches 2 run item replace entity @s armor.chest with elytra{Unbreakable:1b}
+scoreboard players remove @s[scores={switch.glassrunner.elytra=1..}] switch.glassrunner.elytra 1
+ 
+
 
 
 execute if entity @s[y=0,dy=70,gamemode=adventure] run kill @s

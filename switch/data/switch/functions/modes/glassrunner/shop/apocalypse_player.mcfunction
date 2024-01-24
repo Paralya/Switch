@@ -3,7 +3,7 @@
 
 
 
-effect give @s minecraft:levitation 1 80 true
+# effect give @s minecraft:levitation 1 80 true
 
 
 

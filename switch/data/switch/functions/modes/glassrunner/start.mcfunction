@@ -46,6 +46,7 @@ scoreboard objectives add switch.glassrunner.deathCount deathCount
 scoreboard objectives add switch.glassrunner.money_maker dummy
 scoreboard objectives add switch.glassrunner.apocalypse dummy
 scoreboard objectives add switch.glassrunner.turtle_helmet dummy
+scoreboard objectives add switch.glassrunner.elytra dummy
 
 scoreboard objectives add switch.glassrunner.money dummy
 scoreboard objectives setdisplay list switch.glassrunner.money
