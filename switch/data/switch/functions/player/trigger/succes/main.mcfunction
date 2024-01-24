@@ -21,6 +21,7 @@ $execute if data storage switch:temp copy[0] run data modify storage switch:temp
 execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
 
 # Not done yet
+tellraw @s ""
 data modify storage switch:temp copy set value []
 data modify storage switch:temp copy append from storage switch:advancements all[{color:"blue"}]
 $execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value $(player)
