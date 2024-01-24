@@ -87,7 +87,7 @@ execute unless data storage switch:main UUIDs run data modify storage switch:mai
 # Scoreboard constants, shop load, and advancements load
 function switch:set_constants
 function switch:shop/_load
-function switch:advancements/_load {p1:"execute unless data storage switch:advancements all", p2:"data modify storage switch:advancements all", p3:"percent:{int:0,digits:0},players:[],total:0"}
+function switch:advancements/_load
 execute unless score #can_attach switch.data matches 0.. run scoreboard players set #can_attach switch.data 1
 execute unless score #test_mode switch.data matches 0.. run scoreboard players set #test_mode switch.data 0
 
