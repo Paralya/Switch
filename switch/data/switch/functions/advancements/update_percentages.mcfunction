@@ -7,6 +7,7 @@ data modify storage switch:main input set value {id:"",username:""}
 data modify storage switch:main input.username set from block 0 0 0 Items[0].tag.SkullOwner.Name
 
 ## Jumps
+scoreboard players set @s switch.advancements 0
 execute if entity @s[advancements={switch:jump_green=true}] run function switch:advancements/_pre_macro {id:"jump_green"}
 execute if entity @s[advancements={switch:jump_white=true}] run function switch:advancements/_pre_macro {id:"jump_white"}
 execute if entity @s[advancements={switch:jump_blue=true}] run function switch:advancements/_pre_macro {id:"jump_blue"}

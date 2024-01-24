@@ -13,6 +13,7 @@ scoreboard objectives add switch.second_right_click minecraft.used:minecraft.war
 scoreboard objectives add switch.reconnect dummy
 scoreboard objectives add switch.alive dummy
 scoreboard objectives add switch.play_time dummy
+scoreboard objectives add switch.advancements dummy
 
 scoreboard objectives add switch.death deathCount
 scoreboard objectives add switch.kill playerKillCount
@@ -77,8 +78,8 @@ data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dar
 data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 
 # Setup stats storage if needed
-execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[]},modes:{}}
-# ex: all = {player:{total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[]},modes:{pitch_creep:{total_games:0,played:[],wins:[],played_win_ratio:[]}, ...}}
+execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[],advancement_count:[]},modes:{}}
+# ex: all = {player:{total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[],advancement_count:[]},modes:{pitch_creep:{total_games:0,played:[],wins:[],played_win_ratio:[]}, ...}}
 
 # Setup storages if needed
 execute unless data storage switch:ratings all run data modify storage switch:ratings all set value []

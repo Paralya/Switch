@@ -5,10 +5,12 @@
 # 	total_wins:[{name:"Stoupy51",value:0}],
 # 	total_kills:[{name:"Stoupy51",value:0}],
 # 	total_deaths:[{name:"Stoupy51",value:0}],
-# 	total_money:[{name:"Stoupy51",value:0}]
+# 	total_money:[{name:"Stoupy51",value:0}],
+# 	played_win_ratio:[{name:"Stoupy51",value:0}],
+# 	advancement_count:[{name:"Stoupy51",value:0}],
 # },
 # modes:{
-#	pitch_creep:{total_games:0,played:[],wins:[]}
+#	pitch_creep:{total_games:0,played:[],wins:[],played_win_ratio:[]},
 # }}
 
 # Set number of games played and wins
@@ -16,6 +18,11 @@ $execute unless data storage switch:stats all.modes.$(id).played[{name:"$(player
 $execute store result storage switch:stats all.modes.$(id).played[{name:"$(player)"}].value int 1 run scoreboard players get $(player) switch.stats.played.$(id)
 $execute unless data storage switch:stats all.modes.$(id).wins[{name:"$(player)"}] run data modify storage switch:stats all.modes.$(id).wins append value {name:"$(player)",value:0}
 $execute store result storage switch:stats all.modes.$(id).wins[{name:"$(player)"}].value int 1 run scoreboard players get $(player) switch.stats.wins.$(id)
+$execute unless data storage switch:stats all.modes.$(id).played_win_ratio[{name:"$(player)"}] run data modify storage switch:stats all.modes.$(id).played_win_ratio append value {name:"$(player)",value:0}
+$scoreboard players operation #temp switch.data = $(player) switch.stats.wins.$(id)
+scoreboard players operation #temp switch.data *= #100000 switch.data
+$scoreboard players operation #temp switch.data /= $(player) switch.stats.played.$(id)
+$execute store result storage switch:stats all.modes.$(id).played_win_ratio[{name:"$(player)"}].value float 0.001 run scoreboard players get #temp switch.data
 
 # Continue loop
 data remove storage switch:main copy[0]
