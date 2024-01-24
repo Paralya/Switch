@@ -23,7 +23,7 @@ for p in paths:
 		f.write("""{
 	"criteria": {"requirement": {"trigger": "minecraft:tick"}},
 	"requirements": [["requirement"]],
-	"parent": "switch:visible/ADV_ID"
+	"parent": "switch:visible/__ADV_ID__"
 }
-""".replace("ADV_ID", p))
+""".replace("__ADV_ID__", p))
 
