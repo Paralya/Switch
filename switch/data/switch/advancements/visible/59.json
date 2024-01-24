@@ -1,8 +1,8 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:emerald_block", "nbt": "{}"},
-		"title": {"text": "C'est tout naturel", "color": "yellow"},
-		"description": {"text": "Poussez un joueur vers un dé à coudre en Simultaneous Jump", "color": "aqua"},
+		"icon": {"item": "minecraft:arrow"},
+		"title": {"text": "La plèbe a travaillé pour moi", "color": "yellow"},
+		"description": {"text": "Remporter une partie de PitchCreep sans tirer une seule flèche", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/medium"},
-	"parent": "switch:visible/38"
+	"parent": "switch:visible/44"
 }

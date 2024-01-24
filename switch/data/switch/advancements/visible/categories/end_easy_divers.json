@@ -1,5 +1,5 @@
 {
 	"criteria": {"requirement": {"trigger": "minecraft:tick"}},
 	"requirements": [["requirement"]],
-	"parent": "switch:visible/4"
+	"parent": "switch:visible/56"
 }

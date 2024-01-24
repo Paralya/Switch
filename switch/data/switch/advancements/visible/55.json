@@ -1,8 +1,8 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:emerald_block", "nbt": "{}"},
-		"title": {"text": "C'est tout naturel", "color": "yellow"},
-		"description": {"text": "Poussez un joueur vers un dé à coudre en Simultaneous Jump", "color": "aqua"},
+		"icon": {"item": "minecraft:diamond"},
+		"title": {"text": "Stomp", "color": "yellow"},
+		"description": {"text": "Terminer une partie de Rush The Point en atteignant 5000 points", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/medium"},
-	"parent": "switch:visible/38"
+	"parent": "switch:visible/43"
 }

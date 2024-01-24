@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:phantom_membrane"},
+		"title": {"text": "Survivor", "color": "yellow"},
+		"description": {"text": "Gagner une partie d'Infecté sans prendre aucun coup en tant qu'humain", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/hard"},
+	"parent": "switch:visible/54"
+}
