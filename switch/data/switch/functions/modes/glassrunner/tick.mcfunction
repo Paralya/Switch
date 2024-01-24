@@ -22,13 +22,13 @@ execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run func
 
 execute as @e[type=arrow,nbt={inGround:1b},distance=..200] at @s run function switch:modes/glassrunner/arrow_explosion
 
-fill 3003 129 3003 2997 132 2997 air replace #switch:glassrunner/glass
+fill 3003 128 3003 2997 132 2997 air replace #switch:glassrunner/glass
 
-fill 3073 129 3073 3077 131 3077 air replace #switch:glassrunner/glass
-fill 2927 129 2927 2923 131 2923 air replace #switch:glassrunner/glass
+fill 3073 128 3073 3077 131 3077 air replace #switch:glassrunner/glass
+fill 2927 128 2927 2923 131 2923 air replace #switch:glassrunner/glass
 
-fill 3074 129 2924 3076 131 2926 air replace #switch:glassrunner/glass
-fill 2924 131 3076 2926 129 3074 air replace #switch:glassrunner/glass
+fill 3074 128 2924 3076 131 2926 air replace #switch:glassrunner/glass
+fill 2924 131 3076 2926 128 3074 air replace #switch:glassrunner/glass
 
 execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=15..}] at @s run function switch:modes/glassrunner/fireball/use
 execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/glassrunner/fireball/explosion

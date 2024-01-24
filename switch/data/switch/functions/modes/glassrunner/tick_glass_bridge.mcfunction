@@ -1,6 +1,9 @@
 scoreboard players add @s switch.glassrunner.use_snowball 1
 
 
+execute if entity @s[y=0,dy=70] run return 0
+
+
 # Normal snowball
 
 
