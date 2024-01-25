@@ -38,6 +38,8 @@ scoreboard players set #rtbteam switch.data 0
 execute as @a[scores={switch.alive=1..},sort=random] run function switch:modes/replicate_the_build/start/select_teams
 
 gamemode adventure @a[scores={switch.alive=1..}]
+clear @a[tag=!detached]
+kill @e[type=item]
 
 
 # Tirage au sort de la structure

@@ -17,6 +17,7 @@ tag @r[scores={switch.alive=1..},tag=switch.looser_score,tag=switch.looser_time,
 
 tellraw @a[tag=!detached] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur ","color":"red"},{"selector":"@a[tag=!detached,tag=switch.looser]","color":"red"},{"text":" a été éliminé !","color":"red"}]
 
+gamerule doTileDrops false
 
 execute as @p[tag=switch.looser] run function switch:modes/replicate_the_build/utils/explose_island
 

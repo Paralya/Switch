@@ -6,3 +6,5 @@ execute as @e[type=marker,tag=switch.rtb.island] if score @s switch.rtb.id = #rt
 execute as @e[type=marker,tag=switch.rtb.island] if score @s switch.rtb.id = #rtb_search switch.data at @s run function switch:modes/replicate_the_build/structure/destroy
 tag @s remove switch.rtb.temp
 
+
+scoreboard players set @s switch.alive 0

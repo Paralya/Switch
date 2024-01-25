@@ -8,8 +8,8 @@ with open("give_player.mcfunction","w") as f:
     for i in range(0,7):
         for j in range(0,7):
             for k in range(0,7):
-                l=l+"loot give @a[scores={switch.alive=1..}] mine ~{i} ~{j} ~{k}".format(i=i,j=j,k=k)
+                l=l+f"execute as @a[scores={{switch.alive=1..}}] run loot give @s mine ~{i} ~{j} ~{k}"
                 l=l+r' diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1s}]}'+"\n"
-    f.write(l)
+    print(l)
 
 
