@@ -15,6 +15,9 @@ scoreboard players set #block_party_seconds switch.data -10
 scoreboard players set #block_party_ticks switch.data -200
 scoreboard players set #block_party_round switch.data 1
 scoreboard players set #process_end switch.data 0
+scoreboard objectives add switch.temp.old_x dummy
+scoreboard objectives add switch.temp.old_z dummy
+scoreboard objectives add switch.temp.time_since_movement dummy
 
 # Data storage
 execute unless data storage switch:maps block_party run data modify storage switch:maps block_party set value []

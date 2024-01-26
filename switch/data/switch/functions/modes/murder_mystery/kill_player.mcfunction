@@ -17,3 +17,8 @@ execute if data entity @s Inventory[].tag.switch.detective_bow run summon item_d
 title @s title {"text":"Vous êtes mort","color":"red"}
 clear @s
 
+# Killed by murderer as murderer?
+scoreboard players set #murderer_killer switch.data 0
+execute on attacker if score @s switch.temp.role matches 3 run scoreboard players set #murderer_killer switch.data 1
+execute if score #murderer_killer switch.data matches 1 if score @s switch.temp.role matches 3 run advancement grant @s only switch:visible/80
+

@@ -19,5 +19,6 @@ scoreboard players set #remaining_time switch.data 100
 scoreboard players set #warden_escape_seconds switch.data -10
 scoreboard players set #warden_escape_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard objectives add switch.temp.snowballs_shot minecraft.used:minecraft.snowball
 execute as @a[tag=!detached] at @s run function switch:modes/warden_escape/give_items
 
