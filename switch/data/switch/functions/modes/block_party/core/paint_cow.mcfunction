@@ -20,6 +20,9 @@ execute if score #bp_block switch.data matches 13 run fill ~-1.69 ~-1 ~-1.69 ~1.
 execute if score #bp_block switch.data matches 14 run fill ~-1.69 ~-1 ~-1.69 ~1.69 ~-1 ~1.69 red_concrete replace #switch:block_party/all
 execute if score #bp_block switch.data matches 15 run fill ~-1.69 ~-1 ~-1.69 ~1.69 ~-1 ~1.69 black_concrete replace #switch:block_party/all
 
+# Summon marker to know what players survived because of the paint cow
+summon marker ~ ~ ~ {Tags:["switch.paint_marker"]}
+
 # Kill paint cow and explode
 particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
 playsound entity.generic.explode block @a[tag=!detached]

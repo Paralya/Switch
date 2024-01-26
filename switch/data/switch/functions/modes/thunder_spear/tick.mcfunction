@@ -1,13 +1,11 @@
 
-scoreboard players add #thunder_spear_ticks switch.data 1
-
 ## Death system
+scoreboard players add #thunder_spear_ticks switch.data 1
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/thunder_spear/give_and_teleport
 
-# Modify arrow damage
+# Summon tnt to arrows on ground and remove them & Modify arrow damage & Kill all items
+execute as @e[type=arrow,nbt={inBlockState:{}}] at @s run function switch:modes/thunder_spear/explode_arrow
 execute as @e[type=arrow] run data modify entity @s damage set value 100.0d
-
-# Kill all items
 kill @e[type=item]
 
 # Auto reload system
@@ -16,8 +14,8 @@ scoreboard players add @a[tag=!detached] switch.temp.reload 1
 execute as @a[scores={switch.temp.reload=40..}] run item replace entity @s hotbar.0 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
 scoreboard players reset @a[scores={switch.temp.reload=40..}] switch.temp.reload
 
-# Summon tnt to arrows on ground and remove them
-execute as @e[type=arrow,nbt={inBlockState:{}}] at @s run function switch:modes/thunder_spear/explode_arrow
+# Advancement
+advancement grant @a[scores={switch.temp.kills=10..}] only switch:visible/67
 
 ## Fin de partie
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/thunder_spear/process_end

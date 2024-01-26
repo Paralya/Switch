@@ -1,0 +1,23 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:entity_killed_player",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:warden"
+				},
+				"killing_blow": {
+					"tags": [
+						{
+							"id": "minecraft:bypasses_armor",
+							"expected": true
+						}
+					]
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "switch:modes/warden_escape/calls/laser_beam"
+	}
+}

@@ -22,9 +22,11 @@ execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue_king] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] at @s run function switch:engine/add_win
 
-# Advancement
-execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red_king] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run advancement grant @s only switch:visible/14
-execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue_king] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run advancement grant @s only switch:visible/14
+# Advancements
+execute if score #game_state switch.data matches 1 unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run advancement grant @a[tag=!detached,gamemode=!spectator,team=switch.temp.red_king] only switch:visible/14
+execute if score #game_state switch.data matches 2 unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run advancement grant @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue_king] only switch:visible/14
+execute if score #game_state switch.data matches 1 unless entity @a[tag=!detached,gamemode=spectator,team=switch.temp.red] run advancement grant @a[tag=!detached,gamemode=!spectator,team=!switch.temp.blue,team=!switch.temp.blue_king,team=!] only switch:visible/65
+execute if score #game_state switch.data matches 2 unless entity @a[tag=!detached,gamemode=spectator,team=switch.temp.blue] run advancement grant @a[tag=!detached,gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.red_king,team=!] only switch:visible/65
 
 # Visuel de fin de partie
 execute if score #protect_the_king_seconds switch.data matches 900.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s

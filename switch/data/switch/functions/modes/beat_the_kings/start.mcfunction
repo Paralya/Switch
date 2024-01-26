@@ -28,6 +28,7 @@ scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.damages dummy {"text":" Coups infligés ","color":"aqua"}
+scoreboard objectives add switch.temp.killed_kings teamkill.dark_purple
 scoreboard objectives setdisplay sidebar switch.temp.damages
 scoreboard objectives setdisplay list switch.health
 
