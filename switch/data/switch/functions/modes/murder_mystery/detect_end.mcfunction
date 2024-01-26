@@ -25,6 +25,7 @@ execute if score #remaining_time switch.data matches ..1 if score #game_state sw
 
 execute if score #remaining_time switch.data matches ..1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Détective : "},{"selector":"@a[scores={switch.temp.role=2}]","color":"green"},{"text":" - Murderer : "},{"selector":"@a[scores={switch.temp.role=3}]","color":"red"}]
 execute if score #remaining_time switch.data matches ..1 as @a[scores={switch.temp.role=3}] on attacker if entity @s[scores={switch.temp.role=1}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Héro : "},{"selector":"@s","color":"blue"}]
+execute if score #remaining_time switch.data matches ..1 as @a[scores={switch.temp.role=3}] on attacker run advancement grant @s[scores={switch.temp.role=1}] only switch:visible/61
 
 # Visuel de fin de partie
 execute if score #remaining_time switch.data matches ..1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s

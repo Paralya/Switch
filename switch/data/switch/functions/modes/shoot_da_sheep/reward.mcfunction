@@ -17,3 +17,7 @@ execute if score #color switch.data matches 14 run tellraw @s {"text":"+10 point
 execute if score #color switch.data matches 15 run tellraw @s {"text":"-50% points","color":"dark_gray"}
 execute at @s run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 1 2
 
+# Advancement
+execute if score #color switch.data matches 15 run scoreboard players add @s switch.temp.black_shot 1
+execute if score @s switch.temp.black_shot matches 3.. run advancement grant @s only switch:visible/63
+

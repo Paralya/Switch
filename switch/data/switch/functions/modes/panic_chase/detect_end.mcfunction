@@ -22,6 +22,9 @@ execute if score #remaining_time switch.data matches 0 if score #game_state swit
 execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.hunter] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.mouse] at @s run function switch:engine/add_win
 
+# Advancement
+execute if score #game_state switch.data matches 0 run advancement grant @a[tag=!detached,gamemode=!spectator,team=switch.temp.mouse,scores={switch.health=..6}] only switch:visible/62
+
 # Visuel de fin de partie
 execute if score #remaining_time switch.data matches ..0 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 execute if score #remaining_time switch.data matches 0 run scoreboard players set #remaining_time switch.data -1

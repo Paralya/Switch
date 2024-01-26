@@ -27,3 +27,6 @@ execute if score #zombie_attacker switch.data matches 1 store result storage swi
 execute if score #zombie_attacker switch.data matches 1 run function switch:modes/infected/advancements/apply_damage with storage switch:main input
 tag @a remove switch.temp
 
+# Advancement
+scoreboard players add @s switch.temp.hits_gotten 1
+

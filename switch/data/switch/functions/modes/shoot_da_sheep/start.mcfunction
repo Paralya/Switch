@@ -14,6 +14,7 @@ scoreboard players set #shoot_da_sheep_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 65
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"red"}
+scoreboard objectives add switch.temp.black_shot dummy
 scoreboard objectives setdisplay sidebar switch.temp.points
 
 give @a bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:10s}]}

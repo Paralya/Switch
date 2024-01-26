@@ -24,6 +24,9 @@ scoreboard players operation #temp switch.data *= #100000 switch.data
 $scoreboard players operation #temp switch.data /= $(player) switch.stats.played.$(id)
 $execute store result storage switch:stats all.modes.$(id).played_win_ratio[{name:"$(player)"}].value float 0.001 run scoreboard players get #temp switch.data
 
+# Advancement
+$execute if score $(player) switch.stats.wins.$(id) matches 1.. run scoreboard players remove #total_games_not_won switch.data 1
+
 # Continue loop
 data remove storage switch:main copy[0]
 execute if data storage switch:main copy[0] run data modify storage switch:main copy[0].player set from storage switch:main input.player
