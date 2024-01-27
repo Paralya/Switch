@@ -33,7 +33,7 @@ execute store result storage switch:temp indexes.wins int 1 run scoreboard playe
 execute store result storage switch:temp indexes.kills int 1 run scoreboard players get #max_index_kills switch.data
 execute store result storage switch:temp indexes.deaths int 1 run scoreboard players get #max_index_deaths switch.data
 execute store result storage switch:temp indexes.money int 1 run scoreboard players get #max_index_money switch.data
-execute store result storage switch:temp indexes.played_win_ratio int 1 run scoreboard players get #max_index_played switch.data
+execute store result storage switch:temp indexes.played_win_ratio int 1 run scoreboard players get #max_index_played_win_ratio switch.data
 execute store result storage switch:temp indexes.advancement_count int 1 run scoreboard players get #max_index_advancement_count switch.data
 function switch:stats/macro_add_to_new_player_arrays with storage switch:temp indexes
 

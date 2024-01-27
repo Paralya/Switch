@@ -24,8 +24,8 @@ execute store result score #temp switch.data run data get storage switch:temp co
 execute if score #temp switch.data > #max_value_money switch.data run scoreboard players operation #max_index_money switch.data = #current_index switch.data
 execute if score #temp switch.data > #max_value_money switch.data run scoreboard players operation #max_value_money switch.data = #temp switch.data
 
-# Compare for the player_win_ratio array
-execute store result score #temp switch.data run data get storage switch:temp copy_played_win_ratio[0].value 100
+# Compare for the played_win_ratio array
+execute store result score #temp switch.data run data get storage switch:temp copy_played_win_ratio[0].value 1000
 execute if score #temp switch.data > #max_value_played_win_ratio switch.data run scoreboard players operation #max_index_played_win_ratio switch.data = #current_index switch.data
 execute if score #temp switch.data > #max_value_played_win_ratio switch.data run scoreboard players operation #max_value_played_win_ratio switch.data = #temp switch.data
 
