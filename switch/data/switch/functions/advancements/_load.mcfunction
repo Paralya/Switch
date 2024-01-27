@@ -169,7 +169,7 @@ data modify storage switch:advancements all[{id:60}] merge value {color:"red",au
 data modify storage switch:advancements all[{id:61}] merge value {color:"green",auteur:"luigimario12",name:"Héro",description:"Tuez le meurtrier en Murder Mystery en tant qu'innocent"}
 data modify storage switch:advancements all[{id:62}] merge value {color:"red",auteur:"OfChara",name:"Chaud les fesses",description:"Remporter une partie de Panic Chase en ayant au maximum 3 coeurs"}
 data modify storage switch:advancements all[{id:63}] merge value {color:"green",auteur:"OfChara",name:"Raciste",description:"Tirer sur 3 moutons noirs en une partie de Shoot Da'Sheep"}
-data modify storage switch:advancements all[{id:64}] merge value {color:"green",auteur:"Goldvision",name:"Rater son moment de gloire",description:"Mourir sur un cactus dans une partie de Murder Mystery"}
+data modify storage switch:advancements all[{id:64}] merge value {color:"green",auteur:"Goldvision",name:"Rater son moment de gloire",description:"Mourir sur un cactus, d'une tnt ou de suffocation dans une partie de Murder Mystery"}
 data modify storage switch:advancements all[{id:65}] merge value {color:"red",auteur:"Shazin",name:"Régicide",description:"Gagner une partie de Protect The King sans perdre aucun membre de votre royaume"}
 data modify storage switch:advancements all[{id:66}] merge value {color:"yellow",auteur:"OfChara",name:"Révolution",description:"Tuer un Roi dans une partie de Beat The Kings"}
 data modify storage switch:advancements all[{id:67}] merge value {color:"yellow",auteur:"luigimario12",name:"Tonerre de Zeus",description:"Eliminer 10 joueurs dans une partie de Thunder Spear"}
@@ -179,13 +179,13 @@ data modify storage switch:advancements all[{id:70}] merge value {color:"green",
 data modify storage switch:advancements all[{id:71}] merge value {color:"yellow",auteur:"Shazin",name:"Merci Gertrude",description:"A partir de la 10ème manche en Block Party, en survivre une grâce à Gertrude"}
 data modify storage switch:advancements all[{id:72}] merge value {color:"green",auteur:"luigimario12",name:"C'est donc ça, de se vider...",description:"Lancer 42 boules de neige en une partie de Warden Escape"}
 data modify storage switch:advancements all[{id:73}] merge value {color:"red",auteur:"OfChara",name:"Parade Parfaite",description:"Réussir à parer une flèche en lançant son couteau en Murder Mystery"}
-data modify storage switch:advancements all[{id:74}] merge value {color:"red",auteur:"OfChara",name:"I am Legend",description:"Gagner une partie d'Infecté en étant le dernier humain si il y a plus de 10 joueurs"}
+data modify storage switch:advancements all[{id:74}] merge value {color:"red",auteur:"OfChara",name:"I am Legend",description:"Gagner une partie d'Infecté en étant le dernier humain (si il y a plus de 10 joueurs)"}
 data modify storage switch:advancements all[{id:75}] merge value {color:"yellow",auteur:"OfChara",name:"Tout ça pour ça...",description:"Survivre 42 secondes puis mourir en tombant dans l'eau en Bombardement"}
 data modify storage switch:advancements all[{id:76}] merge value {color:"red",auteur:"OfChara",name:"Injustice",description:"Finir le jump en Gay Shooter mais mourir de la main d'un Shooter"}
 data modify storage switch:advancements all[{id:77}] merge value {color:"green",auteur:"Stoupy",name:"Pour l'équipe !",description:"Tirer sur la base de bonus dans une partie de Laser Game"}
-data modify storage switch:advancements all[{id:78}] merge value {color:"green",auteur:"TreekoZ",name:"Banger sucré au sucre",description:"Fabriquez 1 gâteau en une partie de Cooking Festival"}
+data modify storage switch:advancements all[{id:78}] merge value {color:"green",auteur:"TreekoZ",name:"Banger sucré au sucre",description:"Préparez un gâteau en une partie de Cooking Festival"}
 data modify storage switch:advancements all[{id:79}] merge value {color:"green",auteur:"Thakeax",name:"Le boulet",description:"Mourir du premier coup de canon en Bombardement"}
 data modify storage switch:advancements all[{id:80}] merge value {color:"yellow",auteur:"ArtiGrrr",name:"Ooopsy",description:"Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery"}
-data modify storage switch:advancements all[{id:81}] merge value {color:"green",auteur:"ArtiGrrr",name:"Revient par ici",description:"Replacer le drapeau de son équipe en Rush The Flag"}
+data modify storage switch:advancements all[{id:81}] merge value {color:"green",auteur:"ArtiGrrr",name:"Reviens par ici",description:"Replacer le drapeau de son équipe en Rush The Flag"}
 data modify storage switch:advancements all[{id:82}] merge value {color:"red",auteur:"Stoupy",name:"Bien placé",description:"Survivre 30 secondes sans bouger en Block Party"}
 

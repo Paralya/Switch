@@ -94,7 +94,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 61	luigimario12	easy	Héro	Tuez le meurtrier en Murder Mystery en tant qu'innocent
 62	OfChara	hard	Chaud les fesses	Remporter une partie de Panic Chase en ayant au maximum 3 coeurs
 63	OfChara	easy	Raciste	Tirer sur 3 moutons noirs en une partie de Shoot Da'Sheep
-64	Goldvision	easy	Rater son moment de gloire	Mourir sur un cactus dans une partie de Murder Mystery
+64	Goldvision	easy	Rater son moment de gloire	Mourir sur un cactus, d'une tnt ou de suffocation dans une partie de Murder Mystery
 65	Shazin	hard	Régicide	Gagner une partie de Protect The King sans perdre aucun membre de votre royaume
 66	OfChara	medium	Révolution	Tuer un Roi dans une partie de Beat The Kings
 67	luigimario12	medium	Tonerre de Zeus	Eliminer 10 joueurs dans une partie de Thunder Spear
@@ -104,14 +104,14 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 71	Shazin	medium	Merci Gertrude	A partir de la 10ème manche en Block Party, en survivre une grâce à Gertrude
 72	luigimario12	easy	C'est donc ça, de se vider...	Lancer 42 boules de neige en une partie de Warden Escape
 73	OfChara	hard	Parade Parfaite	Réussir à parer une flèche en lançant son couteau en Murder Mystery
-74	OfChara	hard	I am Legend	Gagner une partie d'Infecté en étant le dernier humain si il y a plus de 10 joueurs
+74	OfChara	hard	I am Legend	Gagner une partie d'Infecté en étant le dernier humain (si il y a plus de 10 joueurs)
 75	OfChara	medium	Tout ça pour ça...	Survivre 42 secondes puis mourir en tombant dans l'eau en Bombardement
 76	OfChara	hard	Injustice	Finir le jump en Gay Shooter mais mourir de la main d'un Shooter
 77	Stoupy	easy	Pour l'équipe !	Tirer sur la base de bonus dans une partie de Laser Game
-78	TreekoZ	easy	Banger sucré au sucre	Fabriquez 1 gâteau en une partie de Cooking Festival
+78	TreekoZ	easy	Banger sucré au sucre	Préparez un gâteau en une partie de Cooking Festival
 79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardement
 80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery
-81	ArtiGrrr	easy	Revient par ici	Replacer le drapeau de son équipe en Rush The Flag
+81	ArtiGrrr	easy	Reviens par ici	Replacer le drapeau de son équipe en Rush The Flag
 82	Stoupy	hard	Bien placé	Survivre 30 secondes sans bouger en Block Party
 """.split("\n")
 
