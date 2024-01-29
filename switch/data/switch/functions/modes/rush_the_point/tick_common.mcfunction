@@ -3,7 +3,7 @@
 scoreboard players add #rush_the_point_ticks switch.data 1
 
 # Kill all entities under the map & Manage dropped items
-execute as @e[type=!marker,type=!item_display,type=!armor_stand] at @s run kill @s[y=0,dy=20]
+execute as @e[tag=!detached,type=!marker,type=!item_display,type=!armor_stand] at @s run kill @s[y=0,dy=20]
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/rush_the_point/items_check
 execute as @e[type=tnt,nbt={Fuse:1s}] at @s run function switch:modes/rush_the_point/explode_tnt
 

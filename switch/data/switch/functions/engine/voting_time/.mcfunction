@@ -1,5 +1,5 @@
 
-scoreboard players set #state switch.data 2
+scoreboard players set #engine_state switch.data 2
 
 scoreboard players set #voting_timer switch.data 299
 

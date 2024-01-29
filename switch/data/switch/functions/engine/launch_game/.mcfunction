@@ -1,7 +1,7 @@
 
 gamerule sendCommandFeedback true
 
-scoreboard players set #state switch.data 3
+scoreboard players set #engine_state switch.data 3
 scoreboard players add total_games switch.last_total_games 1
 
 function switch:engine/voting_time/update_votes

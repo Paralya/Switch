@@ -146,11 +146,11 @@ data modify storage switch:main minigames set from storage switch:main indexed_m
 data remove storage switch:main temp
 
 ## States
-execute if score #state switch.data matches -1 run tell none désactivé
-execute if score #state switch.data matches 0 run tell none à l'arrêt
-execute if score #state switch.data matches 1 run tell none engine start
-execute if score #state switch.data matches 2 run tell none temps de vote
-execute if score #state switch.data matches 3 run tell none game en cours
+execute if score #engine_state switch.data matches -1 run tell none désactivé
+execute if score #engine_state switch.data matches 0 run tell none à l'arrêt
+execute if score #engine_state switch.data matches 1 run tell none engine start
+execute if score #engine_state switch.data matches 2 run tell none temps de vote
+execute if score #engine_state switch.data matches 3 run tell none game en cours
 
 # Games and maps picks history
 execute unless data storage switch:main history run data modify storage switch:main history set value {games:[],maps:[]}

@@ -8,7 +8,7 @@ $execute store result score #game_1 switch.data run data get storage switch:main
 tag @s remove detached
 
 # Start the game with the right state
-scoreboard players set #state switch.data 3
+scoreboard players set #engine_state switch.data 3
 scoreboard players reset #set_spec switch.data
 scoreboard players reset #do_spreadplayers switch.data
 scoreboard players reset #is_adventure switch.data

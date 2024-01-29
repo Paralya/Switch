@@ -1,5 +1,5 @@
 
-execute unless score #state switch.data matches 2 run return 1
+execute unless score #engine_state switch.data matches 2 run return 1
 
 scoreboard players set #success switch.data 0
 execute if entity @a[tag=!detached,scores={switch.trigger.game_vote=1..}] run function switch:engine/voting_time/update_votes

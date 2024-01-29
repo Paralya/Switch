@@ -12,5 +12,5 @@
 #
 
 # Suicidaire advancement
-execute if score #state switch.data matches 3 if data storage switch:main {current_game:"sheepwars"} run advancement grant @s[tag=sheepwars.owner] only switch:visible/46
+execute if score #engine_state switch.data matches 3 if data storage switch:main {current_game:"sheepwars"} run advancement grant @s[tag=sheepwars.owner] only switch:visible/46
 
