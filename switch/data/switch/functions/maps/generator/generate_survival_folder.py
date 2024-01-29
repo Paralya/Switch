@@ -315,6 +315,8 @@ generate_clone_survival_folder("luxium_spectres_remake", (142000, 0, 142000), (1
 generate_clone_survival_folder("sheepwars_bonbons", (143000, 0, 143000), (143083, 83, 143114), 100, override_tp_coords = (143044, 151, 143056))
 generate_clone_survival_folder("sheepwars_plateforme", (144000, 0, 144000), (144079, 69, 144075), 100, override_tp_coords = (144044, 142, 144040))
 generate_clone_survival_folder("sheepwars_ilots", (145000, 0, 145000), (145092, 93, 145122), 100, override_tp_coords = (145046, 156, 145059))
+generate_clone_survival_folder("ctf_plains_castles", (146000, 0, 146000), (146341, 80, 146227), 100, override_tp_coords = (146170, 118, 146114))
+generate_clone_survival_folder("ctf_mountains_castles", (147000, -64, 147000), (147363, 98, 147158), 100, override_tp_coords = (147181, 180, 147078))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air

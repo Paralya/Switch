@@ -156,4 +156,6 @@
 #	143000	(survival)	: sheepwars_bonbons
 #	144000	(survival)	: sheepwars_plateforme
 #	145000	(survival)	: sheepwars_îlots
+#	146000	(survival)	: ctf_plains_castles
+#	147000	(survival)	: ctf_mountains_castles
 
