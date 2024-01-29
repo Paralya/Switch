@@ -25,3 +25,6 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/rush_the_point/death/detect
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function switch:modes/rush_the_point/death/for_global
 
+# Update sidebar
+function switch:modes/rush_the_point/update_sidebar
+

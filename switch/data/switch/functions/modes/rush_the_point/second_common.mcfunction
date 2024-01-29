@@ -13,6 +13,9 @@ execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 1
 execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 86 14000 air
 execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a[tag=!detached]
 
+# Elytra cooldown
+scoreboard players remove @a[scores={switch.temp.elytra_cooldown=1..}] switch.temp.elytra_cooldown 1
+
 # Bonus
 scoreboard players add #bonus_reload switch.data 1
 execute if score #bonus_reload switch.data matches 60.. run function switch:modes/rush_the_point/bonus_reload
@@ -22,7 +25,4 @@ execute if score #bonus_reload switch.data matches 0 run summon item 14063 103 1
 execute if score #bonus_reload switch.data matches 0 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:1b}
 execute if score #bonus_reload switch.data matches 31 run summon item 14063 103 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:1b}
 execute if score #bonus_reload switch.data matches 31 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",Count:1b,tag:{display:{Name:'{"text":"Bridge Snowball","color":"yellow","italic":false}'}}},NoGravity:1b,Glowing:1b,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:1b}
-
-# Update sidebar
-function switch:modes/rush_the_point/update_sidebar
 

@@ -4,6 +4,7 @@ team remove switch.rush_the_point.red
 team remove switch.rush_the_point.blue
 scoreboard objectives remove switch.temp.cooldown
 scoreboard objectives remove switch.temp.choosen_class
+scoreboard objectives remove switch.temp.elytra_cooldown
 scoreboard objectives remove switch.temp.break_obsidian
 scoreboard objectives remove switch.temp.sidebar
 scoreboard objectives remove switch.temp.total_obsidian

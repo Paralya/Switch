@@ -1,4 +1,6 @@
 
+scoreboard players set @s switch.temp.elytra_cooldown 120
+
 setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
 loot insert 0 0 0 loot stardust:i/original_stardust_sword
