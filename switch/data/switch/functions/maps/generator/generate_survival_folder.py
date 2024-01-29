@@ -193,7 +193,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 ## Execute the functions
 # Generate the folders for the survival maps
 generate_clone_survival_folder("laser_game", (499, 0, 499), (551, 43, 551), 91, override_tp_coords = (524, 102, 523))
-generate_clone_survival_folder("pitchout_1", (950, 0, 1050), (1050, 44, 1150), 95, override_tp_coords = (1000, 105, 1000))
+generate_clone_survival_folder("pitchout_1", (950, 0, 950), (1050, 44, 1050), 95, override_tp_coords = (1000, 105, 1000))
 generate_clone_survival_folder("traitor_original", (1408, 0, 1423), (1592, 63, 1578), 114, override_tp_coords = (1500, 121, 1500))
 generate_clone_survival_folder("area_51", (1947, 0, 1937), (2055, 92, 2063), 100, override_tp_coords = (2004, 170, 2002))
 generate_clone_survival_folder("spectre_original", (2459, 0, 2452), (2545, 85, 2547), 100, override_tp_coords = (2500, 127, 2500))
@@ -317,6 +317,7 @@ generate_clone_survival_folder("sheepwars_plateforme", (144000, 0, 144000), (144
 generate_clone_survival_folder("sheepwars_ilots", (145000, 0, 145000), (145092, 93, 145122), 100, override_tp_coords = (145046, 156, 145059))
 generate_clone_survival_folder("ctf_plains_castles", (146000, 0, 146000), (146341, 80, 146227), 100, override_tp_coords = (146170, 118, 146114))
 generate_clone_survival_folder("ctf_mountains_castles", (147000, -64, 147000), (147363, 98, 147158), 100, override_tp_coords = (147181, 180, 147078))
+generate_clone_survival_folder("ctf_flowers", (148000, 0, 148000), (148202, 99, 148105), 100, override_tp_coords = (148047, 118, 14804))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air

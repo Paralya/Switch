@@ -158,4 +158,6 @@
 #	145000	(survival)	: sheepwars_îlots
 #	146000	(survival)	: ctf_plains_castles
 #	147000	(survival)	: ctf_mountains_castles
+#	148000	(survival)	: ctf_flowers
+#	149000	(survival)	: 
 
