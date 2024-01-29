@@ -159,5 +159,6 @@
 #	146000	(survival)	: ctf_plains_castles
 #	147000	(survival)	: ctf_mountains_castles
 #	148000	(survival)	: ctf_flowers
-#	149000	(survival)	: 
+#	149000	(survival)	: ctf_nether
+#	150000	(survival)	: ctf_forest_castles
 
