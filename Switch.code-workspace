@@ -6,7 +6,6 @@
 	],
 	"settings": {
 		"editor.insertSpaces": false,
-		"editor.detectIndentation": false,
-		"datapack.env.cmdVersion": "1.20.2"
+		"editor.detectIndentation": false
 	}
 }
