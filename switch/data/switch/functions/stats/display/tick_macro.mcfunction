@@ -7,6 +7,9 @@
 # scoreboard value "#player_nearby switch.data" is set to 1 if there is a player nearby, and set to 0 if there is no player nearby
 # scoreboard value "#display_nearby switch.data" is set to 1 if there is a display nearby, and set to 0 if there is no display nearby
 
+# For optimisation, having 10% chance of ticking (meaning average execution 2 times per second)
+execute unless predicate switch:chance/0.1 run return 1
+
 # Set scoreboard values
 $scoreboard players set #mode switch.data $(mode)
 scoreboard players set #player_nearby switch.data 0

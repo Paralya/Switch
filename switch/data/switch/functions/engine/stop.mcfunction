@@ -36,7 +36,7 @@ gamerule doImmediateRespawn true
 gamerule announceAdvancements true
 gamerule doTraderSpawning false
 
-function #switch:signals/stop
+function switch:engine/signals/stop
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 
 # Update the stats of the minigame
