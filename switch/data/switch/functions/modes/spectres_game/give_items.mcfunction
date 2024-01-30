@@ -10,6 +10,7 @@ item replace entity @s[team=switch.temp.visible] hotbar.3 with oak_planks 64
 item replace entity @s[team=switch.temp.visible] hotbar.7 with water_bucket
 item replace entity @s[team=switch.temp.visible] hotbar.8 with golden_apple 5
 item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 18
+give @s[team=switch.temp.visible] diamond_pickaxe
 
 item replace entity @s[team=switch.temp.spectre] hotbar.0 with water_bucket
 item replace entity @s[team=switch.temp.spectre] hotbar.1 with stone_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:3s},{id:"minecraft:fire_aspect",lvl:1s}]}
@@ -30,6 +31,6 @@ effect give @s resistance 10 255 true
 attribute @s generic.attack_speed base set 1024
 
 # Pommes en plus pour les spectres en cas de spectror game
-execute if score #SPECTROR_GAME switch.data matches 1 run give @s[team=switch.temp.spectre] golden_apple 2
+execute if score #SPECTROR_GAME switch.data matches 1 run give @s[scores={switch.temp.spectror=1}] golden_apple 2
 
 

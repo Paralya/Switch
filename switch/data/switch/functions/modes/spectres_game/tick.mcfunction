@@ -8,6 +8,12 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/spectres_game/death/detect
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/for_global
 
+#si un joueur casse la crying obsidienne executer une fonction
+execute as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}] run function switch:modes/spectres_game/obsidian_effect
+#clear les crying obsidiennes des inventaires
+clear @a[tag=!detached] crying_obsidian
+
+
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
 execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 

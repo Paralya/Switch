@@ -12,11 +12,17 @@ effect give @a[tag=!detached] slowness 8 255 true
 function switch:utils/set_dynamic_time
 
 ## Partie spectror game aléatoire
-
 scoreboard objectives add switch.temp.spectror dummy
 scoreboard players set #SPECTROR_GAME switch.data 0
-execute if predicate switch:chance/0.2 run scoreboard players set #SPECTROR_GAME switch.data 1
 #mettre le score à 1
+
+## Partie TASKS GAME aléatoire
+scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.crying_obsidian
+scoreboard players set #TASKS_GAME switch.data 0
+execute if predicate switch:chance/0.33 run scoreboard players set #TASKS_GAME switch.data 1
+#mettre le score à 1
+scoreboard players set #TASKS_GAME switch.data 1
+
 
 
 ## Placement de la map et des joueurs
