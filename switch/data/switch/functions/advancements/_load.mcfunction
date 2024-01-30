@@ -138,7 +138,7 @@ data modify storage switch:advancements all[{id:29}] merge value {color:"yellow"
 data modify storage switch:advancements all[{id:30}] merge value {color:"red",auteur:"Lawtank",name:"Légende",description:"Gagnez 5 mini-jeux d’affilée"}
 data modify storage switch:advancements all[{id:31}] merge value {color:"yellow",auteur:"Xiaojuun",name:"Interville",description:"Mourir en block party à cause d'une vache folle"}
 data modify storage switch:advancements all[{id:32}] merge value {color:"yellow",auteur:"Enlaniel",name:"Reste dans ta tombe",description:"Tuez deux fois le ninja dans une partie de Traitors Game"}
-data modify storage switch:advancements all[{id:33}] merge value {color:"yellow",auteur:"Megamat",name:"Rush Thief",description:"Capturez le drapeau ennemi en Rush The Flag"}
+data modify storage switch:advancements all[{id:33}] merge value {color:"yellow",auteur:"Megamat",name:"Rush Thief",description:"Sécurisez le drapeau ennemi en Capture/Rush The Flag"}
 data modify storage switch:advancements all[{id:34}] merge value {color:"green",auteur:"Megamat",name:"Monopoly",description:"Ramasser 20 lingots d'or en une partie en Murder Mystery"}
 data modify storage switch:advancements all[{id:35}] merge value {color:"green",auteur:"Xiaojuun",name:"Daltonien",description:"Meurs à la première manche en Block Party"}
 data modify storage switch:advancements all[{id:36}] merge value {color:"green",auteur:"Megamat",name:"Contre son camp",description:"Marcher sur sa propre mine pendant une partie de Landing Mine"}
@@ -186,6 +186,6 @@ data modify storage switch:advancements all[{id:77}] merge value {color:"green",
 data modify storage switch:advancements all[{id:78}] merge value {color:"green",auteur:"TreekoZ",name:"Banger sucré au sucre",description:"Préparez un gâteau en une partie de Cooking Festival"}
 data modify storage switch:advancements all[{id:79}] merge value {color:"green",auteur:"Thakeax",name:"Le boulet",description:"Mourir du premier coup de canon en Bombardement"}
 data modify storage switch:advancements all[{id:80}] merge value {color:"yellow",auteur:"ArtiGrrr",name:"Ooopsy",description:"Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery"}
-data modify storage switch:advancements all[{id:81}] merge value {color:"green",auteur:"ArtiGrrr",name:"Reviens par ici",description:"Replacer le drapeau de son équipe en Rush The Flag"}
+data modify storage switch:advancements all[{id:81}] merge value {color:"green",auteur:"ArtiGrrr",name:"Reviens par ici",description:"Replacer le drapeau de son équipe en Capture/Rush The Flag"}
 data modify storage switch:advancements all[{id:82}] merge value {color:"red",auteur:"Stoupy",name:"Bien placé",description:"Survivre 30 secondes sans bouger en Block Party"}
 

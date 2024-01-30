@@ -63,7 +63,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 30	Lawtank	hard	Légende	Gagnez 5 mini-jeux d’affilée
 31	Xiaojuun	medium	Interville	Mourir en block party à cause d'une vache folle
 32	Enlaniel	medium	Reste dans ta tombe	Tuez deux fois le ninja dans une partie de Traitors Game
-33	Megamat	medium	Rush Thief	Capturez le drapeau ennemi en Rush The Flag
+33	Megamat	medium	Rush Thief	Sécurisez le drapeau ennemi en Capture/Rush The Flag
 34	Megamat	easy	Monopoly	Ramasser 20 lingots d'or en une partie en Murder Mystery
 35	Xiaojuun	easy	Daltonien	Meurs à la première manche en Block Party
 36	Megamat	easy	Contre son camp	Marcher sur sa propre mine pendant une partie de Landing Mine
@@ -111,7 +111,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 78	TreekoZ	easy	Banger sucré au sucre	Préparez un gâteau en une partie de Cooking Festival
 79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardement
 80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery
-81	ArtiGrrr	easy	Reviens par ici	Replacer le drapeau de son équipe en Rush The Flag
+81	ArtiGrrr	easy	Reviens par ici	Replacer le drapeau de son équipe en Capture/Rush The Flag
 82	Stoupy	hard	Bien placé	Survivre 30 secondes sans bouger en Block Party
 """.split("\n")
 
