@@ -1,5 +1,5 @@
 
-tag @a[tag=!detached] remove switch.looser
+tag @a remove switch.looser
 
 scoreboard objectives remove switch.temp.like_compteur
 scoreboard objectives remove switch.temp.nb_like

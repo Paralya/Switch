@@ -7,5 +7,5 @@ execute store success score #success switch.data run tag @a[scores={switch.alive
 execute if score #success switch.data matches 0 run tag @s add switch.player_dead
 execute if score #success switch.data matches 1 run tp @s @p[tag=switch.temp]
 execute if score #success switch.data matches 1 run data modify entity @s data.Inventory set from entity @p[tag=switch.temp] Inventory
-tag @a[tag=!detached] remove switch.temp
+tag @a remove switch.temp
 

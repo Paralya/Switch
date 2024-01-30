@@ -22,10 +22,10 @@ gamerule doTileDrops false
 execute as @p[tag=switch.looser] run function switch:modes/replicate_the_build/utils/explose_island
 
 
-tag @a[tag=!detached] remove switch.looser_score
-tag @a[tag=!detached] remove switch.looser_time
+tag @a remove switch.looser_score
+tag @a remove switch.looser_time
 tag @a[tag=!detached,tag=switch.looser] remove switch.alive
-tag @a[tag=!detached] remove switch.looser
+tag @a remove switch.looser
 
 kill @e[tag=switch.rtb.verify]
 

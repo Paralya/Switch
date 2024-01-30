@@ -1,6 +1,6 @@
 
 scoreboard players set @a[tag=!detached] switch.alive 1
-tag @a[tag=!detached] remove switch.looser
+tag @a remove switch.looser
 tp @a[tag=!detached] 1 101 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] weakness infinite 255 true

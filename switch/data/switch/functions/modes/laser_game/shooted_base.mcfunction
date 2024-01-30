@@ -15,7 +15,7 @@ execute if score #random switch.data matches 2 run tellraw @a[tag=!detached,tag=
 execute if score #random switch.data matches 3 run tellraw @a[tag=!detached,tag=switch.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et donne un Effet Glowing à la team ennemie [+20 points]","color":"green"}]
 execute if score #random switch.data matches 4 run tellraw @a[tag=!detached,tag=switch.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et obtient un Changement de couleur visuellement pendant 30 secondes [+20 points]","color":"green"}]
 execute if score #random switch.data matches 5 run tellraw @a[tag=!detached,tag=switch.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et donne un Effet Speed à votre équipe pendant 15 secondes [+20 points]","color":"green"}]
-tag @a[tag=!detached] remove switch.message
+tag @a remove switch.message
 
 execute if score #random switch.data matches 0 run scoreboard players set @s switch.temp.shield 5
 execute if score #random switch.data matches 1 run scoreboard players set #mitraillette switch.data 15
