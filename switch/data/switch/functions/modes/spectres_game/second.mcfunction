@@ -24,13 +24,7 @@ execute if score #spectres_game_seconds switch.data matches 15 if score #TASKS_G
 execute if score #spectres_game_seconds switch.data matches 15 if score #TASKS_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound block.anvil.use ambient @s
 
 # Première vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 32 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-execute if score #spectres_game_seconds switch.data matches 35 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-execute if score #spectres_game_seconds switch.data matches 40 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-execute if score #spectres_game_seconds switch.data matches 45 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-execute if score #spectres_game_seconds switch.data matches 55 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-execute if score #spectres_game_seconds switch.data matches 65 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-execute if score #spectres_game_seconds switch.data matches 60 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+execute if score #spectres_game_seconds switch.data matches 80 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
 # Première vague d'obsidiennes
 execute if score #spectres_game_seconds switch.data matches 200 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
 # Première vague d'obsidiennes

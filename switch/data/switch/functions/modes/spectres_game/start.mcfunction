@@ -21,7 +21,7 @@ scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.c
 scoreboard players set #TASKS_GAME switch.data 0
 execute if predicate switch:chance/0.33 run scoreboard players set #TASKS_GAME switch.data 1
 #mettre le score à 1
-scoreboard players set #TASKS_GAME switch.data 1
+
 
 
 
