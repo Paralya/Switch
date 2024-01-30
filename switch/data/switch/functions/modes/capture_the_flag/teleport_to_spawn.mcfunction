@@ -6,7 +6,14 @@ execute if data storage switch:main {map:"ctf_plains_castles"} if score #random 
 execute if data storage switch:main {map:"ctf_plains_castles"} if score #random switch.data matches 1 run tp @s[team=switch.temp.red] 146322 129 146090 90 0
 execute if data storage switch:main {map:"ctf_plains_castles"} if score #random switch.data matches 0 run tp @s[team=switch.temp.blue] 146003 129 146138 -90 0
 execute if data storage switch:main {map:"ctf_plains_castles"} if score #random switch.data matches 1 run tp @s[team=switch.temp.blue] 146003 129 146090 -90 0
-
+execute if data storage switch:main {map:"ctf_mountains_castles"} run tp @s[team=switch.temp.blue] 147285 201 147135 180 0
+execute if data storage switch:main {map:"ctf_mountains_castles"} run tp @s[team=switch.temp.red] 147076 201 147136 180 0
+execute if data storage switch:main {map:"ctf_flowers"} run tp @s[team=switch.temp.blue] 148187 150 148031 90 0
+execute if data storage switch:main {map:"ctf_flowers"} run tp @s[team=switch.temp.red] 148016 144 148072 -90 0
+execute if data storage switch:main {map:"ctf_nether"} run tp @s[team=switch.temp.blue] 149100 149 149009 0 0
+execute if data storage switch:main {map:"ctf_nether"} run tp @s[team=switch.temp.red] 149102 149 149341 180 0
+execute if data storage switch:main {map:"ctf_forest_castles"} run tp @s[team=switch.temp.blue] 150050 130 150031 0 0
+execute if data storage switch:main {map:"ctf_forest_castles"} run tp @s[team=switch.temp.red] 150050 130 150183 180 0
 
 ## Items to choose a class
 tag @s remove switch.to_tp
