@@ -14,7 +14,7 @@ execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=s
 
 # Update sidebar & Flag tick
 function switch:modes/capture_the_flag/update_sidebar
-execute as @e[type=item_display,tag=switch.flag,sort=random] at @s positioned ~ ~-2 ~ run function switch:modes/capture_the_flag/flag_tick
+execute as @e[type=item_display,tag=switch.flag,sort=random] at @s positioned ~ ~ ~ run function switch:modes/capture_the_flag/flag_tick
 
 # Hotbar when having a flag
 effect give @a[tag=switch.has_blue_flag] slowness 1 0 true

@@ -8,8 +8,8 @@ execute if entity @s[tag=!switch.free,tag=switch.blue_flag] unless entity @p[tag
 execute if entity @s[tag=!switch.free,tag=switch.red_flag] unless entity @p[tag=switch.has_red_flag,distance=..5] run function switch:modes/capture_the_flag/flag_drop
 
 # If not free, teleport to the player holding the flag
-execute if entity @s[tag=!switch.free,tag=switch.blue_flag] on vehicle at @p[tag=switch.has_blue_flag] run tp @s ~ ~ ~ ~180 0
-execute if entity @s[tag=!switch.free,tag=switch.red_flag] on vehicle at @p[tag=switch.has_red_flag] run tp @s ~ ~ ~ ~180 0
+execute if entity @s[tag=!switch.free,tag=switch.blue_flag] on vehicle at @p[tag=switch.has_blue_flag] run tp @s ~ ~2 ~ ~180 0
+execute if entity @s[tag=!switch.free,tag=switch.red_flag] on vehicle at @p[tag=switch.has_red_flag] run tp @s ~ ~2 ~ ~180 0
 
 # Get rotation and motion
 execute if entity @s[tag=!switch.free,tag=switch.blue_flag] on vehicle run data modify entity @s Motion set from entity @p[tag=switch.has_blue_flag] Motion
