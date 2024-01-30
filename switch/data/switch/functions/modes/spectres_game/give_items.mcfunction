@@ -10,7 +10,7 @@ item replace entity @s[team=switch.temp.visible] hotbar.3 with oak_planks 64
 item replace entity @s[team=switch.temp.visible] hotbar.7 with water_bucket
 item replace entity @s[team=switch.temp.visible] hotbar.8 with golden_apple 5
 item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 18
-give @s[team=switch.temp.visible] diamond_pickaxe
+give @s[team=switch.temp.visible] diamond_pickaxe 
 
 item replace entity @s[team=switch.temp.spectre] hotbar.0 with water_bucket
 item replace entity @s[team=switch.temp.spectre] hotbar.1 with stone_sword{Enchantments:[{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:sharpness",lvl:3s},{id:"minecraft:fire_aspect",lvl:1s}]}

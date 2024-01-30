@@ -6,6 +6,7 @@ execute store result score #count switch.data if entity @a[tag=!detached,gamemod
 
 # Summon lootboxes depending on the player count
 summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
+summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
 execute if score #count switch.data matches 5.. run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
 execute if score #count switch.data matches 8.. run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
 execute if score #count switch.data matches 15.. run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
@@ -13,7 +14,14 @@ execute if score #count switch.data matches 15.. run summon falling_block ~ ~ ~ 
 
 # Spreadplayers (item)
 execute as @e[type=falling_block,tag=switch.new] run function switch:maps/spread_one_player
+
+# donner slow falling à l'obsidienne    
+effect give @e[type=falling_block,tag=switch.new] minecraft:slow_falling 15 5 true
+
+# téléporte le bloc en hauteur pour qu'il chute plus longtemps
+execute as @e[type=falling_block,tag=switch.new] at @s run tp @s ~ 150 ~
 tag @e[type=falling_block,tag=switch.new] remove switch.new
+
 
 # Tellraw & playsound
 tellraw @a[tag=!detached] ["",{"text":"---------------","color":"#DEE2E5"},{"text":"\n"},{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022","bold":true,"color":"gray"},{"text":" Des obsidiennes sont apparues ! Les visibles auront des bonus en les cassant !","color":"white"},{"text":"\n"},{"text":"---------------","color":"#DEE2E5"}]
