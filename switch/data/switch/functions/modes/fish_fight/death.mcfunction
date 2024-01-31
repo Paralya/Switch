@@ -16,3 +16,4 @@ execute unless score @s switch.alive matches 1.. run effect clear @s
 execute unless score @s switch.alive matches 1.. run clear @s
 
 
+
