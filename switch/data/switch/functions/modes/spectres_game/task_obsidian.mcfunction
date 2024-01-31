@@ -16,7 +16,7 @@ execute if score #count switch.data matches 15.. run summon falling_block ~ ~ ~ 
 execute as @e[type=falling_block,tag=switch.new] run function switch:maps/spread_one_player
 
 # donner slow falling à l'obsidienne    
-effect give @e[type=falling_block,tag=switch.new] slow_falling 15 9 true
+effect give @e[type=falling_block,tag=switch.new] slow_falling 15 15 true
 
 # Téléporte le bloc en hauteur pour qu'il chute plus longtemps
 execute as @e[type=falling_block,tag=switch.new] at @s positioned over world_surface run tp @s ~ ~-2 ~
