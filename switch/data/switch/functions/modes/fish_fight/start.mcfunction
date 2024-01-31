@@ -9,8 +9,9 @@ gamerule fallDamage false
 scoreboard players set #TEAM_FISH switch.data 0
 execute if predicate switch:chance/0.33 run scoreboard players set #TEAM_FISH switch.data 1
 
+
 ## Téléportation des joueurs
-scoreboard players set #is_adventure switch.data 1
+execute if score #TEAM_FISH switch.data matches 0 
 function switch:choose_map_for/fish_fight
 scoreboard players set #spawn_count switch.data 0
 execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
