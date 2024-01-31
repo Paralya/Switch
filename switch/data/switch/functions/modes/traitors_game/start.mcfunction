@@ -59,6 +59,12 @@ scoreboard players set §3 switch.temp.sidebar 3
 scoreboard players set §2 switch.temp.sidebar 2
 scoreboard players set §1 switch.temp.sidebar 1
 
+## Scenarios
+# Traitors, affichage des scénarios supplémentaires en début de partie :
+# - Détraqué : Innocent solitaire (ça peut être le ninja)
+# - Floupy : Voleur (annule la deuxième vie du ninja)
+# - Silencieux : n'importe qui peut avoir (1st kill non affiché).
+
 # Choix des rôles
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0

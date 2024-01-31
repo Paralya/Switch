@@ -161,4 +161,5 @@
 #	148000	(survival)	: ctf_flowers
 #	149000	(survival)	: ctf_nether
 #	150000	(survival)	: ctf_forest_castles
+#	151000	(survival)	: luxio_fish_fight 151000 0 151000 151056 36 151055
 
