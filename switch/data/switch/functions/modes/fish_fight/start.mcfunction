@@ -5,15 +5,17 @@ function switch:utils/set_dynamic_time
 
 gamerule fallDamage false
 
+# partie en équipe aléatoire
+scoreboard players set #TEAM_FISH switch.data 0
+execute if predicate switch:chance/0.33 run scoreboard players set #TEAM_FISH switch.data 1
+
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/fish_fight
 scoreboard players set #spawn_count switch.data 0
-execute if data storage switch:main {map:"fish_fight_1"} as @a[tag=!detached,sort=random] run function switch:modes/fish_fight/map_1/tp_give
-execute if data storage switch:main {map:"fish_fight_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/fish_fight/map_halloween/tp_give
 execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, exterminez les autres !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Fish Fight, expulsez les autres !"}]
 
 scoreboard objectives add switch.temp.damages dummy
 scoreboard objectives add switch.temp.cooldown dummy

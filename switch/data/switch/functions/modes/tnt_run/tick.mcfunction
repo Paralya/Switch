@@ -8,7 +8,7 @@ execute as @a[tag=!detached,gamemode=!spectator,sort=random] at @s if entity @s[
 execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,gamemode=adventure] at @s run function switch:modes/tnt_run/is_on_ground
 
 # Manage destruction of blocks
-execute as @e[tag=switch.tnt_run,scores={switch.data=6..}] at @s run function switch:modes/tnt_run/destroy_block
+execute as @e[tag=switch.tnt_run,scores={switch.data=8..}] at @s run function switch:modes/tnt_run/destroy_block
 scoreboard players add @e[tag=switch.tnt_run] switch.data 1
 
 ## Fin de partie
