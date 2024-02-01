@@ -3,7 +3,6 @@ gamemode adventure @a[tag=!detached]
 team join switch.no_pvp @a[tag=!detached]
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] jump_boost infinite 250 true
-effect give @a[tag=!detached] slowness infinite 4 true
 effect give @a[tag=!detached] invisibility infinite 255 true
 function switch:utils/set_dynamic_time
 
