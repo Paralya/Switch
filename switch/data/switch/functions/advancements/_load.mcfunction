@@ -141,7 +141,7 @@ data modify storage switch:advancements all[{id:32}] merge value {color:"yellow"
 data modify storage switch:advancements all[{id:33}] merge value {color:"yellow",auteur:"Megamat",name:"Rush Thief",description:"Sécurisez le drapeau ennemi en Capture/Rush The Flag"}
 data modify storage switch:advancements all[{id:34}] merge value {color:"green",auteur:"Megamat",name:"Monopoly",description:"Ramasser 20 lingots d'or en une partie en Murder Mystery"}
 data modify storage switch:advancements all[{id:35}] merge value {color:"green",auteur:"Xiaojuun",name:"Daltonien",description:"Meurs à la première manche en Block Party"}
-data modify storage switch:advancements all[{id:36}] merge value {color:"green",auteur:"Megamat",name:"Contre son camp",description:"Marcher sur sa propre mine pendant une partie de Landing Mine"}
+data modify storage switch:advancements all[{id:36}] merge value {color:"green",auteur:"Megamat",name:"Contre son camp",description:"Marcher sur sa propre mine pendant une partie de Memory Mine"}
 data modify storage switch:advancements all[{id:37}] merge value {color:"yellow",auteur:"Megamat",name:"Oppenheimer",description:"Survivre plus d'une minute en Bombardement"}
 data modify storage switch:advancements all[{id:38}] merge value {color:"yellow",auteur:"Xiaojuun",name:"Regarde ma queue",description:"Avoir une trainée de 15 secondes en moutron"}
 data modify storage switch:advancements all[{id:39}] merge value {color:"red",auteur:"ArtiGrrr",name:"Précision Artistique",description:"Finir une partie de Snowball Painter avec exactement 51 points"}

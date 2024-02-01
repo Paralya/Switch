@@ -8,5 +8,5 @@ execute if score #process_end switch.data matches 1 unless score #remaining_play
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/border_run/death
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
-execute if score #process_end switch.data matches 100 run function switch:engine/restart
+execute if score #process_end switch.data matches 200 run function switch:engine/restart
 

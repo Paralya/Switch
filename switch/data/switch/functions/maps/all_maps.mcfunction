@@ -163,5 +163,5 @@
 #	150000	(survival)	: ctf_forest_castles
 #	151000	(survival)	: luxio_fish_fight
 #	152000	(survival)	: arti_tnt_run_tower
-#	153000	(survival)	: landing_mine
+#	153000	(adventure)	: memory_mine
 

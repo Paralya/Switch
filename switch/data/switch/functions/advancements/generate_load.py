@@ -66,7 +66,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 33	Megamat	medium	Rush Thief	Sécurisez le drapeau ennemi en Capture/Rush The Flag
 34	Megamat	easy	Monopoly	Ramasser 20 lingots d'or en une partie en Murder Mystery
 35	Xiaojuun	easy	Daltonien	Meurs à la première manche en Block Party
-36	Megamat	easy	Contre son camp	Marcher sur sa propre mine pendant une partie de Landing Mine
+36	Megamat	easy	Contre son camp	Marcher sur sa propre mine pendant une partie de Memory Mine
 37	Megamat	medium	Oppenheimer	Survivre plus d'une minute en Bombardement
 38	Xiaojuun	medium	Regarde ma queue	Avoir une trainée de 15 secondes en moutron
 39	ArtiGrrr	hard	Précision Artistique	Finir une partie de Snowball Painter avec exactement 51 points
