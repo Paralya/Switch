@@ -15,6 +15,6 @@ execute as @e[type=marker,tag=switch.mine] at @s run function switch:modes/memor
 ## Fin de partie
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=adventure]
-# execute if score #remaining_players switch.data matches ..1 run function switch:modes/memory_mine/process_end
-# execute if score #memory_mine_seconds switch.data matches 300.. run function switch:modes/memory_mine/process_end
+execute if score #remaining_players switch.data matches ..1 run function switch:modes/memory_mine/process_end
+execute if score #memory_mine_seconds switch.data matches 300.. run function switch:modes/memory_mine/process_end
 

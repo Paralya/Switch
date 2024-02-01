@@ -15,6 +15,12 @@ with open("particles.mcfunction", "w") as f:
 		theta = i * 2 * math.pi / N_points
 		x = radius * math.cos(theta)
 		z = radius * math.sin(theta)
-		f.write(f"particle dust 0 1 0 1 ~{round(x, 5)} ~ ~{round(z, 5)} 0 0 0 0 1 force @a[distance=..50]\n")
-	f.write("\n")
+		f.write(f"particle dust 0 1 0 1 ~{round(x, 5)} ~ ~{round(z, 5)} 0 0 0 0 5 force @a[distance=..50]\n")
+	f.write("""particle dust 0 0.75 0 2 ~ ~ ~ 2 0 2 0 10 force @a[distance=..50]
+
+# Sound & glowing
+playsound block.note_block.harp ambient @a[distance=..50] ~ ~ ~ 1 1 1
+effect give @a[tag=!detached,gamemode=adventure,distance=..3] glowing 1 0 true
+
+""")
 
