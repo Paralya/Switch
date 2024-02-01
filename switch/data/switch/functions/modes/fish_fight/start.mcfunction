@@ -6,18 +6,19 @@ effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 gamerule fallDamage false
+gamerule keepInventory true
 
 # partie en équipe aléatoire
 scoreboard players set #TEAM_FISH switch.data 0
 execute if predicate switch:chance/0.33 run scoreboard players set #TEAM_FISH switch.data 1
-execute if predicate switch:chance/0.33 run function switch:modes/fish_fight/teams_tp/teams
-
+execute if score #TEAM_FISH switch.data matches 1 run function switch:modes/fish_fight/teams_tp/setup
+execute if score #TEAM_FISH switch.data matches 1 as @a[tag=!detached] run function switch:modes/fish_fight/teams_tp/teams
 
 ## Téléportation des joueurs
-execute if score #TEAM_FISH switch.data matches 0 run execute as @a[tag=!detached] run function switch:maps/spread_one_player
-execute if score #TEAM_FISH switch.data matches 1 run teleport @a[team=switch.temp.blue] 151026 16 151007
-execute if score #TEAM_FISH switch.data matches 1 run teleport @a[team=switch.temp.red] 151026 16 151045
 function switch:choose_map_for/fish_fight
+execute if score #TEAM_FISH switch.data matches 0 as @a[tag=!detached] run function switch:maps/spread_one_player
+execute if score #TEAM_FISH switch.data matches 1 run teleport @a[team=switch.temp.blue] 151026 116 151007
+execute if score #TEAM_FISH switch.data matches 1 run teleport @a[team=switch.temp.red] 151026 116 151045
 execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Fish Fight, expulsez les autres !"}]
@@ -29,6 +30,7 @@ scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 #création d'un score pour compter les axolotls tués par les joueurs
 scoreboard objectives add switch.temp.axolotl_killed minecraft.killed:minecraft.axolotl
+scoreboard players set @a[team=!detached] switch.temp.axolotl_killed 0
 
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 

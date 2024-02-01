@@ -3,7 +3,8 @@ scoreboard players add #fish_fight_ticks switch.data 1
 
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/fish_fight/no_drop
 
-execute as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] run function switch:maps/spread_one_player
+execute as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] run function switch:maps/spread_one_player 
+execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/fish_fight/death
 
 execute as @a[scores={switch.alive=1..},predicate=switch:in_water,sort=random] run function switch:modes/fish_fight/death
 execute as @e[type=axolotl,predicate=switch:in_water] run function switch:maps/spread_one_player
