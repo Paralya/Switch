@@ -162,5 +162,6 @@
 #	149000	(survival)	: ctf_nether
 #	150000	(survival)	: ctf_forest_castles
 #	151000	(survival)	: luxio_fish_fight
-#	152000	(survival)	: arti_tnt_run_tower 152000 0 152000 152020 73 152020
+#	152000	(survival)	: arti_tnt_run_tower
+#	153000	(survival)	: landing_mine
 
