@@ -8,5 +8,6 @@ item replace entity @s armor.chest with diamond_chestplate{Enchantments:[{id:"mi
 effect give @s jump_boost 1 250 true
 effect give @s weakness 5 255 true
 effect give @s slowness 3 5 true
+effect give @s saturation infinite 255 true
 
 function switch:modes/fish_fight/give_items

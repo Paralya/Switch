@@ -19,8 +19,8 @@ execute at @a[scores={switch.alive=1}] run particle dust 0.996 0.522 0.522 1 ~ ~
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
 item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
 
- scoreboard players set #remaining_players switch.data 0
- execute store result score #remaining_players switch.data if entity @a[scores={switch.alive=1..}]
- execute if score #remaining_players switch.data matches ..1 run function switch:modes/fish_fight/process_end
- execute if score #fish_fight_seconds switch.data matches 600.. run function switch:modes/fish_fight/process_end
+scoreboard players set #remaining_players switch.data 0
+execute store result score #remaining_players switch.data if entity @a[scores={switch.alive=1..}]
+execute if score #remaining_players switch.data matches ..1 run function switch:modes/fish_fight/process_end
+execute if score #fish_fight_seconds switch.data matches 600.. run function switch:modes/fish_fight/process_end
 

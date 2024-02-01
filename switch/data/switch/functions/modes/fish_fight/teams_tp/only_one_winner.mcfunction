@@ -2,3 +2,4 @@ tellraw @a[tag=!detached] ["",{"text":"----------------------------------","colo
 playsound entity.ender_dragon.growl ambient @s
 team remove switch.temp.red
 team remove switch.temp.blue
+scoreboard players set #TEAM_FISH switch.data 0

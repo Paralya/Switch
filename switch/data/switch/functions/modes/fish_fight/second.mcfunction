@@ -20,7 +20,18 @@ execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH swi
 execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 1 run give @s[team=switch.temp.blue] blue_wool 1 
 execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 1 run give @s[team=switch.temp.red] red_wool 1
 
+scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
+scoreboard players operation #temp switch.data %= #8 switch.data
+execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_wool 1
+
 #only one winner en cas d'une team
 
 execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run function switch:modes/fish_fight/teams_tp/only_one_winner
 execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] run function switch:modes/fish_fight/teams_tp/only_one_winner
+
+#TNT
+
+execute if score #fish_fight_seconds switch.data matches 60 run give @a[tag=!detached] tnt 1
+execute if score #fish_fight_seconds switch.data matches 60 run give @a[tag=!detached] oak_pressure_plate 1
+execute if score #fish_fight_seconds switch.data matches 120 run give @a[tag=!detached] tnt 2
+execute if score #fish_fight_seconds switch.data matches 120 run give @a[tag=!detached] oak_pressure_plate 2

@@ -18,7 +18,7 @@ execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run pl
 execute if score #random switch.data matches 2 run tellraw @a[tag=!detached] ["",{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022","bold":true,"color":"gray"},{"text":" Les visibles ont obtenu deux pommes d'or !","color":"white"},{"text":"\n "}]
 
 # si le score est 3, on donne un effet d'absorption aux visibles
-execute if score #random switch.data matches 3 run effect give @a[tag=!detached,team=switch.temp.visible] absorption 15 1 true
+execute if score #random switch.data matches 3 run effect give @a[tag=!detached,team=switch.temp.visible] absorption 60 1 true
 execute if score #random switch.data matches 3 as @a[tag=!detached] at @s run playsound entity.frog.hurt ambient @s
 execute if score #random switch.data matches 3 run tellraw @a[tag=!detached] ["",{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022","bold":true,"color":"gray"},{"text":" Les visibles ont obtenu un effet d'absorption !","color":"white"},{"text":"\n "}]
 
