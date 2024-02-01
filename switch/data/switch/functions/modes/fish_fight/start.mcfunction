@@ -15,6 +15,7 @@ execute if predicate switch:chance/0.33 run scoreboard players set #TEAM_FISH sw
 ## Téléportation des joueurs
 execute if score #TEAM_FISH switch.data matches 0 
 function switch:choose_map_for/fish_fight
+execute as @a[tag=!detached] run function switch:maps/spread_one_player
 execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Fish Fight, expulsez les autres !"}]
@@ -26,10 +27,13 @@ scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
-scoreboard players set #fish_fight_seconds switch.data -5
+scoreboard players set #fish_fight_seconds switch.data 0
 scoreboard players set #fish_fight_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 # gamemode survival
 gamemode survival @a[tag=!detached]
+# donner blindness et slownees pendant 4 secondes
+effect give @a[tag=!detached] minecraft:blindness 4 2 true
+effect give @a[tag=!detached] minecraft:slowness 4 2 true
 
