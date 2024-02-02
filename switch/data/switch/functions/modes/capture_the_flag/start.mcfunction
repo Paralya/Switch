@@ -15,6 +15,7 @@ gamerule keepInventory true
 scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
+scoreboard objectives setdisplay list switch.health
 
 scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
