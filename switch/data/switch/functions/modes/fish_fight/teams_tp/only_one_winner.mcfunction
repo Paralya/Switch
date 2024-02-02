@@ -6,4 +6,6 @@ effect give @a[tag=!detached,gamemode=!spectator] slowness 4 5 true
 effect give @a[tag=!detached,gamemode=!spectator] blindness 3 5 true
 team remove switch.temp.red
 team remove switch.temp.blue
+clear @a[tag=!detached] red_wool
+clear @a[tag=!detached] blue_wool
 scoreboard players set #TEAM_FISH switch.data 0

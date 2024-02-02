@@ -83,9 +83,9 @@ execute if score #random switch.data matches 9 run effect give @s speed 10 0 tru
 
 
 # si le score est 10, on donne un effet temporaire de weakness à joueurs
-execute if score #random switch.data matches 10 run effect give @a[gamemode=!spectator,tag=!detached,scores={switch.temp.axolotl_killed=0}] weakness 6 255 true
+execute if score #random switch.data matches 10 run effect give @a[gamemode=!spectator,tag=!detached,scores={switch.temp.axolotl_killed=0}] weakness 8 255 true
 execute if score #random switch.data matches 10 as @a[tag=!detached] at @s run playsound entity.zombie_villager.ambient ambient @s
-execute if score #random switch.data matches 10 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":"a empêché de frapper temporairement ses adversaires !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 10 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a empêché de frapper temporairement ses adversaires !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 10 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 10 run effect give @s speed 10 0 true
 
