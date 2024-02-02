@@ -9,6 +9,7 @@ item replace entity @s armor.feet with iron_boots
 item replace entity @s hotbar.0 with iron_sword
 item replace entity @s hotbar.1 with stone_axe{AttributeModifiers:[{AttributeName:"minecraft:generic.attack_damage",Name:"minecraft:generic.attack_damage",Slot:"mainhand",Amount:4,Operation:0,UUID:[I;2012000,-2012000,-2012000,2012000]}]}
 item replace entity @s hotbar.2 with potion{Potion:"minecraft:strong_healing"}
+item replace entity @s hotbar.5 with potion{display:{Name:'{"text":"Suicide Potion","color":"dark_purple","italic":false}'},custom_potion_effects:[{id:"minecraft:wither",amplifier:10b,duration:-1}],CustomPotionColor:4391004}
 item replace entity @s hotbar.6 with flint_and_steel
 item replace entity @s hotbar.7 with tnt 2
 item replace entity @s hotbar.8 with bread 21
