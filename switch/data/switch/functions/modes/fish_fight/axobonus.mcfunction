@@ -52,9 +52,9 @@ execute if score #random switch.data matches 6 run effect give @s regeneration 8
 execute if score #random switch.data matches 6 run effect give @s speed 10 0 true
 
 # si le score est 7, on summon pleins d'axolotls
-execute if score #random switch.data matches 7 run summon axolotl 151026 127 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
-execute if score #random switch.data matches 7 run summon axolotl 151026 127 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
-execute if score #random switch.data matches 7 run summon axolotl 151026 127 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
+execute if score #random switch.data matches 7 run summon axolotl 151026 130 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
+execute if score #random switch.data matches 7 run summon axolotl 151026 130 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
+execute if score #random switch.data matches 7 run summon axolotl 151026 130 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
 execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound entity.axolotl.hurt ambient @s
 execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound entity.axolotl.splash ambient @s
 execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
@@ -66,6 +66,9 @@ execute if score #random switch.data matches 7 run effect give @s speed 10 0 tru
 execute if score #random switch.data matches 8 run summon pufferfish 151026 119 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Poisson mécontent","color":"green","bold":true}'}
 execute if score #random switch.data matches 8 run summon pufferfish 151026 119 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Poisson mécontent","color":"green","bold":true}'}
 execute if score #random switch.data matches 8 run summon pufferfish 151026 119 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Poisson mécontent","color":"green","bold":true}'}
+execute if score #random switch.data matches 8 run summon pufferfish 151040 124 151032 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Poisson mécontent","color":"green","bold":true}'}
+execute if score #random switch.data matches 8 run summon pufferfish 151015 124 151020 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Poisson mécontent","color":"green","bold":true}'}
+
 execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound entity.zombie.ambient ambient @s
 execute if score #random switch.data matches 8 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a invoqué des poissons mécontents !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 8 run effect give @s regeneration 8 1 true
