@@ -15,6 +15,8 @@ YELLOW = "\033[33m"
 BLUE = "\033[34m"
 RESET = "\033[39m"
 
+NB_SPREAD_PLAYERS = 24
+
 ## Create the functions
 
 def convert_tick_to_strings(tick: int, name: str) -> tuple:
@@ -354,8 +356,9 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	# Write the assurance commands
 	f.write("\n")
 	f.write("## Assurance commands\n")
-	for _ in range(12):
+	for _ in range(NB_SPREAD_PLAYERS):
 		f.write(f"execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file
@@ -378,8 +381,9 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	# Write the assurance commands
 	f.write("\n")
 	f.write("## Assurance commands\n")
-	for _ in range(12):
+	for _ in range(NB_SPREAD_PLAYERS):
 		f.write(f"execute at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute at @s if block ~ ~-2 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 		f.write(f"execute at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file and return
