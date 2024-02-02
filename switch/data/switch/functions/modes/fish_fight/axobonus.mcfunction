@@ -31,7 +31,7 @@ execute if score #random switch.data matches 3 run effect give @s regeneration 8
 execute if score #random switch.data matches 3 run effect give @s speed 10 0 true
 
 # si le score est 4, on donne un effet de glowing à tous les joueurs sans le donner au détenteur du score axolotl killed
-execute if score #random switch.data matches 4 run effect give @a[tag=!detached,scores={switch.temp.axolotl_killed=0}] glowing 10 0 true
+execute if score #random switch.data matches 4 run effect give @a[gamemode=!spectator,tag=!detached,scores={switch.temp.axolotl_killed=0}] glowing 10 0 true
 execute if score #random switch.data matches 4 as @a[tag=!detached] at @s run playsound entity.enderman.stare ambient @s
 execute if score #random switch.data matches 4 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Tous les joueurs ont obtenu un effet de Glowing !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 4 run effect give @s regeneration 8 1 true
@@ -75,24 +75,24 @@ execute if score #random switch.data matches 8 run effect give @s regeneration 8
 execute if score #random switch.data matches 8 run effect give @s speed 10 0 true
 
 # si le score est 9, on donne un effet temporaire de slowness à joueurs
-execute if score #random switch.data matches 9 run effect give @a[tag=!detached,scores={switch.temp.axolotl_killed=0}] slowness 20 1 true
+execute if score #random switch.data matches 9 run effect give @a[gamemode=!spectator,tag=!detached,scores={switch.temp.axolotl_killed=0}] slowness 20 1 true
 execute if score #random switch.data matches 9 as @a[tag=!detached] at @s run playsound entity.pig.ambient ambient @s
-execute if score #random switch.data matches 9 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" vous a ralenti !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 9 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a ralenti ses adversaires !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 9 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 9 run effect give @s speed 10 0 true
 
 
 # si le score est 10, on donne un effet temporaire de weakness à joueurs
-execute if score #random switch.data matches 10 run effect give @a[tag=!detached,scores={switch.temp.axolotl_killed=0}] weakness 6 255 true
+execute if score #random switch.data matches 10 run effect give @a[gamemode=!spectator,tag=!detached,scores={switch.temp.axolotl_killed=0}] weakness 6 255 true
 execute if score #random switch.data matches 10 as @a[tag=!detached] at @s run playsound entity.zombie_villager.ambient ambient @s
-execute if score #random switch.data matches 10 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" vous a empêché de frapper temporairement !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 10 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":"a empêché de frapper temporairement ses adversaires !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 10 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 10 run effect give @s speed 10 0 true
 
 # si le score est 11, on donne un effet de levitation à tous les joueurs
-execute if score #random switch.data matches 11 run effect give @a[tag=!detached,scores={switch.temp.axolotl_killed=0}] levitation 10 0 true
+execute if score #random switch.data matches 11 run effect give @a[gamemode=!spectator,tag=!detached,scores={switch.temp.axolotl_killed=0}] levitation 10 0 true
 execute if score #random switch.data matches 11 as @a[tag=!detached] at @s run playsound entity.ender_dragon.growl ambient @s
-execute if score #random switch.data matches 11 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" vous a infligé un effet de Levitation !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 11 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a infligé un effet de Levitation à ses adversaires !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 11 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 11 run effect give @s speed 10 0 true
 

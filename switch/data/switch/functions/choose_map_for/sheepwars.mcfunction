@@ -10,6 +10,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main s
 execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_bonbons"
 execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_plateforme"
 execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_ilots"
+execute if score #mc switch.data matches 0 run data modify storage switch:main sheepwars_maps append value "sheepwars_colored_sheeps"
 
 
 

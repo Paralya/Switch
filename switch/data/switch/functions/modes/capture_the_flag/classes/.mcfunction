@@ -11,5 +11,5 @@ execute if score @s switch.temp.choosen_class matches 1 run function switch:mode
 execute if score @s switch.temp.choosen_class matches 2 run function switch:modes/capture_the_flag/classes/warrior
 execute if score @s switch.temp.choosen_class matches 3 run function switch:modes/capture_the_flag/classes/archer
 execute if score @s switch.temp.choosen_class matches 4 run function switch:modes/capture_the_flag/classes/demolisher
-execute if score @s switch.temp.choosen_class matches 1..4 run effect give @s slow_falling 5 1 true
+execute if score @s switch.temp.choosen_class matches 1..4 run effect give @s slow_falling 10 0 true
 

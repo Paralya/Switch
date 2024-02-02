@@ -9,20 +9,16 @@ execute if score #fish_fight_seconds switch.data matches 3 run execute if score 
 # spawn axolot
 scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
 scoreboard players operation #temp switch.data %= #40 switch.data
-execute if score #temp switch.data matches 0 run summon axolotl 151026 134 151026 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
+execute if score #temp switch.data matches 0 run summon axolotl 151026 134 151026 {Glowing:1b,CustomNameVisible:1b,Health:8f,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
 execute if score #temp switch.data matches 0 run effect give @a[tag=!detached] minecraft:glowing 4 2 true
 execute if score #temp switch.data matches 0 run tellraw @a[tag=!detached] ["",{"text":"Fish Fight","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Un Axolotl Bonus est apparu ! Tuez le pour obtenir un bonus !"},{"text":"\n "}]
 execute if score #temp switch.data matches 0 run execute as @a[tag=!detached] at @s run playsound entity.arrow.hit_player ambient @s
 
 scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
-scoreboard players operation #temp switch.data %= #8 switch.data
+scoreboard players operation #temp switch.data %= #6 switch.data
 execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_wool 1
 execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 1 run give @s[team=switch.temp.blue] blue_wool 1 
 execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 1 run give @s[team=switch.temp.red] red_wool 1
-
-scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
-scoreboard players operation #temp switch.data %= #8 switch.data
-execute if score #temp switch.data matches 0 run execute if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_wool 1
 
 #only one winner en cas d'une team
 
