@@ -9,10 +9,10 @@
 # Title
 execute if score @s switch.tutorial matches 0..2 run title @s times 0 30 20
 execute if score @s switch.tutorial matches 0..2 run title @s title {"text":"[Tutoriel]","color":"gold"}
-execute if score @s switch.tutorial matches 0..2 run title @s subtitle {"text":"Regardez votre chat","color":"yellow"}
+execute if score @s switch.tutorial matches 0..2 run title @s subtitle {"text":"Regardez votre tchat","color":"yellow"}
 execute if score @s switch.tutorial matches 4.. run title @s times 0 30 20
 execute if score @s switch.tutorial matches 4.. run title @s title {"text":"[Tutoriel]","color":"gold"}
-execute if score @s switch.tutorial matches 4.. run title @s subtitle {"text":"Regardez votre chat","color":"yellow"}
+execute if score @s switch.tutorial matches 4.. run title @s subtitle {"text":"Regardez votre tchat","color":"yellow"}
 
 # Init dialog
 execute if score @s switch.tutorial matches 0 run data modify storage switch:temp cutted_username set string entity @s Inventory[-1].tag.SkullOwner.Name 0 4
