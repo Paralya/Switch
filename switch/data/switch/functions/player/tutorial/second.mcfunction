@@ -6,18 +6,23 @@
 # Attach/Detach
 # End
 
+# Title
+execute if score @s switch.tutorial matches 0..3 run title @s times 0 40 20
+execute if score @s switch.tutorial matches 0..3 run title @s title {"text":"[Tutoriel]","color":"gold"}
+execute if score @s switch.tutorial matches 0..3 run title @s subtitle {"text":"Regardez votre chat","color":"yellow"}
+
 # Init dialog
 execute if score @s switch.tutorial matches 0..2 run data modify storage switch:temp cutted_username set string entity @s Inventory[-1].tag.SkullOwner.Name 0 4
 execute if score @s switch.tutorial matches 0..2 run data modify storage switch:temp username set from entity @s Inventory[-1].tag.SkullOwner.Name
 execute if score @s switch.tutorial matches 0..2 run scoreboard players operation #dialog_type switch.data = @s switch.id
 execute if score @s switch.tutorial matches 0..2 run scoreboard players operation #dialog_type switch.data %= #6 switch.data
 execute if score @s switch.tutorial matches 0..2 run tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 0 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch mon cher "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-chan !","color":"gold"}]
-execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 1 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch mon cher "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-kun !","color":"gold"}]
-execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 2 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch mon cher "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-sama !","color":"gold"}]
-execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 3 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch mon cher "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-sensei !","color":"gold"}]
-execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 4 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch mon cher "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-san !","color":"gold"}]
-execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 5 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch mon cher "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-senpai !","color":"gold"}]
+execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 0 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-chan !","color":"gold"}]
+execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 1 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-kun !","color":"gold"}]
+execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 2 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-sama !","color":"gold"}]
+execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 3 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-sensei !","color":"gold"}]
+execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 4 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-san !","color":"gold"}]
+execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 5 run tellraw @s [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bienvenue à toi sur l'espace Switch "},{"nbt":"cutted_username","storage":"switch:temp","color":"gold"},{"text":"-senpai !","color":"gold"}]
 execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 0 run tellraw @s [{"text":"Ah pardon, je suis peut-être trop familier avec toi, désolé "},{"nbt":"username","storage":"switch:temp","color":"gold"},{"text":"...\nBref, je suis le moteur de l'espace Switch, je suis là pour t'aider à comprendre comment tout fonctionne ici ! Actuellement, tu es séparé du reste du monde, mais ne t'inquiète pas, tu pourras bientôt rejoindre les autres joueurs !"}]
 execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 1 run tellraw @s [{"text":"Ah excuse-moi, je suis peut-être trop familier avec toi, désolé "},{"nbt":"username","storage":"switch:temp","color":"gold"},{"text":"...\nBon, je suis le moteur de l'espace Switch et je vais t'expliquer comment tout fonctionne ici ! Pour l'instant, tu ne peux pas lire les messages des autres joueurs, jusqu'à tu finisses ce tutoriel !"}]
 execute if score @s switch.tutorial matches 0..2 if score #dialog_type switch.data matches 2 run tellraw @s [{"text":"Ah désolé, je suis peut-être un peu trop familier avec toi "},{"nbt":"username","storage":"switch:temp","color":"gold"},{"text":"...\nEnfin, je suis le moteur de l'espace Switch, et je vais t'aider à comprendre comment tout fonctionne ici ! Actuellement, tu es isolé des autres joueurs, mais ne t'en fais pas, tu pourras bientôt les rejoindre !"}]
@@ -47,10 +52,10 @@ execute if score @s switch.tutorial matches 2..3 run tellraw @s ["\n",{"text":"C
 # Third dialog
 execute if score @s switch.tutorial matches 3..4 run tellraw @s ["\n",{"text":"Est-ce que tu vois ces particules au sol ? Je les ai placés de tel sorte à ce qu'elles te guident vers le shop du Pitchout, essaie de les suivre !"}, \
 	{"text":"\nEssaie de cliquer sur le panneau du shop !\n","color":"gray"}]
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 0 69.1 3 0.1 0 1.5 0 150 force @s
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 0 69.6 4 0.1 0 0.35 0 35 force @s
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 0 70.1 9 0.1 0 2 0 200 force @s
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -2 70.1 13 1 0 0.1 0 100 force @s
+execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 69.1 -497 0.1 0 1.5 0 150 force @s
+execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 69.6 -496 0.1 0 0.35 0 35 force @s
+execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 70.1 -491 0.1 0 2 0 200 force @s
+execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -502 70.1 -487 1 0 0.1 0 100 force @s
 
 # Fourth dialog
 execute if score @s switch.tutorial matches 4..5 run function switch:shop/pitchout

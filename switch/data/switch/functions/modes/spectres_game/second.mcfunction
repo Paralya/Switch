@@ -42,12 +42,6 @@ execute if score #spectres_game_seconds switch.data matches 220 if score #TASKS_
 # Troisième vague d'obsidiennes
 execute if score #spectres_game_seconds switch.data matches 350 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
 
-# Alternance des scoreboard damage et kills
-scoreboard players operation #temp switch.data = #spectres_game_seconds switch.data
-scoreboard players operation #temp switch.data %= #20 switch.data
-execute if score #temp switch.data matches 0 run scoreboard objectives setdisplay sidebar switch.temp.damages
-execute if score #temp switch.data matches 10 run scoreboard objectives setdisplay sidebar switch.temp.kills
-
 
 # Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..48] run effect give @s glowing 2 0 true

@@ -2,6 +2,7 @@
 gamemode adventure @s[gamemode=!adventure,tag=!can_creative]
 execute if entity @s[y=-64,dy=119] run tp @s 0 69.69 0 0 0
 team join switch.detached @s[team=!switch.tutorial]
+tp @s[team=switch.tutorial] -500 69.69 -500 0 0
 
 effect give @s[gamemode=survival] mining_fatigue 1 255 true
 effect give @s[gamemode=!creative,gamemode=!spectator] resistance 1 255 true
