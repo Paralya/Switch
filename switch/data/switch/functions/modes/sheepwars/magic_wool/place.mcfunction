@@ -13,6 +13,7 @@ execute if data storage switch:main {map:"survival_boat"} positioned 79062 138 7
 execute if data storage switch:main {map:"sheepwars_bonbons"} positioned 143044 140 143056 run function sheepwars:magic_wool/summon
 execute if data storage switch:main {map:"sheepwars_plateforme"} positioned 144044 140 144040 run function sheepwars:magic_wool/summon
 execute if data storage switch:main {map:"sheepwars_ilots"} positioned 145046 145 145059 run function sheepwars:magic_wool/summon
+execute if data storage switch:main {map:"sheepwars_colored_sheeps"} positioned 154054 147 154053 run function sheepwars:magic_wool/summon
 
 # Message
 tellraw @a[tag=!detached] ["",{"text":"[SheepWars] ","color":"yellow"},{"text":"Une laine magique est apparue !"}]

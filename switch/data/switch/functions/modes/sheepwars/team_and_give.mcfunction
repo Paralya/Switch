@@ -16,6 +16,8 @@ execute if data storage switch:main {map:"sheepwars_plateforme"} if entity @s[te
 execute if data storage switch:main {map:"sheepwars_plateforme"} if entity @s[team=switch.temp.red] run function switch:maps/survival/sheepwars_plateforme/tp_red_player
 execute if data storage switch:main {map:"sheepwars_ilots"} if entity @s[team=switch.temp.blue] run function switch:maps/survival/sheepwars_ilots/tp_blue_player
 execute if data storage switch:main {map:"sheepwars_ilots"} if entity @s[team=switch.temp.red] run function switch:maps/survival/sheepwars_ilots/tp_red_player
+execute if data storage switch:main {map:"sheepwars_colored_sheeps"} if entity @s[team=switch.temp.blue] run function switch:maps/survival/sheepwars_colored_sheeps/tp_blue_player
+execute if data storage switch:main {map:"sheepwars_colored_sheeps"} if entity @s[team=switch.temp.red] run function switch:maps/survival/sheepwars_colored_sheeps/tp_red_player
 
 # Starter kit
 clear @s
