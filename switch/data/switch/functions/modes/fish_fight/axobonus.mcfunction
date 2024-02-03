@@ -98,6 +98,7 @@ execute if score #random switch.data matches 9 run effect give @s regeneration 8
 execute if score #random switch.data matches 9 run effect give @s speed 10 0 true
 
 # si le score est 10, on donne un plastron anti kb
+execute if score #random switch.data matches 10 run scoreboard players set @s switch.temp.cooldown 100
 execute if score #random switch.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate{Enchantments:[{id:"minecraft:binding_curse",lvl:1}],AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"Invulnerable",Amount:100,Operation:0,UUID:[I;-1183043601,1352617525,-2118127505,-66323243],Slot:"chest"}]}
 execute if score #random switch.data matches 10 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 execute if score #random switch.data matches 10 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" est invincible pendant quelques secondes !","color":"white"},{"text":"\n "}]
