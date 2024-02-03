@@ -11,7 +11,7 @@ gamerule keepInventory true
 scoreboard players set #TEAM_FISH switch.data 0
 execute if predicate switch:chance/0.33 run scoreboard players set #TEAM_FISH switch.data 1
 execute if score #TEAM_FISH switch.data matches 1 run function switch:modes/fish_fight/teams_tp/setup
-execute if score #TEAM_FISH switch.data matches 1 as @a[tag=!detached] run function switch:modes/fish_fight/teams_tp/teams
+execute if score #TEAM_FISH switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/fish_fight/teams_tp/teams
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
