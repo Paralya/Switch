@@ -8,6 +8,8 @@ execute as @e[type=item,tag=!switch.checked] run function switch:modes/fish_figh
 execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
 
 # Détection si un joueur/axolotl est en mer
+execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival,scores={switch.alive=1..,switch.temp.cooldown=1..}] at @s if entity @s[y=20,dy=105] run function switch:modes/fish_fight/tp_airdox
+
 execute as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] run function switch:maps/spread_one_player 
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/fish_fight/death
 # axolot si map airdox
@@ -15,7 +17,9 @@ execute if data storage switch:main {map:"airdox_fish_fight"} as @e[type=axolotl
 execute if data storage switch:main {map:"airdox_fish_fight"} as @e[type=ender_pearl] at @s if entity @s[y=20,dy=105] run kill @s
 
 
-execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival] at @s if entity @s[y=20,dy=105] run function switch:modes/fish_fight/death
+execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival] at @s if entity @s[y=20,dy=105] run scoreboard players add @s switch.temp.deathCooldown 1
+
+execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival,scores={switch.temp.deathCooldown=60..}] run function switch:modes/fish_fight/death
 
 
 execute as @a[scores={switch.alive=1..},predicate=switch:in_water,sort=random] run function switch:modes/fish_fight/death

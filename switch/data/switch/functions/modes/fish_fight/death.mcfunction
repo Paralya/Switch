@@ -12,3 +12,7 @@ execute unless score @s switch.alive matches 1.. run gamemode spectator @s
 execute unless score @s switch.alive matches 1.. at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 execute unless score @s switch.alive matches 1.. run effect clear @s
 execute unless score @s switch.alive matches 1.. run clear @s
+
+
+
+scoreboard players set @s switch.temp.deathCooldown 0

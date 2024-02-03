@@ -37,6 +37,7 @@ scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.old_x dummy
 scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
+scoreboard objectives add switch.temp.deathCooldown dummy
 scoreboard objectives add switch.temp.axolotl_killed_const minecraft.killed:minecraft.axolotl {"text":"AxoBonus","color":"light_purple"}
 #création d'un score pour compter les axolotls tués par les joueurs
 scoreboard objectives add switch.temp.axolotl_killed minecraft.killed:minecraft.axolotl

@@ -1,4 +1,5 @@
 execute store result score #tp_random switch.data run random value 1..5
+scoreboard players set @s switch.temp.deathCooldown 0
 
 execute if score #tp_random switch.data matches 1 run tp @s 156002 151 155970
 

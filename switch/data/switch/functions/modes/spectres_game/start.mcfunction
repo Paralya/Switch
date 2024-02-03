@@ -14,6 +14,7 @@ function switch:utils/set_dynamic_time
 ## Partie spectror game aléatoire
 scoreboard objectives add switch.temp.spectror dummy
 scoreboard players set #SPECTROR_GAME switch.data 0
+scoreboard players set #SPECTROR_GAME switch.data 1
 execute if predicate switch:chance/0.33 run scoreboard players set #SPECTROR_GAME switch.data 1
 #mettre le score à 1
 
