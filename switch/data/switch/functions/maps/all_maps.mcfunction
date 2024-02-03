@@ -168,4 +168,5 @@
 #	155000	(survival)	: elza_dual_biomes
 #	156000	(survival)	: airdox_fish_fight
 #	157000	(survival)	: arti_ancient_city
+#	158000	(survival)	: yeti_in_panic
 
