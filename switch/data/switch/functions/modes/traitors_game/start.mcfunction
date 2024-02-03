@@ -39,26 +39,31 @@ team add switch.temp.sidebar.4
 team add switch.temp.sidebar.3
 team add switch.temp.sidebar.2
 team add switch.temp.sidebar.1
+team add switch.temp.sidebar.0
 team modify switch.temp.sidebar.5 suffix [{"text":"Inspecteur : ","color":"green"},{"text":"1","color":"yellow"}]
 team modify switch.temp.sidebar.4 suffix [{"text":"Ninja : ","color":"green"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.3 suffix [{"text":"Innocent : ","color":"green"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 suffix [{"text":"Traitre : ","color":"red"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.1 suffix [{"text":"Gros Traitre : ","color":"dark_red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.0 suffix [{"text":"Floupy : ","color":"gold"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.5 color green
 team modify switch.temp.sidebar.4 color green
 team modify switch.temp.sidebar.3 color green
 team modify switch.temp.sidebar.2 color red
 team modify switch.temp.sidebar.1 color dark_red
+team modify switch.temp.sidebar.0 color gold
 team join switch.temp.sidebar.5 §5
 team join switch.temp.sidebar.4 §4
 team join switch.temp.sidebar.3 §3
 team join switch.temp.sidebar.2 §2
 team join switch.temp.sidebar.1 §1
+team join switch.temp.sidebar.0 §0
 scoreboard players set §5 switch.temp.sidebar 5
 scoreboard players set §4 switch.temp.sidebar 4
 scoreboard players set §3 switch.temp.sidebar 3
 scoreboard players set §2 switch.temp.sidebar 2
 scoreboard players set §1 switch.temp.sidebar 1
+scoreboard players set §0 switch.temp.sidebar 0
 
 ## Scenarios
 # Traitors, affichage des scénarios supplémentaires en début de partie :
