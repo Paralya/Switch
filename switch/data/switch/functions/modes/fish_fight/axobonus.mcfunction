@@ -45,8 +45,8 @@ execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data m
 execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[gamemode=!spectator,team=switch.temp.blue] glowing 10 0 true
 execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run effect give @a[gamemode=!spectator,team=switch.temp.red] weakness 10 0 true
 execute if score #random switch.data matches 4 as @a[tag=!detached] at @s run playsound entity.splash_potion.throw ambient @s
-execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data matches 0 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a infligé aux autres joueurs un effet de Glowing et Slowness !","color":"white"},{"text":"\n "}]
-execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a infligé à l'équipe adverse un effet de Glowing et Slowness !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data matches 0 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a infligé aux autres joueurs un effet de Glowing et Weakness !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 4 if score #TEAM_FISH switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a infligé à l'équipe adverse un effet de Glowing et Weakness !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 4 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 4 run effect give @s speed 10 0 true
 
@@ -71,7 +71,7 @@ execute if score #random switch.data matches 7 run summon axolotl 151026 130 151
 execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound entity.axolotl.hurt ambient @s
 execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound entity.axolotl.splash ambient @s
 execute if score #random switch.data matches 7 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
-execute if score #random switch.data matches 7 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a invoqué des axolotls !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 7 run tellraw @a[tag=!detached] ["",{"text":"AxoBonus","bold":false,"color":"light_purple"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a invoqué des axolotls !","color":"white"},{"text":"\n "}]
 execute if score #random switch.data matches 7 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 7 run effect give @s speed 10 0 true
 
