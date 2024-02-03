@@ -324,6 +324,7 @@ generate_clone_survival_folder("luxio_fish_fight", (151000, 0, 151000), (151056,
 generate_clone_survival_folder("arti_tnt_run_tower", (152000, 0, 152000), (152020, 73, 152020), 100, override_tp_coords = (152010, 169, 152011))
 generate_clone_survival_folder("sheepwars_colored_sheeps", (154000, 0, 154000), (154107, 69, 154106), 100, override_tp_coords = (154035, 148, 154064))
 generate_clone_survival_folder("elza_dual_biomes", (155000, 0, 155000), (155042, 75, 155042), 100, override_tp_coords = (155021, 154, 155021))
+generate_clone_survival_folder("airdox_fish_fight", (155924, -52, 155924), (156076, 68, 156075), 75, override_tp_coords = (156009, 152, 155990))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air
