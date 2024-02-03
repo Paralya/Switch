@@ -6,5 +6,4 @@ item replace entity @s armor.feet with leather_boots{display:{color:255},Unbreak
 
 
 loot give @s loot switch:glassrunner/snowball_bridge_blue_x8
-loot give @s loot switch:glassrunner/renforced_snowball_bridge_blue_x2
 

@@ -6,7 +6,6 @@ execute if entity @s[scores={switch.alive=3}] run tellraw @a[tag=!detached] [{"s
 scoreboard players remove @s switch.alive 1
 execute if entity @s[scores={switch.alive=1..}] run function switch:modes/fish_fight/teams_tp/tp_give
 
-function switch:modes/fish_fight/advancements/on_death
 
 execute unless score @s switch.alive matches 1.. run scoreboard players add @s switch.stats.deaths 1
 execute unless score @s switch.alive matches 1.. run gamemode spectator @s

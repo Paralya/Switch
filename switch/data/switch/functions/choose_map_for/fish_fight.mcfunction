@@ -6,7 +6,7 @@ execute store result score #mc switch.data run data get storage switch:main fish
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main fish_fight_maps append value "luxio_fish_fight"
-# execute if score #mc switch.data matches 0 run data modify storage switch:main fish_fight_maps append value "airdox_fish_fight"
+execute if score #mc switch.data matches 0 run data modify storage switch:main fish_fight_maps append value "airdox_fish_fight"
 
 
 

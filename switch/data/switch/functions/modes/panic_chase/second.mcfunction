@@ -10,6 +10,7 @@ execute if score #panic_chase_seconds switch.data matches 0 run effect clear @a[
 execute if score #panic_chase_seconds switch.data matches 0 run effect clear @a[team=switch.temp.hunter] blindness
 execute if score #panic_chase_seconds switch.data matches 0 if data storage switch:main {map:"arti_box"} run fill 119021 106 119025 119026 104 119021 air replace tinted_glass
 execute if score #panic_chase_seconds switch.data matches 0 if data storage switch:main {map:"nether_storm"} run fill 122033 119 122036 122035 120 122038 air replace #switch:moutron/glass
+execute if score #panic_chase_seconds switch.data matches 0 if data storage switch:main {map:"yeti_in_panic"} run fill 158006 111 158006 158006 112 158006 air replace tinted_glass
 
 # Title actionbar
 scoreboard players operation #second switch.data = #remaining_time switch.data
