@@ -11,3 +11,5 @@ item replace entity @a[scores={switch.temp.role=5..6}] inventory.26 with potion{
 
 tellraw @a[scores={switch.temp.role=2..}] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" L'inspecteur est "},{"selector":"@a[scores={switch.temp.role=1}]","color":"green"},{"text":", donc ne l'accusez pas si vous êtes innocent !"}]
 
+tellraw @a[scores={switch.temp.role=7}] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous êtes "},{"text":"Floupy","color":"yellow"},{"text":" ! Vous avez le pouvoir de voler le rôle du premier joueur que vous tuez. Si vous tuez le Ninja, vous l'empêchez d'utiliser sa deuxième vie et vous lui voler son nombre de vie actuel. Vous devez gagner dans le camp dans lequel vous passez."}]
+
