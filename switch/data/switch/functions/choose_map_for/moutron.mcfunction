@@ -7,6 +7,7 @@ execute store result score #mc switch.data run data get storage switch:main mout
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main moutron_maps append value "whity_lab"
 execute if score #mc switch.data matches 0 run data modify storage switch:main moutron_maps append value "the_four_elements"
+execute if score #mc switch.data matches 0 run data modify storage switch:main moutron_maps append value "arti_ancient_city"
 
 
 
