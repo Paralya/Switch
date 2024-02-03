@@ -3,7 +3,7 @@ playsound entity.zombified_piglin.angry ambient @s
 execute as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_win
 execute as @a[tag=!detached] run function switch:maps/spread_one_player
 effect give @a[tag=!detached,gamemode=!spectator] slowness 4 5 true
-effect give @a[tag=!detached,gamemode=!spectator] blindness 3 5 true
+effect give @a[tag=!detached,gamemode=!spectator] blindness 3 1 true
 team remove switch.temp.red
 team remove switch.temp.blue
 clear @a[tag=!detached] red_wool
