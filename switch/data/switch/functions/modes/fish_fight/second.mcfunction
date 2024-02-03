@@ -3,7 +3,7 @@ scoreboard players add #fish_fight_seconds switch.data 1
 
 
 execute if score #fish_fight_seconds switch.data matches 3 as @a[tag=!detached] at @s run function switch:modes/fish_fight/give_items
-execute if score #fish_fight_seconds switch.data matches 3 if score #TEAM_FISH switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Fish Fight","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"(1 partie sur 3)","italic":true,"color":"gray"},{"text":" Le jeu se déroulera en ","color":"white"},{"text":"équipes","underlined":true,"color":"white"},{"text":" !","color":"white"},{"text":"\n "}]
+execute if score #fish_fight_seconds switch.data matches 3 if score #TEAM_FISH switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Fish Fight","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"(1 partie sur 2)","italic":true,"color":"gray"},{"text":" Le jeu se déroulera en ","color":"white"},{"text":"équipes","underlined":true,"color":"white"},{"text":" !","color":"white"},{"text":"\n "}]
 
 
 # spawn axolot
@@ -30,21 +30,18 @@ execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] un
 
 #TNT
 
-execute if score #fish_fight_seconds switch.data matches 70 run give @r[tag=!detached,gamemode=!spectator] tnt 1
-execute if score #fish_fight_seconds switch.data matches 70 run give @r[tag=!detached,gamemode=!spectator] oak_pressure_plate 1
-execute if score #fish_fight_seconds switch.data matches 70 run give @r[tag=!detached,gamemode=!spectator] tnt 1
-execute if score #fish_fight_seconds switch.data matches 70 run give @r[tag=!detached,gamemode=!spectator] oak_pressure_plate 1
-execute if score #fish_fight_seconds switch.data matches 70 run give @r[tag=!detached,gamemode=!spectator] tnt 1
-execute if score #fish_fight_seconds switch.data matches 70 run give @r[tag=!detached,gamemode=!spectator] oak_pressure_plate 1
+execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 # tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires 
 execute if score #fish_fight_seconds switch.data matches 69 run tellraw @a[tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des TNT ont été donnés à des joueurs aléatoires !","color":"white"},{"text":"\n "}]
 
-execute if score #fish_fight_seconds switch.data matches 125 run give @r[tag=!detached,gamemode=!spectator] tnt 2
-execute if score #fish_fight_seconds switch.data matches 125 run give @r[tag=!detached,gamemode=!spectator] oak_pressure_plate 2
-execute if score #fish_fight_seconds switch.data matches 125 run give @r[tag=!detached,gamemode=!spectator] tnt 2
-execute if score #fish_fight_seconds switch.data matches 125 run give @r[tag=!detached,gamemode=!spectator] oak_pressure_plate 2
-execute if score #fish_fight_seconds switch.data matches 125 run give @r[tag=!detached,gamemode=!spectator] tnt 2
-execute if score #fish_fight_seconds switch.data matches 125 run give @r[tag=!detached,gamemode=!spectator] oak_pressure_plate 2
+execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
+execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 
 # tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires
 execute if score #fish_fight_seconds switch.data matches 125 run tellraw @a[tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des TNT ont été donnés à des joueurs aléatoires !","color":"white"},{"text":"\n "}]
