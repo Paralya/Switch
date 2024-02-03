@@ -7,6 +7,7 @@ execute store result score #mc switch.data run data get storage switch:main tnt_
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main tnt_run_maps append value "tnt_run_futuristic"
 execute if score #mc switch.data matches 0 run data modify storage switch:main tnt_run_maps append value "arti_tnt_run_tower"
+execute if score #mc switch.data matches 0 run data modify storage switch:main tnt_run_maps append value "elza_dual_biomes"
 
 
 
