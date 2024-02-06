@@ -22,9 +22,10 @@ execute if score #role switch.data matches 6 run tellraw @p[tag=switch.floupy] [
 execute if score #role switch.data matches 7 run tellraw @p[tag=switch.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Floupy","color":"yellow"},{"text":" !"}]
 
 # Effects
-execute if score #role switch.data matches 1 run attribute @s generic.max_health base set 16
-execute if score #role switch.data matches 3..4 run attribute @s generic.movement_speed base set 0.115
-execute if score #role switch.data matches 7 run attribute @s generic.max_health base set 30
+execute if score #role switch.data matches 1 run attribute @p[tag=switch.floupy] generic.max_health base set 16
+execute if score #role switch.data matches 1 run team join switch.temp.visible @p[tag=switch.floupy]
+execute if score #role switch.data matches 3..4 run attribute @p[tag=switch.floupy] generic.movement_speed base set 0.115
+execute if score #role switch.data matches 7 run attribute @p[tag=switch.floupy] generic.max_health base set 30
 
 # Remove tag
 scoreboard players reset @a[tag=switch.floupy] switch.temp.kills

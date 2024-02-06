@@ -5,18 +5,16 @@
 execute store result score #count switch.data if entity @a[tag=!detached,gamemode=!spectator]
 
 # Summon lootboxes depending on the player count
-summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
-summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
-execute if score #count switch.data matches 5.. run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
-execute if score #count switch.data matches 8.. run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
-execute if score #count switch.data matches 15.. run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Tags:["switch.new"]}
+summon chicken ~ ~ ~ {Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Time:20,Tags:["switch.new"]}]}
+execute if score #count switch.data matches 5.. run summon chicken ~ ~ ~ {Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Time:20,Tags:["switch.new"]}]}
+execute if score #count switch.data matches 15.. run summon chicken ~ ~ ~ {Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Time:20,Tags:["switch.new"]}]}
 
 
 # Spreadplayers
-execute as @e[type=falling_block,tag=switch.new] run function switch:maps/spread_one_player
+execute as @e[type=chicken,tag=switch.new] run function switch:maps/spread_one_player
 
 # donner slow falling à l'obsidienne    
-effect give @e[type=falling_block,tag=switch.new] slow_falling 15 15 true
+effect give @e[type=chicken,tag=switch.new] slow_falling 15 15 true
 
 # Téléporte le bloc en hauteur pour qu'il chute plus longtemps
 execute as @e[type=falling_block,tag=switch.new] at @s positioned over world_surface run tp @s ~ ~-2 ~

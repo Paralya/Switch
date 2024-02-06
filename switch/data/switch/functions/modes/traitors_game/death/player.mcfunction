@@ -10,7 +10,6 @@ attribute @s[scores={switch.alive=0}] generic.max_health base set 20.0
 tag @s[scores={switch.alive=0}] add switch.to_tp
 gamemode spectator @s[scores={switch.alive=0}]
 effect clear @s[scores={switch.alive=0}]
-tag @s remove switch.solitaire
 
 
 # Second life management for Ninja role
