@@ -27,6 +27,11 @@ execute if score #spectres_game_seconds switch.data matches 15 if score #TASKS_G
 # Première vague d'obsidiennes
 
 execute if score #spectres_game_seconds switch.data matches 70 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+execute if score #spectres_game_seconds switch.data matches 75 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+execute if score #spectres_game_seconds switch.data matches 80 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+execute if score #spectres_game_seconds switch.data matches 82 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+execute if score #spectres_game_seconds switch.data matches 85 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+execute if score #spectres_game_seconds switch.data matches 90 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
 # Première vague d'obsidiennes
 execute if score #spectres_game_seconds switch.data matches 200 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
 # Première vague d'obsidiennes

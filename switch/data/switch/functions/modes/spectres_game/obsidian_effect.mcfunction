@@ -12,13 +12,13 @@ execute if score #random switch.data matches 0 if entity @s[team=switch.temp.vis
 execute if score #random switch.data matches 1 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] speed 12 1 true
 execute if score #random switch.data matches 1 if entity @s[team=switch.temp.spectre] run effect give @a[tag=!detached,team=switch.temp.spectre] speed 12 1 true
 execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.splash_potion.throw ambient @s
-execute if score #random switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" Les visibles ont obtenu un effet de vitesse !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" aobtenu un effet de vitesse pour son équipe !","color":"white"},{"text":"\n "}]
 
 # si le score est 2, on donne deux pommes d'or aux visibles ou spectre
 execute if score #random switch.data matches 2 if entity @s[team=switch.temp.visible] run give @a[tag=!detached,team=switch.temp.visible] golden_apple 1
 execute if score #random switch.data matches 2 if entity @s[team=switch.temp.spectre] run give @a[tag=!detached,team=switch.temp.spectre] golden_apple 1
 execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound entity.generic.eat ambient @s
-execute if score #random switch.data matches 2 run tellraw @a[tag=!detached] ["",{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a obtenu une pomme d'or pour son équipe !","color":"white"},{"text":"\n "}]
+execute if score #random switch.data matches 2 run tellraw @a[tag=!detached] ["",{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022 ","bold":true,"color":"gray"},{"selector":"@s","color":"yellow","bold":true},{"text":" a obtenu une pomme d'or pour son équipe !","color":"white"},{"text":"\n "}]
 
 # si le score est 3, on donne un effet d'absorption aux visibles ou spectre
 execute if score #random switch.data matches 3 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] absorption 25 1 true
@@ -99,4 +99,4 @@ execute if score #random switch.data matches 12 run tellraw @a[tag=!detached] ["
 
 
 # on reset le score de break obsidian
-scoreboard players set @s switch.break_obsidian 0
+scoreboard players remove @s switch.temp.break_obsidian 1

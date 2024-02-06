@@ -30,3 +30,5 @@ advancement grant @a[tag=!detached,team=switch.temp.spectre,scores={switch.temp.
 execute if score #spectres_game_seconds switch.data matches 1..900 run function switch:modes/spectres_game/detect_end
 execute if score #spectres_game_seconds switch.data matches 901.. run function switch:modes/spectres_game/process_end
 
+# obsidienne poulmet
+execute as @e[type=falling_block] at @s unless block ~ ~-2 ~ minecraft:air run ride @s dismount
