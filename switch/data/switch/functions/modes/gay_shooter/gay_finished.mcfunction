@@ -5,5 +5,5 @@ clear @s
 loot give @s loot stardust:i/ultimate_sniper
 loot give @s loot stardust:i/ultimate_bullet_x32
 item replace entity @s weapon.offhand with shield
-advancement grant @s only switch:visible/6
+execute unless score #test_mode switch.data matches 1 run advancement grant @s only switch:visible/6
 

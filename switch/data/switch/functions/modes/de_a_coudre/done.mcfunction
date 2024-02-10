@@ -32,7 +32,7 @@ execute if score #points switch.data matches 1..4 run summon firework_rocket ~ ~
 
 execute if score #points switch.data matches 5 run scoreboard players set #points switch.data 6
 execute if score #points switch.data matches 6 run scoreboard players add @s switch.temp.nb_de_a_coudre 1
-execute if score @s switch.temp.nb_de_a_coudre matches 3 run advancement grant @s only switch:visible/21
+execute unless score #test_mode switch.data matches 1 if score @s switch.temp.nb_de_a_coudre matches 3 run advancement grant @s only switch:visible/21
 execute if score #points switch.data matches 1 run tellraw @a[tag=!detached] [{"selector":"@s","color":"green"},{"text":" valide son saut et fait "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" point !"}]
 execute if score #points switch.data matches 2.. run tellraw @a[tag=!detached] [{"selector":"@s","color":"green"},{"text":" valide son saut et fait "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" points !"}]
 scoreboard players operation @s switch.temp.points += #points switch.data

@@ -1,7 +1,7 @@
 
 # Advancement
-execute if entity @s[tag=switch.blue_flag] run advancement grant @p[team=switch.temp.blue,distance=..1] only switch:visible/81
-execute if entity @s[tag=switch.red_flag] run advancement grant @p[team=switch.temp.red,distance=..1] only switch:visible/81
+execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.blue_flag] run advancement grant @p[team=switch.temp.blue,distance=..1] only switch:visible/81
+execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[team=switch.temp.red,distance=..1] only switch:visible/81
 
 # Copy initial pos and rotation
 data modify storage switch:temp Pos set from entity @s item.tag.Pos

@@ -8,7 +8,7 @@ execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=m
 execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/beat_the_kings/death/for_global
 
 # Advancement
-advancement grant @a[scores={switch.temp.killed_kings=1..}] only switch:visible/66
+execute unless score #test_mode switch.data matches 1 run advancement grant @a[scores={switch.temp.killed_kings=1..}] only switch:visible/66
 
 # Détection de fin de partie
 execute if score #beat_the_kings_seconds switch.data matches 1..900 run function switch:modes/beat_the_kings/detect_end

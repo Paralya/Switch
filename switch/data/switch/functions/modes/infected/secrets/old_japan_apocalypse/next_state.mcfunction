@@ -34,7 +34,7 @@ execute if score #infected_secret switch.data matches 16 as @p[tag=!detached,tea
 execute if score #infected_secret switch.data matches 16 as @r[tag=!detached,team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Il ne reste plus qu'à attendre les renforts !"}]
 
 # Humans victory
-execute if score #infected_secret switch.data matches 17 run advancement grant @a[team=switch.temp.human] only switch:visible/50
+execute if score #infected_secret switch.data matches 17 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/50
 execute if score #infected_secret switch.data matches 17 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
 execute if score #infected_secret switch.data matches 17 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, les renforts sont arrivés !"}]
 execute if score #infected_secret switch.data matches 17 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Si on veut sauver cette planète, nous devons nous en savoir plus sur ces météorites ! Il faut aller consulter les recherches des égyptiens !"}]

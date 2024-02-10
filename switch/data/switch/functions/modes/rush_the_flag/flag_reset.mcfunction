@@ -1,7 +1,7 @@
 
 # Advancement
-execute if entity @s[tag=switch.blue_flag] run advancement grant @p[team=switch.rush_the_point.blue,distance=..1] only switch:visible/81
-execute if entity @s[tag=switch.red_flag] run advancement grant @p[team=switch.rush_the_point.red,distance=..1] only switch:visible/81
+execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.blue_flag] run advancement grant @p[team=switch.rush_the_point.blue,distance=..1] only switch:visible/81
+execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[team=switch.rush_the_point.red,distance=..1] only switch:visible/81
 
 # Flag Reset Blue
 execute if entity @s[tag=switch.blue_flag] on vehicle run tp @s 14077 99 14000 -90 0

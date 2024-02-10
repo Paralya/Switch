@@ -9,7 +9,7 @@ execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detac
 execute as @a[tag=!detached,gamemode=survival] at @s if entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect clear @s glowing
 
 # Advancement
-advancement grant @a[tag=!detached,scores={switch.temp.kill=1..,switch.temp.cooldown_kill=1..}] only switch:visible/9
+execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.kill=1..,switch.temp.cooldown_kill=1..}] only switch:visible/9
 scoreboard players set @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.cooldown_kill 200
 scoreboard players remove @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill 1
 scoreboard players remove @a[tag=!detached,scores={switch.temp.cooldown_kill=1..}] switch.temp.cooldown_kill 1

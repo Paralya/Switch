@@ -16,7 +16,7 @@ execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kar
 scoreboard players operation #temp switch.data = #life_time switch.data
 scoreboard players operation #temp switch.data /= #20 switch.data
 title @a[tag=!detached] actionbar [{"text":"Durée des trainées : ","color":"aqua"},{"score":{"name":"#temp","objective":"switch.data"},"color":"yellow"},{"text":"s","color":"aqua"}]
-execute if score #temp switch.data matches 15.. run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/38
+execute unless score #test_mode switch.data matches 1 if score #temp switch.data matches 15.. run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/38
 
 ## Fin de partie
 scoreboard players set #remaining_players switch.data 0

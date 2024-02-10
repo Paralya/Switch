@@ -23,5 +23,5 @@ execute if score #APOCALYPSE_GAME switch.data matches 1 if score #magic_wool swi
 execute if score #magic_wool switch.data matches 15 run function switch:modes/sheepwars/magic_wool/place
 
 # Humm Charal advancement
-advancement grant @a[tag=!detached,scores={switch.temp.killed_sheep=10..}] only switch:visible/45
+execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.killed_sheep=10..}] only switch:visible/45
 

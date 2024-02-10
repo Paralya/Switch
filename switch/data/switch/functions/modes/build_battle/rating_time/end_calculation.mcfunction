@@ -23,5 +23,5 @@ execute as @a[scores={switch.temp.rank=1}] at @s run function switch:engine/add_
 scoreboard objectives remove switch.temp.rank
 
 # Advancement
-advancement grant @a[scores={switch.temp.points=50..}] only switch:visible/28
+execute unless score #test_mode switch.data matches 1 run advancement grant @a[scores={switch.temp.points=50..}] only switch:visible/28
 

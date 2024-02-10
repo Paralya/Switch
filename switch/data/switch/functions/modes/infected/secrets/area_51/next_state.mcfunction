@@ -41,7 +41,7 @@ execute if score #infected_secret switch.data matches 8 as @e[tag=switch.giant] 
 execute if score #infected_secret switch.data matches 8 at @e[limit=24] at @e[tag=switch.giant] run summon zombie ~ ~ ~ {Team:"switch.temp.zombie"}
 
 # End (killed the giant)
-execute if score #infected_secret switch.data matches 9 run advancement grant @a[team=switch.temp.human] only switch:visible/53
+execute if score #infected_secret switch.data matches 9 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/53
 execute if score #infected_secret switch.data matches 9 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
 execute if score #infected_secret switch.data matches 9 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est la merde, il n'y a plus rien sur cette terre qui peut nous sauver."}]
 execute if score #infected_secret switch.data matches 9 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> On doit donc vraiment, exterminer, tous les zombies, pour survivre..."}]

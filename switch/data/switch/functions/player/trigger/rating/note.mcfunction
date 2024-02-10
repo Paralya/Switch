@@ -2,7 +2,7 @@
 ## Advancement
 scoreboard objectives add switch.rates_given dummy
 scoreboard players add @s switch.rates_given 1
-execute if score @s switch.rates_given matches 20.. run advancement grant @s only switch:visible/56
+execute unless score #test_mode switch.data matches 1 if score @s switch.rates_given matches 20.. run advancement grant @s only switch:visible/56
 
 
 ## {index:0,index_hundred:0,digits:0,player:""}

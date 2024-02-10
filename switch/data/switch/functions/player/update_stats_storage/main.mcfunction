@@ -17,5 +17,5 @@ execute if data storage switch:main copy[0] run data modify storage switch:main 
 execute if data storage switch:main copy[0] run function switch:player/update_stats_storage/stats_per_minigame with storage switch:main copy[0]
 
 # Advancement "Multigamer"
-execute if score #total_games_not_won switch.data matches 0 run advancement grant @s only switch:visible/60
+execute unless score #test_mode switch.data matches 1 if score #total_games_not_won switch.data matches 0 run advancement grant @s only switch:visible/60
 

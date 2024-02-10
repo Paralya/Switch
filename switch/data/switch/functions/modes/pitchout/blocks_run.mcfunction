@@ -11,5 +11,5 @@ execute if score #z switch.data matches ..-1 run scoreboard players operation @s
 execute if score #z switch.data matches 1.. run scoreboard players operation @s switch.temp.blocks_run += #z switch.data
 execute store result score @s switch.temp.old_x run data get entity @s Pos[0]
 execute store result score @s switch.temp.old_z run data get entity @s Pos[2]
-execute if score @s switch.temp.blocks_run matches 500.. run advancement grant @s only switch:visible/47
+execute unless score #test_mode switch.data matches 1 if score @s switch.temp.blocks_run matches 500.. run advancement grant @s only switch:visible/47
 

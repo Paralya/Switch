@@ -10,7 +10,7 @@ execute as @a[tag=!detached,gamemode=adventure] at @s run function switch:modes/
 
 # Infinite snowball
 item replace entity @a[tag=!detached] hotbar.0 with snowball 16
-advancement grant @a[tag=!detached,scores={switch.temp.snowballs_shot=42..}] only switch:visible/72
+execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.snowballs_shot=42..}] only switch:visible/72
 
 # Process end
 execute unless entity @a[scores={switch.alive=1..}] run function switch:modes/warden_escape/process_end

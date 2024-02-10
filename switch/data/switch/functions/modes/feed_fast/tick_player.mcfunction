@@ -9,5 +9,5 @@ execute if score #foodLevel switch.data matches 1.. run scoreboard players opera
 execute store result score @s switch.temp.previous_food run data get entity @s foodLevel
 
 # Advancement
-execute if score @s switch.temp.points matches 50.. run advancement grant @s only switch:visible/8
+execute unless score #test_mode switch.data matches 1 if score @s switch.temp.points matches 50.. run advancement grant @s only switch:visible/8
 

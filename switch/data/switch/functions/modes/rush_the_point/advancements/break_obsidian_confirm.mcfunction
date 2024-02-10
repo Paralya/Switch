@@ -48,4 +48,4 @@ execute if score #random switch.data matches 9 run tellraw @a[tag=!detached] ["\
 
 # Increment
 scoreboard players add @s switch.temp.total_obsidian 1
-execute if score @s switch.temp.total_obsidian matches 5.. run advancement grant @s only switch:visible/43
+execute unless score #test_mode switch.data matches 1 if score @s switch.temp.total_obsidian matches 5.. run advancement grant @s only switch:visible/43

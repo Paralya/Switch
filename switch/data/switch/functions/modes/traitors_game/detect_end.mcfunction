@@ -38,7 +38,7 @@ execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={s
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=5},tag=!switch.traitors_game.big_traitor] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 4 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=6}] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 9 as @a[tag=!detached,scores={switch.alive=1..},tag=switch.solitaire] at @s run function switch:engine/add_win
-execute if score #game_state switch.data matches 4 run advancement grant @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=6}] only switch:visible/5
+execute if score #game_state switch.data matches 4 unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.alive=1..,switch.temp.role=6}] only switch:visible/5
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 1 as @a[scores={switch.alive=1..,switch.temp.role=..4}] at @s run function switch:engine/add_win
 
 # Cas des égalités
