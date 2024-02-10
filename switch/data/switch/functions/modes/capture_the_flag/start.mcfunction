@@ -1,5 +1,4 @@
 
-
 effect give @a[tag=!detached] resistance 10 255 true
 effect give @a[tag=!detached] saturation 10 255 true
 effect give @a[tag=!detached] regeneration 10 255 true
