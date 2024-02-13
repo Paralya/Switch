@@ -20,5 +20,5 @@ clear @s
 # Killed by murderer as murderer?
 scoreboard players set #murderer_killer switch.data 0
 execute on attacker if score @s switch.temp.role matches 3 run scoreboard players set #murderer_killer switch.data 1
-execute if score #murderer_killer switch.data matches 1 if score @s switch.temp.role matches 3 run advancement grant @s only switch:visible/80
+execute unless score #test_mode switch.data matches 1 if score #murderer_killer switch.data matches 1 if score @s switch.temp.role matches 3 run advancement grant @s only switch:visible/80
 

@@ -22,8 +22,8 @@ execute if score #game_state switch.data matches 4 run tellraw @a[tag=!detached]
 execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] unless score @s switch.temp.spectror matches 1 at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 4 as @a[tag=!detached,scores={switch.temp.spectror=1},team=switch.temp.spectre] at @s run function switch:engine/add_win
-execute if score #game_state switch.data matches 1 if score #nb_dead_visibles switch.data matches 0 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] run advancement grant @s only switch:visible/12
-execute if score #game_state switch.data matches 2 if score #nb_dead_spectres switch.data matches 0 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] run advancement grant @s only switch:visible/12
+execute if score #game_state switch.data matches 1 unless score #test_mode switch.data matches 1 if score #nb_dead_visibles switch.data matches 0 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] run advancement grant @s only switch:visible/12
+execute if score #game_state switch.data matches 2 unless score #test_mode switch.data matches 1 if score #nb_dead_spectres switch.data matches 0 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] run advancement grant @s only switch:visible/12
 
 
 # Visuel de fin de partie

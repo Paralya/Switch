@@ -7,4 +7,4 @@ scoreboard players set #success switch.data 1
 
 # Advancement
 scoreboard players add @s switch.temp.nb_de_a_coudre 1
-execute if score @s switch.temp.nb_de_a_coudre matches 3 run advancement grant @s only switch:visible/21
+execute unless score #test_mode switch.data matches 1 if score @s switch.temp.nb_de_a_coudre matches 3 run advancement grant @s only switch:visible/21

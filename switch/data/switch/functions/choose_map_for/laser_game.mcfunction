@@ -6,8 +6,6 @@ execute store result score #mc switch.data run data get storage switch:main lase
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
 execute if score #mc switch.data matches 0 run data modify storage switch:main laser_game_maps append value "laser_game"
-execute if score #mc switch.data matches 0 run data modify storage switch:main laser_game_maps append value "operation_pigclaw"
-execute if score #mc switch.data matches 0 run data modify storage switch:main laser_game_maps append value "nuketown"
 
 
 

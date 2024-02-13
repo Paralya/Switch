@@ -3,7 +3,7 @@
 scoreboard players set @p[scores={switch.temp.to_rate=2}] switch.temp.points 0
 scoreboard players operation @p[scores={switch.temp.to_rate=2}] switch.temp.points += @a[tag=!detached,gamemode=!spectator] switch.temp.rating_vote
 scoreboard players operation @p[scores={switch.temp.to_rate=2}] switch.temp.points -= @p[scores={switch.temp.to_rate=2}] switch.temp.rating_vote
-execute as @p[scores={switch.temp.to_rate=2}] at @s if entity @a[tag=!detached,distance=0.001..,scores={switch.temp.rating_vote=12}] run advancement grant @s only switch:visible/49
+execute unless score #test_mode switch.data matches 1 as @p[scores={switch.temp.to_rate=2}] at @s if entity @a[tag=!detached,distance=0.001..,scores={switch.temp.rating_vote=12}] run advancement grant @s only switch:visible/49
 
 # Save the build
 execute as @e[type=marker,tag=switch.build_battle_save,limit=1] at @s run function switch:modes/build_battle/rating_time/save_build

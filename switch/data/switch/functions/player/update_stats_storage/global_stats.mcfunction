@@ -34,7 +34,7 @@ $execute unless data storage switch:stats all.player.played_win_ratio[{name:"$(p
 $scoreboard players operation #temp switch.data = $(player) switch.stats.wins
 scoreboard players operation #temp switch.data *= #100000 switch.data
 $scoreboard players operation #temp switch.data /= $(player) switch.stats.played
-$execute unless score $(player) switch.stats.played matches 10.. run scoreboard players set #temp switch.data 0
+$execute unless score $(player) switch.stats.played matches 25.. run scoreboard players set #temp switch.data 0
 $execute store result storage switch:stats all.player.played_win_ratio[{name:"$(player)"}].value float 0.001 run scoreboard players get #temp switch.data
 $execute unless data storage switch:stats all.player.advancement_count[{name:"$(player)"}] run data modify storage switch:stats all.player.advancement_count append value {name:"$(player)",value:0}
 $execute store result storage switch:stats all.player.advancement_count[{name:"$(player)"}].value int 1 run scoreboard players get $(player) switch.advancements

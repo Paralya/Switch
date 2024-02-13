@@ -2,6 +2,7 @@
 scoreboard players set #color switch.data 0
 execute store success score #color switch.data if entity @s[team=switch.rush_the_point.blue]
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
+scoreboard players remove @s switch.temp.break_obsidian 1
 
 # Random
 execute store result score #random switch.data run random value 0..9

@@ -43,5 +43,5 @@ setblock 72114 112 72090 dark_oak_trapdoor[powered=true,open=true,facing=north]
 execute as @e[tag=switch.laser_game.base] run data modify entity @s Item set value {id:""}
 
 # Advancement
-advancement grant @s only switch:visible/77
+execute unless score #test_mode switch.data matches 1 run advancement grant @s only switch:visible/77
 

@@ -7,9 +7,6 @@ scoreboard players remove #remaining_time switch.data 1
 execute if score #laser_game_seconds switch.data matches ..9 run kill @e[type=!player,type=!marker]
 execute if score #laser_game_seconds switch.data matches 10 run kill @e[tag=switch.laser_game.base]
 execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"laser_game"} run summon item_frame 516 104 523 {Tags:["switch.laser_game.base"],Facing:2b,Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Glowing:1b}
-execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"operation_pigclaw"} run summon item_frame 36041 149 36011 {Tags:["switch.laser_game.base"],Facing:5b,Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Glowing:1b}
-execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"operation_pigclaw"} run summon item_frame 36041 149 36012 {Tags:["switch.laser_game.base"],Facing:5b,Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Glowing:1b}
-execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"nuketown"} run summon item_frame 72114 112 72090 {Tags:["switch.laser_game.base"],Facing:2b,Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Glowing:1b,Rotation:[180.0f,0.0f]}
 
 
 # Base reload

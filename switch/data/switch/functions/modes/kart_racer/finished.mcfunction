@@ -17,4 +17,4 @@ tag @s remove shopping_kart.temp
 
 # Advancement
 scoreboard players remove @s switch.temp.pos_on_last_lap 5
-execute if score @s switch.temp.pv_classement <= @s switch.temp.pos_on_last_lap run advancement grant @s only switch:visible/20
+execute unless score #test_mode switch.data matches 1 if score @s switch.temp.pv_classement <= @s switch.temp.pos_on_last_lap run advancement grant @s only switch:visible/20

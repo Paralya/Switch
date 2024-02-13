@@ -24,8 +24,8 @@ execute if score #mins switch.data matches ..4 if score #pos_y switch.data match
 execute if score #mins switch.data matches ..4 if score #pos_y switch.data matches ..108 run kill @e[tag=switch.layers_4_teams.marker]
 
 # Detect Xenophobe advancement
-execute as @a[tag=!detached] if score @s switch.temp.killed_red = #total switch.temp.killed_red run advancement grant @s only switch:visible/42
-execute as @a[tag=!detached] if score @s switch.temp.killed_blue = #total switch.temp.killed_blue run advancement grant @s only switch:visible/42
-execute as @a[tag=!detached] if score @s switch.temp.killed_green = #total switch.temp.killed_green run advancement grant @s only switch:visible/42
-execute as @a[tag=!detached] if score @s switch.temp.killed_yellow = #total switch.temp.killed_yellow run advancement grant @s only switch:visible/42
+execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_red = #total switch.temp.killed_red run advancement grant @s only switch:visible/42
+execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_blue = #total switch.temp.killed_blue run advancement grant @s only switch:visible/42
+execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_green = #total switch.temp.killed_green run advancement grant @s only switch:visible/42
+execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_yellow = #total switch.temp.killed_yellow run advancement grant @s only switch:visible/42
 

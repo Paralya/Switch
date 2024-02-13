@@ -15,7 +15,7 @@ execute if score #infected_secret switch.data matches 3 run tellraw @a[tag=!deta
 execute if score #infected_secret switch.data matches 3 run gamerule doTileDrops false
 
 # TNT exploded (end)
-execute if score #infected_secret switch.data matches 4 run advancement grant @a[team=switch.temp.human] only switch:visible/52
+execute if score #infected_secret switch.data matches 4 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/52
 execute if score #infected_secret switch.data matches 4 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
 execute if score #infected_secret switch.data matches 4 as @p[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> C'est bon, le minerai est détruit !"}]
 execute if score #infected_secret switch.data matches 4 as @r[team=switch.temp.human] run tellraw @a[tag=!detached] [{"text":"<","color":"gray","italic":true},{"selector":"@s","color":"gray","italic":true},{"text":"> Il n'y a plus qu'une seule chose à faire, c'est de survivre jusqu'à ce que nos renforts arrivent afin d'aller étudier ce minerai au méga-laboratoire !"}]
