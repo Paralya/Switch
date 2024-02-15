@@ -25,7 +25,7 @@ execute if score #inventory switch.data matches -1 unless data storage switch:te
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_brown run tp @s -35 74 -9 180 0
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_purple run tp @s -9 74 35 90 0
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_dripstone run tp @s 9 73 47 -90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run tp @s -74 71 0 90 0
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run tp @s -84 71 0 90 0
 execute if score #inventory switch.data matches -1 run clear @s
 
 # If lost at least one item, setup inventory

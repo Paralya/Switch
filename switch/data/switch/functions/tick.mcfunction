@@ -31,7 +31,7 @@ advancement grant @a[x=63,y=88,z=10,distance=..2,gamemode=!creative,gamemode=!sp
 advancement grant @a[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:jump_red
 advancement grant @a[x=-20,y=75,z=-78,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_brown
 advancement grant @a[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_purple
-advancement grant @a[x=-112,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_bricks
+advancement grant @a[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_bricks
 
 ## Profiling
 #function switch:profiling/start
