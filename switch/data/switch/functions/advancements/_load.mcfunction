@@ -12,6 +12,7 @@ execute unless data storage switch:advancements all[{id:"jump_brown"}] run data 
 execute unless data storage switch:advancements all[{id:"jump_purple"}] run data modify storage switch:advancements all append value {id:"jump_purple",percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:"jump_dripstone"}] run data modify storage switch:advancements all append value {id:"jump_dripstone",percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:"jump_bricks"}] run data modify storage switch:advancements all append value {id:"jump_bricks",percent:{int:0,digits:0},players:[],total:0}
+execute unless data storage switch:advancements all[{id:"jump_pink"}] run data modify storage switch:advancements all append value {id:"jump_pink",percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:1}] run data modify storage switch:advancements all append value {id:1,percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:2}] run data modify storage switch:advancements all append value {id:2,percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:3}] run data modify storage switch:advancements all append value {id:3,percent:{int:0,digits:0},players:[],total:0}
@@ -106,6 +107,7 @@ data modify storage switch:advancements all[{id:"jump_brown"}] merge value {colo
 data modify storage switch:advancements all[{id:"jump_purple"}] merge value {color:"blue",auteur:"AirDox",name:"The Purple Jump",description:"Finir le jump violet pour la première fois"}
 data modify storage switch:advancements all[{id:"jump_dripstone"}] merge value {color:"blue",auteur:"AirDox",name:"The Dripstone Jump",description:"Finir le jump dripstone pour la première fois"}
 data modify storage switch:advancements all[{id:"jump_bricks"}] merge value {color:"blue",auteur:"Thitanas",name:"The Bricks Jump",description:"Finir le jump des briques pour la première fois"}
+data modify storage switch:advancements all[{id:"jump_pink"}] merge value {color:"blue",auteur:"OfChara",name:"The Pink Jump",description:"Finir le jump rose pour la première fois"}
 data modify storage switch:advancements all[{id:1}] merge value {color:"green",auteur:"Stoupy",name:"Bénévolat",description:"Aider à la construction d'une map ou la création d'un mini-jeu"}
 data modify storage switch:advancements all[{id:2}] merge value {color:"green",auteur:"Stoupy",name:"Fidèle",description:"Jouez un total de 100 parties sur le Switch"}
 data modify storage switch:advancements all[{id:3}] merge value {color:"green",auteur:"Stoupy",name:"La moula",description:"Ayez au moins 400$ dans votre porte-monnaie"}
@@ -141,7 +143,7 @@ data modify storage switch:advancements all[{id:32}] merge value {color:"yellow"
 data modify storage switch:advancements all[{id:33}] merge value {color:"yellow",auteur:"Megamat",name:"Rush Thief",description:"Sécurisez le drapeau ennemi en Capture/Rush The Flag"}
 data modify storage switch:advancements all[{id:34}] merge value {color:"green",auteur:"Megamat",name:"Monopoly",description:"Ramasser 20 lingots d'or en une partie en Murder Mystery"}
 data modify storage switch:advancements all[{id:35}] merge value {color:"green",auteur:"Xiaojuun",name:"Daltonien",description:"Meurs à la première manche en Block Party"}
-data modify storage switch:advancements all[{id:36}] merge value {color:"green",auteur:"Megamat",name:"Contre son camp",description:"Marcher sur sa propre mine pendant une partie de Memory Mine"}
+data modify storage switch:advancements all[{id:36}] merge value {color:"green",auteur:"Megamat",name:"Contre son camp",description:"Marcher sur sa propre mine pendant une partie de Landing Mine"}
 data modify storage switch:advancements all[{id:37}] merge value {color:"yellow",auteur:"Megamat",name:"Oppenheimer",description:"Survivre plus d'une minute en Bombardement"}
 data modify storage switch:advancements all[{id:38}] merge value {color:"yellow",auteur:"Xiaojuun",name:"Regarde ma queue",description:"Avoir une trainée de 15 secondes en moutron"}
 data modify storage switch:advancements all[{id:39}] merge value {color:"red",auteur:"ArtiGrrr",name:"Précision Artistique",description:"Finir une partie de Snowball Painter avec exactement 51 points"}

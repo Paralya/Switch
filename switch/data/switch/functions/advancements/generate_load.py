@@ -31,6 +31,7 @@ jump_brown	OfChara	jump	The Brown Jump	Finir le jump marron pour la première fo
 jump_purple	AirDox	jump	The Purple Jump	Finir le jump violet pour la première fois
 jump_dripstone	AirDox	jump	The Dripstone Jump	Finir le jump dripstone pour la première fois
 jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la première fois
+jump_pink	OfChara	jump	The Pink Jump	Finir le jump rose pour la première fois
 1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu
 2	Stoupy	easy	Fidèle	Jouez un total de 100 parties sur le Switch
 3	Stoupy	easy	La moula	Ayez au moins 400$ dans votre porte-monnaie
@@ -66,7 +67,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 33	Megamat	medium	Rush Thief	Sécurisez le drapeau ennemi en Capture/Rush The Flag
 34	Megamat	easy	Monopoly	Ramasser 20 lingots d'or en une partie en Murder Mystery
 35	Xiaojuun	easy	Daltonien	Meurs à la première manche en Block Party
-36	Megamat	easy	Contre son camp	Marcher sur sa propre mine pendant une partie de Memory Mine
+36	Megamat	easy	Contre son camp	Marcher sur sa propre mine pendant une partie de Landing Mine
 37	Megamat	medium	Oppenheimer	Survivre plus d'une minute en Bombardement
 38	Xiaojuun	medium	Regarde ma queue	Avoir une trainée de 15 secondes en moutron
 39	ArtiGrrr	hard	Précision Artistique	Finir une partie de Snowball Painter avec exactement 51 points
