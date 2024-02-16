@@ -34,7 +34,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 jump_pink	OfChara	jump	The Pink Jump	Finir le jump rose pour la première fois
 1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu
 2	Stoupy	easy	Fidèle	Jouez un total de 100 parties sur le Switch
-3	Stoupy	easy	La moula	Ayez au moins 400$ dans votre porte-monnaie
+3	Stoupy	easy	La moula	Ayez au moins 400 Saphirs dans votre banque
 4	Lawtank	easy	First Victor	Gagnez votre première partie dans n'importe quel mini-jeu
 5	GoldVision	hard	Gros Diabète	Gagner une partie de Traitors Game en étant Gros Traitre
 6	Fhara	medium	Gay Jumper	Terminer le parcours du Gay Shooter

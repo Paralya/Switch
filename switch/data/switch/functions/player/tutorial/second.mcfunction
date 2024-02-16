@@ -68,7 +68,7 @@ execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -502 70.
 execute if score @s switch.tutorial matches 4 run tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 execute if score @s switch.tutorial matches 4 run function switch:shop/pitchout
 execute if score @s switch.tutorial matches 4 run tellraw @s ["\n",{"text":"Voici le shop du Pitchout ! Ici est listé toutes les améliorations que tu peux acheter pour ce mini-jeu !"}, \
-	{"text":"\nComme je suis sympa, je viens de te donner 100$. Essaie d'acheter une amélioration !\n","color":"gray"}]
+	{"text":"\nComme je suis sympa, je viens de te donner 100 Saphirs. Essaie d'acheter une amélioration !\n","color":"gray"}]
 
 # Fifth dialog
 execute if score @s switch.tutorial matches 5 run tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", \

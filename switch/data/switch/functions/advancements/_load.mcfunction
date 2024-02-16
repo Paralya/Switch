@@ -110,7 +110,7 @@ data modify storage switch:advancements all[{id:"jump_bricks"}] merge value {col
 data modify storage switch:advancements all[{id:"jump_pink"}] merge value {color:"blue",auteur:"OfChara",name:"The Pink Jump",description:"Finir le jump rose pour la première fois"}
 data modify storage switch:advancements all[{id:1}] merge value {color:"green",auteur:"Stoupy",name:"Bénévolat",description:"Aider à la construction d'une map ou la création d'un mini-jeu"}
 data modify storage switch:advancements all[{id:2}] merge value {color:"green",auteur:"Stoupy",name:"Fidèle",description:"Jouez un total de 100 parties sur le Switch"}
-data modify storage switch:advancements all[{id:3}] merge value {color:"green",auteur:"Stoupy",name:"La moula",description:"Ayez au moins 400$ dans votre porte-monnaie"}
+data modify storage switch:advancements all[{id:3}] merge value {color:"green",auteur:"Stoupy",name:"La moula",description:"Ayez au moins 400 Saphirs dans votre banque"}
 data modify storage switch:advancements all[{id:4}] merge value {color:"green",auteur:"Lawtank",name:"First Victor",description:"Gagnez votre première partie dans n'importe quel mini-jeu"}
 data modify storage switch:advancements all[{id:5}] merge value {color:"red",auteur:"GoldVision",name:"Gros Diabète",description:"Gagner une partie de Traitors Game en étant Gros Traitre"}
 data modify storage switch:advancements all[{id:6}] merge value {color:"yellow",auteur:"Fhara",name:"Gay Jumper",description:"Terminer le parcours du Gay Shooter"}
