@@ -1,4 +1,4 @@
 
 scoreboard players reset @s switch.alive
-function switch:modes/OneShot/death
+function switch:modes/one_shot/death
 

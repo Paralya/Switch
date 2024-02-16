@@ -14,5 +14,5 @@ team remove switch.temp.blue
 team remove switch.temp.green
 team remove switch.temp.yellow
 
-data remove storage switch:temp OneShot
+data remove storage switch:temp one_shot
 

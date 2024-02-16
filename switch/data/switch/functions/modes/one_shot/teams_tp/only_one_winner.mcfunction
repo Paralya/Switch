@@ -2,9 +2,7 @@ tellraw @a[tag=!detached] ["",{"text":"----------------------------------","colo
 playsound entity.zombified_piglin.ambient ambient @s
 execute as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_win
 
-execute if data storage switch:main {map:"luxio_OneShot"} as @a[tag=!detached] run function switch:maps/spread_one_player
-execute if data storage switch:main {map:"airdox_OneShot"} as @a[tag=!detached] run function switch:modes/OneShot/tp_airdox
-
+function switch:maps/spread_one_player
 
 effect give @a[tag=!detached,gamemode=!spectator] slowness 4 5 true
 team remove switch.temp.red

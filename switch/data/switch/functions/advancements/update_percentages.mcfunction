@@ -17,6 +17,7 @@ execute if entity @s[advancements={switch:jump_red=true}] run function switch:ad
 execute if entity @s[advancements={switch:visible/jump_brown=true}] run function switch:advancements/_pre_macro {id:"jump_brown"}
 execute if entity @s[advancements={switch:visible/jump_purple=true}] run function switch:advancements/_pre_macro {id:"jump_purple"}
 execute if entity @s[advancements={switch:visible/jump_bricks=true}] run function switch:advancements/_pre_macro {id:"jump_bricks"}
+execute if entity @s[advancements={switch:visible/jump_pink=true}] run function switch:advancements/_pre_macro {id:"jump_pink"}
 
 # for i in range(1,101):
 #    print(f"""execute if entity @s[advancements={{switch:visible/{i}=true}}] run function switch:advancements/_pre_macro {{id:"{i}"}}""")
