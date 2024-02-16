@@ -1,6 +1,5 @@
 
 # Starter kit
-attribute @s generic.attack_speed base set 1024
 scoreboard players set #armor switch.data 0
 scoreboard players set #sword switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #armor switch.data 1
@@ -12,7 +11,7 @@ execute if score #armor switch.data matches 1 run item replace entity @s armor.c
 execute if score #armor switch.data matches 1 run item replace entity @s armor.legs with diamond_leggings
 execute if score #armor switch.data matches 1 run item replace entity @s armor.feet with iron_boots{Enchantments:[{id:"minecraft:protection",lvl:2s}]}
 execute if score #sword switch.data matches 1 run item replace entity @s hotbar.0 with diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:1s}]}
-execute if score #sword switch.data matches 0 run item replace entity @s hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
+execute if score #sword switch.data matches 0 run item replace entity @s hotbar.0 with iron_sword{Enchantments:[{id:"minecraft:sharpness",lvl:3s}]}
 item replace entity @s hotbar.1 with bow{Enchantments:[{id:"minecraft:power",lvl:1s}]}
 item replace entity @s hotbar.3 with stone_axe
 item replace entity @s hotbar.6 with arrow 28
@@ -22,7 +21,7 @@ give @s oak_planks 100
 give @s anvil
 
 effect give @s[team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
-item replace entity @s[team=!switch.temp.red,team=!switch.temp.blue] hotbar.0 with netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}
+item replace entity @s[team=!switch.temp.red,team=!switch.temp.blue] hotbar.0 with netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:3s}]}
 attribute @s[team=!switch.temp.red,team=!switch.temp.blue] generic.max_health base set 40.0
 
 # Leather cap color
