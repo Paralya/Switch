@@ -1,72 +1,74 @@
 
-# 2023/10/16
+# 2023/10
 tellraw @s [{"text":"\n\n [Début des changelogs]","color":"red"}]
-tellraw @s [{"text":"[2023/10/16] ","color":"dark_aqua"},{"text":"Passage en 1.20.2","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Passage en 1.20.2","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Build Battle : les builds se sauvegardent maintenant correctement, les items ne clignotent plus autant qu'avant pendant la phase des votes","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Beat The Kings : affichage correct des kills\n+ tentative d'équilibrage","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Block Party : la Paint Cow s'efforce maintenant de bouger","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Castagne : la vitesse d'attaque est remise par défaut\n+ changement de stuff (+les items randoms ont été retirés)","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Coin Chaser : réparation de l'équipement tridimensionnel bugué à cause de la 1.20.2\n+ Fix de l'apparation du gold trop tôt","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Réglage des effets de potions dans tous les modes de jeu (Changement de syntaxe en 1.20.2)","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Creeper Apocalypse : les creepers volent plus haut et plus loin lors de leur duplication\n+ affichage du temps restant en Actionbar","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Les maps se régénérant et ayant des portes ne font plus autant lag le serveur","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Simultaneous Jump : ajout du mode de jeu","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Fix du bug qui affichait des faux gagnants dans certains modes de jeu","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Murder Mystery : le joueur qui a tué le meutrier est maintenant affiché","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Kart Racer : fix du problème qui faisait que certains véhicules bougeaient tous seuls\n+ la vitesse max des véhicules a été réduite\n+ le title censé s'afficher lors du passage sur un bloc à effet s'affiche maintenant correctement\n+ certains blocs à effets ont été retirés sur plusieurs maps","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"/stats : ajout du nombre de victoires\n+ reset des statistiques","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Ajout de la commande /changelog","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Moutron : glass_pane -> glass","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Rush The Flag","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Bombardement","color":"white"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Panic Chase : Nouvelle map 'nether_storm'","color":"green"}]
+tellraw @s [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Shoot Da'Sheep","color":"white"}]
 
-# 2023/10/17
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Build Battle : les builds se sauvegardent maintenant correctement, les items ne clignotent plus autant qu'avant pendant la phase des votes","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Beat The Kings : affichage correct des kills\n+ tentative d'équilibrage","color":"green"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Block Party : la Paint Cow s'efforce maintenant de bouger","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Castagne : la vitesse d'attaque est remise par défaut\n+ changement de stuff (+les items randoms ont été retirés)","color":"green"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Coin Chaser : réparation de l'équipement tridimensionnel bugué à cause de la 1.20.2\n+ Fix de l'apparation du gold trop tôt","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Réglage des effets de potions dans tous les modes de jeu (Changement de syntaxe en 1.20.2)","color":"green"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Creeper Apocalypse : les creepers volent plus haut et plus loin lors de leur duplication\n+ affichage du temps restant en Actionbar","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Les maps se régénérant et ayant des portes ne font plus autant lag le serveur","color":"green"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Simultaneous Jump : ajout du mode de jeu","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Fix du bug qui affichait des faux gagnants dans certains modes de jeu","color":"green"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Murder Mystery : le joueur qui a tué le meutrier est maintenant affiché","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Kart Racer : fix du problème qui faisait que certains véhicules bougeaient tous seuls\n+ la vitesse max des véhicules a été réduite\n+ le title censé s'afficher lors du passage sur un bloc à effet s'affiche maintenant correctement\n+ certains blocs à effets ont été retirés sur plusieurs maps","color":"green"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"/stats : ajout du nombre de victoires\n+ reset des statistiques","color":"white"}]
-tellraw @s [{"text":"[2023/10/17] ","color":"dark_aqua"},{"text":"Ajout de la commande /changelog","color":"green"}]
+# 2023/11
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : MiniGolf","color":"green"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Murder Mystery : la map 'new_grounds' peut maintenant être choisie !","color":"white"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Murder Mystery : les rôles dépendent maintenant d'un pourcentage de chance visible en début de partie","color":"green"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Traitors Game : des lootboxes apparaissent maintenant aléatoirement sur la map à certains moments de la partie","color":"white"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Build Battle : Affiche maintenant correctement le nombre de votes d'un thème en Lore\n+ Le même thème ne tombera plus plusieurs fois parmi les 5\n+ Les pseudos et le thème sont maintenant enregistrés avec les builds\n+ Les gens peuvent voter pour prolonger le temps de build","color":"green"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Pitchout : nouvelle map type halloween","color":"white"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Cigogne","color":"green"}]
+tellraw @s [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Arrivée du Switch 2.0 : Masterclass","color":"white"}]
 
-# 2023/10/22
-tellraw @s [{"text":"[2023/10/22] ","color":"dark_aqua"},{"text":"Moutron : glass_pane -> glass","color":"white"}]
+# 2023/12
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Infected : nouvelle map 'Lost Graveyard Remastered' ajoutée\n+ les dégâts des infectés ont été réduits\n+ les parties durent maintenant 7m30 max","color":"green"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Les joueurs qui ne se sont pas connectés depuis longtemps s'ont automatiquement détachés","color":"white"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Build Battle : chaque participant gagne 50 Saphirs à chaque fin de partie","color":"green"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Creeper Apocalypse : les creepers sont moins nombreux mais plus puissant","color":"white"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Infected : nouvelle map 'Area 51' ajoutée\n+ Des secrets ont été ajoutés sur chacune des maps\n+ équilibrage du jeu","color":"green"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Arrivée des succès dans tout le serveur avec des récompenses selon les difficultés, faire /succès : Masterclass","color":"white"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Fixes et équilibrages dans un peu tous les mini-jeux","color":"green"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Ajout de nouvelles maps en Murder Mystery et tweaks de certaines maps","color":"white"}]
+tellraw @s [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Ajout de téléporteurs aux jumps dans l'inventaire lorsqu'on est détaché","color":"green"}]
 
-# 2023/10/26
-tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Rush The Flag","color":"green"}]
-tellraw @s [{"text":"[2023/10/26] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Bombardement","color":"white"}]
+# 2024/01
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Build Battle : La liste des thèmes est maintenant réinitialisée seulement quand tous les thèmes ont été proposés\n+ Une profondeur a été ajoutée pour creuser\n+ Les mobs ne sont plus dupliqués","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"La commande /night_vision est maintenant disponible pour tout le monde n'importe quand","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : GlassRunner par AirDox_","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Fish Fight par Luxio","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Memory Mine","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Capture The Flag","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Rush The Point : Le jeu contient maintenant plusieurs points à capturer, avec un fonctionnement type domination","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Rush The Point/Flag : Le kit Elytra possède maintenant un cooldown de 2 minutes + la boule de neige qui pose des blocs est de retour","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Spectres Game : 1 chance sur 3 que la partie contienne un traitre dans le camp des spectres\n+ 1 chance sur 3 que la partie contienne des objectifs pour obtenir des bonus","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Block Party : le tirage aléatoire est maintenant sans remise","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Murder Mystery : Le lancé de couteau est maintenant accurate + les joueurs ne peuvent plus mourir avant l'annonce des rôles","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Panic Chase : les souris ont maintenant 30 secondes de préparation peu importe la map","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"SheepWars : 4 nouvelles maps ajoutées","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"TNT Run : 2 nouvelles maps ajoutées","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Moutron : 1 nouvelle map ajoutée","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Si vous changez de pseudo, vous ne perderez plus toute votre progression","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"27 nouveaux succès + ajout des jumps dans le /succès","color":"white"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Nouveaux classement dans le lobby : Nombre de succès et pourcentage de victoires","color":"green"}]
+tellraw @s [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Votre argent est maintenant affiché dans le /shop","color":"white"}]
 
-# 2023/10/27
-tellraw @s [{"text":"[2023/10/27] ","color":"dark_aqua"},{"text":"Panic Chase : Nouvelle map 'nether_storm'","color":"green"}]
-tellraw @s [{"text":"[2023/10/27] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Shoot Da'Sheep","color":"white"}]
-
-# 2023/11/01
-tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : MiniGolf","color":"green"}]
-
-# 2023/11/03
-tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : la map 'new_grounds' peut maintenant être choisie !","color":"white"}]
-tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Murder Mystery : les rôles dépendent maintenant d'un pourcentage de chance visible en début de partie","color":"green"}]
-tellraw @s [{"text":"[2023/11/01] ","color":"dark_aqua"},{"text":"Traitors Game : des lootboxes apparaissent maintenant aléatoirement sur la map à certains moments de la partie","color":"white"}]
-
-# 2023/11/17
-tellraw @s [{"text":"[2023/11/17] ","color":"dark_aqua"},{"text":"Build Battle : Affiche maintenant correctement le nombre de votes d'un thème en Lore\n+ Le même thème ne tombera plus plusieurs fois parmi les 5\n+ Les pseudos et le thème sont maintenant enregistrés avec les builds\n+ Les gens peuvent voter pour prolonger le temps de build","color":"green"}]
-
-# 2023/11/20
-tellraw @s [{"text":"[2023/11/20] ","color":"dark_aqua"},{"text":"Pitchout : nouvelle map type halloween","color":"white"}]
-
-# 2023/11/21
-tellraw @s [{"text":"[2023/11/21] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Cigogne","color":"green"}]
-
-# 2023/11/29
-tellraw @s [{"text":"[2023/11/29] ","color":"dark_aqua"},{"text":"Arrivée du Switch 2.0 : Masterclass","color":"white"}]
-
-# 2023/12/11
-tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Infected : nouvelle map 'Lost Graveyard Remastered' ajoutée\n+ les dégâts des infectés ont été réduits\n+ les parties durent maintenant 7m30 max","color":"green"}]
-tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Les joueurs qui ne se sont pas connectés depuis longtemps s'ont automatiquement détachés","color":"white"}]
-tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Build Battle : chaque participant gagne 50 Saphirs à chaque fin de partie","color":"green"}]
-tellraw @s [{"text":"[2023/12/11] ","color":"dark_aqua"},{"text":"Creeper Apocalypse : les creepers sont moins nombreux mais plus puissant","color":"white"}]
-
-# 2023/12/22
-tellraw @s [{"text":"[2023/12/22] ","color":"dark_aqua"},{"text":"Infected : nouvelle map 'Area 51' ajoutée\n+ Des secrets ont été ajoutés sur chacune des maps\n+ équilibrage du jeu","color":"green"}]
-tellraw @s [{"text":"[2023/12/22] ","color":"dark_aqua"},{"text":"Arrivée des succès dans tout le serveur avec des récompenses selon les difficultés, faire /succès : Masterclass","color":"white"}]
-
-# 2023/12/29
-tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Fixes et équilibrages dans un peu tous les mini-jeux","color":"green"}]
-tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Ajout de nouvelles maps en Murder Mystery et tweaks de certaines maps","color":"white"}]
-tellraw @s [{"text":"[2023/12/29] ","color":"dark_aqua"},{"text":"Ajout de téléporteurs aux jumps dans l'inventaire lorsqu'on est détaché","color":"green"}]
-
-# 2024/01/11
-tellraw @s [{"text":"[2024/01/11] ","color":"dark_aqua"},{"text":"Build Battle : La liste des thèmes est maintenant réinitialisée seulement quand tous les thèmes ont été proposés\n+ Une profondeur a été ajoutée pour creuser\n+ Les mobs ne sont plus dupliqués","color":"white"}]
+# 2024/02
+tellraw @s [{"text":"[2024/02] ","color":"dark_aqua"},{"text":"Le tutoriel a été retravaillé et est beaucoup plus simple d'accès pour les nouveaux joueurs","color":"green"}]
+tellraw @s [{"text":"[2024/02] ","color":"dark_aqua"},{"text":"Traitors Game : 3 nouveaux scénarios peuvent apparaître avec chacun 1/3 chance : Innocent solitaire, Floupy, Silencieux","color":"white"}]
+tellraw @s [{"text":"[2024/02] ","color":"dark_aqua"},{"text":"Capture The Flag : Nouvelle map + la map nether nécessite au moins 40 joueurs","color":"green"}]
+tellraw @s [{"text":"[2024/02] ","color":"dark_aqua"},{"text":"La ParalyaMoney a été renommé en Saphir !","color":"white"}]
 
 # End of line
 tellraw @s ""
