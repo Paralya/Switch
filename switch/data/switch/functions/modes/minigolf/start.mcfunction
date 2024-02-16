@@ -14,7 +14,6 @@ scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/minigolf
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de MiniGolf, vous avez 5 secondes de préparation !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaAstuce","storage":"switch:main","interpret":true},{"text":" La puissance de votre coup est déterminée par le slot sélectionné de votre hotbar !"}]
 
 scoreboard players set #minigolf_seconds switch.data -5
 scoreboard players set #minigolf_ticks switch.data 0
@@ -42,4 +41,5 @@ scoreboard players reset #new_record switch.data
 execute unless data storage switch:records minigolf run data modify storage switch:records minigolf set value {}
 data modify storage switch:records minigolf.current_map set from storage switch:main map
 function switch:modes/minigolf/record_tellraw with storage switch:records minigolf
+tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaAstuce","storage":"switch:main","interpret":true},{"text":" La puissance de votre coup est déterminée par le slot sélectionné de votre hotbar !"}]
 

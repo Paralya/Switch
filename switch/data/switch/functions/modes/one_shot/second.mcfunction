@@ -3,6 +3,7 @@ scoreboard players add #one_shot_seconds switch.data 1
 
 
 execute if score #one_shot_seconds switch.data matches 3 as @a[tag=!detached] at @s run function switch:modes/one_shot/give_items
+execute if score #one_shot_seconds switch.data matches 5 run give @a arrow 1
 execute if score #one_shot_seconds switch.data matches 4 if score #TEAM_ONESHOT switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"One Shot","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"(1 partie sur 2)","italic":true,"color":"gray"},{"text":" Le jeu se déroulera en ","color":"white"},{"text":"équipes","underlined":true,"color":"white"},{"text":" !","color":"white"},{"text":"\n "}]
 execute if score #one_shot_seconds switch.data matches 8 if score #TEAM_ONESHOT switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"One Shot","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"(1 partie sur 2)","italic":true,"color":"gray"},{"text":" Le jeu se déroulera en ","color":"white"},{"text":"équipes","underlined":true,"color":"white"},{"text":" !","color":"white"},{"text":"\n "}]
 
@@ -22,6 +23,10 @@ scoreboard players operation #temp switch.data %= #8 switch.data
 execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 0 run give @a[tag=!detached] white_wool 1
 execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 1 run give @a[team=switch.temp.blue] blue_wool 1 
 execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 1 run give @a[team=switch.temp.red] red_wool 1
+
+scoreboard players operation #temp switch.data = #one_shot_seconds switch.data
+scoreboard players operation #temp switch.data %= #31 switch.data
+execute if score #temp switch.data matches 0 run effect give @a[tag=!detached] minecraft:glowing 4 2 true
 
 #only one winner en cas d'une team
 
@@ -65,13 +70,15 @@ execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] un
 
 # clear items useless
 
-clear @s oak_log
-clear @s dirt 
-clear @s wheat_seeds 
-clear @s chain
-clear @s stone
-clear @s podzol
-clear @s mycelium
-clear @s pufferfish
-clear @s wheat_seeds
-clear @s orange_tulip
+clear @a oak_log
+clear @a dirt 
+clear @a wheat_seeds 
+clear @a chain
+clear @a stone
+clear @a podzol
+clear @a mycelium
+clear @a pufferfish
+clear @a wheat_seeds
+clear @a orange_tulip
+clear @a oak_sapling
+clear @a 

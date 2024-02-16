@@ -1,6 +1,6 @@
 #TODO les TP par équipes au début
 
-scoreboard players set @a[tag=!detached] switch.alive 7
+scoreboard players set @a[tag=!detached] switch.alive 6
 function switch:utils/set_dynamic_time
 
 gamerule fallDamage false
@@ -43,8 +43,8 @@ scoreboard objectives add switch.temp.old_x dummy
 scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard objectives add switch.temp.deathCooldown dummy
-scoreboard objectives add switch.temps.players_killed playerKillCount
-scoreboard objectives setdisplay sidebar switch.temps.players_killed 
+scoreboard objectives add switch.temps.kills playerKillCount
+scoreboard objectives setdisplay sidebar switch.temps.kills
 scoreboard objectives add switch.temp.axolotl_killed_const minecraft.killed:minecraft.axolotl {"text":"AxoBonus","color":"light_purple"}
 #création d'un score pour compter les axolotls tués par les joueurs
 scoreboard objectives add switch.temp.axolotl_killed minecraft.killed:minecraft.axolotl
