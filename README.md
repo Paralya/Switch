@@ -24,7 +24,7 @@ Ensuite, je vous conseille d'utiliser VSCode (Visual Studio Code) pour modifier 
 Les mini-jeux sont inclus dans le datapack `switch` et sont donc dans le dossier [`data/switch/functions/modes/`](switch/data/switch/functions/load.mcfunction).
 
 Un moteur est présent avec plusieurs spécificités afin de manipuler et donner la main aux mini-jeux lorsqu'ils sont lancés.
-<br>Il est aussi responsable des votes, du choix des maps aléatoirement, de la ParalyaMoney, des statistiques, et d'autres choses encore.
+<br>Il est aussi responsable des votes, du choix des maps aléatoirement, des Saphirs, des statistiques, et d'autres choses encore.
 
 <br>
 

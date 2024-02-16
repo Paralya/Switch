@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:yellow_dye"},
 		"title": {"text": "Medium", "color": "yellow"},
-		"description": {"text": "50$ par succès", "color": "aqua"},
+		"description": {"text": "50 Saphirs par succès", "color": "aqua"},
 		"frame": "goal",
 		"show_toast": false,
 		"announce_to_chat": false,
