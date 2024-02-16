@@ -22,6 +22,6 @@ execute if score @s[tag=!detached] switch.reconnect matches -600.. run function 
 execute unless score @s switch.reconnect matches -600.. run tellraw @s [{"text":"\nVous avez été détaché car votre dernière connexion date de plus de 10 minutes, tapez '/changelog' si vous souhaitez voir les derniers changements ou '/attach' pour rejoindre le moteur Switch\n","color":"gold"}]
 execute unless score @s switch.reconnect matches -600.. run function switch:player/trigger/detach/
 
-# Prevent spam
+# Prevent calling this function again
 scoreboard players operation @s switch.reconnect = #score switch.reconnect
 
