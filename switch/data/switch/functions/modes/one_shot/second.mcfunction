@@ -70,15 +70,3 @@ execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] un
 
 # clear items useless
 
-clear @a oak_log
-clear @a dirt 
-clear @a wheat_seeds 
-clear @a chain
-clear @a stone
-clear @a podzol
-clear @a mycelium
-clear @a pufferfish
-clear @a wheat_seeds
-clear @a orange_tulip
-clear @a oak_sapling
-clear @a 

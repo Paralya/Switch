@@ -5,6 +5,7 @@ function switch:utils/set_dynamic_time
 
 gamerule fallDamage false
 gamerule keepInventory true
+gamerule showDeathMessages false
 effect give @a[tag=!detached] minecraft:regeneration 5 255 true
 effect give @a[tag=!detached] minecraft:resistance 6 255 true
 effect give @a[tag=!detached] minecraft:slowness 6 255 true
