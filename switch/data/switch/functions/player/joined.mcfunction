@@ -13,6 +13,9 @@ function switch:player/update_stats_storage/main
 scoreboard players set #reconnect switch.data 0
 execute store success score #reconnect switch.data if score @s switch.last_total_games = total_games switch.last_total_games
 
+# Si ce n'est pas une reconnexion, on reset ses attributs
+execute if score #reconnect switch.data matches 0 run function switch:utils/reset_attributes
+
 # Si le joueur n'a pas joué depuis plus de 600 secondes, on le détache
 scoreboard players operation @s switch.reconnect -= #score switch.reconnect
 execute if score @s[tag=!detached] switch.reconnect matches -600.. run function switch:player/make_join
