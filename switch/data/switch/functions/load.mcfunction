@@ -70,7 +70,7 @@ forceload add 0 0
 # tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'
 data modify storage switch:main ParalyaStats set value '[{"text":"[ParalyaStats]","color":"yellow"}]'
-data modify storage switch:main ParalyaSapphires set value '[{"text":"[Saphirs]","color":"dark_blue"}]'
+data modify storage switch:main ParalyaSapphires set value '[{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Saphirs","color":"blue"},{"text":"]","color":"dark_blue"}]'
 data modify storage switch:main ParalyaError set value '[{"text":"[ParalyaError]","color":"red"}]'
 data modify storage switch:main ParalyaAstuce set value '[{"text":"[","color":"dark_green"},{"text":"ParalyaAstuce","color":"green"},{"text":"]","color":"dark_green"}]'
 data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
