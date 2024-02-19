@@ -11,6 +11,7 @@ tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"
 tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/succes : ","color":"yellow"},{"text":"Affiche l'intégralité des succès"}]
 tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/rating : ","color":"yellow"},{"text":"Affiche les notes des mini-jeux"}]
 tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/night_vision : ","color":"yellow"},{"text":"Permet de toggle l'effet Night Vision"}]
+tellraw @s[scores={switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/music : ","color":"yellow"},{"text":"Affiche l'interface du Music Player"}]
 tellraw @s ""
 
 scoreboard players set @s switch.trigger.help 0

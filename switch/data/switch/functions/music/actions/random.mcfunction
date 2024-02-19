@@ -5,5 +5,7 @@ function switch:utils/get_random/
 
 scoreboard players add #random switch.data 100
 scoreboard players operation @s switch.music.current = #random switch.data
-scoreboard players set @s switch.music.progress 0
+scoreboard players set @s switch.music.progress 1
+
+function switch:music/browser
 
