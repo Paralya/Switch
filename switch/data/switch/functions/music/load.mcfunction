@@ -11,7 +11,7 @@ scoreboard players set #stereo_madness switch.music.progress 1819
 scoreboard players set #fingerdash switch.music.progress 1264
 scoreboard players set #stay_inside_me switch.music.progress 2044
 scoreboard players set #never_gonna_give_you_up switch.music.progress 2880
-scoreboard players set #overworld_day switch.music.progress 1992
+scoreboard players set #overworld_day switch.music.progress 3984
 scoreboard players set #main_theme switch.music.progress 539
 scoreboard players set #hope switch.music.progress 4666
 scoreboard players set #unravel switch.music.progress 4348

@@ -14,7 +14,6 @@ import zipfile
 INPUTS_FOLDER = "script_inputs/"
 FINAL_ZIP_FILE = "../../../../../switch_musics.zip"
 ALL_BPM = 80
-PLAYSOUND_VOLUME_MULTIPLIER = 1
 
 # Score objectives
 objectives = []
@@ -44,7 +43,6 @@ with zipfile.ZipFile(FINAL_ZIP_FILE + ".git", "w") as zip_file:
 						for i, line in enumerate(file_content):
 							if line.startswith("playsound"):
 								playsound = line.split(" ")
-								playsound[7] = str(round(float(playsound[7]) * PLAYSOUND_VOLUME_MULTIPLIER, 5))
 								playsound[7] = "1"
 								playsounds.append(" ".join(playsound))
 						file_content = "\n".join(playsounds)
@@ -56,7 +54,7 @@ with zipfile.ZipFile(FINAL_ZIP_FILE + ".git", "w") as zip_file:
 						zip_file.writestr(destination_file, file_content.encode("utf-8"))
 
 						# Remember length if higher
-						length = max(length, int(file_to_copy.split("/")[-1].split(".")[0]))
+						length = max(length, int(destination_file.split("/")[-1].split(".")[0]))
 					
 					elif "load.mcfunction" in file_to_copy:
 						bpm = int(zip_file_to_read.read(file_to_copy).decode("utf-8").split(" ")[-1])
@@ -65,7 +63,6 @@ with zipfile.ZipFile(FINAL_ZIP_FILE + ".git", "w") as zip_file:
 			song = file.replace(".zip","").replace(" ", "_").split("_sss_")
 			authors.append(song[0])
 			objectives.append((song[1], length, bpm))
-			#print(song, length, bpm)
 
 	# Add a pack.mcmeta file
 	zip_file.writestr("pack.mcmeta", """{
