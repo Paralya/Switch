@@ -4,6 +4,7 @@ execute if score @s switch.trigger.music matches 1 run function switch:music/bro
 
 # Action buttons
 execute if score @s switch.trigger.music matches 2 run function switch:music/actions/random
+execute if score @s switch.trigger.music matches 2 run function switch:music/browser
 execute if score @s switch.trigger.music matches 3 run function switch:music/actions/previous
 execute if score @s switch.trigger.music matches 4 run scoreboard players operation @s switch.music.progress *= #-1 switch.data
 execute if score @s switch.trigger.music matches 5 run function switch:music/actions/next

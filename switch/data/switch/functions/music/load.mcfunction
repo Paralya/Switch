@@ -3,12 +3,15 @@
 scoreboard objectives add switch.music.current dummy
 scoreboard objectives add switch.music.progress dummy
 scoreboard objectives add switch.music.loop_state dummy
-scoreboard players set #last_index switch.music.current 107
-scoreboard players set #at_the_speed_of_light switch.music.progress 5280
-scoreboard players set #fingerdash switch.music.progress 1264
-scoreboard players set #ludicrous_speed switch.music.progress 7518
-scoreboard players set #never_gonna_give_you_up switch.music.progress 2880
-scoreboard players set #stay_inside_me switch.music.progress 2044
-scoreboard players set #stereo_madness switch.music.progress 1819
+scoreboard players set #last_index switch.music.current 110
 scoreboard players set #the_maze_of_mayonnaise switch.music.progress 3344
+scoreboard players set #at_the_speed_of_light switch.music.progress 5280
+scoreboard players set #ludicrous_speed switch.music.progress 7518
+scoreboard players set #stereo_madness switch.music.progress 1819
+scoreboard players set #fingerdash switch.music.progress 1264
+scoreboard players set #stay_inside_me switch.music.progress 2044
+scoreboard players set #never_gonna_give_you_up switch.music.progress 2880
+scoreboard players set #overworld_day switch.music.progress 1992
+scoreboard players set #main_theme switch.music.progress 539
+scoreboard players set #hope switch.music.progress 4666
 scoreboard players set #unravel switch.music.progress 4348
