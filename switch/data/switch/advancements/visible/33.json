@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:yellow_banner", "nbt": "{}"},
 		"title": {"text": "Rush Thief", "color": "yellow"},
-		"description": {"text": "Capturez le drapeau ennemi en Rush The Flag", "color": "aqua"},
+		"description": {"text": "Sécurisez le drapeau ennemi en Capture/Rush The Flag", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
