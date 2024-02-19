@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/jumps/white"},
-	"parent": "switch:jump_green"
+	"parent": "switch:visible/jump_green"
 }
