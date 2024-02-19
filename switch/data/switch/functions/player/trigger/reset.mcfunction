@@ -12,4 +12,5 @@ scoreboard players set @s switch.trigger.tutorial 0
 scoreboard players set @s switch.trigger.succes 0
 scoreboard players set @s switch.trigger.rating 0
 scoreboard players set @s switch.trigger.night_vision 0
+scoreboard players set @s switch.trigger.music 0
 

@@ -12,6 +12,7 @@ execute unless score @s switch.trigger.tutorial matches 0 run function switch:pl
 execute unless score @s switch.trigger.succes matches 0 in overworld run function switch:player/trigger/succes/
 execute unless score @s switch.trigger.rating matches 0 run function switch:player/trigger/rating/
 execute unless score @s switch.trigger.night_vision matches 0 run function switch:player/trigger/night_vision/
+execute unless score @s switch.trigger.music matches 0 run function switch:player/trigger/music/
 
 function switch:player/trigger/enable
 
