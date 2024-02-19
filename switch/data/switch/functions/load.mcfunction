@@ -84,10 +84,11 @@ execute unless data storage switch:stats all run data modify storage switch:stat
 execute unless data storage switch:ratings all run data modify storage switch:ratings all set value []
 execute unless data storage switch:main UUIDs run data modify storage switch:main UUIDs set value []
 
-# Scoreboard constants, shop load, and advancements load
+# Scoreboard constants, shop load, advancements, and music load
 function switch:set_constants
 function switch:shop/_load
 function switch:advancements/_load
+function switch:music/load
 execute unless score #can_attach switch.data matches 0.. run scoreboard players set #can_attach switch.data 1
 execute unless score #test_mode switch.data matches 0.. run scoreboard players set #test_mode switch.data 0
 
