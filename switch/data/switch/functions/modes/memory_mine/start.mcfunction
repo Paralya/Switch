@@ -1,6 +1,7 @@
 
 gamemode adventure @a[tag=!detached]
 team join switch.no_pvp @a[tag=!detached]
+team modify switch.no_pvp seeFriendlyInvisibles true
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] jump_boost infinite 250 true
 effect give @a[tag=!detached] invisibility infinite 255 true
