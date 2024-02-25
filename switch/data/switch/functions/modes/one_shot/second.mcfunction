@@ -70,3 +70,5 @@ execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] un
 
 # clear items useless
 
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+

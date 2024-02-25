@@ -86,3 +86,6 @@ clear @s stone
 clear @s podzol
 clear @s mycelium
 clear @s pufferfish
+
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.9+","color":"red"}
+

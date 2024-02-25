@@ -11,7 +11,7 @@ scoreboard players operation #mins switch.data = #remaining_time switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-title @a[tag=!detached] actionbar [{"text":"Temps restant : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
+#title @a[tag=!detached] actionbar [{"text":"Temps restant : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
 
 # Glowing pour les joueurs isolés au bout de 5 minutes restantes
 execute if score #mins switch.data matches ..4 as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..15] run effect give @s glowing 2 0 true
@@ -28,4 +28,6 @@ execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if sc
 execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_blue = #total switch.temp.killed_blue run advancement grant @s only switch:visible/42
 execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_green = #total switch.temp.killed_green run advancement grant @s only switch:visible/42
 execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_yellow = #total switch.temp.killed_yellow run advancement grant @s only switch:visible/42
+
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
 

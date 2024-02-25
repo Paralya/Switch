@@ -5,5 +5,5 @@ execute if score #remaining_time switch.data matches 1.. run scoreboard players 
 execute if score #protect_the_king_seconds switch.data matches 0.. run function switch:modes/protect_the_king/xp_bar
 execute if score #protect_the_king_seconds switch.data matches 0.. run effect give @a[tag=!detached,gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
 
-title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention: PVP 1.9+","color":"red"}
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.9+","color":"red"}
 

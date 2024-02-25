@@ -9,3 +9,5 @@ execute if score #beat_the_kings_seconds switch.data matches 0 run function swit
 execute if score #beat_the_kings_seconds switch.data matches 30 run tellraw @a[tag=!detached,team=switch.temp.king] ["",{"nbt":"ParalyaAstuce","storage":"switch:main","interpret":true},{"text":" Utilisez votre arc pour drainer la vie des joueurs !"}]
 execute if score #beat_the_kings_seconds switch.data matches 30 as @a[tag=!detached,team=switch.temp.king] at @s run playsound entity.experience_orb.pickup ambient @s
 
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+

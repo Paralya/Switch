@@ -11,7 +11,7 @@ scoreboard players operation #mins switch.data = #remaining_time switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-title @a[tag=!detached] actionbar [{"text":"Temps restant : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
+#title @a[tag=!detached] actionbar [{"text":"Temps restant : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
 
 # Glowing pour les joueurs isolés au bout de 5 minutes restantes
 execute if score #mins switch.data matches ..4 as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..15] run effect give @s glowing 2 0 true
@@ -22,4 +22,6 @@ execute if score #mins switch.data matches ..4 at @e[tag=switch.layers_2_teams.m
 execute if score #mins switch.data matches ..4 as @e[tag=switch.layers_2_teams.marker] store result score #pos_y switch.data run data get entity @s Pos[1]
 execute if score #mins switch.data matches ..4 if score #pos_y switch.data matches 109.. as @e[tag=switch.layers_2_teams.marker] at @s run tp @s ~ ~-0.5 ~
 execute if score #mins switch.data matches ..4 if score #pos_y switch.data matches ..108 run kill @e[tag=switch.layers_2_teams.marker]
+
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
 

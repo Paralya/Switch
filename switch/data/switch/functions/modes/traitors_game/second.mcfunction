@@ -21,3 +21,5 @@ execute as @e[type=chest_minecart] run data modify entity @s Glowing set value 1
 # Innocent solitaire
 execute if score #sc_solitaire switch.data matches 1 if score #traitors_game_seconds switch.data matches 90 run function switch:modes/traitors_game/roles/choose_solitaire
 
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+

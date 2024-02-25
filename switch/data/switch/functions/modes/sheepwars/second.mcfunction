@@ -25,3 +25,5 @@ execute if score #magic_wool switch.data matches 15 run function switch:modes/sh
 # Humm Charal advancement
 execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.killed_sheep=10..}] only switch:visible/45
 
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+

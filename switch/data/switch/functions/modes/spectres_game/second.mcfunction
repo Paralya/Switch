@@ -46,3 +46,5 @@ execute if score #spectres_game_seconds switch.data matches 350 if score #TASKS_
 # Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..48] run effect give @s glowing 2 0 true
 
+title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+
