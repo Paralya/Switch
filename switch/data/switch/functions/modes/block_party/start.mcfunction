@@ -8,7 +8,7 @@ time set 18000
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/block_party
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Block Party, 10 secondes de préparation et soyez le dernier en vie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Block Party dans 10 secondes, dirigez-vous vers la couleur indiquée dans le temps imparti !"}]
 execute if data storage switch:records block_party run function switch:modes/block_party/record_tellraw with storage switch:records block_party
 
 scoreboard players set #block_party_seconds switch.data -10

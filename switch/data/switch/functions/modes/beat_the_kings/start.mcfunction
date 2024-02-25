@@ -18,7 +18,8 @@ gamerule mobGriefing true
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Beat The Kings, tenez-vous prêt vous avez 15 secondes de resistance !\n"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Beat The Kings dans 15 secondes !\nLes rois sont moins nombreux mais plus puissants que les civils et les deux équipes doivent s'affronter pour exterminer l'équipe ennemie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901

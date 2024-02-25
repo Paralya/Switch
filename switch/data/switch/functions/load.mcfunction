@@ -76,6 +76,8 @@ data modify storage switch:main ParalyaError set value '[{"text":"[ParalyaError]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'
 data modify storage switch:main ParalyaAstuce set value '[{"text":"[","color":"dark_green"},{"text":"ParalyaAstuce","color":"green"},{"text":"]","color":"dark_green"}]'
 data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
+data modify storage switch:main ParalyaPvPOld set value '[{"text":"[PvP 1.8 : Vitesse d\'attaque infinie]","color":"dark_aqua"}]'
+data modify storage switch:main ParalyaPvPNew set value '[{"text":"[PvP 1.9+ : Nouveau PvP]","color":"dark_green"}]'
 data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 
 # Setup stats storage if needed

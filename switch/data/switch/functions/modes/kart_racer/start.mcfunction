@@ -9,7 +9,7 @@ effect give @a[tag=!detached] levitation 10 255 true
 function switch:utils/set_dynamic_time
 gamerule fallDamage false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer, tenez-vous prêt car vous avez un temps de préparation de 10 secondes !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer dans 10 secondes, finissez la course le plus rapidement possible !"}]
 
 scoreboard players set #remaining_time switch.data 310
 scoreboard players set #kart_racer_seconds switch.data -10

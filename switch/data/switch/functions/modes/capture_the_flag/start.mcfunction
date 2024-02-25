@@ -20,7 +20,8 @@ scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
 scoreboard players set #process_end switch.data 0
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Capture The Flag, tenez-vous prêt vous avez 10 secondes de préparation !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Capture The Flag dans 10 secondes, votre objectif est de capturer le drapeau ennemi grâce aux différentes classes à votre disposition !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 
 team add switch.temp.sidebar.5
 team add switch.temp.sidebar.3

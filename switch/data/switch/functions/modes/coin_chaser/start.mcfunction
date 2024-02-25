@@ -10,8 +10,7 @@ scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/coin_chaser
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Coin Chaser, vous avez 10 secondes de préparation !"}]
-tellraw @a[tag=!detached] [{"text":"Envolez-vous à l'aide de votre équipement tridimensionnel et vos ailes !\n","color":"green"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Coin Chaser dans 10 secondes, collectez le plus d'or dans le temps imparti grâce à vos ailes et votre équipement tridimensionnel !"}]
 
 scoreboard players set #coin_chaser_seconds switch.data -10
 scoreboard players set #coin_chaser_ticks switch.data 0

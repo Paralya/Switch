@@ -15,7 +15,7 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Creeper Apocalypse, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Creeper Apocalypse dans 5 secondes, survivez faces aux creepers qui se dupliquent sans cesse !"}]
 
 scoreboard players set #remaining_time switch.data 105
 scoreboard players set #creeper_apocalypse_seconds switch.data -5

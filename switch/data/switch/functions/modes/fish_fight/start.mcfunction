@@ -29,7 +29,8 @@ execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FIS
 # execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
 # execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Fish Fight, expulsez les autres !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Fish Fight, votre objectif est d'expulsez les autres joueurs et d'être le dernier en vie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
 
 scoreboard objectives setdisplay list switch.health
 scoreboard objectives add switch.temp.damages dummy

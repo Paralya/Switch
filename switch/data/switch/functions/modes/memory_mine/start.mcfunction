@@ -7,7 +7,7 @@ effect give @a[tag=!detached] invisibility infinite 255 true
 function switch:utils/set_dynamic_time
 
 scoreboard players set #is_aventure switch.data 1
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Memory Mine, 5 secondes de préparation et soyez le dernier en vie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Memory Mine dans 5 secondes, votre objectif est de rejoindre le cercle à chaque fois qu'il apparaît et d'éviter les mines que vous ou les autres joueurs posent !"}]
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard players set #memory_mine_seconds switch.data -5

@@ -35,7 +35,8 @@ function switch:choose_map_for/one_shot
 # execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
 # execute as @a[tag=!detached] run function switch:modes/one_shot/xp_bar
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de One Shot ! Éliminez tout le monde !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de One Shot dans 6 secondes, soyez le dernier survivant en éliminant tous les autres joueurs !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 
 scoreboard objectives setdisplay list switch.health
 scoreboard objectives add switch.temp.damages dummy

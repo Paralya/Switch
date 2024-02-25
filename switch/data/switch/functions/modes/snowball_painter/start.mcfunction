@@ -6,7 +6,7 @@ function switch:utils/set_dynamic_time
 ## Téléportation des joueurs
 function switch:choose_map_for/snowball_painter
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Snowball Painter, vous avez 5 secondes de préparation !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Snowball Painter dans 5 secondes, un tableau est présent et vous devez être le joueur ayant peint le plus à la fin du temps imparti !"}]
 
 scoreboard players set #snowball_painter_seconds switch.data -5
 scoreboard players set #snowball_painter_ticks switch.data 0

@@ -9,7 +9,7 @@ function switch:choose_map_for/de_a_coudre
 gamerule showDeathMessages false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Dé à Coudre, on commence direct !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Dé à Coudre, marquez le maximum de points en sautant dans des points d'eau encerclé de blocs !"}]
 
 scoreboard players set #de_a_coudre_seconds switch.data 0
 scoreboard players set #de_a_coudre_ticks switch.data 0

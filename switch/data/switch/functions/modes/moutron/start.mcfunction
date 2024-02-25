@@ -12,7 +12,7 @@ execute if data storage switch:main {map:"whity_lab"} run function switch:modes/
 
 gamerule fallDamage false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Moutron, 10 secondes de préparation et soyez le dernier en vie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Moutron dans 10 secondes, chaque mouton va créer une trainée derrière lui et votre objectif est de survivre le plus longtemps en évitant tous les obstacles !"}]
 
 scoreboard objectives add switch.temp.moutron dummy
 scoreboard objectives add switch.temp.color dummy

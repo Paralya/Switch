@@ -4,7 +4,8 @@ time set 18000
 function switch:choose_map_for/infected
 execute as @a[tag=!detached] run function switch:modes/infected/death/early_respawn
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie d'Infecté, vous avez 12 secondes de préparation !\n"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie d'Infecté dans 12 secondes, un joueur aléatoire va être choisi pour être le premier infecté de la partie ! Survivez jusqu'à la fin du temps imparti en tant qu'humain ou infectez tous les humains en tant que zombie !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 gamerule naturalRegeneration false

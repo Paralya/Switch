@@ -8,7 +8,7 @@ function switch:utils/set_dynamic_time
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/gay_shooter
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Gay Shooter, ça se lance direct !"}]
+tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Gay Shooter, les tireurs doivent empêcher les coureurs de grimper la tour !"}]
 
 scoreboard players set #remaining_time switch.data 301
 scoreboard players set #gay_shooter_seconds switch.data 0
