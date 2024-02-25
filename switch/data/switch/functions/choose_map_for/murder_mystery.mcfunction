@@ -9,6 +9,7 @@ execute if score #mc switch.data matches 0 run data modify storage switch:main m
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "remelta_cluedo"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "jn_murder_mystery"
 execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "charly_murder_2018"
+execute if score #mc switch.data matches 0 run data modify storage switch:main murder_mystery_maps append value "cluedo_casino"
 
 
 
