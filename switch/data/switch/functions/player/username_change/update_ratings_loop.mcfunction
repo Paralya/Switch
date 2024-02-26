@@ -1,5 +1,6 @@
 
 # Update username
+$data remove storage switch:ratings all[{id:"$(id)"}].players[{name:"$(username)"}]
 $execute if data storage switch:ratings all[{id:"$(id)"}].players[{name:"$(old_username)"}] run data modify storage switch:ratings all[{id:"$(id)"}].players[{name:"$(old_username)"}].name set value "$(username)"
 
 # Continue loop
