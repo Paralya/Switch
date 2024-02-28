@@ -45,8 +45,8 @@ scoreboard objectives add switch.temp.old_x dummy
 scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard objectives add switch.temp.deathCooldown dummy
-scoreboard objectives add switch.temps.kills playerKillCount {"text":"Nombre de kills","color":"gold"}
-scoreboard objectives setdisplay sidebar switch.temps.kills
+scoreboard objectives add switch.temp.kills playerKillCount {"text":"Nombre de kills","color":"gold"}
+scoreboard objectives setdisplay sidebar switch.temps.kill
 
 scoreboard players set @a[team=!detached] switch.temp.axolotl_killed 0
 

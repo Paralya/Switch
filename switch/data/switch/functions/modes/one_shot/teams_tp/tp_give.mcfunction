@@ -14,12 +14,6 @@ effect give @s resistance 2 255 true
 effect give @s blindness 1 255 true
 
 clear @s arrow
-clear @s minecraft:ender_pearl
+clear @s ender_pearl
 give @s ender_pearl
-clear @s white_wool
-clear @s red_wool
-clear @s blue_wool
-execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 0 run give @s white_wool 2
-execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 1 run give @s blue_wool 2
-execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 1 run give @s red_wool 2
 
