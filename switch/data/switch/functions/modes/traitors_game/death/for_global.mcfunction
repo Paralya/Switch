@@ -4,7 +4,7 @@ clear @a[tag=!detached,predicate=switch:has_same_id]
 execute at @s run function switch:modes/traitors_game/death/drop_inventory
 
 scoreboard players set #success switch.data 0
-execute store success score #success switch.data if predicate switch:chance/0.5
+execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
 execute if score #success switch.data matches 1 if predicate switch:chance/0.5 run scoreboard players set #success switch.data 2
 
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2

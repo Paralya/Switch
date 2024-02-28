@@ -11,7 +11,7 @@ function switch:player/update_stats_storage/main
 
 # On détecte si c'est une reconnexion ou non
 scoreboard players set #reconnect switch.data 0
-execute store success score #reconnect switch.data if score @s switch.last_total_games = total_games switch.last_total_games
+execute if score @s switch.last_total_games = total_games switch.last_total_games run scoreboard players set #reconnect switch.data 1
 
 # Si ce n'est pas une reconnexion, on reset ses attributs
 execute if score #reconnect switch.data matches 0 run function switch:utils/reset_attributes

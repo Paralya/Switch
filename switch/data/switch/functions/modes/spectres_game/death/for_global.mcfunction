@@ -7,7 +7,7 @@ function switch:modes/spectres_game/death/inventory_filter
 execute at @s run function switch:modes/spectres_game/death/inventory_drop
 
 scoreboard players set #success switch.data 0
-execute store success score #success switch.data if predicate switch:chance/0.5
+execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
 
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 execute if entity @a[tag=switch.temp,scores={switch.temp.spectror=1}] run scoreboard players set @s switch.alive 3

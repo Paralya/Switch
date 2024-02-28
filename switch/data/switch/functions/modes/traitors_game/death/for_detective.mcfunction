@@ -1,6 +1,6 @@
 
 scoreboard players set #success switch.data 0
-execute store success score #success switch.data if predicate switch:chance/0.5
+execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
 execute if score #success switch.data matches 1 if predicate switch:chance/0.5 run scoreboard players set #success switch.data 2
 
 execute if entity @s[scores={switch.temp.role=0}] run tellraw @a[scores={switch.temp.role=1}] ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"UWUWUWUWU","color":"gray","obfuscated":true},{"text":" !"}]
