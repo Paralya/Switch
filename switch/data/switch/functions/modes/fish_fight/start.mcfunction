@@ -9,7 +9,7 @@ gamerule keepInventory true
 
 # partie en équipe aléatoire
 scoreboard players set #TEAM_FISH switch.data 0
-execute if predicate switch:chance/0.5 run scoreboard players set #TEAM_FISH switch.data 1
+# execute if predicate switch:chance/0.5 run scoreboard players set #TEAM_FISH switch.data 1
 execute if score #TEAM_FISH switch.data matches 1 run function switch:modes/fish_fight/teams_tp/setup
 execute if score #TEAM_FISH switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/fish_fight/teams_tp/teams
 
