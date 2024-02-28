@@ -29,6 +29,7 @@ execute if entity @s[tag=switch.free,tag=!switch.original_pos,tag=switch.red_fla
 execute if entity @s[tag=!switch.free,tag=switch.blue_flag] positioned ~ ~-2 ~ if entity @e[tag=switch.original_pos,tag=switch.red_flag,distance=..1] run function switch:modes/capture_the_flag/score_point
 execute if entity @s[tag=!switch.free,tag=switch.red_flag] positioned ~ ~-2 ~ if entity @e[tag=switch.original_pos,tag=switch.blue_flag,distance=..1] run function switch:modes/capture_the_flag/score_point
 
-# Kill every tnt in range
-kill @e[type=tnt,distance=..5]
+# Kill every tnt and remove blocks in range
+execute if entity @s[tag=switch.free] run kill @e[type=tnt,distance=..5]
+execute if entity @s[tag=switch.free] run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace #wool
 
