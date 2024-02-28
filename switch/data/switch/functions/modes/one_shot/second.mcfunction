@@ -19,12 +19,6 @@ execute if score #one_shot_seconds switch.data matches 8 if score #TEAM_ONESHOT 
 # execute if score #temp switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.arrow.hit_player ambient @s
 
 scoreboard players operation #temp switch.data = #one_shot_seconds switch.data
-scoreboard players operation #temp switch.data %= #8 switch.data
-execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 0 run give @a[tag=!detached] white_wool 1
-execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 1 run give @a[team=switch.temp.blue] blue_wool 1 
-execute if score #temp switch.data matches 0 if score #TEAM_ONESHOT switch.data matches 1 run give @a[team=switch.temp.red] red_wool 1
-
-scoreboard players operation #temp switch.data = #one_shot_seconds switch.data
 scoreboard players operation #temp switch.data %= #31 switch.data
 execute if score #temp switch.data matches 0 run effect give @a[tag=!detached] minecraft:glowing 4 2 true
 

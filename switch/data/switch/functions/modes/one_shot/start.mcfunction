@@ -45,12 +45,8 @@ scoreboard objectives add switch.temp.old_x dummy
 scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard objectives add switch.temp.deathCooldown dummy
-scoreboard objectives add switch.temps.kills playerKillCount
+scoreboard objectives add switch.temps.kills playerKillCount {"text":"Nombre de kills","color":"gold"}
 scoreboard objectives setdisplay sidebar switch.temps.kills
-scoreboard objectives add switch.temp.axolotl_killed_const minecraft.killed:minecraft.axolotl {"text":"AxoBonus","color":"light_purple"}
-#création d'un score pour compter les axolotls tués par les joueurs
-scoreboard objectives add switch.temp.axolotl_killed minecraft.killed:minecraft.axolotl
-scoreboard objectives setdisplay sidebar switch.temp.axolotl_killed_const
 
 scoreboard players set @a[team=!detached] switch.temp.axolotl_killed 0
 
