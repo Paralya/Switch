@@ -9,7 +9,7 @@ execute if score #success switch.data matches 1 if predicate switch:chance/0.5 r
 
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 
-execute if score #sc_silencieux switch.data matches 1 if predicate switch:chance/0.66 run scoreboard players set @s switch.temp.role 0
+execute if score #sc_silencieux switch.data matches 1 if predicate switch:chance/0.5 run scoreboard players set @s switch.temp.role 0
 
 execute if score #success switch.data matches 0 if entity @s[scores={switch.temp.role=0}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était "},{"text":"UWUWUWUWU","color":"gray","obfuscated":true},{"text":" !"}]
 execute if score #success switch.data matches 0 if entity @s[scores={switch.temp.role=2}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"Innocent","color":"green"},{"text":" !"}]

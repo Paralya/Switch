@@ -26,8 +26,8 @@ execute if score #murder_mystery_seconds switch.data matches 0.. if score #gold_
 
 # Reload detective bow
 execute as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] unless data entity @s Inventory[{id:"minecraft:arrow"}] run scoreboard players add #detective_reload switch.data 1
-execute if score #detective_reload switch.data matches 5 run give @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] arrow
-execute if score #detective_reload switch.data matches 5 run scoreboard players set #detective_reload switch.data 0
+execute if score #detective_reload switch.data matches 5.. run give @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] arrow
+execute if score #detective_reload switch.data matches 5.. run scoreboard players set #detective_reload switch.data 0
 
 # Title actionbar
 scoreboard players operation #second switch.data = #remaining_time switch.data
