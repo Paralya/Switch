@@ -5,11 +5,7 @@ scoreboard players set #mc switch.data 0
 execute store result score #mc switch.data run data get storage switch:main one_shot_maps
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
-execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "friends_pvpbox_ice"
 execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "friends_pvpbox_hills"
-execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "friends_pvpbox_nether"
-execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "paralya_lobby_noel"
-execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "ghost_town"
 execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "luxium_spectres_remake"
 execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "jn_one_in_the_chamber_1"
 execute if score #mc switch.data matches 0 run data modify storage switch:main one_shot_maps append value "jn_one_in_the_chamber_2"
