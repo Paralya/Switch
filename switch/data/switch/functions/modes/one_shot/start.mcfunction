@@ -45,7 +45,7 @@ effect give @a[tag=!detached] blindness 5 2 true
 effect give @a[tag=!detached] slowness 5 2 true
 effect give @a[tag=!detached] resistance infinite 0 true
 
-# Summon 128 markers for respawn system
-execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] summon marker run function switch:modes/one_shot/respawn/spawn_marker
+# Summon 64 markers for respawn system
+execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] summon marker run function switch:modes/one_shot/respawn/spawn_marker
 execute as @a[tag=!detached] run function switch:modes/one_shot/respawn/main
 
