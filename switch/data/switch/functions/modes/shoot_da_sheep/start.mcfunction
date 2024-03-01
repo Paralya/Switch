@@ -17,6 +17,6 @@ scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"r
 scoreboard objectives add switch.temp.black_shot dummy
 scoreboard objectives setdisplay sidebar switch.temp.points
 
-give @a bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:10s}]}
-give @a arrow
+give @a[tag=!detached] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:10s}]}
+give @a[tag=!detached] arrow
 
