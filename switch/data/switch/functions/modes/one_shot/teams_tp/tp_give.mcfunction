@@ -1,8 +1,5 @@
-function switch:maps/spread_one_player
 
-#execute if data storage switch:main {map:"airdox_one_shot"} run function switch:modes/one_shot/tp_airdox
-
-
+function switch:modes/one_shot/respawn/main
 function switch:modes/one_shot/xp_bar
 
 scoreboard players set @s switch.temp.cooldown 60
@@ -10,8 +7,4 @@ item replace entity @s armor.chest with golden_chestplate{Enchantments:[{id:"min
 effect give @s jump_boost 1 250 true
 effect give @s resistance 2 255 true
 effect give @s blindness 1 255 true
-
-clear @s arrow
-clear @s ender_pearl
-give @s ender_pearl
 

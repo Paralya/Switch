@@ -4,21 +4,10 @@ scoreboard players add #one_shot_ticks switch.data 1
 # Prevent drop
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/one_shot/no_drop
 
-# Custom Saturation
+# Custom Saturation & Mort
 execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
-#mort 
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/one_shot/death
 
-
-# axolot si map airdox
-# execute if data storage switch:main {map:"airdox_one_shot"} as @e[type=axolotl] at @s if entity @s[y=20,dy=105] run function switch:modes/one_shot/tp_airdox
-# execute if data storage switch:main {map:"airdox_one_shot"} as @e[type=ender_pearl] at @s if entity @s[y=20,dy=105] run kill @s
-# execute if data storage switch:main {map:"airdox_one_shot"} as @a[tag=!detached,gamemode=survival] at @s if entity @s[y=20,dy=105] run scoreboard players add @s switch.temp.deathCooldown 1
-# execute if data storage switch:main {map:"airdox_one_shot"} as @a[tag=!detached,gamemode=survival,scores={switch.temp.deathCooldown=60..}] run function switch:modes/one_shot/death
-
-
-# Détection si un joueur tue un axolotl
-# execute as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}] run function switch:modes/one_shot/axobonus
 
 # Particules
 execute at @a[tag=!detached,scores={switch.alive=7}] run particle dust 0.631 0.973 0.867 1 ~ ~2.4 ~ .1 .1 .1 0 1
@@ -31,7 +20,6 @@ execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust 0.325 0.1
 # Cooldown invincibilité
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
 item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
-give @a[scores={switch.temp.cooldown=1}] arrow 1
 
 
 ## Détection de fin de partie
