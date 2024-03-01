@@ -12,6 +12,7 @@ gamerule fallDamage false
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Panic Chase, libération des chasseurs dans 30 secondes ! Les souris doivent échapper aux chasseurs jusqu'à la fin du temps imparti alors que les chasseurs doivent les chasser !"}]
+tellraw @a[tag=!detached] [{"text":"Attention, les souris ne peuvent pas taper les chasseurs !","color":"yellow"}]
 tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
 execute if data storage switch:main {map:"arti_box"} run scoreboard players set #remaining_time switch.data 150
 execute if data storage switch:main {map:"arti_box"} run scoreboard players set #panic_chase_seconds switch.data -30
