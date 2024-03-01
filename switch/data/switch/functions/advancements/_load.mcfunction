@@ -13,6 +13,7 @@ execute unless data storage switch:advancements all[{id:"jump_purple"}] run data
 execute unless data storage switch:advancements all[{id:"jump_dripstone"}] run data modify storage switch:advancements all append value {id:"jump_dripstone",percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:"jump_bricks"}] run data modify storage switch:advancements all append value {id:"jump_bricks",percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:"jump_pink"}] run data modify storage switch:advancements all append value {id:"jump_pink",percent:{int:0,digits:0},players:[],total:0}
+execute unless data storage switch:advancements all[{id:"jump_black"}] run data modify storage switch:advancements all append value {id:"jump_black",percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:1}] run data modify storage switch:advancements all append value {id:1,percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:2}] run data modify storage switch:advancements all append value {id:2,percent:{int:0,digits:0},players:[],total:0}
 execute unless data storage switch:advancements all[{id:3}] run data modify storage switch:advancements all append value {id:3,percent:{int:0,digits:0},players:[],total:0}
@@ -108,6 +109,7 @@ data modify storage switch:advancements all[{id:"jump_purple"}] merge value {col
 data modify storage switch:advancements all[{id:"jump_dripstone"}] merge value {color:"blue",auteur:"AirDox",name:"The Dripstone Jump",description:"Finir le jump dripstone pour la première fois"}
 data modify storage switch:advancements all[{id:"jump_bricks"}] merge value {color:"blue",auteur:"Thitanas",name:"The Bricks Jump",description:"Finir le jump des briques pour la première fois"}
 data modify storage switch:advancements all[{id:"jump_pink"}] merge value {color:"blue",auteur:"OfChara",name:"The Pink Jump",description:"Finir le jump rose pour la première fois"}
+data modify storage switch:advancements all[{id:"jump_black"}] merge value {color:"blue",auteur:"Stoupy",name:"The Black Jump",description:"Finir le jump noir pour la première fois"}
 data modify storage switch:advancements all[{id:1}] merge value {color:"green",auteur:"Stoupy",name:"Bénévolat",description:"Aider à la construction d'une map ou la création d'un mini-jeu"}
 data modify storage switch:advancements all[{id:2}] merge value {color:"green",auteur:"Stoupy",name:"Fidèle",description:"Jouez un total de 100 parties sur le Switch"}
 data modify storage switch:advancements all[{id:3}] merge value {color:"green",auteur:"Stoupy",name:"La moula",description:"Ayez au moins 400 Saphirs dans votre banque"}

@@ -1,0 +1,15 @@
+{
+	"display": {
+		"icon": {"item": "minecraft:black_concrete"},
+		"title": {"text": "The Black Jump", "color": "yellow"},
+		"description": {"text": "Finir le jump noir pour la première fois", "color": "aqua"},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/jumps/black"},
+	"parent": "switch:visible/jump_bricks"
+}
