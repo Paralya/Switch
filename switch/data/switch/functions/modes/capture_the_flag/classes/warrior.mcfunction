@@ -11,8 +11,8 @@ item replace entity @s hotbar.1 with stone_axe{AttributeModifiers:[{AttributeNam
 item replace entity @s hotbar.2 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.3 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.6 with potion{display:{Name:'{"text":"Suicide Potion","color":"dark_purple","italic":false}'},custom_potion_effects:[{id:"minecraft:wither",amplifier:10b,duration:-1},{id:"minecraft:poison",amplifier:10b,duration:-1}],CustomPotionColor:4391004}
-item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 4
-item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 4
+item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 12
+item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 12
 item replace entity @s hotbar.8 with bread 21
 
 attribute @s generic.movement_speed base set 0.10
