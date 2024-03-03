@@ -10,12 +10,12 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 
 
 # Particules
-execute at @a[tag=!detached,scores={switch.alive=7}] run particle dust 0.631 0.973 0.867 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=6}] run particle dust 0.337 0.788 0.212 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=5}] run particle dust 1 1 0.447 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=4}] run particle dust 0.988 0.796 0.22 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=3}] run particle dust 0.878 0.365 0.02 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust 0.325 0.153 0.047 1 ~ ~2.4 ~ .1 .1 .1 0 1
+execute at @a[tag=!detached,scores={switch.alive=7}] run particle dust 0.631 0.973 0.867 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
+execute at @a[tag=!detached,scores={switch.alive=6}] run particle dust 0.337 0.788 0.212 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
+execute at @a[tag=!detached,scores={switch.alive=5}] run particle dust 1 1 0.447 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
+execute at @a[tag=!detached,scores={switch.alive=4}] run particle dust 0.988 0.796 0.22 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
+execute at @a[tag=!detached,scores={switch.alive=3}] run particle dust 0.878 0.365 0.02 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
+execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust 0.325 0.153 0.047 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
 
 # Cooldown invincibilité
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1

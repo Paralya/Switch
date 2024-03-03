@@ -32,7 +32,7 @@ scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard objectives add switch.temp.deathCooldown dummy
 scoreboard objectives add switch.temp.kills playerKillCount {"text":"Nombre de kills","color":"gold"}
-scoreboard objectives setdisplay sidebar switch.temps.kill
+scoreboard objectives setdisplay list switch.alive
 
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
