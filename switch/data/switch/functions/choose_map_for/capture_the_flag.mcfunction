@@ -34,4 +34,5 @@ data modify storage switch:main capture_the_flag_maps set from storage switch:ma
 ## If not enough players for ctf_nether, restart it
 execute store result score #count switch.data if entity @a[tag=!detached]
 execute if score #count switch.data matches ..30 if data storage switch:main {map:"ctf_nether"} run function switch:choose_map_for/capture_the_flag
+execute if score #count switch.data matches ..14 if data storage switch:main {map:"ctf_mountains_castles"} run function switch:choose_map_for/capture_the_flag
 
