@@ -1,6 +1,5 @@
 
 gamemode adventure @s[gamemode=!adventure,tag=!can_creative]
-execute if entity @s[y=-64,dy=119] run tp @s 0 69.69 0 0 0
 team join switch.detached @s[team=!switch.tutorial]
 tp @s[team=switch.tutorial] -500 69.69 -500 0 0
 
@@ -17,18 +16,34 @@ execute store result score #inventory switch.data if data storage switch:temp In
 
 # If lost (only) one item, check where
 execute unless score #inventory switch.data matches 11 unless score #inventory switch.data matches 0 run scoreboard players set #inventory switch.data -1
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_green run tp @s 0 71 -10 90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_white run tp @s 0 71 -10 -90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_blue run tp @s 0 76 -24 180 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_yellow run tp @s 9 75 23 -90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_red run tp @s -14 74 9 0 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_brown run tp @s -35 74 -9 180 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_purple run tp @s -9 74 35 90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_dripstone run tp @s 9 73 47 -90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_pink run tp @s -47 77 10 0 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run tp @s -84 71 0 90 0
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_black run tp @s 51 76 -9 180 0
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_green run scoreboard players set @s switch.lobby_respawn 1
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_white run scoreboard players set @s switch.lobby_respawn 2
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_blue run scoreboard players set @s switch.lobby_respawn 3
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_yellow run scoreboard players set @s switch.lobby_respawn 4
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_red run scoreboard players set @s switch.lobby_respawn 5
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_brown run scoreboard players set @s switch.lobby_respawn 6
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_purple run scoreboard players set @s switch.lobby_respawn 7
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_dripstone run scoreboard players set @s switch.lobby_respawn 8
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_pink run scoreboard players set @s switch.lobby_respawn 9
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run scoreboard players set @s switch.lobby_respawn 10
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_black run scoreboard players set @s switch.lobby_respawn 11
+execute if score #inventory switch.data matches -1 run tp @s 0 0 0
 execute if score #inventory switch.data matches -1 run clear @s
+
+# Teleport to respawn point
+scoreboard players add @s switch.lobby_respawn 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=0}] run tp @s 0 69.69 0 0 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=1}] run tp @s 0 71 -10 90 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=2}] run tp @s 0 71 -10 -90 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=3}] run tp @s 0 76 -24 180 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=4}] run tp @s 9 75 23 -90 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=5}] run tp @s -14 74 9 0 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=6}] run tp @s -35 74 -9 180 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=7}] run tp @s -9 74 35 90 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=8}] run tp @s 9 73 47 -90 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=9}] run tp @s -47 77 10 0 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=10}] run tp @s -84 71 0 90 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=11}] run tp @s 51 76 -9 180 0
 
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.3 with dripstone_block{switch:{jump_dripstone:1b},display:{Name:'{"text":"Dripstone Jump","color":"gold","italic":false}',Lore:['{"text":"par AirDox","color":"gray","italic":false}']}}

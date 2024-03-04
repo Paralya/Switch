@@ -13,6 +13,7 @@ scoreboard objectives add switch.reconnect dummy
 scoreboard objectives add switch.alive dummy
 scoreboard objectives add switch.play_time dummy
 scoreboard objectives add switch.advancements dummy
+scoreboard objectives add switch.lobby_respawn dummy
 
 scoreboard objectives add switch.death deathCount
 scoreboard objectives add switch.kill playerKillCount
