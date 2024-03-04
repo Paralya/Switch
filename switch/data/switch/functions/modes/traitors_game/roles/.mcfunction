@@ -1,6 +1,7 @@
 
 tag @s add switch.temp
 tag @s remove switch.solitaire
+tag @s remove switch.floupy
 
 # Role selection (1 = inspecteur, 2 = innocent, 3 & 4 = ninja, 5 = traitor, 6 = big traitor)
 scoreboard players add #next_player_id switch.data 1
@@ -19,6 +20,7 @@ execute if score #next_role switch.data matches 4 run scoreboard players set @s 
 # Innocents (but first is Floupy if scenario)
 execute if score #next_role switch.data matches 5..6 run scoreboard players set @s switch.temp.role 2
 execute if score #next_role switch.data matches 5 if score #sc_floupy switch.data matches 1 run scoreboard players set @s switch.temp.role 7
+execute if score #next_role switch.data matches 5 if score #sc_floupy switch.data matches 1 run tag @s add switch.floupy
 # Gros Traitre
 execute if score #next_role switch.data matches 7 run scoreboard players set @s switch.temp.role 6
 execute if score #next_role switch.data matches 7 run attribute @s generic.max_health base set 30
@@ -26,9 +28,17 @@ execute if score #next_role switch.data matches 7 run attribute @s generic.max_h
 execute if score #next_role switch.data matches 8..9 run scoreboard players set @s switch.temp.role 2
 # Traitre
 execute if score #next_role switch.data matches 10 run scoreboard players set @s switch.temp.role 5
+# Innocent
+execute if score #next_role switch.data matches 11 run scoreboard players set @s switch.temp.role 2
+# Traitre
+execute if score #next_role switch.data matches 12 run scoreboard players set @s switch.temp.role 5
+# Innocent
+execute if score #next_role switch.data matches 13 run scoreboard players set @s switch.temp.role 2
+# Traitre
+execute if score #next_role switch.data matches 14 run scoreboard players set @s switch.temp.role 5
 
 # Reroll at 7
-execute if score #next_role switch.data matches 10 run scoreboard players set #next_role switch.data 7
+execute if score #next_role switch.data matches 14 run scoreboard players set #next_role switch.data 7
 
 
 ## Linked marker for offline players

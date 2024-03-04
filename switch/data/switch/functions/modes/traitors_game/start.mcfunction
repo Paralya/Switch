@@ -67,6 +67,10 @@ scoreboard players set §1 switch.temp.sidebar 1
 scoreboard players set §0 switch.temp.sidebar 0
 
 ## Scenarios
+# Get new players and players count
+scoreboard players add @a[tag=!detached] switch.stats.played.traitors_game 0
+execute store result score #count switch.data if entity @a[tag=!detached]
+execute store result score #new_players switch.data if entity @a[tag=!detached,scores={switch.stats.played.traitors_game=0}]
 # Traitors, affichage des scénarios supplémentaires en début de partie :
 # - Détraqué : Innocent solitaire (ça peut être le ninja) (role = 8)
 # - Floupy : Voleur (annule la deuxième vie du ninja) (role = 7)
@@ -74,10 +78,9 @@ scoreboard players set §0 switch.temp.sidebar 0
 scoreboard players set #sc_solitaire switch.data 0
 scoreboard players set #sc_floupy switch.data 0
 scoreboard players set #sc_silencieux switch.data 0
-execute store result score #count switch.data if entity @a[tag=!detached]
-execute if score #count switch.data matches 8.. if predicate switch:chance/0.33 run scoreboard players set #sc_solitaire switch.data 1
-execute if score #count switch.data matches 8.. if predicate switch:chance/0.33 run scoreboard players set #sc_floupy switch.data 1
-execute if predicate switch:chance/0.33 run scoreboard players set #sc_silencieux switch.data 1
+execute unless score #new_players switch.data matches 3.. if score #count switch.data matches 8.. if predicate switch:chance/0.5 run scoreboard players set #sc_solitaire switch.data 1
+execute unless score #new_players switch.data matches 3.. if score #count switch.data matches 8.. if predicate switch:chance/0.5 run scoreboard players set #sc_floupy switch.data 1
+execute unless score #new_players switch.data matches 3.. if predicate switch:chance/0.5 run scoreboard players set #sc_silencieux switch.data 1
 scoreboard players set #has_scenarios switch.data 1
 execute if score #sc_solitaire switch.data matches 0 if score #sc_floupy switch.data matches 0 if score #sc_silencieux switch.data matches 0 run scoreboard players set #has_scenarios switch.data 0
 
