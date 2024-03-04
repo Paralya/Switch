@@ -1,26 +1,23 @@
 
 gamemode survival @a[tag=!detached]
 scoreboard players set @a[tag=!detached] switch.alive 1
-effect give @a[tag=!detached] saturation infinite 255 true
-effect give @a[tag=!detached] resistance 18 255 true
-effect give @a[tag=!detached] fire_resistance 18 255 true
-effect give @a[tag=!detached] regeneration 10 255 true
-effect give @a[tag=!detached] weakness 22 255 true
-effect give @a[team=switch.temp.visible] blindness 11 255 true
-effect give @a[team=switch.temp.spectre] blindness 3 255 true
-effect give @a[tag=!detached] slowness 8 255 true
 function switch:utils/set_dynamic_time
+
+# Get new players and players count
+scoreboard players add @a[tag=!detached] switch.stats.played.spectres_game 0
+execute store result score #count switch.data if entity @a[tag=!detached]
+execute store result score #new_players switch.data if entity @a[tag=!detached,scores={switch.stats.played.spectres_game=0}]
 
 ## Partie spectror game aléatoire
 scoreboard objectives add switch.temp.spectror dummy
 scoreboard players set #SPECTROR_GAME switch.data 0
-execute if predicate switch:chance/0.33 run scoreboard players set #SPECTROR_GAME switch.data 1
+execute unless score #new_players switch.data matches 2.. if score #count switch.data matches 10.. if predicate switch:chance/0.33 run scoreboard players set #SPECTROR_GAME switch.data 1
 #mettre le score à 1
 
 ## Partie TASKS GAME aléatoire
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.crying_obsidian
 scoreboard players set #TASKS_GAME switch.data 0
-execute if predicate switch:chance/0.33 run scoreboard players set #TASKS_GAME switch.data 1
+execute unless score #new_players switch.data matches 2.. if score #count switch.data matches 10.. if predicate switch:chance/0.33 run scoreboard players set #TASKS_GAME switch.data 1
 #mettre le score à 1
 
 
@@ -75,4 +72,13 @@ give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion d
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:nausea",amplifier:0b,duration:200,show_particles:0b},{id:"minecraft:poison",amplifier:0b,duration:220,show_particles:0b}],Potion:"minecraft:water"}
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:nausea",amplifier:0b,duration:200,show_particles:0b},{id:"minecraft:poison",amplifier:0b,duration:220,show_particles:0b}],Potion:"minecraft:water"}
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:nausea",amplifier:0b,duration:200,show_particles:0b},{id:"minecraft:poison",amplifier:0b,duration:220,show_particles:0b}],Potion:"minecraft:water"}
+
+effect give @a[tag=!detached] saturation infinite 255 true
+effect give @a[tag=!detached] resistance 18 255 true
+effect give @a[tag=!detached] fire_resistance 18 255 true
+effect give @a[tag=!detached] regeneration 10 255 true
+effect give @a[tag=!detached] weakness 22 255 true
+effect give @a[team=switch.temp.visible] blindness 11 255 true
+effect give @a[team=switch.temp.spectre] blindness 3 255 true
+effect give @a[tag=!detached] slowness 8 255 true
 
