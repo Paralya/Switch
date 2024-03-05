@@ -63,7 +63,7 @@ for path, tellraws in tellraws_per_file.items():
 			if "tellraw @" not in line:
 				new_content.append(line)
 			else:
-				last_line = i
+				last_line = i + 1 - len(tellraws) # As i increase even if the line is not written, we need to remove the number of lines we skip
 
 		# Add a function call to the new file
 		call = "function switch:translations/" + new_path.replace(".mcfunction","") + "\n"
