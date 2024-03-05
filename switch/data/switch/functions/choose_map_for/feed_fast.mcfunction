@@ -5,18 +5,13 @@ scoreboard players set #mc switch.data 0
 execute store result score #mc switch.data run data get storage switch:main feed_fast_maps
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
-execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "spectre_original"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "mushroom_plains"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "friends_pvpbox_ice"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "friends_pvpbox_hills"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "friends_pvpbox_end"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "kart_racer_relai"
-execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "find_the_wool"
-execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "sky_island_tower"
-execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "survival_boat"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "red_temple"
 execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "nature_house"
-execute if score #mc switch.data matches 0 run data modify storage switch:main feed_fast_maps append value "wyvern_towers"
 
 
 
