@@ -63,13 +63,13 @@ for path, messages in messages_per_file.items():
 		lines = f.readlines()
 		last_line = 0
 		for i, line in enumerate(lines):
-			if "tellraw @" not in line:
+			if not any(splitter in line for splitter in SPLITTERS):
 				new_content.append(line)
 			else:
 				last_line = i + 1 - len(messages) # As i increase even if the line is not written, we need to remove the number of lines we skip
 
 		# Add a function call to the new file
-		call = "function switch:translations/tellraw/" + new_path.replace(".mcfunction","") + "\n"
+		call = "function switch:translations/" + new_path.replace(".mcfunction","") + "\n"
 		new_content = new_content[:last_line] + [call] + new_content[last_line:]
 		new_content = "".join(new_content)
 	with open(path, "w", encoding="utf-8") as f:
