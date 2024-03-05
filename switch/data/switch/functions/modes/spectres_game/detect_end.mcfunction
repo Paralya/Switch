@@ -13,11 +13,7 @@ execute unless entity @a[scores={switch.alive=1..}] run scoreboard players set #
 execute if score #game_state switch.data matches 1..4 run scoreboard players set #spectres_game_seconds switch.data 100000
 
 # Cas des vainqueurs
-execute if score #spectres_game_seconds switch.data matches 900 if score #game_state switch.data matches 0 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Aucun des camps n'est sorti vainqueur au bout de 10 minutes !"}]
-execute if score #game_state switch.data matches 1 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"visibles","color":"green"},{"text":" ! GG à "},{"selector":"@a[scores={switch.alive=1..},team=switch.temp.visible]"}]
-execute if score #game_state switch.data matches 2 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"spectres","color":"yellow"},{"text":" ! GG à "},{"selector":"@a[scores={switch.alive=1..,switch.temp.spectror=0},team=switch.temp.spectre]"}]
-execute if score #game_state switch.data matches 3 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
-execute if score #game_state switch.data matches 4 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Victoire du "},{"text":"spectror","color":"red"},{"text":" ! GG à "},{"selector":"@a[scores={switch.alive=1..,switch.temp.spectror=1}]"}]
+function switch:translations/modes_spectres_game_detect_end
 
 execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] unless score @s switch.temp.spectror matches 1 at @s run function switch:engine/add_win

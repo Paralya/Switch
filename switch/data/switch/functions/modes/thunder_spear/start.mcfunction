@@ -14,7 +14,7 @@ execute as @a[tag=!detached] run function switch:modes/thunder_spear/give_and_te
 gamerule keepInventory true
 gamerule fallDamage false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Thunder Spear dans 10 secondes, vous devez tuer le plus de joueurs grâce à vos lances foudroyantes, vous pouvez esquiver les attaques des autres joueurs en utilisant votre équipement tridimensionnel dans votre deuxième main !"}]
+function switch:translations/modes_thunder_spear_start
 
 scoreboard players set #thunder_spear_seconds switch.data -5
 scoreboard players set #thunder_spear_ticks switch.data 0

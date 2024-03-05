@@ -22,7 +22,7 @@ execute as @a[tag=!detached,sort=random] run function switch:modes/laser_game/te
 
 gamerule fallDamage false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Laser Game, faites le plus de points possibles en tirant sur les bases bonus et les ennemis !"}]
+function switch:translations/modes_laser_game_start
 
 scoreboard objectives add switch.temp.individual_points dummy {"text":" Points Individuels ","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy

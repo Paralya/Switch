@@ -12,7 +12,7 @@ gamerule doTileDrops false
 ## Téléportation des joueurs
 tp @a[tag=!detached] 102000 100 102000
 #define bossbar rtb.all
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Replicate the build, tenez-vous prêt car vous avez un temps de préparation de 5 secondes !"}]
+function switch:translations/modes_replicate_the_build_start
 
 scoreboard players set #replicate_the_build_seconds switch.data -5
 scoreboard players set #replicate_the_build_ticks switch.data 0

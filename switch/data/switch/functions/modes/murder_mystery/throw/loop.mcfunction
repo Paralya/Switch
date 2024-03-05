@@ -22,8 +22,7 @@ execute store result score #z switch.data run data get entity @s Pos[2] 10
 execute on passengers store result score #dest_x switch.data run data get entity @s item.tag.destination[0] 10
 execute on passengers store result score #dest_y switch.data run data get entity @s item.tag.destination[1] 10
 execute on passengers store result score #dest_z switch.data run data get entity @s item.tag.destination[2] 10
-# tellraw @a [{"score":{"name":"#x","objective":"switch.data"}},{"score":{"name":"#y","objective":"switch.data"}},{"score":{"name":"#z","objective":"switch.data"}}]
-# tellraw @a [{"score":{"name":"#dest_x","objective":"switch.data"}},{"score":{"name":"#dest_y","objective":"switch.data"}},{"score":{"name":"#dest_z","objective":"switch.data"}}]
+function switch:translations/modes_murder_mystery_throw_loop
 scoreboard players operation #x switch.data -= #dest_x switch.data
 scoreboard players operation #y switch.data -= #dest_y switch.data
 scoreboard players operation #z switch.data -= #dest_z switch.data

@@ -13,7 +13,7 @@ function switch:utils/set_dynamic_time
 ## Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
 execute as @a[tag=!detached] run function switch:modes/boat_race/give_items
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Boat Race. Vous avez 8 secondes pour placer votre bateau et y rentrer ainsi que 8 minutes maximum pour finir la course !"}]
+function switch:translations/modes_boat_race_start
 
 scoreboard players set #remaining_time switch.data 488
 scoreboard players set #boat_race_seconds switch.data -8

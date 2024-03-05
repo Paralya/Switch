@@ -1,6 +1,6 @@
 
 # Display
-$tellraw @s [{"text":"➤ ","color":"gold"},{"text":"$(count)","color":"yellow"},{"text":" $(Name) dont "},{"text":"$(wins)","color":"yellow"},{"text":" victoires "},{"text":"($(winrate)%)","color":"green"}]
+function switch:translations/player_trigger_stats_display_loop
 
 # Continue loop
 data remove storage switch:temp sorted_stats[0]

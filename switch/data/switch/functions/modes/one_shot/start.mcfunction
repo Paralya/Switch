@@ -21,8 +21,7 @@ execute if score #TEAM_ONESHOT switch.data matches 1 as @a[tag=!detached,sort=ra
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/one_shot
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de One Shot dans 6 secondes, soyez le dernier survivant en éliminant tous les autres joueurs !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
+function switch:translations/modes_one_shot_start
 
 scoreboard objectives setdisplay list switch.health
 scoreboard objectives add switch.temp.damages dummy

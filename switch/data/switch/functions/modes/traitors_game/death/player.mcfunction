@@ -13,7 +13,7 @@ effect clear @s[scores={switch.alive=0}]
 
 
 # Second life management for Ninja role
-tellraw @s[scores={switch.alive=1..,switch.temp.role=4}] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Vous êtes mort mais votre capacité de "},{"text":"ninja","color":"green"},{"text":" vous permet de revenir dans la partie !"}]
+function switch:translations/modes_traitors_game_death_player
 attribute @s[scores={switch.alive=1..,switch.temp.role=4}] generic.max_health base set 10.0
 attribute @s[scores={switch.alive=1..,switch.temp.role=4}] generic.movement_speed base set 0.115
 tag @s[scores={switch.alive=1..,switch.temp.role=4}] add switch.ninja_death

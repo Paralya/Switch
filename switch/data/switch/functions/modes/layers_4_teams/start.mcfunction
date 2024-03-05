@@ -6,8 +6,7 @@ function switch:utils/set_dynamic_time
 
 ## Chargement de la map
 function switch:choose_map_for/layers_4_teams
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Layers, votre objectif est de vous équipez le plus rapidement pour tuer les autres joueurs au travers des couches de tous les minerais ! Le PvP s'active au bout d'une minute mais vous devez détruire l'obsidienne pour rejoindre la zone ennemi !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
+function switch:translations/modes_layers_4_teams_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 610

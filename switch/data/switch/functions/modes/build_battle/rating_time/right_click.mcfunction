@@ -4,12 +4,7 @@ scoreboard players set #slot switch.data 0
 execute store result score #slot switch.data run data get entity @s SelectedItemSlot
 
 # Depending on slot, print message and playsound cat
-execute if score #slot switch.data matches 0 run tellraw @s {"text":"Super Poop","color":"#8B4513"}
-execute if score #slot switch.data matches 1 run tellraw @s {"text":"Poop","color":"red"}
-execute if score #slot switch.data matches 2 run tellraw @s {"text":"OK","color":"dark_green"}
-execute if score #slot switch.data matches 3 run tellraw @s {"text":"Good","color":"green"}
-execute if score #slot switch.data matches 4 run tellraw @s {"text":"Epic","color":"light_purple"}
-execute if score #slot switch.data matches 5 run tellraw @s {"text":"Legendary","color":"gold"}
+function switch:translations/modes_build_battle_rating_time_right_click
 execute if score #slot switch.data matches 0 run playsound entity.cat.ambient ambient @s ~ ~ ~ 1 0.33
 execute if score #slot switch.data matches 1 run playsound entity.cat.ambient ambient @s ~ ~ ~ 1 0.66
 execute if score #slot switch.data matches 2 run playsound entity.cat.ambient ambient @s ~ ~ ~ 1 1.00

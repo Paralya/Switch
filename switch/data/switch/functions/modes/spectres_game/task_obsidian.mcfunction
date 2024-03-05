@@ -20,6 +20,6 @@ tag @e[type=chicken,tag=switch.new] remove switch.new
 
 
 # Tellraw & playsound
-tellraw @a[tag=!detached] ["",{"text":"---------------","color":"#DEE2E5"},{"text":"\n"},{"text":"Tasks Game","bold":true,"color":"green"},{"text":" \u2022","bold":true,"color":"gray"},{"text":" Des obsidiennes sont apparues ! Les visibles auront des bonus en les cassant !","color":"white"},{"text":"\n"},{"text":"---------------","color":"#DEE2E5"}]
+function switch:translations/modes_spectres_game_task_obsidian
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 

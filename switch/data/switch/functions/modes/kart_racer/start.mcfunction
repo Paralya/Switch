@@ -1,7 +1,6 @@
 
 scoreboard players set @a[tag=!detached] switch.alive 1
 
-title @a[tag=!detached] times 5 20 5
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
@@ -9,7 +8,7 @@ effect give @a[tag=!detached] levitation 10 255 true
 function switch:utils/set_dynamic_time
 gamerule fallDamage false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Kart Racer dans 10 secondes, finissez la course le plus rapidement possible !"}]
+function switch:translations/modes_kart_racer_start
 
 scoreboard players set #remaining_time switch.data 310
 scoreboard players set #kart_racer_seconds switch.data -10

@@ -11,7 +11,7 @@ execute if score #laser_game_seconds switch.data matches 10 if data storage swit
 
 # Base reload
 scoreboard players remove #base_reload switch.data 1
-execute if score #base_reload switch.data matches 0 run tellraw @a[tag=!detached] [{"text":"La base de bonus vient de se recharger !","color":"yellow"}]
+function switch:translations/modes_laser_game_second
 execute if score #base_reload switch.data matches 0 run setblock 516 104 523 iron_trapdoor[powered=true,open=true]
 execute if score #base_reload switch.data matches 0 run setblock 36041 149 36011 iron_trapdoor[powered=true,open=true,facing=east]
 execute if score #base_reload switch.data matches 0 run setblock 36041 149 36012 iron_trapdoor[powered=true,open=true,facing=east]

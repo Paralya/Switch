@@ -1,5 +1,5 @@
 
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" s'est pris un mur, il a survécu "},{"score":{"name":"#moutron_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+function switch:translations/modes_moutron_death
 execute if entity @s[gamemode=!spectator] at @s as @p[gamemode=!spectator,distance=0.001..12] run function switch:modes/moutron/adv_kill
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 

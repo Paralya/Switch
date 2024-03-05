@@ -12,7 +12,7 @@ function switch:choose_map_for/feed_fast
 gamerule showDeathMessages false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Feed Fast dans 5 secondes, mangez les nourritures les plus rassasiantes pour marquer le maximum de points !"}]
+function switch:translations/modes_feed_fast_start
 
 scoreboard players set #remaining_time switch.data 50
 scoreboard players set #feed_fast_seconds switch.data -5

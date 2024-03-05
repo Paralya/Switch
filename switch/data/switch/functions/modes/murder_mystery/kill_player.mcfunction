@@ -14,7 +14,7 @@ execute summon zombie run function switch:modes/murder_mystery/apply_properties_
 execute if data entity @s Inventory[].tag.switch.detective_bow run summon item_display ~ ~1 ~ {item:{id:"minecraft:bow",Count:1b},Tags:["switch.detective_bow"],Glowing:1b}
 
 # Title & clear
-title @s title {"text":"Vous êtes mort","color":"red"}
+function switch:translations/modes_murder_mystery_kill_player
 clear @s
 
 # Killed by murderer as murderer?

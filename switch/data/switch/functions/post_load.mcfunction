@@ -1,5 +1,5 @@
 
-tellraw @a[tag=convention.debug] {"text":"[Loaded Switch v1.0.0]","italic":false,"color":"green"}
+function switch:translations/post_load
 execute unless entity @a run schedule function switch:post_load 1t
 
 execute if score #engine_state switch.data matches 2..3 run return 1

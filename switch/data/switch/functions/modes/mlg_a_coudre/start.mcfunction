@@ -19,7 +19,7 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de MLG à Coudre, sautez et posez votre seau d'eau pour amortir votre chute !"}]
+function switch:translations/modes_mlg_a_coudre_start
 
 scoreboard players set #mlg_a_coudre_seconds switch.data 0
 scoreboard players set #mlg_a_coudre_ticks switch.data 0

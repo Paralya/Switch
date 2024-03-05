@@ -9,7 +9,6 @@ function switch:choose_map_for/de_a_coudre
 gamerule showDeathMessages false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Dé à Coudre, marquez le maximum de points en sautant dans des points d'eau encerclé de blocs !"}]
 
 scoreboard players set #de_a_coudre_seconds switch.data 0
 scoreboard players set #de_a_coudre_ticks switch.data 0
@@ -36,5 +35,5 @@ execute if score #max switch.data matches 17..24 run scoreboard players set #rou
 execute if score #max switch.data matches 25..32 run scoreboard players set #rounds switch.data 2
 execute if score #max switch.data matches 33.. run scoreboard players set #rounds switch.data 1
 scoreboard players operation #max_rounds switch.data = #rounds switch.data
-tellraw @a[tag=!detached] [{"text":"Démarrage d'un nouveau round ! [","color":"yellow"},{"text":"1","color":"gold"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"gold"},{"text":"]"}]
+function switch:translations/modes_de_a_coudre_start
 

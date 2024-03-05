@@ -16,7 +16,7 @@ execute if data storage switch:main {map:"pitchout_1"} as @a[tag=!detached,sort=
 execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
 execute as @a[tag=!detached] run function switch:modes/pitchout/xp_bar
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, votre objectif est d'expulser les autres joueurs grâce à vos équipements et d'être le dernier en vie à la fin !"}]
+function switch:translations/modes_pitchout_start
 
 scoreboard objectives add switch.temp.damages dummy
 scoreboard objectives add switch.temp.cooldown dummy

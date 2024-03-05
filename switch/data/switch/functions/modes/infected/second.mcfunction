@@ -6,32 +6,24 @@ execute if score #infected_seconds switch.data matches 0.. run function switch:m
 # Countdown for starting the game
 execute if score #infected_seconds switch.data matches -10..-2 run scoreboard players operation #temp switch.data = #infected_seconds switch.data
 execute if score #infected_seconds switch.data matches -10..-2 run scoreboard players operation #temp switch.data *= #-1 switch.data
-execute if score #infected_seconds switch.data matches -10..-2 run title @a[tag=!detached] actionbar [{"text":"Début de la partie dans ","color":"dark_purple"},{"score":{"name":"#temp","objective":"switch.data"},"color":"light_purple"},{"text":" secondes","color":"dark_purple"}]
-execute if score #infected_seconds switch.data matches -1 run title @a[tag=!detached] actionbar [{"text":"Début de la partie dans ","color":"dark_purple"},{"text":"1","color":"light_purple"},{"text":" seconde","color":"dark_purple"}]
 execute if score #infected_seconds switch.data matches -3..-1 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
-execute if score #infected_seconds switch.data matches 0 run tellraw @a[tag=!detached] [{"text":"La partie commence !","color":"yellow"}]
 execute if score #infected_seconds switch.data matches 0 run function switch:modes/infected/secrets/load
 execute if score #infected_seconds switch.data matches 0 as @a[tag=!detached] at @s run function switch:modes/infected/death/human_spawn
 
 # Title action bar
 execute store result score #nb_humans switch.data if entity @a[team=switch.temp.human]
 execute store result score #nb_zombies switch.data if entity @a[team=switch.temp.zombie]
-execute if score #infected_seconds switch.data matches 0.. run title @a[tag=!detached] actionbar [{"text":"Humains : ","color":"light_purple"},{"score":{"name":"#nb_humans","objective":"switch.data"},"color":"dark_purple"},{"text":", "},{"text":"Zombies : ","color":"dark_green"},{"score":{"name":"#nb_zombies","objective":"switch.data"},"color":"green"}]
 
 # Player infection
 execute as @a[scores={switch.temp.infection=1..}] at @s run function switch:modes/infected/death/infection_second
 
 # If there are no zombies left, infect a random human
 execute if score #infected_seconds switch.data matches 7..9 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
-execute if score #infected_seconds switch.data matches 7 run tellraw @a[tag=!detached] [{"text":"Choix de l'infecté dans 3 secondes","color":"dark_purple"}]
-execute if score #infected_seconds switch.data matches 8 run tellraw @a[tag=!detached] [{"text":"Choix de l'infecté dans 2 secondes","color":"dark_purple"}]
-execute if score #infected_seconds switch.data matches 9 run tellraw @a[tag=!detached] [{"text":"Choix de l'infecté dans 1 seconde","color":"dark_purple"}]
 execute if score #infected_seconds switch.data matches 10 as @r[team=switch.temp.human] run function switch:modes/infected/death/launch_infection
-execute if score #infected_seconds switch.data matches 10 run tellraw @a[tag=!detached] [{"selector":"@p[scores={switch.temp.infection=1}]","color":"green"},{"text":" a été choisi comme premier infecté !","color":"dark_purple"},{"text":"\n"},{"text":"Humains, les renforts arrivent dans moins de 10 minutes !","color":"light_purple"}]
 execute if score #infected_seconds switch.data matches 10 run scoreboard players set @p[scores={switch.temp.infection=1}] switch.temp.original_zombie 1
 execute if score #infected_seconds switch.data matches 25.. unless entity @a[team=switch.temp.zombie] unless entity @a[team=switch.temp.human,scores={switch.temp.infection=1..}] run tag @r[team=switch.temp.human] add switch.to_infect
 execute if score #infected_seconds switch.data matches 25.. as @p[tag=switch.to_infect] run function switch:modes/infected/death/launch_infection
-execute if score #infected_seconds switch.data matches 25.. as @p[tag=switch.to_infect] run tellraw @a[tag=!detached] [{"selector":"@p[tag=switch.to_infect]","color":"green"},{"text":" a été choisi comme nouvel infecté car il n'y a plus de zombies !"}]
+function switch:translations/modes_infected_second
 execute if score #infected_seconds switch.data matches 10 run scoreboard players set @p[tag=switch.to_infect] switch.temp.original_zombie 1
 execute if score #infected_seconds switch.data matches 25.. run tag @a[tag=switch.to_infect] remove switch.to_infect
 

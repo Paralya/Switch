@@ -1,3 +1,3 @@
-tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin du mini-jeu ! Les rouges ont gagnés"}]
+function switch:translations/modes_glassrunner_end_red
 
 scoreboard players set #process_end switch.data 1

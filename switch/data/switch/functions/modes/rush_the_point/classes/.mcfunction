@@ -9,7 +9,7 @@ execute if score @s switch.temp.choosen_class matches 0 if score @s switch.right
 
 # Elytra cooldown
 scoreboard players add @s switch.temp.elytra_cooldown 0
-execute if score @s switch.temp.choosen_class matches 3 unless score @s switch.temp.elytra_cooldown matches 0 run tellraw @s [{"text":"Erreur : Vous devez attendre encore ","color":"red"},{"score":{"name":"@s","objective":"switch.temp.elytra_cooldown"},"color":"dark_red"},{"text":" secondes avant de choisir cette classe","color":"red"}]
+function switch:translations/modes_rush_the_point_classes_
 execute if score @s switch.temp.choosen_class matches 3 unless score @s switch.temp.elytra_cooldown matches 0 at @s run playsound entity.villager.no ambient @s
 execute if score @s switch.temp.choosen_class matches 3 unless score @s switch.temp.elytra_cooldown matches 0 run function switch:modes/rush_the_point/teleport_to_spawn
 

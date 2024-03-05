@@ -33,16 +33,7 @@ execute if score #random switch.data matches 7 if entity @s[team=switch.temp.red
 execute if score #random switch.data matches 8 if entity @s[team=switch.temp.red] run effect give @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] glowing 10 0 true
 
 # Print message
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" a activé la laine magique !"}]
-execute if score #random switch.data matches 0 run tellraw @a[tag=!detached] {"text":"[20s de résistance pour son équipe]\n","color":"aqua"}
-execute if score #random switch.data matches 1 run tellraw @a[tag=!detached] {"text":"[20s de régénération pour son équipe]\n","color":"aqua"}
-execute if score #random switch.data matches 2 run tellraw @a[tag=!detached] {"text":"[5s de poison pour l'équipe adverse]\n","color":"aqua"}
-execute if score #random switch.data matches 3 run tellraw @a[tag=!detached] {"text":"[10s de nausée pour l'équipe adverse]\n","color":"aqua"}
-execute if score #random switch.data matches 4 run tellraw @a[tag=!detached] {"text":"[Un drop de mouton pour son équipe]\n","color":"aqua"}
-execute if score #random switch.data matches 5 run tellraw @a[tag=!detached] {"text":"[10s de flèches enflammées pour son équipe]\n","color":"aqua"}
-execute if score #random switch.data matches 6 run tellraw @a[tag=!detached] {"text":"[10s de flèches explosives pour son équipe]\n","color":"aqua"}
-execute if score #random switch.data matches 7 run tellraw @a[tag=!detached] {"text":"[20s de slow falling pour son équipe]\n","color":"aqua"}
-execute if score #random switch.data matches 8 run tellraw @a[tag=!detached] {"text":"[10s de glowing pour l'équipe adverse]\n","color":"aqua"}
+function switch:translations/modes_sheepwars_magic_wool_slot
 
 # Playsound
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 0.5

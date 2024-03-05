@@ -5,7 +5,7 @@ execute unless score #test_mode switch.data matches 1 if entity @s[gamemode=!spe
 execute if entity @s[gamemode=!spectator] run effect give @s glowing infinite 255 true
 execute if entity @s[gamemode=!spectator] run particle explosion ~ ~ ~ 0 0 0 1 1 force @a[distance=..50]
 execute if entity @s[gamemode=!spectator] run playsound entity.generic.explode ambient @a[distance=..50]
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#memory_mine_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+function switch:translations/modes_memory_mine_death
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 scoreboard players reset @s switch.temp.cooldown
 

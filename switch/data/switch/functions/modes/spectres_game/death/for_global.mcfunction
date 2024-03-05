@@ -12,13 +12,8 @@ execute if predicate switch:chance/0.5 run scoreboard players set #success switc
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 execute if entity @a[tag=switch.temp,scores={switch.temp.spectror=1}] run scoreboard players set @s switch.alive 3
 
-execute if score #success switch.data matches 0 if entity @s[scores={switch.alive=1}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"Spectre","color":"yellow"},{"text":" !"}]
-execute if score #success switch.data matches 0 if entity @s[scores={switch.alive=2}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"Visible","color":"green"},{"text":" !"}]
-execute if score #success switch.data matches 0 if entity @s[scores={switch.alive=3}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, il était un "},{"text":"Spectror","color":"red"},{"text":" !"}]
 
-execute if score #success switch.data matches 1 if entity @s[scores={switch.alive=1}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Spectre","color":"yellow"},{"text":" !"}]
-execute if score #success switch.data matches 1 if entity @s[scores={switch.alive=2}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Visible","color":"green"},{"text":" !"}]
-execute if score #success switch.data matches 1 if entity @s[scores={switch.alive=3}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur "},{"nbt":"data.Name","entity":"@s"},{"text":" est mort, c'était un "},{"text":"Spectror","color":"red"},{"text":" !"}]
+function switch:translations/modes_spectres_game_death_for_global
 
 execute if entity @s[scores={switch.alive=1}] run scoreboard players add #nb_dead_spectres switch.data 1
 execute if entity @s[scores={switch.alive=2}] run scoreboard players add #nb_dead_visibles switch.data 1

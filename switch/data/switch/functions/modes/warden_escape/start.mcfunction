@@ -13,7 +13,7 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Warden Escape dans 10 secondes, vous devez rester discrets afin de ne pas être pris pour cible par les Wardens !"}]
+function switch:translations/modes_warden_escape_start
 
 scoreboard players set #remaining_time switch.data 100
 scoreboard players set #warden_escape_seconds switch.data -10

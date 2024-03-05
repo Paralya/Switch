@@ -15,7 +15,7 @@ execute as @a[scores={switch.alive=1..}] if score @s switch.rtb.time = #max_time
 
 tag @r[scores={switch.alive=1..},tag=switch.looser_score,tag=switch.looser_time,limit=1] add switch.looser
 
-tellraw @a[tag=!detached] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le joueur ","color":"red"},{"selector":"@a[tag=!detached,tag=switch.looser]","color":"red"},{"text":" a été éliminé !","color":"red"}]
+function switch:translations/modes_replicate_the_build_round_7_end
 
 gamerule doTileDrops false
 

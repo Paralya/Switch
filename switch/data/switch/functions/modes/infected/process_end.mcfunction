@@ -2,9 +2,7 @@
 scoreboard players add #process_end switch.data 1
 
 # Victory
-execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 0 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Les renforts sont arrivés, victoires des "},{"text":"humains","color":"light_purple"},{"text":" !"}]
-execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 1 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tous les humains se sont fait infectés, victoire des "},{"text":"zombies","color":"dark_green"},{"text":" !"}]
-execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 2 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
+function switch:translations/modes_infected_process_end
 
 # Advancements
 execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 0 unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,team=switch.temp.human,scores={switch.temp.hits_gotten=0}] only switch:visible/57

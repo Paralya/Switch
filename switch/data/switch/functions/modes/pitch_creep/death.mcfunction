@@ -1,5 +1,5 @@
 
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#pitch_creep_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+function switch:translations/modes_pitch_creep_death
 scoreboard players set @s switch.alive 0
 function switch:utils/classic_death
 

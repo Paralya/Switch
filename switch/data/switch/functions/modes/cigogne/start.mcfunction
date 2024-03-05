@@ -17,8 +17,7 @@ function switch:choose_map_for/cigogne
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de Cigogne dans 10 secondes, vous êtes invisibles et votre objectif est de tuer tous les autres joueurs ! Des particules d'eau apparaissent sous vos pieds si vous ne sneakez pas, et vous obtenez l'effet glowing si vous sneakez pendant 10 secondes de suite !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
+function switch:translations/modes_cigogne_start
 
 scoreboard players set #remaining_time switch.data 910
 scoreboard players set #cigogne_seconds switch.data -10

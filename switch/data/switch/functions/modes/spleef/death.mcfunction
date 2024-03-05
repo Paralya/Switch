@@ -1,5 +1,5 @@
 
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#spleef_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+function switch:translations/modes_spleef_death
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 
 gamemode spectator @s

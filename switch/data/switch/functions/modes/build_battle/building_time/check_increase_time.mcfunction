@@ -13,10 +13,9 @@ scoreboard players reset * switch.temp.theme_vote
 
 # If the vote is successful, increase the time
 execute if score #success switch.data matches 1 run scoreboard players add #remaining_time switch.data 120
-execute if score #success switch.data matches 1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" La population (plus de 75%) a voté pour augmenter le temps de construction de 5 minutes !","color":"green"}]
 execute if score #success switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.villager.yes ambient @s
 
 # Else, tell the players that the vote failed
-execute unless score #success switch.data matches 1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Il n'y a pas eu assez de votes (moins de 75%) pour augmenter le temps de construction...","color":"red"}]
+function switch:translations/modes_build_battle_building_time_check_increase_time
 execute unless score #success switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.villager.no ambient @s
 

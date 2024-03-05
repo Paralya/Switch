@@ -39,13 +39,12 @@ execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos
 setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
 execute at @s run loot insert 0 0 0 mine ~ ~ ~ diamond_pickaxe
-execute unless data block 0 0 0 Items[0] run tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Veuillez reporter ce message à Stoupy51 : #bp_selected_block = "},{"score":{"name":"#bp_selected_block","objective":"switch.data"},"color":"aqua"},{"text":", #modulo_rand = "},{"score":{"name":"#modulo_rand","objective":"switch.data"},"color":"aqua"},{"text":", (#y_pos, z_pos) : ("},{"score":{"name":"#y_pos","objective":"switch.data"},"color":"aqua"},{"text":", "},{"score":{"name":"#z_pos","objective":"switch.data"},"color":"aqua"},{"text":")"}]
 
 
 
 ## Others
 # Tellraw, Playsound, and Clear all
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Démarrage de la manche n°"},{"score":{"name":"#block_party_round","objective":"switch.data"},"color":"aqua"},{"text":" !"}]
+function switch:translations/modes_block_party_core_pick_random_art
 execute as @a[tag=!detached] at @s run playsound entity.villager.ambient ambient @s
 clear @a[tag=!detached,gamemode=adventure]
 

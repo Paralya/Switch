@@ -13,8 +13,7 @@ function switch:choose_map_for/castagne
 
 gamerule naturalRegeneration false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la Castagne dans 10 secondes, soyez le dernier en vie dans ce FFA sanglant !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
+function switch:translations/modes_castagne_start
 
 scoreboard players set #remaining_time switch.data 910
 scoreboard players set #castagne_seconds switch.data -10

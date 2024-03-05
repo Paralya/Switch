@@ -8,10 +8,9 @@ execute store result score #votes_max switch.data if entity @a[tag=!detached,gam
 scoreboard players operation #votes_max switch.data /= #2 switch.data
 scoreboard players add #votes_max switch.data 1
 
-tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" a voté pour activer les collisions joueurs ["},{"score":{"name":"#votes","objective":"switch.data"},"color":"aqua"},{"text":"/"},{"score":{"name":"#votes_max","objective":"switch.data"},"color":"aqua"},{"text":"]"}]
 
 execute if score #votes switch.data >= #votes_max switch.data run scoreboard players set @a[tag=!detached] switch.temp.vote_collisions 1
-execute if score #votes switch.data >= #votes_max switch.data run tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Collisions entre joueurs activées !\n"}]
+function switch:translations/modes_kart_racer_vote_for_collisions
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.kart collisionRule always
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.1 collisionRule always
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.2 collisionRule always

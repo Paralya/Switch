@@ -5,8 +5,6 @@ execute if score #remaining_time switch.data matches 1.. run scoreboard players 
 execute if score #traitors_game_seconds switch.data matches 0.. run function switch:modes/traitors_game/xp_bar
 execute if score #traitors_game_seconds switch.data matches 0 run function switch:modes/traitors_game/roles/announcement
 execute if score #traitors_game_seconds switch.data matches 5 if score #has_scenarios switch.data matches 1 run function switch:modes/traitors_game/announce_scenarios
-execute if score #traitors_game_seconds switch.data matches 90 run tellraw @a[scores={switch.temp.role=1}] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Voici l'identité d'un traitre : "},{"selector":"@a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6},sort=random,limit=1]","color":"green"},{"text":" !"}]
-execute if score #traitors_game_seconds switch.data matches 180 run tellraw @a[scores={switch.temp.role=1}] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Voici l'identité d'un traitre : "},{"selector":"@a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6},sort=random,limit=1]","color":"green"},{"text":" !"}]
 
 # Lootboxes summon
 execute if score #traitors_game_seconds switch.data matches 30 run function switch:modes/traitors_game/summon_lootboxes
@@ -21,5 +19,5 @@ execute as @e[type=chest_minecart] run data modify entity @s Glowing set value 1
 # Innocent solitaire
 execute if score #sc_solitaire switch.data matches 1 if score #traitors_game_seconds switch.data matches 90 run function switch:modes/traitors_game/roles/choose_solitaire
 
-title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+function switch:translations/modes_traitors_game_second
 

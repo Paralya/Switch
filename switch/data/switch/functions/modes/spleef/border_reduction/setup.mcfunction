@@ -1,6 +1,6 @@
 
 # Message d'annonce
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" 30 secondes sont passées, réduction de la bordure !"}]
+function switch:translations/modes_spleef_border_reduction_setup
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 
 # Summon entity depending on map

@@ -7,9 +7,8 @@ execute if score @s switch.checkpoint matches 0 run scoreboard players add @s sw
 execute if score @s switch.checkpoint matches 0 unless score @s switch.lap > #total_laps switch.data run scoreboard players operation @s switch.temp.pos_on_last_lap = @s switch.temp.pv_classement
 
 # Playsounds & messages
-execute if score @s switch.checkpoint matches 0 if score @s switch.lap <= #total_laps switch.data run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s","color":"green"},{"text":" passe au tour n°"},{"score":{"name":"@s","objective":"switch.lap"},"color":"aqua"},{"text":"/"},{"score":{"name":"#total_laps","objective":"switch.data"},"color":"aqua"}]
 execute if score @s switch.checkpoint matches 0 at @e[limit=2] at @s run playsound item.goat_horn.sound.1 ambient @s ^ ^ ^10 100 1 1
-execute unless score @s switch.checkpoint matches 0 if score @s switch.lap <= #total_laps switch.data run tellraw @s ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Checkpoint n°"},{"score":{"name":"@s","objective":"switch.checkpoint"},"color":"aqua"},{"text":"/"},{"score":{"name":"#total_checkpoints","objective":"switch.data"},"color":"aqua"}]
+function switch:translations/modes_kart_racer_checkpoints_player_in
 execute unless score @s switch.checkpoint matches 0 at @s run playsound entity.player.levelup ambient @s ^ ^ ^10 100 2 1
 execute if score @s switch.checkpoint matches 0 if score @s switch.lap > #total_laps switch.data run function switch:modes/kart_racer/complete
 
