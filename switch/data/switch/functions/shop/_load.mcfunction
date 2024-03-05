@@ -1,4 +1,5 @@
 
+## Don't forget to edit "switch/data/switch/functions/player/username_change/update_everything.mcfunction"
 # Scoreboard objectives creation
 scoreboard objectives add switch.pitchout.boots dummy
 scoreboard objectives add switch.pitchout.ender_pearl dummy
@@ -21,4 +22,11 @@ scoreboard objectives add switch.sheepwars.kit_more_sheep dummy
 scoreboard objectives add switch.sheepwars.kit_builder dummy
 scoreboard objectives add switch.sheepwars.kit_mobility dummy
 scoreboard objectives add switch.sheepwars.kit_armored_sheep dummy
+
+scoreboard objectives add switch.spectres_game.sp_arrow_effect dummy
+scoreboard objectives add switch.spectres_game.sp_arrows dummy
+scoreboard objectives add switch.spectres_game.sp_apples dummy
+scoreboard objectives add switch.spectres_game.vi_arrows dummy
+scoreboard objectives add switch.spectres_game.vi_apples dummy
+scoreboard objectives add switch.spectres_game.vi_slow_regen dummy
 

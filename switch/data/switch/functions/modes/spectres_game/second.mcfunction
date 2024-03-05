@@ -24,23 +24,17 @@ execute if score #spectres_game_seconds switch.data matches 15 if score #TASKS_G
 execute if score #spectres_game_seconds switch.data matches 15 if score #TASKS_GAME switch.data matches 1 run title @a[tag=!detached] subtitle {"text":"Pour les Visibles et Spectres","color":"light_purple"}
 execute if score #spectres_game_seconds switch.data matches 15 if score #TASKS_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound block.anvil.use ambient @s
 
-# Première vague d'obsidiennes
+# Vagues d'obsidiennes
+execute if score #TASKS_GAME switch.data matches 1 run scoreboard players set #modulo switch.data 120
+execute if score #TASKS_GAME switch.data matches 1 run scoreboard players operation #temp switch.data = #spectres_game_seconds switch.data
+execute if score #TASKS_GAME switch.data matches 1 run scoreboard players operation #temp switch.data %= #modulo switch.data
+execute if score #TASKS_GAME switch.data matches 1 if score #temp switch.data matches 40 run function switch:modes/spectres_game/task_obsidian
+execute if score #TASKS_GAME switch.data matches 1 if score #temp switch.data matches 100 run function switch:modes/spectres_game/task_obsidian
 
-execute if score #spectres_game_seconds switch.data matches 80 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-# Première vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 200 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-# Première vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 390 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-# Première vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 590 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-# Première vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 800 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-
-# Deuxième vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 220 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
-
-# Troisième vague d'obsidiennes
-execute if score #spectres_game_seconds switch.data matches 350 if score #TASKS_GAME switch.data matches 1 run function switch:modes/spectres_game/task_obsidian
+# Slow regeneration
+scoreboard players operation #temp switch.data = #spectres_game_seconds switch.data
+scoreboard players operation #temp switch.data %= #10 switch.data
+execute if score #temp switch.data matches 5 run effect give @a[tag=!detached,scores={switch.spectres_game.vi_slow_regen=1}] regeneration 1 2 true
 
 
 # Glowing

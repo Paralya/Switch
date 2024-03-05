@@ -61,3 +61,10 @@ $scoreboard players operation $(username) switch.sheepwars.kit_builder = $(old_u
 $scoreboard players operation $(username) switch.sheepwars.kit_mobility = $(old_username) switch.sheepwars.kit_mobility
 $scoreboard players operation $(username) switch.sheepwars.kit_armored_sheep = $(old_username) switch.sheepwars.kit_armored_sheep
 
+$scoreboard players operation $(username) switch.spectres_game.sp_arrow_effect = $(old_username) switch.spectres_game.sp_arrow_effect
+$scoreboard players operation $(username) switch.spectres_game.sp_arrows = $(old_username) switch.spectres_game.sp_arrows
+$scoreboard players operation $(username) switch.spectres_game.sp_apples = $(old_username) switch.spectres_game.sp_apples
+$scoreboard players operation $(username) switch.spectres_game.vi_arrows = $(old_username) switch.spectres_game.vi_arrows
+$scoreboard players operation $(username) switch.spectres_game.vi_apples = $(old_username) switch.spectres_game.vi_apples
+$scoreboard players operation $(username) switch.spectres_game.vi_slow_regen = $(old_username) switch.spectres_game.vi_slow_regen
+
