@@ -3,8 +3,7 @@ kill @e[type=arrow]
 kill @e[tag=switch.rtb.verify,type=marker]
 
 
-title @a[tag=!detached] times 0t 20t 0
-title @a[tag=!detached] title {"text":" Mémorisez !","color":"green"}
+function switch:translations/modes_replicate_the_build_round_3
 scoreboard players add #rtb_round_state switch.data 1
 
 scoreboard objectives remove switch.rtb.id

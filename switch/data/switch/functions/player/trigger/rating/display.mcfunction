@@ -1,6 +1,6 @@
 
 ## For each of the game, print it in order
-tellraw @s ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Liste des mini-jeux :"}]
+function switch:translations/player_trigger_rating_display
 
 # Done advancements
 data modify storage switch:temp copy set from storage switch:ratings all

@@ -11,7 +11,7 @@ gamerule keepInventory true
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/murder_mystery
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Murder Mystery, votre rôle va vous être donné !\n"}]
+function switch:translations/modes_murder_mystery_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 245

@@ -12,11 +12,10 @@ data modify entity @s Rotation set from storage switch:temp Rotation
 
 # Flag Reset Blue
 execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag
-execute if entity @s[tag=switch.blue_flag] run tellraw @a[tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" Le drapeau "},{"text":"bleu","color":"blue"},{"text":" est à nouveau en place !"}]
 
 # Flag Reset Red
 execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
-execute if entity @s[tag=switch.red_flag] run tellraw @a[tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" Le drapeau "},{"text":"rouge","color":"red"},{"text":" est à nouveau en place !"}]
+function switch:translations/modes_capture_the_flag_flag_reset
 
 # Reset Banner
 tag @s add switch.original_pos

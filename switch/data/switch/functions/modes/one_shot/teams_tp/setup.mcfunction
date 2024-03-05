@@ -1,5 +1,5 @@
 
-tellraw @a[tag=!detached] ["",{"text":"Fish Fight","bold":true,"color":"#8DF0CE"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"(1 partie sur 2)","bold":true,"italic":true,"color":"gray"},{"text":" Le jeu se déroulera en 2 équipes !","bold":true},{"text":"\n "}]
+function switch:translations/modes_one_shot_teams_tp_setup
 
 team add switch.temp.red
 team add switch.temp.blue

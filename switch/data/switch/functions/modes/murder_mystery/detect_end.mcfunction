@@ -14,17 +14,12 @@ execute if score #game_state switch.data matches 1..3 run scoreboard players set
 execute if score #remaining_time switch.data matches 1 run scoreboard players set #remaining_time switch.data 0
 
 # Cas des vainqueurs
-execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 0 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, temps écoulé ! Victoire des innocents restants !"}]
-execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 1 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire de "},{"selector":"@a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=3}]","color":"red"}]
-execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 2 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, victoire des "},{"text":"innocents","color":"green"},{"text":" ! GG à "},{"selector":"@a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1..2}]"}]
-execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 3 run tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Fin de partie, aucun des camps n'est sorti vainqueur car il n'y a plus aucun joueur en vie !"}]
 
 execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 0 as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1..2}] at @s run function switch:engine/add_win
 execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=3}] at @s run function switch:engine/add_win
 execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1..2}] at @s run function switch:engine/add_win
 
-execute if score #remaining_time switch.data matches ..1 run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Détective : "},{"selector":"@a[scores={switch.temp.role=2}]","color":"green"},{"text":" - Murderer : "},{"selector":"@a[scores={switch.temp.role=3}]","color":"red"}]
-execute if score #remaining_time switch.data matches ..1 as @a[scores={switch.temp.role=3}] on attacker if entity @s[scores={switch.temp.role=1}] run tellraw @a[tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Héro : "},{"selector":"@s","color":"blue"}]
+function switch:translations/modes_murder_mystery_detect_end
 execute if score #remaining_time switch.data matches ..1 unless score #test_mode switch.data matches 1 as @a[scores={switch.temp.role=3}] on attacker run advancement grant @s[scores={switch.temp.role=1}] only switch:visible/61
 
 # Visuel de fin de partie

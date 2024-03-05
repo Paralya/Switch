@@ -16,5 +16,5 @@ execute if data storage switch:main {map:"sheepwars_ilots"} positioned 145046 14
 execute if data storage switch:main {map:"sheepwars_colored_sheeps"} positioned 154054 147 154053 run function sheepwars:magic_wool/summon
 
 # Message
-tellraw @a[tag=!detached] ["",{"text":"[SheepWars] ","color":"yellow"},{"text":"Une laine magique est apparue !"}]
+function switch:translations/modes_sheepwars_magic_wool_place
 

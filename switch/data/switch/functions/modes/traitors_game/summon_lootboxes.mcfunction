@@ -17,7 +17,6 @@ execute as @e[type=chest_minecart,tag=switch.new] run function switch:maps/sprea
 tag @e[type=chest_minecart,tag=switch.new] remove switch.new
 
 # Tellraw & playsound
-execute unless score #count switch.data matches 6.. run tellraw @a[tag=!detached] [{"text":"Une lootbox est apparue !","color":"green"}]
-execute if score #count switch.data matches 6.. run tellraw @a[tag=!detached] [{"text":"Plusieurs lootboxes sont apparues !","color":"green"}]
+function switch:translations/modes_traitors_game_summon_lootboxes
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 

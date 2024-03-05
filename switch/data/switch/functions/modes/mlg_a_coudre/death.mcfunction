@@ -1,7 +1,6 @@
 
 execute if score @s switch.temp.lives matches 1.. run scoreboard players remove @s switch.temp.lives 1
-execute if score @s switch.temp.lives matches 1 run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" a raté son saut mais il lui reste une vie !"}]
-execute if score @s switch.temp.lives matches 0 run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" a raté son saut, il termine "},{"score":{"name":"#position","objective":"switch.data"}},{"text":"ème !"}]
+function switch:translations/modes_mlg_a_coudre_death
 execute if score @s switch.temp.lives matches 0 run scoreboard players reset @s switch.temp.lives
 
 gamemode spectator @s

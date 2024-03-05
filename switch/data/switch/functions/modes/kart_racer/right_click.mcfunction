@@ -1,6 +1,6 @@
 
 # Manage Respawns
-execute if score #kart_racer_seconds switch.data matches 0.. if score @s switch.respawn_cp_id matches -1 if data entity @s SelectedItem.tag.switch.classic_respawn run tellraw @s [{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Tu n'as encore passé aucun checkpoint, seul le hard respawn fonctionne"}]
+function switch:translations/modes_kart_racer_right_click
 execute if score #kart_racer_seconds switch.data matches 0.. unless score @s switch.respawn_cp_id matches -1 if data entity @s SelectedItem.tag.switch.classic_respawn run function switch:modes/kart_racer/checkpoints/respawn/classic
 execute if score #kart_racer_seconds switch.data matches 0.. if data entity @s SelectedItem.tag.switch.hard_respawn run function switch:modes/kart_racer/checkpoints/respawn/hard
 

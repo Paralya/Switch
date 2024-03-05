@@ -1,4 +1,4 @@
 
-tellraw @s ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Tu viens de tomber dans le vide de la map !","color":"yellow"}]
+function switch:translations/player_kill_out_of_map
 kill @s
 

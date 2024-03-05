@@ -22,7 +22,7 @@ execute if score #block switch.data matches 16 run setblock ~ ~ ~ black_wool
 
 scoreboard players set #success switch.data 0
 execute unless block ~1 ~ ~ water unless block ~-1 ~ ~ water unless block ~ ~ ~1 water unless block ~ ~ ~-1 water unless block ~1 ~ ~ air unless block ~-1 ~ ~ air unless block ~ ~ ~1 air unless block ~ ~ ~-1 air run function switch:modes/mlg_a_coudre/mlg_a_coudre
-execute if score #success switch.data matches 0 run tellraw @a[tag=!detached] [{"selector":"@s","color":"dark_gray"},{"text":" valide son saut."}]
+function switch:translations/modes_mlg_a_coudre_done
 
 schedule function switch:modes/mlg_a_coudre/remove_water 1s
 

@@ -1,4 +1,4 @@
 
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" a raté son saut [+0 points]"}]
+function switch:translations/modes_simultaneous_jump_death
 function switch:modes/simultaneous_jump/teleport
 

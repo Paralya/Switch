@@ -1,5 +1,5 @@
 
-tellraw @s {"text":"Item random reçu !","color":"dark_purple"}
+function switch:translations/modes_traitors_game_random_items
 
 execute store result score #random switch.data run random value 0..47
 execute if score #random switch.data matches 0 run give @s iron_ore 32

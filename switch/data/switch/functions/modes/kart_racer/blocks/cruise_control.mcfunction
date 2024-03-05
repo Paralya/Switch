@@ -9,8 +9,7 @@ scoreboard players set @s switch.effects.timer 50
 
 # Title and subtitle to the player
 tag @s add shopping_kart.temp
-execute on passengers run title @s title ""
-execute on passengers run title @s subtitle [{"text":"Cruise Control","color":"blue"}]
+function switch:translations/modes_kart_racer_blocks_cruise_control
 execute on passengers at @s run playsound entity.experience_orb.pickup ambient @s ^ ^ ^10 100 1 1
 tag @s remove shopping_kart.temp
 

@@ -1,4 +1,4 @@
 
-$tellraw @s ["\n",{"nbt":"minigames[{id:\"$(id)\"}].Lore","storage":"switch:main","interpret":true},"\n"]
+function switch:translations/shop_description
 playsound block.note_block.bell ambient @s
 

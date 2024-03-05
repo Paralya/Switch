@@ -13,8 +13,7 @@ function switch:choose_map_for/protect_the_king
 
 gamerule naturalRegeneration false
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Protect The King, deux équipes s'affrontent et la partie se termine lorsqu'un des deux rois est tué !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
+function switch:translations/modes_protect_the_king_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901

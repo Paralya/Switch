@@ -29,7 +29,7 @@ execute as @e[type=sheep,tag=!switch.checked] run function switch:modes/sheepwar
 # Night if intergalactique
 scoreboard players add #sheepwars_night switch.data 0
 execute if score #sheepwars_night switch.data matches 0 if entity @e[type=sheep,tag=sheepwars.intergalactique,tag=!sheepwars.intertag] run scoreboard players set #sheepwars_night switch.data 1
-execute if score #sheepwars_night switch.data matches 1 run tellraw @a[tag=!detached] [{"text":"[SheepWars] ","color":"yellow"},{"text":"Une nuit intergalactique commence !","color":"blue"}]
+function switch:translations/modes_sheepwars_tick
 execute if score #sheepwars_night switch.data matches 1 run tag @e[type=sheep,tag=sheepwars.intergalactique,tag=!sheepwars.intertag] add sheepwars.intertag
 execute if score #sheepwars_night switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.wither.spawn ambient @s
 execute if score #sheepwars_night switch.data matches 1 run time set 18000

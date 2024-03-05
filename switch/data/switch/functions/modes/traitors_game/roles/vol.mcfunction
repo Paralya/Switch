@@ -11,14 +11,7 @@ execute if entity @s[tag=switch.solitaire] run tag @p[tag=switch.temp.floupy] ad
 execute if entity @s[tag=switch.solitaire] run tag @e[type=marker,predicate=switch:has_same_id] add switch.solitaire
 
 # Tellraws
-tellraw @s [{"text":"\nFloupy vient de vous voler votre rôle !\n","color":"red"}]
-execute if score #role switch.data matches 1 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Inspecteur","color":"green"},{"text":" !"}]
-execute if score #role switch.data matches 2 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Innocent","color":"green"},{"text":" !"}]
-execute if score #role switch.data matches 3 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Ninja (seconde vie non-utilisée)","color":"green"},{"text":" !"}]
-execute if score #role switch.data matches 4 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Ninja (seconde vie utilisée)","color":"green"},{"text":" !"}]
-execute if score #role switch.data matches 5 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Traitre","color":"red"},{"text":" !"}]
-execute if score #role switch.data matches 6 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Gros Traitre","color":"red"},{"text":" !"}]
-execute if score #role switch.data matches 7 run tellraw @p[tag=switch.temp.floupy] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Vous avez volé le rôle "},{"text":"Floupy","color":"yellow"},{"text":" !"}]
+function switch:translations/modes_traitors_game_roles_vol
 
 # Effects
 execute if score #role switch.data matches 1 run attribute @p[tag=switch.temp.floupy] generic.max_health base set 16

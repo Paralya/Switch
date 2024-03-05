@@ -1,7 +1,5 @@
 
 # Bases
-execute if data storage switch:main input{player:"@s"} run tellraw @s ["",{"nbt":"ParalyaStats","storage":"switch:main","interpret":true},{"text":" Voici vos statistiques :"}]
-$execute unless data storage switch:main input{player:"@s"} run tellraw @s ["",{"nbt":"ParalyaStats","storage":"switch:main","interpret":true},{"text":" Voici les statistiques de $(player) :"}]
 
 # Prepare a compound list containing the number of games played and the name for each game
 data modify storage switch:main stats set value []
@@ -18,7 +16,7 @@ execute if data storage switch:temp sorted_stats[0] run function switch:player/t
 
 # Total victories (all games)
 $scoreboard players add $(player) switch.stats.wins 0
-$tellraw @s [{"text":"\n➤ ","color":"gold"},{"score":{"name":"$(player)","objective":"switch.stats.wins"},"color":"yellow"},{"text":" victoires au total"}]
+function switch:translations/player_trigger_stats_main
 
 # Reset trigger
 scoreboard players set @s switch.trigger.stats 0

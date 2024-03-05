@@ -1,10 +1,7 @@
 
 # Macro input {index:0,index_hundred:0,digits:0}
-$tellraw @s [{"text":"[","color":"aqua"},{"nbt":"minigames[{index:$(index)}].Name","storage":"switch:main","interpret":false,"color":"aqua"},{"text":"] ","color":"aqua"},{"text":"Notez ce mini-jeu : ","color":"white"},{"text":"✮","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"Noter 1 étoile","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)01"}},{"text":"✮","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"Noter 2 étoiles","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)02"}},{"text":"✮","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"Noter 3 étoiles","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)03"}},{"text":"✮","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"Noter 4 étoiles","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)04"}},{"text":"✮","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"Noter 5 étoiles","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger switch.trigger.rating set $(index)05"}}]
 
 data remove storage switch:temp temp
 $data modify storage switch:temp temp set from storage switch:ratings all[{index:$(index)}].players[{name:"$(player)"}].value
-execute if data storage switch:temp temp if data storage switch:temp {temp:1} run tellraw @s [{"text":"Votre vote actuel est de ","color":"gold"},{"nbt":"temp","storage":"switch:temp","interpret":false,"color":"yellow"},{"text":" étoile."}]
-execute if data storage switch:temp temp unless data storage switch:temp {temp:1} run tellraw @s [{"text":"Votre vote actuel est de ","color":"gold"},{"nbt":"temp","storage":"switch:temp","interpret":false,"color":"yellow"},{"text":" étoiles."}]
-execute unless data storage switch:temp temp run tellraw @s [{"text":"Aucun vote actuel pour ce mini-jeu ","color":"gold"}]
+function switch:translations/player_trigger_rating_print
 

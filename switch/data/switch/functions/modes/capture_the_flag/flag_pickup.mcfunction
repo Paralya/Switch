@@ -6,8 +6,7 @@ tag @s remove switch.free
 # Depending on the flag color, tag the respective player
 execute if entity @s[tag=switch.blue_flag] run tag @p[team=switch.temp.red,distance=..1] add switch.has_blue_flag
 execute if entity @s[tag=switch.red_flag] run tag @p[team=switch.temp.blue,distance=..1] add switch.has_red_flag
-execute if entity @s[tag=switch.blue_flag] run tellraw @a[tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" Le drapeau "},{"text":"bleu","color":"blue"},{"text":" a été ramassé !"}]
-execute if entity @s[tag=switch.red_flag] run tellraw @a[tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" Le drapeau "},{"text":"rouge","color":"red"},{"text":" a été ramassé !"}]
+function switch:translations/modes_capture_the_flag_flag_pickup
 
 # Translation & Playsound
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s

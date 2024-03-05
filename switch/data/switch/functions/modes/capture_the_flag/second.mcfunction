@@ -12,5 +12,5 @@ execute if score #capture_the_flag_seconds switch.data matches 0 run effect clea
 # Summon the flags
 execute if score #capture_the_flag_seconds switch.data matches 0 run function switch:modes/capture_the_flag/flags_summon
 
-title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
+function switch:translations/modes_capture_the_flag_second
 

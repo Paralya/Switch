@@ -29,9 +29,6 @@ execute if score #index switch.data matches 4 run data modify storage switch:mai
 execute if score #index switch.data matches 5 run data modify storage switch:main current_theme set from storage switch:main themes.theme5
 
 # Tellraw start + playsound
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Le thème choisi est "},{"nbt":"current_theme","storage":"switch:main","color":"yellow"},{"text":" !"}]
-title @a[tag=!detached] times 20 60 20
-title @a[tag=!detached] title {"text":"Thème choisi", "color":"aqua"}
-title @a[tag=!detached] subtitle {"nbt":"current_theme","storage":"switch:main","color":"yellow"}
+function switch:translations/modes_build_battle_building_time_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 

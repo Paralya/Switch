@@ -1,5 +1,5 @@
 
-execute if entity @s[gamemode=!spectator] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#block_party_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+function switch:translations/modes_block_party_death
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 execute if entity @s[gamemode=!spectator] run summon lightning_bolt ~ ~-5 ~
 execute if entity @s[gamemode=!spectator] run tag @s add switch.temp

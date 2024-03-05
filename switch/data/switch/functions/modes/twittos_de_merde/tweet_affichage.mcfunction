@@ -10,8 +10,7 @@ execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup am
 # (enlever le # à la fin du dev)
 
 execute unless data entity @r[scores={switch.temp.passage_vote=0}] Inventory[{id:"minecraft:written_book"}] run function switch:modes/twittos_de_merde/tweet/tweet_pas_signe
-# tellraw @a[tag=!detached] [{"text":"[Tweet de @","color":"aqua"},{"selector":"@r[scores={switch.temp.passage_vote=0}]"},{"text":"] "},{"nbt":"Inventory[0].tag.pages","interpret":true,"entity":"@r[scores={switch.temp.passage_vote=0}]","color":"yellow"}]
 execute if data entity @r[scores={switch.temp.passage_vote=0}] Inventory[{id:"minecraft:written_book"}] run function switch:modes/twittos_de_merde/tweet/tweet_signe
 tp @r[scores={switch.temp.passage_vote=0}] 1 108 1 
-# execute if data entity @s Items[0].tag.pages[{id:"minecraft:written_book"}] run tellraw @a[tag=!detached] [{"text":"[Tweet de @","color":"aqua"},{"selector":"@r[scores={switch.temp.passage_vote=0}]"},{"text":"] "},{"nbt":"Items[0].tag.pages","interpret":true,"entity":"@r[scores={switch.temp.passage_vote=0}]","color":"yellow"}]
+function switch:translations/modes_twittos_de_merde_tweet_affichage
 # playsound minecraft:block.note_block.pling ambient @a[tag=!detached] (peut-être un jour ? je garde de coté)

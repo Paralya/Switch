@@ -1,7 +1,5 @@
 
-execute if entity @s[scores={switch.alive=1}] run tellraw @a[tag=!detached] [{"selector":"@s","color":"dark_red"},{"text":" est mort définitivement, il a survécu "},{"score":{"name":"#pitchout_seconds","objective":"switch.data"}},{"text":" secondes !"}]
-execute if entity @s[scores={switch.alive=2}] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est tombé, il ne lui reste plus qu'une vie !"}]
-execute if entity @s[scores={switch.alive=3}] run tellraw @a[tag=!detached] [{"selector":"@s","color":"red"},{"text":" est tombé, il lui reste seulement 2 vies !"}]
+function switch:translations/modes_pitchout_death
 
 scoreboard players remove @s switch.alive 1
 execute if entity @s[scores={switch.alive=1..}] if data storage switch:main {map:"pitchout_1"} run function switch:modes/pitchout/map_1/tp_give

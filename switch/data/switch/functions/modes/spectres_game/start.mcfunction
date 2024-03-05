@@ -32,8 +32,7 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule keepInventory true
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Spectres Game dans 10 secondes, un tier des joueurs sont des spectres invisibles laissant des particules d'eau sur leur chemin lorsqu'ils ne sneak pas, ils doivent tuer les joueurs visibles tandis qu'eux doivent survivre et tuer les spectres !"}]
-tellraw @a[tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
+function switch:translations/modes_spectres_game_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 

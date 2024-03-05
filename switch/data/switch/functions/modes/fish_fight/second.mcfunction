@@ -3,7 +3,6 @@ scoreboard players add #fish_fight_seconds switch.data 1
 
 
 execute if score #fish_fight_seconds switch.data matches 3 as @a[tag=!detached] at @s run function switch:modes/fish_fight/give_items
-execute if score #fish_fight_seconds switch.data matches 3 if score #TEAM_FISH switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Fish Fight","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"(1 partie sur 2)","italic":true,"color":"gray"},{"text":" Le jeu se déroulera en ","color":"white"},{"text":"équipes","underlined":true,"color":"white"},{"text":" !","color":"white"},{"text":"\n "}]
 
 
 # spawn axolot
@@ -13,7 +12,6 @@ execute if score #temp switch.data matches 0 if data storage switch:main {map:"l
 execute if score #temp switch.data matches 0 if data storage switch:main {map:"airdox_fish_fight"} run summon axolotl 155993 152 156013 {Glowing:1b,CustomNameVisible:1b,Health:6f,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
 execute if score #temp switch.data matches 0 if data storage switch:main {map:"airdox_fish_fight"} run summon axolotl 155983 164 155995 {Glowing:1b,CustomNameVisible:1b,Health:6f,CustomName:'{"text":"Axobonus","color":"light_purple","bold":true}',active_effects:[{id:"minecraft:slow_falling",amplifier:10b,duration:2000,show_particles:0b}]}
 execute if score #temp switch.data matches 0 run effect give @a[tag=!detached] minecraft:glowing 4 2 true
-execute if score #temp switch.data matches 0 run tellraw @a[tag=!detached] ["",{"text":"Fish Fight","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Un Axolotl Bonus est apparu ! Tuez le pour obtenir un bonus et gagner des coeurs !"},{"text":"\n "}]
 execute if score #temp switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.arrow.hit_player ambient @s
 
 scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
@@ -34,7 +32,6 @@ execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,
 execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 # tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires 
-execute if score #fish_fight_seconds switch.data matches 69 run tellraw @a[tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des TNT ont été donnés à des joueurs aléatoires !","color":"white"},{"text":"\n "}]
 
 execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
@@ -44,7 +41,6 @@ execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached
 execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 
 # tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires
-execute if score #fish_fight_seconds switch.data matches 125 run tellraw @a[tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des TNT ont été donnés à des joueurs aléatoires !","color":"white"},{"text":"\n "}]
 
 # event pufferfish 
 execute if score #fish_fight_seconds switch.data matches 86 store result score #random switch.data run random value 0..2
@@ -60,7 +56,6 @@ execute if score #fish_fight_seconds switch.data matches 86 if score #random swi
 
 
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
-execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des poissons mécontents envahissent le terrain !","color":"white"},{"text":"\n "}]
 
 
 # event pufferfish 2
@@ -76,7 +71,6 @@ execute if score #fish_fight_seconds switch.data matches 115 if score #random sw
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 15586 153 156004 {Glowing:1b,CustomNameVisible:1b,CustomName:'{"text":"Poisson mécontent","color":"green","bold":true}'}
 
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
-execute if score #fish_fight_seconds switch.data matches 116 if score #random switch.data matches 1 run tellraw @a[tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des poissons mécontents envahissent le terrain !","color":"white"},{"text":"\n "}]
 
 # clear items useless
 clear @s dirt 
@@ -87,5 +81,5 @@ clear @s podzol
 clear @s mycelium
 clear @s pufferfish
 
-title @a[tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.9+","color":"red"}
+function switch:translations/modes_fish_fight_second
 

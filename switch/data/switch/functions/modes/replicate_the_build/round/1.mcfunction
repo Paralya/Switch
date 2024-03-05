@@ -1,5 +1,4 @@
-title @a[tag=!detached] times 0t 20t 0
-title @a[tag=!detached] title {"text":"2","color":"green"}
+function switch:translations/modes_replicate_the_build_round_1
 scoreboard players add #rtb_round_state switch.data 1
 
 

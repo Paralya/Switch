@@ -1,5 +1,5 @@
 
-tellraw @a[tag=!detached] [{"text":"Le tirage parmi la liste des thèmes a été réinitialisé !","color":"green"}]
+function switch:translations/modes_build_battle_preparation_themes_list
 data modify storage switch:main build_battle_themes set value [ \
 	"Maison traditionnelle", \
 	"France", \

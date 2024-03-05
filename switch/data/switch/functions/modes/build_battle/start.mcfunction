@@ -28,8 +28,5 @@ execute unless score #build_battle_save_z switch.data matches 0.. run scoreboard
 
 # Téléportation des joueurs dans leur cage
 function switch:modes/build_battle/preparation/
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Build Battle, votez pour le thème en ouvrant votre inventaire !"}]
-title @a[tag=!detached] times 20 60 20
-title @a[tag=!detached] title {"text":"Vote du Thème","color":"aqua"}
-title @a[tag=!detached] subtitle {"text":"(Ouvrez votre inventaire !)","color":"yellow"}
+function switch:translations/modes_build_battle_start
 

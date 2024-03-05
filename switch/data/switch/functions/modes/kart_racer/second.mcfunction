@@ -4,12 +4,7 @@ scoreboard players add #kart_racer_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. if entity @a[tag=!detached,gamemode=adventure] run scoreboard players remove #remaining_time switch.data 1
 
 # Start countdown
-execute if score #kart_racer_seconds switch.data matches -5 run title @a[tag=!detached] title {"text":"5","color":"red"}
-execute if score #kart_racer_seconds switch.data matches -4 run title @a[tag=!detached] title {"text":"4","color":"red"}
-execute if score #kart_racer_seconds switch.data matches -3 run title @a[tag=!detached] title {"text":"3","color":"red"}
-execute if score #kart_racer_seconds switch.data matches -2 run title @a[tag=!detached] title {"text":"2","color":"red"}
-execute if score #kart_racer_seconds switch.data matches -1 run title @a[tag=!detached] title {"text":"1","color":"red"}
-execute if score #kart_racer_seconds switch.data matches 0 run title @a[tag=!detached] title {"text":"GO !","color":"green"}
+function switch:translations/modes_kart_racer_second
 
 # Start sounds
 execute if score #kart_racer_seconds switch.data matches -5..-1 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 100

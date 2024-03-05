@@ -18,9 +18,7 @@ scoreboard players set #remaining switch.data 0
 scoreboard players operation #remaining switch.data = #voting_timer switch.data
 scoreboard players operation #remaining switch.data /= #20 switch.data
 scoreboard players add #remaining switch.data 1
-execute unless entity @a[tag=!detached,scores={switch.trigger.game_vote=..-1}] run title @a[tag=!detached] actionbar [{"text":"Démarrage du compteur dès qu'un joueur vote.","color":"aqua"}]
-execute if entity @a[tag=!detached,scores={switch.trigger.game_vote=..-1}] if score #remaining switch.data matches 2.. run title @a[tag=!detached] actionbar [{"text":"Fin de la période de vote dans ","color":"aqua"},{"score":{"name":"#remaining","objective":"switch.data"},"color":"yellow"},{"text":" secondes."}]
-execute if entity @a[tag=!detached,scores={switch.trigger.game_vote=..-1}] if score #remaining switch.data matches 1 run title @a[tag=!detached] actionbar [{"text":"Fin de la période de vote dans ","color":"aqua"},{"score":{"name":"#remaining","objective":"switch.data"},"color":"yellow"},{"text":" seconde."}]
+function switch:translations/engine_voting_time_tick
 
 execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/
 execute if score #voting_timer switch.data matches 1.. run schedule function switch:engine/voting_time/tick 1t

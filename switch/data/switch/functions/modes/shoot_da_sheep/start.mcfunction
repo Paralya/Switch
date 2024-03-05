@@ -7,7 +7,7 @@ function switch:utils/set_dynamic_time
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/shoot_da_sheep
 
-tellraw @a[tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Shoot Da'Sheep dans 5 secondes, votre objectif est de marquer le plus de point en tirant sur les moutons en rapportant le plus !"}]
+function switch:translations/modes_shoot_da_sheep_start
 
 scoreboard players set #shoot_da_sheep_seconds switch.data -5
 scoreboard players set #shoot_da_sheep_ticks switch.data 0

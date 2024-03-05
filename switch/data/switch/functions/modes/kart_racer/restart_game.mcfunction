@@ -1,5 +1,5 @@
 
-tellraw @a[tag=!detached] [{"text":"\nLes joueurs ont votés pour changer de map !","color":"red"}]
+function switch:translations/modes_kart_racer_restart_game
 
 function switch:modes/kart_racer/stop
 function switch:modes/kart_racer/start
