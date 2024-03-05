@@ -44,8 +44,9 @@ for path, messages in messages_per_file.items():
 			if splitted[1][1] != '[': # Do not have an advanced selector
 				splitted[1] = splitted[1][0] + f"[scores={{{SCORE_SELECTOR}}}]" + splitted[1][1:]
 			else: # Have an advanced selector
-				if "scores={" in splitted[1]: # Already have a score selector
-					splitted[1] = splitted[1].replace("scores={", f"scores={{{SCORE_SELECTOR},")
+				if "scores={" in splitted[1].split("] ")[0]: # Already have a score selector
+					end_of_advanced_selector = splitted[1].split("] ")
+					splitted[1] = end_of_advanced_selector[0].replace("scores={", f"scores={{{SCORE_SELECTOR},") + "] " + "] ".join(end_of_advanced_selector[1:])
 				else: # No score selector
 					splitted[1] = splitted[1][0] + f"[scores={{{SCORE_SELECTOR}}}," + splitted[1][2:]
 			line = splitter.join(splitted)
