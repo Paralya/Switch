@@ -55,7 +55,6 @@ for path, messages in messages_per_file.items():
 			content += line
 		f.write(content + "\n")
 
-		
 	# Update original file to aim for the new function
 	with open(path, "r", encoding="utf-8") as f:
 
