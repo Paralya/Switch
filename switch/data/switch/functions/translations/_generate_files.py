@@ -33,7 +33,7 @@ SCORE_SELECTOR = "switch.lang=0"
 for path, tellraws in tellraws_per_file.items():
 	new_path = path.replace("../","").replace("/","_")
 	with open(new_path, "w", encoding="utf-8") as f:
-		content = "\n# French translation\n"
+		content = "\n# French\n"
 		for line in tellraws:
 
 			# Update the tellraw part to only select player with score of switch.lang equal to 0
@@ -56,14 +56,19 @@ for path, tellraws in tellraws_per_file.items():
 	with open(path, "r", encoding="utf-8") as f:
 
 		# Get file content without lines containing tellraws
-		new_content = ""
+		new_content = []
 		lines = f.readlines()
-		for line in lines:
+		last_line = 0
+		for i, line in enumerate(lines):
 			if "tellraw @" not in line:
-				new_content += line
+				new_content.append(line)
+			else:
+				last_line = i
 
 		# Add a function call to the new file
-		new_content += "function switch:translations/" + new_path.replace(".mcfunction","") + "\n\n"
+		call = "function switch:translations/" + new_path.replace(".mcfunction","") + "\n"
+		new_content = new_content[:last_line] + [call] + new_content[last_line:]
+		new_content = "".join(new_content)
 	with open(path, "w", encoding="utf-8") as f:
 		f.write(new_content)
 
