@@ -13,7 +13,7 @@ import time
 source = ("French", "fr", "switch.lang=0")
 target = ("English", "en-us", "switch.lang=1")
 auth_key = ""
-with open("_deepl_auth_key.txt", "r") as f:
+with open("_deepl_auth_key.txt", "r") as f: # "import deepl" ":fx"
 	auth_key = f.read().strip()
 	pass
 translator = deepl.Translator(auth_key)
