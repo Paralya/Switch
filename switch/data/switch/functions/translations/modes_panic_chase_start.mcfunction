@@ -5,7 +5,7 @@ tellraw @a[scores={switch.lang=0},tag=!detached] [{"text":"Attention, les souris
 tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt": "Paralya", "storage": "switch:main", "interpret":true},{"text": "Panic Chase game launched, hunters free in 30 seconds! The mice must escape from the hunters until the time runs out, while the hunters must chase them away!"}]
-tellraw @a[scores={switch.lang=1},tag=!detached] [{"text": "Attention, the mice can't hit the hunters!", "color": "yellow"}]
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt": "ParalyaPvPNew", "storage": "switch:main", "interpret":true}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"Panic Chase game launched, hunters free in 30 seconds! The mice must escape from the hunters until the time runs out, while the hunters must chase them away!"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] [{"text":"Attention, the mice can't hit the hunters!","color":"yellow"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
 

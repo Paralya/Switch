@@ -8,10 +8,10 @@ execute if score #slot switch.data matches 4 run tellraw @s[scores={switch.lang=
 execute if score #slot switch.data matches 5 run tellraw @s[scores={switch.lang=0}] {"text":"Legendary","color":"gold"}
 
 # English
-execute if score #slot switch.data matches 0 run tellraw @s[scores={switch.lang=1}] {"text": "Super Poop", "color": "#8B4513"}
-execute if score #slot switch.data matches 1 run tellraw @s[scores={switch.lang=1}] {"text": "Poop", "color": "red"}
-execute if score #slot switch.data matches 2 run tellraw @s[scores={switch.lang=1}] {"text": "OK", "color": "dark_green"}
-execute if score #slot switch.data matches 3 run tellraw @s[scores={switch.lang=1}] {"text": "Good", "color": "green"}
-execute if score #slot switch.data matches 4 run tellraw @s[scores={switch.lang=1}] {"text": "Epic", "color": "light_purple"}
-execute if score #slot switch.data matches 5 run tellraw @s[scores={switch.lang=1}] {"text": "Legendary", "color": "gold"}
+execute if score #slot switch.data matches 0 run tellraw @s[scores={switch.lang=1}] {"text":"Super Poop","color":"#8B4513"}
+execute if score #slot switch.data matches 1 run tellraw @s[scores={switch.lang=1}] {"text":"Poop","color":"red"}
+execute if score #slot switch.data matches 2 run tellraw @s[scores={switch.lang=1}] {"text":"OK","color":"dark_green"}
+execute if score #slot switch.data matches 3 run tellraw @s[scores={switch.lang=1}] {"text":"Good","color":"green"}
+execute if score #slot switch.data matches 4 run tellraw @s[scores={switch.lang=1}] {"text":"Epic","color":"light_purple"}
+execute if score #slot switch.data matches 5 run tellraw @s[scores={switch.lang=1}] {"text":"Legendary","color":"gold"}
 

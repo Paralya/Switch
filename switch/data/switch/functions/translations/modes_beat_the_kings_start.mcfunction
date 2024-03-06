@@ -4,6 +4,6 @@ tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"Paralya","storage
 tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt": "Paralya", "storage": "switch:main", "interpret":true},{"text": "Beat The Kings game starts in 15 seconds!"The kings are fewer in number but more powerful than the civilians, and the two teams must compete to exterminate the enemy team!"}]
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt": "ParalyaPvPOld", "storage": "switch:main", "interpret":true}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"Beat The Kings game starts in 15 seconds!"The kings are fewer in number but more powerful than the civilians, and the two teams must compete to exterminate the enemy team!"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 

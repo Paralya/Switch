@@ -4,6 +4,6 @@ tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"Paralya","storage
 tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt": "Paralya", "storage": "switch:main", "interpret":true},{"text": "Starting the Fish Fight game, your objective is to expel the other players and be the last one alive!"}]
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt": "ParalyaPvPNew", "storage": "switch:main", "interpret":true}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"Starting the Fish Fight game, your objective is to expel the other players and be the last one alive!"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
 

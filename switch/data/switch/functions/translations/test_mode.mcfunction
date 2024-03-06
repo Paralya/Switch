@@ -4,6 +4,6 @@ execute if score #engine_state switch.data matches 0 run tellraw @s[scores={swit
 execute if score #engine_state switch.data matches 1 run tellraw @s[scores={switch.lang=0}] {"text":"Test Mode is now OFF","color":"red"}
 
 # English
-execute if score #engine_state switch.data matches 0 run tellraw @s[scores={switch.lang=1}] {"text": "Test Mode is now ON", "color": "green"}
-execute if score #engine_state switch.data matches 1 run tellraw @s[scores={switch.lang=1}] {"text": "Test Mode is now OFF", "color": "red"}
+execute if score #engine_state switch.data matches 0 run tellraw @s[scores={switch.lang=1}] {"text":"Test Mode is now ON","color":"green"}
+execute if score #engine_state switch.data matches 1 run tellraw @s[scores={switch.lang=1}] {"text":"Test Mode is now OFF","color":"red"}
 

@@ -10,6 +10,8 @@ execute if score #vote_game_6 switch.data matches 2.. run data modify storage sw
 # Edit the last vote to make it hidden
 data modify storage switch:main selections[5].Lore set value '["",{"text":"[Aléatoire]\\n","color":"yellow"},{"text":"Jeu totalement aléatoire qui n\'est pas\\n"},{"text":"présent parmi les 5 au dessus"}]'
 data modify storage switch:main selections[5].Name set value "Aléatoire"
+data modify storage switch:main selections[5].LoreEN set value '["",{"text":"[Random]\\n","color":"yellow"},{"text":"Game completely random that is not\\n"},{"text":"present among the 5 above"}]'
+data modify storage switch:main selections[5].NameEN set value "Random"
 
 # Tellraw
 function switch:translations/engine_voting_time_message

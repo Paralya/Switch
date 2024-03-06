@@ -41,14 +41,13 @@ for root, dirs, files in os.walk("./"):
 				translated_messages = ""
 				if source_messages:
 					translation = translator.translate_text(source_messages, source_lang=source[1], target_lang=target[1])
-					translated_messages = translation.text
-					print(f"Translation done for {path}")
+					translated_messages = translation.text.replace('", "', '","').replace('": "', '":"')
 				pass
 
 			# Write the english messages to the file
 			with open(path, "w", encoding="utf-8") as f:
 				f.write(content + f"# {target[0]}\n" + translated_messages.replace(source[2], target[2]))
-
+				print(f"Translation done for {path}")
 			pass
 		pass
 	pass

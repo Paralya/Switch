@@ -5,5 +5,5 @@ execute on passengers run title @s[scores={switch.lang=0}] subtitle [{"text":"No
 
 # English
 execute on passengers run title @s[scores={switch.lang=1}] title ""
-execute on passengers run title @s[scores={switch.lang=1}] subtitle [{"text": "No Grip", "color": "aqua"}]
+execute on passengers run title @s[scores={switch.lang=1}] subtitle [{"text":"No Grip","color":"aqua"}]
 

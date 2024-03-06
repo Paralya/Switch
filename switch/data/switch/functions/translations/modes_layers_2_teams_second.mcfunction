@@ -4,6 +4,6 @@
 title @a[scores={switch.lang=0},tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.8","color":"dark_aqua"}
 
 # English
-#title @a[scores={switch.lang=1},tag=!detached] actionbar [{"text": "Time remaining: ", "color": "gray"},{"score":{"name": "#mins", "objective": "switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
-title @a[scores={switch.lang=1},tag=!detached,gamemode=!spectator] actionbar {"text": "Attention: PVP 1.8", "color": "dark_aqua"}
+#title @a[scores={switch.lang=1},tag=!detached] actionbar [{"text":"Time remaining: ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
+title @a[scores={switch.lang=1},tag=!detached,gamemode=!spectator] actionbar {"text":"Attention: PVP 1.8","color":"dark_aqua"}
 
