@@ -1,4 +1,7 @@
+
 tag Stoupy51 add convention.debug
+
+scoreboard objectives add switch.lang dummy
 
 scoreboard objectives add switch.id dummy
 scoreboard objectives add switch.data dummy
@@ -19,6 +22,7 @@ scoreboard objectives add switch.death deathCount
 scoreboard objectives add switch.kill playerKillCount
 scoreboard objectives add switch.last_death dummy
 
+scoreboard objectives add switch.trigger.lang trigger
 scoreboard objectives add switch.trigger.help trigger
 scoreboard objectives add switch.trigger.money trigger
 scoreboard objectives add switch.trigger.game_vote trigger

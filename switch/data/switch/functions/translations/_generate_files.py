@@ -21,6 +21,10 @@ for root, dirs, files in os.walk(FUNCTIONS_FOLDER):
 			path = os.path.join(root, file).replace("\\", "/")
 			with open(path, "r", encoding="utf-8") as f:
 				lines = f.readlines()
+				if "## File attribut: Ignore translations" in "".join(lines):
+					continue
+
+				# Get the tellraw and title messages
 				messages = []
 				for line in lines:
 					for splitter in SPLITTERS:

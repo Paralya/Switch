@@ -1,4 +1,5 @@
 
+scoreboard players enable @s switch.trigger.lang
 scoreboard players enable @s switch.trigger.help
 scoreboard players enable @s switch.trigger.money
 scoreboard players enable @s switch.trigger.game_vote
