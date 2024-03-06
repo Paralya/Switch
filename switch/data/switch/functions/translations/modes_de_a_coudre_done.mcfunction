@@ -5,5 +5,5 @@ execute if score #points switch.data matches 2.. run tellraw @a[scores={switch.l
 
 # English
 execute if score #points switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] [{"selector":"@s","color":"green"},{"text":" validates his jump and makes "},{"score":{"name":"#points","objective":"switch.data"}, "color":"aqua"},{"text":" point!"}]
-execute if score #points switch.data matches 2... run tellraw @a[scores={switch.lang=1},tag=!detached] [{"selector":"@s","color":"green"},{"text":" validates his jump and makes "},{"score":{"name":"#points","objective":"switch.data"}, "color":"aqua"},{"text":" points!"}]
+execute if score #points switch.data matches 2.. run tellraw @a[scores={switch.lang=1},tag=!detached] [{"selector":"@s","color":"green"},{"text":" validates his jump and makes "},{"score":{"name":"#points","objective":"switch.data"}, "color":"aqua"},{"text":" points!"}]
 

@@ -97,7 +97,7 @@ tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"
 tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Players who haven't logged in for a while have automatically logged out","color":"white"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Build Battle: each participant wins 50 Sapphires at the end of each game","color":"green"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Creeper Apocalypse: fewer but more powerful creepers","color":"white"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Infected: new map 'Area 51' added","secrets have been added to each map","color":"green"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Infected: new map 'Area 51' added secrets have been added to each map","color":"green"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Achievements throughout the server with rewards according to difficulty, do /success: Masterclass","color":"white"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"Fixes and balancing in all mini-games","color":"green"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2023/12] ","color":"dark_aqua"},{"text":"New Murder Mystery maps added and some maps tweaked","color":"white"}]

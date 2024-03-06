@@ -1,10 +1,10 @@
 
 ## File attribut: Ignore translations
 
-effect give @s blindness 1 255 true
-effect give @s darkness 1 255 true
-effect give @s slowness 1 255 true
-effect give @s night_vision 1 255 true
+effect give @s blindness 5 255 true
+effect give @s darkness 5 255 true
+effect give @s slowness 5 255 true
+effect give @s night_vision 5 255 true
 
 tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 tellraw @s [{"text":"Please choose a language by cliking it:","color":"aqua"}]

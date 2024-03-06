@@ -12,7 +12,7 @@ execute if score #random switch.data matches 7 run tellraw @a[scores={switch.lan
 execute if score #random switch.data matches 8 run tellraw @a[scores={switch.lang=0},tag=!detached] {"text":"[10s de glowing pour l'équipe adverse]\n","color":"aqua"}
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":""},{"selector":"@s"},{"text":" activated the magic wool!"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" activated the magic wool!"}]
 execute if score #random switch.data matches 0 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[20s of resistance for his team]\n","color":"aqua"}
 execute if score #random switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[20s regeneration for his team]\n","color":"aqua"}
 execute if score #random switch.data matches 2 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[5s of poison for the opposing team]\n","color":"aqua"}
