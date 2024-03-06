@@ -12,3 +12,16 @@ tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ",
 tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/music : ","color":"yellow"},{"text":"Affiche l'interface du Music Player"}]
 tellraw @s[scores={switch.lang=0}] ""
 
+# English
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["\n",{"nbt":"ParalyaHelp","storage":"switch:main","interpret":true},{"text":" Help page #1/1:"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/money: ","color":"yellow"},{"text":"Display your current money"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/shop: ","color":"yellow"},{"text":"Access the store"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/detach: ","color":"yellow"},{"text":"Detaches from Switch Engine"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/attach: ","color":"yellow"},{"text":"Reattaches you to the Switch Motor"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/stats: ","color":"yellow"},{"text":"Display your statistics"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/successes: ","color":"yellow"},{"text":"Display all successes"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/rating: ","color":"yellow"},{"text":"Display mini-game scores"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/night_vision: ","color":"yellow"},{"text":"Toggle Night Vision effect"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/music: ","color":"yellow"},{"text":"Displays the Music Player interface"}]
+tellraw @s[scores={switch.lang=1}] ""
+
