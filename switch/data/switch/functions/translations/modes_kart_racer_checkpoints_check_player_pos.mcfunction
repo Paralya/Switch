@@ -5,3 +5,4 @@
 # tellraw @a[scores={switch.lang=0},tag=!detached] [{"text":"#px : ","color":"yellow"},{"score":{"name":"#px","objective":"switch.data"},"color":"aqua"},{"text":", #py : "},{"score":{"name":"#py","objective":"switch.data"},"color":"aqua"},{"text":", #pz : "},{"score":{"name":"#pz","objective":"switch.data"},"color":"aqua"}]
 # tellraw @a[scores={switch.lang=0},tag=!detached] [{"text":"#px : ","color":"yellow"},{"score":{"name":"#px","objective":"switch.data"},"color":"aqua"},{"text":", #py : "},{"score":{"name":"#py","objective":"switch.data"},"color":"aqua"},{"text":", #pz : "},{"score":{"name":"#pz","objective":"switch.data"},"color":"aqua"}]
 
+# English
