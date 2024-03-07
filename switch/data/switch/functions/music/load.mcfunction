@@ -3,11 +3,13 @@
 scoreboard objectives add switch.music.current dummy
 scoreboard objectives add switch.music.progress dummy
 scoreboard objectives add switch.music.loop_state dummy
-scoreboard players set #last_index switch.music.current 115
+scoreboard players set #last_index switch.music.current 117
 scoreboard players set #the_maze_of_mayonnaise switch.music.progress 3344
+scoreboard players set #invincible switch.music.progress 7186
 scoreboard players set #nekozilla switch.music.progress 2622
 scoreboard players set #at_the_speed_of_light switch.music.progress 5280
 scoreboard players set #blank switch.music.progress 3324
+scoreboard players set #dance_of_the_violins switch.music.progress 5662
 scoreboard players set #ludicrous_speed switch.music.progress 3759
 scoreboard players set #stereo_madness switch.music.progress 1819
 scoreboard players set #fingerdash switch.music.progress 1264

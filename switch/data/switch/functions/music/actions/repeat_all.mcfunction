@@ -1,3 +1,4 @@
 
-function switch:translations/music_actions_repeat_all
+## File attribut: Ignore translations
+tellraw @s {"text":"Work in progress","color":"red"}
 
