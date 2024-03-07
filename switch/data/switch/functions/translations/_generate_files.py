@@ -21,7 +21,7 @@ for root, dirs, files in os.walk(FUNCTIONS_FOLDER):
 			path = os.path.join(root, file).replace("\\", "/")
 			with open(path, "r", encoding="utf-8") as f:
 				lines = f.readlines()
-				if "## File attribut: Ignore translations" in "".join(lines):
+				if "## File attribut: Ignore translations" in "".join(lines) or "$(" in "".join(lines): # Ignore files with ignore translations attribut or with macro variables
 					continue
 
 				# Get the tellraw and title messages
