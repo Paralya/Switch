@@ -5,5 +5,5 @@ tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","s
 
 # English
 tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"Start the Protect The King game, two teams compete and the game ends when one of the two kings is killed!"}]
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaPvPNew","storage":"switch:main","interpret":true}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaPvPNewEN","storage":"switch:main","interpret":true}]
 

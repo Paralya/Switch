@@ -113,7 +113,7 @@ tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"
 tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Spectres Game: 1 chance in 3 that the game contains a traitor in the spectres camp+ 1 chance in 3 that the game contains objectives to obtain bonuses","color":"white"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Block Party: random draw now without discount","color":"green"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Murder Mystery: knife throwing is now accurate + players can no longer die before roles are announced","color":"white"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Panic Chase: mice now have 30 seconds to prepare for any map","color":"green"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Panic Chase: mouse now have 30 seconds to prepare for any map","color":"green"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"SheepWars: 4 new maps added","color":"white"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"TNT Run: 2 new maps added","color":"green"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"[2024/01] ","color":"dark_aqua"},{"text":"Moutron: 1 new map added","color":"white"}]
