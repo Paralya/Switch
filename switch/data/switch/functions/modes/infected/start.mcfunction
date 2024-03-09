@@ -12,6 +12,7 @@ gamerule keepInventory true
 gamerule showDeathMessages false
 gamerule doTileDrops false
 
+scoreboard objectives add switch.temp.dont_want_to_be_infected trigger
 scoreboard objectives add switch.temp.infection dummy
 scoreboard objectives add switch.temp.original_zombie dummy
 scoreboard objectives add switch.temp.kills playerKillCount
