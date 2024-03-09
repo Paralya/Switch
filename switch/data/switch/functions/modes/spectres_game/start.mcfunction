@@ -57,14 +57,17 @@ team modify switch.temp.visible color dark_green
 team modify switch.temp.spectre color yellow
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-execute as @a[tag=!detached,sort=random] at @s run function switch:modes/spectres_game/roles/
+scoreboard objectives add switch.games_not_being_spectre dummy
+function switch:modes/spectres_game/percentage/select_roles
+execute as @a[tag=!detached] run function switch:modes/spectres_game/roles/
+
 # Si partie spectror game
 execute if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @r[team=switch.temp.visible] switch.temp.spectror 1
 execute if score #SPECTROR_GAME switch.data matches 1 run team join switch.temp.spectre @a[scores={switch.temp.spectror=1}]
 execute if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @a[scores={switch.temp.spectror=1}] switch.alive 3
 
+# Give items
 execute as @a[tag=!detached] at @s run function switch:modes/spectres_game/give_items
-
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:mining_fatigue",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:instant_damage",amplifier:0b,duration:20,show_particles:0b},{id:"minecraft:blindness",amplifier:0b,duration:80,show_particles:0b}],Potion:"minecraft:water"}
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:mining_fatigue",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:instant_damage",amplifier:0b,duration:20,show_particles:0b},{id:"minecraft:blindness",amplifier:0b,duration:80,show_particles:0b}],Potion:"minecraft:water"}
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:mining_fatigue",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:instant_damage",amplifier:0b,duration:20,show_particles:0b},{id:"minecraft:blindness",amplifier:0b,duration:80,show_particles:0b}],Potion:"minecraft:water"}
@@ -72,6 +75,7 @@ give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion d
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:nausea",amplifier:0b,duration:200,show_particles:0b},{id:"minecraft:poison",amplifier:0b,duration:220,show_particles:0b}],Potion:"minecraft:water"}
 give @r[team=switch.temp.spectre] splash_potion{display:{Name:'{"text":"Potion dévastatrice du fantôme","italic":false}',Lore:['{"text":"À lancer sur les visibles","color":"white","italic":false}']},custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:400,show_particles:0b},{id:"minecraft:nausea",amplifier:0b,duration:200,show_particles:0b},{id:"minecraft:poison",amplifier:0b,duration:220,show_particles:0b}],Potion:"minecraft:water"}
 
+# Start effects give
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance 18 255 true
 effect give @a[tag=!detached] fire_resistance 18 255 true
