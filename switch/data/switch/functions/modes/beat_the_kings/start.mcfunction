@@ -33,8 +33,8 @@ scoreboard objectives setdisplay sidebar switch.temp.damages
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items
-team add switch.temp.civil
-team add switch.temp.king
+team add switch.temp.civil {"text":"[Civil]","color":"gray"}
+team add switch.temp.king {"text":"[King]","color":"dark_purple"}
 team modify switch.temp.civil color gray
 team modify switch.temp.king color dark_purple
 scoreboard players set #next_role switch.data 0

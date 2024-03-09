@@ -1,6 +1,6 @@
 
-team add switch.laser_game.blue
-team add switch.laser_game.red
+team add switch.laser_game.blue {"text":"[Blue]","color":"blue"}
+team add switch.laser_game.red {"text":"[Red]","color":"red"}
 team modify switch.laser_game.blue color blue
 team modify switch.laser_game.blue seeFriendlyInvisibles true
 team modify switch.laser_game.blue nametagVisibility never
@@ -39,9 +39,9 @@ scoreboard players set #remaining_time switch.data 150
 scoreboard players set #process_end switch.data 0
 scoreboard players set #base_reload switch.data 15
 
-team add switch.temp.sidebar.3
-team add switch.temp.sidebar.2
-team add switch.temp.sidebar.1
+team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
+team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
+team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
 team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
 team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]

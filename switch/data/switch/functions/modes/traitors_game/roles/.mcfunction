@@ -7,7 +7,7 @@ tag @s remove switch.floupy
 scoreboard players add #next_player_id switch.data 1
 scoreboard players add #next_role switch.data 1
 # Inspecteur
-execute if score #next_role switch.data matches 1 run team join switch.temp.visible @s
+execute if score #next_role switch.data matches 1 run team join switch.temp.inspector @s
 execute if score #next_role switch.data matches 1 run scoreboard players set @s switch.temp.role 1
 execute if score #next_role switch.data matches 1 run attribute @s generic.max_health base set 16
 # Traitre

@@ -11,10 +11,10 @@ data modify storage switch:glassrunner ItemsNBT.fireball_wand set value {id:"min
 
 
 ## Teams
-team add switch.glassrunner.red
+team add switch.glassrunner.red {"text":"[Red]","color":"red"}
 team modify switch.glassrunner.red color red
 team modify switch.glassrunner.red friendlyFire false
-team add switch.glassrunner.blue
+team add switch.glassrunner.blue {"text":"[Blue]","color":"blue"}
 team modify switch.glassrunner.blue color blue
 team modify switch.glassrunner.blue friendlyFire false
 
@@ -57,8 +57,8 @@ scoreboard objectives setdisplay sidebar switch.glassrunner.display
 scoreboard players set §P§R§r switch.glassrunner.display 1
 scoreboard players set §P§B§r switch.glassrunner.display 0
 
-team add switch.glassrunner.p_red
-team add switch.glassrunner.p_blue
+team add switch.glassrunner.p_red {"text":"[P Red]","color":"red"}
+team add switch.glassrunner.p_blue {"text":"[P Blue]","color":"blue"}
 team join switch.glassrunner.p_red §P§R§r
 team join switch.glassrunner.p_blue §P§B§r
 

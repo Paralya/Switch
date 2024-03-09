@@ -33,8 +33,8 @@ function switch:translations/modes_sheepwars_start
 execute if score #APOCALYPSE_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.wither.death ambient @s
 
 # Choix des teams + give d'items
-team add switch.temp.red
-team add switch.temp.blue
+team add switch.temp.red {"text":"[Red]","color":"red"}
+team add switch.temp.blue {"text":"[Blue]","color":"blue"}
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.red friendlyFire true

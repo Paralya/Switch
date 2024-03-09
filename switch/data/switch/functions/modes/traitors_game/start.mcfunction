@@ -31,15 +31,15 @@ scoreboard objectives add switch.temp.killed_ninja dummy
 scoreboard objectives add switch.temp.kills playerKillCount
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-team add switch.temp.visible
-team modify switch.temp.visible color green
+team add switch.temp.inspector {"text":"[Inspector]","color":"green"}
+team modify switch.temp.inspector color green
 
-team add switch.temp.sidebar.5
-team add switch.temp.sidebar.4
-team add switch.temp.sidebar.3
-team add switch.temp.sidebar.2
-team add switch.temp.sidebar.1
-team add switch.temp.sidebar.0
+team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
+team add switch.temp.sidebar.4 {"text":"[Sidebar 4]"}
+team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
+team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
+team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
+team add switch.temp.sidebar.0 {"text":"[Sidebar 0]"}
 team modify switch.temp.sidebar.5 suffix [{"text":"Inspecteur : ","color":"green"},{"text":"1","color":"yellow"}]
 team modify switch.temp.sidebar.4 suffix [{"text":"Ninja : ","color":"green"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.3 suffix [{"text":"Innocent : ","color":"green"},{"text":"0","color":"yellow"}]

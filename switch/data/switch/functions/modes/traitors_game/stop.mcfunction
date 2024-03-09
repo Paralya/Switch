@@ -1,5 +1,5 @@
 
-team remove switch.temp.visible
+team remove switch.temp.inspector
 team remove switch.temp.sidebar.5
 team remove switch.temp.sidebar.4
 team remove switch.temp.sidebar.3

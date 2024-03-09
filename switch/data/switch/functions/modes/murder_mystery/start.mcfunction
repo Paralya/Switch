@@ -41,7 +41,7 @@ execute as @a[tag=!detached] run function switch:modes/murder_mystery/percentage
 function switch:modes/murder_mystery/percentage/select_roles
 
 # Hide nametags
-team add switch.temp
+team add switch.temp {"text":"[Temp]"}
 team modify switch.temp nametagVisibility never
 team join switch.temp @a[tag=!detached]
 

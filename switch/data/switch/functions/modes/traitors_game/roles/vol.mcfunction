@@ -15,7 +15,7 @@ function switch:translations/modes_traitors_game_roles_vol
 
 # Effects
 execute if score #role switch.data matches 1 run attribute @p[tag=switch.temp.floupy] generic.max_health base set 16
-execute if score #role switch.data matches 1 run team join switch.temp.visible @p[tag=switch.temp.floupy]
+execute if score #role switch.data matches 1 run team join switch.temp.inspector @p[tag=switch.temp.floupy]
 execute if score #role switch.data matches 3..4 run attribute @p[tag=switch.temp.floupy] generic.movement_speed base set 0.115
 execute if score #role switch.data matches 7 run attribute @p[tag=switch.temp.floupy] generic.max_health base set 30
 

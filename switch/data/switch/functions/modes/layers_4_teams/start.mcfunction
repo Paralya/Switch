@@ -21,10 +21,10 @@ scoreboard objectives add switch.temp.killed_yellow teamkill.yellow
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
-team add switch.temp.red
-team add switch.temp.blue
-team add switch.temp.green
-team add switch.temp.yellow
+team add switch.temp.red {"text":"[Red]","color":"red"}
+team add switch.temp.blue {"text":"[Blue]","color":"blue"}
+team add switch.temp.green {"text":"[Green]","color":"green"}
+team add switch.temp.yellow {"text":"[Yellow]","color":"yellow"}
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.green color green

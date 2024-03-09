@@ -18,8 +18,8 @@ scoreboard players set #cut_clean switch.data 1
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
-team add switch.temp.red
-team add switch.temp.blue
+team add switch.temp.red {"text":"[Red]","color":"red"}
+team add switch.temp.blue {"text":"[Blue]","color":"blue"}
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.red friendlyFire true
