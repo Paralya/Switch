@@ -12,5 +12,4 @@ execute if score #tick switch.data matches 5 run tellraw @s "\n\n\n\n\n\n\n\n\n\
 execute if score #tick switch.data matches 5 run tellraw @s [{"text":"Please choose a language by cliking it:","color":"aqua"}]
 execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\n[Français]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.lang set 10"},"hoverEvent":{"action":"show_text","value":{"text":"[Cliquez pour choisir Français]","color":"yellow"}}}]
 execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\n[English]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.lang set 11"},"hoverEvent":{"action":"show_text","value":{"text":"[Click to choose English]","color":"yellow"}}}]
-execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\nYou can always change it later by typing '/lang'\n","color":"aqua"}]
 
