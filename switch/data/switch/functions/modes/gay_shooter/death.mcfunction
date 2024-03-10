@@ -4,3 +4,5 @@ gamemode spectator @s[team=!switch.temp.gays]
 effect clear @s
 clear @s
 
+effect give @s[team=switch.temp.gays] saturation infinite 255 true
+
