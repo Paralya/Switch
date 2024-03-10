@@ -3,7 +3,6 @@
 data modify storage switch:temp list set value []
 execute as @a[team=switch.temp.visible] run function switch:modes/spectres_game/percentage/get_spectre_id
 
-
 ## Choose a random ID from the list
 # Get a random value from 0 to the length of the list
 data modify storage switch:temp input set value {index:0}
