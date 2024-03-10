@@ -7,5 +7,7 @@ execute as @e[tag=switch.respawn] if score @s switch.data = #max switch.data run
 
 # Teleport the player to the respawn point
 tp @s @e[tag=switch.respawn_max,limit=1]
-tag @e[tag=switch.respawn_max,limit=1] remove switch.respawn_max
+tag @e[tag=switch.respawn_max] remove switch.respawn_max
+
+say je suis censé respawn
 

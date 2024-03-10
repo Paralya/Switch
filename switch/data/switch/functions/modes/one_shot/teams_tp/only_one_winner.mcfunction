@@ -5,7 +5,7 @@ playsound entity.zombified_piglin.ambient ambient @s
 
 execute as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_win
 
-function switch:modes/one_shot/respawn/main
+execute as @a[tag=!detached,scores={switch.alive=1..}] run function switch:modes/one_shot/respawn/main
 
 effect give @a[tag=!detached,gamemode=!spectator] slowness 4 5 true
 team remove switch.temp.red
