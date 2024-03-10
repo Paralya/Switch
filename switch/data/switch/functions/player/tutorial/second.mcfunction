@@ -29,6 +29,7 @@ execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 70.
 execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -502 70.1 -487 1 0 0.1 0 100 force @s
 
 # Fourth dialog
+execute if score @s switch.tutorial matches 4 run scoreboard players set #for_tutorial switch.data 1
 execute if score @s switch.tutorial matches 4 run function switch:shop/pitchout
 
 # Sixth dialog

@@ -1,4 +1,7 @@
 
+execute if score #for_tutorial switch.data matches 1 run tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+scoreboard players reset #for_tutorial switch.data
+
 # French
 tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique Pitchout]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=0}] [{"text":"Votre achat pour les bottes en cuir a été effectué !","color":"green"}]
