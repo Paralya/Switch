@@ -19,9 +19,6 @@ scoreboard players operation #second switch.data %= #60 switch.data
 scoreboard players operation #minute switch.data /= #60 switch.data
 function switch:translations/modes_panic_chase_second
 execute if score #second switch.data matches 0 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
-execute if score #second switch.data matches 30 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
-
-# Number of hunters
-execute store result score #hunters switch.data if entity @a[team=switch.temp.hunter]
-execute if score #hunters switch.data matches 2.. run effect give @a[team=switch.temp.hunter] glowing 2 0 true
+execute if score #second switch.data matches 20 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
+execute if score #second switch.data matches 40 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
 
