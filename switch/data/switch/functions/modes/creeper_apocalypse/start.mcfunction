@@ -7,7 +7,6 @@ effect give @a[tag=!detached] resistance 12 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs + give d'items
-scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/creeper_apocalypse
 
 gamerule mobGriefing true
