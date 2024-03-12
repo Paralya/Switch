@@ -25,8 +25,8 @@ scoreboard objectives add switch.sheepwars.kit_armored_sheep dummy
 
 scoreboard objectives add switch.spectres_game.sp_arrow_effect dummy
 scoreboard objectives add switch.spectres_game.sp_arrows dummy
-scoreboard objectives add switch.spectres_game.sp_apples dummy
+scoreboard objectives add switch.spectres_game.sp_tnt dummy
 scoreboard objectives add switch.spectres_game.vi_arrows dummy
-scoreboard objectives add switch.spectres_game.vi_apples dummy
+scoreboard objectives add switch.spectres_game.vi_tnt dummy
 scoreboard objectives add switch.spectres_game.vi_slow_regen dummy
 
