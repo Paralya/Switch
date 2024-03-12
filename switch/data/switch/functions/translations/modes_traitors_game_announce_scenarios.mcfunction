@@ -6,7 +6,7 @@ execute if score #sc_floupy switch.data matches 1 run tellraw @a[scores={switch.
 execute if score #sc_silencieux switch.data matches 1 run tellraw @a[scores={switch.lang=0},tag=!detached] [{"text":"➤ Silencieux","color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Il y a 1/3 chance que le rôle d'un joueur ne soit pas affiché lors de sa mort.\nN'affecte pas les messages de l'inspecteur.\nLe scoreboard à droite est gelé.","color":"gray"}]}}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"Scenarios enabled:"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Scenarios enabled:"}]
 execute if score #sc_solitaire switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] [{"text":"➤ Innocent solitaire","color":"green","hoverEvent":{"action":"show_text","value":[{"text":"After one minute, a random innocent is designated as the solitaire.\nWhen it dies, it is not displayed as a loner.","color":"gray"}]}}]
 execute if score #sc_floupy switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] [{"text":"➤ Floupy","color":"green","hoverEvent":{"action":"show_text","value":[{"text":"The 'Floupy' role allows you to steal the role of whoever you kill.\nThe victim's role is obfuscated.","color":"gray"}]}}]
 execute if score #sc_silencieux switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] [{"text":"➤ Silencer","color":"green","hoverEvent":{"action":"show_text","value":[{"text":"There's a 1/3 chance that a player's role won't be displayed when they die.\nThe scoreboard on the right is frozen.","color":"gray"}]}}]

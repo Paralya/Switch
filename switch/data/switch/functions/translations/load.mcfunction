@@ -1,5 +1,6 @@
 
 # French
+data modify storage switch:main ParalyaSapphires set value '[{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Saphirs","color":"blue"},{"text":"]","color":"dark_blue"}]'
 data modify storage switch:main ParalyaAstuce set value '[{"text":"[","color":"dark_green"},{"text":"ParalyaAstuce","color":"green"},{"text":"]","color":"dark_green"}]'
 data modify storage switch:main ParalyaPvPOld set value '[{"text":"[PvP 1.8 : Vitesse d\'attaque infinie]","color":"dark_aqua"}]'
 data modify storage switch:main ParalyaPvPNew set value '[{"text":"[PvP 1.9+ : Nouveau PvP]","color":"dark_green"}]'
@@ -48,6 +49,7 @@ data modify storage switch:main minigames append value {min_players:1	,max_playe
 # data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"replicate_the_build"	,Name:"Replicate The Build BUGUÉ"	,Lore:'["",{"text":"[Replicate The Build]\\n","color":"yellow"},{"text":"Refaites le build donné le plus rapidement possible, et sans vous tromper !\\n"},{"text":"\\n[Estimation : 1-6 mins]","color":"gold"},{"text":"\\n[Proposé/Développé par AirDox]","color":"aqua"}]'}
 
 # English
+data modify storage switch:main ParalyaSapphiresEN set value '[{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Sapphires","color":"blue"},{"text":"]","color":"dark_blue"}]'
 data modify storage switch:main ParalyaAstuceEN set value '[{"text":"[","color":"dark_green"},{"text":"ParalyaTip","color":"green"},{"text":"]","color":"dark_green"}]'
 data modify storage switch:main ParalyaPvPOldEN set value '[{"text":"[PvP 1.8 : Infinite attack speed]","color":"dark_aqua"}]'
 data modify storage switch:main ParalyaPvPNewEN set value '[{"text":"[PvP 1.9+ : New PvP]","color":"dark_green"}]'

@@ -4,6 +4,6 @@ tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"Paralya","storage
 tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"nbt":"ParalyaPvPOld","storage":"switch:main","interpret":true}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"Starting the Layers game, your objective is to team up as quickly as possible to kill the other players through the layers of all the ores! PvP activates after one minute, but you must destroy the obsidian to reach the enemy zone!"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Starting the Layers game, your objective is to team up as quickly as possible to kill the other players through the layers of all the ores! PvP activates after one minute, but you must destroy the obsidian to reach the enemy zone!"}]
 tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"nbt":"ParalyaPvPOldEN","storage":"switch:main","interpret":true}]
 

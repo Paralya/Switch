@@ -4,6 +4,6 @@ execute unless score @s switch.glassrunner.money matches 12.. run tellraw @s[sco
 execute if score @s switch.glassrunner.money matches 12.. run tellraw @s[scores={switch.lang=0}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu viens d'acheter un casque de tortue","color":"green"}]
 
 # English
-execute unless score @s switch.glassrunner.money matches 12.. run tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"You don't have enough money","color":"red"}]
-execute if score @s switch.glassrunner.money matches 12.. run tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":"You just bought a turtle helmet","color":"green"}]
+execute unless score @s switch.glassrunner.money matches 12.. run tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" You don't have enough money","color":"red"}]
+execute if score @s switch.glassrunner.money matches 12.. run tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" You just bought a turtle helmet","color":"green"}]
 
