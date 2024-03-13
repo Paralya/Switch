@@ -7,5 +7,5 @@ $tellraw @s[scores={switch.lang=0}] [{"text":"\n➤ ","color":"yellow"},{"score"
 # English
 execute if data storage switch:main input{player:"@s"} run tellraw @s[scores={switch.lang=1}] ["",{"nbt":"ParalyaStats","storage":"switch:main","interpret":true},{"text":" Here are your statistics:"}]
 $execute unless data storage switch:main input{player:"@s"} run tellraw @s[scores={switch.lang=1}] ["",{"nbt":"ParalyaStats","storage":"switch:main","interpret":true},{"text":" Here are $(player)'s statistics:"}]
-$tellraw @s[scores={switch.lang=1}] [{"text":"\n➤ ","color":"yellow"},{"score":{"name":"$(player)","objective":"switch.stats.wins"}, "color":"gold"},{"text":" total wins"}]
+$tellraw @s[scores={switch.lang=1}] [{"text":"\n➤ ","color":"yellow"},{"score":{"name":"$(player)","objective":"switch.stats.wins"},"color":"gold"},{"text":" total wins"}]
 
