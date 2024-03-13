@@ -17,7 +17,7 @@ execute if score #random switch.data matches 0 run tellraw @a[scores={switch.lan
 execute if score #random switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[20s regeneration for his team]\n","color":"aqua"}
 execute if score #random switch.data matches 2 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[5s of poison for the opposing team]\n","color":"aqua"}
 execute if score #random switch.data matches 3 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[10s of nausea for the opposing team]\n","color":"aqua"}
-execute if score #random switch.data matches 4 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[One drop of mutton for his team]\n","color":"aqua"}
+execute if score #random switch.data matches 4 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[One drop of sheep for his team]\n","color":"aqua"}
 execute if score #random switch.data matches 5 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[10s of flaming arrows for his team]\n","color":"aqua"}
 execute if score #random switch.data matches 6 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[10s of explosive arrows for his team]\n","color":"aqua"}
 execute if score #random switch.data matches 7 run tellraw @a[scores={switch.lang=1},tag=!detached] {"text":"[20s of slow falling for his team]\n","color":"aqua"}
