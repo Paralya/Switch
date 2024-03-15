@@ -20,7 +20,7 @@ tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ",
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/attach: ","color":"yellow"},{"text":"Reattaches you to the Switch Engine"}]
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/stats: ","color":"yellow"},{"text":"Display your statistics"}]
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/succes: ","color":"yellow"},{"text":"Display all advancements"}]
-tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/rating: ","color":"yellow"},{"text":"Display mini-game scores"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/rating: ","color":"yellow"},{"text":"Display mini-game star ratings"}]
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/night_vision: ","color":"yellow"},{"text":"Toggle Night Vision effect"}]
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/music: ","color":"yellow"},{"text":"Displays the Music Player interface"}]
 tellraw @s[scores={switch.lang=1}] ""
