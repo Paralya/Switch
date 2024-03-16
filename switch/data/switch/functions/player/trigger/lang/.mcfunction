@@ -1,7 +1,7 @@
 
 ## File attribut: Ignore translations
 
-# If player write /lang, detach him and remove his lang
+# If player write /lang, detach him and remove their lang
 execute if score @s switch.trigger.lang matches 1 run scoreboard players reset @s switch.lang
 execute if score @s switch.trigger.lang matches 1 run function switch:player/trigger/detach/
 

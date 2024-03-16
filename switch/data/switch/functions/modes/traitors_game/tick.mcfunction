@@ -16,7 +16,8 @@ execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=m
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/process
 
 # Voleur
-execute if score #sc_floupy switch.data matches 1 run scoreboard players reset @a[scores={switch.temp.kills=1..}] switch.temp.kills
+execute if score #sc_floupy switch.data matches 1 run scoreboard players reset @a[scores={switch.temp.kills=-1}] switch.temp.kills
+execute if score #sc_floupy switch.data matches 1 run scoreboard players set @a[scores={switch.temp.kills=1..}] switch.temp.kills -1
 
 # Détection de fin de partie
 execute if score #traitors_game_seconds switch.data matches 1..1200 run function switch:modes/traitors_game/detect_end
