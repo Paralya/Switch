@@ -26,7 +26,7 @@ execute if score #inventory switch.data matches -1 unless data storage switch:te
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_dripstone run scoreboard players set @s switch.lobby_respawn 8
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_pink run scoreboard players set @s switch.lobby_respawn 9
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run scoreboard players set @s switch.lobby_respawn 10
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_black run scoreboard players set @s switch.lobby_respawn 11
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_obsidian run scoreboard players set @s switch.lobby_respawn 11
 execute if score #inventory switch.data matches -1 run tp @s 0 0 0
 execute if score #inventory switch.data matches -1 run clear @s
 
@@ -56,7 +56,7 @@ execute unless score #inventory switch.data matches 10 run item replace entity @
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.14 with red_concrete{switch:{jump_red:1b},display:{Name:'{"text":"Red Jump","color":"red","italic":false}',Lore:['{"text":"by Stoupy51","color":"gray","italic":false}']}}
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.15 with brown_concrete{switch:{jump_brown:1b},display:{Name:'{"text":"Brown Jump","color":"#8B4513","italic":false}',Lore:['{"text":"by OfChara","color":"gray","italic":false}']}}
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.16 with purple_concrete{switch:{jump_purple:1b},display:{Name:'{"text":"Purple Jump","color":"light_purple","italic":false}',Lore:['{"text":"by AirDox","color":"gray","italic":false}']}}
-execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.22 with black_concrete{switch:{jump_black:1b},display:{Name:'{"text":"Black Jump","color":"black","italic":false}',Lore:['{"text":"by Stoupy51","color":"gray","italic":false}']}}
+execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.22 with crying_obsidian{switch:{jump_obsidian:1b},display:{Name:'{"text":"Obsidian Jump","color":"dark_gray","italic":false}',Lore:['{"text":"by Stoupy51","color":"gray","italic":false}']}}
 
 
 ## Jumps advancements
@@ -70,5 +70,5 @@ advancement grant @s[x=-20,y=75,z=-78,distance=..2,gamemode=!creative,gamemode=!
 advancement grant @s[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_purple
 advancement grant @s[x=-44,y=93,z=27,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_pink
 advancement grant @s[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_bricks
-advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_black
+advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_obsidian
 

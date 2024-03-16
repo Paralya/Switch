@@ -30,7 +30,7 @@ jump_purple	AirDox	jump	The Purple Jump	Finir le jump violet pour la première f
 jump_dripstone	AirDox	jump	The Dripstone Jump	Finir le jump dripstone pour la première fois
 jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la première fois
 jump_pink	OfChara	jump	The Pink Jump	Finir le jump rose pour la première fois
-jump_black	Stoupy	jump	The Black Jump	Finir le jump noir pour la première fois
+jump_obsidian	Stoupy	jump	The Obsidian Jump	Finir le jump obsidienne pour la première fois
 1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu
 2	Stoupy	easy	Fidèle	Jouez un total de 100 parties sur le Switch
 3	Stoupy	easy	La moula	Ayez au moins 400 Saphirs dans votre banque

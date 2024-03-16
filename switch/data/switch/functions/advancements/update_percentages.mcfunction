@@ -19,7 +19,7 @@ execute if entity @s[advancements={switch:visible/jump_purple=true}] run functio
 execute if entity @s[advancements={switch:visible/jump_dripstone=true}] run function switch:advancements/_pre_macro {id:"jump_dripstone"}
 execute if entity @s[advancements={switch:visible/jump_bricks=true}] run function switch:advancements/_pre_macro {id:"jump_bricks"}
 execute if entity @s[advancements={switch:visible/jump_pink=true}] run function switch:advancements/_pre_macro {id:"jump_pink"}
-execute if entity @s[advancements={switch:visible/jump_black=true}] run function switch:advancements/_pre_macro {id:"jump_black"}
+execute if entity @s[advancements={switch:visible/jump_obsidian=true}] run function switch:advancements/_pre_macro {id:"jump_obsidian"}
 execute if entity @s[advancements={switch:visible/1=true}] run function switch:advancements/_pre_macro {id:"1"}
 execute if entity @s[advancements={switch:visible/2=true}] run function switch:advancements/_pre_macro {id:"2"}
 execute if entity @s[advancements={switch:visible/3=true}] run function switch:advancements/_pre_macro {id:"3"}
