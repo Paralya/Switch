@@ -14,11 +14,11 @@ execute if score #temp switch.data matches 0 if data storage switch:main {map:"a
 execute if score #temp switch.data matches 0 run effect give @a[tag=!detached] minecraft:glowing 4 2 true
 execute if score #temp switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.arrow.hit_player ambient @s
 
-scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
-scoreboard players operation #temp switch.data %= #6 switch.data
-execute if score #temp switch.data matches 0 if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_wool 1
-execute if score #temp switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.blue] blue_wool 1 
-execute if score #temp switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.red] red_wool 1
+scoreboard players operation #temp_2 switch.data = #fish_fight_seconds switch.data
+scoreboard players operation #temp_2 switch.data %= #6 switch.data
+execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_wool 1
+execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.blue] blue_wool 1 
+execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.red] red_wool 1
 
 #only one winner en cas d'une team
 
