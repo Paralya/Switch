@@ -45,6 +45,7 @@ scoreboard objectives add switch.stats.played dummy
 scoreboard objectives add switch.stats.wins dummy
 
 scoreboard objectives add switch.win_streak dummy
+scoreboard objectives add switch.lobby_easter_egg_counter dummy
 
 team add switch.no_pvp {"text":"[No PvP]"}
 team add switch.detached {"text":"[Detached]","color":"dark_gray"}
