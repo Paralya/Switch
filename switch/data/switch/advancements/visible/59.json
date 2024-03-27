@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:creeper_head"},
 		"title": {"text": "La plèbe a travaillé pour moi", "color": "yellow"},
-		"description": {"text": "Remporter une partie de PitchCreep sans tirer une seule flèche", "color": "aqua"},
+		"description": {"text": "Win a game of PitchCreep without firing a single arrow", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

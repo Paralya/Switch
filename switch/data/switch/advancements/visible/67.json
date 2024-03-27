@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:crossbow"},
 		"title": {"text": "Tonerre de Zeus", "color": "yellow"},
-		"description": {"text": "Eliminer 10 joueurs dans une partie de Thunder Spear", "color": "aqua"},
+		"description": {"text": "Eliminate 10 players in a game of Thunder Spear", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

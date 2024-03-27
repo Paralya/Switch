@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:quartz_block", "nbt": "{}"},
 		"title": {"text": "Storm Area", "color": "yellow"},
-		"description": {"text": "Terminer le secret de la map Area51 en Infected", "color": "aqua"},
+		"description": {"text": "Complete the Area51 map secret in Infected", "color": "aqua"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

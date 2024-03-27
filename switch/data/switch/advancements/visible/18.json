@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:iron_sword", "nbt": "{Enchantments:[{id:\"minecraft:sharpness\",lvl:5s}]}"},
 		"title": {"text": "Roi fantôme", "color": "yellow"},
-		"description": {"text": "Tuez 3 personnes en tant que spectre en Spectres Games", "color": "aqua"},
+		"description": {"text": "Kill 3 people as a spectre in Spectres Games", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

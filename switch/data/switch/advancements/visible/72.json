@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:snowball"},
 		"title": {"text": "C'est donc ça, de se vider...", "color": "yellow"},
-		"description": {"text": "Lancer 42 boules de neige en une partie de Warden Escape", "color": "aqua"},
+		"description": {"text": "Throw 42 snowballs in one game of Warden Escape", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

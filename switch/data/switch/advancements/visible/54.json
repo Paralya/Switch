@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:command_block", "nbt": "{CustomModelData:2013001}"},
 		"title": {"text": "Secret Slayer", "color": "yellow"},
-		"description": {"text": "Terminer les secrets de toutes les maps dans le mode de jeu Infected", "color": "aqua"},
+		"description": {"text": "Complete all map secrets in Infected game mode", "color": "aqua"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

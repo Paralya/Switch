@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:white_banner"},
 		"title": {"text": "Reviens par ici", "color": "yellow"},
-		"description": {"text": "Replacer le drapeau de son équipe en Capture/Rush The Flag", "color": "aqua"},
+		"description": {"text": "Return your team's flag in a game of Capture/Rush The Flag", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

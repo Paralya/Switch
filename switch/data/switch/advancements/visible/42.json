@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:dragon_head", "nbt": "{}"},
 		"title": {"text": "Xenophobe", "color": "yellow"},
-		"description": {"text": "Eliminer tous les joueurs d'une même couleur en Layers 4 Teams", "color": "aqua"},
+		"description": {"text": "Eliminate all players of the same color in Layers 4 Teams", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:zombie_head", "nbt": "{}"},
 		"title": {"text": "Héro Humanitaire", "color": "yellow"},
-		"description": {"text": "Tuez au moins 8 zombies en une partie d'Infected", "color": "aqua"},
+		"description": {"text": "Kill at least 8 zombies in one game of Infected", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

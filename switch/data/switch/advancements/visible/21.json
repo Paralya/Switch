@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:water_bucket", "nbt": "{}"},
 		"title": {"text": "Plongeur Expert", "color": "yellow"},
-		"description": {"text": "Complétez 3 dés à coudre dans les modes de jeu du style", "color": "aqua"},
+		"description": {"text": "Complete 3 holes in game modes such as Dé à Coudre", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

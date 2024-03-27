@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:golden_apple", "nbt": "{CustomModelData:2013173}"},
 		"title": {"text": "Bénévolat", "color": "yellow"},
-		"description": {"text": "Aider à la construction d'une map ou la création d'un mini-jeu", "color": "aqua"},
+		"description": {"text": "Help to build a map or create a mini-game", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

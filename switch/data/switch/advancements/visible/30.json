@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:command_block", "nbt": "{CustomModelData:2013040}"},
 		"title": {"text": "Légende", "color": "yellow"},
-		"description": {"text": "Gagnez 5 mini-jeux d'affilée", "color": "aqua"},
+		"description": {"text": "Win 5 mini-games in a row", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

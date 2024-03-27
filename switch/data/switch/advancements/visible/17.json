@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:rotten_flesh", "nbt": "{}"},
 		"title": {"text": "Vive la chair", "color": "yellow"},
-		"description": {"text": "Infectez 5 survivants dans une partie d'Infected", "color": "aqua"},
+		"description": {"text": "Infect 5 survivors in one game of Infected", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

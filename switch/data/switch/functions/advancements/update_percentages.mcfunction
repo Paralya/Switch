@@ -20,6 +20,7 @@ execute if entity @s[advancements={switch:visible/jump_dripstone=true}] run func
 execute if entity @s[advancements={switch:visible/jump_bricks=true}] run function switch:advancements/_pre_macro {id:"jump_bricks"}
 execute if entity @s[advancements={switch:visible/jump_pink=true}] run function switch:advancements/_pre_macro {id:"jump_pink"}
 execute if entity @s[advancements={switch:visible/jump_obsidian=true}] run function switch:advancements/_pre_macro {id:"jump_obsidian"}
+execute if entity @s[advancements={switch:visible/jump_duality=true}] run function switch:advancements/_pre_macro {id:"jump_duality"}
 execute if entity @s[advancements={switch:visible/1=true}] run function switch:advancements/_pre_macro {id:"1"}
 execute if entity @s[advancements={switch:visible/2=true}] run function switch:advancements/_pre_macro {id:"2"}
 execute if entity @s[advancements={switch:visible/3=true}] run function switch:advancements/_pre_macro {id:"3"}
@@ -102,6 +103,7 @@ execute if entity @s[advancements={switch:visible/79=true}] run function switch:
 execute if entity @s[advancements={switch:visible/80=true}] run function switch:advancements/_pre_macro {id:"80"}
 execute if entity @s[advancements={switch:visible/81=true}] run function switch:advancements/_pre_macro {id:"81"}
 execute if entity @s[advancements={switch:visible/82=true}] run function switch:advancements/_pre_macro {id:"82"}
+execute if entity @s[advancements={switch:visible/83=true}] run function switch:advancements/_pre_macro {id:"83"}
 
 setblock 0 0 0 air
 

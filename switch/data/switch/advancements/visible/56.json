@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:writable_book"},
 		"title": {"text": "Jugeote", "color": "yellow"},
-		"description": {"text": "Noter les étoiles de 20 mini-jeux différents", "color": "aqua"},
+		"description": {"text": "Rate 20 different mini-games", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

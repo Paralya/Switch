@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013152}"},
 		"title": {"text": "Pour l'équipe !", "color": "yellow"},
-		"description": {"text": "Tirer sur la base de bonus dans une partie de Laser Game", "color": "aqua"},
+		"description": {"text": "Shoot the bonus base in Laser Game", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

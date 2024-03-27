@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:gold_ingot", "nbt": "{}"},
 		"title": {"text": "Monopoly", "color": "yellow"},
-		"description": {"text": "Ramasser 20 lingots d'or en une partie en Murder Mystery", "color": "aqua"},
+		"description": {"text": "Collect 20 gold ingots in one game of Murder Mystery", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

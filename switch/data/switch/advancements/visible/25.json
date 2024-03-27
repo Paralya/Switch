@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:ocelot_spawn_egg", "nbt": "{}"},
 		"title": {"text": "Ocelot", "color": "yellow"},
-		"description": {"text": "Ne pas descendre en dessous de la moitié de vie en Creeper Apocalypse", "color": "aqua"},
+		"description": {"text": "Don't drop below half life in Creeper Apocalypse", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

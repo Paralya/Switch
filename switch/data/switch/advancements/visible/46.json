@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:red_wool", "nbt": "{}"},
 		"title": {"text": "Automutilation", "color": "yellow"},
-		"description": {"text": "Se tuer soi-même avec un mouton en SheepWars", "color": "aqua"},
+		"description": {"text": "Kill yourself with a sheep in SheepWars", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:sculk_sensor", "nbt": "{}"},
 		"title": {"text": "Suicidaire", "color": "yellow"},
-		"description": {"text": "Soyez la cible de 8 wardens en Warden Escape", "color": "aqua"},
+		"description": {"text": "Be the target of 8 wardens in Warden Escape", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:sandstone", "nbt": "{}"},
 		"title": {"text": "Pharaon", "color": "yellow"},
-		"description": {"text": "Terminer le secret de la map Ancienne Egypte en Infected", "color": "aqua"},
+		"description": {"text": "Complete the Ancient Egypt map secret in Infected", "color": "aqua"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

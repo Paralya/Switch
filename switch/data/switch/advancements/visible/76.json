@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013154}"},
 		"title": {"text": "Injustice", "color": "yellow"},
-		"description": {"text": "Finir le jump en Gay Shooter mais mourir de la main d'un Shooter", "color": "aqua"},
+		"description": {"text": "Finish the parkour in Gay Shooter but die from the hands of a Shooter", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

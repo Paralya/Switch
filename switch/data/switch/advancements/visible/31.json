@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:saddle", "nbt": "{}"},
 		"title": {"text": "Interville", "color": "yellow"},
-		"description": {"text": "Mourir en block party à cause d'une vache folle", "color": "aqua"},
+		"description": {"text": "Die in Block Party because of a mad cow (Ravager)", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

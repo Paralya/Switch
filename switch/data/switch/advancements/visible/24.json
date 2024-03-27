@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:jukebox", "nbt": "{}"},
 		"title": {"text": "Feeling The Music", "color": "yellow"},
-		"description": {"text": "Survivez 20 manches en Block Party", "color": "aqua"},
+		"description": {"text": "Survive 20 rounds in Block Party", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

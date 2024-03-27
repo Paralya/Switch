@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:cactus"},
 		"title": {"text": "Rater son moment de gloire", "color": "yellow"},
-		"description": {"text": "Mourir sur un cactus, d'une tnt ou de suffocation dans une partie de Murder Mystery", "color": "aqua"},
+		"description": {"text": "Die on a cactus, from a tnt or suffocation in a game of Murder Mystery", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

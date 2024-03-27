@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:black_wool"},
 		"title": {"text": "Raciste", "color": "yellow"},
-		"description": {"text": "Tirer sur 3 moutons noirs en une partie de Shoot Da'Sheep", "color": "aqua"},
+		"description": {"text": "Shoot 3 black sheep in a game of Shoot Da'Sheep", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:arrow"},
 		"title": {"text": "Porc-épic", "color": "yellow"},
-		"description": {"text": "Se prendre 10 flèches en une partie de Gay Shooter", "color": "aqua"},
+		"description": {"text": "Take 10 arrows in a game of Gay Shooter", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

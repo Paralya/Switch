@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:bow", "nbt": "{CustomModelData:2013151}"},
 		"title": {"text": "Homophobe", "color": "yellow"},
-		"description": {"text": "Mettre au moins 42 flèches en Gay Shooter", "color": "aqua"},
+		"description": {"text": "Put at least 42 arrows in Gay Shooter", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -2,7 +2,7 @@
 	"display": {
 		"icon": {"item": "minecraft:totem_of_undying", "nbt": "{}"},
 		"title": {"text": "Sans Faute", "color": "yellow"},
-		"description": {"text": "Gagnez une partie de Spectres Game sans perdre aucun membre de votre équipe.", "color": "aqua"},
+		"description": {"text": "Win a game of Spectres Game without losing a member of your team", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
