@@ -48,7 +48,7 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple:
 		parenthesis = f" ({minsString}m{secsString}s)"
 	
 	# Create the tellraw string
-	tellraw = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' vient de finir de se régénérer en ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+	tellraw = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
 
 	# Return
 	return (f"{secs} seconds{parenthesis}", tellraw)
@@ -229,9 +229,7 @@ def createSplittedCoordinates(start_pos: tuple, end_pos: tuple, divider: int) ->
 		z1 = round(c1[0] + d*(i+1))
 		z2 = c1[3]
 
-		# Append the coordinates to the list and
-		dx = x2 - x1
-		dz = z2 - z1
+		# Append the coordinates to the list
 		c.append([ x1, x2, z1, z2 ])
 
 	# Return
@@ -359,7 +357,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	for _ in range(NB_SPREAD_PLAYERS):
 		f.write(f"execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file
 	f.write("\n")
@@ -384,7 +382,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	for _ in range(NB_SPREAD_PLAYERS):
 		f.write(f"execute at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 		f.write(f"execute at @s if block ~ ~-2 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute at @s if block ~ ~-1 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file and return
 	f.write("\n")
