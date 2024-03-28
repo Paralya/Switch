@@ -3,9 +3,9 @@ scoreboard players add #creeper_apocalypse_ticks switch.data 1
 
 execute as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier run kill @s
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/creeper_apocalypse/death
+stopsound @a[tag=!detached] * entity.generic.explode
 
 # Creeper stuff
-#stopsound @a * entity.generic.explode
 effect give @e[type=creeper] resistance infinite 0 true
 execute as @e[type=area_effect_cloud] at @s run function switch:modes/creeper_apocalypse/creeper_exploded
 execute as @e[type=creeper] run scoreboard players add @e[type=creeper,sort=random,limit=1] switch.temp.duplication 1
@@ -19,6 +19,6 @@ execute store result score #creeper_count switch.data if entity @e[type=creeper]
 function switch:translations/modes_creeper_apocalypse_tick
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute if score #creeper_apocalypse_seconds switch.data matches ..99 unless entity @a[scores={switch.alive=1..}] run function switch:modes/creeper_apocalypse/process_end
-execute if score #creeper_apocalypse_seconds switch.data matches 100.. run function switch:modes/creeper_apocalypse/process_end
+execute if score #remaining_time switch.data matches 1.. unless entity @a[scores={switch.alive=1..}] run function switch:modes/creeper_apocalypse/process_end
+execute if score #remaining_time switch.data matches ..0 run function switch:modes/creeper_apocalypse/process_end
 
