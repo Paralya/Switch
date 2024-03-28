@@ -5,9 +5,9 @@ execute if data storage switch:main {map:"airdox_fish_fight"} run function switc
 
 function switch:modes/fish_fight/xp_bar
 
-clear @s white_wool
-clear @s red_wool
-clear @s blue_wool
+clear @s white_concrete
+clear @s red_concrete
+clear @s blue_concrete
 clear @s ender_pearl
 clear @s shears 1
 scoreboard players set @s switch.temp.cooldown 100

@@ -20,9 +20,9 @@ execute if score #random switch.data matches 1 run effect give @s regeneration 8
 execute if score #random switch.data matches 1 run effect give @s speed 10 0 true
 
 # si le score est 2, on donne 25 blocs au détenteur du score axolotl killed
-execute if score #random switch.data matches 2 if score #TEAM_FISH switch.data matches 0 run give @s white_wool 25
-execute if score #random switch.data matches 2 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run give @s red_wool 25
-execute if score #random switch.data matches 2 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run give @s blue_wool 25
+execute if score #random switch.data matches 2 if score #TEAM_FISH switch.data matches 0 run give @s white_concrete 25
+execute if score #random switch.data matches 2 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run give @s red_concrete 25
+execute if score #random switch.data matches 2 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run give @s blue_concrete 25
 execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound entity.item.pickup ambient @s
 execute if score #random switch.data matches 2 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 2 run effect give @s speed 10 0 true

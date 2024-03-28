@@ -16,9 +16,9 @@ execute if score #temp switch.data matches 0 as @a[tag=!detached] at @s run play
 
 scoreboard players operation #temp_2 switch.data = #fish_fight_seconds switch.data
 scoreboard players operation #temp_2 switch.data %= #6 switch.data
-execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_wool 1
-execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.blue] blue_wool 1 
-execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.red] red_wool 1
+execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_concrete 1
+execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.blue] blue_concrete 1 
+execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.red] red_concrete 1
 
 #only one winner en cas d'une team
 

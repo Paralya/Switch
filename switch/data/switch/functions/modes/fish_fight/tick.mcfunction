@@ -38,6 +38,8 @@ execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust 0.996 0.5
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
 item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
 
+# Placed blocks disappear
+function switch:modes/fish_fight/block_disappear/global_tick
 
 ## Détection de fin de partie
 scoreboard players set #remaining_players switch.data 0
