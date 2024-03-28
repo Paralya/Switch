@@ -1,12 +1,11 @@
 
 gamemode adventure @a[tag=!detached]
 team join switch.no_pvp @a[tag=!detached]
-team modify switch.no_pvp seeFriendlyInvisibles true
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] jump_boost infinite 250 true
 function switch:utils/set_dynamic_time
 
-scoreboard players set #is_aventure switch.data 1
+scoreboard players set #is_adventure switch.data 1
 function switch:translations/modes_memory_mine_start
 
 scoreboard objectives add switch.temp.cooldown dummy
