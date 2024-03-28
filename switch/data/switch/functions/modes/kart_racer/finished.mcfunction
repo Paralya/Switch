@@ -17,3 +17,8 @@ tag @s remove shopping_kart.temp
 # Advancement
 scoreboard players remove @s switch.temp.pos_on_last_lap 5
 execute unless score #test_mode switch.data matches 1 if score @s switch.temp.pv_classement <= @s switch.temp.pos_on_last_lap run advancement grant @s only switch:visible/20
+
+# Clear people the vote items
+clear @a[tag=!detached] warped_fungus_on_a_stick{switch:{vote:1b}}
+scoreboard players reset #can_vote switch.data
+

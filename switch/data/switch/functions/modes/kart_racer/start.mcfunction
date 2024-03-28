@@ -10,6 +10,7 @@ gamerule fallDamage false
 
 function switch:translations/modes_kart_racer_start
 
+scoreboard players set #can_vote switch.data 1
 scoreboard players set #remaining_time switch.data 310
 scoreboard players set #kart_racer_seconds switch.data -10
 scoreboard players set #kart_racer_ticks switch.data 0
