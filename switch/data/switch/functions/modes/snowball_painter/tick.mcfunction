@@ -16,6 +16,8 @@ execute as @e[type=snowball,tag=!switch.marker] at @s run function switch:modes/
 # For each marker, check if they still have a vehicle
 execute as @e[type=marker,tag=switch.marker,predicate=!switch:has_vehicle,sort=random] at @s run function switch:modes/snowball_painter/explode_marker
 
+# Unknown death
+execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/snowball_painter/death
 
 ## Fin de partie
 scoreboard players remove #remaining_time switch.data 1

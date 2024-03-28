@@ -17,6 +17,10 @@ execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust .75 0 0 1
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
 item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
 
+# Unknown death
+execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/pitchout/death
+
+# Process end
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,scores={switch.alive=1..}]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/pitchout/process_end

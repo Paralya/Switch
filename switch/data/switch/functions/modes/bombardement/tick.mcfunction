@@ -3,6 +3,7 @@
 execute if score #bombardement_seconds switch.data matches ..-1 run tp @a[tag=!detached,gamemode=!spectator,predicate=switch:in_water] 121057 110 121064 180 -30
 execute if score #bombardement_seconds switch.data matches 42.. unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,gamemode=!spectator,predicate=switch:in_water] only switch:visible/75
 execute if score #bombardement_seconds switch.data matches 0.. as @a[tag=!detached,gamemode=!spectator,predicate=switch:in_water] at @s run function switch:modes/bombardement/death
+execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/bombardement/death/
 
 # Ball tick
 execute as @e[type=armor_stand,tag=switch.ball] at @s run function switch:modes/bombardement/ball_tick

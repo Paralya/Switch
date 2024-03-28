@@ -1,3 +1,3 @@
 
-gamemode spectator @s
+function switch:modes/snowball_painter/death
 
