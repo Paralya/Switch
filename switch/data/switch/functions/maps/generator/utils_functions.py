@@ -330,7 +330,7 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	_, x, _, z = createTpCoordsStringFromStartAndEnd(start_pos, end_pos, paste_start_height)
 	dx = end_pos[0] - x
 	dz = end_pos[2] - z
-	maxRange = min(dx, dz) // 2
+	maxRange = min(dx, dz)
 	if maxRange < 10:
 		maxRange = 10
 	spread_distance = maxRange // 10

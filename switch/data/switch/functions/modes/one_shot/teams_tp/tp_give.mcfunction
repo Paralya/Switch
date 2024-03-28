@@ -7,4 +7,13 @@ item replace entity @s armor.chest with golden_chestplate{Enchantments:[{id:"min
 effect give @s jump_boost 1 250 true
 effect give @s resistance 3 255 true
 effect give @s blindness 1 255 true
+effect give @s night_vision infinite 0 true 
+
+attribute @s generic.attack_speed base set 1024
+execute if score @s switch.alive matches 6 run attribute @s generic.max_health base set 6
+execute if score @s switch.alive matches 5 run attribute @s generic.max_health base set 5
+execute if score @s switch.alive matches 4 run attribute @s generic.max_health base set 4
+execute if score @s switch.alive matches 3 run attribute @s generic.max_health base set 3
+execute if score @s switch.alive matches 2 run attribute @s generic.max_health base set 2
+execute unless score @s switch.alive matches 2..6 run attribute @s generic.max_health base set 1
 
