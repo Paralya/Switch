@@ -29,8 +29,7 @@ scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.old_x dummy
 scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
-scoreboard objectives add switch.temp.deathCooldown dummy
-scoreboard objectives add switch.temp.kills playerKillCount {"text":"Nombre de kills","color":"gold"}
+scoreboard objectives add switch.temp.kills playerKillCount {"text":"Kills","color":"gold"}
 scoreboard objectives setdisplay list switch.alive
 scoreboard objectives setdisplay sidebar switch.temp.kills
 
@@ -46,6 +45,9 @@ effect give @a[tag=!detached] slowness 5 2 true
 effect give @a[tag=!detached] resistance infinite 0 true
 
 # Summon 64 markers for respawn system
+execute summon marker run function switch:modes/one_shot/respawn/spawn_marker
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] summon marker run function switch:modes/one_shot/respawn/spawn_marker
+
+# Make players spawn
 execute as @a[tag=!detached] run function switch:modes/one_shot/respawn/main
 
