@@ -16,6 +16,7 @@ execute at @a[tag=!detached,scores={switch.alive=5}] run particle dust 1 1 0.447
 execute at @a[tag=!detached,scores={switch.alive=4}] run particle dust 0.988 0.796 0.22 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
 execute at @a[tag=!detached,scores={switch.alive=3}] run particle dust 0.878 0.365 0.02 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
 execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust 0.325 0.153 0.047 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
+execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust 0.647 0.059 0.059 1 ~ ~2.4 ~ .1 .1 .1 0 1 force @a[distance=..128]
 #execute at @e[tag=switch.respawn] run particle flame ~ ~1 ~ 0.5 0.5 0.5 0 10 force @a
 
 # Cooldown invincibilité
