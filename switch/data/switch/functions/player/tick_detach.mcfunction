@@ -15,7 +15,7 @@ scoreboard players set #inventory switch.data 0
 execute store result score #inventory switch.data if data storage switch:temp Inventory[].tag.switch
 
 # If lost (only) one item, check where
-execute unless score #inventory switch.data matches 11 unless score #inventory switch.data matches 0 run scoreboard players set #inventory switch.data -1
+execute unless score #inventory switch.data matches 12 unless score #inventory switch.data matches 0 run scoreboard players set #inventory switch.data -1
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_green run scoreboard players set @s switch.lobby_respawn 1
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_white run scoreboard players set @s switch.lobby_respawn 2
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_blue run scoreboard players set @s switch.lobby_respawn 3
@@ -27,6 +27,7 @@ execute if score #inventory switch.data matches -1 unless data storage switch:te
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_pink run scoreboard players set @s switch.lobby_respawn 9
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run scoreboard players set @s switch.lobby_respawn 10
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_obsidian run scoreboard players set @s switch.lobby_respawn 11
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_duality run scoreboard players set @s switch.lobby_respawn 12
 execute if score #inventory switch.data matches -1 run tp @s 0 0 0
 execute if score #inventory switch.data matches -1 run clear @s
 
@@ -44,6 +45,7 @@ execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=8}] run tp @s 9 7
 execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=9}] run tp @s -47 77 10 0 0
 execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=10}] run tp @s -84 71 0 90 0
 execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=11}] run tp @s 51 76 -9 180 0
+execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=12}] run tp @s 9 75 111 -90 0
 
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.3 with dripstone_block{switch:{jump_dripstone:1b},display:{Name:'{"text":"Dripstone Jump","color":"gold","italic":false}',Lore:['{"text":"by AirDox","color":"gray","italic":false}']}}
@@ -56,7 +58,8 @@ execute unless score #inventory switch.data matches 10 run item replace entity @
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.14 with red_concrete{switch:{jump_red:1b},display:{Name:'{"text":"Red Jump","color":"red","italic":false}',Lore:['{"text":"by Stoupy51","color":"gray","italic":false}']}}
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.15 with brown_concrete{switch:{jump_brown:1b},display:{Name:'{"text":"Brown Jump","color":"#8B4513","italic":false}',Lore:['{"text":"by OfChara","color":"gray","italic":false}']}}
 execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.16 with purple_concrete{switch:{jump_purple:1b},display:{Name:'{"text":"Purple Jump","color":"light_purple","italic":false}',Lore:['{"text":"by AirDox","color":"gray","italic":false}']}}
-execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.22 with crying_obsidian{switch:{jump_obsidian:1b},display:{Name:'{"text":"Obsidian Jump","color":"dark_gray","italic":false}',Lore:['{"text":"by Stoupy51","color":"gray","italic":false}']}}
+execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.21 with copper_block{switch:{jump_duality:1b},display:{Name:'{"text":"Duality Jump","color":"dark_gray","italic":false}',Lore:['{"text":"by Stoupy51 / AirDox / OfChara","color":"gray","italic":false}']}}
+execute unless score #inventory switch.data matches 10 run item replace entity @s inventory.23 with crying_obsidian{switch:{jump_obsidian:1b},display:{Name:'{"text":"Obsidian Jump","color":"dark_gray","italic":false}',Lore:['{"text":"by Stoupy51","color":"gray","italic":false}']}}
 
 
 ## Jumps advancements
@@ -71,4 +74,5 @@ advancement grant @s[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!s
 advancement grant @s[x=-44,y=93,z=27,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_pink
 advancement grant @s[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_bricks
 advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_obsidian
+execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2] only switch:visible/jump_duality
 

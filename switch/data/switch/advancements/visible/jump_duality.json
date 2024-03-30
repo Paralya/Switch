@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:gold_block"},
+		"icon": {"item": "minecraft:waxed_copper_block"},
 		"title": {"text": "The Duality Jump", "color": "yellow"},
 		"description": {"text": "Finish the duo jump for the first time", "color": "aqua"},
 		"frame": "challenge",
@@ -11,5 +11,5 @@
 	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 	"requirements": [["requirement"]],
 	"rewards": {"function": "switch:advancements/jumps/duality"},
-	"parent": "switch:visible/jump_bricks"
+	"parent": "switch:visible/jump_red"
 }
