@@ -29,4 +29,3 @@ team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/layers_2_teams/team_and_give
 
-
