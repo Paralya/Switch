@@ -30,4 +30,10 @@ execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/r
 
 scoreboard players set @s crazy_adventure.radiation 0
 attribute @s generic.attack_speed base set 1024
+execute if score @s switch.alive matches 6 run attribute @s generic.max_health base set 6
+execute if score @s switch.alive matches 5 run attribute @s generic.max_health base set 5
+execute if score @s switch.alive matches 4 run attribute @s generic.max_health base set 4
+execute if score @s switch.alive matches 3 run attribute @s generic.max_health base set 3
+execute if score @s switch.alive matches 2 run attribute @s generic.max_health base set 2
+execute unless score @s switch.alive matches 2..6 run attribute @s generic.max_health base set 1
 
