@@ -22,6 +22,9 @@ execute if score #engine_state switch.data matches 3 as @a[tag=!detached,gamemod
 # Right click reset
 scoreboard players reset @a switch.right_click
 
+# Spectral arrow fix in lobby
+execute as @e[type=spectral_arrow,x=26,y=80,z=93,distance=..10,nbt=!{pickup:0b}] run data modify entity @s pickup set value 0b
+
 ## Profiling
 #function switch:profiling/start
 
