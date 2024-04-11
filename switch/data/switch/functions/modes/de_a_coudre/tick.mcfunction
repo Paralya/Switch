@@ -13,7 +13,7 @@ execute if score #remaining_time switch.data matches 0 as @a[tag=!detached,gamem
 execute if score #remaining_time switch.data matches -120 run kill @a[tag=!detached,gamemode=adventure]
 
 
-## Fin de partie
+## End game
 execute if score #detect_end switch.data matches 0 if score #rounds switch.data matches 0 run scoreboard players set #detect_end switch.data 1
 execute if score #detect_end switch.data matches 0 if score #de_a_coudre_seconds switch.data matches 1200.. run scoreboard players set #detect_end switch.data 2
 execute if score #detect_end switch.data matches 1 run function switch:modes/de_a_coudre/process_end

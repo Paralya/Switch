@@ -14,7 +14,7 @@ scoreboard players set @a[tag=!detached,scores={switch.temp.kill=1..}] switch.te
 scoreboard players remove @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill 1
 scoreboard players remove @a[tag=!detached,scores={switch.temp.cooldown_kill=1..}] switch.temp.cooldown_kill 1
 
-## Fin de partie
+## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/castagne/process_end

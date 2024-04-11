@@ -29,7 +29,7 @@ execute if score #block_party_ticks switch.data matches 1000.. unless score #pro
 function switch:modes/block_party/xp_bar
 
 
-## Fin de partie
+## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/block_party/process_end

@@ -16,7 +16,7 @@ execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,ga
 execute as @e[tag=switch.tnt_run,scores={switch.data=8..}] at @s run function switch:modes/tnt_run/destroy_block
 scoreboard players add @e[tag=switch.tnt_run] switch.data 1
 
-## Fin de partie
+## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/tnt_run/process_end

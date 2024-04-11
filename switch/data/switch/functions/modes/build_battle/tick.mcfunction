@@ -23,6 +23,6 @@ kill @e[type=allay]
 kill @e[type=vex]
 kill @e[type=tnt]
 
-## Fin de partie
+## End game
 execute if score #process_end switch.data matches 1.. run function switch:modes/build_battle/process_end
 

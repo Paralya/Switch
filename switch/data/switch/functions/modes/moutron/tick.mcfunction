@@ -21,7 +21,7 @@ execute unless score #test_mode switch.data matches 1 if score #temp switch.data
 # Unknown death
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/moutron/death
 
-## Fin de partie
+## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/moutron/process_end

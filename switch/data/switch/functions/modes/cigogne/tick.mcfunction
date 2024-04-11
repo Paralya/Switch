@@ -18,7 +18,7 @@ scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=200..}] switch
 scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=..0}] switch.temp.sneak 0
 
 
-## Fin de partie
+## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/cigogne/process_end

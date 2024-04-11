@@ -10,7 +10,7 @@ execute if score #spleef_seconds switch.data matches 30.. as @e[type=marker,tag=
 ## Snow Powder
 execute at @a[tag=!detached,gamemode=survival] run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 powder_snow replace white_shulker_box
 
-## Fin de partie
+## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/spleef/process_end

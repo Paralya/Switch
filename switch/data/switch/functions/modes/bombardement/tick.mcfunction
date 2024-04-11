@@ -8,7 +8,7 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 # Ball tick
 execute as @e[type=armor_stand,tag=switch.ball] at @s run function switch:modes/bombardement/ball_tick
 
-# Fin de partie
+# End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/bombardement/process_end

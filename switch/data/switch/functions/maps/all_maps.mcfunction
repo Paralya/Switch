@@ -171,4 +171,5 @@
 #	158000	(survival)	: yeti_in_panic
 #	159000	(survival)	: cluedo_casino
 #	160000	(survival)	: octogone_nether_ice
+#	161000	(survival)	: pillars_of_fortune
 

@@ -16,6 +16,6 @@ execute as @e[type=item,tag=!switch.checked] run function switch:modes/coin_chas
 execute as @a[tag=!detached,gamemode=!spectator] at @s store result score @s switch.temp.points run clear @s gold_ingot 0
 
 
-## Fin de partie
+## End game
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/coin_chaser/process_end
 

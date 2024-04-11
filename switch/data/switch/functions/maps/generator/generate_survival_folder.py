@@ -329,6 +329,7 @@ generate_clone_survival_folder("arti_ancient_city", (157000, 0, 157000), (157111
 generate_clone_survival_folder("yeti_in_panic", (158000, 0, 158000), (158077, 67, 158070), 100, override_tp_coords = (158043, 112, 158025))
 generate_clone_survival_folder("cluedo_casino", (159000, 0, 159000), (159075, 59, 159069), 100, override_tp_coords = (159056, 117, 159047))
 generate_clone_survival_folder("octogone_nether_ice", (160000, 0, 160000), (160080, 62, 160080), 100, override_tp_coords = (160040, 136, 160040))
+generate_clone_survival_folder("pillars_of_fortune", (161000, 0, 161000), (161100, 90, 161100), 100, override_tp_coords = (161050, 164, 161050))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air

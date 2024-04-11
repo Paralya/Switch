@@ -17,6 +17,6 @@ scoreboard players reset @a[scores={switch.temp.reload=40..}] switch.temp.reload
 # Advancement
 execute unless score #test_mode switch.data matches 1 run advancement grant @a[scores={switch.temp.kills=10..}] only switch:visible/67
 
-## Fin de partie
+## End game
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/thunder_spear/process_end
 

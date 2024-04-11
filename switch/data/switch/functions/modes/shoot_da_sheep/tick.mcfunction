@@ -6,6 +6,6 @@ execute as @e[type=sheep] at @s run function switch:modes/shoot_da_sheep/sheep_t
 # Unknown death
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/shoot_da_sheep/joined
 
-## Fin de partie
+## End game
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/shoot_da_sheep/process_end
 

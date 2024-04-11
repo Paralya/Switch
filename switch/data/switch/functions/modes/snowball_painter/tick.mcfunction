@@ -19,7 +19,7 @@ execute as @e[type=marker,tag=switch.marker,predicate=!switch:has_vehicle,sort=r
 # Unknown death
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/snowball_painter/death
 
-## Fin de partie
+## End game
 scoreboard players remove #remaining_time switch.data 1
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/snowball_painter/process_end
 
