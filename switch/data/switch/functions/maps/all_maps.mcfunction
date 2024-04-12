@@ -172,4 +172,5 @@
 #	159000	(survival)	: cluedo_casino
 #	160000	(survival)	: octogone_nether_ice
 #	161000	(survival)	: pillars_of_fortune
+#	162000	(survival)	: even_old_japan
 

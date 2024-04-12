@@ -48,7 +48,10 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple:
 		parenthesis = f" ({minsString}m{secsString}s)"
 	
 	# Create the tellraw string
-	tellraw = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+	if imin > 0:
+		tellraw = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+	else:
+		tellraw = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
 
 	# Return
 	return (f"{secs} seconds{parenthesis}", tellraw)
