@@ -23,7 +23,7 @@ execute store result score #count switch.data if entity @a[tag=!detached]
 execute if score #count switch.data matches ..5 run spreadplayers 161050 161050 8 16 under 190 false @a[tag=!detached]
 execute if score #count switch.data matches 6..12 run spreadplayers 161050 161050 8 24 under 190 false @a[tag=!detached]
 execute if score #count switch.data matches 13.. run spreadplayers 161050 161050 8 30 under 190 false @a[tag=!detached]
-execute as @a[tag=!detached] at @s run tp @s ~ 132 ~
-execute as @a[tag=!detached] at @s run summon item_display ~ 133 ~ {Tags:["switch.pillars_of_fortune"]}
-execute at @a[tag=!detached] run fill ~ 111 ~ ~ 129 ~ bedrock
+execute as @a[tag=!detached] at @s run tp @s ~ 142 ~
+execute as @a[tag=!detached] at @s run summon item_display ~ 142 ~ {Tags:["switch.pillars_of_fortune"]}
+execute at @a[tag=!detached] run fill ~ 111 ~ ~ 140 ~ bedrock
 
