@@ -49,7 +49,7 @@ execute as @a[tag=!detached] at @s run playsound entity.villager.ambient ambient
 clear @a[tag=!detached,gamemode=adventure]
 
 # Play random music
-execute store result score #random switch.data run random value 0..13
+execute store result score #random switch.data run random value 1..13
 execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run playsound music_disc.blocks record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound music_disc.cat record @s ~ ~ ~ 10000 1 1
 execute if score #random switch.data matches 3 as @a[tag=!detached] at @s run playsound music_disc.chirp record @s ~ ~ ~ 10000 1 1
