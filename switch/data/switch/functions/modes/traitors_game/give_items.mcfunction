@@ -1,5 +1,6 @@
 
 function switch:utils/reset_attributes
+attribute @s generic.attack_speed base set 1024
 
 scoreboard players set #armor switch.data 0
 scoreboard players set #sword switch.data 0
