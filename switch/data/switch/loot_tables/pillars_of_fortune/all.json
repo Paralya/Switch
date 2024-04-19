@@ -1924,8 +1924,7 @@
 				},
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:ghast_spawn_egg",
-					"weight": 3
+					"name": "minecraft:ghast_spawn_egg"
 				},
 				{
 					"type": "minecraft:item",
@@ -5207,13 +5206,11 @@
 				},
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:wither_skeleton_spawn_egg",
-					"weight": 3
+					"name": "minecraft:wither_skeleton_spawn_egg"
 				},
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:wither_spawn_egg",
-					"weight": 3
+					"name": "minecraft:wither_spawn_egg"
 				},
 				{
 					"type": "minecraft:item",

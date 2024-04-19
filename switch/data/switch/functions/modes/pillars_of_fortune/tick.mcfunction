@@ -2,6 +2,7 @@
 scoreboard players add #pillars_of_fortune_ticks switch.data 1
 
 ## Death system
+spawnpoint @a[tag=!detached] 0 70 0
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/pillars_of_fortune/death
 
 ## Don't move

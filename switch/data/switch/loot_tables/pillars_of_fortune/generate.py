@@ -15,13 +15,15 @@ items = response.text.split("\n")
 # Function to convert loot table name to entry
 def get_entry(item: str) -> dict:
 	entry = {"type": "minecraft:item", "name": item}
-	if "spawn_egg" in item:
+	if "spawn_egg" in item and "wither" not in item and "ghast" not in item:
 		entry["weight"] = 3
 	return entry
 
 # Insert all items into the loot table
 loot_table = {"pools": [{"rolls": 1, "entries": []}]}
 for item in items:
+	if item == "ender_dragon_spawn_egg" or item == "":
+		continue
 	loot_table["pools"][0]["entries"].append(get_entry(item))
 
 # Save the loot table
