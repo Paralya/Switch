@@ -154,7 +154,7 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 	""" Creates the "teleport_players.mcfunction" file
 	Args:
 		name 		(str)	: The name of the map
-		tp_coords 	(str)	: The tp coordinates string
+		tp_coords 	(str)	: The tp coordinates string "[{x}.5d, {y}.5d, {z}.5d]"
 		kart_racer	(list)	: Start position (tuple), orientation (int), and count (int) for the kart racer start line (optional)
 
 	Returns:
@@ -201,9 +201,16 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 		f.write("scoreboard players add #count switch.data 1\n")
 		f.write(f"scoreboard players operation #count switch.data %= #{count} switch.data\n")
 
-	# Close the file and return
+	# Close the file
 	f.write("\n")
 	f.close()
+
+	# Add a file to teleport @s to the coordinates
+	with open(f"survival/{name}/tp_to_coords.mcfunction", "w", encoding = "utf-8") as f:
+		x, y, z = tp_coords.replace("[", "").replace("]", "").replace("d", "").split(", ")
+		f.write(f"tp @s {x} {y} {z}\n")
+
+	# Return
 	return None
 
 def createSplittedCoordinates(start_pos: tuple, end_pos: tuple, divider: int) -> list:
