@@ -38,7 +38,7 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple:
 
 	# Convert the tick to a string
 	secsString = str(isec)
-	if isec < 10:
+	if isec < 10 and imin > 0:
 		secsString = f"0{isec}"
 	minsString = str(imin)
 

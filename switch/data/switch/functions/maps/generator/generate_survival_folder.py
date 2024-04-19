@@ -331,7 +331,9 @@ generate_clone_survival_folder("cluedo_casino", (159000, 0, 159000), (159075, 59
 generate_clone_survival_folder("octogone_nether_ice", (160000, 0, 160000), (160080, 62, 160080), 100, override_tp_coords = (160040, 136, 160040))
 generate_clone_survival_folder("pillars_of_fortune", (161000, 0, 161000), (161100, 90, 161100), 100, override_tp_coords = (161050, 164, 161050))
 generate_clone_survival_folder("even_old_japan", (162000, 0, 162000), (162102, 52, 162102), 100, override_tp_coords = (162038, 109, 162043))
-
+generate_clone_survival_folder("fireblast_1", (163000, 0, 163000), (163075, 50, 163075), 100, override_tp_coords = (163037, 127, 163037))
+generate_clone_survival_folder("fireblast_2", (164000, 0, 164000), (164075, 50, 164075), 100, override_tp_coords = (164037, 127, 164037))
+generate_clone_survival_folder("fireblast_3", (165000, 0, 165000), (165075, 50, 165075), 100, override_tp_coords = (165037, 127, 165037))
 
 # //replace command_block,chain_command_block,repeating_command_block,granite,diorite,andesite,gravel,copper_ore,coal_ore,iron_ore,lapis_ore,redstone_ore,emerald_ore,diamond_ore stone
 # //replace shulker_box,yellow_shulker_box,red_shulker_box,green_shulker_box,blue_shulker_box,purple_shulker_box,orange_shulker_box,white_shulker_box,black_shulker_box,pink_shulker_box,cyan_shulker_box,light_blue_shulker_box,lime_shulker_box air

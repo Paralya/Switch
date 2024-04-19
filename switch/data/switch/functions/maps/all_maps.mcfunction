@@ -173,4 +173,7 @@
 #	160000	(survival)	: octogone_nether_ice
 #	161000	(survival)	: pillars_of_fortune
 #	162000	(survival)	: even_old_japan
+#	163000	(survival)	: fireblast_1
+#	164000	(survival)	: fireblast_2
+#	165000	(survival)	: fireblast_3
 
