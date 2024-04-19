@@ -10,6 +10,8 @@ execute as @a[tag=!detached,gamemode=adventure,scores={switch.right_click=1..},n
 execute as @a[tag=!detached,gamemode=adventure,scores={switch.right_click=1..},nbt={SelectedItem:{tag:{}}}] unless score @s switch.temp.cooldown matches 1.. at @s run function switch:modes/fireblast/fireball/right_click
 execute as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle] at @s run function switch:modes/fireblast/explode_tnt
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
+execute as @a[tag=!detached,gamemode=adventure] run function switch:modes/fireblast/xp_bar
+
 
 ## End game
 scoreboard players set #remaining_players switch.data 0
