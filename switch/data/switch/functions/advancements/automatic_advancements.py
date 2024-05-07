@@ -32,6 +32,7 @@ jump_bricks	Thitanas	jump	The Bricks Jump	Finir le jump des briques pour la prem
 jump_pink	OfChara	jump	The Pink Jump	Finir le jump rose pour la première fois	Finish the pink jump for the first time
 jump_obsidian	Stoupy	jump	The Obsidian Jump	Finir le jump obsidienne pour la première fois	Finish the obsidian jump for the first time
 jump_duality	Stoupy	jump	The Duality Jump	Finir le jump duo pour la première fois	Finish the duo jump for the first time
+jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour la première fois	Finish the graviglitch jump for the first time																			
 1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu	Help to build a map or create a mini-game
 2	Stoupy	easy	Fidèle	Jouez un total de 100 parties sur le Switch	Play a total of 100 games on the Switch
 3	Stoupy	easy	La moula	Ayez au moins 400 Saphirs dans votre banque	Have at least 400 Sapphires in your bank
