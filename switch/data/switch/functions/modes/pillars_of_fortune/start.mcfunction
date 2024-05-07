@@ -12,6 +12,8 @@ scoreboard players set #do_spreadplayers switch.data 0
 function switch:choose_map_for/pillars_of_fortune
 function switch:translations/modes_pillars_of_fortune_start
 
+gamerule mobGriefing true
+
 scoreboard players set #remaining_time switch.data 605
 scoreboard players set #pillars_of_fortune_seconds switch.data -5
 scoreboard players set #pillars_of_fortune_ticks switch.data 0

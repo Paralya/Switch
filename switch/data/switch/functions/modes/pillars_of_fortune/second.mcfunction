@@ -13,6 +13,9 @@ scoreboard players operation #temp switch.data = #pillars_of_fortune_seconds swi
 scoreboard players operation #temp switch.data %= #2 switch.data
 execute if score #pillars_of_fortune_seconds switch.data matches 1.. if score #temp switch.data matches 0 as @a[tag=!detached,gamemode=survival] run loot give @s loot switch:pillars_of_fortune/all
 
+# Forbidden effects
+effect clear @a[tag=!detached] mining_fatigue
+
 # Title action bar
 function switch:translations/modes_pillars_of_fortune_second
 
