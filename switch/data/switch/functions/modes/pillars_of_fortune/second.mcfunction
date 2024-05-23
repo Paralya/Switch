@@ -16,6 +16,11 @@ execute if score #pillars_of_fortune_seconds switch.data matches 1.. if score #t
 # Forbidden effects
 effect clear @a[tag=!detached] mining_fatigue
 
+# Spawn a creeper every 30 seconds after 2 minutes
+execute if score #pillars_of_fortune_seconds switch.data matches 120.. run scoreboard players operation #creeper switch.data = #pillars_of_fortune_seconds switch.data
+execute if score #pillars_of_fortune_seconds switch.data matches 120.. run scoreboard players operation #creeper switch.data %= #30 switch.data
+execute if score #pillars_of_fortune_seconds switch.data matches 120.. if score #creeper switch.data matches 25 at @a[tag=!detached,gamemode=survival] run summon creeper
+
 # Title action bar
 function switch:translations/modes_pillars_of_fortune_second
 
