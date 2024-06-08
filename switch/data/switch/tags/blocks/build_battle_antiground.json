@@ -1,7 +1,9 @@
 {
 	"values": [
 		"#minecraft:all_signs",
-		"#iris:chests",
+		"#shulker_boxes",
+		"chest",
+		"ender_chest",
 		"barrel",
 		"calibrated_sculk_sensor",
 		"campfire",
