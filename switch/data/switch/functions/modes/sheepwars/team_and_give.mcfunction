@@ -36,11 +36,11 @@ attribute @s generic.armor base set 3.0
 ## Shop things
 # Kit More Health
 execute if score @s switch.sheepwars.choosen_kit matches 1 run item replace entity @s armor.chest with chainmail_chestplate{Unbreakable:1b,HideFlags:8,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;20231201,1,1,1],Slot:"chest"}]}
-execute if score @s switch.sheepwars.choosen_kit matches 1 unless score @s switch.sheepwars.kit_health matches 1.. run attribute @s generic.max_health base set 22
-execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 1 run attribute @s generic.max_health base set 24
-execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 2 run attribute @s generic.max_health base set 26
-execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 3 run attribute @s generic.max_health base set 28
-execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 4 run attribute @s generic.max_health base set 30
+execute if score @s switch.sheepwars.choosen_kit matches 1 unless score @s switch.sheepwars.kit_health matches 1.. run attribute @s generic.max_health base set 21
+execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 1 run attribute @s generic.max_health base set 22
+execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 2 run attribute @s generic.max_health base set 23
+execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 3 run attribute @s generic.max_health base set 24
+execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 4 run attribute @s generic.max_health base set 25
 # Kit Better Bow
 execute if score @s switch.sheepwars.choosen_kit matches 2 run item replace entity @s hotbar.1 with bow{CanDestroy:["#realistic_explosion:all"],Enchantments:[{id:"minecraft:infinity",lvl:1s}],Unbreakable:1b,HideFlags:8,CustomModelData:2013149}
 # Kit Better Sword
