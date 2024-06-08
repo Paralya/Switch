@@ -69,7 +69,7 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 34	Megamat	easy	Monopoly	Ramasser 20 lingots d'or en une partie en Murder Mystery	Collect 20 gold ingots in one game of Murder Mystery
 35	Xiaojuun	easy	Daltonien	Meurs à la première manche en Block Party	Die in the first round of Block Party
 36	Megamat	easy	Contre son camp	Marcher sur sa propre mine pendant une partie de Memory Mine	Step on your own mine in Memory Mine
-37	Megamat	medium	Oppenheimer	Survivre plus d'une minute en Bombardement	Survive for more than one minute in Bombardement
+37	Megamat	medium	Oppenheimer	Survivre plus d'une minute en Bombardment	Survive for more than one minute in Bombardment
 38	Xiaojuun	medium	Regarde ma queue	Avoir une trainée de 15 secondes en moutron	Have a 15-second trail in Moutron
 39	ArtiGrrr	hard	Précision Artistique	Finir une partie de Snowball Painter avec exactement 51 points	Finish a game of Snowball Painter with exactly 51 points
 40	Marcus	medium	Harcelé	Mourir 3 fois par la même personne en Pitchout	Be killed 3 times by the same person in Pitchout
@@ -107,11 +107,11 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 72	luigimario12	easy	C'est donc ça, de se vider...	Lancer 42 boules de neige en une partie de Warden Escape	Throw 42 snowballs in one game of Warden Escape
 73	OfChara	hard	Parade Parfaite	Réussir à parer une flèche en lançant son couteau en Murder Mystery	Parry an arrow by throwing your knife in Murder Mystery
 74	OfChara	hard	I am Legend	Gagner une partie d'Infecté en étant le dernier humain (si il y a plus de 10 joueurs)	Win a game of Infected by being the last human (if there are more than 10 players)
-75	OfChara	medium	Tout ça pour ça...	Survivre 42 secondes puis mourir en tombant dans l'eau en Bombardement	Survive 42 seconds and then die by falling into the water in Bombardement
+75	OfChara	medium	Tout ça pour ça...	Survivre 42 secondes puis mourir en tombant dans l'eau en Bombardment	Survive 42 seconds and then die by falling into the water in Bombardment
 76	OfChara	hard	Injustice	Finir le parcours en Gay Shooter mais mourir de la main d'un Shooter	Finish the parkour in Gay Shooter but die from the hands of a Shooter
 77	Stoupy	easy	Pour l'équipe !	Tirer sur la base de bonus dans une partie de Laser Game	Shoot the bonus base in Laser Game
 78	TreekoZ	easy	Banger sucré au sucre	Préparez un gâteau en une partie de Cooking Festival	Bake a cake in Cooking Festival
-79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardement	Die from the first cannon shot in Bombardement
+79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardment	Die from the first cannon shot in Bombardment
 80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery	Get killed by another murderer as a murderer in Murder Myster
 81	ArtiGrrr	easy	Reviens par ici	Replacer le drapeau de son équipe en une partie de Capture/Rush The Flag	Return your team's flag in a game of Capture/Rush The Flag
 82	Stoupy	hard	Bien placé	Survivre 30 secondes sans bouger en Block Party	Survive 30 seconds without moving in Block Party

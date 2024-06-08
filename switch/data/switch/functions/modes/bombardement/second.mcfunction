@@ -3,7 +3,7 @@
 scoreboard players add #bombardement_seconds switch.data 1
 function switch:modes/bombardement/xp_bar
 
-# Bombardement
+# Bombardment
 execute if score #bombardement_seconds switch.data matches 0 run function switch:modes/bombardement/summon
 execute if score #bombardement_seconds switch.data matches 5 run function switch:modes/bombardement/summon
 execute if score #bombardement_seconds switch.data matches 8 run function switch:modes/bombardement/summon

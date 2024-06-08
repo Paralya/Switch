@@ -18,7 +18,7 @@ tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"
 tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Ajout de la commande /changelog","color":"green"}]
 tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Moutron : glass_pane -> glass","color":"white"}]
 tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Rush The Flag","color":"green"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Bombardement","color":"white"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Bombardment","color":"white"}]
 tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Panic Chase : Nouvelle map 'nether_storm'","color":"green"}]
 tellraw @s[scores={switch.lang=0}] [{"text":"[2023/10] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : Shoot Da'Sheep","color":"white"}]
 tellraw @s[scores={switch.lang=0}] [{"text":"[2023/11] ","color":"dark_aqua"},{"text":"Nouveau mode de jeu : MiniGolf","color":"green"}]
