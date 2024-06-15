@@ -14,6 +14,7 @@ execute if score #murder_mystery_seconds switch.data matches 0 run item replace 
 execute if score #murder_mystery_seconds switch.data matches 0 run scoreboard players set @a[scores={switch.temp.role=3}] switch.temp.throw_reload 0
 
 # Summon gold ingots if low amount (~3 gold per player)
+execute as @e[type=item,tag=switch.gold] at @s if block ~ ~-1 ~ barrier run kill @s
 execute store result score #gold_count switch.data if entity @e[type=item,tag=switch.gold]
 execute store result score #player_count switch.data if entity @a[tag=!detached,gamemode=!spectator]
 scoreboard players operation #gold_count switch.data *= #100 switch.data

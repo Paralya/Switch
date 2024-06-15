@@ -9,5 +9,3 @@ execute as @e[tag=switch.respawn] if score @s switch.data = #max switch.data run
 tp @s @e[tag=switch.respawn_max,limit=1]
 tag @e[tag=switch.respawn_max] remove switch.respawn_max
 
-execute at @s if entity @s[x=0,y=69,z=0,distance=..20] run say je suis censé respawn mais j'ai po été téléporté
-
