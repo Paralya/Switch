@@ -19,7 +19,7 @@ effect clear @a[tag=!detached] mining_fatigue
 # Swap (grounded) players positions every minute after 3 minutes
 execute if score #pillars_of_fortune_seconds switch.data matches 180.. run scoreboard players operation #swap switch.data = #pillars_of_fortune_seconds switch.data
 execute if score #pillars_of_fortune_seconds switch.data matches 180.. run scoreboard players operation #swap switch.data %= #60 switch.data
-execute if score #pillars_of_fortune_seconds switch.data matches 180.. if score #swap switch.data matches 55 run tag @a[tag=!detached,gamemode=survival,predicate=!switch:in_air] add switch.to_swap
+execute if score #pillars_of_fortune_seconds switch.data matches 180.. if score #swap switch.data matches 55 as @a[tag=!detached,gamemode=survival] at @s unless block ~ ~-0.1 ~ air run tag @s add switch.to_swap
 execute if score #pillars_of_fortune_seconds switch.data matches 180.. if score #swap switch.data matches 55 if entity @a[tag=switch.to_swap] run function switch:modes/pillars_of_fortune/swap/main
 
 # Title action bar
