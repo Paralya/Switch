@@ -86,7 +86,7 @@ execute if score #sc_solitaire switch.data matches 0 if score #sc_floupy switch.
 # Choix des rôles
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
-execute as @a[tag=!detached,sort=random] at @s run function switch:modes/traitors_game/roles/
 execute as @a[tag=!detached] at @s run function switch:modes/traitors_game/give_items
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/traitors_game/roles/
 function switch:modes/traitors_game/update_sidebar
 
