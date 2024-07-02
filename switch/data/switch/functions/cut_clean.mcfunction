@@ -10,6 +10,7 @@ execute if score #success switch.data matches 0 store success score #success swi
 execute if score #success switch.data matches 0 store success score #success switch.data if data entity @s Item{id:"minecraft:raw_gold"} unless data entity @s Item.tag.CustomModelData run data modify entity @s Item.id set value "minecraft:gold_ingot"
 execute if score #success switch.data matches 0 store success score #success switch.data if data entity @s Item{id:"minecraft:raw_copper"} unless data entity @s Item.tag.CustomModelData run data modify entity @s Item.id set value "minecraft:copper_ingot"
 execute if score #success switch.data matches 0 store success score #success switch.data if data entity @s Item{id:"minecraft:ancient_debris"} unless data entity @s Item.tag.CustomModelData run data modify entity @s Item.id set value "minecraft:netherite_scrap"
+execute if score #success switch.data matches 1 store result entity @s Item.Count byte 1 run scoreboard players get #count switch.data
 
 # Custom Items
 execute if score #success switch.data matches 0 run scoreboard players set #custom switch.data 0

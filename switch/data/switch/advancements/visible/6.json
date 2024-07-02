@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"item": "minecraft:magenta_wool", "nbt": "{}"},
-		"title": {"text": "Gay Jumper", "color": "yellow"},
-		"description": {"text": "Complete the Gay Shooter parkour", "color": "aqua"},
+		"title": {"text": "Guy Jumper", "color": "yellow"},
+		"description": {"text": "Complete the Guy Shooter parkour", "color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -21,7 +21,7 @@ scoreboard objectives setdisplay sidebar switch.temp.shot_player
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items
-team add switch.temp.gays {"text":"[Gays]","color":"light_purple"}
+team add switch.temp.gays {"text":"[Guys]","color":"light_purple"}
 team add switch.temp.shooters {"text":"[Shooters]","color":"gray"}
 team modify switch.temp.gays color light_purple
 team modify switch.temp.shooters color gray

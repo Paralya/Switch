@@ -38,7 +38,7 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 3	Stoupy	easy	La moula	Ayez au moins 400 Saphirs dans votre banque	Have at least 400 Sapphires in your bank
 4	Lawtank	easy	First Victor	Gagnez votre première partie dans n'importe quel mini-jeu	Win your first game in any mini-game
 5	GoldVision	hard	Gros Diabète	Gagner une partie de Traitors Game en étant Gros Traitre	Win a game of Traitors Game by being a Big Traitor
-6	Fhara	medium	Gay Jumper	Terminer le parcours du Gay Shooter	Complete the Gay Shooter parkour
+6	Fhara	medium	Guy Jumper	Terminer le parcours du Guy Shooter	Complete the Guy Shooter parkour
 7	TreekoZ	hard	Pitch Slayer	Remporter un Pitchout avec 3 vies	Win a Pitchout with 3 lives
 8	Poppiz	easy	Fast Food	Atteignez au moins 50 points en Feed Fast	Reach at least 50 points in Feed Fast
 9	TreekoZ	hard	Bagarreur	Tuez deux personnes dans un délai de 10 secondes en Castagne	Kill two people within 10 seconds in Castagne
@@ -54,7 +54,7 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 19	Manu	medium	Wattouat	Mourir à cause d'un moutron foudroyant en SheepWars	Die from a lightning sheep in SheepWars
 20	OfChara	medium	Fusée	Dépassez 5 joueurs dans le dernier tour en Kart Racer	Overtake 5 players in the last lap of Kart Racer
 21	OfChara	medium	Plongeur Expert	Complétez 3 dés à coudre dans les modes de jeu du style	Complete 3 holes in game modes such as Dé à Coudre
-22	OfChara	hard	Homophobe	Mettre au moins 42 flèches en Gay Shooter	Put at least 42 arrows in Gay Shooter
+22	OfChara	hard	Homophobe	Mettre au moins 42 flèches en Guy Shooter	Put at least 42 arrows in Guy Shooter
 23	Lawtank	medium	Pélican	Soyez celui ayant le plus de kills en Cigogne (égalité autorisée)	Be the one with the most kills in Cigogne (ties allowed)
 24	Fhara	hard	Feeling The Music	Survivez 20 manches en Block Party	Survive 20 rounds in Block Party
 25	OfChara	hard	Ocelot	Ne pas descendre en dessous de la moitié de vie en Creeper Apocalypse	Don't drop below half life in Creeper Apocalypse
@@ -101,14 +101,14 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 66	OfChara	medium	Révolution	Tuer un roi dans une partie de Beat The Kings	Kill a king in a game of Beat The Kings
 67	luigimario12	medium	Tonerre de Zeus	Eliminer 10 joueurs dans une partie de Thunder Spear	Eliminate 10 players in a game of Thunder Spear
 68	OfChara	hard	Collatéral	Tuer deux joueurs en Quake avec un seul tir	Kill two players in Quake with a single shot
-69	OfChara	easy	Porc-épic	Se prendre 10 flèches en une partie de Gay Shooter	Take 10 arrows in a game of Gay Shooter
+69	OfChara	easy	Porc-épic	Se prendre 10 flèches en une partie de Guy Shooter	Take 10 arrows in a game of Guy Shooter
 70	Oraclette	easy	Electro-choc	Mourir du rayon d'un warden en Warden Escape	Die from a warden's beam in Warden Escape
 71	Shazin	medium	Merci Gertrude	A partir de la 10ème manche en Block Party, en survivre une grâce à Gertrude	From the 10th round in Block Party, survive one thanks to Gertrude
 72	luigimario12	easy	C'est donc ça, de se vider...	Lancer 42 boules de neige en une partie de Warden Escape	Throw 42 snowballs in one game of Warden Escape
 73	OfChara	hard	Parade Parfaite	Réussir à parer une flèche en lançant son couteau en Murder Mystery	Parry an arrow by throwing your knife in Murder Mystery
 74	OfChara	hard	I am Legend	Gagner une partie d'Infecté en étant le dernier humain (si il y a plus de 10 joueurs)	Win a game of Infected by being the last human (if there are more than 10 players)
 75	OfChara	medium	Tout ça pour ça...	Survivre 42 secondes puis mourir en tombant dans l'eau en Bombardment	Survive 42 seconds and then die by falling into the water in Bombardment
-76	OfChara	hard	Injustice	Finir le parcours en Gay Shooter mais mourir de la main d'un Shooter	Finish the parkour in Gay Shooter but die from the hands of a Shooter
+76	OfChara	hard	Injustice	Finir le parcours en Guy Shooter mais mourir de la main d'un Shooter	Finish the parkour in Guy Shooter but die from the hands of a Shooter
 77	Stoupy	easy	Pour l'équipe !	Tirer sur la base de bonus dans une partie de Laser Game	Shoot the bonus base in Laser Game
 78	TreekoZ	easy	Banger sucré au sucre	Préparez un gâteau en une partie de Cooking Festival	Bake a cake in Cooking Festival
 79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardment	Die from the first cannon shot in Bombardment
