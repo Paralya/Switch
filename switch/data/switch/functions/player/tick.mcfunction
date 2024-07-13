@@ -1,4 +1,7 @@
 
+# Check if new username
+execute unless score @s switch.reconnect = #score switch.reconnect run function switch:player/username_change/check
+
 # Handle player trigger inputs
 function switch:player/trigger/
 
