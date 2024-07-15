@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:golden_apple", "nbt": "{CustomModelData:2013173}"},
+		"icon": {"id": "minecraft:golden_apple", "components": {"minecraft:custom_model_data": 2013173}},
 		"title": {"text": "Bénévolat", "color": "yellow"},
 		"description": {"text": "Help to build a map or create a mini-game", "color": "aqua"},
 		"frame": "task",

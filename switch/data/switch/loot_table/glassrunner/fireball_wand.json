@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "ItemsNBT.fireball_wand.tag",
+									"source": "ItemsNBT.fireball_wand.components.\"minecraft:custom_data\"",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:obsidian", "nbt": "{}"},
+		"icon": {"id": "minecraft:obsidian"},
 		"title": {"text": "Avide", "color": "yellow"},
 		"description": {"text": "Destroy 5 obsidian blocks in a game of Rush The Point", "color": "aqua"},
 		"frame": "task",

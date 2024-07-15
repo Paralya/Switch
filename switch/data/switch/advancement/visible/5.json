@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:sugar", "nbt": "{}"},
+		"icon": {"id": "minecraft:sugar"},
 		"title": {"text": "Gros Diabète", "color": "yellow"},
 		"description": {"text": "Win a game of Traitors Game by being a Big Traitor", "color": "aqua"},
 		"frame": "task",

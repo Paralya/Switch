@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:magenta_wool", "nbt": "{}"},
+		"icon": {"id": "minecraft:magenta_wool"},
 		"title": {"text": "Guy Jumper", "color": "yellow"},
 		"description": {"text": "Complete the Guy Shooter parkour", "color": "aqua"},
 		"frame": "task",

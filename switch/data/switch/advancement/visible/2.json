@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:apple", "nbt": "{}"},
+		"icon": {"id": "minecraft:apple"},
 		"title": {"text": "Fidèle", "color": "yellow"},
 		"description": {"text": "Play a total of 100 games on the Switch", "color": "aqua"},
 		"frame": "task",

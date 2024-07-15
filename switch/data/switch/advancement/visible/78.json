@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:cake"},
+		"icon": {"id": "minecraft:cake"},
 		"title": {"text": "Banger sucré au sucre", "color": "yellow"},
 		"description": {"text": "Bake a cake in Cooking Festival", "color": "aqua"},
 		"frame": "task",

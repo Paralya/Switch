@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:diamond"},
+		"icon": {"id": "minecraft:diamond"},
 		"title": {"text": "Stomp", "color": "yellow"},
 		"description": {"text": "Complete a game of Rush The Point by reaching 5000 points", "color": "aqua"},
 		"frame": "task",

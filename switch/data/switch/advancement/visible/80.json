@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:observer"},
+		"icon": {"id": "minecraft:observer"},
 		"title": {"text": "Ooopsy", "color": "yellow"},
 		"description": {"text": "Get killed by another murderer as a murderer in Murder Myster", "color": "aqua"},
 		"frame": "task",

@@ -11,7 +11,7 @@ data modify storage switch:main Rotation set from entity @s Rotation
 execute summon zombie run function switch:modes/murder_mystery/apply_properties_to_zombie
 
 # Drop bow if detective
-execute if data entity @s Inventory[].tag.switch.detective_bow run summon item_display ~ ~1 ~ {item:{id:"minecraft:bow",Count:1b},Tags:["switch.detective_bow"],Glowing:1b}
+execute if data entity @s Inventory[].components."minecraft:custom_data".switch.detective_bow run summon item_display ~ ~1 ~ {item:{id:"minecraft:bow",Count:1b},Tags:["switch.detective_bow"],Glowing:1b}
 
 # Title & clear
 function switch:translations/modes_murder_mystery_kill_player

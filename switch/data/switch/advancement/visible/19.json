@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:yellow_wool", "nbt": "{}"},
+		"icon": {"id": "minecraft:yellow_wool"},
 		"title": {"text": "Wattouat", "color": "yellow"},
 		"description": {"text": "Die from a lightning sheep in SheepWars", "color": "aqua"},
 		"frame": "task",

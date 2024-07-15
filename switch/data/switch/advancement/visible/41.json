@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:iron_axe", "nbt": "{}"},
+		"icon": {"id": "minecraft:iron_axe"},
 		"title": {"text": "Vengeur", "color": "yellow"},
 		"description": {"text": "Kill your murderer as a ninja in Traitors Game", "color": "aqua"},
 		"frame": "task",

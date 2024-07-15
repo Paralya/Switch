@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:sculk_shrieker"},
+		"icon": {"id": "minecraft:sculk_shrieker"},
 		"title": {"text": "Electro-choc", "color": "yellow"},
 		"description": {"text": "Die from a warden's beam in Warden Escape", "color": "aqua"},
 		"frame": "task",

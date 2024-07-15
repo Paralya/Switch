@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:end_crystal"},
+		"icon": {"id": "minecraft:end_crystal"},
 		"title": {"text": "Multigamer", "color": "yellow"},
 		"description": {"text": "Win each mini-game at least once", "color": "aqua"},
 		"frame": "task",

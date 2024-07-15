@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:minecart", "nbt": "{}"},
+		"icon": {"id": "minecraft:minecart"},
 		"title": {"text": "Fusée", "color": "yellow"},
 		"description": {"text": "Overtake 5 players in the last lap of Kart Racer", "color": "aqua"},
 		"frame": "task",

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:shield"},
+		"icon": {"id": "minecraft:shield"},
 		"title": {"text": "Parade Parfaite", "color": "yellow"},
 		"description": {"text": "Parry an arrow by throwing your knife in Murder Mystery", "color": "aqua"},
 		"frame": "task",

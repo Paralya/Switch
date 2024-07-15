@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:player_head", "nbt": "{SkullOwner:King}"},
+		"icon": {"id": "minecraft:player_head", "components": {"minecraft:profile": {"name": "King"}}},
 		"title": {"text": "The Last King", "color": "yellow"},
 		"description": {"text": "Be the last survivor in Protect The King", "color": "aqua"},
 		"frame": "task",

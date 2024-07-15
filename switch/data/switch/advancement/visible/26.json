@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:sculk_sensor", "nbt": "{}"},
+		"icon": {"id": "minecraft:sculk_sensor"},
 		"title": {"text": "Suicidaire", "color": "yellow"},
 		"description": {"text": "Be the target of 8 wardens in Warden Escape", "color": "aqua"},
 		"frame": "task",

@@ -15,7 +15,7 @@ execute store result storage switch:temp input.digits int 1 run scoreboard playe
 setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
 loot insert 0 0 0 loot switch:get_username
-data modify storage switch:temp input.player set from block 0 0 0 Items[0].tag.SkullOwner.Name
+data modify storage switch:temp input.player set from block 0 0 0 Items[0].components."minecraft:profile".name
 setblock 0 0 0 air
 
 # If the digit is 0, print function

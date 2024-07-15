@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "ItemsNBT.destroying_crossbow.tag",
+									"source": "ItemsNBT.destroying_crossbow.components.\"minecraft:custom_data\"",
 									"target": "{}",
 									"op": "merge"
 								}

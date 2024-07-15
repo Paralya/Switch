@@ -4,7 +4,7 @@ setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
 loot insert 0 0 0 loot switch:get_username
 data modify storage switch:main input set value {player:""}
-data modify storage switch:main input.player set from block 0 0 0 Items[0].tag.SkullOwner.Name
+data modify storage switch:main input.player set from block 0 0 0 Items[0].components."minecraft:profile".name
 setblock 0 0 0 air
 
 # Insert global stats

@@ -1,12 +1,13 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "equipment": {
-        "mainhand": {
-          "nbt": "{glassrunner:{fireball_wand:1b}}"
-        }
-      }
-    }
-  }
-  
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"equipment": {
+			"mainhand": {
+				"predicates": {
+					"minecraft:custom_data": "{\"glassrunner\":{\"fireball_wand\":true}}"
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:coal_block", "nbt": "{}"},
+		"icon": {"id": "minecraft:coal_block"},
 		"title": {"text": "Oppenheimer", "color": "yellow"},
 		"description": {"text": "Survive for more than one minute in Bombardment", "color": "aqua"},
 		"frame": "task",

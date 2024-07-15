@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:orange_stained_glass", "nbt": "{}"},
+		"icon": {"id": "minecraft:orange_stained_glass"},
 		"title": {"text": "Regarde ma queue", "color": "yellow"},
 		"description": {"text": "Have a 15-second trail in Moutron", "color": "aqua"},
 		"frame": "task",

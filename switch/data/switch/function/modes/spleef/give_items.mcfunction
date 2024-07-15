@@ -2,7 +2,7 @@
 setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
 loot insert 0 0 0 loot simplenergy:i/simplunium_shovel
-data modify block 0 0 0 Items[0].tag.Enchantments set value [{id:"minecraft:efficiency",lvl:10s}]
+data modify block 0 0 0 Items[0].components."minecraft:enchantments" set value {"levels":{"minecraft:efficiency":10}}
 data modify block 0 0 0 Items append value {id:"minecraft:white_shulker_box",Count:1b,Slot:1b,tag:{display:{Name:'{"text":"Powder Snow","color":"white","italic":false}'}}}
 execute if score @s switch.spleef.powder_snow matches 1 run data modify block 0 0 0 Items[1].Count set value 2b
 execute if score @s switch.spleef.powder_snow matches 2 run data modify block 0 0 0 Items[1].Count set value 3b

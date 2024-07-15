@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:phantom_membrane"},
+		"icon": {"id": "minecraft:phantom_membrane"},
 		"title": {"text": "Survivor", "color": "yellow"},
 		"description": {"text": "Win a game of Infected without taking any hits as a human", "color": "aqua"},
 		"frame": "task",

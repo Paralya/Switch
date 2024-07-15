@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:lime_concrete"},
+		"icon": {"id": "minecraft:lime_concrete"},
 		"title": {"text": "The Green Jump", "color": "yellow"},
 		"description": {"text": "Finish the green jump for the first time", "color": "aqua"},
 		"frame": "task",

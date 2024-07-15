@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:brown_concrete"},
+		"icon": {"id": "minecraft:brown_concrete"},
 		"title": {"text": "The Brown Jump", "color": "yellow"},
 		"description": {"text": "Finish the brown jump for the first time", "color": "aqua"},
 		"frame": "task",

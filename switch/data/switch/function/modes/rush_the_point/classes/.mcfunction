@@ -5,7 +5,7 @@ execute if score @s switch.temp.choosen_class matches 0 unless data entity @s In
 execute if score @s switch.temp.choosen_class matches 0 unless data entity @s Inventory[{Slot:4b}] run scoreboard players set @s switch.temp.choosen_class 3
 execute if score @s switch.temp.choosen_class matches 0 unless data entity @s Inventory[{Slot:6b}] run scoreboard players set @s switch.temp.choosen_class 4
 execute if score @s switch.temp.choosen_class matches 0 unless data entity @s Inventory[{Slot:8b}] run scoreboard players set @s switch.temp.choosen_class 5
-execute if score @s switch.temp.choosen_class matches 0 if score @s switch.right_click matches 1.. if data entity @s SelectedItem.tag.switch.class_item store result score @s switch.temp.choosen_class run data get entity @s SelectedItem.tag.switch.class_item
+execute if score @s switch.temp.choosen_class matches 0 if score @s switch.right_click matches 1.. if data entity @s SelectedItem.components."minecraft:custom_data".switch.class_item store result score @s switch.temp.choosen_class run data get entity @s SelectedItem.components."minecraft:custom_data".switch.class_item
 
 # Elytra cooldown
 scoreboard players add @s switch.temp.elytra_cooldown 0

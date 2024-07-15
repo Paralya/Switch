@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:rabbit_stew", "nbt": "{}"},
+		"icon": {"id": "minecraft:rabbit_stew"},
 		"title": {"text": "Fast Food", "color": "yellow"},
 		"description": {"text": "Reach at least 50 points in Feed Fast", "color": "aqua"},
 		"frame": "task",

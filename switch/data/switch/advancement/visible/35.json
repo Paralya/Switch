@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:light_gray_concrete", "nbt": "{}"},
+		"icon": {"id": "minecraft:light_gray_concrete"},
 		"title": {"text": "Daltonien", "color": "yellow"},
 		"description": {"text": "Die in the first round of Block Party", "color": "aqua"},
 		"frame": "task",

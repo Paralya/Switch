@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:emerald"},
+		"icon": {"id": "minecraft:emerald"},
 		"title": {"text": "Héro", "color": "yellow"},
 		"description": {"text": "Kill the murderer as an innocent in Murder Mystery", "color": "aqua"},
 		"frame": "task",

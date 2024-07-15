@@ -15,8 +15,8 @@ execute if score #infected_secret switch.data matches 2 run scoreboard players r
 execute if score #infected_secret switch.data matches 2 if score #blood_extraction switch.data matches 0 run function switch:modes/infected/secrets/area_51/next_state
 
 # Check blood analysis
-execute if score #infected_secret switch.data matches 3 positioned 1980 122 1980 if data block ~ ~ ~ Items[].tag.switch.115 if data block ~-2 ~ ~ Items[].tag.switch.water_bottle if block 1975 122 1979 polished_blackstone_button[powered=true] run function switch:modes/infected/secrets/area_51/next_state
-execute if score #infected_secret switch.data matches 3 positioned 1980 122 1980 if data block ~ ~ ~ Items[].tag.switch.water_bottle if data block ~-2 ~ ~ Items[].tag.switch.115 if block 1975 122 1979 polished_blackstone_button[powered=true] run function switch:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret switch.data matches 3 positioned 1980 122 1980 if data block ~ ~ ~ Items[].components."minecraft:custom_data".switch.115 if data block ~-2 ~ ~ Items[].components."minecraft:custom_data".switch.water_bottle if block 1975 122 1979 polished_blackstone_button[powered=true] run function switch:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret switch.data matches 3 positioned 1980 122 1980 if data block ~ ~ ~ Items[].components."minecraft:custom_data".switch.water_bottle if data block ~-2 ~ ~ Items[].components."minecraft:custom_data".switch.115 if block 1975 122 1979 polished_blackstone_button[powered=true] run function switch:modes/infected/secrets/area_51/next_state
 execute if score #infected_secret switch.data matches 4..8 run scoreboard players remove #element_analysis switch.data 1
 execute if score #infected_secret switch.data matches 4 if score #element_analysis switch.data matches 440 run function switch:modes/infected/secrets/area_51/next_state
 execute if score #infected_secret switch.data matches 5 if score #element_analysis switch.data matches 240 run function switch:modes/infected/secrets/area_51/next_state

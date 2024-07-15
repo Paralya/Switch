@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:blue_stained_glass"},
+		"icon": {"id": "minecraft:blue_stained_glass"},
 		"title": {"text": "Tout ça pour ça...", "color": "yellow"},
 		"description": {"text": "Survive 42 seconds and then die by falling into the water in Bombardment", "color": "aqua"},
 		"frame": "task",

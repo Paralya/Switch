@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:snowball", "nbt": "{}"},
+		"icon": {"id": "minecraft:snowball"},
 		"title": {"text": "Précision Artistique", "color": "yellow"},
 		"description": {"text": "Finish a game of Snowball Painter with exactly 51 points", "color": "aqua"},
 		"frame": "task",

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:paper", "nbt": "{}"},
+		"icon": {"id": "minecraft:paper"},
 		"title": {"text": "Contre Courant", "color": "yellow"},
 		"description": {"text": "Get at least 8 people to vote for an unpopular game (Feed Fast, Snowball Painter, etc.)", "color": "aqua"},
 		"frame": "task",

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:pink_concrete"},
+		"icon": {"id": "minecraft:pink_concrete"},
 		"title": {"text": "The Pink Jump", "color": "yellow"},
 		"description": {"text": "Finish the pink jump for the first time", "color": "aqua"},
 		"frame": "task",

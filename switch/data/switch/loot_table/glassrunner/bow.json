@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "ItemsNBT.bow.tag",
+									"source": "ItemsNBT.bow.components.\"minecraft:custom_data\"",
 									"target": "{}",
 									"op": "merge"
 								}

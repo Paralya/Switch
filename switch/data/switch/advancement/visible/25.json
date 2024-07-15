@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:ocelot_spawn_egg", "nbt": "{}"},
+		"icon": {"id": "minecraft:ocelot_spawn_egg"},
 		"title": {"text": "Ocelot", "color": "yellow"},
 		"description": {"text": "Don't drop below half life in Creeper Apocalypse", "color": "aqua"},
 		"frame": "task",

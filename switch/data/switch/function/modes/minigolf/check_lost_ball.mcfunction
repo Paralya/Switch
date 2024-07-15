@@ -1,6 +1,6 @@
 
 # Check if the ball is really lost
-execute as @e[tag=golf_ball.display] at @s run function golf_ball:ball/ride_vehicle_macro with entity @s item.tag.SkullOwner
+execute as @e[tag=golf_ball.display] at @s run function golf_ball:ball/ride_vehicle_macro with entity @s item.components."minecraft:profile"
 scoreboard players set #success switch.data 0
 execute on vehicle run scoreboard players set #success switch.data 1
 execute if score #success switch.data matches 1 run return 1

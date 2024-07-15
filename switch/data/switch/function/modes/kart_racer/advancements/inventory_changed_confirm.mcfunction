@@ -2,14 +2,14 @@
 data modify storage switch:main Inventory set from entity @s Inventory
 
 scoreboard players set #success switch.data 0
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[0].tag.switch.classic_respawn
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[1].tag.switch.hard_respawn
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[2].tag.switch.previous_model
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[3].tag.switch.random_model
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[4].tag.switch.next_model
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[5].tag.switch.enable_collisions
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[6].tag.switch.change_map
-execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[-1].tag.switch.right_click_detect
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[0].components."minecraft:custom_data".switch.classic_respawn
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[1].components."minecraft:custom_data".switch.hard_respawn
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[2].components."minecraft:custom_data".switch.previous_model
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[3].components."minecraft:custom_data".switch.random_model
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[4].components."minecraft:custom_data".switch.next_model
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[5].components."minecraft:custom_data".switch.enable_collisions
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[6].components."minecraft:custom_data".switch.change_map
+execute if score #success switch.data matches 0 store success score #success switch.data unless data storage switch:main Inventory[-1].components."minecraft:custom_data".switch.right_click_detect
 
 execute if score #success switch.data matches 1 run clear @s
 execute if score #success switch.data matches 1 run item replace entity @s hotbar.0 with warped_fungus_on_a_stick{CustomModelData:2013171,switch:{classic_respawn:1b},Unbreakable:1b,display:{Name:'{"text":"Classic Respawn","color":"yellow","italic":false}'}}

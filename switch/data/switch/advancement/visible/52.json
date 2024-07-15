@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:magma_block", "nbt": "{}"},
+		"icon": {"id": "minecraft:magma_block"},
 		"title": {"text": "The Volcano Core", "color": "yellow"},
 		"description": {"text": "Complete the Lost Graveyard Remastered map secret in Infected", "color": "aqua"},
 		"frame": "challenge",

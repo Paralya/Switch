@@ -5,7 +5,7 @@ data modify storage switch:temp input.Slot set from entity @s Inventory[{id:"min
 data modify storage switch:temp input.Count set from entity @s Inventory[{id:"minecraft:arrow"}].Count
 execute store result score #count switch.data run data get storage switch:temp input.Count
 scoreboard players add #count switch.data 1
-execute store result storage switch:temp input.Count byte 1 run scoreboard players get #count switch.data
+execute store result storage switch:temp input.count int 1 run scoreboard players get #count switch.data
 
 # If slot is different from -1, then we have an arrow
 execute unless data storage switch:temp input{Slot:-1b} run function switch:modes/infected/give_arrow/have_one_slot_arrow with storage switch:temp input

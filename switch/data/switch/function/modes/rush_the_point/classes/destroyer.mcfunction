@@ -9,24 +9,26 @@ loot insert 0 0 0 loot stardust:i/reinforced_stardust_leggings
 loot insert 0 0 0 loot stardust:i/reinforced_stardust_boots
 loot insert 0 0 0 loot crazy_adventure:i/fireball_stick
 loot insert 0 0 0 loot crazy_adventure:i/banana
-data modify block 0 0 0 Items[0].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
-data modify block 0 0 0 Items[0].tag.Enchantments set value [{id:"minecraft:knockback",lvl:1s}]
-data remove block 0 0 0 Items[0].tag.display
-data remove block 0 0 0 Items[1].tag.Enchantments
-data remove block 0 0 0 Items[1].tag.display
-data modify block 0 0 0 Items[1].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
-data remove block 0 0 0 Items[2].tag.AttributeModifiers[{AttributeName:"generic.max_health"}]
-data remove block 0 0 0 Items[3].tag.AttributeModifiers[{AttributeName:"generic.knockback_resistance"}]
-data remove block 0 0 0 Items[4].tag.AttributeModifiers[{AttributeName:"generic.movement_speed"}]
-data remove block 0 0 0 Items[6].tag.ctc
-data remove block 0 0 0 Items[6].tag.crazy_adventure
-data modify block 0 0 0 Items[6].tag.display.Lore set value []
-data modify block 0 0 0 Items[6].tag.switch set value {fireball_stick:1b}
+data modify block 0 0 0 Items[0].components."minecraft:can_break".blocks set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
+data modify block 0 0 0 Items[0].components."minecraft:enchantments" set value {"levels":{"minecraft:knockback":1}}
+data remove block 0 0 0 Items[0].components."minecraft:item_name"
+data remove block 0 0 0 Items[0].components."minecraft:lore"
+data remove block 0 0 0 Items[1].components."minecraft:enchantments"
+data remove block 0 0 0 Items[1].components."minecraft:item_name"
+data remove block 0 0 0 Items[1].components."minecraft:lore"
+data modify block 0 0 0 Items[1].components."minecraft:can_break".blocks set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
+data remove block 0 0 0 Items[2].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.max_health"}]
+data remove block 0 0 0 Items[3].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.knockback_resistance"}]
+data remove block 0 0 0 Items[4].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.movement_speed"}]
+data remove block 0 0 0 Items[6].components."minecraft:custom_data".ctc
+data remove block 0 0 0 Items[6].components."minecraft:custom_data".crazy_adventure
+data modify block 0 0 0 Items[6].components."minecraft:lore" set value []
+data modify block 0 0 0 Items[6].components."minecraft:custom_data".switch set value {"fireball_stick":true}
 data modify block 0 0 0 Items[7].Count set value 42b
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].tag.display.color set value 16731469
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].tag.display.color set value 16731469
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].tag.display.color set value 16731469
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[5].tag.display.color set value 16731469
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].components."minecraft:dyed_color" set value 16731469
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].components."minecraft:dyed_color" set value 16731469
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].components."minecraft:dyed_color" set value 16731469
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[5].components."minecraft:dyed_color" set value 16731469
 
 clear @s
 effect clear @s

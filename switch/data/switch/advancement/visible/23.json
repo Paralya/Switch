@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:feather", "nbt": "{}"},
+		"icon": {"id": "minecraft:feather"},
 		"title": {"text": "Pélican", "color": "yellow"},
 		"description": {"text": "Be the one with the most kills in Cigogne (ties allowed)", "color": "aqua"},
 		"frame": "task",

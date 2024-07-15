@@ -12,23 +12,23 @@ execute if entity @s[gamemode=!creative,gamemode=!spectator] unless data entity 
 # Get number of blocks
 data modify storage switch:temp Inventory set from entity @s Inventory
 scoreboard players set #inventory switch.data 0
-execute store result score #inventory switch.data if data storage switch:temp Inventory[].tag.switch.jump
+execute store result score #inventory switch.data if data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump
 
 # If lost (only) one item, check where
 execute unless score #inventory switch.data matches 13 unless score #inventory switch.data matches 0 run scoreboard players set #inventory switch.data -1
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_green run scoreboard players set @s switch.lobby_respawn 1
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_white run scoreboard players set @s switch.lobby_respawn 2
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_blue run scoreboard players set @s switch.lobby_respawn 3
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_yellow run scoreboard players set @s switch.lobby_respawn 4
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_red run scoreboard players set @s switch.lobby_respawn 5
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_brown run scoreboard players set @s switch.lobby_respawn 6
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_purple run scoreboard players set @s switch.lobby_respawn 7
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_dripstone run scoreboard players set @s switch.lobby_respawn 8
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_pink run scoreboard players set @s switch.lobby_respawn 9
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_bricks run scoreboard players set @s switch.lobby_respawn 10
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_obsidian run scoreboard players set @s switch.lobby_respawn 11
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_duality run scoreboard players set @s switch.lobby_respawn 12
-execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].tag.switch.jump_graviglitch run scoreboard players set @s switch.lobby_respawn 13
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_green run scoreboard players set @s switch.lobby_respawn 1
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_white run scoreboard players set @s switch.lobby_respawn 2
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_blue run scoreboard players set @s switch.lobby_respawn 3
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_yellow run scoreboard players set @s switch.lobby_respawn 4
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_red run scoreboard players set @s switch.lobby_respawn 5
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_brown run scoreboard players set @s switch.lobby_respawn 6
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_purple run scoreboard players set @s switch.lobby_respawn 7
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_dripstone run scoreboard players set @s switch.lobby_respawn 8
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_pink run scoreboard players set @s switch.lobby_respawn 9
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_bricks run scoreboard players set @s switch.lobby_respawn 10
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_obsidian run scoreboard players set @s switch.lobby_respawn 11
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_duality run scoreboard players set @s switch.lobby_respawn 12
+execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_graviglitch run scoreboard players set @s switch.lobby_respawn 13
 execute if score #inventory switch.data matches -1 run tp @s 0 0 0
 execute if score #inventory switch.data matches -1 run clear @s
 
@@ -81,7 +81,7 @@ execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity
 advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_graviglitch
 
 # GraviGlitch jump gives
-execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",Count:42b}]}] run clear @s suspicious_gravel{switch:{to_place:1b}}
+execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",Count:42b}]}] run clear @s suspicious_gravel[minecraft:custom_data={"switch":{"to_place":true}}]
 execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",Count:42b}]}] run give @s suspicious_gravel{CanPlaceOn:["smooth_red_sandstone","orange_wall_banner", "red_sandstone_wall"],switch:{to_place:1b}} 42
 execute unless entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37] run clear @s suspicious_gravel{switch:{to_place:1b}}
 

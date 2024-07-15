@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:yellow_banner", "nbt": "{}"},
+		"icon": {"id": "minecraft:yellow_banner"},
 		"title": {"text": "Rush Thief", "color": "yellow"},
 		"description": {"text": "Secure the enemy flag in Capture/Rush The Flag", "color": "aqua"},
 		"frame": "task",

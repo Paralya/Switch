@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:red_stained_glass", "nbt": "{}"},
+		"icon": {"id": "minecraft:red_stained_glass"},
 		"title": {"text": "Sam Flynn", "color": "yellow"},
 		"description": {"text": "Eliminate 3 players with your trail in Moutron", "color": "aqua"},
 		"frame": "task",

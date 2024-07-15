@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:gold_nugget", "nbt": "{}"},
+		"icon": {"id": "minecraft:gold_nugget"},
 		"title": {"text": "La moula", "color": "yellow"},
 		"description": {"text": "Have at least 400 Sapphires in your bank", "color": "aqua"},
 		"frame": "task",

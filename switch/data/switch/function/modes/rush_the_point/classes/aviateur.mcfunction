@@ -9,16 +9,16 @@ loot insert 0 0 0 loot stardust:i/original_stardust_helmet
 loot insert 0 0 0 loot stardust:i/original_stardust_leggings
 loot insert 0 0 0 loot stardust:i/original_stardust_boots
 loot insert 0 0 0 loot crazy_adventure:i/banana
-data modify block 0 0 0 Items[0].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
-data modify block 0 0 0 Items[0].tag.Enchantments set value [{id:"minecraft:knockback",lvl:1s}]
-data remove block 0 0 0 Items[1].tag.Enchantments
-data modify block 0 0 0 Items[1].tag.CanDestroy set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
-data remove block 0 0 0 Items[2].tag.AttributeModifiers[{AttributeName:"generic.max_health"}]
-data remove block 0 0 0 Items[3].tag.AttributeModifiers[{AttributeName:"generic.movement_speed"}]
+data modify block 0 0 0 Items[0].components."minecraft:can_break".blocks set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
+data modify block 0 0 0 Items[0].components."minecraft:enchantments" set value {"levels":{"minecraft:knockback":1}}
+data remove block 0 0 0 Items[1].components."minecraft:enchantments"
+data modify block 0 0 0 Items[1].components."minecraft:can_break".blocks set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
+data remove block 0 0 0 Items[2].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.max_health"}]
+data remove block 0 0 0 Items[3].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.movement_speed"}]
 data modify block 0 0 0 Items[5].Count set value 42b
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].tag.display.color set value 13369344
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].tag.display.color set value 13369344
-execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].tag.display.color set value 13369344
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].components."minecraft:dyed_color" set value 13369344
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].components."minecraft:dyed_color" set value 13369344
+execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].components."minecraft:dyed_color" set value 13369344
 
 
 clear @s

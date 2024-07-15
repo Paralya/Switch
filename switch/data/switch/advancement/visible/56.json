@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:writable_book"},
+		"icon": {"id": "minecraft:writable_book"},
 		"title": {"text": "Jugeote", "color": "yellow"},
 		"description": {"text": "Rate 20 different mini-games", "color": "aqua"},
 		"frame": "task",

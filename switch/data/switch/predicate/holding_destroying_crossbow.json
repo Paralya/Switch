@@ -1,12 +1,13 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "equipment": {
-        "mainhand": {
-          "nbt": "{glassrunner:{destroying_crossbow:1b}}"
-        }
-      }
-    }
-  }
-  
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"equipment": {
+			"mainhand": {
+				"predicates": {
+					"minecraft:custom_data": "{\"glassrunner\":{\"destroying_crossbow\":true}}"
+				}
+			}
+		}
+	}
+}

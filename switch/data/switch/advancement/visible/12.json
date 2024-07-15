@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:totem_of_undying", "nbt": "{}"},
+		"icon": {"id": "minecraft:totem_of_undying"},
 		"title": {"text": "Sans Faute", "color": "yellow"},
 		"description": {"text": "Win a game of Spectres Game without losing a member of your team", "color": "aqua"},
 		"frame": "task",

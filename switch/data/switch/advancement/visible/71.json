@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:milk_bucket"},
+		"icon": {"id": "minecraft:milk_bucket"},
 		"title": {"text": "Merci Gertrude", "color": "yellow"},
 		"description": {"text": "From the 10th round in Block Party, survive one thanks to Gertrude", "color": "aqua"},
 		"frame": "task",

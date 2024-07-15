@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:mutton", "nbt": "{}"},
+		"icon": {"id": "minecraft:mutton"},
 		"title": {"text": "Humm Charal !", "color": "yellow"},
 		"description": {"text": "Kill 10 sheep in one game of SheepWars", "color": "aqua"},
 		"frame": "task",

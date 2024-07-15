@@ -9,11 +9,11 @@ $item replace block 0 0 0 container.3 with paper{display:{Name:'{"text":"$(theme
 $item replace block 0 0 0 container.4 with paper{display:{Name:'{"text":"$(theme5)","color":"yellow","italic":false}',Lore:['""']},HideFlags:7}
 
 # Change the paper Count depending on their number of votes
-execute if score #vote_theme_1 switch.data matches 1.. store result block 0 0 0 Items[0].Count byte 1 run scoreboard players get #vote_theme_1 switch.data
-execute if score #vote_theme_2 switch.data matches 1.. store result block 0 0 0 Items[1].Count byte 1 run scoreboard players get #vote_theme_2 switch.data
-execute if score #vote_theme_3 switch.data matches 1.. store result block 0 0 0 Items[2].Count byte 1 run scoreboard players get #vote_theme_3 switch.data
-execute if score #vote_theme_4 switch.data matches 1.. store result block 0 0 0 Items[3].Count byte 1 run scoreboard players get #vote_theme_4 switch.data
-execute if score #vote_theme_5 switch.data matches 1.. store result block 0 0 0 Items[4].Count byte 1 run scoreboard players get #vote_theme_5 switch.data
+execute if score #vote_theme_1 switch.data matches 1.. store result block 0 0 0 Items[0].count int 1 run scoreboard players get #vote_theme_1 switch.data
+execute if score #vote_theme_2 switch.data matches 1.. store result block 0 0 0 Items[1].count int 1 run scoreboard players get #vote_theme_2 switch.data
+execute if score #vote_theme_3 switch.data matches 1.. store result block 0 0 0 Items[2].count int 1 run scoreboard players get #vote_theme_3 switch.data
+execute if score #vote_theme_4 switch.data matches 1.. store result block 0 0 0 Items[3].count int 1 run scoreboard players get #vote_theme_4 switch.data
+execute if score #vote_theme_5 switch.data matches 1.. store result block 0 0 0 Items[4].count int 1 run scoreboard players get #vote_theme_5 switch.data
 
 ## Change the paper Lore depending on their number of votes
 # 1

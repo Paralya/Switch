@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:blue_ice", "nbt": "{}"},
+		"icon": {"id": "minecraft:blue_ice"},
 		"title": {"text": "Pitch Slayer", "color": "yellow"},
 		"description": {"text": "Win a Pitchout with 3 lives", "color": "aqua"},
 		"frame": "task",

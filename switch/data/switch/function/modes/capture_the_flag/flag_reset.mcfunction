@@ -4,8 +4,8 @@ execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.bl
 execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[team=switch.temp.red,distance=..1] only switch:visible/81
 
 # Copy initial pos and rotation
-data modify storage switch:temp Pos set from entity @s item.tag.Pos
-data modify storage switch:temp Rotation set from entity @s item.tag.Rotation
+data modify storage switch:temp Pos set from entity @s item.components."minecraft:custom_data".Pos
+data modify storage switch:temp Rotation set from entity @s item.components."minecraft:custom_data".Rotation
 execute on vehicle run data modify entity @s Pos set from storage switch:temp Pos
 execute on vehicle run data modify entity @s Rotation set from storage switch:temp Rotation
 data modify entity @s Rotation set from storage switch:temp Rotation

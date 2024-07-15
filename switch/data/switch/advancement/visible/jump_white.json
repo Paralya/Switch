@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:white_concrete"},
+		"icon": {"id": "minecraft:white_concrete"},
 		"title": {"text": "The White Jump", "color": "yellow"},
 		"description": {"text": "Finish the white jump for the first time", "color": "aqua"},
 		"frame": "task",

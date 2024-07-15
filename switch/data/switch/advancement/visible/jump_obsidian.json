@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:crying_obsidian"},
+		"icon": {"id": "minecraft:crying_obsidian"},
 		"title": {"text": "The Obsidian Jump", "color": "yellow"},
 		"description": {"text": "Finish the obsidian jump for the first time", "color": "aqua"},
 		"frame": "challenge",

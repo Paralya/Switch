@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:dripstone_block"},
+		"icon": {"id": "minecraft:dripstone_block"},
 		"title": {"text": "The Dripstone Jump", "color": "yellow"},
 		"description": {"text": "Finish the dripstone jump for the first time", "color": "aqua"},
 		"frame": "task",

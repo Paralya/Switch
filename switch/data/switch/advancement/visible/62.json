@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:campfire"},
+		"icon": {"id": "minecraft:campfire"},
 		"title": {"text": "Chaud les fesses", "color": "yellow"},
 		"description": {"text": "Win a game of Panic Chase with less than 3 hearts", "color": "aqua"},
 		"frame": "task",

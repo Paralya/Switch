@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:coal"},
+		"icon": {"id": "minecraft:coal"},
 		"title": {"text": "Le boulet", "color": "yellow"},
 		"description": {"text": "Die from the first cannon shot in Bombardment", "color": "aqua"},
 		"frame": "task",

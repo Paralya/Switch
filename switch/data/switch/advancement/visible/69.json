@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:arrow"},
+		"icon": {"id": "minecraft:arrow"},
 		"title": {"text": "Porc-épic", "color": "yellow"},
 		"description": {"text": "Take 10 arrows in a game of Guy Shooter", "color": "aqua"},
 		"frame": "task",

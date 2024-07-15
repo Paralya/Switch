@@ -14,7 +14,7 @@ execute if data storage switch:main {map:"ctf_forest_castles"} run summon armor_
 execute if data storage switch:main {map:"ctf_forest_castles"} run summon armor_stand 150050 114 150180 {Invisible:1b,Invulnerable:1b,Marker:1b,Passengers:[{id:"minecraft:item_display",Tags:["switch.flag","switch.free","switch.original_pos","switch.red_flag"],item:{id:"minecraft:red_banner",Count:1b},Rotation:[180.0f,0.0f],Glowing:1b}],Rotation:[180.0f,0.0f]}
 
 # Stuff
-execute as @e[tag=switch.flag] at @s run data modify entity @s item.tag.Pos set from entity @e[type=armor_stand,sort=nearest,limit=1] Pos
-execute as @e[tag=switch.flag] at @s run data modify entity @s item.tag.Rotation set from entity @e[type=armor_stand,sort=nearest,limit=1] Rotation
+execute as @e[tag=switch.flag] at @s run data modify entity @s item.components."minecraft:custom_data".Pos set from entity @e[type=armor_stand,sort=nearest,limit=1] Pos
+execute as @e[tag=switch.flag] at @s run data modify entity @s item.components."minecraft:custom_data".Rotation set from entity @e[type=armor_stand,sort=nearest,limit=1] Rotation
 execute as @e[tag=switch.flag] run data modify entity @s transformation.translation[1] set value 0.5f
 

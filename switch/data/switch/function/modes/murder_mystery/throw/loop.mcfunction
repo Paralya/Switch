@@ -19,9 +19,9 @@ execute at @s positioned ~ ~-1 ~ as @a[tag=!detached,gamemode=adventure,distance
 execute store result score #x switch.data run data get entity @s Pos[0] 10
 execute store result score #y switch.data run data get entity @s Pos[1] 10
 execute store result score #z switch.data run data get entity @s Pos[2] 10
-execute on passengers store result score #dest_x switch.data run data get entity @s item.tag.destination[0] 10
-execute on passengers store result score #dest_y switch.data run data get entity @s item.tag.destination[1] 10
-execute on passengers store result score #dest_z switch.data run data get entity @s item.tag.destination[2] 10
+execute on passengers store result score #dest_x switch.data run data get entity @s item.components."minecraft:custom_data".destination[0] 10
+execute on passengers store result score #dest_y switch.data run data get entity @s item.components."minecraft:custom_data".destination[1] 10
+execute on passengers store result score #dest_z switch.data run data get entity @s item.components."minecraft:custom_data".destination[2] 10
 function switch:translations/modes_murder_mystery_throw_loop
 scoreboard players operation #x switch.data -= #dest_x switch.data
 scoreboard players operation #y switch.data -= #dest_y switch.data

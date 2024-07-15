@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:bricks"},
+		"icon": {"id": "minecraft:bricks"},
 		"title": {"text": "The Bricks Jump", "color": "yellow"},
 		"description": {"text": "Finish the brick jump for the first time", "color": "aqua"},
 		"frame": "task",

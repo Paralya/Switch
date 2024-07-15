@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:dragon_head", "nbt": "{}"},
+		"icon": {"id": "minecraft:dragon_head"},
 		"title": {"text": "Xenophobe", "color": "yellow"},
 		"description": {"text": "Eliminate all players of the same color in Layers 4 Teams", "color": "aqua"},
 		"frame": "task",

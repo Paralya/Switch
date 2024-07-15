@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:slime_block"},
+		"icon": {"id": "minecraft:slime_block"},
 		"title": {"text": "Jumps", "color": "yellow"},
 		"description": {"text": "Catégorie des jumps", "color": "aqua"},
 		"frame": "goal",

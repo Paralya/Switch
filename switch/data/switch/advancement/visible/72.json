@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:snowball"},
+		"icon": {"id": "minecraft:snowball"},
 		"title": {"text": "C'est donc ça, de se vider...", "color": "yellow"},
 		"description": {"text": "Throw 42 snowballs in one game of Warden Escape", "color": "aqua"},
 		"frame": "task",

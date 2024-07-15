@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:heavy_weighted_pressure_plate", "nbt": "{}"},
+		"icon": {"id": "minecraft:heavy_weighted_pressure_plate"},
 		"title": {"text": "Contre son camp", "color": "yellow"},
 		"description": {"text": "Step on your own mine in Memory Mine", "color": "aqua"},
 		"frame": "task",

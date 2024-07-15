@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013154}"},
+		"icon": {"id": "minecraft:warped_fungus_on_a_stick", "components": {"minecraft:custom_model_data": 2013154}},
 		"title": {"text": "Injustice", "color": "yellow"},
 		"description": {"text": "Finish the parkour in Guy Shooter but die from the hands of a Shooter", "color": "aqua"},
 		"frame": "task",

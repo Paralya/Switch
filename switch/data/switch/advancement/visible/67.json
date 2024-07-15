@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:crossbow"},
+		"icon": {"id": "minecraft:crossbow"},
 		"title": {"text": "Tonerre de Zeus", "color": "yellow"},
 		"description": {"text": "Eliminate 10 players in a game of Thunder Spear", "color": "aqua"},
 		"frame": "task",

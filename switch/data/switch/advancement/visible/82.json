@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:turtle_egg"},
+		"icon": {"id": "minecraft:turtle_egg"},
 		"title": {"text": "Bien placé", "color": "yellow"},
 		"description": {"text": "Survive 30 seconds without moving in Block Party", "color": "aqua"},
 		"frame": "task",

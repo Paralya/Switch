@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:white_tulip", "nbt": "{}"},
+		"icon": {"id": "minecraft:white_tulip"},
 		"title": {"text": "Pacifiste", "color": "yellow"},
 		"description": {"text": "Survive 100 seconds in Pitchout without taking a single hit", "color": "aqua"},
 		"frame": "task",

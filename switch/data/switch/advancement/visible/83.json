@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:turtle_egg"},
+		"icon": {"id": "minecraft:turtle_egg"},
 		"title": {"text": "Chercheur Acharné", "color": "yellow"},
 		"description": {"text": "Find all the Easter Eggs in the lobby", "color": "aqua"},
 		"frame": "task",

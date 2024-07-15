@@ -20,7 +20,7 @@
 							},
 							"ops": [
 								{
-									"source": "ItemsNBT.snowball_bridge_red.tag",
+									"source": "ItemsNBT.snowball_bridge_red.components.\"minecraft:custom_data\"",
 									"target": "{}",
 									"op": "merge"
 								}

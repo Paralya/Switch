@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:jukebox", "nbt": "{}"},
+		"icon": {"id": "minecraft:jukebox"},
 		"title": {"text": "Feeling The Music", "color": "yellow"},
 		"description": {"text": "Survive 20 rounds in Block Party", "color": "aqua"},
 		"frame": "task",

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:saddle", "nbt": "{}"},
+		"icon": {"id": "minecraft:saddle"},
 		"title": {"text": "Interville", "color": "yellow"},
 		"description": {"text": "Die in Block Party because of a mad cow (Ravager)", "color": "aqua"},
 		"frame": "task",

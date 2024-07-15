@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:emerald_block", "nbt": "{}"},
+		"icon": {"id": "minecraft:emerald_block"},
 		"title": {"text": "C'est tout naturel", "color": "yellow"},
 		"description": {"text": "Push a player towards a hole in Simultaneous Jump", "color": "aqua"},
 		"frame": "task",

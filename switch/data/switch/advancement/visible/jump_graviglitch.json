@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:suspicious_gravel"},
+		"icon": {"id": "minecraft:suspicious_gravel"},
 		"title": {"text": "The GraviGlitch Jump", "color": "yellow"},
 		"description": {"text": "Finish the graviglitch jump for the first time", "color": "aqua"},
 		"frame": "task",

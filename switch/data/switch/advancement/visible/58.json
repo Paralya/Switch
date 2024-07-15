@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:bow", "nbt": "{CustomModelData:2013150}"},
+		"icon": {"id": "minecraft:bow", "components": {"minecraft:custom_model_data": 2013150}},
 		"title": {"text": "Harceleur", "color": "yellow"},
 		"description": {"text": "Eliminate the same person 3 times in Pitchout", "color": "aqua"},
 		"frame": "task",

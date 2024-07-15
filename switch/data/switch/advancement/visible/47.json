@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:packed_ice", "nbt": "{}"},
+		"icon": {"id": "minecraft:packed_ice"},
 		"title": {"text": "Il a rien compris lui", "color": "yellow"},
 		"description": {"text": "Run 500 blocks in one game of Pitchout", "color": "aqua"},
 		"frame": "task",

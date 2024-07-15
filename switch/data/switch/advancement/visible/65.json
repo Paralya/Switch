@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:golden_helmet"},
+		"icon": {"id": "minecraft:golden_helmet"},
 		"title": {"text": "Régicide", "color": "yellow"},
 		"description": {"text": "Win a game of Protect The King without losing any members of your kingdom", "color": "aqua"},
 		"frame": "task",

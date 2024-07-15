@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:creeper_head"},
+		"icon": {"id": "minecraft:creeper_head"},
 		"title": {"text": "La plèbe a travaillé pour moi", "color": "yellow"},
 		"description": {"text": "Win a game of PitchCreep without firing a single arrow", "color": "aqua"},
 		"frame": "task",

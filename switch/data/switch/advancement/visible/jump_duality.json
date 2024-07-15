@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:waxed_copper_block"},
+		"icon": {"id": "minecraft:waxed_copper_block"},
 		"title": {"text": "The Duality Jump", "color": "yellow"},
 		"description": {"text": "Finish the duo jump for the first time", "color": "aqua"},
 		"frame": "task",

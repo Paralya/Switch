@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:yellow_concrete", "nbt": "{}"},
+		"icon": {"id": "minecraft:yellow_concrete"},
 		"title": {"text": "Damidot", "color": "yellow"},
 		"description": {"text": "Receive a Legendary rating in Build Battle", "color": "aqua"},
 		"frame": "task",

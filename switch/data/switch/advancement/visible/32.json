@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:wither_rose", "nbt": "{}"},
+		"icon": {"id": "minecraft:wither_rose"},
 		"title": {"text": "Reste dans ta tombe", "color": "yellow"},
 		"description": {"text": "Kill the ninja twice in Traitors Game", "color": "aqua"},
 		"frame": "task",

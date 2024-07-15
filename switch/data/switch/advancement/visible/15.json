@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:golden_sword", "nbt": "{}"},
+		"icon": {"id": "minecraft:golden_sword"},
 		"title": {"text": "Tomahawk", "color": "yellow"},
 		"description": {"text": "Kill a player by throwing your knife in Murder Mystery", "color": "aqua"},
 		"frame": "task",

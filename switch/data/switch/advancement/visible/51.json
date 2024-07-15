@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:sandstone", "nbt": "{}"},
+		"icon": {"id": "minecraft:sandstone"},
 		"title": {"text": "Pharaon", "color": "yellow"},
 		"description": {"text": "Complete the Ancient Egypt map secret in Infected", "color": "aqua"},
 		"frame": "challenge",

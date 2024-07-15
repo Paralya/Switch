@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:bricks", "nbt": "{}"},
+		"icon": {"id": "minecraft:bricks"},
 		"title": {"text": "D&Cube", "color": "yellow"},
 		"description": {"text": "Score at least 50 points in Build Battle", "color": "aqua"},
 		"frame": "task",

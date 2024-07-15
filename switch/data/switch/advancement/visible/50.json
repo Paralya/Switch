@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:cherry_sapling", "nbt": "{}"},
+		"icon": {"id": "minecraft:cherry_sapling"},
 		"title": {"text": "Zom 100", "color": "yellow"},
 		"description": {"text": "Complete the Old Japan Apocalypse map secret in Infected", "color": "aqua"},
 		"frame": "challenge",

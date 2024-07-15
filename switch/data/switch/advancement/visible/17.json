@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:rotten_flesh", "nbt": "{}"},
+		"icon": {"id": "minecraft:rotten_flesh"},
 		"title": {"text": "Vive la chair", "color": "yellow"},
 		"description": {"text": "Infect 5 survivors in one game of Infected", "color": "aqua"},
 		"frame": "task",

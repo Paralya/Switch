@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:water_bucket", "nbt": "{}"},
+		"icon": {"id": "minecraft:water_bucket"},
 		"title": {"text": "Plongeur Expert", "color": "yellow"},
 		"description": {"text": "Complete 3 holes in game modes such as Dé à Coudre", "color": "aqua"},
 		"frame": "task",

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:player_head", "nbt": "{SkullOwner:\"Luxio_\"}"},
+		"icon": {"id": "minecraft:player_head", "components": {"minecraft:profile": {"name": "Luxio_"}}},
 		"title": {"text": "Révolution", "color": "yellow"},
 		"description": {"text": "Kill a king in a game of Beat The Kings", "color": "aqua"},
 		"frame": "task",

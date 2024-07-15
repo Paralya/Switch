@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:stick", "nbt": "{}"},
+		"icon": {"id": "minecraft:stick"},
 		"title": {"text": "Embrouilleur", "color": "yellow"},
 		"description": {"text": "Hit every player in a game of Castagne", "color": "aqua"},
 		"frame": "task",

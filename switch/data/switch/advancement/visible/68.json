@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:diamond_hoe"},
+		"icon": {"id": "minecraft:diamond_hoe"},
 		"title": {"text": "Collatéral", "color": "yellow"},
 		"description": {"text": "Kill two players in Quake with a single shot", "color": "aqua"},
 		"frame": "task",

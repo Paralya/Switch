@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:white_banner"},
+		"icon": {"id": "minecraft:white_banner"},
 		"title": {"text": "Reviens par ici", "color": "yellow"},
 		"description": {"text": "Return your team's flag in a game of Capture/Rush The Flag", "color": "aqua"},
 		"frame": "task",

@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"item": "minecraft:barrier", "nbt": "{}"},
+		"icon": {"id": "minecraft:barrier"},
 		"title": {"text": "Berger", "color": "yellow"},
 		"description": {"text": "Win a game of SheepWars without using any sheep", "color": "aqua"},
 		"frame": "task",
