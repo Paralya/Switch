@@ -24,7 +24,7 @@ data remove block 0 0 0 Items[6].components."minecraft:custom_data".ctc
 data remove block 0 0 0 Items[6].components."minecraft:custom_data".crazy_adventure
 data modify block 0 0 0 Items[6].components."minecraft:lore" set value []
 data modify block 0 0 0 Items[6].components."minecraft:custom_data".switch set value {"fireball_stick":true}
-data modify block 0 0 0 Items[7].Count set value 42b
+data modify block 0 0 0 Items[7].count set value 42b
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].components."minecraft:dyed_color" set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].components."minecraft:dyed_color" set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].components."minecraft:dyed_color" set value 16731469

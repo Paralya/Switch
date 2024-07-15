@@ -7,7 +7,7 @@ item replace entity @s armor.chest with chainmail_chestplate
 item replace entity @s armor.legs with iron_leggings
 item replace entity @s armor.feet with chainmail_boots
 item replace entity @s hotbar.0 with stone_sword
-item replace entity @s hotbar.1 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
+item replace entity @s hotbar.1 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",count:1}],Charged:1b}
 item replace entity @s hotbar.2 with stone_axe{AttributeModifiers:[{AttributeName:"minecraft:generic.attack_damage",Name:"minecraft:generic.attack_damage",Slot:"mainhand",Amount:4,Operation:0,UUID:[I;2012000,-2012000,-2012000,2012000]}]}
 item replace entity @s hotbar.3 with potion{Potion:"minecraft:strong_healing"}
 item replace entity @s hotbar.4 with arrow 24

@@ -15,7 +15,7 @@ data remove block 0 0 0 Items[1].components."minecraft:enchantments"
 data modify block 0 0 0 Items[1].components."minecraft:can_break".blocks set value ["minecraft:cut_sandstone","minecraft:smooth_sandstone_stairs","minecraft:obsidian","minecraft:fire","minecraft:tnt"]
 data remove block 0 0 0 Items[2].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.max_health"}]
 data remove block 0 0 0 Items[3].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.movement_speed"}]
-data modify block 0 0 0 Items[5].Count set value 42b
+data modify block 0 0 0 Items[5].count set value 42b
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].components."minecraft:dyed_color" set value 13369344
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].components."minecraft:dyed_color" set value 13369344
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].components."minecraft:dyed_color" set value 13369344

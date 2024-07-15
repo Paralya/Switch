@@ -19,7 +19,7 @@ data modify block 0 0 0 Items[1].components."minecraft:can_break".blocks set val
 data remove block 0 0 0 Items[2].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.max_health"}]
 data remove block 0 0 0 Items[3].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.knockback_resistance"}]
 data remove block 0 0 0 Items[4].components."minecraft:attribute_modifiers".modifiers[{type:"minecraft:generic.movement_speed"}]
-data modify block 0 0 0 Items[6].Count set value 42b
+data modify block 0 0 0 Items[6].count set value 42b
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[2].components."minecraft:dyed_color" set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[3].components."minecraft:dyed_color" set value 16731469
 execute if entity @s[team=switch.rush_the_point.red] run data modify block 0 0 0 Items[4].components."minecraft:dyed_color" set value 16731469

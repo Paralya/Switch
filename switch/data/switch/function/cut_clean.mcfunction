@@ -3,7 +3,7 @@ tag @s add switch.cut_clean
 
 scoreboard players set #custom switch.data 1
 scoreboard players set #success switch.data 0
-execute store result score #count switch.data run data get entity @s Item.Count
+execute store result score #count switch.data run data get entity @s Item.count
 
 # Vanilla Items
 execute if score #success switch.data matches 0 store success score #success switch.data if data entity @s Item{id:"minecraft:raw_iron"} unless data entity @s Item.components."minecraft:custom_model_data" run data modify entity @s Item.id set value "minecraft:iron_ingot"

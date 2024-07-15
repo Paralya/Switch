@@ -1,3 +1,3 @@
 
-$item replace entity @s container.$(Slot) with $(with) $(Count)
+$item replace entity @s container.$(Slot) with $(with) $(count)
 

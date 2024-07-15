@@ -1,9 +1,9 @@
 
 # Try to get slot and count
-data modify storage switch:temp input set value {Slot:-1b,Count:-1b}
+data modify storage switch:temp input set value {Slot:0b,count:0}
 data modify storage switch:temp input.Slot set from entity @s Inventory[{id:"minecraft:arrow"}].Slot
-data modify storage switch:temp input.Count set from entity @s Inventory[{id:"minecraft:arrow"}].Count
-execute store result score #count switch.data run data get storage switch:temp input.Count
+data modify storage switch:temp input.count set from entity @s Inventory[{id:"minecraft:arrow"}].count
+execute store result score #count switch.data run data get storage switch:temp input.count
 scoreboard players add #count switch.data 1
 execute store result storage switch:temp input.count int 1 run scoreboard players get #count switch.data
 

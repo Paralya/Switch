@@ -15,8 +15,8 @@ execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] re
 function switch:translations/modes_rush_the_flag_flag_reset
 
 # Reset Banner
-data modify entity @s[tag=switch.blue_flag] item set value {id:"minecraft:blue_banner",Count:1b}
-data modify entity @s[tag=switch.red_flag] item set value {id:"minecraft:red_banner",Count:1b}
+data modify entity @s[tag=switch.blue_flag] item set value {id:"minecraft:blue_banner",count:1}
+data modify entity @s[tag=switch.red_flag] item set value {id:"minecraft:red_banner",count:1}
 data modify entity @s transformation.translation[1] set value -1.5f
 tag @s add switch.original_pos
 tag @s add switch.free
