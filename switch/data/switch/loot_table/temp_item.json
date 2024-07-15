@@ -10,8 +10,10 @@
 					"name": "minecraft:stone",
 					"functions": [
 						{
-							"function": "minecraft:set_nbt",
-							"tag": "{switch.temp_item:1b}"
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": "{\"switch\":{\"temp_item\":true}}"
+							}
 						}
 					]
 				}

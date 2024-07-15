@@ -14,7 +14,7 @@ execute if score #success switch.data matches 1 run function switch:modes/infect
 
 # Replace classic potion with a custom one
 scoreboard players set #success switch.data 0
-execute store success score #success switch.data run data modify storage switch:temp temp set from storage switch:temp Inventory[{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}]
+execute store success score #success switch.data run data modify storage switch:temp temp set from storage switch:temp Inventory[{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:water"}}}]
 execute if score #success switch.data matches 1 if data storage switch:temp temp.components."minecraft:custom_data".switch.water_bottle run scoreboard players set #success switch.data 0
 execute if score #success switch.data matches 1 run data modify storage switch:temp input set value {Slot:7b,Count:1b,with:'potion{switch:{water_bottle:1b},display:{Name:\'{"text":"Zombie blood","italic":false,"color":"light_purple"}\',Lore:[\'{"text":"Infected","italic":true,"color":"dark_green"}\']}}'}
 execute if score #success switch.data matches 1 run data modify storage switch:temp input.Slot set from storage switch:temp temp.Slot

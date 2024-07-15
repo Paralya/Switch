@@ -22,8 +22,8 @@ scoreboard players operation #gold_count switch.data /= #player_count switch.dat
 execute if score #murder_mystery_seconds switch.data matches 0.. if score #gold_count switch.data matches ..300 run function switch:modes/murder_mystery/summon_gold
 
 # Reload detective bow
-execute as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] unless data entity @s Inventory[{id:"minecraft:arrow"}] run scoreboard players add #detective_reload switch.data 1
-execute if score #detective_reload switch.data matches 5.. run give @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{tag:{switch:{detective_bow:1b}}}]}] arrow
+execute as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{components:{"minecraft:custom_data":{"switch":{"detective_bow":true}}}}]}] unless data entity @s Inventory[{id:"minecraft:arrow"}] run scoreboard players add #detective_reload switch.data 1
+execute if score #detective_reload switch.data matches 5.. run give @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{components:{"minecraft:custom_data":{"switch":{"detective_bow":true}}}}]}] arrow
 execute if score #detective_reload switch.data matches 5.. run scoreboard players set #detective_reload switch.data 0
 
 # Title actionbar

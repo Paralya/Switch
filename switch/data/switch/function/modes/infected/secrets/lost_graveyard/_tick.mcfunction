@@ -1,7 +1,7 @@
 
 # Items to pickup
-execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.shovel] run summon item 127026 118 127071 {Tags:["switch.infected.shovel","switch.infected.item"],Item:{id:"minecraft:stone_shovel",Count:1b,tag:{CanDestroy:["gravel","sand"],Damage:23,display:{Name:'{"text":"Teuse","italic":false,"color":"light_purple"}',Lore:['{"text":"Infected","italic":true,"color":"dark_green"}']}}}}
-execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.iron_ingot] run summon item 127084 112 127016 {Tags:["switch.infected.iron_ingot","switch.infected.item"],Item:{id:"minecraft:iron_ingot",Count:1b,tag:{display:{Name:'{"text":"Lingot de fer","italic":false,"color":"light_purple"}',Lore:['{"text":"Infected","italic":true,"color":"dark_green"}']}}}}
+execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.shovel] run summon item 127026 118 127071 {Tags:["switch.infected.shovel","switch.infected.item"],Item:{id:"minecraft:stone_shovel",Count:1b,components:{"minecraft:can_break":{blocks:["gravel","sand"]},"minecraft:damage":23,"minecraft:item_name":'{"text":"Teuse","italic":false,"color":"light_purple"}',"minecraft:lore":['{"text":"Infected","italic":true,"color":"dark_green"}']}}}
+execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.iron_ingot] run summon item 127084 112 127016 {Tags:["switch.infected.iron_ingot","switch.infected.item"],Item:{id:"minecraft:iron_ingot",Count:1b,components:{"minecraft:item_name":'{"text":"Lingot de fer","italic":false,"color":"light_purple"}',"minecraft:lore":['{"text":"Infected","italic":true,"color":"dark_green"}']}}}
 execute as @e[tag=switch.infected.item] at @s run function switch:modes/infected/secrets/lost_graveyard/item_tick
 
 ## State checks

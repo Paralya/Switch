@@ -12,7 +12,7 @@ effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id
 # Tick du sheepwars
 function sheepwars:tick
 kill @e[type=arrow,nbt={inGround:1b}]
-kill @e[type=item,nbt=!{Item:{tag:{}}}]
+kill @e[type=item,nbt=!{Item:{components:{"minecraft:custom_data":{}}}}]
 execute as @a[tag=!detached,nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
 # Force offhand item

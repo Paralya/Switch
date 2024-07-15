@@ -8,8 +8,8 @@ execute as @e[type=item,tag=!switch.checked] run function switch:modes/rush_the_
 execute as @e[type=tnt,nbt={Fuse:1s}] at @s run function switch:modes/rush_the_point/explode_tnt
 
 # Manage Fireball Stick
-execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={SelectedItem:{tag:{switch:{fireball_stick:1b}}}}] if score @s crazy_adventure.cooldown matches 1.. at @s run function switch:modes/rush_the_point/fireball/no_cooldown
-execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={SelectedItem:{tag:{switch:{fireball_stick:1b}}}}] if score @s crazy_adventure.cooldown matches 0 at @s run function switch:modes/rush_the_point/fireball/right_click
+execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{"switch":{"fireball_stick":true}}}}}] if score @s crazy_adventure.cooldown matches 1.. at @s run function switch:modes/rush_the_point/fireball/no_cooldown
+execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{"switch":{"fireball_stick":true}}}}}] if score @s crazy_adventure.cooldown matches 0 at @s run function switch:modes/rush_the_point/fireball/right_click
 execute as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle] at @s positioned ~ ~-1 ~ run function switch:modes/rush_the_point/explode_tnt
 
 # Kill all arrows in ground & Manage snowballs

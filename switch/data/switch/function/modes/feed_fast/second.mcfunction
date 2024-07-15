@@ -8,7 +8,7 @@ execute if score #feed_fast_seconds switch.data matches 0.. run function switch:
 execute if score #feed_fast_seconds switch.data matches 0 as @e[limit=2] as @e[limit=2] as @e[limit=2] run summon marker 0 0 0
 execute if score #feed_fast_seconds switch.data matches 0 at @e[limit=8] at @a[tag=!detached,gamemode=!spectator] run function switch:modes/feed_fast/summon_food
 execute if score #feed_fast_seconds switch.data matches 1.. at @a[tag=!detached,gamemode=!spectator] run function switch:modes/feed_fast/summon_food
-execute if score #feed_fast_seconds switch.data matches 0.. as @e[type=item,nbt={Item:{tag:{switch:{}}}}] run data modify entity @s Glowing set value 1b
+execute if score #feed_fast_seconds switch.data matches 0.. as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{"switch":{}}}}}] run data modify entity @s Glowing set value 1b
 
 execute if score #feed_fast_seconds switch.data matches ..-1 run kill @e[type=item]
 execute if score #feed_fast_seconds switch.data matches ..-1 run scoreboard players set @a[tag=!detached,gamemode=!spectator] switch.temp.previous_food 20
