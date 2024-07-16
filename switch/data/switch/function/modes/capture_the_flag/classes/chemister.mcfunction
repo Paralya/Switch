@@ -12,7 +12,7 @@ item replace entity @s hotbar.2 with lingering_potion{Potion:"minecraft:strong_h
 item replace entity @s hotbar.3 with lingering_potion{Potion:"minecraft:long_swiftness"}
 item replace entity @s hotbar.4 with lingering_potion{Potion:"minecraft:strong_harming"}
 item replace entity @s hotbar.5 with lingering_potion{Potion:"minecraft:strong_poison"}
-item replace entity @s hotbar.6 with potion{display:{Name:'{"text":"Suicide Potion","color":"dark_purple","italic":false}'},custom_potion_effects:[{id:"minecraft:instant_damage",amplifier:1b,duration:20},{id:"minecraft:wither",amplifier:10b,duration:-1},{id:"minecraft:poison",amplifier:10b,duration:-1}],CustomPotionColor:4391004}
+item replace entity @s hotbar.6 with potion{display:{Name:'{"text":"Suicide Potion","color":"dark_purple","italic":false}'},custom_potion_effects:[{id:"instant_damage",amplifier:1b,duration:20},{id:"wither",amplifier:10b,duration:-1},{id:"poison",amplifier:10b,duration:-1}],CustomPotionColor:4391004}
 item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 8
 item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 8
 item replace entity @s hotbar.8 with bread 21

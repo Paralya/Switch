@@ -2,7 +2,7 @@
 tp @s ~ ~ ~ ~ ~
 data modify entity @s Motion set value [0.d, 0.d, 0.d]
 data modify entity @s Tags set value ["shopping_kart.kart"]
-data modify entity @s active_effects set value [{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}]
+data modify entity @s active_effects set value [{id:"invisibility",amplifier:0b,duration:2147483647,show_particles:0b}]
 data modify entity @s Fire set value 0s
 data modify entity @s Brain set value {memories:{}}
 scoreboard players set @s shopping_kart.engine 0

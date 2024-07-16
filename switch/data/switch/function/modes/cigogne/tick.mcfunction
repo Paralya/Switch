@@ -8,7 +8,7 @@ execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:mode
 execute at @a[tag=!detached,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 
 # On enlève les particules d'absorption
-execute as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption",show_particles:1b}]}] run function switch:modes/cigogne/absorption
+execute as @a[tag=!detached,nbt={active_effects:[{id:"absorption",show_particles:1b}]}] run function switch:modes/cigogne/absorption
 
 # Glowing time
 execute as @a[tag=!detached,gamemode=!spectator,predicate=switch:is_sneaking] run scoreboard players add @s switch.temp.sneak 1

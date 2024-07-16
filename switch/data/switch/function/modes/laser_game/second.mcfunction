@@ -16,7 +16,7 @@ execute if score #base_reload switch.data matches 0 run setblock 516 104 523 iro
 execute if score #base_reload switch.data matches 0 run setblock 36041 149 36011 iron_trapdoor[powered=true,open=true,facing=east]
 execute if score #base_reload switch.data matches 0 run setblock 36041 149 36012 iron_trapdoor[powered=true,open=true,facing=east]
 execute if score #base_reload switch.data matches 0 run setblock 72114 112 72090 iron_trapdoor[powered=true,open=true,facing=north]
-execute if score #base_reload switch.data matches 0 as @e[tag=switch.laser_game.base] run data modify entity @s Item set value {id:"minecraft:experience_bottle",count:1}
+execute if score #base_reload switch.data matches 0 as @e[tag=switch.laser_game.base] run data modify entity @s Item set value {id:"experience_bottle",count:1}
 execute if score #base_reload switch.data matches 1.. run setblock 516 104 523 dark_oak_trapdoor[powered=true,open=true]
 execute if score #base_reload switch.data matches 1.. run setblock 36041 149 36011 dark_oak_trapdoor[powered=true,open=true,facing=east]
 execute if score #base_reload switch.data matches 1.. run setblock 36041 149 36012 dark_oak_trapdoor[powered=true,open=true,facing=east]

@@ -82,6 +82,6 @@ advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!
 
 # GraviGlitch jump gives
 execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run clear @s suspicious_gravel[minecraft:custom_data={"switch":{"to_place":true}}]
-execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run give @s suspicious_gravel{CanPlaceOn:["smooth_red_sandstone","orange_wall_banner", "red_sandstone_wall"],switch:{to_place:1b}} 42
-execute unless entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37] run clear @s suspicious_gravel{switch:{to_place:1b}}
+execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run give @s suspicious_gravel[can_place_on={blocks:["smooth_red_sandstone","orange_wall_banner","red_sandstone_wall"]},custom_data={"switch":{"to_place":true}}] 42
+execute unless entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37] run clear @s suspicious_gravel[custom_data={"switch":{"to_place":true}}]
 

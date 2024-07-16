@@ -1,6 +1,6 @@
 
 # replace tropical fish knockback 1 rename "Fishy Fish" 
-execute unless data entity @s Inventory[{id:"minecraft:tropical_fish"}] run give @s tropical_fish{Enchantments:[{id:"minecraft:knockback",lvl:2s},{id:"minecraft:sharpness",lvl:2s}],display:{Name:'{"text":"Fishy Fish","italic":false,"color":"aqua"}'}}
+execute unless data entity @s Inventory[{id:"minecraft:tropical_fish"}] run give @s tropical_fish[enchantments={"minecraft:knockback":2,"minecraft:sharpness":2},custom_name='{"text":"Fishy Fish","italic":false,"color":"aqua"}']
 execute if score #TEAM_FISH switch.data matches 0 run give @s white_concrete 6
 execute if score #TEAM_FISH switch.data matches 1 run give @s[team=switch.temp.blue] blue_concrete 6 
 execute if score #TEAM_FISH switch.data matches 1 run give @s[team=switch.temp.red] red_concrete 6 

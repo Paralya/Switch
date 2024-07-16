@@ -14,7 +14,7 @@ setblock 0 0 0 yellow_shulker_box
 loot insert 0 0 0 loot e.anchor:item/monemtum_hookshot
 item replace entity @s weapon.offhand from block 0 0 0 container.0
 setblock 0 0 0 air
-give @s crossbow{ChargedProjectiles:[{id:"minecraft:arrow",count:1}],Charged:1b}
+give @s crossbow[charged_projectiles=[{id:"arrow"}]]
 
 # Teleport player
 function switch:maps/spread_one_player

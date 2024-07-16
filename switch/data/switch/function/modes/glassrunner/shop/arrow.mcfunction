@@ -2,7 +2,7 @@
 
 
 
-clear @s flint{to_clear:1b}
+clear @s flint[custom_data={to_clear:1b}]
 
 #Name : Flèches x5 
 #Lore : Vous ravitaille en flèches !
