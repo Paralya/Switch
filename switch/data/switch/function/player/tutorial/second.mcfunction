@@ -23,10 +23,10 @@ execute if score @s switch.tutorial matches 2 run scoreboard players set #for_tu
 execute if score @s switch.tutorial matches 2 run function switch:engine/voting_time/message
 
 # Third dialog
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 69.1 -497 0.1 0 1.5 0 150 force @s
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 69.6 -496 0.1 0 0.35 0 35 force @s
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -500 70.1 -491 0.1 0 2 0 200 force @s
-execute if score @s switch.tutorial matches 3 run particle dust 0 1 0 1 -502 70.1 -487 1 0 0.1 0 100 force @s
+execute if score @s switch.tutorial matches 3 run particle dust{color:[0.0,1.0,0.0],scale:1.0} -500 69.1 -497 0.1 0 1.5 0 150 force @s
+execute if score @s switch.tutorial matches 3 run particle dust{color:[0.0,1.0,0.0],scale:1.0} -500 69.6 -496 0.1 0 0.35 0 35 force @s
+execute if score @s switch.tutorial matches 3 run particle dust{color:[0.0,1.0,0.0],scale:1.0} -500 70.1 -491 0.1 0 2 0 200 force @s
+execute if score @s switch.tutorial matches 3 run particle dust{color:[0.0,1.0,0.0],scale:1.0} -502 70.1 -487 1 0 0.1 0 100 force @s
 
 # Fourth dialog
 execute if score @s switch.tutorial matches 4 run scoreboard players set #for_tutorial switch.data 1

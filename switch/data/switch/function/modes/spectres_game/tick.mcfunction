@@ -21,7 +21,7 @@ execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predica
 execute as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption",show_particles:true}]}] run function switch:modes/spectres_game/absorption
 
 # Particules sur tous les spectres, pour les spectres
-execute at @a[tag=!detached,gamemode=!spectator,team=switch.temp.spectre] run particle dust 1 1 0.5 1 ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[tag=!detached,team=switch.temp.spectre]
+execute at @a[tag=!detached,gamemode=!spectator,team=switch.temp.spectre] run particle dust{color:[1.0,1.0,0.5],scale:1.0} ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[tag=!detached,team=switch.temp.spectre]
 
 # Advancement
 execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,team=switch.temp.spectre,scores={switch.temp.kills=3..}] only switch:visible/18

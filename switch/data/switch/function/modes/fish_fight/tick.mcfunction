@@ -30,9 +30,9 @@ execute as @e[type=axolotl,predicate=switch:in_water] run function switch:maps/s
 execute as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}] run function switch:modes/fish_fight/axobonus
 
 # Particules
-execute at @a[tag=!detached,scores={switch.alive=3}] run particle dust 0.631 0.973 0.867 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust 1 1 0.447 1 ~ ~2.4 ~ .1 .1 .1 0 1
-execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust 0.996 0.522 0.522 1 ~ ~2.4 ~ .1 .1 .1 0 1
+execute at @a[tag=!detached,scores={switch.alive=3}] run particle dust{color:[0.631,0.973,0.867],scale:1} ~ ~2.4 ~ .1 .1 .1 0 1
+execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust{color:[1.0,1.0,0.447],scale:1} ~ ~2.4 ~ .1 .1 .1 0 1
+execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust{color:[0.996,0.522,0.522],scale:1} ~ ~2.4 ~ .1 .1 .1 0 1
 
 # Cooldown invincibilité
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
