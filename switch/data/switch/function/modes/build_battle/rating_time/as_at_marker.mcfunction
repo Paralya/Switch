@@ -3,7 +3,7 @@
 tag @s add switch.marker_temp
 
 # Save the build in the structure switch:temp
-setblock ~ ~-2 ~ structure_block{mode:"SAVE",name:"switch:temp",posX:5,posY:2,posZ:5,sizeX:38,sizeY:35,sizeZ:38,showboundingbox:0b,ignoreEntities:1b}
+setblock ~ ~-2 ~ structure_block{mode:"SAVE",name:"switch:temp",posX:5,posY:2,posZ:5,sizeX:38,sizeY:35,sizeZ:38,showboundingbox:0b,ignoreEntities:true}
 setblock ~ ~-1 ~ redstone_block
 
 # Forceload the save zone

@@ -5,9 +5,9 @@
 execute store result score #count switch.data if entity @a[tag=!detached,gamemode=!spectator]
 
 # Summon lootboxes depending on the player count
-summon chicken ~ ~ ~ {Invulnerable:true,Tags:["switch.new"],Passengers:[{id:"falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Time:20}]}
-execute if score #count switch.data matches 5.. run summon chicken ~ ~ ~ {Invulnerable:true,Tags:["switch.new"],Passengers:[{id:"falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Time:20}]}
-execute if score #count switch.data matches 15.. run summon chicken ~ ~ ~ {Invulnerable:true,Tags:["switch.new"],Passengers:[{id:"falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:1b,Time:20}]}
+summon chicken ~ ~ ~ {Invulnerable:true,Tags:["switch.new"],Passengers:[{id:"falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:true,Time:20}]}
+execute if score #count switch.data matches 5.. run summon chicken ~ ~ ~ {Invulnerable:true,Tags:["switch.new"],Passengers:[{id:"falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:true,Time:20}]}
+execute if score #count switch.data matches 15.. run summon chicken ~ ~ ~ {Invulnerable:true,Tags:["switch.new"],Passengers:[{id:"falling_block",BlockState:{Name:"minecraft:crying_obsidian"},Glowing:true,Time:20}]}
 
 
 # Spreadplayers

@@ -9,7 +9,7 @@ scoreboard players set @s[tag=switch.bonus.fast] switch.temp.cooldown -4
 playsound mechanization:gadgets.laser_gun ambient @s
 
 function iris:setup/load
-data merge storage iris:input {MaxRecursionDepth:256, TargetEntities:1b}
+data merge storage iris:input {MaxRecursionDepth:256, TargetEntities:true}
 execute anchored eyes positioned ^ ^ ^ run function iris:get_target
 execute as @e[tag=iris.ray] run function iris:set_coordinates
 execute if entity @s[scores={switch.alive=10}] as @e[tag=iris.target,scores={switch.alive=11},tag=!global.ignore] at @s run function switch:modes/laser_game/shooted_player_red

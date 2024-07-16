@@ -11,7 +11,7 @@ kill @e[type=item]
 # Auto reload system
 item replace entity @a[tag=!detached] inventory.0 with arrow 1
 scoreboard players add @a[tag=!detached] switch.temp.reload 1
-execute as @a[scores={switch.temp.reload=40..}] run item replace entity @s hotbar.0 with crossbow{ChargedProjectiles:[{id:"minecraft:arrow",count:1}],Charged:1b}
+execute as @a[scores={switch.temp.reload=40..}] run item replace entity @s hotbar.0 with crossbow[charged_projectiles=[{id:"minecraft:arrow"}]]
 scoreboard players reset @a[scores={switch.temp.reload=40..}] switch.temp.reload
 
 # Advancement

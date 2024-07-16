@@ -28,10 +28,10 @@ effect give @s night_vision infinite 250 true
 effect give @s darkness infinite 250 true
 gamemode survival @s
 scoreboard players set @s switch.temp.choosen_class 0
-item replace entity @s weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
-item replace entity @s hotbar.0 with diamond_chestplate{switch:{class_item:1b},display:{Name:'{"text":"Tank","color":"red","italic":false}'}}
-item replace entity @s hotbar.2 with iron_sword{switch:{class_item:2b},display:{Name:'{"text":"Warrior","color":"red","italic":false}'}}
-item replace entity @s hotbar.4 with crossbow{switch:{class_item:3b},display:{Name:'{"text":"Archer","color":"red","italic":false}'}}
-item replace entity @s hotbar.6 with tnt{switch:{class_item:4b},display:{Name:'{"text":"Demolisher","color":"red","italic":false}'}}
-item replace entity @s hotbar.8 with glass_bottle{switch:{class_item:5b},display:{Name:'{"text":"Chemister","color":"red","italic":false}'}}
+item replace entity @s weapon.offhand with warped_fungus_on_a_stick[unbreakable={},custom_model_data=2010003]
+item replace entity @s hotbar.0 with diamond_chestplate[custom_name='{"text":"Tank","color":"red","italic":false}',custom_data={switch:{class_item:1b}}]
+item replace entity @s hotbar.2 with iron_sword[custom_name='{"text":"Warrior","color":"red","italic":false}',custom_data={switch:{class_item:2b}}]
+item replace entity @s hotbar.4 with crossbow[custom_name='{"text":"Archer","color":"red","italic":false}',custom_data={switch:{class_item:3b}}]
+item replace entity @s hotbar.6 with tnt[custom_name='{"text":"Demolisher","color":"red","italic":false}',custom_data={switch:{class_item:4b}}]
+item replace entity @s hotbar.8 with glass_bottle[custom_name='{"text":"Chemister","color":"red","italic":false}',custom_data={switch:{class_item:5b}}]
 

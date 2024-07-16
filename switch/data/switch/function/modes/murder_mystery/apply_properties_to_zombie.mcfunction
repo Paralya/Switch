@@ -1,5 +1,5 @@
 
-data merge entity @s {NoAI:1b,Invulnerable:1b,IsBaby:1b,Silent:1b}
+data merge entity @s {NoAI:true,Invulnerable:true,IsBaby:true,Silent:true}
 data modify entity @s Rotation set from storage switch:main Rotation
 
 # Copy Name to CustomName

@@ -8,7 +8,7 @@ execute if score #red_fire_arrows switch.data matches 1.. run scoreboard players
 execute if score #red_explosive_arrows switch.data matches 1.. run scoreboard players remove #red_explosive_arrows switch.data 1
 
 # Small fixes
-kill @e[type=falling_block,nbt={BlockState:{Name:"minecraft:fire"},OnGround:1b}]
+kill @e[type=falling_block,nbt={BlockState:{Name:"minecraft:fire"},OnGround:true}]
 
 # 20 seconds give sheeps
 scoreboard players operation #sheep_give switch.data = #sheepwars_seconds switch.data

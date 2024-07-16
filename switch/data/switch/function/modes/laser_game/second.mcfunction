@@ -6,7 +6,7 @@ scoreboard players remove #remaining_time switch.data 1
 # Start thing
 execute if score #laser_game_seconds switch.data matches ..9 run kill @e[type=!player,type=!marker]
 execute if score #laser_game_seconds switch.data matches 10 run kill @e[tag=switch.laser_game.base]
-execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"laser_game"} run summon item_frame 516 104 523 {Tags:["switch.laser_game.base"],Facing:2b,Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Glowing:1b}
+execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"laser_game"} run summon item_frame 516 104 523 {Tags:["switch.laser_game.base"],Facing:2b,Invisible:true,Invulnerable:true,Fixed:true,Silent:true,Glowing:true}
 
 
 # Base reload

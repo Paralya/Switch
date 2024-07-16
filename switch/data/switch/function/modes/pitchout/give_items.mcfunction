@@ -26,10 +26,10 @@ item replace entity @s hotbar.2 with arrow
 item replace entity @s hotbar.8 with ender_pearl 3
 
 # Give depending on the upgrades
-execute if score @s switch.pitchout.boots matches 1 run item replace entity @s armor.feet with leather_boots{Damage:45}
-execute if score @s switch.pitchout.boots matches 2 run item replace entity @s armor.feet with leather_boots{Damage:35}
-execute if score @s switch.pitchout.boots matches 3 run item replace entity @s armor.feet with leather_boots{Damage:25}
-execute if score @s switch.pitchout.boots matches 4 run item replace entity @s armor.feet with leather_boots{Damage:15}
+execute if score @s switch.pitchout.boots matches 1 run item replace entity @s armor.feet with leather_boots[damage=45]
+execute if score @s switch.pitchout.boots matches 2 run item replace entity @s armor.feet with leather_boots[damage=35]
+execute if score @s switch.pitchout.boots matches 3 run item replace entity @s armor.feet with leather_boots[damage=25]
+execute if score @s switch.pitchout.boots matches 4 run item replace entity @s armor.feet with leather_boots[damage=15]
 execute if score @s switch.pitchout.boots matches 5 run item replace entity @s armor.feet with leather_boots
 execute if score @s switch.pitchout.ender_pearl matches 1 run item replace entity @s hotbar.8 with ender_pearl 4
 execute if score @s switch.pitchout.ender_pearl matches 2 run item replace entity @s hotbar.8 with ender_pearl 5

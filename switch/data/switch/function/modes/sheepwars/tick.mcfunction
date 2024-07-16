@@ -7,18 +7,18 @@ execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
 execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/sheepwars/death
-effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id:"wither"}]}] wither 2 2 true
+effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id:"minecraft:wither"}]}] wither 2 2 true
 
 # Tick du sheepwars
 function sheepwars:tick
-kill @e[type=arrow,nbt={inGround:1b}]
+kill @e[type=arrow,nbt={inGround:true}]
 kill @e[type=item,nbt=!{Item:{components:{"minecraft:custom_data":{}}}}]
 execute as @a[tag=!detached,nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
 # Force offhand item
 execute as @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] run item replace entity @s[nbt={Inventory:[{Slot:-106b}]}] hotbar.8 from entity @s weapon.offhand
 clear @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] warped_fungus_on_a_stick
-item replace entity @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] weapon.offhand with warped_fungus_on_a_stick{CustomModelData:2010003,Unbreakable:1b}
+item replace entity @a[tag=!detached,nbt=!{Inventory:[{Slot:-106b,id:"minecraft:warped_fungus_on_a_stick"}]}] weapon.offhand with warped_fungus_on_a_stick[unbreakable={},custom_model_data=2010003]
 
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear

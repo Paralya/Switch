@@ -1,5 +1,5 @@
 
-clear @s blue_ice{to_clear:1b}
+clear @s blue_ice{to_clear:true}
 
 
 function switch:modes/glassrunner/shop/reset_item

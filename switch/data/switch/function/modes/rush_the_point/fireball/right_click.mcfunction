@@ -1,5 +1,5 @@
 
-summon fireball ^ ^1 ^1 {Tags:["switch.new"],power:[0.0d,0.0d,0.0d],ExplosionPower:0b,NoGravity:1b,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b}]}
+summon fireball ^ ^1 ^1 {Tags:["switch.new"],power:[0.0d,0.0d,0.0d],ExplosionPower:0b,NoGravity:true,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}]}
 summon marker 0 0 0 {UUID:[I;0,539099136,0,0]}
 
 data modify storage switch:main Rotation set from entity @s Rotation

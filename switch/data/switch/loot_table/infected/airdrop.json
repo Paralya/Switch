@@ -66,7 +66,7 @@
 						},
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{CustomModelData:2013001,switch:{115:1b}}"
+							"tag": "{CustomModelData:2013001,switch:{115:true}}"
 						}
 					]
 				}
