@@ -5,71 +5,157 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"weight": 4,
 					"name": "minecraft:apple"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 4,
-					"name": "minecraft:dried_kelp"
-				},
-				{
-					"type": "minecraft:item",
-					"weight": 2,
 					"name": "minecraft:golden_apple"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 4,
+					"name": "minecraft:melon_slice"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:sweet_berries"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:glow_berries"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:carrot"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:golden_carrot"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 4,
-					"name": "minecraft:cookie"
+					"name": "minecraft:potato"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 4,
+					"name": "minecraft:baked_potato"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poisonous_potato"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:beetroot"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:dried_kelp"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:beef"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:cooked_beef"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 4,
+					"name": "minecraft:porkchop"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_porkchop"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:mutton"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_mutton"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:chicken"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_chicken"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:rabbit"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_rabbit"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cod"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_cod"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:salmon"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cooked_salmon"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:tropical_fish"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pufferfish"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bread"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cookie"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pumpkin_pie"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:mushroom_stew"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:beetroot_soup"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:rabbit_stew"
 				},
 				{
-					"type": "minecraft:loot_table",
-					"weight": 4,
-					"name": "crazy_adventure:i/banana"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"weight": 2,
-					"name": "crazy_adventure:i/uranium_banana"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"weight": 2,
-					"name": "stardust:i/stardust_apple"
-				},
-				{
 					"type": "minecraft:item",
 					"name": "minecraft:potion",
 					"functions": [
 						{
-							"function": "minecraft:set_nbt",
-							"tag": "{custom_potion_effects:[{id:\"minecraft:instant_health\",amplifier:9b}],CustomPotionColor:16711680,display:{Name:'{\"text\":\"Potion de soin\",\"italic\":false}'}}"
-						}
-					]
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:potion",
-					"functions": [
-						{
-							"function": "minecraft:set_nbt",
-							"tag": "{custom_potion_effects:[{id:\"minecraft:saturation\",amplifier:4b}],CustomPotionColor:10569486,display:{Name:'{\"text\":\"Potion de saturation\",\"italic\":false}'}}"
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:potion_contents": {
+									"custom_color": 10569486,
+									"custom_effects": [
+										{
+											"id": "minecraft:saturation",
+											"amplifier": 4
+										}
+									]
+								}
+							}
 						}
 					]
 				}
@@ -78,8 +164,10 @@
 	],
 	"functions": [
 		{
-			"function": "minecraft:set_nbt",
-			"tag": "{switch:{}}"
+			"function": "minecraft:set_components",
+			"components": {
+				"minecraft:custom_data": "{\"switch\":{}}"
+			}
 		}
 	]
 }

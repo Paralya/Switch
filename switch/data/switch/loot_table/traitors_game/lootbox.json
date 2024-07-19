@@ -8,10 +8,6 @@
 			},
 			"entries": [
 				{
-					"type": "minecraft:loot_table",
-					"name": "stardust:i/stardust_apple"
-				},
-				{
 					"type": "minecraft:item",
 					"weight": 2,
 					"name": "minecraft:golden_apple",

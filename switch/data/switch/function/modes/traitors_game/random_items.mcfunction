@@ -1,7 +1,7 @@
 
 function switch:translations/modes_traitors_game_random_items
 
-execute store result score #random switch.data run random value 0..47
+execute store result score #random switch.data run random value 0..46
 execute if score #random switch.data matches 0 run give @s iron_ore 32
 execute if score #random switch.data matches 1 run give @s gold_ore 32
 execute if score #random switch.data matches 2 run give @s diamond_ore 3
@@ -49,5 +49,4 @@ execute if score #random switch.data matches 43 run give @s enchanted_book[store
 execute if score #random switch.data matches 44 run give @s enchanted_book[stored_enchantments={mending:10}] 4
 execute if score #random switch.data matches 45 run give @s enchanted_book[stored_enchantments={vanishing_curse:10}] 4
 execute if score #random switch.data matches 46 run loot give @s loot switch:traitors_game/bomber_man
-execute if score #random switch.data matches 47 run loot give @s loot switch:traitors_game/banana_man
 

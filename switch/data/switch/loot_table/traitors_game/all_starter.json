@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "simplenergy:i/simplunium_pickaxe",
+					"value": "simplenergy:i/simplunium_pickaxe",
 					"functions": [
 						{
 							"function": "minecraft:set_enchantments",
