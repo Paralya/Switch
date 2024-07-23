@@ -28,7 +28,7 @@ execute if score @s switch.temp.zone_capture matches ..-60 if entity @s[tag=swit
 execute if score @s switch.temp.zone_capture matches ..-60 if entity @s[tag=switch.rush_the_point.center] if predicate switch:chance/0.2 run scoreboard players add #red_points switch.data 1
 
 # Being blue
-execute if score @s switch.temp.zone_capture matches 20..39 run particle dust{color:[0.75,0.75,1.0],scale:1.0}  ~ ~1 ~ 1 1 1 0 10
+execute if score @s switch.temp.zone_capture matches 20..39 run particle dust{color:[0.75,0.75,1.0],scale:1.0} ~ ~1 ~ 1 1 1 0 10
 execute if score @s switch.temp.zone_capture matches 40..59 run particle dust{color:[0.5,0.5,1.0],scale:1.0} ~ ~1 ~ 1 1 1 0 10
 execute if score @s switch.temp.zone_capture matches 60.. run particle dust{color:[0.0,0.0,1.0],scale:1.0} ~ ~1 ~ 1 1 1 0 10
 execute if score @s switch.temp.zone_capture matches 60.. if entity @s[tag=switch.rush_the_point.side] run fill ~-3 ~-1 ~-3 ~3 ~ ~3 blue_wool replace #minecraft:wool

@@ -1,6 +1,6 @@
 
 
-clear @s snow_block{to_clear:true}
+clear @s snow_block[custom_data~{to_clear:true}]
 
 #Name : Snowball renforcée x5 
 #Lore : Permet de faire des bridges dirrectement en vitre foncée !

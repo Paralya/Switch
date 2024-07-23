@@ -206,7 +206,7 @@ generate_clone_survival_folder("warden_forest", (9940, 0, 9940), (10060, 64, 100
 generate_clone_survival_folder("friends_pvpbox_ice", (10964, 0, 10968), (11029, 42, 11033), 100, override_tp_coords = (11000, 120, 11000))
 generate_clone_survival_folder("friends_pvpbox_hills", (11957, 0, 11965), (12047, 67, 12055), 100, override_tp_coords = (11999, 123, 11996))
 generate_clone_survival_folder("friends_pvpbox_end", (12955, 0, 12955), (13046, 33, 13045), 100, override_tp_coords = (13000, 117, 13000))
-generate_fill_survival_folder("rush_the_point_1", (13901, 0, 13901), (14099, 255, 14099), "air", "#switch:rush_the_point/placed", override_tp_coords = (14000, 101, 14000))
+generate_fill_survival_folder("rush_the_point_1", (13901, 0, 13901), (14099, 255, 14099), "air", "#switch:rush_the_point/can_break", override_tp_coords = (14000, 101, 14000))
 generate_clone_survival_folder("friends_cube_lobby", (16960, 0, 16960), (17040, 45, 17040), 100, override_tp_coords = (17000, 119, 17024))
 generate_clone_survival_folder("baby_park", (20862, 0, 20908), (21132, 95, 21099), 100, kart_racer = [(21003.5, 131.69, 21014.5), 90, 20], override_tp_coords = (21003, 132, 21011))
 generate_clone_survival_folder("bowser_castle", (21888, 0, 21888), (22114, 81, 22133), 100, kart_racer = [(21953.5, 130.69, 22056.5), 180, 20], override_tp_coords = (21956, 131, 22056))

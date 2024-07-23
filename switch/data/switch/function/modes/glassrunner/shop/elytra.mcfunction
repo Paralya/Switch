@@ -2,7 +2,7 @@
 
 
 
-clear @s elytra{to_clear:true}
+clear @s elytra[custom_data~{to_clear:true}]
 
 #Name : Flèches x5 
 #Lore : Vous ravitaille en flèches !

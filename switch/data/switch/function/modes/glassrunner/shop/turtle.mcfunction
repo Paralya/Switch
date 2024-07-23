@@ -2,7 +2,7 @@
 
 
 
-clear @s turtle_helmet{to_clear:true}
+clear @s turtle_helmet[custom_data~{to_clear:true}]
 
 #Name : Flèches x5 
 #Lore : Vous ravitaille en flèches !
