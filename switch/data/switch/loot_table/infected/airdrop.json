@@ -9,13 +9,13 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"weight": 1,
-					"name": "minecraft:golden_apple"
+					"name": "minecraft:golden_apple",
+					"weight": 1
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 3,
 					"name": "minecraft:potion",
+					"weight": 3,
 					"functions": [
 						{
 							"function": "minecraft:set_potion",
@@ -25,8 +25,8 @@
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 1,
 					"name": "minecraft:potion",
+					"weight": 1,
 					"functions": [
 						{
 							"function": "minecraft:set_potion",
@@ -44,29 +44,15 @@
 					"name": "minecraft:command_block",
 					"functions": [
 						{
-							"function": "minecraft:set_lore",
-							"entity": "this",
-							"lore": [
-								{
-									"text": "Infected",
-									"color": "dark_green",
-									"italic": true
-								}
-							],
-							"replace": true
-						},
-						{
-							"function": "minecraft:set_name",
-							"entity": "this",
-							"name": {
-								"text": "Element 115",
-								"color": "light_purple",
-								"italic": false
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "{\"text\":\"Element 115\",\"color\":\"light_purple\",\"italic\":false}",
+								"minecraft:lore": [
+									"{\"text\":\"Infected\",\"color\":\"dark_green\",\"italic\":true}"
+								],
+								"minecraft:custom_model_data": 2013001,
+								"minecraft:custom_data": "{switch:{115:true}}"
 							}
-						},
-						{
-							"function": "minecraft:set_nbt",
-							"tag": "{CustomModelData:2013001,switch:{115:true}}"
 						}
 					]
 				}
