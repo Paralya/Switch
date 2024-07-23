@@ -23,7 +23,7 @@ Ensuite, je vous conseille d'utiliser VSCode (Visual Studio Code) pour modifier 
 <br>
 
 ## 1. Comment ajouter un mini-jeu ?
-Les mini-jeux sont inclus dans le datapack `switch` et sont donc dans le dossier [`data/switch/functions/modes/`](switch/data/switch/functions/load.mcfunction).
+Les mini-jeux sont inclus dans le datapack `switch` et sont donc dans le dossier [`data/switch/function/modes/`](switch/data/switch/function/load.mcfunction).
 
 Un moteur est présent avec plusieurs spécificités afin de manipuler et donner la main aux mini-jeux lorsqu'ils sont lancés.
 <br>Il est aussi responsable des votes, du choix des maps aléatoirement, des Saphirs, des statistiques, et d'autres choses encore.
@@ -43,7 +43,7 @@ Une fois copié, vous devez renommer le dossier et le contenu des fichiers à l'
 
 <br>
 
-Ensuite, vous devez modifier le fichier [`data/switch/functions/load.mcfunction`](switch/data/switch/functions/load.mcfunction) pour ajouter votre mini-jeu dans la liste.
+Ensuite, vous devez modifier le fichier [`data/switch/function/load.mcfunction`](switch/data/switch/function/load.mcfunction) pour ajouter votre mini-jeu dans la liste.
 
 Il faut simplement ajouter une ligne, pour cela copiez en une déjà existante et respectez les points suivants :
 - L'`index` doit être unique et à la suite du précédent obligatoirement.
@@ -55,7 +55,7 @@ Il faut simplement ajouter une ligne, pour cela copiez en une déjà existante e
 ![Image 3](https://cdn.discordapp.com/attachments/826544632338448436/1118233017996017707/image.png)
 
 La prochaine étape est de configurer les maps que le moteur pourra choisir aléatoirement pour votre mini-jeu.
-<br>Pour cela, vous devez modifier le fichier [`data/switch/functions/choose_map_for/traitors_game`](switch/data/switch/functions/choose_map_for/traitors_game.mcfunction) où `traitors_game` est le nom de votre mini-jeu.
+<br>Pour cela, vous devez modifier le fichier [`data/switch/function/choose_map_for/traitors_game`](switch/data/switch/function/choose_map_for/traitors_game.mcfunction) où `traitors_game` est le nom de votre mini-jeu.
 <br>Cela veut dire que vous l'avez copié et renommé en fonction de votre mini-jeu.
 
 ![Image 4](https://cdn.discordapp.com/attachments/1117933012986900560/1118193951539732621/image_4.png)
@@ -65,11 +65,11 @@ Pour ce qui est des maps disponibles, vous ne devez **jamais** utiliser des maps
 <br>Il faut donc utiliser des maps "survival" pour ce genre de mini-jeu.
 
 La liste des maps est disponibles sous plusieurs formats :
-- [`data/switch/functions/maps/all_maps`](switch/data/switch/functions/maps/all_maps.mcfunction) : Toutes les maps et leur coordonnées sont disponibles dans le fichier avec leur nom générique (que vous pouvez utiliser dans `choose_map_for`).
-- [`data/switch/functions/maps/load_survival`](switch/data/switch/functions/maps/load_survival.mcfunction) Toutes les maps régénerables utilisables sont indiquées.
-- [`data/switch/functions/maps/load_adventure`](switch/data/switch/functions/maps/load_adventure.mcfunction) Toutes les maps non régénerables utilisables sont indiquées.
+- [`data/switch/function/maps/all_maps`](switch/data/switch/function/maps/all_maps.mcfunction) : Toutes les maps et leur coordonnées sont disponibles dans le fichier avec leur nom générique (que vous pouvez utiliser dans `choose_map_for`).
+- [`data/switch/function/maps/load_survival`](switch/data/switch/function/maps/load_survival.mcfunction) Toutes les maps régénerables utilisables sont indiquées.
+- [`data/switch/function/maps/load_adventure`](switch/data/switch/function/maps/load_adventure.mcfunction) Toutes les maps non régénerables utilisables sont indiquées.
 
-Si votre mode de jeu est en aventure et que vous souhaitez utiliser une map survival, vous devez indiquer dans votre `start.mcfunction` que la map ne doit pas être régénérée, exemple dans [`data/switch/functions/modes/pitch_creep/start`](switch/data/switch/functions/modes/pitch_creep/start.mcfunction) à la ligne 27 :
+Si votre mode de jeu est en aventure et que vous souhaitez utiliser une map survival, vous devez indiquer dans votre `start.mcfunction` que la map ne doit pas être régénérée, exemple dans [`data/switch/function/modes/pitch_creep/start`](switch/data/switch/function/modes/pitch_creep/start.mcfunction) à la ligne 27 :
 ```mcfunction
 # Indique que la map ne doit pas être régénérée
 scoreboard players set #is_adventure switch.data 1

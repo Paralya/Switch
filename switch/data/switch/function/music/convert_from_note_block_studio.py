@@ -48,7 +48,7 @@ with zipfile.ZipFile(FINAL_ZIP_FILE + ".git", "w") as zip_file:
 						file_content = "\n".join(playsounds)
 
 						# Write file
-						destination_file = file_to_copy.replace("functions/","functions/music/").replace("notes/","").split("/")
+						destination_file = file_to_copy.replace("functions/","function/music/").replace("notes/","").split("/")
 						destination_file[-1] = str(int(int(destination_file[-1].split(".")[0]) * (ALL_BPM / bpm))) + ".mcfunction"
 						destination_file = "/".join(destination_file)
 						zip_file.writestr(destination_file, file_content.encode("utf-8"))

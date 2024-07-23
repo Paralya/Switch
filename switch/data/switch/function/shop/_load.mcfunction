@@ -1,5 +1,5 @@
 
-## Don't forget to edit "switch/data/switch/functions/player/username_change/update_everything.mcfunction"
+## Don't forget to edit "switch/data/switch/function/player/username_change/update_everything.mcfunction"
 # Scoreboard objectives creation
 scoreboard objectives add switch.pitchout.boots dummy
 scoreboard objectives add switch.pitchout.ender_pearl dummy

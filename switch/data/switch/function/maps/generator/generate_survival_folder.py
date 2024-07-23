@@ -471,7 +471,7 @@ zip_path = "../../../../../../switch_survival_maps__pycache__.zip"
 zip_file = zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, 9)
 
 # Write every .mcfunction files in this folder
-internal_zip_path_base = "data/switch/functions/maps/"
+internal_zip_path_base = "data/switch/function/maps/"
 for root, dirs, files in os.walk("."):
 	for file in files:
 		if file.endswith(".mcfunction"):
