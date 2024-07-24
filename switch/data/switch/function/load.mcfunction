@@ -80,7 +80,7 @@ forceload add 0 0
 data modify storage switch:main ParalyaMusic set value '[{"text":"[ParalyaMusic]","color":"dark_purple"}]'
 data modify storage switch:main ParalyaStats set value '[{"text":"[ParalyaStats]","color":"yellow"}]'
 data modify storage switch:main ParalyaError set value '[{"text":"[ParalyaError]","color":"red"}]'
-data modify storage switch:main ParalyaWarning set value '[{"text":"[ParalyaWarning]","color":"gold"}]'
+data modify storage switch:main ParalyaWarning set value '[{"text":"[Paralya]","color":"gold"}]'
 data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 
