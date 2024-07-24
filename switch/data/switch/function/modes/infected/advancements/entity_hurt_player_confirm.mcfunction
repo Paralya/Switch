@@ -1,6 +1,6 @@
 
 # In every case, particles of blood
-particle block redstone_wire ~ ~1 ~ 0.35 0.5 0.35 0 100 force @a[distance=..100]
+particle block{block_state:"redstone_wire"} ~ ~1 ~ 0.35 0.5 0.35 0 100 force @a[distance=..100]
 
 ## If the attacker is a zombie,
 # Tag the attacker as a zombie
