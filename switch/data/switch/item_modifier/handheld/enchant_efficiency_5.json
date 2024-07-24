@@ -12,12 +12,14 @@
 				"predicate": {
 					"equipment": {
 						"mainhand": {
-							"enchantments": [
-								{
-									"enchantment": "minecraft:efficiency",
-									"levels": 5
-								}
-							]
+							"predicates": {
+								"minecraft:enchantments": [
+									{
+										"enchantments": "minecraft:efficiency",
+										"levels": 5
+									}
+								]
+							}
 						}
 					}
 				}
@@ -29,7 +31,7 @@
 			"predicate": {
 				"equipment": {
 					"mainhand": {
-						"tag": "switch:tools"
+						"items": "#switch:tools"
 					}
 				}
 			}

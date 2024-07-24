@@ -1,4 +1,0 @@
-{
-	"function": "minecraft:set_nbt",
-	"tag": "{CanDestroy:[\"#realistic_explosion:all\"],HideFlags:8}"
-}
