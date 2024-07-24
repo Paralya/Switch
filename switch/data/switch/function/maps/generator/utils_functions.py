@@ -167,6 +167,7 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 	# If there is no kart racer
 	if len(kart_racer) == 0:
 		f.write(f'data modify entity @s Pos set value {tp_coords}\n')
+		f.write(f'execute at @s in switch:game run tp @s ~ ~ ~\n')
 		f.write(f'execute at @s run tp @a[tag=!detached] ~ ~ ~\n')
 		f.write(f'execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/{name}/spread_players\n')
 		f.write(f'scoreboard players reset #do_spreadplayers switch.data\n')
@@ -194,7 +195,7 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 				coords = f"~-{k*2} ~ ~{j*2}"
 
 			# Write the line
-			f.write(f'execute if score #count switch.data matches {i} in overworld positioned {x} {y} {z} run tp @s {coords} {orientation} 0\n')
+			f.write(f'execute if score #count switch.data matches {i} in minecraft:overworld positioned {x} {y} {z} run tp @s {coords} {orientation} 0\n')
 
 		# Write the last lines
 		f.write("\n")
@@ -208,7 +209,7 @@ def createTeleportPlayersFile(name: str, tp_coords: str, kart_racer: list = []) 
 	# Add a file to teleport @s to the coordinates
 	with open(f"survival/{name}/tp_to_coords.mcfunction", "w", encoding = "utf-8") as f:
 		x, y, z = tp_coords.replace("[", "").replace("]", "").replace("d", "").split(", ")
-		f.write(f"tp @s {x} {y} {z}\n")
+		f.write(f"execute in switch:game run tp @s {x} {y} {z}\n")
 
 	# Return
 	return None
@@ -261,10 +262,12 @@ def writeFirstLinesOfRegenerate(name: str, base_condition: str, splitted_coordin
 	# Write the first lines
 	f.write("\n")
 	f.write(f"scoreboard players add #rg_{name} switch.data 1\n")
+	f.write(f"{base_condition} 1 run data modify storage switch:maps to_regenerate.{name} set value 2b\n")
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
-		f.write(f"{base_condition} 1 run forceload add {x1} {x2} {z1} {z2}\n")
+		f.write(f"{base_condition} 1 in minecraft:overworld run forceload add {x1} {x2} {z1} {z2}\n")
+		f.write(f"{base_condition} 1 in switch:game run forceload add {x1} {x2} {z1} {z2}\n")
 
 	# Add a blank line and return the TextIOWrapper
 	f.write("\n")
@@ -296,6 +299,7 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_y switch.data {y}\n")
 	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_mod switch.data 0\n")
 	f.write(f"{base_condition} ..{last_tick} summon marker run function switch:maps/survival/{name}/regeneration_on_marker\n")
+	f.write(f"{base_condition} ..{last_tick} run data remove storage switch:maps to_regenerate.{name}\n")
 	f.write("\n")
 
 	# Write the kill command
@@ -304,11 +308,12 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
-		f.write(f"{base_condition} {last_tick}.. run forceload remove {x1} {x2} {z1} {z2}\n")
+		f.write(f"{base_condition} {last_tick}.. in minecraft:overworld run forceload remove {x1} {x2} {z1} {z2}\n")
+		f.write(f"{base_condition} {last_tick}.. in switch:game run forceload remove {x1} {x2} {z1} {z2}\n")
 
 	# Write the tellraw command
 	f.write(f"{base_condition} {last_tick}.. run {tellraw}")
-	f.write(f"{base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\": \"La map `{name}` a fini sa regeneration !\"}}'\n")
+	f.write(f"{base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\":\"Map `{name}` just regenerated!\"}}'\n")
 	f.write(f"{base_condition} {last_tick}.. run function switch:engine/log_message/apply\n")
 
 	# Write the door regeneration command
@@ -359,15 +364,15 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	f.write("\n")
 
 	# Write the spreadplayers command
-	f.write(f"spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @a[tag=!detached]\n")
+	f.write(f"execute in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @a[tag=!detached]\n")
 
 	# Write the assurance commands
 	f.write("\n")
 	f.write("## Assurance commands\n")
 	for _ in range(NB_SPREAD_PLAYERS):
-		f.write(f"execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file
 	f.write("\n")
@@ -384,15 +389,15 @@ def createSpreadPlayersFile(name: str, start_pos: tuple, end_pos: tuple, paste_s
 	f.write("\n")
 
 	# Write the spreadplayers command
-	f.write(f"spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+	f.write(f"execute in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Write the assurance commands
 	f.write("\n")
 	f.write("## Assurance commands\n")
 	for _ in range(NB_SPREAD_PLAYERS):
-		f.write(f"execute at @s if entity @s[y={y},dy={dy}] run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute at @s if block ~ ~-2 ~ barrier run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
-		f.write(f"execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute at @s if entity @s[y={y},dy={dy}] in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
+		f.write(f"execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s\n")
 
 	# Close the file and return
 	f.write("\n")
@@ -421,7 +426,8 @@ def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_
 
 		# Write the forceload commands
 		for x1, x2, z1, z2 in splitted_coordinates:
-			f.write(f"{base_cond} 1 run forceload add {x1} {x2} {z1} {z2}\n")
+			f.write(f"{base_cond} 1 in minecraft:overworld run forceload add {x1} {x2} {z1} {z2}\n")
+			f.write(f"{base_cond} 1 in switch:game run forceload add {x1} {x2} {z1} {z2}\n")
 
 		# Init values
 		blocks_per_second = 5000
@@ -430,7 +436,7 @@ def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_
 		if (total_blocks_to_scan % blocks_per_second) > 0:
 			total_loops += 1
 		f.write(f"""
-{base_cond} 1 run data modify storage switch:maps to_regenerate.{name} set value 2b
+{base_cond} 1 run data modify storage switch:maps to_scan.{name} set value 2b
 {base_cond} 1 run scoreboard players set #start_x_{name} switch.data {start_pos[0] + 1}
 {base_cond} 1 run scoreboard players set #start_y_{name} switch.data {start_pos[1] + 1}
 {base_cond} 1 run scoreboard players set #start_z_{name} switch.data {start_pos[2] + 1}
@@ -451,10 +457,11 @@ def scanEveryDoorInMap(name: str, start_pos: tuple, end_pos: tuple, paste_start_
 
 		# Finish scan
 		for x1, x2, z1, z2 in splitted_coordinates:
-			f.write(f"\n{base_cond} {total_loops + 30} run forceload remove {x1} {x2} {z1} {z2}")
+			f.write(f"\n{base_cond} {total_loops + 30} in minecraft:overworld run forceload remove {x1} {x2} {z1} {z2}")
+			f.write(f"\n{base_cond} {total_loops + 30} in switch:game run forceload remove {x1} {x2} {z1} {z2}")
 		f.write(f"""
-{base_cond} {total_loops + 30} run tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" La map '","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"' vient de finir de scanner ses portes en ","color":"yellow"}},{{"text":"{(total_loops + 30) // 20}","color":"gold"}},{{"text":"s","color":"yellow"}}]
-{base_cond} {total_loops + 30} run data remove storage switch:maps to_regenerate.{name}
+{base_cond} {total_loops + 30} run tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Doors of map '","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"' just been scanned in ","color":"yellow"}},{{"text":"{(total_loops + 30) // 20}","color":"gold"}},{{"text":"s","color":"yellow"}}]
+{base_cond} {total_loops + 30} run data remove storage switch:maps to_scan.{name}
 {base_cond} {total_loops + 30} run scoreboard players reset #scan_{name} switch.data
 
 {base_cond} 1.. run schedule function switch:maps/survival/{name}/scan_doors 1t
