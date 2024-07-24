@@ -2,7 +2,7 @@
 
 
 
-clear @s ghast_tear{to_clear:true}
+clear @s ghast_tear[custom_data~{to_clear:true}]
 
 #Name : Flèches x5 
 #Lore : Vous ravitaille en flèches !

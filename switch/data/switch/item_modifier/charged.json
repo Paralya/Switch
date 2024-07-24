@@ -1,7 +1,39 @@
 [
     {
-      "function": "minecraft:set_nbt",
-      "tag": "{Charged:true,ChargedProjectiles:[{id:\"minecraft:arrow\",count:1,tag:{glassrunner:{destroying_arrow:true}}},{id:\"minecraft:arrow\",count:1,tag:{glassrunner:{destroying_arrow:true}}},{id:\"minecraft:arrow\",count:1,tag:{glassrunner:{destroying_arrow:true}}}]}"
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:charged_projectiles": [
+                {
+                    "id": "minecraft:arrow",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "glassrunner": {
+                                "destroying_arrow": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "minecraft:arrow",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "glassrunner": {
+                                "destroying_arrow": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "minecraft:arrow",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "glassrunner": {
+                                "destroying_arrow": 1
+                            }
+                        }
+                    }
+                }
+            ]
+        }
     }
-  ]
-  
+]
