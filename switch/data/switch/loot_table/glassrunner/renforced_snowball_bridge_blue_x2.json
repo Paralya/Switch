@@ -5,26 +5,12 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:snowball",
+					"type": "minecraft:loot_table",
+					"value": "switch:glassrunner/renforced_snowball_bridge_blue",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": 2
-						},
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "switch:glassrunner"
-							},
-							"ops": [
-								{
-									"source": "ItemsNBT.renforced_snowball_bridge_blue.components.\"minecraft:custom_data\"",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
 						}
 					]
 				}
