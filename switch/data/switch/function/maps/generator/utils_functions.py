@@ -299,12 +299,12 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_y switch.data {y}\n")
 	f.write(f"{base_condition} 1 run scoreboard players set #rg_{name}_mod switch.data 0\n")
 	f.write(f"{base_condition} ..{last_tick} summon marker run function switch:maps/survival/{name}/regeneration_on_marker\n")
-	f.write(f"{base_condition} ..{last_tick} run data remove storage switch:maps to_regenerate.{name}\n")
 	f.write("\n")
 
 	# Write the kill command
 	last_tick += 1
 	f.write(f"{base_condition} {last_tick}.. run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
+	f.write(f"{base_condition} {last_tick}.. run data remove storage switch:maps to_regenerate.{name}\n")
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
