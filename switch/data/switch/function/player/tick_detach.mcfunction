@@ -3,10 +3,11 @@ gamemode adventure @s[gamemode=!adventure,tag=!can_creative]
 team join switch.detached @s[team=!switch.tutorial]
 tp @s[team=switch.tutorial] -500 69.69 -500 0 0
 
-effect give @s[gamemode=survival] mining_fatigue 1 255 true
-effect give @s[gamemode=!creative,gamemode=!spectator] resistance 1 255 true
-effect give @s[gamemode=!creative,gamemode=!spectator] weakness 1 255 true
+effect give @s[gamemode=survival] mining_fatigue 1 127 true
+effect give @s[gamemode=!creative,gamemode=!spectator] resistance 1 127 true
+effect give @s[gamemode=!creative,gamemode=!spectator] weakness 1 127 true
 execute if entity @s[gamemode=!creative,gamemode=!spectator] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
+attribute @s[gamemode=!creative,gamemode=!spectator] generic.safe_fall_distance base set 1024
 
 ## Teleport inventory
 # Get number of blocks
