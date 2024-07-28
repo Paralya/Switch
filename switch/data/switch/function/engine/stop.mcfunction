@@ -36,6 +36,27 @@ gamerule doImmediateRespawn true
 gamerule announceAdvancements true
 gamerule doTraderSpawning false
 
+execute in switch:game run gamerule maxCommandChainLength 2147483647
+execute in switch:game run gamerule sendCommandFeedback true
+execute in switch:game run gamerule mobGriefing false
+execute in switch:game run gamerule showDeathMessages true
+execute in switch:game run gamerule naturalRegeneration true
+execute in switch:game run gamerule keepInventory false
+execute in switch:game run gamerule fallDamage true
+execute in switch:game run gamerule fireDamage true
+execute in switch:game run gamerule drowningDamage true
+execute in switch:game run gamerule freezeDamage true
+execute in switch:game run gamerule doDaylightCycle false
+execute in switch:game run gamerule doWeatherCycle false
+execute in switch:game run gamerule doMobSpawning false
+execute in switch:game run gamerule doFireTick false
+execute in switch:game run gamerule doTileDrops true
+execute in switch:game run gamerule doEntityDrops true
+execute in switch:game run gamerule doMobLoot true
+execute in switch:game run gamerule doImmediateRespawn true
+execute in switch:game run gamerule announceAdvancements true
+execute in switch:game run gamerule doTraderSpawning false
+
 function switch:engine/signals/stop
 function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
 

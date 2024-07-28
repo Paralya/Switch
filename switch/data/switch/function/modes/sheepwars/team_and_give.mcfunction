@@ -21,7 +21,6 @@ execute if data storage switch:main {map:"sheepwars_colored_sheeps"} if entity @
 
 # Starter kit
 clear @s
-item replace entity @s weapon.offhand with warped_fungus_on_a_stick[unbreakable={},custom_name='{"text":"Détection de click","color":"dark_purple","italic":false}',lore=['{"text":"Ne pas touger","color":"light_purple","italic":false}'],custom_model_data=2010003]
 execute if entity @s[team=switch.temp.red] run item replace entity @s armor.chest with leather_chestplate[unbreakable={},dyed_color=16711680]
 execute if entity @s[team=switch.temp.red] run item replace entity @s armor.legs with leather_leggings[unbreakable={},dyed_color=16711680]
 execute if entity @s[team=switch.temp.red] run item replace entity @s armor.feet with leather_boots[unbreakable={},dyed_color=16711680]
