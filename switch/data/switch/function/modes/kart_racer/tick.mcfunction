@@ -18,15 +18,15 @@ execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_ka
 execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!shopping_kart:have_player_passenger,sort=nearest,limit=1]
 
 # Remove items and death prevention
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/kart_racer/joined
+function switch:utils/on_death_run_function {function:"switch:modes/kart_racer/joined"}
 kill @e[type=item]
 
 # Maps tick for special events
-execute if data storage switch:main {map:"plains_routine"} run function switch:modes/kart_racer/map_tick/plains_routine
-execute if data storage switch:main {map:"airship_fortress"} run function switch:modes/kart_racer/map_tick/airship_fortress
-execute if data storage switch:main {map:"dk_mountain"} run function switch:modes/kart_racer/map_tick/dk_mountain
-execute if data storage switch:main {map:"clock_circuit"} run function switch:modes/kart_racer/map_tick/clock_circuit
-execute if data storage switch:main {map:"trackmania_stadium_2"} run function switch:modes/kart_racer/map_tick/trackmania_stadium_2
+execute if data storage switch:main {map:"plains_routine"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/plains_routine
+execute if data storage switch:main {map:"airship_fortress"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/airship_fortress
+execute if data storage switch:main {map:"dk_mountain"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/dk_mountain
+execute if data storage switch:main {map:"clock_circuit"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/clock_circuit
+execute if data storage switch:main {map:"trackmania_stadium_2"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/trackmania_stadium_2
 
 ## Fin de la partie
 execute if score #detect_end switch.data matches 1.. run function switch:modes/kart_racer/process_end

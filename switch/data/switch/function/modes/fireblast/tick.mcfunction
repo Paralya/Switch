@@ -3,7 +3,7 @@ scoreboard players add #fireblast_ticks switch.data 1
 
 # Death system
 execute as @a[tag=!detached,gamemode=adventure] at @s if entity @s[y=0,dy=105] run function switch:modes/fireblast/death
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/fireblast/death
+function switch:utils/on_death_run_function {function:"switch:modes/fireblast/death"}
 
 # Fireball
 execute as @a[tag=!detached,gamemode=adventure,scores={switch.right_click=1..},nbt={SelectedItem:{components:{}}}] if score @s switch.temp.cooldown matches 1.. at @s run function switch:modes/fireblast/fireball/no_cooldown

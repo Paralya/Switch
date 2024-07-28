@@ -6,12 +6,12 @@ scoreboard players set @a[scores={switch.death=1..}] switch.death 0
 ## Timer and tick related
 scoreboard players add #tick switch.data 1
 execute as @a[sort=random] at @s run function switch:player/tick
-execute if score #tick switch.data matches 20.. in overworld run function switch:second
+execute if score #tick switch.data matches 20.. in switch:game run function switch:second
 
 # Engine : games ticks, start, stop
-execute if score #engine_state switch.data matches 3 in overworld run function switch:engine/signals/tick
-execute if score #engine_state switch.data matches 0 if entity @a[tag=!detached] in overworld run function switch:engine/start
-execute unless score #engine_state switch.data matches 0 unless entity @a[tag=!detached] in overworld run function switch:engine/stop
+execute if score #engine_state switch.data matches 3 in switch:game run function switch:engine/signals/tick
+execute if score #engine_state switch.data matches 0 if entity @a[tag=!detached] run function switch:engine/start
+execute unless score #engine_state switch.data matches 0 unless entity @a[tag=!detached] run function switch:engine/stop
 
 # Cut Clean support
 execute if score #cut_clean switch.data matches 1 as @e[type=item,tag=!switch.cut_clean,nbt={Age:2s}] run function switch:cut_clean

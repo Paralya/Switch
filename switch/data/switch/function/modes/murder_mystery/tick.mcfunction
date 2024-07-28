@@ -3,7 +3,7 @@
 scoreboard players add #murder_mystery_ticks switch.data 1
 
 # Détection des morts
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/murder_mystery/death
+function switch:utils/on_death_run_function {function:"switch:modes/murder_mystery/death"}
 
 # Give a bow with an arrow for players that have at least 10 golds
 execute as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{id:"minecraft:gold_ingot"}]}] run function switch:modes/murder_mystery/tick_ingot

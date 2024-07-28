@@ -21,7 +21,7 @@ execute as @a[tag=!detached,scores={switch.temp.choosen_class=0}] run function s
 
 # Death System
 execute as @e[tag=!detached,type=player,tag=switch.to_tp] run function switch:modes/rush_the_point/teleport_to_death
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/rush_the_point/death/player
+function switch:utils/on_death_run_function {function:"switch:modes/rush_the_point/death/player"}
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/rush_the_point/death/detect
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function switch:modes/rush_the_point/death/for_global
 

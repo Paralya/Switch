@@ -61,6 +61,7 @@ team modify switch.tutorial color gold
 gamerule maxCommandChainLength 2147483647
 scoreboard players set Switch load.status 1000
 forceload add 0 0
+execute in switch:game run forceload add 0 0
 
 #define storage switch:temp
 #define storage switch:main

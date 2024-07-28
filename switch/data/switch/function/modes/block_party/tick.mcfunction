@@ -1,6 +1,6 @@
 
 ## Death system
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/block_party/death
+function switch:utils/on_death_run_function {function:"switch:modes/block_party/death"}
 execute as @a[tag=!detached,gamemode=!spectator,sort=random] at @s if block ~ ~ ~ moving_piston run function switch:modes/block_party/death
 execute as @e[type=!player] at @s if block ~ ~ ~ moving_piston run tp @s 0 -10000 0
 kill @e[type=item]
@@ -25,7 +25,7 @@ execute if score #block_party_ticks switch.data matches 0 run function switch:mo
 execute if score #block_party_ticks switch.data matches 0.. run function switch:modes/block_party/core/timer_per_round
 execute if score #block_party_ticks switch.data matches 500.. as @e[tag=switch.paint_cow] at @s run function switch:modes/block_party/core/paint_cow
 execute if score #block_party_ticks switch.data matches 1000.. run stopsound @a[tag=!detached] record
-execute if score #block_party_ticks switch.data matches 1000.. unless score #process_end switch.data matches 1.. run function switch:modes/block_party/core/remove_blocks
+execute if score #block_party_ticks switch.data matches 1000.. unless score #process_end switch.data matches 1.. in minecraft:overworld run function switch:modes/block_party/core/remove_blocks
 function switch:modes/block_party/xp_bar
 
 

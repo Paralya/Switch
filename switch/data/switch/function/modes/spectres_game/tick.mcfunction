@@ -4,7 +4,7 @@ scoreboard players add #spectres_game_ticks switch.data 1
 execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/spectres_game/teleport_to_death
 kill @e[type=item,nbt={Age:200s}]
 
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/spectres_game/death/player
+function switch:utils/on_death_run_function {function:"switch:modes/spectres_game/death/player"}
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/spectres_game/death/detect
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/for_global
 

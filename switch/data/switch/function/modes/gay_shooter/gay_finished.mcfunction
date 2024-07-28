@@ -1,5 +1,5 @@
 
-execute if data storage switch:main {map:"gay_shooter"} run tp @s 114028 125 114010
+execute if data storage switch:main {map:"gay_shooter"} in minecraft:overworld run tp @s 114028 125 114010
 
 clear @s
 # loot give @s loot stardust:i/ultimate_sniper

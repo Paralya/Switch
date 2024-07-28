@@ -6,7 +6,7 @@ execute as @e[type=item,tag=!switch.checked] run function switch:modes/one_shot/
 
 # Custom Saturation & Mort
 execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/one_shot/death
+function switch:utils/on_death_run_function {function:"switch:modes/one_shot/death"}
 
 # Cooldown invincibilité
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1

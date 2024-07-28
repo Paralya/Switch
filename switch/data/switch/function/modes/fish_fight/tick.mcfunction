@@ -11,7 +11,7 @@ execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect giv
 execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival,scores={switch.alive=1..,switch.temp.cooldown=1..}] at @s if entity @s[y=20,dy=105] run function switch:modes/fish_fight/tp_airdox
 
 execute as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/fish_fight/death
+function switch:utils/on_death_run_function {function:"switch:modes/fish_fight/death"}
 # axolot si map airdox
 execute if data storage switch:main {map:"airdox_fish_fight"} as @e[type=axolotl] at @s if entity @s[y=20,dy=105] run function switch:modes/fish_fight/tp_airdox
 execute if data storage switch:main {map:"airdox_fish_fight"} as @e[type=ender_pearl] at @s if entity @s[y=20,dy=105] run kill @s

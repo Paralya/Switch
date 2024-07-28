@@ -3,7 +3,7 @@ scoreboard players add #coin_chaser_ticks switch.data 1
 
 ## Global tick
 # Dead players
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/coin_chaser/respawn
+function switch:utils/on_death_run_function {function:"switch:modes/coin_chaser/respawn"}
 
 # Teleport stucked players
 execute as @a[tag=!detached,scores={switch.right_click=1..}] at @s run spreadplayers ~ ~ 0 1 false @s

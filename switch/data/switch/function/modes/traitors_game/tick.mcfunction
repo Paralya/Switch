@@ -11,7 +11,7 @@ execute as @a[tag=!detached,tag=switch.ninja_death] run function switch:modes/tr
 execute at @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1}] run particle glow ~ ~ ~ 0.2 0 0.2 0 5
 execute at @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6}] run particle dust{color:[1.0,0.0,0.0],scale:1.0} ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[scores={switch.temp.role=5..6}]
 
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/traitors_game/death/player
+function switch:utils/on_death_run_function {function:"switch:modes/traitors_game/death/player"}
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/traitors_game/death/detect
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/process
 

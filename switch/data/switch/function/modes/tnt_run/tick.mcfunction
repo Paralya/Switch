@@ -7,7 +7,7 @@ execute if data storage switch:main {map:"arti_tnt_run_tower"} as @a[tag=!detach
 execute if data storage switch:main {map:"elza_dual_biomes"} as @a[tag=!detached,gamemode=!spectator,sort=random] at @s if entity @s[y=0,dy=105] run function switch:modes/tnt_run/death
 
 # Unknown death
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/tnt_run/death
+function switch:utils/on_death_run_function {function:"switch:modes/tnt_run/death"}
 
 # Summon a marker if players are on the ground
 execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,gamemode=adventure] at @s run function switch:modes/tnt_run/is_on_ground

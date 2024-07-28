@@ -13,7 +13,7 @@ execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={Inventory:[{id:
 execute as @e[type=marker,tag=switch.mine] at @s run function switch:modes/memory_mine/mine_tick
 
 # Unknown death
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/memory_mine/death
+function switch:utils/on_death_run_function {function:"switch:modes/memory_mine/death"}
 
 ## End game
 scoreboard players set #remaining_players switch.data 0

@@ -1,7 +1,7 @@
 
 ## Death system
 scoreboard players add #thunder_spear_ticks switch.data 1
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/thunder_spear/give_and_teleport
+function switch:utils/on_death_run_function {function:"switch:modes/thunder_spear/give_and_teleport"}
 
 # Summon tnt to arrows on ground and remove them & Modify arrow damage & Kill all items
 execute as @e[type=arrow,nbt={inBlockState:{}}] at @s run function switch:modes/thunder_spear/explode_arrow

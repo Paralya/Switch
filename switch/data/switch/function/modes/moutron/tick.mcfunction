@@ -19,7 +19,7 @@ function switch:translations/modes_moutron_tick
 execute unless score #test_mode switch.data matches 1 if score #temp switch.data matches 15.. run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/38
 
 # Unknown death
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/moutron/death
+function switch:utils/on_death_run_function {function:"switch:modes/moutron/death"}
 
 ## End game
 scoreboard players set #remaining_players switch.data 0

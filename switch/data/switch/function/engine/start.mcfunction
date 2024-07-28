@@ -8,5 +8,5 @@ execute if score #nb_attached switch.data >= #min_required switch.data run funct
 # Else,
 execute unless score #nb_attached switch.data >= #min_required switch.data run gamerule sendCommandFeedback true
 execute unless score #nb_attached switch.data >= #min_required switch.data run gamemode spectator @a[tag=!detached]
-execute unless score #nb_attached switch.data >= #min_required switch.data in overworld as @a[tag=!detached] unless entity @s[x=0,y=69,z=0,distance=..200] run tp @s 0 69 0
+execute unless score #nb_attached switch.data >= #min_required switch.data in minecraft:overworld as @a[tag=!detached] unless entity @s[x=0,y=69,z=0,distance=..200] run tp @s 0 69 0
 

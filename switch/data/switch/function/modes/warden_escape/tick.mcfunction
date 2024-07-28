@@ -2,7 +2,7 @@
 scoreboard players add #warden_escape_ticks switch.data 1
 
 # Manage death and items
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/warden_escape/death
+function switch:utils/on_death_run_function {function:"switch:modes/warden_escape/death"}
 kill @e[type=item]
 
 # Player tick to change Warden Sus

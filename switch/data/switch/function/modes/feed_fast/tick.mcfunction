@@ -2,7 +2,7 @@
 scoreboard players add #feed_fast_ticks switch.data 1
 
 # Pour chaque joueur,
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10] run function switch:modes/feed_fast/death
+function switch:utils/on_death_run_function {function:"switch:modes/feed_fast/death"}
 execute as @a[tag=!detached,gamemode=!spectator] run function switch:modes/feed_fast/tick_player
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
