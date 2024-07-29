@@ -35,20 +35,20 @@ execute if score #inventory switch.data matches -1 run clear @s
 
 # Teleport to respawn point
 scoreboard players add @s switch.lobby_respawn 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=0}] run tp @s 0 69.69 0 0 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=1}] run tp @s 0 70.1 -10 90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=2}] run tp @s 0 70.1 -10 -90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=3}] run tp @s 0 75.51 -24 180 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=4}] run tp @s 9 74.51 23 -90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=5}] run tp @s -14 73.51 9 0 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=6}] run tp @s -35 73.1 -9 180 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=7}] run tp @s -9 73.1 35 90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=8}] run tp @s 9 73.1 47 -90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=9}] run tp @s -47 76.1 10 0 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=10}] run tp @s -84 70.1 0 90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=11}] run tp @s 51 74.6 -9 180 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=12}] run tp @s 9 74.6 111 -90 0
-execute if entity @s[y=-64,dy=119,scores={switch.lobby_respawn=13}] run tp @s -12 74.1 91 90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=0}] run tp @s 0 69.69 0 0 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=1}] run tp @s 0 70.1 -10 90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=2}] run tp @s 0 70.1 -10 -90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=3}] run tp @s 0 75.51 -24 180 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=4}] run tp @s 9 74.51 23 -90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=5}] run tp @s -14 73.51 9 0 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=6}] run tp @s -35 73.1 -9 180 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=7}] run tp @s -9 73.1 35 90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=8}] run tp @s 9 73.1 47 -90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=9}] run tp @s -47 76.1 10 0 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=10}] run tp @s -84 70.1 0 90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=11}] run tp @s 51 74.6 -9 180 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=12}] run tp @s 9 74.6 111 -90 0
+execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=13}] run tp @s -12 74.1 91 90 0
 
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.3 with dripstone_block[custom_name='{"text":"Dripstone Jump","color":"gold","italic":false}',lore=['{"text":"by AirDox","color":"gray","italic":false}'],custom_data={switch:{jump:true,jump_dripstone:true}}]

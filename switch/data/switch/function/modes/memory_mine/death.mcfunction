@@ -11,6 +11,6 @@ scoreboard players reset @s switch.temp.cooldown
 
 gamemode spectator @s
 effect clear @s
-execute if entity @s at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
+execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
 clear @s
 
