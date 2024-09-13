@@ -20,4 +20,5 @@ item replace entity @s hotbar.8 with bread 21
 attribute @s generic.movement_speed base set 0.10
 attribute @s generic.attack_speed base set 2048
 attribute @s generic.max_health base set 20
+attribute @s generic.jump_strength base set 0.42
 

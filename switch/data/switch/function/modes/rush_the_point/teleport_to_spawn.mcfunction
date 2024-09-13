@@ -8,8 +8,8 @@ execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=s
 ## Items to choose a class
 tag @s remove switch.to_tp
 clear @s
+attribute @s generic.jump_strength base set 0
 effect give @s resistance infinite 250 true
-effect give @s jump_boost infinite 250 true
 effect give @s slowness infinite 250 true
 effect give @s blindness infinite 250 true
 effect give @s night_vision infinite 250 true

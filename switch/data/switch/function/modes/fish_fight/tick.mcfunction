@@ -36,7 +36,8 @@ execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust{color:[0.
 
 # Cooldown invincibilité
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
-item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
+execute as @a[scores={switch.temp.cooldown=1..80}] run attribute @s generic.jump_strength base set 0.42
+item replace entity @a[scores={switch.temp.cooldown=1}] armor.chest with air
 
 # Placed blocks disappear
 function switch:modes/fish_fight/block_disappear/global_tick

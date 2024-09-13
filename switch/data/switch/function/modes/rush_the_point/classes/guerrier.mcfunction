@@ -2,6 +2,7 @@
 clear @s
 effect clear @s
 attribute @s generic.attack_speed base set 2048
+attribute @s generic.jump_strength base set 0.42
 
 item replace entity @s[team=switch.rush_the_point.blue] armor.head with leather_helmet[unbreakable={show_in_tooltip:false},dyed_color=3827848,enchantments={"protection":4}]
 item replace entity @s[team=switch.rush_the_point.blue] armor.chest with leather_chestplate[unbreakable={show_in_tooltip:false},dyed_color=546752,enchantments={"protection":4}]
