@@ -12,13 +12,13 @@ data modify storage switch:main map set from storage switch:main copy[0]
 data modify storage switch:main previous_map set from storage switch:main map
 
 # Maps that regenerate (gamemode survival, may be adventure):
-execute in minecraft:overworld run function switch:maps/load_survival
+execute in switch:game run function switch:maps/load_survival
 
 # Maps that doesn't (always gamemode adventure):
 execute in minecraft:overworld run function switch:maps/load_adventure
 
 # Log message of which map is loaded
-data modify storage switch:main MessageToLog set value '[{"text": "Map selectionnee : `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"` !"}]'
+data modify storage switch:main MessageToLog set value '[{"text":"Selected map: `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"`!"}]'
 function switch:engine/log_message/apply
 
 # Add map to history

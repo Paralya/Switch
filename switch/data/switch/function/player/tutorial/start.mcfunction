@@ -4,7 +4,7 @@ tag @s add detached
 team join switch.tutorial @s
 scoreboard players set @s switch.tutorial 0
 execute unless score @s switch.stats.wins matches 1.. run scoreboard players set @s switch.stats.wins 0
-execute unless score @s switch.stats.money matches 100.. run scoreboard players set @s switch.stats.money 100
+execute unless score @s switch.money matches 100.. run scoreboard players set @s switch.money 100
 function switch:player/trigger/reset
 
 # Teleport & Get username

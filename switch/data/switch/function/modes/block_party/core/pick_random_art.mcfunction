@@ -10,7 +10,7 @@ execute store result score #bp_selected_art switch.data run data get storage swi
 data remove storage switch:maps block_party[0]
 
 # Teleport current marker to the selected pixel art
-execute in minecraft:overworld run tp @s 110008 85 110008
+tp @s 110008 85 110008
 scoreboard players set #y_pos switch.data 85
 scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos switch.data
