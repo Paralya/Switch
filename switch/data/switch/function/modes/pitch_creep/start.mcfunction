@@ -4,12 +4,11 @@ scoreboard players set @a[tag=!detached] switch.alive 1
 
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
-effect give @a[tag=!detached] weakness infinite 2 true
 time set 18000
 
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in minecraft:overworld run gamerule showDeathMessages false
+execute in minecraft:overworld run gamerule naturalRegeneration false
+execute in minecraft:overworld run gamerule keepInventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
