@@ -168,7 +168,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 
 	# Write kill item entities command & the scoreboard commands
 	marker_file.write("\n")
-	marker_file.write(f"kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
+	marker_file.write(f"execute in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 	marker_file.write(f"scoreboard players add #rg_{name}_y switch.data 1\n")
 
 	# Write the kill command

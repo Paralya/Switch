@@ -303,7 +303,7 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 
 	# Write the kill command
 	last_tick += 1
-	f.write(f"{base_condition} {last_tick}.. run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
+	f.write(f"{base_condition} {last_tick}.. in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 	f.write(f"{base_condition} {last_tick}.. run data remove storage switch:maps to_regenerate.{name}\n")
 
 	# Write the forceload commands
@@ -317,7 +317,7 @@ def writeLastLinesOfRegenerate(f: TextIOWrapper, name: str, base_condition: str,
 	f.write(f"{base_condition} {last_tick}.. run function switch:engine/log_message/apply\n")
 
 	# Write the door regeneration command
-	f.write(f"{base_condition} {last_tick}.. run function switch:maps/regenerate_doors_macro {{name:\"{name}\"}}\n")
+	f.write(f"{base_condition} {last_tick}.. in switch:game run function switch:maps/regenerate_doors_macro {{name:\"{name}\"}}\n")
 
 	# Write the reset command
 	f.write(f"{base_condition} {last_tick}.. run scoreboard players reset #rg_{name} switch.data\n")
