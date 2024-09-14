@@ -82,8 +82,8 @@ def generate_clone_survival_folder(name: str, start_pos: tuple, end_pos: tuple, 
 
 	# Write kill item entities command & the scoreboard commands
 	marker_file.write("\n")
-	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 	marker_file.write(f"scoreboard players add #rg_{name}_mod switch.data 1\n")
+	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]\n")
 	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players add #rg_{name}_y switch.data 1\n")
 	marker_file.write(f"execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players set #rg_{name}_mod switch.data 0\n")
 
