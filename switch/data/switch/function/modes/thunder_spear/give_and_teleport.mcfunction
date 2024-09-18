@@ -10,10 +10,7 @@ gamemode survival @s
 scoreboard players add @s switch.temp.kills 0
 
 # Give items
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot e.anchor:item/monemtum_hookshot
-item replace entity @s weapon.offhand from block 0 0 0 container.0
-setblock 0 0 0 air
+loot replace entity @s weapon.offhand loot grappling_hook:v1.1.1/items/advanced_grappling_hook
 give @s crossbow[charged_projectiles=[{id:"arrow"}]]
 
 # Teleport player
