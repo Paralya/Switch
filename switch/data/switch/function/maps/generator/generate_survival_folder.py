@@ -164,7 +164,7 @@ def generate_fill_survival_folder(name: str, start_pos: tuple, end_pos: tuple, b
 		dx = (k[2] - k[0]) // 2
 		dz = (k[3] - k[1]) // 2
 		marker_file.write(f"execute at @s in switch:game run particle cloud {k[0] + dx} ~1 {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force\n")
-		marker_file.write(f"execute at @s run fill {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
+		marker_file.write(f"execute at @s in switch:game run fill {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {block_that_replace} replace {block_tag_to_replace}\n")
 
 	# Write kill item entities command & the scoreboard commands
 	marker_file.write("\n")
