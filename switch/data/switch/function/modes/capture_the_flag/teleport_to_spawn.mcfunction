@@ -30,7 +30,7 @@ gamemode survival @s
 scoreboard players set @s switch.temp.choosen_class 0
 item replace entity @s hotbar.0 with diamond_chestplate[custom_name='{"text":"Tank","color":"red","italic":false}',custom_data={switch:{class_item:1b,ctf_class:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
 item replace entity @s hotbar.2 with iron_sword[custom_name='{"text":"Warrior","color":"red","italic":false}',custom_data={switch:{class_item:2b,ctf_class:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
-item replace entity @s hotbar.4 with crossbow[custom_name='{"text":"Archer","color":"red","italic":false}',custom_data={switch:{class_item:3b,ctf_class:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
+item replace entity @s hotbar.4 with arrow[custom_name='{"text":"Archer","color":"red","italic":false}',custom_data={switch:{class_item:3b,ctf_class:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
 item replace entity @s hotbar.6 with tnt[custom_name='{"text":"Demolisher","color":"red","italic":false}',custom_data={switch:{class_item:4b,ctf_class:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
 item replace entity @s hotbar.8 with glass_bottle[custom_name='{"text":"Chemister","color":"red","italic":false}',custom_data={switch:{class_item:5b,ctf_class:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
 
