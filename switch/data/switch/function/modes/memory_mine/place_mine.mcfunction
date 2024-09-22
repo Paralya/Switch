@@ -1,4 +1,7 @@
 
+# Revoke right click advancement
+advancement revoke @s only switch:memory_mine/right_click
+
 clear @s tnt 1
 execute positioned over world_surface run summon marker ~ ~ ~ {Tags:["switch.mine","switch.temp"]}
 scoreboard players set @s switch.temp.cooldown 100
