@@ -87,7 +87,7 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 52	Stoupy et Lawtank	hard	The Volcano Core	Terminer le secret de la map Lost Graveyard Remastered en Infected	Complete the Lost Graveyard Remastered map secret in Infected
 53	Stoupy	hard	Storm Area	Terminer le secret de la map Area51 en Infected	Complete the Area51 map secret in Infected
 54	Stoupy	hard	Secret Slayer	Terminer les secrets de toutes les maps dans le mode de jeu Infected	Complete all map secrets in Infected game mode
-55	Thitanas	medium	Stomp	Terminer une partie de Rush The Point en atteignant 5000 points	Complete a game of Rush The Point by reaching 5000 points
+55	Thitanas	medium	Stomp	Terminer une partie de Rush The Point en atteignant 7500 points	Complete a game of Rush The Point by reaching 7500 points
 56	Stoupy	easy	Jugeote	Noter les étoiles de 20 mini-jeux	Rate 20 different mini-games
 57	Goldvision	hard	Survivor	Gagner une partie d'Infecté sans prendre aucun coup en tant qu'humain	Win a game of Infected without taking any hits as a human
 58	Stoupy	medium	Harceleur	Eliminer 3 fois la même personne en Pitchout	Eliminate the same person 3 times in Pitchout

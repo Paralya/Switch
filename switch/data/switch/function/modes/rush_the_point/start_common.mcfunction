@@ -28,7 +28,7 @@ team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
 team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
 team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
 team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
-team modify switch.temp.sidebar.5 suffix [{"text":"Objectif : "},{"text":"5000","color":"yellow"},{"text":" points"}]
+team modify switch.temp.sidebar.5 suffix [{"text":"Objectif : "},{"text":"7500","color":"yellow"},{"text":" points"}]
 team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
 team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
