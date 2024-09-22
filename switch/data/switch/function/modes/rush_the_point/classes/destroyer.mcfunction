@@ -17,7 +17,7 @@ item replace entity @s[team=switch.rush_the_point.red] armor.feet with leather_b
 item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
 item replace entity @s hotbar.0 with warped_fungus_on_a_stick[unbreakable={show_in_tooltip:false},item_name='{"text":"Fireball Stick","color":"gold","italic":false}',custom_model_data=0,custom_data={switch:{fireball_stick:true}}]
 item replace entity @s hotbar.1 with iron_sword[unbreakable={show_in_tooltip:false},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={show_in_tooltip:false},enchantments={"efficiency":5},can_break={blocks:"#switch:rush_the_point/can_break"}]
+item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={show_in_tooltip:false},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.3 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
 item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
 item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
