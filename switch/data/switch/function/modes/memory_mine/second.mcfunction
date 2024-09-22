@@ -1,7 +1,7 @@
 
 # Classic timer
 scoreboard players add #memory_mine_seconds switch.data 1
-execute if score #memory_mine_seconds switch.data matches 0 as @a[tag=!detached] at @s run function switch:modes/memory_mine/give_items
+execute if score #memory_mine_seconds switch.data matches 0 run scoreboard players set @a[tag=!detached] switch.temp.cooldown 2
 
 # Every 30 seconds, make a zone where people need to be
 scoreboard players operation #temp switch.data = #memory_mine_seconds switch.data
