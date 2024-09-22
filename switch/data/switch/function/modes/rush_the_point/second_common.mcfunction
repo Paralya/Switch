@@ -12,6 +12,10 @@ execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 1
 execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14075 air
 execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 86 14000 air
 execute if score #rush_the_point_seconds switch.data matches 0 as @a[tag=!detached] run attribute @s generic.jump_strength base set 0.42
+execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a[tag=!detached] slowness
+execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a[tag=!detached] blindness
+execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a[tag=!detached] night_vision
+execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a[tag=!detached] darkness
 
 # Elytra cooldown
 scoreboard players remove @a[scores={switch.temp.elytra_cooldown=1..}] switch.temp.elytra_cooldown 1
