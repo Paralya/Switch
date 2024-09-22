@@ -31,5 +31,3 @@ give @s anvil
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 execute if predicate switch:chance/0.5 run function switch:modes/traitors_game/random_items
 
-scoreboard players set @s crazy_adventure.radiation 0
-

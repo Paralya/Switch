@@ -12,6 +12,7 @@ gamerule naturalRegeneration false
 gamerule keepInventory true
 
 scoreboard objectives add switch.temp.cooldown dummy
+scoreboard objectives add switch.temp.fireball_cooldown dummy
 scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives add switch.temp.elytra_cooldown dummy
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
