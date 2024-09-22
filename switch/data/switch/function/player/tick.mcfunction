@@ -7,6 +7,7 @@ function switch:player/trigger/
 
 # Ask for a lang if not set
 execute unless score @s switch.lang matches 0.. run function switch:player/trigger/lang/tick_undefined
+execute unless score @s switch.lang matches 0.. run tag @s add detached
 execute unless score @s switch.lang matches 0.. run return 1
 
 # Set player id
