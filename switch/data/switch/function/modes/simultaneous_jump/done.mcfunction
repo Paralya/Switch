@@ -26,10 +26,10 @@ execute positioned ~ ~ ~-1 unless block ~ ~ ~ water unless block ~ ~ ~ air run s
 execute positioned ~ ~ ~1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
 execute positioned ~1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
 
-execute if score #points switch.data matches 5 run setblock ~ ~ ~ emerald_block
-execute if score #points switch.data matches 5 run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{"flight_duration":2},"minecraft:firework_explosion":{"shape":"star","has_trail":true,"has_flicker":true,"colors":[3789123]}}}}
 execute unless score #test_mode switch.data matches 1 if score #points switch.data matches 5 on attacker run advancement grant @s only switch:visible/44
-execute if score #points switch.data matches 1..4 run summon firework_rocket ~ ~1 ~ {LifeTime:10,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{"flight_duration":2},"minecraft:firework_explosion":{"shape":"star","has_trail":true,"has_flicker":true,"colors":[5631]}}}}
+execute if score #points switch.data matches 5 run setblock ~ ~ ~ emerald_block
+execute if score #points switch.data matches 5 run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"burst",has_twinkle:true,has_trail:true,colors:[I;65280]}]}}}}
+execute if score #points switch.data matches 1..4 run summon firework_rocket ~ ~1 ~ {LifeTime:15,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"burst",has_twinkle:true,has_trail:true,colors:[I;255]}]}}}}
 
 execute if score #points switch.data matches 5 run scoreboard players set #points switch.data 6
 execute if score #points switch.data matches 6 run scoreboard players add @s switch.temp.nb_de_a_coudre 1
