@@ -13,7 +13,7 @@ function switch:modes/glassrunner/shop/reset_item
 
 
 
-execute if score @s switch.glassrunner.money matches 12.. run scoreboard players add @s switch.glassrunner.turtle_helmet 100
+execute if score @s switch.glassrunner.money matches 12.. run scoreboard players add @s switch.glassrunner.turtle_helmet 200
 
 function switch:translations/modes_glassrunner_shop_turtle
 

@@ -11,7 +11,7 @@ scoreboard players add @s switch.temp.kills 0
 
 # Give items
 loot replace entity @s weapon.offhand loot grappling_hook:v1.1.1/items/normal_grappling_hook
-give @s crossbow[charged_projectiles=[{id:"arrow"}]]
+scoreboard players set @s switch.temp.reload -60
 
 # Teleport player
 function switch:maps/spread_one_player

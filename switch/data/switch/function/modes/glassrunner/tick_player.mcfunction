@@ -38,6 +38,5 @@ execute if score @s switch.glassrunner.elytra matches 2 run item replace entity 
 scoreboard players remove @s[scores={switch.glassrunner.elytra=1..}] switch.glassrunner.elytra 1
  
 
-
-
 execute if entity @s[y=0,dy=70,gamemode=adventure] run kill @s
+

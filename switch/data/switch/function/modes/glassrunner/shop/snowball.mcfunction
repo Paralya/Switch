@@ -5,6 +5,7 @@ clear @s snow_block[custom_data~{to_clear:true}]
 #Name : Snowball renforcée x5 
 #Lore : Permet de faire des bridges dirrectement en vitre foncée !
 #Lore : Prix : 8 levels
+function switch:modes/glassrunner/shop/reset_item
 
 
 execute if score @s[team=switch.glassrunner.red] switch.glassrunner.money matches 8.. run loot give @s loot switch:glassrunner/renforced_snowball_bridge_red_x5
