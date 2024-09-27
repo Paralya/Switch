@@ -22,6 +22,6 @@ execute store result score @s shopping_kart.booster_timer run data get storage s
 execute store result score @s shopping_kart.reactor_boost run data get storage switch:main copy[0].scores.shopping_kart.reactor_boost
 execute store result score @s shopping_kart.cruise_control run data get storage switch:main copy[0].scores.shopping_kart.cruise_control
 scoreboard players remove @s shopping_kart.old_pos_y 100000
-scoreboard players reset @s shopping_kart.temp.compteur
+scoreboard players reset @s switch.temp.compteur
 scoreboard players reset @s switch.effects.timer
 

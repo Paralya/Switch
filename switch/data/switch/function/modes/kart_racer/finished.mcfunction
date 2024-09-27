@@ -9,10 +9,10 @@ execute if score #remaining_time switch.data matches 61.. run scoreboard players
 scoreboard players add @s switch.temp.checkpoint 1000000
 scoreboard players operation @s switch.temp.checkpoint -= #kart_racer_ticks switch.data
 
-tag @s add shopping_kart.temp
-kill @e[tag=shopping_kart.kart,predicate=shopping_kart:have_temp_player_passenger]
+tag @s add switch.temp
+kill @e[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger]
 kill @e[type=item]
-tag @s remove shopping_kart.temp
+tag @s remove switch.temp
 
 # Advancement
 scoreboard players remove @s switch.temp.pos_on_last_lap 5
