@@ -1,42 +1,42 @@
 {
-    "pools": [
-        {
-            "rolls": 1,
-            "bonus_rolls": 0,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:jigsaw",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:custom_data": {
-                                    "ctc": {
-                                        "id": "glassrunner:bow"
-                                    }
-                                },
-                                "minecraft:unbreakable": {},
-                                "minecraft:enchantments": {
-                                    "levels": {
-                                        "minecraft:knockback": 5,
-                                        "minecraft:punch": 5
-                                    }
-                                },
-                                "minecraft:can_break": {
-                                    "blocks": [
-                                        "minecraft:glass",
-                                        "minecraft:red_stained_glass",
-                                        "minecraft:blue_stained_glass",
-                                        "minecraft:pink_stained_glass",
-                                        "minecraft:light_blue_stained_glass"
-                                    ]
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bow",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"ctc": {
+										"id": "glassrunner:bow"
+									}
+								},
+								"minecraft:unbreakable": {},
+								"minecraft:enchantments": {
+									"levels": {
+										"minecraft:knockback": 5,
+										"minecraft:punch": 5
+									}
+								},
+								"minecraft:can_break": {
+									"blocks": [
+										"minecraft:glass",
+										"minecraft:red_stained_glass",
+										"minecraft:blue_stained_glass",
+										"minecraft:pink_stained_glass",
+										"minecraft:light_blue_stained_glass"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
 }

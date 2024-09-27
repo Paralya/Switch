@@ -1,6 +1,6 @@
 scoreboard players add #glassrunner_ticks switch.data 1
 
-execute as @a[tag=!detached,x=0,y=69,z=0,distance=..10,sort=random] run function switch:modes/glassrunner/death/death
+function switch:utils/on_death_run_function {function:"switch:modes/glassrunner/death/death"}
 
 
 execute if score #glassrunner.apocalypse switch.data matches 1 run function switch:modes/glassrunner/apocalypse/start
@@ -41,10 +41,6 @@ execute as @a[scores={switch.glassrunner.money_maker=60..}] run function switch:
 execute if score #glassrunner_seconds switch.data matches 3600.. if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/null
 execute if score #glassrunner.points.red switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
 execute if score #glassrunner.points.blue switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
-
-# to uncomment
-execute unless entity @a[tag=!detached,team=switch.glassrunner.blue] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
-execute unless entity @a[tag=!detached,team=switch.glassrunner.red] if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
 
 execute if score #process_end switch.data matches 1.. run function switch:modes/glassrunner/end/process_end
 

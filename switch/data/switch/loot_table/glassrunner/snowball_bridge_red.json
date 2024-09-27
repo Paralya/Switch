@@ -1,28 +1,28 @@
 {
-    "pools": [
-        {
-            "rolls": 1,
-            "bonus_rolls": 0,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:snowball",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:custom_data": {
-                                    "glassrunner": {
-                                        "glass_bridge": true,
-                                        "glass_bridge_red": true
-                                    }
-                                },
-                                "minecraft:item_name": "{\"text\":\"Snowball Bridge Red\",\"color\":\"red\",\"italic\":false}"
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:snowball",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"glassrunner": {
+										"glass_bridge": true,
+										"glass_bridge_red": true
+									}
+								},
+								"minecraft:item_name": "{\"text\":\"Snowball Bridge Red\",\"color\":\"red\",\"italic\":false}"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
 }
