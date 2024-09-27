@@ -24,7 +24,7 @@ execute if score @s switch.infected.armor matches 4 run item replace entity @s a
 execute if score @s switch.infected.armor matches 5 run item replace entity @s armor.chest with leather_chestplate[unbreakable={},dyed_color=546752,attribute_modifiers=[{type:"generic.armor",slot:"chest",id:"switch.armor",amount:5.0,operation:"add_value"}],custom_model_data=2013115]
 
 # Give the player an antidote potion
-execute if score @s switch.infected.antidote matches 1.. run item replace entity @s hotbar.8 with potion[custom_name='{"text":"Antidote à usage unique","color":"green","italic":false}',lore=['{"text":"Boire seulement lorsqu\'on se transforme","color":"gray","italic":false}'],custom_model_data=2013116,hide_additional_tooltip={},custom_data={switch:{antidote:1b}}]
+execute if score @s switch.infected.antidote matches 1.. run item replace entity @s hotbar.8 with potion[custom_name='{"text":"Antidote [1 use]","color":"green","italic":false}',lore=['{"text":"To consume when turning into a zombie","color":"gray","italic":false}'],custom_model_data=2013116,hide_additional_tooltip={},custom_data={switch:{antidote:1b}}]
 
 # Playsound
 execute at @s run playsound entity.ender_dragon.growl ambient @s
