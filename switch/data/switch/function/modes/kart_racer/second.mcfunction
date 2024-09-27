@@ -10,8 +10,10 @@ function switch:translations/modes_kart_racer_second
 execute if score #kart_racer_seconds switch.data matches -5..-1 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 100
 execute if score #kart_racer_seconds switch.data matches 0 at @e[limit=2] as @a[tag=!detached] at @s run playsound item.goat_horn.sound.0 ambient @s ^ ^ ^5 100 1 1
 
-# XP bar
+# XP bar and gravity fix
 execute if score #kart_racer_seconds switch.data matches 0.. run function switch:modes/kart_racer/xp_bar
+execute if score #kart_racer_seconds switch.data matches 0.. as @a[tag=!detached] run attribute @s generic.gravity base set 0.08
+
 
 # Détection de fin de partie
 execute if score #detect_end switch.data matches 0 if score #remaining_time switch.data matches 0 run scoreboard players set #detect_end switch.data 1

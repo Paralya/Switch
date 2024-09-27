@@ -15,7 +15,7 @@ execute if score #kart_racer_seconds switch.data matches -7..-1 run scoreboard p
 execute if score #kart_racer_seconds switch.data matches 0 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 0b
 
 # Force riding the kart
-execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!shopping_kart:have_player_passenger,sort=nearest,limit=1]
+execute as @a[tag=!detached,gamemode=adventure,predicate=!switch:has_vehicle] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!switch:has_passenger,sort=nearest,limit=1,distance=..100]
 
 # Remove items and death prevention
 function switch:utils/on_death_run_function {function:"switch:modes/kart_racer/joined"}

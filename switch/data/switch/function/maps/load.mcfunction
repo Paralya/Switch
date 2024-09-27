@@ -11,11 +11,8 @@ function switch:maps/find_map
 data modify storage switch:main map set from storage switch:main copy[0]
 data modify storage switch:main previous_map set from storage switch:main map
 
-# Maps that regenerate (gamemode survival, may be adventure):
-function switch:maps/load_survival
-
-# Maps that doesn't (always gamemode adventure):
-function switch:maps/load_adventure
+# Load map
+function switch:maps/load_gamemode
 
 # Log message of which map is loaded
 data modify storage switch:main MessageToLog set value '[{"text":"Selected map: `"},{"nbt":"map","storage":"switch:main","interpret":false},{"text":"`!"}]'

@@ -4,9 +4,11 @@ scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
-effect give @a[tag=!detached] levitation 10 255 true
+execute as @a[tag=!detached] run attribute @s generic.gravity base set 0
 function switch:utils/set_dynamic_time
-gamerule fallDamage false
+
+execute in switch:game run gamerule fallDamage false
+execute in minecraft:overworld run gamerule fallDamage false
 
 function switch:translations/modes_kart_racer_start
 
@@ -78,7 +80,7 @@ team modify switch.temp.7 suffix {"text":" [7th]","color":"#696969"}
 team modify switch.temp.8 suffix {"text":" [8th]","color":"#696969"}
 team modify switch.temp.9 suffix {"text":" [9th]","color":"#696969"}
 team modify switch.temp.10 suffix {"text":" [10th]","color":"#696969"}
-team modify switch.temp.10+ suffix {"text":" [Nah Good]","color":"#9200DF"}
+team modify switch.temp.10+ suffix {"text":" [10+th]","color":"#9200DF"}
 
 ## Number of checkpoints and laps per map
 scoreboard players set #total_laps switch.data 3
@@ -87,7 +89,6 @@ scoreboard players set #total_checkpoints switch.data 1
 ## Téléportation des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
 function switch:choose_map_for/kart_racer
-execute as @a[tag=!detached] at @s run function switch:modes/kart_racer/give_items
-
+schedule function switch:modes/kart_racer/give_items 1s
 schedule function switch:modes/kart_racer/post_load 9s
 
