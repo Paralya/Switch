@@ -15,7 +15,7 @@ execute as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle
 
 # Kill all arrows in ground & Manage snowballs
 execute at @e[type=snowball] positioned ~ ~-2 ~ run fill ~-0.25 ~ ~-0.25 ~0.25 ~ ~0.25 cut_sandstone replace air
-kill @e[type=arrow,nbt={inGround:true}]
+kill @e[type=arrow,nbt={inBlockState:{}}]
 
 # Class System
 execute as @a[tag=!detached,scores={switch.temp.choosen_class=0}] run function switch:modes/rush_the_point/classes/
