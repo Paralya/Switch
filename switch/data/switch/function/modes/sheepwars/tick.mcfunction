@@ -11,7 +11,7 @@ effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id
 
 # Tick du sheepwars
 function sheepwars:tick
-kill @e[type=arrow,nbt={inBlockState:{}}]
+kill @e[type=arrow,nbt={inGround:true}]
 kill @e[type=item,nbt=!{Item:{components:{"minecraft:custom_data":{}}}}]
 execute as @a[tag=!detached,nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
