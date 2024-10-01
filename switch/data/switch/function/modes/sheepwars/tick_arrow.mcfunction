@@ -1,4 +1,8 @@
 
+# If the arrow is in a block, kill it 1 tick after
+execute if entity @s[tag=switch.to_kill] run kill @s
+execute if data entity @s inBlockState run tag @s add switch.to_kill
+
 # Damage depending on the upgrade
 data modify entity @s damage set value 1.0d
 scoreboard players set #level switch.data 0

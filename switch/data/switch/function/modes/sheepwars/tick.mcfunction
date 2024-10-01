@@ -9,9 +9,7 @@ execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 function switch:utils/on_death_run_function {function:"switch:modes/sheepwars/death"}
 effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id:"minecraft:wither"}]}] wither 2 2 true
 
-# Tick du sheepwars
-function sheepwars:tick
-kill @e[type=arrow,nbt={inBlockState:{}}]
+# Kill items without custom data and give saturation
 kill @e[type=item,nbt=!{Item:{components:{"minecraft:custom_data":{}}}}]
 execute as @a[tag=!detached,nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
