@@ -6,6 +6,9 @@ execute as @e[type=!player] at @s if block ~ ~ ~ moving_piston run tp @s 0 -1000
 kill @e[type=item]
 
 ## Game on the line
+scoreboard players set #remaining_players switch.data 0
+execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
+
 # Basic timer & particles
 scoreboard players add #block_party_ticks switch.data 1
 execute if score #block_party_ticks switch.data matches -100.. run particle note 110040 104 110040 64 2 64 1 8
@@ -18,20 +21,18 @@ execute if score #block_party_ticks switch.data matches -130 run kill @e[type=ma
 execute if score #block_party_ticks switch.data matches -100 summon marker run function switch:modes/block_party/core/pick_random_art
 
 # Give the block needed for everyone
-execute if score #block_party_ticks switch.data matches 0 run function switch:modes/block_party/core/give_block
+execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 0 run function switch:modes/block_party/core/give_block
 
 
 # Timer depending on rounds + stop sound
-execute if score #block_party_ticks switch.data matches 0.. run function switch:modes/block_party/core/timer_per_round
-execute if score #block_party_ticks switch.data matches 500.. as @e[tag=switch.paint_cow] at @s run function switch:modes/block_party/core/paint_cow
-execute if score #block_party_ticks switch.data matches 1000.. run stopsound @a[tag=!detached] record
-execute if score #block_party_ticks switch.data matches 1000.. unless score #process_end switch.data matches 1.. run function switch:modes/block_party/core/remove_blocks
+execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 0.. run function switch:modes/block_party/core/timer_per_round
+execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 500.. as @e[tag=switch.paint_cow] at @s run function switch:modes/block_party/core/paint_cow
+execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 1000.. run stopsound @a[tag=!detached] record
+execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 1000.. unless score #process_end switch.data matches 1.. run function switch:modes/block_party/core/remove_blocks
 function switch:modes/block_party/xp_bar
 
 
 ## End game
-scoreboard players set #remaining_players switch.data 0
-execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/block_party/process_end
 execute if score #block_party_seconds switch.data matches 1800.. run function switch:modes/block_party/process_end
 

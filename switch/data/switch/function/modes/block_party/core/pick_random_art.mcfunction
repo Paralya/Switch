@@ -65,10 +65,10 @@ execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run p
 execute if score #random switch.data matches 13 as @a[tag=!detached] at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
 
 # Summon a paint cow randomly (1/3 chance)
-execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:'{"text":"Gertrude","color":"yellow"}',CustomNameVisible:true,Tags:["switch.paint_cow"],AbsorptionAmount:2048.0f,DeathLootTable:"none",Attributes:[{Name:"generic.max_absorption",Base:2048.0},{Name:"generic.movement_speed",Base:5.0d}]}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:'{"text":"Gertrude","color":"yellow"}',CustomNameVisible:true,Tags:["switch.paint_cow"],AbsorptionAmount:2048.0f,DeathLootTable:"empty",attributes:[{id:"generic.max_absorption",base:2048.0},{id:"generic.movement_speed",base:5.0d}]}
 
 # Summon ravager (1/4 chance)
-execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:true,CustomName:'{"text":"Vachette","color":"red"}',CustomNameVisible:true,Tags:["switch.ravager"],DeathLootTable:"none"}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:true,CustomName:'{"text":"Vachette","color":"red"}',CustomNameVisible:true,Tags:["switch.ravager"],DeathLootTable:"empty"}
 
 # Spreadplayers the entities
 spreadplayers 110038 110038 10 20 false @e[tag=switch.paint_cow]
