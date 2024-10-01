@@ -1,5 +1,5 @@
 
-execute at @e[type=marker,tag=switch.selected_map,limit=1] run tp @s ~ ~ ~
+execute at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~
 gamemode spectator @s[team=!switch.temp.gays]
 effect clear @s
 clear @s

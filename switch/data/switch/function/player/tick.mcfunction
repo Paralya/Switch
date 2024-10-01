@@ -22,7 +22,7 @@ execute if score @s switch.kill matches 1.. run scoreboard players operation @s 
 execute if score @s switch.kill matches 1.. run scoreboard players reset @s switch.kill
 
 # Detach tick at spawn
-execute if entity @s[tag=detached,x=0,y=69,z=0,distance=..200] run function switch:player/tick_detach
+execute if dimension minecraft:overworld if entity @s[tag=detached,x=0,y=69,z=0,distance=..200] run function switch:player/tick_detach
 
 # Noteblock
 execute at @s if score @s switch.music.progress matches 1.. run function switch:music/player_tick
