@@ -45,6 +45,3 @@ scoreboard players set #next_role switch.data 0
 gamemode adventure @a[tag=!detached]
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/sheepwars/team_and_give
 
-# Load du sheepwars
-function sheepwars:load
-

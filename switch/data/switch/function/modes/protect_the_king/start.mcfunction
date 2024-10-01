@@ -9,6 +9,7 @@ effect give @a[tag=!detached] slowness 8 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
+scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/protect_the_king
 
 gamerule naturalRegeneration false
@@ -24,8 +25,8 @@ scoreboard players set #cut_clean switch.data 1
 scoreboard objectives setdisplay list switch.health
 
 # Mise en place des deux bossbars
-bossbar add switch.temp.red_king "Roi Rouge"
-bossbar add switch.temp.blue_king "Roi Bleu"
+bossbar add switch.temp.red_king "Red King"
+bossbar add switch.temp.blue_king "Blue King"
 bossbar set switch.temp.red_king color red
 bossbar set switch.temp.blue_king color blue
 bossbar set switch.temp.red_king max 40
