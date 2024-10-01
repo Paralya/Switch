@@ -15,7 +15,6 @@ gamerule keepInventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
-scoreboard players set #do_spreadplayers switch.data 1
 function switch:choose_map_for/pitch_creep
 
 function switch:translations/modes_pitch_creep_start
@@ -26,4 +25,9 @@ scoreboard players set #pitch_creep_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.shot minecraft.used:minecraft.bow
 scoreboard players set @a[tag=!detached] switch.temp.shot 0
+
+# Teleport on maps
+scoreboard players set #count switch.data 0
+execute if data storage switch:main {map:"pitch_creep_1"} as @a[tag=!detached,sort=random] run function switch:modes/pitch_creep/maps/pitch_creep_1
+execute if data storage switch:main {map:"octogone_nether_ice"} as @a[tag=!detached,sort=random] run function switch:modes/pitch_creep/maps/octogone_nether_ice
 
