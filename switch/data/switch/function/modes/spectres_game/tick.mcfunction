@@ -18,7 +18,7 @@ clear @a[tag=!detached] crying_obsidian
 execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 
 # On enlève les particules d'absorption
-execute as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption",show_particles:true}]}] run function switch:modes/spectres_game/absorption
+execute as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption"}]}] unless data entity @s active_effects[{id:"minecraft:absorption"}].show_particles run function switch:modes/spectres_game/absorption
 
 # Particules sur tous les spectres, pour les spectres
 execute at @a[tag=!detached,gamemode=!spectator,team=switch.temp.spectre] run particle dust{color:[1.0,1.0,0.5],scale:1.0} ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[tag=!detached,team=switch.temp.spectre]
