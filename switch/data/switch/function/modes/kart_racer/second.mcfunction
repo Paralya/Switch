@@ -9,6 +9,7 @@ function switch:translations/modes_kart_racer_second
 # Start sounds
 execute if score #kart_racer_seconds switch.data matches -5..-1 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 100
 execute if score #kart_racer_seconds switch.data matches 0 at @e[limit=2] as @a[tag=!detached] at @s run playsound item.goat_horn.sound.0 ambient @s ^ ^ ^5 100 1 1
+execute if score #kart_racer_seconds switch.data matches 0 at @r[tag=!detached] run scoreboard players operation #default switch.hard_respawn_cp_id = @n[tag=switch.checkpoint] switch.temp.id
 
 # XP bar and gravity fix
 execute if score #kart_racer_seconds switch.data matches 0.. run function switch:modes/kart_racer/xp_bar

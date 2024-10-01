@@ -1,8 +1,8 @@
 
 # Manage Respawns
 function switch:translations/modes_kart_racer_right_click
-execute if score #kart_racer_seconds switch.data matches 0.. unless score @s switch.respawn_cp_id matches -1 if data entity @s SelectedItem.components."minecraft:custom_data".switch.classic_respawn run function switch:modes/kart_racer/checkpoints/respawn/classic
-execute if score #kart_racer_seconds switch.data matches 0.. if data entity @s SelectedItem.components."minecraft:custom_data".switch.hard_respawn run function switch:modes/kart_racer/checkpoints/respawn/hard
+execute if score #kart_racer_seconds switch.data matches 3.. unless score @s switch.respawn_cp_id matches -1 if data entity @s SelectedItem.components."minecraft:custom_data".switch.classic_respawn run function switch:modes/kart_racer/checkpoints/respawn/classic
+execute if score #kart_racer_seconds switch.data matches 3.. if data entity @s SelectedItem.components."minecraft:custom_data".switch.hard_respawn run function switch:modes/kart_racer/checkpoints/respawn/hard
 
 # Manage Model changes
 execute if data entity @s SelectedItem.components."minecraft:custom_data".switch.previous_model run scoreboard players set @s shopping_kart.trigger_model -2
