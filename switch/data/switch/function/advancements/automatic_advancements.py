@@ -114,7 +114,7 @@ jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour
 79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardment	Die from the first cannon shot in Bombardment
 80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery	Get killed by another murderer as a murderer in Murder Myster
 81	ArtiGrrr	easy	Reviens par ici	Replacer le drapeau de son équipe en une partie de Capture/Rush The Flag	Return your team's flag in a game of Capture/Rush The Flag
-82	Stoupy	hard	Bien placé	Survivre 30 secondes sans bouger en Block Party	Survive 30 seconds without moving in Block Party
+82	Stoupy	hard	Bien placé	Survivre 25 secondes sans bouger en Block Party	Survive 25 seconds without moving in Block Party
 83	AirDox	medium	Chercheur Acharné	Trouver tous les Easter Eggs du lobby	Find all the Easter Eggs in the lobby
 """.split("\n")
 
