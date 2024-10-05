@@ -20,6 +20,7 @@ kill @e[type=text_display,tag=switch.stat_display,scores={switch.data=60..}]
 
 # Kill items out of the map
 execute if score #engine_state switch.data matches 3 as @e[type=item] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ #switch:out_of_map run kill @s
+execute if score #engine_state switch.data matches 3 as @e[type=item] at @s if block ~ ~-1 ~ barrier if block ~ ~ ~ #switch:out_of_map run kill @s
 
 # Tutorial second loop
 execute as @a[team=switch.tutorial] at @s run function switch:player/tutorial/second
