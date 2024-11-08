@@ -2,6 +2,7 @@
 # Imports
 from python_datapack.utils.database_helper import *
 from user.misc_links.random_loot_table import main as random_loot_table
+from user.misc_links.note_block_studio import main as note_block_studio
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
@@ -13,4 +14,5 @@ def main(config: dict) -> None:
 
 	# Call all links
 	random_loot_table(config)
+	note_block_studio(config)
 

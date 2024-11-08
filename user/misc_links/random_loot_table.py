@@ -1,6 +1,5 @@
 
 # Imports
-import os
 import requests
 from python_datapack.utils.database_helper import *
 
