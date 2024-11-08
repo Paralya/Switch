@@ -7,10 +7,11 @@ import zipfile
 # Constants
 ALL_BPM: int = 80
 INPUTS_FOLDER: str = f"{ROOT}/script_inputs"
-REQUIRED_PATH_PARTS: list[str] = ["switch/functions/", "notes/", ".mcfunction"]
+REQUIRED_PATH_PARTS: list[str] = ["notes/", ".mcfunction"]
 LIB_TO_WRITE: str = f"{LIBS_FOLDER}/datapack/switch_music.zip"
 
 # Main function
+@measure_time(progress, "Generated the NoteBlock Studio songs")
 def main(config: dict) -> None:
 	objectives: list[tuple[str, int, int]] = []
 	authors: list[str] = []
@@ -103,7 +104,5 @@ tellraw @s ["\\n",{"nbt":"ParalyaMusic","storage":"switch:main","interpret":true
 		write_to_function(config, "switch:music/browser", f"""
 execute if score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","clickEvent":{{"action":"run_command","value":"/trigger switch.trigger.music set {i+100}"}},"hoverEvent":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
 execute unless score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display}","color":"light_purple","clickEvent":{{"action":"run_command","value":"/trigger switch.trigger.music set {i+100}"}},"hoverEvent":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]""")
-
-	progress(f"Linked {len(objectives)} NoteBlock Studio musics")
 	pass
 

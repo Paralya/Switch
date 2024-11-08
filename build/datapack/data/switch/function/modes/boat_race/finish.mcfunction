@@ -17,5 +17,5 @@ function switch:translations/modes_boat_race_finish
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 gamemode spectator @s
-kill @e[type=boat,distance=..1.25,sort=nearest,limit=1]
+kill @e[type=#minecraft:boat,distance=..1.25,sort=nearest,limit=1]
 
