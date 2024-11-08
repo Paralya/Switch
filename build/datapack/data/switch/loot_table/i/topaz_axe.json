@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_axe",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"tools": {"topaz": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"topaz_axe": true}
+								},
+								"minecraft:max_damage": 1281,
+								"minecraft:attribute_modifiers": [
+									{"type": "attack_damage","amount": 10.0,"operation": "add_value","slot": "mainhand","id": "switch:attack_damage.mainhand"},
+									{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "switch:attack_speed.mainhand"}
+								],
+								"minecraft:item_model": "switch:topaz_axe",
+								"minecraft:item_name": "{'text': 'Topaz Axe', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

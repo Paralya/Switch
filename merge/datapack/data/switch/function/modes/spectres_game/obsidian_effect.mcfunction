@@ -5,7 +5,7 @@ execute store result score #random switch.data run random value 0..12
 # si le score est 0, on donne un effet de heal aux visibles
 execute if score #random switch.data matches 0 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] instant_health 1 1 true
 execute if score #random switch.data matches 0 if entity @s[team=switch.temp.spectre] run effect give @a[tag=!detached,team=switch.temp.spectre] regeneration 5 1 true
-execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 
 # si le score est 1, on donne un effet de speed aux visibles ou spectre
 execute if score #random switch.data matches 1 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] speed 12 1 true
@@ -15,7 +15,7 @@ execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run pl
 # si le score est 2, on donne deux pommes d'or aux visibles ou spectre
 execute if score #random switch.data matches 2 if entity @s[team=switch.temp.visible] run give @a[tag=!detached,team=switch.temp.visible] golden_apple 1
 execute if score #random switch.data matches 2 if entity @s[team=switch.temp.spectre] run give @a[tag=!detached,team=switch.temp.spectre] golden_apple 1
-execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound entity.generic.eat ambient @s
+execute if score #random switch.data matches 2 as @a[tag=!detached] at @s run playsound entity.eat ambient @s
 
 # si le score est 3, on donne un effet d'absorption aux visibles ou spectre
 execute if score #random switch.data matches 3 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] absorption 25 1 true
@@ -31,7 +31,7 @@ execute if score #random switch.data matches 4 as @a[tag=!detached] at @s run pl
 execute if score #random switch.data matches 5 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] resistance 33 0 true
 execute if score #random switch.data matches 5 if entity @s[team=switch.temp.spectre] run give @a[tag=!detached,team=switch.temp.spectre] creeper_spawn_egg 2
 execute if score #random switch.data matches 5 if entity @s[team=switch.temp.spectre] run give @a[tag=!detached,team=switch.temp.spectre] zombie_villager_spawn_egg 2
-execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 
 # si le score est 6, on donne un effet d'invisibilité aux visibles ou on summon 3 golems de fer
 execute if score #random switch.data matches 6 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.visible] invisibility 25 0 true
@@ -39,7 +39,7 @@ execute if score #random switch.data matches 6 if entity @s[team=switch.temp.spe
 execute if score #random switch.data matches 6 if entity @s[team=switch.temp.spectre] run summon minecraft:iron_golem ~ ~ ~ {Tags:["switch.new"]}
 execute if score #random switch.data matches 6 if entity @s[team=switch.temp.spectre] run summon minecraft:iron_golem ~ ~ ~ {Tags:["switch.new"]}
 execute if score #random switch.data matches 6 if entity @s[team=switch.temp.spectre] as @e[type=iron_golem,tag=switch.new] run function switch:maps/spread_one_player
-execute if score #random switch.data matches 6 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 6 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 
 # si le score est 7, on téléporte tous les visibles sur l'un des visibles
 execute if score #random switch.data matches 7 run teleport @a[tag=!detached,team=switch.temp.visible,scores={switch.alive=1}] @r[tag=!detached,team=switch.temp.visible,scores={switch.alive=1}]

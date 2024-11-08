@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/netherite_sword",
+	"textures": {
+		"layer0": "switch:item/adamantium_sword"
+	}
+}
+

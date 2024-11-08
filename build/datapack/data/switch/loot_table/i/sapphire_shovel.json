@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_shovel",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"tools": {"sapphire": true,"shovel": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"sapphire_shovel": true}
+								},
+								"minecraft:max_damage": 1752,
+								"minecraft:attribute_modifiers": [
+									{"type": "attack_damage","amount": 5.5,"operation": "add_value","slot": "mainhand","id": "switch:attack_damage.mainhand"},
+									{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "switch:attack_speed.mainhand"},
+									{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}
+								],
+								"minecraft:item_model": "switch:sapphire_shovel",
+								"minecraft:item_name": "{'text': 'Sapphire Shovel', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

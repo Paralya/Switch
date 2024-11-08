@@ -1,0 +1,7 @@
+{
+	"layers": {
+		"humanoid": [{"texture": "switch:ruby_layer_1"}],
+		"humanoid_leggings": [{"texture": "switch:ruby_layer_2"}]
+	}
+}
+

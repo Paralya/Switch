@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"steel": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"steel_chestplate": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 5460819,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 426,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"model": "switch:steel"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 6,"operation": "add_value","slot": "chest","id": "switch:armor.chest"}
+								],
+								"minecraft:item_model": "switch:steel_chestplate",
+								"minecraft:item_name": "{'text': 'Steel Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

@@ -77,10 +77,6 @@
 				},
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:air"
-				},
-				{
-					"type": "minecraft:item",
 					"name": "minecraft:allay_spawn_egg",
 					"weight": 2
 				},

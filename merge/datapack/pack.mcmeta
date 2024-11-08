@@ -4,10 +4,6 @@
 			{
 				"namespace": "minecraft",
 				"path": "advancement"
-			},
-			{
-				"namespace": "simplenergy",
-				"path": "advancement"
 			}
 		]
 	}

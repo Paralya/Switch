@@ -1,0 +1,33 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"block": {"adamantium": true},"ore": {"adamantium": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"deepslate_adamantium_ore": true}
+								},
+								"minecraft:item_model": "switch:deepslate_adamantium_ore",
+								"minecraft:item_name": "{'text': 'Deepslate Adamantium Ore', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:container": [
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:deepslate_adamantium_ore","from": "switch"}}}}}}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

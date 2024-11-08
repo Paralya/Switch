@@ -14,10 +14,10 @@ execute if entity @s[tag=switch.solitaire] run tag @e[type=marker,predicate=swit
 function switch:translations/modes_traitors_game_roles_vol
 
 # Effects
-execute if score #role switch.data matches 1 run attribute @p[tag=switch.temp.floupy] generic.max_health base set 16
+execute if score #role switch.data matches 1 run attribute @p[tag=switch.temp.floupy] max_health base set 16
 execute if score #role switch.data matches 1 run team join switch.temp.inspector @p[tag=switch.temp.floupy]
-execute if score #role switch.data matches 3..4 run attribute @p[tag=switch.temp.floupy] generic.movement_speed base set 0.115
-execute if score #role switch.data matches 7 run attribute @p[tag=switch.temp.floupy] generic.max_health base set 30
+execute if score #role switch.data matches 3..4 run attribute @p[tag=switch.temp.floupy] movement_speed base set 0.115
+execute if score #role switch.data matches 7 run attribute @p[tag=switch.temp.floupy] max_health base set 30
 
 # Remove tag
 scoreboard players reset @a[tag=switch.temp.floupy] switch.temp.kills

@@ -29,6 +29,7 @@ def main(config: dict) -> None:
 
 	# Insert all items into the loot table
 	items: list[str] = requests.get(ITEMS_LINK).text.strip().split("\n")
+	items = [item for item in items if item not in ["", "minecraft:air"]]
 	loot_table: dict[str, list[dict[str, str|int]]] = {"pools": [{"rolls": 1, "entries": []}]}
 	for item in items:
 		if "ender_dragon_spawn_egg" in item or item == "":
@@ -41,7 +42,7 @@ def main(config: dict) -> None:
 	# For each item in the database, add it to the loot table and save it
 	database: dict[str, dict] = config["database"]
 	for item in database.keys():
-		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "name": f"switch:i/{item}"})
+		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"switch:i/{item}"})
 	write_to_file(all_path, super_json_dump(loot_table, max_level = -1))
 	progress(f"The random loot tables 'vanilla.json' and 'all.json' have been generated")
 

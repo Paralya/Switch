@@ -23,7 +23,7 @@ execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=swi
 execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.yellow] run tp @s 74009 158.69 74047
 
 # Starter kit
-attribute @s generic.attack_speed base set 2048
+attribute @s attack_speed base set 2048
 give @s stone_pickaxe
 give @s stone_axe
 give @s netherite_upgrade_smithing_template 5

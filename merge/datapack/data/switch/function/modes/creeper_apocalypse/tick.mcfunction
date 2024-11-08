@@ -3,7 +3,7 @@ scoreboard players add #creeper_apocalypse_ticks switch.data 1
 
 execute as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier run kill @s
 function switch:utils/on_death_run_function {function:"switch:modes/creeper_apocalypse/death"}
-stopsound @a[tag=!detached] * entity.generic.explode
+stopsound @a[tag=!detached] * entity.explode
 
 # Creeper stuff
 effect give @e[type=creeper] resistance infinite 0 true

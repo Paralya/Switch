@@ -1,0 +1,7 @@
+{
+	"condition": "minecraft:location_check",
+	"predicate": {
+		"block": {"blocks": "#switch:used_vanilla_blocks"}
+	}
+}
+

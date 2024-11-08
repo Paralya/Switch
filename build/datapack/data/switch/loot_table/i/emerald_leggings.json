@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"emerald": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"emerald_leggings": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 2532680,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 233,
+								"minecraft:equippable": {
+									"slot": "legs",
+									"model": "switch:emerald"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},
+									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "legs","id": "switch:luck.legs"}
+								],
+								"minecraft:item_model": "switch:emerald_leggings",
+								"minecraft:item_name": "{'text': 'Emerald Leggings', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

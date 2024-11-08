@@ -10,7 +10,7 @@ scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
-execute as @a[tag=!detached] run attribute @s generic.gravity base set 0
+execute as @a[tag=!detached] run attribute @s gravity base set 0
 function switch:utils/set_dynamic_time
 
 execute in switch:game run gamerule fallDamage false

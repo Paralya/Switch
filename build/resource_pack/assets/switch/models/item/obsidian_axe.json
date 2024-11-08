@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/diamond_axe",
+	"textures": {
+		"layer0": "switch:item/obsidian_axe"
+	}
+}
+

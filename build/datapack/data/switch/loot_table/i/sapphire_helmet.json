@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"sapphire": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"sapphire_helmet": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 2887831,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 407,
+								"minecraft:equippable": {
+									"slot": "head",
+									"model": "switch:sapphire"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}
+								],
+								"minecraft:item_model": "switch:sapphire_helmet",
+								"minecraft:item_name": "{'text': 'Sapphire Helmet', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

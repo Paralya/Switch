@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"topaz": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"topaz_chestplate": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 12153387,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 433,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"model": "switch:topaz"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 9.0,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}
+								],
+								"minecraft:item_model": "switch:topaz_chestplate",
+								"minecraft:item_name": "{'text': 'Topaz Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

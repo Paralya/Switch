@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/diamond_shovel",
+	"textures": {
+		"layer0": "switch:item/emerald_shovel"
+	}
+}
+

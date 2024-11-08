@@ -1,8 +1,8 @@
 
 clear @s
 effect clear @s
-attribute @s generic.attack_speed base set 2048
-attribute @s generic.jump_strength base set 0.42
+attribute @s attack_speed base set 2048
+attribute @s jump_strength base set 0.42
 
 item replace entity @s armor.chest with elytra[unbreakable={show_in_tooltip:false}]
 

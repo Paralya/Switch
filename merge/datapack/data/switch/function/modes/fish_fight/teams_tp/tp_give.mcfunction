@@ -11,8 +11,8 @@ clear @s blue_concrete
 clear @s ender_pearl
 clear @s shears 1
 scoreboard players set @s switch.temp.cooldown 100
-item replace entity @s armor.chest with golden_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"generic.knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
-attribute @s generic.jump_strength base set 0
+item replace entity @s armor.chest with golden_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
+attribute @s jump_strength base set 0
 effect give @s weakness 4 255 true
 effect give @s slowness 3 255 true
 effect give @s resistance infinite 0 true

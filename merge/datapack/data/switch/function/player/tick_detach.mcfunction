@@ -7,7 +7,7 @@ effect give @s[gamemode=survival] mining_fatigue 1 127 true
 effect give @s[gamemode=!creative,gamemode=!spectator] resistance 1 127 true
 effect give @s[gamemode=!creative,gamemode=!spectator] weakness 1 127 true
 execute if entity @s[gamemode=!creative,gamemode=!spectator] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
-attribute @s[gamemode=!creative,gamemode=!spectator] generic.safe_fall_distance base set 1024
+attribute @s[gamemode=!creative,gamemode=!spectator] safe_fall_distance base set 1024
 
 ## Teleport inventory
 # Get number of blocks

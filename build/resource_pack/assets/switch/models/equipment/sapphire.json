@@ -1,0 +1,7 @@
+{
+	"layers": {
+		"humanoid": [{"texture": "switch:sapphire_layer_1"}],
+		"humanoid_leggings": [{"texture": "switch:sapphire_layer_2"}]
+	}
+}
+

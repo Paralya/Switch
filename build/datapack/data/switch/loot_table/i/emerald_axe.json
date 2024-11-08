@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_axe",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"tools": {"emerald": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"emerald_axe": true}
+								},
+								"minecraft:max_damage": 736,
+								"minecraft:attribute_modifiers": [
+									{"type": "attack_damage","amount": 9,"operation": "add_value","slot": "mainhand","id": "switch:attack_damage.mainhand"},
+									{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "switch:attack_speed.mainhand"},
+									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}
+								],
+								"minecraft:item_model": "switch:emerald_axe",
+								"minecraft:item_name": "{'text': 'Emerald Axe', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

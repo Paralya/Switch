@@ -25,7 +25,7 @@ execute unless data storage switch:glassrunner temp.Inventory[{Slot:31b}] run fu
 execute if score @s switch.glassrunner.apocalypse matches 1.. run function switch:modes/glassrunner/shop/apocalypse_player
 
 
-item replace entity @s[scores={switch.glassrunner.turtle_helmet=1..}] armor.head with turtle_helmet[enchantments={levels:{binding_curse:1,vanishing_curse:1},show_in_tooltip:0b},attribute_modifiers=[{type:"generic.knockback_resistance",id:"switch.knockback_resistance",amount:1,operation:"add_value"}]]
+item replace entity @s[scores={switch.glassrunner.turtle_helmet=1..}] armor.head with turtle_helmet[enchantments={levels:{binding_curse:1,vanishing_curse:1},show_in_tooltip:0b},attribute_modifiers=[{type:"knockback_resistance",id:"switch.knockback_resistance",amount:1,operation:"add_value"}]]
 item replace entity @s[scores={switch.glassrunner.turtle_helmet=..1}] armor.head with air
 
 scoreboard players remove @s[scores={switch.glassrunner.turtle_helmet=1..}] switch.glassrunner.turtle_helmet 1

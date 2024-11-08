@@ -7,8 +7,8 @@
 # Players can't die during start countdown
 execute if score #infected_seconds switch.data matches ..-1 run effect give @a[tag=!detached] resistance 3 255 true
 execute if score #infected_seconds switch.data matches ..-1 run effect give @a[tag=!detached] regeneration 3 255 true
-execute if score #infected_seconds switch.data matches ..0 as @a[tag=!detached] run attribute @s generic.burning_time base set 0
-execute if score #infected_seconds switch.data matches 1..10 as @a[tag=!detached] run attribute @s generic.burning_time base set 1
+execute if score #infected_seconds switch.data matches ..0 as @a[tag=!detached] run attribute @s burning_time base set 0
+execute if score #infected_seconds switch.data matches 1..10 as @a[tag=!detached] run attribute @s burning_time base set 1
 
 # Countdown for starting the game
 execute if score #infected_seconds switch.data matches -10..-2 run scoreboard players operation #temp switch.data = #infected_seconds switch.data

@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/diamond_pickaxe",
+	"textures": {
+		"layer0": "switch:item/ruby_pickaxe"
+	}
+}
+

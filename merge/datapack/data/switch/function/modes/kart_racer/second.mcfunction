@@ -13,7 +13,7 @@ execute if score #kart_racer_seconds switch.data matches 0 at @r[tag=!detached] 
 
 # XP bar and gravity fix
 execute if score #kart_racer_seconds switch.data matches 0.. run function switch:modes/kart_racer/xp_bar
-execute if score #kart_racer_seconds switch.data matches 0.. as @a[tag=!detached] run attribute @s generic.gravity base set 0.08
+execute if score #kart_racer_seconds switch.data matches 0.. as @a[tag=!detached] run attribute @s gravity base set 0.08
 
 
 # Détection de fin de partie

@@ -21,7 +21,7 @@ if __name__ == "__main__":
 		error("Invalid config format, please check the documentation")
 
 	# Setup and start file watcher
-	configs_to_get: list[str] = ["merge_folder", "assets_folder", "libs_folder"]
+	configs_to_get: list[str] = ["merge_folder", "assets_folder"]
 	to_watch: list[str] = [configuration[x] + '/' for x in configs_to_get if configuration.get(x, None) is not None]
 	to_watch += [
 		f"{ROOT}/user/",

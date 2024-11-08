@@ -22,5 +22,5 @@ effect give @s[team=switch.temp.king] resistance infinite 3 true
 effect give @s[team=switch.temp.king] speed infinite 0 true
 effect give @s[team=switch.temp.king] health_boost infinite 1 true
 
-attribute @s generic.attack_speed base set 1024
+attribute @s attack_speed base set 1024
 

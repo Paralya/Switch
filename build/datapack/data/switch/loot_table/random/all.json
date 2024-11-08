@@ -77,10 +77,6 @@
 				},
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:air"
-				},
-				{
-					"type": "minecraft:item",
 					"name": "minecraft:allay_spawn_egg",
 					"weight": 2
 				},
@@ -5575,6 +5571,342 @@
 					"type": "minecraft:item",
 					"name": "minecraft:zombified_piglin_spawn_egg",
 					"weight": 2
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/deepslate_adamantium_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/deepslate_sapphire_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/sapphire"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/deepslate_ruby_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ruby"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/deepslate_topaz_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/topaz"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/obsidian_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_stick"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/emerald_hoe"
 				}
 			]
 		}

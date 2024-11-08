@@ -28,7 +28,7 @@ execute if data storage switch:main {map:"ctf_forest_castles"} run tp @s[team=sw
 ## Items to choose a class
 tag @s remove switch.to_tp
 clear @s
-attribute @s generic.jump_strength base set 0
+attribute @s jump_strength base set 0
 effect give @s resistance infinite 250 true
 effect give @s slowness infinite 250 true
 effect give @s blindness infinite 250 true

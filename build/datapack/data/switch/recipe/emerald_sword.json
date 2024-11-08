@@ -1,0 +1,58 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"pattern": [
+		"X",
+		"X",
+		"S"
+	],
+	"key": {
+		"X": "minecraft:emerald",
+		"S": "minecraft:stick"
+	},
+	"result": {
+		"id": "minecraft:diamond_sword",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {"tools": {"emerald": true,"sword": true}},
+					"ignore": {"functionality": true,"crafting": true}
+				},
+				"switch": {
+					"emerald_sword": true
+				}
+			},
+			"minecraft:max_damage": 736,
+			"minecraft:attribute_modifiers": [
+				{
+					"type": "attack_damage",
+					"amount": 7,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:attack_damage.mainhand"
+				},
+				{
+					"type": "attack_speed",
+					"amount": -2.5,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:attack_speed.mainhand"
+				},
+				{
+					"type": "luck",
+					"amount": 0.25,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:luck.mainhand"
+				}
+			],
+			"minecraft:item_model": "switch:emerald_sword",
+			"minecraft:item_name": "{'text': 'Emerald Sword', 'italic': false, 'color': 'white'}",
+			"minecraft:lore": [
+				"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+			]
+		}
+	}
+}
+

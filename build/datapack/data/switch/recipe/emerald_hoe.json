@@ -1,0 +1,58 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"pattern": [
+		"XX",
+		" S",
+		" S"
+	],
+	"key": {
+		"X": "minecraft:emerald",
+		"S": "minecraft:stick"
+	},
+	"result": {
+		"id": "minecraft:diamond_hoe",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {"tools": {"emerald": true,"hoe": true}},
+					"ignore": {"functionality": true,"crafting": true}
+				},
+				"switch": {
+					"emerald_hoe": true
+				}
+			},
+			"minecraft:max_damage": 736,
+			"minecraft:attribute_modifiers": [
+				{
+					"type": "attack_damage",
+					"amount": 1,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:attack_damage.mainhand"
+				},
+				{
+					"type": "attack_speed",
+					"amount": 0,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:attack_speed.mainhand"
+				},
+				{
+					"type": "luck",
+					"amount": 0.25,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:luck.mainhand"
+				}
+			],
+			"minecraft:item_model": "switch:emerald_hoe",
+			"minecraft:item_name": "{'text': 'Emerald Hoe', 'italic': false, 'color': 'white'}",
+			"minecraft:lore": [
+				"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+			]
+		}
+	}
+}
+

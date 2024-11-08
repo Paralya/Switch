@@ -9,7 +9,7 @@
 #    print('tp @s[scores={switch.temp.compteur='+str(i+1)+'}]', round(l1[0] + i*dx, 4), round(l1[1] + i*dy, 4), round(l1[2] + i*dz, 4))
 
 execute if score @s switch.temp.compteur matches 1 run particle explosion 20662 110 20382 2 2 2 0 10 force
-execute if score @s switch.temp.compteur matches 1 run playsound entity.generic.explode block @a[tag=!detached] 20662 110 20382
+execute if score @s switch.temp.compteur matches 1 run playsound entity.explode block @a[tag=!detached] 20662 110 20382
 execute at @s run particle flame ~ ~ ~ .5 .5 .5 0 50 force
 
 tp @s[scores={switch.temp.compteur=1}] 37091.0 139.0 37015.0

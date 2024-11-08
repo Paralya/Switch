@@ -11,7 +11,7 @@ execute store result score #random switch.data run random value 0..12
 execute if score #random switch.data matches 0 if score #TEAM_FISH switch.data matches 0 run effect give @s slow_falling 25 1 true
 execute if score #random switch.data matches 0 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[team=switch.temp.red] slow_falling 25 1 true
 execute if score #random switch.data matches 0 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run effect give @a[team=switch.temp.blue] slow_falling 25 1 true
-execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 execute if score #random switch.data matches 0 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 0 run effect give @s speed 10 0 true
 
@@ -20,7 +20,7 @@ execute if score #random switch.data matches 0 run effect give @s speed 10 0 tru
 execute if score #random switch.data matches 1 if score #TEAM_FISH switch.data matches 0 run effect give @s speed 10 1 true
 execute if score #random switch.data matches 1 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[team=switch.temp.red] speed 10 1 true
 execute if score #random switch.data matches 1 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run effect give @a[team=switch.temp.blue] speed 10 1 true
-execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 execute if score #random switch.data matches 1 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 1 run effect give @s speed 10 0 true
 
@@ -49,7 +49,7 @@ execute if score #random switch.data matches 4 run effect give @s speed 10 0 tru
 
 # si le score est 5, on donne un effet de force au détenteur du score axolotl killed
 execute if score #random switch.data matches 5 run effect give @s strength 20 0 true
-execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 5 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 execute if score #random switch.data matches 5 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 5 run effect give @s speed 10 0 true
 
@@ -104,7 +104,7 @@ execute if score #random switch.data matches 9 run effect give @s speed 10 0 tru
 
 # si le score est 10, on donne un plastron anti kb
 execute if score #random switch.data matches 10 run scoreboard players set @s switch.temp.cooldown 100
-execute if score #random switch.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"generic.knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
+execute if score #random switch.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
 execute if score #random switch.data matches 10 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 execute if score #random switch.data matches 10 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 10 run effect give @s speed 10 0 true
@@ -121,7 +121,7 @@ execute if score #random switch.data matches 11 run effect give @s speed 10 0 tr
 execute if score #random switch.data matches 12 if score #TEAM_FISH switch.data matches 0 run effect give @s jump_boost 8 1 true
 execute if score #random switch.data matches 12 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[team=switch.temp.red] jump_boost 8 1 true
 execute if score #random switch.data matches 12 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run effect give @a[team=switch.temp.blue] jump_boost 8 1 true
-execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run playsound entity.generic.drink ambient @s
+execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
 function switch:translations/modes_fish_fight_axobonus
 execute if score #random switch.data matches 12 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 12 run effect give @s speed 10 0 true

@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"ruby": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"ruby_leggings": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 9571615,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 522,
+								"minecraft:equippable": {
+									"slot": "legs",
+									"model": "switch:ruby"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 6.5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}
+								],
+								"minecraft:item_model": "switch:ruby_leggings",
+								"minecraft:item_name": "{'text': 'Ruby Leggings', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

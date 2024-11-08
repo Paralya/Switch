@@ -6,7 +6,7 @@
 
 setblock 0 0 0 air
 setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot simplenergy:i/simplunium_shovel
+loot insert 0 0 0 loot switch:i/ruby_shovel
 data modify block 0 0 0 Items[0].components."minecraft:enchantments" set value {"levels":{"minecraft:efficiency":10}}
 data modify block 0 0 0 Items append value {id:"white_shulker_box",count:1,Slot:1b,components:{"minecraft:item_name":'{"text":"Powder Snow","color":"white","italic":false}'}}
 execute if score @s switch.spleef.powder_snow matches 1 run data modify block 0 0 0 Items[1].count set value 2b

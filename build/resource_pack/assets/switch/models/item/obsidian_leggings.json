@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:item/leather_leggings",
+	"textures": {
+		"layer0": "switch:item/obsidian_leggings",
+		"layer1": "switch:item/obsidian_leggings"
+	}
+}
+

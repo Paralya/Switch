@@ -1,5 +1,9 @@
 {
 	"values": [
+		{
+			"id": "#switch:dependencies",
+			"required": false
+		},
 		"#switch:enumerate",
 		"#switch:resolve"
 	]

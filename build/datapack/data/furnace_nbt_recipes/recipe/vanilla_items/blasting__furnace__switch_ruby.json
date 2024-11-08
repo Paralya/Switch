@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": "minecraft:furnace",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"ruby": {
+							"ruby": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"switch": {
+					"ruby": true
+				}
+			},
+			"minecraft:item_model": "switch:ruby",
+			"minecraft:item_name": "{'text': 'Ruby', 'italic': false, 'color': 'white'}",
+			"minecraft:lore": [
+				"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}
+

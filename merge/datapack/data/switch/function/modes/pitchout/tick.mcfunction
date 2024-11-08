@@ -15,7 +15,7 @@ execute at @a[tag=!detached,scores={switch.alive=2}] run particle dust{color:[0.
 execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust{color:[0.75,0.0,0.0],scale:1.0} ~ ~2.4 ~ .1 .1 .1 0 1
 
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
-execute as @a[scores={switch.temp.cooldown=1..80}] run attribute @s generic.jump_strength base set 0.42
+execute as @a[scores={switch.temp.cooldown=1..80}] run attribute @s jump_strength base set 0.42
 item replace entity @a[scores={switch.temp.cooldown=1}] armor.chest with air
 
 # Unknown death

@@ -22,11 +22,11 @@ give @s anvil
 
 effect give @s[team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
 item replace entity @s[team=!switch.temp.red,team=!switch.temp.blue] hotbar.0 with netherite_sword[enchantments={sharpness:3}]
-attribute @s[team=!switch.temp.red,team=!switch.temp.blue] generic.max_health base set 40.0
+attribute @s[team=!switch.temp.red,team=!switch.temp.blue] max_health base set 40.0
 
 # Leather cap color
-item replace entity @s[team=switch.temp.red] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=16711680,attribute_modifiers=[{type:"generic.armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"generic.armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
-item replace entity @s[team=switch.temp.red_king] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=16711680,attribute_modifiers=[{type:"generic.armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"generic.armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
-item replace entity @s[team=switch.temp.blue] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=255,attribute_modifiers=[{type:"generic.armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"generic.armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
-item replace entity @s[team=switch.temp.blue_king] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=255,attribute_modifiers=[{type:"generic.armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"generic.armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
+item replace entity @s[team=switch.temp.red] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=16711680,attribute_modifiers=[{type:"armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
+item replace entity @s[team=switch.temp.red_king] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=16711680,attribute_modifiers=[{type:"armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
+item replace entity @s[team=switch.temp.blue] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=255,attribute_modifiers=[{type:"armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
+item replace entity @s[team=switch.temp.blue_king] armor.head with leather_helmet[unbreakable={},enchantments={protection:2},dyed_color=255,attribute_modifiers=[{type:"armor",slot:"head",id:"switch.helmet.armor",amount:3,operation:"add_value"},{type:"armor_toughness",slot:"head",id:"switch.helmet.armor_toughness",amount:2,operation:"add_value"}]]
 

@@ -12,7 +12,7 @@ execute if score #random switch.data matches 3 run summon armor_stand 121060 132
 execute if score #random switch.data matches 1 positioned 121054 132 121026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
 execute if score #random switch.data matches 2 positioned 121057 132 121026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
 execute if score #random switch.data matches 3 positioned 121060 132 121026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
-execute positioned 121057 132 121026 run playsound entity.generic.explode ambient @a[tag=!detached] ~ ~ ~ 1 1
+execute positioned 121057 132 121026 run playsound entity.explode ambient @a[tag=!detached] ~ ~ ~ 1 1
 
 # Get a random position
 summon marker 121057 109 121064 {Tags:["switch.temp"]}

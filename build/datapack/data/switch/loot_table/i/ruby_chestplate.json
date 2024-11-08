@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"ruby": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"ruby_chestplate": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 9571615,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 557,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"model": "switch:ruby"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 8.5,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}
+								],
+								"minecraft:item_model": "switch:ruby_chestplate",
+								"minecraft:item_name": "{'text': 'Ruby Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

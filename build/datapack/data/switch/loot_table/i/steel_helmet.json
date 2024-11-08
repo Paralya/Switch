@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"steel": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"steel_helmet": true}
+								},
+								"minecraft:dyed_color": {
+									"rgb": 5460819,
+									"show_in_tooltip": false
+								},
+								"minecraft:max_damage": 293,
+								"minecraft:equippable": {
+									"slot": "head",
+									"model": "switch:steel"
+								},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor.head"}
+								],
+								"minecraft:item_model": "switch:steel_helmet",
+								"minecraft:item_name": "{'text': 'Steel Helmet', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

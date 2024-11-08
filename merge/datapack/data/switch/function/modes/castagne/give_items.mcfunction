@@ -7,7 +7,7 @@ item replace entity @s hotbar.0 with wooden_sword[enchantments={sharpness:1,knoc
 item replace entity @s hotbar.1 with bow
 item replace entity @s hotbar.2 with water_bucket
 item replace entity @s hotbar.3 with iron_pickaxe[enchantments={efficiency:1}]
-item replace entity @s hotbar.4 with iron_axe[enchantments={efficiency:1},attribute_modifiers=[{type:"minecraft:generic.attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:2,operation:"add_value"}]]
+item replace entity @s hotbar.4 with iron_axe[enchantments={efficiency:1},attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:2,operation:"add_value"}]]
 item replace entity @s hotbar.6 with arrow 8
 item replace entity @s hotbar.7 with oak_planks 64
 item replace entity @s hotbar.8 with golden_apple 12
