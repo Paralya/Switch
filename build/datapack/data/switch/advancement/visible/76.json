@@ -1,0 +1,16 @@
+{
+	"display": {
+		"icon": {"id": "minecraft:warped_fungus_on_a_stick", "components": {"minecraft:custom_model_data": 2013154}},
+		"title": {"text": "Injustice", "color": "yellow"},
+		"description": {"text": "Finish the parkour in Guy Shooter but die from the hands of a Shooter", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/hard"},
+	"parent": "switch:visible/22"
+}
+

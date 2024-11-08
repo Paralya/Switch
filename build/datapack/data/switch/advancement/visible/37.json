@@ -1,0 +1,16 @@
+{
+	"display": {
+		"icon": {"id": "minecraft:coal_block"},
+		"title": {"text": "Oppenheimer", "color": "yellow"},
+		"description": {"text": "Survive for more than one minute in Bombardment", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/medium"},
+	"parent": "switch:visible/44"
+}
+

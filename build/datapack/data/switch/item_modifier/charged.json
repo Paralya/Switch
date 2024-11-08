@@ -1,0 +1,38 @@
+{
+	"function": "minecraft:set_components",
+	"components": {
+		"minecraft:charged_projectiles": [
+			{
+				"id": "minecraft:arrow",
+				"components": {
+					"minecraft:custom_data": {
+						"glassrunner": {
+							"destroying_arrow": 1
+						}
+					}
+				}
+			},
+			{
+				"id": "minecraft:arrow",
+				"components": {
+					"minecraft:custom_data": {
+						"glassrunner": {
+							"destroying_arrow": 1
+						}
+					}
+				}
+			},
+			{
+				"id": "minecraft:arrow",
+				"components": {
+					"minecraft:custom_data": {
+						"glassrunner": {
+							"destroying_arrow": 1
+						}
+					}
+				}
+			}
+		]
+	}
+}
+

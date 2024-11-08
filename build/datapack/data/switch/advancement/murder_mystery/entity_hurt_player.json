@@ -1,0 +1,16 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:entity_hurt_player"
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"rewards": {
+		"function": "switch:modes/murder_mystery/calls/entity_hurt_player"
+	}
+}
+

@@ -1,0 +1,22 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "simplenergy:i/simplunium_pickaxe",
+					"functions": [
+						{
+							"function": "minecraft:set_enchantments",
+							"enchantments": {
+								"minecraft:efficiency": 1
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

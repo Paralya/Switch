@@ -1,0 +1,18 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": "{switch:{memory_mine:true}}"
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "switch:modes/memory_mine/place_mine"
+	}
+}
+

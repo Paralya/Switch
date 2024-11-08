@@ -1,0 +1,16 @@
+{
+	"display": {
+		"icon": {"id": "minecraft:totem_of_undying"},
+		"title": {"text": "Sans Faute", "color": "yellow"},
+		"description": {"text": "Win a game of Spectres Game without losing a member of your team", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/hard"},
+	"parent": "switch:visible/25"
+}
+

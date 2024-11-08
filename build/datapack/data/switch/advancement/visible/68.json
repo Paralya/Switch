@@ -1,0 +1,16 @@
+{
+	"display": {
+		"icon": {"id": "minecraft:diamond_hoe"},
+		"title": {"text": "Collatéral", "color": "yellow"},
+		"description": {"text": "Kill two players in Quake with a single shot", "color": "aqua"},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+	"requirements": [["requirement"]],
+	"rewards": {"function": "switch:advancements/hard"},
+	"parent": "switch:visible/62"
+}
+

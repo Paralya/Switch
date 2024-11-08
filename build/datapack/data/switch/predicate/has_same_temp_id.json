@@ -1,0 +1,25 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"switch.temp.id": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#player_id"
+				},
+				"score": "switch.temp.id"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#player_id"
+				},
+				"score": "switch.temp.id"
+			}
+		}
+	}
+}
+

@@ -1,0 +1,23 @@
+{
+	"values": [
+		"#minecraft:all_signs",
+		"#shulker_boxes",
+		"chest",
+		"ender_chest",
+		"barrel",
+		"calibrated_sculk_sensor",
+		"campfire",
+		"dragon_egg",
+		"furnace",
+		"blast_furnace",
+		"player_head",
+		"smoker",
+		"soul_campfire",
+		"sculk_sensor",
+		"sculk_shrieker",
+		"spawner",
+		"stonecutter",
+		"respawn_anchor"
+	]
+}
+

@@ -1,0 +1,18 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": "{switch:{rtp_class:true}}"
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "switch:modes/rush_the_point/right_click"
+	}
+}
+
