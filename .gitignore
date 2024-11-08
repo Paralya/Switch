@@ -1,4 +1,7 @@
-
-*__pycache__/*
+env
+venv
+.env
+.venv
+__pycache__
 *_deepl_auth_key*
 

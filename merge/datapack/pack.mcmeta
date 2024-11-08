@@ -1,0 +1,14 @@
+{
+	"filter": {
+		"block": [
+			{
+				"namespace": "minecraft",
+				"path": "advancement"
+			},
+			{
+				"namespace": "simplenergy",
+				"path": "advancement"
+			}
+		]
+	}
+}
