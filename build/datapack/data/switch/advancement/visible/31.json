@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:saddle"},
-		"title": {"text": "Interville", "color": "yellow"},
-		"description": {"text": "Die in Block Party because of a mad cow (Ravager)", "color": "aqua"},
+		"title": {"text": "Interville","color": "yellow"},
+		"description": {"text": "Die in Block Party because of a mad cow (Ravager)","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/medium"
+	},
 	"parent": "switch:visible/29"
 }
 

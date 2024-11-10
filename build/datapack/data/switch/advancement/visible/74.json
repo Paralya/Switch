@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:enchanted_golden_apple"},
-		"title": {"text": "I am Legend", "color": "yellow"},
-		"description": {"text": "Win a game of Infected by being the last human (if there are more than 10 players)", "color": "aqua"},
+		"title": {"text": "I am Legend","color": "yellow"},
+		"description": {"text": "Win a game of Infected by being the last human (if there are more than 10 players)","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/hard"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/hard"
+	},
 	"parent": "switch:visible/57"
 }
 

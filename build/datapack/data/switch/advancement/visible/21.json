@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:water_bucket"},
-		"title": {"text": "Plongeur Expert", "color": "yellow"},
-		"description": {"text": "Complete 3 holes in game modes such as Dé à Coudre", "color": "aqua"},
+		"title": {"text": "Plongeur Expert","color": "yellow"},
+		"description": {"text": "Complete 3 holes in game modes such as Dé à Coudre","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/medium"
+	},
 	"parent": "switch:visible/20"
 }
 

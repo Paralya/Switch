@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:sculk_sensor"},
-		"title": {"text": "Suicidaire", "color": "yellow"},
-		"description": {"text": "Be the target of 8 wardens in Warden Escape", "color": "aqua"},
+		"title": {"text": "Suicidaire","color": "yellow"},
+		"description": {"text": "Be the target of 8 wardens in Warden Escape","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/medium"
+	},
 	"parent": "switch:visible/23"
 }
 

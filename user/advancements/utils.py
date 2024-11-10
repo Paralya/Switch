@@ -78,5 +78,34 @@ def hidden_advancements(config: dict) -> None:
 			write_to_file(f"{advancement_folder}/{id}.json", super_json_dump(json_dict, max_level=1))
 
 
+def visible_advancements(config: dict) -> None:
+	""" Generates the visible advancements.\n
+	Args:
+		config (dict): Configuration dictionary for writing functions
+	"""
+	advancement_folder: str = f"{config['build_datapack']}/data/switch/advancement/visible"
 
+	# For each advancement, generate the file
+	for adv in ALL_ADVANCEMENTS:
+		id: str = adv["id"]
+		category: str = adv["category"]
+		if category == "jump":
+			category = "jumps/" + id.replace("jump_", "")
+
+		json_dict: dict = {
+			"display": {
+				"icon": json.loads(adv["icon"]),
+				"title": {"text": adv["title"], "color": "yellow"},
+				"description": {"text": adv["desc_en"], "color": "aqua"},
+				"frame": "task" if id not in CHALLENGES else "challenge",
+				"show_toast": True,
+				"announce_to_chat": True,
+				"hidden": False
+			},
+			"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+			"requirements": [["requirement"]],
+			"rewards": {"function": f"switch:advancements/{category}"},
+			"parent": f"switch:visible/{adv['parent']}"
+		}
+		write_to_file(f"{advancement_folder}/{id}.json", super_json_dump(json_dict, max_level=2))
 

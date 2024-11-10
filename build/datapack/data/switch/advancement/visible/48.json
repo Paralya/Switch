@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:iron_hoe"},
-		"title": {"text": "Donald Trump", "color": "yellow"},
-		"description": {"text": "Hit a maximum of 5 shots in a game of MiniGolf", "color": "aqua"},
+		"title": {"text": "Donald Trump","color": "yellow"},
+		"description": {"text": "Hit a maximum of 5 shots in a game of MiniGolf","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/hard"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/hard"
+	},
 	"parent": "switch:visible/42"
 }
 

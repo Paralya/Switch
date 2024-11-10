@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:crossbow"},
-		"title": {"text": "Tonerre de Zeus", "color": "yellow"},
-		"description": {"text": "Eliminate 10 players in a game of Thunder Spear", "color": "aqua"},
+		"title": {"text": "Tonerre de Zeus","color": "yellow"},
+		"description": {"text": "Eliminate 10 players in a game of Thunder Spear","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/medium"
+	},
 	"parent": "switch:visible/66"
 }
 

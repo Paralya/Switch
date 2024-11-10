@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:apple"},
-		"title": {"text": "Fidèle", "color": "yellow"},
-		"description": {"text": "Play a total of 100 games on the Switch", "color": "aqua"},
+		"title": {"text": "Fidèle","color": "yellow"},
+		"description": {"text": "Play a total of 100 games on the Switch","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/easy"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/easy"
+	},
 	"parent": "switch:visible/1"
 }
 

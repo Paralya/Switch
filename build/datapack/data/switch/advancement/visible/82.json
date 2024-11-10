@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:turtle_egg"},
-		"title": {"text": "Bien placé", "color": "yellow"},
-		"description": {"text": "Survive 25 seconds without moving in Block Party", "color": "aqua"},
+		"title": {"text": "Bien placé","color": "yellow"},
+		"description": {"text": "Survive 25 seconds without moving in Block Party","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/hard"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/hard"
+	},
 	"parent": "switch:visible/24"
 }
 

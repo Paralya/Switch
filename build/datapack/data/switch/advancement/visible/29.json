@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stick"},
-		"title": {"text": "Embrouilleur", "color": "yellow"},
-		"description": {"text": "Hit every player in a game of Castagne", "color": "aqua"},
+		"title": {"text": "Embrouilleur","color": "yellow"},
+		"description": {"text": "Hit every player in a game of Castagne","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/medium"
+	},
 	"parent": "switch:visible/26"
 }
 

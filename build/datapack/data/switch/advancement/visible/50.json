@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:cherry_sapling"},
-		"title": {"text": "Zom 100", "color": "yellow"},
-		"description": {"text": "Complete the Old Japan Apocalypse map secret in Infected", "color": "aqua"},
+		"title": {"text": "Zom 100","color": "yellow"},
+		"description": {"text": "Complete the Old Japan Apocalypse map secret in Infected","color": "aqua"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/hard"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/hard"
+	},
 	"parent": "switch:visible/17"
 }
 

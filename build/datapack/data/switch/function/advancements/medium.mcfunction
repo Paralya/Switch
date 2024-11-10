@@ -1,7 +1,8 @@
 
 #> switch:advancements/medium
 #
-# @within	advancement switch:visible/10
+# @within	advancement switch:visible/6
+#			advancement switch:visible/10
 #			advancement switch:visible/15
 #			advancement switch:visible/19
 #			advancement switch:visible/20
@@ -22,7 +23,6 @@
 #			advancement switch:visible/55
 #			advancement switch:visible/58
 #			advancement switch:visible/59
-#			advancement switch:visible/6
 #			advancement switch:visible/66
 #			advancement switch:visible/67
 #			advancement switch:visible/71

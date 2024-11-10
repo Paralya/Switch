@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:pink_concrete"},
-		"title": {"text": "The Pink Jump", "color": "yellow"},
-		"description": {"text": "Finish the pink jump for the first time", "color": "aqua"},
+		"title": {"text": "The Pink Jump","color": "yellow"},
+		"description": {"text": "Finish the pink jump for the first time","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/jumps/pink"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/jumps/pink"
+	},
 	"parent": "switch:visible/jump_duality"
 }
 

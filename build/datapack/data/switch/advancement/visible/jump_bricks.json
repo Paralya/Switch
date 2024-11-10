@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:bricks"},
-		"title": {"text": "The Bricks Jump", "color": "yellow"},
-		"description": {"text": "Finish the brick jump for the first time", "color": "aqua"},
+		"title": {"text": "The Bricks Jump","color": "yellow"},
+		"description": {"text": "Finish the brick jump for the first time","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/jumps/bricks"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/jumps/bricks"
+	},
 	"parent": "switch:visible/jump_purple"
 }
 

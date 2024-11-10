@@ -7,7 +7,9 @@ from user.advancements.utils import *
 @measure_time(progress, "Generated the advancements")
 def main(config: dict) -> None:
 	generate_adv_dictionnary()
+	make_load_file(config)
+	make_update_percentages(config)
 	hidden_advancements(config)
-
+	visible_advancements(config)
 	pass
 

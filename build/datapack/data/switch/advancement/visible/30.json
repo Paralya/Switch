@@ -1,16 +1,22 @@
 {
 	"display": {
-		"icon": {"id": "minecraft:command_block", "components": {"minecraft:custom_model_data": 2013040}},
-		"title": {"text": "Légende", "color": "yellow"},
-		"description": {"text": "Win 5 mini-games in a row", "color": "aqua"},
+		"icon": {"id": "minecraft:command_block","components": {"minecraft:custom_model_data": 2013040}},
+		"title": {"text": "Légende","color": "yellow"},
+		"description": {"text": "Win 5 mini-games in a row","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/hard"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/hard"
+	},
 	"parent": "switch:visible/categories/hard"
 }
 

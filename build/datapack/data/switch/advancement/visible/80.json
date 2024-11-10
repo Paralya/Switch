@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:observer"},
-		"title": {"text": "Ooopsy", "color": "yellow"},
-		"description": {"text": "Get killed by another murderer as a murderer in Murder Myster", "color": "aqua"},
+		"title": {"text": "Ooopsy","color": "yellow"},
+		"description": {"text": "Get killed by another murderer as a murderer in Murder Myster","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/medium"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/medium"
+	},
 	"parent": "switch:visible/15"
 }
 

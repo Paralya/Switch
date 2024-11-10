@@ -1,16 +1,22 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:diamond_axe"},
-		"title": {"text": "Bagarreur", "color": "yellow"},
-		"description": {"text": "Kill two people within 10 seconds in Castagne", "color": "aqua"},
+		"title": {"text": "Bagarreur","color": "yellow"},
+		"description": {"text": "Kill two people within 10 seconds in Castagne","color": "aqua"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"rewards": {"function": "switch:advancements/hard"},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"rewards": {
+		"function": "switch:advancements/hard"
+	},
 	"parent": "switch:visible/7"
 }
 
