@@ -10,13 +10,13 @@ from python_datapack.constants import *
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 
 	# Custom materials from ImagineYourCraft
-	"adamantium_fragment":	EquipmentsConfig(DEFAULT_ORE.NETHERITE, 1873, {"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 0.2}),
-	"sapphire":				EquipmentsConfig(DEFAULT_ORE.DIAMOND, 1752, {"mining_efficiency": 0.2}),
-	"ruby":					EquipmentsConfig(DEFAULT_ORE.DIAMOND, 1647, {"attack_damage": 0.5, "armor": 0.5, "mining_efficiency": 0.1}),
-	"topaz":				EquipmentsConfig(DEFAULT_ORE.DIAMOND, 1281, {"attack_damage": 1.0, "armor": 1.0}),
-	"obsidian_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND, 3902, {"attack_damage": -0.2, "mining_efficiency": -0.2}),
-	"steel_ingot":			EquipmentsConfig(DEFAULT_ORE.IRON, 444, {"mining_efficiency": 0.1}),
-	"minecraft:emerald":	EquipmentsConfig(DEFAULT_ORE.DIAMOND, 736, {"luck": 0.25}),
+	"adamantium_fragment":	EquipmentsConfig(DEFAULT_ORE.NETHERITE,	1873,	{"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 0.2}),
+	"sapphire":				EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1752,	{"mining_efficiency": 0.2}),
+	"ruby":					EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1647,	{"attack_damage": 0.5, "armor": 0.5, "mining_efficiency": 0.1}),
+	"topaz":				EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1281,	{"attack_damage": 1.0, "armor": 1.0}),
+	"obsidian_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	3902,	{"attack_damage": -0.2, "mining_efficiency": -0.2}),
+	"steel_ingot":			EquipmentsConfig(DEFAULT_ORE.IRON,		444,	{"mining_efficiency": 0.1}),
+	"minecraft:emerald":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	736,	{"luck": 0.25}),
 }
 
 # Main function should return a database
