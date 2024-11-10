@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/bowser_castle/if_kart_racer
 #
-# @within	???
+# @within	switch:maps/survival/bowser_castle/main
 #
 
 scoreboard players set #total_laps switch.data 3

@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/baby_park/if_kart_racer
 #
-# @within	???
+# @within	switch:maps/survival/baby_park/main
 #
 
 scoreboard players set #total_laps switch.data 7

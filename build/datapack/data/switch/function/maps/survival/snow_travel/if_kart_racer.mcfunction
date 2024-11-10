@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/snow_travel/if_kart_racer
 #
-# @within	???
+# @within	switch:maps/survival/snow_travel/main
 #
 
 scoreboard players set #total_laps switch.data 3
