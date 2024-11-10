@@ -33,7 +33,7 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 	# The name can be whatever you want, it's just used in messages
 	
 	# Example for DatapackEnergy >= 1.8.0
-	#"energy": {"version":[1, 8, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
+	"sheepwars": {"version":[2, 1, 0], "name":"SheepWars", "url":"https://github.com/Stoupy51/SheepWars"},
 }
 
 

@@ -27,17 +27,17 @@
 			"minecraft:attribute_modifiers": [
 				{
 					"type": "attack_damage",
-					"amount": 5,
+					"amount": 4,
 					"operation": "add_value",
 					"slot": "mainhand",
-					"id": "switch:attack_damage.mainhand"
+					"id": "minecraft:base_attack_damage"
 				},
 				{
 					"type": "attack_speed",
-					"amount": -2.75,
+					"amount": -2.8,
 					"operation": "add_value",
 					"slot": "mainhand",
-					"id": "switch:attack_speed.mainhand"
+					"id": "minecraft:base_attack_speed"
 				},
 				{
 					"type": "luck",
