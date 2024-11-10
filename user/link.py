@@ -5,6 +5,7 @@ from user.misc_links.random_loot_table import main as random_loot_table
 from user.misc_links.note_block_studio import main as note_block_studio
 from user.misc_links.memory_mine import main as memory_mine
 from user.survival_maps.main import main as generate_survival_maps
+from user.advancements.main import main as automatic_advancements
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
@@ -21,4 +22,7 @@ def main(config: dict) -> None:
 
 	# Generate the survival folder for generating maps
 	generate_survival_maps(config)
+
+	# Generate the advancements
+	automatic_advancements(config)
 

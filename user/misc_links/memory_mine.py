@@ -1,6 +1,5 @@
 
 # Imports
-from config import *
 from python_datapack.utils.database_helper import *
 import math
 

@@ -1,6 +1,6 @@
 
 # Imports
-from config import *
+from config import ROOT, LIBS_FOLDER
 from python_datapack.utils.database_helper import *
 import zipfile
 

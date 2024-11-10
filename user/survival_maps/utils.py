@@ -1,5 +1,5 @@
+
 # Imports
-from config import *
 from python_datapack.utils.database_helper import *
 from user.survival_maps.shared_memory import *
 
