@@ -6,7 +6,7 @@ import zipfile
 
 # Constants
 ALL_BPM: int = 80
-INPUTS_FOLDER: str = f"{ROOT}/script_inputs"
+INPUTS_FOLDER: str = f"{ROOT}/note_block_studio"
 REQUIRED_PATH_PARTS: list[str] = ["notes/", ".mcfunction"]
 LIB_TO_WRITE: str = f"{LIBS_FOLDER}/datapack/switch_music.zip"
 RELATIVE_LIB_TO_WRITE: str = LIB_TO_WRITE.replace(clean_path(os.getcwd()) + "/", "")
