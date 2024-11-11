@@ -7,7 +7,6 @@ scoreboard players add @s switch.spectres_game.sp_arrows 0
 scoreboard players add @s switch.spectres_game.sp_tnt 0
 scoreboard players add @s switch.spectres_game.vi_arrows 0
 scoreboard players add @s switch.spectres_game.vi_tnt 0
-scoreboard players add @s switch.spectres_game.vi_slow_regen 0
 execute if score @s switch.trigger.shop matches 500 run playsound block.note_block.bell ambient @s
 
 ## Spectre
@@ -54,12 +53,6 @@ execute if score @s switch.trigger.shop matches 512 if score @s switch.spectres_
 execute if score @s switch.trigger.shop matches 512 if score #success switch.data matches 1.. run scoreboard players add @s switch.spectres_game.vi_tnt 1
 execute if score @s switch.trigger.shop matches 512 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 execute if score @s switch.trigger.shop matches 512 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
-
-# Slow regeneration
-execute if score @s switch.trigger.shop matches 513 if score @s switch.spectres_game.vi_slow_regen matches 0 if score @s switch.money matches 600.. store success score #success switch.data run scoreboard players remove @s switch.money 600
-execute if score @s switch.trigger.shop matches 513 if score #success switch.data matches 1.. run scoreboard players add @s switch.spectres_game.vi_slow_regen 1
-execute if score @s switch.trigger.shop matches 513 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
-execute if score @s switch.trigger.shop matches 513 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 # Messages
 function switch:translations/shop_spectres_game

@@ -30,8 +30,8 @@ PITCHOUT: dict = {
 		},
 		"upgrade_name": {"fr": "Perles de l'end", "en": "Ender pearls"},
 		"upgrades": [
-			{"price": 80,	"hover_text": {"fr": "3 -> 4 ender pearls"}},
-			{"price": 160,	"hover_text": {"fr": "4 -> 5 ender pearls"}},
+			{"price": 80,	"hover_text": {"en": "3 -> 4 ender pearls"}},
+			{"price": 160,	"hover_text": {"en": "4 -> 5 ender pearls"}},
 		]
 	},
 }

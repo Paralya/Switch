@@ -7,7 +7,20 @@ from user.shop.dict.sheepwars import SHEEPWARS
 from user.shop.dict.spectres_game import SPECTRES_GAME
 
 # Constants
-LANGUAGE_SCORES: dict[str, int] = {"fr": 0, "en": 1}
+STAR: str = "✮"
+MONEY: dict[str, str] = {
+	"fr": " Saphirs",
+	"en": " Sapphires"
+}
+LANGUAGE_SCORES: dict[str, tuple[int, str, str, str, str]] = {
+	"fr": (0, "French", "Boutique X", "Acheter pour X", "Accéder à la boutique X"),
+	"en": (1, "English", "X Shop", "Buy for X", "Access the X shop")
+}
+SHEEPWARS_CHOOSE_KIT: dict[str, str] = {
+	"fr": "Sélectionnez un kit en cliquant sur le nom !",
+	"en": "Select a kit by clicking on the name!"
+}
+SHEEPWARS_KIT_OFFSET: int = 50
 SHOPS: dict[str, dict[str, dict]] = {
 	"pitchout": PITCHOUT,
 	"infected": INFECTED,
@@ -15,4 +28,13 @@ SHOPS: dict[str, dict[str, dict]] = {
 	"sheepwars": SHEEPWARS,
 	"spectres_game": SPECTRES_GAME,
 }
+LOAD_PATH: str = "switch:shop/_load"
+TRIGGER_PATH: str = "switch:shop/trigger"
+USERNAME_CHANGE_PATH: str = "switch:player/username_change/update_shops"
+INITIALIZE_SHOP_SCORES_PATH: str = "switch:shop/initialize_shop_scores"
+
+SHOP_MAX_SIZE: int = 100
+def get_shop_range(index: int) -> tuple[int, int]:
+	index += 1 # Because the first shop is 1
+	return (SHOP_MAX_SIZE*index, SHOP_MAX_SIZE*(index + 1) - 1)
 

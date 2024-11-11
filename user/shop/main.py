@@ -6,6 +6,14 @@ from user.shop.utils import *
 # Main function
 @measure_time(progress, "Generated the shops")
 def main(config: dict) -> None:
-	for shop_name, shop_dict in SHOPS.items():
-		generate_shop(shop_name, shop_dict)
+
+	# Generate all the shops
+	for i, (shop_name, shop_dict) in enumerate(SHOPS.items()):
+		generate_shop(config, i, shop_name, shop_dict)
+
+	# Write the trigger function
+	generate_trigger(config)
+
+	# Write the general translations
+	general_translations(config)
 

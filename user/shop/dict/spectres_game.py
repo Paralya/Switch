@@ -12,15 +12,15 @@ SPECTRES_GAME: dict = {
 		},
 		"upgrade_name": {"fr": "Nombre de fleches", "en": "Number of arrows"},
 		"upgrades": [
-			{"price": 50,	"hover_text": {"fr": "24 -> 26"}},
-			{"price": 100,	"hover_text": {"fr": "26 -> 28"}},
-			{"price": 150,	"hover_text": {"fr": "28 -> 30"}},
-			{"price": 200,	"hover_text": {"fr": "30 -> 32"}},
-			{"price": 250,	"hover_text": {"fr": "32 -> 34"}},
-			{"price": 300,	"hover_text": {"fr": "34 -> 36"}},
-			{"price": 350,	"hover_text": {"fr": "36 -> 38"}},
-			{"price": 400,	"hover_text": {"fr": "38 -> 40"}},
-			{"price": 450,	"hover_text": {"fr": "40 -> 42"}},
+			{"price": 50,	"hover_text": {"en": "24 -> 26"}},
+			{"price": 100,	"hover_text": {"en": "26 -> 28"}},
+			{"price": 150,	"hover_text": {"en": "28 -> 30"}},
+			{"price": 200,	"hover_text": {"en": "30 -> 32"}},
+			{"price": 250,	"hover_text": {"en": "32 -> 34"}},
+			{"price": 300,	"hover_text": {"en": "34 -> 36"}},
+			{"price": 350,	"hover_text": {"en": "36 -> 38"}},
+			{"price": 400,	"hover_text": {"en": "38 -> 40"}},
+			{"price": 450,	"hover_text": {"en": "40 -> 42"}},
 		]
 	},
 	"sp_tnt": {
@@ -34,9 +34,9 @@ SPECTRES_GAME: dict = {
 		},
 		"upgrade_name": {"fr": "Nombre de TNT", "en": "Number of TNT"},
 		"upgrades": [
-			{"price": 50,	"hover_text": {"fr": "3 -> 4 TNT"}},
-			{"price": 100,	"hover_text": {"fr": "4 -> 5 TNT"}},
-			{"price": 150,	"hover_text": {"fr": "5 -> 6 TNT"}},
+			{"price": 50,	"hover_text": {"en": "3 -> 4 TNT"}},
+			{"price": 100,	"hover_text": {"en": "4 -> 5 TNT"}},
+			{"price": 150,	"hover_text": {"en": "5 -> 6 TNT"}},
 		]
 	},
 	"vi_arrows": {
@@ -50,14 +50,14 @@ SPECTRES_GAME: dict = {
 		},
 		"upgrade_name": {"fr": "Nombre de fleches", "en": "Number of arrows"},
 		"upgrades": [
-			{"price": 50,	"hover_text": {"fr": "16 -> 18"}},
-			{"price": 100,	"hover_text": {"fr": "18 -> 20"}},
-			{"price": 150,	"hover_text": {"fr": "20 -> 22"}},
-			{"price": 200,	"hover_text": {"fr": "22 -> 24"}},
-			{"price": 250,	"hover_text": {"fr": "24 -> 26"}},
-			{"price": 300,	"hover_text": {"fr": "26 -> 28"}},
-			{"price": 350,	"hover_text": {"fr": "28 -> 30"}},
-			{"price": 400,	"hover_text": {"fr": "30 -> 32"}},
+			{"price": 50,	"hover_text": {"en": "16 -> 18"}},
+			{"price": 100,	"hover_text": {"en": "18 -> 20"}},
+			{"price": 150,	"hover_text": {"en": "20 -> 22"}},
+			{"price": 200,	"hover_text": {"en": "22 -> 24"}},
+			{"price": 250,	"hover_text": {"en": "24 -> 26"}},
+			{"price": 300,	"hover_text": {"en": "26 -> 28"}},
+			{"price": 350,	"hover_text": {"en": "28 -> 30"}},
+			{"price": 400,	"hover_text": {"en": "30 -> 32"}},
 		]
 	},
 	"vi_tnt": {
@@ -71,9 +71,9 @@ SPECTRES_GAME: dict = {
 		},
 		"upgrade_name": {"fr": "Nombre de TNT", "en": "Number of TNT"},
 		"upgrades": [
-			{"price": 50,	"hover_text": {"fr": "3 -> 4 TNT"}},
-			{"price": 100,	"hover_text": {"fr": "4 -> 5 TNT"}},
-			{"price": 150,	"hover_text": {"fr": "5 -> 6 TNT"}},
+			{"price": 50,	"hover_text": {"en": "3 -> 4 TNT"}},
+			{"price": 100,	"hover_text": {"en": "4 -> 5 TNT"}},
+			{"price": 150,	"hover_text": {"en": "5 -> 6 TNT"}},
 		]
 	},
 }

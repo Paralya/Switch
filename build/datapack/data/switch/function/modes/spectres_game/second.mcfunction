@@ -29,12 +29,6 @@ execute if score #TASKS_GAME switch.data matches 1 run scoreboard players operat
 execute if score #TASKS_GAME switch.data matches 1 if score #temp switch.data matches 40 run function switch:modes/spectres_game/task_obsidian
 execute if score #TASKS_GAME switch.data matches 1 if score #temp switch.data matches 100 run function switch:modes/spectres_game/task_obsidian
 
-# Slow regeneration
-scoreboard players operation #temp switch.data = #spectres_game_seconds switch.data
-scoreboard players operation #temp switch.data %= #10 switch.data
-execute if score #temp switch.data matches 5 run effect give @a[tag=!detached,scores={switch.spectres_game.vi_slow_regen=1}] regeneration 1 2 true
-
-
 # Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..48] run effect give @s glowing 2 0 true
 

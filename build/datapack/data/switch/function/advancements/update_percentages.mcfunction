@@ -29,19 +29,19 @@ data modify storage switch:main input.username set from block 0 0 0 Items[0].com
 
 ## For each advancement, check if the player has the advancement
 scoreboard players set @s switch.advancements 0
-execute if entity @s[advancements={switch:visible/"jump_green"=true}] run function switch:advancements/_pre_macro {id:"jump_green"}
-execute if entity @s[advancements={switch:visible/"jump_white"=true}] run function switch:advancements/_pre_macro {id:"jump_white"}
-execute if entity @s[advancements={switch:visible/"jump_blue"=true}] run function switch:advancements/_pre_macro {id:"jump_blue"}
-execute if entity @s[advancements={switch:visible/"jump_yellow"=true}] run function switch:advancements/_pre_macro {id:"jump_yellow"}
-execute if entity @s[advancements={switch:visible/"jump_red"=true}] run function switch:advancements/_pre_macro {id:"jump_red"}
-execute if entity @s[advancements={switch:visible/"jump_brown"=true}] run function switch:advancements/_pre_macro {id:"jump_brown"}
-execute if entity @s[advancements={switch:visible/"jump_purple"=true}] run function switch:advancements/_pre_macro {id:"jump_purple"}
-execute if entity @s[advancements={switch:visible/"jump_dripstone"=true}] run function switch:advancements/_pre_macro {id:"jump_dripstone"}
-execute if entity @s[advancements={switch:visible/"jump_bricks"=true}] run function switch:advancements/_pre_macro {id:"jump_bricks"}
-execute if entity @s[advancements={switch:visible/"jump_pink"=true}] run function switch:advancements/_pre_macro {id:"jump_pink"}
-execute if entity @s[advancements={switch:visible/"jump_obsidian"=true}] run function switch:advancements/_pre_macro {id:"jump_obsidian"}
-execute if entity @s[advancements={switch:visible/"jump_duality"=true}] run function switch:advancements/_pre_macro {id:"jump_duality"}
-execute if entity @s[advancements={switch:visible/"jump_graviglitch"=true}] run function switch:advancements/_pre_macro {id:"jump_graviglitch"}
+execute if entity @s[advancements={switch:visible/jump_green=true}] run function switch:advancements/_pre_macro {id:"jump_green"}
+execute if entity @s[advancements={switch:visible/jump_white=true}] run function switch:advancements/_pre_macro {id:"jump_white"}
+execute if entity @s[advancements={switch:visible/jump_blue=true}] run function switch:advancements/_pre_macro {id:"jump_blue"}
+execute if entity @s[advancements={switch:visible/jump_yellow=true}] run function switch:advancements/_pre_macro {id:"jump_yellow"}
+execute if entity @s[advancements={switch:visible/jump_red=true}] run function switch:advancements/_pre_macro {id:"jump_red"}
+execute if entity @s[advancements={switch:visible/jump_brown=true}] run function switch:advancements/_pre_macro {id:"jump_brown"}
+execute if entity @s[advancements={switch:visible/jump_purple=true}] run function switch:advancements/_pre_macro {id:"jump_purple"}
+execute if entity @s[advancements={switch:visible/jump_dripstone=true}] run function switch:advancements/_pre_macro {id:"jump_dripstone"}
+execute if entity @s[advancements={switch:visible/jump_bricks=true}] run function switch:advancements/_pre_macro {id:"jump_bricks"}
+execute if entity @s[advancements={switch:visible/jump_pink=true}] run function switch:advancements/_pre_macro {id:"jump_pink"}
+execute if entity @s[advancements={switch:visible/jump_obsidian=true}] run function switch:advancements/_pre_macro {id:"jump_obsidian"}
+execute if entity @s[advancements={switch:visible/jump_duality=true}] run function switch:advancements/_pre_macro {id:"jump_duality"}
+execute if entity @s[advancements={switch:visible/jump_graviglitch=true}] run function switch:advancements/_pre_macro {id:"jump_graviglitch"}
 execute if entity @s[advancements={switch:visible/1=true}] run function switch:advancements/_pre_macro {id:1}
 execute if entity @s[advancements={switch:visible/2=true}] run function switch:advancements/_pre_macro {id:2}
 execute if entity @s[advancements={switch:visible/3=true}] run function switch:advancements/_pre_macro {id:3}

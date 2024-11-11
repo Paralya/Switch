@@ -1,4 +1,7 @@
 
+# Add 0 to every shop score
+function switch:shop/initialize_shop_scores
+
 # Check if new username
 function switch:player/username_change/check
 

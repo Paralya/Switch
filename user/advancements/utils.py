@@ -52,8 +52,9 @@ scoreboard players set @s switch.advancements 0
 	
 	# For each advancement, generate the check line
 	for adv in ALL_ADVANCEMENTS:
+		id: str = adv["id"]
 		string_id: str = adv["string_id"]
-		write_to_function(config, UPDATE_PERCENTAGES_FILE, f"""execute if entity @s[advancements={{switch:visible/{string_id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}\n""")
+		write_to_function(config, UPDATE_PERCENTAGES_FILE, f"""execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}\n""")
 
 	# Write the last part of the file
 	write_to_function(config, UPDATE_PERCENTAGES_FILE, "setblock 0 0 0 air")
