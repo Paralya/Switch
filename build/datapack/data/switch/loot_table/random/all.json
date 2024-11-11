@@ -5907,6 +5907,94 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/emerald_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_0"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_1"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_2"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_3"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_4"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_5"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_6"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_7"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_8"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_9"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_sword_10"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_0"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_1"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_2"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_3"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_4"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_5"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_6"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_7"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_8"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_9"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/infected_armor_10"
 				}
 			]
 		}

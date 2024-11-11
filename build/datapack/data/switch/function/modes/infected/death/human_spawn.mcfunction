@@ -25,6 +25,8 @@ execute if score @s switch.infected.sword matches 5 run loot replace entity @s h
 execute if score @s switch.infected.sword matches 6 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_6
 execute if score @s switch.infected.sword matches 7 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_7
 execute if score @s switch.infected.sword matches 8 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_8
+execute if score @s switch.infected.sword matches 9 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_9
+execute if score @s switch.infected.sword matches 10 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_10
 execute if score @s switch.infected.armor matches 0 run loot replace entity @s armor.chest loot switch:i/infected_armor_0
 execute if score @s switch.infected.armor matches 1 run loot replace entity @s armor.chest loot switch:i/infected_armor_1
 execute if score @s switch.infected.armor matches 2 run loot replace entity @s armor.chest loot switch:i/infected_armor_2
@@ -34,6 +36,8 @@ execute if score @s switch.infected.armor matches 5 run loot replace entity @s a
 execute if score @s switch.infected.armor matches 6 run loot replace entity @s armor.chest loot switch:i/infected_armor_6
 execute if score @s switch.infected.armor matches 7 run loot replace entity @s armor.chest loot switch:i/infected_armor_7
 execute if score @s switch.infected.armor matches 8 run loot replace entity @s armor.chest loot switch:i/infected_armor_8
+execute if score @s switch.infected.armor matches 9 run loot replace entity @s armor.chest loot switch:i/infected_armor_9
+execute if score @s switch.infected.armor matches 10 run loot replace entity @s armor.chest loot switch:i/infected_armor_10
 
 
 # Playsound

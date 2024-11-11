@@ -17,11 +17,17 @@ clear @s
 
 # Give stuff depending on player's upgrades
 item replace entity @s armor.head with zombie_head[enchantment_glint_override=false,enchantments={levels:{binding_curse:1,vanishing_curse:1},show_in_tooltip:0b}]
-execute unless score @s switch.infected.zombie_speed matches 1.. run attribute @s movement_speed base set 0.110
-execute if score @s switch.infected.zombie_speed matches 1 run attribute @s movement_speed base set 0.115
-execute if score @s switch.infected.zombie_speed matches 2 run attribute @s movement_speed base set 0.120
-execute if score @s switch.infected.zombie_speed matches 3 run attribute @s movement_speed base set 0.125
-execute if score @s switch.infected.zombie_speed matches 4 run attribute @s movement_speed base set 0.130
-execute unless score @s switch.infected.zombie_jump matches 1.. run effect give @s jump_boost infinite 0 true
+execute if score @s switch.infected.zombie_speed matches 0 run attribute @s movement_speed base set 0.20
+execute if score @s switch.infected.zombie_speed matches 1 run attribute @s movement_speed base set 0.21
+execute if score @s switch.infected.zombie_speed matches 2 run attribute @s movement_speed base set 0.22
+execute if score @s switch.infected.zombie_speed matches 3 run attribute @s movement_speed base set 0.23
+execute if score @s switch.infected.zombie_speed matches 4 run attribute @s movement_speed base set 0.24
+execute if score @s switch.infected.zombie_speed matches 5 run attribute @s movement_speed base set 0.25
+execute if score @s switch.infected.zombie_speed matches 6 run attribute @s movement_speed base set 0.26
+execute if score @s switch.infected.zombie_speed matches 7 run attribute @s movement_speed base set 0.27
+execute if score @s switch.infected.zombie_speed matches 8 run attribute @s movement_speed base set 0.28
+execute if score @s switch.infected.zombie_speed matches 9 run attribute @s movement_speed base set 0.29
+execute if score @s switch.infected.zombie_speed matches 10 run attribute @s movement_speed base set 0.30
+execute if score @s switch.infected.zombie_jump matches 0 run effect give @s jump_boost infinite 0 true
 execute if score @s switch.infected.zombie_jump matches 1 run effect give @s jump_boost infinite 1 true
 
