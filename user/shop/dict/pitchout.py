@@ -12,7 +12,7 @@ PITCHOUT: dict = {
 		},
 		"upgrade_name": {"fr": "Bottes en cuir", "en": "Leather boots"},
 		"upgrades": [
-			{"price": 50,	"hover_text": {"fr": "Rien -> Bottes en cuir avec 20 de durabilité", "en": "Nothing -> Leather boots with 20 durability"}},
+			{"price": 50,	"hover_text": {"fr": "5 -> 20 de durabilité", "en": "5 -> 20 durability"}},
 			{"price": 100,	"hover_text": {"fr": "20 -> 30 de durabilité", "en": "20 -> 30 durability"}},
 			{"price": 150,	"hover_text": {"fr": "30 -> 40 de durabilité", "en": "30 -> 40 durability"}},
 			{"price": 200,	"hover_text": {"fr": "40 -> 50 de durabilité", "en": "40 -> 50 durability"}},

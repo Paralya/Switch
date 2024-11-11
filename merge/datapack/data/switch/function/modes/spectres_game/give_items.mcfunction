@@ -5,11 +5,16 @@ item replace entity @s[team=switch.temp.spectre] hotbar.1 with stone_sword[encha
 item replace entity @s[team=switch.temp.spectre] hotbar.3 with bow[enchantments={punch:1}]
 item replace entity @s[team=switch.temp.spectre] hotbar.7 with golden_apple 8
 item replace entity @s[team=switch.temp.spectre] hotbar.8 with oak_planks 64
-execute unless score @s switch.spectres_game.sp_arrows matches 1.. run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 24
-execute if score @s switch.spectres_game.sp_arrows matches 1 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 28
-execute if score @s switch.spectres_game.sp_arrows matches 2 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 32
-execute if score @s switch.spectres_game.sp_arrows matches 3 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 36
-execute if score @s switch.spectres_game.sp_arrows matches 4 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 40
+execute if score @s switch.spectres_game.sp_arrows matches 0 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 24
+execute if score @s switch.spectres_game.sp_arrows matches 1 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 26
+execute if score @s switch.spectres_game.sp_arrows matches 2 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 28
+execute if score @s switch.spectres_game.sp_arrows matches 3 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 30
+execute if score @s switch.spectres_game.sp_arrows matches 4 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 32
+execute if score @s switch.spectres_game.sp_arrows matches 5 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 34
+execute if score @s switch.spectres_game.sp_arrows matches 6 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 36
+execute if score @s switch.spectres_game.sp_arrows matches 7 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 38
+execute if score @s switch.spectres_game.sp_arrows matches 8 run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 40
+execute if score @s switch.spectres_game.sp_arrows matches 9.. run item replace entity @s[team=switch.temp.spectre] inventory.0 with arrow 42
 item replace entity @s[team=switch.temp.spectre] inventory.1 with stone_axe[attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:4,operation:"add_value"}]]
 effect give @s[team=switch.temp.spectre] invisibility infinite 255 true
 effect give @s[team=switch.temp.spectre] resistance infinite 0 true
@@ -27,11 +32,15 @@ item replace entity @s[team=switch.temp.visible] hotbar.2 with stone_axe[attribu
 item replace entity @s[team=switch.temp.visible] hotbar.3 with oak_planks 64
 item replace entity @s[team=switch.temp.visible] hotbar.7 with water_bucket
 item replace entity @s[team=switch.temp.visible] hotbar.8 with golden_apple 5
-execute unless score @s switch.spectres_game.vi_arrows matches 1.. run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 16
+execute if score @s switch.spectres_game.vi_arrows matches 0 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 16
 execute if score @s switch.spectres_game.vi_arrows matches 1 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 18
 execute if score @s switch.spectres_game.vi_arrows matches 2 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 20
 execute if score @s switch.spectres_game.vi_arrows matches 3 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 22
 execute if score @s switch.spectres_game.vi_arrows matches 4 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 24
+execute if score @s switch.spectres_game.vi_arrows matches 5 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 26
+execute if score @s switch.spectres_game.vi_arrows matches 6 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 28
+execute if score @s switch.spectres_game.vi_arrows matches 7 run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 30
+execute if score @s switch.spectres_game.vi_arrows matches 8.. run item replace entity @s[team=switch.temp.visible] inventory.0 with arrow 32
 
 # TNT in inventory
 item replace entity @s inventory.25 with flint_and_steel
@@ -49,6 +58,7 @@ attribute @s attack_speed base set 1024
 ## Game specific events
 # Pommes en plus pour le spectror en cas de spectror game
 execute if score #SPECTROR_GAME switch.data matches 1 run give @s[scores={switch.temp.spectror=1}] golden_apple 2
-# Diamond pickaxe if task game
-execute if score #TASKS_GAME switch.data matches 1 run give @s diamond_pickaxe
+
+# Emerald pickaxe if task game
+execute if score #TASKS_GAME switch.data matches 1 run loot give @s loot switch:i/emerald_pickaxe
 
