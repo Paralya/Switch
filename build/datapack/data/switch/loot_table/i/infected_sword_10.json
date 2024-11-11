@@ -1,0 +1,34 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "switch:adamantium_sword",
+								"minecraft:item_name": "\"Adamantium Sword\"",
+								"minecraft:unbreakable": {},
+								"minecraft:attribute_modifiers": [
+									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.5,"operation": "add_value"}
+								],
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								],
+								"minecraft:custom_data": {
+									"switch": {"infected_sword_10": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

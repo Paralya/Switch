@@ -22,9 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "switch:steel_ingot",
-			"minecraft:item_name": "{'text': 'Steel Ingot', 'italic': false, 'color': 'white'}",
+			"minecraft:item_name": "{\"text\": \"Steel Ingot\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:lore": [
-				"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+				"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 			]
 		}
 	},

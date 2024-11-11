@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../../../advanced_desktop/Python Datapack"
 		}
 	],
 	"settings": {

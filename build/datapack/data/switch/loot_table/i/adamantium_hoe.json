@@ -21,9 +21,9 @@
 									{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}
 								],
 								"minecraft:item_model": "switch:adamantium_hoe",
-								"minecraft:item_name": "{'text': 'Adamantium Hoe', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Adamantium Hoe\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

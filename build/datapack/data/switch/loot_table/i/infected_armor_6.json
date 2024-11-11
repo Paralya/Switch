@@ -1,0 +1,38 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:equippable": {
+									"slot": "chest",
+									"model": "switch:obsidian"
+								},
+								"minecraft:item_model": "switch:obsidian_chestplate",
+								"minecraft:item_name": "\"Obsidian Chestplate\"",
+								"minecraft:unbreakable": {},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.3,"operation": "add_value"}
+								],
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								],
+								"minecraft:custom_data": {
+									"switch": {"infected_armor_6": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

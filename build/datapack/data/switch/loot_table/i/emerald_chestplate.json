@@ -29,9 +29,9 @@
 									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "chest","id": "switch:luck.chest"}
 								],
 								"minecraft:item_model": "switch:emerald_chestplate",
-								"minecraft:item_name": "{'text': 'Emerald Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Emerald Chestplate\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

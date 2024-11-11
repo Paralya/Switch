@@ -16,20 +16,25 @@ effect clear @s
 clear @s
 
 # Give stuff depending on player's upgrades
-execute unless score @s switch.infected.sword matches 1.. run item replace entity @s hotbar.0 with wooden_sword[unbreakable={},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:4.0,operation:"add_value"}]]
-execute if score @s switch.infected.sword matches 1 run item replace entity @s hotbar.0 with stone_sword[unbreakable={},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:4.5,operation:"add_value"}]]
-execute if score @s switch.infected.sword matches 2 run item replace entity @s hotbar.0 with iron_sword[unbreakable={},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:5.0,operation:"add_value"}]]
-execute if score @s switch.infected.sword matches 3 run item replace entity @s hotbar.0 with diamond_sword[unbreakable={},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:5.5,operation:"add_value"}]]
-execute if score @s switch.infected.sword matches 4 run item replace entity @s hotbar.0 with netherite_sword[unbreakable={},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:6.0,operation:"add_value"}],custom_model_data=2013118]
-execute unless score @s switch.infected.armor matches 1.. run item replace entity @s armor.chest with leather_chestplate[unbreakable={},attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:2.5,operation:"add_value"}]]
-execute if score @s switch.infected.armor matches 1 run item replace entity @s armor.chest with chainmail_chestplate[unbreakable={},attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:3.0,operation:"add_value"}]]
-execute if score @s switch.infected.armor matches 2 run item replace entity @s armor.chest with golden_chestplate[unbreakable={},attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:3.5,operation:"add_value"}]]
-execute if score @s switch.infected.armor matches 3 run item replace entity @s armor.chest with iron_chestplate[unbreakable={},attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:4.0,operation:"add_value"}]]
-execute if score @s switch.infected.armor matches 4 run item replace entity @s armor.chest with diamond_chestplate[unbreakable={},attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:4.5,operation:"add_value"}]]
-execute if score @s switch.infected.armor matches 5 run item replace entity @s armor.chest with leather_chestplate[unbreakable={},dyed_color=546752,attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:5.0,operation:"add_value"}],custom_model_data=2013115]
+execute if score @s switch.infected.sword matches 0 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_0
+execute if score @s switch.infected.sword matches 1 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_1
+execute if score @s switch.infected.sword matches 2 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_2
+execute if score @s switch.infected.sword matches 3 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_3
+execute if score @s switch.infected.sword matches 4 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_4
+execute if score @s switch.infected.sword matches 5 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_5
+execute if score @s switch.infected.sword matches 6 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_6
+execute if score @s switch.infected.sword matches 7 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_7
+execute if score @s switch.infected.sword matches 8 run loot replace entity @s hotbar.0 loot switch:i/infected_sword_8
+execute if score @s switch.infected.armor matches 0 run loot replace entity @s armor.chest loot switch:i/infected_armor_0
+execute if score @s switch.infected.armor matches 1 run loot replace entity @s armor.chest loot switch:i/infected_armor_1
+execute if score @s switch.infected.armor matches 2 run loot replace entity @s armor.chest loot switch:i/infected_armor_2
+execute if score @s switch.infected.armor matches 3 run loot replace entity @s armor.chest loot switch:i/infected_armor_3
+execute if score @s switch.infected.armor matches 4 run loot replace entity @s armor.chest loot switch:i/infected_armor_4
+execute if score @s switch.infected.armor matches 5 run loot replace entity @s armor.chest loot switch:i/infected_armor_5
+execute if score @s switch.infected.armor matches 6 run loot replace entity @s armor.chest loot switch:i/infected_armor_6
+execute if score @s switch.infected.armor matches 7 run loot replace entity @s armor.chest loot switch:i/infected_armor_7
+execute if score @s switch.infected.armor matches 8 run loot replace entity @s armor.chest loot switch:i/infected_armor_8
 
-# Give the player an antidote potion
-execute if score @s switch.infected.antidote matches 1.. run item replace entity @s hotbar.8 with potion[custom_name='{"text":"Antidote [1 use]","color":"green","italic":false}',lore=['{"text":"To consume when turning into a zombie","color":"gray","italic":false}'],custom_model_data=2013116,hide_additional_tooltip={},custom_data={switch:{antidote:1b}}]
 
 # Playsound
 execute at @s run playsound entity.ender_dragon.growl ambient @s

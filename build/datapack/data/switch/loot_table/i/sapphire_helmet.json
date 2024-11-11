@@ -28,9 +28,9 @@
 									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}
 								],
 								"minecraft:item_model": "switch:sapphire_helmet",
-								"minecraft:item_name": "{'text': 'Sapphire Helmet', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Sapphire Helmet\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

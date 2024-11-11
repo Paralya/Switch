@@ -28,9 +28,9 @@
 									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}
 								],
 								"minecraft:item_model": "switch:ruby_chestplate",
-								"minecraft:item_name": "{'text': 'Ruby Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Ruby Chestplate\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

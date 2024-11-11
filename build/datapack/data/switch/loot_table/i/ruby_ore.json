@@ -15,9 +15,9 @@
 									"switch": {"ruby_ore": true}
 								},
 								"minecraft:item_model": "switch:ruby_ore",
-								"minecraft:item_name": "{'text': 'Ruby Ore', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Ruby Ore\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								],
 								"minecraft:container": [
 									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:ruby_ore","from": "switch"}}}}}}

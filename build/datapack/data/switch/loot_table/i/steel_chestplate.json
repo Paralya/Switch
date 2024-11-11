@@ -27,9 +27,9 @@
 									{"type": "armor","amount": 6,"operation": "add_value","slot": "chest","id": "switch:armor.chest"}
 								],
 								"minecraft:item_model": "switch:steel_chestplate",
-								"minecraft:item_name": "{'text': 'Steel Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Steel Chestplate\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

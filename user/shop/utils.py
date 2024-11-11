@@ -147,9 +147,10 @@ def write_translations(config: dict, index: int, shop_name: str, shop_dict: dict
 				if shop_name != "sheepwars":
 					write_to_function(config, path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j} run tellraw {selector} {super_json_dump(tellraw_json, max_level=0)}")
 				else:
+					tellraw_json[0]["clickEvent"] = {"action": "run_command", "value": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
 					write_to_function(config, path, f"execute unless score @s switch.sheepwars.choosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {super_json_dump(tellraw_json, max_level=0)}")
 					tellraw_json[0]["color"] = "green"
-					tellraw_json[0]["clickEvent"] = {"action": "run_command", "value": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
+					del tellraw_json[0]["clickEvent"]
 					write_to_function(config, path, f"execute if score @s switch.sheepwars.choosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {super_json_dump(tellraw_json, max_level=0)}")
 
 

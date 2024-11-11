@@ -29,9 +29,9 @@
 									{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "switch:knockback_resistance.head"}
 								],
 								"minecraft:item_model": "switch:adamantium_helmet",
-								"minecraft:item_name": "{'text': 'Adamantium Helmet', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Adamantium Helmet\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

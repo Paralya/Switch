@@ -21,9 +21,9 @@
 									{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}
 								],
 								"minecraft:item_model": "switch:steel_pickaxe",
-								"minecraft:item_name": "{'text': 'Steel Pickaxe', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Steel Pickaxe\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

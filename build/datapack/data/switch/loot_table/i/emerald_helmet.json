@@ -29,9 +29,9 @@
 									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}
 								],
 								"minecraft:item_model": "switch:emerald_helmet",
-								"minecraft:item_name": "{'text': 'Emerald Helmet', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Emerald Helmet\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

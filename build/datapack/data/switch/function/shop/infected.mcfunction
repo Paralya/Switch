@@ -16,6 +16,7 @@ execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 6 if score @s switch.money matches 350.. store success score #success switch.data run scoreboard players remove @s switch.money 350
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 7 if score @s switch.money matches 400.. store success score #success switch.data run scoreboard players remove @s switch.money 400
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 8 if score @s switch.money matches 450.. store success score #success switch.data run scoreboard players remove @s switch.money 450
+execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 9 if score @s switch.money matches 500.. store success score #success switch.data run scoreboard players remove @s switch.money 500
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 1.. run scoreboard players add @s switch.infected.sword 1
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s

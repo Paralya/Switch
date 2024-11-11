@@ -15,9 +15,9 @@
 									"switch": {"topaz": true}
 								},
 								"minecraft:item_model": "switch:topaz",
-								"minecraft:item_name": "{'text': 'Topaz', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Topaz\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

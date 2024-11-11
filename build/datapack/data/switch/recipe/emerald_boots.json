@@ -54,9 +54,9 @@
 				}
 			],
 			"minecraft:item_model": "switch:emerald_boots",
-			"minecraft:item_name": "{'text': 'Emerald Boots', 'italic': false, 'color': 'white'}",
+			"minecraft:item_name": "{\"text\": \"Emerald Boots\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:lore": [
-				"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+				"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 			]
 		}
 	}

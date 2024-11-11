@@ -22,9 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "switch:adamantium_fragment",
-			"minecraft:item_name": "{'text': 'Adamantium Fragment', 'italic': false, 'color': 'white'}",
+			"minecraft:item_name": "{\"text\": \"Adamantium Fragment\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:lore": [
-				"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+				"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 			]
 		}
 	},

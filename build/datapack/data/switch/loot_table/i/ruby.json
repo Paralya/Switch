@@ -15,9 +15,9 @@
 									"switch": {"ruby": true}
 								},
 								"minecraft:item_model": "switch:ruby",
-								"minecraft:item_name": "{'text': 'Ruby', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"text\": \"Ruby\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'text': 'Switch', 'italic': true, 'color': 'blue'}"
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

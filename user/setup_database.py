@@ -45,6 +45,26 @@ def main(config: dict) -> dict[str, dict]:
 	database["steel_block"].update({VANILLA_BLOCK: {"id":"minecraft:iron_block", "apply_facing": False}})
 	database["steel_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "raw_steel"})
 
+	## Infected: swords and armors
+	from user.shop.dict.infected import INFECTED
+	SWORDS: list[str] = ["minecraft:wooden", "minecraft:stone", "minecraft:golden", "minecraft:iron", "minecraft:diamond", "switch:emerald", "switch:obsidian", "switch:topaz", "switch:ruby", "switch:sapphire", "switch:adamantium"]
+	CHESTPLATES: list[str] = ["minecraft:leather", "minecraft:chainmail", "minecraft:golden", "minecraft:iron", "minecraft:diamond", "switch:emerald", "switch:obsidian", "switch:topaz", "switch:ruby", "switch:sapphire", "switch:adamantium"]
+
+	# Swords
+	for i, sword in enumerate(SWORDS):
+		material: str = sword.split(":")[1].title()
+		sword_model: str = f"{sword}_sword"
+		sword_attribute: list[dict] = [{"type":"attack_damage", "slot":"mainhand", "id":"base_attack_damage", "amount":4.00 + (0.05 * i), "operation":"add_value"}]
+		database[f"infected_sword_{i}"] = {"id": CUSTOM_ITEM_VANILLA, "item_model": sword_model, "item_name": f'"{material} Sword"', "unbreakable": {}, "attribute_modifiers": sword_attribute}
+
+	# Chestplates
+	for i, armor in enumerate(CHESTPLATES):
+		material: str = armor.split(":")[1].title()
+		armor_model: str = f"{armor}_chestplate"
+		armor_attribute: list[dict] = [{"type":"armor", "slot":"chest", "id":"switch.armor", "amount":4.00 + (0.05 * i), "operation":"add_value"}]
+		database[f"infected_armor_{i}"] = {"id": CUSTOM_ITEM_VANILLA, "equippable": {"slot":"chest", "model": armor.replace("golden", "gold")}, "item_model": armor_model, "item_name": f'"{material} Chestplate"', "unbreakable": {}, "attribute_modifiers": armor_attribute}
+
+
 	# Final adjustments, you definitively should keep them!
 	add_item_model_component(config, database, black_list = [])
 	add_item_name_and_lore_if_missing(config, database)

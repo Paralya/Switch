@@ -1,0 +1,38 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:equippable": {
+									"slot": "chest",
+									"model": "switch:sapphire"
+								},
+								"minecraft:item_model": "switch:sapphire_chestplate",
+								"minecraft:item_name": "\"Sapphire Chestplate\"",
+								"minecraft:unbreakable": {},
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.45,"operation": "add_value"}
+								],
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								],
+								"minecraft:custom_data": {
+									"switch": {"infected_armor_9": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
