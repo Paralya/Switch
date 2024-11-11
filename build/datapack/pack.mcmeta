@@ -5,12 +5,7 @@
 	},
 	"id": "switch",
 	"filter": {
-		"block": [
-			{
-				"namespace": "minecraft",
-				"path": "advancement"
-			}
-		]
+		"block": [{"namespace": "minecraft","path": "advancement"}]
 	}
 }
 
