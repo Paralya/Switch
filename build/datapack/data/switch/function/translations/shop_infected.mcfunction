@@ -5,7 +5,7 @@
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique Infected]","color":"yellow"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique cosmétique Infected]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=0}] [{"text":"Votre achat pour améliorer votre épée a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=0}] [{"text":"Vous n'avez pas assez d'argent pour améliorer votre épée !","color":"red"}]
 execute if score @s switch.infected.sword matches 0 run tellraw @s[scores={switch.lang=0}] [{"text": "Épée","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮✮✮✮✮✮✮✮✮✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 201"},"hoverEvent": {"action": "show_text","contents": [{"text": "Épée en bois -> Épée en pierre\n","color": "green"},{"text": "Acheter pour 50 Saphirs","color": "yellow"}]}}]
@@ -61,7 +61,7 @@ execute if score @s switch.trigger.shop matches 205 if score #success switch.dat
 execute if score @s switch.infected.zombie_jump matches 0 run tellraw @s[scores={switch.lang=0}] [{"text": "Hauteur de saut en zombie","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 205"},"hoverEvent": {"action": "show_text","contents": [{"text": "jump boost 1 -> jump boost 2\n","color": "green"},{"text": "Acheter pour 200 Saphirs","color": "yellow"}]}}]
 execute if score @s switch.infected.zombie_jump matches 1 run tellraw @s[scores={switch.lang=0}] [{"text": "Hauteur de saut en zombie","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮","color": "yellow"},{"text": " [+]","color": "gray"}]
 # English
-tellraw @s[scores={switch.lang=1}] [{"text":"[Infected Shop]","color":"yellow"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"[Infected Cosmetic Shop]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=1}] [{"text":"Your purchase for upgrading your sword has been completed!","color":"green"}]
 execute if score @s switch.trigger.shop matches 201 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=1}] [{"text":"You don't have enough money to upgrade your sword!","color":"red"}]
 execute if score @s switch.infected.sword matches 0 run tellraw @s[scores={switch.lang=1}] [{"text": "Sword","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮✮✮✮✮✮✮✮✮✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 201"},"hoverEvent": {"action": "show_text","contents": [{"text": "Wooden sword -> Stone sword\n","color": "green"},{"text": "Buy for 50 Sapphires","color": "yellow"}]}}]

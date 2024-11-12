@@ -13,8 +13,8 @@ MONEY: dict[str, str] = {
 	"en": " Sapphires"
 }
 LANGUAGE_SCORES: dict[str, tuple[int, str, str, str, str]] = {
-	"fr": (0, "French", "Boutique X", "Acheter pour X", "Accéder à la boutique X"),
-	"en": (1, "English", "X Shop", "Buy for X", "Access the X shop")
+	"fr": (0, "French", "Boutique cosmétique X", "Acheter pour X", "Accéder à la boutique cosmétique X"),
+	"en": (1, "English", "X Cosmetic Shop", "Buy for X", "Access the X cosmetic shop")
 }
 SHEEPWARS_CHOOSE_KIT: dict[str, str] = {
 	"fr": "Sélectionnez un kit en cliquant sur le nom !",

@@ -5,7 +5,7 @@
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique Spectres Game]","color":"yellow"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique cosmétique Spectres Game]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 501 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=0}] [{"text":"Votre achat pour augmenter le nombre de fleches pour votre classe Spectre a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 501 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=0}] [{"text":"Vous n'avez pas assez d'argent pour augmenter le nombre de fleches pour votre classe Spectre !","color":"red"}]
 execute if score @s switch.spectres_game.sp_arrows matches 0 run tellraw @s[scores={switch.lang=0}] [{"text": "Nombre de fleches","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮✮✮✮✮✮✮✮✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 501"},"hoverEvent": {"action": "show_text","contents": [{"text": "24 -> 26\n","color": "green"},{"text": "Acheter pour 50 Saphirs","color": "yellow"}]}}]
@@ -42,7 +42,7 @@ execute if score @s switch.spectres_game.vi_tnt matches 1 run tellraw @s[scores=
 execute if score @s switch.spectres_game.vi_tnt matches 2 run tellraw @s[scores={switch.lang=0}] [{"text": "Nombre de TNT","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮✮","color": "yellow"},{"text": "✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 504"},"hoverEvent": {"action": "show_text","contents": [{"text": "5 -> 6 TNT\n","color": "green"},{"text": "Acheter pour 150 Saphirs","color": "yellow"}]}}]
 execute if score @s switch.spectres_game.vi_tnt matches 3 run tellraw @s[scores={switch.lang=0}] [{"text": "Nombre de TNT","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮✮✮","color": "yellow"},{"text": " [+]","color": "gray"}]
 # English
-tellraw @s[scores={switch.lang=1}] [{"text":"[Spectres Game Shop]","color":"yellow"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"[Spectres Game Cosmetic Shop]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 501 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=1}] [{"text":"Your purchase for upgrading the number of arrows for your Spectre class has been completed!","color":"green"}]
 execute if score @s switch.trigger.shop matches 501 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=1}] [{"text":"You don't have enough money to upgrade the number of arrows for your Spectre class!","color":"red"}]
 execute if score @s switch.spectres_game.sp_arrows matches 0 run tellraw @s[scores={switch.lang=1}] [{"text": "Number of arrows","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮✮✮✮✮✮✮✮✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 501"},"hoverEvent": {"action": "show_text","contents": [{"text": "24 -> 26\n","color": "green"},{"text": "Buy for 50 Sapphires","color": "yellow"}]}}]

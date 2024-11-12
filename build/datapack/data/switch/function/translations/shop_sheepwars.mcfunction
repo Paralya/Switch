@@ -5,7 +5,7 @@
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique Sheepwars]","color":"yellow"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique cosmétique Sheepwars]","color":"yellow"}]
 tellraw @s[scores={switch.lang=0}] [{"text":"Sélectionnez un kit en cliquant sur le nom !","color":"red"}]
 execute if score @s switch.trigger.shop matches 401 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=0}] [{"text":"Votre achat pour améliorer le kit 'Plus de vie' a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 401 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=0}] [{"text":"Vous n'avez pas assez d'argent pour améliorer le kit 'Plus de vie' !","color":"red"}]
@@ -92,7 +92,7 @@ execute if score @s switch.sheepwars.choosen_kit matches 7 if score @s switch.sh
 execute unless score @s switch.sheepwars.choosen_kit matches 7 if score @s switch.sheepwars.kit_armored_sheep matches 4 run tellraw @s[scores={switch.lang=0}] [{"text": "Kit 'Mouton blindé'","color": "aqua","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 457"}},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮✮✮✮","color": "yellow"},{"text": " [+]","color": "gray"}]
 execute if score @s switch.sheepwars.choosen_kit matches 7 if score @s switch.sheepwars.kit_armored_sheep matches 4 run tellraw @s[scores={switch.lang=0}] [{"text": "Kit 'Mouton blindé'","color": "green"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮✮✮✮","color": "yellow"},{"text": " [+]","color": "gray"}]
 # English
-tellraw @s[scores={switch.lang=1}] [{"text":"[Sheepwars Shop]","color":"yellow"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"[Sheepwars Cosmetic Shop]","color":"yellow"}]
 tellraw @s[scores={switch.lang=1}] [{"text":"Select a kit by clicking on the name!","color":"red"}]
 execute if score @s switch.trigger.shop matches 401 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=1}] [{"text":"Your purchase for upgrading the 'More health' kit has been completed!","color":"green"}]
 execute if score @s switch.trigger.shop matches 401 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=1}] [{"text":"You don't have enough money to upgrade the 'More health' kit!","color":"red"}]

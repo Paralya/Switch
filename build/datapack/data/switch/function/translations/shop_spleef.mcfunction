@@ -5,7 +5,7 @@
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique Spleef]","color":"yellow"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"[Boutique cosmétique Spleef]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 301 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=0}] [{"text":"Votre achat pour augmenter votre nombre de blocs de neige a été effectué !","color":"green"}]
 execute if score @s switch.trigger.shop matches 301 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=0}] [{"text":"Vous n'avez pas assez d'argent pour augmenter votre nombre de blocs de neige !","color":"red"}]
 execute if score @s switch.spleef.snow_block matches 0 run tellraw @s[scores={switch.lang=0}] [{"text": "Blocs de neige","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮✮✮✮✮✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 301"},"hoverEvent": {"action": "show_text","contents": [{"text": "4 -> 5 blocs de neige\n","color": "green"},{"text": "Acheter pour 50 Saphirs","color": "yellow"}]}}]
@@ -23,7 +23,7 @@ execute if score @s switch.spleef.powder_snow matches 2 run tellraw @s[scores={s
 execute if score @s switch.spleef.powder_snow matches 3 run tellraw @s[scores={switch.lang=0}] [{"text": "Poudreuse","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮✮✮","color": "yellow"},{"text": "✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 302"},"hoverEvent": {"action": "show_text","contents": [{"text": "7 -> 8 poudreuse\n","color": "green"},{"text": "Acheter pour 200 Saphirs","color": "yellow"}]}}]
 execute if score @s switch.spleef.powder_snow matches 4 run tellraw @s[scores={switch.lang=0}] [{"text": "Poudreuse","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "✮✮✮✮","color": "yellow"},{"text": " [+]","color": "gray"}]
 # English
-tellraw @s[scores={switch.lang=1}] [{"text":"[Spleef Shop]","color":"yellow"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"[Spleef Cosmetic Shop]","color":"yellow"}]
 execute if score @s switch.trigger.shop matches 301 if score #success switch.data matches 1.. run tellraw @s[scores={switch.lang=1}] [{"text":"Your purchase for increasing your snow block amount has been completed!","color":"green"}]
 execute if score @s switch.trigger.shop matches 301 if score #success switch.data matches 0 run tellraw @s[scores={switch.lang=1}] [{"text":"You don't have enough money to increase your snow block amount!","color":"red"}]
 execute if score @s switch.spleef.snow_block matches 0 run tellraw @s[scores={switch.lang=1}] [{"text": "Snow blocks","color": "aqua"},{"text": " | ","bold": true,"color": "dark_gray"},{"text": "","color": "yellow"},{"text": "✮✮✮✮✮✮","color": "gray"},{"text": " [+]","color": "green","clickEvent": {"action": "run_command","value": "/trigger switch.trigger.shop set 301"},"hoverEvent": {"action": "show_text","contents": [{"text": "4 -> 5 snow blocks\n","color": "green"},{"text": "Buy for 50 Sapphires","color": "yellow"}]}}]
