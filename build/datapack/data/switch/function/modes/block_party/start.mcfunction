@@ -12,7 +12,7 @@ time set 18000
 
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
-function switch:choose_map_for/block_party
+function switch:utils/choose_map_for {id:"block_party", maps:["block_party"]}
 function switch:translations/modes_block_party_start
 execute if data storage switch:records block_party run function switch:modes/block_party/record_tellraw with storage switch:records block_party
 

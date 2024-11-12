@@ -1,9 +1,7 @@
 
 #> switch:maps/load
 #
-# @within	switch:choose_map_for/beat_the_kings
-#			switch:choose_map_for/block_party
-#			switch:choose_map_for/boat_race
+# @within	switch:choose_map_for/boat_race
 #			switch:choose_map_for/bombardement
 #			switch:choose_map_for/border_run
 #			switch:choose_map_for/build_battle
@@ -45,6 +43,7 @@
 #			switch:choose_map_for/traitors_game
 #			switch:choose_map_for/twittos_de_merde
 #			switch:choose_map_for/warden_escape
+#			switch:utils/choose_map_for
 #
 
 ## Choix d'une map random de la liste maps_to_choose
