@@ -26,13 +26,6 @@ VERSION: str = "2.0.0"					# Project version in the following mandatory format: 
 NAMESPACE: str = "switch"				# Simplified version of the datapack name. Should be the same you use in the merge folder. Used to namespace functions, tags, etc.
 DESCRIPTION = f"{PROJECT_NAME} [{VERSION}] by {AUTHOR}"	# Pack description displayed in pack.mcmeta
 DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
-	# Automagically, the datapack will check for the presence of dependencies and their minimum required versions at runtime
-	# The url is used when the dependency is not found to suggest where to get it
-	# The version dict key contains the minimum required version of the dependency in [major, minor, patch] format
-	# The main key is the dependency namespace to check for
-	# The name can be whatever you want, it's just used in messages
-	
-	# Example for DatapackEnergy >= 1.8.0
 	"sheepwars": {"version":[2, 1, 0], "name":"SheepWars", "url":"https://github.com/Stoupy51/SheepWars"},
 }
 
