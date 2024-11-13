@@ -25,6 +25,8 @@ def main(config: dict) -> None:
 	if INITIAL_FILES.get(vanilla_path) and INITIAL_FILES.get(all_path):
 		del INITIAL_FILES[vanilla_path]
 		del INITIAL_FILES[all_path]
+		INITIAL_FILES_SET.remove(vanilla_path)
+		INITIAL_FILES_SET.remove(all_path)
 		return progress(f"The random loot tables 'vanilla.json' and 'all.json' already exists, skipping the generation")
 
 	# Insert all items into the loot table
