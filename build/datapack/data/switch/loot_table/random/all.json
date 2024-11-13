@@ -5910,6 +5910,94 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/awakened_stardust"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/awakened_stardust_bow"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/awakened_stardust_sniper"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_bow"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_sniper"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_bow"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_sniper"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_essence"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_config"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_bullet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/dragon_pearl"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/life_crystal"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_apple"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/quarry_configurator"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/travel_staff"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/wormhole_potion"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/infected_sword_0"
 				},
 				{

@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/bow",
+	"textures": {
+		"layer0": "switch:item/stardust_bow"
+	}
+}
+

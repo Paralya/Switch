@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "switch:life_crystal",
+								"minecraft:item_name": "{\"text\": \"Life Crystal\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								],
+								"minecraft:custom_data": {
+									"switch": {"life_crystal": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

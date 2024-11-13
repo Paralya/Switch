@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/ender_pearl",
+	"textures": {
+		"layer0": "switch:item/dragon_pearl"
+	}
+}
+

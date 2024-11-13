@@ -950,6 +950,160 @@
 		"item_name": "{\"text\": \"Emerald Hoe\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
 	},
+	"awakened_stardust": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:awakened_stardust",
+		"item_name": "{\"text\": \"Awakened Stardust\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"awakened_stardust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"awakened_stardust_bow": {
+		"id": "minecraft:bow",
+		"item_model": "switch:awakened_stardust_bow",
+		"item_name": "{\"text\": \"Awakened Stardust Bow\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"awakened_stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"awakened_stardust_sniper": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:awakened_stardust_sniper",
+		"item_name": "{\"text\": \"Awakened Stardust Sniper\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"awakened_stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_bow": {
+		"id": "minecraft:bow",
+		"item_model": "switch:stardust_bow",
+		"item_name": "{\"text\": \"Stardust Bow\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_sniper": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:stardust_sniper",
+		"item_name": "{\"text\": \"Stardust Sniper\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_bow": {
+		"id": "minecraft:bow",
+		"item_model": "switch:ultimate_bow",
+		"item_name": "{\"text\": \"Ultimate Bow\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"ultimate_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_sniper": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:ultimate_sniper",
+		"item_name": "{\"text\": \"Ultimate Sniper\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"ultimate_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_fragment": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:stardust_fragment",
+		"item_name": "{\"text\": \"Stardust Fragment\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_ingot": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:stardust_ingot",
+		"item_name": "{\"text\": \"Stardust Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_essence": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:stardust_essence",
+		"item_name": "{\"text\": \"Stardust Essence\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_essence": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_config": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:stardust_config",
+		"item_name": "{\"text\": \"Stardust Config\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_config": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"legendarium_ingot": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:legendarium_ingot",
+		"item_name": "{\"text\": \"Legendarium Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"legendarium_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"solarium_ingot": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:solarium_ingot",
+		"item_name": "{\"text\": \"Solarium Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"solarium_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"darkium_ingot": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:darkium_ingot",
+		"item_name": "{\"text\": \"Darkium Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"darkium_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_ingot": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:ultimate_ingot",
+		"item_name": "{\"text\": \"Ultimate Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"ultimate_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_bullet": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:ultimate_bullet",
+		"item_name": "{\"text\": \"Ultimate Bullet\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"ultimate_bullet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"dragon_pearl": {
+		"id": "minecraft:ender_pearl",
+		"item_model": "switch:dragon_pearl",
+		"item_name": "{\"text\": \"Dragon Pearl\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"dragon_pearl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"life_crystal": {
+		"id": "minecraft:golden_apple",
+		"item_model": "switch:life_crystal",
+		"item_name": "{\"text\": \"Life Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_apple": {
+		"id": "minecraft:golden_apple",
+		"item_model": "switch:stardust_apple",
+		"item_name": "{\"text\": \"Stardust Apple\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quarry_configurator": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:quarry_configurator",
+		"item_name": "{\"text\": \"Quarry Configurator\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"travel_staff": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:travel_staff",
+		"item_name": "{\"text\": \"Travel Staff\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"travel_staff": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"wormhole_potion": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:wormhole_potion",
+		"item_name": "{\"text\": \"Wormhole Potion\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"wormhole_potion": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"infected_sword_0": {
 		"id": "minecraft:command_block",
 		"item_model": "minecraft:wooden_sword",
