@@ -15,7 +15,7 @@ time set 18000
 
 ## Traitement des joueurs
 scoreboard players set #is_adventure switch.data 1
-function switch:choose_map_for/laser_game
+function switch:utils/choose_map_for {id:"laser_game", maps:["laser_game"]}
 
 scoreboard players set #team_boolean switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/laser_game/teleport_players

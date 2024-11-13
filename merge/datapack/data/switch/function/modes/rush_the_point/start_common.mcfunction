@@ -6,7 +6,7 @@ effect give @a[tag=!detached] weakness 10 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
-function switch:choose_map_for/rush_the_point
+function switch:utils/choose_map_for {id:"rush_the_point", maps:["rush_the_point_1"]}
 
 gamerule naturalRegeneration false
 gamerule keepInventory true

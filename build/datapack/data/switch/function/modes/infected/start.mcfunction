@@ -6,7 +6,7 @@
 
 ## Placement de la map et des joueurs
 time set 18000
-function switch:choose_map_for/infected
+function switch:utils/choose_map_for {id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}
 execute as @a[tag=!detached] run function switch:modes/infected/death/early_respawn
 
 function switch:translations/modes_infected_start

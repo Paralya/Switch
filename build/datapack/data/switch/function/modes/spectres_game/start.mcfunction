@@ -30,7 +30,7 @@ execute unless score #new_players switch.data matches 2.. if score #count switch
 
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:choose_map_for/spectres_game
+function switch:utils/choose_map_for {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","wyvern_towers","jn_sakura_pvpbox","luxium_spectres_remake"]}
 
 gamerule mobGriefing true
 gamerule showDeathMessages false

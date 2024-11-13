@@ -11,7 +11,7 @@ function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
 scoreboard players set #is_adventure switch.data 1
-function switch:choose_map_for/gay_shooter
+function switch:utils/choose_map_for {id:"gay_shooter", maps:["gay_shooter"]}
 
 function switch:translations/modes_gay_shooter_start
 

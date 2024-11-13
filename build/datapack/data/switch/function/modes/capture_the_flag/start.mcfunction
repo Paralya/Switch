@@ -11,7 +11,7 @@ effect give @a[tag=!detached] weakness 10 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
-function switch:choose_map_for/capture_the_flag
+function switch:modes/capture_the_flag/choose_map_for
 
 gamerule doTileDrops false
 gamerule keepInventory true

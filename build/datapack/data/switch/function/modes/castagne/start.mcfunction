@@ -14,7 +14,7 @@ function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:choose_map_for/castagne
+function switch:utils/choose_map_for {id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","wyvern_towers","paralya_lobby","jn_nature_box"]}
 
 gamerule naturalRegeneration false
 

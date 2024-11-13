@@ -13,7 +13,7 @@ gamerule fallDamage false
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:choose_map_for/coin_chaser
+function switch:utils/choose_map_for {id:"coin_chaser", maps:["huge_cargo","paralya_lobby","purple_sky_island"]}
 
 function switch:translations/modes_coin_chaser_start
 

@@ -21,7 +21,7 @@ effect give @a[tag=!detached] jump_boost infinite 3 true
 time set 6000
 
 ## Téléportation des joueurs dans quatres coins + give d'items
-function switch:choose_map_for/glassrunner
+function switch:utils/choose_map_for {id:"glassrunner", maps:["glassrunner"]}
 scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/death

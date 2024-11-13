@@ -4,7 +4,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function switch:choose_map_for/simultaneous_jump
+function switch:utils/choose_map_for {id:"simultaneous_jump", maps:["de_a_coudre_1","mlg_a_coudre_1"]}
 
 gamerule showDeathMessages false
 gamerule keepInventory true

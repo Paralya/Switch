@@ -10,7 +10,7 @@ execute as @a[tag=!detached] at @s run function switch:modes/tnt_run/give_items
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function switch:choose_map_for/tnt_run
+function switch:utils/choose_map_for {id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}
 gamerule fallDamage false
 function switch:translations/modes_tnt_run_start
 

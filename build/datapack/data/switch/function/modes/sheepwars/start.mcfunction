@@ -13,7 +13,7 @@ effect give @a[tag=!detached] slowness 5 255 true
 function switch:utils/set_dynamic_time
 
 ## Chargement de la map
-function switch:choose_map_for/sheepwars
+function switch:utils/choose_map_for {id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}
 gamerule keepInventory true
 gamerule doTileDrops false
 

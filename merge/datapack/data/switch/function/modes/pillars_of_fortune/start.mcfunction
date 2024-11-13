@@ -9,7 +9,7 @@ function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 0
-function switch:choose_map_for/pillars_of_fortune
+function switch:utils/choose_map_for {id:"pillars_of_fortune", maps:["pillars_of_fortune"]}
 function switch:translations/modes_pillars_of_fortune_start
 
 gamerule mobGriefing true

@@ -88,7 +88,7 @@ scoreboard players set #total_checkpoints switch.data 1
 
 ## Téléportation des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1
-function switch:choose_map_for/kart_racer
+function switch:utils/choose_map_for {id:"kart_racer", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit"]}
 schedule function switch:modes/kart_racer/give_items 1s
 schedule function switch:modes/kart_racer/post_load 9s
 

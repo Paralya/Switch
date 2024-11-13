@@ -10,7 +10,7 @@ effect give @a[tag=!detached] resistance 60 255 true
 function switch:utils/set_dynamic_time
 
 ## Chargement de la map
-function switch:choose_map_for/layers_4_teams
+function switch:utils/choose_map_for {id:"layers_4_teams", maps:["layers_4_teams"]}
 function switch:translations/modes_layers_4_teams_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 

@@ -13,7 +13,7 @@ function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:choose_map_for/traitors_game
+function switch:utils/choose_map_for {id:"traitors_game", maps:["traitor_original","mushroom_plains","zonweeb_highschool","hider_mansion","nuketown_no_barrier","stardust_pvp_zone"]}
 
 gamerule mobGriefing true
 gamerule showDeathMessages false

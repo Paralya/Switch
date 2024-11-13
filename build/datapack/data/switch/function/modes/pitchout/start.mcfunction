@@ -14,7 +14,7 @@ function switch:utils/set_dynamic_time
 gamerule fallDamage false
 
 ## Téléportation des joueurs
-function switch:choose_map_for/pitchout
+function switch:utils/choose_map_for {id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}
 scoreboard players set #spawn_count switch.data 0
 execute if data storage switch:main {map:"pitchout_1"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_1/tp_give
 execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give

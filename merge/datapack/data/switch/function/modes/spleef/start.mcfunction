@@ -6,7 +6,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function switch:choose_map_for/spleef
+function switch:utils/choose_map_for {id:"spleef", maps:["spleef_1"]}
 
 function switch:translations/modes_spleef_start
 

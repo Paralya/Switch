@@ -5,7 +5,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 0
-function switch:choose_map_for/bombardement
+function switch:utils/choose_map_for {id:"bombardement", maps:["bombardement"]}
 function switch:translations/modes_bombardement_start
 
 scoreboard players set #bombardement_seconds switch.data -10

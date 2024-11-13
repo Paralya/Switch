@@ -9,7 +9,7 @@ function switch:utils/set_dynamic_time
 gamerule commandModificationBlockLimit 262144
 
 ## Téléportation des joueurs
-function switch:choose_map_for/build_battle
+function switch:utils/choose_map_for {id:"build_battle", maps:["build_battle"]}
 
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.theme_vote trigger

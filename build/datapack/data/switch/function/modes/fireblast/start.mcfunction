@@ -18,7 +18,7 @@ gamerule mobGriefing true
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:choose_map_for/fireblast
+function switch:utils/choose_map_for {id:"fireblast", maps:["fireblast_1","fireblast_2","fireblast_3"]}
 function switch:translations/modes_fireblast_start
 
 scoreboard players set #remaining_time switch.data 605

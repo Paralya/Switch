@@ -12,7 +12,7 @@ time set 18000
 
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1
-function switch:choose_map_for/warden_escape
+function switch:utils/choose_map_for {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 
 gamerule showDeathMessages false
 gamerule naturalRegeneration false

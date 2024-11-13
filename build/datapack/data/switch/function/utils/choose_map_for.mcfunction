@@ -3,6 +3,46 @@
 #
 # @within	switch:modes/beat_the_kings/start {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
 #			switch:modes/block_party/start {id:"block_party", maps:["block_party"]}
+#			switch:modes/boat_race/start {id:"boat_race", maps:["boat_race_1","boat_race_2"]}
+#			switch:modes/bombardement/start {id:"bombardement", maps:["bombardement"]}
+#			switch:modes/build_battle/start {id:"build_battle", maps:["build_battle"]}
+#			switch:modes/capture_the_flag/choose_map_for {id:"capture_the_flag", maps:["operation_pigclaw","ctf_plains_castles","ctf_mountains_castles","ctf_flowers","ctf_nether","ctf_forest_castles"]}
+#			switch:modes/castagne/start {id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","wyvern_towers","paralya_lobby","jn_nature_box"]}
+#			switch:modes/cigogne/start {id:"cigogne", maps:["cigogne"]}
+#			switch:modes/coin_chaser/start {id:"coin_chaser", maps:["huge_cargo","paralya_lobby","purple_sky_island"]}
+#			switch:modes/creeper_apocalypse/start {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main","pretty_garden"]}
+#			switch:modes/de_a_coudre/start {id:"de_a_coudre", maps:["de_a_coudre_1"]}
+#			switch:modes/feed_fast/start {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","red_temple","nature_house"]}
+#			switch:modes/fireblast/start {id:"fireblast", maps:["fireblast_1","fireblast_2","fireblast_3"]}
+#			switch:modes/fish_fight/start {id:"fish_fight", maps:["luxio_fish_fight"]}
+#			switch:modes/gay_shooter/start {id:"gay_shooter", maps:["gay_shooter"]}
+#			switch:modes/glassrunner/start {id:"glassrunner", maps:["glassrunner"]}
+#			switch:modes/infected/start {id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}
+#			switch:modes/kart_racer/start {id:"kart_racer", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit"]}
+#			switch:modes/laser_game/start {id:"laser_game", maps:["laser_game"]}
+#			switch:modes/layers_2_teams/start {id:"layers_2_teams", maps:["layers_2_teams"]}
+#			switch:modes/layers_4_teams/start {id:"layers_4_teams", maps:["layers_4_teams"]}
+#			switch:modes/minigolf/start {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
+#			switch:modes/mlg_a_coudre/start {id:"mlg_a_coudre", maps:["mlg_a_coudre_1"]}
+#			switch:modes/moutron/start {id:"moutron", maps:["whity_lab","the_four_elements","arti_ancient_city"]}
+#			switch:modes/murder_mystery/start {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino"]}
+#			switch:modes/one_shot/start {id:"one_shot", maps:["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"]}
+#			switch:modes/panic_chase/start {id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}
+#			switch:modes/pillars_of_fortune/start {id:"pillars_of_fortune", maps:["pillars_of_fortune"]}
+#			switch:modes/pitchout/start {id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}
+#			switch:modes/pitch_creep/start {id:"pitch_creep", maps:["pitch_creep_1","octogone_nether_ice"]}
+#			switch:modes/protect_the_king/start {id:"protect_the_king", maps:["traitor_original","mushroom_plains","baby_park","snow_travel","cathedrale_liege","jayl_dark_forest","operation_pigclaw","dark_forest_hills","paralya_lobby_noel","zonweeb_highschool","hider_mansion","nuketown_no_barrier","sprucy_village","highland_mansion","japanese_village","snowy_village","werewolf_village","lightium_spawn","paralya_lobby","stardust_spawn","stardust_boss_zone","stardust_boss_zone_nether","stardust_pvp_zone","jn_biomes_relief"]}
+#			switch:modes/rush_the_point/start_common {id:"rush_the_point", maps:["rush_the_point_1"]}
+#			switch:modes/sheepwars/start {id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}
+#			switch:modes/shoot_da_sheep/start {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}
+#			switch:modes/simultaneous_jump/start {id:"simultaneous_jump", maps:["de_a_coudre_1","mlg_a_coudre_1"]}
+#			switch:modes/snowball_painter/start {id:"snowball_painter", maps:["snowball_painter"]}
+#			switch:modes/spectres_game/start {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","wyvern_towers","jn_sakura_pvpbox","luxium_spectres_remake"]}
+#			switch:modes/spleef/start {id:"spleef", maps:["spleef_1"]}
+#			switch:modes/thunder_spear/start {id:"thunder_spear", maps:["dark_forest_hills","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone"]}
+#			switch:modes/tnt_run/start {id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}
+#			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","zonweeb_highschool","hider_mansion","nuketown_no_barrier","stardust_pvp_zone"]}
+#			switch:modes/warden_escape/start {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 #
 
 ## Vérification de la liste des maps
