@@ -5,6 +5,9 @@
 from python_datapack.utils.database_helper import *
 from python_datapack.utils.ingredients import *
 from python_datapack.constants import *
+from .database.misc_items import setup_misc_items
+from .database.blocks_behaviors import setup_blocks_behaviors
+from .database.infected import setup_infected_items
 
 # Configuration to generate everything about the material based on "steel_ingot"
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
@@ -23,47 +26,14 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 def main(config: dict) -> dict[str, dict]:
 	database: dict[str, dict] = {}
 
-	# Generate ores in database (add every stuff related to steel and stone found in the textures folder to the database)
+	# Generate ores in database & custom disc records
 	generate_everything_about_these_materials(config, database, ORES_CONFIGS)
-
-	# Generate custom disc records
 	generate_custom_records(config, database, "auto")
 
-	# Custom blocks and ores behaviors
-	database["adamantium_block"].update({VANILLA_BLOCK: {"id":"minecraft:netherite_block", "apply_facing": False}})
-	database["adamantium_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "adamantium_fragment"})
-	database["deepslate_adamantium_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "adamantium_fragment"})
-	database["sapphire_block"].update({VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing": False}})
-	database["sapphire_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "sapphire"})
-	database["deepslate_sapphire_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "sapphire"})
-	database["ruby_block"].update({VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing": False}})
-	database["ruby_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "ruby"})
-	database["deepslate_ruby_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "ruby"})
-	database["topaz_block"].update({VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing": False}})
-	database["topaz_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "topaz"})
-	database["deepslate_topaz_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "topaz"})
-	database["steel_block"].update({VANILLA_BLOCK: {"id":"minecraft:iron_block", "apply_facing": False}})
-	database["steel_ore"].update({VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "raw_steel"})
-
-	## Infected: swords and armors
-	from user.shop.dict.infected import INFECTED
-	SWORDS: list[str] = ["minecraft:wooden", "minecraft:stone", "minecraft:golden", "minecraft:iron", "minecraft:diamond", "switch:emerald", "switch:obsidian", "switch:topaz", "switch:ruby", "switch:sapphire", "switch:adamantium"]
-	CHESTPLATES: list[str] = ["minecraft:leather", "minecraft:chainmail", "minecraft:golden", "minecraft:iron", "minecraft:diamond", "switch:emerald", "switch:obsidian", "switch:topaz", "switch:ruby", "switch:sapphire", "switch:adamantium"]
-
-	# Swords
-	for i, sword in enumerate(SWORDS):
-		material: str = sword.split(":")[1].title()
-		sword_model: str = f"{sword}_sword"
-		sword_attribute: list[dict] = [{"type":"attack_damage", "slot":"mainhand", "id":"base_attack_damage", "amount":4.00 + (0.05 * i), "operation":"add_value"}]
-		database[f"infected_sword_{i}"] = {"id": CUSTOM_ITEM_VANILLA, "item_model": sword_model, "item_name": f'"{material} Sword"', "unbreakable": {}, "attribute_modifiers": sword_attribute}
-
-	# Chestplates
-	for i, armor in enumerate(CHESTPLATES):
-		material: str = armor.split(":")[1].title()
-		armor_model: str = f"{armor}_chestplate"
-		armor_attribute: list[dict] = [{"type":"armor", "slot":"chest", "id":"switch.armor", "amount":4.00 + (0.05 * i), "operation":"add_value"}]
-		database[f"infected_armor_{i}"] = {"id": CUSTOM_ITEM_VANILLA, "equippable": {"slot":"chest", "model": armor.replace("golden", "gold")}, "item_model": armor_model, "item_name": f'"{material} Chestplate"', "unbreakable": {}, "attribute_modifiers": armor_attribute}
-
+	# More database setup
+	setup_misc_items(database)
+	setup_blocks_behaviors(database)
+	setup_infected_items(database)
 
 	# Final adjustments, you definitively should keep them!
 	add_item_model_component(config, database, black_list = [])
