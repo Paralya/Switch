@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"id": "minecraft:command_block","components": {"minecraft:custom_model_data": 2013040}},
+		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:ultimate_fragment"}},
 		"title": {"text": "Légende","color": "yellow"},
 		"description": {"text": "Win 5 mini-games in a row","color": "aqua"},
 		"frame": "task",

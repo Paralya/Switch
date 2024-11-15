@@ -1,0 +1,34 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"anti_radiation": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"anti_radiation_chestplate": true}
+								},
+								"minecraft:max_damage": 240,
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 6,"operation": "add_value","slot": "chest","id": "switch:armor.chest"}
+								],
+								"minecraft:item_model": "switch:anti_radiation_chestplate",
+								"minecraft:item_name": "{\"text\": \"Anti Radiation Chestplate\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

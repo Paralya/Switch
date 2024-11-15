@@ -1,0 +1,34 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"anti_radiation": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"anti_radiation_leggings": true}
+								},
+								"minecraft:max_damage": 225,
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"}
+								],
+								"minecraft:item_model": "switch:anti_radiation_leggings",
+								"minecraft:item_name": "{\"text\": \"Anti Radiation Leggings\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

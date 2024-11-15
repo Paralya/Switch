@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_shovel",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"tools": {"uranium": true,"shovel": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"uranium_shovel": true}
+								},
+								"minecraft:max_damage": 1812,
+								"minecraft:attribute_modifiers": [
+									{"type": "attack_damage","amount": 5.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},
+									{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},
+									{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}
+								],
+								"minecraft:item_model": "switch:uranium_shovel",
+								"minecraft:item_name": "{\"text\": \"Uranium Shovel\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

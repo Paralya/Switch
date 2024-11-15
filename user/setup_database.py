@@ -20,6 +20,11 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	"obsidian_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	3902,	{"attack_damage": -0.2, "mining_efficiency": -0.2}),
 	"steel_ingot":			EquipmentsConfig(DEFAULT_ORE.IRON,		444,	{"mining_efficiency": 0.1}),
 	"minecraft:emerald":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	736,	{"luck": 0.25}),
+
+	# Custom materials from CrazyAdventure
+	"anti_radiation_stuff":	EquipmentsConfig(DEFAULT_ORE.IRON,		250),
+	"californium_ingot":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1953,	{"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 0.2}),
+	"uranium_ingot":		EquipmentsConfig(DEFAULT_ORE.NETHERITE,	1812,	{"luck": -0.25}),
 }
 
 # Main function should return a database

@@ -10,5 +10,5 @@ execute if data storage switch:main {map:"old_japan_apocalypse"} run function sw
 execute if data storage switch:main {map:"lost_graveyard_remastered"} run function switch:modes/infected/secrets/lost_graveyard/_tick
 
 # Zombie drop element 115
-execute as @a[tag=!detached,team=switch.temp.zombie,nbt={Inventory:[{components:{"minecraft:custom_data":{switch:{"115":true}}}}]}] at @s run function switch:modes/infected/secrets/drop_element_115
+execute as @a[tag=!detached,team=switch.temp.zombie,nbt={Inventory:[{components:{"minecraft:custom_data":{switch:{"element_115":true}}}}]}] at @s run function switch:modes/infected/secrets/drop_element_115
 

@@ -19,7 +19,7 @@
 										"fireball_wand": true
 									}
 								},
-								"minecraft:custom_model_data": 4220108,
+								"minecraft:item_model": "switch:fireball_wand",
 								"minecraft:item_name": "{\"text\":\"Fireball Wand\",\"color\":\"dark_red\",\"italic\":false}",
 								"minecraft:lore": [
 									"{\"text\":\"Fait spawn une fireball devant vous qui détruit tout sur son passage\",\"color\":\"dark_gray\",\"italic\":false}",

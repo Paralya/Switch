@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"id": "minecraft:bow","components": {"minecraft:custom_model_data": 2013151}},
+		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:ultimate_bow"}},
 		"title": {"text": "Homophobe","color": "yellow"},
 		"description": {"text": "Put at least 42 arrows in Guy Shooter","color": "aqua"},
 		"frame": "task",

@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": "minecraft:netherite_axe",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"nugget": {
+							"uranium": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"switch": {
+					"uranium_nugget": true
+				}
+			},
+			"minecraft:item_model": "switch:uranium_nugget",
+			"minecraft:item_name": "{\"text\": \"Uranium Nugget\", \"italic\": false, \"color\": \"white\"}",
+			"minecraft:lore": [
+				"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 200
+}
+

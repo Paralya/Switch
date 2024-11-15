@@ -1,0 +1,37 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"uranium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"uranium_helmet": true}
+								},
+								"minecraft:max_damage": 363,
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},
+									{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},
+									{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "switch:knockback_resistance.head"},
+									{"type": "luck","amount": -0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}
+								],
+								"minecraft:item_model": "switch:uranium_helmet",
+								"minecraft:item_name": "{\"text\": \"Uranium Helmet\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"californium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"californium_leggings": true}
+								},
+								"minecraft:max_damage": 619,
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 6.2,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}
+								],
+								"minecraft:item_model": "switch:californium_leggings",
+								"minecraft:item_name": "{\"text\": \"Californium Leggings\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

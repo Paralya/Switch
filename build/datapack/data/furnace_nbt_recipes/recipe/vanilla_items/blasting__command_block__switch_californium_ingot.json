@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": "minecraft:command_block",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"ingot": {
+							"californium": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"switch": {
+					"californium_ingot": true
+				}
+			},
+			"minecraft:item_model": "switch:californium_ingot",
+			"minecraft:item_name": "{\"text\": \"Californium Ingot\", \"italic\": false, \"color\": \"white\"}",
+			"minecraft:lore": [
+				"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}
+

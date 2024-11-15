@@ -19,6 +19,8 @@ gamerule doTileDrops false
 
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
+# Default: 20 seconds delay between the give of sheeps (decrease every minute)
+scoreboard players set #sheep_give_delay switch.data 20
 scoreboard players set #remaining_time switch.data 90500
 scoreboard players set #sheepwars_seconds switch.data -5
 scoreboard players set #sheepwars_ticks switch.data 0

@@ -40,7 +40,7 @@ attribute @s armor base set 3.0
 ## Shop things
 # Kit More Health
 execute if score @s switch.sheepwars.choosen_kit matches 1 run item replace entity @s armor.legs with leather_leggings[unbreakable={},dyed_color=16514816]
-execute if score @s switch.sheepwars.choosen_kit matches 1 run item replace entity @s armor.chest with chainmail_chestplate[unbreakable={},attribute_modifiers=[{type:"armor",slot:"chest",id:"switch.armor",amount:3,operation:"add_value"}]]
+execute if score @s switch.sheepwars.choosen_kit matches 1 run item replace entity @s armor.chest with leather_chestplate[unbreakable={},equippable={slot:"chest",model:"minecraft:chainmail"},item_model="minecraft:chainmail_chestplate"]
 execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 0 run attribute @s max_health base set 21
 execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 1 run attribute @s max_health base set 22
 execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 2 run attribute @s max_health base set 23
@@ -49,7 +49,7 @@ execute if score @s switch.sheepwars.choosen_kit matches 1 if score @s switch.sh
 
 # Kit Better Bow
 execute if score @s switch.sheepwars.choosen_kit matches 2 run item replace entity @s armor.legs with leather_leggings[unbreakable={},dyed_color=6225664]
-execute if score @s switch.sheepwars.choosen_kit matches 2 run item replace entity @s hotbar.1 with bow[unbreakable={},enchantments={infinity:1},can_break={predicates:[{blocks:"#realistic_explosion:all"}],show_in_tooltip:0b},custom_model_data=2013149]
+execute if score @s switch.sheepwars.choosen_kit matches 2 run item replace entity @s hotbar.1 with bow[unbreakable={},enchantments={infinity:1},can_break={predicates:[{blocks:"#realistic_explosion:all"}],show_in_tooltip:0b},item_model="switch:stardust_bow"]
 
 # Kit Better Sword
 execute if score @s switch.sheepwars.choosen_kit matches 3 run item replace entity @s armor.legs with leather_leggings[unbreakable={},dyed_color=65480]

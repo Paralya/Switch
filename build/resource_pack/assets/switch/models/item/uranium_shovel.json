@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/netherite_shovel",
+	"textures": {
+		"layer0": "switch:item/uranium_shovel"
+	}
+}
+

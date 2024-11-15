@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "{\"text\": \"Element 115\", \"color\": \"light_purple\", \"italic\": false}",
+								"minecraft:lore": [
+									"{\"text\": \"Infected\", \"color\": \"dark_green\", \"italic\": true}"
+								],
+								"minecraft:item_model": "switch:stardust_ingot",
+								"minecraft:custom_data": {
+									"switch": {"element_115": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

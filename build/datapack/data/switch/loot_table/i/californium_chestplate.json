@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"armor": {"californium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"californium_chestplate": true}
+								},
+								"minecraft:max_damage": 660,
+								"minecraft:attribute_modifiers": [
+									{"type": "armor","amount": 8.2,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}
+								],
+								"minecraft:item_model": "switch:californium_chestplate",
+								"minecraft:item_name": "{\"text\": \"Californium Chestplate\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

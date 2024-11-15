@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"id": "minecraft:warped_fungus_on_a_stick","components": {"minecraft:custom_model_data": 2013152}},
+		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:stardust_sniper"}},
 		"title": {"text": "Pour l'équipe !","color": "yellow"},
 		"description": {"text": "Shoot the bonus base in Laser Game","color": "aqua"},
 		"frame": "task",

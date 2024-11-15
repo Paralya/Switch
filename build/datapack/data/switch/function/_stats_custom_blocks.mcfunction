@@ -9,6 +9,10 @@ scoreboard players add #total_vanilla_polished_deepslate switch.data 0
 scoreboard players add #total_vanilla_netherite_block switch.data 0
 scoreboard players add #total_vanilla_iron_block switch.data 0
 scoreboard players add #total_vanilla_diamond_block switch.data 0
+scoreboard players add #total_uranium_ore switch.data 0
+scoreboard players add #total_uranium_block switch.data 0
+scoreboard players add #total_californium_ore switch.data 0
+scoreboard players add #total_californium_block switch.data 0
 scoreboard players add #total_steel_ore switch.data 0
 scoreboard players add #total_steel_block switch.data 0
 scoreboard players add #total_deepslate_topaz_ore switch.data 0
@@ -37,6 +41,10 @@ tellraw @s [{"text":"- Total 'Topaz Ore': ","color":"gold"},{"score":{"name":"#t
 tellraw @s [{"text":"- Total 'Deepslate Topaz Ore': ","color":"gold"},{"score":{"name":"#total_deepslate_topaz_ore","objective":"switch.data"},"color":"yellow"}]
 tellraw @s [{"text":"- Total 'Steel Block': ","color":"gold"},{"score":{"name":"#total_steel_block","objective":"switch.data"},"color":"yellow"}]
 tellraw @s [{"text":"- Total 'Steel Ore': ","color":"gold"},{"score":{"name":"#total_steel_ore","objective":"switch.data"},"color":"yellow"}]
+tellraw @s [{"text":"- Total 'Californium Block': ","color":"gold"},{"score":{"name":"#total_californium_block","objective":"switch.data"},"color":"yellow"}]
+tellraw @s [{"text":"- Total 'Californium Ore': ","color":"gold"},{"score":{"name":"#total_californium_ore","objective":"switch.data"},"color":"yellow"}]
+tellraw @s [{"text":"- Total 'Uranium Block': ","color":"gold"},{"score":{"name":"#total_uranium_block","objective":"switch.data"},"color":"yellow"}]
+tellraw @s [{"text":"- Total 'Uranium Ore': ","color":"gold"},{"score":{"name":"#total_uranium_ore","objective":"switch.data"},"color":"yellow"}]
 tellraw @s [{"text":"- Vanilla 'minecraft:diamond_block': ","color":"gray"},{"score":{"name":"#total_vanilla_diamond_block","objective":"switch.data"},"color":"white"}]
 tellraw @s [{"text":"- Vanilla 'minecraft:iron_block': ","color":"gray"},{"score":{"name":"#total_vanilla_iron_block","objective":"switch.data"},"color":"white"}]
 tellraw @s [{"text":"- Vanilla 'minecraft:netherite_block': ","color":"gray"},{"score":{"name":"#total_vanilla_netherite_block","objective":"switch.data"},"color":"white"}]

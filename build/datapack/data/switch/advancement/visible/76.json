@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"id": "minecraft:warped_fungus_on_a_stick","components": {"minecraft:custom_model_data": 2013154}},
+		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:ultimate_sniper"}},
 		"title": {"text": "Injustice","color": "yellow"},
 		"description": {"text": "Finish the parkour in Guy Shooter but die from the hands of a Shooter","color": "aqua"},
 		"frame": "task",
