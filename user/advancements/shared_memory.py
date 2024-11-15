@@ -26,7 +26,7 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:crying_obsidian"}	jump_graviglitch	jump_obsidian	Stoupy	jump	The Obsidian Jump	Finir le jump obsidienne pour la première fois	Finish the obsidian jump for the first time
 {"id": "minecraft:waxed_copper_block"}	jump_red	jump_duality	Stoupy	jump	The Duality Jump	Finir le jump duo pour la première fois	Finish the duo jump for the first time
 {"id": "minecraft:suspicious_gravel"}	jump_bricks	jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour la première fois	Finish the graviglitch jump for the first time
-{"id": "minecraft:golden_apple", "components": {"minecraft:custom_model_data": 2013173}}	categories/easy	1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu	Help to build a map or create a mini-game
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:life_crystal"}}	categories/easy	1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu	Help to build a map or create a mini-game
 {"id": "minecraft:apple"}	1	2	Stoupy	easy	Fidèle	Jouez un total de 100 parties sur le Switch	Play a total of 100 games on the Switch
 {"id": "minecraft:gold_nugget"}	2	3	Stoupy	easy	La moula	Ayez au moins 400 Saphirs dans votre banque	Have at least 400 Sapphires in your bank
 {"id": "minecraft:nether_star"}	3	4	Lawtank	easy	First Victor	Gagnez votre première partie dans n'importe quel mini-jeu	Win your first game in any mini-game
@@ -47,7 +47,7 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:yellow_wool"}	6	19	Manu	medium	Wattouat	Mourir à cause d'un moutron foudroyant en SheepWars	Die from a lightning sheep in SheepWars
 {"id": "minecraft:minecart"}	19	20	OfChara	medium	Fusée	Dépassez 5 joueurs dans le dernier tour en Kart Racer	Overtake 5 players in the last lap of Kart Racer
 {"id": "minecraft:water_bucket"}	20	21	OfChara	medium	Plongeur Expert	Complétez 3 dés à coudre dans les modes de jeu du style	Complete 3 holes in game modes such as Dé à Coudre
-{"id": "minecraft:bow", "components": {"minecraft:custom_model_data": 2013151}}	48	22	OfChara	hard	Homophobe	Mettre au moins 42 flèches en Guy Shooter	Put at least 42 arrows in Guy Shooter
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:ultimate_bow"}}	48	22	OfChara	hard	Homophobe	Mettre au moins 42 flèches en Guy Shooter	Put at least 42 arrows in Guy Shooter
 {"id": "minecraft:feather"}	21	23	Lawtank	medium	Pélican	Soyez celui ayant le plus de kills en Cigogne (égalité autorisée)	Be the one with the most kills in Cigogne (ties allowed)
 {"id": "minecraft:jukebox"}	68	24	Fhara	hard	Feeling The Music	Survivez 20 manches en Block Party	Survive 20 rounds in Block Party
 {"id": "minecraft:ocelot_spawn_egg"}	9	25	OfChara	hard	Ocelot	Ne pas descendre en dessous de la moitié de vie en Creeper Apocalypse	Don't drop below half life in Creeper Apocalypse
@@ -55,7 +55,7 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:red_stained_glass"}	25	27	Megamat	hard	Sam Flynn	Éliminer 3 joueurs avec sa traînée en Moutron	Eliminate 3 players with your trail in Moutron
 {"id": "minecraft:bricks"}	21	28	Megamat	medium	D&Cube	Faites au minimum 50 points en Build Battle	Score at least 50 points in Build Battle
 {"id": "minecraft:stick"}	26	29	Marcus	medium	Embrouilleur	Tapez chaque joueur de la partie en Castagne	Hit every player in a game of Castagne
-{"id": "minecraft:command_block", "components": {"minecraft:custom_model_data": 2013040}}	categories/hard	30	Lawtank	hard	Légende	Gagnez 5 mini-jeux d'affilée	Win 5 mini-games in a row
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:ultimate_fragment"}}	categories/hard	30	Lawtank	hard	Légende	Gagnez 5 mini-jeux d'affilée	Win 5 mini-games in a row
 {"id": "minecraft:saddle"}	29	31	Xiaojuun	medium	Interville	Mourir en Block Party à cause d'une vache folle	Die in Block Party because of a mad cow (Ravager)
 {"id": "minecraft:wither_rose"}	31	32	Enlaniel	medium	Reste dans ta tombe	Tuez deux fois le ninja dans une partie de Traitors Game	Kill the ninja twice in Traitors Game
 {"id": "minecraft:yellow_banner"}	29	33	Megamat	medium	Rush Thief	Sécurisez le drapeau ennemi en Capture/Rush The Flag	Secure the enemy flag in Capture/Rush The Flag
@@ -79,11 +79,11 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:sandstone"}	50	51	Stoupy	hard	Pharaon	Terminer le secret de la map Ancienne Egypte en Infected	Complete the Ancient Egypt map secret in Infected
 {"id": "minecraft:magma_block"}	51	52	Stoupy et Lawtank	hard	The Volcano Core	Terminer le secret de la map Lost Graveyard Remastered en Infected	Complete the Lost Graveyard Remastered map secret in Infected
 {"id": "minecraft:quartz_block"}	52	53	Stoupy	hard	Storm Area	Terminer le secret de la map Area51 en Infected	Complete the Area51 map secret in Infected
-{"id": "minecraft:command_block", "components": {"minecraft:custom_model_data": 2013001}}	53	54	Stoupy	hard	Secret Slayer	Terminer les secrets de toutes les maps dans le mode de jeu Infected	Complete all map secrets in Infected game mode
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:stardust_ingot"}}	53	54	Stoupy	hard	Secret Slayer	Terminer les secrets de toutes les maps dans le mode de jeu Infected	Complete all map secrets in Infected game mode
 {"id": "minecraft:diamond"}	43	55	Thitanas	medium	Stomp	Terminer une partie de Rush The Point en atteignant 7500 points	Complete a game of Rush The Point by reaching 7500 points
 {"id": "minecraft:writable_book"}	4	56	Stoupy	easy	Jugeote	Noter les étoiles de 20 mini-jeux	Rate 20 different mini-games
 {"id": "minecraft:phantom_membrane"}	54	57	Goldvision	hard	Survivor	Gagner une partie d'Infecté sans prendre aucun coup en tant qu'humain	Win a game of Infected without taking any hits as a human
-{"id": "minecraft:bow", "components": {"minecraft:custom_model_data": 2013150}}	40	58	Stoupy	medium	Harceleur	Eliminer 3 fois la même personne en Pitchout	Eliminate the same person 3 times in Pitchout
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:awakened_stardust_bow"}}	40	58	Stoupy	medium	Harceleur	Eliminer 3 fois la même personne en Pitchout	Eliminate the same person 3 times in Pitchout
 {"id": "minecraft:creeper_head"}	44	59	Stoupy	medium	La plèbe a travaillé pour moi	Remporter une partie de PitchCreep sans tirer une seule flèche	Win a game of PitchCreep without firing a single arrow
 {"id": "minecraft:end_crystal"}	30	60	Redemoles	hard	Multigamer	Gagner une partie de chaque mini-jeu au moins une fois	Win each mini-game at least once
 {"id": "minecraft:emerald"}	34	61	luigimario12	easy	Héro	Tuez le meurtrier en Murder Mystery en tant qu'innocent	Kill the murderer as an innocent in Murder Mystery
@@ -101,8 +101,8 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:shield"}	68	73	OfChara	hard	Parade Parfaite	Réussir à parer une flèche en lançant son couteau en Murder Mystery	Parry an arrow by throwing your knife in Murder Mystery
 {"id": "minecraft:enchanted_golden_apple"}	57	74	OfChara	hard	I am Legend	Gagner une partie d'Infecté en étant le dernier humain (si il y a plus de 10 joueurs)	Win a game of Infected by being the last human (if there are more than 10 players)
 {"id": "minecraft:blue_stained_glass"}	37	75	OfChara	medium	Tout ça pour ça...	Survivre 42 secondes puis mourir en tombant dans l'eau en Bombardment	Survive 42 seconds and then die by falling into the water in Bombardment
-{"id": "minecraft:warped_fungus_on_a_stick", "components": {"minecraft:custom_model_data": 2013154}}	22	76	OfChara	hard	Injustice	Finir le parcours en Guy Shooter mais mourir de la main d'un Shooter	Finish the parkour in Guy Shooter but die from the hands of a Shooter
-{"id": "minecraft:warped_fungus_on_a_stick", "components": {"minecraft:custom_model_data": 2013152}}	72	77	Stoupy	easy	Pour l'équipe !	Tirer sur la base de bonus dans une partie de Laser Game	Shoot the bonus base in Laser Game
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:ultimate_sniper"}}	22	76	OfChara	hard	Injustice	Finir le parcours en Guy Shooter mais mourir de la main d'un Shooter	Finish the parkour in Guy Shooter but die from the hands of a Shooter
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:stardust_sniper"}}	72	77	Stoupy	easy	Pour l'équipe !	Tirer sur la base de bonus dans une partie de Laser Game	Shoot the bonus base in Laser Game
 {"id": "minecraft:cake"}	77	78	TreekoZ	easy	Banger sucré au sucre	Préparez un gâteau en une partie de Cooking Festival	Bake a cake in Cooking Festival
 {"id": "minecraft:coal"}	78	79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardment	Die from the first cannon shot in Bombardment
 {"id": "minecraft:observer"}	15	80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery	Get killed by another murderer as a murderer in Murder Myster

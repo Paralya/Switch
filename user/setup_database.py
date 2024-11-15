@@ -37,7 +37,7 @@ def main(config: dict) -> dict[str, dict]:
 
 	# Final adjustments, you definitively should keep them!
 	add_item_model_component(config, database, black_list = [])
-	add_item_name_and_lore_if_missing(config, database)
+	add_item_name_and_lore_if_missing(config, database, black_list = ["element_115"])
 	add_private_custom_data_for_namespace(config, database)		# Add a custom namespace for easy item detection
 	add_smithed_ignore_vanilla_behaviours_convention(database)	# Smithed items convention
 	print()

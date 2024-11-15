@@ -5,10 +5,19 @@ from python_datapack.constants import *
 
 # Setup infected items
 def setup_infected_items(database: dict[str, dict]) -> None:
-	""" Setup infected swords and armors\n
+	""" Setup all infected items such as swords, chestplates, etc.\n
 	Args:
 		database (dict[str, dict]): The database to update
 	"""
+	# Remaining items
+	database["element_115"] = {
+		"id": CUSTOM_ITEM_VANILLA,
+		"item_name": json.dumps({"text":"Element 115","color":"light_purple","italic":False}),
+		"lore": [json.dumps({"text":"Infected","color":"dark_green","italic":True})],
+		"item_model": "switch:stardust_ingot"
+	}
+
+	# Setup swords and chestplates
 	SWORDS: list[str] = [
 		"minecraft:wooden",	"minecraft:stone",		"minecraft:golden", 
 		"minecraft:iron",	"minecraft:diamond",	"switch:emerald", 
