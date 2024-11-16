@@ -59,22 +59,8 @@ team modify switch.tutorial prefix {"text":"[En tutoriel] ","color":"yellow"}
 team modify switch.tutorial color gold
 
 gamerule maxCommandChainLength 2147483647
-scoreboard players set Switch load.status 1000
 forceload add 0 0
 execute in switch:game run forceload add 0 0
-
-#define storage switch:temp
-#define storage switch:main
-#define storage switch:maps
-#define storage switch:records
-#define storage switch:stats
-#define storage switch:ratings
-#define storage switch:advancements
-#define score_holder #success
-#define score_holder #valid
-#define score_holder #count
-#define score_holder #temp
-#define score_holder #pos
 
 ## Storage
 # tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
@@ -84,6 +70,17 @@ data modify storage switch:main ParalyaError set value '[{"text":"[ParalyaError]
 data modify storage switch:main ParalyaWarning set value '[{"text":"[Paralya]","color":"gold"}]'
 data modify storage switch:main ParalyaHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
 data modify storage switch:main Paralya set value '[{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
+
+data modify storage switch:main ParalyaSapphires set value '[{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Saphirs","color":"blue"},{"text":"]","color":"dark_blue"}]'
+data modify storage switch:main ParalyaAstuce set value '[{"text":"[","color":"dark_green"},{"text":"ParalyaAstuce","color":"green"},{"text":"]","color":"dark_green"}]'
+data modify storage switch:main ParalyaPvPOld set value '[{"text":"[PvP 1.8 : Vitesse d\'attaque infinie]","color":"dark_aqua"}]'
+data modify storage switch:main ParalyaPvPNew set value '[{"text":"[PvP 1.9+ : Nouveau PvP]","color":"dark_green"}]'
+
+data modify storage switch:main ParalyaSapphiresEN set value '[{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Sapphires","color":"blue"},{"text":"]","color":"dark_blue"}]'
+data modify storage switch:main ParalyaAstuceEN set value '[{"text":"[","color":"dark_green"},{"text":"ParalyaTip","color":"green"},{"text":"]","color":"dark_green"}]'
+data modify storage switch:main ParalyaPvPOldEN set value '[{"text":"[PvP 1.8 : Infinite attack speed]","color":"dark_aqua"}]'
+data modify storage switch:main ParalyaPvPNewEN set value '[{"text":"[PvP 1.9+ : New PvP]","color":"dark_green"}]'
+
 
 # Setup stats storage if needed
 execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[],advancement_count:[]},modes:{}}
@@ -105,7 +102,7 @@ execute unless score #min_required switch.data matches 1.. run scoreboard player
 
 ## Define mini-games list
 data modify storage switch:main minigames set value []
-function switch:translations/load
+function switch:modes/load
 
 
 # Auto index

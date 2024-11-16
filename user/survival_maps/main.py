@@ -19,3 +19,6 @@ def main(config: dict) -> None:
 	generate_resume_regeneration_file(config)
 	generate_spread_one_player_file(config)
 
+	# For each map, note what modes use it
+	generate_map_usage_file(config)
+

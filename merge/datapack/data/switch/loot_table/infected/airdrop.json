@@ -41,7 +41,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:infected/element_115"
+					"value": "switch:i/element_115"
 				}
 			]
 		}

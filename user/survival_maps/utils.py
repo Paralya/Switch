@@ -672,3 +672,16 @@ def generate_spread_one_player_file(config: dict) -> None:
 	for name in generated_maps:
 		write_to_function(config, PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/spread_one_player\n')
 
+
+@measure_time(progress, "Generated the map usage file")
+def generate_map_usage_file(config: dict) -> None:
+	""" Generate the map_usage file for the survival maps, it shows for each map which modes use it
+	Args:
+		config (dict): The configuration of the project
+	"""
+	from config import ROOT
+	PATH: str = f"{ROOT}/map_usage.json"
+	
+	# Get for each modes the maps they use
+	modes_usage: dict = {}
+
