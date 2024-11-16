@@ -680,8 +680,38 @@ def generate_map_usage_file(config: dict) -> None:
 		config (dict): The configuration of the project
 	"""
 	from config import ROOT
+	from user._important.modes import MODES
 	PATH: str = f"{ROOT}/map_usage.json"
+	CHOOSE_MAP_FOR: str = "function switch:utils/choose_map_for"
 	
 	# Get for each modes the maps they use
-	modes_usage: dict = {}
+	modes_usage: dict[str, list[str]] = {}
+	for mode in MODES:
+		mode_id: str = mode["id"]
+		start_file: str = f"switch:modes/{mode_id}/start"
+		modes_usage[mode_id] = []
+
+		# Get the start function of the mode and search for "function switch:utils/choose_map_for {id:"block_party", maps:["pitch_creep_1","octogone_nether_ice"]}"
+		function_content: str = read_function(config, start_file + "_common")
+		if not function_content:
+			function_content = read_function(config, start_file)
+		splitted: list[str] = function_content.split(CHOOSE_MAP_FOR)
+		if len(splitted) > 1:
+			maps_str: str = splitted[1].split("\n")[0].split("maps:")[1].split("}")[0]
+			modes_usage[mode_id] = json.loads(maps_str)
+
+	# Now, generate the maps_usage dictionary
+	maps_usage: dict[str, list[str]] = {}
+	for map_name in generated_maps:
+		maps_usage[map_name] = []
+		for mode_id, maps_of_mode in modes_usage.items():
+			if map_name in maps_of_mode:
+				maps_usage[map_name].append(mode_id)
+	
+	# Sort the maps_usage dictionary by the length of the lists
+	maps_usage = dict(sorted(maps_usage.items(), key=lambda item: len(item[1])))
+
+	# Write the map_usage.json file
+	with super_open(PATH, "w") as f:
+		f.write(super_json_dump([maps_usage, modes_usage], max_level=2))
 
