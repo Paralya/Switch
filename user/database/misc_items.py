@@ -28,14 +28,14 @@ def setup_misc_items(database: dict[str, dict]) -> None:
 	database["dragon_pearl"] = {"id": "minecraft:ender_pearl"}
 	database["life_crystal"] = {"id": "minecraft:golden_apple"}
 	database["stardust_apple"] = {"id": CUSTOM_ITEM_VANILLA,
-		"minecraft:consumable": {"on_consume_effects": [{
+		"consumable": {"on_consume_effects": [{
 			"type": "minecraft:apply_effects",
 			"effects": [
 				{"amplifier": 2, "duration": 100, "id": "minecraft:regeneration", "show_icon": True},
 				{"amplifier": 1, "duration": 2400, "id": "minecraft:absorption", "show_icon": True}
 			]
 		}]},
-		"minecraft:food": {"can_always_eat": True, "nutrition": 4, "saturation": 9.6}
+		"food": {"can_always_eat": True, "nutrition": 4, "saturation": 9.6}
 	}
 	database["quarry_configurator"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["travel_staff"] = {"id": CUSTOM_ITEM_VANILLA}

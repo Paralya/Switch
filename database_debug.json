@@ -1431,8 +1431,8 @@
 	},
 	"stardust_apple": {
 		"id": "minecraft:command_block",
-		"minecraft:consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},
-		"minecraft:food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},
+		"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},
+		"food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},
 		"item_model": "switch:stardust_apple",
 		"item_name": "{\"text\": \"Stardust Apple\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
