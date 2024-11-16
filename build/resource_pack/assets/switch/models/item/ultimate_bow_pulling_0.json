@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/bow",
+	"textures": {
+		"layer0": "switch:item/ultimate_bow_pulling_0"
+	}
+}
+
