@@ -101,7 +101,7 @@ MODES: list[dict] = [
 	},
 	{
 		"min_players":1, "max_players":-1, "id":"spleef", "Name":"Spleef",
-		"estimated_time": "1-4 mins", "inspiration": "un peu partout", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+		"estimated_time": "1-4 mins", "inspiration": "everywhere", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
 		"description": {
 			"FR": [{"text":"Soyez le dernier en vie en faisant tomber\n"},{"text":"tous vos adversaires grâce à votre pelle !\n"}],
 			"EN": [{"text":"Aim to be the last one alive by digging\n"},{"text":"below other player using your shovel!\n"}]
@@ -109,7 +109,7 @@ MODES: list[dict] = [
 	},
 	{
 		"min_players":1, "max_players":-1, "id":"de_a_coudre", "Name":"Dé à Coudre",
-		"estimated_time": "3-6 mins", "inspiration": "système de points de OneCube", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+		"estimated_time": "3-6 mins", "inspiration": "OneCube point system", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
 		"description": {
 			"FR": [{"text":"Affrontez les autres joueurs dans un saut,\n"},{"text":"dans une piscine, iconique de Minecraft !\n"}],
 			"EN": [{"text":"Take on the other players in\n"},{"text":"Minecraft's iconic pool jump!\n"}]
@@ -301,7 +301,7 @@ MODES: list[dict] = [
 	},
 	{
 		"min_players":8, "max_players":-1, "id":"infected", "Name":"Infected",
-		"estimated_time": "5-10 mins", "inspiration": "ImagineYourCraft (2013)", "suggested_by": "la Terre entière", "developed_by": "Stoupy51",
+		"estimated_time": "5-10 mins", "inspiration": "ImagineYourCraft (2013)", "suggested_by": "the whole Earth", "developed_by": "Stoupy51",
 		"description": {
 			"FR": [{"text":"Un infecté est choisi en début de partie et doit infecter\n"},{"text":"tous les humains qui doivent attendre les renforts !\n"}],
 			"EN": [{"text":"An infected person is chosen at the beginning of the game and\n"},{"text":"must infect all humans who must wait for rescue!\n"}]
