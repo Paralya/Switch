@@ -5,11 +5,19 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:golden_apple",
+					"name": "minecraft:command_block",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:minecraft:consumable": {
+									"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]
+								},
+								"minecraft:minecraft:food": {
+									"can_always_eat": true,
+									"nutrition": 4,
+									"saturation": 9.6
+								},
 								"minecraft:item_model": "switch:stardust_apple",
 								"minecraft:item_name": "{\"text\": \"Stardust Apple\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [

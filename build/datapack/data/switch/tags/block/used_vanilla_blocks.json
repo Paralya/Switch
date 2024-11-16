@@ -1,9 +1,11 @@
 {
 	"values": [
 		"minecraft:diamond_block",
+		"minecraft:emerald_block",
 		"minecraft:iron_block",
 		"minecraft:netherite_block",
-		"minecraft:polished_deepslate"
+		"minecraft:polished_deepslate",
+		"minecraft:raw_iron_block"
 	]
 }
 

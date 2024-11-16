@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"bottom": "switch:item/radioactive_waste_barrel_bottom",
+		"side": "switch:item/radioactive_waste_barrel_side",
+		"top": "switch:item/radioactive_waste_barrel_top"
+	}
+}
+

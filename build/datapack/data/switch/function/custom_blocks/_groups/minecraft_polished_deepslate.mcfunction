@@ -13,6 +13,7 @@ execute if score #total_deepslate_ruby_ore switch.data matches 1.. if entity @s[
 execute if score #total_topaz_ore switch.data matches 1.. if entity @s[tag=switch.topaz_ore] run function switch:custom_blocks/topaz_ore/destroy
 execute if score #total_deepslate_topaz_ore switch.data matches 1.. if entity @s[tag=switch.deepslate_topaz_ore] run function switch:custom_blocks/deepslate_topaz_ore/destroy
 execute if score #total_steel_ore switch.data matches 1.. if entity @s[tag=switch.steel_ore] run function switch:custom_blocks/steel_ore/destroy
+execute if score #total_deepslate_steel_ore switch.data matches 1.. if entity @s[tag=switch.deepslate_steel_ore] run function switch:custom_blocks/deepslate_steel_ore/destroy
 execute if score #total_californium_ore switch.data matches 1.. if entity @s[tag=switch.californium_ore] run function switch:custom_blocks/californium_ore/destroy
 execute if score #total_uranium_ore switch.data matches 1.. if entity @s[tag=switch.uranium_ore] run function switch:custom_blocks/uranium_ore/destroy
 

@@ -3,8 +3,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"adamantium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"adamantium_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "adamantium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:netherite_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "adamantium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
 		"item_model": "switch:adamantium_block",
 		"item_name": "{\"text\": \"Adamantium Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -145,8 +145,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"sapphire": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"sapphire_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "sapphire","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "sapphire","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
 		"item_model": "switch:sapphire_block",
 		"item_name": "{\"text\": \"Sapphire Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -287,8 +287,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"ruby": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ruby_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "ruby","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "ruby","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
 		"item_model": "switch:ruby_block",
 		"item_name": "{\"text\": \"Ruby Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -429,8 +429,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"topaz": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"topaz_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "topaz","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "topaz","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
 		"item_model": "switch:topaz_block",
 		"item_name": "{\"text\": \"Topaz Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -682,8 +682,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "steel","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "steel","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
 		"item_model": "switch:steel_block",
 		"item_name": "{\"text\": \"Steel Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -696,6 +696,26 @@
 		"no_silk_touch_drop": "raw_steel",
 		"item_model": "switch:steel_ore",
 		"item_name": "{\"text\": \"Steel Ore\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
+	},
+	"deepslate_steel_ore": {
+		"id": "minecraft:furnace",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"block": {"steel": true},"ore": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"deepslate_steel_ore": true}},
+		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
+		"no_silk_touch_drop": "raw_steel",
+		"item_model": "switch:deepslate_steel_ore",
+		"item_name": "{\"text\": \"Deepslate Steel Ore\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
+	},
+	"raw_steel_block": {
+		"id": "minecraft:furnace",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"block": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"raw_steel_block": true}},
+		"vanilla_block": {"id": "minecraft:raw_iron_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "steel","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}}}],
+		"item_model": "switch:raw_steel_block",
+		"item_name": "{\"text\": \"Raw Steel Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
 	},
 	"steel_helmet": {
@@ -805,9 +825,36 @@
 		"id": "minecraft:command_block",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"ingot": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_ingot": true}},
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "steel","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"steel_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "steel","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"steel_block": true}}}}]},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "steel","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_nugget": true}}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_steel_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_steel_ore": true}}}}}],
 		"item_model": "switch:steel_ingot",
 		"item_name": "{\"text\": \"Steel Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
+	},
+	"steel_nugget": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"nugget": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_nugget": true}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "steel","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}]},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_helmet": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_chestplate": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_leggings": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_boots": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_sword": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_pickaxe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_axe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_shovel": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_hoe": true}}}}}],
+		"item_model": "switch:steel_nugget",
+		"item_name": "{\"text\": \"Steel Nugget\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
+	},
+	"raw_steel": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"raw": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"raw_steel": true}},
+		"item_model": "switch:raw_steel",
+		"item_name": "{\"text\": \"Raw Steel\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
+	},
+	"steel_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"dust": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_dust": true}},
+		"result_of_crafting": [{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_steel_ore": true}}}}}],
+		"used_for_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}],
+		"item_model": "switch:steel_dust",
+		"item_name": "{\"text\": \"Steel Dust\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
 	},
 	"steel_stick": {
@@ -970,8 +1017,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"californium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "californium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "californium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
 		"item_model": "switch:californium_block",
 		"item_name": "{\"text\": \"Californium Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -1115,8 +1162,8 @@
 		"id": "minecraft:furnace",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"block": {"uranium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_block": true}},
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "uranium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "uranium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],
 		"item_model": "switch:uranium_block",
 		"item_name": "{\"text\": \"Uranium Block\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
@@ -1383,7 +1430,9 @@
 		"custom_data": {"switch": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stardust_apple": {
-		"id": "minecraft:golden_apple",
+		"id": "minecraft:command_block",
+		"minecraft:consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},
+		"minecraft:food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},
 		"item_model": "switch:stardust_apple",
 		"item_name": "{\"text\": \"Stardust Apple\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
@@ -1409,6 +1458,113 @@
 		"item_name": "{\"text\": \"Wormhole Potion\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
 		"custom_data": {"switch": {"wormhole_potion": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"banana": {
+		"id": "minecraft:command_block",
+		"food": {"can_always_eat": true,"nutrition": 5,"saturation": 6},
+		"item_model": "switch:banana",
+		"item_name": "{\"text\": \"Banana\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"banana": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"anti_radiation_glove": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:anti_radiation_glove",
+		"item_name": "{\"text\": \"Anti Radiation Glove\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"anti_radiation_glove": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"californium_core": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:californium_core",
+		"item_name": "{\"text\": \"Californium Core\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"californium_core": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"californium_waste": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:californium_waste",
+		"item_name": "{\"text\": \"Californium Waste\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"californium_waste": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"radioactive_waste": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:radioactive_waste",
+		"item_name": "{\"text\": \"Radioactive Waste\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"radioactive_waste": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"radioactive_waste_barrel": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:emerald_block","apply_facing": false},
+		"item_model": "switch:radioactive_waste_barrel",
+		"item_name": "{\"text\": \"Radioactive Waste Barrel\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"radioactive_waste_barrel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"uranium_shard": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:uranium_shard",
+		"item_name": "{\"text\": \"Uranium Shard\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"uranium_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"chargeless_wand": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:chargeless_wand",
+		"item_name": "{\"text\": \"Chargeless Wand\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"chargeless_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"fertilizer_wand": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:fertilizer_wand",
+		"item_name": "{\"text\": \"Fertilizer Wand\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"fertilizer_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"fireball_wand": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:fireball_wand",
+		"item_name": "{\"text\": \"Fireball Wand\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"fireball_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"shield_wand": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:shield_wand",
+		"item_name": "{\"text\": \"Shield Wand\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"shield_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"storm_wand": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:storm_wand",
+		"item_name": "{\"text\": \"Storm Wand\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"storm_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"souls_bag": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:souls_bag",
+		"item_name": "{\"text\": \"Souls Bag\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"souls_bag": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"souls_bag_half_filled": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:souls_bag_half_filled",
+		"item_name": "{\"text\": \"Souls Bag Half Filled\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"souls_bag_half_filled": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"souls_bag_filled": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:souls_bag_filled",
+		"item_name": "{\"text\": \"Souls Bag Filled\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"],
+		"custom_data": {"switch": {"souls_bag_filled": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"element_115": {
 		"id": "minecraft:command_block",

@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "switch:radioactive_waste",
+								"minecraft:item_name": "{\"text\": \"Radioactive Waste\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								],
+								"minecraft:custom_data": {
+									"switch": {"radioactive_waste": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

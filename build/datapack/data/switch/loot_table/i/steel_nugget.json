@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"nugget": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"steel_nugget": true}
+								},
+								"minecraft:item_model": "switch:steel_nugget",
+								"minecraft:item_name": "{\"text\": \"Steel Nugget\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

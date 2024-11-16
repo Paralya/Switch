@@ -3,6 +3,7 @@
 #
 # @within	switch:calls/simpledrawer/steel/block
 #			switch:calls/simpledrawer/steel/ingot
+#			switch:calls/simpledrawer/steel/nugget
 #
 
 # Set score of material found to 1
@@ -18,4 +19,5 @@ data modify storage simpledrawer:io material set value {material: "switch.steel"
 # Fill the NBT with your own items
 data modify storage simpledrawer:io material.block.item set from storage switch:items all.steel_block
 data modify storage simpledrawer:io material.ingot.item set from storage switch:items all.steel_ingot
+data modify storage simpledrawer:io material.nugget.item set from storage switch:items all.steel_nugget
 

@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/golden_apple",
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "switch:item/stardust_apple"
 	}

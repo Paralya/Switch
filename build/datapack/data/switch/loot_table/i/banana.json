@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:food": {
+									"can_always_eat": true,
+									"nutrition": 5,
+									"saturation": 6
+								},
+								"minecraft:item_model": "switch:banana",
+								"minecraft:item_name": "{\"text\": \"Banana\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+								],
+								"minecraft:custom_data": {
+									"switch": {"banana": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
