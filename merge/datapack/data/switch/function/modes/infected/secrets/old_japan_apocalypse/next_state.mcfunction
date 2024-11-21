@@ -4,15 +4,12 @@ execute if score #infected_secret switch.data matches 0 run playsound block.iron
 
 # Radio dialogue
 execute if score #infected_secret switch.data matches 1 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
-execute if score #infected_secret switch.data matches 1 run scoreboard players set #infected_radio switch.data 1300
+execute if score #infected_secret switch.data matches 1 run scoreboard players enable @a[tag=!detached,team=switch.temp.human] switch.temp.radio_trigger
+execute if score #infected_secret switch.data matches 1 run scoreboard players set #infected_radio switch.data 1400
 execute if score #infected_secret switch.data matches 5 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
 execute if score #infected_secret switch.data matches 7 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
 execute if score #infected_secret switch.data matches 10 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
 execute if score #infected_secret switch.data matches 14 positioned 129027 104 129014 run playsound block.note_block.imitate.zombie ambient @a[tag=!detached] ~ ~ ~ 1 0.75 1
-
-# Got nether star
-
-# Placed beacon
 
 # Humans victory
 execute if score #infected_secret switch.data matches 17 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/50

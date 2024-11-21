@@ -6,5 +6,6 @@ scoreboard objectives remove switch.temp.infection
 scoreboard objectives remove switch.temp.original_zombie
 scoreboard objectives remove switch.temp.kills
 
+# Secrets objectives
 scoreboard objectives remove switch.temp.secret_kills
-
+scoreboard objectives remove switch.temp.radio_trigger
