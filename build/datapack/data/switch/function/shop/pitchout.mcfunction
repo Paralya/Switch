@@ -5,6 +5,9 @@
 #			switch:shop/trigger
 #
 
+# Tutorial stuff
+execute if score @s switch.tutorial matches 3 run scoreboard players set @s switch.tutorial 4
+
 ## File attribut: Ignore translations
 
 # Leather boots

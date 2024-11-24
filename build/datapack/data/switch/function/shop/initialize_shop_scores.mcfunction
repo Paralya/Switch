@@ -2,6 +2,7 @@
 #> switch:shop/initialize_shop_scores
 #
 # @within	switch:player/joined
+#			switch:player/tutorial/second
 #
 
 scoreboard players add @s switch.pitchout.boots 0
