@@ -8,5 +8,6 @@ credentials: dict[str, str] = load_credentials("~/python_datapack/credentials.ym
 ## Uploads
 # Upload to GitHub
 from continuous_delivery.github_config import github_config
+credentials["github"]["username"] = "Paralya"
 changelog: str = upload_to_github(credentials, github_config)
 
