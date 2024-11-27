@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/jn_one_in_the_chamber_2/main
 #
-# @within	???
+# @within	switch:maps/load_survival
 #
 
 summon marker 0 0 0 {Tags:["switch.selected_map"]}

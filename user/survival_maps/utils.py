@@ -631,9 +631,8 @@ def generate_load_file(config: dict) -> None:
 		config (dict): The configuration of the project
 	"""
 	PATH: str = f"switch:maps/load_survival"
-	write_to_function(config, PATH, "data modify storage switch:main map set value {}\n")
 	for name in generated_maps:
-		write_to_function(config, PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/\n')
+		write_to_function(config, PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/main\n')
 
 
 def generate_regenerate_map_file(config: dict) -> None:

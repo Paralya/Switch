@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/arti_ancient_city/main
 #
-# @within	???
+# @within	switch:maps/load_survival
 #
 
 summon marker 0 0 0 {Tags:["switch.selected_map"]}
