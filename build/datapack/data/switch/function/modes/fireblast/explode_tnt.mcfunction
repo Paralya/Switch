@@ -6,5 +6,6 @@
 
 kill @s
 summon creeper ~ ~ ~ {Fuse:0s,ignited:true}
+playsound switch:explosion ambient
 #summon tnt ~ ~ ~ {block_state:{Name:"minecraft:air"}}
 
