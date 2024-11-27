@@ -1303,6 +1303,16 @@
 		"item_name": "{\"text\": \"Raw Uranium\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
 	},
+	"shazinho": {
+		"id": "minecraft:command_block",
+		"custom_data": {"switch": {"shazinho": true},"smithed": {"dict": {"record": {"shazinho": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": "{'text':'Music Disc', 'italic': false}",
+		"jukebox_playable": {"song": "switch:shazinho","show_in_tooltip": true},
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "switch:shazinho",
+		"lore": ["{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"]
+	},
 	"awakened_stardust": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:awakened_stardust",

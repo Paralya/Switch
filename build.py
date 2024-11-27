@@ -20,5 +20,11 @@ from user.link import main as link_main	# Called near the end of the build proce
 
 # Run build process
 if __name__ == "__main__":
+	dump_folder = configuration["build_copy_destinations"][0][0]
+	if not os.path.exists(dump_folder):
+		os.makedirs(dump_folder, exist_ok = True)
+		with open(f"{dump_folder}/_switch_dump.txt", "w") as file:
+			file.write("Folder created")
+
 	build_process(configuration, setup_database_main, setup_external_database_main, link_main)
 
