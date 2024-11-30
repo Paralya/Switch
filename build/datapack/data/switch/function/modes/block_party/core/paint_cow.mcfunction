@@ -30,6 +30,6 @@ summon marker ~ ~ ~ {Tags:["switch.paint_marker"]}
 
 # Kill paint cow and explode
 particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
-playsound entity.explode block @a[tag=!detached]
+playsound switch:explosion block @a[tag=!detached]
 kill @s
 

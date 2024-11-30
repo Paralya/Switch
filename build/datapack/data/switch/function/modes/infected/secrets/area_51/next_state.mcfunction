@@ -24,6 +24,7 @@ execute if score #infected_secret switch.data matches 5 run playsound entity.zom
 execute if score #infected_secret switch.data matches 6 run playsound entity.zombie.attack_wooden_door ambient @a[tag=!detached]
 execute if score #infected_secret switch.data matches 7 run playsound entity.zombie.break_wooden_door ambient @a[tag=!detached]
 execute if score #infected_secret switch.data matches 7 run summon tnt 1967 127 1983
+execute if score #infected_secret switch.data matches 7 run playsound switch:explosion ambient @a[distance=..50]
 execute if score #infected_secret switch.data matches 7 run effect clear @a[tag=!detached] night_vision
 execute if score #infected_secret switch.data matches 7 run effect give @a[tag=!detached] darkness 3 0 true
 execute if score #infected_secret switch.data matches 7 run fill 2003 108 2037 1997 116 2044 air destroy

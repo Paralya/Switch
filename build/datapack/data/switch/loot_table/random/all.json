@@ -5830,6 +5830,14 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/deepslate_steel_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/raw_steel_block"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/steel_helmet"
 				},
 				{
@@ -5870,6 +5878,18 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_nugget"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/raw_steel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_dust"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/steel_stick"
 				},
 				{
@@ -5907,6 +5927,138 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/emerald_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/anti_radiation_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/anti_radiation_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/anti_radiation_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/anti_radiation_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_nugget"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/raw_californium"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_shovel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_nugget"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/raw_uranium"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/shazinho"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -5995,6 +6147,70 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/wormhole_potion"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/banana"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/anti_radiation_glove"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_core"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_waste"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/radioactive_waste"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/radioactive_waste_barrel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/uranium_shard"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/chargeless_wand"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/fertilizer_wand"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/fireball_wand"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/shield_wand"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/storm_wand"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/souls_bag"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/souls_bag_half_filled"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/souls_bag_filled"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/element_115"
 				},
 				{
 					"type": "minecraft:loot_table",
