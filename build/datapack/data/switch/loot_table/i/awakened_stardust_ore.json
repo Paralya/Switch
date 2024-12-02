@@ -1,0 +1,33 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"block": {"awakened_stardust": true},"ore": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"awakened_stardust_ore": true}
+								},
+								"minecraft:item_model": "switch:awakened_stardust_ore",
+								"minecraft:item_name": "{\"text\": \"Awakened Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+								],
+								"minecraft:container": [
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:awakened_stardust_ore","from": "switch"}}}}}}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

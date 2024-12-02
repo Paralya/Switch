@@ -10,6 +10,7 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
 									"model": "switch:emerald"

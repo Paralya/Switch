@@ -10,15 +10,15 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:custom_data": {
+									"smithed": {"dict": {"ingot": {"ultimate": true}},"ignore": {"functionality": true,"crafting": true}},
+									"switch": {"ultimate_ingot": true}
+								},
 								"minecraft:item_model": "switch:ultimate_ingot",
 								"minecraft:item_name": "{\"text\": \"Ultimate Ingot\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
 									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
-								],
-								"minecraft:custom_data": {
-									"switch": {"ultimate_ingot": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
-								}
+								]
 							}
 						}
 					]

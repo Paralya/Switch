@@ -5,11 +5,12 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:iron_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:rarity": "epic",
 								"minecraft:item_model": "minecraft:diamond_sword",
 								"minecraft:item_name": "\"Diamond Sword\"",
 								"minecraft:unbreakable": {},

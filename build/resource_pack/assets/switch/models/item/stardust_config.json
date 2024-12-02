@@ -1,7 +1,7 @@
 {
-	"parent": "item/generated",
+	"parent": "block/command_block",
 	"textures": {
-		"layer0": "switch:item/stardust_config"
+		"all": "switch:item/stardust_config"
 	}
 }
 

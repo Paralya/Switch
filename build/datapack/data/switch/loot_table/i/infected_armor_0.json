@@ -5,11 +5,12 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:leather_chestplate",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
 									"model": "minecraft:leather"

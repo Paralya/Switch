@@ -21,6 +21,14 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	"steel_ingot":			EquipmentsConfig(DEFAULT_ORE.IRON,		444,	{"mining_efficiency": 0.1}),
 	"minecraft:emerald":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	736,	{"luck": 0.25}),
 
+	# Custom materials from Stardust Fragment
+	"stardust_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+	"awakened_stardust!":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+	"legendarium_ingot":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+	"solarium_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+	"darkium_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+	"ultimate_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+
 	# Custom materials from CrazyAdventure
 	"anti_radiation_stuff":	EquipmentsConfig(DEFAULT_ORE.IRON,		250),
 	"californium_ingot":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1953,	{"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 0.2}),
@@ -28,6 +36,7 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 }
 
 # Main function should return a database
+@measure_time(progress, "Setup database")
 def main(config: dict) -> dict[str, dict]:
 	database: dict[str, dict] = {}
 

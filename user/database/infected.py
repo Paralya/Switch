@@ -35,7 +35,7 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
 		database[f"infected_sword_{i}"] = {
-			"id": CUSTOM_ITEM_VANILLA, "item_model": sword_model, "item_name": f'"{material} Sword"',
+			"id": "minecraft:iron_sword", "rarity": "epic", "item_model": sword_model, "item_name": f'"{material} Sword"',
 			"unbreakable": {}, "attribute_modifiers": sword_attribute
 		}
 
@@ -48,7 +48,8 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
 		database[f"infected_armor_{i}"] = {
-			"id": CUSTOM_ITEM_VANILLA,
+			"id": "minecraft:leather_chestplate" if i == 0 else CUSTOM_ITEM_VANILLA,
+			"rarity": "epic",
 			"equippable": {
 				"slot": "chest",
 				"model": armor.replace("golden", "gold")

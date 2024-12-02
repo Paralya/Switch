@@ -5,11 +5,12 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:iron_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:rarity": "epic",
 								"minecraft:item_model": "switch:emerald_sword",
 								"minecraft:item_name": "\"Emerald Sword\"",
 								"minecraft:unbreakable": {},

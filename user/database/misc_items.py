@@ -9,21 +9,22 @@ def setup_misc_items(database: dict[str, dict]) -> None:
 	Args:
 		database (dict[str, dict]): The database to update
 	"""
-	database["awakened_stardust"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["awakened_stardust_bow"] = {"id": "minecraft:bow"}
 	database["awakened_stardust_sniper"] = {"id": CUSTOM_ITEM_VANILLA}
+	database["awakened_stardust_block"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: {"id": "minecraft:stone", "apply_facing": False}}
 	database["stardust_bow"] = {"id": "minecraft:bow"}
 	database["stardust_sniper"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["ultimate_bow"] = {"id": "minecraft:bow"}
 	database["ultimate_sniper"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["stardust_fragment"] = {"id": CUSTOM_ITEM_VANILLA}
-	database["stardust_ingot"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["stardust_essence"] = {"id": CUSTOM_ITEM_VANILLA}
-	database["stardust_config"] = {"id": CUSTOM_ITEM_VANILLA}
-	database["legendarium_ingot"] = {"id": CUSTOM_ITEM_VANILLA}
-	database["solarium_ingot"] = {"id": CUSTOM_ITEM_VANILLA}
-	database["darkium_ingot"] = {"id": CUSTOM_ITEM_VANILLA}
-	database["ultimate_ingot"] = {"id": CUSTOM_ITEM_VANILLA}
+	database["stardust_config"] = {"id": CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL: {"parent": "block/command_block"}}
+	database["stardust_block"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: {"id": "minecraft:diamond_block", "apply_facing": False}}
+	database["ender_stardust_ore"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "stardust_essence"}
+	database["nether_stardust_ore"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "stardust_ingot"}
+	database["legendarium_block"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: {"id": "minecraft:lime_concrete", "apply_facing": False}}
+	database["solarium_block"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: {"id": "minecraft:orange_concrete", "apply_facing": False}}
+	database["darkium_block"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: {"id": "minecraft:black_concrete", "apply_facing": False}}
 	database["ultimate_bullet"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["dragon_pearl"] = {"id": "minecraft:ender_pearl"}
 	database["life_crystal"] = {"id": "minecraft:golden_apple"}
@@ -37,6 +38,7 @@ def setup_misc_items(database: dict[str, dict]) -> None:
 		}]},
 		"food": {"can_always_eat": True, "nutrition": 4, "saturation": 9.6}
 	}
+	database["dog_excrement"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["quarry_configurator"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["travel_staff"] = {"id": CUSTOM_ITEM_VANILLA}
 	database["wormhole_potion"] = {"id": CUSTOM_ITEM_VANILLA}

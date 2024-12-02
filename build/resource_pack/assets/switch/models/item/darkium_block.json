@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "switch:item/darkium_block"
+	}
+}
+

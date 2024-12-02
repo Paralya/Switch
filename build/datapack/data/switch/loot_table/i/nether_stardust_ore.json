@@ -1,0 +1,33 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "switch:nether_stardust_ore",
+								"minecraft:item_name": "{\"text\": \"Nether Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+								],
+								"minecraft:custom_data": {
+									"switch": {"nether_stardust_ore": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:container": [
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:nether_stardust_ore","from": "switch"}}}}}}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

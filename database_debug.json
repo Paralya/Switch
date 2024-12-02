@@ -969,6 +969,137 @@
 		"item_name": "{\"text\": \"Emerald Hoe\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
+	"stardust_block": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
+		"item_model": "switch:stardust_block",
+		"item_name": "{\"text\": \"Stardust Block\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"stardust_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_ore": {
+		"id": "minecraft:furnace",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"block": {"stardust": true},"ore": {"stardust": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_ore": true}},
+		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
+		"no_silk_touch_drop": "stardust_ingot",
+		"item_model": "switch:stardust_ore",
+		"item_name": "{\"text\": \"Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"deepslate_stardust_ore": {
+		"id": "minecraft:furnace",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"block": {"stardust": true},"ore": {"stardust": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"deepslate_stardust_ore": true}},
+		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
+		"no_silk_touch_drop": "stardust_ingot",
+		"item_model": "switch:deepslate_stardust_ore",
+		"item_name": "{\"text\": \"Deepslate Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"stardust_ingot": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"ingot": {"stardust": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_ingot": true}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "stardust","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"stardust_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"stardust_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"stardust_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_stardust_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_stardust_ore": true}}}}}],
+		"item_model": "switch:stardust_ingot",
+		"item_name": "{\"text\": \"Stardust Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"stardust_fragment": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:stardust_fragment",
+		"item_name": "{\"text\": \"Stardust Fragment\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"awakened_stardust_block": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:stone","apply_facing": false},
+		"item_model": "switch:awakened_stardust_block",
+		"item_name": "{\"text\": \"Awakened Stardust Block\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"awakened_stardust_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"awakened_stardust_ore": {
+		"id": "minecraft:furnace",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"block": {"awakened_stardust": true},"ore": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"awakened_stardust_ore": true}},
+		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
+		"no_silk_touch_drop": "awakened_stardust",
+		"item_model": "switch:awakened_stardust_ore",
+		"item_name": "{\"text\": \"Awakened Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"awakened_stardust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"awakened_stardust": true}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "awakened_stardust","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_ore": true}}}}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "awakened_stardust","ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "awakened_stardust","ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_ore": true}}}}}],
+		"used_for_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}}}],
+		"item_model": "switch:awakened_stardust",
+		"item_name": "{\"text\": \"Awakened Stardust\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"legendarium_block": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:lime_concrete","apply_facing": false},
+		"item_model": "switch:legendarium_block",
+		"item_name": "{\"text\": \"Legendarium Block\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"legendarium_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"legendarium_ingot": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"legendarium_ingot": true}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "legendarium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"legendarium_block": true}}}}]}],
+		"item_model": "switch:legendarium_ingot",
+		"item_name": "{\"text\": \"Legendarium Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"solarium_block": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:orange_concrete","apply_facing": false},
+		"item_model": "switch:solarium_block",
+		"item_name": "{\"text\": \"Solarium Block\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"solarium_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"solarium_ingot": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"solarium_ingot": true}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "solarium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"solarium_block": true}}}}]}],
+		"item_model": "switch:solarium_ingot",
+		"item_name": "{\"text\": \"Solarium Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"darkium_block": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:black_concrete","apply_facing": false},
+		"item_model": "switch:darkium_block",
+		"item_name": "{\"text\": \"Darkium Block\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"darkium_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"darkium_ingot": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"darkium_ingot": true}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "darkium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"darkium_block": true}}}}]}],
+		"item_model": "switch:darkium_ingot",
+		"item_name": "{\"text\": \"Darkium Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"ultimate_ingot": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"custom_data": {"smithed": {"dict": {"ingot": {"ultimate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ultimate_ingot": true}},
+		"item_model": "switch:ultimate_ingot",
+		"item_name": "{\"text\": \"Ultimate Ingot\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
 	"anti_radiation_helmet": {
 		"id": "minecraft:leather_helmet",
 		"category": "equipment",
@@ -1313,13 +1444,6 @@
 		"item_model": "switch:shazinho",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
-	"awakened_stardust": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:awakened_stardust",
-		"item_name": "{\"text\": \"Awakened Stardust\", \"italic\": false, \"color\": \"white\"}",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"awakened_stardust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
 	"awakened_stardust_bow": {
 		"id": "minecraft:bow",
 		"item_model": "switch:awakened_stardust_bow",
@@ -1362,20 +1486,6 @@
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"switch": {"ultimate_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
-	"stardust_fragment": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:stardust_fragment",
-		"item_name": "{\"text\": \"Stardust Fragment\", \"italic\": false, \"color\": \"white\"}",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"stardust_ingot": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:stardust_ingot",
-		"item_name": "{\"text\": \"Stardust Ingot\", \"italic\": false, \"color\": \"white\"}",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"stardust_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
 	"stardust_essence": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:stardust_essence",
@@ -1385,38 +1495,29 @@
 	},
 	"stardust_config": {
 		"id": "minecraft:command_block",
+		"override_model": {"parent": "block/command_block"},
 		"item_model": "switch:stardust_config",
 		"item_name": "{\"text\": \"Stardust Config\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"switch": {"stardust_config": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
-	"legendarium_ingot": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:legendarium_ingot",
-		"item_name": "{\"text\": \"Legendarium Ingot\", \"italic\": false, \"color\": \"white\"}",
+	"ender_stardust_ore": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
+		"no_silk_touch_drop": "stardust_essence",
+		"item_model": "switch:ender_stardust_ore",
+		"item_name": "{\"text\": \"Ender Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"legendarium_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		"custom_data": {"switch": {"ender_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
-	"solarium_ingot": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:solarium_ingot",
-		"item_name": "{\"text\": \"Solarium Ingot\", \"italic\": false, \"color\": \"white\"}",
+	"nether_stardust_ore": {
+		"id": "minecraft:furnace",
+		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
+		"no_silk_touch_drop": "stardust_ingot",
+		"item_model": "switch:nether_stardust_ore",
+		"item_name": "{\"text\": \"Nether Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"solarium_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"darkium_ingot": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:darkium_ingot",
-		"item_name": "{\"text\": \"Darkium Ingot\", \"italic\": false, \"color\": \"white\"}",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"darkium_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"ultimate_ingot": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:ultimate_ingot",
-		"item_name": "{\"text\": \"Ultimate Ingot\", \"italic\": false, \"color\": \"white\"}",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
-		"custom_data": {"switch": {"ultimate_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		"custom_data": {"switch": {"nether_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"ultimate_bullet": {
 		"id": "minecraft:command_block",
@@ -1447,6 +1548,13 @@
 		"item_name": "{\"text\": \"Stardust Apple\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"switch": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"dog_excrement": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:dog_excrement",
+		"item_name": "{\"text\": \"Dog Excrement\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"switch": {"dog_excrement": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"quarry_configurator": {
 		"id": "minecraft:command_block",
@@ -1584,7 +1692,8 @@
 		"custom_data": {"switch": {"element_115": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_0": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "minecraft:wooden_sword",
 		"item_name": "\"Wooden Sword\"",
 		"unbreakable": {},
@@ -1593,7 +1702,8 @@
 		"custom_data": {"switch": {"infected_sword_0": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_1": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "minecraft:stone_sword",
 		"item_name": "\"Stone Sword\"",
 		"unbreakable": {},
@@ -1602,7 +1712,8 @@
 		"custom_data": {"switch": {"infected_sword_1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_2": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "minecraft:golden_sword",
 		"item_name": "\"Golden Sword\"",
 		"unbreakable": {},
@@ -1611,7 +1722,8 @@
 		"custom_data": {"switch": {"infected_sword_2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_3": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "minecraft:iron_sword",
 		"item_name": "\"Iron Sword\"",
 		"unbreakable": {},
@@ -1620,7 +1732,8 @@
 		"custom_data": {"switch": {"infected_sword_3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_4": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "minecraft:diamond_sword",
 		"item_name": "\"Diamond Sword\"",
 		"unbreakable": {},
@@ -1629,7 +1742,8 @@
 		"custom_data": {"switch": {"infected_sword_4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_5": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "switch:emerald_sword",
 		"item_name": "\"Emerald Sword\"",
 		"unbreakable": {},
@@ -1638,7 +1752,8 @@
 		"custom_data": {"switch": {"infected_sword_5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_6": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "switch:obsidian_sword",
 		"item_name": "\"Obsidian Sword\"",
 		"unbreakable": {},
@@ -1647,7 +1762,8 @@
 		"custom_data": {"switch": {"infected_sword_6": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_7": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "switch:topaz_sword",
 		"item_name": "\"Topaz Sword\"",
 		"unbreakable": {},
@@ -1656,7 +1772,8 @@
 		"custom_data": {"switch": {"infected_sword_7": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_8": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "switch:ruby_sword",
 		"item_name": "\"Ruby Sword\"",
 		"unbreakable": {},
@@ -1665,7 +1782,8 @@
 		"custom_data": {"switch": {"infected_sword_8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_9": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "switch:sapphire_sword",
 		"item_name": "\"Sapphire Sword\"",
 		"unbreakable": {},
@@ -1674,7 +1792,8 @@
 		"custom_data": {"switch": {"infected_sword_9": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_sword_10": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:iron_sword",
+		"rarity": "epic",
 		"item_model": "switch:adamantium_sword",
 		"item_name": "\"Adamantium Sword\"",
 		"unbreakable": {},
@@ -1683,7 +1802,8 @@
 		"custom_data": {"switch": {"infected_sword_10": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"infected_armor_0": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:leather_chestplate",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "minecraft:leather"},
 		"item_model": "minecraft:leather_chestplate",
 		"item_name": "\"Leather Chestplate\"",
@@ -1694,6 +1814,7 @@
 	},
 	"infected_armor_1": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "minecraft:chainmail"},
 		"item_model": "minecraft:chainmail_chestplate",
 		"item_name": "\"Chainmail Chestplate\"",
@@ -1704,6 +1825,7 @@
 	},
 	"infected_armor_2": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "minecraft:gold"},
 		"item_model": "minecraft:golden_chestplate",
 		"item_name": "\"Golden Chestplate\"",
@@ -1714,6 +1836,7 @@
 	},
 	"infected_armor_3": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "minecraft:iron"},
 		"item_model": "minecraft:iron_chestplate",
 		"item_name": "\"Iron Chestplate\"",
@@ -1724,6 +1847,7 @@
 	},
 	"infected_armor_4": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "minecraft:diamond"},
 		"item_model": "minecraft:diamond_chestplate",
 		"item_name": "\"Diamond Chestplate\"",
@@ -1734,6 +1858,7 @@
 	},
 	"infected_armor_5": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "switch:emerald"},
 		"item_model": "switch:emerald_chestplate",
 		"item_name": "\"Emerald Chestplate\"",
@@ -1744,6 +1869,7 @@
 	},
 	"infected_armor_6": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "switch:obsidian"},
 		"item_model": "switch:obsidian_chestplate",
 		"item_name": "\"Obsidian Chestplate\"",
@@ -1754,6 +1880,7 @@
 	},
 	"infected_armor_7": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "switch:topaz"},
 		"item_model": "switch:topaz_chestplate",
 		"item_name": "\"Topaz Chestplate\"",
@@ -1764,6 +1891,7 @@
 	},
 	"infected_armor_8": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "switch:ruby"},
 		"item_model": "switch:ruby_chestplate",
 		"item_name": "\"Ruby Chestplate\"",
@@ -1774,6 +1902,7 @@
 	},
 	"infected_armor_9": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "switch:sapphire"},
 		"item_model": "switch:sapphire_chestplate",
 		"item_name": "\"Sapphire Chestplate\"",
@@ -1784,6 +1913,7 @@
 	},
 	"infected_armor_10": {
 		"id": "minecraft:command_block",
+		"rarity": "epic",
 		"equippable": {"slot": "chest","model": "switch:adamantium"},
 		"item_model": "switch:adamantium_chestplate",
 		"item_name": "\"Adamantium Chestplate\"",
