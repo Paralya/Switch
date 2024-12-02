@@ -23,7 +23,7 @@
 								"minecraft:rarity": "rare",
 								"minecraft:item_model": "switch:shazinho",
 								"minecraft:lore": [
-									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
 								]
 							}
 						}

@@ -8,8 +8,10 @@ from user.misc_links.memory_mine import main as memory_mine
 from user.survival_maps.main import main as generate_survival_maps
 from user.advancements.main import main as automatic_advancements
 from user.shop.main import main as shop
+from user.special_fonts.main import main as special_fonts
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
+@handle_error()
 def main(config: dict) -> None:
 
 	# Load the real load function and tick the real tick function
@@ -26,7 +28,6 @@ def main(config: dict) -> None:
 	memory_mine(config)
 	generate_survival_maps(config)
 	automatic_advancements(config)
-
-	# Generate the shops
 	shop(config)
+	special_fonts(config)
 

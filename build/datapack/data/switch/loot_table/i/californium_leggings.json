@@ -22,7 +22,7 @@
 								"minecraft:item_model": "switch:californium_leggings",
 								"minecraft:item_name": "{\"text\": \"Californium Leggings\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
 								]
 							}
 						}

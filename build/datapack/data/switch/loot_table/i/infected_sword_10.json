@@ -17,7 +17,7 @@
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.5,"operation": "add_value"}
 								],
 								"minecraft:lore": [
-									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:custom_data": {
 									"switch": {"infected_sword_10": true},

@@ -13,7 +13,7 @@
 								"minecraft:item_model": "switch:ultimate_sniper",
 								"minecraft:item_name": "{\"text\": \"Ultimate Sniper\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:custom_data": {
 									"switch": {"ultimate_sniper": true},

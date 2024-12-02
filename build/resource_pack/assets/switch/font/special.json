@@ -1,0 +1,6 @@
+{
+	"providers": [
+		{"type": "bitmap","file": "switch:font/special/black_pixel.png","ascent": 4000,"height": 8000,"chars": ["\u0021"]}
+	]
+}
+

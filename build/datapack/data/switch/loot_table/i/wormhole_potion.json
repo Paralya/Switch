@@ -13,7 +13,7 @@
 								"minecraft:item_model": "switch:wormhole_potion",
 								"minecraft:item_name": "{\"text\": \"Wormhole Potion\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:custom_data": {
 									"switch": {"wormhole_potion": true},

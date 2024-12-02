@@ -17,7 +17,7 @@
 								"minecraft:item_model": "switch:raw_steel",
 								"minecraft:item_name": "{\"text\": \"Raw Steel\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{\"text\": \"Switch\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
 								]
 							}
 						}

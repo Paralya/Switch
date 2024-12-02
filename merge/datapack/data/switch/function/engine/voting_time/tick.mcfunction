@@ -20,6 +20,7 @@ scoreboard players operation #remaining switch.data /= #20 switch.data
 scoreboard players add #remaining switch.data 1
 function switch:translations/engine_voting_time_tick
 
+execute if score #voting_timer switch.data matches 12 as @a[tag=!detached] run function switch:utils/black_transition
 execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/
 execute if score #voting_timer switch.data matches 1.. run schedule function switch:engine/voting_time/tick 1t
 
