@@ -56,7 +56,7 @@ def calculate_divider(start_pos: tuple, end_pos: tuple) -> int:
 	return (area // BLOCKS_PER_DIVISION + 2)
 
 
-def create_tp_coords_string_from_start_and_end(start_pos: tuple, end_pos: tuple, paste_start_height: int = 0) -> tuple:
+def create_tp_coords_string_from_start_and_end(start_pos: tuple[int, ...], end_pos: tuple[int, ...], paste_start_height: int = 0) -> tuple[str, int, int, int]:
 	""" Creates a string with the tp coordinates\n
 	Args:
 		start_pos (tuple)		: The start position of the regeneration area
@@ -275,7 +275,7 @@ def write_last_lines_of_regenerate(config: dict, name: str, base_condition: str,
 """)
 
 
-def create_spread_players_file(config: dict, name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int) -> None:
+def create_spread_players_file(config: dict, name: str, start_pos: tuple[int, ...], end_pos: tuple[int, ...], paste_start_height: int) -> None:
 	""" Creates the "spread_players.mcfunction" and "spread_one_player.mcfunction" files\n
 	Args:
 		name (str)					: The name of the map
@@ -285,15 +285,15 @@ def create_spread_players_file(config: dict, name: str, start_pos: tuple, end_po
 	"""
 	## Get variables
 	_, x, _, z = create_tp_coords_string_from_start_and_end(start_pos, end_pos, paste_start_height)
-	dx = end_pos[0] - x
-	dz = end_pos[2] - z
-	maxRange = min(dx, dz)
+	dx: int = end_pos[0] - x
+	dz: int = end_pos[2] - z
+	maxRange: int = min(dx, dz)
 	if maxRange < 10:
 		maxRange = 10
-	spread_distance = maxRange // 10
-	max_height = end_pos[1] + paste_start_height - 3
-	y = start_pos[1]
-	dy = paste_start_height - 1 - y
+	spread_distance: int = maxRange // 2
+	max_height: int = end_pos[1] + paste_start_height - 3
+	y: int = start_pos[1]
+	dy: int = paste_start_height - 1 - y
 
 	## Spread players file
 	# Create the file

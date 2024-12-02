@@ -4,103 +4,103 @@
 # @within	switch:maps/spread_one_player
 #
 
-execute in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
 ## Assurance commands
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
-execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 2 21 under 172 false @s
+execute at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 155021 155021 10 21 under 172 false @s
 
