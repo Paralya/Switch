@@ -20,8 +20,8 @@ execute if score #color switch.data matches 8 run data modify entity @s CustomNa
 execute if score #color switch.data matches 9 run data modify entity @s CustomName set value '{"text":"+4 points","color":"yellow"}'
 execute if score #color switch.data matches 10 run data modify entity @s CustomName set value '{"text":"+6 points","color":"yellow"}'
 execute if score #color switch.data matches 11 run data modify entity @s CustomName set value '{"text":"+6 points","color":"yellow"}'
-execute if score #color switch.data matches 12 run data modify entity @s CustomName set value '{"text":"+8 points","color":"orange"}'
-execute if score #color switch.data matches 13 run data modify entity @s CustomName set value '{"text":"+8 points","color":"orange"}'
+execute if score #color switch.data matches 12 run data modify entity @s CustomName set value '{"text":"+8 points","color":"gold"}'
+execute if score #color switch.data matches 13 run data modify entity @s CustomName set value '{"text":"+8 points","color":"gold"}'
 execute if score #color switch.data matches 14 run data modify entity @s CustomName set value '{"text":"+10 points","color":"red"}'
 execute if score #color switch.data matches 15 run data modify entity @s CustomName set value '{"text":"-50% points","color":"black"}'
 data modify entity @s CustomNameVisible set value 1b
