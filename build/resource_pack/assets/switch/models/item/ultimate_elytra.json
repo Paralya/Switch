@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/elytra",
+	"textures": {
+		"layer0": "switch:item/ultimate_elytra"
+	}
+}
+

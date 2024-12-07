@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:item/leather_helmet",
+	"textures": {
+		"layer0": "switch:item/stardust_helmet",
+		"layer1": "switch:item/stardust_helmet"
+	}
+}
+
