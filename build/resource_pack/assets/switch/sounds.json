@@ -1,20 +1,10 @@
 {
 	"shazinho": {
 		"category": "music",
-		"sounds": [
-			{
-				"name": "switch:shazinho",
-				"stream": true
-			}
-		]
+		"sounds": [{"name": "switch:shazinho","stream": true}]
 	},
 	"explosion": {
-		"sounds": [
-			"random/explode1",
-			"random/explode2",
-			"random/explode3",
-			"random/explode4"
-		],
+		"sounds": ["random/explode1","random/explode2","random/explode3","random/explode4"],
 		"subtitle": "subtitles.entity.generic.explode"
 	}
 }

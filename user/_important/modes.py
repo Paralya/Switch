@@ -75,14 +75,14 @@ MODES: list[dict] = [
 			"EN": [{"text":"Two sides: one with visible players,\n"},{"text":"the other with spectres, which side will win?\n"}]
 		},
 	},
-	{
-		"min_players":1, "max_players":-1, "id":"kart_racer", "Name":"Kart Racer",
-		"estimated_time": "3-6 mins", "inspiration": "Racing games", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
-		"description": {
-			"FR": [{"text":"Affrontez les autres joueurs sur des\n"},{"text":"circuits et soyez le premier arrivé !\n"}],
-			"EN": [{"text":"Compete against other players on circuits\n"},{"text":"and be the first to reach the finish line!\n"}]
-		},
-	},
+	# {
+	# 	"min_players":1, "max_players":-1, "id":"kart_racer", "Name":"Kart Racer",
+	# 	"estimated_time": "3-6 mins", "inspiration": "Racing games", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+	# 	"description": {
+	# 		"FR": [{"text":"Affrontez les autres joueurs sur des\n"},{"text":"circuits et soyez le premier arrivé !\n"}],
+	# 		"EN": [{"text":"Compete against other players on circuits\n"},{"text":"and be the first to reach the finish line!\n"}]
+	# 	},
+	# },
 	{
 		"min_players":1, "max_players":-1, "id":"rush_the_point", "Name":"Rush The Point",
 		"estimated_time": "7-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
