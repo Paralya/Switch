@@ -17,8 +17,7 @@
 								"minecraft:max_damage": 1812,
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},
-									{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},
-									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}
+									{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}
 								],
 								"minecraft:item_model": "switch:stardust_sword",
 								"minecraft:item_name": "{\"text\": \"Stardust Sword\", \"italic\": false, \"color\": \"white\"}",

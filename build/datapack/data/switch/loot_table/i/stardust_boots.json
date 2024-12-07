@@ -17,8 +17,7 @@
 								"minecraft:max_damage": 497,
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},
-									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"},
-									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "feet","id": "switch:luck.feet"}
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}
 								],
 								"minecraft:item_model": "switch:stardust_boots",
 								"minecraft:item_name": "{\"text\": \"Stardust Boots\", \"italic\": false, \"color\": \"white\"}",

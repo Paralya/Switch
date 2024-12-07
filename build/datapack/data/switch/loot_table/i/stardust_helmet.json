@@ -17,8 +17,7 @@
 								"minecraft:max_damage": 421,
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},
-									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},
-									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}
+									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}
 								],
 								"minecraft:item_model": "switch:stardust_helmet",
 								"minecraft:item_name": "{\"text\": \"Stardust Helmet\", \"italic\": false, \"color\": \"white\"}",
