@@ -10,6 +10,7 @@ function switch:utils/choose_map_for {id:"rush_the_point", maps:["rush_the_point
 
 gamerule naturalRegeneration false
 gamerule keepInventory true
+gamerule doTileDrops false
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.fireball_cooldown dummy
