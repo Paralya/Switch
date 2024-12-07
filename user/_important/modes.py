@@ -123,14 +123,14 @@ MODES: list[dict] = [
 			"EN": [{"text":"Find food around you and eat\n"},{"text":"the most amount to win!\n"}]
 		},
 	},
-	{
-		"min_players":1, "max_players":8, "id":"mlg_a_coudre", "Name":"MLG à Coudre",
-		"estimated_time": "1-6 mins", "inspiration": "Dé à Coudre", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
-		"description": {
-			"FR": [{"text":"Affrontez les autres joueurs dans un saut\n"},{"text":"iconique de Minecraft, mais avec un seau d'eau !\n"}],
-			"EN": [{"text":"Take on the other players in Minecraft's\n"},{"text":"iconic pool jump, but with a water bucket!\n"}]
-		},
-	},
+	# {
+	# 	"min_players":1, "max_players":8, "id":"mlg_a_coudre", "Name":"MLG à Coudre",
+	# 	"estimated_time": "1-6 mins", "inspiration": "Dé à Coudre", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+	# 	"description": {
+	# 		"FR": [{"text":"Affrontez les autres joueurs dans un saut\n"},{"text":"iconique de Minecraft, mais avec un seau d'eau !\n"}],
+	# 		"EN": [{"text":"Take on the other players in Minecraft's\n"},{"text":"iconic pool jump, but with a water bucket!\n"}]
+	# 	},
+	# },
 	{
 		"min_players":1, "max_players":-1, "id":"protect_the_king", "Name":"Protect The King",
 		"estimated_time": "1-4 mins", "inspiration": "Charlemagne", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
@@ -219,14 +219,14 @@ MODES: list[dict] = [
 			"EN": [{"text":"One third of the players have a bow and must prevent\n"},{"text":"the other players from climbing the rainbow tower!\n"}]
 		},
 	},
-	{
-		"min_players":1, "max_players":-1, "id":"build_battle", "Name":"Build Battle",
-		"estimated_time": "5-7 mins", "inspiration": "Hypixel", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
-		"description": {
-			"FR": [{"text":"Concurrencez les autres joueurs avec votre\n"},{"text":"construction sur un thème choisi démocratiquement au début !\n"}],
-			"EN": [{"text":"Compete against other players with your construction\n"},{"text":"on a theme chosen democratically at the start!\n"}]
-		},
-	},
+	# {
+	# 	"min_players":1, "max_players":-1, "id":"build_battle", "Name":"Build Battle",
+	# 	"estimated_time": "5-7 mins", "inspiration": "Hypixel", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+	# 	"description": {
+	# 		"FR": [{"text":"Concurrencez les autres joueurs avec votre\n"},{"text":"construction sur un thème choisi démocratiquement au début !\n"}],
+	# 		"EN": [{"text":"Compete against other players with your construction\n"},{"text":"on a theme chosen democratically at the start!\n"}]
+	# 	},
+	# },
 	{
 		"min_players":1, "max_players":-1, "id":"beat_the_kings", "Name":"Beat The Kings",
 		"estimated_time": "3-5 mins", "inspiration": "Henry IV/Louis XVI", "suggested_by": "Luxio", "developed_by": "Luxio",
@@ -307,14 +307,14 @@ MODES: list[dict] = [
 			"EN": [{"text":"An infected person is chosen at the beginning of the game and\n"},{"text":"must infect all humans who must wait for rescue!\n"}]
 		},
 	},
-	{
-		"min_players":1, "max_players":-1, "id":"glassrunner", "Name":"GlassRunner",
-		"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
-		"description": {
-			"FR": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
-			"EN": [{"text":"Take on the opposing team in the sky in a\n"},{"text":"CaptureThePoint seasoned with multiple special features\n"}]
-		},
-	},
+	# {
+	# 	"min_players":1, "max_players":-1, "id":"glassrunner", "Name":"GlassRunner",
+	# 	"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
+	# 	"description": {
+	# 		"FR": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
+	# 		"EN": [{"text":"Take on the opposing team in the sky in a\n"},{"text":"CaptureThePoint seasoned with multiple special features\n"}]
+	# 	},
+	# },
 	{
 		"min_players":10, "max_players":-1, "id":"capture_the_flag", "Name":"Capture The Flag",
 		"estimated_time": "10-15 mins", "inspiration": "Aspiration", "suggested_by": "Oraclette", "developed_by": "Stoupy51",
