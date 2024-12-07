@@ -5,7 +5,7 @@ scoreboard players add #memory_mine_ticks switch.data 1
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/memory_mine/no_drop
 
 # Give mines and decrease cooldown timer
-give @a[scores={switch.temp.cooldown=1}] tnt[custom_data={switch:{memory_mine:true}},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1024}]
+give @a[scores={switch.temp.cooldown=1}] tnt[custom_data={switch:{memory_mine:true}},consumable={consume_seconds:1024}]
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
 
 # Mine tick
