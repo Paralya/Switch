@@ -22,12 +22,12 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	"minecraft:emerald":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	736,	{"luck": 0.25}),
 
 	# Custom materials from Stardust Fragment
-	"stardust_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
-	"awakened_stardust!":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
-	"legendarium_ingot":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
-	"solarium_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
-	"darkium_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
-	"ultimate_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{"luck": 0.25}),
+	"stardust_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{}),
+	"awakened_stardust!":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{}),
+	"legendarium_ingot":	EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{}),
+	"solarium_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{}),
+	"darkium_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{}),
+	"ultimate_ingot":		EquipmentsConfig(DEFAULT_ORE.DIAMOND,	1812,	{}),
 
 	# Custom materials from CrazyAdventure
 	"anti_radiation_stuff":	EquipmentsConfig(DEFAULT_ORE.IRON,		250),
