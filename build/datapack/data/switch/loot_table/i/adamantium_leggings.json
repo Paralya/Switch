@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 511,
 								"minecraft:equippable": {
 									"slot": "legs",
-									"model": "switch:adamantium"
+									"asset_id": "switch:adamantium"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 6.2,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},

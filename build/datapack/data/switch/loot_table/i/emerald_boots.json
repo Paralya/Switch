@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 202,
 								"minecraft:equippable": {
 									"slot": "feet",
-									"model": "switch:emerald"
+									"asset_id": "switch:emerald"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},

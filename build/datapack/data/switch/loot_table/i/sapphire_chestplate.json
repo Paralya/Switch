@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 592,
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "switch:sapphire"
+									"asset_id": "switch:sapphire"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},

@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 352,
 								"minecraft:equippable": {
 									"slot": "feet",
-									"model": "switch:topaz"
+									"asset_id": "switch:topaz"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 4.0,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},

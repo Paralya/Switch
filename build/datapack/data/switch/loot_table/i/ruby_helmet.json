@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 382,
 								"minecraft:equippable": {
 									"slot": "head",
-									"model": "switch:ruby"
+									"asset_id": "switch:ruby"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 3.5,"operation": "add_value","slot": "head","id": "switch:armor.head"},

@@ -25,7 +25,7 @@
 			"minecraft:max_damage": 233,
 			"minecraft:equippable": {
 				"slot": "legs",
-				"model": "switch:emerald"
+				"asset_id": "switch:emerald"
 			},
 			"minecraft:attribute_modifiers": [
 				{

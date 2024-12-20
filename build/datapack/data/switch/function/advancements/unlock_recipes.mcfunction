@@ -30,3 +30,14 @@ execute if score #success switch.data matches 1 run recipe give @s switch:emeral
 execute if score #success switch.data matches 1 run recipe give @s switch:emerald_shovel
 execute if score #success switch.data matches 1 run recipe give @s switch:emerald_sword
 
+## Add result items
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_helmet":true} }] run recipe give @s switch:emerald_helmet
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_chestplate":true} }] run recipe give @s switch:emerald_chestplate
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_leggings":true} }] run recipe give @s switch:emerald_leggings
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_boots":true} }] run recipe give @s switch:emerald_boots
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_sword":true} }] run recipe give @s switch:emerald_sword
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_pickaxe":true} }] run recipe give @s switch:emerald_pickaxe
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_axe":true} }] run recipe give @s switch:emerald_axe
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_shovel":true} }] run recipe give @s switch:emerald_shovel
+execute if items entity @s container.* *[custom_data~{"switch": {"emerald_hoe":true} }] run recipe give @s switch:emerald_hoe
+

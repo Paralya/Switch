@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 545,
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "switch:adamantium"
+									"asset_id": "switch:adamantium"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 8.2,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},

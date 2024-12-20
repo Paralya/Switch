@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 557,
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "switch:ruby"
+									"asset_id": "switch:ruby"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 8.5,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},

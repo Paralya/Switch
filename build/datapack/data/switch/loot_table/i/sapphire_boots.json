@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 481,
 								"minecraft:equippable": {
 									"slot": "feet",
-									"model": "switch:sapphire"
+									"asset_id": "switch:sapphire"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},

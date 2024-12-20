@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 452,
 								"minecraft:equippable": {
 									"slot": "feet",
-									"model": "switch:ruby"
+									"asset_id": "switch:ruby"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 3.5,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},
