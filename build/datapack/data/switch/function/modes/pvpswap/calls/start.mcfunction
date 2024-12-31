@@ -1,0 +1,8 @@
+
+#> switch:modes/pvpswap/calls/start
+#
+# @within	???
+#
+
+execute if data storage switch:main {current_game:"pvpswap"} run function switch:modes/pvpswap/start
+

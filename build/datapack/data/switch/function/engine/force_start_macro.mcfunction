@@ -33,6 +33,7 @@
 #			switch:modes/pitchout/_force_start {id:"pitchout"}
 #			switch:modes/pitch_creep/_force_start {id:"pitch_creep"}
 #			switch:modes/protect_the_king/_force_start {id:"protect_the_king"}
+#			switch:modes/pvpswap/_force_start {id:"pvpswap"}
 #			switch:modes/replicate_the_build/_force_start {id:"replicate_the_build"}
 #			switch:modes/rush_the_flag/_force_start {id:"rush_the_flag"}
 #			switch:modes/rush_the_point/_force_start {id:"rush_the_point"}

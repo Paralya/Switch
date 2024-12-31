@@ -15,6 +15,7 @@
 #			switch:modes/pillars_of_fortune/death
 #			switch:modes/pitch_creep/death
 #			switch:modes/protect_the_king/death
+#			switch:modes/pvpswap/death
 #			switch:modes/replicate_the_build/death
 #			switch:modes/rush_the_point/death/player
 #			switch:modes/sheepwars/death

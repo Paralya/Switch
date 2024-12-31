@@ -8,6 +8,7 @@ from python_datapack.constants import *
 from .database.misc_items import setup_misc_items
 from .database.blocks_behaviors import setup_blocks_behaviors
 from .database.infected import setup_infected_items
+from .database.pvpswap import setup_pvpswap
 
 # Configuration to generate everything about the material based on "steel_ingot"
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
@@ -48,6 +49,7 @@ def main(config: dict) -> dict[str, dict]:
 	setup_misc_items(database)
 	setup_blocks_behaviors(database)
 	setup_infected_items(database)
+	setup_pvpswap(database)
 
 	# Final adjustments, you definitively should keep them!
 	add_item_model_component(config, database, black_list = [])

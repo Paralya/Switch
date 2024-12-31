@@ -25,6 +25,7 @@
 #			switch:modes/pillars_of_fortune/start
 #			switch:modes/pitchout/start
 #			switch:modes/protect_the_king/start
+#			switch:modes/pvpswap/start
 #			switch:modes/replicate_the_build/start
 #			switch:modes/rush_the_point/start_common
 #			switch:modes/sheepwars/start

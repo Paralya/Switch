@@ -362,6 +362,14 @@ MODES: list[dict] = [
 			"FR": [{"text":"Éjectez tous les joueurs de la plateforme\n"},{"text":"en utilisant des boules de feu explosives !\n"}],
 			"EN": [{"text":"Knock out every players from the platform\n"},{"text":"by using explosive fireballs!\n"}]
 		},
+	},
+	{
+		"min_players":1, "max_players":32, "id":"pvpswap", "Name":"PvPSwap",
+		"estimated_time": "1-2 mins", "inspiration": "Épicube", "suggested_by": "Arobaze", "developed_by": "Arobaze",
+		"description": {
+			"FR": [{"text":"Éliminez les autres joueurs au travers\n"},{"text":"des changements inopinés de positions !\n"}],
+			"EN": [{"text":"Eliminate other players through\n"},{"text":"sudden changes in positions!\n"}]
+		},
 	}
 ]
 
