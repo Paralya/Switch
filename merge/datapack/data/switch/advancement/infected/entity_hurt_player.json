@@ -17,6 +17,6 @@
 		]
 	],
 	"rewards": {
-		"function": "switch:modes/infected/advancements/entity_hurt_player"
+		"function": "switch:modes/infected/advancements/entity_hurt_player/main"
 	}
 }
