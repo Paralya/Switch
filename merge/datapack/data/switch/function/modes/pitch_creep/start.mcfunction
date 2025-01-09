@@ -9,9 +9,9 @@ time set 18000
 execute in minecraft:overworld run gamerule showDeathMessages false
 execute in minecraft:overworld run gamerule naturalRegeneration false
 execute in minecraft:overworld run gamerule keepInventory true
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #is_adventure switch.data 1

@@ -7,9 +7,9 @@ effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] night_vision infinite 255 true
 time set 6000
 
-gamerule keepInventory true
-gamerule doTileDrops false
-gamerule mobGriefing true
+execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule doTileDrops false
+execute in switch:game run gamerule mobGriefing true
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1

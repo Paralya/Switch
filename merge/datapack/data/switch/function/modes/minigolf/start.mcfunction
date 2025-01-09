@@ -4,10 +4,11 @@ team modify switch.no_pvp seeFriendlyInvisibles false
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
-gamerule fallDamage false
-gamerule fireDamage false
-gamerule drowningDamage false
-gamerule freezeDamage false
+
+execute in minecraft:overworld run gamerule fallDamage false
+execute in minecraft:overworld run gamerule fireDamage false
+execute in minecraft:overworld run gamerule drowningDamage false
+execute in minecraft:overworld run gamerule freezeDamage false
 
 ## Téléportation des joueurs
 scoreboard players set #is_adventure switch.data 1

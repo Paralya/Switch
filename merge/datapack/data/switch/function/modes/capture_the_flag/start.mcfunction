@@ -8,8 +8,8 @@ function switch:utils/set_dynamic_time
 ## Placement de la map et des joueurs
 function switch:modes/capture_the_flag/choose_map_for
 
-gamerule doTileDrops false
-gamerule keepInventory true
+execute in switch:game run gamerule doTileDrops false
+execute in switch:game run gamerule keepInventory true
 
 scoreboard objectives add switch.temp.choosen_class dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}

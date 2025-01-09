@@ -9,9 +9,9 @@ time set 18000
 scoreboard players set #is_adventure switch.data 1
 function switch:utils/choose_map_for {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_warden_escape_start
 

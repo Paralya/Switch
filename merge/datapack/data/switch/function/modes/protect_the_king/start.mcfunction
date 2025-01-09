@@ -12,7 +12,7 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"protect_the_king", maps:["traitor_original","mushroom_plains","baby_park","snow_travel","cathedrale_liege","jayl_dark_forest","operation_pigclaw","dark_forest_hills","paralya_lobby_noel","zonweeb_highschool","hider_mansion","nuketown_no_barrier","sprucy_village","highland_mansion","japanese_village","snowy_village","werewolf_village","lightium_spawn","paralya_lobby","stardust_spawn","stardust_boss_zone","stardust_boss_zone_nether","stardust_pvp_zone","jn_biomes_relief"]}
 
-gamerule naturalRegeneration false
+execute in switch:game run gamerule naturalRegeneration false
 
 function switch:translations/modes_protect_the_king_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

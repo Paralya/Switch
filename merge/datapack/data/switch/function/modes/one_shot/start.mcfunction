@@ -1,9 +1,9 @@
 
 function switch:utils/set_dynamic_time
 
-gamerule fallDamage false
-gamerule keepInventory true
-gamerule showDeathMessages true
+execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule showDeathMessages true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] resistance 6 255 true
 effect give @a[tag=!detached] slowness 6 255 true

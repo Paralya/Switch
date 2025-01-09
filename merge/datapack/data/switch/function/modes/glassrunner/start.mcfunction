@@ -22,8 +22,8 @@ execute as @a[tag=!detached,sort=random] at @s run function switch:modes/glassru
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/death
 
 
-gamerule showDeathMessages false
-gamerule keepInventory true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_glassrunner_start
 

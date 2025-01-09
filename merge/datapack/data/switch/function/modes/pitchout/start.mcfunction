@@ -6,7 +6,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
 function switch:utils/set_dynamic_time
 
-gamerule fallDamage false
+execute in switch:game run gamerule fallDamage false
 
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}
