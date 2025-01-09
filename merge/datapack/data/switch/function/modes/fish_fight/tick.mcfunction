@@ -36,7 +36,7 @@ execute at @a[tag=!detached,scores={switch.alive=1}] run particle dust{color:[0.
 
 # Cooldown invincibilité
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
-execute as @a[scores={switch.temp.cooldown=1..80}] run attribute @s jump_strength base set 0.42
+execute as @a[scores={switch.temp.cooldown=1..80}] run attribute @s jump_strength base reset
 item replace entity @a[scores={switch.temp.cooldown=1}] armor.chest with air
 
 # Placed blocks disappear

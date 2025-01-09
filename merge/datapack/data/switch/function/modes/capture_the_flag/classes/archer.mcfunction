@@ -18,6 +18,6 @@ item replace entity @s hotbar.8 with bread 21
 
 attribute @s movement_speed base set 0.11
 attribute @s attack_speed base set 2048
-attribute @s max_health base set 20
-attribute @s jump_strength base set 0.42
+attribute @s max_health base reset
+attribute @s jump_strength base reset
 
