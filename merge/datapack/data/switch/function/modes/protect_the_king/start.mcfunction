@@ -45,6 +45,8 @@ team modify switch.temp.red_king color dark_red
 team modify switch.temp.blue_king color dark_blue
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
+team modify switch.temp.red collisionRule never
+team modify switch.temp.blue collisionRule never
 scoreboard players set #next_role switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/protect_the_king/roles
 function switch:modes/protect_the_king/better_tp
