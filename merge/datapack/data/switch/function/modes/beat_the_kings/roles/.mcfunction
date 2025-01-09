@@ -8,11 +8,11 @@ execute if score #next_role switch.data matches 7..10 run team join switch.temp.
 execute if score #next_role switch.data matches 10.. run scoreboard players set #next_role switch.data 0
 
 # Linked marker for offline players
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot switch:get_username
+setblock 0 3 0 yellow_shulker_box
+loot insert 0 3 0 loot switch:get_username
 scoreboard players operation #player_id switch.id = @s switch.id
 tag @s add switch.temp
 execute summon marker run function switch:modes/beat_the_kings/roles/marker
 tag @s remove switch.temp
-setblock 0 0 0 air
+setblock 0 3 0 air
 

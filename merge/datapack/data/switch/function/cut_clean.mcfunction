@@ -14,9 +14,9 @@ execute if score #success switch.data matches 1 store result entity @s Item.coun
 
 # Custom Items
 execute if score #success switch.data matches 0 run scoreboard players set #custom switch.data 0
-execute if score #success switch.data matches 0 run setblock 0 0 0 air
-execute if score #success switch.data matches 0 run setblock 0 0 0 yellow_shulker_box
-execute if score #custom switch.data matches 1 run data modify entity @s Item set from block 0 0 0 Items[0]
+execute if score #success switch.data matches 0 run setblock 0 1 0 air
+execute if score #success switch.data matches 0 run setblock 0 1 0 yellow_shulker_box
+execute if score #custom switch.data matches 1 run data modify entity @s Item set from block 0 1 0 Items[0]
 execute if score #custom switch.data matches 1 store result entity @s Item.count int 1 run scoreboard players get #count switch.data
-execute if score #success switch.data matches 0 run setblock 0 0 0 air
+execute if score #success switch.data matches 0 run setblock 0 1 0 air
 

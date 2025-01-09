@@ -42,12 +42,12 @@ execute if score #next_role switch.data matches 14 run scoreboard players set #n
 
 
 ## Linked marker for offline players
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot switch:get_username
-summon marker 0 0 0 {Tags:["switch.temp.player","switch.new"]}
+setblock 0 11 0 yellow_shulker_box
+loot insert 0 11 0 loot switch:get_username
+summon marker 0 11 0 {Tags:["switch.temp.player","switch.new"]}
 scoreboard players operation #player_id switch.id = @s switch.id
 execute as @e[tag=switch.new] run function switch:modes/traitors_game/roles/marker
-setblock 0 0 0 air
+setblock 0 11 0 air
 
 tag @s remove switch.temp
 

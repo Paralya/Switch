@@ -40,11 +40,11 @@ def make_update_percentages(config: dict) -> None:
 	# Write the first part of the file
 	write_to_function(config, UPDATE_PERCENTAGES_FILE, """
 # Update percentage
-setblock 0 0 0 air
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot switch:get_username
+setblock 0 16 0 air
+setblock 0 16 0 yellow_shulker_box
+loot insert 0 16 0 loot switch:get_username
 data modify storage switch:main input set value {id:"", username:""}
-data modify storage switch:main input.username set from block 0 0 0 Items[0].components."minecraft:profile".name
+data modify storage switch:main input.username set from block 0 16 0 Items[0].components."minecraft:profile".name
 
 ## For each advancement, check if the player has the advancement
 scoreboard players set @s switch.advancements 0
@@ -57,7 +57,7 @@ scoreboard players set @s switch.advancements 0
 		write_to_function(config, UPDATE_PERCENTAGES_FILE, f"""execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}\n""")
 
 	# Write the last part of the file
-	write_to_function(config, UPDATE_PERCENTAGES_FILE, "setblock 0 0 0 air")
+	write_to_function(config, UPDATE_PERCENTAGES_FILE, "setblock 0 16 0 air")
 
 
 def hidden_advancements(config: dict) -> None:

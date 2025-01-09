@@ -12,11 +12,11 @@ execute store result storage switch:temp input.index_hundred int 100 run scorebo
 execute store result storage switch:temp input.digits int 1 run scoreboard players get #digits switch.data
 
 # Get username
-setblock 0 0 0 air
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot switch:get_username
-data modify storage switch:temp input.player set from block 0 0 0 Items[0].components."minecraft:profile".name
-setblock 0 0 0 air
+setblock 0 12 0 air
+setblock 0 12 0 yellow_shulker_box
+loot insert 0 12 0 loot switch:get_username
+data modify storage switch:temp input.player set from block 0 12 0 Items[0].components."minecraft:profile".name
+setblock 0 12 0 air
 
 # If the digit is 0, print function
 execute if score #digits switch.data matches 0 run function switch:player/trigger/rating/print with storage switch:temp input
