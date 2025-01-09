@@ -23,7 +23,7 @@ tag @r[scores={switch.alive=1..},tag=switch.looser_score,tag=switch.looser_time,
 
 function switch:translations/modes_replicate_the_build_round_7_end
 
-gamerule doTileDrops false
+execute in switch:game run gamerule doTileDrops false
 
 execute as @p[tag=switch.looser] run function switch:modes/replicate_the_build/utils/explose_island
 

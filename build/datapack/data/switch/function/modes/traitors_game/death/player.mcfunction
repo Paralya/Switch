@@ -9,10 +9,10 @@
 execute if entity @a[tag=!detached,scores={switch.temp.kills=-1,switch.temp.role=7}] run function switch:modes/traitors_game/roles/vol
 
 # Death management
-execute at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~
+execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~
 execute unless score @s switch.temp.role matches 3 run scoreboard players set @s switch.alive 0
 execute if score @s switch.temp.role matches 3 run scoreboard players set @s switch.temp.role 4
-attribute @s[scores={switch.alive=0}] max_health base set 20.0
+attribute @s[scores={switch.alive=0}] max_health base reset
 tag @s[scores={switch.alive=0}] add switch.to_tp
 gamemode spectator @s[scores={switch.alive=0}]
 effect clear @s[scores={switch.alive=0}]

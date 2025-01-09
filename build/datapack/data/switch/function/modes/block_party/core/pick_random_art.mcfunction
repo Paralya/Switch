@@ -41,9 +41,9 @@ scoreboard players operation #z_pos switch.data += #bp_selected_block switch.dat
 execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos switch.data
 
 # Get the block at the current marker
-setblock 0 0 0 air
-setblock 0 0 0 yellow_shulker_box
-execute at @s run loot insert 0 0 0 mine ~ ~ ~ diamond_pickaxe
+setblock 0 4 0 air
+setblock 0 4 0 yellow_shulker_box
+execute at @s run loot insert 0 4 0 mine ~ ~ ~ diamond_pickaxe
 
 
 

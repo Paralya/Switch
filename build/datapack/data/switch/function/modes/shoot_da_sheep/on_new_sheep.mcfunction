@@ -7,7 +7,7 @@
 # Add absorption to prevent killing, NoGravity, and remove loot table
 attribute @s max_absorption base set 2048.0
 data modify entity @s AbsorptionAmount set value 2048.0f
-data modify entity @s DeathLootTable set value "none"
+data modify entity @s DeathLootTable set value "empty"
 data modify entity @s NoGravity set value 1b
 
 # Choose a random color

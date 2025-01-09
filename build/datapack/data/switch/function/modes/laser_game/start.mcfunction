@@ -25,7 +25,7 @@ function switch:utils/choose_map_for {id:"laser_game", maps:["laser_game"]}
 scoreboard players set #team_boolean switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/laser_game/teleport_players
 
-gamerule fallDamage false
+execute in switch:game run gamerule fallDamage false
 
 function switch:translations/modes_laser_game_start
 

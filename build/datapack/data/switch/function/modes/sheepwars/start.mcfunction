@@ -14,8 +14,8 @@ function switch:utils/set_dynamic_time
 
 ## Chargement de la map
 function switch:utils/choose_map_for {id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}
-gamerule keepInventory true
-gamerule doTileDrops false
+execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule doTileDrops false
 
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 

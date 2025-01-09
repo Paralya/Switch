@@ -5,7 +5,7 @@
 #
 
 # Remove jump strength
-attribute @s minecraft:jump_strength base set 0
+attribute @s jump_strength base set 0
 
 # Summon marker with sheep color
 execute store result score #color switch.data run data get entity @s Color

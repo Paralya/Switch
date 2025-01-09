@@ -12,7 +12,7 @@ effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] weakness infinite 2 true
 function switch:utils/set_dynamic_time
 
-gamerule doTileDrops false
+execute in switch:game run gamerule doTileDrops false
 
 ## Téléportation des joueurs
 tp @a[tag=!detached] 102000 100 102000

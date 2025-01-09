@@ -19,9 +19,9 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
 
-gamerule mobGriefing true
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in switch:game run gamerule mobGriefing true
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_beat_the_kings_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

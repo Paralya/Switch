@@ -20,9 +20,9 @@ weather clear
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"mlg_a_coudre", maps:["mlg_a_coudre_1"]}
 
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_mlg_a_coudre_start
 

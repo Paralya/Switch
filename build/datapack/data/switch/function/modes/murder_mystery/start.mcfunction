@@ -9,8 +9,8 @@ effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
 function switch:utils/set_dynamic_time
 
-gamerule fallDamage false
-gamerule keepInventory true
+execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule keepInventory true
 
 ## Chargement de la map
 scoreboard players set #do_spreadplayers switch.data 1

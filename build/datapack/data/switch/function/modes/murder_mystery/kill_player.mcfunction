@@ -11,8 +11,8 @@ execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.s
 gamemode spectator @s
 
 # Summon dead body with username
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot switch:get_username
+setblock 0 7 0 yellow_shulker_box
+loot insert 0 7 0 loot switch:get_username
 data modify storage switch:main Rotation set from entity @s Rotation
 execute summon zombie run function switch:modes/murder_mystery/apply_properties_to_zombie
 

@@ -15,10 +15,10 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"traitors_game", maps:["traitor_original","mushroom_plains","zonweeb_highschool","hider_mansion","nuketown_no_barrier","stardust_pvp_zone"]}
 
-gamerule mobGriefing true
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in switch:game run gamerule mobGriefing true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_traitors_game_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

@@ -5,7 +5,7 @@
 	},
 	"id": "switch",
 	"filter": {
-		"block": [{"namespace": "minecraft","path": "advancement"}]
+		"block": [{"namespace": "minecraft","path": "advancement"},{"namespace": "grappling_hook","path": "advancement/.*first_guide.*"}]
 	}
 }
 

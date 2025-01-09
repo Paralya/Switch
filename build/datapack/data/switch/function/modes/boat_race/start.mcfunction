@@ -15,9 +15,6 @@ effect give @a[tag=!detached] resistance infinite 255 true
 
 function switch:utils/set_dynamic_time
 
-## Give du bateau coffre (pour pas qu'ils soit deux dans le bateau)
-execute as @a[tag=!detached] run function switch:modes/boat_race/give_items
-
 function switch:translations/modes_boat_race_start
 
 scoreboard players set #remaining_time switch.data 488

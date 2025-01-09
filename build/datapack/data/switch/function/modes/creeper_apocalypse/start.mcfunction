@@ -14,10 +14,10 @@ function switch:utils/set_dynamic_time
 ## Téléportation des joueurs + give d'items
 function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main","pretty_garden"]}
 
-gamerule mobGriefing true
-gamerule showDeathMessages false
-gamerule naturalRegeneration false
-gamerule keepInventory true
+execute in switch:game run gamerule mobGriefing true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_creeper_apocalypse_start
 

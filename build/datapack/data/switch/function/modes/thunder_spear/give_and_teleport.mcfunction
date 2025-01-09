@@ -16,7 +16,8 @@ gamemode survival @s
 scoreboard players add @s switch.temp.kills 0
 
 # Give items
-loot replace entity @s weapon.offhand loot grappling_hook:v1.2.1/items/normal_grappling_hook
+loot replace entity @s weapon.offhand loot grappling_hook:v1.3.0/items/normal_grappling_hook
+item modify entity @s weapon.offhand switch:unbreakable
 scoreboard players set @s switch.temp.reload -60
 
 # Teleport player

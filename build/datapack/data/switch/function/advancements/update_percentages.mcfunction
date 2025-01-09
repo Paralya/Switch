@@ -21,11 +21,11 @@
 #
 
 # Update percentage
-setblock 0 0 0 air
-setblock 0 0 0 yellow_shulker_box
-loot insert 0 0 0 loot switch:get_username
+setblock 0 16 0 air
+setblock 0 16 0 yellow_shulker_box
+loot insert 0 16 0 loot switch:get_username
 data modify storage switch:main input set value {id:"", username:""}
-data modify storage switch:main input.username set from block 0 0 0 Items[0].components."minecraft:profile".name
+data modify storage switch:main input.username set from block 0 16 0 Items[0].components."minecraft:profile".name
 
 ## For each advancement, check if the player has the advancement
 scoreboard players set @s switch.advancements 0
@@ -125,5 +125,5 @@ execute if entity @s[advancements={switch:visible/80=true}] run function switch:
 execute if entity @s[advancements={switch:visible/81=true}] run function switch:advancements/_pre_macro {id:81}
 execute if entity @s[advancements={switch:visible/82=true}] run function switch:advancements/_pre_macro {id:82}
 execute if entity @s[advancements={switch:visible/83=true}] run function switch:advancements/_pre_macro {id:83}
-setblock 0 0 0 air
+setblock 0 16 0 air
 

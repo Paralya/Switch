@@ -31,6 +31,6 @@ execute positioned -29999997 24 1603 run function switch:modes/replicate_the_bui
 gamemode survival @a[scores={switch.alive=1..}]
 clear @a[tag=!detached]
 kill @e[type=item]
-gamerule doTileDrops true
+execute in switch:game run gamerule doTileDrops true
 execute positioned -29999997 24 1603 run function switch:modes/replicate_the_build/structure/give_player
 
