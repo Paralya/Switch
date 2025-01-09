@@ -11,6 +11,6 @@ scoreboard players reset @s switch.temp.cooldown
 
 gamemode spectator @s
 effect clear @s
-execute at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~
+execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~
 clear @s
 
