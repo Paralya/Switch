@@ -10,7 +10,7 @@ scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
 
 # Basic timer & particles
-scoreboard players add #block_party_ticks switch.data 1
+execute if score #remaining_players switch.data matches 2.. run scoreboard players add #block_party_ticks switch.data 1
 execute if score #block_party_ticks switch.data matches -100.. run particle note 110040 104 110040 64 2 64 1 8
 
 # Paint cow advancement
