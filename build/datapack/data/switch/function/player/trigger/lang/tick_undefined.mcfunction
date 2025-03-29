@@ -15,6 +15,6 @@ effect give @s night_vision 5 255 true
 
 execute if score #tick switch.data matches 5 run tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 execute if score #tick switch.data matches 5 run tellraw @s [{"text":"Please choose a language by clicking it:","color":"aqua"}]
-execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\n[Français]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.lang set 10"},"hoverEvent":{"action":"show_text","value":{"text":"[Cliquez pour choisir Français]","color":"yellow"}}}]
-execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\n[English]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger switch.trigger.lang set 11"},"hoverEvent":{"action":"show_text","value":{"text":"[Click to choose English]","color":"yellow"}}}]
+execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\n[Français]","color":"yellow","click_event":{"action":"run_command","command":"/trigger switch.trigger.lang set 10"},"hover_event":{"action":"show_text","value":{"text":"[Cliquez pour choisir Français]","color":"yellow"}}}]
+execute if score #tick switch.data matches 5 run tellraw @s [{"text":"\n[English]","color":"yellow","click_event":{"action":"run_command","command":"/trigger switch.trigger.lang set 11"},"hover_event":{"action":"show_text","value":{"text":"[Click to choose English]","color":"yellow"}}}]
 

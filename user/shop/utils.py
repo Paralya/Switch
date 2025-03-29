@@ -128,8 +128,8 @@ def write_translations(config: dict, index: int, shop_name: str, shop_dict: dict
 						{"text": gray_stars, "color": "gray"},
 						{
 							"text": " [+]", "color": "green",
-							"clickEvent": {"action": "run_command", "value": f"/trigger switch.trigger.shop set {counter}"},
-							"hoverEvent": {"action": "show_text", "contents": [
+							"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter}"},
+							"hover_event": {"action": "show_text", "value": [
 								{"text":f"{hover_text}\n","color":"green"},
 								{"text":buy_text.replace("X", str(price)) + MONEY[lang_id],"color":"yellow"}
 							]}
@@ -148,10 +148,10 @@ def write_translations(config: dict, index: int, shop_name: str, shop_dict: dict
 				if shop_name != "sheepwars":
 					write_function(config, path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j} run tellraw {selector} {stp.super_json_dump(tellraw_json, max_level=0)}")
 				else:
-					tellraw_json[0]["clickEvent"] = {"action": "run_command", "value": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
+					tellraw_json[0]["click_event"] = {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
 					write_function(config, path, f"execute unless score @s switch.sheepwars.choosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {stp.super_json_dump(tellraw_json, max_level=0)}")
 					tellraw_json[0]["color"] = "green"
-					del tellraw_json[0]["clickEvent"]
+					del tellraw_json[0]["click_event"]
 					write_function(config, path, f"execute if score @s switch.sheepwars.choosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {stp.super_json_dump(tellraw_json, max_level=0)}")
 
 
@@ -215,7 +215,7 @@ tellraw {selector} [{{"text":"","color":"gold"}},{{"score":{{"name":"@s","object
 		for i, shop_name in enumerate(SHOPS.keys()):
 			mini: int = get_shop_range(i)[0]
 			titled: str = shop_name.replace("_", " ").title()
-			write_function(config, path, f"""tellraw {selector} [{{"text":"➤ ","color":"gold","clickEvent":{{"action":"run_command","value":"/trigger switch.trigger.shop set {mini}"}}, "hoverEvent":{{"action":"show_text","contents":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[{titled}]","color":"yellow"}}]\n""")
+			write_function(config, path, f"""tellraw {selector} [{{"text":"➤ ","color":"gold","click_event":{{"action":"run_command","command":"/trigger switch.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[{titled}]","color":"yellow"}}]\n""")
 
 	# Write the empty line
 	write_function(config, path, 'tellraw @s ""\n')

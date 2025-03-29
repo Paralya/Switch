@@ -6,7 +6,7 @@
 #
 
 # Give items to the player
-give @s bow[unbreakable={},enchantments={levels:{infinity:1,power:123},show_in_tooltip:0b},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]
+give @s bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display:{"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]
 give @s netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]
 give @s arrow 1
 attribute @s attack_speed base set 1024

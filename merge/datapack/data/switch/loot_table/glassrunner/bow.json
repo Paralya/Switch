@@ -18,10 +18,8 @@
 								},
 								"minecraft:unbreakable": {},
 								"minecraft:enchantments": {
-									"levels": {
-										"minecraft:knockback": 5,
-										"minecraft:punch": 5
-									}
+									"minecraft:knockback": 5,
+									"minecraft:punch": 5
 								},
 								"minecraft:can_break": {
 									"blocks": [
