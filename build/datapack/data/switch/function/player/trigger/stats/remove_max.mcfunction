@@ -4,5 +4,5 @@
 # @within	switch:player/trigger/stats/sort_loop with storage switch:main max
 #
 
-$data remove storage switch:main stats[{Name:"$(Name)"}]
+$data remove storage switch:main stats[{name_fr:"$(name_fr)"}]
 

@@ -1,6 +1,6 @@
 
 # Prepare compound
-$data modify storage switch:main temp set value {Name:"$(Name)",count:0,wins:0,winrate:0}
+$data modify storage switch:main temp set value {name_fr:"$(name_fr)", name_en:"$(name_en)", count:0, wins:0, winrate:0}
 $execute store result storage switch:main temp.count int 1 run scoreboard players get $(player) switch.stats.played.$(id)
 $execute store result storage switch:main temp.wins int 1 run scoreboard players get $(player) switch.stats.wins.$(id)
 execute store result score #winrate switch.data run data get storage switch:main temp.wins 100

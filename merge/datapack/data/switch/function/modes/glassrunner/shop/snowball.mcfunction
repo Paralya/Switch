@@ -2,9 +2,9 @@
 
 clear @s snow_block[custom_data~{to_clear:true}]
 
-#Name : Snowball renforcée x5 
-#Lore : Permet de faire des bridges dirrectement en vitre foncée !
-#Lore : Prix : 8 levels
+# item_name : Snowball renforcée x5 
+# lore : Permet de faire des bridges dirrectement en vitre foncée !
+# lore : Prix : 8 levels
 function switch:modes/glassrunner/shop/reset_item
 
 

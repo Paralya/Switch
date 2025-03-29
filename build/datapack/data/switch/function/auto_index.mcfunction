@@ -10,9 +10,9 @@ data modify storage switch:main temp set from storage switch:main minigames[0]
 execute store result storage switch:main temp.index int 1 run scoreboard players get #index switch.data
 scoreboard players add #index switch.data 1
 
-# Copy Name for differents langs
-data modify storage switch:main temp.NameEN set from storage switch:main temp.Name
-data modify storage switch:main temp.NameJA set from storage switch:main temp.Name
+# Copy name for differents langs
+execute unless data storage switch:main temp.name_en run data modify storage switch:main temp.name_en set from storage switch:main temp.name_fr
+execute unless data storage switch:main temp.name_jp run data modify storage switch:main temp.name_jp set from storage switch:main temp.name_fr
 
 # Copy the temporary storage back to the new minigames list
 data modify storage switch:main indexed_minigames append from storage switch:main temp

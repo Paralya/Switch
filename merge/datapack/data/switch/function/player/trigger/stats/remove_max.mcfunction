@@ -1,3 +1,3 @@
 
-$data remove storage switch:main stats[{Name:"$(Name)"}]
+$data remove storage switch:main stats[{name_fr:"$(name_fr)"}]
 

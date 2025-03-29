@@ -4,7 +4,7 @@ function switch:engine/disable
 
 # Set the current game
 $data modify storage switch:main current_game set value "$(id)"
-$data modify storage switch:main current_game_name set from storage switch:main minigames[{id:"$(id)"}].Name
+$data modify storage switch:main current_game_name set from storage switch:main minigames[{id:"$(id)"}].name_fr
 $execute store result score #game_1 switch.data run data get storage switch:main minigames[{id:"$(id)"}].index
 tag @s remove detached
 

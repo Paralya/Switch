@@ -4,9 +4,9 @@
 
 clear @s elytra[custom_data~{to_clear:true}]
 
-#Name : Flèches x5 
-#Lore : Vous ravitaille en flèches !
-#Lore : Prix : 5 levels
+# item_name : Flèches x5 
+# lore : Vous ravitaille en flèches !
+#lore  : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
 
 

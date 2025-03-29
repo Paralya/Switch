@@ -6,7 +6,7 @@
 #
 
 execute if score #index switch.data = #random switch.data run data modify storage switch:main current_game set from storage switch:main voted_games[0].id
-execute if score #index switch.data = #random switch.data run data modify storage switch:main current_game_Name set from storage switch:main voted_games[0].Name
+execute if score #index switch.data = #random switch.data run data modify storage switch:main current_game_name set from storage switch:main voted_games[0].name_fr
 execute if score #index switch.data = #random switch.data store result score #game_1 switch.data run data get storage switch:main voted_games[0].index
 
 scoreboard players add #index switch.data 1
