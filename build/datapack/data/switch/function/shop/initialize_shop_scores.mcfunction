@@ -14,6 +14,7 @@ scoreboard players add @s switch.infected.zombie_strength 0
 scoreboard players add @s switch.infected.zombie_jump 0
 scoreboard players add @s switch.spleef.snow_block 0
 scoreboard players add @s switch.spleef.powder_snow 0
+scoreboard players add @s switch.sheepwars.chosen_kit 0
 scoreboard players add @s switch.sheepwars.kit_health 0
 scoreboard players add @s switch.sheepwars.kit_bow 0
 scoreboard players add @s switch.sheepwars.kit_sword 0

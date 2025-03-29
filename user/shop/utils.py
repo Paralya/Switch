@@ -12,9 +12,7 @@ def load_username_change(config: dict, shop_name: str, shop_dict: dict) -> None:
 		shop_name	(str):	The name of the shop, e.g. "pitchout"
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
-	for upgrade_id, data in shop_dict.items():
-		if not data:
-			continue
+	for upgrade_id in shop_dict.keys():
 		write_function(config, LOAD_PATH, f"scoreboard objectives add switch.{shop_name}.{upgrade_id} dummy\n")
 		write_function(config, USERNAME_CHANGE_PATH, f"$scoreboard players operation $(username) switch.{shop_name}.{upgrade_id} = $(old_username) switch.{shop_name}.{upgrade_id}\n")
 		write_function(config, INITIALIZE_SHOP_SCORES_PATH, f"scoreboard players add @s switch.{shop_name}.{upgrade_id} 0\n")

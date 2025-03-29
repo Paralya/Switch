@@ -13,6 +13,7 @@ scoreboard objectives add switch.infected.zombie_strength dummy
 scoreboard objectives add switch.infected.zombie_jump dummy
 scoreboard objectives add switch.spleef.snow_block dummy
 scoreboard objectives add switch.spleef.powder_snow dummy
+scoreboard objectives add switch.sheepwars.chosen_kit dummy
 scoreboard objectives add switch.sheepwars.kit_health dummy
 scoreboard objectives add switch.sheepwars.kit_bow dummy
 scoreboard objectives add switch.sheepwars.kit_sword dummy

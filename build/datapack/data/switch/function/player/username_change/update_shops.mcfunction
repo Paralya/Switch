@@ -13,6 +13,7 @@ $scoreboard players operation $(username) switch.infected.zombie_strength = $(ol
 $scoreboard players operation $(username) switch.infected.zombie_jump = $(old_username) switch.infected.zombie_jump
 $scoreboard players operation $(username) switch.spleef.snow_block = $(old_username) switch.spleef.snow_block
 $scoreboard players operation $(username) switch.spleef.powder_snow = $(old_username) switch.spleef.powder_snow
+$scoreboard players operation $(username) switch.sheepwars.chosen_kit = $(old_username) switch.sheepwars.chosen_kit
 $scoreboard players operation $(username) switch.sheepwars.kit_health = $(old_username) switch.sheepwars.kit_health
 $scoreboard players operation $(username) switch.sheepwars.kit_bow = $(old_username) switch.sheepwars.kit_bow
 $scoreboard players operation $(username) switch.sheepwars.kit_sword = $(old_username) switch.sheepwars.kit_sword
