@@ -1188,6 +1188,13 @@
 		"item_name": {"text": "Ultimate Ingot","italic": false,"color": "white"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
+	"ultimate_fragment": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:ultimate_fragment",
+		"item_name": {"text": "Ultimate Fragment","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"ultimate_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"anti_radiation_helmet": {
 		"id": "minecraft:leather_helmet",
 		"category": "equipment",
@@ -1584,6 +1591,20 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"ultimate_bullet": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:ultimate_bullet",
+		"item_name": {"text": "Ultimate Bullet","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"ultimate_bullet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_core": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:ultimate_core",
+		"item_name": {"text": "Ultimate Core","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"ultimate_core": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"stardust_essence": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:stardust_essence",
@@ -1616,13 +1637,6 @@
 		"item_name": {"text": "Nether Stardust Ore","italic": false,"color": "white"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"nether_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"ultimate_bullet": {
-		"id": "minecraft:command_block",
-		"item_model": "switch:ultimate_bullet",
-		"item_name": {"text": "Ultimate Bullet","italic": false,"color": "white"},
-		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
-		"custom_data": {"switch": {"ultimate_bullet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"dragon_pearl": {
 		"id": "minecraft:ender_pearl",
