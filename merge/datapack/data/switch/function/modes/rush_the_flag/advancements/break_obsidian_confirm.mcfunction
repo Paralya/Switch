@@ -12,7 +12,7 @@ execute if score #random switch.data matches 0 if score #color switch.data match
 execute if score #random switch.data matches 1 if score #color switch.data matches 0 run effect give @a[tag=!detached,team=switch.rush_the_point.red] speed 60 0 true
 execute if score #random switch.data matches 2 if score #color switch.data matches 0 run effect give @a[tag=!detached,team=switch.rush_the_point.red] strength 60 0 true
 execute if score #random switch.data matches 3 if score #color switch.data matches 0 run effect give @a[tag=!detached,team=switch.rush_the_point.red] resistance 60 0 true
-execute if score #random switch.data matches 4 if score #color switch.data matches 0 run summon wither 14000 110 14000 {Team:"switch.rush_the_point.red",CustomName:'{"text":"Wither Rouge","color":"red"}'}
+execute if score #random switch.data matches 4 if score #color switch.data matches 0 run summon wither 14000 110 14000 {Team:"switch.rush_the_point.red",CustomName:{"text":"Wither Rouge","color":"red"}}
 execute if score #random switch.data matches 5 if score #color switch.data matches 0 run effect give @a[tag=!detached,team=switch.rush_the_point.blue] slowness 60 1 true
 execute if score #random switch.data matches 6 if score #color switch.data matches 0 run effect give @a[tag=!detached,team=switch.rush_the_point.blue] glowing 60 0 true
 execute if score #random switch.data matches 7 if score #color switch.data matches 0 run effect give @a[tag=!detached,team=switch.rush_the_point.blue] levitation 1 20 true
@@ -24,7 +24,7 @@ execute if score #random switch.data matches 0 if score #color switch.data match
 execute if score #random switch.data matches 1 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.blue] speed 60 0 true
 execute if score #random switch.data matches 2 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.blue] strength 60 0 true
 execute if score #random switch.data matches 3 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.blue] resistance 60 0 true
-execute if score #random switch.data matches 4 if score #color switch.data matches 1 run summon wither 14000 110 14000 {Team:"switch.rush_the_point.blue",CustomName:'{"text":"Wither Bleu","color":"blue"}'}
+execute if score #random switch.data matches 4 if score #color switch.data matches 1 run summon wither 14000 110 14000 {Team:"switch.rush_the_point.blue",CustomName:{"text":"Wither Bleu","color":"blue"}}
 execute if score #random switch.data matches 5 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.red] slowness 60 1 true
 execute if score #random switch.data matches 6 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.red] glowing 60 0 true
 execute if score #random switch.data matches 7 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.red] levitation 1 20 true

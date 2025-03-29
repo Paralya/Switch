@@ -8,8 +8,8 @@ execute if score #random switch.data matches 2 run give @s diamond_ore 3
 execute if score #random switch.data matches 3 run give @s spyglass
 execute if score #random switch.data matches 4 run give @s ender_pearl
 execute if score #random switch.data matches 5 run give @s ender_pearl
-execute if score #random switch.data matches 6 run give @s netherite_shovel[enchantments={efficiency:10},item_name={"text":"Teuse","color":"gold"},lore=[{"text":"C\'est la pelle Teuse MDR !","color":"white","italic":false}]]
-execute if score #random switch.data matches 7 run give @s golden_sword[damage=30,enchantments={knockback:10},item_name={"text":"Baseball Bat","color":"gold"},lore=[{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}]]
+execute if score #random switch.data matches 6 run give @s netherite_shovel[enchantments={efficiency:10},item_name={"text":"Teuse","color":"gold"},lore=[{"text":"C'est la pelle Teuse MDR !","color":"white","italic":false}]]
+execute if score #random switch.data matches 7 run give @s golden_sword[damage=30,enchantments={knockback:10},item_name={"text":"Baseball Bat","color":"gold"},lore=[{"text":"Excitant n'est-ce pas ?","color":"white","italic":false}]]
 execute if score #random switch.data matches 8 run give @s lava_bucket 2
 execute if score #random switch.data matches 9 run give @s golden_apple 4
 execute if score #random switch.data matches 10 run give @s golden_apple 2

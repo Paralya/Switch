@@ -9,8 +9,8 @@ scoreboard players add #process_end switch.data 1
 
 # Teleport players to most points build, add "winner" to the sign, and calculate scores
 execute if score #process_end switch.data matches 1 at @e[type=marker,tag=switch.build_battle.best] run spreadplayers ~19 ~19 5 10 under 128 false @a[tag=!detached]
-execute if score #process_end switch.data matches 1 at @e[type=marker,tag=switch.build_battle.best] run data modify block ~19 ~30 ~19 front_text.messages[0] set value '{"text":"Winner !","underlined":true}'
-execute if score #process_end switch.data matches 1 at @e[type=marker,tag=switch.build_battle.best] run data modify block ~19 ~30 ~19 back_text.messages[0] set value '{"text":"Winner !","underlined":true}'
+execute if score #process_end switch.data matches 1 at @e[type=marker,tag=switch.build_battle.best] run data modify block ~19 ~30 ~19 front_text.messages[0] set value {"text":"Winner !","underlined":true}
+execute if score #process_end switch.data matches 1 at @e[type=marker,tag=switch.build_battle.best] run data modify block ~19 ~30 ~19 back_text.messages[0] set value {"text":"Winner !","underlined":true}
 execute if score #process_end switch.data matches 1 at @e[type=marker,tag=switch.build_battle.best] run setblock ~19 ~29 ~19 emerald_block
 execute if score #process_end switch.data matches 1 run function switch:modes/build_battle/rating_time/end_calculation
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] at @s run function switch:modes/build_battle/add_money

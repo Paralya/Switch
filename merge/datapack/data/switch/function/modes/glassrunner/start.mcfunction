@@ -62,7 +62,7 @@ scoreboard players set #glassrunner.points.blue switch.data 0
 
 
 
-execute in switch:game run summon text_display 3000 110 3000 {Tags:["switch.glassrunner.money_maker"], text:'{"text":"3 seconds => 2 money","color":"gold","italic":false}', billboard:"vertical", alignment:"center"}
-execute in switch:game run summon text_display 3084 131 3084 {Tags:["switch.glassrunner.money_maker"], text:'{"text":"3 seconds => 2 money","color":"gold","italic":false}', billboard:"vertical", alignment:"center"}
-execute in switch:game run summon text_display 2916 131 2916 {Tags:["switch.glassrunner.money_maker"], text:'{"text":"3 seconds => 2 money","color":"gold","italic":false}', billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display 3000 110 3000 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display 3084 131 3084 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display 2916 131 2916 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
 

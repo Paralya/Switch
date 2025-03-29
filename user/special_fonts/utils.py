@@ -41,5 +41,5 @@ title @s title {{"text":"{SharedMemory.BLACK_PIXEL_FONT}","font":"switch:special
 
 # Functions
 def write_final_file() -> None:
-	write_file(SharedMemory.FONT_FILE_PATH, stp.super_json_dump({"providers": SharedMemory.providers}).replace("\\\\", "\\"))
+	write_file(SharedMemory.FONT_FILE_PATH, stp.super_json_dump({"providers": SharedMemory.providers}))
 

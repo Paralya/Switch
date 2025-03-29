@@ -27,11 +27,11 @@ execute if score #bonus_reload switch.data matches 60.. run function switch:mode
 
 # Spawn bridge snowballs at specific intervals
 # First pair at start of reload cycle
-execute if score #bonus_reload switch.data matches 0 run summon item 14063 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":'{"text":"Bridge Snowball","color":"yellow","italic":false}'}},NoGravity:true,Glowing:true,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:true}
-execute if score #bonus_reload switch.data matches 0 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":'{"text":"Bridge Snowball","color":"yellow","italic":false}'}},NoGravity:true,Glowing:true,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:true}
+execute if score #bonus_reload switch.data matches 0 run summon item 14063 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":{"text":"Bridge Snowball","color":"yellow","italic":false}}},NoGravity:true,Glowing:true,CustomName:{"text":"Bridge Snowball","color":"yellow","italic":false},CustomNameVisible:true}
+execute if score #bonus_reload switch.data matches 0 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":{"text":"Bridge Snowball","color":"yellow","italic":false}}},NoGravity:true,Glowing:true,CustomName:{"text":"Bridge Snowball","color":"yellow","italic":false},CustomNameVisible:true}
 # Second pair halfway through reload cycle
-execute if score #bonus_reload switch.data matches 31 run summon item 14063 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":'{"text":"Bridge Snowball","color":"yellow","italic":false}'}},NoGravity:true,Glowing:true,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:true}
-execute if score #bonus_reload switch.data matches 31 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":'{"text":"Bridge Snowball","color":"yellow","italic":false}'}},NoGravity:true,Glowing:true,CustomName:'{"text":"Bridge Snowball","color":"yellow","italic":false}',CustomNameVisible:true}
+execute if score #bonus_reload switch.data matches 31 run summon item 14063 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":{"text":"Bridge Snowball","color":"yellow","italic":false}}},NoGravity:true,Glowing:true,CustomName:{"text":"Bridge Snowball","color":"yellow","italic":false},CustomNameVisible:true}
+execute if score #bonus_reload switch.data matches 31 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":{"text":"Bridge Snowball","color":"yellow","italic":false}}},NoGravity:true,Glowing:true,CustomName:{"text":"Bridge Snowball","color":"yellow","italic":false},CustomNameVisible:true}
 
 # Run translations
 function switch:translations/modes_rush_the_point_second_common

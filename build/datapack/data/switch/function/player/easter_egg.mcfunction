@@ -1,14 +1,14 @@
 
 #> switch:player/easter_egg
 #
-# @within	switch:player/easter_egg_give {tag:\\\"switch.easter_egg.cc_001001\\\"}\"}}","{\"text\":\"tu veux voir ma\"}","{\"text\":\"000101\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.pi\\\"}\"}}","{\"text\":\"\"}","{\"text\":\"\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.ping\\\"}\"}}","{\"text\":\"\"}","{\"text\":\"\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.pong\\\"}\"}}","{\"text\":\"\"}","{\"text\":\"\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.42\\\"}\"}}","{\"text\":\"vie\"}","{\"text\":\"\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.ayjaraQ\\\"}\"}}","{\"text\":\"\"}","{\"text\":\"\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.luxium\\\"}\"}}","{\"text\":\"\"}","{\"text\":\"\"}"]}}]
-#			switch:player/easter_egg_give {tag:\\\"switch.easter_egg.friends_cube\\\"}\"}}","{\"text\":\"\"}","{\"text\":\"\"}"]}}]
+# @within	switch:player/easter_egg_give {tag:\"switch.easter_egg.cc_001001\"}"}},{"text":"tu veux voir ma"},{"text":"000101"}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.pi\"}"}},{"text":""},{"text":""}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.ping\"}"}},{"text":""},{"text":""}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.pong\"}"}},{"text":""},{"text":""}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.42\"}"}},{"text":"vie"},{"text":""}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.ayjaraQ\"}"}},{"text":""},{"text":""}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.luxium\"}"}},{"text":""},{"text":""}]}}]
+#			switch:player/easter_egg_give {tag:\"switch.easter_egg.friends_cube\"}"}},{"text":""},{"text":""}]}}]
 #
 
 # Tak

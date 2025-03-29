@@ -1,9 +1,9 @@
 
 """
 # French
-# data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"replicate_the_build"	,Name:"Replicate The Build"	,Lore:'["",{"text":"[Replicate The Build]\\n","color":"yellow"},	{"text":"Refaites le build donné le plus rapidement possible, et sans vous tromper !\\n"},																								{"text":"\\n[Estimation : 1-6 mins]","color":"gold"},	{"text":"\\n[Inspiration : Mineplex]","color":"green"},						{"text":"\\n[Proposé/Développé par AirDox]","color":"aqua"}]'}
+# data modify storage switch:main minigames append value {min_players:2	,max_players:-1		,id:"replicate_the_build"	,Name:"Replicate The Build"	,Lore:["",{"text":"[Replicate The Build]\n","color":"yellow"},	{"text":"Refaites le build donné le plus rapidement possible, et sans vous tromper !\n"},																								{"text":"\n[Estimation : 1-6 mins]","color":"gold"},	{"text":"\n[Inspiration : Mineplex]","color":"green"},						{"text":"\n[Proposé/Développé par AirDox]","color":"aqua"}]}
 
-# data modify storage switch:main minigames[{id:"replicate_the_build"}].LoreEN set value '["",	{"text":"[Replicate The Build]\\n","color":"yellow"},	{"text":"Repeat the given build as quickly as possible, without making any mistakes!\\n"},																								{"text":"\\n[Estimated: 1-6 mins]","color":"gold"},		{"text":"\\n[Inspiration: Mineplex]","color":"green"},						{"text":"\\n[Suggested/Developed by AirDox]","color":"aqua"}]'}
+# data modify storage switch:main minigames[{id:"replicate_the_build"}].LoreEN set value ["",	{"text":"[Replicate The Build]\n","color":"yellow"},	{"text":"Repeat the given build as quickly as possible, without making any mistakes!\n"},																								{"text":"\n[Estimated: 1-6 mins]","color":"gold"},		{"text":"\n[Inspiration: Mineplex]","color":"green"},						{"text":"\n[Suggested/Developed by AirDox]","color":"aqua"}]}
 """
 
 # Imports

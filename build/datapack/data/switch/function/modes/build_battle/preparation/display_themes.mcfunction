@@ -8,11 +8,11 @@
 # Place the papers in a shulker box with their name
 setblock 0 5 0 air
 setblock 0 5 0 yellow_shulker_box
-$item replace block 0 5 0 container.0 with paper{display:{Name:'{"text":"$(theme1)","color":"yellow","italic":false}',Lore:['""']},HideFlags:7}
-$item replace block 0 5 0 container.1 with paper{display:{Name:'{"text":"$(theme2)","color":"yellow","italic":false}',Lore:['""']},HideFlags:7}
-$item replace block 0 5 0 container.2 with paper{display:{Name:'{"text":"$(theme3)","color":"yellow","italic":false}',Lore:['""']},HideFlags:7}
-$item replace block 0 5 0 container.3 with paper{display:{Name:'{"text":"$(theme4)","color":"yellow","italic":false}',Lore:['""']},HideFlags:7}
-$item replace block 0 5 0 container.4 with paper{display:{Name:'{"text":"$(theme5)","color":"yellow","italic":false}',Lore:['""']},HideFlags:7}
+$item replace block 0 5 0 container.0 with paper{display:{Name:{"text":"$(theme1)","color":"yellow","italic":false},Lore:[""]},HideFlags:7}
+$item replace block 0 5 0 container.1 with paper{display:{Name:{"text":"$(theme2)","color":"yellow","italic":false},Lore:[""]},HideFlags:7}
+$item replace block 0 5 0 container.2 with paper{display:{Name:{"text":"$(theme3)","color":"yellow","italic":false},Lore:[""]},HideFlags:7}
+$item replace block 0 5 0 container.3 with paper{display:{Name:{"text":"$(theme4)","color":"yellow","italic":false},Lore:[""]},HideFlags:7}
+$item replace block 0 5 0 container.4 with paper{display:{Name:{"text":"$(theme5)","color":"yellow","italic":false},Lore:[""]},HideFlags:7}
 
 # Change the paper Count depending on their number of votes
 execute if score #vote_theme_1 switch.data matches 1.. store result block 0 5 0 Items[0].count int 1 run scoreboard players get #vote_theme_1 switch.data
