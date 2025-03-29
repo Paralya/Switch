@@ -11,9 +11,9 @@ function switch:utils/get_random/
 execute store result storage switch:temp input.index int 1 run scoreboard players get #random switch.data
 
 # Get the ID from the list
-scoreboard players set #choosen_id switch.data 0
+scoreboard players set #chosen_id switch.data 0
 function switch:modes/spectres_game/percentage/get_id_from_list with storage switch:temp input
-execute as @a[team=switch.temp.visible] if score @s switch.id = #choosen_id switch.data run team join switch.temp.spectre
+execute as @a[team=switch.temp.visible] if score @s switch.id = #chosen_id switch.data run team join switch.temp.spectre
 
 
 # Loop again until all spectres are chosen

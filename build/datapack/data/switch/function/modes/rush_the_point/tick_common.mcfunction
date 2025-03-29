@@ -24,7 +24,7 @@ execute at @e[type=snowball] positioned ~ ~-2 ~ run fill ~-0.25 ~ ~-0.25 ~0.25 ~
 kill @e[type=arrow,nbt={inBlockState:{}}]
 
 # Class System
-execute as @a[tag=!detached,scores={switch.temp.choosen_class=0}] run function switch:modes/rush_the_point/classes/
+execute as @a[tag=!detached,scores={switch.temp.chosen_class=0}] run function switch:modes/rush_the_point/classes/
 
 # Death System
 execute as @e[tag=!detached,type=player,tag=switch.to_tp] run function switch:modes/rush_the_point/teleport_to_death

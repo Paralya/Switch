@@ -12,6 +12,7 @@ MONEY: dict[str, str] = {
 	"fr": " Saphirs",
 	"en": " Sapphires"
 }
+REFUND_PERCENTAGE: float = 0.8	# Players get 80% of the upgrade cost back when selling
 LANGUAGE_SCORES: dict[str, tuple[int, str, str, str, str]] = {
 	"fr": (0, "French", "Boutique cosmétique X", "Acheter pour X", "Accéder à la boutique cosmétique X"),
 	"en": (1, "English", "X Cosmetic Shop", "Buy for X", "Access the X cosmetic shop")

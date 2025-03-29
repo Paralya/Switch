@@ -4,7 +4,7 @@
 # @within	switch:modes/capture_the_flag/calls/stop
 #
 
-scoreboard objectives remove switch.temp.choosen_class
+scoreboard objectives remove switch.temp.chosen_class
 scoreboard objectives remove switch.temp.sidebar
 team remove switch.temp.sidebar.5
 team remove switch.temp.sidebar.4

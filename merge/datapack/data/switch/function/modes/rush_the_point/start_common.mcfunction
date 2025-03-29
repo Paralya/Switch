@@ -14,7 +14,7 @@ execute in switch:game run gamerule doTileDrops false
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.fireball_cooldown dummy
-scoreboard objectives add switch.temp.choosen_class dummy
+scoreboard objectives add switch.temp.chosen_class dummy
 scoreboard objectives add switch.temp.elytra_cooldown dummy
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add switch.temp.total_obsidian dummy

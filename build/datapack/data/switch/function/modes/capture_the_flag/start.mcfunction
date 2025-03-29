@@ -16,7 +16,7 @@ function switch:modes/capture_the_flag/choose_map_for
 execute in switch:game run gamerule doTileDrops false
 execute in switch:game run gamerule keepInventory true
 
-scoreboard objectives add switch.temp.choosen_class dummy
+scoreboard objectives add switch.temp.chosen_class dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 scoreboard objectives setdisplay list switch.health

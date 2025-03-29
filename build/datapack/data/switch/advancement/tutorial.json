@@ -11,7 +11,7 @@
 			"text": "Compléter le tutoriel du Switch",
 			"color": "aqua"
 		},
-		"background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+		"background": "minecraft:gui/advancements/backgrounds/stone",
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

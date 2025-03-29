@@ -395,7 +395,7 @@ def add_lore():
 			lore.append({"text":f"\n[{pretext['suggested']} {mode['suggested_by']}]","color":"aqua"})
 			lore.append({"text":f"\n[{pretext['developed']} {mode['developed_by']}]","color":"aqua"})
 			lore_key: str = f"lore_{lang}"
-			mode[lore_key] = json.dumps(lore, ensure_ascii=False)
+			mode[lore_key] = lore
 
 		del mode["description"]
 
