@@ -7,6 +7,7 @@
 """
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 
 # Modes list
@@ -398,9 +399,9 @@ def add_lore():
 
 		del mode["description"]
 
-@measure_time(progress, "Generated modes load file")
+@stp.measure_time(stp.progress, "Generated modes load file")
 def main(config: dict):
 	add_lore()
 	append_lines: list[str] = ["data modify storage switch:main minigames append value " + json.dumps(mode, ensure_ascii=False) for mode in MODES]
-	write_to_function(config, "switch:modes/load", "\n".join(append_lines))
+	write_function(config, "switch:modes/load", "\n".join(append_lines))
 

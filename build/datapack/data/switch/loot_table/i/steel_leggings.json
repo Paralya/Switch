@@ -23,9 +23,13 @@
 									{"type": "armor","amount": 5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"}
 								],
 								"minecraft:item_model": "switch:steel_leggings",
-								"minecraft:item_name": "{\"text\": \"Steel Leggings\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Steel Leggings",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

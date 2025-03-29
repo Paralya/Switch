@@ -1,22 +1,23 @@
 
 # Imports
+import zipfile
+import stouputils as stp
 from config import ROOT, LIBS_FOLDER
 from python_datapack.utils.database_helper import *
-import zipfile
 
 # Constants
 ALL_BPM: int = 80
 INPUTS_FOLDER: str = f"{ROOT}/note_block_studio"
 REQUIRED_PATH_PARTS: list[str] = ["notes/", ".mcfunction"]
 LIB_TO_WRITE: str = f"{LIBS_FOLDER}/datapack/switch_music.zip"
-RELATIVE_LIB_TO_WRITE: str = LIB_TO_WRITE.replace(clean_path(os.getcwd()) + "/", "")
+RELATIVE_LIB_TO_WRITE: str = LIB_TO_WRITE.replace(stp.clean_path(os.getcwd()) + "/", "")
 
 # Main function
 def main(config: dict) -> None:
 
 	# Cache the zip file
 	if os.path.exists(LIB_TO_WRITE):
-		progress(f"The NoteBlock Studio songs zip file already exists at '{RELATIVE_LIB_TO_WRITE}', skipping the generation")
+		stp.progress(f"The NoteBlock Studio songs zip file already exists at '{RELATIVE_LIB_TO_WRITE}', skipping the generation")
 		return
 
 	objectives: list[tuple[str, int, int]] = []
@@ -66,7 +67,7 @@ def main(config: dict) -> None:
 				objectives.append((song[1], length, bpm))
 		
 		# Add a pack.mcmeta file
-		lib.writestr("pack.mcmeta", super_json_dump({"pack":{"pack_format":DATAPACK_FORMAT,"description":"Musics made with NoteBlock Studio"}}))
+		lib.writestr("pack.mcmeta", stp.super_json_dump({"pack":{"pack_format":DATAPACK_FORMAT,"description":"Musics made with NoteBlock Studio"}}))
 		pass
 
 		# Write the objectives
@@ -124,5 +125,5 @@ execute unless score @s switch.music.current matches {i+100} run tellraw @s [{{"
 		lib.writestr("data/switch/function/music/browser.mcfunction", browser_content)
 		pass
 
-	progress(f"The NoteBlock Studio songs zip file has been generated at '{RELATIVE_LIB_TO_WRITE}'")
+	stp.progress(f"The NoteBlock Studio songs zip file has been generated at '{RELATIVE_LIB_TO_WRITE}'")
 

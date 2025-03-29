@@ -15,9 +15,13 @@
 									"switch": {"raw_uranium": true}
 								},
 								"minecraft:item_model": "switch:raw_uranium",
-								"minecraft:item_name": "{\"text\": \"Raw Uranium\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Raw Uranium",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

@@ -24,9 +24,13 @@
 									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}
 								],
 								"minecraft:item_model": "switch:ruby_leggings",
-								"minecraft:item_name": "{\"text\": \"Ruby Leggings\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Ruby Leggings",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

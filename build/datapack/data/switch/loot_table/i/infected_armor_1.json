@@ -22,7 +22,7 @@
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.05,"operation": "add_value"}
 								],
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								],
 								"minecraft:custom_data": {
 									"switch": {"infected_armor_1": true},

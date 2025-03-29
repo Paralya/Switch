@@ -25,9 +25,13 @@
 									{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "switch:knockback_resistance.feet"}
 								],
 								"minecraft:item_model": "switch:adamantium_boots",
-								"minecraft:item_name": "{\"text\": \"Adamantium Boots\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Adamantium Boots",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

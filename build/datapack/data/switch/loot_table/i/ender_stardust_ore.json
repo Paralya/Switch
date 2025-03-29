@@ -11,9 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:ender_stardust_ore",
-								"minecraft:item_name": "{\"text\": \"Ender Stardust Ore\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Ender Stardust Ore",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								],
 								"minecraft:custom_data": {
 									"switch": {"ender_stardust_ore": true},
@@ -21,7 +25,10 @@
 								},
 								"minecraft:container": [
 									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:ender_stardust_ore","from": "switch"}}}}}}
-								]
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": ["minecraft:container"]
+								}
 							}
 						}
 					]

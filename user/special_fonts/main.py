@@ -1,9 +1,10 @@
 
 # Imports
+import stouputils as stp
 from user.special_fonts.utils import *
 
 # Main function
-@measure_time(progress, "Generated all the special fonts")
+@stp.measure_time(stp.progress, "Generated all the special fonts")
 def main(config: dict) -> None:
 	SharedMemory.config = config
 	for attr in [attr for attr in dir(SharedMemory) if str(attr).endswith("_PATH")]:

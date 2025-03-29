@@ -1,5 +1,6 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 from user.advancements.shared_memory import *
 
@@ -10,16 +11,16 @@ def make_load_file(config: dict) -> None:
 	Args:
 		config (dict): Configuration dictionary for writing functions
 	"""
-	write_to_function(config, LOAD_FILE, """
+	write_function(config, LOAD_FILE, """
 # Setup storages
 execute unless data storage switch:advancements all run data modify storage switch:advancements all set value []
 """)
 	for adv in ALL_ADVANCEMENTS:
 		string_id: str = adv["string_id"]
-		write_to_function(config, LOAD_FILE, f"execute unless data storage switch:advancements all[{{id:{string_id}}}] run data modify storage switch:advancements all append value {{id:{string_id}, percent:{{int:0, digits:0}}, players:[], total:0}}\n")
+		write_function(config, LOAD_FILE, f"execute unless data storage switch:advancements all[{{id:{string_id}}}] run data modify storage switch:advancements all append value {{id:{string_id}, percent:{{int:0, digits:0}}, players:[], total:0}}\n")
 
 	# For each advancement, generate the merge line
-	write_to_function(config, LOAD_FILE, """
+	write_function(config, LOAD_FILE, """
 # Update storages
 """)
 	for adv in ALL_ADVANCEMENTS:
@@ -29,7 +30,7 @@ execute unless data storage switch:advancements all run data modify storage swit
 		name: str = adv["title"]
 		desc_fr: str = adv["desc_fr"]
 		desc_en: str = adv["desc_en"]
-		write_to_function(config, LOAD_FILE, f"""data modify storage switch:advancements all[{{id:{string_id}}}] merge value {{color:"{color}", auteur:"{author}", name:"{name}", description:"{desc_fr}", desc_en:"{desc_en}"}}\n""")
+		write_function(config, LOAD_FILE, f"""data modify storage switch:advancements all[{{id:{string_id}}}] merge value {{color:"{color}", auteur:"{author}", name:"{name}", description:"{desc_fr}", desc_en:"{desc_en}"}}\n""")
 
 
 def make_update_percentages(config: dict) -> None:
@@ -38,7 +39,7 @@ def make_update_percentages(config: dict) -> None:
 		config (dict): Configuration dictionary for writing functions
 	"""
 	# Write the first part of the file
-	write_to_function(config, UPDATE_PERCENTAGES_FILE, """
+	write_function(config, UPDATE_PERCENTAGES_FILE, """
 # Update percentage
 setblock 0 16 0 air
 setblock 0 16 0 yellow_shulker_box
@@ -54,10 +55,10 @@ scoreboard players set @s switch.advancements 0
 	for adv in ALL_ADVANCEMENTS:
 		id: str = adv["id"]
 		string_id: str = adv["string_id"]
-		write_to_function(config, UPDATE_PERCENTAGES_FILE, f"""execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}\n""")
+		write_function(config, UPDATE_PERCENTAGES_FILE, f"""execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}\n""")
 
 	# Write the last part of the file
-	write_to_function(config, UPDATE_PERCENTAGES_FILE, "setblock 0 16 0 air")
+	write_function(config, UPDATE_PERCENTAGES_FILE, "setblock 0 16 0 air")
 
 
 def hidden_advancements(config: dict) -> None:
@@ -76,7 +77,7 @@ def hidden_advancements(config: dict) -> None:
 				"requirements": [["requirement"]],
 				"parent": f"switch:visible/{id}"
 			}
-			write_to_file(f"{advancement_folder}/{id}.json", super_json_dump(json_dict, max_level=1))
+			write_file(f"{advancement_folder}/{id}.json", stp.super_json_dump(json_dict, max_level=1))
 
 
 def visible_advancements(config: dict) -> None:
@@ -108,5 +109,5 @@ def visible_advancements(config: dict) -> None:
 			"rewards": {"function": f"switch:advancements/{category}"},
 			"parent": f"switch:visible/{adv['parent']}"
 		}
-		write_to_file(f"{advancement_folder}/{id}.json", super_json_dump(json_dict, max_level=2))
+		write_file(f"{advancement_folder}/{id}.json", stp.super_json_dump(json_dict, max_level=2))
 

@@ -25,9 +25,13 @@
 									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "legs","id": "switch:luck.legs"}
 								],
 								"minecraft:item_model": "switch:emerald_leggings",
-								"minecraft:item_name": "{\"text\": \"Emerald Leggings\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Emerald Leggings",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

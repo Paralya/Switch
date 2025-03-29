@@ -14,8 +14,8 @@ if configuration.get("manual_path") is not None:
 	shutil.rmtree(configuration["manual_path"], ignore_errors = True)
 	print(f"Deleted manual folder '{configuration['manual_path']}'")
 
-# Delete database_debug, debug_manual, and cmd_cache json files
-for x in ["database_debug", "manual_debug", "cmd_cache"]:
+# Delete database_debug, debug_manual json files
+for x in ["database_debug", "manual_debug"]:
 	if configuration.get(x) is not None:
 		if os.path.exists(configuration[x]):
 			os.remove(configuration[x])

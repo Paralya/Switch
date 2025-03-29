@@ -15,13 +15,20 @@
 									"switch": {"californium_ore": true}
 								},
 								"minecraft:item_model": "switch:californium_ore",
-								"minecraft:item_name": "{\"text\": \"Californium Ore\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Californium Ore",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								],
 								"minecraft:container": [
 									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:californium_ore","from": "switch"}}}}}}
-								]
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": ["minecraft:container"]
+								}
 							}
 						}
 					]

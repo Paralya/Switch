@@ -1,5 +1,6 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 from user.special_fonts.shared_memory import *
 from PIL import Image
@@ -28,7 +29,7 @@ def generate_few_textures() -> None:
 
 # Links
 def write_black_transition() -> None:
-	write_to_function(SharedMemory.config, "switch:utils/black_transition", f"""
+	write_function(SharedMemory.config, "switch:utils/black_transition", f"""
 # Seconds for (fade in, hold, fade out) = (1.5, 1.5, 1.5)
 title @s times 10 30 10
 
@@ -40,5 +41,5 @@ title @s title {{"text":"{SharedMemory.BLACK_PIXEL_FONT}","font":"switch:special
 
 # Functions
 def write_final_file() -> None:
-	write_to_file(SharedMemory.FONT_FILE_PATH, super_json_dump({"providers": SharedMemory.providers}).replace("\\\\", "\\"))
+	write_file(SharedMemory.FONT_FILE_PATH, stp.super_json_dump({"providers": SharedMemory.providers}).replace("\\\\", "\\"))
 

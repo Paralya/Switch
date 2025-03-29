@@ -15,9 +15,13 @@
 									"switch": {"awakened_stardust": true}
 								},
 								"minecraft:item_model": "switch:awakened_stardust",
-								"minecraft:item_name": "{\"text\": \"Awakened Stardust\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Awakened Stardust",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

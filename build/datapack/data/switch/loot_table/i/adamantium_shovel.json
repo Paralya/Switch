@@ -21,9 +21,13 @@
 									{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}
 								],
 								"minecraft:item_model": "switch:adamantium_shovel",
-								"minecraft:item_name": "{\"text\": \"Adamantium Shovel\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Adamantium Shovel",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

@@ -13,8 +13,8 @@ execute if score #random switch.data matches 2 run give @s diamond_ore 3
 execute if score #random switch.data matches 3 run give @s spyglass
 execute if score #random switch.data matches 4 run give @s ender_pearl
 execute if score #random switch.data matches 5 run give @s ender_pearl
-execute if score #random switch.data matches 6 run give @s netherite_shovel[enchantments={efficiency:10},item_name='{"text":"Teuse","color":"gold"}',lore=['{"text":"C\'est la pelle Teuse MDR !","color":"white","italic":false}']]
-execute if score #random switch.data matches 7 run give @s golden_sword[damage=30,enchantments={knockback:10},item_name='{"text":"Baseball Bat","color":"gold"}',lore=['{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}']]
+execute if score #random switch.data matches 6 run give @s netherite_shovel[enchantments={efficiency:10},item_name={"text":"Teuse","color":"gold"},lore=[{"text":"C\'est la pelle Teuse MDR !","color":"white","italic":false}]]
+execute if score #random switch.data matches 7 run give @s golden_sword[damage=30,enchantments={knockback:10},item_name={"text":"Baseball Bat","color":"gold"},lore=[{"text":"Excitant n\'est-ce pas ?","color":"white","italic":false}]]
 execute if score #random switch.data matches 8 run give @s lava_bucket 2
 execute if score #random switch.data matches 9 run give @s golden_apple 4
 execute if score #random switch.data matches 10 run give @s golden_apple 2
@@ -27,7 +27,7 @@ execute if score #random switch.data matches 16 run give @s polar_bear_spawn_egg
 execute if score #random switch.data matches 17 run give @s zoglin_spawn_egg 2
 execute if score #random switch.data matches 18 run give @s fox_spawn_egg 8
 execute if score #random switch.data matches 19 run give @s frog_spawn_egg 8
-execute if score #random switch.data matches 20 run give @s pufferfish_spawn_egg[item_name='{"text":"Bubulle","color":"yellow"}'] 8
+execute if score #random switch.data matches 20 run give @s pufferfish_spawn_egg[item_name={"text":"Bubulle","color":"yellow"}] 8
 execute if score #random switch.data matches 21 run give @s elytra[damage=415]
 execute if score #random switch.data matches 22 run give @s spectral_arrow 32
 execute if score #random switch.data matches 23 run give @s splash_potion[potion_contents="minecraft:long_slow_falling"]

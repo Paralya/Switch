@@ -5930,6 +5930,98 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/deepslate_stardust_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/awakened_stardust_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/awakened_stardust_ore"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/awakened_stardust"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/anti_radiation_helmet"
 				},
 				{
@@ -6062,10 +6154,6 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/awakened_stardust"
-				},
-				{
-					"type": "minecraft:loot_table",
 					"value": "switch:i/awakened_stardust_bow"
 				},
 				{
@@ -6090,11 +6178,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/stardust_fragment"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/stardust_ingot"
+					"value": "switch:i/ultimate_elytra"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6106,19 +6190,11 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/legendarium_ingot"
+					"value": "switch:i/ender_stardust_ore"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/solarium_ingot"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/darkium_ingot"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/ultimate_ingot"
+					"value": "switch:i/nether_stardust_ore"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6135,6 +6211,10 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/stardust_apple"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/dog_excrement"
 				},
 				{
 					"type": "minecraft:loot_table",

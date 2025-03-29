@@ -15,9 +15,13 @@
 									"switch": {"obsidian_ingot": true}
 								},
 								"minecraft:item_model": "switch:obsidian_ingot",
-								"minecraft:item_name": "{\"text\": \"Obsidian Ingot\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Obsidian Ingot",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}

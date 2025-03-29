@@ -21,9 +21,13 @@
 									{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}
 								],
 								"minecraft:item_model": "switch:uranium_sword",
-								"minecraft:item_name": "{\"text\": \"Uranium Sword\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Uranium Sword",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"switch:icons\"}, {\"text\": \" Switch\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
 								]
 							}
 						}
