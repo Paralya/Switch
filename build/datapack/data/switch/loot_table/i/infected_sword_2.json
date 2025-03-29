@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "minecraft:golden_sword",
-								"minecraft:item_name": "\"Golden Sword\"",
+								"minecraft:item_name": "Golden Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.1,"operation": "add_value"}

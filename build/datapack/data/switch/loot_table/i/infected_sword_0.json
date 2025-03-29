@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "minecraft:wooden_sword",
-								"minecraft:item_name": "\"Wooden Sword\"",
+								"minecraft:item_name": "Wooden Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.0,"operation": "add_value"}

@@ -10,13 +10,14 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "minecraft:diamond"
+									"asset_id": "minecraft:diamond"
 								},
 								"minecraft:item_model": "minecraft:diamond_chestplate",
-								"minecraft:item_name": "\"Diamond Chestplate\"",
+								"minecraft:item_name": "Diamond Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.2,"operation": "add_value"}

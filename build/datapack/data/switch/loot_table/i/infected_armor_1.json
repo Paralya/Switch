@@ -10,13 +10,14 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "minecraft:chainmail"
+									"asset_id": "minecraft:chainmail"
 								},
 								"minecraft:item_model": "minecraft:chainmail_chestplate",
-								"minecraft:item_name": "\"Chainmail Chestplate\"",
+								"minecraft:item_name": "Chainmail Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.05,"operation": "add_value"}

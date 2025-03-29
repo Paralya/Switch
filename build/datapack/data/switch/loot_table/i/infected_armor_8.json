@@ -10,13 +10,14 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "switch:ruby"
+									"asset_id": "switch:ruby"
 								},
 								"minecraft:item_model": "switch:ruby_chestplate",
-								"minecraft:item_name": "\"Ruby Chestplate\"",
+								"minecraft:item_name": "Ruby Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.4,"operation": "add_value"}

@@ -10,13 +10,14 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "switch:sapphire"
+									"asset_id": "switch:sapphire"
 								},
 								"minecraft:item_model": "switch:sapphire_chestplate",
-								"minecraft:item_name": "\"Sapphire Chestplate\"",
+								"minecraft:item_name": "Sapphire Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.45,"operation": "add_value"}

@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "minecraft:iron_sword",
-								"minecraft:item_name": "\"Iron Sword\"",
+								"minecraft:item_name": "Iron Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.15,"operation": "add_value"}

@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "minecraft:diamond_sword",
-								"minecraft:item_name": "\"Diamond Sword\"",
+								"minecraft:item_name": "Diamond Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.2,"operation": "add_value"}

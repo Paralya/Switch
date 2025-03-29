@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "switch:obsidian_sword",
-								"minecraft:item_name": "\"Obsidian Sword\"",
+								"minecraft:item_name": "Obsidian Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.3,"operation": "add_value"}

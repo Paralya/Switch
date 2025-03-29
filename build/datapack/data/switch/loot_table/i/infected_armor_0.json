@@ -10,13 +10,14 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "minecraft:leather"
+									"asset_id": "minecraft:leather"
 								},
 								"minecraft:item_model": "minecraft:leather_chestplate",
-								"minecraft:item_name": "\"Leather Chestplate\"",
+								"minecraft:item_name": "Leather Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.0,"operation": "add_value"}

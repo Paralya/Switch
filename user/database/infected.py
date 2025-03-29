@@ -12,8 +12,8 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 	# Remaining items
 	database["element_115"] = {
 		"id": CUSTOM_ITEM_VANILLA,
-		"item_name": json.dumps({"text":"Element 115","color":"light_purple","italic":False}),
-		"lore": [json.dumps({"text":"Infected","color":"dark_green","italic":True})],
+		"item_name": {"text":"Element 115","color":"light_purple","italic":False},
+		"lore": [{"text":"Infected","color":"dark_green","italic":True}],
 		"item_model": "switch:stardust_ingot"
 	}
 
@@ -35,7 +35,7 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
 		database[f"infected_sword_{i}"] = {
-			"id": "minecraft:iron_sword", "rarity": "epic", "item_model": sword_model, "item_name": f'"{material} Sword"',
+			"id": "minecraft:iron_sword", "rarity": "epic", "item_model": sword_model, "item_name": f"{material} Sword",
 			"unbreakable": {}, "attribute_modifiers": sword_attribute
 		}
 
@@ -49,12 +49,13 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 		}]
 		database[f"infected_armor_{i}"] = {
 			"id": "minecraft:leather_chestplate" if i == 0 else CUSTOM_ITEM_VANILLA,
+			"max_stack_size": 1,
 			"rarity": "epic",
 			"equippable": {
 				"slot": "chest",
-				"model": armor.replace("golden", "gold")
+				"asset_id": armor.replace("golden", "gold"),
 			},
-			"item_model": armor_model, "item_name": f'"{material} Chestplate"',
+			"item_model": armor_model, "item_name": f"{material} Chestplate",
 			"unbreakable": {}, "attribute_modifiers": armor_attribute
 		}
 

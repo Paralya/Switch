@@ -10,13 +10,14 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "epic",
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "switch:topaz"
+									"asset_id": "switch:topaz"
 								},
 								"minecraft:item_model": "switch:topaz_chestplate",
-								"minecraft:item_name": "\"Topaz Chestplate\"",
+								"minecraft:item_name": "Topaz Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.35,"operation": "add_value"}

@@ -10,9 +10,13 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": "{\"text\": \"Element 115\", \"color\": \"light_purple\", \"italic\": false}",
+								"minecraft:item_name": {
+									"text": "Element 115",
+									"color": "light_purple",
+									"italic": false
+								},
 								"minecraft:lore": [
-									"{\"text\": \"Infected\", \"color\": \"dark_green\", \"italic\": true}"
+									{"text": "Infected","color": "dark_green","italic": true}
 								],
 								"minecraft:item_model": "switch:stardust_ingot",
 								"minecraft:custom_data": {

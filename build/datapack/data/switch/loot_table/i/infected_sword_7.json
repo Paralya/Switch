@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "switch:topaz_sword",
-								"minecraft:item_name": "\"Topaz Sword\"",
+								"minecraft:item_name": "Topaz Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.35,"operation": "add_value"}

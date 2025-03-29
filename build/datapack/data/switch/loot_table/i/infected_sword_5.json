@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:rarity": "epic",
 								"minecraft:item_model": "switch:emerald_sword",
-								"minecraft:item_name": "\"Emerald Sword\"",
+								"minecraft:item_name": "Emerald Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
 									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.25,"operation": "add_value"}
