@@ -65,7 +65,7 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:coal_block"}	44	37	Megamat	medium	Oppenheimer	Survivre plus d'une minute en Bombardment	Survive for more than one minute in Bombardment
 {"id": "minecraft:orange_stained_glass"}	32	38	Xiaojuun	medium	Regarde ma queue	Avoir une trainée de 15 secondes en moutron	Have a 15-second trail in Moutron
 {"id": "minecraft:snowball"}	27	39	ArtiGrrr	hard	Précision Artistique	Finir une partie de Snowball Painter avec exactement 51 points	Finish a game of Snowball Painter with exactly 51 points
-{"id": "minecraft:player_head", "components": {"minecraft:profile": {"name": "Rikumastolfo"}}}	67	40	Marcus	medium	Harcelé	Mourir 3 fois par la même personne en Pitchout	Be killed 3 times by the same person in Pitchout
+{"id": "minecraft:player_head", "components": {"minecraft:profile": {"name": "Xiaojuuun"}}}	67	40	Marcus	medium	Harcelé	Mourir 3 fois par la même personne en Pitchout	Be killed 3 times by the same person in Pitchout
 {"id": "minecraft:iron_axe"}	5	41	ArtiGrrr	hard	Vengeur	Tuez son meurtrier en temps que ninja dans une partie de Traitors Game	Kill your murderer as a ninja in Traitors Game
 {"id": "minecraft:dragon_head"}	39	42	ArtiGrrr	hard	Xenophobe	Eliminer tous les joueurs d'une même couleur en Layers 4 Teams	Eliminate all players of the same color in Layers 4 Teams
 {"id": "minecraft:obsidian"}	33	43	ArtiGrrr	medium	Avide	Détruisez 5 blocs d'obsidienne en une partie de Rush The Point	Destroy 5 obsidian blocks in a game of Rush The Point

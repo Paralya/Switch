@@ -1,8 +1,9 @@
 {
 	"function": "minecraft:set_components",
 	"components": {
-		"minecraft:unbreakable": {
-			"show_in_tooltip": true
+		"minecraft:unbreakable": true,
+		"minecraft:tooltip_display": {
+			"hidden_components": ["minecraft:unbreakable"]
 		}
 	}
 }

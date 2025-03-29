@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": {"id": "minecraft:player_head","components": {"minecraft:profile": {"name": "Rikumastolfo"}}},
+		"icon": {"id": "minecraft:player_head","components": {"minecraft:profile": {"name": "Xiaojuuun"}}},
 		"title": {"text": "Harcelé","color": "yellow"},
 		"description": {"text": "Be killed 3 times by the same person in Pitchout","color": "aqua"},
 		"frame": "task",
