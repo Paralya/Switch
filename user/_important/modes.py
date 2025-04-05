@@ -364,14 +364,14 @@ MODES: list[dict] = [
 			"en": [{"text":"Knock out every players from the platform\n"},{"text":"by using explosive fireballs!\n"}]
 		},
 	},
-	{
-		"min_players":1, "max_players":32, "id":"pvpswap", "name_fr":"PvPSwap",
-		"estimated_time": "1-2 mins", "inspiration": "Épicube", "suggested_by": "Arobaze", "developed_by": "Arobaze",
-		"description": {
-			"fr": [{"text":"Éliminez les autres joueurs au travers\n"},{"text":"des changements inopinés de positions !\n"}],
-			"en": [{"text":"Eliminate other players through\n"},{"text":"sudden changes in positions!\n"}]
-		},
-	}
+	# {
+	# 	"min_players":1, "max_players":32, "id":"pvpswap", "name_fr":"PvPSwap",
+	# 	"estimated_time": "1-2 mins", "inspiration": "Épicube", "suggested_by": "Arobaze", "developed_by": "Arobaze",
+	# 	"description": {
+	# 		"fr": [{"text":"Éliminez les autres joueurs au travers\n"},{"text":"des changements inopinés de positions !\n"}],
+	# 		"en": [{"text":"Eliminate other players through\n"},{"text":"sudden changes in positions!\n"}]
+	# 	},
+	# }
 ]
 
 # Language pretext constant
