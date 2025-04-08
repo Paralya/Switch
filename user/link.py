@@ -2,6 +2,7 @@
 # Imports
 import stouputils as stp
 from python_datapack.utils.database_helper import *
+from python_datapack.constants import official_lib_used
 from user._important.modes import main as write_modes_load_file
 from user.misc_links.random_loot_table import main as random_loot_table
 from user.misc_links.note_block_studio import main as note_block_studio
@@ -31,4 +32,8 @@ def main(config: dict) -> None:
 	automatic_advancements(config)
 	shop(config)
 	special_fonts(config)
+
+	# Force enable dump module from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
+	official_lib_used("bs.dump")
+
 
