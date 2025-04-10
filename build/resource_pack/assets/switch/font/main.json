@@ -1,0 +1,7 @@
+{
+	"providers": [
+		{"type": "bitmap","file": "switch:font/special/black_pixel.png","ascent": 4000,"height": 8000,"chars": ["B"]},
+		{"type": "bitmap","file": "switch:item/sapphire.png","ascent": 8,"chars": ["S"]}
+	]
+}
+

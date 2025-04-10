@@ -195,7 +195,8 @@ def write_translations(config: dict, index: int, shop_name: str, shop_dict: dict
 						hover_value = []
 						if downgrade_hover_text:
 							hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
-						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}" + MONEY[lang_id], "color": "yellow"})
+						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}", "color": "yellow"})
+						hover_value.append(MONEY[lang_id])
 						
 						tellraw_json.append({
 							"text": " [-]", "color": "red",
@@ -209,7 +210,8 @@ def write_translations(config: dict, index: int, shop_name: str, shop_dict: dict
 						"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter}"},
 						"hover_event": {"action": "show_text", "value": [
 							{"text":f"{hover_text}\n","color":"green"},
-							{"text":buy_text.replace("X", str(price)) + MONEY[lang_id],"color":"yellow"}
+							{"text":buy_text.replace("X", str(price)), "color":"yellow"},
+							MONEY[lang_id]
 						]}
 					})
 				else:
@@ -233,7 +235,8 @@ def write_translations(config: dict, index: int, shop_name: str, shop_dict: dict
 						hover_value = []
 						if downgrade_hover_text:
 							hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
-						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}" + MONEY[lang_id], "color": "yellow"})
+						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}", "color": "yellow"})
+						hover_value.append(MONEY[lang_id])
 						
 						tellraw_json.append({
 							"text": " [-]", "color": "red",
@@ -312,7 +315,7 @@ def general_translations(config: dict) -> None:
 		write_function(config, path, f"""
 # {lang_name}
 tellraw {selector} [{{"text":"[{label.replace('X', 'Switch')}]","color":"yellow"}}]
-tellraw {selector} [{{"text":"","color":"gold"}},{{"score":{{"name":"@s","objective":"switch.money"}}}},{{"text":"{MONEY[lang_id]}\\n"}}]
+tellraw {selector} [{{"text":"","color":"gold"}},{{"score":{{"name":"@s","objective":"switch.money"}}}},{json.dumps(MONEY[lang_id])},{{"text":"\\n"}}]
 """)
 		# For each shop, write the access text
 		for i, shop_name in enumerate(SHOPS.keys()):

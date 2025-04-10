@@ -8,9 +8,9 @@ from user.shop.dict.spectres_game import SPECTRES_GAME
 
 # Constants
 STAR: str = "✮"
-MONEY: dict[str, str] = {
-	"fr": " Saphirs",
-	"en": " Sapphires"
+MONEY: dict[str, dict[str, str]] = {
+	"fr": {"nbt":"SapphireFR","storage":"switch:main","interpret":True},
+	"en": {"nbt":"SapphireEN","storage":"switch:main","interpret":True}
 }
 REFUND_PERCENTAGE: float = 0.8	# Players get 80% of the upgrade cost back when selling
 LANGUAGE_SCORES: dict[str, tuple[int, str, str, str, str]] = {

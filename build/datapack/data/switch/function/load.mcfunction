@@ -86,6 +86,10 @@ data modify storage switch:main ParalyaAstuceEN set value [{"text":"[","color":"
 data modify storage switch:main ParalyaPvPOldEN set value {"text":"[PvP 1.8 : Infinite attack speed]","color":"dark_aqua"}
 data modify storage switch:main ParalyaPvPNewEN set value {"text":"[PvP 1.9+ : New PvP]","color":"dark_green"}
 
+# Sapphire icon
+# Example: tellraw @s {"nbt":"SapphireFR","storage":"switch:main","interpret":true}
+data modify storage switch:main SapphireFR set value {"text":"S","color":"white","font":"switch:main","hover_event":{"action":"show_text","value":{"text":"Saphirs","color":"blue"}}}
+data modify storage switch:main SapphireEN set value {"text":"S","color":"white","font":"switch:main","hover_event":{"action":"show_text","value":{"text":"Sapphires","color":"blue"}}}
 
 # Setup stats storage if needed
 execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[],advancement_count:[]},modes:{}}

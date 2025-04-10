@@ -17,14 +17,19 @@ def convert_path_to_namespace(path: str) -> str:
 # Generate few textures
 def generate_few_textures() -> None:
 	""" Generate the few textures needed for the special fonts such as:
+
 	- Black image (1x1) that will be used for smooth transitions
-	- None yet
+	- Sapphire image (16x16) that will be used when talking about money
 	"""
 	# Generate the black pixel texture and add it to the providers
-	os.makedirs(os.path.dirname(SharedMemory.BLACK_PIXEL_TEXTURE_PATH), exist_ok=True)
+	directory = os.path.dirname(SharedMemory.BLACK_PIXEL_TEXTURE_PATH)
+	os.makedirs(directory, exist_ok=True)
 	black_pixel = Image.new("RGB", (1, 1), (0, 0, 0))
 	black_pixel.save(SharedMemory.BLACK_PIXEL_TEXTURE_PATH)
 	SharedMemory.providers.append({"type":"bitmap","file":convert_path_to_namespace(SharedMemory.BLACK_PIXEL_TEXTURE_PATH),"ascent":4000,"height":8000,"chars":[SharedMemory.BLACK_PIXEL_FONT]})
+
+	# Add the sapphire texture and font to the providers
+	SharedMemory.providers.append({"type":"bitmap","file":"switch:item/sapphire.png","ascent":8,"chars":["S"]})
 
 
 # Links
@@ -34,7 +39,7 @@ def write_black_transition() -> None:
 title @s times 10 30 10
 
 # Display the black pixel
-title @s title {{"text":"{SharedMemory.BLACK_PIXEL_FONT}","font":"switch:special"}}
+title @s title {{"text":"{SharedMemory.BLACK_PIXEL_FONT}","font":"switch:main"}}
 """)
 
 

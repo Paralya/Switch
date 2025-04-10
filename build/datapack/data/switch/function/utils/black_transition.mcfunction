@@ -8,5 +8,5 @@
 title @s times 10 30 10
 
 # Display the black pixel
-title @s title {"text":"耡","font":"switch:special"}
+title @s title {"text":"B","font":"switch:main"}
 
