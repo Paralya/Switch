@@ -76,10 +76,10 @@ data modify storage switch:main ParalyaWarning set value {"text":"[Paralya]","co
 data modify storage switch:main ParalyaHelp set value [{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]
 data modify storage switch:main Paralya set value [{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]
 
-data modify storage switch:main ParalyaSapphires set value [{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Saphirs","color":"blue"},{"text":"]","color":"dark_blue"}]
-data modify storage switch:main ParalyaAstuce set value [{"text":"[","color":"dark_green"},{"text":"ParalyaAstuce","color":"green"},{"text":"]","color":"dark_green"}]
-data modify storage switch:main ParalyaPvPOld set value {"text":"[PvP 1.8 : Vitesse d'attaque infinie]","color":"dark_aqua"}
-data modify storage switch:main ParalyaPvPNew set value {"text":"[PvP 1.9+ : Nouveau PvP]","color":"dark_green"}
+data modify storage switch:main ParalyaSapphiresFR set value [{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Saphirs","color":"blue"},{"text":"]","color":"dark_blue"}]
+data modify storage switch:main ParalyaAstuceFR set value [{"text":"[","color":"dark_green"},{"text":"ParalyaAstuceFR","color":"green"},{"text":"]","color":"dark_green"}]
+data modify storage switch:main ParalyaPvPOldFR set value {"text":"[PvP 1.8 : Vitesse d'attaque infinie]","color":"dark_aqua"}
+data modify storage switch:main ParalyaPvPNewFR set value {"text":"[PvP 1.9+ : Nouveau PvP]","color":"dark_green"}
 
 data modify storage switch:main ParalyaSapphiresEN set value [{"text":"","color":"blue"},{"text":"[","color":"dark_blue"},{"text":"Sapphires","color":"blue"},{"text":"]","color":"dark_blue"}]
 data modify storage switch:main ParalyaAstuceEN set value [{"text":"[","color":"dark_green"},{"text":"ParalyaTip","color":"green"},{"text":"]","color":"dark_green"}]
