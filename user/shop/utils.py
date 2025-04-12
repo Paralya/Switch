@@ -314,14 +314,13 @@ def general_translations(config: dict) -> None:
 		selector: str = f"@s[scores={{switch.lang={lang_score}}}]"
 		write_function(config, path, f"""
 # {lang_name}
-tellraw {selector} [{{"text":"[{label.replace('X', 'Switch')}]","color":"yellow"}}]
-tellraw {selector} [{{"text":"","color":"gold"}},{{"score":{{"name":"@s","objective":"switch.money"}}}},{json.dumps(MONEY[lang_id])},{{"text":"\\n"}}]
+tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X', 'Switch')}","color":"blue"}},{{"text":"]","color":"#1b1796"}},{{"text":" - ","color":"blue"}},{{"score":{{"name":"@s","objective":"switch.money"}},"color":"blue","underlined":true}},{json.dumps(MONEY[lang_id])},{{"text":"\\n"}}]
 """)
 		# For each shop, write the access text
 		for i, shop_name in enumerate(SHOPS.keys()):
 			mini: int = get_shop_range(i)[0]
 			titled: str = shop_name.replace("_", " ").title()
-			write_function(config, path, f"""tellraw {selector} [{{"text":"➤ ","color":"gold","click_event":{{"action":"run_command","command":"/trigger switch.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[{titled}]","color":"yellow"}}]\n""")
+			write_function(config, path, f"""tellraw {selector} [{{"text":"➤ ","color":"#1b1796","click_event":{{"action":"run_command","command":"/trigger switch.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[","color":"#1b1796"}},{{"text":"{titled}","color":"blue"}},{{"text":"]","color":"#1b1796"}}]\n""")
 
 	# Write the empty line
 	write_function(config, path, 'tellraw @s ""\n')
