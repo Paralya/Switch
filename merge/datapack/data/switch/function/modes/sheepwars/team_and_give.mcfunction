@@ -35,7 +35,7 @@ attribute @s armor base set 3.0
 ## Shop things
 # Kit More Health
 execute if score @s switch.sheepwars.chosen_kit matches 1 run item replace entity @s armor.legs with leather_leggings[unbreakable={},dyed_color=16514816]
-execute if score @s switch.sheepwars.chosen_kit matches 1 run item replace entity @s armor.chest with leather_chestplate[unbreakable={},equippable={slot:"chest",model:"minecraft:chainmail"},item_model="minecraft:chainmail_chestplate"]
+execute if score @s switch.sheepwars.chosen_kit matches 1 run item replace entity @s armor.chest with leather_chestplate[unbreakable={},equippable={slot:"chest",asset_id:"minecraft:chainmail"},item_model="minecraft:chainmail_chestplate"]
 execute if score @s switch.sheepwars.chosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 0 run attribute @s max_health base set 21
 execute if score @s switch.sheepwars.chosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 1 run attribute @s max_health base set 22
 execute if score @s switch.sheepwars.chosen_kit matches 1 if score @s switch.sheepwars.kit_health matches 2 run attribute @s max_health base set 23
