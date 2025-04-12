@@ -5994,11 +5994,35 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/legendarium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/solarium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_axe"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6010,6 +6034,18 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/darkium_ingot"
 				},
 				{
@@ -6018,7 +6054,19 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/ultimate_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_fragment"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6182,6 +6230,14 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_bullet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_core"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/stardust_essence"
 				},
 				{
@@ -6195,10 +6251,6 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/nether_stardust_ore"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/ultimate_bullet"
 				},
 				{
 					"type": "minecraft:loot_table",
