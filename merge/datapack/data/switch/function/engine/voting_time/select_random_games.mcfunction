@@ -1,6 +1,7 @@
 
-function switch:utils/get_random/
-scoreboard players add #random switch.data 1
+# Randomly select a minigame based on weights
+function #bs.random:weighted_choice
+execute store result score #random switch.data run data get storage bs:out random.weighted_choice
 
 scoreboard players set #wrong switch.data 0
 function switch:engine/voting_time/get/min_players

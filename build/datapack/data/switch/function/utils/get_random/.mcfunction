@@ -2,7 +2,6 @@
 #> switch:utils/get_random/
 #
 # @within	switch:engine/launch_game/get_random_max
-#			switch:engine/voting_time/select_random_games
 #			switch:maps/find_map
 #			switch:modes/block_party/core/pick_random_art
 #			switch:modes/block_party/core/remake_list/shuffle

@@ -124,5 +124,5 @@ execute if score #engine_state switch.data matches 2 run tell none temps de vote
 execute if score #engine_state switch.data matches 3 run tell none game en cours
 
 # Games and maps picks history
-execute unless data storage switch:main history run data modify storage switch:main history set value {games:[],maps:[]}
+execute unless data storage switch:main history run data modify storage switch:main history set value {games:[],maps:[],time_since_last_play:{}}
 
