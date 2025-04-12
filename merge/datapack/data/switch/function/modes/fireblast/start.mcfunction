@@ -5,6 +5,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] night_vision infinite 255 true
+effect give @a[tag=!detached] glowing infinite 255 true
 time set 6000
 
 execute in switch:game run gamerule keepInventory true
