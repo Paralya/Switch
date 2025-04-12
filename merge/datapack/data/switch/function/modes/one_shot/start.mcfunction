@@ -30,13 +30,10 @@ effect give @a[tag=!detached] blindness 5 2 true
 effect give @a[tag=!detached] slowness 5 2 true
 effect give @a[tag=!detached] resistance infinite 0 true
 
-# Summon 128 markers for respawn system and keep only 64
-scoreboard players set #middle_x switch.data 0
-scoreboard players set #middle_y switch.data 0
-scoreboard players set #middle_z switch.data 0
+# Summon 64 markers for respawn system
+scoreboard players set #respawn_marker_count switch.data 0
 execute summon marker run function switch:modes/one_shot/respawn/spawn_marker
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] summon marker run function switch:modes/one_shot/respawn/spawn_marker
-execute summon marker run function switch:modes/one_shot/respawn/erase_close_to_middle
 
 # Make players spawn
 execute as @a[tag=!detached] run function switch:modes/one_shot/respawn/main

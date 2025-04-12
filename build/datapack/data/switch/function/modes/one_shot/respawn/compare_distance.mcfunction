@@ -1,7 +1,8 @@
 
 #> switch:modes/one_shot/respawn/compare_distance
 #
-# @within	switch:modes/one_shot/respawn/get_player_distance
+# @within	switch:modes/one_shot/respawn/get_marker_distance
+#			switch:modes/one_shot/respawn/get_player_distance
 #
 
 ## Real

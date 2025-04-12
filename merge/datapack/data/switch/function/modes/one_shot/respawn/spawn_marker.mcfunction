@@ -1,13 +1,17 @@
 
+# Spawn a new marker
+scoreboard players add #respawn_marker_count switch.data 1
 function switch:maps/spread_one_player
-execute at @s run forceload add ~ ~
 tag @s add switch.respawn
 
-# Add position to get center
-execute store result score #x switch.data run data get entity @s Pos[0]
-execute store result score #y switch.data run data get entity @s Pos[1]
-execute store result score #z switch.data run data get entity @s Pos[2]
-scoreboard players operation #middle_x switch.data += #x switch.data
-scoreboard players operation #middle_y switch.data += #y switch.data
-scoreboard players operation #middle_z switch.data += #z switch.data
+# Debug armor stand with glowing
+#execute at @s run summon armor_stand ~ ~ ~ {Tags:["switch.respawn_debug"],Glowing:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
+
+# Kill the marker if not on solid block
+execute at @s if block ~ ~-0.1 ~ #minecraft:replaceable run return run function switch:modes/one_shot/respawn/kill_marker
+
+# Kill the marker if another marker is too close
+tag @s add switch.respawn_check
+execute at @s if entity @e[tag=!switch.respawn_check,tag=switch.respawn,distance=..5] run return run function switch:modes/one_shot/respawn/kill_marker
+tag @s remove switch.respawn_check
 
