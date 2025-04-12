@@ -1,7 +1,7 @@
 
 #> switch:player/update_stats_storage/of_player
 #
-# @within	switch:player/update_stats_storage/every_player_loop {player:"$(name)"}
+# @within	switch:player/update_stats_storage/every_player_loop {player:"$(username)"}
 #
 
 # Get username

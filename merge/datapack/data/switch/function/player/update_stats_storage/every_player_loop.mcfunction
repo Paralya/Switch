@@ -1,5 +1,5 @@
 
-$function switch:player/update_stats_storage/of_player {player:"$(name)"}
+$function switch:player/update_stats_storage/of_player {player:"$(username)"}
 
 # Continue loop
 data remove storage switch:temp players[0]

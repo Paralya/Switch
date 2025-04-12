@@ -123,7 +123,7 @@ data remove storage switch:main temp
 
 ## States
 execute if score #engine_state switch.data matches -1 run tell none désactivé
-execute if score #engine_state switch.data matches 0 run tell none à l'arrêt
+execute if score #engine_state switch.data matches 0 run tell none à l arrêt
 execute if score #engine_state switch.data matches 1 run tell none engine start
 execute if score #engine_state switch.data matches 2 run tell none temps de vote
 execute if score #engine_state switch.data matches 3 run tell none game en cours
