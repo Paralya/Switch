@@ -7,6 +7,7 @@ $data modify storage switch:temp played_win_ratio set from storage switch:stats 
 data modify storage switch:temp new_played set value []
 data modify storage switch:temp new_wins set value []
 data modify storage switch:temp new_played_win_ratio set value []
+scoreboard players set #sorted_count switch.data 0
 execute if data storage switch:temp played[0] run function switch:stats/sort_minigames_stats/loop_played_and_wins
 $data modify storage switch:stats all.modes.$(id).played set from storage switch:temp new_played
 $data modify storage switch:stats all.modes.$(id).wins set from storage switch:temp new_wins

@@ -21,6 +21,12 @@ execute store result storage switch:temp indexes.wins int 1 run scoreboard playe
 execute store result storage switch:temp indexes.played_win_ratio int 1 run scoreboard players get #max_index_played_win_ratio switch.data
 function switch:stats/sort_minigames_stats/macro_add_to_new_arrays with storage switch:temp indexes
 
-# Loop through the rest of the values
-execute if data storage switch:temp played[0] run function switch:stats/sort_minigames_stats/loop_played_and_wins
+# Increment sorted count
+scoreboard players add #sorted_count switch.data 1
+
+# Loop through the rest of the values (up to 15)
+execute if score #sorted_count switch.data matches ..15 if data storage switch:temp played[0] run return run function switch:stats/sort_minigames_stats/loop_played_and_wins
+
+# If 15 elements were sorted, append the rest
+execute if score #sorted_count switch.data matches 16 run function switch:stats/sort_minigames_stats/append_remaining
 
