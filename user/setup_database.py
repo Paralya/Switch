@@ -3,12 +3,20 @@
 
 # Import database helper and setup constants
 import stouputils as stp
-from python_datapack.utils.database_helper import *
-from python_datapack.utils.ingredients import *
-from python_datapack.constants import *
-from .database.misc_items import setup_misc_items
+from python_datapack.utils.database_helper import (
+	DEFAULT_ORE,
+	EquipmentsConfig,
+	add_item_model_component,
+	add_item_name_and_lore_if_missing,
+	add_private_custom_data_for_namespace,
+	add_smithed_ignore_vanilla_behaviours_convention,
+	generate_custom_records,
+	generate_everything_about_these_materials,
+)
+
 from .database.blocks_behaviors import setup_blocks_behaviors
 from .database.infected import setup_infected_items
+from .database.misc_items import setup_misc_items
 from .database.pvpswap import setup_pvpswap
 
 # Configuration to generate everything about the material based on "steel_ingot"

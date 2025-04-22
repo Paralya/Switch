@@ -1,6 +1,6 @@
 
 # Import database helper (from python_datapack, containing database helper functions)
-from python_datapack.utils.database_helper import *
+#from python_datapack.utils.database_helper import *
 
 # WARNING: using an external database is currently very scuffed,
 # until I find a good way to include external datapack items in a recipe.
