@@ -18,6 +18,8 @@ execute if score #dependency_error switch.data matches 0 unless score $bs.dump.m
 execute if score #dependency_error switch.data matches 0 if score $bs.dump.major load.status matches 3 unless score $bs.dump.minor load.status matches 0.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 unless score $bs.random.major load.status matches 3.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 if score $bs.random.major load.status matches 3 unless score $bs.random.minor load.status matches 0.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 unless score $bs.spline.major load.status matches 3.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 if score $bs.spline.major load.status matches 3 unless score $bs.spline.minor load.status matches 0.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 unless score $bs.string.major load.status matches 3.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 if score $bs.string.major load.status matches 3 unless score $bs.string.minor load.status matches 0.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 unless score #sheepwars.major load.status matches 2.. run scoreboard players set #dependency_error switch.data 1
