@@ -39,6 +39,10 @@ data modify storage switch:temp half_position set value [0.0d, 0.0d, 0.0d]
 execute store result storage switch:temp half_position[0] double 0.01 run scoreboard players get #target_x switch.data
 execute store result storage switch:temp half_position[2] double 0.01 run scoreboard players get #target_z switch.data
 
+# Return to the state where target_x and target_z are the offset
+scoreboard players operation #target_x switch.data -= #current_x switch.data
+scoreboard players operation #target_z switch.data -= #current_z switch.data
+
 ## Summon temporary entity that will:
 # - go to the half position
 # - look at the target position
@@ -53,12 +57,12 @@ execute if score #target_x switch.data <= #target_z switch.data run data modify 
 # Summon the entity and do the side offset
 execute summon item_display run function switch:cinematic/get_position_between/side_offset with storage switch:temp forward
 
-# Modify the Y position with (max(current.y, target.y) + 10) (2 decimals)
+# Modify the Y position with (max(current.y, target.y) + 20) (2 decimals)
 execute if score #target_y switch.data > #current_y switch.data run scoreboard players operation #half_position_y switch.data = #target_y switch.data
 execute if score #target_y switch.data <= #current_y switch.data run scoreboard players operation #half_position_y switch.data = #current_y switch.data
-scoreboard players add #half_position_y switch.data 1000
+scoreboard players add #half_position_y switch.data 2000
 execute store result storage switch:temp half_position[1] double 0.01 run scoreboard players get #half_position_y switch.data
 
 ## Finally, append the half position to the spline
-data modify storage bs:in spline.sample_bezier.points append from storage switch:temp half_position
+data modify storage switch:temp initial_points.points append from storage switch:temp half_position
 

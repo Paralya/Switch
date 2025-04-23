@@ -8,6 +8,15 @@
 data modify entity @s Pos set from entity @s item.components."minecraft:custom_data".points[0]
 data remove entity @s item.components."minecraft:custom_data".points[0]
 
+# Rotate to the next rotation (double -> float) and remove it from the list
+# execute store result entity @s Rotation[0] float 0.0001 run data get entity @s item.components."minecraft:custom_data".rotations[0][0] 10000
+# execute store result entity @s Rotation[1] float 0.0001 run data get entity @s item.components."minecraft:custom_data".rotations[0][1] 10000
+data modify entity @s Rotation set from entity @s item.components."minecraft:custom_data".rotations[0]
+data remove entity @s item.components."minecraft:custom_data".rotations[0]
+
+# Teleport to self to avoid desync (Rotation is updated every second, so we need to teleport to self to avoid desync)
+execute at @s run tp @s ~ ~ ~ ~ ~
+
 # Make sure the player is spectating the entity
 scoreboard players operation #player_id switch.id = @s switch.id
 tag @p[predicate=switch:has_same_id] add switch.temp
