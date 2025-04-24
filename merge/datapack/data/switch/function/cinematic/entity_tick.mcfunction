@@ -18,6 +18,9 @@ data remove entity @s item.components."minecraft:custom_data".points[0]
 data modify entity @s Rotation set from entity @s item.components."minecraft:custom_data".rotations[0]
 data remove entity @s item.components."minecraft:custom_data".rotations[0]
 
+# Happy villager particles if enabled
+execute if data entity @s item.components."minecraft:custom_data".particle at @s run particle happy_villager ~ ~ ~ 0.2 0.2 0.2 0 2
+
 # If the list is empty, finish the cinematic
 execute unless data entity @s item.components."minecraft:custom_data".points[0] run function switch:cinematic/finish
 

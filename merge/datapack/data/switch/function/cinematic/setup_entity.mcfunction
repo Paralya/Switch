@@ -2,17 +2,17 @@
 ## As we are updating every X ticks, teleport duration is X and step is multiplied by X
 # Increment the number of cinematic entities and add convention tags
 scoreboard players add #cinematic_entities switch.data 1
-scoreboard players set @s switch.data 100
 tag @s add switch.cinematic
 tag @s add smithed.entity
 tag @s add smithed.strict
 tag @s add global.ignore.kill
 tag @s add global.ignore
 
-# Set the interpolation to the given value + 1
-scoreboard players operation #temp switch.data = #cinematic_interpolation switch.data
-scoreboard players add #temp switch.data 1
-execute if score #temp switch.data matches 2.. run execute store result entity @s teleport_duration int 1 run scoreboard players get #temp switch.data
+# Set the interpolation to the given value + 1, and set start loop timer (@s switch.data)
+scoreboard players operation @s switch.data = #cinematic_interpolation switch.data
+scoreboard players add @s switch.data 1
+execute if score @s switch.data matches 2.. run execute store result entity @s teleport_duration int 1 run scoreboard players get @s switch.data
+scoreboard players remove @s switch.data 2
 
 
 ## Stream Bezier
@@ -47,7 +47,8 @@ data modify storage switch:temp item.components."minecraft:custom_data".interpol
 data modify storage bs:in spline.sample_bezier set from storage switch:temp initial_points
 function #bs.spline:sample_bezier
 data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
-data remove storage switch:temp bs:out spline.sample_bezier[0]
+data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
+data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
 data modify storage switch:temp item.components."minecraft:custom_data".points set from storage bs:out spline.sample_bezier
 
 ## Get all the rotations (not the first one), add the target rotation and remember them
@@ -55,10 +56,12 @@ data modify storage switch:temp initial_points.points set from storage switch:te
 data modify storage bs:in spline.sample_bspline set from storage switch:temp initial_points
 function #bs.spline:sample_bspline
 data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
-data remove storage switch:temp bs:out spline.sample_bspline[0]
+data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
+data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
 data modify storage switch:temp item.components."minecraft:custom_data".rotations set from storage bs:out spline.sample_bspline
 
 ## Remember everything, player's id and gamemode, make the player spectator, then make them mount @s (item_display)
+data modify storage switch:temp item.components."minecraft:custom_data".particle set from storage switch:temp with.particle
 data modify entity @s item set from storage switch:temp item
 scoreboard players operation @s switch.id = #player_id switch.id
 execute if entity @p[tag=switch.temp,gamemode=survival] run tag @s add switch.was_survival

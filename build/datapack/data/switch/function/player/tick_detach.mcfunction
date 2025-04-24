@@ -35,25 +35,27 @@ execute if score #inventory switch.data matches -1 unless data storage switch:te
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_obsidian run scoreboard players set @s switch.lobby_respawn 11
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_duality run scoreboard players set @s switch.lobby_respawn 12
 execute if score #inventory switch.data matches -1 unless data storage switch:temp Inventory[].components."minecraft:custom_data".switch.jump_graviglitch run scoreboard players set @s switch.lobby_respawn 13
-execute if score #inventory switch.data matches -1 run tp @s 0 0 0
+execute if score #inventory switch.data matches -1 run tag @s add switch.lobby_respawn
 execute if score #inventory switch.data matches -1 run clear @s
 
 # Teleport to respawn point
 scoreboard players add @s switch.lobby_respawn 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=0}] run tp @s 0 69.69 0 0 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=1}] run tp @s 0 70.1 -10 90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=2}] run tp @s 0 70.1 -10 -90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=3}] run tp @s 0 75.51 -24 180 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=4}] run tp @s 9 74.51 23 -90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=5}] run tp @s -14 73.51 9 0 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=6}] run tp @s -35 73.1 -9 180 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=7}] run tp @s -9 73.1 35 90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=8}] run tp @s 9 73.1 47 -90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=9}] run tp @s -47 76.1 10 0 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=10}] run tp @s -84 70.1 0 90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=11}] run tp @s 51 74.6 -9 180 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=12}] run tp @s 9 74.6 111 -90 0
-execute if entity @s[gamemode=!creative,gamemode=!spectator,y=-64,dy=119,scores={switch.lobby_respawn=13}] run tp @s -12 74.1 91 90 0
+execute if entity @s[tag=!switch.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=119] run tag @s add switch.lobby_respawn
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=0}] run function switch:cinematic/launch {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=1}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=2}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=3}] run function switch:cinematic/launch {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=4}] run function switch:cinematic/launch {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=5}] run function switch:cinematic/launch {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=6}] run function switch:cinematic/launch {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=7}] run function switch:cinematic/launch {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=8}] run function switch:cinematic/launch {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=9}] run function switch:cinematic/launch {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=10}] run function switch:cinematic/launch {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=11}] run function switch:cinematic/launch {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=12}] run function switch:cinematic/launch {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=13}] run function switch:cinematic/launch {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
+tag @s remove switch.lobby_respawn
 
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.3 with dripstone_block[item_name={"text":"Dripstone Jump","color":"gold"},lore=[{"text":"by AirDox","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_dripstone:true}}]
