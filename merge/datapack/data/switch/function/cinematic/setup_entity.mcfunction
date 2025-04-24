@@ -47,8 +47,8 @@ data modify storage switch:temp item.components."minecraft:custom_data".interpol
 data modify storage bs:in spline.sample_bezier set from storage switch:temp initial_points
 function #bs.spline:sample_bezier
 data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
-data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
-data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
+execute if score #cinematic_interpolation switch.data matches ..2 run data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
+execute if score #cinematic_interpolation switch.data matches ..1 run data modify storage bs:out spline.sample_bezier append from storage switch:temp target_position
 data modify storage switch:temp item.components."minecraft:custom_data".points set from storage bs:out spline.sample_bezier
 
 ## Get all the rotations (not the first one), add the target rotation and remember them
@@ -56,8 +56,8 @@ data modify storage switch:temp initial_points.points set from storage switch:te
 data modify storage bs:in spline.sample_bspline set from storage switch:temp initial_points
 function #bs.spline:sample_bspline
 data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
-data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
-data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
+execute if score #cinematic_interpolation switch.data matches ..2 run data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
+execute if score #cinematic_interpolation switch.data matches ..1 run data modify storage bs:out spline.sample_bspline append from storage switch:temp target_rotation
 data modify storage switch:temp item.components."minecraft:custom_data".rotations set from storage bs:out spline.sample_bspline
 
 ## Remember everything, player's id and gamemode, make the player spectator, then make them mount @s (item_display)
