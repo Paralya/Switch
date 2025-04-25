@@ -40,37 +40,25 @@ execute if score #inventory switch.data matches -1 run clear @s
 
 # Teleport to respawn point
 scoreboard players add @s switch.lobby_respawn 0
-execute if entity @s[tag=!switch.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=119] run tag @s add switch.lobby_respawn
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=0}] run function switch:cinematic/launch {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=1}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=2}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=3}] run function switch:cinematic/launch {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=4}] run function switch:cinematic/launch {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=5}] run function switch:cinematic/launch {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=6}] run function switch:cinematic/launch {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=7}] run function switch:cinematic/launch {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=8}] run function switch:cinematic/launch {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=9}] run function switch:cinematic/launch {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=10}] run function switch:cinematic/launch {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=11}] run function switch:cinematic/launch {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=12}] run function switch:cinematic/launch {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=13}] run function switch:cinematic/launch {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
+execute if entity @s[tag=!switch.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add switch.lobby_respawn
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=0}] run function switch:cinematic/launch {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=1}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=2}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=3}] run function switch:cinematic/launch {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=4}] run function switch:cinematic/launch {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=5}] run function switch:cinematic/launch {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=6}] run function switch:cinematic/launch {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=7}] run function switch:cinematic/launch {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=8}] run function switch:cinematic/launch {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=9}] run function switch:cinematic/launch {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=10}] run function switch:cinematic/launch {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=11}] run function switch:cinematic/launch {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=12}] run function switch:cinematic/launch {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=13}] run function switch:cinematic/launch {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
 tag @s remove switch.lobby_respawn
 
 # If lost at least one item, setup inventory
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.3 with dripstone_block[item_name={"text":"Dripstone Jump","color":"gold"},lore=[{"text":"by AirDox","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_dripstone:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.4 with pink_concrete[item_name={"text":"Pink Jump","color":"light_purple"},lore=[{"text":"by OfChara","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_pink:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.5 with bricks[item_name={"text":"Bricks Jump","color":"#BC4A3C"},lore=[{"text":"by Thitanas","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_bricks:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.10 with lime_concrete[item_name={"text":"Green Jump","color":"green"},lore=[{"text":"by Stoupy51","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_green:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.11 with white_concrete[item_name={"text":"White Jump","color":"white"},lore=[{"text":"by Stoupy51","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_white:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.12 with blue_concrete[item_name={"text":"Blue Jump","color":"blue"},lore=[{"text":"by Stoupy51","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_blue:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.13 with yellow_concrete[item_name={"text":"Yellow Jump","color":"yellow"},lore=[{"text":"by ArtiGrrr","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_yellow:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.14 with red_concrete[item_name={"text":"Red Jump","color":"red"},lore=[{"text":"by Stoupy51","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_red:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.15 with brown_concrete[item_name={"text":"Brown Jump","color":"#8B4513"},lore=[{"text":"by OfChara","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_brown:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.16 with purple_concrete[item_name={"text":"Purple Jump","color":"light_purple"},lore=[{"text":"by AirDox","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_purple:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.21 with copper_block[item_name={"text":"Duality Jump","color":"#B87333"},lore=[{"text":"by Stoupy51 / AirDox / OfChara","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_duality:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.22 with suspicious_gravel[item_name={"text":"GraviGlitch Jump","color":"#676767"},lore=[{"text":"by OfChara / Stoupy51","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_graviglitch:true}}]
-execute unless score #inventory switch.data matches 13 run item replace entity @s inventory.23 with crying_obsidian[item_name={"text":"Obsidian Jump","color":"dark_gray"},lore=[{"text":"by Stoupy51","color":"gray","italic":false}],custom_data={switch:{jump:true,jump_obsidian:true}}]
+execute unless score #inventory switch.data matches 13 run function switch:player/setup_lobby_inventory
 
 
 ## Jumps advancements
@@ -90,6 +78,6 @@ advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!
 
 # GraviGlitch jump gives
 execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run clear @s suspicious_gravel[minecraft:custom_data~{switch:{"to_place":true}}]
-execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run give @s suspicious_gravel[can_place_on={blocks:["smooth_red_sandstone","orange_wall_banner","red_sandstone_wall"]},custom_data={switch:{"to_place":true}}] 42
-execute unless entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37] run clear @s suspicious_gravel[custom_data~{switch:{"to_place":true}}]
+execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run give @s suspicious_gravel[can_place_on={blocks:["smooth_red_sandstone","orange_wall_banner","red_sandstone_wall"]},custom_data={"switch":{"to_place":true}}] 42
+execute unless entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37] run clear @s suspicious_gravel[custom_data~{"switch":{"to_place":true}}]
 

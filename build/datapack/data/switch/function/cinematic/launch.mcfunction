@@ -2,20 +2,20 @@
 #> switch:cinematic/launch
 #
 # @within	switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:1}}
-#			switch:player/tick_detach {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:1}}
+#			switch:player/tick_detach {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
+#			switch:player/tick_detach {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
 #
 
 ## /execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,particle:1,interpolation:1}}

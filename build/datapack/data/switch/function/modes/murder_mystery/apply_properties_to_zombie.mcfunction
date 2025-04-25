@@ -13,5 +13,4 @@ item replace entity @s armor.head from block 0 7 0 container.0
 setblock 0 7 0 oak_sign
 data modify block 0 7 0 front_text.messages[0] set value {"nbt":"temp","storage":"switch:main"}
 data modify entity @s CustomName set from block 0 7 0 front_text.messages[0]
-setblock 0 7 0 air
 
