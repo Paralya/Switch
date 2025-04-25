@@ -7,8 +7,10 @@
 """
 
 # Imports
+import json
+
 import stouputils as stp
-from python_datapack.utils.database_helper import *
+from python_datapack.utils.io import write_function
 
 # Modes list
 MODES: list[dict] = [
@@ -76,14 +78,14 @@ MODES: list[dict] = [
 			"en": [{"text":"Two sides: one with visible players,\n"},{"text":"the other with spectres, which side will win?\n"}]
 		},
 	},
-	# {
-	# 	"min_players":1, "max_players":-1, "id":"kart_racer", "name_fr":"Kart Racer",
-	# 	"estimated_time": "3-6 mins", "inspiration": "Racing games", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
-	# 	"description": {
-	# 		"fr": [{"text":"Affrontez les autres joueurs sur des\n"},{"text":"circuits et soyez le premier arrivé !\n"}],
-	# 		"en": [{"text":"Compete against other players on circuits\n"},{"text":"and be the first to reach the finish line!\n"}]
-	# 	},
-	# },
+	{
+		"min_players":1, "max_players":-1, "id":"kart_racer", "name_fr":"Kart Racer",
+		"estimated_time": "3-6 mins", "inspiration": "Racing games", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+		"description": {
+			"fr": [{"text":"Affrontez les autres joueurs sur des\n"},{"text":"circuits et soyez le premier arrivé !\n"}],
+			"en": [{"text":"Compete against other players on circuits\n"},{"text":"and be the first to reach the finish line!\n"}]
+		},
+	},
 	{
 		"min_players":1, "max_players":-1, "id":"rush_the_point", "name_fr":"Rush The Point",
 		"estimated_time": "7-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
@@ -124,14 +126,14 @@ MODES: list[dict] = [
 			"en": [{"text":"Find food around you and eat\n"},{"text":"the most amount to win!\n"}]
 		},
 	},
-	# {
-	# 	"min_players":1, "max_players":8, "id":"mlg_a_coudre", "name_fr":"MLG à Coudre",
-	# 	"estimated_time": "1-6 mins", "inspiration": "Dé à Coudre", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
-	# 	"description": {
-	# 		"fr": [{"text":"Affrontez les autres joueurs dans un saut\n"},{"text":"iconique de Minecraft, mais avec un seau d'eau !\n"}],
-	# 		"en": [{"text":"Take on the other players in Minecraft's\n"},{"text":"iconic pool jump, but with a water bucket!\n"}]
-	# 	},
-	# },
+	{
+		"min_players":1, "max_players":8, "id":"mlg_a_coudre", "name_fr":"MLG à Coudre",
+		"estimated_time": "1-6 mins", "inspiration": "Dé à Coudre", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+		"description": {
+			"fr": [{"text":"Affrontez les autres joueurs dans un saut\n"},{"text":"iconique de Minecraft, mais avec un seau d'eau !\n"}],
+			"en": [{"text":"Take on the other players in Minecraft's\n"},{"text":"iconic pool jump, but with a water bucket!\n"}]
+		},
+	},
 	{
 		"min_players":1, "max_players":-1, "id":"protect_the_king", "name_fr":"Protect The King",
 		"estimated_time": "1-4 mins", "inspiration": "Charlemagne", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
@@ -220,14 +222,14 @@ MODES: list[dict] = [
 			"en": [{"text":"One third of the players have a bow and must prevent\n"},{"text":"the other players from climbing the rainbow tower!\n"}]
 		},
 	},
-	# {
-	# 	"min_players":1, "max_players":-1, "id":"build_battle", "name_fr":"Build Battle",
-	# 	"estimated_time": "5-7 mins", "inspiration": "Hypixel", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
-	# 	"description": {
-	# 		"fr": [{"text":"Concurrencez les autres joueurs avec votre\n"},{"text":"construction sur un thème choisi démocratiquement au début !\n"}],
-	# 		"en": [{"text":"Compete against other players with your construction\n"},{"text":"on a theme chosen democratically at the start!\n"}]
-	# 	},
-	# },
+	{
+		"min_players":1, "max_players":-1, "id":"build_battle", "name_fr":"Build Battle",
+		"estimated_time": "5-7 mins", "inspiration": "Hypixel", "suggested_by": "Stoupy51", "developed_by": "Stoupy51",
+		"description": {
+			"fr": [{"text":"Concurrencez les autres joueurs avec votre\n"},{"text":"construction sur un thème choisi démocratiquement au début !\n"}],
+			"en": [{"text":"Compete against other players with your construction\n"},{"text":"on a theme chosen democratically at the start!\n"}]
+		},
+	},
 	{
 		"min_players":1, "max_players":-1, "id":"beat_the_kings", "name_fr":"Beat The Kings",
 		"estimated_time": "3-5 mins", "inspiration": "Henry IV/Louis XVI", "suggested_by": "Luxio", "developed_by": "Luxio",
@@ -308,14 +310,14 @@ MODES: list[dict] = [
 			"en": [{"text":"An infected person is chosen at the beginning of the game and\n"},{"text":"must infect all humans who must wait for rescue!\n"}]
 		},
 	},
-	# {
-	# 	"min_players":1, "max_players":-1, "id":"glassrunner", "name_fr":"GlassRunner",
-	# 	"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
-	# 	"description": {
-	# 		"fr": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
-	# 		"en": [{"text":"Take on the opposing team in the sky in a\n"},{"text":"CaptureThePoint seasoned with multiple special features\n"}]
-	# 	},
-	# },
+	{
+		"min_players":1, "max_players":-1, "id":"glassrunner", "name_fr":"GlassRunner",
+		"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
+		"description": {
+			"fr": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
+			"en": [{"text":"Take on the opposing team in the sky in a\n"},{"text":"CaptureThePoint seasoned with multiple special features\n"}]
+		},
+	},
 	{
 		"min_players":10, "max_players":-1, "id":"capture_the_flag", "name_fr":"Capture The Flag",
 		"estimated_time": "10-15 mins", "inspiration": "Aspiration", "suggested_by": "Oraclette", "developed_by": "Stoupy51",
