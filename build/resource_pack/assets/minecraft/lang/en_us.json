@@ -1,5 +1,4 @@
 {
-	"commands.gamemode.success.self": "",
-	"commands.gamemode.success.other": ""
+	"gameMode.changed": ""
 }
 
