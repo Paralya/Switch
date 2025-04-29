@@ -1,8 +1,19 @@
 
-## /execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,particle:1,interpolation:1}}
-# TODO: Add rotation
-# Pos 1 = current position
-# Pos 2 = target position ($(x) $(y) $(z))
+## /execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1}}
+# Arguments:
+# as @s = player
+# at @s = current position
+# x: float = target x position
+# y: float = target y position
+# z: float = target z position
+# time: int = time in ticks
+# with: {...} = additional arguments (optional)
+#   yaw: float = yaw rotation
+#   pitch: float = pitch rotation
+#   go_side: float = how far to go side (0 = don't go side)
+#   add_y: float = additional y position (to add to the middle point, if none default is 20.0)
+#   particle: int = particle effect (0 = none, 1 = glow)
+#   interpolation: int = teleport_duration (0 = instant, 1 = 1 tick, 2 = 2 ticks, etc.)
 
 # Tag the player and remember it's id
 scoreboard players operation #player_id switch.id = @s switch.id
@@ -33,6 +44,8 @@ $data modify storage switch:temp with set value $(with)
 execute unless data storage switch:temp with.interpolation run data modify storage switch:temp with.interpolation set value 1
 execute store result score #cinematic_interpolation switch.data run data get storage switch:temp with.interpolation
 execute if data storage switch:temp with.pitch if data storage switch:temp with.yaw run function switch:cinematic/get_rotation_arguments with storage switch:temp with
+execute unless data storage switch:temp with.go_side run data modify storage switch:temp with.go_side set value 0
+execute unless data storage switch:temp with.add_y run data modify storage switch:temp with.add_y set value 20.0
 
 
 ## Summon the entity that will control the player

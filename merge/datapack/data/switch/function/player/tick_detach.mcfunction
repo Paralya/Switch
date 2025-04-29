@@ -36,20 +36,20 @@ execute if score #inventory switch.data matches -1 run clear @s
 # Teleport to respawn point
 scoreboard players add @s switch.lobby_respawn 0
 execute if entity @s[tag=!switch.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add switch.lobby_respawn
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=0}] run function switch:cinematic/launch {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=1}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=2}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=3}] run function switch:cinematic/launch {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=4}] run function switch:cinematic/launch {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=5}] run function switch:cinematic/launch {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=6}] run function switch:cinematic/launch {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=7}] run function switch:cinematic/launch {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=8}] run function switch:cinematic/launch {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=9}] run function switch:cinematic/launch {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=10}] run function switch:cinematic/launch {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=11}] run function switch:cinematic/launch {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=12}] run function switch:cinematic/launch {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,particle:1,interpolation:2}}
-execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=13}] run function switch:cinematic/launch {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=0}] run function switch:cinematic/launch {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=1}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=2}] run function switch:cinematic/launch {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=3}] run function switch:cinematic/launch {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=4}] run function switch:cinematic/launch {x:9.5,y:74.51,z:23.5,time:20,with:{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=5}] run function switch:cinematic/launch {x:-14.5,y:73.51,z:9.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=6}] run function switch:cinematic/launch {x:-34.5,y:73.1,z:-8.5,time:20,with:{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=7}] run function switch:cinematic/launch {x:-8.5,y:73.1,z:35.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=8}] run function switch:cinematic/launch {x:9.5,y:73.1,z:47.5,time:20,with:{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=9}] run function switch:cinematic/launch {x:-46.5,y:76.1,z:10.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=10}] run function switch:cinematic/launch {x:-84.5,y:70.1,z:0.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=11}] run function switch:cinematic/launch {x:51.5,y:74.6,z:-8.5,time:20,with:{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=12}] run function switch:cinematic/launch {x:9.5,y:74.6,z:111.5,time:20,with:{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}
+execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=13}] run function switch:cinematic/launch {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
 tag @s remove switch.lobby_respawn
 
 # If lost at least one item, setup inventory
