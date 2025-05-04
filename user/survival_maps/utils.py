@@ -412,28 +412,41 @@ kill @s
 
 
 # Create the function that generates a folder for a gamemode with regeneration using /clone
-def generate_clone_survival_folder(config: dict, name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, kart_racer: list = [], override_tp_coords: tuple = None):
+def clone_survival(
+	config: dict,
+	identity: tuple[str, ...],
+	start_pos: tuple,
+	end_pos: tuple,
+	paste_start_height: int,
+	kart_racer: list = [],
+	coords: tuple | None = None
+) -> None:
 	""" Generates a folder for a gamemode using /clone for regeneration
 	Args:
-		name				(str)	: The name of the gamemode
+		identity			(tuple)	: The identity of the gamemode (namespace, name, credits)
 		start_pos			(tuple)	: The coordinates of the start position (y should be 0)
 		end_pos				(tuple)	: The coordinates of the end position (y should be < 100)
 		paste_start_height	(int)	: The y coordinate where the regeneration starts
 		kart_racer			(list)	: Start position (tuple), orientation (int), and count (int) for the kart racer start line (optional)
-		override_tp_coords	(tuple)	: The coordinates to teleport the players (optional)
+		coords	(tuple)	: The coordinates to teleport the players (optional)
 	"""
+	# Extract namespace, name and credits
+	namespace: str = identity[0]
+	name: str = identity[1]
+	credits: str = identity[2] if len(identity) > 2 else ""
+
 	## Calculate the divider depending on the start and end positions
 	divider = calculate_divider(start_pos, end_pos)
 
 	## Create the base_condition variable (for the conditions)
-	base_condition = f"execute if score #rg_{name} switch.data matches"
+	base_condition = f"execute if score #rg_{namespace} switch.data matches"
 
 	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
 	tp_coords, x, y, z = create_tp_coords_string_from_start_and_end(start_pos, end_pos, paste_start_height)
-	if override_tp_coords != None:
-		tp_coords = create_tp_coords_string_from_xyz(override_tp_coords)
-	create_main_file(config, name, kart_racer + [tp_coords])
-	create_teleport_players_file(config, name, tp_coords, kart_racer)
+	if coords != None:
+		tp_coords = create_tp_coords_string_from_xyz(coords)
+	create_main_file(config, namespace, kart_racer + [tp_coords])
+	create_teleport_players_file(config, namespace, tp_coords, kart_racer)
 
 	## Create the "regenerate.mcfunction" file
 	# Create the splitted coordinates
@@ -445,12 +458,12 @@ def generate_clone_survival_folder(config: dict, name: str, start_pos: tuple, en
 	maxY = minY - start_pos[1] + end_pos[1]		# The y coordinate where the regeneration ends
 
 	# Write the first lines
-	write_first_lines_of_regenerate(config, name, base_condition, splitted_coordinates)
+	write_first_lines_of_regenerate(config, namespace, base_condition, splitted_coordinates)
 
 	## Write the marker part for the regeneration
 	# Create the file
-	PATH: str = f"switch:maps/survival/{name}/regeneration_on_marker"
-	write_function(config, PATH, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{name}_y switch.data\n")
+	PATH: str = f"switch:maps/survival/{namespace}/regeneration_on_marker"
+	write_function(config, PATH, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y switch.data\n")
 
 	# Write the clone and particle commands
 	i = 0
@@ -460,60 +473,73 @@ def generate_clone_survival_folder(config: dict, name: str, start_pos: tuple, en
 		dx = (k[2] - k[0]) // 2
 		dz = (k[3] - k[1]) // 2
 		write_function(config, PATH, f"""
-execute if score #rg_{name}_mod switch.data matches {i} at @s in switch:game run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force
-execute if score #rg_{name}_mod switch.data matches {i} at @s run clone from minecraft:overworld {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} to switch:game {k[0]} ~{dy} {k[1]} replace force
+execute if score #rg_{namespace}_mod switch.data matches {i} at @s in switch:game run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force
+execute if score #rg_{namespace}_mod switch.data matches {i} at @s run clone from minecraft:overworld {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} to switch:game {k[0]} ~{dy} {k[1]} replace force
 """)
 		i += 1
 
 	# Write kill item entities command & the scoreboard commands
 	write_function(config, PATH, f"""
-scoreboard players add #rg_{name}_mod switch.data 1
-execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
-execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players add #rg_{name}_y switch.data 1
-execute if score #rg_{name}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players set #rg_{name}_mod switch.data 0
+scoreboard players add #rg_{namespace}_mod switch.data 1
+execute if score #rg_{namespace}_mod switch.data matches {len(splitted_coordinates)} in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
+execute if score #rg_{namespace}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players add #rg_{namespace}_y switch.data 1
+execute if score #rg_{namespace}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players set #rg_{namespace}_mod switch.data 0
 
 kill @s
 """)
 
 	# Write the last lines
 	i = (maxY - minY + 1) * len(splitted_coordinates)
-	write_last_lines_of_regenerate(config, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
+	write_last_lines_of_regenerate(config, namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
 
 	# Write the spread_players file
-	create_spread_players_file(config, name, start_pos, end_pos, paste_start_height)
+	create_spread_players_file(config, namespace, start_pos, end_pos, paste_start_height)
 
 	# Write the scan_doors file
-	scan_every_door_in_map(config, name, start_pos, end_pos, paste_start_height, splitted_coordinates)
+	scan_every_door_in_map(config, namespace, start_pos, end_pos, paste_start_height, splitted_coordinates)
 
 	# Add the map to the list of the generated maps and return
-	generated_maps.append(name)
-	survival_maps.append(name)
+	generated_maps.append(namespace)
+	survival_maps.append(namespace)
 
 
 # Create the function that generates a folder for a gamemode with regeneration using the fill command
-def generate_fill_survival_folder(config: dict, name: str, start_pos: tuple, end_pos: tuple, block_that_replace: str, block_tag_to_replace: str, override_tp_coords: tuple = None):
+def fill_survival(
+	config: dict,
+	identity: tuple[str, ...],
+	start_pos: tuple,
+	end_pos: tuple,
+	block_that_replace: str,
+	block_tag_to_replace: str,
+	coords: tuple | None = None
+) -> None:
 	""" Generate a folder for a gamemode with regeneration using the fill command
+
 	Args:
-		name					(str)	: The name of the gamemode
+		identity				(tuple)	: The identity of the gamemode (namespace, name, credits)
 		start_pos				(tuple)	: The start position of the regeneration area
 		end_pos					(tuple)	: The end position of the regeneration area
 		block_that_replace		(str)	: The block that replace the blocks with the tag
 		block_tag_to_replace	(str)	: The block tag to replace
-		override_tp_coords		(tuple)	: The coordinates to teleport the players (optional)
-
+		coords		(tuple)	: The coordinates to teleport the players (optional)
 	"""
+	# Extract namespace, name and credits
+	namespace: str = identity[0]
+	name: str = identity[1]
+	credits: str = identity[2] if len(identity) > 2 else ""
+
 	## Calculate the divider depending on the start and end positions
 	divider = calculate_divider(start_pos, end_pos)
 
 	## Create the base_condition variable
-	base_condition = f"execute if score #rg_{name} switch.data matches"
+	base_condition = f"execute if score #rg_{namespace} switch.data matches"
 
 	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
 	tp_coords, x, y, z = create_tp_coords_string_from_start_and_end(start_pos, end_pos)
-	if override_tp_coords != None:
-		tp_coords = create_tp_coords_string_from_xyz(override_tp_coords)
-	create_main_file(config, name)
-	create_teleport_players_file(config, name, tp_coords)
+	if coords != None:
+		tp_coords = create_tp_coords_string_from_xyz(coords)
+	create_main_file(config, namespace)
+	create_teleport_players_file(config, namespace, tp_coords)
 
 	## Create the "regenerate.mcfunction" file
 	# Create the splitted coordinates
@@ -524,11 +550,11 @@ def generate_fill_survival_folder(config: dict, name: str, start_pos: tuple, end
 	minY = y									# The y coordinate where the regeneration starts
 
 	# Write the first lines
-	write_first_lines_of_regenerate(config, name, base_condition, splitted_coordinates)
+	write_first_lines_of_regenerate(config, namespace, base_condition, splitted_coordinates)
 
 	## Write the marker part for the regeneration
-	PATH: str = f"switch:maps/survival/{name}/regeneration_on_marker"
-	write_function(config, PATH, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{name}_y switch.data\n\n")
+	PATH: str = f"switch:maps/survival/{namespace}/regeneration_on_marker"
+	write_function(config, PATH, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y switch.data\n\n")
 
 	# Write the clone and particle commands
 	particle_count = int(250 / len(splitted_coordinates)) + 1
@@ -543,20 +569,20 @@ execute at @s in switch:game run fill {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {block_tha
 	# Write kill item entities command & the scoreboard commands
 	write_function(config, PATH, f"""
 execute in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
-scoreboard players add #rg_{name}_y switch.data 1
+scoreboard players add #rg_{namespace}_y switch.data 1
 
 kill @s
 """)
 
 	# Write the last lines
 	i = (end_pos[1] - minY) + 1
-	write_last_lines_of_regenerate(config, name, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
+	write_last_lines_of_regenerate(config, namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
 
 	# Write the spread_players file
-	create_spread_players_file(config, name, start_pos, end_pos, paste_start_height = y)
+	create_spread_players_file(config, namespace, start_pos, end_pos, paste_start_height = y)
 
 	# Add the map to the list of the generated maps and return
-	generated_maps.append(name)
+	generated_maps.append(namespace)
 
 
 def generate_door_files(config: dict) -> None:
