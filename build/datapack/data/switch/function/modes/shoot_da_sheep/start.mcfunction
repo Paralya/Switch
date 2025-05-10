@@ -9,7 +9,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-scoreboard players set #is_adventure switch.data 1
+scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}
 
 function switch:translations/modes_shoot_da_sheep_start

@@ -29,7 +29,7 @@ execute if score #color switch.data matches 1 run scoreboard players add #red_po
 scoreboard players add @s switch.temp.individual_points 20
 
 scoreboard players set #base_reload switch.data 15
-setblock 516 104 523 dark_oak_trapdoor[powered=true,open=true]
+setblock 517 113 524 dark_oak_trapdoor[powered=true,open=true]
 setblock 36041 149 36011 dark_oak_trapdoor[powered=true,open=true,facing=east]
 setblock 36041 149 36012 dark_oak_trapdoor[powered=true,open=true,facing=east]
 setblock 72114 112 72090 dark_oak_trapdoor[powered=true,open=true,facing=north]

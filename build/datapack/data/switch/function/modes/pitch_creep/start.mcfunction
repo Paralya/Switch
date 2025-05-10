@@ -19,7 +19,7 @@ execute in switch:game run gamerule naturalRegeneration false
 execute in switch:game run gamerule keepInventory true
 
 ## Placement de la map et des joueurs + give d'items
-scoreboard players set #is_adventure switch.data 1
+scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"pitch_creep", maps:["pitch_creep_1","octogone_nether_ice"]}
 
 function switch:translations/modes_pitch_creep_start

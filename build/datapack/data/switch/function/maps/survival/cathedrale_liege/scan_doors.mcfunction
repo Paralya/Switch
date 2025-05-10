@@ -7,28 +7,28 @@
 
 scoreboard players add #scan_cathedrale_liege switch.data 1
 
-execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 25961 25944 25989 26028
-execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 25961 25944 25989 26028
+execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26000 26000 26028 26084
+execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26000 26000 26028 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 25989 25944 26016 26028
-execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 25989 25944 26016 26028
+execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26028 26000 26055 26084
+execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26028 26000 26055 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26016 25944 26044 26028
-execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26016 25944 26044 26028
+execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26055 26000 26083 26084
+execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26055 26000 26083 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26044 25944 26071 26028
-execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26044 25944 26071 26028
+execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26083 26000 26110 26084
+execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26083 26000 26110 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26071 25944 26099 26028
-execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26071 25944 26099 26028
+execute if score #scan_cathedrale_liege switch.data matches 1 in minecraft:overworld run forceload add 26110 26000 26138 26084
+execute if score #scan_cathedrale_liege switch.data matches 1 in switch:game run forceload add 26110 26000 26138 26084
 
 execute if score #scan_cathedrale_liege switch.data matches 1 run data modify storage switch:maps to_scan.cathedrale_liege set value 2b
-execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #start_x_cathedrale_liege switch.data 25962
-execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #start_y_cathedrale_liege switch.data -63
-execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #start_z_cathedrale_liege switch.data 25945
-execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #end_x_cathedrale_liege switch.data 26098
-execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #end_y_cathedrale_liege switch.data 98
-execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #end_z_cathedrale_liege switch.data 26027
+execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #start_x_cathedrale_liege switch.data 26001
+execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #start_y_cathedrale_liege switch.data 101
+execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #start_z_cathedrale_liege switch.data 26001
+execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #end_x_cathedrale_liege switch.data 26137
+execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #end_y_cathedrale_liege switch.data 264
+execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players set #end_z_cathedrale_liege switch.data 26083
 execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players operation #curr_x_cathedrale_liege switch.data = #start_x_cathedrale_liege switch.data
 execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players operation #curr_y_cathedrale_liege switch.data = #start_y_cathedrale_liege switch.data
 execute if score #scan_cathedrale_liege switch.data matches 1 run scoreboard players operation #curr_z_cathedrale_liege switch.data = #start_z_cathedrale_liege switch.data
@@ -38,24 +38,24 @@ execute if score #scan_cathedrale_liege switch.data matches 1 run data modify st
 execute if score #scan_cathedrale_liege switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_cathedrale_liege switch.data matches 30.. summon marker run function switch:maps/survival/cathedrale_liege/scan_doors_on_marker
 
-execute if score #scan_cathedrale_liege switch.data matches 399 in minecraft:overworld run forceload remove 25961 25944 25989 26028
-execute if score #scan_cathedrale_liege switch.data matches 399 in switch:game run forceload remove 25961 25944 25989 26028
+execute if score #scan_cathedrale_liege switch.data matches 403 in minecraft:overworld run forceload remove 26000 26000 26028 26084
+execute if score #scan_cathedrale_liege switch.data matches 403 in switch:game run forceload remove 26000 26000 26028 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 399 in minecraft:overworld run forceload remove 25989 25944 26016 26028
-execute if score #scan_cathedrale_liege switch.data matches 399 in switch:game run forceload remove 25989 25944 26016 26028
+execute if score #scan_cathedrale_liege switch.data matches 403 in minecraft:overworld run forceload remove 26028 26000 26055 26084
+execute if score #scan_cathedrale_liege switch.data matches 403 in switch:game run forceload remove 26028 26000 26055 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 399 in minecraft:overworld run forceload remove 26016 25944 26044 26028
-execute if score #scan_cathedrale_liege switch.data matches 399 in switch:game run forceload remove 26016 25944 26044 26028
+execute if score #scan_cathedrale_liege switch.data matches 403 in minecraft:overworld run forceload remove 26055 26000 26083 26084
+execute if score #scan_cathedrale_liege switch.data matches 403 in switch:game run forceload remove 26055 26000 26083 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 399 in minecraft:overworld run forceload remove 26044 25944 26071 26028
-execute if score #scan_cathedrale_liege switch.data matches 399 in switch:game run forceload remove 26044 25944 26071 26028
+execute if score #scan_cathedrale_liege switch.data matches 403 in minecraft:overworld run forceload remove 26083 26000 26110 26084
+execute if score #scan_cathedrale_liege switch.data matches 403 in switch:game run forceload remove 26083 26000 26110 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 399 in minecraft:overworld run forceload remove 26071 25944 26099 26028
-execute if score #scan_cathedrale_liege switch.data matches 399 in switch:game run forceload remove 26071 25944 26099 26028
+execute if score #scan_cathedrale_liege switch.data matches 403 in minecraft:overworld run forceload remove 26110 26000 26138 26084
+execute if score #scan_cathedrale_liege switch.data matches 403 in switch:game run forceload remove 26110 26000 26138 26084
 
-execute if score #scan_cathedrale_liege switch.data matches 399 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"cathedrale_liege","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #scan_cathedrale_liege switch.data matches 399 run data remove storage switch:maps to_scan.cathedrale_liege
-execute if score #scan_cathedrale_liege switch.data matches 399 run scoreboard players reset #scan_cathedrale_liege switch.data
+execute if score #scan_cathedrale_liege switch.data matches 403 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"cathedrale_liege","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #scan_cathedrale_liege switch.data matches 403 run data remove storage switch:maps to_scan.cathedrale_liege
+execute if score #scan_cathedrale_liege switch.data matches 403 run scoreboard players reset #scan_cathedrale_liege switch.data
 
 execute if score #scan_cathedrale_liege switch.data matches 1.. run schedule function switch:maps/survival/cathedrale_liege/scan_doors 1t
 

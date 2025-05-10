@@ -1,5 +1,5 @@
 
-gamemode adventure @s[gamemode=!adventure,tag=!can_creative]
+gamemode adventure @s[gamemode=creative,tag=!can_creative]
 team join switch.detached @s[team=!switch.tutorial]
 tp @s[team=switch.tutorial] -500 69.69 -500 0 0
 

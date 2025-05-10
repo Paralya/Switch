@@ -13,7 +13,7 @@ execute if score #curr_x_cathedrale_liege switch.data > #end_x_cathedrale_liege 
 execute if score #curr_x_cathedrale_liege switch.data > #end_x_cathedrale_liege switch.data run scoreboard players operation #curr_x_cathedrale_liege switch.data = #start_x_cathedrale_liege switch.data
 execute if score #curr_y_cathedrale_liege switch.data > #end_y_cathedrale_liege switch.data run scoreboard players add #curr_z_cathedrale_liege switch.data 1
 execute if score #curr_y_cathedrale_liege switch.data > #end_y_cathedrale_liege switch.data run scoreboard players operation #curr_y_cathedrale_liege switch.data = #start_y_cathedrale_liege switch.data
-execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"cathedrale_liege",additional_height:164}
+execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"cathedrale_liege",additional_height:0}
 
 scoreboard players remove #blocks_in_loop switch.data 1
 execute if score #blocks_in_loop switch.data matches 1.. if score #curr_z_cathedrale_liege switch.data < #end_z_cathedrale_liege switch.data run function switch:maps/survival/cathedrale_liege/scan_doors_on_marker

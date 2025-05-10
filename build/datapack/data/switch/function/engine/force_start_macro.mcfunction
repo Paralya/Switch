@@ -62,9 +62,9 @@ tag @s remove detached
 scoreboard players set #engine_state switch.data 3
 scoreboard players reset #set_spec switch.data
 scoreboard players reset #do_spreadplayers switch.data
-scoreboard players reset #is_adventure switch.data
+scoreboard players reset #dont_regenerate switch.data
 function switch:utils/reset_players
-function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
+function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached]"}
 execute in switch:game run function switch:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s

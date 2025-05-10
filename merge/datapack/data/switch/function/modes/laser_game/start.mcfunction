@@ -14,7 +14,7 @@ effect give @a[tag=!detached] weakness infinite 255 true
 time set 18000
 
 ## Traitement des joueurs
-scoreboard players set #is_adventure switch.data 1
+scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"laser_game", maps:["laser_game"]}
 
 scoreboard players set #team_boolean switch.data 0

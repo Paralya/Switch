@@ -9,70 +9,70 @@
 
 scoreboard players add #rg_traitor_original switch.data 1
 execute if score #rg_traitor_original switch.data matches 1 run data modify storage switch:maps to_regenerate.traitor_original set value 2b
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1408 1423 1426 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1408 1423 1426 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1426 1423 1445 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1426 1423 1445 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1445 1423 1463 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1445 1423 1463 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1463 1423 1482 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1463 1423 1482 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1482 1423 1500 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1482 1423 1500 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1500 1423 1518 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1500 1423 1518 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1518 1423 1537 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1518 1423 1537 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1537 1423 1555 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1537 1423 1555 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1555 1423 1574 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1555 1423 1574 1578
-execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1574 1423 1592 1578
-execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1574 1423 1592 1578
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1500 1500 1518 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1500 1500 1518 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1518 1500 1537 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1518 1500 1537 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1537 1500 1555 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1537 1500 1555 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1555 1500 1574 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1555 1500 1574 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1574 1500 1592 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1574 1500 1592 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1592 1500 1610 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1592 1500 1610 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1610 1500 1629 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1610 1500 1629 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1629 1500 1647 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1629 1500 1647 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1647 1500 1666 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1647 1500 1666 1655
+execute if score #rg_traitor_original switch.data matches 1 in minecraft:overworld run forceload add 1666 1500 1684 1655
+execute if score #rg_traitor_original switch.data matches 1 in switch:game run forceload add 1666 1500 1684 1655
 
-execute if score #rg_traitor_original switch.data matches 1 run scoreboard players set #rg_traitor_original_y switch.data 0
+execute if score #rg_traitor_original switch.data matches 1 run scoreboard players set #rg_traitor_original_y switch.data 100
 execute if score #rg_traitor_original switch.data matches 1 run scoreboard players set #rg_traitor_original_mod switch.data 0
-execute if score #rg_traitor_original switch.data matches ..640 summon marker run function switch:maps/survival/traitor_original/regeneration_on_marker
+execute if score #rg_traitor_original switch.data matches ..900 summon marker run function switch:maps/survival/traitor_original/regeneration_on_marker
 
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run kill @e[type=item,x=1500,y=0,z=1500,distance=..1000]
-execute if score #rg_traitor_original switch.data matches 641.. run data remove storage switch:maps to_regenerate.traitor_original
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run kill @e[type=item,x=1592,y=100,z=1577,distance=..1000]
+execute if score #rg_traitor_original switch.data matches 901.. run data remove storage switch:maps to_regenerate.traitor_original
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1408 1423 1426 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1408 1423 1426 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1500 1500 1518 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1500 1500 1518 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1426 1423 1445 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1426 1423 1445 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1518 1500 1537 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1518 1500 1537 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1445 1423 1463 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1445 1423 1463 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1537 1500 1555 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1537 1500 1555 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1463 1423 1482 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1463 1423 1482 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1555 1500 1574 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1555 1500 1574 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1482 1423 1500 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1482 1423 1500 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1574 1500 1592 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1574 1500 1592 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1500 1423 1518 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1500 1423 1518 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1592 1500 1610 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1592 1500 1610 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1518 1423 1537 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1518 1423 1537 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1610 1500 1629 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1610 1500 1629 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1537 1423 1555 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1537 1423 1555 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1629 1500 1647 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1629 1500 1647 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1555 1423 1574 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1555 1423 1574 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1647 1500 1666 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1647 1500 1666 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. in minecraft:overworld run forceload remove 1574 1423 1592 1578
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run forceload remove 1574 1423 1592 1578
+execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1666 1500 1684 1655
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1666 1500 1684 1655
 
-execute if score #rg_traitor_original switch.data matches 641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"traitor_original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"32","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_traitor_original switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"traitor_original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_traitor_original switch.data matches 641.. run data modify storage switch:main MessageToLog set value '{"text":"Map `traitor_original` just regenerated!"}'
-execute if score #rg_traitor_original switch.data matches 641.. run function switch:engine/log_message/apply
+execute if score #rg_traitor_original switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `traitor_original` just regenerated!"}'
+execute if score #rg_traitor_original switch.data matches 901.. run function switch:engine/log_message/apply
 
-execute if score #rg_traitor_original switch.data matches 641.. in switch:game run function switch:maps/regenerate_doors_macro {name:"traitor_original"}
-execute if score #rg_traitor_original switch.data matches 641.. run scoreboard players reset #rg_traitor_original switch.data
+execute if score #rg_traitor_original switch.data matches 901.. in switch:game run function switch:maps/regenerate_doors_macro {name:"traitor_original"}
+execute if score #rg_traitor_original switch.data matches 901.. run scoreboard players reset #rg_traitor_original switch.data
 execute if score #rg_traitor_original switch.data matches 1.. run schedule function switch:maps/survival/traitor_original/regenerate 1t
 

@@ -9,8 +9,8 @@ function switch:utils/reset_players
 worldborder set 59999968
 worldborder center 0 0
 scoreboard objectives setdisplay list switch.stats.wins
-execute unless score #is_adventure switch.data matches 1 unless score #already_regenerated switch.data matches 1 run function switch:maps/regenerate_map
-scoreboard players reset #is_adventure switch.data
+execute unless score #dont_regenerate switch.data matches 1 unless score #already_regenerated switch.data matches 1 run function switch:maps/regenerate_map
+scoreboard players reset #dont_regenerate switch.data
 
 scoreboard objectives setdisplay sidebar
 scoreboard players reset #disable switch.data

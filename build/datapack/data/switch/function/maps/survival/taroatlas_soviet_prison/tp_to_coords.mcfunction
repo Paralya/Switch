@@ -4,5 +4,5 @@
 # @within	???
 #
 
-execute in switch:game run tp @s 45998.5 209.5 45984.5
+execute in minecraft:overworld run tp @s 45998.5 209.5 45984.5
 

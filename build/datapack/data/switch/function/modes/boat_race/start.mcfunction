@@ -5,7 +5,7 @@
 #
 
 # Choose map
-scoreboard players set #is_adventure switch.data 1
+scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"boat_race", maps:["boat_race_1","boat_race_2"]}
 
 scoreboard players set @a[tag=!detached] switch.alive 1

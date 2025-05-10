@@ -13,7 +13,7 @@ execute if score #curr_x_traitor_original switch.data > #end_x_traitor_original 
 execute if score #curr_x_traitor_original switch.data > #end_x_traitor_original switch.data run scoreboard players operation #curr_x_traitor_original switch.data = #start_x_traitor_original switch.data
 execute if score #curr_y_traitor_original switch.data > #end_y_traitor_original switch.data run scoreboard players add #curr_z_traitor_original switch.data 1
 execute if score #curr_y_traitor_original switch.data > #end_y_traitor_original switch.data run scoreboard players operation #curr_y_traitor_original switch.data = #start_y_traitor_original switch.data
-execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"traitor_original",additional_height:114}
+execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"traitor_original",additional_height:0}
 
 scoreboard players remove #blocks_in_loop switch.data 1
 execute if score #blocks_in_loop switch.data matches 1.. if score #curr_z_traitor_original switch.data < #end_z_traitor_original switch.data run function switch:maps/survival/traitor_original/scan_doors_on_marker

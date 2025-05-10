@@ -11,7 +11,7 @@ execute in minecraft:overworld run gamerule drowningDamage false
 execute in minecraft:overworld run gamerule freezeDamage false
 
 ## Téléportation des joueurs
-scoreboard players set #is_adventure switch.data 1
+scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
 
 

@@ -1,0 +1,22 @@
+
+#> switch:maps/survival/boat_race_1/teleport_players
+#
+# @within	switch:maps/survival/boat_race_1/main
+#
+
+execute if score #count switch.data matches 0 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~0 ~ ~-0 90 0
+execute if score #count switch.data matches 1 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~0 ~ ~-2 90 0
+execute if score #count switch.data matches 2 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~0 ~ ~-4 90 0
+execute if score #count switch.data matches 3 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~0 ~ ~-6 90 0
+execute if score #count switch.data matches 4 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~2 ~ ~-0 90 0
+execute if score #count switch.data matches 5 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~2 ~ ~-2 90 0
+execute if score #count switch.data matches 6 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~2 ~ ~-4 90 0
+execute if score #count switch.data matches 7 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~2 ~ ~-6 90 0
+execute if score #count switch.data matches 8 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~4 ~ ~-0 90 0
+execute if score #count switch.data matches 9 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~4 ~ ~-2 90 0
+execute if score #count switch.data matches 10 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~4 ~ ~-4 90 0
+execute if score #count switch.data matches 11 in switch:game positioned 5199.5 160.69 5142.5 run tp @s ~4 ~ ~-6 90 0
+
+scoreboard players add #count switch.data 1
+scoreboard players operation #count switch.data %= #12 switch.data
+
