@@ -1,28 +1,30 @@
 
+# ruff: noqa: E501
 # Imports
+import os
 import zipfile
+
 import stouputils as stp
-from config import ROOT, LIBS_FOLDER
-from python_datapack.utils.database_helper import *
+from stewbeet.core import Mem
 
 # Constants
 ALL_BPM: int = 80
-INPUTS_FOLDER: str = f"{ROOT}/note_block_studio/datapacks"
+INPUTS_FOLDER: str = "note_block_studio/datapacks"
 REQUIRED_PATH_PARTS: list[str] = ["notes/", ".mcfunction"]
-LIB_TO_WRITE: str = f"{LIBS_FOLDER}/datapack/switch_music.zip"
-RELATIVE_LIB_TO_WRITE: str = LIB_TO_WRITE.replace(stp.clean_path(os.getcwd()) + "/", "")
+LIB_TO_WRITE: str = "datapack/switch_music.zip"
 
 # Main function
-def main(config: dict) -> None:
+def main() -> None:
+	lib_file = f"{Mem.ctx.stewbeet.libs_folder}/{LIB_TO_WRITE}"
 
 	# Cache the zip file
-	if os.path.exists(LIB_TO_WRITE):
-		stp.progress(f"The NoteBlock Studio songs zip file already exists at '{RELATIVE_LIB_TO_WRITE}', skipping the generation")
+	if os.path.exists(lib_file):
+		stp.progress(f"The NoteBlock Studio songs zip file already exists at '{stp.relative_path(lib_file)}', skipping the generation")
 		return
 
 	objectives: list[tuple[str, int, int]] = []
 	authors: list[str] = []
-	with zipfile.ZipFile(LIB_TO_WRITE, "w") as lib:
+	with zipfile.ZipFile(lib_file, "w") as lib:
 
 		# For each .zip file in the input folder
 		for file in os.listdir(INPUTS_FOLDER):
@@ -33,12 +35,12 @@ def main(config: dict) -> None:
 				# For each file in the zip file that matches the required path parts
 				with zipfile.ZipFile(f"{INPUTS_FOLDER}/{file}", "r") as zf:
 					files: list[str] = sorted(zf.namelist())
-					load_file: str = [x for x in files if "load.mcfunction" in x][0]
+					load_file: str = next(x for x in files if "load.mcfunction" in x)
 					bpm = int(zf.read(load_file).decode("utf-8").split(" ")[-1])
 
 					for file_to_copy in files:
 						if all(x in file_to_copy for x in REQUIRED_PATH_PARTS):
-							
+
 							# Only keep the playsound lines
 							playsounds: list[str] = zf.read(file_to_copy).decode("utf-8").split("\n")
 							playsounds = [line for line in playsounds if line.startswith("playsound")]
@@ -65,9 +67,9 @@ def main(config: dict) -> None:
 				song: str = file.replace(".zip", "").replace(" ", "_").split("_sss_")
 				authors.append(song[0])
 				objectives.append((song[1], length, bpm))
-		
+
 		# Add a pack.mcmeta file
-		lib.writestr("pack.mcmeta", stp.super_json_dump({"pack":{"pack_format":DATAPACK_FORMAT,"description":"Musics made with NoteBlock Studio"}}))
+		lib.writestr("pack.mcmeta", stp.super_json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
 		pass
 
 		# Write the objectives
@@ -78,17 +80,17 @@ scoreboard objectives add switch.music.progress dummy
 scoreboard objectives add switch.music.loop_state dummy
 scoreboard players set #last_index switch.music.current {len(objectives)+99}
 """
-		for song, length, bpm in objectives:
+		for song, length, _ in objectives:
 			load_content += f"scoreboard players set #{song} switch.music.progress {length}\n"
-			
+
 		# Write the full content at once
 		lib.writestr("data/switch/function/music/load.mcfunction", load_content)
 
 		# Write the tick functions
 		player_tick_content = ""
-		for i, (song, length, bpm) in enumerate(objectives):
+		for i, (song, _, _) in enumerate(objectives):
 			player_tick_content += f"execute if score @s switch.music.current matches {i+100} run function switch:music/ticks/{song}\n"
-			
+
 			tick_song_content = f"""
 scoreboard players add @s switch.music.progress 1
 data modify storage switch:temp input set value {{tick:0,name:"{song}"}}
@@ -116,7 +118,7 @@ tellraw @s ["\\n",{"nbt":"ParalyaMusic","storage":"switch:main","interpret":true
 			duration: int = int(length // 20 // (bpm / ALL_BPM))
 			if duration > 60:
 				duration: str = f"{duration // 60}m{duration % 60:02}"
-			display: str = authors[i].replace("_"," ") + f" - " + song.replace("_"," ").title()
+			display: str = authors[i].replace("_"," ") + " - " + song.replace("_"," ").title()
 			browser_content += f"""
 execute if score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","click_event":{{"action":"run_command","command":"/trigger switch.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
 execute unless score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display}","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger switch.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
@@ -125,5 +127,5 @@ execute unless score @s switch.music.current matches {i+100} run tellraw @s [{{"
 		lib.writestr("data/switch/function/music/browser.mcfunction", browser_content)
 		pass
 
-	stp.progress(f"The NoteBlock Studio songs zip file has been generated at '{RELATIVE_LIB_TO_WRITE}'")
+	stp.progress(f"The NoteBlock Studio songs zip file has been generated at '{stp.relative_path(lib_file)}' with {len(objectives)} songs")
 

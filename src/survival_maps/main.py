@@ -2,9 +2,8 @@
 # Imports
 import stouputils as stp
 
-from user.survival_maps.definitions import generate_folders_for_survival_maps
-from user.survival_maps.shared_memory import SharedMemory
-from user.survival_maps.utils import (
+from .definitions import generate_folders_for_survival_maps
+from .utils import (
 	generate_door_files,
 	generate_load_file,
 	generate_map_usage_file,
@@ -17,8 +16,7 @@ from user.survival_maps.utils import (
 
 # Main function
 @stp.measure_time(stp.progress, "Generated the survival maps")
-def main(config: dict) -> None:
-	SharedMemory.CONFIG = config
+def main() -> None:
 
 	# Generate the folders for the survival maps
 	generate_folders_for_survival_maps()

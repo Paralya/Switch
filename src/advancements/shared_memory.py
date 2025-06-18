@@ -1,4 +1,5 @@
 
+# ruff: noqa: E501
 # Constants
 LOAD_FILE: str = "switch:advancements/_load.mcfunction"
 UPDATE_PERCENTAGES_FILE: str = "switch:advancements/update_percentages"
@@ -141,15 +142,11 @@ def generate_adv_dictionnary() -> None:
 
 	# Create lookup dict for faster access
 	adv_by_id: dict[str, dict[str, str]] = {adv["id"]: adv for adv in ALL_ADVANCEMENTS}
-	
+
 	# Process each advancement once
 	for adv in ALL_ADVANCEMENTS:
 		parent_id: str = adv["parent"]
 		if parent_id and parent_id in adv_by_id:
 			parent: dict[str, str] = adv_by_id[parent_id]
 			parent["children"].append(adv["id"])
-
-
-
-
 

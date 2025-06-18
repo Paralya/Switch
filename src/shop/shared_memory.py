@@ -1,10 +1,10 @@
 
 # Imports
-from user.shop.dict.pitchout import PITCHOUT
-from user.shop.dict.infected import INFECTED
-from user.shop.dict.spleef import SPLEEF
-from user.shop.dict.sheepwars import SHEEPWARS
-from user.shop.dict.spectres_game import SPECTRES_GAME
+from .dict.infected import INFECTED
+from .dict.pitchout import PITCHOUT
+from .dict.sheepwars import SHEEPWARS
+from .dict.spectres_game import SPECTRES_GAME
+from .dict.spleef import SPLEEF
 
 # Constants
 STAR: str = "✮"

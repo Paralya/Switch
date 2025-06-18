@@ -1,14 +1,9 @@
 
 # Imports
-from python_datapack.utils.database_helper import *
-from python_datapack.constants import *
+from stewbeet.core import Mem
 
 # Setup pvpswap items
-def setup_pvpswap(database: dict[str, dict]) -> None:
-	""" Setup pvpswap items\n
-	Args:
-		database (dict[str, dict]): The database to update
-	"""
-
+def setup_pvpswap() -> None:
+	""" Setup pvpswap items	"""
 	return
 

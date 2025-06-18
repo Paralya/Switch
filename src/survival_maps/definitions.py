@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from user.survival_maps.utils import clone_survival, fill_survival
+from .utils import clone_survival, fill_survival
 
 
 # Main function calling all the map generation functions

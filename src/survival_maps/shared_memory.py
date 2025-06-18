@@ -1,6 +1,6 @@
 
 # Imports
-from typing import Any, ClassVar
+from typing import ClassVar
 
 # List of the maps that have been generated
 generated_maps: list[str] = []
@@ -25,5 +25,4 @@ class SharedMemory:
 		"open": ["true", "false"],
 		"powered": ["true", "false"]
 	}
-	CONFIG: ClassVar[dict[str, Any]] = {}	# To prevent passing the config to every function
 

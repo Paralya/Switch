@@ -1,16 +1,13 @@
 
 # Imports
-from python_datapack.utils.database_helper import *
-from python_datapack.constants import *
+from stewbeet.core import CUSTOM_ITEM_VANILLA, Mem
+
 
 # Setup infected items
-def setup_infected_items(database: dict[str, dict]) -> None:
-	""" Setup all infected items such as swords, chestplates, etc.\n
-	Args:
-		database (dict[str, dict]): The database to update
-	"""
+def setup_infected_items() -> None:
+	""" Setup all infected items such as swords, chestplates, etc. """
 	# Remaining items
-	database["element_115"] = {
+	Mem.definitions["element_115"] = {
 		"id": CUSTOM_ITEM_VANILLA,
 		"item_name": {"text":"Element 115","color":"light_purple","italic":False},
 		"lore": [{"text":"Infected","color":"dark_green","italic":True}],
@@ -19,9 +16,9 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 
 	# Setup swords and chestplates
 	SWORDS: list[str] = [
-		"minecraft:wooden",	"minecraft:stone",		"minecraft:golden", 
-		"minecraft:iron",	"minecraft:diamond",	"switch:emerald", 
-		"switch:obsidian",	"switch:topaz",			"switch:ruby", 
+		"minecraft:wooden",	"minecraft:stone",		"minecraft:golden",
+		"minecraft:iron",	"minecraft:diamond",	"switch:emerald",
+		"switch:obsidian",	"switch:topaz",			"switch:ruby",
 		"switch:sapphire",	"switch:adamantium"
 	]
 	CHESTPLATES: list[str] = ["minecraft:leather", "minecraft:chainmail"] + SWORDS[2:]	# Same as swords but leather and chainmail instead of wooden and stone
@@ -34,7 +31,7 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 			"type": "attack_damage", "slot": "mainhand", "id": "base_attack_damage",
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
-		database[f"infected_sword_{i}"] = {
+		Mem.definitions[f"infected_sword_{i}"] = {
 			"id": "minecraft:iron_sword", "rarity": "epic", "item_model": sword_model, "item_name": f"{material} Sword",
 			"unbreakable": {}, "attribute_modifiers": sword_attribute
 		}
@@ -47,7 +44,7 @@ def setup_infected_items(database: dict[str, dict]) -> None:
 			"type": "armor", "slot": "chest", "id": "switch.armor",
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
-		database[f"infected_armor_{i}"] = {
+		Mem.definitions[f"infected_armor_{i}"] = {
 			"id": "minecraft:leather_chestplate" if i == 0 else CUSTOM_ITEM_VANILLA,
 			"max_stack_size": 1,
 			"rarity": "epic",
