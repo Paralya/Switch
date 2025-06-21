@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"emerald": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"emerald_helmet": true}
+									"smithed": {
+										"dict": {"armor": {"emerald": true,"helmet": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"emerald_helmet": true
+									}
 								},
 								"minecraft:max_damage": 171,
 								"minecraft:equippable": {
@@ -20,9 +25,27 @@
 									"asset_id": "switch:emerald"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},
-									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},
-									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}
+									{
+										"type": "armor",
+										"amount": 3,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor_toughness.head"
+									},
+									{
+										"type": "luck",
+										"amount": 0.25,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:luck.head"
+									}
 								],
 								"minecraft:item_model": "switch:emerald_helmet",
 								"minecraft:item_name": {
@@ -31,7 +54,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -41,4 +68,3 @@
 		}
 	]
 }
-

@@ -1,7 +1,7 @@
 
 #> switch:player/tutorial/finish
 #
-# @within	switch:player/trigger/attach/
+# @within	switch:player/trigger/attach/main
 #
 
 team leave @s

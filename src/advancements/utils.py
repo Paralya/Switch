@@ -31,7 +31,7 @@ execute unless data storage switch:advancements all run data modify storage swit
 		name: str = adv["title"]
 		desc_fr: str = adv["desc_fr"]
 		desc_en: str = adv["desc_en"]
-		write_function(LOAD_FILE, f"""data modify storage switch:advancements all[{{id:{string_id}}}] merge value {{color:"{color}", auteur:"{author}", name:"{name}", description:"{desc_fr}", desc_en:"{desc_en}"}}\n""")
+		write_function(LOAD_FILE, f"""data modify storage switch:advancements all[{{id:{string_id}}}] merge value {{color:"{color}", auteur:"{author}", name:"{name}", description:"{desc_fr}", desc_en:"{desc_en}"}}""")
 
 
 def make_update_percentages() -> None:
@@ -53,7 +53,7 @@ scoreboard players set @s switch.advancements 0
 	for adv in ALL_ADVANCEMENTS:
 		id: str = adv["id"]
 		string_id: str = adv["string_id"]
-		write_function(UPDATE_PERCENTAGES_FILE, f"""execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}\n""")
+		write_function(UPDATE_PERCENTAGES_FILE, f"execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}")
 
 	# Write the last part of the file
 	write_function(UPDATE_PERCENTAGES_FILE, "setblock 0 16 0 air")
@@ -71,7 +71,9 @@ def hidden_advancements() -> None:
 				"requirements": [["requirement"]],
 				"parent": f"switch:visible/{id}"
 			}
-			Mem.ctx.data["switch"].advancements[f"hidden_ends/{id}"] = Advancement(stp.super_json_dump(json_dict, max_level=1))
+			adv = Advancement(json_dict)
+			adv.encoder = lambda x: stp.super_json_dump(x, max_level=1)
+			Mem.ctx.data["switch"].advancements[f"hidden_ends/{id}"] = adv
 
 
 def visible_advancements() -> None:
@@ -98,5 +100,7 @@ def visible_advancements() -> None:
 			"rewards": {"function": f"switch:advancements/{category}"},
 			"parent": f"switch:visible/{adv['parent']}"
 		}
-		Mem.ctx.data["switch"].advancements[f"visible/{id}"] = Advancement(stp.super_json_dump(json_dict, max_level=2))
+		adv = Advancement(json_dict)
+		adv.encoder = lambda x: stp.super_json_dump(x, max_level=2)
+		Mem.ctx.data["switch"].advancements[f"visible/{id}"] = adv
 

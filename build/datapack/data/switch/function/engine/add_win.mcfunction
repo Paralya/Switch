@@ -31,8 +31,8 @@
 #			switch:modes/one_shot/process_end
 #			switch:modes/panic_chase/detect_end
 #			switch:modes/pillars_of_fortune/process_end
-#			switch:modes/pitchout/process_end
 #			switch:modes/pitch_creep/process_end
+#			switch:modes/pitchout/process_end
 #			switch:modes/protect_the_king/detect_end
 #			switch:modes/pvpswap/process_end
 #			switch:modes/replicate_the_build/process_end

@@ -57,7 +57,7 @@ team modify switch.temp.blue nametagVisibility hideForOtherTeams
 team modify switch.temp.red friendlyFire false
 team modify switch.temp.blue friendlyFire false
 scoreboard players set #next_role switch.data 0
-execute as @a[tag=!detached,sort=random] at @s run function switch:modes/capture_the_flag/roles/
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/capture_the_flag/roles/main
 
 scoreboard players set #remaining_time switch.data 910
 scoreboard players set #capture_the_flag_seconds switch.data -10

@@ -11,15 +11,44 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"uranium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"uranium_chestplate": true}
+									"smithed": {
+										"dict": {"armor": {"uranium": true,"chestplate": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"uranium_chestplate": true
+									}
 								},
 								"minecraft:max_damage": 528,
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},
-									{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"},
-									{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "switch:knockback_resistance.chest"},
-									{"type": "luck","amount": -0.25,"operation": "add_value","slot": "chest","id": "switch:luck.chest"}
+									{
+										"type": "armor",
+										"amount": 8,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "switch:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 3,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "switch:armor_toughness.chest"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "switch:knockback_resistance.chest"
+									},
+									{
+										"type": "luck",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "switch:luck.chest"
+									}
 								],
 								"minecraft:item_model": "switch:uranium_chestplate",
 								"minecraft:item_name": {
@@ -28,7 +57,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -38,4 +71,3 @@
 		}
 	]
 }
-

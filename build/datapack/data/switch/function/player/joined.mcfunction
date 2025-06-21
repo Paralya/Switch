@@ -28,7 +28,7 @@ execute if score #reconnect switch.data matches 0 run function switch:utils/rese
 scoreboard players operation @s switch.reconnect -= #score switch.reconnect
 execute if score @s[tag=!detached] switch.reconnect matches -600.. run function switch:player/make_join
 function switch:translations/player_joined
-execute unless score @s switch.reconnect matches -600.. run function switch:player/trigger/detach/
+execute unless score @s switch.reconnect matches -600.. run function switch:player/trigger/detach/main
 
 # Prevent calling this function again
 scoreboard players operation @s switch.reconnect = #score switch.reconnect

@@ -18,7 +18,6 @@ execute as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}] run functio
 #clear les crying obsidiennes des inventaires
 clear @a[tag=!detached] crying_obsidian
 
-
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
 execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 

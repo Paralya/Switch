@@ -1,7 +1,7 @@
 
 #> switch:engine/voting_time/tick
 #
-# @within	switch:engine/voting_time/ 1t
+# @within	switch:engine/voting_time/main 1t
 #			switch:engine/voting_time/tick 1t
 #
 
@@ -35,7 +35,7 @@ function switch:translations/engine_voting_time_tick
 execute if score #voting_timer switch.data matches 12 as @a[tag=!detached] run function switch:utils/black_transition
 execute if score #voting_timer switch.data matches 1 run scoreboard players remove @a[tag=!detached] switch.stats.deaths 1
 #execute if score #voting_timer switch.data matches 1 run kill @a[tag=!detached]
-execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/
+execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/main
 
 # Schedule next tick if timer hasn't expired
 execute if score #voting_timer switch.data matches 1.. run schedule function switch:engine/voting_time/tick 1t

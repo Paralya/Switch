@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"ruby": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"ruby_helmet": true}
+									"smithed": {
+										"dict": {"armor": {"ruby": true,"helmet": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"ruby_helmet": true
+									}
 								},
 								"minecraft:max_damage": 382,
 								"minecraft:equippable": {
@@ -20,8 +25,20 @@
 									"asset_id": "switch:ruby"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 3.5,"operation": "add_value","slot": "head","id": "switch:armor.head"},
-									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}
+									{
+										"type": "armor",
+										"amount": 3.5,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor_toughness.head"
+									}
 								],
 								"minecraft:item_model": "switch:ruby_helmet",
 								"minecraft:item_name": {
@@ -30,7 +47,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -40,4 +61,3 @@
 		}
 	]
 }
-

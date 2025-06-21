@@ -27,7 +27,6 @@ execute unless score #new_players switch.data matches 2.. if score #count switch
 
 
 
-
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","wyvern_towers","jn_sakura_pvpbox","luxium_spectres_remake"]}
@@ -39,7 +38,6 @@ execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_spectres_game_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
-
 
 scoreboard players set #remaining_time switch.data 901
 scoreboard players set #spectres_game_seconds switch.data -1
@@ -64,7 +62,7 @@ scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 scoreboard objectives add switch.games_not_being_spectre dummy
 function switch:modes/spectres_game/percentage/select_roles
-execute as @a[tag=!detached] run function switch:modes/spectres_game/roles/
+execute as @a[tag=!detached] run function switch:modes/spectres_game/roles/main
 
 # Si partie spectror game
 execute if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @r[team=switch.temp.visible] switch.temp.spectror 1

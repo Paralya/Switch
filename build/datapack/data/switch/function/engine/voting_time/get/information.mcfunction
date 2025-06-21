@@ -1,8 +1,8 @@
 
 #> switch:engine/voting_time/get/information
 #
-# @within	switch:engine/voting_time/
-#			switch:engine/voting_time/get/information
+# @within	switch:engine/voting_time/get/information
+#			switch:engine/voting_time/main
 #
 
 scoreboard players set #list_index switch.data 1

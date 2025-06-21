@@ -1,8 +1,8 @@
 
 #> switch:modes/kart_racer/checkpoints/respawn/hard
 #
-# @within	switch:modes/kart_racer/right_click
-#			switch:modes/kart_racer/checkpoints/forced_respawn
+# @within	switch:modes/kart_racer/checkpoints/forced_respawn
+#			switch:modes/kart_racer/right_click
 #
 
 tag @s add switch.temp

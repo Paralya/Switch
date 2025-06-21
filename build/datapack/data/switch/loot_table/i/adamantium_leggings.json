@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"adamantium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"adamantium_leggings": true}
+									"smithed": {
+										"dict": {"armor": {"adamantium": true,"leggings": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"adamantium_leggings": true
+									}
 								},
 								"minecraft:max_damage": 511,
 								"minecraft:equippable": {
@@ -20,9 +25,27 @@
 									"asset_id": "switch:adamantium"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 6.2,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},
-									{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},
-									{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "legs","id": "switch:knockback_resistance.legs"}
+									{
+										"type": "armor",
+										"amount": 6.2,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:armor.legs"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 3,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:armor_toughness.legs"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:knockback_resistance.legs"
+									}
 								],
 								"minecraft:item_model": "switch:adamantium_leggings",
 								"minecraft:item_name": {
@@ -31,7 +54,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -41,4 +68,3 @@
 		}
 	]
 }
-

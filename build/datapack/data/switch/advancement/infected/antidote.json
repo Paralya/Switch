@@ -1,23 +1,22 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:consume_item",
-			"conditions": {
-				"item": {
-					"predicates": {
-						"minecraft:custom_data": "{\"switch\":{\"antidote\":true}}"
-					}
-				}
-			}
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	],
-	"rewards": {
-		"function": "switch:modes/infected/advancements/antidote"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{\"switch\":{\"antidote\":true}}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "function": "switch:modes/infected/advancements/antidote"
+  }
 }
-

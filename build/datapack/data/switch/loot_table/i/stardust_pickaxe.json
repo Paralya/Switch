@@ -11,13 +11,30 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"tools": {"stardust": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"stardust_pickaxe": true}
+									"smithed": {
+										"dict": {"tools": {"stardust": true,"pickaxe": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"stardust_pickaxe": true
+									}
 								},
 								"minecraft:max_damage": 1812,
 								"minecraft:attribute_modifiers": [
-									{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},
-									{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}
+									{
+										"type": "attack_damage",
+										"amount": 4,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -2.8,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									}
 								],
 								"minecraft:item_model": "switch:stardust_pickaxe",
 								"minecraft:item_name": {
@@ -26,7 +43,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -36,4 +57,3 @@
 		}
 	]
 }
-

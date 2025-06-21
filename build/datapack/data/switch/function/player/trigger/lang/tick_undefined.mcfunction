@@ -6,7 +6,7 @@
 
 ## File attribut: Ignore translations
 
-execute if entity @s[tag=!detached] run function switch:player/trigger/detach/
+execute if entity @s[tag=!detached] run function switch:player/trigger/detach/main
 
 effect give @s blindness 5 255 true
 effect give @s darkness 5 255 true

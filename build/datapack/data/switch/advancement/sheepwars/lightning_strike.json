@@ -1,11 +1,10 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:lightning_strike"
-		}
-	},
-	"rewards": {
-		"function": "switch:modes/sheepwars/advancements/lightning_strike"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:lightning_strike"
+    }
+  },
+  "rewards": {
+    "function": "switch:modes/sheepwars/advancements/lightning_strike"
+  }
 }
-

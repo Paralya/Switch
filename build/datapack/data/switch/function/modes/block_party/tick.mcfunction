@@ -28,14 +28,12 @@ execute if score #block_party_ticks switch.data matches -100 summon marker run f
 # Give the block needed for everyone
 execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 0 run function switch:modes/block_party/core/give_block
 
-
 # Timer depending on rounds + stop sound
 execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 0.. run function switch:modes/block_party/core/timer_per_round
 execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 500.. as @e[tag=switch.paint_cow] at @s run function switch:modes/block_party/core/paint_cow
 execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 1000.. run stopsound @a[tag=!detached] record
 execute if score #remaining_players switch.data matches 2.. if score #block_party_ticks switch.data matches 1000.. unless score #process_end switch.data matches 1.. run function switch:modes/block_party/core/remove_blocks
 function switch:modes/block_party/xp_bar
-
 
 ## End game
 execute if score #remaining_players switch.data matches ..1 run function switch:modes/block_party/process_end

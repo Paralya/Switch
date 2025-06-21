@@ -12,4 +12,3 @@ give @s arrow 4
 
 function switch:modes/glassrunner/shop/reset_item
 
-

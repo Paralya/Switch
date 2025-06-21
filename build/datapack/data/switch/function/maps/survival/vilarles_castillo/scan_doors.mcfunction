@@ -61,7 +61,6 @@ execute if score #scan_vilarles_castillo switch.data matches 1 run scoreboard pl
 execute if score #scan_vilarles_castillo switch.data matches 1 run scoreboard players operation #curr_z_vilarles_castillo switch.data = #start_z_vilarles_castillo switch.data
 execute if score #scan_vilarles_castillo switch.data matches 1 run data modify storage switch:doors vilarles_castillo set value []
 
-
 execute if score #scan_vilarles_castillo switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_vilarles_castillo switch.data matches 30.. summon marker run function switch:maps/survival/vilarles_castillo/scan_doors_on_marker
 

@@ -1,9 +1,9 @@
 
 #> switch:modes/infected/secrets/ancienne_egypte/next_state
 #
-# @within	switch:modes/infected/secrets/ancienne_egypte/button_black
+# @within	switch:modes/infected/secrets/ancienne_egypte/_tick
+#			switch:modes/infected/secrets/ancienne_egypte/button_black
 #			switch:modes/infected/secrets/ancienne_egypte/button_red
-#			switch:modes/infected/secrets/ancienne_egypte/_tick
 #
 
 # Jukebox

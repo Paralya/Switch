@@ -1,7 +1,7 @@
 
 #> switch:translations/player_trigger_help_
 #
-# @within	switch:player/trigger/help/
+# @within	switch:player/trigger/help/main
 #
 
 # French

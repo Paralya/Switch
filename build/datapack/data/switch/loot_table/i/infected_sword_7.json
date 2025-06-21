@@ -15,14 +15,28 @@
 								"minecraft:item_name": "Topaz Sword",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
-									{"type": "attack_damage","slot": "mainhand","id": "base_attack_damage","amount": 4.35,"operation": "add_value"}
+									{
+										"type": "attack_damage",
+										"slot": "mainhand",
+										"id": "base_attack_damage",
+										"amount": 4.35,
+										"operation": "add_value"
+									}
 								],
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"switch": {"infected_sword_7": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"infected_sword_7": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -32,4 +46,3 @@
 		}
 	]
 }
-

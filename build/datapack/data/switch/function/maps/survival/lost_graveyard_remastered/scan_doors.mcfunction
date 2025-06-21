@@ -43,7 +43,6 @@ execute if score #scan_lost_graveyard_remastered switch.data matches 1 run score
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players operation #curr_z_lost_graveyard_remastered switch.data = #start_z_lost_graveyard_remastered switch.data
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run data modify storage switch:doors lost_graveyard_remastered set value []
 
-
 execute if score #scan_lost_graveyard_remastered switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_lost_graveyard_remastered switch.data matches 30.. summon marker run function switch:maps/survival/lost_graveyard_remastered/scan_doors_on_marker
 

@@ -31,7 +31,6 @@ execute if score #scan_overgrown_forest switch.data matches 1 run scoreboard pla
 execute if score #scan_overgrown_forest switch.data matches 1 run scoreboard players operation #curr_z_overgrown_forest switch.data = #start_z_overgrown_forest switch.data
 execute if score #scan_overgrown_forest switch.data matches 1 run data modify storage switch:doors overgrown_forest set value []
 
-
 execute if score #scan_overgrown_forest switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_overgrown_forest switch.data matches 30.. summon marker run function switch:maps/survival/overgrown_forest/scan_doors_on_marker
 

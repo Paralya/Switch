@@ -6,7 +6,6 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_glassrunner_y switch.data
 
-
 execute at @s in switch:game run particle cloud 2753 ~1 3000 3 0 125 0 4 force
 execute at @s in switch:game run fill 2750 ~ 2750 2756 ~ 3250 air replace #switch:glassrunner/glass
 

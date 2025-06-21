@@ -1,18 +1,17 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:using_item",
-			"conditions": {
-				"item": {
-					"predicates": {
-						"minecraft:custom_data": "{switch:{ctf_class:true}}"
-					}
-				}
-			}
-		}
-	},
-	"rewards": {
-		"function": "switch:modes/capture_the_flag/right_click"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{switch:{ctf_class:true}}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "switch:modes/capture_the_flag/right_click"
+  }
 }
-

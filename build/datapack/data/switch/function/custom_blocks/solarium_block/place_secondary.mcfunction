@@ -16,7 +16,6 @@ tag @s add switch.vanilla.minecraft_orange_concrete
 # Add a custom name
 data merge entity @s {"CustomName": {"text": "Solarium Block","italic": false,"color": "white"}}
 
-
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="switch:solarium_block"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]

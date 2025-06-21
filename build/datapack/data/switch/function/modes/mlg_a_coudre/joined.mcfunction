@@ -4,7 +4,6 @@
 # @within	switch:modes/mlg_a_coudre/calls/joined
 #
 
-
 # Reset attributes (like safe_fall_distance)
 function switch:utils/reset_attributes
 

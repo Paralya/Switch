@@ -31,7 +31,6 @@ execute if score #scan_snk_lab_s9 switch.data matches 1 run scoreboard players o
 execute if score #scan_snk_lab_s9 switch.data matches 1 run scoreboard players operation #curr_z_snk_lab_s9 switch.data = #start_z_snk_lab_s9 switch.data
 execute if score #scan_snk_lab_s9 switch.data matches 1 run data modify storage switch:doors snk_lab_s9 set value []
 
-
 execute if score #scan_snk_lab_s9 switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_snk_lab_s9 switch.data matches 30.. summon marker run function switch:maps/survival/snk_lab_s9/scan_doors_on_marker
 

@@ -1,8 +1,8 @@
 
 #> switch:modes/murder_mystery/throw/throw
 #
-# @within	switch:modes/murder_mystery/tick
-#			switch:modes/murder_mystery/throw/player_tick
+# @within	switch:modes/murder_mystery/throw/player_tick
+#			switch:modes/murder_mystery/tick
 #
 
 # Clear slowness

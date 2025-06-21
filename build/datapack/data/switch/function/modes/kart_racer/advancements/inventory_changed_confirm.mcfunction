@@ -1,8 +1,8 @@
 
 #> switch:modes/kart_racer/advancements/inventory_changed_confirm
 #
-# @within	switch:modes/kart_racer/give_items
-#			switch:modes/kart_racer/advancements/inventory_changed
+# @within	switch:modes/kart_racer/advancements/inventory_changed
+#			switch:modes/kart_racer/give_items
 #
 
 data modify storage switch:main Inventory set from entity @s Inventory

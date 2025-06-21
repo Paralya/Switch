@@ -21,5 +21,5 @@ execute if score #detect_end switch.data matches 0 if score #remaining_time swit
 execute if score #detect_end switch.data matches 0 unless entity @a[scores={switch.alive=1}] run scoreboard players set #detect_end switch.data 1
 
 ## Classement
-function switch:modes/kart_racer/classement/
+function switch:modes/kart_racer/classement/main
 

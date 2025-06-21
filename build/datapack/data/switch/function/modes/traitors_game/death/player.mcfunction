@@ -17,7 +17,6 @@ tag @s[scores={switch.alive=0}] add switch.to_tp
 gamemode spectator @s[scores={switch.alive=0}]
 effect clear @s[scores={switch.alive=0}]
 
-
 # Second life management for Ninja role
 function switch:translations/modes_traitors_game_death_player
 attribute @s[scores={switch.alive=1..,switch.temp.role=4}] max_health base set 10.0

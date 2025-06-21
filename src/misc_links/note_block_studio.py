@@ -15,7 +15,7 @@ LIB_TO_WRITE: str = "datapack/switch_music.zip"
 
 # Main function
 def main() -> None:
-	lib_file = f"{Mem.ctx.stewbeet.libs_folder}/{LIB_TO_WRITE}"
+	lib_file = f"{Mem.ctx.meta.stewbeet.libs_folder}/{LIB_TO_WRITE}"
 
 	# Cache the zip file
 	if os.path.exists(lib_file):

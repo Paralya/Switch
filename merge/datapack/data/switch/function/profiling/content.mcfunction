@@ -33,5 +33,5 @@
 
 ## Tests des fonctions random
 # scoreboard players set #modulo_rand switch.data 9
-# function switch:utils/get_random/
+# function switch:utils/get_random/main
 

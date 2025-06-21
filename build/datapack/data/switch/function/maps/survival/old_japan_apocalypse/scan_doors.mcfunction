@@ -34,7 +34,6 @@ execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players operation #curr_z_old_japan_apocalypse switch.data = #start_z_old_japan_apocalypse switch.data
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run data modify storage switch:doors old_japan_apocalypse set value []
 
-
 execute if score #scan_old_japan_apocalypse switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_old_japan_apocalypse switch.data matches 30.. summon marker run function switch:maps/survival/old_japan_apocalypse/scan_doors_on_marker
 

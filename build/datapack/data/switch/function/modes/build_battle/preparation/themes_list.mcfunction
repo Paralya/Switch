@@ -1,7 +1,7 @@
 
 #> switch:modes/build_battle/preparation/themes_list
 #
-# @within	switch:modes/build_battle/preparation/
+# @within	switch:modes/build_battle/preparation/main
 #
 
 function switch:translations/modes_build_battle_preparation_themes_list

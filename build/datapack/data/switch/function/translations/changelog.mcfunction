@@ -1,7 +1,7 @@
 
 #> switch:translations/changelog
 #
-# @within	switch:player/trigger/changelog/
+# @within	switch:player/trigger/changelog/main
 #
 
 # French

@@ -1,6 +1,13 @@
 {
-	"criteria": {"requirement": {"trigger": "minecraft:tick"}},
-	"requirements": [["requirement"]],
-	"parent": "switch:visible/jump_blue"
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "switch:visible/jump_blue"
 }
-

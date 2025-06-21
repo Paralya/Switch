@@ -1,22 +1,21 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:player_hurt_entity",
-			"conditions": {
-				"player": {
-					"equipment": {
-						"mainhand": {
-							"items": [
-								"bow"
-							]
-						}
-					}
-				}
-			}
-		}
-	},
-	"rewards": {
-		"function": "switch:modes/gay_shooter/shot_player"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "bow"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "switch:modes/gay_shooter/shot_player"
+  }
 }
-

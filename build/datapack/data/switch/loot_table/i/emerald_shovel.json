@@ -11,14 +11,37 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"tools": {"emerald": true,"shovel": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"emerald_shovel": true}
+									"smithed": {
+										"dict": {"tools": {"emerald": true,"shovel": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"emerald_shovel": true
+									}
 								},
 								"minecraft:max_damage": 736,
 								"minecraft:attribute_modifiers": [
-									{"type": "attack_damage","amount": 4.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},
-									{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},
-									{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}
+									{
+										"type": "attack_damage",
+										"amount": 4.5,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -3.0,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "luck",
+										"amount": 0.25,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "switch:luck.mainhand"
+									}
 								],
 								"minecraft:item_model": "switch:emerald_shovel",
 								"minecraft:item_name": {
@@ -27,7 +50,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -37,4 +64,3 @@
 		}
 	]
 }
-

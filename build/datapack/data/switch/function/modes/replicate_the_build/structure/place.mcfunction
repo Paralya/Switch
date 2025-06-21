@@ -6,7 +6,6 @@
 #			switch:modes/replicate_the_build/round/5_end
 #
 
-
 execute if score #random switch.data matches 0 run place template switch:replicate_the_build/full_blue
 execute if score #random switch.data matches 1 run place template switch:replicate_the_build/beacon
 execute if score #random switch.data matches 2 run place template switch:replicate_the_build/beacon2

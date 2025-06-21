@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Constants
-LOAD_FILE: str = "switch:advancements/_load.mcfunction"
+LOAD_FILE: str = "switch:advancements/_load"
 UPDATE_PERCENTAGES_FILE: str = "switch:advancements/update_percentages"
 CHALLENGES: list[str] = ["50", "51", "52", "53", "54", "jump_obsidian"]
 CATEGORIES_COLOR: dict[str, str] = {

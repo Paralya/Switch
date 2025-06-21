@@ -1,7 +1,7 @@
 
 #> switch:engine/voting_time/update_votes
 #
-# @within	switch:engine/launch_game/
+# @within	switch:engine/launch_game/main
 #			switch:engine/voting_time/tick
 #
 

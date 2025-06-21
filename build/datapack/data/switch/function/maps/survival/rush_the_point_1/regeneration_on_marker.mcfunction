@@ -6,7 +6,6 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_rush_the_point_1_y switch.data
 
-
 execute at @s in switch:game run particle cloud 13908 ~1 14000 7 0 49 0 18 force
 execute at @s in switch:game run fill 13901 ~ 13901 13915 ~ 14099 air replace #switch:rush_the_point/can_break
 

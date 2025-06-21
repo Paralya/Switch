@@ -3,7 +3,7 @@
 execute store result score #nb_attached switch.data if entity @a[tag=!detached]
 execute if score #nb_attached switch.data >= #min_required switch.data run scoreboard players set #engine_state switch.data 1
 execute if score #nb_attached switch.data >= #min_required switch.data run gamerule sendCommandFeedback false
-execute if score #nb_attached switch.data >= #min_required switch.data run function switch:engine/voting_time/
+execute if score #nb_attached switch.data >= #min_required switch.data run function switch:engine/voting_time/main
 
 # Else,
 execute unless score #nb_attached switch.data >= #min_required switch.data run gamerule sendCommandFeedback true

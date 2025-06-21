@@ -2,8 +2,8 @@
 #> switch:modes/glassrunner/death/death
 #
 # @within	switch:modes/glassrunner/joined
-#			switch:modes/glassrunner/start
 #			switch:modes/glassrunner/start/team
+#			switch:modes/glassrunner/start
 #
 
 clear @s snowball

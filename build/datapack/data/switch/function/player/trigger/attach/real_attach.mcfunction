@@ -1,7 +1,7 @@
 
 #> switch:player/trigger/attach/real_attach
 #
-# @within	switch:player/trigger/attach/
+# @within	switch:player/trigger/attach/main
 #
 
 execute unless entity @s[team=switch.tutorial] run tag @s remove detached

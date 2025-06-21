@@ -25,7 +25,6 @@ execute if score #scan_laser_game switch.data matches 1 run scoreboard players o
 execute if score #scan_laser_game switch.data matches 1 run scoreboard players operation #curr_z_laser_game switch.data = #start_z_laser_game switch.data
 execute if score #scan_laser_game switch.data matches 1 run data modify storage switch:doors laser_game set value []
 
-
 execute if score #scan_laser_game switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_laser_game switch.data matches 30.. summon marker run function switch:maps/survival/laser_game/scan_doors_on_marker
 

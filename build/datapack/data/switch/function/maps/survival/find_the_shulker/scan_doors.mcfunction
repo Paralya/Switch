@@ -31,7 +31,6 @@ execute if score #scan_find_the_shulker switch.data matches 1 run scoreboard pla
 execute if score #scan_find_the_shulker switch.data matches 1 run scoreboard players operation #curr_z_find_the_shulker switch.data = #start_z_find_the_shulker switch.data
 execute if score #scan_find_the_shulker switch.data matches 1 run data modify storage switch:doors find_the_shulker set value []
 
-
 execute if score #scan_find_the_shulker switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_find_the_shulker switch.data matches 30.. summon marker run function switch:maps/survival/find_the_shulker/scan_doors_on_marker
 

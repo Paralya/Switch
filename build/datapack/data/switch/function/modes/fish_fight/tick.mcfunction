@@ -21,15 +21,12 @@ function switch:utils/on_death_run_function {function:"switch:modes/fish_fight/d
 execute if data storage switch:main {map:"airdox_fish_fight"} as @e[type=axolotl] at @s if entity @s[y=20,dy=105] run function switch:modes/fish_fight/tp_airdox
 execute if data storage switch:main {map:"airdox_fish_fight"} as @e[type=ender_pearl] at @s if entity @s[y=20,dy=105] run kill @s
 
-
 execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival] at @s if entity @s[y=20,dy=105] run scoreboard players add @s switch.temp.deathCooldown 1
 
 execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival,scores={switch.temp.deathCooldown=60..}] run function switch:modes/fish_fight/death
 
-
 execute as @a[scores={switch.alive=1..},predicate=switch:in_water,sort=random] run function switch:modes/fish_fight/death
 execute as @e[type=axolotl,predicate=switch:in_water] run function switch:maps/spread_one_player
-
 
 # Détection si un joueur tue un axolotl
 execute as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}] run function switch:modes/fish_fight/axobonus

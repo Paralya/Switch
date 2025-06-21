@@ -22,11 +22,19 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"switch": {"banana": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"banana": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -36,4 +44,3 @@
 		}
 	]
 }
-

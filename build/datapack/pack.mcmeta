@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 71,
+		"pack_format": 80,
 		"description": "Switch [2.0.0] by Stoupy51"
 	},
 	"id": "switch",
@@ -8,4 +8,3 @@
 		"block": [{"namespace": "minecraft","path": "advancement"},{"namespace": "grappling_hook","path": "advancement/.*first_guide.*"}]
 	}
 }
-

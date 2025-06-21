@@ -25,7 +25,6 @@ execute if score #scan_shoot_da_sheep switch.data matches 1 run scoreboard playe
 execute if score #scan_shoot_da_sheep switch.data matches 1 run scoreboard players operation #curr_z_shoot_da_sheep switch.data = #start_z_shoot_da_sheep switch.data
 execute if score #scan_shoot_da_sheep switch.data matches 1 run data modify storage switch:doors shoot_da_sheep set value []
 
-
 execute if score #scan_shoot_da_sheep switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_shoot_da_sheep switch.data matches 30.. summon marker run function switch:maps/survival/shoot_da_sheep/scan_doors_on_marker
 

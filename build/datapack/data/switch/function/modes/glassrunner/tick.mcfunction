@@ -8,7 +8,6 @@ scoreboard players add #glassrunner_ticks switch.data 1
 
 function switch:utils/on_death_run_function {function:"switch:modes/glassrunner/death/death"}
 
-
 execute if score #glassrunner.apocalypse switch.data matches 1 run function switch:modes/glassrunner/apocalypse/start
 execute if score #glassrunner.apocalypse switch.data matches 1.. run scoreboard players add #glassrunner.apocalypse switch.data 1
 execute if score #glassrunner.apocalypse switch.data matches 5 run function switch:modes/glassrunner/apocalypse/tick
@@ -19,7 +18,6 @@ execute if score #glassrunner.apocalypse switch.data matches 25 run function swi
 execute if score #glassrunner.apocalypse switch.data matches 30 run function switch:modes/glassrunner/apocalypse/tick
 
 execute if score #glassrunner.apocalypse switch.data matches 30.. run function switch:modes/glassrunner/apocalypse/end
-
 
 
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/tick_player
@@ -38,7 +36,6 @@ fill 2924 131 3076 2926 128 3074 air replace #switch:glassrunner/glass
 
 execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=15..}] at @s run function switch:modes/glassrunner/fireball/use
 execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/glassrunner/fireball/explosion
-
 
 execute as @e[tag=switch.glassrunner.money_maker] at @s run function switch:modes/glassrunner/money_maker/tick
 execute as @a[scores={switch.glassrunner.money_maker=60..}] run function switch:modes/glassrunner/money_maker/add_money

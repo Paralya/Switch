@@ -18,5 +18,5 @@ execute unless score @s switch.checkpoint matches 0 at @s run playsound entity.p
 execute if score @s switch.checkpoint matches 0 if score @s switch.lap > #total_laps switch.data run function switch:modes/kart_racer/complete
 
 # Checkpoint remember
-function switch:modes/kart_racer/checkpoints/remember/
+function switch:modes/kart_racer/checkpoints/remember/main
 

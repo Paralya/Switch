@@ -418,6 +418,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:black_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:black_shulker_box"
 				},
 				{
@@ -507,7 +511,15 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:blue_egg"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:blue_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:blue_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -665,7 +677,15 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:brown_egg"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:brown_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:brown_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -729,7 +749,15 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:bush"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:cactus"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cactus_flower"
 				},
 				{
 					"type": "minecraft:item",
@@ -933,6 +961,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:chiseled_resin_bricks"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:chiseled_sandstone"
 				},
 				{
@@ -970,6 +1002,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:clock"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:closed_eyeblossom"
 				},
 				{
 					"type": "minecraft:item",
@@ -1322,6 +1358,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:cyan_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cyan_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -1691,6 +1731,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:dried_ghast"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:dried_kelp"
 				},
 				{
@@ -1901,6 +1945,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:fire_coral_fan"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:firefly_bush"
 				},
 				{
 					"type": "minecraft:item",
@@ -2176,6 +2224,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:gray_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:gray_shulker_box"
 				},
 				{
@@ -2232,6 +2284,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:green_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:green_shulker_box"
 				},
 				{
@@ -2274,6 +2330,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:hanging_roots"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:happy_ghast_spawn_egg"
 				},
 				{
 					"type": "minecraft:item",
@@ -2597,6 +2657,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:leaf_litter"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:leather"
 				},
 				{
@@ -2669,6 +2733,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:light_blue_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:light_blue_shulker_box"
 				},
 				{
@@ -2722,6 +2790,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:light_gray_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_gray_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -2801,6 +2873,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:lime_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:lime_shulker_box"
 				},
 				{
@@ -2875,6 +2951,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:magenta_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:magenta_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -3173,6 +3253,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:music_disc_tears"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:music_disc_wait"
 				},
 				{
@@ -3398,6 +3482,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:open_eyeblossom"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:orange_banner"
 				},
 				{
@@ -3431,6 +3519,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:orange_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:orange_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -3686,6 +3778,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:pink_glazed_terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pink_harness"
 				},
 				{
 					"type": "minecraft:item",
@@ -3995,6 +4091,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:purple_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:purple_shulker_box"
 				},
 				{
@@ -4153,6 +4253,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:red_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:red_mushroom"
 				},
 				{
@@ -4250,6 +4354,34 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:repeating_command_block"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_block"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_brick"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_brick_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_brick_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_brick_wall"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_bricks"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:resin_clump"
 				},
 				{
 					"type": "minecraft:item",
@@ -4376,6 +4508,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:shield"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:short_dry_grass"
 				},
 				{
 					"type": "minecraft:item",
@@ -4891,6 +5027,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:tall_dry_grass"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:tall_grass"
 				},
 				{
@@ -4900,6 +5040,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:terracotta"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:test_block"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:test_instance_block"
 				},
 				{
 					"type": "minecraft:item",
@@ -5399,6 +5547,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:white_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:white_shulker_box"
 				},
 				{
@@ -5424,6 +5576,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:wild_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:wildflowers"
 				},
 				{
 					"type": "minecraft:item",
@@ -5525,6 +5681,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:yellow_harness"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:yellow_shulker_box"
 				},
 				{
@@ -5576,4 +5736,3 @@
 		}
 	]
 }
-

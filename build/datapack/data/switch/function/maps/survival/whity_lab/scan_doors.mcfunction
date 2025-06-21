@@ -34,7 +34,6 @@ execute if score #scan_whity_lab switch.data matches 1 run scoreboard players op
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players operation #curr_z_whity_lab switch.data = #start_z_whity_lab switch.data
 execute if score #scan_whity_lab switch.data matches 1 run data modify storage switch:doors whity_lab set value []
 
-
 execute if score #scan_whity_lab switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_whity_lab switch.data matches 30.. summon marker run function switch:maps/survival/whity_lab/scan_doors_on_marker
 

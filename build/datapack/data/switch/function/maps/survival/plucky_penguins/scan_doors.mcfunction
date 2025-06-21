@@ -25,7 +25,6 @@ execute if score #scan_plucky_penguins switch.data matches 1 run scoreboard play
 execute if score #scan_plucky_penguins switch.data matches 1 run scoreboard players operation #curr_z_plucky_penguins switch.data = #start_z_plucky_penguins switch.data
 execute if score #scan_plucky_penguins switch.data matches 1 run data modify storage switch:doors plucky_penguins set value []
 
-
 execute if score #scan_plucky_penguins switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_plucky_penguins switch.data matches 30.. summon marker run function switch:maps/survival/plucky_penguins/scan_doors_on_marker
 

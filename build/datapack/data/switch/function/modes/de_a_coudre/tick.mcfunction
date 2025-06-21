@@ -17,7 +17,6 @@ execute if score #remaining_time switch.data matches -120.. run scoreboard playe
 execute if score #remaining_time switch.data matches 0 as @a[tag=!detached,gamemode=adventure] at @s if entity @s[y=190,dy=100] run kill @s
 execute if score #remaining_time switch.data matches -120 run kill @a[tag=!detached,gamemode=adventure]
 
-
 ## End game
 execute if score #detect_end switch.data matches 0 if score #rounds switch.data matches 0 run scoreboard players set #detect_end switch.data 1
 execute if score #detect_end switch.data matches 0 if score #de_a_coudre_seconds switch.data matches 1200.. run scoreboard players set #detect_end switch.data 2

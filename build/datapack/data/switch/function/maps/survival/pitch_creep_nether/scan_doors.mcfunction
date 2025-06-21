@@ -25,7 +25,6 @@ execute if score #scan_pitch_creep_nether switch.data matches 1 run scoreboard p
 execute if score #scan_pitch_creep_nether switch.data matches 1 run scoreboard players operation #curr_z_pitch_creep_nether switch.data = #start_z_pitch_creep_nether switch.data
 execute if score #scan_pitch_creep_nether switch.data matches 1 run data modify storage switch:doors pitch_creep_nether set value []
 
-
 execute if score #scan_pitch_creep_nether switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_pitch_creep_nether switch.data matches 30.. summon marker run function switch:maps/survival/pitch_creep_nether/scan_doors_on_marker
 

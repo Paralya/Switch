@@ -43,7 +43,6 @@ execute if score #scan_stardust_boss_zone_nether switch.data matches 1 run score
 execute if score #scan_stardust_boss_zone_nether switch.data matches 1 run scoreboard players operation #curr_z_stardust_boss_zone_nether switch.data = #start_z_stardust_boss_zone_nether switch.data
 execute if score #scan_stardust_boss_zone_nether switch.data matches 1 run data modify storage switch:doors stardust_boss_zone_nether set value []
 
-
 execute if score #scan_stardust_boss_zone_nether switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_stardust_boss_zone_nether switch.data matches 30.. summon marker run function switch:maps/survival/stardust_boss_zone_nether/scan_doors_on_marker
 

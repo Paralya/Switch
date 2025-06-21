@@ -10,7 +10,6 @@
 #    print('scoreboard players set #'+str(min)+' switch.data '+str(min))
 #    min += 1
 
-
 scoreboard players set #negative_max switch.data -2147483648
 scoreboard players set #-2147483648 switch.data -2147483648
 scoreboard players set #-1000000000 switch.data -1000000000

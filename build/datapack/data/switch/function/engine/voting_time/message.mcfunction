@@ -1,7 +1,7 @@
 
 #> switch:engine/voting_time/message
 #
-# @within	switch:engine/voting_time/
+# @within	switch:engine/voting_time/main
 #			switch:engine/voting_time/player_join
 #			switch:engine/voting_time/tick
 #			switch:player/tutorial/second

@@ -1,8 +1,8 @@
 
 #> switch:modes/infected/death/launch_infection
 #
-# @within	switch:modes/infected/second_selector
-#			switch:modes/infected/advancements/entity_hurt_player/is_zombie_attacker
+# @within	switch:modes/infected/advancements/entity_hurt_player/is_zombie_attacker
+#			switch:modes/infected/second_selector
 #
 
 function switch:modes/infected/death/infection_second

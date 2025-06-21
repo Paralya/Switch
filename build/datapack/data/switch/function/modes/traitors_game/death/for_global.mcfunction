@@ -1,8 +1,8 @@
 
 #> switch:modes/traitors_game/death/for_global
 #
-# @within	switch:modes/traitors_game/detect_end
-#			switch:modes/traitors_game/death/process
+# @within	switch:modes/traitors_game/death/process
+#			switch:modes/traitors_game/detect_end
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

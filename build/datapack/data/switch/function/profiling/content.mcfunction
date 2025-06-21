@@ -25,7 +25,6 @@
 
 
 
-
 ## Tests de la commande 'execute store result score' avec if items et clear, meilleur méthode avec if items
 # execute store result score #count switch.data if items entity @s container.* oak_planks		1.931 ms (best)
 # execute store result score #count switch.data run clear @s oak_planks 0						5.639 ms
@@ -38,5 +37,5 @@
 
 ## Tests des fonctions random
 # scoreboard players set #modulo_rand switch.data 9
-# function switch:utils/get_random/
+# function switch:utils/get_random/main
 

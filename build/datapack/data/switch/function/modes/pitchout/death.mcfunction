@@ -19,4 +19,3 @@ execute unless score @s switch.alive matches 1.. at @n[type=marker,tag=switch.se
 execute unless score @s switch.alive matches 1.. run effect clear @s
 execute unless score @s switch.alive matches 1.. run clear @s
 
-

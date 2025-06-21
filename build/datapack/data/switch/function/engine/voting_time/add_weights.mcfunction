@@ -1,8 +1,8 @@
 
 #> switch:engine/voting_time/add_weights
 #
-# @within	switch:engine/voting_time/ with storage switch:temp copy[0]
-#			switch:engine/voting_time/add_weights with storage switch:temp copy[0]
+# @within	switch:engine/voting_time/add_weights with storage switch:temp copy[0]
+#			switch:engine/voting_time/main with storage switch:temp copy[0]
 #
 
 # Add time_since_last_play to the weights

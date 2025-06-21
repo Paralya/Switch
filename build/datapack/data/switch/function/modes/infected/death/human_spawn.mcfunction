@@ -39,7 +39,6 @@ execute if score @s switch.infected.armor matches 8 run loot replace entity @s a
 execute if score @s switch.infected.armor matches 9 run loot replace entity @s armor.chest loot switch:i/infected_armor_9
 execute if score @s switch.infected.armor matches 10 run loot replace entity @s armor.chest loot switch:i/infected_armor_10
 
-
 # Playsound
 execute at @s run playsound entity.ender_dragon.growl ambient @s
 effect give @s blindness 3 0 true

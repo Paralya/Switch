@@ -13,4 +13,3 @@ execute unless data entity @s {HurtTime:0s} store result score #color switch.dat
 execute unless data entity @s {HurtTime:0s} on attacker run function switch:modes/shoot_da_sheep/reward
 execute unless data entity @s {HurtTime:0s} run function switch:utils/safe_kill
 
-

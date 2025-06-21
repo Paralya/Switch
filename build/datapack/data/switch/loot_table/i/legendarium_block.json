@@ -17,17 +17,30 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"switch": {"legendarium_block": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"legendarium_block": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								},
 								"minecraft:container": [
-									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:legendarium_block","from": "switch"}}}}}}
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:legendarium_block","from": "switch"}}}}}
+									}
 								],
 								"minecraft:tooltip_display": {
-									"hidden_components": ["minecraft:container"]
+									"hidden_components": [
+										"minecraft:container"
+									]
 								}
 							}
 						}
@@ -37,4 +50,3 @@
 		}
 	]
 }
-

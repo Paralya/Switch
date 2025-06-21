@@ -1,7 +1,7 @@
 
 #> switch:modes/kart_racer/checkpoints/remember/get_from_kart
 #
-# @within	switch:modes/kart_racer/checkpoints/remember/
+# @within	switch:modes/kart_racer/checkpoints/remember/main
 #
 
 function switch:modes/kart_racer/blocks/reset_checkpoint

@@ -26,7 +26,6 @@ scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/death
 
-
 execute in switch:game run gamerule showDeathMessages false
 execute in switch:game run gamerule keepInventory true
 
@@ -64,7 +63,6 @@ team join switch.glassrunner.p_blue §P§B§r
 
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0
-
 
 
 execute in switch:game run summon text_display 3000 110 3000 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}

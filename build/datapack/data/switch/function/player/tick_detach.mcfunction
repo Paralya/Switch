@@ -60,7 +60,6 @@ tag @s remove switch.lobby_respawn
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 13 run function switch:player/setup_lobby_inventory
 
-
 ## Jumps advancements
 advancement grant @s[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_green
 advancement grant @s[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_white

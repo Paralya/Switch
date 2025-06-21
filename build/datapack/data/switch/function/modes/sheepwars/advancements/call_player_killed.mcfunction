@@ -2,13 +2,11 @@
 #> switch:modes/sheepwars/advancements/call_player_killed
 #
 # @within	#sheepwars:signals/player_killed
+#			#sheepwars:signals/player_killed
 #
-
-#> switch:modes/sheepwars/advancements/call_player_killed
-#
-# @within			#sheepwars:signals/player_killed
 # @executed			as a player
 #
+
 # @input victim		The player who has been damaged (executing the function tag)
 # @input damager	The owner of the sheep who killed the victim (tagged with "sheepwars.owner")
 #

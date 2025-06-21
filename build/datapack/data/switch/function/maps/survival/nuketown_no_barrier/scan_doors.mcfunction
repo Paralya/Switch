@@ -67,7 +67,6 @@ execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard 
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players operation #curr_z_nuketown_no_barrier switch.data = #start_z_nuketown_no_barrier switch.data
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run data modify storage switch:doors nuketown_no_barrier set value []
 
-
 execute if score #scan_nuketown_no_barrier switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_nuketown_no_barrier switch.data matches 30.. summon marker run function switch:maps/survival/nuketown_no_barrier/scan_doors_on_marker
 

@@ -1,7 +1,7 @@
 
 #> switch:music/actions/previous
 #
-# @within	switch:player/trigger/music/
+# @within	switch:player/trigger/music/main
 #
 
 # Go previous song if not playing or if playing and less than 5 seconds

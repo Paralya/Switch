@@ -13,7 +13,6 @@ execute store result score #votes_max switch.data if entity @a[tag=!detached,gam
 scoreboard players operation #votes_max switch.data /= #2 switch.data
 scoreboard players add #votes_max switch.data 1
 
-
 execute if score #votes switch.data >= #votes_max switch.data run scoreboard players set @a[tag=!detached] switch.temp.vote_collisions 1
 function switch:translations/modes_kart_racer_vote_for_collisions
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.kart collisionRule always
@@ -28,5 +27,4 @@ execute if score #votes switch.data >= #votes_max switch.data run team modify sw
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.9 collisionRule always
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.10 collisionRule always
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.10+ collisionRule always
-
 

@@ -22,7 +22,6 @@ effect give @a[tag=!detached,scores={switch.temp.sneak=200..}] glowing 1 0 true
 scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=200..}] switch.temp.sneak 200
 scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=..0}] switch.temp.sneak 0
 
-
 ## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]

@@ -1651,7 +1651,6 @@ execute if score #scan_flamingosaurus_mariokart switch.data matches 1 run scoreb
 execute if score #scan_flamingosaurus_mariokart switch.data matches 1 run scoreboard players operation #curr_z_flamingosaurus_mariokart switch.data = #start_z_flamingosaurus_mariokart switch.data
 execute if score #scan_flamingosaurus_mariokart switch.data matches 1 run data modify storage switch:doors flamingosaurus_mariokart set value []
 
-
 execute if score #scan_flamingosaurus_mariokart switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_flamingosaurus_mariokart switch.data matches 30.. summon marker run function switch:maps/survival/flamingosaurus_mariokart/scan_doors_on_marker
 

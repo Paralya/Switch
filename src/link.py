@@ -15,6 +15,7 @@ from .survival_maps.main import main as generate_survival_maps
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 @stp.handle_error
+@stp.measure_time(stp.debug, message="Execution time of 'src.link'")
 def beet_default(ctx: Context) -> None:
 	if Mem.ctx is None:
 		Mem.ctx = ctx

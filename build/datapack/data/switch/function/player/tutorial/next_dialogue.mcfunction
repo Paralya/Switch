@@ -1,7 +1,7 @@
 
 #> switch:player/tutorial/next_dialogue
 #
-# @within	switch:player/trigger/
+# @within	switch:player/trigger/main
 #
 
 scoreboard players add @s[team=switch.tutorial] switch.tutorial 1

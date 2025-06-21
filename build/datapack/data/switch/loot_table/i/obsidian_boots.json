@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"obsidian": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"obsidian_boots": true}
+									"smithed": {
+										"dict": {"armor": {"obsidian": true,"boots": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"obsidian_boots": true
+									}
 								},
 								"minecraft:max_damage": 1072,
 								"minecraft:equippable": {
@@ -20,8 +25,20 @@
 									"asset_id": "switch:obsidian"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},
-									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}
+									{
+										"type": "armor",
+										"amount": 3,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "switch:armor.feet"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "switch:armor_toughness.feet"
+									}
 								],
 								"minecraft:item_model": "switch:obsidian_boots",
 								"minecraft:item_name": {
@@ -30,7 +47,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -40,4 +61,3 @@
 		}
 	]
 }
-

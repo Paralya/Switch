@@ -1,8 +1,8 @@
 
 #> switch:player/tutorial/second
 #
-# @within	switch:second
-#			switch:player/tutorial/next_dialogue
+# @within	switch:player/tutorial/next_dialogue
+#			switch:second
 #
 
 ## Objectives:
@@ -40,7 +40,7 @@ execute if score @s switch.tutorial matches 4 run function switch:shop/pitchout
 
 # Sixth dialog
 execute if score @s switch.tutorial matches 6 run scoreboard players set @s switch.trigger.help 1
-execute if score @s switch.tutorial matches 6 run function switch:player/trigger/help/
+execute if score @s switch.tutorial matches 6 run function switch:player/trigger/help/main
 
 # Go next dialog
 function switch:translations/player_tutorial_second

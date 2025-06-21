@@ -1,18 +1,17 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:using_item",
-			"conditions": {
-				"item": {
-					"predicates": {
-						"minecraft:custom_data": "{switch:{murder_knife:true}}"
-					}
-				}
-			}
-		}
-	},
-	"rewards": {
-		"function": "switch:modes/murder_mystery/throw/advancement"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{switch:{murder_knife:true}}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "switch:modes/murder_mystery/throw/advancement"
+  }
 }
-

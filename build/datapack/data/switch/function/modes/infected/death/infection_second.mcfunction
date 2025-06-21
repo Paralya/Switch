@@ -1,8 +1,8 @@
 
 #> switch:modes/infected/death/infection_second
 #
-# @within	switch:modes/infected/second
-#			switch:modes/infected/death/launch_infection
+# @within	switch:modes/infected/death/launch_infection
+#			switch:modes/infected/second
 #
 
 damage @s 0.00001

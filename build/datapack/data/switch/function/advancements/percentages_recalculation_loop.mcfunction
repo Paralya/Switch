@@ -1,8 +1,8 @@
 
 #> switch:advancements/percentages_recalculation_loop
 #
-# @within	switch:advancements/percentages_recalculations
-#			switch:advancements/percentages_recalculation_loop
+# @within	switch:advancements/percentages_recalculation_loop
+#			switch:advancements/percentages_recalculations
 #
 
 ## Calculation

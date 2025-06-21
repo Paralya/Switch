@@ -25,7 +25,6 @@ execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard playe
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players operation #curr_z_layers_4_teams switch.data = #start_z_layers_4_teams switch.data
 execute if score #scan_layers_4_teams switch.data matches 1 run data modify storage switch:doors layers_4_teams set value []
 
-
 execute if score #scan_layers_4_teams switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_layers_4_teams switch.data matches 30.. summon marker run function switch:maps/survival/layers_4_teams/scan_doors_on_marker
 

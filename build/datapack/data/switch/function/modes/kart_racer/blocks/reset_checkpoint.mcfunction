@@ -12,4 +12,3 @@ tag @s remove shopping_kart.engine_off
 tag @s remove shopping_kart.no_steering
 tag @s remove shopping_kart.no_grip
 
-

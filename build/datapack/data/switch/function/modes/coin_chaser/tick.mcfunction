@@ -24,7 +24,6 @@ execute as @a[tag=!detached,gamemode=!spectator] at @s store result score @s swi
 execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{grappling_hook:1b}] run item modify entity @s weapon.mainhand {"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{"id":"minecraft:arrow"}]}}
 execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{grappling_hook:1b}] run item modify entity @s weapon.offhand {"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{"id":"minecraft:arrow"}]}}
 
-
 ## End game
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/coin_chaser/process_end
 

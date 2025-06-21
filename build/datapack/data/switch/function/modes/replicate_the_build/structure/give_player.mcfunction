@@ -11,8 +11,6 @@ give @a[scores={switch.alive=1..}] diamond_shovel[unbreakable={},enchantments={s
 
 
 
-
-
 execute as @a[scores={switch.alive=1..}] run loot give @s mine ~0 ~0 ~0 diamond_pickaxe[enchantments={silk_touch:1}]
 execute as @a[scores={switch.alive=1..}] run loot give @s mine ~0 ~0 ~1 diamond_pickaxe[enchantments={silk_touch:1}]
 execute as @a[scores={switch.alive=1..}] run loot give @s mine ~0 ~0 ~2 diamond_pickaxe[enchantments={silk_touch:1}]

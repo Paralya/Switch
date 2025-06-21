@@ -3,8 +3,8 @@
 #
 # @within	switch:engine/restart
 #			switch:player/joined
-#			switch:stats/util_update_player
 #			switch:stats/_update_every_single_stat
+#			switch:stats/util_update_player
 #
 
 ## Storage Format: all.player = {total_played:[{name:"Stoupy51",value:0}],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[],advancement_count:[]}

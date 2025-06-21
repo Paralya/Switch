@@ -1,6 +1,5 @@
 {
-	"values": [
-		"switch:modes/sheepwars/advancements/call_player_killed"
-	]
+  "values": [
+    "switch:modes/sheepwars/advancements/call_player_killed"
+  ]
 }
-

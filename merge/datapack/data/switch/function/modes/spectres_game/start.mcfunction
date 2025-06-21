@@ -59,7 +59,7 @@ scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 scoreboard objectives add switch.games_not_being_spectre dummy
 function switch:modes/spectres_game/percentage/select_roles
-execute as @a[tag=!detached] run function switch:modes/spectres_game/roles/
+execute as @a[tag=!detached] run function switch:modes/spectres_game/roles/main
 
 # Si partie spectror game
 execute if score #SPECTROR_GAME switch.data matches 1 run scoreboard players set @r[team=switch.temp.visible] switch.temp.spectror 1

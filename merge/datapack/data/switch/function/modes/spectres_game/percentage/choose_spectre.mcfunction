@@ -7,7 +7,7 @@ execute as @a[team=switch.temp.visible] run function switch:modes/spectres_game/
 # Get a random value from 0 to the length of the list
 data modify storage switch:temp input set value {index:0}
 execute store result score #modulo_rand switch.data run data get storage switch:temp list
-function switch:utils/get_random/
+function switch:utils/get_random/main
 execute store result storage switch:temp input.index int 1 run scoreboard players get #random switch.data
 
 # Get the ID from the list

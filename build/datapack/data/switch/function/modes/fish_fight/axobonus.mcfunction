@@ -15,7 +15,6 @@ execute if score #random switch.data matches 0 as @a[tag=!detached] at @s run pl
 execute if score #random switch.data matches 0 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 0 run effect give @s speed 10 0 true
 
-
 # si le score est 1, on donne un effet de speed au détenteur du score axolotl killed
 execute if score #random switch.data matches 1 if score #TEAM_FISH switch.data matches 0 run effect give @s speed 10 1 true
 execute if score #random switch.data matches 1 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[team=switch.temp.red] speed 10 1 true
@@ -81,13 +80,11 @@ execute if score #random switch.data matches 8 if data storage switch:main {map:
 execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151040 124 151032 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151015 124 151020 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 
-
 execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-
 
 execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound entity.zombie.ambient ambient @s
 execute if score #random switch.data matches 8 run effect give @s regeneration 8 1 true
@@ -124,7 +121,6 @@ execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run p
 function switch:translations/modes_fish_fight_axobonus
 execute if score #random switch.data matches 12 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 12 run effect give @s speed 10 0 true
-
 
 # on reset le score d'axolo_killed
 scoreboard players set @s switch.temp.axolotl_killed 0

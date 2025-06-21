@@ -4,7 +4,6 @@
 # @within	switch:modes/murder_mystery/start
 #
 
-
 # Calculate percentages
 scoreboard players operation #percentage_murderer switch.data = @s switch.games_not_being_murderer
 scoreboard players operation #percentage_murderer switch.data *= #100 switch.data

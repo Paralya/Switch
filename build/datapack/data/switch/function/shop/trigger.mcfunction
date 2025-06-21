@@ -1,7 +1,7 @@
 
 #> switch:shop/trigger
 #
-# @within	switch:player/trigger/
+# @within	switch:player/trigger/main
 #
 
 # Global shop trigger
@@ -9,6 +9,7 @@ scoreboard players set #success switch.data 0
 execute if score @s switch.trigger.shop matches 1..99 run function switch:shop/global
 
 # Minigames shops
+
 execute if score @s switch.trigger.shop matches 100..199 run function switch:shop/pitchout
 execute if score @s switch.trigger.shop matches 10100..10199 run function switch:shop/pitchout
 execute if score @s switch.trigger.shop matches 200..299 run function switch:shop/infected

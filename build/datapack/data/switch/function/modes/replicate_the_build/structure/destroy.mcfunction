@@ -1,9 +1,9 @@
 
 #> switch:modes/replicate_the_build/structure/destroy
 #
-# @within	switch:modes/replicate_the_build/stop
-#			switch:modes/replicate_the_build/round/4_end
+# @within	switch:modes/replicate_the_build/round/4_end
 #			switch:modes/replicate_the_build/round/8_end
+#			switch:modes/replicate_the_build/stop
 #			switch:modes/replicate_the_build/utils/explose_island
 #
 

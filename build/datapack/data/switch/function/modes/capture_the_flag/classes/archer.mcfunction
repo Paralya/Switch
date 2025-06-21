@@ -1,7 +1,7 @@
 
 #> switch:modes/capture_the_flag/classes/archer
 #
-# @within	switch:modes/capture_the_flag/classes/
+# @within	switch:modes/capture_the_flag/classes/main
 #
 
 clear @s

@@ -1,8 +1,8 @@
 
 #> switch:modes/infected/secrets/drop_element_115
 #
-# @within	switch:modes/infected/secrets/tick
-#			switch:modes/infected/secrets/lost_graveyard/next_state
+# @within	switch:modes/infected/secrets/lost_graveyard/next_state
+#			switch:modes/infected/secrets/tick
 #
 
 clear @s *[minecraft:custom_data={switch:{"element_115":true}}] 1

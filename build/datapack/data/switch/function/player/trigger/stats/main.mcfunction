@@ -1,7 +1,7 @@
 
 #> switch:player/trigger/stats/main
 #
-# @within	switch:player/trigger/stats/ with storage switch:main input
+# @within	switch:player/trigger/stats/entry with storage switch:main input
 #
 
 # Bases

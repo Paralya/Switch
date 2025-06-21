@@ -7,7 +7,6 @@
 execute if data storage switch:main {map:"luxio_fish_fight"} run function switch:maps/spread_one_player
 execute if data storage switch:main {map:"airdox_fish_fight"} run function switch:modes/fish_fight/tp_airdox
 
-
 function switch:modes/fish_fight/xp_bar
 
 clear @s white_concrete

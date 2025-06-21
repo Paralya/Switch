@@ -13,4 +13,3 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"switch.vanilla.minecraft_stone\"]}","location": {"block": {"blocks": "minecraft:stone"}}}}
 	]
 }
-

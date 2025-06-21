@@ -4,17 +4,17 @@
 # @within	switch:modes/coin_chaser/respawn
 #			switch:modes/coin_chaser/summon_gold
 #			switch:modes/creeper_apocalypse/second
-#			switch:modes/fish_fight/tick
 #			switch:modes/fish_fight/teams_tp/only_one_winner
 #			switch:modes/fish_fight/teams_tp/tp_give
+#			switch:modes/fish_fight/tick
 #			switch:modes/one_shot/respawn/spawn_marker
 #			switch:modes/protect_the_king/better_tp
+#			switch:modes/spectres_game/death/revive_visible
 #			switch:modes/spectres_game/obsidian_effect
 #			switch:modes/spectres_game/task_obsidian
-#			switch:modes/spectres_game/death/revive_visible
 #			switch:modes/thunder_spear/give_and_teleport
-#			switch:modes/traitors_game/summon_lootboxes
 #			switch:modes/traitors_game/death/to_tp
+#			switch:modes/traitors_game/summon_lootboxes
 #
 
 # Spread one player on the survival maps

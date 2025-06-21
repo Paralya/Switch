@@ -1,7 +1,7 @@
 
 #> switch:translations/player_trigger_money_
 #
-# @within	switch:player/trigger/money/
+# @within	switch:player/trigger/money/main
 #
 
 # French

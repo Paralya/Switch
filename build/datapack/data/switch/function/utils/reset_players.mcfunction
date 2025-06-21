@@ -2,8 +2,8 @@
 #> switch:utils/reset_players
 #
 # @within	switch:engine/force_start_macro
+#			switch:engine/launch_game/main
 #			switch:engine/stop
-#			switch:engine/launch_game/
 #
 
 # Attributes

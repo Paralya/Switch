@@ -1,7 +1,7 @@
 
 #> switch:translations/player_trigger_attach_
 #
-# @within	switch:player/trigger/attach/
+# @within	switch:player/trigger/attach/main
 #
 
 # French

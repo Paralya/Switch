@@ -1,7 +1,7 @@
 
 #> switch:modes/beat_the_kings/roles/marker
 #
-# @within	switch:modes/beat_the_kings/roles/
+# @within	switch:modes/beat_the_kings/roles/main
 #
 
 scoreboard players operation @s switch.id = #player_id switch.id

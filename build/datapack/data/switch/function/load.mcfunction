@@ -108,11 +108,9 @@ execute unless score #can_attach switch.data matches 0.. run scoreboard players 
 execute unless score #test_mode switch.data matches 0.. run scoreboard players set #test_mode switch.data 0
 execute unless score #min_required switch.data matches 1.. run scoreboard players set #min_required switch.data 5
 
-
 ## Define mini-games list
 data modify storage switch:main minigames set value []
 function switch:modes/load
-
 
 # Auto index
 data modify storage switch:main indexed_minigames set value []

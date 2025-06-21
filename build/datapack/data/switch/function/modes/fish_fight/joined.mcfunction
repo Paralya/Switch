@@ -1,8 +1,8 @@
 
 #> switch:modes/fish_fight/joined
 #
-# @within	switch:modes/fish_fight/process_end
-#			switch:modes/fish_fight/calls/joined
+# @within	switch:modes/fish_fight/calls/joined
+#			switch:modes/fish_fight/process_end
 #
 
 scoreboard players reset @s switch.alive

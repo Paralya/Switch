@@ -6,9 +6,7 @@
 
 scoreboard players add #fish_fight_seconds switch.data 1
 
-
 execute if score #fish_fight_seconds switch.data matches 3 as @a[tag=!detached] at @s run function switch:modes/fish_fight/give_items
-
 
 # spawn axolot
 scoreboard players operation #temp switch.data = #fish_fight_seconds switch.data
@@ -29,7 +27,6 @@ execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data m
 
 execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] run function switch:modes/fish_fight/teams_tp/only_one_winner
 execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] unless entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] run function switch:modes/fish_fight/teams_tp/only_one_winner
-
 
 #TNT
 
@@ -59,9 +56,7 @@ execute if score #fish_fight_seconds switch.data matches 86 if score #random swi
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 146 156028 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 15586 153 156004 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 
-
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
-
 
 # event pufferfish 2
 execute if score #fish_fight_seconds switch.data matches 115 run execute store result score #random switch.data run random value 0..2

@@ -67,7 +67,6 @@ execute if score #scan_dk_mountain switch.data matches 1 run scoreboard players 
 execute if score #scan_dk_mountain switch.data matches 1 run scoreboard players operation #curr_z_dk_mountain switch.data = #start_z_dk_mountain switch.data
 execute if score #scan_dk_mountain switch.data matches 1 run data modify storage switch:doors dk_mountain set value []
 
-
 execute if score #scan_dk_mountain switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_dk_mountain switch.data matches 30.. summon marker run function switch:maps/survival/dk_mountain/scan_doors_on_marker
 

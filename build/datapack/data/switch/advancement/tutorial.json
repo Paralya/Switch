@@ -1,31 +1,30 @@
 {
-	"display": {
-		"icon": {
-			"id": "minecraft:command_block"
-		},
-		"title": {
-			"text": "Switch",
-			"color": "yellow"
-		},
-		"description": {
-			"text": "Compléter le tutoriel du Switch",
-			"color": "aqua"
-		},
-		"background": "minecraft:gui/advancements/backgrounds/stone",
-		"frame": "challenge",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
-	},
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:impossible"
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	]
+  "display": {
+    "icon": {
+      "id": "minecraft:command_block"
+    },
+    "title": {
+      "text": "Switch",
+      "color": "yellow"
+    },
+    "description": {
+      "text": "Compl\u00e9ter le tutoriel du Switch",
+      "color": "aqua"
+    },
+    "background": "minecraft:gui/advancements/backgrounds/stone",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
 }
-

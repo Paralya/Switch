@@ -32,6 +32,6 @@ execute unless score #build_battle_save_x switch.data matches ..-76 run scoreboa
 execute unless score #build_battle_save_z switch.data matches 0.. run scoreboard players set #build_battle_save_z switch.data 0
 
 # Téléportation des joueurs dans leur cage
-function switch:modes/build_battle/preparation/
+function switch:modes/build_battle/preparation/main
 function switch:translations/modes_build_battle_start
 

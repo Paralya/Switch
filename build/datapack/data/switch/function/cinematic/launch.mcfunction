@@ -58,7 +58,6 @@ data modify storage switch:temp current_position set from entity @s Pos
 data modify storage switch:temp current_rotation set from entity @s Rotation
 data modify storage switch:temp target_rotation set from storage switch:temp current_rotation
 
-
 ## Remember the additional arguments
 $data modify storage switch:temp with set value $(with)
 execute unless data storage switch:temp with.interpolation run data modify storage switch:temp with.interpolation set value 1
@@ -66,7 +65,6 @@ execute store result score #cinematic_interpolation switch.data run data get sto
 execute if data storage switch:temp with.pitch if data storage switch:temp with.yaw run function switch:cinematic/get_rotation_arguments with storage switch:temp with
 execute unless data storage switch:temp with.go_side run data modify storage switch:temp with.go_side set value 0
 execute unless data storage switch:temp with.add_y run data modify storage switch:temp with.add_y set value 20.0
-
 
 ## Summon the entity that will control the player
 execute summon item_display run function switch:cinematic/setup_entity

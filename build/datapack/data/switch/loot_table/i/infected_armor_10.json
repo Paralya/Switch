@@ -20,14 +20,28 @@
 								"minecraft:item_name": "Adamantium Chestplate",
 								"minecraft:unbreakable": {},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.5,"operation": "add_value"}
+									{
+										"type": "armor",
+										"slot": "chest",
+										"id": "switch.armor",
+										"amount": 4.5,
+										"operation": "add_value"
+									}
 								],
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"switch": {"infected_armor_10": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"infected_armor_10": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -37,4 +51,3 @@
 		}
 	]
 }
-

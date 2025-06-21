@@ -14,7 +14,6 @@ function switch:utils/choose_map_for {id:"de_a_coudre", maps:["de_a_coudre_1"]}
 execute in switch:game run gamerule showDeathMessages false
 execute in switch:game run gamerule keepInventory true
 
-
 scoreboard players set #de_a_coudre_seconds switch.data 0
 scoreboard players set #de_a_coudre_ticks switch.data 0
 scoreboard players set #process_end switch.data 0

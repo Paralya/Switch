@@ -37,7 +37,6 @@ execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard pl
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players operation #curr_z_arti_ancient_city switch.data = #start_z_arti_ancient_city switch.data
 execute if score #scan_arti_ancient_city switch.data matches 1 run data modify storage switch:doors arti_ancient_city set value []
 
-
 execute if score #scan_arti_ancient_city switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_arti_ancient_city switch.data matches 30.. summon marker run function switch:maps/survival/arti_ancient_city/scan_doors_on_marker
 

@@ -1,7 +1,7 @@
 
 #> switch:music/actions/next
 #
-# @within	switch:player/trigger/music/
+# @within	switch:player/trigger/music/main
 #
 
 # Go next song

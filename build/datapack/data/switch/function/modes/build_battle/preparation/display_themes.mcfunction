@@ -1,8 +1,8 @@
 
 #> switch:modes/build_battle/preparation/display_themes
 #
-# @within	switch:modes/build_battle/tick with storage switch:main themes
-#			switch:modes/build_battle/preparation/
+# @within	switch:modes/build_battle/preparation/main
+#			switch:modes/build_battle/tick with storage switch:main themes
 #
 
 # Place the papers in a shulker box with their name
@@ -47,7 +47,6 @@ data modify storage switch:main input set value {Slot:4b, count:0, plurial:""}
 execute store result storage switch:main input.count int 1 run scoreboard players get #vote_theme_5 switch.data
 execute if score #vote_theme_5 switch.data matches 2.. run data modify storage switch:main input.plurial set value "s"
 function switch:modes/build_battle/preparation/display_themes_macro with storage switch:main input
-
 
 # Change the correct paper to a book
 execute if score @s switch.temp.theme_vote matches 1 run data modify block 0 5 0 Items[0].id set value "minecraft:book"

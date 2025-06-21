@@ -1,9 +1,9 @@
 
 #> switch:modes/kart_racer/complete
 #
-# @within	switch:modes/kart_racer/joined
+# @within	switch:modes/kart_racer/checkpoints/player_in
+#			switch:modes/kart_racer/joined
 #			switch:modes/kart_racer/process_end
-#			switch:modes/kart_racer/checkpoints/player_in
 #
 
 execute if entity @s[scores={switch.alive=1}] run function switch:modes/kart_racer/finished

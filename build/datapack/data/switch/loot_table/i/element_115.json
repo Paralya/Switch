@@ -16,12 +16,20 @@
 									"italic": false
 								},
 								"minecraft:lore": [
-									{"text": "Infected","color": "dark_green","italic": true}
+									{
+										"text": "Infected",
+										"color": "dark_green",
+										"italic": true
+									}
 								],
 								"minecraft:item_model": "switch:stardust_ingot",
 								"minecraft:custom_data": {
-									"switch": {"element_115": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"element_115": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -31,4 +39,3 @@
 		}
 	]
 }
-

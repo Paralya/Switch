@@ -2,7 +2,7 @@
 # Get random
 scoreboard players operation #modulo_rand switch.data = #art_count switch.data
 scoreboard players remove #art_count switch.data 1
-function switch:utils/get_random/
+function switch:utils/get_random/main
 
 # Move from first list to new
 data modify storage switch:temp input set value {index:0}

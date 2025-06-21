@@ -1,7 +1,7 @@
 
 #> switch:player/trigger/enable
 #
-# @within	switch:player/trigger/
+# @within	switch:player/trigger/main
 #			switch:player/trigger/reset
 #
 

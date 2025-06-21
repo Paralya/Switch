@@ -1,7 +1,7 @@
 
 #> switch:translations/engine_launch_game_
 #
-# @within	switch:engine/launch_game/
+# @within	switch:engine/launch_game/main
 #
 
 # French

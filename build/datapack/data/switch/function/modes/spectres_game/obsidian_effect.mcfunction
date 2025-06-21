@@ -55,7 +55,6 @@ execute if score #random switch.data matches 8 if entity @s[team=switch.temp.vis
 execute if score #random switch.data matches 8 if entity @s[team=switch.temp.spectre] run give @a[tag=!detached,team=switch.temp.spectre] spectral_arrow 10
 execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound entity.arrow.shoot ambient @s
 
-
 # si le score est 9, on donne un effet temporaire de slowness à tous les spectres
 execute if score #random switch.data matches 9 if entity @s[team=switch.temp.visible] run effect give @a[tag=!detached,team=switch.temp.spectre] slowness 21 1 true
 execute if score #random switch.data matches 9 if entity @s[team=switch.temp.spectre] run effect give @a[tag=!detached,team=switch.temp.visible] slowness 21 1 true
@@ -83,7 +82,6 @@ execute if score #random switch.data matches 11 as @a[tag=!detached] at @s run p
 execute if score #random switch.data matches 12 run effect give @a[tag=!detached,team=switch.temp.visible] water_breathing 40 0 true
 execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run playsound block.water.ambient ambient @s
 function switch:translations/modes_spectres_game_obsidian_effect
-
 
 # on reset le score de break obsidian
 scoreboard players remove @s switch.temp.break_obsidian 1

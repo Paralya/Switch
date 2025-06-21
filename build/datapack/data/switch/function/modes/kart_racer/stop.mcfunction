@@ -1,8 +1,8 @@
 
 #> switch:modes/kart_racer/stop
 #
-# @within	switch:modes/kart_racer/restart_game
-#			switch:modes/kart_racer/calls/stop
+# @within	switch:modes/kart_racer/calls/stop
+#			switch:modes/kart_racer/restart_game
 #
 
 execute at @e[tag=switch.checkpoint] run forceload remove ~ ~

@@ -44,7 +44,6 @@ execute if score #traitors_game_seconds switch.data matches 1200 if score #game_
 # Cas des égalités
 function switch:translations/modes_traitors_game_detect_end
 
-
 # Visuel de fin de partie
 execute if score #traitors_game_seconds switch.data matches 1200.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 

@@ -1,8 +1,8 @@
 
 #> switch:custom_blocks/nether_stardust_ore/place_main
 #
-# @within	switch:custom_blocks/place
-#			switch:modes/infected/secrets/lost_graveyard/_load
+# @within	switch:modes/infected/secrets/lost_graveyard/_load
+#			switch:custom_blocks/place
 #
 
 tag @s add switch.placer

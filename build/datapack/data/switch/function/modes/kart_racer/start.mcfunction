@@ -1,8 +1,8 @@
 
 #> switch:modes/kart_racer/start
 #
-# @within	switch:modes/kart_racer/restart_game
-#			switch:modes/kart_racer/calls/start
+# @within	switch:modes/kart_racer/calls/start
+#			switch:modes/kart_racer/restart_game
 #
 
 scoreboard players set @a[tag=!detached] switch.alive 1

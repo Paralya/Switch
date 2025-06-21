@@ -14,4 +14,3 @@ execute if data entity @s Item.components."minecraft:custom_data".glassrunner.gl
 
 execute if data entity @s Item.components."minecraft:custom_data".glassrunner.glass_bridge run tag @s add switch.glassrunner.glass_bridge
 
-

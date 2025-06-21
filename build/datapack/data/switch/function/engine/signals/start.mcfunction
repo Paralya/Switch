@@ -2,7 +2,7 @@
 #> switch:engine/signals/start
 #
 # @within	switch:engine/force_start_macro
-#			switch:engine/launch_game/
+#			switch:engine/launch_game/main
 #
 
 # Log message

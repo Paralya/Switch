@@ -11,14 +11,37 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"tools": {"californium": true,"hoe": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"californium_hoe": true}
+									"smithed": {
+										"dict": {"tools": {"californium": true,"hoe": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"californium_hoe": true
+									}
 								},
 								"minecraft:max_damage": 1953,
 								"minecraft:attribute_modifiers": [
-									{"type": "attack_damage","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},
-									{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},
-									{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}
+									{
+										"type": "attack_damage",
+										"amount": 0.2,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": 0.0,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "mining_efficiency",
+										"amount": 0.2,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "switch:mining_efficiency.mainhand"
+									}
 								],
 								"minecraft:item_model": "switch:californium_hoe",
 								"minecraft:item_name": {
@@ -27,7 +50,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -37,4 +64,3 @@
 		}
 	]
 }
-

@@ -1,7 +1,7 @@
 
 #> switch:engine/voting_time/select_random_games
 #
-# @within	switch:engine/voting_time/
+# @within	switch:engine/voting_time/main
 #			switch:engine/voting_time/select_random_games
 #
 

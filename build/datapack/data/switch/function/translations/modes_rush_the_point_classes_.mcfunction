@@ -1,7 +1,7 @@
 
 #> switch:translations/modes_rush_the_point_classes_
 #
-# @within	switch:modes/rush_the_point/classes/
+# @within	switch:modes/rush_the_point/classes/main
 #
 
 # French

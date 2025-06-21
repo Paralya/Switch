@@ -58,5 +58,5 @@ team modify switch.rush_the_point.blue friendlyFire false
 team modify switch.rush_the_point.red collisionRule never
 team modify switch.rush_the_point.blue collisionRule never
 scoreboard players set #next_role switch.data 0
-execute as @a[tag=!detached,sort=random] at @s run function switch:modes/rush_the_point/roles/
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/rush_the_point/roles/main
 

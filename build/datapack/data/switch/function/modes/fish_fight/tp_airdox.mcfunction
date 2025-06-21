@@ -2,9 +2,9 @@
 #> switch:modes/fish_fight/tp_airdox
 #
 # @within	switch:modes/fish_fight/start
-#			switch:modes/fish_fight/tick
 #			switch:modes/fish_fight/teams_tp/only_one_winner
 #			switch:modes/fish_fight/teams_tp/tp_give
+#			switch:modes/fish_fight/tick
 #
 
 execute store result score #tp_random switch.data run random value 1..5

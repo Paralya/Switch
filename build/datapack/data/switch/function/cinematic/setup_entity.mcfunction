@@ -19,7 +19,6 @@ scoreboard players add @s switch.data 1
 execute if score @s switch.data matches 2.. run execute store result entity @s teleport_duration int 1 run scoreboard players get @s switch.data
 scoreboard players remove @s switch.data 2
 
-
 ## Stream Bezier
 # Prepare storages for Stream Bezier
 data modify storage switch:temp initial_points set value {points:[],step:5}

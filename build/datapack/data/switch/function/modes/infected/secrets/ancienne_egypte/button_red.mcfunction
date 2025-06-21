@@ -4,7 +4,6 @@
 # @within	???
 #
 
-
 ## Red button: sacrificing yourself
 # Check if both sides are lit
 execute unless score #infected_secret switch.data matches 2 run return 0

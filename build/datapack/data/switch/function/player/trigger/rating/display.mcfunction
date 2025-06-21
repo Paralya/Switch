@@ -1,7 +1,7 @@
 
 #> switch:player/trigger/rating/display
 #
-# @within	switch:player/trigger/rating/
+# @within	switch:player/trigger/rating/main
 #
 
 ## For each of the game, print it in order

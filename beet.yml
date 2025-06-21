@@ -38,7 +38,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.basic_datapack_structure"
     - "stewbeet.plugins.finalyze.dependencies"
     - "stewbeet.plugins.finalyze.check_unused_textures"
-    - "stewbeet.plugins.auto.lang_file"
+    # - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.headers"
     - "stewbeet.plugins.archive"
     - "stewbeet.plugins.merge_smithed_weld"

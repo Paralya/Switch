@@ -109,7 +109,6 @@ execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard pl
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players operation #curr_z_stardust_pvp_zone switch.data = #start_z_stardust_pvp_zone switch.data
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run data modify storage switch:doors stardust_pvp_zone set value []
 
-
 execute if score #scan_stardust_pvp_zone switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_stardust_pvp_zone switch.data matches 30.. summon marker run function switch:maps/survival/stardust_pvp_zone/scan_doors_on_marker
 

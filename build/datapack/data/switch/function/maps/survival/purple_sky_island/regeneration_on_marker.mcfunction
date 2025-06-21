@@ -6,7 +6,6 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_purple_sky_island_y switch.data
 
-
 execute at @s in switch:game run particle cloud 80828 ~1 81002 4 0 90 0 6 force
 execute at @s in switch:game run fill 80824 ~ 80822 80833 ~ 81182 air replace #switch:purple_sky_island
 

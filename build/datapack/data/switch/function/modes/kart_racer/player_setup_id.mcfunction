@@ -12,5 +12,3 @@ data modify storage switch:main temp set value {id:0}
 execute store result storage switch:main temp.id int 1 run scoreboard players get @s switch.temp.id
 data modify storage switch:main respawn_states append from storage switch:main temp
 
-
-

@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"topaz": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"topaz_leggings": true}
+									"smithed": {
+										"dict": {"armor": {"topaz": true,"leggings": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"topaz_leggings": true
+									}
 								},
 								"minecraft:max_damage": 406,
 								"minecraft:equippable": {
@@ -20,8 +25,20 @@
 									"asset_id": "switch:topaz"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 7.0,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},
-									{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}
+									{
+										"type": "armor",
+										"amount": 7.0,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:armor.legs"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:armor_toughness.legs"
+									}
 								],
 								"minecraft:item_model": "switch:topaz_leggings",
 								"minecraft:item_name": {
@@ -30,7 +47,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -40,4 +61,3 @@
 		}
 	]
 }
-

@@ -14,8 +14,16 @@
 		"components": {
 			"minecraft:custom_data": {
 				"smithed": {
-					"dict": {"armor": {"emerald": true,"helmet": true}},
-					"ignore": {"functionality": true,"crafting": true}
+					"dict": {
+						"armor": {
+							"emerald": true,
+							"helmet": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
 				},
 				"switch": {
 					"emerald_helmet": true
@@ -58,11 +66,19 @@
 			"minecraft:lore": [
 				[
 					"",
-					{"text": "I","color": "white","italic": false,"font": "switch:icons"},
-					{"text": " Switch","italic": true,"color": "blue"}
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "switch:icons"
+					},
+					{
+						"text": " Switch",
+						"italic": true,
+						"color": "blue"
+					}
 				]
 			]
 		}
 	}
 }
-

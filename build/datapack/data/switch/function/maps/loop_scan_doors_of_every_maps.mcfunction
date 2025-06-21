@@ -7,6 +7,7 @@
 
 execute if data storage switch:maps to_scan{fireblast_3:1b} run schedule function switch:maps/loop_scan_doors_of_every_maps 1t
 execute if data storage switch:maps to_scan{laser_game:1b} run function switch:maps/survival/laser_game/scan_doors
+
 execute unless data storage switch:maps to_scan.laser_game if data storage switch:maps to_scan{pitchout_1:1b} run function switch:maps/survival/pitchout_1/scan_doors
 execute unless data storage switch:maps to_scan.pitchout_1 if data storage switch:maps to_scan{traitor_original:1b} run function switch:maps/survival/traitor_original/scan_doors
 execute unless data storage switch:maps to_scan.traitor_original if data storage switch:maps to_scan{area_51:1b} run function switch:maps/survival/area_51/scan_doors

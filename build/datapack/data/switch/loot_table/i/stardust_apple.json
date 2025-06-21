@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:consumable": {
-									"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]
+									"on_consume_effects": [
+										{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}
+									]
 								},
 								"minecraft:food": {
 									"can_always_eat": true,
@@ -25,11 +27,19 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"switch": {"stardust_apple": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"stardust_apple": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -39,4 +49,3 @@
 		}
 	]
 }
-

@@ -3,12 +3,9 @@
 #
 # @within	switch:engine/log_message/apply
 #
-
-#> switch:engine/log_message/on_wolf
-#
-# @within			switch:engine/log_message/apply
 # @executed			as temporary wolf
 #
+
 # @input storage	switch:main MessageToLog
 #
 # @description		Function executed on the wolf summoned to log the message into the console.

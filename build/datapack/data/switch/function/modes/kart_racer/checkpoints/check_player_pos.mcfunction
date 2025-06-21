@@ -8,7 +8,6 @@ execute store result score #px switch.data run data get entity @s Pos[0]
 execute store result score #py switch.data run data get entity @s Pos[1]
 execute store result score #pz switch.data run data get entity @s Pos[2]
 
-
 scoreboard players operation #px switch.data -= #x switch.data
 scoreboard players operation #py switch.data -= #y switch.data
 scoreboard players operation #pz switch.data -= #z switch.data

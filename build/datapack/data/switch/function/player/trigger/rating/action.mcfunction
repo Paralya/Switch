@@ -1,7 +1,7 @@
 
 #> switch:player/trigger/rating/action
 #
-# @within	switch:player/trigger/rating/
+# @within	switch:player/trigger/rating/main
 #
 
 # Get the digit

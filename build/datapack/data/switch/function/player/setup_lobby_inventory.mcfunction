@@ -4,7 +4,6 @@
 # @within	switch:player/tick_detach
 #
 
-
 item replace entity @s[advancements={switch:visible/jump_dripstone=false}] inventory.3 with dripstone_block[item_name={"text":"Dripstone Jump","color":"gold"},lore=[{"text":"by AirDox","color":"gray","italic":false}],custom_data={"switch":{"jump":true,"jump_dripstone":true}},tooltip_style="failure"]
 item replace entity @s[advancements={switch:visible/jump_dripstone=true}] inventory.3 with dripstone_block[item_name={"text":"Dripstone Jump","color":"gold"},lore=[{"text":"by AirDox","color":"gray","italic":false}],custom_data={"switch":{"jump":true,"jump_dripstone":true}},tooltip_style="success"]
 

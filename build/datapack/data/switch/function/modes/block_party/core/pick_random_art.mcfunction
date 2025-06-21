@@ -24,7 +24,6 @@ execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos
 execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
 
 
-
 ## Choose block
 # Get the number of blocks in the pixel art
 scoreboard players set #block_count switch.data 0
@@ -32,7 +31,7 @@ execute at @s positioned ~ ~ ~65 run function switch:modes/block_party/core/get_
 
 # Choose a random block for the pixel art
 scoreboard players operation #modulo_rand switch.data = #block_count switch.data
-function switch:utils/get_random/
+function switch:utils/get_random/main
 scoreboard players operation #bp_selected_block switch.data = #random switch.data
 
 # Teleport current marker to the selected block
@@ -44,7 +43,6 @@ execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos
 setblock 0 4 0 air
 setblock 0 4 0 yellow_shulker_box
 execute at @s run loot insert 0 4 0 mine ~ ~ ~ diamond_pickaxe
-
 
 
 ## Others

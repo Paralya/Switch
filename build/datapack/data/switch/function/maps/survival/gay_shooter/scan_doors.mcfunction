@@ -28,7 +28,6 @@ execute if score #scan_gay_shooter switch.data matches 1 run scoreboard players 
 execute if score #scan_gay_shooter switch.data matches 1 run scoreboard players operation #curr_z_gay_shooter switch.data = #start_z_gay_shooter switch.data
 execute if score #scan_gay_shooter switch.data matches 1 run data modify storage switch:doors gay_shooter set value []
 
-
 execute if score #scan_gay_shooter switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_gay_shooter switch.data matches 30.. summon marker run function switch:maps/survival/gay_shooter/scan_doors_on_marker
 

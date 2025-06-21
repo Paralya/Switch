@@ -4,7 +4,6 @@
 # @within	switch:modes/block_party/tick
 #
 
-
 ## Switch case
 data modify storage switch:main Item set from block 0 4 0 Items[0]
 scoreboard players set #bp_block switch.data -1
@@ -53,7 +52,6 @@ item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.8 from block 0 
 
 # Tellraw players
 function switch:translations/modes_block_party_core_give_block
-
 
 # Playsound and remove shulker box
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s

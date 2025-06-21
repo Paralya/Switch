@@ -1,7 +1,7 @@
 
 #> switch:music/actions/repeat_all
 #
-# @within	switch:player/trigger/music/
+# @within	switch:player/trigger/music/main
 #
 
 ## File attribut: Ignore translations

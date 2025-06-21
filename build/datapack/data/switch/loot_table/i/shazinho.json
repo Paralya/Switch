@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"switch": {"shazinho": true},
-									"smithed": {"dict": {"record": {"shazinho": true}},"ignore": {"functionality": true,"crafting": true}}
+									"switch": {
+										"shazinho": true
+									},
+									"smithed": {
+										"dict": {"record": {"shazinho": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								},
 								"minecraft:item_name": {
 									"text": "Music Disc",
@@ -23,7 +28,11 @@
 								"minecraft:rarity": "rare",
 								"minecraft:item_model": "switch:shazinho",
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -33,4 +42,3 @@
 		}
 	]
 }
-

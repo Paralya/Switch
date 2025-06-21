@@ -7,7 +7,6 @@
 # Classic timer
 scoreboard players add #moutron_seconds switch.data 1
 
-
 # Start countdown
 execute if score #moutron_seconds switch.data matches -5..0 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 function switch:translations/modes_moutron_second

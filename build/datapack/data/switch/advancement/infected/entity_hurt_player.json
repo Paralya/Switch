@@ -1,23 +1,22 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:entity_hurt_player",
-			"conditions": {
-				"damage": {
-					"source_entity": {
-						"type": "minecraft:player"
-					}
-				}
-			}
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	],
-	"rewards": {
-		"function": "switch:modes/infected/advancements/entity_hurt_player/main"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:player"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "function": "switch:modes/infected/advancements/entity_hurt_player/main"
+  }
 }
-

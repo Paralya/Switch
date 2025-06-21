@@ -3,7 +3,6 @@
 #
 # @within	switch:advancements/easy
 #			switch:advancements/hard
-#			switch:advancements/medium
 #			switch:advancements/jumps/blue
 #			switch:advancements/jumps/bricks
 #			switch:advancements/jumps/brown
@@ -17,6 +16,7 @@
 #			switch:advancements/jumps/red
 #			switch:advancements/jumps/white
 #			switch:advancements/jumps/yellow
+#			switch:advancements/medium
 #			switch:player/joined
 #
 
@@ -29,6 +29,7 @@ data modify storage switch:main input.username set from block 0 16 0 Items[0].co
 
 ## For each advancement, check if the player has the advancement
 scoreboard players set @s switch.advancements 0
+
 execute if entity @s[advancements={switch:visible/jump_green=true}] run function switch:advancements/_pre_macro {id:"jump_green"}
 execute if entity @s[advancements={switch:visible/jump_white=true}] run function switch:advancements/_pre_macro {id:"jump_white"}
 execute if entity @s[advancements={switch:visible/jump_blue=true}] run function switch:advancements/_pre_macro {id:"jump_blue"}

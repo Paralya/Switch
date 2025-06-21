@@ -1,9 +1,9 @@
 
 #> switch:modes/pitchout/xp_bar
 #
-# @within	switch:modes/pitchout/start
-#			switch:modes/pitchout/map_1/tp_give
+# @within	switch:modes/pitchout/map_1/tp_give
 #			switch:modes/pitchout/map_halloween/tp_give
+#			switch:modes/pitchout/start
 #
 
 execute if entity @s[scores={switch.alive=1}] run scoreboard players set #points switch.data 333

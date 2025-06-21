@@ -38,7 +38,7 @@ team add switch.temp.king {"text":"[King]","color":"dark_purple"}
 team modify switch.temp.civil color gray
 team modify switch.temp.king color dark_purple
 scoreboard players set #next_role switch.data 0
-execute as @a[tag=!detached,sort=random] at @s run function switch:modes/beat_the_kings/roles/
+execute as @a[tag=!detached,sort=random] at @s run function switch:modes/beat_the_kings/roles/main
 execute as @a[tag=!detached] at @s run function switch:modes/beat_the_kings/give_items
 
 give @r[team=switch.temp.king] splash_potion[item_name={"text":"Potion dévastatrice du tyran"},lore=[{"text":"À lancer sur les civils","color":"white","italic":false}],potion_contents={potion:"minecraft:water",custom_color:7039516,custom_effects:[{id:"slowness",amplifier:0b,duration:400,show_particles:0b},{id:"mining_fatigue",amplifier:0b,duration:400,show_particles:0b},{id:"blindness",amplifier:0b,duration:110,show_particles:0b}]}]

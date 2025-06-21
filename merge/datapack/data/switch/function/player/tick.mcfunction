@@ -3,7 +3,7 @@
 execute unless score @s switch.reconnect = #score switch.reconnect run function switch:player/username_change/check
 
 # Handle player trigger inputs
-function switch:player/trigger/
+function switch:player/trigger/main
 
 # Ask for a lang if not set
 execute unless score @s switch.lang matches 0.. run function switch:player/trigger/lang/tick_undefined

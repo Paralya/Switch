@@ -35,4 +35,3 @@ scoreboard players set #rtb_round switch.data 1
 scoreboard players set #rtb_round_state switch.data 0
 scoreboard players set #rtb_round_timer switch.data 0
 
-

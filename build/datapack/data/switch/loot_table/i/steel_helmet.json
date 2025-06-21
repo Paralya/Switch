@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"steel": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"steel_helmet": true}
+									"smithed": {
+										"dict": {"armor": {"steel": true,"helmet": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"steel_helmet": true
+									}
 								},
 								"minecraft:max_damage": 293,
 								"minecraft:equippable": {
@@ -20,7 +25,13 @@
 									"asset_id": "switch:steel"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor.head"}
+									{
+										"type": "armor",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor.head"
+									}
 								],
 								"minecraft:item_model": "switch:steel_helmet",
 								"minecraft:item_name": {
@@ -29,7 +40,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -39,4 +54,3 @@
 		}
 	]
 }
-

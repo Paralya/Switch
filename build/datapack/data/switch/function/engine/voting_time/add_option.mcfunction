@@ -1,8 +1,8 @@
 
 #> switch:engine/voting_time/add_option
 #
-# @within	switch:engine/voting_time/
-#			switch:engine/voting_time/add_option
+# @within	switch:engine/voting_time/add_option
+#			switch:engine/voting_time/main
 #
 
 # Add the current index to the options

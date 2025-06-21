@@ -2,7 +2,7 @@
 #> switch:modes/build_battle/preparation/summon_marker
 #
 # @within	switch:modes/build_battle/joined
-#			switch:modes/build_battle/preparation/
+#			switch:modes/build_battle/preparation/main
 #
 
 # Get coordinates of marker

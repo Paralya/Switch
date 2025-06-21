@@ -30,8 +30,8 @@
 #			switch:modes/one_shot/process_end
 #			switch:modes/panic_chase/process_end
 #			switch:modes/pillars_of_fortune/process_end
-#			switch:modes/pitchout/process_end
 #			switch:modes/pitch_creep/process_end
+#			switch:modes/pitchout/process_end
 #			switch:modes/protect_the_king/process_end
 #			switch:modes/pvpswap/process_end
 #			switch:modes/replicate_the_build/process_end
@@ -51,5 +51,5 @@
 
 scoreboard players operation @s switch.trigger.rating = #game_1 switch.data
 scoreboard players operation @s switch.trigger.rating *= #100 switch.data
-function switch:player/trigger/
+function switch:player/trigger/main
 

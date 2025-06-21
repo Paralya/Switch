@@ -1,7 +1,7 @@
 
 #> switch:modes/rush_the_point/classes/archer
 #
-# @within	switch:modes/rush_the_point/classes/
+# @within	switch:modes/rush_the_point/classes/main
 #
 
 clear @s

@@ -1,11 +1,10 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:entity_hurt_player"
-		}
-	},
-	"rewards": {
-		"function": "switch:modes/gay_shooter/shot_taken"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+    "function": "switch:modes/gay_shooter/shot_taken"
+  }
 }
-

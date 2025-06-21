@@ -18,9 +18,9 @@ def load_username_change(shop_name: str, shop_dict: dict) -> None:
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
 	for upgrade_id in shop_dict.keys():
-		write_function(LOAD_PATH, f"scoreboard objectives add switch.{shop_name}.{upgrade_id} dummy\n")
-		write_function(USERNAME_CHANGE_PATH, f"$scoreboard players operation $(username) switch.{shop_name}.{upgrade_id} = $(old_username) switch.{shop_name}.{upgrade_id}\n")
-		write_function(INITIALIZE_SHOP_SCORES_PATH, f"scoreboard players add @s switch.{shop_name}.{upgrade_id} 0\n")
+		write_function(LOAD_PATH, f"scoreboard objectives add switch.{shop_name}.{upgrade_id} dummy")
+		write_function(USERNAME_CHANGE_PATH, f"$scoreboard players operation $(username) switch.{shop_name}.{upgrade_id} = $(old_username) switch.{shop_name}.{upgrade_id}")
+		write_function(INITIALIZE_SHOP_SCORES_PATH, f"scoreboard players add @s switch.{shop_name}.{upgrade_id} 0")
 
 
 def write_technicals(index: int, shop_name: str, shop_dict: dict) -> None:
@@ -33,7 +33,7 @@ def write_technicals(index: int, shop_name: str, shop_dict: dict) -> None:
 	"""
 	mini: int = get_shop_range(index)[0]
 	path: str = f"switch:shop/{shop_name}"
-	write_function(path, "## File attribut: Ignore translations\n")
+	write_function(path, "## File attribut: Ignore translations")
 
 	# Special case for sheepwars
 	if shop_name == "sheepwars":
@@ -46,7 +46,7 @@ scoreboard players add @s switch.sheepwars.chosen_kit 0
 			if not upgrade:
 				continue
 			counter += 1
-			write_function(path, f"execute if score @s switch.trigger.shop matches {mini + counter + SHEEPWARS_KIT_OFFSET} run scoreboard players set @s switch.sheepwars.chosen_kit {counter}\n")
+			write_function(path, f"execute if score @s switch.trigger.shop matches {mini + counter + SHEEPWARS_KIT_OFFSET} run scoreboard players set @s switch.sheepwars.chosen_kit {counter}")
 
 	# Write the upgrades
 	counter: int = mini
@@ -132,9 +132,9 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 		selector: str = f"@s[scores={{switch.lang={lang_score}}}]"
 
 		# Write the first lines
-		write_function(path, f"""# {lang_name}\ntellraw {selector} [{{"text":"[{label.replace('X', titled)}]","color":"yellow"}}]\n""")
+		write_function(path, f"""# {lang_name}\ntellraw {selector} [{{"text":"[{label.replace('X', titled)}]","color":"yellow"}}]""")
 		if shop_name == "sheepwars":
-			write_function(path, f"""tellraw {selector} [{{"text":"{SHEEPWARS_CHOOSE_KIT[lang_id]}","color":"red"}}]\n""")
+			write_function(path, f"""tellraw {selector} [{{"text":"{SHEEPWARS_CHOOSE_KIT[lang_id]}","color":"red"}}]""")
 
 		# Write the upgrades
 		counter: int = mini
@@ -163,11 +163,11 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 				}.get(lang_id, f"You sold one level of {upgrade_name} and received a refund!")
 
 			# Write the ok and error messages for buying
-			write_function(path, f"""execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run tellraw {selector} [{{"text":"{ok_message}","color":"green"}}]\n""")
-			write_function(path, f"""execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 0 run tellraw {selector} [{{"text":"{error_message}","color":"red"}}]\n""")
+			write_function(path, f"""execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run tellraw {selector} [{{"text":"{ok_message}","color":"green"}}]""")
+			write_function(path, f"""execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 0 run tellraw {selector} [{{"text":"{error_message}","color":"red"}}]""")
 
 			# Write only the ok message for selling (no error message since button is disabled if can't sell)
-			write_function(path, f"""execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run tellraw {selector} [{{"text":"{sell_ok_message}","color":"green"}}]\n""")
+			write_function(path, f"""execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run tellraw {selector} [{{"text":"{sell_ok_message}","color":"green"}}]""")
 
 			# For each upgrade
 			for j, upgrade in enumerate(upgrades):
@@ -252,13 +252,16 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 
 				# Write the tellraw text
 				if shop_name != "sheepwars":
-					write_function(path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j} run tellraw {selector} {stp.super_json_dump(tellraw_json, max_level=0)}")
+					dump: str = stp.super_json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
+					write_function(path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j} run tellraw {selector} {dump}")
 				else:
 					tellraw_json[0]["click_event"] = {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
-					write_function(path, f"execute unless score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {stp.super_json_dump(tellraw_json, max_level=0)}")
+					dump: str = stp.super_json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
+					write_function(path, f"execute unless score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {dump}")
 					tellraw_json[0]["color"] = "green"
 					del tellraw_json[0]["click_event"]
-					write_function(path, f"execute if score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {stp.super_json_dump(tellraw_json, max_level=0)}")
+					dump = stp.super_json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
+					write_function(path, f"execute if score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {dump}")
 
 
 
@@ -287,10 +290,10 @@ execute if score @s switch.trigger.shop matches 1..99 run function switch:shop/g
 """)
 	for i, (shop_name, _) in enumerate(SHOPS.items()):
 		mini, maxi = get_shop_range(i)
-		write_function(TRIGGER_PATH, f"execute if score @s switch.trigger.shop matches {mini}..{maxi} run function switch:shop/{shop_name}\n")
+		write_function(TRIGGER_PATH, f"execute if score @s switch.trigger.shop matches {mini}..{maxi} run function switch:shop/{shop_name}")
 
 		# Add trigger handling for sell commands (using counter+10000)
-		write_function(TRIGGER_PATH, f"execute if score @s switch.trigger.shop matches {mini+10000}..{maxi+10000} run function switch:shop/{shop_name}\n")
+		write_function(TRIGGER_PATH, f"execute if score @s switch.trigger.shop matches {mini+10000}..{maxi+10000} run function switch:shop/{shop_name}")
 
 	write_function(TRIGGER_PATH, """
 # Tutorial thing
@@ -318,8 +321,8 @@ tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X
 		for i, shop_name in enumerate(SHOPS.keys()):
 			mini: int = get_shop_range(i)[0]
 			titled: str = shop_name.replace("_", " ").title()
-			write_function(path, f"""tellraw {selector} [{{"text":"➤ ","color":"#1b1796","click_event":{{"action":"run_command","command":"/trigger switch.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[","color":"#1b1796"}},{{"text":"{titled}","color":"blue"}},{{"text":"]","color":"#1b1796"}}]\n""")
+			write_function(path, f"""tellraw {selector} [{{"text":"➤ ","color":"#1b1796","click_event":{{"action":"run_command","command":"/trigger switch.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[","color":"#1b1796"}},{{"text":"{titled}","color":"blue"}},{{"text":"]","color":"#1b1796"}}]""")
 
 	# Write the empty line
-	write_function(path, 'tellraw @s ""\n')
+	write_function(path, 'tellraw @s ""')
 

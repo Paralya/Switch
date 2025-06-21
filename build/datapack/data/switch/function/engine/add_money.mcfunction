@@ -3,7 +3,6 @@
 #
 # @within	switch:advancements/easy
 #			switch:advancements/hard
-#			switch:advancements/medium
 #			switch:advancements/jumps/blue
 #			switch:advancements/jumps/bricks
 #			switch:advancements/jumps/brown
@@ -17,6 +16,7 @@
 #			switch:advancements/jumps/red
 #			switch:advancements/jumps/white
 #			switch:advancements/jumps/yellow
+#			switch:advancements/medium
 #			switch:engine/add_win
 #			switch:modes/build_battle/add_money
 #

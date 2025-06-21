@@ -1,15 +1,30 @@
 {
-	"display": {
-		"icon": {"id": "minecraft:red_dye"},
-		"title": {"text": "Hard", "color": "yellow"},
-		"description": {"text": "100 Saphirs par succès", "color": "aqua"},
-		"frame": "goal",
-		"show_toast": false,
-		"announce_to_chat": false,
-		"hidden": false
-	},
-	"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
-	"requirements": [["requirement"]],
-	"parent": "switch:tutorial"
+  "display": {
+    "icon": {
+      "id": "minecraft:red_dye"
+    },
+    "title": {
+      "text": "Hard",
+      "color": "yellow"
+    },
+    "description": {
+      "text": "100 Saphirs par succ\u00e8s",
+      "color": "aqua"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "switch:tutorial"
 }
-

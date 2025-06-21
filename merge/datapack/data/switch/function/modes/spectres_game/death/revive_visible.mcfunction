@@ -1,7 +1,7 @@
 
 
 scoreboard players set #next_role switch.data 1
-function switch:modes/spectres_game/roles/
+function switch:modes/spectres_game/roles/main
 
 item replace entity @s armor.head with diamond_helmet[enchantments={protection:3}]
 item replace entity @s armor.chest with chainmail_chestplate[enchantments={fire_protection:2}]

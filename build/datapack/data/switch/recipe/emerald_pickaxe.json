@@ -16,8 +16,16 @@
 		"components": {
 			"minecraft:custom_data": {
 				"smithed": {
-					"dict": {"tools": {"emerald": true,"pickaxe": true}},
-					"ignore": {"functionality": true,"crafting": true}
+					"dict": {
+						"tools": {
+							"emerald": true,
+							"pickaxe": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
 				},
 				"switch": {
 					"emerald_pickaxe": true
@@ -56,11 +64,19 @@
 			"minecraft:lore": [
 				[
 					"",
-					{"text": "I","color": "white","italic": false,"font": "switch:icons"},
-					{"text": " Switch","italic": true,"color": "blue"}
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "switch:icons"
+					},
+					{
+						"text": " Switch",
+						"italic": true,
+						"color": "blue"
+					}
 				]
 			]
 		}
 	}
 }
-

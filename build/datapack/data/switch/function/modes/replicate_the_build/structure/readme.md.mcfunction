@@ -4,9 +4,7 @@
 # @within	???
 #
 
-
 # Comment ajouter une structure ?
-
 
 ## Etape 1 : La structure
 

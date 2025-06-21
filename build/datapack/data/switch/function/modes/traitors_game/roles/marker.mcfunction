@@ -1,7 +1,7 @@
 
 #> switch:modes/traitors_game/roles/marker
 #
-# @within	switch:modes/traitors_game/roles/
+# @within	switch:modes/traitors_game/roles/main
 #
 
 scoreboard players operation @s switch.id = #player_id switch.id

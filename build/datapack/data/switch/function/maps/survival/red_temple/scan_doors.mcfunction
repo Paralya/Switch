@@ -28,7 +28,6 @@ execute if score #scan_red_temple switch.data matches 1 run scoreboard players o
 execute if score #scan_red_temple switch.data matches 1 run scoreboard players operation #curr_z_red_temple switch.data = #start_z_red_temple switch.data
 execute if score #scan_red_temple switch.data matches 1 run data modify storage switch:doors red_temple set value []
 
-
 execute if score #scan_red_temple switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_red_temple switch.data matches 30.. summon marker run function switch:maps/survival/red_temple/scan_doors_on_marker
 

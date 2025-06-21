@@ -27,7 +27,7 @@ execute at @s positioned ~ ~ ~65 run function switch:modes/block_party/core/get_
 
 # Choose a random block for the pixel art
 scoreboard players operation #modulo_rand switch.data = #block_count switch.data
-function switch:utils/get_random/
+function switch:utils/get_random/main
 scoreboard players operation #bp_selected_block switch.data = #random switch.data
 
 # Teleport current marker to the selected block

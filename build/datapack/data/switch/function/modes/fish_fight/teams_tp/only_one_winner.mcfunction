@@ -11,7 +11,6 @@ execute as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch
 execute if data storage switch:main {map:"luxio_fish_fight"} as @a[tag=!detached] run function switch:maps/spread_one_player
 execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached] run function switch:modes/fish_fight/tp_airdox
 
-
 effect give @a[tag=!detached,gamemode=!spectator] slowness 4 5 true
 team remove switch.temp.red
 team remove switch.temp.blue

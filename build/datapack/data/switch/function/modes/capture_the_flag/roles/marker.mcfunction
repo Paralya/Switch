@@ -1,7 +1,7 @@
 
 #> switch:modes/capture_the_flag/roles/marker
 #
-# @within	switch:modes/capture_the_flag/roles/
+# @within	switch:modes/capture_the_flag/roles/main
 #
 
 scoreboard players operation @s switch.id = #player_id switch.id

@@ -1,7 +1,7 @@
 
 #> switch:modes/kart_racer/checkpoints/remember/storage_loop
 #
-# @within	switch:modes/kart_racer/checkpoints/remember/
+# @within	switch:modes/kart_racer/checkpoints/remember/main
 #			switch:modes/kart_racer/checkpoints/remember/storage_loop
 #
 

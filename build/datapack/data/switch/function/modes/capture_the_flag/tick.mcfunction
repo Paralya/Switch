@@ -9,7 +9,7 @@ scoreboard players add #capture_the_flag_ticks switch.data 1
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/capture_the_flag/items_check
 
 # Class System
-execute as @a[scores={switch.temp.chosen_class=0}] run function switch:modes/capture_the_flag/classes/
+execute as @a[scores={switch.temp.chosen_class=0}] run function switch:modes/capture_the_flag/classes/main
 
 # Death System
 execute as @e[type=player,tag=switch.to_tp] run function switch:modes/capture_the_flag/teleport_to_death

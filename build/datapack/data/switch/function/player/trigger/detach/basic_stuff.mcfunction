@@ -2,7 +2,7 @@
 #> switch:player/trigger/detach/basic_stuff
 #
 # @within	switch:player/make_join
-#			switch:player/trigger/detach/
+#			switch:player/trigger/detach/main
 #
 
 scoreboard players set @s switch.lobby_respawn 0

@@ -19,7 +19,6 @@ execute if entity @s[gamemode=!spectator] run particle dust{color:[0.66,0.33,0.0
 execute if entity @s[gamemode=!spectator] run playsound switch:explosion ambient @a[distance=..50]
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 
-
 ## Death message
 # Tag the owner of the mine
 execute as @a[tag=!detached] if score @s switch.id = #owner_id switch.data run tag @s add switch.owner
@@ -27,7 +26,6 @@ execute as @a[tag=!detached] if score @s switch.id = #owner_id switch.data run t
 function switch:translations/modes_memory_mine_death
 # Remove the owner tag
 tag @a[tag=switch.owner] remove switch.owner
-
 
 # Spectator and other stuff
 gamemode spectator @s

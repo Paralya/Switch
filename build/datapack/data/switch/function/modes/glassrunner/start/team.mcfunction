@@ -4,7 +4,6 @@
 # @within	switch:modes/glassrunner/start
 #
 
-
 execute if score #count switch.data matches 0 run team join switch.glassrunner.red @s
 execute if score #count switch.data matches 1 run team join switch.glassrunner.blue @s
 

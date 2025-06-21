@@ -43,7 +43,6 @@ execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players 
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players operation #curr_z_ctf_flowers switch.data = #start_z_ctf_flowers switch.data
 execute if score #scan_ctf_flowers switch.data matches 1 run data modify storage switch:doors ctf_flowers set value []
 
-
 execute if score #scan_ctf_flowers switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_ctf_flowers switch.data matches 30.. summon marker run function switch:maps/survival/ctf_flowers/scan_doors_on_marker
 

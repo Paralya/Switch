@@ -167,1349 +167,2694 @@ $scoreboard players add #y switch.data $(additional_height)
 execute store result storage switch:temp compound.y int 1 run scoreboard players get #y switch.data
 execute store result storage switch:temp compound.z int 1 run data get entity @s Pos[2]
 scoreboard players set #success switch.data 0
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oak_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oak_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ spruce_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "spruce_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ birch_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "birch_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ jungle_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "jungle_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ acacia_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "acacia_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ dark_oak_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "dark_oak_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ mangrove_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "mangrove_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ cherry_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "cherry_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ pale_oak_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "pale_oak_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ bamboo_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "bamboo_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ crimson_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "crimson_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ warped_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "warped_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ iron_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "iron_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_weathered_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]"
+
 execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false] run data modify storage switch:temp compound.door set value "waxed_oxidized_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]"
+
 $data modify storage switch:doors $(name) append from storage switch:temp compound
 

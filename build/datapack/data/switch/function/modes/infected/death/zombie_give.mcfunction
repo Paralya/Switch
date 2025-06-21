@@ -14,7 +14,6 @@ effect give @s hunger infinite 0 true
 effect give @s resistance infinite 0 true
 clear @s
 
-
 # Give stuff depending on player's upgrades
 item replace entity @s armor.head with zombie_head[enchantment_glint_override=false,enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]}]
 execute if score @s switch.infected.zombie_speed matches 0 run attribute @s movement_speed base set 0.115

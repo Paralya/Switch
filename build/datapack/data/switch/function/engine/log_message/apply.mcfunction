@@ -1,7 +1,8 @@
 
 #> switch:engine/log_message/apply
 #
-# @within	switch:engine/signals/start
+# @within	?
+#			switch:engine/signals/start
 #			switch:engine/signals/stop
 #			switch:maps/load
 #			switch:maps/survival/laser_game/regenerate
@@ -165,12 +166,9 @@
 #			switch:maps/survival/fireblast_2/regenerate
 #			switch:maps/survival/fireblast_3/regenerate
 #
-
-#> switch:engine/log_message/apply
-#
-# @within			?
 # @executed			Don't care
 #
+
 # @input storage	switch:main MessageToLog
 #
 # @description		Interprets the message and logs it to the console

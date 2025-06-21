@@ -1,7 +1,7 @@
 
 #> switch:player/trigger/succes/main
 #
-# @within	switch:player/trigger/succes/ with storage switch:main input
+# @within	switch:player/trigger/succes/entry with storage switch:main input
 #
 
 ## File attribut: Ignore translations

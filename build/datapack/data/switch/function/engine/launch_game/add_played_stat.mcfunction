@@ -1,7 +1,7 @@
 
 #> switch:engine/launch_game/add_played_stat
 #
-# @within	switch:engine/launch_game/ with storage switch:main
+# @within	switch:engine/launch_game/main with storage switch:main
 #
 
 # If test mode is enabled, stop right now

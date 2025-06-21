@@ -26,7 +26,6 @@ execute if score #game_state switch.data matches 4 as @a[tag=!detached,scores={s
 execute if score #game_state switch.data matches 1 unless score #test_mode switch.data matches 1 if score #nb_dead_visibles switch.data matches 0 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] run advancement grant @s only switch:visible/12
 execute if score #game_state switch.data matches 2 unless score #test_mode switch.data matches 1 if score #nb_dead_spectres switch.data matches 0 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] run advancement grant @s only switch:visible/12
 
-
 # Visuel de fin de partie
 execute if score #spectres_game_seconds switch.data matches 900.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 

@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"nugget": {"uranium": true}},"ignore": {"functionality": true,"crafting": true}},
-									"switch": {"uranium_nugget": true}
+									"smithed": {
+										"dict": {"nugget": {"uranium": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"uranium_nugget": true
+									}
 								},
 								"minecraft:item_model": "switch:uranium_nugget",
 								"minecraft:item_name": {
@@ -21,7 +26,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -31,4 +40,3 @@
 		}
 	]
 }
-

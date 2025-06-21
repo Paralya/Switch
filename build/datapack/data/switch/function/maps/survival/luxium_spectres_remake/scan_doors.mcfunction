@@ -34,7 +34,6 @@ execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboa
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players operation #curr_z_luxium_spectres_remake switch.data = #start_z_luxium_spectres_remake switch.data
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run data modify storage switch:doors luxium_spectres_remake set value []
 
-
 execute if score #scan_luxium_spectres_remake switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_luxium_spectres_remake switch.data matches 30.. summon marker run function switch:maps/survival/luxium_spectres_remake/scan_doors_on_marker
 

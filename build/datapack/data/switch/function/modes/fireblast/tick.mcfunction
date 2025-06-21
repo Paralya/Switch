@@ -17,7 +17,6 @@ execute as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle
 scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
 execute as @a[tag=!detached,gamemode=adventure] run function switch:modes/fireblast/xp_bar
 
-
 ## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=adventure]

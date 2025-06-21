@@ -1,8 +1,8 @@
 
 #> switch:modes/traitors_game/update_sidebar
 #
-# @within	switch:modes/traitors_game/start
-#			switch:modes/traitors_game/death/for_global
+# @within	switch:modes/traitors_game/death/for_global
+#			switch:modes/traitors_game/start
 #
 
 data modify storage switch:main input set value {inspecteur:0,ninja:0,innocent:0,traitre:0,gros_traitre:0,floupy:0}

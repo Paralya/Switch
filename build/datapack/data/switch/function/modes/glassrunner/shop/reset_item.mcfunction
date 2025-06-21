@@ -10,9 +10,6 @@
 #			switch:modes/glassrunner/shop/turtle
 #
 
-
-
-
 item replace entity @s inventory.4 with turtle_helmet[item_name={"text":"Casque de tortue","color":"white"},lore=[[{"text":"Met un anti knockback pendant 10 secondes","color":"dark_gray","italic":false}],[{"text":"Prix : ","color":"dark_gray","italic":false},{"text":"25 levels","color":"gold"}]],custom_data={to_clear:true}]
 item replace entity @s inventory.12 with flint[item_name={"text":"Flèches x5","color":"white"},lore=[[{"text":"Vous ravitaille en flèches !","color":"dark_gray","italic":false}],[{"text":"Prix : ","color":"dark_gray","italic":false},{"text":"5 levels","color":"gold"}]],custom_data={to_clear:true}]
 item replace entity @s inventory.10 with snow_block[item_name={"text":"Snowball renforcée x5","color":"white"},lore=[[{"text":"Permet de faire des bridges dirrectement en vitre foncée !","color":"dark_gray","italic":false}],[{"text":"Prix : ","color":"dark_gray","italic":false},{"text":"8 levels","color":"gold"}]],custom_data={to_clear:true}]

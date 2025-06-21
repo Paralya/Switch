@@ -133,7 +133,6 @@ execute if score #scan_taroatlas_soviet_prison switch.data matches 1 run scorebo
 execute if score #scan_taroatlas_soviet_prison switch.data matches 1 run scoreboard players operation #curr_z_taroatlas_soviet_prison switch.data = #start_z_taroatlas_soviet_prison switch.data
 execute if score #scan_taroatlas_soviet_prison switch.data matches 1 run data modify storage switch:doors taroatlas_soviet_prison set value []
 
-
 execute if score #scan_taroatlas_soviet_prison switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_taroatlas_soviet_prison switch.data matches 30.. summon marker run function switch:maps/survival/taroatlas_soviet_prison/scan_doors_on_marker
 

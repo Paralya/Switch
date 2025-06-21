@@ -1,8 +1,8 @@
 
 #> switch:modes/pitchout/joined
 #
-# @within	switch:modes/pitchout/process_end
-#			switch:modes/pitchout/calls/joined
+# @within	switch:modes/pitchout/calls/joined
+#			switch:modes/pitchout/process_end
 #
 
 scoreboard players reset @s switch.alive
