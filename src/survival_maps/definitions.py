@@ -67,22 +67,14 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (39000, 100, 39000), (39143, 170, 39221), ("dark_forest_hills", "Dark Forest Hills", "Stoupy"), view=(39051.36, 135.94, 39191.41, -1241.32, 15.82))
 	clone_survival(100, (40000, 100, 40000), (40200, 264, 40200), ("paralya_lobby_noel", "Paralya Lobby Noel", "Jugou2"), view=(40153.12, 204.86, 40096.92, -283.29, 9.64))
 	##	41000	(undefined)	: empty
-
-	clone_survival(100, (42000, 0, 42000), (42070, 25, 42056), ("ghost_town", "Ghost Town", "Unknown"), view=(42037, 113, 42028))
-
-	clone_survival(100, (42959, 91, 42959), (43041, 115, 43041), ("abandoned_city_spawn_circle", "Abandoned City Spawn Circle", "Unknown"), view=(43000, 116, 43000))
-
-	clone_survival(100, (43999, -1, 43999), (45001, 259, 46001), ("abandoned_city", "Abandoned City", "Unknown"), view=(44500, 260, 45000))
-
-	clone_survival(128, (45788, -64, 45849), (46136, 126, 46187), ("taroatlas_soviet_prison", "Soviet Prison", "TaroAtlas"), view=(45998, 209, 45984))
-
-	clone_survival(100, (46971, 0, 46971), (47036, 42, 47042), ("desert_grand_library", "Desert Grand Library", "Unknown"), view=(47003, 108, 47006))
-
-	clone_survival(100, (47930, 0, 47930), (48070, 84, 48070), ("new_grounds", "New Grounds", "Unknown"), view=(48000, 113, 48000))
-
-	clone_survival(100, (48900, 0, 48900), (49100, 47, 49100), ("cookie_wars", "Cookie Wars", "Stoupy"), view=(49000, 123, 49000))
-
-	clone_survival(100, (49906, 0, 49918), (50145, 60, 50103), ("snow_hills", "Snow Hills", "Unknown"), view=(50025, 120, 50010))
+	clone_survival(100, (42000, 100, 42000), (42070, 125, 42056), ("ghost_town", "Ghost Town", "FanSarwet46"), view=(42012.45, 112.27, 42034.30, -120.51, 1.25))
+	clone_survival(100, (43000, 100, 43000), (43082, 132, 43082), ("abandoned_city_spawn_circle", "Abandoned City Spawn Circle", "Viator"), view=(43069.79, 128.06, 43063.05, -595.24, 23.65))
+	clone_survival(100, (43999, -1, 43999), (45001, 259, 46001), ("abandoned_city", "Abandoned City", "Viator"), view=(44634.21, 97.01, 44772.98, -926.23, 26.87))
+	##	46000	(undefined)	: empty
+	##	47000	(undefined)	: empty
+	clone_survival(100, (48000, 100, 48000), (48093, 141, 48093), ("new_grounds", "New Grounds", "Unknown"), view=(48065.56, 118.22, 48062.48, -1311.92, 19.39))
+	clone_survival(100, (49000, 100, 49000), (49200, 147, 49200), ("cookie_wars", "Cookie Wars", "Stoupy, Arobaze"), view=(49148.12, 141.36, 49129.67, -1681.13, 30.35))
+	clone_survival(100, (50000, 100, 50000), (50239, 160, 50185), ("snow_hills", "Snow Hills", "Stoupy"), view=(50066.89, 151.85, 50095.16, 263.80, 28.89))
 
 	clone_survival(100, (50963, 80, 50947), (51062, 160, 51070), ("boat_race_2", "Boat Race 2", "Marcus (Survisland)"), view=(51012, 161, 51008), racing_pos=((51032.5, 139, 51038.5), 180, 32))
 
