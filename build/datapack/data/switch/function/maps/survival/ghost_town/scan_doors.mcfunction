@@ -18,10 +18,10 @@ execute if score #scan_ghost_town switch.data matches 1 in switch:game run force
 
 execute if score #scan_ghost_town switch.data matches 1 run data modify storage switch:maps to_scan.ghost_town set value 2b
 execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #start_x_ghost_town switch.data 42001
-execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #start_y_ghost_town switch.data 1
+execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #start_y_ghost_town switch.data 101
 execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #start_z_ghost_town switch.data 42001
 execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #end_x_ghost_town switch.data 42069
-execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #end_y_ghost_town switch.data 24
+execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #end_y_ghost_town switch.data 124
 execute if score #scan_ghost_town switch.data matches 1 run scoreboard players set #end_z_ghost_town switch.data 42055
 execute if score #scan_ghost_town switch.data matches 1 run scoreboard players operation #curr_x_ghost_town switch.data = #start_x_ghost_town switch.data
 execute if score #scan_ghost_town switch.data matches 1 run scoreboard players operation #curr_y_ghost_town switch.data = #start_y_ghost_town switch.data

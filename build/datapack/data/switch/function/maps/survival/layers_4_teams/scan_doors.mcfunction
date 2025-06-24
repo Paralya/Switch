@@ -15,10 +15,10 @@ execute if score #scan_layers_4_teams switch.data matches 1 in switch:game run f
 
 execute if score #scan_layers_4_teams switch.data matches 1 run data modify storage switch:maps to_scan.layers_4_teams set value 2b
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #start_x_layers_4_teams switch.data 74001
-execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #start_y_layers_4_teams switch.data 1
+execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #start_y_layers_4_teams switch.data 101
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #start_z_layers_4_teams switch.data 74001
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #end_x_layers_4_teams switch.data 74035
-execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #end_y_layers_4_teams switch.data 60
+execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #end_y_layers_4_teams switch.data 160
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players set #end_z_layers_4_teams switch.data 74061
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players operation #curr_x_layers_4_teams switch.data = #start_x_layers_4_teams switch.data
 execute if score #scan_layers_4_teams switch.data matches 1 run scoreboard players operation #curr_y_layers_4_teams switch.data = #start_y_layers_4_teams switch.data

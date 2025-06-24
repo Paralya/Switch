@@ -57,10 +57,10 @@ execute if score #scan_nuketown switch.data matches 1 in switch:game run forcelo
 
 execute if score #scan_nuketown switch.data matches 1 run data modify storage switch:maps to_scan.nuketown set value 2b
 execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #start_x_nuketown switch.data 72001
-execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #start_y_nuketown switch.data 1
+execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #start_y_nuketown switch.data 101
 execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #start_z_nuketown switch.data 72001
 execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #end_x_nuketown switch.data 72206
-execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #end_y_nuketown switch.data 50
+execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #end_y_nuketown switch.data 150
 execute if score #scan_nuketown switch.data matches 1 run scoreboard players set #end_z_nuketown switch.data 72219
 execute if score #scan_nuketown switch.data matches 1 run scoreboard players operation #curr_x_nuketown switch.data = #start_x_nuketown switch.data
 execute if score #scan_nuketown switch.data matches 1 run scoreboard players operation #curr_y_nuketown switch.data = #start_y_nuketown switch.data

@@ -725,13 +725,16 @@ def generate_map_usage_file() -> None:
 	modes_usage: dict[str, list[str]] = {}
 	for mode in MODES:
 		mode_id: str = mode["id"]
-		start_file: str = f"switch:modes/{mode_id}/start"
+		start_file: str = f"switch:modes/{mode_id}/"
 		modes_usage[mode_id] = []
 
 		# Get the start function of the mode and search for "function switch:utils/choose_map_for {id:"block_party", maps:["pitch_creep_1","octogone_nether_ice"]}"
-		function_content: str = Mem.ctx.data.functions.get(start_file + "_common", Function()).text
+		function_content: str = Mem.ctx.data.functions.get(start_file + "start_common", Function()).text.strip()
 		if not function_content:
-			function_content = Mem.ctx.data.functions[start_file].text
+			function_content = Mem.ctx.data.functions.get(start_file + "choose_map_for", Function()).text.strip()
+			if not function_content:
+				function_content = Mem.ctx.data.functions[start_file + "start"].text.strip()
+
 		splitted: list[str] = function_content.split(CHOOSE_MAP_FOR)
 		if len(splitted) > 1:
 			maps_str: str = splitted[1].split("\n")[0].split("maps:")[1].split("}")[0]

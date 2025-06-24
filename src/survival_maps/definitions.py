@@ -75,78 +75,41 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (48000, 100, 48000), (48093, 141, 48093), ("new_grounds", "New Grounds", "Unknown"), view=(48065.56, 118.22, 48062.48, -1311.92, 19.39))
 	clone_survival(100, (49000, 100, 49000), (49200, 147, 49200), ("cookie_wars", "Cookie Wars", "Stoupy, Arobaze"), view=(49148.12, 141.36, 49129.67, -1681.13, 30.35))
 	clone_survival(100, (50000, 100, 50000), (50239, 160, 50185), ("snow_hills", "Snow Hills", "Stoupy"), view=(50066.89, 151.85, 50095.16, 263.80, 28.89))
-
-	clone_survival(100, (50963, 80, 50947), (51062, 160, 51070), ("boat_race_2", "Boat Race 2", "Marcus (Survisland)"), view=(51012, 161, 51008), racing_pos=((51032.5, 139, 51038.5), 180, 32))
-
-	clone_survival(100, (51899, -64, 51853), (52076, 92, 52071), ("vilarles_castillo", "Castillo", "Vilarles"), view=(52000, 135, 52000))
-
-	clone_survival(100, (52915, 0, 52876), (53040, 57, 53094), ("zonweeb_highschool", "A Japanese High School", "Minami310, ComputerGraphics, Stoupy"), view=(53000, 112, 53000))
-
-	clone_survival(100, (53977, 0, 53994), (54008, 40, 54100), ("enigma_lab_1", "Enigma Lab 1", "Stoupy (Survisland)"), view=(53979.06, 37.20, 53993.02, -382.69, 43.02))
-
-	clone_survival(100, (54979, 0, 54996), (55020, 39, 55037), ("sumo_lawef", "Sumo Arena", "Lawef (Survisland)"), view=(54999, 112, 55016))
-
+	clone_survival(100, (51000, 100, 51000), (51099, 180, 51123), ("boat_race_2", "Boat Race 2", "Marcus (Survisland)"), view=(51005.01, 168.14, 51040.46, -71.72, 42.03), racing_pos=((51069.5, 159, 51091.5), 180, 32))
+	clone_survival(100, (52000, 100, 52000), (52177, 256, 52173), ("vilarles_castillo", "Castillo", "Vilarles"), view=(52053.77, 175.12, 52166.47, -158.81, 15.64))
+	clone_survival(100, (53000, 100, 53000), (53125, 158, 53218), ("zonweeb_highschool", "A Japanese High School", "Minami310, ComputerGraphics, Stoupy"), view=(53115.10, 109.14, 53116.11, 72.04, -9.97))
+	##	54000	(undefined)	: empty
+	##	55000	(undefined)	: empty
 	##	56000	(undefined)	: CSGO Map, faut trouver le nom	(not done yet)
-
-	clone_survival(100, (57000, 0, 57000), (57074, 55, 57113), ("find_the_shulker", "Find the Shulker", "? (Survisland)"), view=(57037, 120, 57056))
-
-	clone_survival(100, (58000, 0, 58000), (58160, 91, 58188), ("scartmania", "Scartmania", "Stoupy (Survisland)"), view=(58008, 111, 58020))
-
-	clone_survival(100, (59000, 0, 59000), (59160, 47, 59124), ("colliseum", "Colliseum", "? (Survisland)"), view=(59080, 111, 59062))
-
-	clone_survival(100, (60000, 0, 60000), (60184, 73, 60066), ("scary_labyrinth", "Scary Labyrinth", "? (Survisland)"), view=(60091, 110, 60037))
-
-	clone_survival(100, (61000, 0, 61000), (61084, 88, 61049), ("snk_tower", "SNK Tower", "Stoupy (Survisland)"), view=(61071.93, 9.93, 61027.64, -272.83, -61.81))
-
-	clone_survival(100, (62000, 0, 62000), (62088, 59, 62093), ("blindtest", "Blindtest", "Islijelis (Survisland)"), view=(62044, 111, 62046))
-
-	#	63000	(survival)	: VIDE (pas de map)
-
-	# Drive the pig (63000)
-
-	clone_survival(100, (64000, 0, 64000), (64101, 53, 64126), ("kart_racer_relai", "Kart Racer Relay", "?, Stoupy (Survisland)"), view=(64037, 112, 64052))
-
-	clone_survival(100, (65000, 0, 65000), (65099, 94, 65103), ("orange_rings", "Orange Rings", "Stoupy (Survisland)"), view=(65006, 109, 65003))
-
-	clone_survival(100, (66000, 0, 66000), (66085, 56, 66080), ("find_the_wool", "Find the Wool", "? (Survisland)"), view=(66042, 115, 66040))
-
-	clone_survival(100, (67000, 0, 67000), (67065, 33, 67073), ("snk_lab_s11", "SNK Lab S11", "Stoupy (Survisland)"), view=(67037, 128, 67037))
-
-	clone_survival(100, (68000, 0, 68000), (68024, 20, 68031), ("plucky_penguins", "Plucky Penguins", "Stoupy (Survisland)"), view=(68012, 116, 68015))
-
-	clone_survival(100, (69000, -64, 69000), (69148, 60, 69106), ("warden_escape_statue", "Warden Escape Statue", "?, Oraclette (Survisland)"), view=(69055, 136, 69050))
-
-	clone_survival(100, (70000, 0, 70000), (70303, 64, 70287), ("giant_zoo", "Giant Zoo", "?, M4TOUW (Survisland)"), view=(70026, 123, 70126))
-
-	clone_survival(100, (71000, 0, 71000), (71170, 70, 71160), ("hider_mansion", "Hider Mansion", "?, Oraclette, math730 (Survisland)"), view=(71073, 110, 71080))
-
-	clone_survival(100, (72000, 0, 72000), (72207, 51, 72220), ("nuketown", "Nuketown", "Qiuye, Cube Horizon"), view=(72109, 111, 72109))
-
-	clone_survival(100, (73000, 0, 73000), (73076, 29, 73083), ("enigma_lab_2", "Enigma Lab 2", "Stoupy (Survisland)"), view=(72109, 111, 72109))
-
-	clone_survival(100, (74000, 0, 74000), (74036, 61, 74062), ("layers_4_teams", "Layers 4 Teams", "Stoupy"), view=(72109, 111, 72109))
-
-	clone_survival(100, (75000, 0, 75000), (75089, 35, 75076), ("snk_lab_s9", "SNK Lab S9", "Stoupy (Survisland)"), view=(72109, 111, 72109))
-
+	##	57000	(undefined)	: empty
+	clone_survival(100, (58000, 100, 58000), (58160, 191, 58188), ("scartmania", "Scartmania", "Stoupy (Survisland)"), view=(58103.72, 244.52, 58043.93, -340.04, 78.09))
+	##	59000	(undefined)	: empty
+	##	60000	(undefined)	: empty
+	##	61000	(undefined)	: empty
+	##	62000	(undefined)	: empty
+	##	63000	(undefined)	: empty
+	##	64000	(undefined)	: empty
+	##	65000	(undefined)	: empty
+	##	66000	(undefined)	: empty
+	##	67000	(undefined)	: empty
+	##	68000	(undefined)	: empty
+	clone_survival(100, (69000, 100, 69000), (69148, 223, 69106), ("warden_escape_statue", "Warden Escape Statue", "?, Oraclette, math730 (Survisland)"), view=(69017.77, 136.85, 69078.56, -1200.28, -1.32))
+	##	70000	(undefined)	: empty
+	clone_survival(100, (71000, 100, 71000), (71170, 170, 71160), ("hider_mansion", "Hider Mansion", "?, Oraclette, math730 (Survisland)"), view=(71152.74, 114.70, 71047.07, -1019.62, -5.03))
+	clone_survival(100, (72000, 100, 72000), (72207, 151, 72220), ("nuketown", "Nuketown", "Qiuye, Cube Horizon"), view=(72087.17, 117.13, 72105.28, -836.41, 15.91))
+	##	73000	(undefined)	: empty
+	clone_survival(100, (74000, 100, 74000), (74036, 161, 74062), ("layers_4_teams", "Layers 4 Teams", "Stoupy"), view=(73990.28, 107.53, 74079.30, -2665.00, -23.18))
+	##	75000	(undefined)	: empty
 	##	76000	(undefined)	: Fish the pig			(not done yet)
-
-	clone_survival(100, (77000, -64, 77000), (77097, 81, 77094), ("sky_island_tower", "Sky Island Tower", "Unknown"), view=(77052, 183, 77038))
-
-	clone_survival(100, (78000, 0, 78000), (78171, 81, 78112), ("sprucy_village", "Sprucy Village", "Unknown"), view=(78085, 119, 78055))
-
-	clone_survival(100, (79000, 0, 79000), (79126, 99, 79102), ("survival_boat", "Survival Boat", "Unknown"), view=(72109, 111, 72109))
-
-	clone_survival(150, (80000, -64, 80000), (80142, 0, 80142), ("sky_tower", "Sky Tower", "Unknown"), view=(80071, 173, 80071))
-
-	fill_survival((80824, 0, 80822), (81219, 235, 81182), ("purple_sky_island", "Purple Sky Island", "Unknown"), "air", "#switch:purple_sky_island", view=(81000, 101, 81000))
-
+	clone_survival(100, (77000, 100, 77000), (77097, 244, 77094), ("sky_island_tower", "Sky Island Tower", "Unknown"), view=(77026.88, 171.22, 77099.86, -155.14, 14.42))
+	##	78000	(undefined)	: empty
+	clone_survival(100, (79000, 100, 79000), (79126, 199, 79102), ("survival_boat", "Survival Boat", "Unknown"), view=(79029.80, 115.97, 79042.34, -64.00, -11.00))
+	##	80000	(undefined)	: empty
+	##	81000	(undefined)	: empty
 	##	82000	(undefined)	: Maps Infinitri customs à fusionner	(not done yet) [Infinitri Pack]
-
-	clone_survival(100, (83000, 0, 83000), (83063, 85, 83063), ("lava_castle", "Lava Castle", "Unknown"), view=(83032, 132, 83039))
-
-	clone_survival(100, (84000, 0, 84000), (84083, 35, 84069), ("spruce_dojo", "Spruce Dojo", "Unknown"), view=(84041, 109, 84035))
-
-	clone_survival(100, (85000, 0, 85000), (85150, 72, 85142), ("highland_mansion", "Highland Mansion", "Unknown"), view=(72109, 111, 72109))
+	##	83000	(undefined)	: empty
+	##	84000	(undefined)	: Création de maps (Guy Shooter, et ???)
+	##	85000	(undefined)	: empty
 
 	clone_survival(100, (86000, 0, 86000), (86121, 94, 86135), ("sakura_house", "Sakura House", "Unknown"), view=(86072, 117, 86100))
 

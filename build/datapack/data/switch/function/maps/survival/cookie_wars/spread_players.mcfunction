@@ -4,103 +4,103 @@
 # @within	switch:maps/survival/cookie_wars/teleport_players
 #
 
-execute in switch:game run spreadplayers 49000 49000 50 100 under 144 false @a[tag=!detached]
+execute in switch:game run spreadplayers 49100 49100 50 100 under 244 false @a[tag=!detached]
 
 ## Assurance commands
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49000 49000 50 100 under 144 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=100,dy=-1] in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers 49100 49100 50 100 under 244 false @s
 

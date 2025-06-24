@@ -30,11 +30,11 @@ execute if score #rg_hider_mansion switch.data matches 1 in switch:game run forc
 execute if score #rg_hider_mansion switch.data matches 1 in minecraft:overworld run forceload add 71153 71000 71170 71160
 execute if score #rg_hider_mansion switch.data matches 1 in switch:game run forceload add 71153 71000 71170 71160
 
-execute if score #rg_hider_mansion switch.data matches 1 run scoreboard players set #rg_hider_mansion_y switch.data 0
+execute if score #rg_hider_mansion switch.data matches 1 run scoreboard players set #rg_hider_mansion_y switch.data 100
 execute if score #rg_hider_mansion switch.data matches 1 run scoreboard players set #rg_hider_mansion_mod switch.data 0
 execute if score #rg_hider_mansion switch.data matches ..710 summon marker run function switch:maps/survival/hider_mansion/regeneration_on_marker
 
-execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run kill @e[type=item,x=71085,y=0,z=71080,distance=..1000]
+execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run kill @e[type=item,x=71085,y=100,z=71080,distance=..1000]
 execute if score #rg_hider_mansion switch.data matches 711.. run data remove storage switch:maps to_regenerate.hider_mansion
 
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71000 71000 71017 71160

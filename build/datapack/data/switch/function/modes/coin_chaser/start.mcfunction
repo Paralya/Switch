@@ -13,7 +13,7 @@ execute in switch:game run gamerule fallDamage false
 ## Téléportation des joueurs
 scoreboard players set #dont_regenerate switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"coin_chaser", maps:["paralya_lobby","purple_sky_island"]}
+function switch:utils/choose_map_for {id:"coin_chaser", maps:["paralya_lobby"]}
 
 function switch:translations/modes_coin_chaser_start
 

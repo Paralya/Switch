@@ -16,11 +16,11 @@ execute if score #rg_ghost_town switch.data matches 1 in switch:game run forcelo
 execute if score #rg_ghost_town switch.data matches 1 in minecraft:overworld run forceload add 42047 42000 42070 42056
 execute if score #rg_ghost_town switch.data matches 1 in switch:game run forceload add 42047 42000 42070 42056
 
-execute if score #rg_ghost_town switch.data matches 1 run scoreboard players set #rg_ghost_town_y switch.data 0
+execute if score #rg_ghost_town switch.data matches 1 run scoreboard players set #rg_ghost_town_y switch.data 100
 execute if score #rg_ghost_town switch.data matches 1 run scoreboard players set #rg_ghost_town_mod switch.data 0
 execute if score #rg_ghost_town switch.data matches ..78 summon marker run function switch:maps/survival/ghost_town/regeneration_on_marker
 
-execute if score #rg_ghost_town switch.data matches 79.. in switch:game run kill @e[type=item,x=42035,y=0,z=42028,distance=..1000]
+execute if score #rg_ghost_town switch.data matches 79.. in switch:game run kill @e[type=item,x=42035,y=100,z=42028,distance=..1000]
 execute if score #rg_ghost_town switch.data matches 79.. run data remove storage switch:maps to_regenerate.ghost_town
 
 execute if score #rg_ghost_town switch.data matches 79.. in minecraft:overworld run forceload remove 42000 42000 42023 42056

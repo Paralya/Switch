@@ -42,10 +42,10 @@ execute if score #scan_scartmania switch.data matches 1 in switch:game run force
 
 execute if score #scan_scartmania switch.data matches 1 run data modify storage switch:maps to_scan.scartmania set value 2b
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_x_scartmania switch.data 58001
-execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_y_scartmania switch.data 1
+execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_y_scartmania switch.data 101
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_z_scartmania switch.data 58001
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_x_scartmania switch.data 58159
-execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_y_scartmania switch.data 90
+execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_y_scartmania switch.data 190
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_z_scartmania switch.data 58187
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players operation #curr_x_scartmania switch.data = #start_x_scartmania switch.data
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players operation #curr_y_scartmania switch.data = #start_y_scartmania switch.data

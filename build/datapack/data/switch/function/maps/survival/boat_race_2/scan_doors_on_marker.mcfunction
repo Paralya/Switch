@@ -13,7 +13,7 @@ execute if score #curr_x_boat_race_2 switch.data > #end_x_boat_race_2 switch.dat
 execute if score #curr_x_boat_race_2 switch.data > #end_x_boat_race_2 switch.data run scoreboard players operation #curr_x_boat_race_2 switch.data = #start_x_boat_race_2 switch.data
 execute if score #curr_y_boat_race_2 switch.data > #end_y_boat_race_2 switch.data run scoreboard players add #curr_z_boat_race_2 switch.data 1
 execute if score #curr_y_boat_race_2 switch.data > #end_y_boat_race_2 switch.data run scoreboard players operation #curr_y_boat_race_2 switch.data = #start_y_boat_race_2 switch.data
-execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"boat_race_2",additional_height:20}
+execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"boat_race_2",additional_height:0}
 
 scoreboard players remove #blocks_in_loop switch.data 1
 execute if score #blocks_in_loop switch.data matches 1.. if score #curr_z_boat_race_2 switch.data < #end_z_boat_race_2 switch.data run function switch:maps/survival/boat_race_2/scan_doors_on_marker

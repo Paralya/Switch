@@ -9,70 +9,70 @@
 
 scoreboard players add #rg_zonweeb_highschool switch.data 1
 execute if score #rg_zonweeb_highschool switch.data matches 1 run data modify storage switch:maps to_regenerate.zonweeb_highschool set value 2b
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52915 52876 52928 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52915 52876 52928 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52928 52876 52940 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52928 52876 52940 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52940 52876 52952 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52940 52876 52952 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52952 52876 52965 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52952 52876 52965 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52965 52876 52978 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52965 52876 52978 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52978 52876 52990 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52978 52876 52990 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 52990 52876 53002 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 52990 52876 53002 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53002 52876 53015 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53002 52876 53015 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53015 52876 53028 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53015 52876 53028 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53028 52876 53040 53094
-execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53028 52876 53040 53094
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53000 53000 53012 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53000 53000 53012 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53012 53000 53025 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53012 53000 53025 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53025 53000 53038 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53025 53000 53038 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53038 53000 53050 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53038 53000 53050 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53050 53000 53062 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53050 53000 53062 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53062 53000 53075 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53062 53000 53075 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53075 53000 53088 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53075 53000 53088 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53088 53000 53100 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53088 53000 53100 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53100 53000 53112 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53100 53000 53112 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in minecraft:overworld run forceload add 53112 53000 53125 53218
+execute if score #rg_zonweeb_highschool switch.data matches 1 in switch:game run forceload add 53112 53000 53125 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 1 run scoreboard players set #rg_zonweeb_highschool_y switch.data 0
+execute if score #rg_zonweeb_highschool switch.data matches 1 run scoreboard players set #rg_zonweeb_highschool_y switch.data 100
 execute if score #rg_zonweeb_highschool switch.data matches 1 run scoreboard players set #rg_zonweeb_highschool_mod switch.data 0
-execute if score #rg_zonweeb_highschool switch.data matches ..580 summon marker run function switch:maps/survival/zonweeb_highschool/regeneration_on_marker
+execute if score #rg_zonweeb_highschool switch.data matches ..590 summon marker run function switch:maps/survival/zonweeb_highschool/regeneration_on_marker
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run kill @e[type=item,x=52977,y=0,z=52985,distance=..1000]
-execute if score #rg_zonweeb_highschool switch.data matches 581.. run data remove storage switch:maps to_regenerate.zonweeb_highschool
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run kill @e[type=item,x=53062,y=100,z=53109,distance=..1000]
+execute if score #rg_zonweeb_highschool switch.data matches 591.. run data remove storage switch:maps to_regenerate.zonweeb_highschool
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52915 52876 52928 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52915 52876 52928 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53000 53000 53012 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53000 53000 53012 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52928 52876 52940 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52928 52876 52940 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53012 53000 53025 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53012 53000 53025 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52940 52876 52952 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52940 52876 52952 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53025 53000 53038 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53025 53000 53038 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52952 52876 52965 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52952 52876 52965 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53038 53000 53050 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53038 53000 53050 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52965 52876 52978 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52965 52876 52978 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53050 53000 53062 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53050 53000 53062 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52978 52876 52990 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52978 52876 52990 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53062 53000 53075 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53062 53000 53075 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 52990 52876 53002 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 52990 52876 53002 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53075 53000 53088 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53075 53000 53088 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 53002 52876 53015 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 53002 52876 53015 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53088 53000 53100 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53088 53000 53100 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 53015 52876 53028 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 53015 52876 53028 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53100 53000 53112 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53100 53000 53112 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in minecraft:overworld run forceload remove 53028 52876 53040 53094
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run forceload remove 53028 52876 53040 53094
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove 53112 53000 53125 53218
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove 53112 53000 53125 53218
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"zonweeb_highschool","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"29","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zonweeb_highschool switch.data matches 591.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"zonweeb_highschool","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"29","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. run data modify storage switch:main MessageToLog set value '{"text":"Map `zonweeb_highschool` just regenerated!"}'
-execute if score #rg_zonweeb_highschool switch.data matches 581.. run function switch:engine/log_message/apply
+execute if score #rg_zonweeb_highschool switch.data matches 591.. run data modify storage switch:main MessageToLog set value '{"text":"Map `zonweeb_highschool` just regenerated!"}'
+execute if score #rg_zonweeb_highschool switch.data matches 591.. run function switch:engine/log_message/apply
 
-execute if score #rg_zonweeb_highschool switch.data matches 581.. in switch:game run function switch:maps/regenerate_doors_macro {name:"zonweeb_highschool"}
-execute if score #rg_zonweeb_highschool switch.data matches 581.. run scoreboard players reset #rg_zonweeb_highschool switch.data
+execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run function switch:maps/regenerate_doors_macro {name:"zonweeb_highschool"}
+execute if score #rg_zonweeb_highschool switch.data matches 591.. run scoreboard players reset #rg_zonweeb_highschool switch.data
 execute if score #rg_zonweeb_highschool switch.data matches 1.. run schedule function switch:maps/survival/zonweeb_highschool/regenerate 1t
 

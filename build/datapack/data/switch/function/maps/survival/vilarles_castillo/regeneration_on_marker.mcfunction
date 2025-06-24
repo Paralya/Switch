@@ -6,52 +6,43 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_vilarles_castillo_y switch.data
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 0 at @s in switch:game run particle cloud 51905 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 0 at @s run clone from minecraft:overworld 51899 ~ 51853 51912 ~ 52071 to switch:game 51899 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 0 at @s in switch:game run particle cloud 52008 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 0 at @s run clone from minecraft:overworld 52000 ~ 52000 52016 ~ 52173 to switch:game 52000 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 1 at @s in switch:game run particle cloud 51918 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 1 at @s run clone from minecraft:overworld 51912 ~ 51853 51924 ~ 52071 to switch:game 51912 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 1 at @s in switch:game run particle cloud 52024 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 1 at @s run clone from minecraft:overworld 52016 ~ 52000 52032 ~ 52173 to switch:game 52016 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 2 at @s in switch:game run particle cloud 51930 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 2 at @s run clone from minecraft:overworld 51924 ~ 51853 51937 ~ 52071 to switch:game 51924 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 2 at @s in switch:game run particle cloud 52040 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 2 at @s run clone from minecraft:overworld 52032 ~ 52000 52048 ~ 52173 to switch:game 52032 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 3 at @s in switch:game run particle cloud 51943 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 3 at @s run clone from minecraft:overworld 51937 ~ 51853 51950 ~ 52071 to switch:game 51937 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 3 at @s in switch:game run particle cloud 52056 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 3 at @s run clone from minecraft:overworld 52048 ~ 52000 52064 ~ 52173 to switch:game 52048 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 4 at @s in switch:game run particle cloud 51956 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 4 at @s run clone from minecraft:overworld 51950 ~ 51853 51962 ~ 52071 to switch:game 51950 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 4 at @s in switch:game run particle cloud 52072 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 4 at @s run clone from minecraft:overworld 52064 ~ 52000 52080 ~ 52173 to switch:game 52064 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 5 at @s in switch:game run particle cloud 51968 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 5 at @s run clone from minecraft:overworld 51962 ~ 51853 51975 ~ 52071 to switch:game 51962 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 5 at @s in switch:game run particle cloud 52088 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 5 at @s run clone from minecraft:overworld 52080 ~ 52000 52097 ~ 52173 to switch:game 52080 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 6 at @s in switch:game run particle cloud 51981 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 6 at @s run clone from minecraft:overworld 51975 ~ 51853 51988 ~ 52071 to switch:game 51975 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 6 at @s in switch:game run particle cloud 52105 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 6 at @s run clone from minecraft:overworld 52097 ~ 52000 52113 ~ 52173 to switch:game 52097 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 7 at @s in switch:game run particle cloud 51994 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 7 at @s run clone from minecraft:overworld 51988 ~ 51853 52000 ~ 52071 to switch:game 51988 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 7 at @s in switch:game run particle cloud 52121 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 7 at @s run clone from minecraft:overworld 52113 ~ 52000 52129 ~ 52173 to switch:game 52113 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 8 at @s in switch:game run particle cloud 52006 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 8 at @s run clone from minecraft:overworld 52000 ~ 51853 52013 ~ 52071 to switch:game 52000 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 8 at @s in switch:game run particle cloud 52137 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 8 at @s run clone from minecraft:overworld 52129 ~ 52000 52145 ~ 52173 to switch:game 52129 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 9 at @s in switch:game run particle cloud 52019 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 9 at @s run clone from minecraft:overworld 52013 ~ 51853 52025 ~ 52071 to switch:game 52013 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 9 at @s in switch:game run particle cloud 52153 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 9 at @s run clone from minecraft:overworld 52145 ~ 52000 52161 ~ 52173 to switch:game 52145 ~0 52000 replace force
 
-execute if score #rg_vilarles_castillo_mod switch.data matches 10 at @s in switch:game run particle cloud 52031 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 10 at @s run clone from minecraft:overworld 52025 ~ 51853 52038 ~ 52071 to switch:game 52025 ~164 51853 replace force
-
-execute if score #rg_vilarles_castillo_mod switch.data matches 11 at @s in switch:game run particle cloud 52044 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 11 at @s run clone from minecraft:overworld 52038 ~ 51853 52051 ~ 52071 to switch:game 52038 ~164 51853 replace force
-
-execute if score #rg_vilarles_castillo_mod switch.data matches 12 at @s in switch:game run particle cloud 52057 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 12 at @s run clone from minecraft:overworld 52051 ~ 51853 52063 ~ 52071 to switch:game 52051 ~164 51853 replace force
-
-execute if score #rg_vilarles_castillo_mod switch.data matches 13 at @s in switch:game run particle cloud 52069 ~164.5 51962 6 0 54 0 250 force
-execute if score #rg_vilarles_castillo_mod switch.data matches 13 at @s run clone from minecraft:overworld 52063 ~ 51853 52076 ~ 52071 to switch:game 52063 ~164 51853 replace force
+execute if score #rg_vilarles_castillo_mod switch.data matches 10 at @s in switch:game run particle cloud 52169 ~0.5 52086 8 0 43 0 250 force
+execute if score #rg_vilarles_castillo_mod switch.data matches 10 at @s run clone from minecraft:overworld 52161 ~ 52000 52177 ~ 52173 to switch:game 52161 ~0 52000 replace force
 
 scoreboard players add #rg_vilarles_castillo_mod switch.data 1
-execute if score #rg_vilarles_castillo_mod switch.data matches 14 in switch:game run kill @e[type=item,x=51987,y=-64,z=51962,distance=..1000]
-execute if score #rg_vilarles_castillo_mod switch.data matches 14 run scoreboard players add #rg_vilarles_castillo_y switch.data 1
-execute if score #rg_vilarles_castillo_mod switch.data matches 14 run scoreboard players set #rg_vilarles_castillo_mod switch.data 0
+execute if score #rg_vilarles_castillo_mod switch.data matches 11 in switch:game run kill @e[type=item,x=52088,y=100,z=52086,distance=..1000]
+execute if score #rg_vilarles_castillo_mod switch.data matches 11 run scoreboard players add #rg_vilarles_castillo_y switch.data 1
+execute if score #rg_vilarles_castillo_mod switch.data matches 11 run scoreboard players set #rg_vilarles_castillo_mod switch.data 0
 
 kill @s
 

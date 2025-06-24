@@ -32,11 +32,11 @@ execute if score #rg_scartmania switch.data matches 1 in switch:game run forcelo
 execute if score #rg_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58145 58000 58160 58188
 execute if score #rg_scartmania switch.data matches 1 in switch:game run forceload add 58145 58000 58160 58188
 
-execute if score #rg_scartmania switch.data matches 1 run scoreboard players set #rg_scartmania_y switch.data 0
+execute if score #rg_scartmania switch.data matches 1 run scoreboard players set #rg_scartmania_y switch.data 100
 execute if score #rg_scartmania switch.data matches 1 run scoreboard players set #rg_scartmania_mod switch.data 0
 execute if score #rg_scartmania switch.data matches ..1012 summon marker run function switch:maps/survival/scartmania/regeneration_on_marker
 
-execute if score #rg_scartmania switch.data matches 1013.. in switch:game run kill @e[type=item,x=58080,y=0,z=58094,distance=..1000]
+execute if score #rg_scartmania switch.data matches 1013.. in switch:game run kill @e[type=item,x=58080,y=100,z=58094,distance=..1000]
 execute if score #rg_scartmania switch.data matches 1013.. run data remove storage switch:maps to_regenerate.scartmania
 
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58000 58000 58015 58188

@@ -14,11 +14,11 @@ execute if score #rg_layers_4_teams switch.data matches 1 in switch:game run for
 execute if score #rg_layers_4_teams switch.data matches 1 in minecraft:overworld run forceload add 74018 74000 74036 74062
 execute if score #rg_layers_4_teams switch.data matches 1 in switch:game run forceload add 74018 74000 74036 74062
 
-execute if score #rg_layers_4_teams switch.data matches 1 run scoreboard players set #rg_layers_4_teams_y switch.data 0
+execute if score #rg_layers_4_teams switch.data matches 1 run scoreboard players set #rg_layers_4_teams_y switch.data 100
 execute if score #rg_layers_4_teams switch.data matches 1 run scoreboard players set #rg_layers_4_teams_mod switch.data 0
 execute if score #rg_layers_4_teams switch.data matches ..124 summon marker run function switch:maps/survival/layers_4_teams/regeneration_on_marker
 
-execute if score #rg_layers_4_teams switch.data matches 125.. in switch:game run kill @e[type=item,x=74018,y=0,z=74031,distance=..1000]
+execute if score #rg_layers_4_teams switch.data matches 125.. in switch:game run kill @e[type=item,x=74018,y=100,z=74031,distance=..1000]
 execute if score #rg_layers_4_teams switch.data matches 125.. run data remove storage switch:maps to_regenerate.layers_4_teams
 
 execute if score #rg_layers_4_teams switch.data matches 125.. in minecraft:overworld run forceload remove 74000 74000 74018 74062

@@ -4,7 +4,7 @@
 # @within	switch:maps/survival/layers_4_teams/main
 #
 
-data modify entity @s Pos set value [72109.5d, 111.5d, 72109.5d]
+data modify entity @s Pos set value [73990.28.5d, 107.53.5d, 74079.3.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/layers_4_teams/spread_players

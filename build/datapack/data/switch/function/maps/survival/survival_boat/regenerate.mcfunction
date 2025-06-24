@@ -22,11 +22,11 @@ execute if score #rg_survival_boat switch.data matches 1 in switch:game run forc
 execute if score #rg_survival_boat switch.data matches 1 in minecraft:overworld run forceload add 79105 79000 79126 79102
 execute if score #rg_survival_boat switch.data matches 1 in switch:game run forceload add 79105 79000 79126 79102
 
-execute if score #rg_survival_boat switch.data matches 1 run scoreboard players set #rg_survival_boat_y switch.data 0
+execute if score #rg_survival_boat switch.data matches 1 run scoreboard players set #rg_survival_boat_y switch.data 100
 execute if score #rg_survival_boat switch.data matches 1 run scoreboard players set #rg_survival_boat_mod switch.data 0
 execute if score #rg_survival_boat switch.data matches ..600 summon marker run function switch:maps/survival/survival_boat/regeneration_on_marker
 
-execute if score #rg_survival_boat switch.data matches 601.. in switch:game run kill @e[type=item,x=79063,y=0,z=79051,distance=..1000]
+execute if score #rg_survival_boat switch.data matches 601.. in switch:game run kill @e[type=item,x=79063,y=100,z=79051,distance=..1000]
 execute if score #rg_survival_boat switch.data matches 601.. run data remove storage switch:maps to_regenerate.survival_boat
 
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79000 79000 79021 79102

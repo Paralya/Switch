@@ -27,10 +27,10 @@ execute if score #scan_survival_boat switch.data matches 1 in switch:game run fo
 
 execute if score #scan_survival_boat switch.data matches 1 run data modify storage switch:maps to_scan.survival_boat set value 2b
 execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #start_x_survival_boat switch.data 79001
-execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #start_y_survival_boat switch.data 1
+execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #start_y_survival_boat switch.data 101
 execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #start_z_survival_boat switch.data 79001
 execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #end_x_survival_boat switch.data 79125
-execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #end_y_survival_boat switch.data 98
+execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #end_y_survival_boat switch.data 198
 execute if score #scan_survival_boat switch.data matches 1 run scoreboard players set #end_z_survival_boat switch.data 79101
 execute if score #scan_survival_boat switch.data matches 1 run scoreboard players operation #curr_x_survival_boat switch.data = #start_x_survival_boat switch.data
 execute if score #scan_survival_boat switch.data matches 1 run scoreboard players operation #curr_y_survival_boat switch.data = #start_y_survival_boat switch.data

@@ -6,50 +6,50 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_cookie_wars_y switch.data
 
-execute if score #rg_cookie_wars_mod switch.data matches 0 at @s in switch:game run particle cloud 48907 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 0 at @s run clone from minecraft:overworld 48900 ~ 48900 48914 ~ 49100 to switch:game 48900 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 0 at @s in switch:game run particle cloud 49007 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 0 at @s run clone from minecraft:overworld 49000 ~ 49000 49014 ~ 49200 to switch:game 49000 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 1 at @s in switch:game run particle cloud 48921 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 1 at @s run clone from minecraft:overworld 48914 ~ 48900 48929 ~ 49100 to switch:game 48914 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 1 at @s in switch:game run particle cloud 49021 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 1 at @s run clone from minecraft:overworld 49014 ~ 49000 49029 ~ 49200 to switch:game 49014 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 2 at @s in switch:game run particle cloud 48936 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 2 at @s run clone from minecraft:overworld 48929 ~ 48900 48943 ~ 49100 to switch:game 48929 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 2 at @s in switch:game run particle cloud 49036 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 2 at @s run clone from minecraft:overworld 49029 ~ 49000 49043 ~ 49200 to switch:game 49029 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 3 at @s in switch:game run particle cloud 48950 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 3 at @s run clone from minecraft:overworld 48943 ~ 48900 48957 ~ 49100 to switch:game 48943 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 3 at @s in switch:game run particle cloud 49050 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 3 at @s run clone from minecraft:overworld 49043 ~ 49000 49057 ~ 49200 to switch:game 49043 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 4 at @s in switch:game run particle cloud 48964 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 4 at @s run clone from minecraft:overworld 48957 ~ 48900 48971 ~ 49100 to switch:game 48957 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 4 at @s in switch:game run particle cloud 49064 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 4 at @s run clone from minecraft:overworld 49057 ~ 49000 49071 ~ 49200 to switch:game 49057 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 5 at @s in switch:game run particle cloud 48978 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 5 at @s run clone from minecraft:overworld 48971 ~ 48900 48986 ~ 49100 to switch:game 48971 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 5 at @s in switch:game run particle cloud 49078 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 5 at @s run clone from minecraft:overworld 49071 ~ 49000 49086 ~ 49200 to switch:game 49071 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 6 at @s in switch:game run particle cloud 48993 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 6 at @s run clone from minecraft:overworld 48986 ~ 48900 49000 ~ 49100 to switch:game 48986 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 6 at @s in switch:game run particle cloud 49093 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 6 at @s run clone from minecraft:overworld 49086 ~ 49000 49100 ~ 49200 to switch:game 49086 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 7 at @s in switch:game run particle cloud 49007 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 7 at @s run clone from minecraft:overworld 49000 ~ 48900 49014 ~ 49100 to switch:game 49000 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 7 at @s in switch:game run particle cloud 49107 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 7 at @s run clone from minecraft:overworld 49100 ~ 49000 49114 ~ 49200 to switch:game 49100 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 8 at @s in switch:game run particle cloud 49021 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 8 at @s run clone from minecraft:overworld 49014 ~ 48900 49029 ~ 49100 to switch:game 49014 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 8 at @s in switch:game run particle cloud 49121 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 8 at @s run clone from minecraft:overworld 49114 ~ 49000 49129 ~ 49200 to switch:game 49114 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 9 at @s in switch:game run particle cloud 49036 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 9 at @s run clone from minecraft:overworld 49029 ~ 48900 49043 ~ 49100 to switch:game 49029 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 9 at @s in switch:game run particle cloud 49136 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 9 at @s run clone from minecraft:overworld 49129 ~ 49000 49143 ~ 49200 to switch:game 49129 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 10 at @s in switch:game run particle cloud 49050 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 10 at @s run clone from minecraft:overworld 49043 ~ 48900 49057 ~ 49100 to switch:game 49043 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 10 at @s in switch:game run particle cloud 49150 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 10 at @s run clone from minecraft:overworld 49143 ~ 49000 49157 ~ 49200 to switch:game 49143 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 11 at @s in switch:game run particle cloud 49064 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 11 at @s run clone from minecraft:overworld 49057 ~ 48900 49071 ~ 49100 to switch:game 49057 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 11 at @s in switch:game run particle cloud 49164 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 11 at @s run clone from minecraft:overworld 49157 ~ 49000 49171 ~ 49200 to switch:game 49157 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 12 at @s in switch:game run particle cloud 49078 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 12 at @s run clone from minecraft:overworld 49071 ~ 48900 49086 ~ 49100 to switch:game 49071 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 12 at @s in switch:game run particle cloud 49178 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 12 at @s run clone from minecraft:overworld 49171 ~ 49000 49186 ~ 49200 to switch:game 49171 ~0 49000 replace force
 
-execute if score #rg_cookie_wars_mod switch.data matches 13 at @s in switch:game run particle cloud 49093 ~100.5 49000 7 0 50 0 250 force
-execute if score #rg_cookie_wars_mod switch.data matches 13 at @s run clone from minecraft:overworld 49086 ~ 48900 49100 ~ 49100 to switch:game 49086 ~100 48900 replace force
+execute if score #rg_cookie_wars_mod switch.data matches 13 at @s in switch:game run particle cloud 49193 ~0.5 49100 7 0 50 0 250 force
+execute if score #rg_cookie_wars_mod switch.data matches 13 at @s run clone from minecraft:overworld 49186 ~ 49000 49200 ~ 49200 to switch:game 49186 ~0 49000 replace force
 
 scoreboard players add #rg_cookie_wars_mod switch.data 1
-execute if score #rg_cookie_wars_mod switch.data matches 14 in switch:game run kill @e[type=item,x=49000,y=0,z=49000,distance=..1000]
+execute if score #rg_cookie_wars_mod switch.data matches 14 in switch:game run kill @e[type=item,x=49100,y=100,z=49100,distance=..1000]
 execute if score #rg_cookie_wars_mod switch.data matches 14 run scoreboard players add #rg_cookie_wars_y switch.data 1
 execute if score #rg_cookie_wars_mod switch.data matches 14 run scoreboard players set #rg_cookie_wars_mod switch.data 0
 
