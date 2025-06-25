@@ -66,10 +66,7 @@ data modify storage switch:maps to_scan.sky_island_tower set value 1b
 data modify storage switch:maps to_scan.survival_boat set value 1b
 data modify storage switch:maps to_scan.nature_house set value 1b
 data modify storage switch:maps to_scan.whity_lab set value 1b
-data modify storage switch:maps to_scan.werewolf_village set value 1b
-data modify storage switch:maps to_scan.wyvern_towers set value 1b
-data modify storage switch:maps to_scan.lg_medieval set value 1b
-data modify storage switch:maps to_scan.lg_village set value 1b
+data modify storage switch:maps to_scan.floating_island set value 1b
 data modify storage switch:maps to_scan.lightium_spawn set value 1b
 data modify storage switch:maps to_scan.paralya_uhc_lobbies set value 1b
 data modify storage switch:maps to_scan.paralya_lobby set value 1b

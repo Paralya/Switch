@@ -64,10 +64,7 @@
 #			switch:maps/survival/survival_boat/regenerate {name:"survival_boat"}
 #			switch:maps/survival/nature_house/regenerate {name:"nature_house"}
 #			switch:maps/survival/whity_lab/regenerate {name:"whity_lab"}
-#			switch:maps/survival/werewolf_village/regenerate {name:"werewolf_village"}
-#			switch:maps/survival/wyvern_towers/regenerate {name:"wyvern_towers"}
-#			switch:maps/survival/lg_medieval/regenerate {name:"lg_medieval"}
-#			switch:maps/survival/lg_village/regenerate {name:"lg_village"}
+#			switch:maps/survival/floating_island/regenerate {name:"floating_island"}
 #			switch:maps/survival/lightium_spawn/regenerate {name:"lightium_spawn"}
 #			switch:maps/survival/paralya_uhc_lobbies/regenerate {name:"paralya_uhc_lobbies"}
 #			switch:maps/survival/paralya_lobby/regenerate {name:"paralya_lobby"}

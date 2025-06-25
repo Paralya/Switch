@@ -68,10 +68,7 @@ execute if score #rg_sky_island_tower switch.data matches 1.. run function switc
 execute if score #rg_survival_boat switch.data matches 1.. run function switch:maps/survival/survival_boat/regenerate
 execute if score #rg_nature_house switch.data matches 1.. run function switch:maps/survival/nature_house/regenerate
 execute if score #rg_whity_lab switch.data matches 1.. run function switch:maps/survival/whity_lab/regenerate
-execute if score #rg_werewolf_village switch.data matches 1.. run function switch:maps/survival/werewolf_village/regenerate
-execute if score #rg_wyvern_towers switch.data matches 1.. run function switch:maps/survival/wyvern_towers/regenerate
-execute if score #rg_lg_medieval switch.data matches 1.. run function switch:maps/survival/lg_medieval/regenerate
-execute if score #rg_lg_village switch.data matches 1.. run function switch:maps/survival/lg_village/regenerate
+execute if score #rg_floating_island switch.data matches 1.. run function switch:maps/survival/floating_island/regenerate
 execute if score #rg_lightium_spawn switch.data matches 1.. run function switch:maps/survival/lightium_spawn/regenerate
 execute if score #rg_paralya_uhc_lobbies switch.data matches 1.. run function switch:maps/survival/paralya_uhc_lobbies/regenerate
 execute if score #rg_paralya_lobby switch.data matches 1.. run function switch:maps/survival/paralya_lobby/regenerate

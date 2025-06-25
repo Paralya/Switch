@@ -24,11 +24,11 @@ execute if score #rg_lightium_spawn switch.data matches 1 in switch:game run for
 execute if score #rg_lightium_spawn switch.data matches 1 in minecraft:overworld run forceload add 97111 97000 97129 97129
 execute if score #rg_lightium_spawn switch.data matches 1 in switch:game run forceload add 97111 97000 97129 97129
 
-execute if score #rg_lightium_spawn switch.data matches 1 run scoreboard players set #rg_lightium_spawn_y switch.data 0
+execute if score #rg_lightium_spawn switch.data matches 1 run scoreboard players set #rg_lightium_spawn_y switch.data 100
 execute if score #rg_lightium_spawn switch.data matches 1 run scoreboard players set #rg_lightium_spawn_mod switch.data 0
 execute if score #rg_lightium_spawn switch.data matches ..308 summon marker run function switch:maps/survival/lightium_spawn/regeneration_on_marker
 
-execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run kill @e[type=item,x=97064,y=0,z=97064,distance=..1000]
+execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run kill @e[type=item,x=97064,y=100,z=97064,distance=..1000]
 execute if score #rg_lightium_spawn switch.data matches 309.. run data remove storage switch:maps to_regenerate.lightium_spawn
 
 execute if score #rg_lightium_spawn switch.data matches 309.. in minecraft:overworld run forceload remove 97000 97000 97018 97129

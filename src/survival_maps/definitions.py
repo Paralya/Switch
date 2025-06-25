@@ -117,20 +117,13 @@ def generate_folders_for_survival_maps() -> None:
 	##	90000	(undefined)	: empty
 	clone_survival(100, (91000, 100, 91000), (91102, 187, 91102), ("whity_lab", "Whity Lab", "Sagnosis, Mrfox4, MrSirozz, Judipie, banane1299, Pikore, Stoupy"), view=(91081.17, 133.05, 91003.43, -329.09, 31.53))
 	##	92000	(undefined)	: empty
-
-	clone_survival(100, (93000, 0, 93000), (93122, 64, 93122), ("werewolf_village", "Werewolf Village", "Unknown"), view=(93061, 115, 93061))
-
-	clone_survival(100, (94000, 0, 94000), (94076, 99, 94076), ("wyvern_towers", "Wyvern Towers", "Unknown"), view=(94036, 157, 94037))
-
-	clone_survival(100, (95000, -63, 95000), (95219, 41, 95203), ("lg_medieval", "LG Medieval", "Unknown"), view=(95126, 120, 95100))
-
-	clone_survival(100, (96000, -63, 96000), (96246, 50, 96239), ("lg_village", "LG Village", "Unknown"), view=(96128, 113, 96118))
-
-	clone_survival(100, (97000, 0, 97000), (97129, 43, 97129), ("lightium_spawn", "Lightium Spawn", "Ikinox, Stoupy, ?"), view=(97065, 111, 97065))
-
-	clone_survival(100, (98000, 0, 98000), (98090, 93, 98090), ("paralya_uhc_lobbies", "Paralya UHC Lobbies", "Unknown"), view=(98037, 154, 98046))
-
-	clone_survival(100, (99000, -63, 99000), (99200, 98, 99200), ("paralya_lobby", "Paralya Lobby", "MLyshu, Jugou2, Stoupy"), view=(99100, 181, 99100))
+	##	93000	(undefined)	: empty
+	clone_survival(100, (94000, 100, 94000), (94076, 199, 94076), ("floating_island", "Floating Island", "Tebayai, Lenitra"), view=(94050.09, 158.37, 94065.73, -926.75, 19.24))
+	##	95000	(undefined)	: empty
+	##	96000	(undefined)	: empty
+	clone_survival(100, (97000, 100, 97000), (97129, 143, 97129), ("lightium_spawn", "Lightium Spawn", "Ikinox, Stoupy, ?"), view=(97073.14, 117.71, 97054.12, -691.69, 19.57))
+	clone_survival(100, (98000, 10, 98000), (98090, 193, 98090), ("paralya_uhc_lobbies", "Paralya UHC Lobbies", "Unknown, Stoupy"), view=(98027.33, 153.62, 98060.28, 597.16, 11.62))
+	clone_survival(100, (99000, 100, 99000), (99200, 261, 99200), ("paralya_lobby", "Paralya Lobby", "MLyshu, Jugou2, Stoupy"), view=(99142.87, 193.64, 99136.94, 848.04, 9.70))
 
 	clone_survival(100, (100028, -63, 100000), (100135, 25, 100103), ("sheepwars_dirigeables", "Sheepwars Dirigeables", "Unknown"), view=(100156, 163, 100122))
 

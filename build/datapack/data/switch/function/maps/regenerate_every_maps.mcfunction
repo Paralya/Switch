@@ -66,10 +66,7 @@ data modify storage switch:maps to_regenerate.sky_island_tower set value 1b
 data modify storage switch:maps to_regenerate.survival_boat set value 1b
 data modify storage switch:maps to_regenerate.nature_house set value 1b
 data modify storage switch:maps to_regenerate.whity_lab set value 1b
-data modify storage switch:maps to_regenerate.werewolf_village set value 1b
-data modify storage switch:maps to_regenerate.wyvern_towers set value 1b
-data modify storage switch:maps to_regenerate.lg_medieval set value 1b
-data modify storage switch:maps to_regenerate.lg_village set value 1b
+data modify storage switch:maps to_regenerate.floating_island set value 1b
 data modify storage switch:maps to_regenerate.lightium_spawn set value 1b
 data modify storage switch:maps to_regenerate.paralya_uhc_lobbies set value 1b
 data modify storage switch:maps to_regenerate.paralya_lobby set value 1b

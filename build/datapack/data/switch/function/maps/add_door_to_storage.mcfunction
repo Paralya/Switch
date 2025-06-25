@@ -62,13 +62,10 @@
 #			switch:maps/survival/survival_boat/scan_doors_on_marker {name:"survival_boat",additional_height:0}
 #			switch:maps/survival/nature_house/scan_doors_on_marker {name:"nature_house",additional_height:0}
 #			switch:maps/survival/whity_lab/scan_doors_on_marker {name:"whity_lab",additional_height:0}
-#			switch:maps/survival/werewolf_village/scan_doors_on_marker {name:"werewolf_village",additional_height:100}
-#			switch:maps/survival/wyvern_towers/scan_doors_on_marker {name:"wyvern_towers",additional_height:100}
-#			switch:maps/survival/lg_medieval/scan_doors_on_marker {name:"lg_medieval",additional_height:163}
-#			switch:maps/survival/lg_village/scan_doors_on_marker {name:"lg_village",additional_height:163}
-#			switch:maps/survival/lightium_spawn/scan_doors_on_marker {name:"lightium_spawn",additional_height:100}
-#			switch:maps/survival/paralya_uhc_lobbies/scan_doors_on_marker {name:"paralya_uhc_lobbies",additional_height:100}
-#			switch:maps/survival/paralya_lobby/scan_doors_on_marker {name:"paralya_lobby",additional_height:163}
+#			switch:maps/survival/floating_island/scan_doors_on_marker {name:"floating_island",additional_height:0}
+#			switch:maps/survival/lightium_spawn/scan_doors_on_marker {name:"lightium_spawn",additional_height:0}
+#			switch:maps/survival/paralya_uhc_lobbies/scan_doors_on_marker {name:"paralya_uhc_lobbies",additional_height:90}
+#			switch:maps/survival/paralya_lobby/scan_doors_on_marker {name:"paralya_lobby",additional_height:0}
 #			switch:maps/survival/sheepwars_dirigeables/scan_doors_on_marker {name:"sheepwars_dirigeables",additional_height:163}
 #			switch:maps/survival/stardust_spawn/scan_doors_on_marker {name:"stardust_spawn",additional_height:100}
 #			switch:maps/survival/stardust_boss_zone/scan_doors_on_marker {name:"stardust_boss_zone",additional_height:164}

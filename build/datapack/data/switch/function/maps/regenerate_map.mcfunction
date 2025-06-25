@@ -69,10 +69,7 @@ execute if data storage switch:main {map:"sky_island_tower"} run function switch
 execute if data storage switch:main {map:"survival_boat"} run function switch:maps/survival/survival_boat/regenerate
 execute if data storage switch:main {map:"nature_house"} run function switch:maps/survival/nature_house/regenerate
 execute if data storage switch:main {map:"whity_lab"} run function switch:maps/survival/whity_lab/regenerate
-execute if data storage switch:main {map:"werewolf_village"} run function switch:maps/survival/werewolf_village/regenerate
-execute if data storage switch:main {map:"wyvern_towers"} run function switch:maps/survival/wyvern_towers/regenerate
-execute if data storage switch:main {map:"lg_medieval"} run function switch:maps/survival/lg_medieval/regenerate
-execute if data storage switch:main {map:"lg_village"} run function switch:maps/survival/lg_village/regenerate
+execute if data storage switch:main {map:"floating_island"} run function switch:maps/survival/floating_island/regenerate
 execute if data storage switch:main {map:"lightium_spawn"} run function switch:maps/survival/lightium_spawn/regenerate
 execute if data storage switch:main {map:"paralya_uhc_lobbies"} run function switch:maps/survival/paralya_uhc_lobbies/regenerate
 execute if data storage switch:main {map:"paralya_lobby"} run function switch:maps/survival/paralya_lobby/regenerate

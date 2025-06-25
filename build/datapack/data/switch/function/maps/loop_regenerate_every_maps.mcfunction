@@ -68,11 +68,8 @@ execute unless data storage switch:maps to_regenerate.layers_4_teams if data sto
 execute unless data storage switch:maps to_regenerate.sky_island_tower if data storage switch:maps to_regenerate{survival_boat:1b} run function switch:maps/survival/survival_boat/regenerate
 execute unless data storage switch:maps to_regenerate.survival_boat if data storage switch:maps to_regenerate{nature_house:1b} run function switch:maps/survival/nature_house/regenerate
 execute unless data storage switch:maps to_regenerate.nature_house if data storage switch:maps to_regenerate{whity_lab:1b} run function switch:maps/survival/whity_lab/regenerate
-execute unless data storage switch:maps to_regenerate.whity_lab if data storage switch:maps to_regenerate{werewolf_village:1b} run function switch:maps/survival/werewolf_village/regenerate
-execute unless data storage switch:maps to_regenerate.werewolf_village if data storage switch:maps to_regenerate{wyvern_towers:1b} run function switch:maps/survival/wyvern_towers/regenerate
-execute unless data storage switch:maps to_regenerate.wyvern_towers if data storage switch:maps to_regenerate{lg_medieval:1b} run function switch:maps/survival/lg_medieval/regenerate
-execute unless data storage switch:maps to_regenerate.lg_medieval if data storage switch:maps to_regenerate{lg_village:1b} run function switch:maps/survival/lg_village/regenerate
-execute unless data storage switch:maps to_regenerate.lg_village if data storage switch:maps to_regenerate{lightium_spawn:1b} run function switch:maps/survival/lightium_spawn/regenerate
+execute unless data storage switch:maps to_regenerate.whity_lab if data storage switch:maps to_regenerate{floating_island:1b} run function switch:maps/survival/floating_island/regenerate
+execute unless data storage switch:maps to_regenerate.floating_island if data storage switch:maps to_regenerate{lightium_spawn:1b} run function switch:maps/survival/lightium_spawn/regenerate
 execute unless data storage switch:maps to_regenerate.lightium_spawn if data storage switch:maps to_regenerate{paralya_uhc_lobbies:1b} run function switch:maps/survival/paralya_uhc_lobbies/regenerate
 execute unless data storage switch:maps to_regenerate.paralya_uhc_lobbies if data storage switch:maps to_regenerate{paralya_lobby:1b} run function switch:maps/survival/paralya_lobby/regenerate
 execute unless data storage switch:maps to_regenerate.paralya_lobby if data storage switch:maps to_regenerate{sheepwars_dirigeables:1b} run function switch:maps/survival/sheepwars_dirigeables/regenerate

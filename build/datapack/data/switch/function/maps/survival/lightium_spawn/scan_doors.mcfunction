@@ -30,10 +30,10 @@ execute if score #scan_lightium_spawn switch.data matches 1 in switch:game run f
 
 execute if score #scan_lightium_spawn switch.data matches 1 run data modify storage switch:maps to_scan.lightium_spawn set value 2b
 execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #start_x_lightium_spawn switch.data 97001
-execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #start_y_lightium_spawn switch.data 1
+execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #start_y_lightium_spawn switch.data 101
 execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #start_z_lightium_spawn switch.data 97001
 execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #end_x_lightium_spawn switch.data 97128
-execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #end_y_lightium_spawn switch.data 42
+execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #end_y_lightium_spawn switch.data 142
 execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players set #end_z_lightium_spawn switch.data 97128
 execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players operation #curr_x_lightium_spawn switch.data = #start_x_lightium_spawn switch.data
 execute if score #scan_lightium_spawn switch.data matches 1 run scoreboard players operation #curr_y_lightium_spawn switch.data = #start_y_lightium_spawn switch.data

@@ -68,10 +68,7 @@
 #			switch:maps/survival/survival_boat/regenerate
 #			switch:maps/survival/nature_house/regenerate
 #			switch:maps/survival/whity_lab/regenerate
-#			switch:maps/survival/werewolf_village/regenerate
-#			switch:maps/survival/wyvern_towers/regenerate
-#			switch:maps/survival/lg_medieval/regenerate
-#			switch:maps/survival/lg_village/regenerate
+#			switch:maps/survival/floating_island/regenerate
 #			switch:maps/survival/lightium_spawn/regenerate
 #			switch:maps/survival/paralya_uhc_lobbies/regenerate
 #			switch:maps/survival/paralya_lobby/regenerate

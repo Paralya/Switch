@@ -38,11 +38,11 @@ execute if score #rg_paralya_lobby switch.data matches 1 in switch:game run forc
 execute if score #rg_paralya_lobby switch.data matches 1 in minecraft:overworld run forceload add 99186 99000 99200 99200
 execute if score #rg_paralya_lobby switch.data matches 1 in switch:game run forceload add 99186 99000 99200 99200
 
-execute if score #rg_paralya_lobby switch.data matches 1 run scoreboard players set #rg_paralya_lobby_y switch.data -63
+execute if score #rg_paralya_lobby switch.data matches 1 run scoreboard players set #rg_paralya_lobby_y switch.data 100
 execute if score #rg_paralya_lobby switch.data matches 1 run scoreboard players set #rg_paralya_lobby_mod switch.data 0
 execute if score #rg_paralya_lobby switch.data matches ..2268 summon marker run function switch:maps/survival/paralya_lobby/regeneration_on_marker
 
-execute if score #rg_paralya_lobby switch.data matches 2269.. in switch:game run kill @e[type=item,x=99100,y=-63,z=99100,distance=..1000]
+execute if score #rg_paralya_lobby switch.data matches 2269.. in switch:game run kill @e[type=item,x=99100,y=100,z=99100,distance=..1000]
 execute if score #rg_paralya_lobby switch.data matches 2269.. run data remove storage switch:maps to_regenerate.paralya_lobby
 
 execute if score #rg_paralya_lobby switch.data matches 2269.. in minecraft:overworld run forceload remove 99000 99000 99014 99200

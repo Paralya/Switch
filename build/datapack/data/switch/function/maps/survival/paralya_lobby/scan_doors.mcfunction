@@ -51,10 +51,10 @@ execute if score #scan_paralya_lobby switch.data matches 1 in switch:game run fo
 
 execute if score #scan_paralya_lobby switch.data matches 1 run data modify storage switch:maps to_scan.paralya_lobby set value 2b
 execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #start_x_paralya_lobby switch.data 99001
-execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #start_y_paralya_lobby switch.data -62
+execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #start_y_paralya_lobby switch.data 101
 execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #start_z_paralya_lobby switch.data 99001
 execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #end_x_paralya_lobby switch.data 99199
-execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #end_y_paralya_lobby switch.data 97
+execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #end_y_paralya_lobby switch.data 260
 execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players set #end_z_paralya_lobby switch.data 99199
 execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players operation #curr_x_paralya_lobby switch.data = #start_x_paralya_lobby switch.data
 execute if score #scan_paralya_lobby switch.data matches 1 run scoreboard players operation #curr_y_paralya_lobby switch.data = #start_y_paralya_lobby switch.data
