@@ -24,10 +24,10 @@ execute if score #scan_whity_lab switch.data matches 1 in switch:game run forcel
 
 execute if score #scan_whity_lab switch.data matches 1 run data modify storage switch:maps to_scan.whity_lab set value 2b
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #start_x_whity_lab switch.data 91001
-execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #start_y_whity_lab switch.data 1
+execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #start_y_whity_lab switch.data 101
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #start_z_whity_lab switch.data 91001
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #end_x_whity_lab switch.data 91101
-execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #end_y_whity_lab switch.data 86
+execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #end_y_whity_lab switch.data 186
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players set #end_z_whity_lab switch.data 91101
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players operation #curr_x_whity_lab switch.data = #start_x_whity_lab switch.data
 execute if score #scan_whity_lab switch.data matches 1 run scoreboard players operation #curr_y_whity_lab switch.data = #start_y_whity_lab switch.data

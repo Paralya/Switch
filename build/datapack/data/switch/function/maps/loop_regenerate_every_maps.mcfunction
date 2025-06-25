@@ -66,14 +66,9 @@ execute unless data storage switch:maps to_regenerate.hider_mansion if data stor
 execute unless data storage switch:maps to_regenerate.nuketown if data storage switch:maps to_regenerate{layers_4_teams:1b} run function switch:maps/survival/layers_4_teams/regenerate
 execute unless data storage switch:maps to_regenerate.layers_4_teams if data storage switch:maps to_regenerate{sky_island_tower:1b} run function switch:maps/survival/sky_island_tower/regenerate
 execute unless data storage switch:maps to_regenerate.sky_island_tower if data storage switch:maps to_regenerate{survival_boat:1b} run function switch:maps/survival/survival_boat/regenerate
-execute unless data storage switch:maps to_regenerate.survival_boat if data storage switch:maps to_regenerate{sakura_house:1b} run function switch:maps/survival/sakura_house/regenerate
-execute unless data storage switch:maps to_regenerate.sakura_house if data storage switch:maps to_regenerate{red_temple:1b} run function switch:maps/survival/red_temple/regenerate
-execute unless data storage switch:maps to_regenerate.red_temple if data storage switch:maps to_regenerate{nature_house:1b} run function switch:maps/survival/nature_house/regenerate
-execute unless data storage switch:maps to_regenerate.nature_house if data storage switch:maps to_regenerate{flower_village:1b} run function switch:maps/survival/flower_village/regenerate
-execute unless data storage switch:maps to_regenerate.flower_village if data storage switch:maps to_regenerate{japanese_village:1b} run function switch:maps/survival/japanese_village/regenerate
-execute unless data storage switch:maps to_regenerate.japanese_village if data storage switch:maps to_regenerate{whity_lab:1b} run function switch:maps/survival/whity_lab/regenerate
-execute unless data storage switch:maps to_regenerate.whity_lab if data storage switch:maps to_regenerate{snowy_village:1b} run function switch:maps/survival/snowy_village/regenerate
-execute unless data storage switch:maps to_regenerate.snowy_village if data storage switch:maps to_regenerate{werewolf_village:1b} run function switch:maps/survival/werewolf_village/regenerate
+execute unless data storage switch:maps to_regenerate.survival_boat if data storage switch:maps to_regenerate{nature_house:1b} run function switch:maps/survival/nature_house/regenerate
+execute unless data storage switch:maps to_regenerate.nature_house if data storage switch:maps to_regenerate{whity_lab:1b} run function switch:maps/survival/whity_lab/regenerate
+execute unless data storage switch:maps to_regenerate.whity_lab if data storage switch:maps to_regenerate{werewolf_village:1b} run function switch:maps/survival/werewolf_village/regenerate
 execute unless data storage switch:maps to_regenerate.werewolf_village if data storage switch:maps to_regenerate{wyvern_towers:1b} run function switch:maps/survival/wyvern_towers/regenerate
 execute unless data storage switch:maps to_regenerate.wyvern_towers if data storage switch:maps to_regenerate{lg_medieval:1b} run function switch:maps/survival/lg_medieval/regenerate
 execute unless data storage switch:maps to_regenerate.lg_medieval if data storage switch:maps to_regenerate{lg_village:1b} run function switch:maps/survival/lg_village/regenerate

@@ -7,7 +7,7 @@ function switch:utils/set_dynamic_time
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #dont_regenerate switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","red_temple","nature_house"]}
+function switch:utils/choose_map_for {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","nature_house"]}
 
 execute in switch:game run gamerule showDeathMessages false
 execute in switch:game run gamerule keepInventory true

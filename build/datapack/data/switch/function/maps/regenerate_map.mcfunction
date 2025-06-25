@@ -67,13 +67,8 @@ execute if data storage switch:main {map:"nuketown"} run function switch:maps/su
 execute if data storage switch:main {map:"layers_4_teams"} run function switch:maps/survival/layers_4_teams/regenerate
 execute if data storage switch:main {map:"sky_island_tower"} run function switch:maps/survival/sky_island_tower/regenerate
 execute if data storage switch:main {map:"survival_boat"} run function switch:maps/survival/survival_boat/regenerate
-execute if data storage switch:main {map:"sakura_house"} run function switch:maps/survival/sakura_house/regenerate
-execute if data storage switch:main {map:"red_temple"} run function switch:maps/survival/red_temple/regenerate
 execute if data storage switch:main {map:"nature_house"} run function switch:maps/survival/nature_house/regenerate
-execute if data storage switch:main {map:"flower_village"} run function switch:maps/survival/flower_village/regenerate
-execute if data storage switch:main {map:"japanese_village"} run function switch:maps/survival/japanese_village/regenerate
 execute if data storage switch:main {map:"whity_lab"} run function switch:maps/survival/whity_lab/regenerate
-execute if data storage switch:main {map:"snowy_village"} run function switch:maps/survival/snowy_village/regenerate
 execute if data storage switch:main {map:"werewolf_village"} run function switch:maps/survival/werewolf_village/regenerate
 execute if data storage switch:main {map:"wyvern_towers"} run function switch:maps/survival/wyvern_towers/regenerate
 execute if data storage switch:main {map:"lg_medieval"} run function switch:maps/survival/lg_medieval/regenerate

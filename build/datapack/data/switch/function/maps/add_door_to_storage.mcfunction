@@ -60,13 +60,8 @@
 #			switch:maps/survival/layers_4_teams/scan_doors_on_marker {name:"layers_4_teams",additional_height:0}
 #			switch:maps/survival/sky_island_tower/scan_doors_on_marker {name:"sky_island_tower",additional_height:0}
 #			switch:maps/survival/survival_boat/scan_doors_on_marker {name:"survival_boat",additional_height:0}
-#			switch:maps/survival/sakura_house/scan_doors_on_marker {name:"sakura_house",additional_height:100}
-#			switch:maps/survival/red_temple/scan_doors_on_marker {name:"red_temple",additional_height:100}
-#			switch:maps/survival/nature_house/scan_doors_on_marker {name:"nature_house",additional_height:100}
-#			switch:maps/survival/flower_village/scan_doors_on_marker {name:"flower_village",additional_height:100}
-#			switch:maps/survival/japanese_village/scan_doors_on_marker {name:"japanese_village",additional_height:100}
-#			switch:maps/survival/whity_lab/scan_doors_on_marker {name:"whity_lab",additional_height:100}
-#			switch:maps/survival/snowy_village/scan_doors_on_marker {name:"snowy_village",additional_height:100}
+#			switch:maps/survival/nature_house/scan_doors_on_marker {name:"nature_house",additional_height:0}
+#			switch:maps/survival/whity_lab/scan_doors_on_marker {name:"whity_lab",additional_height:0}
 #			switch:maps/survival/werewolf_village/scan_doors_on_marker {name:"werewolf_village",additional_height:100}
 #			switch:maps/survival/wyvern_towers/scan_doors_on_marker {name:"wyvern_towers",additional_height:100}
 #			switch:maps/survival/lg_medieval/scan_doors_on_marker {name:"lg_medieval",additional_height:163}

@@ -62,13 +62,8 @@
 #			switch:maps/survival/layers_4_teams/regenerate {name:"layers_4_teams"}
 #			switch:maps/survival/sky_island_tower/regenerate {name:"sky_island_tower"}
 #			switch:maps/survival/survival_boat/regenerate {name:"survival_boat"}
-#			switch:maps/survival/sakura_house/regenerate {name:"sakura_house"}
-#			switch:maps/survival/red_temple/regenerate {name:"red_temple"}
 #			switch:maps/survival/nature_house/regenerate {name:"nature_house"}
-#			switch:maps/survival/flower_village/regenerate {name:"flower_village"}
-#			switch:maps/survival/japanese_village/regenerate {name:"japanese_village"}
 #			switch:maps/survival/whity_lab/regenerate {name:"whity_lab"}
-#			switch:maps/survival/snowy_village/regenerate {name:"snowy_village"}
 #			switch:maps/survival/werewolf_village/regenerate {name:"werewolf_village"}
 #			switch:maps/survival/wyvern_towers/regenerate {name:"wyvern_towers"}
 #			switch:maps/survival/lg_medieval/regenerate {name:"lg_medieval"}

@@ -64,13 +64,8 @@ data modify storage switch:maps to_scan.nuketown set value 1b
 data modify storage switch:maps to_scan.layers_4_teams set value 1b
 data modify storage switch:maps to_scan.sky_island_tower set value 1b
 data modify storage switch:maps to_scan.survival_boat set value 1b
-data modify storage switch:maps to_scan.sakura_house set value 1b
-data modify storage switch:maps to_scan.red_temple set value 1b
 data modify storage switch:maps to_scan.nature_house set value 1b
-data modify storage switch:maps to_scan.flower_village set value 1b
-data modify storage switch:maps to_scan.japanese_village set value 1b
 data modify storage switch:maps to_scan.whity_lab set value 1b
-data modify storage switch:maps to_scan.snowy_village set value 1b
 data modify storage switch:maps to_scan.werewolf_village set value 1b
 data modify storage switch:maps to_scan.wyvern_towers set value 1b
 data modify storage switch:maps to_scan.lg_medieval set value 1b

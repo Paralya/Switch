@@ -110,20 +110,13 @@ def generate_folders_for_survival_maps() -> None:
 	##	83000	(undefined)	: empty
 	##	84000	(undefined)	: Création de maps (Guy Shooter, et ???)
 	##	85000	(undefined)	: empty
-
-	clone_survival(100, (86000, 0, 86000), (86121, 94, 86135), ("sakura_house", "Sakura House", "Unknown"), view=(86072, 117, 86100))
-
-	clone_survival(100, (87000, 0, 87000), (87045, 40, 87094), ("red_temple", "Red Temple", "? (Survisland)"), view=(87023, 110, 87058))
-
-	clone_survival(100, (88000, 0, 88000), (88068, 98, 88068), ("nature_house", "Nature House", "Unknown"), view=(88039, 110, 88033))
-
-	clone_survival(100, (89000, 0, 89000), (89422, 94, 89532), ("flower_village", "Flower Village", "Unknown"), view=(89311, 116, 89291))
-
-	clone_survival(100, (90000, 0, 90000), (90224, 81, 90286), ("japanese_village", "Japanese Village", "Unknown"), view=(90106, 116, 90167))
-
-	clone_survival(100, (91000, 0, 91000), (91102, 87, 91102), ("whity_lab", "Whity Lab", "JustNoob, Stoupy (y'a encore les panneaux)"), view=(91051, 112, 91051))
-
-	clone_survival(100, (92000, 0, 92000), (92200, 70, 92229), ("snowy_village", "Snowy Village", "Unknown"), view=(92108, 123, 92090))
+	##	86000	(undefined)	: empty
+	##	87000	(undefined)	: empty
+	clone_survival(100, (88000, 100, 88000), (88068, 137, 88068), ("nature_house", "Nature House", "Unknown"), view=(88024.65, 109.70, 88051.82, -868.29, 1.41))
+	##	89000	(undefined)	: empty
+	##	90000	(undefined)	: empty
+	clone_survival(100, (91000, 100, 91000), (91102, 187, 91102), ("whity_lab", "Whity Lab", "Sagnosis, Mrfox4, MrSirozz, Judipie, banane1299, Pikore, Stoupy"), view=(91081.17, 133.05, 91003.43, -329.09, 31.53))
+	##	92000	(undefined)	: empty
 
 	clone_survival(100, (93000, 0, 93000), (93122, 64, 93122), ("werewolf_village", "Werewolf Village", "Unknown"), view=(93061, 115, 93061))
 

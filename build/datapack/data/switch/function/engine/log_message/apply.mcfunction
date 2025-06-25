@@ -66,13 +66,8 @@
 #			switch:maps/survival/layers_4_teams/regenerate
 #			switch:maps/survival/sky_island_tower/regenerate
 #			switch:maps/survival/survival_boat/regenerate
-#			switch:maps/survival/sakura_house/regenerate
-#			switch:maps/survival/red_temple/regenerate
 #			switch:maps/survival/nature_house/regenerate
-#			switch:maps/survival/flower_village/regenerate
-#			switch:maps/survival/japanese_village/regenerate
 #			switch:maps/survival/whity_lab/regenerate
-#			switch:maps/survival/snowy_village/regenerate
 #			switch:maps/survival/werewolf_village/regenerate
 #			switch:maps/survival/wyvern_towers/regenerate
 #			switch:maps/survival/lg_medieval/regenerate

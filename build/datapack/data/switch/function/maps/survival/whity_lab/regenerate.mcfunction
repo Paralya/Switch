@@ -20,11 +20,11 @@ execute if score #rg_whity_lab switch.data matches 1 in switch:game run forceloa
 execute if score #rg_whity_lab switch.data matches 1 in minecraft:overworld run forceload add 91082 91000 91102 91102
 execute if score #rg_whity_lab switch.data matches 1 in switch:game run forceload add 91082 91000 91102 91102
 
-execute if score #rg_whity_lab switch.data matches 1 run scoreboard players set #rg_whity_lab_y switch.data 0
+execute if score #rg_whity_lab switch.data matches 1 run scoreboard players set #rg_whity_lab_y switch.data 100
 execute if score #rg_whity_lab switch.data matches 1 run scoreboard players set #rg_whity_lab_mod switch.data 0
 execute if score #rg_whity_lab switch.data matches ..440 summon marker run function switch:maps/survival/whity_lab/regeneration_on_marker
 
-execute if score #rg_whity_lab switch.data matches 441.. in switch:game run kill @e[type=item,x=91051,y=0,z=91051,distance=..1000]
+execute if score #rg_whity_lab switch.data matches 441.. in switch:game run kill @e[type=item,x=91051,y=100,z=91051,distance=..1000]
 execute if score #rg_whity_lab switch.data matches 441.. run data remove storage switch:maps to_regenerate.whity_lab
 
 execute if score #rg_whity_lab switch.data matches 441.. in minecraft:overworld run forceload remove 91000 91000 91020 91102

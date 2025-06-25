@@ -64,13 +64,8 @@ data modify storage switch:maps to_regenerate.nuketown set value 1b
 data modify storage switch:maps to_regenerate.layers_4_teams set value 1b
 data modify storage switch:maps to_regenerate.sky_island_tower set value 1b
 data modify storage switch:maps to_regenerate.survival_boat set value 1b
-data modify storage switch:maps to_regenerate.sakura_house set value 1b
-data modify storage switch:maps to_regenerate.red_temple set value 1b
 data modify storage switch:maps to_regenerate.nature_house set value 1b
-data modify storage switch:maps to_regenerate.flower_village set value 1b
-data modify storage switch:maps to_regenerate.japanese_village set value 1b
 data modify storage switch:maps to_regenerate.whity_lab set value 1b
-data modify storage switch:maps to_regenerate.snowy_village set value 1b
 data modify storage switch:maps to_regenerate.werewolf_village set value 1b
 data modify storage switch:maps to_regenerate.wyvern_towers set value 1b
 data modify storage switch:maps to_regenerate.lg_medieval set value 1b

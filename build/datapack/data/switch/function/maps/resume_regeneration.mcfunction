@@ -66,13 +66,8 @@ execute if score #rg_nuketown switch.data matches 1.. run function switch:maps/s
 execute if score #rg_layers_4_teams switch.data matches 1.. run function switch:maps/survival/layers_4_teams/regenerate
 execute if score #rg_sky_island_tower switch.data matches 1.. run function switch:maps/survival/sky_island_tower/regenerate
 execute if score #rg_survival_boat switch.data matches 1.. run function switch:maps/survival/survival_boat/regenerate
-execute if score #rg_sakura_house switch.data matches 1.. run function switch:maps/survival/sakura_house/regenerate
-execute if score #rg_red_temple switch.data matches 1.. run function switch:maps/survival/red_temple/regenerate
 execute if score #rg_nature_house switch.data matches 1.. run function switch:maps/survival/nature_house/regenerate
-execute if score #rg_flower_village switch.data matches 1.. run function switch:maps/survival/flower_village/regenerate
-execute if score #rg_japanese_village switch.data matches 1.. run function switch:maps/survival/japanese_village/regenerate
 execute if score #rg_whity_lab switch.data matches 1.. run function switch:maps/survival/whity_lab/regenerate
-execute if score #rg_snowy_village switch.data matches 1.. run function switch:maps/survival/snowy_village/regenerate
 execute if score #rg_werewolf_village switch.data matches 1.. run function switch:maps/survival/werewolf_village/regenerate
 execute if score #rg_wyvern_towers switch.data matches 1.. run function switch:maps/survival/wyvern_towers/regenerate
 execute if score #rg_lg_medieval switch.data matches 1.. run function switch:maps/survival/lg_medieval/regenerate
