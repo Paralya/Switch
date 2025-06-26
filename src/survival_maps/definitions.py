@@ -16,7 +16,7 @@ def generate_folders_for_survival_maps() -> None:
 	"""
 	clone_survival(100, (500, 100, 500), (552, 143, 552), ("laser_game", "LaserGame51 (2010 IRL layout)", "Stoupy, Ikinox"), view=(517.62, 111.36, 518.34, -31.98, 9.81))
 	clone_survival(100, (1000, 100, 1000), (1100, 144, 1100), ("pitchout_1", "Wet Wood Dome", "Stoupy, ?"), view=(1081.19, 117.69, 1065.08, -245.28, 15.66))
-	clone_survival(100, (1500, 100, 1500), (1684, 189, 1655), ("traitor_original", "Traitor Original", "Paralya"), view=(1566.00, 122.20, 1533.79, -56.61, 8.90))
+	clone_survival(100, (1500, 100, 1500), (1684, 189, 1655), ("traitor_original", "Traitor Original", "(Paralya) Stoupy, Luxio, Jugou2, etc."), view=(1566.00, 122.20, 1533.79, -56.61, 8.90))
 	clone_survival(100, (2000, 100, 2000), (2108, 193, 2126), ("area_51", "Area 51", "Jugou2, Stoupy, TheFRcRaZy"), view=(2046.90, 105.29, 2056.55, -214.60, -2.02))
 	clone_survival(100, (2500, 100, 2500), (2586, 185, 2595), ("spectre_original", "Spectre Original", "DIocelot, Stoupy"), view=(2526.27, 150.48, 2573.21, -143.57, 25.80))
 	fill_survival((2750, -64, 2750), (3250, 320, 3250), ("glassrunner", "Glassrunner", "AirDox"), "air", "#switch:glassrunner/glass", view=(3003.25, 138.64, 2987.65, 12.58, 56.33))
@@ -122,32 +122,20 @@ def generate_folders_for_survival_maps() -> None:
 	##	95000	(undefined)	: empty
 	##	96000	(undefined)	: empty
 	clone_survival(100, (97000, 100, 97000), (97129, 143, 97129), ("lightium_spawn", "Lightium Spawn", "Ikinox, Stoupy, ?"), view=(97073.14, 117.71, 97054.12, -691.69, 19.57))
-	clone_survival(100, (98000, 10, 98000), (98090, 193, 98090), ("paralya_uhc_lobbies", "Paralya UHC Lobbies", "Unknown, Stoupy"), view=(98027.33, 153.62, 98060.28, 597.16, 11.62))
+	clone_survival(100, (98000, 100, 98000), (98090, 193, 98090), ("paralya_uhc_lobbies", "Paralya UHC Lobbies", "Unknown, Stoupy"), view=(98027.33, 153.62, 98060.28, 597.16, 11.62))
 	clone_survival(100, (99000, 100, 99000), (99200, 261, 99200), ("paralya_lobby", "Paralya Lobby", "MLyshu, Jugou2, Stoupy"), view=(99142.87, 193.64, 99136.94, 848.04, 9.70))
-
-	clone_survival(100, (100028, -63, 100000), (100135, 25, 100103), ("sheepwars_dirigeables", "Sheepwars Dirigeables", "Unknown"), view=(100156, 163, 100122))
-
-	clone_survival(100, (101000, 0, 101000), (101120, 90, 101120), ("stardust_spawn", "Stardust Spawn", "Stoupy, Jugou2"), view=(101060, 156, 101060))
-
+	clone_survival(100, (100000, 100, 100000), (100107, 188, 100103), ("sheepwars_dirigeables", "Sheepwars Dirigeables", "Epicube, Unknown"), view=(100089.36, 159.74, 100056.56, -260.93, 15.33))
+	clone_survival(100, (101000, 100, 101000), (101120, 190, 101120), ("stardust_spawn", "Stardust Spawn", "Stoupy, Jugou2"), view=(101040.87, 174.88, 101026.31, -1112.90, 34.48))
 	##	102000	(undefined)	: replicate_the_build
-
-	clone_survival(100, (103000, -64, 103000), (103132, 49, 103165), ("stardust_boss_zone", "Stardust Boss Zone", "Jugou2"), view=(103057, 154, 103095))
-
-	clone_survival(100, (104000, -63, 104000), (104132, 65, 104165), ("stardust_boss_zone_nether", "Stardust Boss Zone Nether", "Jugou2"), view=(104057, 159, 104095))
-
-	clone_survival(100, (105000, -63, 105000), (105291, 79, 105314), ("stardust_pvp_zone", "Stardust PVP Zone", "Cala"), view=(105164, 158, 105165))
-
-	clone_survival(100, (106000, 0, 106000), (106132, 57, 106178), ("stardust_prison", "Stardust Prison", "Stoupy"), view=(106067, 115 ,106064))
-
-	clone_survival(100, (107000, 0, 107000), (107113, 50, 107085), ("stardust_vip_zone", "Stardust VIP Zone", "Stoupy"), view=(107056, 116, 107017))
-
-	clone_survival(100, (108000, -63, 108000), (108178, 40, 108129), ("end_factory", "End Factory", "Flamingosaurus & co"), view=(108146, 133, 108076))
-
-	clone_survival(100, (109000, 0, 109000), (109059, 68, 109046), ("tnt_run_futuristic", "TNT Run Futuristic", "Stoupy, Jugou2"), view=(109029, 148, 109022))
-
-	clone_survival(100, (109999, 89, 109999), (110080, 117, 110081), ("block_party", "Block Party", "You"), view=(110039, 118, 110040))
-
-	clone_survival(100, (111000, 0, 111000), (111207, 51, 111220), ("nuketown_no_barrier", "Nuketown No Barrier", "Qiuye, Cube Horizon"), view=(111109, 111, 111109))
+	clone_survival(100, (103000, 100, 103000), (103132, 213, 103165), ("stardust_boss_zone", "Stardust Boss Zone", "Jugou2"), view=(103098.69, 159.79, 103132.23, -1663.49, 15.25))
+	clone_survival(100, (104000, 100, 104000), (104132, 228, 104165), ("stardust_boss_zone_nether", "Stardust Boss Zone Nether", "Jugou2"), view=(104028.44, 158.24, 104130.78, -1228.99, 1.11))
+	clone_survival(100, (105000, 100, 105000), (105291, 242, 105314), ("stardust_pvp_zone", "Stardust PVP Zone", "Cala"), view=(105113.91, 176.66, 105201.80, -1231.05, 28.43))
+	clone_survival(100, (106000, 100, 106000), (106132, 157, 106178), ("stardust_prison", "Stardust Prison", "Stoupy, Jugou2"), view=(106093.02, 125.28, 106139.82, -927.17, 16.65))
+	clone_survival(100, (107000, 100, 107000), (107113, 150, 107085), ("stardust_vip_zone", "Stardust VIP Zone", "Stoupy, Jugou2"), view=(107056.85, 118.73, 107016.80, -1050.76, 14.46))
+	##	108000	(undefined)	: empty
+	clone_survival(100, (109000, 100, 109000), (109059, 168, 109046), ("tnt_run_futuristic", "TNT Run Futuristic", "Stoupy, Jugou2"), view=(108992.51, 136.29, 109061.09, -497.66, 9.07))
+	clone_survival(100, (109993, -63, 109993), (110087, 117, 110087), ("block_party", "Block Party", "👉 You 👈"), view=(109951.05, 42.21, 110071.73, 249.32, 2.55))
+	clone_survival(100, (111000, 100, 111000), (111207, 151, 111220), ("nuketown_no_barrier", "Nuketown No Barrier", "Qiuye, Cube Horizon"), view=(72087.17, 117.13, 72105.28, -836.41, 15.91))
 
 	clone_survival(100, (112000, 0, 112000), (112043, 33, 112042), ("snowball_painter", "Snowball Painter", "Stoupy, ?"), view=(112022, 110, 112006))
 
