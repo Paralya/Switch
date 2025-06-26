@@ -57,10 +57,10 @@ execute if score #scan_nuketown_no_barrier switch.data matches 1 in switch:game 
 
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run data modify storage switch:maps to_scan.nuketown_no_barrier set value 2b
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #start_x_nuketown_no_barrier switch.data 111001
-execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #start_y_nuketown_no_barrier switch.data 1
+execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #start_y_nuketown_no_barrier switch.data 101
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #start_z_nuketown_no_barrier switch.data 111001
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #end_x_nuketown_no_barrier switch.data 111206
-execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #end_y_nuketown_no_barrier switch.data 50
+execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #end_y_nuketown_no_barrier switch.data 150
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players set #end_z_nuketown_no_barrier switch.data 111219
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players operation #curr_x_nuketown_no_barrier switch.data = #start_x_nuketown_no_barrier switch.data
 execute if score #scan_nuketown_no_barrier switch.data matches 1 run scoreboard players operation #curr_y_nuketown_no_barrier switch.data = #start_y_nuketown_no_barrier switch.data

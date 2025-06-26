@@ -20,11 +20,11 @@ execute if score #rg_bombardement switch.data matches 1 in switch:game run force
 execute if score #rg_bombardement switch.data matches 1 in minecraft:overworld run forceload add 121092 121000 121115 121087
 execute if score #rg_bombardement switch.data matches 1 in switch:game run forceload add 121092 121000 121115 121087
 
-execute if score #rg_bombardement switch.data matches 1 run scoreboard players set #rg_bombardement_y switch.data 0
+execute if score #rg_bombardement switch.data matches 1 run scoreboard players set #rg_bombardement_y switch.data 100
 execute if score #rg_bombardement switch.data matches 1 run scoreboard players set #rg_bombardement_mod switch.data 0
 execute if score #rg_bombardement switch.data matches ..390 summon marker run function switch:maps/survival/bombardement/regeneration_on_marker
 
-execute if score #rg_bombardement switch.data matches 391.. in switch:game run kill @e[type=item,x=121057,y=0,z=121043,distance=..1000]
+execute if score #rg_bombardement switch.data matches 391.. in switch:game run kill @e[type=item,x=121057,y=100,z=121043,distance=..1000]
 execute if score #rg_bombardement switch.data matches 391.. run data remove storage switch:maps to_regenerate.bombardement
 
 execute if score #rg_bombardement switch.data matches 391.. in minecraft:overworld run forceload remove 121000 121000 121023 121087

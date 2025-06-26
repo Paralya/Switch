@@ -77,17 +77,14 @@ data modify storage switch:maps to_scan.stardust_boss_zone_nether set value 1b
 data modify storage switch:maps to_scan.stardust_pvp_zone set value 1b
 data modify storage switch:maps to_scan.stardust_prison set value 1b
 data modify storage switch:maps to_scan.stardust_vip_zone set value 1b
-data modify storage switch:maps to_scan.end_factory set value 1b
 data modify storage switch:maps to_scan.tnt_run_futuristic set value 1b
 data modify storage switch:maps to_scan.block_party set value 1b
 data modify storage switch:maps to_scan.nuketown_no_barrier set value 1b
 data modify storage switch:maps to_scan.snowball_painter set value 1b
 data modify storage switch:maps to_scan.gay_shooter set value 1b
 data modify storage switch:maps to_scan.the_four_elements set value 1b
-data modify storage switch:maps to_scan.winnie_city set value 1b
 data modify storage switch:maps to_scan.remelta_cluedo set value 1b
 data modify storage switch:maps to_scan.arti_box set value 1b
-data modify storage switch:maps to_scan.pitch_creep_nether set value 1b
 data modify storage switch:maps to_scan.bombardement set value 1b
 data modify storage switch:maps to_scan.nether_storm set value 1b
 data modify storage switch:maps to_scan.shoot_da_sheep set value 1b

@@ -42,11 +42,11 @@ execute if score #rg_nuketown_no_barrier switch.data matches 1 in switch:game ru
 execute if score #rg_nuketown_no_barrier switch.data matches 1 in minecraft:overworld run forceload add 111194 111000 111207 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 1 in switch:game run forceload add 111194 111000 111207 111220
 
-execute if score #rg_nuketown_no_barrier switch.data matches 1 run scoreboard players set #rg_nuketown_no_barrier_y switch.data 0
+execute if score #rg_nuketown_no_barrier switch.data matches 1 run scoreboard players set #rg_nuketown_no_barrier_y switch.data 100
 execute if score #rg_nuketown_no_barrier switch.data matches 1 run scoreboard players set #rg_nuketown_no_barrier_mod switch.data 0
 execute if score #rg_nuketown_no_barrier switch.data matches ..832 summon marker run function switch:maps/survival/nuketown_no_barrier/regeneration_on_marker
 
-execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run kill @e[type=item,x=111103,y=0,z=111110,distance=..1000]
+execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run kill @e[type=item,x=111103,y=100,z=111110,distance=..1000]
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run data remove storage switch:maps to_regenerate.nuketown_no_barrier
 
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111000 111000 111013 111220

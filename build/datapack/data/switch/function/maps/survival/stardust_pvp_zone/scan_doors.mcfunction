@@ -99,10 +99,10 @@ execute if score #scan_stardust_pvp_zone switch.data matches 1 in switch:game ru
 
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run data modify storage switch:maps to_scan.stardust_pvp_zone set value 2b
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #start_x_stardust_pvp_zone switch.data 105001
-execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #start_y_stardust_pvp_zone switch.data -62
+execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #start_y_stardust_pvp_zone switch.data 101
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #start_z_stardust_pvp_zone switch.data 105001
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #end_x_stardust_pvp_zone switch.data 105290
-execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #end_y_stardust_pvp_zone switch.data 78
+execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #end_y_stardust_pvp_zone switch.data 241
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players set #end_z_stardust_pvp_zone switch.data 105313
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players operation #curr_x_stardust_pvp_zone switch.data = #start_x_stardust_pvp_zone switch.data
 execute if score #scan_stardust_pvp_zone switch.data matches 1 run scoreboard players operation #curr_y_stardust_pvp_zone switch.data = #start_y_stardust_pvp_zone switch.data

@@ -27,10 +27,10 @@ execute if score #scan_stardust_spawn switch.data matches 1 in switch:game run f
 
 execute if score #scan_stardust_spawn switch.data matches 1 run data modify storage switch:maps to_scan.stardust_spawn set value 2b
 execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #start_x_stardust_spawn switch.data 101001
-execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #start_y_stardust_spawn switch.data 1
+execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #start_y_stardust_spawn switch.data 101
 execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #start_z_stardust_spawn switch.data 101001
 execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #end_x_stardust_spawn switch.data 101119
-execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #end_y_stardust_spawn switch.data 89
+execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #end_y_stardust_spawn switch.data 189
 execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players set #end_z_stardust_spawn switch.data 101119
 execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players operation #curr_x_stardust_spawn switch.data = #start_x_stardust_spawn switch.data
 execute if score #scan_stardust_spawn switch.data matches 1 run scoreboard players operation #curr_y_stardust_spawn switch.data = #start_y_stardust_spawn switch.data

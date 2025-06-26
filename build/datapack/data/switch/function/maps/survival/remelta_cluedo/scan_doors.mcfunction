@@ -18,10 +18,10 @@ execute if score #scan_remelta_cluedo switch.data matches 1 in switch:game run f
 
 execute if score #scan_remelta_cluedo switch.data matches 1 run data modify storage switch:maps to_scan.remelta_cluedo set value 2b
 execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #start_x_remelta_cluedo switch.data 118001
-execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #start_y_remelta_cluedo switch.data 1
+execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #start_y_remelta_cluedo switch.data 101
 execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #start_z_remelta_cluedo switch.data 118001
 execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #end_x_remelta_cluedo switch.data 118088
-execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #end_y_remelta_cluedo switch.data 41
+execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #end_y_remelta_cluedo switch.data 141
 execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players set #end_z_remelta_cluedo switch.data 118065
 execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players operation #curr_x_remelta_cluedo switch.data = #start_x_remelta_cluedo switch.data
 execute if score #scan_remelta_cluedo switch.data matches 1 run scoreboard players operation #curr_y_remelta_cluedo switch.data = #start_y_remelta_cluedo switch.data

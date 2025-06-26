@@ -15,10 +15,10 @@ execute if score #scan_snowball_painter switch.data matches 1 in switch:game run
 
 execute if score #scan_snowball_painter switch.data matches 1 run data modify storage switch:maps to_scan.snowball_painter set value 2b
 execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #start_x_snowball_painter switch.data 112001
-execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #start_y_snowball_painter switch.data 1
+execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #start_y_snowball_painter switch.data 101
 execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #start_z_snowball_painter switch.data 112001
 execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #end_x_snowball_painter switch.data 112042
-execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #end_y_snowball_painter switch.data 32
+execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #end_y_snowball_painter switch.data 132
 execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players set #end_z_snowball_painter switch.data 112041
 execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players operation #curr_x_snowball_painter switch.data = #start_x_snowball_painter switch.data
 execute if score #scan_snowball_painter switch.data matches 1 run scoreboard players operation #curr_y_snowball_painter switch.data = #start_y_snowball_painter switch.data

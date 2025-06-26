@@ -15,10 +15,10 @@ execute if score #scan_tnt_run_futuristic switch.data matches 1 in switch:game r
 
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run data modify storage switch:maps to_scan.tnt_run_futuristic set value 2b
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #start_x_tnt_run_futuristic switch.data 109001
-execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #start_y_tnt_run_futuristic switch.data 1
+execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #start_y_tnt_run_futuristic switch.data 101
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #start_z_tnt_run_futuristic switch.data 109001
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #end_x_tnt_run_futuristic switch.data 109058
-execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #end_y_tnt_run_futuristic switch.data 67
+execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #end_y_tnt_run_futuristic switch.data 167
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players set #end_z_tnt_run_futuristic switch.data 109045
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players operation #curr_x_tnt_run_futuristic switch.data = #start_x_tnt_run_futuristic switch.data
 execute if score #scan_tnt_run_futuristic switch.data matches 1 run scoreboard players operation #curr_y_tnt_run_futuristic switch.data = #start_y_tnt_run_futuristic switch.data

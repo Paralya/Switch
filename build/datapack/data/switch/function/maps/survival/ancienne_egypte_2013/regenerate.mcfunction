@@ -20,11 +20,11 @@ execute if score #rg_ancienne_egypte_2013 switch.data matches 1 in switch:game r
 execute if score #rg_ancienne_egypte_2013 switch.data matches 1 in minecraft:overworld run forceload add 128076 128000 128095 128113
 execute if score #rg_ancienne_egypte_2013 switch.data matches 1 in switch:game run forceload add 128076 128000 128095 128113
 
-execute if score #rg_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #rg_ancienne_egypte_2013_y switch.data 0
+execute if score #rg_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #rg_ancienne_egypte_2013_y switch.data 100
 execute if score #rg_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #rg_ancienne_egypte_2013_mod switch.data 0
 execute if score #rg_ancienne_egypte_2013 switch.data matches ..385 summon marker run function switch:maps/survival/ancienne_egypte_2013/regeneration_on_marker
 
-execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:game run kill @e[type=item,x=128047,y=0,z=128056,distance=..1000]
+execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:game run kill @e[type=item,x=128047,y=100,z=128056,distance=..1000]
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run data remove storage switch:maps to_regenerate.ancienne_egypte_2013
 
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in minecraft:overworld run forceload remove 128000 128000 128019 128113

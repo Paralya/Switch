@@ -75,17 +75,14 @@
 #			switch:maps/survival/stardust_pvp_zone/regenerate {name:"stardust_pvp_zone"}
 #			switch:maps/survival/stardust_prison/regenerate {name:"stardust_prison"}
 #			switch:maps/survival/stardust_vip_zone/regenerate {name:"stardust_vip_zone"}
-#			switch:maps/survival/end_factory/regenerate {name:"end_factory"}
 #			switch:maps/survival/tnt_run_futuristic/regenerate {name:"tnt_run_futuristic"}
 #			switch:maps/survival/block_party/regenerate {name:"block_party"}
 #			switch:maps/survival/nuketown_no_barrier/regenerate {name:"nuketown_no_barrier"}
 #			switch:maps/survival/snowball_painter/regenerate {name:"snowball_painter"}
 #			switch:maps/survival/gay_shooter/regenerate {name:"gay_shooter"}
 #			switch:maps/survival/the_four_elements/regenerate {name:"the_four_elements"}
-#			switch:maps/survival/winnie_city/regenerate {name:"winnie_city"}
 #			switch:maps/survival/remelta_cluedo/regenerate {name:"remelta_cluedo"}
 #			switch:maps/survival/arti_box/regenerate {name:"arti_box"}
-#			switch:maps/survival/pitch_creep_nether/regenerate {name:"pitch_creep_nether"}
 #			switch:maps/survival/bombardement/regenerate {name:"bombardement"}
 #			switch:maps/survival/nether_storm/regenerate {name:"nether_storm"}
 #			switch:maps/survival/shoot_da_sheep/regenerate {name:"shoot_da_sheep"}

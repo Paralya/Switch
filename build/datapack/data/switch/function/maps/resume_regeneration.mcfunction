@@ -79,17 +79,14 @@ execute if score #rg_stardust_boss_zone_nether switch.data matches 1.. run funct
 execute if score #rg_stardust_pvp_zone switch.data matches 1.. run function switch:maps/survival/stardust_pvp_zone/regenerate
 execute if score #rg_stardust_prison switch.data matches 1.. run function switch:maps/survival/stardust_prison/regenerate
 execute if score #rg_stardust_vip_zone switch.data matches 1.. run function switch:maps/survival/stardust_vip_zone/regenerate
-execute if score #rg_end_factory switch.data matches 1.. run function switch:maps/survival/end_factory/regenerate
 execute if score #rg_tnt_run_futuristic switch.data matches 1.. run function switch:maps/survival/tnt_run_futuristic/regenerate
 execute if score #rg_block_party switch.data matches 1.. run function switch:maps/survival/block_party/regenerate
 execute if score #rg_nuketown_no_barrier switch.data matches 1.. run function switch:maps/survival/nuketown_no_barrier/regenerate
 execute if score #rg_snowball_painter switch.data matches 1.. run function switch:maps/survival/snowball_painter/regenerate
 execute if score #rg_gay_shooter switch.data matches 1.. run function switch:maps/survival/gay_shooter/regenerate
 execute if score #rg_the_four_elements switch.data matches 1.. run function switch:maps/survival/the_four_elements/regenerate
-execute if score #rg_winnie_city switch.data matches 1.. run function switch:maps/survival/winnie_city/regenerate
 execute if score #rg_remelta_cluedo switch.data matches 1.. run function switch:maps/survival/remelta_cluedo/regenerate
 execute if score #rg_arti_box switch.data matches 1.. run function switch:maps/survival/arti_box/regenerate
-execute if score #rg_pitch_creep_nether switch.data matches 1.. run function switch:maps/survival/pitch_creep_nether/regenerate
 execute if score #rg_bombardement switch.data matches 1.. run function switch:maps/survival/bombardement/regenerate
 execute if score #rg_nether_storm switch.data matches 1.. run function switch:maps/survival/nether_storm/regenerate
 execute if score #rg_shoot_da_sheep switch.data matches 1.. run function switch:maps/survival/shoot_da_sheep/regenerate

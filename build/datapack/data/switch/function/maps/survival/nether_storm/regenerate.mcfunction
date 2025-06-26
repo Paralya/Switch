@@ -18,11 +18,11 @@ execute if score #rg_nether_storm switch.data matches 1 in switch:game run force
 execute if score #rg_nether_storm switch.data matches 1 in minecraft:overworld run forceload add 122083 122000 122111 122074
 execute if score #rg_nether_storm switch.data matches 1 in switch:game run forceload add 122083 122000 122111 122074
 
-execute if score #rg_nether_storm switch.data matches 1 run scoreboard players set #rg_nether_storm_y switch.data 0
+execute if score #rg_nether_storm switch.data matches 1 run scoreboard players set #rg_nether_storm_y switch.data 100
 execute if score #rg_nether_storm switch.data matches 1 run scoreboard players set #rg_nether_storm_mod switch.data 0
 execute if score #rg_nether_storm switch.data matches ..200 summon marker run function switch:maps/survival/nether_storm/regeneration_on_marker
 
-execute if score #rg_nether_storm switch.data matches 201.. in switch:game run kill @e[type=item,x=122055,y=0,z=122037,distance=..1000]
+execute if score #rg_nether_storm switch.data matches 201.. in switch:game run kill @e[type=item,x=122055,y=100,z=122037,distance=..1000]
 execute if score #rg_nether_storm switch.data matches 201.. run data remove storage switch:maps to_regenerate.nether_storm
 
 execute if score #rg_nether_storm switch.data matches 201.. in minecraft:overworld run forceload remove 122000 122000 122028 122074

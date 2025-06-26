@@ -136,40 +136,24 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (109000, 100, 109000), (109059, 168, 109046), ("tnt_run_futuristic", "TNT Run Futuristic", "Stoupy, Jugou2"), view=(108992.51, 136.29, 109061.09, -497.66, 9.07))
 	clone_survival(100, (109993, -63, 109993), (110087, 117, 110087), ("block_party", "Block Party", "👉 You 👈"), view=(109951.05, 42.21, 110071.73, 249.32, 2.55))
 	clone_survival(100, (111000, 100, 111000), (111207, 151, 111220), ("nuketown_no_barrier", "Nuketown No Barrier", "Qiuye, Cube Horizon"), view=(72087.17, 117.13, 72105.28, -836.41, 15.91))
+	clone_survival(100, (112000, 100, 112000), (112043, 133, 112042), ("snowball_painter", "Snowball Painter", "Stoupy, ?"), view=(112036.42, 110.64, 112002.87, 29.00, 8.65))
+	clone_survival(100, (114000, 100, 114000), (114070, 149, 114058), ("gay_shooter", "Guy Shooter", "scartvol (Survisland)"), view=(114060.54, 135.63, 114016.48, 47.54, 14.09))
+	clone_survival(100, (115000, 100, 115000), (115101, 133, 115101), ("the_four_elements", "The Four Elements", "Stoupy, ?"), view=(115089.76, 125.47, 115008.43, 38.50, 32.30))
+	##	116000	(undefined)	: empty
+	##	117000	(undefined)	: empty
+	clone_survival(100, (118000, 100, 118000), (118089, 142, 118066), ("remelta_cluedo", "Cluedo", "Remelta"), view=(118027.17, 107.72, 118026.11, -62.95, -1.90))
+	clone_survival(100, (119000, 100, 119000), (119047, 134, 119047), ("arti_box", "Arti Box", "Arti"), view=(119015.55, 111.00, 119037.61, -504.51, 22.17))
+	##	120000	(undefined)	: empty
+	clone_survival(100, (121000, 100, 121000), (121115, 177, 121087), ("bombardement", "Bombardement", "Stoupy"), view=(121042.45, 110.42, 121079.05, -510.48, 3.87))
+	clone_survival(100, (122000, 100, 122000), (122111, 149, 122074), ("nether_storm", "Nether Storm", "Arti, TreekoZ"), view=(122018.26, 126.30, 122025.17, -414.81, 13.85))
+	clone_survival(100, (123000, 100, 123000), (123040, 157, 123040), ("shoot_da_sheep", "Shoot Da Sheep", "Stoupy"), view=(123012.43, 113.94, 123003.14, -744.00, 11.83))
+	clone_survival(100, (124000, 84, 124000), (124166, 136, 124140), ("minigolf", "Minigolf", "Remelta, Fhara"), view=(124082.24, 203.51, 124068.68, -809.77, 90.00))
+	clone_survival(100, (125000, 100, 125000), (125122, 128, 125122), ("pitchout_halloween", "Pitchout Halloween", "Even, Stoupy"), view=(125041.62, 119.09, 125102.16, 205.44, 15.99))
+	clone_survival(100, (126000, 100, 126000), (126108, 147, 126108), ("cigogne", "Cigogne", "JustNoob"), view=(126027.31, 112.17, 126071.37, 233.45, 11.79))
+	clone_survival(100, (128000, 100, 128000), (128095, 176, 128113), ("ancienne_egypte_2013", "Ancienne Egypte 2013", "Farrel, Snowa, Jowjow (Rebuilt by Stoupy, Shazin, Thitanas)"), view=(128022.53, 146.68, 128029.90, -397.22, 24.89))
+	clone_survival(100, (129000, 100, 129000), (129102, 152, 129102), ("old_japan_apocalypse", "Old Japan Apocalypse", "Stoupy, Even"), view=(129066.12, 113.57, 129020.79, -325.93, 3.87))
 
-	clone_survival(100, (112000, 0, 112000), (112043, 33, 112042), ("snowball_painter", "Snowball Painter", "Stoupy, ?"), view=(112022, 110, 112006))
-
-	clone_survival(100, (113994, 90, 113992), (114064, 139, 114050), ("gay_shooter", "Guy Shooter", "scartvol (Survisland)"), view=(114029, 140, 114021))
-
-	clone_survival(100, (115000, 0, 115000), (115101, 33, 115101), ("the_four_elements", "The Four Elements", "Stoupy, ?"), view=(115051, 110, 115052))
-
-	##	116000	(undefined)	: EMPTY
-
-	clone_survival(100, (117000, 0, 117000), (117119, 31, 117130), ("winnie_city", "Winnie City", "M4TOUW"), view=(117053, 110, 117052))
-
-	clone_survival(100, (118000, 0, 118000), (118089, 42, 118066), ("remelta_cluedo", "Cluedo", "Remelta"), view=(118032, 108, 118030))
-
-	clone_survival(100, (119000, 0, 119000), (119047, 34, 119047), ("arti_box", "Arti Box", "Arti"), view=(119024, 109, 119023))
-
-	clone_survival(100, (120000, 0, 120000), (120037, 16, 120020), ("pitch_creep_nether", "Pitch Creep Nether", "Stoupy, ?"), view=(120019, 115, 120010))
-
-	clone_survival(100, (121000, 0, 121000), (121115, 77, 121087), ("bombardement", "Bombardement", "Stoupy"), view=(121057, 110, 121064))
-
-	clone_survival(100, (122000, 0, 122000), (122111, 49, 122074), ("nether_storm", "Nether Storm", "Arti, TreekoZ"), view=(122034, 119, 122037))
-
-	clone_survival(100, (122980, 97, 122980), (123020, 154, 123020), ("shoot_da_sheep", "Shoot Da Sheep", "Stoupy"), view=(123000, 155, 123000))
-
-	clone_survival(100, (124000, 84, 124000), (124166, 136, 124140), ("minigolf", "Minigolf", "Remelta, Fhara"), view=(124083, 137, 124070))
-
-	clone_survival(100, (125000, 0, 125000), (125122, 28, 125122), ("pitchout_halloween", "Pitchout Halloween", "Even, Stoupy"), view=(125061, 112, 125061))
-
-	clone_survival(100, (126000, 0, 126000), (126108, 47, 126108), ("cigogne", "Cigogne", "JustNoob"), view=(126059, 108, 126061))
-
-	clone_survival(100, (128000, 0, 128000), (128095, 76, 128113), ("ancienne_egypte_2013", "Ancienne Egypte 2013", "?, ?, ? (Rebuilt by Stoupy, Shazin, Thitanas)"), view=(128048, 121, 128105))
-
-	clone_survival(100, (129000, 0, 129000), (129102, 52, 129102), ("old_japan_apocalypse", "Old Japan Apocalypse", "Stoupy, Even"), view=(129041, 108, 129043))
-
-	clone_survival(100, (127000, 0, 127000), (127150, 62, 127134), ("lost_graveyard_remastered", "Lost Graveyard Remastered", "Stoupy, ?, ShoupZ"), view=(127030, 119, 127111))
+	clone_survival(100, (127000, 100, 127000), (127150, 162, 127134), ("lost_graveyard_remastered", "Lost Graveyard Remastered", "Stoupy, Rizdeau, Lawtank, TreekoZ, ShoupZ"), view=(127030, 119, 127111))
 
 	clone_survival(100, (130000, 0, 130000), (130192, 80, 130134), ("jn_nature_box", "Nature Box", "JustNoob"), view=(130098, 169, 130067))
 

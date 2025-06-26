@@ -24,10 +24,10 @@ execute if score #scan_cigogne switch.data matches 1 in switch:game run forceloa
 
 execute if score #scan_cigogne switch.data matches 1 run data modify storage switch:maps to_scan.cigogne set value 2b
 execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #start_x_cigogne switch.data 126001
-execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #start_y_cigogne switch.data 1
+execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #start_y_cigogne switch.data 101
 execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #start_z_cigogne switch.data 126001
 execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #end_x_cigogne switch.data 126107
-execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #end_y_cigogne switch.data 46
+execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #end_y_cigogne switch.data 146
 execute if score #scan_cigogne switch.data matches 1 run scoreboard players set #end_z_cigogne switch.data 126107
 execute if score #scan_cigogne switch.data matches 1 run scoreboard players operation #curr_x_cigogne switch.data = #start_x_cigogne switch.data
 execute if score #scan_cigogne switch.data matches 1 run scoreboard players operation #curr_y_cigogne switch.data = #start_y_cigogne switch.data

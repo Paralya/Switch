@@ -4,7 +4,7 @@
 # @within	switch:maps/survival/stardust_boss_zone/main
 #
 
-data modify entity @s Pos set value [103057.5d, 154.5d, 103095.5d]
+data modify entity @s Pos set value [103098.69.5d, 159.79.5d, 103132.23.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/stardust_boss_zone/spread_players

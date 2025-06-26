@@ -22,11 +22,11 @@ execute if score #rg_pitchout_halloween switch.data matches 1 in switch:game run
 execute if score #rg_pitchout_halloween switch.data matches 1 in minecraft:overworld run forceload add 125102 125000 125122 125122
 execute if score #rg_pitchout_halloween switch.data matches 1 in switch:game run forceload add 125102 125000 125122 125122
 
-execute if score #rg_pitchout_halloween switch.data matches 1 run scoreboard players set #rg_pitchout_halloween_y switch.data 0
+execute if score #rg_pitchout_halloween switch.data matches 1 run scoreboard players set #rg_pitchout_halloween_y switch.data 100
 execute if score #rg_pitchout_halloween switch.data matches 1 run scoreboard players set #rg_pitchout_halloween_mod switch.data 0
 execute if score #rg_pitchout_halloween switch.data matches ..174 summon marker run function switch:maps/survival/pitchout_halloween/regeneration_on_marker
 
-execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run kill @e[type=item,x=125061,y=0,z=125061,distance=..1000]
+execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run kill @e[type=item,x=125061,y=100,z=125061,distance=..1000]
 execute if score #rg_pitchout_halloween switch.data matches 175.. run data remove storage switch:maps to_regenerate.pitchout_halloween
 
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125000 125000 125020 125122

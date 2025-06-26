@@ -79,17 +79,14 @@
 #			switch:maps/survival/stardust_pvp_zone/regenerate
 #			switch:maps/survival/stardust_prison/regenerate
 #			switch:maps/survival/stardust_vip_zone/regenerate
-#			switch:maps/survival/end_factory/regenerate
 #			switch:maps/survival/tnt_run_futuristic/regenerate
 #			switch:maps/survival/block_party/regenerate
 #			switch:maps/survival/nuketown_no_barrier/regenerate
 #			switch:maps/survival/snowball_painter/regenerate
 #			switch:maps/survival/gay_shooter/regenerate
 #			switch:maps/survival/the_four_elements/regenerate
-#			switch:maps/survival/winnie_city/regenerate
 #			switch:maps/survival/remelta_cluedo/regenerate
 #			switch:maps/survival/arti_box/regenerate
-#			switch:maps/survival/pitch_creep_nether/regenerate
 #			switch:maps/survival/bombardement/regenerate
 #			switch:maps/survival/nether_storm/regenerate
 #			switch:maps/survival/shoot_da_sheep/regenerate

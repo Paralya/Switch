@@ -13,7 +13,7 @@ execute if score #curr_x_stardust_vip_zone switch.data > #end_x_stardust_vip_zon
 execute if score #curr_x_stardust_vip_zone switch.data > #end_x_stardust_vip_zone switch.data run scoreboard players operation #curr_x_stardust_vip_zone switch.data = #start_x_stardust_vip_zone switch.data
 execute if score #curr_y_stardust_vip_zone switch.data > #end_y_stardust_vip_zone switch.data run scoreboard players add #curr_z_stardust_vip_zone switch.data 1
 execute if score #curr_y_stardust_vip_zone switch.data > #end_y_stardust_vip_zone switch.data run scoreboard players operation #curr_y_stardust_vip_zone switch.data = #start_y_stardust_vip_zone switch.data
-execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"stardust_vip_zone",additional_height:100}
+execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"stardust_vip_zone",additional_height:0}
 
 scoreboard players remove #blocks_in_loop switch.data 1
 execute if score #blocks_in_loop switch.data matches 1.. if score #curr_z_stardust_vip_zone switch.data < #end_z_stardust_vip_zone switch.data run function switch:maps/survival/stardust_vip_zone/scan_doors_on_marker

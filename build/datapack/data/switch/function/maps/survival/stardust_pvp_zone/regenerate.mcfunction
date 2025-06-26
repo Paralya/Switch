@@ -70,11 +70,11 @@ execute if score #rg_stardust_pvp_zone switch.data matches 1 in switch:game run 
 execute if score #rg_stardust_pvp_zone switch.data matches 1 in minecraft:overworld run forceload add 105281 105000 105291 105314
 execute if score #rg_stardust_pvp_zone switch.data matches 1 in switch:game run forceload add 105281 105000 105291 105314
 
-execute if score #rg_stardust_pvp_zone switch.data matches 1 run scoreboard players set #rg_stardust_pvp_zone_y switch.data -63
+execute if score #rg_stardust_pvp_zone switch.data matches 1 run scoreboard players set #rg_stardust_pvp_zone_y switch.data 100
 execute if score #rg_stardust_pvp_zone switch.data matches 1 run scoreboard players set #rg_stardust_pvp_zone_mod switch.data 0
 execute if score #rg_stardust_pvp_zone switch.data matches ..4290 summon marker run function switch:maps/survival/stardust_pvp_zone/regeneration_on_marker
 
-execute if score #rg_stardust_pvp_zone switch.data matches 4291.. in switch:game run kill @e[type=item,x=105145,y=-63,z=105157,distance=..1000]
+execute if score #rg_stardust_pvp_zone switch.data matches 4291.. in switch:game run kill @e[type=item,x=105145,y=100,z=105157,distance=..1000]
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. run data remove storage switch:maps to_regenerate.stardust_pvp_zone
 
 execute if score #rg_stardust_pvp_zone switch.data matches 4291.. in minecraft:overworld run forceload remove 105000 105000 105010 105314

@@ -24,10 +24,10 @@ execute if score #scan_ancienne_egypte_2013 switch.data matches 1 in switch:game
 
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run data modify storage switch:maps to_scan.ancienne_egypte_2013 set value 2b
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #start_x_ancienne_egypte_2013 switch.data 128001
-execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #start_y_ancienne_egypte_2013 switch.data 1
+execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #start_y_ancienne_egypte_2013 switch.data 101
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #start_z_ancienne_egypte_2013 switch.data 128001
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #end_x_ancienne_egypte_2013 switch.data 128094
-execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #end_y_ancienne_egypte_2013 switch.data 75
+execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #end_y_ancienne_egypte_2013 switch.data 175
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players set #end_z_ancienne_egypte_2013 switch.data 128112
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players operation #curr_x_ancienne_egypte_2013 switch.data = #start_x_ancienne_egypte_2013 switch.data
 execute if score #scan_ancienne_egypte_2013 switch.data matches 1 run scoreboard players operation #curr_y_ancienne_egypte_2013 switch.data = #start_y_ancienne_egypte_2013 switch.data

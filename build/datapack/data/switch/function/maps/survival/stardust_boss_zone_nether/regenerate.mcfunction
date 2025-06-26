@@ -26,11 +26,11 @@ execute if score #rg_stardust_boss_zone_nether switch.data matches 1 in switch:g
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1 in minecraft:overworld run forceload add 104116 104000 104132 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1 in switch:game run forceload add 104116 104000 104132 104165
 
-execute if score #rg_stardust_boss_zone_nether switch.data matches 1 run scoreboard players set #rg_stardust_boss_zone_nether_y switch.data -63
+execute if score #rg_stardust_boss_zone_nether switch.data matches 1 run scoreboard players set #rg_stardust_boss_zone_nether_y switch.data 100
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1 run scoreboard players set #rg_stardust_boss_zone_nether_mod switch.data 0
 execute if score #rg_stardust_boss_zone_nether switch.data matches ..1032 summon marker run function switch:maps/survival/stardust_boss_zone_nether/regeneration_on_marker
 
-execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run kill @e[type=item,x=104066,y=-63,z=104082,distance=..1000]
+execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run kill @e[type=item,x=104066,y=100,z=104082,distance=..1000]
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run data remove storage switch:maps to_regenerate.stardust_boss_zone_nether
 
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104000 104000 104016 104165

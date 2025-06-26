@@ -13,7 +13,7 @@ execute if score #curr_x_remelta_cluedo switch.data > #end_x_remelta_cluedo swit
 execute if score #curr_x_remelta_cluedo switch.data > #end_x_remelta_cluedo switch.data run scoreboard players operation #curr_x_remelta_cluedo switch.data = #start_x_remelta_cluedo switch.data
 execute if score #curr_y_remelta_cluedo switch.data > #end_y_remelta_cluedo switch.data run scoreboard players add #curr_z_remelta_cluedo switch.data 1
 execute if score #curr_y_remelta_cluedo switch.data > #end_y_remelta_cluedo switch.data run scoreboard players operation #curr_y_remelta_cluedo switch.data = #start_y_remelta_cluedo switch.data
-execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"remelta_cluedo",additional_height:100}
+execute at @s if block ~ ~ ~ #minecraft:doors run function switch:maps/add_door_to_storage {name:"remelta_cluedo",additional_height:0}
 
 scoreboard players remove #blocks_in_loop switch.data 1
 execute if score #blocks_in_loop switch.data matches 1.. if score #curr_z_remelta_cluedo switch.data < #end_z_remelta_cluedo switch.data run function switch:maps/survival/remelta_cluedo/scan_doors_on_marker

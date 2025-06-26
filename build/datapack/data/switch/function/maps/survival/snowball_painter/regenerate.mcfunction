@@ -14,11 +14,11 @@ execute if score #rg_snowball_painter switch.data matches 1 in switch:game run f
 execute if score #rg_snowball_painter switch.data matches 1 in minecraft:overworld run forceload add 112022 112000 112043 112042
 execute if score #rg_snowball_painter switch.data matches 1 in switch:game run forceload add 112022 112000 112043 112042
 
-execute if score #rg_snowball_painter switch.data matches 1 run scoreboard players set #rg_snowball_painter_y switch.data 0
+execute if score #rg_snowball_painter switch.data matches 1 run scoreboard players set #rg_snowball_painter_y switch.data 100
 execute if score #rg_snowball_painter switch.data matches 1 run scoreboard players set #rg_snowball_painter_mod switch.data 0
 execute if score #rg_snowball_painter switch.data matches ..68 summon marker run function switch:maps/survival/snowball_painter/regeneration_on_marker
 
-execute if score #rg_snowball_painter switch.data matches 69.. in switch:game run kill @e[type=item,x=112021,y=0,z=112021,distance=..1000]
+execute if score #rg_snowball_painter switch.data matches 69.. in switch:game run kill @e[type=item,x=112021,y=100,z=112021,distance=..1000]
 execute if score #rg_snowball_painter switch.data matches 69.. run data remove storage switch:maps to_regenerate.snowball_painter
 
 execute if score #rg_snowball_painter switch.data matches 69.. in minecraft:overworld run forceload remove 112000 112000 112022 112042

@@ -33,10 +33,10 @@ execute if score #scan_stardust_boss_zone switch.data matches 1 in switch:game r
 
 execute if score #scan_stardust_boss_zone switch.data matches 1 run data modify storage switch:maps to_scan.stardust_boss_zone set value 2b
 execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #start_x_stardust_boss_zone switch.data 103001
-execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #start_y_stardust_boss_zone switch.data -63
+execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #start_y_stardust_boss_zone switch.data 101
 execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #start_z_stardust_boss_zone switch.data 103001
 execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #end_x_stardust_boss_zone switch.data 103131
-execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #end_y_stardust_boss_zone switch.data 48
+execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #end_y_stardust_boss_zone switch.data 212
 execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players set #end_z_stardust_boss_zone switch.data 103164
 execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players operation #curr_x_stardust_boss_zone switch.data = #start_x_stardust_boss_zone switch.data
 execute if score #scan_stardust_boss_zone switch.data matches 1 run scoreboard players operation #curr_y_stardust_boss_zone switch.data = #start_y_stardust_boss_zone switch.data

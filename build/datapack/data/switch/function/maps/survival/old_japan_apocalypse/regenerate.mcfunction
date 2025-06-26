@@ -20,11 +20,11 @@ execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game r
 execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 129082 129000 129102 129102
 execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 129082 129000 129102 129102
 
-execute if score #rg_old_japan_apocalypse switch.data matches 1 run scoreboard players set #rg_old_japan_apocalypse_y switch.data 0
+execute if score #rg_old_japan_apocalypse switch.data matches 1 run scoreboard players set #rg_old_japan_apocalypse_y switch.data 100
 execute if score #rg_old_japan_apocalypse switch.data matches 1 run scoreboard players set #rg_old_japan_apocalypse_mod switch.data 0
 execute if score #rg_old_japan_apocalypse switch.data matches ..265 summon marker run function switch:maps/survival/old_japan_apocalypse/regeneration_on_marker
 
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run kill @e[type=item,x=129051,y=0,z=129051,distance=..1000]
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run kill @e[type=item,x=129051,y=100,z=129051,distance=..1000]
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. run data remove storage switch:maps to_regenerate.old_japan_apocalypse
 
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 129000 129000 129020 129102

@@ -33,10 +33,10 @@ execute if score #scan_lost_graveyard_remastered switch.data matches 1 in switch
 
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run data modify storage switch:maps to_scan.lost_graveyard_remastered set value 2b
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #start_x_lost_graveyard_remastered switch.data 127001
-execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #start_y_lost_graveyard_remastered switch.data 1
+execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #start_y_lost_graveyard_remastered switch.data 101
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #start_z_lost_graveyard_remastered switch.data 127001
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #end_x_lost_graveyard_remastered switch.data 127149
-execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #end_y_lost_graveyard_remastered switch.data 61
+execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #end_y_lost_graveyard_remastered switch.data 161
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #end_z_lost_graveyard_remastered switch.data 127133
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players operation #curr_x_lost_graveyard_remastered switch.data = #start_x_lost_graveyard_remastered switch.data
 execute if score #scan_lost_graveyard_remastered switch.data matches 1 run scoreboard players operation #curr_y_lost_graveyard_remastered switch.data = #start_y_lost_graveyard_remastered switch.data

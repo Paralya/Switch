@@ -78,17 +78,14 @@ execute if data storage switch:main {map:"stardust_boss_zone_nether"} run functi
 execute if data storage switch:main {map:"stardust_pvp_zone"} run function switch:maps/survival/stardust_pvp_zone/main
 execute if data storage switch:main {map:"stardust_prison"} run function switch:maps/survival/stardust_prison/main
 execute if data storage switch:main {map:"stardust_vip_zone"} run function switch:maps/survival/stardust_vip_zone/main
-execute if data storage switch:main {map:"end_factory"} run function switch:maps/survival/end_factory/main
 execute if data storage switch:main {map:"tnt_run_futuristic"} run function switch:maps/survival/tnt_run_futuristic/main
 execute if data storage switch:main {map:"block_party"} run function switch:maps/survival/block_party/main
 execute if data storage switch:main {map:"nuketown_no_barrier"} run function switch:maps/survival/nuketown_no_barrier/main
 execute if data storage switch:main {map:"snowball_painter"} run function switch:maps/survival/snowball_painter/main
 execute if data storage switch:main {map:"gay_shooter"} run function switch:maps/survival/gay_shooter/main
 execute if data storage switch:main {map:"the_four_elements"} run function switch:maps/survival/the_four_elements/main
-execute if data storage switch:main {map:"winnie_city"} run function switch:maps/survival/winnie_city/main
 execute if data storage switch:main {map:"remelta_cluedo"} run function switch:maps/survival/remelta_cluedo/main
 execute if data storage switch:main {map:"arti_box"} run function switch:maps/survival/arti_box/main
-execute if data storage switch:main {map:"pitch_creep_nether"} run function switch:maps/survival/pitch_creep_nether/main
 execute if data storage switch:main {map:"bombardement"} run function switch:maps/survival/bombardement/main
 execute if data storage switch:main {map:"nether_storm"} run function switch:maps/survival/nether_storm/main
 execute if data storage switch:main {map:"shoot_da_sheep"} run function switch:maps/survival/shoot_da_sheep/main

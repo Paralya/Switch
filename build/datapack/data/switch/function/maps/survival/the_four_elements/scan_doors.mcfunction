@@ -24,10 +24,10 @@ execute if score #scan_the_four_elements switch.data matches 1 in switch:game ru
 
 execute if score #scan_the_four_elements switch.data matches 1 run data modify storage switch:maps to_scan.the_four_elements set value 2b
 execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #start_x_the_four_elements switch.data 115001
-execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #start_y_the_four_elements switch.data 1
+execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #start_y_the_four_elements switch.data 101
 execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #start_z_the_four_elements switch.data 115001
 execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #end_x_the_four_elements switch.data 115100
-execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #end_y_the_four_elements switch.data 32
+execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #end_y_the_four_elements switch.data 132
 execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players set #end_z_the_four_elements switch.data 115100
 execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players operation #curr_x_the_four_elements switch.data = #start_x_the_four_elements switch.data
 execute if score #scan_the_four_elements switch.data matches 1 run scoreboard players operation #curr_y_the_four_elements switch.data = #start_y_the_four_elements switch.data

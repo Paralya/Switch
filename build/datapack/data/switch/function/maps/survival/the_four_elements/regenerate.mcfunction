@@ -20,11 +20,11 @@ execute if score #rg_the_four_elements switch.data matches 1 in switch:game run 
 execute if score #rg_the_four_elements switch.data matches 1 in minecraft:overworld run forceload add 115081 115000 115101 115101
 execute if score #rg_the_four_elements switch.data matches 1 in switch:game run forceload add 115081 115000 115101 115101
 
-execute if score #rg_the_four_elements switch.data matches 1 run scoreboard players set #rg_the_four_elements_y switch.data 0
+execute if score #rg_the_four_elements switch.data matches 1 run scoreboard players set #rg_the_four_elements_y switch.data 100
 execute if score #rg_the_four_elements switch.data matches 1 run scoreboard players set #rg_the_four_elements_mod switch.data 0
 execute if score #rg_the_four_elements switch.data matches ..170 summon marker run function switch:maps/survival/the_four_elements/regeneration_on_marker
 
-execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run kill @e[type=item,x=115050,y=0,z=115050,distance=..1000]
+execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run kill @e[type=item,x=115050,y=100,z=115050,distance=..1000]
 execute if score #rg_the_four_elements switch.data matches 171.. run data remove storage switch:maps to_regenerate.the_four_elements
 
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 115000 115000 115020 115101

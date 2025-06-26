@@ -20,11 +20,11 @@ execute if score #rg_cigogne switch.data matches 1 in switch:game run forceload 
 execute if score #rg_cigogne switch.data matches 1 in minecraft:overworld run forceload add 126086 126000 126108 126108
 execute if score #rg_cigogne switch.data matches 1 in switch:game run forceload add 126086 126000 126108 126108
 
-execute if score #rg_cigogne switch.data matches 1 run scoreboard players set #rg_cigogne_y switch.data 0
+execute if score #rg_cigogne switch.data matches 1 run scoreboard players set #rg_cigogne_y switch.data 100
 execute if score #rg_cigogne switch.data matches 1 run scoreboard players set #rg_cigogne_mod switch.data 0
 execute if score #rg_cigogne switch.data matches ..240 summon marker run function switch:maps/survival/cigogne/regeneration_on_marker
 
-execute if score #rg_cigogne switch.data matches 241.. in switch:game run kill @e[type=item,x=126054,y=0,z=126054,distance=..1000]
+execute if score #rg_cigogne switch.data matches 241.. in switch:game run kill @e[type=item,x=126054,y=100,z=126054,distance=..1000]
 execute if score #rg_cigogne switch.data matches 241.. run data remove storage switch:maps to_regenerate.cigogne
 
 execute if score #rg_cigogne switch.data matches 241.. in minecraft:overworld run forceload remove 126000 126000 126022 126108

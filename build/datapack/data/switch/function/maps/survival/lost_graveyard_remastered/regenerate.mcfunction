@@ -26,11 +26,11 @@ execute if score #rg_lost_graveyard_remastered switch.data matches 1 in switch:g
 execute if score #rg_lost_graveyard_remastered switch.data matches 1 in minecraft:overworld run forceload add 127131 127000 127150 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 1 in switch:game run forceload add 127131 127000 127150 127134
 
-execute if score #rg_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #rg_lost_graveyard_remastered_y switch.data 0
+execute if score #rg_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #rg_lost_graveyard_remastered_y switch.data 100
 execute if score #rg_lost_graveyard_remastered switch.data matches 1 run scoreboard players set #rg_lost_graveyard_remastered_mod switch.data 0
 execute if score #rg_lost_graveyard_remastered switch.data matches ..504 summon marker run function switch:maps/survival/lost_graveyard_remastered/regeneration_on_marker
 
-execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run kill @e[type=item,x=127075,y=0,z=127067,distance=..1000]
+execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run kill @e[type=item,x=127075,y=100,z=127067,distance=..1000]
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run data remove storage switch:maps to_regenerate.lost_graveyard_remastered
 
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127000 127000 127019 127134

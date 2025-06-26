@@ -24,10 +24,10 @@ execute if score #scan_old_japan_apocalypse switch.data matches 1 in switch:game
 
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run data modify storage switch:maps to_scan.old_japan_apocalypse set value 2b
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #start_x_old_japan_apocalypse switch.data 129001
-execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #start_y_old_japan_apocalypse switch.data 1
+execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #start_y_old_japan_apocalypse switch.data 101
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #start_z_old_japan_apocalypse switch.data 129001
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #end_x_old_japan_apocalypse switch.data 129101
-execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #end_y_old_japan_apocalypse switch.data 51
+execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #end_y_old_japan_apocalypse switch.data 151
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players set #end_z_old_japan_apocalypse switch.data 129101
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players operation #curr_x_old_japan_apocalypse switch.data = #start_x_old_japan_apocalypse switch.data
 execute if score #scan_old_japan_apocalypse switch.data matches 1 run scoreboard players operation #curr_y_old_japan_apocalypse switch.data = #start_y_old_japan_apocalypse switch.data

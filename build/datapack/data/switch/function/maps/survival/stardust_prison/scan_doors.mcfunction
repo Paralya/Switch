@@ -36,10 +36,10 @@ execute if score #scan_stardust_prison switch.data matches 1 in switch:game run 
 
 execute if score #scan_stardust_prison switch.data matches 1 run data modify storage switch:maps to_scan.stardust_prison set value 2b
 execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #start_x_stardust_prison switch.data 106001
-execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #start_y_stardust_prison switch.data 1
+execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #start_y_stardust_prison switch.data 101
 execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #start_z_stardust_prison switch.data 106001
 execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #end_x_stardust_prison switch.data 106131
-execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #end_y_stardust_prison switch.data 56
+execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #end_y_stardust_prison switch.data 156
 execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players set #end_z_stardust_prison switch.data 106177
 execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players operation #curr_x_stardust_prison switch.data = #start_x_stardust_prison switch.data
 execute if score #scan_stardust_prison switch.data matches 1 run scoreboard players operation #curr_y_stardust_prison switch.data = #start_y_stardust_prison switch.data

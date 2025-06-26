@@ -22,11 +22,11 @@ execute if score #rg_stardust_spawn switch.data matches 1 in switch:game run for
 execute if score #rg_stardust_spawn switch.data matches 1 in minecraft:overworld run forceload add 101100 101000 101120 101120
 execute if score #rg_stardust_spawn switch.data matches 1 in switch:game run forceload add 101100 101000 101120 101120
 
-execute if score #rg_stardust_spawn switch.data matches 1 run scoreboard players set #rg_stardust_spawn_y switch.data 0
+execute if score #rg_stardust_spawn switch.data matches 1 run scoreboard players set #rg_stardust_spawn_y switch.data 100
 execute if score #rg_stardust_spawn switch.data matches 1 run scoreboard players set #rg_stardust_spawn_mod switch.data 0
 execute if score #rg_stardust_spawn switch.data matches ..546 summon marker run function switch:maps/survival/stardust_spawn/regeneration_on_marker
 
-execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run kill @e[type=item,x=101060,y=0,z=101060,distance=..1000]
+execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run kill @e[type=item,x=101060,y=100,z=101060,distance=..1000]
 execute if score #rg_stardust_spawn switch.data matches 547.. run data remove storage switch:maps to_regenerate.stardust_spawn
 
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101000 101000 101020 101120

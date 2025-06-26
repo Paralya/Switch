@@ -14,11 +14,11 @@ execute if score #rg_arti_box switch.data matches 1 in switch:game run forceload
 execute if score #rg_arti_box switch.data matches 1 in minecraft:overworld run forceload add 119024 119000 119047 119047
 execute if score #rg_arti_box switch.data matches 1 in switch:game run forceload add 119024 119000 119047 119047
 
-execute if score #rg_arti_box switch.data matches 1 run scoreboard players set #rg_arti_box_y switch.data 0
+execute if score #rg_arti_box switch.data matches 1 run scoreboard players set #rg_arti_box_y switch.data 100
 execute if score #rg_arti_box switch.data matches 1 run scoreboard players set #rg_arti_box_mod switch.data 0
 execute if score #rg_arti_box switch.data matches ..70 summon marker run function switch:maps/survival/arti_box/regeneration_on_marker
 
-execute if score #rg_arti_box switch.data matches 71.. in switch:game run kill @e[type=item,x=119023,y=0,z=119023,distance=..1000]
+execute if score #rg_arti_box switch.data matches 71.. in switch:game run kill @e[type=item,x=119023,y=100,z=119023,distance=..1000]
 execute if score #rg_arti_box switch.data matches 71.. run data remove storage switch:maps to_regenerate.arti_box
 
 execute if score #rg_arti_box switch.data matches 71.. in minecraft:overworld run forceload remove 119000 119000 119024 119047

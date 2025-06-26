@@ -77,17 +77,14 @@ data modify storage switch:maps to_regenerate.stardust_boss_zone_nether set valu
 data modify storage switch:maps to_regenerate.stardust_pvp_zone set value 1b
 data modify storage switch:maps to_regenerate.stardust_prison set value 1b
 data modify storage switch:maps to_regenerate.stardust_vip_zone set value 1b
-data modify storage switch:maps to_regenerate.end_factory set value 1b
 data modify storage switch:maps to_regenerate.tnt_run_futuristic set value 1b
 data modify storage switch:maps to_regenerate.block_party set value 1b
 data modify storage switch:maps to_regenerate.nuketown_no_barrier set value 1b
 data modify storage switch:maps to_regenerate.snowball_painter set value 1b
 data modify storage switch:maps to_regenerate.gay_shooter set value 1b
 data modify storage switch:maps to_regenerate.the_four_elements set value 1b
-data modify storage switch:maps to_regenerate.winnie_city set value 1b
 data modify storage switch:maps to_regenerate.remelta_cluedo set value 1b
 data modify storage switch:maps to_regenerate.arti_box set value 1b
-data modify storage switch:maps to_regenerate.pitch_creep_nether set value 1b
 data modify storage switch:maps to_regenerate.bombardement set value 1b
 data modify storage switch:maps to_regenerate.nether_storm set value 1b
 data modify storage switch:maps to_regenerate.shoot_da_sheep set value 1b

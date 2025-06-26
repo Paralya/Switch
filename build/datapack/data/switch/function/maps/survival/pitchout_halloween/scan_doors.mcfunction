@@ -27,10 +27,10 @@ execute if score #scan_pitchout_halloween switch.data matches 1 in switch:game r
 
 execute if score #scan_pitchout_halloween switch.data matches 1 run data modify storage switch:maps to_scan.pitchout_halloween set value 2b
 execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #start_x_pitchout_halloween switch.data 125001
-execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #start_y_pitchout_halloween switch.data 1
+execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #start_y_pitchout_halloween switch.data 101
 execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #start_z_pitchout_halloween switch.data 125001
 execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #end_x_pitchout_halloween switch.data 125121
-execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #end_y_pitchout_halloween switch.data 27
+execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #end_y_pitchout_halloween switch.data 127
 execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players set #end_z_pitchout_halloween switch.data 125121
 execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players operation #curr_x_pitchout_halloween switch.data = #start_x_pitchout_halloween switch.data
 execute if score #scan_pitchout_halloween switch.data matches 1 run scoreboard players operation #curr_y_pitchout_halloween switch.data = #start_y_pitchout_halloween switch.data

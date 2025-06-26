@@ -15,10 +15,10 @@ execute if score #scan_arti_box switch.data matches 1 in switch:game run forcelo
 
 execute if score #scan_arti_box switch.data matches 1 run data modify storage switch:maps to_scan.arti_box set value 2b
 execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #start_x_arti_box switch.data 119001
-execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #start_y_arti_box switch.data 1
+execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #start_y_arti_box switch.data 101
 execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #start_z_arti_box switch.data 119001
 execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #end_x_arti_box switch.data 119046
-execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #end_y_arti_box switch.data 33
+execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #end_y_arti_box switch.data 133
 execute if score #scan_arti_box switch.data matches 1 run scoreboard players set #end_z_arti_box switch.data 119046
 execute if score #scan_arti_box switch.data matches 1 run scoreboard players operation #curr_x_arti_box switch.data = #start_x_arti_box switch.data
 execute if score #scan_arti_box switch.data matches 1 run scoreboard players operation #curr_y_arti_box switch.data = #start_y_arti_box switch.data

@@ -92,17 +92,14 @@ execute if data storage switch:main {map:"stardust_boss_zone_nether"} run functi
 execute if data storage switch:main {map:"stardust_pvp_zone"} run function switch:maps/survival/stardust_pvp_zone/spread_one_player
 execute if data storage switch:main {map:"stardust_prison"} run function switch:maps/survival/stardust_prison/spread_one_player
 execute if data storage switch:main {map:"stardust_vip_zone"} run function switch:maps/survival/stardust_vip_zone/spread_one_player
-execute if data storage switch:main {map:"end_factory"} run function switch:maps/survival/end_factory/spread_one_player
 execute if data storage switch:main {map:"tnt_run_futuristic"} run function switch:maps/survival/tnt_run_futuristic/spread_one_player
 execute if data storage switch:main {map:"block_party"} run function switch:maps/survival/block_party/spread_one_player
 execute if data storage switch:main {map:"nuketown_no_barrier"} run function switch:maps/survival/nuketown_no_barrier/spread_one_player
 execute if data storage switch:main {map:"snowball_painter"} run function switch:maps/survival/snowball_painter/spread_one_player
 execute if data storage switch:main {map:"gay_shooter"} run function switch:maps/survival/gay_shooter/spread_one_player
 execute if data storage switch:main {map:"the_four_elements"} run function switch:maps/survival/the_four_elements/spread_one_player
-execute if data storage switch:main {map:"winnie_city"} run function switch:maps/survival/winnie_city/spread_one_player
 execute if data storage switch:main {map:"remelta_cluedo"} run function switch:maps/survival/remelta_cluedo/spread_one_player
 execute if data storage switch:main {map:"arti_box"} run function switch:maps/survival/arti_box/spread_one_player
-execute if data storage switch:main {map:"pitch_creep_nether"} run function switch:maps/survival/pitch_creep_nether/spread_one_player
 execute if data storage switch:main {map:"bombardement"} run function switch:maps/survival/bombardement/spread_one_player
 execute if data storage switch:main {map:"nether_storm"} run function switch:maps/survival/nether_storm/spread_one_player
 execute if data storage switch:main {map:"shoot_da_sheep"} run function switch:maps/survival/shoot_da_sheep/spread_one_player

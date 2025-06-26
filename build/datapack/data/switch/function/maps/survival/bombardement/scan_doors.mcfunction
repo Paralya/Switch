@@ -24,10 +24,10 @@ execute if score #scan_bombardement switch.data matches 1 in switch:game run for
 
 execute if score #scan_bombardement switch.data matches 1 run data modify storage switch:maps to_scan.bombardement set value 2b
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_x_bombardement switch.data 121001
-execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_y_bombardement switch.data 1
+execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_y_bombardement switch.data 101
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_z_bombardement switch.data 121001
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_x_bombardement switch.data 121114
-execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_y_bombardement switch.data 76
+execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_y_bombardement switch.data 176
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_z_bombardement switch.data 121086
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players operation #curr_x_bombardement switch.data = #start_x_bombardement switch.data
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players operation #curr_y_bombardement switch.data = #start_y_bombardement switch.data

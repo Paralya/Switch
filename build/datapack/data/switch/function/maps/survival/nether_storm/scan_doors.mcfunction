@@ -21,10 +21,10 @@ execute if score #scan_nether_storm switch.data matches 1 in switch:game run for
 
 execute if score #scan_nether_storm switch.data matches 1 run data modify storage switch:maps to_scan.nether_storm set value 2b
 execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #start_x_nether_storm switch.data 122001
-execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #start_y_nether_storm switch.data 1
+execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #start_y_nether_storm switch.data 101
 execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #start_z_nether_storm switch.data 122001
 execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #end_x_nether_storm switch.data 122110
-execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #end_y_nether_storm switch.data 48
+execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #end_y_nether_storm switch.data 148
 execute if score #scan_nether_storm switch.data matches 1 run scoreboard players set #end_z_nether_storm switch.data 122073
 execute if score #scan_nether_storm switch.data matches 1 run scoreboard players operation #curr_x_nether_storm switch.data = #start_x_nether_storm switch.data
 execute if score #scan_nether_storm switch.data matches 1 run scoreboard players operation #curr_y_nether_storm switch.data = #start_y_nether_storm switch.data
