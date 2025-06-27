@@ -42,9 +42,9 @@ execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run f
 execute if score #rg_fast_circuit switch.data matches 176.. in minecraft:overworld run forceload remove 20215 19522 20230 19650
 execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run forceload remove 20215 19522 20230 19650
 
-execute if score #rg_fast_circuit switch.data matches 176.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"fast_circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_fast_circuit switch.data matches 176.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fast Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_fast_circuit switch.data matches 176.. run data modify storage switch:main MessageToLog set value '{"text":"Map `fast_circuit` just regenerated!"}'
+execute if score #rg_fast_circuit switch.data matches 176.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Fast Circuit` just regenerated!"}'
 execute if score #rg_fast_circuit switch.data matches 176.. run function switch:engine/log_message/apply
 
 execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run function switch:maps/regenerate_doors_macro {name:"fast_circuit"}

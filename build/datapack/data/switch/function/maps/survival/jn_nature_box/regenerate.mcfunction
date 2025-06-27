@@ -67,9 +67,9 @@ execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run 
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130173 130000 130192 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130173 130000 130192 130134
 
-execute if score #rg_jn_nature_box switch.data matches 811.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"jn_nature_box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_nature_box switch.data matches 811.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nature Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_jn_nature_box switch.data matches 811.. run data modify storage switch:main MessageToLog set value '{"text":"Map `jn_nature_box` just regenerated!"}'
+execute if score #rg_jn_nature_box switch.data matches 811.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nature Box` just regenerated!"}'
 execute if score #rg_jn_nature_box switch.data matches 811.. run function switch:engine/log_message/apply
 
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jn_nature_box"}

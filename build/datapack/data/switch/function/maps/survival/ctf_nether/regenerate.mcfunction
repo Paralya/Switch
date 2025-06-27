@@ -137,9 +137,9 @@ execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run fo
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149194 149000 149202 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149194 149000 149202 149350
 
-execute if score #rg_ctf_nether switch.data matches 2641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"ctf_nether","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ctf_nether switch.data matches 2641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fiery Wastes","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_ctf_nether switch.data matches 2641.. run data modify storage switch:main MessageToLog set value '{"text":"Map `ctf_nether` just regenerated!"}'
+execute if score #rg_ctf_nether switch.data matches 2641.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Fiery Wastes` just regenerated!"}'
 execute if score #rg_ctf_nether switch.data matches 2641.. run function switch:engine/log_message/apply
 
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_nether"}

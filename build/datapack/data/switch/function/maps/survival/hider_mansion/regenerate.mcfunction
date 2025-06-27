@@ -67,9 +67,9 @@ execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run 
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71153 71000 71170 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71153 71000 71170 71160
 
-execute if score #rg_hider_mansion switch.data matches 711.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"hider_mansion","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_hider_mansion switch.data matches 711.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Hider Mansion","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_hider_mansion switch.data matches 711.. run data modify storage switch:main MessageToLog set value '{"text":"Map `hider_mansion` just regenerated!"}'
+execute if score #rg_hider_mansion switch.data matches 711.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Hider Mansion` just regenerated!"}'
 execute if score #rg_hider_mansion switch.data matches 711.. run function switch:engine/log_message/apply
 
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run function switch:maps/regenerate_doors_macro {name:"hider_mansion"}

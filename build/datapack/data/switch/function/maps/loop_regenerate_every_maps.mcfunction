@@ -5,7 +5,7 @@
 #			switch:maps/loop_regenerate_every_maps 1t
 #
 
-execute if data storage switch:maps to_regenerate{fireblast_3:1b} run schedule function switch:maps/loop_regenerate_every_maps 1t
+execute if data storage switch:maps to_regenerate{fireblast_pork:1b} run schedule function switch:maps/loop_regenerate_every_maps 1t
 execute if data storage switch:maps to_regenerate{laser_game:1b} run function switch:maps/survival/laser_game/regenerate
 
 execute unless data storage switch:maps to_regenerate.laser_game if data storage switch:maps to_regenerate{pitchout_1:1b} run function switch:maps/survival/pitchout_1/regenerate
@@ -125,7 +125,7 @@ execute unless data storage switch:maps to_regenerate.yeti_in_panic if data stor
 execute unless data storage switch:maps to_regenerate.cluedo_casino if data storage switch:maps to_regenerate{octogone_nether_ice:1b} run function switch:maps/survival/octogone_nether_ice/regenerate
 execute unless data storage switch:maps to_regenerate.octogone_nether_ice if data storage switch:maps to_regenerate{pillars_of_fortune:1b} run function switch:maps/survival/pillars_of_fortune/regenerate
 execute unless data storage switch:maps to_regenerate.pillars_of_fortune if data storage switch:maps to_regenerate{even_old_japan:1b} run function switch:maps/survival/even_old_japan/regenerate
-execute unless data storage switch:maps to_regenerate.even_old_japan if data storage switch:maps to_regenerate{fireblast_1:1b} run function switch:maps/survival/fireblast_1/regenerate
-execute unless data storage switch:maps to_regenerate.fireblast_1 if data storage switch:maps to_regenerate{fireblast_2:1b} run function switch:maps/survival/fireblast_2/regenerate
-execute unless data storage switch:maps to_regenerate.fireblast_2 if data storage switch:maps to_regenerate{fireblast_3:1b} run function switch:maps/survival/fireblast_3/regenerate
+execute unless data storage switch:maps to_regenerate.even_old_japan if data storage switch:maps to_regenerate{fireblast_bubulle:1b} run function switch:maps/survival/fireblast_bubulle/regenerate
+execute unless data storage switch:maps to_regenerate.fireblast_bubulle if data storage switch:maps to_regenerate{fireblast_cookie:1b} run function switch:maps/survival/fireblast_cookie/regenerate
+execute unless data storage switch:maps to_regenerate.fireblast_cookie if data storage switch:maps to_regenerate{fireblast_pork:1b} run function switch:maps/survival/fireblast_pork/regenerate
 

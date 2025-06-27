@@ -97,9 +97,9 @@ execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:gam
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111194 111000 111207 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111194 111000 111207 111220
 
-execute if score #rg_nuketown_no_barrier switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"nuketown_no_barrier","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_nuketown_no_barrier switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nuketown No Barrier","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_nuketown_no_barrier switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text":"Map `nuketown_no_barrier` just regenerated!"}'
+execute if score #rg_nuketown_no_barrier switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nuketown No Barrier` just regenerated!"}'
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run function switch:engine/log_message/apply
 
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run function switch:maps/regenerate_doors_macro {name:"nuketown_no_barrier"}

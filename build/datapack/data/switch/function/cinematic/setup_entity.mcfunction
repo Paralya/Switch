@@ -66,6 +66,7 @@ data modify storage switch:temp item.components."minecraft:custom_data".rotation
 
 ## Remember everything, player's id and gamemode, make the player spectator, then make them mount @s (item_display)
 data modify storage switch:temp item.components."minecraft:custom_data".particle set from storage switch:temp with.particle
+data modify storage switch:temp item.components."minecraft:custom_data".delay set from storage switch:temp with.delay
 data modify entity @s item set from storage switch:temp item
 scoreboard players operation @s switch.id = #player_id switch.id
 execute if entity @p[tag=switch.temp,gamemode=survival] run tag @s add switch.was_survival

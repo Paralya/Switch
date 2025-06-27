@@ -416,9 +416,9 @@ execute if score #rg_glassrunner switch.data matches 386.. in switch:game run fo
 execute if score #rg_glassrunner switch.data matches 386.. in minecraft:overworld run forceload remove 3244 2750 3250 3250
 execute if score #rg_glassrunner switch.data matches 386.. in switch:game run forceload remove 3244 2750 3250 3250
 
-execute if score #rg_glassrunner switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"glassrunner","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_glassrunner switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Glassrunner","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_glassrunner switch.data matches 386.. run data modify storage switch:main MessageToLog set value '{"text":"Map `glassrunner` just regenerated!"}'
+execute if score #rg_glassrunner switch.data matches 386.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Glassrunner` just regenerated!"}'
 execute if score #rg_glassrunner switch.data matches 386.. run function switch:engine/log_message/apply
 
 execute if score #rg_glassrunner switch.data matches 386.. in switch:game run function switch:maps/regenerate_doors_macro {name:"glassrunner"}

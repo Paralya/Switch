@@ -32,9 +32,9 @@ execute if score #rg_yeti_in_panic switch.data matches 205.. in switch:game run 
 execute if score #rg_yeti_in_panic switch.data matches 205.. in minecraft:overworld run forceload remove 158051 158000 158077 158070
 execute if score #rg_yeti_in_panic switch.data matches 205.. in switch:game run forceload remove 158051 158000 158077 158070
 
-execute if score #rg_yeti_in_panic switch.data matches 205.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"yeti_in_panic","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_yeti_in_panic switch.data matches 205.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Yeti in Panic","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_yeti_in_panic switch.data matches 205.. run data modify storage switch:main MessageToLog set value '{"text":"Map `yeti_in_panic` just regenerated!"}'
+execute if score #rg_yeti_in_panic switch.data matches 205.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Yeti in Panic` just regenerated!"}'
 execute if score #rg_yeti_in_panic switch.data matches 205.. run function switch:engine/log_message/apply
 
 execute if score #rg_yeti_in_panic switch.data matches 205.. in switch:game run function switch:maps/regenerate_doors_macro {name:"yeti_in_panic"}

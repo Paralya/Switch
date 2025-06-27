@@ -104,9 +104,9 @@
 		"cluedo_casino": ["murder_mystery"],
 		"octogone_nether_ice": ["pitch_creep"],
 		"pillars_of_fortune": ["pillars_of_fortune"],
-		"fireblast_1": ["fireblast"],
-		"fireblast_2": ["fireblast"],
-		"fireblast_3": ["fireblast"],
+		"fireblast_bubulle": ["fireblast"],
+		"fireblast_cookie": ["fireblast"],
+		"fireblast_pork": ["fireblast"],
 		"snow_travel": ["kart_racer","protect_the_king"],
 		"cathedrale_liege": ["warden_escape","protect_the_king"],
 		"de_a_coudre_1": ["de_a_coudre","simultaneous_jump"],
@@ -168,6 +168,6 @@
 		"fish_fight": ["luxio_fish_fight"],
 		"one_shot": ["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"],
 		"pillars_of_fortune": ["pillars_of_fortune"],
-		"fireblast": ["fireblast_1","fireblast_2","fireblast_3"]
+		"fireblast": ["fireblast_bubulle","fireblast_cookie","fireblast_pork"]
 	}
 ]

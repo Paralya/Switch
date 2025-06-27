@@ -42,9 +42,9 @@ execute if score #rg_bombardement switch.data matches 391.. in switch:game run f
 execute if score #rg_bombardement switch.data matches 391.. in minecraft:overworld run forceload remove 121092 121000 121115 121087
 execute if score #rg_bombardement switch.data matches 391.. in switch:game run forceload remove 121092 121000 121115 121087
 
-execute if score #rg_bombardement switch.data matches 391.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"bombardement","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_bombardement switch.data matches 391.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Bombardement","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_bombardement switch.data matches 391.. run data modify storage switch:main MessageToLog set value '{"text":"Map `bombardement` just regenerated!"}'
+execute if score #rg_bombardement switch.data matches 391.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Bombardement` just regenerated!"}'
 execute if score #rg_bombardement switch.data matches 391.. run function switch:engine/log_message/apply
 
 execute if score #rg_bombardement switch.data matches 391.. in switch:game run function switch:maps/regenerate_doors_macro {name:"bombardement"}

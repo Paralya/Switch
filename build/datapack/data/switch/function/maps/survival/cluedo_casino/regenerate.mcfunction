@@ -32,9 +32,9 @@ execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run 
 execute if score #rg_cluedo_casino switch.data matches 181.. in minecraft:overworld run forceload remove 159050 159000 159075 159069
 execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run forceload remove 159050 159000 159075 159069
 
-execute if score #rg_cluedo_casino switch.data matches 181.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"cluedo_casino","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_cluedo_casino switch.data matches 181.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo Casino","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_cluedo_casino switch.data matches 181.. run data modify storage switch:main MessageToLog set value '{"text":"Map `cluedo_casino` just regenerated!"}'
+execute if score #rg_cluedo_casino switch.data matches 181.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cluedo Casino` just regenerated!"}'
 execute if score #rg_cluedo_casino switch.data matches 181.. run function switch:engine/log_message/apply
 
 execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run function switch:maps/regenerate_doors_macro {name:"cluedo_casino"}

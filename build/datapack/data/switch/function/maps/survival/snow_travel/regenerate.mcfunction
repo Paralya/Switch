@@ -92,9 +92,9 @@ execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run f
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23193 23000 23207 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23193 23000 23207 23205
 
-execute if score #rg_snow_travel switch.data matches 1306.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"snow_travel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_travel switch.data matches 1306.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Travel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_snow_travel switch.data matches 1306.. run data modify storage switch:main MessageToLog set value '{"text":"Map `snow_travel` just regenerated!"}'
+execute if score #rg_snow_travel switch.data matches 1306.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Snow Travel` just regenerated!"}'
 execute if score #rg_snow_travel switch.data matches 1306.. run function switch:engine/log_message/apply
 
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run function switch:maps/regenerate_doors_macro {name:"snow_travel"}

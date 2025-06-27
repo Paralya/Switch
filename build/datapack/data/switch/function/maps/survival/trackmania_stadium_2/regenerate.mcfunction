@@ -317,9 +317,9 @@ execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. in switch:g
 execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. in minecraft:overworld run forceload remove 37502 37000 37510 37367
 execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. in switch:game run forceload remove 37502 37000 37510 37367
 
-execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"trackmania_stadium_2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"m","color":"yellow"},{"text":"57","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Trackmania Stadium 2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"m","color":"yellow"},{"text":"57","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. run data modify storage switch:main MessageToLog set value '{"text":"Map `trackmania_stadium_2` just regenerated!"}'
+execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Trackmania Stadium 2` just regenerated!"}'
 execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. run function switch:engine/log_message/apply
 
 execute if score #rg_trackmania_stadium_2 switch.data matches 7141.. in switch:game run function switch:maps/regenerate_doors_macro {name:"trackmania_stadium_2"}

@@ -32,9 +32,9 @@ execute if score #rg_enchanting_island switch.data matches 151.. in switch:game 
 execute if score #rg_enchanting_island switch.data matches 151.. in minecraft:overworld run forceload remove 7040 7000 7060 7060
 execute if score #rg_enchanting_island switch.data matches 151.. in switch:game run forceload remove 7040 7000 7060 7060
 
-execute if score #rg_enchanting_island switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"enchanting_island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_enchanting_island switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Enchanting Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_enchanting_island switch.data matches 151.. run data modify storage switch:main MessageToLog set value '{"text":"Map `enchanting_island` just regenerated!"}'
+execute if score #rg_enchanting_island switch.data matches 151.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Enchanting Island` just regenerated!"}'
 execute if score #rg_enchanting_island switch.data matches 151.. run function switch:engine/log_message/apply
 
 execute if score #rg_enchanting_island switch.data matches 151.. in switch:game run function switch:maps/regenerate_doors_macro {name:"enchanting_island"}

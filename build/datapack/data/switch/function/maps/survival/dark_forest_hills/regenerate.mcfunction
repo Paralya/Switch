@@ -72,9 +72,9 @@ execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game 
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39130 39000 39143 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39130 39000 39143 39221
 
-execute if score #rg_dark_forest_hills switch.data matches 782.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"dark_forest_hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"39","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_dark_forest_hills switch.data matches 782.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dark Forest Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"39","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_dark_forest_hills switch.data matches 782.. run data modify storage switch:main MessageToLog set value '{"text":"Map `dark_forest_hills` just regenerated!"}'
+execute if score #rg_dark_forest_hills switch.data matches 782.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Dark Forest Hills` just regenerated!"}'
 execute if score #rg_dark_forest_hills switch.data matches 782.. run function switch:engine/log_message/apply
 
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run function switch:maps/regenerate_doors_macro {name:"dark_forest_hills"}

@@ -62,9 +62,9 @@ execute if score #rg_minigolf switch.data matches 478.. in switch:game run force
 execute if score #rg_minigolf switch.data matches 478.. in minecraft:overworld run forceload remove 124148 124000 124166 124140
 execute if score #rg_minigolf switch.data matches 478.. in switch:game run forceload remove 124148 124000 124166 124140
 
-execute if score #rg_minigolf switch.data matches 478.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"minigolf","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_minigolf switch.data matches 478.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Minigolf","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_minigolf switch.data matches 478.. run data modify storage switch:main MessageToLog set value '{"text":"Map `minigolf` just regenerated!"}'
+execute if score #rg_minigolf switch.data matches 478.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Minigolf` just regenerated!"}'
 execute if score #rg_minigolf switch.data matches 478.. run function switch:engine/log_message/apply
 
 execute if score #rg_minigolf switch.data matches 478.. in switch:game run function switch:maps/regenerate_doors_macro {name:"minigolf"}

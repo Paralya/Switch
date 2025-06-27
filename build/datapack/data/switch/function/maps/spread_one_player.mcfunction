@@ -138,7 +138,7 @@ execute if data storage switch:main {map:"cluedo_casino"} run function switch:ma
 execute if data storage switch:main {map:"octogone_nether_ice"} run function switch:maps/survival/octogone_nether_ice/spread_one_player
 execute if data storage switch:main {map:"pillars_of_fortune"} run function switch:maps/survival/pillars_of_fortune/spread_one_player
 execute if data storage switch:main {map:"even_old_japan"} run function switch:maps/survival/even_old_japan/spread_one_player
-execute if data storage switch:main {map:"fireblast_1"} run function switch:maps/survival/fireblast_1/spread_one_player
-execute if data storage switch:main {map:"fireblast_2"} run function switch:maps/survival/fireblast_2/spread_one_player
-execute if data storage switch:main {map:"fireblast_3"} run function switch:maps/survival/fireblast_3/spread_one_player
+execute if data storage switch:main {map:"fireblast_bubulle"} run function switch:maps/survival/fireblast_bubulle/spread_one_player
+execute if data storage switch:main {map:"fireblast_cookie"} run function switch:maps/survival/fireblast_cookie/spread_one_player
+execute if data storage switch:main {map:"fireblast_pork"} run function switch:maps/survival/fireblast_pork/spread_one_player
 

@@ -5,7 +5,7 @@
 #			switch:maps/loop_scan_doors_of_every_maps 1t
 #
 
-execute if data storage switch:maps to_scan{fireblast_3:1b} run schedule function switch:maps/loop_scan_doors_of_every_maps 1t
+execute if data storage switch:maps to_scan{fireblast_pork:1b} run schedule function switch:maps/loop_scan_doors_of_every_maps 1t
 execute if data storage switch:maps to_scan{laser_game:1b} run function switch:maps/survival/laser_game/scan_doors
 
 execute unless data storage switch:maps to_scan.laser_game if data storage switch:maps to_scan{pitchout_1:1b} run function switch:maps/survival/pitchout_1/scan_doors
@@ -125,7 +125,7 @@ execute unless data storage switch:maps to_scan.yeti_in_panic if data storage sw
 execute unless data storage switch:maps to_scan.cluedo_casino if data storage switch:maps to_scan{octogone_nether_ice:1b} run function switch:maps/survival/octogone_nether_ice/scan_doors
 execute unless data storage switch:maps to_scan.octogone_nether_ice if data storage switch:maps to_scan{pillars_of_fortune:1b} run function switch:maps/survival/pillars_of_fortune/scan_doors
 execute unless data storage switch:maps to_scan.pillars_of_fortune if data storage switch:maps to_scan{even_old_japan:1b} run function switch:maps/survival/even_old_japan/scan_doors
-execute unless data storage switch:maps to_scan.even_old_japan if data storage switch:maps to_scan{fireblast_1:1b} run function switch:maps/survival/fireblast_1/scan_doors
-execute unless data storage switch:maps to_scan.fireblast_1 if data storage switch:maps to_scan{fireblast_2:1b} run function switch:maps/survival/fireblast_2/scan_doors
-execute unless data storage switch:maps to_scan.fireblast_2 if data storage switch:maps to_scan{fireblast_3:1b} run function switch:maps/survival/fireblast_3/scan_doors
+execute unless data storage switch:maps to_scan.even_old_japan if data storage switch:maps to_scan{fireblast_bubulle:1b} run function switch:maps/survival/fireblast_bubulle/scan_doors
+execute unless data storage switch:maps to_scan.fireblast_bubulle if data storage switch:maps to_scan{fireblast_cookie:1b} run function switch:maps/survival/fireblast_cookie/scan_doors
+execute unless data storage switch:maps to_scan.fireblast_cookie if data storage switch:maps to_scan{fireblast_pork:1b} run function switch:maps/survival/fireblast_pork/scan_doors
 

@@ -32,9 +32,9 @@ execute if score #rg_spleef_1 switch.data matches 61.. in switch:game run forcel
 execute if score #rg_spleef_1 switch.data matches 61.. in minecraft:overworld run forceload remove 28010 27969 28031 28031
 execute if score #rg_spleef_1 switch.data matches 61.. in switch:game run forceload remove 28010 27969 28031 28031
 
-execute if score #rg_spleef_1 switch.data matches 61.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"spleef_1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_spleef_1 switch.data matches 61.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Spleef 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_spleef_1 switch.data matches 61.. run data modify storage switch:main MessageToLog set value '{"text":"Map `spleef_1` just regenerated!"}'
+execute if score #rg_spleef_1 switch.data matches 61.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Spleef 1` just regenerated!"}'
 execute if score #rg_spleef_1 switch.data matches 61.. run function switch:engine/log_message/apply
 
 execute if score #rg_spleef_1 switch.data matches 61.. in switch:game run function switch:maps/regenerate_doors_macro {name:"spleef_1"}

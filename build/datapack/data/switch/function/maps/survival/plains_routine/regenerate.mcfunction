@@ -72,9 +72,9 @@ execute if score #rg_plains_routine switch.data matches 562.. in switch:game run
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20279 19727 20294 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20279 19727 20294 19911
 
-execute if score #rg_plains_routine switch.data matches 562.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"plains_routine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_plains_routine switch.data matches 562.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Plains Routine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_plains_routine switch.data matches 562.. run data modify storage switch:main MessageToLog set value '{"text":"Map `plains_routine` just regenerated!"}'
+execute if score #rg_plains_routine switch.data matches 562.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Plains Routine` just regenerated!"}'
 execute if score #rg_plains_routine switch.data matches 562.. run function switch:engine/log_message/apply
 
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run function switch:maps/regenerate_doors_macro {name:"plains_routine"}

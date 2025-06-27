@@ -47,9 +47,9 @@ execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game 
 execute if score #rg_arti_ancient_city switch.data matches 313.. in minecraft:overworld run forceload remove 157092 157000 157111 157117
 execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game run forceload remove 157092 157000 157111 157117
 
-execute if score #rg_arti_ancient_city switch.data matches 313.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"arti_ancient_city","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_arti_ancient_city switch.data matches 313.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Big Ancient City","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_arti_ancient_city switch.data matches 313.. run data modify storage switch:main MessageToLog set value '{"text":"Map `arti_ancient_city` just regenerated!"}'
+execute if score #rg_arti_ancient_city switch.data matches 313.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Big Ancient City` just regenerated!"}'
 execute if score #rg_arti_ancient_city switch.data matches 313.. run function switch:engine/log_message/apply
 
 execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game run function switch:maps/regenerate_doors_macro {name:"arti_ancient_city"}

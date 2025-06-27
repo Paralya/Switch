@@ -107,9 +107,9 @@ execute if score #rg_hills_land switch.data matches 1189.. in switch:game run fo
 execute if score #rg_hills_land switch.data matches 1189.. in minecraft:overworld run forceload remove 20551 19983 20564 20210
 execute if score #rg_hills_land switch.data matches 1189.. in switch:game run forceload remove 20551 19983 20564 20210
 
-execute if score #rg_hills_land switch.data matches 1189.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"hills_land","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_hills_land switch.data matches 1189.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Hills Land","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_hills_land switch.data matches 1189.. run data modify storage switch:main MessageToLog set value '{"text":"Map `hills_land` just regenerated!"}'
+execute if score #rg_hills_land switch.data matches 1189.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Hills Land` just regenerated!"}'
 execute if score #rg_hills_land switch.data matches 1189.. run function switch:engine/log_message/apply
 
 execute if score #rg_hills_land switch.data matches 1189.. in switch:game run function switch:maps/regenerate_doors_macro {name:"hills_land"}

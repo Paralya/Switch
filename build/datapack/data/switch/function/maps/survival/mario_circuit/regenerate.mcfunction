@@ -57,9 +57,9 @@ execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run 
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20507 19516 20525 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20507 19516 20525 19658
 
-execute if score #rg_mario_circuit switch.data matches 433.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"mario_circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_mario_circuit switch.data matches 433.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Mario Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_mario_circuit switch.data matches 433.. run data modify storage switch:main MessageToLog set value '{"text":"Map `mario_circuit` just regenerated!"}'
+execute if score #rg_mario_circuit switch.data matches 433.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Mario Circuit` just regenerated!"}'
 execute if score #rg_mario_circuit switch.data matches 433.. run function switch:engine/log_message/apply
 
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run function switch:maps/regenerate_doors_macro {name:"mario_circuit"}

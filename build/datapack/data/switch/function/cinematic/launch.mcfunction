@@ -1,7 +1,7 @@
 
 #> switch:cinematic/launch
 #
-# @within	switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1}}
+# @within	switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1,delay:20}}
 #			switch:player/tick_detach {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
 #			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
 #			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}
@@ -19,7 +19,7 @@
 #			switch:player/trigger/detach/basic_stuff {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
 #
 
-## /execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1}}
+## /execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1,delay:20}}
 # Arguments:
 # as @s = player
 # at @s = current position
@@ -34,6 +34,7 @@
 #   add_y: float = additional y position (to add to the middle point, if none default is 20.0)
 #   particle: int = particle effect (0 = none, 1 = glow)
 #   interpolation: int = teleport_duration (0 = instant, 1 = 1 tick, 2 = 2 ticks, etc.)
+#   delay: int = delay in ticks before starting the cinematic (default is 0)
 
 # Tag the player and remember it's id
 scoreboard players operation #player_id switch.id = @s switch.id
@@ -65,6 +66,7 @@ execute store result score #cinematic_interpolation switch.data run data get sto
 execute if data storage switch:temp with.pitch if data storage switch:temp with.yaw run function switch:cinematic/get_rotation_arguments with storage switch:temp with
 execute unless data storage switch:temp with.go_side run data modify storage switch:temp with.go_side set value 0
 execute unless data storage switch:temp with.add_y run data modify storage switch:temp with.add_y set value 20.0
+execute unless data storage switch:temp with.delay run data modify storage switch:temp with.delay set value 0
 
 ## Summon the entity that will control the player
 execute summon item_display run function switch:cinematic/setup_entity

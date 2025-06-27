@@ -37,9 +37,9 @@ execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. in switch:game run
 execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. in minecraft:overworld run forceload remove 31056 31000 31075 31090
 execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. in switch:game run forceload remove 31056 31000 31075 31090
 
-execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"mlg_a_coudre_1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"MLG à coudre 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. run data modify storage switch:main MessageToLog set value '{"text":"Map `mlg_a_coudre_1` just regenerated!"}'
+execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. run data modify storage switch:main MessageToLog set value '{"text":"Map `MLG à coudre 1` just regenerated!"}'
 execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. run function switch:engine/log_message/apply
 
 execute if score #rg_mlg_a_coudre_1 switch.data matches 521.. in switch:game run function switch:maps/regenerate_doors_macro {name:"mlg_a_coudre_1"}

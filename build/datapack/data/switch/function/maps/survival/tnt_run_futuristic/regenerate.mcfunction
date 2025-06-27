@@ -27,9 +27,9 @@ execute if score #rg_tnt_run_futuristic switch.data matches 139.. in switch:game
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. in minecraft:overworld run forceload remove 109030 109000 109059 109046
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. in switch:game run forceload remove 109030 109000 109059 109046
 
-execute if score #rg_tnt_run_futuristic switch.data matches 139.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"tnt_run_futuristic","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_tnt_run_futuristic switch.data matches 139.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"TNT Run Futuristic","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_tnt_run_futuristic switch.data matches 139.. run data modify storage switch:main MessageToLog set value '{"text":"Map `tnt_run_futuristic` just regenerated!"}'
+execute if score #rg_tnt_run_futuristic switch.data matches 139.. run data modify storage switch:main MessageToLog set value '{"text":"Map `TNT Run Futuristic` just regenerated!"}'
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. run function switch:engine/log_message/apply
 
 execute if score #rg_tnt_run_futuristic switch.data matches 139.. in switch:game run function switch:maps/regenerate_doors_macro {name:"tnt_run_futuristic"}

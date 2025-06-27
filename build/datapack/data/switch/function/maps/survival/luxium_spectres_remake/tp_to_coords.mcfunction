@@ -4,5 +4,5 @@
 # @within	???
 #
 
-execute in minecraft:overworld run tp @s 142097.51.5 143.41.5 142069.19.5
+execute in minecraft:overworld run tp @s 142097.51 143.41 142069.19 105.36 16.57
 

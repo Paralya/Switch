@@ -97,9 +97,9 @@ execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run f
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 20010 20485 20034 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 20010 20485 20034 20603
 
-execute if score #rg_dk_mountain switch.data matches 2289.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"dk_mountain","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"54","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_dk_mountain switch.data matches 2289.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"DK Mountain","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"54","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_dk_mountain switch.data matches 2289.. run data modify storage switch:main MessageToLog set value '{"text":"Map `dk_mountain` just regenerated!"}'
+execute if score #rg_dk_mountain switch.data matches 2289.. run data modify storage switch:main MessageToLog set value '{"text":"Map `DK Mountain` just regenerated!"}'
 execute if score #rg_dk_mountain switch.data matches 2289.. run function switch:engine/log_message/apply
 
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run function switch:maps/regenerate_doors_macro {name:"dk_mountain"}

@@ -42,9 +42,9 @@ execute if score #rg_pillars_of_fortune switch.data matches 456.. in switch:game
 execute if score #rg_pillars_of_fortune switch.data matches 456.. in minecraft:overworld run forceload remove 161080 161000 161100 161100
 execute if score #rg_pillars_of_fortune switch.data matches 456.. in switch:game run forceload remove 161080 161000 161100 161100
 
-execute if score #rg_pillars_of_fortune switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"pillars_of_fortune","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_pillars_of_fortune switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Icy ground circle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_pillars_of_fortune switch.data matches 456.. run data modify storage switch:main MessageToLog set value '{"text":"Map `pillars_of_fortune` just regenerated!"}'
+execute if score #rg_pillars_of_fortune switch.data matches 456.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Icy ground circle` just regenerated!"}'
 execute if score #rg_pillars_of_fortune switch.data matches 456.. run function switch:engine/log_message/apply
 
 execute if score #rg_pillars_of_fortune switch.data matches 456.. in switch:game run function switch:maps/regenerate_doors_macro {name:"pillars_of_fortune"}

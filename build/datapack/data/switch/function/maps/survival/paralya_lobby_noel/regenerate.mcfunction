@@ -87,9 +87,9 @@ execute if score #rg_paralya_lobby_noel switch.data matches 2311.. in switch:gam
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. in minecraft:overworld run forceload remove 40186 40000 40200 40200
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. in switch:game run forceload remove 40186 40000 40200 40200
 
-execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"paralya_lobby_noel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"55","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Paralya Lobby Noel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"55","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run data modify storage switch:main MessageToLog set value '{"text":"Map `paralya_lobby_noel` just regenerated!"}'
+execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Paralya Lobby Noel` just regenerated!"}'
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run function switch:engine/log_message/apply
 
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. in switch:game run function switch:maps/regenerate_doors_macro {name:"paralya_lobby_noel"}

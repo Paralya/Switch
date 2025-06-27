@@ -52,9 +52,9 @@ execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run
 execute if score #rg_lightium_spawn switch.data matches 309.. in minecraft:overworld run forceload remove 97111 97000 97129 97129
 execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run forceload remove 97111 97000 97129 97129
 
-execute if score #rg_lightium_spawn switch.data matches 309.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"lightium_spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_lightium_spawn switch.data matches 309.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Lightium Spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_lightium_spawn switch.data matches 309.. run data modify storage switch:main MessageToLog set value '{"text":"Map `lightium_spawn` just regenerated!"}'
+execute if score #rg_lightium_spawn switch.data matches 309.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Lightium Spawn` just regenerated!"}'
 execute if score #rg_lightium_spawn switch.data matches 309.. run function switch:engine/log_message/apply
 
 execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run function switch:maps/regenerate_doors_macro {name:"lightium_spawn"}

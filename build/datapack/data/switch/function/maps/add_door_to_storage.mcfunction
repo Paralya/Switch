@@ -119,9 +119,9 @@
 #			switch:maps/survival/octogone_nether_ice/scan_doors_on_marker {name:"octogone_nether_ice",additional_height:0}
 #			switch:maps/survival/pillars_of_fortune/scan_doors_on_marker {name:"pillars_of_fortune",additional_height:0}
 #			switch:maps/survival/even_old_japan/scan_doors_on_marker {name:"even_old_japan",additional_height:0}
-#			switch:maps/survival/fireblast_1/scan_doors_on_marker {name:"fireblast_1",additional_height:0}
-#			switch:maps/survival/fireblast_2/scan_doors_on_marker {name:"fireblast_2",additional_height:0}
-#			switch:maps/survival/fireblast_3/scan_doors_on_marker {name:"fireblast_3",additional_height:0}
+#			switch:maps/survival/fireblast_bubulle/scan_doors_on_marker {name:"fireblast_bubulle",additional_height:0}
+#			switch:maps/survival/fireblast_cookie/scan_doors_on_marker {name:"fireblast_cookie",additional_height:0}
+#			switch:maps/survival/fireblast_pork/scan_doors_on_marker {name:"fireblast_pork",additional_height:0}
 #
 
 data modify storage switch:temp compound set value {x:0,y:0,z:0,door:""}

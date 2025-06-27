@@ -42,9 +42,9 @@ execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run fo
 execute if score #rg_boat_race_2 switch.data matches 406.. in minecraft:overworld run forceload remove 51079 51000 51099 51123
 execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run forceload remove 51079 51000 51099 51123
 
-execute if score #rg_boat_race_2 switch.data matches 406.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"boat_race_2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_boat_race_2 switch.data matches 406.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Boat Race 2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_boat_race_2 switch.data matches 406.. run data modify storage switch:main MessageToLog set value '{"text":"Map `boat_race_2` just regenerated!"}'
+execute if score #rg_boat_race_2 switch.data matches 406.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Boat Race 2` just regenerated!"}'
 execute if score #rg_boat_race_2 switch.data matches 406.. run function switch:engine/log_message/apply
 
 execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run function switch:maps/regenerate_doors_macro {name:"boat_race_2"}

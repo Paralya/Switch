@@ -27,9 +27,9 @@ execute if score #rg_friends_cube_jump switch.data matches 187.. in switch:game 
 execute if score #rg_friends_cube_jump switch.data matches 187.. in minecraft:overworld run forceload remove 9018 9000 9035 9032
 execute if score #rg_friends_cube_jump switch.data matches 187.. in switch:game run forceload remove 9018 9000 9035 9032
 
-execute if score #rg_friends_cube_jump switch.data matches 187.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"friends_cube_jump","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_cube_jump switch.data matches 187.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube Jump","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_friends_cube_jump switch.data matches 187.. run data modify storage switch:main MessageToLog set value '{"text":"Map `friends_cube_jump` just regenerated!"}'
+execute if score #rg_friends_cube_jump switch.data matches 187.. run data modify storage switch:main MessageToLog set value '{"text":"Map `FriendsCube Jump` just regenerated!"}'
 execute if score #rg_friends_cube_jump switch.data matches 187.. run function switch:engine/log_message/apply
 
 execute if score #rg_friends_cube_jump switch.data matches 187.. in switch:game run function switch:maps/regenerate_doors_macro {name:"friends_cube_jump"}

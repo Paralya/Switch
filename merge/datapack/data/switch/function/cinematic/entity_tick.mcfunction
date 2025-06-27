@@ -4,6 +4,12 @@ scoreboard players operation #player_id switch.id = @s switch.id
 tag @p[predicate=switch:has_same_id] add switch.temp
 spectate @s @p[tag=switch.temp]
 
+# Handle delay before starting the cinematic
+execute store result score #cinematic_delay switch.data run data get entity @s item.components."minecraft:custom_data".delay
+execute if score #cinematic_delay switch.data matches 1.. run scoreboard players remove #cinematic_delay switch.data 1
+execute if score #cinematic_delay switch.data matches 1.. store result entity @s item.components."minecraft:custom_data".delay int 1 run scoreboard players get #cinematic_delay switch.data
+execute if score #cinematic_delay switch.data matches 1.. run return run tag @a[tag=switch.temp] remove switch.temp
+
 # Only pass 1/Interpolation of the time
 scoreboard players add @s switch.data 1
 execute store result score #cinematic_interpolation switch.data run data get entity @s item.components."minecraft:custom_data".interpolation

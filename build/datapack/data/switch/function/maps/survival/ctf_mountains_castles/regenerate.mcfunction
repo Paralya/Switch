@@ -112,9 +112,9 @@ execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147344 147000 147363 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147344 147000 147363 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"ctf_mountains_castles","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Vale Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run data modify storage switch:main MessageToLog set value '{"text":"Map `ctf_mountains_castles` just regenerated!"}'
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Vale Castle` just regenerated!"}'
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run function switch:engine/log_message/apply
 
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_mountains_castles"}

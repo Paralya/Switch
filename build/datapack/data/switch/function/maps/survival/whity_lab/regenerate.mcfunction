@@ -42,9 +42,9 @@ execute if score #rg_whity_lab switch.data matches 441.. in switch:game run forc
 execute if score #rg_whity_lab switch.data matches 441.. in minecraft:overworld run forceload remove 91082 91000 91102 91102
 execute if score #rg_whity_lab switch.data matches 441.. in switch:game run forceload remove 91082 91000 91102 91102
 
-execute if score #rg_whity_lab switch.data matches 441.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"whity_lab","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_whity_lab switch.data matches 441.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Whity Lab","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_whity_lab switch.data matches 441.. run data modify storage switch:main MessageToLog set value '{"text":"Map `whity_lab` just regenerated!"}'
+execute if score #rg_whity_lab switch.data matches 441.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Whity Lab` just regenerated!"}'
 execute if score #rg_whity_lab switch.data matches 441.. run function switch:engine/log_message/apply
 
 execute if score #rg_whity_lab switch.data matches 441.. in switch:game run function switch:maps/regenerate_doors_macro {name:"whity_lab"}

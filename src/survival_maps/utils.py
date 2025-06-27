@@ -63,13 +63,14 @@ def calculate_divider(start_pos: tuple, end_pos: tuple) -> int:
 	return (area // SharedMemory.BLOCKS_PER_DIVISION + 2)
 
 
-def create_tp_coords_string_from_start_and_end(start_pos: tuple[int, ...], end_pos: tuple[int, ...], paste_start_height: int = 0) -> tuple[str, int, int, int]:
-	""" Creates a string with the tp coordinates\n
+def get_middle_from_start_and_end(start_pos: tuple[int, ...], end_pos: tuple[int, ...], paste_start_height: int = 0) -> tuple[int, int, int]:
+	""" Gets the middle coordinates of the regeneration area
+
 	Args:
 		start_pos (tuple)		: The start position of the regeneration area
 		end_pos (tuple)			: The end position of the regeneration area
 	Returns:
-		(str, int, int, int)	: The tp coordinates string and the x, y and z coordinates
+		(int, int, int)	: The x, y and z coordinates
 	"""
 	# x and z
 	x = int((start_pos[0] + end_pos[0]) / 2)
@@ -83,11 +84,12 @@ def create_tp_coords_string_from_start_and_end(start_pos: tuple[int, ...], end_p
 	y = int(middle_y)
 
 	# Return
-	return f"[{x}.5d, {y}.5d, {z}.5d]", x, y, z
+	return x, y, z
 
 
-def create_tp_coords_string_from_xyz(xyz: tuple) -> str:
-	""" Creates a string with the tp coordinates\n
+def create_tp_coords_string_from_view(view: tuple) -> str:
+	""" Creates a string with the tp coordinates
+
 	Args:
 		x (int)		: The x coordinate
 		y (int)		: The y coordinate
@@ -95,12 +97,12 @@ def create_tp_coords_string_from_xyz(xyz: tuple) -> str:
 	Returns:
 		(str)		: The tp coordinates string
 	"""
-	x, y, z = xyz
-	return f"[{x}.5d, {y}.5d, {z}.5d]"
+	x, y, z = view[:3]
+	return f"[{round(x)}.5d, {round(y)}.5d, {round(z)}.5d]"
 
 
 def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[tuple, int, int] = ()) -> None:
-	""" Creates the ".mcfunction" file
+	""" Creates the "main.mcfunction" file
 
 	Args:
 		name (str)	: The name of the map
@@ -121,18 +123,18 @@ def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[tuple, in
 		write_function(PATH, f"execute if score #is_race switch.data matches 1 run function switch:maps/survival/{name}/if_race")
 
 
-def create_teleport_players_file(name: str, tp_coords: str, racing_pos: tuple[tuple, int, int] = ()) -> None:
+def create_teleport_players_file(name: str, view: tuple, racing_pos: tuple[tuple, int, int] = ()) -> None:
 	""" Creates the "teleport_players.mcfunction" file\n
 	Args:
 		name 		(str)	: The name of the map
-		tp_coords 	(str)	: The tp coordinates string "[{x}.5d, {y}.5d, {z}.5d]"
+		view		(tuple)	: The view position (x, y, z, yaw, pitch)
 		racing_pos	(tuple)	: Start position (tuple), orientation (int), and count (int) for the start line
 	"""
 	PATH: str = f"switch:maps/survival/{name}/teleport_players"
 
 	# If there is no race
 	if len(racing_pos) == 0:
-		write_function(PATH, f'data modify entity @s Pos set value {tp_coords}')
+		write_function(PATH, f'data modify entity @s Pos set value {create_tp_coords_string_from_view(view)}')
 		write_function(PATH, 'execute at @s in switch:game run tp @s ~ ~ ~')
 		write_function(PATH, 'execute at @s run tp @a[tag=!detached] ~ ~ ~')
 		write_function(PATH, f'execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/{name}/spread_players')
@@ -168,8 +170,8 @@ def create_teleport_players_file(name: str, tp_coords: str, racing_pos: tuple[tu
 
 	# Add a file to teleport @s to the coordinates
 	PATH: str = f"switch:maps/survival/{name}/tp_to_coords"
-	x, y, z = tp_coords.replace("[", "").replace("]", "").replace("d", "").split(", ")
-	write_function(PATH, f"execute in minecraft:overworld run tp @s {x} {y} {z}")
+	x, y, z, yaw, pitch = view
+	write_function(PATH, f"execute in minecraft:overworld run tp @s {x} {y} {z} {yaw} {pitch}")
 
 
 def create_splitted_coordinates(start_pos: tuple, end_pos: tuple, divider: int) -> list[list]:
@@ -225,11 +227,12 @@ def write_first_lines_of_regenerate(name: str, base_condition: str, splitted_coo
 		write_function(PATH, f"{base_condition} 1 in switch:game run forceload add {x1} {x2} {z1} {z2}")
 
 
-def write_last_lines_of_regenerate(name: str, base_condition: str, splitted_coordinates: list, xyz: tuple, last_tick: int, divider: int, suffix: str = "") -> None:
+def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: str, splitted_coordinates: list, xyz: tuple, last_tick: int, divider: int, suffix: str = "") -> None:
 	""" Writes the last lines of the "regenerate.mcfunction" file
 	Args:
 		f (TextIOWrapper)			: The file
 		name (str)					: The name of the map
+		namespace (str)				: The namespace of the map
 		base_condition (str)		: The base_condition condition of the command
 		splitted_coordinates (list)	: The splitted coordinates
 		xyz (tuple)					: The coordinates of the regeneration area
@@ -237,7 +240,7 @@ def write_last_lines_of_regenerate(name: str, base_condition: str, splitted_coor
 		divider (int)				: The divider of the regeneration area
 		suffix (str)				: The suffix of the print function (like "[/clone]" or "[/fill]")
 	"""
-	PATH: str = f"switch:maps/survival/{name}/regenerate"
+	PATH: str = f"switch:maps/survival/{namespace}/regenerate"
 
 	# Get the time string and the tellraw command
 	timeStr, tellraw = convert_tick_to_strings(last_tick, name)
@@ -250,16 +253,16 @@ def write_last_lines_of_regenerate(name: str, base_condition: str, splitted_coor
 	# Write the scoreboard and summon commands
 	x, y, z = xyz
 	write_function(PATH, f"""
-{base_condition} 1 run scoreboard players set #rg_{name}_y switch.data {y}
-{base_condition} 1 run scoreboard players set #rg_{name}_mod switch.data 0
-{base_condition} ..{last_tick} summon marker run function switch:maps/survival/{name}/regeneration_on_marker
+{base_condition} 1 run scoreboard players set #rg_{namespace}_y switch.data {y}
+{base_condition} 1 run scoreboard players set #rg_{namespace}_mod switch.data 0
+{base_condition} ..{last_tick} summon marker run function switch:maps/survival/{namespace}/regeneration_on_marker
 """)
 
 	# Write the kill command
 	last_tick += 1
 	write_function(PATH, f"""
 {base_condition} {last_tick}.. in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
-{base_condition} {last_tick}.. run data remove storage switch:maps to_regenerate.{name}
+{base_condition} {last_tick}.. run data remove storage switch:maps to_regenerate.{namespace}
 """)
 
 	# Write the forceload commands
@@ -278,9 +281,9 @@ def write_last_lines_of_regenerate(name: str, base_condition: str, splitted_coor
 
 	# Write the door regeneration command, the reset command and the schedule command
 	write_function(PATH, f"""
-{base_condition} {last_tick}.. in switch:game run function switch:maps/regenerate_doors_macro {{name:\"{name}\"}}
-{base_condition} {last_tick}.. run scoreboard players reset #rg_{name} switch.data
-{base_condition} 1.. run schedule function switch:maps/survival/{name}/regenerate 1t
+{base_condition} {last_tick}.. in switch:game run function switch:maps/regenerate_doors_macro {{name:\"{namespace}\"}}
+{base_condition} {last_tick}.. run scoreboard players reset #rg_{namespace} switch.data
+{base_condition} 1.. run schedule function switch:maps/survival/{namespace}/regenerate 1t
 """)
 
 
@@ -294,7 +297,7 @@ def create_spread_players_file(name: str, start_pos: tuple[int, ...], end_pos: t
 	"""
 
 	# Get variables
-	_, x, _, z = create_tp_coords_string_from_start_and_end(start_pos, end_pos, paste_start_height)
+	x, _, z = get_middle_from_start_and_end(start_pos, end_pos, paste_start_height)
 	dx: int = end_pos[0] - x
 	dz: int = end_pos[2] - z
 	maxRange: int = min(dx, dz)
@@ -437,6 +440,9 @@ def clone_survival(
 		view				(tuple)	: The coordinates and orientation to teleport the players
 		racing_pos			(tuple)	: Start position (tuple), orientation (int), and count (int) for the start line
 	"""
+	# Assertions
+	assert len(view) == 5, f"The view tuple must contain 5 elements: (x, y, z, yaw, pitch), got {len(view)} for {identity[0]}."
+
 	# Extract namespace, name and credits
 	namespace: str = identity[0]
 	name: str = identity[1]
@@ -454,12 +460,10 @@ def clone_survival(
 	## Create the base_condition variable (for the conditions)
 	base_condition = f"execute if score #rg_{namespace} switch.data matches"
 
-	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
-	tp_coords, x, y, z = create_tp_coords_string_from_start_and_end(start_pos, end_pos, paste_start_height)
-	if view is not None:
-		tp_coords = create_tp_coords_string_from_xyz(view[:3])
-	create_main_file(namespace, tp_coords, racing_pos)
-	create_teleport_players_file(namespace, tp_coords, racing_pos)
+	## Create the "main.mcfunction" file and the "teleport_players.mcfunction" file
+	x, y, z = get_middle_from_start_and_end(start_pos, end_pos)
+	create_main_file(namespace, create_tp_coords_string_from_view(view), racing_pos)
+	create_teleport_players_file(namespace, view, racing_pos)
 
 	## Create the "regenerate.mcfunction" file
 	# Create the splitted coordinates
@@ -503,7 +507,7 @@ kill @s
 
 	# Write the last lines
 	i = (maxY - minY + 1) * len(splitted_coordinates)
-	write_last_lines_of_regenerate(namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
+	write_last_lines_of_regenerate(name, namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/clone]")
 
 	# Write the spread_players file
 	create_spread_players_file(namespace, start_pos, end_pos, paste_start_height)
@@ -535,6 +539,9 @@ def fill_survival(
 		block_tag_to_replace	(str)	: The block tag to replace
 		view					(tuple)	: The coordinates and orientation to teleport the players
 	"""
+	# Assertions
+	assert len(view) == 5, f"The view tuple must contain 5 elements: (x, y, z, yaw, pitch), got {len(view)} for {identity[0]}."
+
 	# Extract namespace, name and credits
 	namespace: str = identity[0]
 	name: str = identity[1]
@@ -546,12 +553,10 @@ def fill_survival(
 	## Create the base_condition variable
 	base_condition = f"execute if score #rg_{namespace} switch.data matches"
 
-	## Create the ".mcfunction" file and the "teleport_players.mcfunction" file
-	tp_coords, x, y, z = create_tp_coords_string_from_start_and_end(start_pos, end_pos)
-	if view is not None:
-		tp_coords = create_tp_coords_string_from_xyz(view[:3])
-	create_main_file(namespace)
-	create_teleport_players_file(namespace, tp_coords)
+	## Create the "main.mcfunction" file and the "teleport_players.mcfunction" file
+	x, y, z = get_middle_from_start_and_end(start_pos, end_pos)
+	create_main_file(namespace, create_tp_coords_string_from_view(view))
+	create_teleport_players_file(namespace, view)
 
 	## Create the "regenerate.mcfunction" file
 	# Create the splitted coordinates
@@ -588,7 +593,7 @@ kill @s
 
 	# Write the last lines
 	i = (end_pos[1] - minY) + 1
-	write_last_lines_of_regenerate(namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
+	write_last_lines_of_regenerate(name, namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
 
 	# Write the spread_players file
 	create_spread_players_file(namespace, start_pos, end_pos, paste_start_height = y)

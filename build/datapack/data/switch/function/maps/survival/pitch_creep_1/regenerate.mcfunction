@@ -27,9 +27,9 @@ execute if score #rg_pitch_creep_1 switch.data matches 83.. in switch:game run f
 execute if score #rg_pitch_creep_1 switch.data matches 83.. in minecraft:overworld run forceload remove 3520 3500 3540 3540
 execute if score #rg_pitch_creep_1 switch.data matches 83.. in switch:game run forceload remove 3520 3500 3540 3540
 
-execute if score #rg_pitch_creep_1 switch.data matches 83.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"pitch_creep_1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_pitch_creep_1 switch.data matches 83.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Pitch Creep Wood","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_pitch_creep_1 switch.data matches 83.. run data modify storage switch:main MessageToLog set value '{"text":"Map `pitch_creep_1` just regenerated!"}'
+execute if score #rg_pitch_creep_1 switch.data matches 83.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Pitch Creep Wood` just regenerated!"}'
 execute if score #rg_pitch_creep_1 switch.data matches 83.. run function switch:engine/log_message/apply
 
 execute if score #rg_pitch_creep_1 switch.data matches 83.. in switch:game run function switch:maps/regenerate_doors_macro {name:"pitch_creep_1"}

@@ -42,9 +42,9 @@ execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game ru
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in minecraft:overworld run forceload remove 145074 145000 145092 145122
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run forceload remove 145074 145000 145092 145122
 
-execute if score #rg_sheepwars_ilots switch.data matches 471.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"sheepwars_ilots","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sheepwars_ilots switch.data matches 471.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Ilots","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_sheepwars_ilots switch.data matches 471.. run data modify storage switch:main MessageToLog set value '{"text":"Map `sheepwars_ilots` just regenerated!"}'
+execute if score #rg_sheepwars_ilots switch.data matches 471.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sheepwars Ilots` just regenerated!"}'
 execute if score #rg_sheepwars_ilots switch.data matches 471.. run function switch:engine/log_message/apply
 
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run function switch:maps/regenerate_doors_macro {name:"sheepwars_ilots"}

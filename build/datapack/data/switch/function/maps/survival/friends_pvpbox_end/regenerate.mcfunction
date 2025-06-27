@@ -37,9 +37,9 @@ execute if score #rg_friends_pvpbox_end switch.data matches 137.. in switch:game
 execute if score #rg_friends_pvpbox_end switch.data matches 137.. in minecraft:overworld run forceload remove 13068 13000 13091 13090
 execute if score #rg_friends_pvpbox_end switch.data matches 137.. in switch:game run forceload remove 13068 13000 13091 13090
 
-execute if score #rg_friends_pvpbox_end switch.data matches 137.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"friends_pvpbox_end","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_pvpbox_end switch.data matches 137.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube PvPbox End","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_friends_pvpbox_end switch.data matches 137.. run data modify storage switch:main MessageToLog set value '{"text":"Map `friends_pvpbox_end` just regenerated!"}'
+execute if score #rg_friends_pvpbox_end switch.data matches 137.. run data modify storage switch:main MessageToLog set value '{"text":"Map `FriendsCube PvPbox End` just regenerated!"}'
 execute if score #rg_friends_pvpbox_end switch.data matches 137.. run function switch:engine/log_message/apply
 
 execute if score #rg_friends_pvpbox_end switch.data matches 137.. in switch:game run function switch:maps/regenerate_doors_macro {name:"friends_pvpbox_end"}

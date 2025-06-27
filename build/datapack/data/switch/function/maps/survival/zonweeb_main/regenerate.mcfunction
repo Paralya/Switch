@@ -42,9 +42,9 @@ execute if score #rg_zonweeb_main switch.data matches 226.. in switch:game run f
 execute if score #rg_zonweeb_main switch.data matches 226.. in minecraft:overworld run forceload remove 32080 32000 32100 32100
 execute if score #rg_zonweeb_main switch.data matches 226.. in switch:game run forceload remove 32080 32000 32100 32100
 
-execute if score #rg_zonweeb_main switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"zonweeb_main","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zonweeb_main switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Zonweeb Main","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_zonweeb_main switch.data matches 226.. run data modify storage switch:main MessageToLog set value '{"text":"Map `zonweeb_main` just regenerated!"}'
+execute if score #rg_zonweeb_main switch.data matches 226.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Zonweeb Main` just regenerated!"}'
 execute if score #rg_zonweeb_main switch.data matches 226.. run function switch:engine/log_message/apply
 
 execute if score #rg_zonweeb_main switch.data matches 226.. in switch:game run function switch:maps/regenerate_doors_macro {name:"zonweeb_main"}

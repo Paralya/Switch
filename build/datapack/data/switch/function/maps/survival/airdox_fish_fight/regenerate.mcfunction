@@ -62,9 +62,9 @@ execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game 
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156135 156000 156152 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156135 156000 156152 156151
 
-execute if score #rg_airdox_fish_fight switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"airdox_fish_fight","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_airdox_fish_fight switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dinosaur Volcano","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_airdox_fish_fight switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `airdox_fish_fight` just regenerated!"}'
+execute if score #rg_airdox_fish_fight switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Dinosaur Volcano` just regenerated!"}'
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run function switch:engine/log_message/apply
 
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run function switch:maps/regenerate_doors_macro {name:"airdox_fish_fight"}

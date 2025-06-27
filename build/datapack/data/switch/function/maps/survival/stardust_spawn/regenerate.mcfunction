@@ -47,9 +47,9 @@ execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101100 101000 101120 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101100 101000 101120 101120
 
-execute if score #rg_stardust_spawn switch.data matches 547.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"stardust_spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"27","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_spawn switch.data matches 547.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"27","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_stardust_spawn switch.data matches 547.. run data modify storage switch:main MessageToLog set value '{"text":"Map `stardust_spawn` just regenerated!"}'
+execute if score #rg_stardust_spawn switch.data matches 547.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Stardust Spawn` just regenerated!"}'
 execute if score #rg_stardust_spawn switch.data matches 547.. run function switch:engine/log_message/apply
 
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run function switch:maps/regenerate_doors_macro {name:"stardust_spawn"}

@@ -67,9 +67,9 @@ execute if score #rg_traitor_original switch.data matches 901.. in switch:game r
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1666 1500 1684 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1666 1500 1684 1655
 
-execute if score #rg_traitor_original switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"traitor_original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_traitor_original switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Traitor Original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_traitor_original switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `traitor_original` just regenerated!"}'
+execute if score #rg_traitor_original switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Traitor Original` just regenerated!"}'
 execute if score #rg_traitor_original switch.data matches 901.. run function switch:engine/log_message/apply
 
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run function switch:maps/regenerate_doors_macro {name:"traitor_original"}

@@ -107,9 +107,9 @@ execute if score #rg_baby_park switch.data matches 1729.. in switch:game run for
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21255 21000 21270 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21255 21000 21270 21191
 
-execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"baby_park","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Baby Park","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_baby_park switch.data matches 1729.. run data modify storage switch:main MessageToLog set value '{"text":"Map `baby_park` just regenerated!"}'
+execute if score #rg_baby_park switch.data matches 1729.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Baby Park` just regenerated!"}'
 execute if score #rg_baby_park switch.data matches 1729.. run function switch:engine/log_message/apply
 
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run function switch:maps/regenerate_doors_macro {name:"baby_park"}

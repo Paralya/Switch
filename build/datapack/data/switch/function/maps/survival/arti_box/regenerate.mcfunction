@@ -27,9 +27,9 @@ execute if score #rg_arti_box switch.data matches 71.. in switch:game run forcel
 execute if score #rg_arti_box switch.data matches 71.. in minecraft:overworld run forceload remove 119024 119000 119047 119047
 execute if score #rg_arti_box switch.data matches 71.. in switch:game run forceload remove 119024 119000 119047 119047
 
-execute if score #rg_arti_box switch.data matches 71.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"arti_box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_arti_box switch.data matches 71.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Arti Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_arti_box switch.data matches 71.. run data modify storage switch:main MessageToLog set value '{"text":"Map `arti_box` just regenerated!"}'
+execute if score #rg_arti_box switch.data matches 71.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Arti Box` just regenerated!"}'
 execute if score #rg_arti_box switch.data matches 71.. run function switch:engine/log_message/apply
 
 execute if score #rg_arti_box switch.data matches 71.. in switch:game run function switch:maps/regenerate_doors_macro {name:"arti_box"}

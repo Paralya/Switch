@@ -42,9 +42,9 @@ execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run for
 execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 1080 1000 1100 1100
 execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 1080 1000 1100 1100
 
-execute if score #rg_pitchout_1 switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"pitchout_1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_pitchout_1 switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Wet Wood Dome","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_pitchout_1 switch.data matches 226.. run data modify storage switch:main MessageToLog set value '{"text":"Map `pitchout_1` just regenerated!"}'
+execute if score #rg_pitchout_1 switch.data matches 226.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Wet Wood Dome` just regenerated!"}'
 execute if score #rg_pitchout_1 switch.data matches 226.. run function switch:engine/log_message/apply
 
 execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run function switch:maps/regenerate_doors_macro {name:"pitchout_1"}

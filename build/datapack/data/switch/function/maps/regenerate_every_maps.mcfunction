@@ -123,8 +123,8 @@ data modify storage switch:maps to_regenerate.cluedo_casino set value 1b
 data modify storage switch:maps to_regenerate.octogone_nether_ice set value 1b
 data modify storage switch:maps to_regenerate.pillars_of_fortune set value 1b
 data modify storage switch:maps to_regenerate.even_old_japan set value 1b
-data modify storage switch:maps to_regenerate.fireblast_1 set value 1b
-data modify storage switch:maps to_regenerate.fireblast_2 set value 1b
-data modify storage switch:maps to_regenerate.fireblast_3 set value 1b
+data modify storage switch:maps to_regenerate.fireblast_bubulle set value 1b
+data modify storage switch:maps to_regenerate.fireblast_cookie set value 1b
+data modify storage switch:maps to_regenerate.fireblast_pork set value 1b
 schedule function switch:maps/loop_regenerate_every_maps 1t
 

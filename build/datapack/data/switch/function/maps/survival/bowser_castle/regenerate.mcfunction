@@ -112,9 +112,9 @@ execute if score #rg_bowser_castle switch.data matches 1559.. in switch:game run
 execute if score #rg_bowser_castle switch.data matches 1559.. in minecraft:overworld run forceload remove 22214 22000 22226 22245
 execute if score #rg_bowser_castle switch.data matches 1559.. in switch:game run forceload remove 22214 22000 22226 22245
 
-execute if score #rg_bowser_castle switch.data matches 1559.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"bowser_castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_bowser_castle switch.data matches 1559.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Bowser Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_bowser_castle switch.data matches 1559.. run data modify storage switch:main MessageToLog set value '{"text":"Map `bowser_castle` just regenerated!"}'
+execute if score #rg_bowser_castle switch.data matches 1559.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Bowser Castle` just regenerated!"}'
 execute if score #rg_bowser_castle switch.data matches 1559.. run function switch:engine/log_message/apply
 
 execute if score #rg_bowser_castle switch.data matches 1559.. in switch:game run function switch:maps/regenerate_doors_macro {name:"bowser_castle"}

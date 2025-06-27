@@ -47,9 +47,9 @@ execute if score #rg_warden_escape_statue switch.data matches 745.. in switch:ga
 execute if score #rg_warden_escape_statue switch.data matches 745.. in minecraft:overworld run forceload remove 69123 69000 69148 69106
 execute if score #rg_warden_escape_statue switch.data matches 745.. in switch:game run forceload remove 69123 69000 69148 69106
 
-execute if score #rg_warden_escape_statue switch.data matches 745.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"warden_escape_statue","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"37","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_warden_escape_statue switch.data matches 745.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Warden Escape Statue","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"37","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_warden_escape_statue switch.data matches 745.. run data modify storage switch:main MessageToLog set value '{"text":"Map `warden_escape_statue` just regenerated!"}'
+execute if score #rg_warden_escape_statue switch.data matches 745.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Warden Escape Statue` just regenerated!"}'
 execute if score #rg_warden_escape_statue switch.data matches 745.. run function switch:engine/log_message/apply
 
 execute if score #rg_warden_escape_statue switch.data matches 745.. in switch:game run function switch:maps/regenerate_doors_macro {name:"warden_escape_statue"}

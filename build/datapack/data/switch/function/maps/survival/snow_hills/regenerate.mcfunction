@@ -92,9 +92,9 @@ execute if score #rg_snow_hills switch.data matches 916.. in switch:game run for
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50223 50000 50239 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50223 50000 50239 50185
 
-execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"snow_hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_snow_hills switch.data matches 916.. run data modify storage switch:main MessageToLog set value '{"text":"Map `snow_hills` just regenerated!"}'
+execute if score #rg_snow_hills switch.data matches 916.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Snow Hills` just regenerated!"}'
 execute if score #rg_snow_hills switch.data matches 916.. run function switch:engine/log_message/apply
 
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run function switch:maps/regenerate_doors_macro {name:"snow_hills"}

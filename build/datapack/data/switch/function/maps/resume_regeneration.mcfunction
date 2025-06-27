@@ -125,7 +125,7 @@ execute if score #rg_cluedo_casino switch.data matches 1.. run function switch:m
 execute if score #rg_octogone_nether_ice switch.data matches 1.. run function switch:maps/survival/octogone_nether_ice/regenerate
 execute if score #rg_pillars_of_fortune switch.data matches 1.. run function switch:maps/survival/pillars_of_fortune/regenerate
 execute if score #rg_even_old_japan switch.data matches 1.. run function switch:maps/survival/even_old_japan/regenerate
-execute if score #rg_fireblast_1 switch.data matches 1.. run function switch:maps/survival/fireblast_1/regenerate
-execute if score #rg_fireblast_2 switch.data matches 1.. run function switch:maps/survival/fireblast_2/regenerate
-execute if score #rg_fireblast_3 switch.data matches 1.. run function switch:maps/survival/fireblast_3/regenerate
+execute if score #rg_fireblast_bubulle switch.data matches 1.. run function switch:maps/survival/fireblast_bubulle/regenerate
+execute if score #rg_fireblast_cookie switch.data matches 1.. run function switch:maps/survival/fireblast_cookie/regenerate
+execute if score #rg_fireblast_pork switch.data matches 1.. run function switch:maps/survival/fireblast_pork/regenerate
 

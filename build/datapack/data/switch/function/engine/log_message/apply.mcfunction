@@ -125,9 +125,9 @@
 #			switch:maps/survival/octogone_nether_ice/regenerate
 #			switch:maps/survival/pillars_of_fortune/regenerate
 #			switch:maps/survival/even_old_japan/regenerate
-#			switch:maps/survival/fireblast_1/regenerate
-#			switch:maps/survival/fireblast_2/regenerate
-#			switch:maps/survival/fireblast_3/regenerate
+#			switch:maps/survival/fireblast_bubulle/regenerate
+#			switch:maps/survival/fireblast_cookie/regenerate
+#			switch:maps/survival/fireblast_pork/regenerate
 #
 # @executed			Don't care
 #

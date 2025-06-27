@@ -62,9 +62,9 @@ execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game r
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34166 34000 34187 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34166 34000 34187 34127
 
-execute if score #rg_jayl_dark_forest switch.data matches 820.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"jayl_dark_forest","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jayl_dark_forest switch.data matches 820.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Jayl Dark Forest","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_jayl_dark_forest switch.data matches 820.. run data modify storage switch:main MessageToLog set value '{"text":"Map `jayl_dark_forest` just regenerated!"}'
+execute if score #rg_jayl_dark_forest switch.data matches 820.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Jayl Dark Forest` just regenerated!"}'
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run function switch:engine/log_message/apply
 
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jayl_dark_forest"}

@@ -37,9 +37,9 @@ execute if score #rg_friends_cube_lobby switch.data matches 185.. in switch:game
 execute if score #rg_friends_cube_lobby switch.data matches 185.. in minecraft:overworld run forceload remove 17060 17000 17080 17080
 execute if score #rg_friends_cube_lobby switch.data matches 185.. in switch:game run forceload remove 17060 17000 17080 17080
 
-execute if score #rg_friends_cube_lobby switch.data matches 185.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"friends_cube_lobby","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_cube_lobby switch.data matches 185.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube Lobby","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_friends_cube_lobby switch.data matches 185.. run data modify storage switch:main MessageToLog set value '{"text":"Map `friends_cube_lobby` just regenerated!"}'
+execute if score #rg_friends_cube_lobby switch.data matches 185.. run data modify storage switch:main MessageToLog set value '{"text":"Map `FriendsCube Lobby` just regenerated!"}'
 execute if score #rg_friends_cube_lobby switch.data matches 185.. run function switch:engine/log_message/apply
 
 execute if score #rg_friends_cube_lobby switch.data matches 185.. in switch:game run function switch:maps/regenerate_doors_macro {name:"friends_cube_lobby"}

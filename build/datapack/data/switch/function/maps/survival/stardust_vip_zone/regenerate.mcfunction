@@ -42,9 +42,9 @@ execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game 
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in minecraft:overworld run forceload remove 107090 107000 107113 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run forceload remove 107090 107000 107113 107085
 
-execute if score #rg_stardust_vip_zone switch.data matches 256.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"stardust_vip_zone","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_vip_zone switch.data matches 256.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust VIP Zone","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_stardust_vip_zone switch.data matches 256.. run data modify storage switch:main MessageToLog set value '{"text":"Map `stardust_vip_zone` just regenerated!"}'
+execute if score #rg_stardust_vip_zone switch.data matches 256.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Stardust VIP Zone` just regenerated!"}'
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run function switch:engine/log_message/apply
 
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run function switch:maps/regenerate_doors_macro {name:"stardust_vip_zone"}

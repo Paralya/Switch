@@ -121,9 +121,9 @@
 #			switch:maps/survival/octogone_nether_ice/regenerate {name:"octogone_nether_ice"}
 #			switch:maps/survival/pillars_of_fortune/regenerate {name:"pillars_of_fortune"}
 #			switch:maps/survival/even_old_japan/regenerate {name:"even_old_japan"}
-#			switch:maps/survival/fireblast_1/regenerate {name:"fireblast_1"}
-#			switch:maps/survival/fireblast_2/regenerate {name:"fireblast_2"}
-#			switch:maps/survival/fireblast_3/regenerate {name:"fireblast_3"}
+#			switch:maps/survival/fireblast_bubulle/regenerate {name:"fireblast_bubulle"}
+#			switch:maps/survival/fireblast_cookie/regenerate {name:"fireblast_cookie"}
+#			switch:maps/survival/fireblast_pork/regenerate {name:"fireblast_pork"}
 #
 
 # Get doors

@@ -123,8 +123,8 @@ data modify storage switch:maps to_scan.cluedo_casino set value 1b
 data modify storage switch:maps to_scan.octogone_nether_ice set value 1b
 data modify storage switch:maps to_scan.pillars_of_fortune set value 1b
 data modify storage switch:maps to_scan.even_old_japan set value 1b
-data modify storage switch:maps to_scan.fireblast_1 set value 1b
-data modify storage switch:maps to_scan.fireblast_2 set value 1b
-data modify storage switch:maps to_scan.fireblast_3 set value 1b
+data modify storage switch:maps to_scan.fireblast_bubulle set value 1b
+data modify storage switch:maps to_scan.fireblast_cookie set value 1b
+data modify storage switch:maps to_scan.fireblast_pork set value 1b
 schedule function switch:maps/loop_scan_doors_of_every_maps 1t
 

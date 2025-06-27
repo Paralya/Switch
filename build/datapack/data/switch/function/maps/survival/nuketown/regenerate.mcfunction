@@ -97,9 +97,9 @@ execute if score #rg_nuketown switch.data matches 833.. in switch:game run force
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72194 72000 72207 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72194 72000 72207 72220
 
-execute if score #rg_nuketown switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"nuketown","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_nuketown switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nuketown","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_nuketown switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text":"Map `nuketown` just regenerated!"}'
+execute if score #rg_nuketown switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nuketown` just regenerated!"}'
 execute if score #rg_nuketown switch.data matches 833.. run function switch:engine/log_message/apply
 
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run function switch:maps/regenerate_doors_macro {name:"nuketown"}

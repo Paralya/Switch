@@ -4,7 +4,7 @@
 # @within	switch:maps/survival/sky_island_tower/main
 #
 
-data modify entity @s Pos set value [77026.88.5d, 171.22.5d, 77099.86.5d]
+data modify entity @s Pos set value [77027.5d, 171.5d, 77100.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/sky_island_tower/spread_players

@@ -87,9 +87,9 @@ execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run fo
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49186 49000 49200 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49186 49000 49200 49200
 
-execute if score #rg_cookie_wars switch.data matches 673.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"cookie_wars","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"33","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_cookie_wars switch.data matches 673.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cookie Wars","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"33","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_cookie_wars switch.data matches 673.. run data modify storage switch:main MessageToLog set value '{"text":"Map `cookie_wars` just regenerated!"}'
+execute if score #rg_cookie_wars switch.data matches 673.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cookie Wars` just regenerated!"}'
 execute if score #rg_cookie_wars switch.data matches 673.. run function switch:engine/log_message/apply
 
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run function switch:maps/regenerate_doors_macro {name:"cookie_wars"}

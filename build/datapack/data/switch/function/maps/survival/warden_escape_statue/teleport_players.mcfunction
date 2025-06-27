@@ -4,7 +4,7 @@
 # @within	switch:maps/survival/warden_escape_statue/main
 #
 
-data modify entity @s Pos set value [69017.77.5d, 136.85.5d, 69078.56.5d]
+data modify entity @s Pos set value [69018.5d, 137.5d, 69079.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/warden_escape_statue/spread_players

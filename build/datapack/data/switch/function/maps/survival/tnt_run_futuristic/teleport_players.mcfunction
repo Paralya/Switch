@@ -4,7 +4,7 @@
 # @within	switch:maps/survival/tnt_run_futuristic/main
 #
 
-data modify entity @s Pos set value [108992.51.5d, 136.29.5d, 109061.09.5d]
+data modify entity @s Pos set value [108993.5d, 136.5d, 109061.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/tnt_run_futuristic/spread_players

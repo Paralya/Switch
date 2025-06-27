@@ -5,7 +5,7 @@
 #
 
 summon marker 0 0 0 {Tags:["switch.selected_map"]}
-execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value [20505.74.5d, 122.8.5d, 19539.18.5d]
+execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value [20506.5d, 123.5d, 19539.5d]
 
 scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:maps/survival/mario_circuit/teleport_players

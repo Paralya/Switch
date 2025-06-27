@@ -47,9 +47,9 @@ execute if score #rg_area_51 switch.data matches 565.. in switch:game run forcel
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2090 2000 2108 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2090 2000 2108 2126
 
-execute if score #rg_area_51 switch.data matches 565.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"area_51","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_area_51 switch.data matches 565.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Area 51","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_area_51 switch.data matches 565.. run data modify storage switch:main MessageToLog set value '{"text":"Map `area_51` just regenerated!"}'
+execute if score #rg_area_51 switch.data matches 565.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Area 51` just regenerated!"}'
 execute if score #rg_area_51 switch.data matches 565.. run function switch:engine/log_message/apply
 
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run function switch:maps/regenerate_doors_macro {name:"area_51"}

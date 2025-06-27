@@ -42,9 +42,9 @@ execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:ga
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in minecraft:overworld run forceload remove 128076 128000 128095 128113
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:game run forceload remove 128076 128000 128095 128113
 
-execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"ancienne_egypte_2013","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Ancienne Egypte 2013","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run data modify storage switch:main MessageToLog set value '{"text":"Map `ancienne_egypte_2013` just regenerated!"}'
+execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Ancienne Egypte 2013` just regenerated!"}'
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run function switch:engine/log_message/apply
 
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ancienne_egypte_2013"}

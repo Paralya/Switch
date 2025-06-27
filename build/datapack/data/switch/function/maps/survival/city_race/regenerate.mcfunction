@@ -122,9 +122,9 @@ execute if score #rg_city_race switch.data matches 2521.. in switch:game run for
 execute if score #rg_city_race switch.data matches 2521.. in minecraft:overworld run forceload remove 20050 19470 20062 19731
 execute if score #rg_city_race switch.data matches 2521.. in switch:game run forceload remove 20050 19470 20062 19731
 
-execute if score #rg_city_race switch.data matches 2521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"city_race","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_city_race switch.data matches 2521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"City Race","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
 
-execute if score #rg_city_race switch.data matches 2521.. run data modify storage switch:main MessageToLog set value '{"text":"Map `city_race` just regenerated!"}'
+execute if score #rg_city_race switch.data matches 2521.. run data modify storage switch:main MessageToLog set value '{"text":"Map `City Race` just regenerated!"}'
 execute if score #rg_city_race switch.data matches 2521.. run function switch:engine/log_message/apply
 
 execute if score #rg_city_race switch.data matches 2521.. in switch:game run function switch:maps/regenerate_doors_macro {name:"city_race"}
