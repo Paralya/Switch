@@ -58,11 +58,11 @@ execute if score #rg_ctf_nether switch.data matches 1 in switch:game run forcelo
 execute if score #rg_ctf_nether switch.data matches 1 in minecraft:overworld run forceload add 149194 149000 149202 149350
 execute if score #rg_ctf_nether switch.data matches 1 in switch:game run forceload add 149194 149000 149202 149350
 
-execute if score #rg_ctf_nether switch.data matches 1 run scoreboard players set #rg_ctf_nether_y switch.data -64
+execute if score #rg_ctf_nether switch.data matches 1 run scoreboard players set #rg_ctf_nether_y switch.data 100
 execute if score #rg_ctf_nether switch.data matches 1 run scoreboard players set #rg_ctf_nether_mod switch.data 0
 execute if score #rg_ctf_nether switch.data matches ..2640 summon marker run function switch:maps/survival/ctf_nether/regeneration_on_marker
 
-execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run kill @e[type=item,x=149101,y=-64,z=149175,distance=..1000]
+execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run kill @e[type=item,x=149101,y=100,z=149175,distance=..1000]
 execute if score #rg_ctf_nether switch.data matches 2641.. run data remove storage switch:maps to_regenerate.ctf_nether
 
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149000 149000 149008 149350

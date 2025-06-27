@@ -97,16 +97,12 @@
 #			switch:maps/survival/old_japan_apocalypse/regenerate
 #			switch:maps/survival/lost_graveyard_remastered/regenerate
 #			switch:maps/survival/jn_nature_box/regenerate
-#			switch:maps/survival/block_party_lobby/regenerate
 #			switch:maps/survival/jn_countries_castle/regenerate
-#			switch:maps/survival/jn_ice_castles/regenerate
 #			switch:maps/survival/jn_murder_mystery/regenerate
 #			switch:maps/survival/jn_sakura_pvpbox/regenerate
 #			switch:maps/survival/charly_murder_2018/regenerate
 #			switch:maps/survival/jn_one_in_the_chamber_1/regenerate
 #			switch:maps/survival/jn_one_in_the_chamber_2/regenerate
-#			switch:maps/survival/overgrown_forest/regenerate
-#			switch:maps/survival/pretty_garden/regenerate
 #			switch:maps/survival/jn_biomes_relief/regenerate
 #			switch:maps/survival/luxium_spectres_remake/regenerate
 #			switch:maps/survival/sheepwars_bonbons/regenerate
@@ -119,6 +115,7 @@
 #			switch:maps/survival/ctf_forest_castles/regenerate
 #			switch:maps/survival/luxio_fish_fight/regenerate
 #			switch:maps/survival/arti_tnt_run_tower/regenerate
+#			switch:maps/survival/memory_mine/regenerate
 #			switch:maps/survival/sheepwars_colored_sheeps/regenerate
 #			switch:maps/survival/elza_dual_biomes/regenerate
 #			switch:maps/survival/airdox_fish_fight/regenerate

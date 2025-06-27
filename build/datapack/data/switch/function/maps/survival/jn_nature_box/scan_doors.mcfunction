@@ -39,10 +39,10 @@ execute if score #scan_jn_nature_box switch.data matches 1 in switch:game run fo
 
 execute if score #scan_jn_nature_box switch.data matches 1 run data modify storage switch:maps to_scan.jn_nature_box set value 2b
 execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #start_x_jn_nature_box switch.data 130001
-execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #start_y_jn_nature_box switch.data 1
+execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #start_y_jn_nature_box switch.data 101
 execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #start_z_jn_nature_box switch.data 130001
 execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #end_x_jn_nature_box switch.data 130191
-execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #end_y_jn_nature_box switch.data 79
+execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #end_y_jn_nature_box switch.data 179
 execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players set #end_z_jn_nature_box switch.data 130133
 execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players operation #curr_x_jn_nature_box switch.data = #start_x_jn_nature_box switch.data
 execute if score #scan_jn_nature_box switch.data matches 1 run scoreboard players operation #curr_y_jn_nature_box switch.data = #start_y_jn_nature_box switch.data

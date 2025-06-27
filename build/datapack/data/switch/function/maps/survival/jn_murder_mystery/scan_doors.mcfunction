@@ -30,10 +30,10 @@ execute if score #scan_jn_murder_mystery switch.data matches 1 in switch:game ru
 
 execute if score #scan_jn_murder_mystery switch.data matches 1 run data modify storage switch:maps to_scan.jn_murder_mystery set value 2b
 execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #start_x_jn_murder_mystery switch.data 134001
-execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #start_y_jn_murder_mystery switch.data 1
+execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #start_y_jn_murder_mystery switch.data 101
 execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #start_z_jn_murder_mystery switch.data 134001
 execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #end_x_jn_murder_mystery switch.data 134148
-execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #end_y_jn_murder_mystery switch.data 61
+execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #end_y_jn_murder_mystery switch.data 161
 execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players set #end_z_jn_murder_mystery switch.data 134122
 execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players operation #curr_x_jn_murder_mystery switch.data = #start_x_jn_murder_mystery switch.data
 execute if score #scan_jn_murder_mystery switch.data matches 1 run scoreboard players operation #curr_y_jn_murder_mystery switch.data = #start_y_jn_murder_mystery switch.data

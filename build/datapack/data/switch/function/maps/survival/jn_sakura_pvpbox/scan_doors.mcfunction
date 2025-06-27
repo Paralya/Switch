@@ -24,10 +24,10 @@ execute if score #scan_jn_sakura_pvpbox switch.data matches 1 in switch:game run
 
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run data modify storage switch:maps to_scan.jn_sakura_pvpbox set value 2b
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #start_x_jn_sakura_pvpbox switch.data 135001
-execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #start_y_jn_sakura_pvpbox switch.data 1
+execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #start_y_jn_sakura_pvpbox switch.data 101
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #start_z_jn_sakura_pvpbox switch.data 135001
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #end_x_jn_sakura_pvpbox switch.data 135099
-execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #end_y_jn_sakura_pvpbox switch.data 37
+execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #end_y_jn_sakura_pvpbox switch.data 137
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #end_z_jn_sakura_pvpbox switch.data 135099
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players operation #curr_x_jn_sakura_pvpbox switch.data = #start_x_jn_sakura_pvpbox switch.data
 execute if score #scan_jn_sakura_pvpbox switch.data matches 1 run scoreboard players operation #curr_y_jn_sakura_pvpbox switch.data = #start_y_jn_sakura_pvpbox switch.data

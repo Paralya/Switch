@@ -93,16 +93,12 @@
 #			switch:maps/survival/old_japan_apocalypse/regenerate {name:"old_japan_apocalypse"}
 #			switch:maps/survival/lost_graveyard_remastered/regenerate {name:"lost_graveyard_remastered"}
 #			switch:maps/survival/jn_nature_box/regenerate {name:"jn_nature_box"}
-#			switch:maps/survival/block_party_lobby/regenerate {name:"block_party_lobby"}
 #			switch:maps/survival/jn_countries_castle/regenerate {name:"jn_countries_castle"}
-#			switch:maps/survival/jn_ice_castles/regenerate {name:"jn_ice_castles"}
 #			switch:maps/survival/jn_murder_mystery/regenerate {name:"jn_murder_mystery"}
 #			switch:maps/survival/jn_sakura_pvpbox/regenerate {name:"jn_sakura_pvpbox"}
 #			switch:maps/survival/charly_murder_2018/regenerate {name:"charly_murder_2018"}
 #			switch:maps/survival/jn_one_in_the_chamber_1/regenerate {name:"jn_one_in_the_chamber_1"}
 #			switch:maps/survival/jn_one_in_the_chamber_2/regenerate {name:"jn_one_in_the_chamber_2"}
-#			switch:maps/survival/overgrown_forest/regenerate {name:"overgrown_forest"}
-#			switch:maps/survival/pretty_garden/regenerate {name:"pretty_garden"}
 #			switch:maps/survival/jn_biomes_relief/regenerate {name:"jn_biomes_relief"}
 #			switch:maps/survival/luxium_spectres_remake/regenerate {name:"luxium_spectres_remake"}
 #			switch:maps/survival/sheepwars_bonbons/regenerate {name:"sheepwars_bonbons"}
@@ -115,6 +111,7 @@
 #			switch:maps/survival/ctf_forest_castles/regenerate {name:"ctf_forest_castles"}
 #			switch:maps/survival/luxio_fish_fight/regenerate {name:"luxio_fish_fight"}
 #			switch:maps/survival/arti_tnt_run_tower/regenerate {name:"arti_tnt_run_tower"}
+#			switch:maps/survival/memory_mine/regenerate {name:"memory_mine"}
 #			switch:maps/survival/sheepwars_colored_sheeps/regenerate {name:"sheepwars_colored_sheeps"}
 #			switch:maps/survival/elza_dual_biomes/regenerate {name:"elza_dual_biomes"}
 #			switch:maps/survival/airdox_fish_fight/regenerate {name:"airdox_fish_fight"}

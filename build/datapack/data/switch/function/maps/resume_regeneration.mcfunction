@@ -97,16 +97,12 @@ execute if score #rg_ancienne_egypte_2013 switch.data matches 1.. run function s
 execute if score #rg_old_japan_apocalypse switch.data matches 1.. run function switch:maps/survival/old_japan_apocalypse/regenerate
 execute if score #rg_lost_graveyard_remastered switch.data matches 1.. run function switch:maps/survival/lost_graveyard_remastered/regenerate
 execute if score #rg_jn_nature_box switch.data matches 1.. run function switch:maps/survival/jn_nature_box/regenerate
-execute if score #rg_block_party_lobby switch.data matches 1.. run function switch:maps/survival/block_party_lobby/regenerate
 execute if score #rg_jn_countries_castle switch.data matches 1.. run function switch:maps/survival/jn_countries_castle/regenerate
-execute if score #rg_jn_ice_castles switch.data matches 1.. run function switch:maps/survival/jn_ice_castles/regenerate
 execute if score #rg_jn_murder_mystery switch.data matches 1.. run function switch:maps/survival/jn_murder_mystery/regenerate
 execute if score #rg_jn_sakura_pvpbox switch.data matches 1.. run function switch:maps/survival/jn_sakura_pvpbox/regenerate
 execute if score #rg_charly_murder_2018 switch.data matches 1.. run function switch:maps/survival/charly_murder_2018/regenerate
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1.. run function switch:maps/survival/jn_one_in_the_chamber_1/regenerate
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 1.. run function switch:maps/survival/jn_one_in_the_chamber_2/regenerate
-execute if score #rg_overgrown_forest switch.data matches 1.. run function switch:maps/survival/overgrown_forest/regenerate
-execute if score #rg_pretty_garden switch.data matches 1.. run function switch:maps/survival/pretty_garden/regenerate
 execute if score #rg_jn_biomes_relief switch.data matches 1.. run function switch:maps/survival/jn_biomes_relief/regenerate
 execute if score #rg_luxium_spectres_remake switch.data matches 1.. run function switch:maps/survival/luxium_spectres_remake/regenerate
 execute if score #rg_sheepwars_bonbons switch.data matches 1.. run function switch:maps/survival/sheepwars_bonbons/regenerate
@@ -119,6 +115,7 @@ execute if score #rg_ctf_nether switch.data matches 1.. run function switch:maps
 execute if score #rg_ctf_forest_castles switch.data matches 1.. run function switch:maps/survival/ctf_forest_castles/regenerate
 execute if score #rg_luxio_fish_fight switch.data matches 1.. run function switch:maps/survival/luxio_fish_fight/regenerate
 execute if score #rg_arti_tnt_run_tower switch.data matches 1.. run function switch:maps/survival/arti_tnt_run_tower/regenerate
+execute if score #rg_memory_mine switch.data matches 1.. run function switch:maps/survival/memory_mine/regenerate
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1.. run function switch:maps/survival/sheepwars_colored_sheeps/regenerate
 execute if score #rg_elza_dual_biomes switch.data matches 1.. run function switch:maps/survival/elza_dual_biomes/regenerate
 execute if score #rg_airdox_fish_fight switch.data matches 1.. run function switch:maps/survival/airdox_fish_fight/regenerate

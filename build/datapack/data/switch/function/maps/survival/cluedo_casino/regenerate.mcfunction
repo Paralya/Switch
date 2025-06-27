@@ -16,11 +16,11 @@ execute if score #rg_cluedo_casino switch.data matches 1 in switch:game run forc
 execute if score #rg_cluedo_casino switch.data matches 1 in minecraft:overworld run forceload add 159050 159000 159075 159069
 execute if score #rg_cluedo_casino switch.data matches 1 in switch:game run forceload add 159050 159000 159075 159069
 
-execute if score #rg_cluedo_casino switch.data matches 1 run scoreboard players set #rg_cluedo_casino_y switch.data 0
+execute if score #rg_cluedo_casino switch.data matches 1 run scoreboard players set #rg_cluedo_casino_y switch.data 100
 execute if score #rg_cluedo_casino switch.data matches 1 run scoreboard players set #rg_cluedo_casino_mod switch.data 0
 execute if score #rg_cluedo_casino switch.data matches ..180 summon marker run function switch:maps/survival/cluedo_casino/regeneration_on_marker
 
-execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run kill @e[type=item,x=159037,y=0,z=159034,distance=..1000]
+execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run kill @e[type=item,x=159037,y=100,z=159034,distance=..1000]
 execute if score #rg_cluedo_casino switch.data matches 181.. run data remove storage switch:maps to_regenerate.cluedo_casino
 
 execute if score #rg_cluedo_casino switch.data matches 181.. in minecraft:overworld run forceload remove 159000 159000 159025 159069

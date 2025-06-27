@@ -18,11 +18,11 @@ execute if score #rg_octogone_nether_ice switch.data matches 1 in switch:game ru
 execute if score #rg_octogone_nether_ice switch.data matches 1 in minecraft:overworld run forceload add 160060 160000 160080 160080
 execute if score #rg_octogone_nether_ice switch.data matches 1 in switch:game run forceload add 160060 160000 160080 160080
 
-execute if score #rg_octogone_nether_ice switch.data matches 1 run scoreboard players set #rg_octogone_nether_ice_y switch.data 0
+execute if score #rg_octogone_nether_ice switch.data matches 1 run scoreboard players set #rg_octogone_nether_ice_y switch.data 100
 execute if score #rg_octogone_nether_ice switch.data matches 1 run scoreboard players set #rg_octogone_nether_ice_mod switch.data 0
 execute if score #rg_octogone_nether_ice switch.data matches ..252 summon marker run function switch:maps/survival/octogone_nether_ice/regeneration_on_marker
 
-execute if score #rg_octogone_nether_ice switch.data matches 253.. in switch:game run kill @e[type=item,x=160040,y=0,z=160040,distance=..1000]
+execute if score #rg_octogone_nether_ice switch.data matches 253.. in switch:game run kill @e[type=item,x=160040,y=100,z=160040,distance=..1000]
 execute if score #rg_octogone_nether_ice switch.data matches 253.. run data remove storage switch:maps to_regenerate.octogone_nether_ice
 
 execute if score #rg_octogone_nether_ice switch.data matches 253.. in minecraft:overworld run forceload remove 160000 160000 160020 160080

@@ -16,11 +16,11 @@ execute if score #rg_sheepwars_plateforme switch.data matches 1 in switch:game r
 execute if score #rg_sheepwars_plateforme switch.data matches 1 in minecraft:overworld run forceload add 144053 144000 144079 144075
 execute if score #rg_sheepwars_plateforme switch.data matches 1 in switch:game run forceload add 144053 144000 144079 144075
 
-execute if score #rg_sheepwars_plateforme switch.data matches 1 run scoreboard players set #rg_sheepwars_plateforme_y switch.data 0
+execute if score #rg_sheepwars_plateforme switch.data matches 1 run scoreboard players set #rg_sheepwars_plateforme_y switch.data 100
 execute if score #rg_sheepwars_plateforme switch.data matches 1 run scoreboard players set #rg_sheepwars_plateforme_mod switch.data 0
 execute if score #rg_sheepwars_plateforme switch.data matches ..210 summon marker run function switch:maps/survival/sheepwars_plateforme/regeneration_on_marker
 
-execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:game run kill @e[type=item,x=144039,y=0,z=144037,distance=..1000]
+execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:game run kill @e[type=item,x=144039,y=100,z=144037,distance=..1000]
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run data remove storage switch:maps to_regenerate.sheepwars_plateforme
 
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in minecraft:overworld run forceload remove 144000 144000 144026 144075

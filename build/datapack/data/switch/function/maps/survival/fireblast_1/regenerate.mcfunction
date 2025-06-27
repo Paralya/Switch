@@ -16,11 +16,11 @@ execute if score #rg_fireblast_1 switch.data matches 1 in switch:game run forcel
 execute if score #rg_fireblast_1 switch.data matches 1 in minecraft:overworld run forceload add 163050 163000 163075 163075
 execute if score #rg_fireblast_1 switch.data matches 1 in switch:game run forceload add 163050 163000 163075 163075
 
-execute if score #rg_fireblast_1 switch.data matches 1 run scoreboard players set #rg_fireblast_1_y switch.data 0
+execute if score #rg_fireblast_1 switch.data matches 1 run scoreboard players set #rg_fireblast_1_y switch.data 100
 execute if score #rg_fireblast_1 switch.data matches 1 run scoreboard players set #rg_fireblast_1_mod switch.data 0
 execute if score #rg_fireblast_1 switch.data matches ..153 summon marker run function switch:maps/survival/fireblast_1/regeneration_on_marker
 
-execute if score #rg_fireblast_1 switch.data matches 154.. in switch:game run kill @e[type=item,x=163037,y=0,z=163037,distance=..1000]
+execute if score #rg_fireblast_1 switch.data matches 154.. in switch:game run kill @e[type=item,x=163037,y=100,z=163037,distance=..1000]
 execute if score #rg_fireblast_1 switch.data matches 154.. run data remove storage switch:maps to_regenerate.fireblast_1
 
 execute if score #rg_fireblast_1 switch.data matches 154.. in minecraft:overworld run forceload remove 163000 163000 163025 163075

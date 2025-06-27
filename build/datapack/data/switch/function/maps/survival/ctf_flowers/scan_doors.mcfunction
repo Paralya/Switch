@@ -33,10 +33,10 @@ execute if score #scan_ctf_flowers switch.data matches 1 in switch:game run forc
 
 execute if score #scan_ctf_flowers switch.data matches 1 run data modify storage switch:maps to_scan.ctf_flowers set value 2b
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #start_x_ctf_flowers switch.data 148001
-execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #start_y_ctf_flowers switch.data 1
+execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #start_y_ctf_flowers switch.data 101
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #start_z_ctf_flowers switch.data 148001
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #end_x_ctf_flowers switch.data 148201
-execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #end_y_ctf_flowers switch.data 98
+execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #end_y_ctf_flowers switch.data 198
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players set #end_z_ctf_flowers switch.data 148104
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players operation #curr_x_ctf_flowers switch.data = #start_x_ctf_flowers switch.data
 execute if score #scan_ctf_flowers switch.data matches 1 run scoreboard players operation #curr_y_ctf_flowers switch.data = #start_y_ctf_flowers switch.data

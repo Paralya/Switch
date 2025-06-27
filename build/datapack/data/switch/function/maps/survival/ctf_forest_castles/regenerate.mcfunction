@@ -26,11 +26,11 @@ execute if score #rg_ctf_forest_castles switch.data matches 1 in switch:game run
 execute if score #rg_ctf_forest_castles switch.data matches 1 in minecraft:overworld run forceload add 150088 150000 150101 150216
 execute if score #rg_ctf_forest_castles switch.data matches 1 in switch:game run forceload add 150088 150000 150101 150216
 
-execute if score #rg_ctf_forest_castles switch.data matches 1 run scoreboard players set #rg_ctf_forest_castles_y switch.data 0
+execute if score #rg_ctf_forest_castles switch.data matches 1 run scoreboard players set #rg_ctf_forest_castles_y switch.data 100
 execute if score #rg_ctf_forest_castles switch.data matches 1 run scoreboard players set #rg_ctf_forest_castles_mod switch.data 0
 execute if score #rg_ctf_forest_castles switch.data matches ..520 summon marker run function switch:maps/survival/ctf_forest_castles/regeneration_on_marker
 
-execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run kill @e[type=item,x=150050,y=0,z=150108,distance=..1000]
+execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run kill @e[type=item,x=150050,y=100,z=150108,distance=..1000]
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run data remove storage switch:maps to_regenerate.ctf_forest_castles
 
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150000 150000 150013 150216

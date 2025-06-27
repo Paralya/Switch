@@ -15,10 +15,10 @@ execute if score #scan_elza_dual_biomes switch.data matches 1 in switch:game run
 
 execute if score #scan_elza_dual_biomes switch.data matches 1 run data modify storage switch:maps to_scan.elza_dual_biomes set value 2b
 execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #start_x_elza_dual_biomes switch.data 155001
-execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #start_y_elza_dual_biomes switch.data 1
+execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #start_y_elza_dual_biomes switch.data 101
 execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #start_z_elza_dual_biomes switch.data 155001
 execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #end_x_elza_dual_biomes switch.data 155041
-execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #end_y_elza_dual_biomes switch.data 74
+execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #end_y_elza_dual_biomes switch.data 174
 execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players set #end_z_elza_dual_biomes switch.data 155041
 execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players operation #curr_x_elza_dual_biomes switch.data = #start_x_elza_dual_biomes switch.data
 execute if score #scan_elza_dual_biomes switch.data matches 1 run scoreboard players operation #curr_y_elza_dual_biomes switch.data = #start_y_elza_dual_biomes switch.data

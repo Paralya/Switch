@@ -96,16 +96,12 @@ execute if data storage switch:main {map:"ancienne_egypte_2013"} run function sw
 execute if data storage switch:main {map:"old_japan_apocalypse"} run function switch:maps/survival/old_japan_apocalypse/main
 execute if data storage switch:main {map:"lost_graveyard_remastered"} run function switch:maps/survival/lost_graveyard_remastered/main
 execute if data storage switch:main {map:"jn_nature_box"} run function switch:maps/survival/jn_nature_box/main
-execute if data storage switch:main {map:"block_party_lobby"} run function switch:maps/survival/block_party_lobby/main
 execute if data storage switch:main {map:"jn_countries_castle"} run function switch:maps/survival/jn_countries_castle/main
-execute if data storage switch:main {map:"jn_ice_castles"} run function switch:maps/survival/jn_ice_castles/main
 execute if data storage switch:main {map:"jn_murder_mystery"} run function switch:maps/survival/jn_murder_mystery/main
 execute if data storage switch:main {map:"jn_sakura_pvpbox"} run function switch:maps/survival/jn_sakura_pvpbox/main
 execute if data storage switch:main {map:"charly_murder_2018"} run function switch:maps/survival/charly_murder_2018/main
 execute if data storage switch:main {map:"jn_one_in_the_chamber_1"} run function switch:maps/survival/jn_one_in_the_chamber_1/main
 execute if data storage switch:main {map:"jn_one_in_the_chamber_2"} run function switch:maps/survival/jn_one_in_the_chamber_2/main
-execute if data storage switch:main {map:"overgrown_forest"} run function switch:maps/survival/overgrown_forest/main
-execute if data storage switch:main {map:"pretty_garden"} run function switch:maps/survival/pretty_garden/main
 execute if data storage switch:main {map:"jn_biomes_relief"} run function switch:maps/survival/jn_biomes_relief/main
 execute if data storage switch:main {map:"luxium_spectres_remake"} run function switch:maps/survival/luxium_spectres_remake/main
 execute if data storage switch:main {map:"sheepwars_bonbons"} run function switch:maps/survival/sheepwars_bonbons/main
@@ -118,6 +114,7 @@ execute if data storage switch:main {map:"ctf_nether"} run function switch:maps/
 execute if data storage switch:main {map:"ctf_forest_castles"} run function switch:maps/survival/ctf_forest_castles/main
 execute if data storage switch:main {map:"luxio_fish_fight"} run function switch:maps/survival/luxio_fish_fight/main
 execute if data storage switch:main {map:"arti_tnt_run_tower"} run function switch:maps/survival/arti_tnt_run_tower/main
+execute if data storage switch:main {map:"memory_mine"} run function switch:maps/survival/memory_mine/main
 execute if data storage switch:main {map:"sheepwars_colored_sheeps"} run function switch:maps/survival/sheepwars_colored_sheeps/main
 execute if data storage switch:main {map:"elza_dual_biomes"} run function switch:maps/survival/elza_dual_biomes/main
 execute if data storage switch:main {map:"airdox_fish_fight"} run function switch:maps/survival/airdox_fish_fight/main

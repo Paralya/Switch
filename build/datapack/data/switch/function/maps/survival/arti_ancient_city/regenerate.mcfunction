@@ -22,11 +22,11 @@ execute if score #rg_arti_ancient_city switch.data matches 1 in switch:game run 
 execute if score #rg_arti_ancient_city switch.data matches 1 in minecraft:overworld run forceload add 157092 157000 157111 157117
 execute if score #rg_arti_ancient_city switch.data matches 1 in switch:game run forceload add 157092 157000 157111 157117
 
-execute if score #rg_arti_ancient_city switch.data matches 1 run scoreboard players set #rg_arti_ancient_city_y switch.data 0
+execute if score #rg_arti_ancient_city switch.data matches 1 run scoreboard players set #rg_arti_ancient_city_y switch.data 100
 execute if score #rg_arti_ancient_city switch.data matches 1 run scoreboard players set #rg_arti_ancient_city_mod switch.data 0
 execute if score #rg_arti_ancient_city switch.data matches ..312 summon marker run function switch:maps/survival/arti_ancient_city/regeneration_on_marker
 
-execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game run kill @e[type=item,x=157055,y=0,z=157058,distance=..1000]
+execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game run kill @e[type=item,x=157055,y=100,z=157058,distance=..1000]
 execute if score #rg_arti_ancient_city switch.data matches 313.. run data remove storage switch:maps to_regenerate.arti_ancient_city
 
 execute if score #rg_arti_ancient_city switch.data matches 313.. in minecraft:overworld run forceload remove 157000 157000 157018 157117

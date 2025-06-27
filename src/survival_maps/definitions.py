@@ -129,7 +129,7 @@ def generate_folders_for_survival_maps() -> None:
 	##	102000	(undefined)	: replicate_the_build
 	clone_survival(100, (103000, 100, 103000), (103132, 213, 103165), ("stardust_boss_zone", "Stardust Boss Zone", "Jugou2"), view=(103098.69, 159.79, 103132.23, -1663.49, 15.25))
 	clone_survival(100, (104000, 100, 104000), (104132, 228, 104165), ("stardust_boss_zone_nether", "Stardust Boss Zone Nether", "Jugou2"), view=(104028.44, 158.24, 104130.78, -1228.99, 1.11))
-	clone_survival(100, (105000, 100, 105000), (105291, 242, 105314), ("stardust_pvp_zone", "Stardust PVP Zone", "Cala"), view=(105113.91, 176.66, 105201.80, -1231.05, 28.43))
+	clone_survival(100, (105000, 100, 105000), (105291, 242, 105314), ("stardust_pvp_zone", "Stardust PVP Zone", "Cala (Paralya)"), view=(105113.91, 176.66, 105201.80, -1231.05, 28.43))
 	clone_survival(100, (106000, 100, 106000), (106132, 157, 106178), ("stardust_prison", "Stardust Prison", "Stoupy, Jugou2"), view=(106093.02, 125.28, 106139.82, -927.17, 16.65))
 	clone_survival(100, (107000, 100, 107000), (107113, 150, 107085), ("stardust_vip_zone", "Stardust VIP Zone", "Stoupy, Jugou2"), view=(107056.85, 118.73, 107016.80, -1050.76, 14.46))
 	##	108000	(undefined)	: empty
@@ -152,78 +152,41 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (126000, 100, 126000), (126108, 147, 126108), ("cigogne", "Cigogne", "JustNoob"), view=(126027.31, 112.17, 126071.37, 233.45, 11.79))
 	clone_survival(100, (128000, 100, 128000), (128095, 176, 128113), ("ancienne_egypte_2013", "Ancienne Egypte 2013", "Farrel, Snowa, Jowjow (Rebuilt by Stoupy, Shazin, Thitanas)"), view=(128022.53, 146.68, 128029.90, -397.22, 24.89))
 	clone_survival(100, (129000, 100, 129000), (129102, 152, 129102), ("old_japan_apocalypse", "Old Japan Apocalypse", "Stoupy, Even"), view=(129066.12, 113.57, 129020.79, -325.93, 3.87))
-
-	clone_survival(100, (127000, 100, 127000), (127150, 162, 127134), ("lost_graveyard_remastered", "Lost Graveyard Remastered", "Stoupy, Rizdeau, Lawtank, TreekoZ, ShoupZ"), view=(127030, 119, 127111))
-
-	clone_survival(100, (130000, 0, 130000), (130192, 80, 130134), ("jn_nature_box", "Nature Box", "JustNoob"), view=(130098, 169, 130067))
-
-	clone_survival(100, (131000, 0, 131000), (131222, 79, 131148), ("block_party_lobby", "Block Party Lobby", "HiveMC"), view=(131047, 116, 131074))
-
-	clone_survival(100, (132000, 0, 132000), (132120, 43, 132120), ("jn_countries_castle", "Countries Castle", "JustNoob"), view=(132067, 119, 132060))
-
-	clone_survival(100, (133000, 0, 133000), (133054, 53, 133130), ("jn_ice_castles", "Ice Castle", "JustNoob"), view=(133027, 106, 133069))
-
-	clone_survival(100, (134000, 0, 134000), (134149, 62, 134123), ("jn_murder_mystery", "Murder Mystery", "JustNoob"), view=(134095, 119, 134080))
-
-	clone_survival(100, (135000, 0, 135000), (135100, 38, 135100), ("jn_sakura_pvpbox", "Sakura PVP Box", "JustNoob"), view=(135067, 111, 135037))
-
-	clone_survival(100, (136000, 0, 136000), (136052, 31, 136053), ("charly_murder_2018", "MurderUHC House (2018)", "Charly"), view=(136024, 115 ,136029))
-
-	clone_survival(100, (137000, 0, 137000), (137078, 22, 137120), ("jn_one_in_the_chamber_1", "One in the Chamber 1", "JustNoob"), view=(137045, 105, 137047))
-
-	clone_survival(100, (138000, 0, 138000), (138140, 57, 138100), ("jn_one_in_the_chamber_2", "One in the Chamber 2", "JustNoob"), view=(138104, 104, 138042))
-
-	clone_survival(100, (139000, 0, 139000), (139091, 50, 139103), ("overgrown_forest", "Overgrown Forest", "Unknown"), view=(139056, 113, 139037))
-
-	clone_survival(100, (140000, 0, 140000), (140056, 38, 140070), ("pretty_garden", "Pretty Garden", "Unknown"), view=(140034, 112, 140035))
-
-	clone_survival(100, (141000, 0, 141000), (141198, 89, 141139), ("jn_biomes_relief", "Biomes Relief", "JustNoob"), view=(141137, 167, 141087))
-
-	clone_survival(100, (142000, 0, 142000), (142106, 82, 142106), ("luxium_spectres_remake", "Luxium Spectres Remake", "Luxio"), view=(142034, 141, 142026))
-
-	clone_survival(100, (143000, 0, 143000), (143083, 83, 143114), ("sheepwars_bonbons", "Sheepwars Bonbons", "Team Sylnia"), view=(143044, 151, 143056))
-
-	clone_survival(100, (144000, 0, 144000), (144079, 69, 144075), ("sheepwars_plateforme", "Sheepwars Plateforme", "Team Sylnia"), view=(144044, 142, 144040))
-
-	clone_survival(100, (145000, 0, 145000), (145092, 93, 145122), ("sheepwars_ilots", "Sheepwars Ilots", "Team Sylnia"), view=(145046, 156, 145059))
-
-	clone_survival(100, (146000, 0, 146000), (146341, 80, 146227), ("ctf_plains_castles", "Plains Castle", "Empire War Network"), view=(146170, 118, 146114))
-
-	clone_survival(100, (147000, -64, 147000), (147363, 98, 147158), ("ctf_mountains_castles", "Vale Castle", "Empire War Network, Stoupy"), view=(147181, 180, 147078))
-
-	clone_survival(100, (148000, 0, 148000), (148202, 99, 148105), ("ctf_flowers", "Fairy Garden", "JeSuisMister, Zougly, Maxmos"), view=(148047, 118, 14804))
-
-	clone_survival(100, (149000, -64, 149000), (149202, 45, 149350), ("ctf_nether", "Fiery Wastes", "JeSuisMister, Zougly, Maxmos"), view=(149101, 180, 149175))
-
-	clone_survival(100, (150000, 0, 150000), (150101, 64, 150216), ("ctf_forest_castles", "Forest Castle", "Stolen_capes, Ace_Unhacked"), view=(150050, 115, 150103))
-
-	clone_survival(100, (151000, 0, 151000), (151056, 36, 151055), ("luxio_fish_fight", "Air Fish Fight", "Luxio"), view=(151026, 127, 151026))
-
-	clone_survival(100, (152000, 0, 152000), (152020, 73, 152020), ("arti_tnt_run_tower", "TNT Run Tower", "Arti"), view=(152010, 169, 152011))
-
-	#	153000	(adventure)	: memory_mine 152998 99 152998 153027 115 153034
-
-	clone_survival(100, (154000, 0, 154000), (154107, 69, 154106), ("sheepwars_colored_sheeps", "Colored Sheeps", "AirDox"), view=(154035, 148, 154064))
-
-	clone_survival(100, (155000, 0, 155000), (155042, 75, 155042), ("elza_dual_biomes", "Dual Biomes", "Elzariia"), view=(155021, 154, 155021))
-
-	clone_survival(75, (155924, -52, 155924), (156076, 68, 156075), ("airdox_fish_fight", "Dinosaur Volcano", "AirDox"), view=(156009, 152, 155990))
-
-	clone_survival(100, (157000, 0, 157000), (157111, 51, 157117), ("arti_ancient_city", "Big Ancient City", "Arti"), view=(157046, 121, 157072))
-
-	clone_survival(100, (158000, 0, 158000), (158077, 67, 158070), ("yeti_in_panic", "Yeti in Panic", "TreekoZ, Arti, Chara"), view=(158043, 112, 158025))
-
-	clone_survival(100, (159000, 0, 159000), (159075, 59, 159069), ("cluedo_casino", "Cluedo Casino", "Remelta, Fhara"), view=(159056, 117, 159047))
-
-	clone_survival(100, (160000, 0, 160000), (160080, 62, 160080), ("octogone_nether_ice", "Octogone Nether Ice", "Stoupy"), view=(160040, 136, 160040))
-
-	clone_survival(100, (161000, 0, 161000), (161100, 90, 161100), ("pillars_of_fortune", "Icy ground circle", "Stoupy"), view=(161050, 164, 161050))
-
-	clone_survival(100, (162000, 0, 162000), (162102, 52, 162102), ("even_old_japan", "Old Japan", "Even"), view=(162038, 109, 162043))
-
-	clone_survival(100, (163000, 0, 163000), (163075, 50, 163075), ("fireblast_1", "Fireblast 1", "Stoupy"), view=(163037, 127, 163037))
-
-	clone_survival(100, (164000, 0, 164000), (164075, 50, 164075), ("fireblast_2", "Fireblast 2", "Stoupy"), view=(164037, 127, 164037))
-
-	clone_survival(100, (165000, 0, 165000), (165075, 50, 165075), ("fireblast_3", "Fireblast 3", "Stoupy"), view=(165037, 127, 165037))
+	clone_survival(100, (127000, 100, 127000), (127150, 162, 127134), ("lost_graveyard_remastered", "Lost Graveyard Remastered", "Stoupy, Rizdeau, Lawtank, TreekoZ, ShoupZ"), view=(127007.08, 118.02, 127045.68, -65.84, 5.08))
+	clone_survival(100, (130000, 100, 130000), (130192, 180, 130134), ("jn_nature_box", "Nature Box", "Cala (JustNoob)"), view=(130029.82, 124.07, 130024.58, 304.79, 5.60))
+	##	131000	(undefined)	: empty
+	clone_survival(100, (132000, 100, 132000), (132120, 143, 132120), ("jn_countries_castle", "Countries Castle", "JustNoob"), view=(132033.90, 123.77, 132105.73, 207.59, 19.45))
+	##	133000	(undefined)	: empty
+	clone_survival(100, (134000, 100, 134000), (134149, 162, 134123), ("jn_murder_mystery", "Murder Mystery", "JustNoob"), view=(134120.91, 127.91, 134089.47, 110.58, 21.76))
+	clone_survival(100, (135000, 100, 135000), (135100, 138, 135100), ("jn_sakura_pvpbox", "Sakura PVP Box", "JustNoob"), view=(135078.64, 118.46, 135084.61, 143.55, 18.30))
+	clone_survival(100, (136000, 100, 136000), (136052, 131, 136053), ("charly_murder_2018", "MurderUHC House (2018)", "Charly"), view=(136018.10, 116.20, 136022.19, -45.40, 10.71))
+	clone_survival(100, (137000, 100, 137000), (137078, 122, 137120), ("jn_one_in_the_chamber_1", "Multi-biomes Boxes 1", "JustNoob"), view=(137069.62, 109.03, 137074.15, -205.62, 5.85))
+	clone_survival(100, (138000, 100, 138000), (138140, 157, 138100), ("jn_one_in_the_chamber_2", "Multi-biomes Boxes 2", "JustNoob"), view=(138054.20, 110.02, 138012.82, -43.75, 3.63))
+	##	139000	(undefined)	: empty
+	##	140000	(undefined)	: empty
+	clone_survival(100, (141000, 100, 141000), (141198, 189, 141139), ("jn_biomes_relief", "Biomes Relief", "Cala (JustNoob)"), view=(141159.88, 139.15, 141032.10, -302.44, 11.13))
+	clone_survival(100, (142000, 100, 142000), (142106, 182, 142106), ("luxium_spectres_remake", "Luxium Spectres Remake", "Luxio"), view=(142097.51, 143.41, 142069.19, 465.36, 16.57))
+	clone_survival(100, (143000, 100, 143000), (143083, 183, 143114), ("sheepwars_bonbons", "Sheepwars Bonbons", "Team Sylnia"), view=(143063.66, 151.66, 143088.15, 505.80, 29.34))
+	clone_survival(100, (144000, 100, 144000), (144079, 169, 144075), ("sheepwars_plateforme", "Sheepwars Plateforme", "Team Sylnia"), view=(144019.64, 143.02, 144059.82, 944.84, 29.75))
+	clone_survival(100, (145000, 100, 145000), (145092, 193, 145122), ("sheepwars_ilots", "Sheepwars Ilots", "Team Sylnia"), view=(145079.77, 153.74, 145078.30, 1557.12, 29.01))
+	clone_survival(100, (146000, 100, 146000), (146341, 180, 146227), ("ctf_plains_castles", "Plains Castle", "Empire War Network"), view=(146111.63, 135.34, 146170.62, 945.25, 14.09))
+	clone_survival(100, (146999, 100, 147000), (147363, 262, 147158), ("ctf_mountains_castles", "Vale Castle", "Empire War Network, Stoupy"), view=(147222.14, 192.74, 147038.10, -298.87, 21.26))
+	clone_survival(100, (148000, 100, 148000), (148202, 199, 148105), ("ctf_flowers", "Fairy Garden", "JeSuisMister, Zougly, Maxmos"), view=(148070.85, 139.94, 148026.55, -428.66, 14.09))
+	clone_survival(100, (149000, 100, 149000), (149202, 209, 149350), ("ctf_nether", "Fiery Wastes", "JeSuisMister, Zougly, Maxmos"), view=(149056.38, 157.56, 149204.54, 221.45, 15.91))
+	clone_survival(100, (150000, 100, 150000), (150101, 164, 150216), ("ctf_forest_castles", "Forest Castle", "Stolen_capes, Ace_Unhacked"), view=(150019.35, 133.90, 150071.48, 328.43, 21.35))
+	clone_survival(100, (151000, 100, 151000), (151056, 136, 151055), ("luxio_fish_fight", "Fish Fight Island", "Luxio"), view=(151012.14, 126.63, 151019.28, 295.73, 16.32))
+	clone_survival(100, (152000, 100, 152000), (152020, 173, 152020), ("arti_tnt_run_tower", "TNT Run Tower", "Arti"), view=(152032.51, 144.70, 152056.72, 153.46, 9.31))
+	clone_survival(100, (153000, 100, 153000), (153029, 116, 153036), ("memory_mine", "Memory Mine", "Stoupy"), view=(153025.83, 104.76, 153033.63, -220.96, 17.55))
+	clone_survival(100, (154000, 100, 154000), (154107, 169, 154106), ("sheepwars_colored_sheeps", "Colored Sheeps", "AirDox"), view=(154062.01, 148.53, 154018.31, 15.33, 13.04))
+	clone_survival(100, (155000, 100, 155000), (155042, 175, 155042), ("elza_dual_biomes", "Dual Biomes", "Elzariia"), view=(155036.25, 114.40, 155032.59, -237.78, 16.40))
+	clone_survival(100, (156000, 100, 156000), (156152, 199, 156151), ("airdox_fish_fight", "Dinosaur Volcano", "AirDox"), view=(156111.00, 119.97, 156086.73, 100.10, -33.23))
+	clone_survival(100, (157000, 100, 157000), (157111, 151, 157117), ("arti_ancient_city", "Big Ancient City", "Arti"), view=(157078.87, 111.18, 157104.12, 149.97, 6.33))
+	clone_survival(100, (158000, 100, 158000), (158077, 167, 158070), ("yeti_in_panic", "Yeti in Panic", "TreekoZ, Arti, Chara"), view=(158003.67, 119.48, 158053.31, 239.07, 6.47))
+	clone_survival(100, (159000, 100, 159000), (159075, 159, 159069), ("cluedo_casino", "Cluedo Casino", "Remelta, Fhara"), view=(159037.45, 121.93, 159015.02, 38.99, 17.87))
+	clone_survival(100, (160000, 100, 160000), (160080, 162, 160080), ("octogone_nether_ice", "Octogone Nether Ice", "Stoupy, TreekoZ"), view=(160031.22, 132.41, 160043.15, -104.97, 13.10))
+	clone_survival(100, (161000, 100, 161000), (161100, 190, 161100), ("pillars_of_fortune", "Icy ground circle", "Stoupy"), view=(161070.03, 137.81, 161006.29, 19.81, 42.61))
+	clone_survival(100, (162000, 100, 162000), (162100, 152, 162100), ("even_old_japan", "Old Japan", "Even"), view=(162054.95, 105.40, 162021.91, 16.36, -5.44))
+	clone_survival(100, (163000, 100, 163000), (163075, 150, 163075), ("fireblast_1", "Bubulle", "Stoupy"), view=(163021.55, 167.39, 163033.03, -88.89, 68.41))
+	clone_survival(100, (164000, 100, 164000), (164075, 150, 164075), ("fireblast_2", "Smol Cookie", "Stoupy"), view=(164022.16, 153.99, 164035.08, -448.31, 75.49))
+	clone_survival(100, (165000, 100, 165000), (165075, 150, 165075), ("fireblast_3", "Vegan Pork", "Stoupy"), view=(165047.44, 155.84, 165052.22, -216.50, 67.83))
 

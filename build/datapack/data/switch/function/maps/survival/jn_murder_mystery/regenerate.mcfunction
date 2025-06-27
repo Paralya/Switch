@@ -24,11 +24,11 @@ execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run 
 execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134128 134000 134149 134123
 execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134128 134000 134149 134123
 
-execute if score #rg_jn_murder_mystery switch.data matches 1 run scoreboard players set #rg_jn_murder_mystery_y switch.data 0
+execute if score #rg_jn_murder_mystery switch.data matches 1 run scoreboard players set #rg_jn_murder_mystery_y switch.data 100
 execute if score #rg_jn_murder_mystery switch.data matches 1 run scoreboard players set #rg_jn_murder_mystery_mod switch.data 0
 execute if score #rg_jn_murder_mystery switch.data matches ..441 summon marker run function switch:maps/survival/jn_murder_mystery/regeneration_on_marker
 
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run kill @e[type=item,x=134074,y=0,z=134061,distance=..1000]
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run kill @e[type=item,x=134074,y=100,z=134061,distance=..1000]
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run data remove storage switch:maps to_regenerate.jn_murder_mystery
 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134000 134000 134021 134123

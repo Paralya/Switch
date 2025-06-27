@@ -33,10 +33,10 @@ execute if score #scan_ctf_forest_castles switch.data matches 1 in switch:game r
 
 execute if score #scan_ctf_forest_castles switch.data matches 1 run data modify storage switch:maps to_scan.ctf_forest_castles set value 2b
 execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #start_x_ctf_forest_castles switch.data 150001
-execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #start_y_ctf_forest_castles switch.data 1
+execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #start_y_ctf_forest_castles switch.data 101
 execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #start_z_ctf_forest_castles switch.data 150001
 execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #end_x_ctf_forest_castles switch.data 150100
-execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #end_y_ctf_forest_castles switch.data 63
+execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #end_y_ctf_forest_castles switch.data 163
 execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players set #end_z_ctf_forest_castles switch.data 150215
 execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players operation #curr_x_ctf_forest_castles switch.data = #start_x_ctf_forest_castles switch.data
 execute if score #scan_ctf_forest_castles switch.data matches 1 run scoreboard players operation #curr_y_ctf_forest_castles switch.data = #start_y_ctf_forest_castles switch.data

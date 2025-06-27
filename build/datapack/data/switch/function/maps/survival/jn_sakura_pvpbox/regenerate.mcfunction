@@ -20,11 +20,11 @@ execute if score #rg_jn_sakura_pvpbox switch.data matches 1 in switch:game run f
 execute if score #rg_jn_sakura_pvpbox switch.data matches 1 in minecraft:overworld run forceload add 135080 135000 135100 135100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 1 in switch:game run forceload add 135080 135000 135100 135100
 
-execute if score #rg_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #rg_jn_sakura_pvpbox_y switch.data 0
+execute if score #rg_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #rg_jn_sakura_pvpbox_y switch.data 100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 1 run scoreboard players set #rg_jn_sakura_pvpbox_mod switch.data 0
 execute if score #rg_jn_sakura_pvpbox switch.data matches ..195 summon marker run function switch:maps/survival/jn_sakura_pvpbox/regeneration_on_marker
 
-execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run kill @e[type=item,x=135050,y=0,z=135050,distance=..1000]
+execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run kill @e[type=item,x=135050,y=100,z=135050,distance=..1000]
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run data remove storage switch:maps to_regenerate.jn_sakura_pvpbox
 
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove 135000 135000 135020 135100

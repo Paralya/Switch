@@ -15,10 +15,10 @@ execute if score #scan_luxio_fish_fight switch.data matches 1 in switch:game run
 
 execute if score #scan_luxio_fish_fight switch.data matches 1 run data modify storage switch:maps to_scan.luxio_fish_fight set value 2b
 execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #start_x_luxio_fish_fight switch.data 151001
-execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #start_y_luxio_fish_fight switch.data 1
+execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #start_y_luxio_fish_fight switch.data 101
 execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #start_z_luxio_fish_fight switch.data 151001
 execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #end_x_luxio_fish_fight switch.data 151055
-execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #end_y_luxio_fish_fight switch.data 35
+execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #end_y_luxio_fish_fight switch.data 135
 execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players set #end_z_luxio_fish_fight switch.data 151054
 execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players operation #curr_x_luxio_fish_fight switch.data = #start_x_luxio_fish_fight switch.data
 execute if score #scan_luxio_fish_fight switch.data matches 1 run scoreboard players operation #curr_y_luxio_fish_fight switch.data = #start_y_luxio_fish_fight switch.data

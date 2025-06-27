@@ -27,10 +27,10 @@ execute if score #scan_arti_ancient_city switch.data matches 1 in switch:game ru
 
 execute if score #scan_arti_ancient_city switch.data matches 1 run data modify storage switch:maps to_scan.arti_ancient_city set value 2b
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #start_x_arti_ancient_city switch.data 157001
-execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #start_y_arti_ancient_city switch.data 1
+execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #start_y_arti_ancient_city switch.data 101
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #start_z_arti_ancient_city switch.data 157001
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #end_x_arti_ancient_city switch.data 157110
-execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #end_y_arti_ancient_city switch.data 50
+execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #end_y_arti_ancient_city switch.data 150
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players set #end_z_arti_ancient_city switch.data 157116
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players operation #curr_x_arti_ancient_city switch.data = #start_x_arti_ancient_city switch.data
 execute if score #scan_arti_ancient_city switch.data matches 1 run scoreboard players operation #curr_y_arti_ancient_city switch.data = #start_y_arti_ancient_city switch.data

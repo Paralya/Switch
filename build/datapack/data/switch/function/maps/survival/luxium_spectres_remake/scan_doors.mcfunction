@@ -24,10 +24,10 @@ execute if score #scan_luxium_spectres_remake switch.data matches 1 in switch:ga
 
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run data modify storage switch:maps to_scan.luxium_spectres_remake set value 2b
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #start_x_luxium_spectres_remake switch.data 142001
-execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #start_y_luxium_spectres_remake switch.data 1
+execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #start_y_luxium_spectres_remake switch.data 101
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #start_z_luxium_spectres_remake switch.data 142001
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #end_x_luxium_spectres_remake switch.data 142105
-execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #end_y_luxium_spectres_remake switch.data 81
+execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #end_y_luxium_spectres_remake switch.data 181
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players set #end_z_luxium_spectres_remake switch.data 142105
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players operation #curr_x_luxium_spectres_remake switch.data = #start_x_luxium_spectres_remake switch.data
 execute if score #scan_luxium_spectres_remake switch.data matches 1 run scoreboard players operation #curr_y_luxium_spectres_remake switch.data = #start_y_luxium_spectres_remake switch.data

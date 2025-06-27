@@ -30,11 +30,11 @@ execute if score #rg_jn_biomes_relief switch.data matches 1 in switch:game run f
 execute if score #rg_jn_biomes_relief switch.data matches 1 in minecraft:overworld run forceload add 141178 141000 141198 141139
 execute if score #rg_jn_biomes_relief switch.data matches 1 in switch:game run forceload add 141178 141000 141198 141139
 
-execute if score #rg_jn_biomes_relief switch.data matches 1 run scoreboard players set #rg_jn_biomes_relief_y switch.data 0
+execute if score #rg_jn_biomes_relief switch.data matches 1 run scoreboard players set #rg_jn_biomes_relief_y switch.data 100
 execute if score #rg_jn_biomes_relief switch.data matches 1 run scoreboard players set #rg_jn_biomes_relief_mod switch.data 0
 execute if score #rg_jn_biomes_relief switch.data matches ..900 summon marker run function switch:maps/survival/jn_biomes_relief/regeneration_on_marker
 
-execute if score #rg_jn_biomes_relief switch.data matches 901.. in switch:game run kill @e[type=item,x=141099,y=0,z=141069,distance=..1000]
+execute if score #rg_jn_biomes_relief switch.data matches 901.. in switch:game run kill @e[type=item,x=141099,y=100,z=141069,distance=..1000]
 execute if score #rg_jn_biomes_relief switch.data matches 901.. run data remove storage switch:maps to_regenerate.jn_biomes_relief
 
 execute if score #rg_jn_biomes_relief switch.data matches 901.. in minecraft:overworld run forceload remove 141000 141000 141020 141139

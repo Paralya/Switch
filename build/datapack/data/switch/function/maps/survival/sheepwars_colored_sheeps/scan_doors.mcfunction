@@ -24,10 +24,10 @@ execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 in switch:
 
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run data modify storage switch:maps to_scan.sheepwars_colored_sheeps set value 2b
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #start_x_sheepwars_colored_sheeps switch.data 154001
-execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #start_y_sheepwars_colored_sheeps switch.data 1
+execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #start_y_sheepwars_colored_sheeps switch.data 101
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #start_z_sheepwars_colored_sheeps switch.data 154001
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #end_x_sheepwars_colored_sheeps switch.data 154106
-execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #end_y_sheepwars_colored_sheeps switch.data 68
+execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #end_y_sheepwars_colored_sheeps switch.data 168
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #end_z_sheepwars_colored_sheeps switch.data 154105
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players operation #curr_x_sheepwars_colored_sheeps switch.data = #start_x_sheepwars_colored_sheeps switch.data
 execute if score #scan_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players operation #curr_y_sheepwars_colored_sheeps switch.data = #start_y_sheepwars_colored_sheeps switch.data

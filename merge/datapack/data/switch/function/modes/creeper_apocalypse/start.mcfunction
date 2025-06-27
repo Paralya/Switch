@@ -7,7 +7,7 @@ effect give @a[tag=!detached] resistance 12 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs + give d'items
-function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main","pretty_garden"]}
+function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main"]}
 
 execute in switch:game run gamerule mobGriefing true
 execute in switch:game run gamerule showDeathMessages false

@@ -21,10 +21,10 @@ execute if score #scan_sheepwars_bonbons switch.data matches 1 in switch:game ru
 
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run data modify storage switch:maps to_scan.sheepwars_bonbons set value 2b
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #start_x_sheepwars_bonbons switch.data 143001
-execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #start_y_sheepwars_bonbons switch.data 1
+execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #start_y_sheepwars_bonbons switch.data 101
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #start_z_sheepwars_bonbons switch.data 143001
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #end_x_sheepwars_bonbons switch.data 143082
-execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #end_y_sheepwars_bonbons switch.data 82
+execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #end_y_sheepwars_bonbons switch.data 182
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players set #end_z_sheepwars_bonbons switch.data 143113
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players operation #curr_x_sheepwars_bonbons switch.data = #start_x_sheepwars_bonbons switch.data
 execute if score #scan_sheepwars_bonbons switch.data matches 1 run scoreboard players operation #curr_y_sheepwars_bonbons switch.data = #start_y_sheepwars_bonbons switch.data

@@ -15,10 +15,10 @@ execute if score #scan_charly_murder_2018 switch.data matches 1 in switch:game r
 
 execute if score #scan_charly_murder_2018 switch.data matches 1 run data modify storage switch:maps to_scan.charly_murder_2018 set value 2b
 execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #start_x_charly_murder_2018 switch.data 136001
-execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #start_y_charly_murder_2018 switch.data 1
+execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #start_y_charly_murder_2018 switch.data 101
 execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #start_z_charly_murder_2018 switch.data 136001
 execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #end_x_charly_murder_2018 switch.data 136051
-execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #end_y_charly_murder_2018 switch.data 30
+execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #end_y_charly_murder_2018 switch.data 130
 execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players set #end_z_charly_murder_2018 switch.data 136052
 execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players operation #curr_x_charly_murder_2018 switch.data = #start_x_charly_murder_2018 switch.data
 execute if score #scan_charly_murder_2018 switch.data matches 1 run scoreboard players operation #curr_y_charly_murder_2018 switch.data = #start_y_charly_murder_2018 switch.data

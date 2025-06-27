@@ -18,11 +18,11 @@ execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1 in switch:gam
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1 in minecraft:overworld run forceload add 137058 137000 137078 137120
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1 in switch:game run forceload add 137058 137000 137078 137120
 
-execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1 run scoreboard players set #rg_jn_one_in_the_chamber_1_y switch.data 0
+execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1 run scoreboard players set #rg_jn_one_in_the_chamber_1_y switch.data 100
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1 run scoreboard players set #rg_jn_one_in_the_chamber_1_mod switch.data 0
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches ..92 summon marker run function switch:maps/survival/jn_one_in_the_chamber_1/regeneration_on_marker
 
-execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. in switch:game run kill @e[type=item,x=137039,y=0,z=137060,distance=..1000]
+execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. in switch:game run kill @e[type=item,x=137039,y=100,z=137060,distance=..1000]
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. run data remove storage switch:maps to_regenerate.jn_one_in_the_chamber_1
 
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. in minecraft:overworld run forceload remove 137000 137000 137020 137120

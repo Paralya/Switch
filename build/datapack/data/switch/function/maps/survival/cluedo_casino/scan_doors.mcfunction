@@ -18,10 +18,10 @@ execute if score #scan_cluedo_casino switch.data matches 1 in switch:game run fo
 
 execute if score #scan_cluedo_casino switch.data matches 1 run data modify storage switch:maps to_scan.cluedo_casino set value 2b
 execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #start_x_cluedo_casino switch.data 159001
-execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #start_y_cluedo_casino switch.data 1
+execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #start_y_cluedo_casino switch.data 101
 execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #start_z_cluedo_casino switch.data 159001
 execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #end_x_cluedo_casino switch.data 159074
-execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #end_y_cluedo_casino switch.data 58
+execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #end_y_cluedo_casino switch.data 158
 execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players set #end_z_cluedo_casino switch.data 159068
 execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players operation #curr_x_cluedo_casino switch.data = #start_x_cluedo_casino switch.data
 execute if score #scan_cluedo_casino switch.data matches 1 run scoreboard players operation #curr_y_cluedo_casino switch.data = #start_y_cluedo_casino switch.data

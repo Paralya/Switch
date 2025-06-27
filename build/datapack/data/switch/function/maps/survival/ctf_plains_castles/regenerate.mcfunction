@@ -62,11 +62,11 @@ execute if score #rg_ctf_plains_castles switch.data matches 1 in switch:game run
 execute if score #rg_ctf_plains_castles switch.data matches 1 in minecraft:overworld run forceload add 146328 146000 146341 146227
 execute if score #rg_ctf_plains_castles switch.data matches 1 in switch:game run forceload add 146328 146000 146341 146227
 
-execute if score #rg_ctf_plains_castles switch.data matches 1 run scoreboard players set #rg_ctf_plains_castles_y switch.data 0
+execute if score #rg_ctf_plains_castles switch.data matches 1 run scoreboard players set #rg_ctf_plains_castles_y switch.data 100
 execute if score #rg_ctf_plains_castles switch.data matches 1 run scoreboard players set #rg_ctf_plains_castles_mod switch.data 0
 execute if score #rg_ctf_plains_castles switch.data matches ..2106 summon marker run function switch:maps/survival/ctf_plains_castles/regeneration_on_marker
 
-execute if score #rg_ctf_plains_castles switch.data matches 2107.. in switch:game run kill @e[type=item,x=146170,y=0,z=146113,distance=..1000]
+execute if score #rg_ctf_plains_castles switch.data matches 2107.. in switch:game run kill @e[type=item,x=146170,y=100,z=146113,distance=..1000]
 execute if score #rg_ctf_plains_castles switch.data matches 2107.. run data remove storage switch:maps to_regenerate.ctf_plains_castles
 
 execute if score #rg_ctf_plains_castles switch.data matches 2107.. in minecraft:overworld run forceload remove 146000 146000 146013 146227

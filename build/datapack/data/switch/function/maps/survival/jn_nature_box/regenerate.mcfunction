@@ -30,11 +30,11 @@ execute if score #rg_jn_nature_box switch.data matches 1 in switch:game run forc
 execute if score #rg_jn_nature_box switch.data matches 1 in minecraft:overworld run forceload add 130173 130000 130192 130134
 execute if score #rg_jn_nature_box switch.data matches 1 in switch:game run forceload add 130173 130000 130192 130134
 
-execute if score #rg_jn_nature_box switch.data matches 1 run scoreboard players set #rg_jn_nature_box_y switch.data 0
+execute if score #rg_jn_nature_box switch.data matches 1 run scoreboard players set #rg_jn_nature_box_y switch.data 100
 execute if score #rg_jn_nature_box switch.data matches 1 run scoreboard players set #rg_jn_nature_box_mod switch.data 0
 execute if score #rg_jn_nature_box switch.data matches ..810 summon marker run function switch:maps/survival/jn_nature_box/regeneration_on_marker
 
-execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run kill @e[type=item,x=130096,y=0,z=130067,distance=..1000]
+execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run kill @e[type=item,x=130096,y=100,z=130067,distance=..1000]
 execute if score #rg_jn_nature_box switch.data matches 811.. run data remove storage switch:maps to_regenerate.jn_nature_box
 
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130000 130000 130019 130134

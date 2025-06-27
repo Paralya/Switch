@@ -20,11 +20,11 @@ execute if score #rg_pillars_of_fortune switch.data matches 1 in switch:game run
 execute if score #rg_pillars_of_fortune switch.data matches 1 in minecraft:overworld run forceload add 161080 161000 161100 161100
 execute if score #rg_pillars_of_fortune switch.data matches 1 in switch:game run forceload add 161080 161000 161100 161100
 
-execute if score #rg_pillars_of_fortune switch.data matches 1 run scoreboard players set #rg_pillars_of_fortune_y switch.data 0
+execute if score #rg_pillars_of_fortune switch.data matches 1 run scoreboard players set #rg_pillars_of_fortune_y switch.data 100
 execute if score #rg_pillars_of_fortune switch.data matches 1 run scoreboard players set #rg_pillars_of_fortune_mod switch.data 0
 execute if score #rg_pillars_of_fortune switch.data matches ..455 summon marker run function switch:maps/survival/pillars_of_fortune/regeneration_on_marker
 
-execute if score #rg_pillars_of_fortune switch.data matches 456.. in switch:game run kill @e[type=item,x=161050,y=0,z=161050,distance=..1000]
+execute if score #rg_pillars_of_fortune switch.data matches 456.. in switch:game run kill @e[type=item,x=161050,y=100,z=161050,distance=..1000]
 execute if score #rg_pillars_of_fortune switch.data matches 456.. run data remove storage switch:maps to_regenerate.pillars_of_fortune
 
 execute if score #rg_pillars_of_fortune switch.data matches 456.. in minecraft:overworld run forceload remove 161000 161000 161020 161100

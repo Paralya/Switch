@@ -39,10 +39,10 @@ execute if score #scan_jn_biomes_relief switch.data matches 1 in switch:game run
 
 execute if score #scan_jn_biomes_relief switch.data matches 1 run data modify storage switch:maps to_scan.jn_biomes_relief set value 2b
 execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #start_x_jn_biomes_relief switch.data 141001
-execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #start_y_jn_biomes_relief switch.data 1
+execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #start_y_jn_biomes_relief switch.data 101
 execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #start_z_jn_biomes_relief switch.data 141001
 execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #end_x_jn_biomes_relief switch.data 141197
-execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #end_y_jn_biomes_relief switch.data 88
+execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #end_y_jn_biomes_relief switch.data 188
 execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players set #end_z_jn_biomes_relief switch.data 141138
 execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players operation #curr_x_jn_biomes_relief switch.data = #start_x_jn_biomes_relief switch.data
 execute if score #scan_jn_biomes_relief switch.data matches 1 run scoreboard players operation #curr_y_jn_biomes_relief switch.data = #start_y_jn_biomes_relief switch.data

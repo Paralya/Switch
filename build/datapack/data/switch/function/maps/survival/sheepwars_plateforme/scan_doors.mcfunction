@@ -18,10 +18,10 @@ execute if score #scan_sheepwars_plateforme switch.data matches 1 in switch:game
 
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run data modify storage switch:maps to_scan.sheepwars_plateforme set value 2b
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #start_x_sheepwars_plateforme switch.data 144001
-execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #start_y_sheepwars_plateforme switch.data 1
+execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #start_y_sheepwars_plateforme switch.data 101
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #start_z_sheepwars_plateforme switch.data 144001
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #end_x_sheepwars_plateforme switch.data 144078
-execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #end_y_sheepwars_plateforme switch.data 68
+execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #end_y_sheepwars_plateforme switch.data 168
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players set #end_z_sheepwars_plateforme switch.data 144074
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players operation #curr_x_sheepwars_plateforme switch.data = #start_x_sheepwars_plateforme switch.data
 execute if score #scan_sheepwars_plateforme switch.data matches 1 run scoreboard players operation #curr_y_sheepwars_plateforme switch.data = #start_y_sheepwars_plateforme switch.data

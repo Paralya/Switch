@@ -27,10 +27,10 @@ execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 in switch:g
 
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run data modify storage switch:maps to_scan.jn_one_in_the_chamber_2 set value 2b
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #start_x_jn_one_in_the_chamber_2 switch.data 138001
-execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #start_y_jn_one_in_the_chamber_2 switch.data 1
+execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #start_y_jn_one_in_the_chamber_2 switch.data 101
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #start_z_jn_one_in_the_chamber_2 switch.data 138001
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #end_x_jn_one_in_the_chamber_2 switch.data 138139
-execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #end_y_jn_one_in_the_chamber_2 switch.data 56
+execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #end_y_jn_one_in_the_chamber_2 switch.data 156
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players set #end_z_jn_one_in_the_chamber_2 switch.data 138099
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players operation #curr_x_jn_one_in_the_chamber_2 switch.data = #start_x_jn_one_in_the_chamber_2 switch.data
 execute if score #scan_jn_one_in_the_chamber_2 switch.data matches 1 run scoreboard players operation #curr_y_jn_one_in_the_chamber_2 switch.data = #start_y_jn_one_in_the_chamber_2 switch.data

@@ -26,11 +26,11 @@ execute if score #rg_ctf_flowers switch.data matches 1 in switch:game run forcel
 execute if score #rg_ctf_flowers switch.data matches 1 in minecraft:overworld run forceload add 148177 148000 148202 148105
 execute if score #rg_ctf_flowers switch.data matches 1 in switch:game run forceload add 148177 148000 148202 148105
 
-execute if score #rg_ctf_flowers switch.data matches 1 run scoreboard players set #rg_ctf_flowers_y switch.data 0
+execute if score #rg_ctf_flowers switch.data matches 1 run scoreboard players set #rg_ctf_flowers_y switch.data 100
 execute if score #rg_ctf_flowers switch.data matches 1 run scoreboard players set #rg_ctf_flowers_mod switch.data 0
 execute if score #rg_ctf_flowers switch.data matches ..800 summon marker run function switch:maps/survival/ctf_flowers/regeneration_on_marker
 
-execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run kill @e[type=item,x=148101,y=0,z=148052,distance=..1000]
+execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run kill @e[type=item,x=148101,y=100,z=148052,distance=..1000]
 execute if score #rg_ctf_flowers switch.data matches 801.. run data remove storage switch:maps to_regenerate.ctf_flowers
 
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148000 148000 148025 148105

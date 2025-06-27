@@ -27,10 +27,10 @@ execute if score #scan_jn_countries_castle switch.data matches 1 in switch:game 
 
 execute if score #scan_jn_countries_castle switch.data matches 1 run data modify storage switch:maps to_scan.jn_countries_castle set value 2b
 execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #start_x_jn_countries_castle switch.data 132001
-execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #start_y_jn_countries_castle switch.data 1
+execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #start_y_jn_countries_castle switch.data 101
 execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #start_z_jn_countries_castle switch.data 132001
 execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #end_x_jn_countries_castle switch.data 132119
-execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #end_y_jn_countries_castle switch.data 42
+execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #end_y_jn_countries_castle switch.data 142
 execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players set #end_z_jn_countries_castle switch.data 132119
 execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players operation #curr_x_jn_countries_castle switch.data = #start_x_jn_countries_castle switch.data
 execute if score #scan_jn_countries_castle switch.data matches 1 run scoreboard players operation #curr_y_jn_countries_castle switch.data = #start_y_jn_countries_castle switch.data

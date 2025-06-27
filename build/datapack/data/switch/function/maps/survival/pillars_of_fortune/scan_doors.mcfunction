@@ -24,10 +24,10 @@ execute if score #scan_pillars_of_fortune switch.data matches 1 in switch:game r
 
 execute if score #scan_pillars_of_fortune switch.data matches 1 run data modify storage switch:maps to_scan.pillars_of_fortune set value 2b
 execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #start_x_pillars_of_fortune switch.data 161001
-execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #start_y_pillars_of_fortune switch.data 1
+execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #start_y_pillars_of_fortune switch.data 101
 execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #start_z_pillars_of_fortune switch.data 161001
 execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #end_x_pillars_of_fortune switch.data 161099
-execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #end_y_pillars_of_fortune switch.data 89
+execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #end_y_pillars_of_fortune switch.data 189
 execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players set #end_z_pillars_of_fortune switch.data 161099
 execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players operation #curr_x_pillars_of_fortune switch.data = #start_x_pillars_of_fortune switch.data
 execute if score #scan_pillars_of_fortune switch.data matches 1 run scoreboard players operation #curr_y_pillars_of_fortune switch.data = #start_y_pillars_of_fortune switch.data

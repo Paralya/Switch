@@ -14,11 +14,11 @@ execute if score #rg_arti_tnt_run_tower switch.data matches 1 in switch:game run
 execute if score #rg_arti_tnt_run_tower switch.data matches 1 in minecraft:overworld run forceload add 152010 152000 152020 152020
 execute if score #rg_arti_tnt_run_tower switch.data matches 1 in switch:game run forceload add 152010 152000 152020 152020
 
-execute if score #rg_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #rg_arti_tnt_run_tower_y switch.data 0
+execute if score #rg_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #rg_arti_tnt_run_tower_y switch.data 100
 execute if score #rg_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #rg_arti_tnt_run_tower_mod switch.data 0
 execute if score #rg_arti_tnt_run_tower switch.data matches ..148 summon marker run function switch:maps/survival/arti_tnt_run_tower/regeneration_on_marker
 
-execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in switch:game run kill @e[type=item,x=152010,y=0,z=152010,distance=..1000]
+execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in switch:game run kill @e[type=item,x=152010,y=100,z=152010,distance=..1000]
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. run data remove storage switch:maps to_regenerate.arti_tnt_run_tower
 
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in minecraft:overworld run forceload remove 152000 152000 152010 152020

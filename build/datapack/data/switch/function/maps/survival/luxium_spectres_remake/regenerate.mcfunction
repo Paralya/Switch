@@ -20,11 +20,11 @@ execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game
 execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add 142085 142000 142106 142106
 execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add 142085 142000 142106 142106
 
-execute if score #rg_luxium_spectres_remake switch.data matches 1 run scoreboard players set #rg_luxium_spectres_remake_y switch.data 0
+execute if score #rg_luxium_spectres_remake switch.data matches 1 run scoreboard players set #rg_luxium_spectres_remake_y switch.data 100
 execute if score #rg_luxium_spectres_remake switch.data matches 1 run scoreboard players set #rg_luxium_spectres_remake_mod switch.data 0
 execute if score #rg_luxium_spectres_remake switch.data matches ..415 summon marker run function switch:maps/survival/luxium_spectres_remake/regeneration_on_marker
 
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run kill @e[type=item,x=142053,y=0,z=142053,distance=..1000]
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run kill @e[type=item,x=142053,y=100,z=142053,distance=..1000]
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. run data remove storage switch:maps to_regenerate.luxium_spectres_remake
 
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove 142000 142000 142021 142106

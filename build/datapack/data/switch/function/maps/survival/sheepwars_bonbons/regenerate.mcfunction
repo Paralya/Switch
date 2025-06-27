@@ -18,11 +18,11 @@ execute if score #rg_sheepwars_bonbons switch.data matches 1 in switch:game run 
 execute if score #rg_sheepwars_bonbons switch.data matches 1 in minecraft:overworld run forceload add 143062 143000 143083 143114
 execute if score #rg_sheepwars_bonbons switch.data matches 1 in switch:game run forceload add 143062 143000 143083 143114
 
-execute if score #rg_sheepwars_bonbons switch.data matches 1 run scoreboard players set #rg_sheepwars_bonbons_y switch.data 0
+execute if score #rg_sheepwars_bonbons switch.data matches 1 run scoreboard players set #rg_sheepwars_bonbons_y switch.data 100
 execute if score #rg_sheepwars_bonbons switch.data matches 1 run scoreboard players set #rg_sheepwars_bonbons_mod switch.data 0
 execute if score #rg_sheepwars_bonbons switch.data matches ..336 summon marker run function switch:maps/survival/sheepwars_bonbons/regeneration_on_marker
 
-execute if score #rg_sheepwars_bonbons switch.data matches 337.. in switch:game run kill @e[type=item,x=143041,y=0,z=143057,distance=..1000]
+execute if score #rg_sheepwars_bonbons switch.data matches 337.. in switch:game run kill @e[type=item,x=143041,y=100,z=143057,distance=..1000]
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. run data remove storage switch:maps to_regenerate.sheepwars_bonbons
 
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in minecraft:overworld run forceload remove 143000 143000 143021 143114

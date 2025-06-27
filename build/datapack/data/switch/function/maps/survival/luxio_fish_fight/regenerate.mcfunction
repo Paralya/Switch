@@ -14,11 +14,11 @@ execute if score #rg_luxio_fish_fight switch.data matches 1 in switch:game run f
 execute if score #rg_luxio_fish_fight switch.data matches 1 in minecraft:overworld run forceload add 151028 151000 151056 151055
 execute if score #rg_luxio_fish_fight switch.data matches 1 in switch:game run forceload add 151028 151000 151056 151055
 
-execute if score #rg_luxio_fish_fight switch.data matches 1 run scoreboard players set #rg_luxio_fish_fight_y switch.data 0
+execute if score #rg_luxio_fish_fight switch.data matches 1 run scoreboard players set #rg_luxio_fish_fight_y switch.data 100
 execute if score #rg_luxio_fish_fight switch.data matches 1 run scoreboard players set #rg_luxio_fish_fight_mod switch.data 0
 execute if score #rg_luxio_fish_fight switch.data matches ..74 summon marker run function switch:maps/survival/luxio_fish_fight/regeneration_on_marker
 
-execute if score #rg_luxio_fish_fight switch.data matches 75.. in switch:game run kill @e[type=item,x=151028,y=0,z=151027,distance=..1000]
+execute if score #rg_luxio_fish_fight switch.data matches 75.. in switch:game run kill @e[type=item,x=151028,y=100,z=151027,distance=..1000]
 execute if score #rg_luxio_fish_fight switch.data matches 75.. run data remove storage switch:maps to_regenerate.luxio_fish_fight
 
 execute if score #rg_luxio_fish_fight switch.data matches 75.. in minecraft:overworld run forceload remove 151000 151000 151028 151055

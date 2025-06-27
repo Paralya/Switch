@@ -22,11 +22,11 @@ execute if score #rg_jn_countries_castle switch.data matches 1 in switch:game ru
 execute if score #rg_jn_countries_castle switch.data matches 1 in minecraft:overworld run forceload add 132100 132000 132120 132120
 execute if score #rg_jn_countries_castle switch.data matches 1 in switch:game run forceload add 132100 132000 132120 132120
 
-execute if score #rg_jn_countries_castle switch.data matches 1 run scoreboard players set #rg_jn_countries_castle_y switch.data 0
+execute if score #rg_jn_countries_castle switch.data matches 1 run scoreboard players set #rg_jn_countries_castle_y switch.data 100
 execute if score #rg_jn_countries_castle switch.data matches 1 run scoreboard players set #rg_jn_countries_castle_mod switch.data 0
 execute if score #rg_jn_countries_castle switch.data matches ..264 summon marker run function switch:maps/survival/jn_countries_castle/regeneration_on_marker
 
-execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run kill @e[type=item,x=132060,y=0,z=132060,distance=..1000]
+execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run kill @e[type=item,x=132060,y=100,z=132060,distance=..1000]
 execute if score #rg_jn_countries_castle switch.data matches 265.. run data remove storage switch:maps to_regenerate.jn_countries_castle
 
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132000 132000 132020 132120

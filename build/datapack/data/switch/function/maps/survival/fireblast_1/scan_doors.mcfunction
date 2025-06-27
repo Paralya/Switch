@@ -18,10 +18,10 @@ execute if score #scan_fireblast_1 switch.data matches 1 in switch:game run forc
 
 execute if score #scan_fireblast_1 switch.data matches 1 run data modify storage switch:maps to_scan.fireblast_1 set value 2b
 execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #start_x_fireblast_1 switch.data 163001
-execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #start_y_fireblast_1 switch.data 1
+execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #start_y_fireblast_1 switch.data 101
 execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #start_z_fireblast_1 switch.data 163001
 execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #end_x_fireblast_1 switch.data 163074
-execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #end_y_fireblast_1 switch.data 49
+execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #end_y_fireblast_1 switch.data 149
 execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players set #end_z_fireblast_1 switch.data 163074
 execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players operation #curr_x_fireblast_1 switch.data = #start_x_fireblast_1 switch.data
 execute if score #scan_fireblast_1 switch.data matches 1 run scoreboard players operation #curr_y_fireblast_1 switch.data = #start_y_fireblast_1 switch.data

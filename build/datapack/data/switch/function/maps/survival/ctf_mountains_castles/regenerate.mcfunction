@@ -9,26 +9,26 @@
 
 scoreboard players add #rg_ctf_mountains_castles switch.data 1
 execute if score #rg_ctf_mountains_castles switch.data matches 1 run data modify storage switch:maps to_regenerate.ctf_mountains_castles set value 2b
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147000 147000 147019 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147000 147000 147019 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147019 147000 147038 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147019 147000 147038 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147038 147000 147057 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147038 147000 147057 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147057 147000 147076 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147057 147000 147076 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147076 147000 147096 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147076 147000 147096 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147096 147000 147115 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147096 147000 147115 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147115 147000 147134 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147115 147000 147134 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147134 147000 147153 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147134 147000 147153 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147153 147000 147172 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147153 147000 147172 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147172 147000 147191 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147172 147000 147191 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 146999 147000 147018 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 146999 147000 147018 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147018 147000 147037 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147018 147000 147037 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147037 147000 147056 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147037 147000 147056 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147056 147000 147076 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147056 147000 147076 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147076 147000 147095 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147076 147000 147095 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147095 147000 147114 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147095 147000 147114 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147114 147000 147133 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147114 147000 147133 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147133 147000 147152 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147133 147000 147152 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147152 147000 147171 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147152 147000 147171 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147171 147000 147191 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147171 147000 147191 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147191 147000 147210 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147191 147000 147210 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147210 147000 147229 147158
@@ -37,10 +37,10 @@ execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:ov
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147229 147000 147248 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147248 147000 147267 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147248 147000 147267 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147267 147000 147287 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147267 147000 147287 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147287 147000 147306 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147287 147000 147306 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147267 147000 147286 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147267 147000 147286 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147286 147000 147306 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147286 147000 147306 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147306 147000 147325 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147306 147000 147325 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147325 147000 147344 147158
@@ -48,42 +48,42 @@ execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game 
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in minecraft:overworld run forceload add 147344 147000 147363 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 1 in switch:game run forceload add 147344 147000 147363 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 1 run scoreboard players set #rg_ctf_mountains_castles_y switch.data -64
+execute if score #rg_ctf_mountains_castles switch.data matches 1 run scoreboard players set #rg_ctf_mountains_castles_y switch.data 100
 execute if score #rg_ctf_mountains_castles switch.data matches 1 run scoreboard players set #rg_ctf_mountains_castles_mod switch.data 0
 execute if score #rg_ctf_mountains_castles switch.data matches ..3097 summon marker run function switch:maps/survival/ctf_mountains_castles/regeneration_on_marker
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run kill @e[type=item,x=147181,y=-64,z=147079,distance=..1000]
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run kill @e[type=item,x=147181,y=100,z=147079,distance=..1000]
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run data remove storage switch:maps to_regenerate.ctf_mountains_castles
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147000 147000 147019 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147000 147000 147019 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 146999 147000 147018 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 146999 147000 147018 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147019 147000 147038 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147019 147000 147038 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147018 147000 147037 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147018 147000 147037 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147038 147000 147057 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147038 147000 147057 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147037 147000 147056 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147037 147000 147056 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147057 147000 147076 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147057 147000 147076 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147056 147000 147076 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147056 147000 147076 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147076 147000 147096 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147076 147000 147096 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147076 147000 147095 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147076 147000 147095 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147096 147000 147115 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147096 147000 147115 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147095 147000 147114 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147095 147000 147114 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147115 147000 147134 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147115 147000 147134 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147114 147000 147133 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147114 147000 147133 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147134 147000 147153 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147134 147000 147153 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147133 147000 147152 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147133 147000 147152 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147153 147000 147172 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147153 147000 147172 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147152 147000 147171 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147152 147000 147171 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147172 147000 147191 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147172 147000 147191 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147171 147000 147191 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147171 147000 147191 147158
 
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147191 147000 147210 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147191 147000 147210 147158
@@ -97,11 +97,11 @@ execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147248 147000 147267 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147248 147000 147267 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147267 147000 147287 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147267 147000 147287 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147267 147000 147286 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147267 147000 147286 147158
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147287 147000 147306 147158
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147287 147000 147306 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147286 147000 147306 147158
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147286 147000 147306 147158
 
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove 147306 147000 147325 147158
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove 147306 147000 147325 147158

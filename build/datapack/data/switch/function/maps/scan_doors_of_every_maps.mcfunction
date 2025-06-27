@@ -95,16 +95,12 @@ data modify storage switch:maps to_scan.ancienne_egypte_2013 set value 1b
 data modify storage switch:maps to_scan.old_japan_apocalypse set value 1b
 data modify storage switch:maps to_scan.lost_graveyard_remastered set value 1b
 data modify storage switch:maps to_scan.jn_nature_box set value 1b
-data modify storage switch:maps to_scan.block_party_lobby set value 1b
 data modify storage switch:maps to_scan.jn_countries_castle set value 1b
-data modify storage switch:maps to_scan.jn_ice_castles set value 1b
 data modify storage switch:maps to_scan.jn_murder_mystery set value 1b
 data modify storage switch:maps to_scan.jn_sakura_pvpbox set value 1b
 data modify storage switch:maps to_scan.charly_murder_2018 set value 1b
 data modify storage switch:maps to_scan.jn_one_in_the_chamber_1 set value 1b
 data modify storage switch:maps to_scan.jn_one_in_the_chamber_2 set value 1b
-data modify storage switch:maps to_scan.overgrown_forest set value 1b
-data modify storage switch:maps to_scan.pretty_garden set value 1b
 data modify storage switch:maps to_scan.jn_biomes_relief set value 1b
 data modify storage switch:maps to_scan.luxium_spectres_remake set value 1b
 data modify storage switch:maps to_scan.sheepwars_bonbons set value 1b
@@ -117,6 +113,7 @@ data modify storage switch:maps to_scan.ctf_nether set value 1b
 data modify storage switch:maps to_scan.ctf_forest_castles set value 1b
 data modify storage switch:maps to_scan.luxio_fish_fight set value 1b
 data modify storage switch:maps to_scan.arti_tnt_run_tower set value 1b
+data modify storage switch:maps to_scan.memory_mine set value 1b
 data modify storage switch:maps to_scan.sheepwars_colored_sheeps set value 1b
 data modify storage switch:maps to_scan.elza_dual_biomes set value 1b
 data modify storage switch:maps to_scan.airdox_fish_fight set value 1b

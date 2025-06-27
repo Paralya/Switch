@@ -20,11 +20,11 @@ execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:ga
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add 154086 154000 154107 154106
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add 154086 154000 154107 154106
 
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #rg_sheepwars_colored_sheeps_y switch.data 0
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #rg_sheepwars_colored_sheeps_y switch.data 100
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #rg_sheepwars_colored_sheeps_mod switch.data 0
 execute if score #rg_sheepwars_colored_sheeps switch.data matches ..350 summon marker run function switch:maps/survival/sheepwars_colored_sheeps/regeneration_on_marker
 
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run kill @e[type=item,x=154053,y=0,z=154053,distance=..1000]
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run kill @e[type=item,x=154053,y=100,z=154053,distance=..1000]
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run data remove storage switch:maps to_regenerate.sheepwars_colored_sheeps
 
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove 154000 154000 154021 154106

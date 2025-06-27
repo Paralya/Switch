@@ -24,10 +24,10 @@ execute if score #scan_sheepwars_ilots switch.data matches 1 in switch:game run 
 
 execute if score #scan_sheepwars_ilots switch.data matches 1 run data modify storage switch:maps to_scan.sheepwars_ilots set value 2b
 execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #start_x_sheepwars_ilots switch.data 145001
-execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #start_y_sheepwars_ilots switch.data 1
+execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #start_y_sheepwars_ilots switch.data 101
 execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #start_z_sheepwars_ilots switch.data 145001
 execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #end_x_sheepwars_ilots switch.data 145091
-execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #end_y_sheepwars_ilots switch.data 92
+execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #end_y_sheepwars_ilots switch.data 192
 execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players set #end_z_sheepwars_ilots switch.data 145121
 execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players operation #curr_x_sheepwars_ilots switch.data = #start_x_sheepwars_ilots switch.data
 execute if score #scan_sheepwars_ilots switch.data matches 1 run scoreboard players operation #curr_y_sheepwars_ilots switch.data = #start_y_sheepwars_ilots switch.data

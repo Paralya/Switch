@@ -95,16 +95,12 @@ data modify storage switch:maps to_regenerate.ancienne_egypte_2013 set value 1b
 data modify storage switch:maps to_regenerate.old_japan_apocalypse set value 1b
 data modify storage switch:maps to_regenerate.lost_graveyard_remastered set value 1b
 data modify storage switch:maps to_regenerate.jn_nature_box set value 1b
-data modify storage switch:maps to_regenerate.block_party_lobby set value 1b
 data modify storage switch:maps to_regenerate.jn_countries_castle set value 1b
-data modify storage switch:maps to_regenerate.jn_ice_castles set value 1b
 data modify storage switch:maps to_regenerate.jn_murder_mystery set value 1b
 data modify storage switch:maps to_regenerate.jn_sakura_pvpbox set value 1b
 data modify storage switch:maps to_regenerate.charly_murder_2018 set value 1b
 data modify storage switch:maps to_regenerate.jn_one_in_the_chamber_1 set value 1b
 data modify storage switch:maps to_regenerate.jn_one_in_the_chamber_2 set value 1b
-data modify storage switch:maps to_regenerate.overgrown_forest set value 1b
-data modify storage switch:maps to_regenerate.pretty_garden set value 1b
 data modify storage switch:maps to_regenerate.jn_biomes_relief set value 1b
 data modify storage switch:maps to_regenerate.luxium_spectres_remake set value 1b
 data modify storage switch:maps to_regenerate.sheepwars_bonbons set value 1b
@@ -117,6 +113,7 @@ data modify storage switch:maps to_regenerate.ctf_nether set value 1b
 data modify storage switch:maps to_regenerate.ctf_forest_castles set value 1b
 data modify storage switch:maps to_regenerate.luxio_fish_fight set value 1b
 data modify storage switch:maps to_regenerate.arti_tnt_run_tower set value 1b
+data modify storage switch:maps to_regenerate.memory_mine set value 1b
 data modify storage switch:maps to_regenerate.sheepwars_colored_sheeps set value 1b
 data modify storage switch:maps to_regenerate.elza_dual_biomes set value 1b
 data modify storage switch:maps to_regenerate.airdox_fish_fight set value 1b

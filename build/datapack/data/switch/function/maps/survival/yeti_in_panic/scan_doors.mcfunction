@@ -18,10 +18,10 @@ execute if score #scan_yeti_in_panic switch.data matches 1 in switch:game run fo
 
 execute if score #scan_yeti_in_panic switch.data matches 1 run data modify storage switch:maps to_scan.yeti_in_panic set value 2b
 execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #start_x_yeti_in_panic switch.data 158001
-execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #start_y_yeti_in_panic switch.data 1
+execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #start_y_yeti_in_panic switch.data 101
 execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #start_z_yeti_in_panic switch.data 158001
 execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #end_x_yeti_in_panic switch.data 158076
-execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #end_y_yeti_in_panic switch.data 66
+execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #end_y_yeti_in_panic switch.data 166
 execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players set #end_z_yeti_in_panic switch.data 158069
 execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players operation #curr_x_yeti_in_panic switch.data = #start_x_yeti_in_panic switch.data
 execute if score #scan_yeti_in_panic switch.data matches 1 run scoreboard players operation #curr_y_yeti_in_panic switch.data = #start_y_yeti_in_panic switch.data

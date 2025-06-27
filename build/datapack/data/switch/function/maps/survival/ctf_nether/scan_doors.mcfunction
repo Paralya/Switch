@@ -81,10 +81,10 @@ execute if score #scan_ctf_nether switch.data matches 1 in switch:game run force
 
 execute if score #scan_ctf_nether switch.data matches 1 run data modify storage switch:maps to_scan.ctf_nether set value 2b
 execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #start_x_ctf_nether switch.data 149001
-execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #start_y_ctf_nether switch.data -63
+execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #start_y_ctf_nether switch.data 101
 execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #start_z_ctf_nether switch.data 149001
 execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #end_x_ctf_nether switch.data 149201
-execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #end_y_ctf_nether switch.data 44
+execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #end_y_ctf_nether switch.data 208
 execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players set #end_z_ctf_nether switch.data 149349
 execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players operation #curr_x_ctf_nether switch.data = #start_x_ctf_nether switch.data
 execute if score #scan_ctf_nether switch.data matches 1 run scoreboard players operation #curr_y_ctf_nether switch.data = #start_y_ctf_nether switch.data

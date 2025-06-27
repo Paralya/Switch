@@ -21,10 +21,10 @@ execute if score #scan_octogone_nether_ice switch.data matches 1 in switch:game 
 
 execute if score #scan_octogone_nether_ice switch.data matches 1 run data modify storage switch:maps to_scan.octogone_nether_ice set value 2b
 execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #start_x_octogone_nether_ice switch.data 160001
-execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #start_y_octogone_nether_ice switch.data 1
+execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #start_y_octogone_nether_ice switch.data 101
 execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #start_z_octogone_nether_ice switch.data 160001
 execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #end_x_octogone_nether_ice switch.data 160079
-execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #end_y_octogone_nether_ice switch.data 61
+execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #end_y_octogone_nether_ice switch.data 161
 execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players set #end_z_octogone_nether_ice switch.data 160079
 execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players operation #curr_x_octogone_nether_ice switch.data = #start_x_octogone_nether_ice switch.data
 execute if score #scan_octogone_nether_ice switch.data matches 1 run scoreboard players operation #curr_y_octogone_nether_ice switch.data = #start_y_octogone_nether_ice switch.data
