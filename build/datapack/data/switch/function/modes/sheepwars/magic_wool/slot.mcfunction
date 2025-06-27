@@ -5,8 +5,7 @@
 #			#sheepwars:signals/magic_wool_shot
 #
 # @executed			as the arrow owner & at the colored wool marker
-#
-
+# 
 # @description		Depending on the team of the shooter, apply a random bonus and print a message
 #
 

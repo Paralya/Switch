@@ -5,13 +5,12 @@
 #			#sheepwars:signals/player_killed
 #
 # @executed			as a player
-#
-
+# 
 # @input victim		The player who has been damaged (executing the function tag)
 # @input damager	The owner of the sheep who killed the victim (tagged with "sheepwars.owner")
-#
+# 
 # @description		Send a function tag signal if he is dead, and remove the damage tag
-#					The function tag signal can be used to customize the death of the player (message, etc.)
+# 				The function tag signal can be used to customize the death of the player (message, etc.)
 #
 
 # Suicidaire advancement

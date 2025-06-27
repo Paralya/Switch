@@ -1,24 +1,25 @@
 
-## /execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1,delay:20}}
-# Arguments:
-# as @s = player
-# at @s = current position
-# x: float = target x position
-# y: float = target y position
-# z: float = target z position
-# time: int = time in ticks
-# with: {...} = additional arguments (optional)
-#   yaw: float = yaw rotation
-#   pitch: float = pitch rotation
-#   go_side: float = how far to go side (0 = don't go side)
-#   add_y: float = additional y position (to add to the middle point, if none default is 20.0)
-#   particle: int = particle effect (0 = none, 1 = glow)
-#   interpolation: int = teleport_duration (0 = instant, 1 = 1 tick, 2 = 2 ticks, etc.)
-#   delay: int = delay in ticks before starting the cinematic (default is 0)
-
-# Tag the player and remember it's id
-scoreboard players operation #player_id switch.id = @s switch.id
-tag @s add switch.temp
+#> launch
+#
+# @executed			as the player & at current position
+#
+# @input macro		x : float - target x position
+# @input macro		y : float - target y position
+# @input macro		z : float - target z position
+# @input macro		time : int - time in ticks
+# @input macro		with : compound - additional arguments (optional)
+#						- yaw : float - yaw rotation
+#						- pitch : float - pitch rotation
+#						- go_side : float - how far to go side (0 = don't go side)
+#						- add_y : float - additional y position (default: 20.0)
+#						- particle : int - particle effect (0 = none, 1 = glow)
+#						- interpolation : int - teleport duration (default: 1)
+#						- delay : int - delay in ticks before starting (default: 0)
+#
+# @description		Launch a cinematic that moves the player to specified coordinates with optional settings
+#
+# @example			/execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1,delay:20}}
+#
 
 ## Get the arguments
 # Get the target position as double type (and increment height by 1.6)
@@ -33,26 +34,12 @@ execute store result storage switch:temp target_position[2] double 0.001 run dat
 # Get the time as int type
 $scoreboard players set #cinematic_time switch.data $(time)
 
-# Get the current position (y + 1.6) and rotation
-tp @s ~ ~1.6 ~ ~ ~
-data modify storage switch:temp current_position set from entity @s Pos
-data modify storage switch:temp current_rotation set from entity @s Rotation
-data modify storage switch:temp target_rotation set from storage switch:temp current_rotation
-
+# Set target rotation from current rotation (will be overridden if yaw/pitch provided in with)
+data modify storage switch:temp target_rotation set from entity @s Rotation
 
 ## Remember the additional arguments
 $data modify storage switch:temp with set value $(with)
-execute unless data storage switch:temp with.interpolation run data modify storage switch:temp with.interpolation set value 1
-execute store result score #cinematic_interpolation switch.data run data get storage switch:temp with.interpolation
-execute if data storage switch:temp with.pitch if data storage switch:temp with.yaw run function switch:cinematic/get_rotation_arguments with storage switch:temp with
-execute unless data storage switch:temp with.go_side run data modify storage switch:temp with.go_side set value 0
-execute unless data storage switch:temp with.add_y run data modify storage switch:temp with.add_y set value 20.0
-execute unless data storage switch:temp with.delay run data modify storage switch:temp with.delay set value 0
 
-
-## Summon the entity that will control the player
-execute summon item_display run function switch:cinematic/setup_entity
-
-# Remove the tag
-tag @s remove switch.temp
+# Call common launch function
+function switch:cinematic/common_launch
 

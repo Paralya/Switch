@@ -1,7 +1,7 @@
 
 #> switch:cinematic/setup_entity
 #
-# @within	switch:cinematic/launch
+# @within	switch:cinematic/common_launch
 #
 
 ## As we are updating every X ticks, teleport duration is X and step is multiplied by X

@@ -1,7 +1,7 @@
 
 #> switch:cinematic/get_rotation_arguments
 #
-# @within	switch:cinematic/launch with storage switch:temp with
+# @within	switch:cinematic/common_launch with storage switch:temp with
 #
 
 # Get the target rotation as float type

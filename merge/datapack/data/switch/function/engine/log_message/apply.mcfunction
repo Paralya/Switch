@@ -1,7 +1,6 @@
 
 #> switch:engine/log_message/apply
 #
-# @within			?
 # @executed			Don't care
 #
 # @input storage	switch:main MessageToLog
