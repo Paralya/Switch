@@ -1,7 +1,8 @@
 
 #> switch:cinematic/launch
 #
-# @within	switch:player/tick_detach {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
+# @within	switch:cinematic/intro_spread/cinematic_start with storage switch:temp player_cinematic
+#			switch:player/tick_detach {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
 #			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
 #			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}
 #			switch:player/tick_detach {x:0.5,y:75.51,z:-23.5,time:20,with:{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}
@@ -29,12 +30,12 @@
 # 					- go_side : float - how far to go side (0 = don't go side)
 # 					- add_y : float - additional y position (default: 20.0)
 # 					- particle : int - particle effect (0 = none, 1 = glow)
-# 					- interpolation : int - teleport duration (default: 1)
+# 					- interpolation : int - teleport duration (default: 2)
 # 					- delay : int - delay in ticks before starting (default: 0)
 # 
 # @description		Launch a cinematic that moves the player to specified coordinates with optional settings
 # 
-# @example			/execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1,delay:20}}
+# @example			/execute as @s positioned 0 69 0 rotated -55 10 run function switch:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:2,delay:20}}
 #
 
 ## Get the arguments

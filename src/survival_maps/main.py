@@ -5,6 +5,7 @@ import stouputils as stp
 from .definitions import generate_folders_for_survival_maps
 from .utils import (
 	generate_door_files,
+	generate_intro_spread_file,
 	generate_load_file,
 	generate_map_usage_file,
 	generate_regenerate_every_maps_files,
@@ -28,6 +29,7 @@ def main() -> None:
 	generate_regenerate_map_file()
 	generate_resume_regeneration_file()
 	generate_spread_one_player_file()
+	generate_intro_spread_file()
 
 	# For each map, note what modes use it
 	generate_map_usage_file()

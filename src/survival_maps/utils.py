@@ -4,6 +4,7 @@
 import json
 
 import stouputils as stp
+from PIL import Image
 from beet import Function
 from stewbeet.core import Mem, write_function
 
@@ -515,6 +516,11 @@ kill @s
 	# Write the scan_doors file
 	scan_every_door_in_map(namespace, start_pos, end_pos, paste_start_height, splitted_coordinates)
 
+	# Write the intro_spread file
+	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
+execute in switch:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{}}}}
+""")
+
 	# Add the map to the list of the generated maps and return
 	generated_maps.append(namespace)
 	survival_maps.append(namespace)
@@ -597,6 +603,11 @@ kill @s
 
 	# Write the spread_players file
 	create_spread_players_file(namespace, start_pos, end_pos, paste_start_height = y)
+
+	# Write the intro_spread file
+	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
+execute positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{}}}}
+""")
 
 	# Add the map to the list of the generated maps and return
 	generated_maps.append(namespace)
@@ -714,6 +725,16 @@ def generate_spread_one_player_file() -> None:
 	write_function(PATH, "# Spread one player on the survival maps")
 	for name in generated_maps:
 		write_function(PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/spread_one_player')
+
+def generate_intro_spread_file() -> None:
+	""" Generate the intro_spread file for the survival maps
+	Args:
+		config (dict): The configuration of the project
+	"""
+	PATH: str = "switch:maps/intro_spread"
+	write_function(PATH, "# Launch the intro spread for the survival maps")
+	for name in generated_maps:
+		write_function(PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/intro_spread')
 
 
 @stp.measure_time(stp.progress, "Generated the map usage file")

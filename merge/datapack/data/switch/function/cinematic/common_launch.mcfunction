@@ -17,7 +17,7 @@ data modify storage switch:temp current_position set from entity @s Pos
 data modify storage switch:temp current_rotation set from entity @s Rotation
 
 ## Remember the additional arguments
-execute unless data storage switch:temp with.interpolation run data modify storage switch:temp with.interpolation set value 1
+execute unless data storage switch:temp with.interpolation run data modify storage switch:temp with.interpolation set value 2
 execute store result score #cinematic_interpolation switch.data run data get storage switch:temp with.interpolation
 execute if data storage switch:temp with.pitch if data storage switch:temp with.yaw run function switch:cinematic/get_rotation_arguments with storage switch:temp with
 execute unless data storage switch:temp with.go_side run data modify storage switch:temp with.go_side set value 0

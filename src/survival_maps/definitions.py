@@ -16,7 +16,7 @@ def generate_folders_for_survival_maps() -> None:
 	"""
 	clone_survival(100, (500, 100, 500), (552, 143, 552), ("laser_game", "LaserGame51 (2010 IRL layout)", "Stoupy, Ikinox"), view=(517.62, 111.36, 518.34, -31.98, 9.81))
 	clone_survival(100, (1000, 100, 1000), (1100, 144, 1100), ("pitchout_1", "Wet Wood Dome", "Stoupy, ?"), view=(1081.19, 117.69, 1065.08, 114.72, 15.66))
-	clone_survival(100, (1500, 100, 1500), (1684, 189, 1655), ("traitor_original", "Traitor Original", "(Paralya) Stoupy, Luxio, Jugou2, etc."), view=(1566.00, 122.20, 1533.79, -56.61, 8.90))
+	clone_survival(100, (1500, 100, 1500), (1684, 189, 1655), ("traitor_original", "Traitor Original", "Stoupy, Luxio, Jugou2, etc. (Paralya)"), view=(1566.00, 122.20, 1533.79, -56.61, 8.90))
 	clone_survival(100, (2000, 100, 2000), (2108, 193, 2126), ("area_51", "Area 51", "Jugou2, Stoupy, TheFRcRaZy"), view=(2046.90, 105.29, 2056.55, 145.40, -2.02))
 	clone_survival(100, (2500, 100, 2500), (2586, 185, 2595), ("spectre_original", "Spectre Original", "DIocelot, Stoupy"), view=(2526.27, 150.48, 2573.21, -143.57, 25.80))
 	fill_survival((2750, -64, 2750), (3250, 320, 3250), ("glassrunner", "Glassrunner", "AirDox"), "air", "#switch:glassrunner/glass", view=(3003.25, 138.64, 2987.65, 12.58, 56.33))
