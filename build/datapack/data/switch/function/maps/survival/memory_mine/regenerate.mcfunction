@@ -23,12 +23,10 @@ execute if score #rg_memory_mine switch.data matches 35.. run data remove storag
 
 execute if score #rg_memory_mine switch.data matches 35.. in minecraft:overworld run forceload remove 153000 153000 153014 153036
 execute if score #rg_memory_mine switch.data matches 35.. in switch:game run forceload remove 153000 153000 153014 153036
-
 execute if score #rg_memory_mine switch.data matches 35.. in minecraft:overworld run forceload remove 153014 153000 153029 153036
 execute if score #rg_memory_mine switch.data matches 35.. in switch:game run forceload remove 153014 153000 153029 153036
 
 execute if score #rg_memory_mine switch.data matches 35.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Memory Mine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_memory_mine switch.data matches 35.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Memory Mine` just regenerated!"}'
 execute if score #rg_memory_mine switch.data matches 35.. run function switch:engine/log_message/apply
 

@@ -23,12 +23,10 @@ execute if score #rg_layers_2_teams switch.data matches 127.. run data remove st
 
 execute if score #rg_layers_2_teams switch.data matches 127.. in minecraft:overworld run forceload remove 27000 27000 27018 27062
 execute if score #rg_layers_2_teams switch.data matches 127.. in switch:game run forceload remove 27000 27000 27018 27062
-
 execute if score #rg_layers_2_teams switch.data matches 127.. in minecraft:overworld run forceload remove 27018 27000 27036 27062
 execute if score #rg_layers_2_teams switch.data matches 127.. in switch:game run forceload remove 27018 27000 27036 27062
 
 execute if score #rg_layers_2_teams switch.data matches 127.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Layers 2 Teams","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_layers_2_teams switch.data matches 127.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Layers 2 Teams` just regenerated!"}'
 execute if score #rg_layers_2_teams switch.data matches 127.. run function switch:engine/log_message/apply
 

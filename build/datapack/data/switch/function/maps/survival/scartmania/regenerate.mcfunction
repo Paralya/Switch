@@ -41,39 +41,28 @@ execute if score #rg_scartmania switch.data matches 1013.. run data remove stora
 
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58000 58000 58015 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58000 58000 58015 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58015 58000 58029 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58015 58000 58029 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58029 58000 58044 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58029 58000 58044 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58044 58000 58058 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58044 58000 58058 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58058 58000 58073 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58058 58000 58073 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58073 58000 58087 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58073 58000 58087 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58087 58000 58102 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58087 58000 58102 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58102 58000 58116 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58102 58000 58116 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58116 58000 58131 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58116 58000 58131 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58131 58000 58145 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58131 58000 58145 58188
-
 execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworld run forceload remove 58145 58000 58160 58188
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58145 58000 58160 58188
 
 execute if score #rg_scartmania switch.data matches 1013.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Scartmania","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"50","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_scartmania switch.data matches 1013.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Scartmania` just regenerated!"}'
 execute if score #rg_scartmania switch.data matches 1013.. run function switch:engine/log_message/apply
 

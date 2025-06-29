@@ -4,7 +4,6 @@
 import json
 
 import stouputils as stp
-from PIL import Image
 from beet import Function
 from stewbeet.core import Mem, write_function
 
@@ -13,10 +12,9 @@ from .shared_memory import SharedMemory, generated_maps, survival_maps
 
 # Functions
 def convert_tick_to_strings(tick: int, name: str) -> tuple:
-	""" Converts "tick" in entry to formatted strings
-	such as "XX seconds (XXmXXs)" or "XX seconds"
-	if the tick is less than 60
-	and a tellraw command to display the time\n
+	""" Converts "tick" in entry to formatted strings such as "XX seconds (XXmXXs)" or "XX seconds"
+	if the tick is less than 60 and a tellraw command to display the time
+
 	Args:
 		tick (int): The tick to convert
 		name (str): The name of the map
@@ -41,9 +39,9 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple:
 
 	# Create the tellraw string
 	if imin > 0:
-		tellraw: str = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+		tellraw: str = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{minsString}","color":"gold"}},{{"text":"m","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]'
 	else:
-		tellraw: str = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]\n'
+		tellraw: str = f'tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Map \'","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"\' regenerated in ","color":"yellow"}},{{"text":"{secsString}","color":"gold"}},{{"text":"s","color":"yellow"}}]'
 
 	# Return
 	return (f"{secs} seconds{parenthesis}", tellraw)
@@ -271,7 +269,7 @@ def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: st
 		write_function(PATH, f"""
 {base_condition} {last_tick}.. in minecraft:overworld run forceload remove {x1} {x2} {z1} {z2}
 {base_condition} {last_tick}.. in switch:game run forceload remove {x1} {x2} {z1} {z2}
-""")
+""".strip())
 
 	# Write the tellraw command
 	write_function(PATH, f"""
@@ -305,7 +303,7 @@ def create_spread_players_file(name: str, start_pos: tuple[int, ...], end_pos: t
 	if maxRange < 10:
 		maxRange = 10
 	spread_distance: int = maxRange // 2
-	max_height: int = end_pos[1] + paste_start_height - 3
+	max_height: int = (end_pos[1] - start_pos[1]) + paste_start_height - 10
 	y: int = start_pos[1]
 	dy: int = paste_start_height - 1 - y
 

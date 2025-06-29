@@ -51,54 +51,38 @@ execute if score #rg_dk_mountain switch.data matches 2289.. run data remove stor
 
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19650 20485 19674 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19650 20485 19674 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19674 20485 19698 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19674 20485 19698 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19698 20485 19722 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19698 20485 19722 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19722 20485 19746 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19722 20485 19746 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19746 20485 19770 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19746 20485 19770 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19770 20485 19794 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19770 20485 19794 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19794 20485 19818 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19794 20485 19818 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19818 20485 19842 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19818 20485 19842 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19842 20485 19866 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19842 20485 19866 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19866 20485 19890 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19866 20485 19890 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19890 20485 19914 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19890 20485 19914 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19914 20485 19938 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19914 20485 19938 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19938 20485 19962 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19938 20485 19962 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19962 20485 19986 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19962 20485 19986 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 19986 20485 20010 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 19986 20485 20010 20603
-
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 20010 20485 20034 20603
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 20010 20485 20034 20603
 
 execute if score #rg_dk_mountain switch.data matches 2289.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"DK Mountain","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"54","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_dk_mountain switch.data matches 2289.. run data modify storage switch:main MessageToLog set value '{"text":"Map `DK Mountain` just regenerated!"}'
 execute if score #rg_dk_mountain switch.data matches 2289.. run function switch:engine/log_message/apply
 

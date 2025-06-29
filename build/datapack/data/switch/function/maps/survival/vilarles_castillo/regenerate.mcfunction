@@ -41,39 +41,28 @@ execute if score #rg_vilarles_castillo switch.data matches 1728.. run data remov
 
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52000 52000 52016 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52000 52000 52016 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52016 52000 52032 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52016 52000 52032 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52032 52000 52048 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52032 52000 52048 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52048 52000 52064 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52048 52000 52064 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52064 52000 52080 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52064 52000 52080 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52080 52000 52097 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52080 52000 52097 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52097 52000 52113 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52097 52000 52113 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52113 52000 52129 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52113 52000 52129 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52129 52000 52145 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52129 52000 52145 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52145 52000 52161 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52145 52000 52161 52173
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove 52161 52000 52177 52173
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove 52161 52000 52177 52173
 
 execute if score #rg_vilarles_castillo switch.data matches 1728.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Castillo","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_vilarles_castillo switch.data matches 1728.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Castillo` just regenerated!"}'
 execute if score #rg_vilarles_castillo switch.data matches 1728.. run function switch:engine/log_message/apply
 

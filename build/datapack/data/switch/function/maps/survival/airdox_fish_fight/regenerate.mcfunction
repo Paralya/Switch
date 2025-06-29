@@ -37,33 +37,24 @@ execute if score #rg_airdox_fish_fight switch.data matches 901.. run data remove
 
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156000 156000 156017 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156000 156000 156017 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156017 156000 156034 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156017 156000 156034 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156034 156000 156051 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156034 156000 156051 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156051 156000 156068 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156051 156000 156068 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156068 156000 156084 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156068 156000 156084 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156084 156000 156101 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156084 156000 156101 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156101 156000 156118 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156101 156000 156118 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156118 156000 156135 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156118 156000 156135 156151
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in minecraft:overworld run forceload remove 156135 156000 156152 156151
 execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run forceload remove 156135 156000 156152 156151
 
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dinosaur Volcano","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Dinosaur Volcano` just regenerated!"}'
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run function switch:engine/log_message/apply
 

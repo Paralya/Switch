@@ -29,21 +29,16 @@ execute if score #rg_the_four_elements switch.data matches 171.. run data remove
 
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 115000 115000 115020 115101
 execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run forceload remove 115000 115000 115020 115101
-
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 115020 115000 115040 115101
 execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run forceload remove 115020 115000 115040 115101
-
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 115040 115000 115061 115101
 execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run forceload remove 115040 115000 115061 115101
-
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 115061 115000 115081 115101
 execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run forceload remove 115061 115000 115081 115101
-
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 115081 115000 115101 115101
 execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run forceload remove 115081 115000 115101 115101
 
 execute if score #rg_the_four_elements switch.data matches 171.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"The Four Elements","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_the_four_elements switch.data matches 171.. run data modify storage switch:main MessageToLog set value '{"text":"Map `The Four Elements` just regenerated!"}'
 execute if score #rg_the_four_elements switch.data matches 171.. run function switch:engine/log_message/apply
 

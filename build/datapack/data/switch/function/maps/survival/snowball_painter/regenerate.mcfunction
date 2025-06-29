@@ -23,12 +23,10 @@ execute if score #rg_snowball_painter switch.data matches 69.. run data remove s
 
 execute if score #rg_snowball_painter switch.data matches 69.. in minecraft:overworld run forceload remove 112000 112000 112022 112042
 execute if score #rg_snowball_painter switch.data matches 69.. in switch:game run forceload remove 112000 112000 112022 112042
-
 execute if score #rg_snowball_painter switch.data matches 69.. in minecraft:overworld run forceload remove 112022 112000 112043 112042
 execute if score #rg_snowball_painter switch.data matches 69.. in switch:game run forceload remove 112022 112000 112043 112042
 
 execute if score #rg_snowball_painter switch.data matches 69.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snowball Painter","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_snowball_painter switch.data matches 69.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Snowball Painter` just regenerated!"}'
 execute if score #rg_snowball_painter switch.data matches 69.. run function switch:engine/log_message/apply
 

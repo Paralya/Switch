@@ -35,30 +35,22 @@ execute if score #rg_mario_circuit switch.data matches 433.. run data remove sto
 
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20378 19516 20396 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20378 19516 20396 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20396 19516 20415 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20396 19516 20415 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20415 19516 20433 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20415 19516 20433 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20433 19516 20452 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20433 19516 20452 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20452 19516 20470 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20452 19516 20470 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20470 19516 20488 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20470 19516 20488 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20488 19516 20507 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20488 19516 20507 19658
-
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 20507 19516 20525 19658
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 20507 19516 20525 19658
 
 execute if score #rg_mario_circuit switch.data matches 433.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Mario Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_mario_circuit switch.data matches 433.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Mario Circuit` just regenerated!"}'
 execute if score #rg_mario_circuit switch.data matches 433.. run function switch:engine/log_message/apply
 

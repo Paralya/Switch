@@ -37,33 +37,24 @@ execute if score #rg_clock_circuit switch.data matches 928.. run data remove sto
 
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19469 20289 19487 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19469 20289 19487 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19487 20289 19505 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19487 20289 19505 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19505 20289 19522 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19505 20289 19522 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19522 20289 19540 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19522 20289 19540 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19540 20289 19558 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19540 20289 19558 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19558 20289 19576 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19558 20289 19576 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19576 20289 19593 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19576 20289 19593 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19593 20289 19611 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19593 20289 19611 20445
-
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 19611 20289 19629 20445
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 19611 20289 19629 20445
 
 execute if score #rg_clock_circuit switch.data matches 928.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Clock Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"46","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_clock_circuit switch.data matches 928.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Clock Circuit` just regenerated!"}'
 execute if score #rg_clock_circuit switch.data matches 928.. run function switch:engine/log_message/apply
 

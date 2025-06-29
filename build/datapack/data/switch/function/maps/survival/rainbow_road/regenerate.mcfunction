@@ -33,27 +33,20 @@ execute if score #rg_rainbow_road switch.data matches 470.. run data remove stor
 
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24000 24000 24017 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24000 24000 24017 24137
-
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24017 24000 24035 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24017 24000 24035 24137
-
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24035 24000 24052 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24035 24000 24052 24137
-
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24052 24000 24070 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24052 24000 24070 24137
-
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24070 24000 24087 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24070 24000 24087 24137
-
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24087 24000 24105 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24087 24000 24105 24137
-
 execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overworld run forceload remove 24105 24000 24122 24137
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24105 24000 24122 24137
 
 execute if score #rg_rainbow_road switch.data matches 470.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Rainbow Road","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_rainbow_road switch.data matches 470.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Rainbow Road` just regenerated!"}'
 execute if score #rg_rainbow_road switch.data matches 470.. run function switch:engine/log_message/apply
 

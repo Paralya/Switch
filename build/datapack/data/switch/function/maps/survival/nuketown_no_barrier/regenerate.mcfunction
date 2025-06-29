@@ -51,54 +51,38 @@ execute if score #rg_nuketown_no_barrier switch.data matches 833.. run data remo
 
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111000 111000 111013 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111000 111000 111013 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111013 111000 111026 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111013 111000 111026 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111026 111000 111039 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111026 111000 111039 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111039 111000 111052 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111039 111000 111052 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111052 111000 111065 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111052 111000 111065 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111065 111000 111078 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111065 111000 111078 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111078 111000 111091 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111078 111000 111091 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111091 111000 111104 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111091 111000 111104 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111104 111000 111116 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111104 111000 111116 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111116 111000 111129 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111116 111000 111129 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111129 111000 111142 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111129 111000 111142 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111142 111000 111155 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111142 111000 111155 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111155 111000 111168 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111155 111000 111168 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111168 111000 111181 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111168 111000 111181 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111181 111000 111194 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111181 111000 111194 111220
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 111194 111000 111207 111220
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 111194 111000 111207 111220
 
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nuketown No Barrier","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nuketown No Barrier` just regenerated!"}'
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run function switch:engine/log_message/apply
 

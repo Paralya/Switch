@@ -29,21 +29,16 @@ execute if score #rg_cathedrale_liege switch.data matches 831.. run data remove 
 
 execute if score #rg_cathedrale_liege switch.data matches 831.. in minecraft:overworld run forceload remove 26000 26000 26028 26084
 execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game run forceload remove 26000 26000 26028 26084
-
 execute if score #rg_cathedrale_liege switch.data matches 831.. in minecraft:overworld run forceload remove 26028 26000 26055 26084
 execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game run forceload remove 26028 26000 26055 26084
-
 execute if score #rg_cathedrale_liege switch.data matches 831.. in minecraft:overworld run forceload remove 26055 26000 26083 26084
 execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game run forceload remove 26055 26000 26083 26084
-
 execute if score #rg_cathedrale_liege switch.data matches 831.. in minecraft:overworld run forceload remove 26083 26000 26110 26084
 execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game run forceload remove 26083 26000 26110 26084
-
 execute if score #rg_cathedrale_liege switch.data matches 831.. in minecraft:overworld run forceload remove 26110 26000 26138 26084
 execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game run forceload remove 26110 26000 26138 26084
 
 execute if score #rg_cathedrale_liege switch.data matches 831.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cathédrale Saint-Lambert de Liège","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_cathedrale_liege switch.data matches 831.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cathédrale Saint-Lambert de Liège` just regenerated!"}'
 execute if score #rg_cathedrale_liege switch.data matches 831.. run function switch:engine/log_message/apply
 

@@ -25,15 +25,12 @@ execute if score #rg_floating_island switch.data matches 301.. run data remove s
 
 execute if score #rg_floating_island switch.data matches 301.. in minecraft:overworld run forceload remove 94000 94000 94025 94076
 execute if score #rg_floating_island switch.data matches 301.. in switch:game run forceload remove 94000 94000 94025 94076
-
 execute if score #rg_floating_island switch.data matches 301.. in minecraft:overworld run forceload remove 94025 94000 94051 94076
 execute if score #rg_floating_island switch.data matches 301.. in switch:game run forceload remove 94025 94000 94051 94076
-
 execute if score #rg_floating_island switch.data matches 301.. in minecraft:overworld run forceload remove 94051 94000 94076 94076
 execute if score #rg_floating_island switch.data matches 301.. in switch:game run forceload remove 94051 94000 94076 94076
 
 execute if score #rg_floating_island switch.data matches 301.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Floating Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_floating_island switch.data matches 301.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Floating Island` just regenerated!"}'
 execute if score #rg_floating_island switch.data matches 301.. run function switch:engine/log_message/apply
 

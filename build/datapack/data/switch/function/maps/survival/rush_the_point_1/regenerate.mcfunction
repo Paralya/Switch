@@ -46,48 +46,34 @@ execute if score #rg_rush_the_point_1 switch.data matches 257.. run data remove 
 
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13901 13901 13915 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13901 13901 13915 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13915 13901 13929 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13915 13901 13929 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13929 13901 13943 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13929 13901 13943 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13943 13901 13958 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13943 13901 13958 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13958 13901 13972 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13958 13901 13972 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13972 13901 13986 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13972 13901 13986 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 13986 13901 14000 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 13986 13901 14000 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14000 13901 14014 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14000 13901 14014 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14014 13901 14028 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14014 13901 14028 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14028 13901 14042 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14028 13901 14042 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14042 13901 14057 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14042 13901 14057 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14057 13901 14071 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14057 13901 14071 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14071 13901 14085 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14071 13901 14085 14099
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:overworld run forceload remove 14085 13901 14099 14099
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14085 13901 14099 14099
 
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Rush the Point 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Rush the Point 1` just regenerated!"}'
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run function switch:engine/log_message/apply
 

@@ -23,12 +23,10 @@ execute if score #rg_arti_tnt_run_tower switch.data matches 149.. run data remov
 
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in minecraft:overworld run forceload remove 152000 152000 152010 152020
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in switch:game run forceload remove 152000 152000 152010 152020
-
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in minecraft:overworld run forceload remove 152010 152000 152020 152020
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. in switch:game run forceload remove 152010 152000 152020 152020
 
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"TNT Run Tower","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. run data modify storage switch:main MessageToLog set value '{"text":"Map `TNT Run Tower` just regenerated!"}'
 execute if score #rg_arti_tnt_run_tower switch.data matches 149.. run function switch:engine/log_message/apply
 

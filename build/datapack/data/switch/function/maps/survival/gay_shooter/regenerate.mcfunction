@@ -25,15 +25,12 @@ execute if score #rg_gay_shooter switch.data matches 151.. run data remove stora
 
 execute if score #rg_gay_shooter switch.data matches 151.. in minecraft:overworld run forceload remove 114000 114000 114023 114058
 execute if score #rg_gay_shooter switch.data matches 151.. in switch:game run forceload remove 114000 114000 114023 114058
-
 execute if score #rg_gay_shooter switch.data matches 151.. in minecraft:overworld run forceload remove 114023 114000 114047 114058
 execute if score #rg_gay_shooter switch.data matches 151.. in switch:game run forceload remove 114023 114000 114047 114058
-
 execute if score #rg_gay_shooter switch.data matches 151.. in minecraft:overworld run forceload remove 114047 114000 114070 114058
 execute if score #rg_gay_shooter switch.data matches 151.. in switch:game run forceload remove 114047 114000 114070 114058
 
 execute if score #rg_gay_shooter switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Guy Shooter","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_gay_shooter switch.data matches 151.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Guy Shooter` just regenerated!"}'
 execute if score #rg_gay_shooter switch.data matches 151.. run function switch:engine/log_message/apply
 

@@ -23,12 +23,10 @@ execute if score #rg_shoot_da_sheep switch.data matches 117.. run data remove st
 
 execute if score #rg_shoot_da_sheep switch.data matches 117.. in minecraft:overworld run forceload remove 123000 123000 123020 123040
 execute if score #rg_shoot_da_sheep switch.data matches 117.. in switch:game run forceload remove 123000 123000 123020 123040
-
 execute if score #rg_shoot_da_sheep switch.data matches 117.. in minecraft:overworld run forceload remove 123020 123000 123040 123040
 execute if score #rg_shoot_da_sheep switch.data matches 117.. in switch:game run forceload remove 123020 123000 123040 123040
 
 execute if score #rg_shoot_da_sheep switch.data matches 117.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Shoot Da Sheep","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_shoot_da_sheep switch.data matches 117.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Shoot Da Sheep` just regenerated!"}'
 execute if score #rg_shoot_da_sheep switch.data matches 117.. run function switch:engine/log_message/apply
 

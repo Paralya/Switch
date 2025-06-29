@@ -29,21 +29,16 @@ execute if score #rg_stardust_vip_zone switch.data matches 256.. run data remove
 
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in minecraft:overworld run forceload remove 107000 107000 107023 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run forceload remove 107000 107000 107023 107085
-
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in minecraft:overworld run forceload remove 107023 107000 107045 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run forceload remove 107023 107000 107045 107085
-
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in minecraft:overworld run forceload remove 107045 107000 107068 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run forceload remove 107045 107000 107068 107085
-
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in minecraft:overworld run forceload remove 107068 107000 107090 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run forceload remove 107068 107000 107090 107085
-
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in minecraft:overworld run forceload remove 107090 107000 107113 107085
 execute if score #rg_stardust_vip_zone switch.data matches 256.. in switch:game run forceload remove 107090 107000 107113 107085
 
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust VIP Zone","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Stardust VIP Zone` just regenerated!"}'
 execute if score #rg_stardust_vip_zone switch.data matches 256.. run function switch:engine/log_message/apply
 

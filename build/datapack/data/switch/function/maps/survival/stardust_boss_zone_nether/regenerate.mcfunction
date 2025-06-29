@@ -35,30 +35,22 @@ execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run da
 
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104000 104000 104016 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104000 104000 104016 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104016 104000 104033 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104016 104000 104033 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104033 104000 104050 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104033 104000 104050 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104050 104000 104066 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104050 104000 104066 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104066 104000 104082 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104066 104000 104082 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104082 104000 104099 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104082 104000 104099 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104099 104000 104116 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104099 104000 104116 104165
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove 104116 104000 104132 104165
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove 104116 104000 104132 104165
 
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Boss Zone Nether","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"51","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Stardust Boss Zone Nether` just regenerated!"}'
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run function switch:engine/log_message/apply
 

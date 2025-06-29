@@ -35,30 +35,22 @@ execute if score #rg_ctf_flowers switch.data matches 801.. run data remove stora
 
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148000 148000 148025 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148000 148000 148025 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148025 148000 148050 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148025 148000 148050 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148050 148000 148076 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148050 148000 148076 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148076 148000 148101 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148076 148000 148101 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148101 148000 148126 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148101 148000 148126 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148126 148000 148152 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148126 148000 148152 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148152 148000 148177 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148152 148000 148177 148105
-
 execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworld run forceload remove 148177 148000 148202 148105
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148177 148000 148202 148105
 
 execute if score #rg_ctf_flowers switch.data matches 801.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fairy Garden","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_ctf_flowers switch.data matches 801.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Fairy Garden` just regenerated!"}'
 execute if score #rg_ctf_flowers switch.data matches 801.. run function switch:engine/log_message/apply
 

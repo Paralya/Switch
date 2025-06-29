@@ -25,15 +25,12 @@ execute if score #rg_sheepwars_plateforme switch.data matches 211.. run data rem
 
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in minecraft:overworld run forceload remove 144000 144000 144026 144075
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:game run forceload remove 144000 144000 144026 144075
-
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in minecraft:overworld run forceload remove 144026 144000 144053 144075
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:game run forceload remove 144026 144000 144053 144075
-
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in minecraft:overworld run forceload remove 144053 144000 144079 144075
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:game run forceload remove 144053 144000 144079 144075
 
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Plateforme","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sheepwars Plateforme` just regenerated!"}'
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run function switch:engine/log_message/apply
 

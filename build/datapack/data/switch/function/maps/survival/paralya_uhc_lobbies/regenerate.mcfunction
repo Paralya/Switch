@@ -27,18 +27,14 @@ execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run data remo
 
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in minecraft:overworld run forceload remove 98000 98000 98022 98090
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in switch:game run forceload remove 98000 98000 98022 98090
-
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in minecraft:overworld run forceload remove 98022 98000 98045 98090
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in switch:game run forceload remove 98022 98000 98045 98090
-
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in minecraft:overworld run forceload remove 98045 98000 98068 98090
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in switch:game run forceload remove 98045 98000 98068 98090
-
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in minecraft:overworld run forceload remove 98068 98000 98090 98090
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in switch:game run forceload remove 98068 98000 98090 98090
 
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Paralya UHC Lobbies","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Paralya UHC Lobbies` just regenerated!"}'
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run function switch:engine/log_message/apply
 

@@ -33,7 +33,7 @@ execute if score #scan_warden_forest switch.data matches 1 run scoreboard player
 execute if score #scan_warden_forest switch.data matches 1 run scoreboard players set #start_y_warden_forest switch.data 101
 execute if score #scan_warden_forest switch.data matches 1 run scoreboard players set #start_z_warden_forest switch.data 10001
 execute if score #scan_warden_forest switch.data matches 1 run scoreboard players set #end_x_warden_forest switch.data 10131
-execute if score #scan_warden_forest switch.data matches 1 run scoreboard players set #end_y_warden_forest switch.data 163
+execute if score #scan_warden_forest switch.data matches 1 run scoreboard players set #end_y_warden_forest switch.data 118
 execute if score #scan_warden_forest switch.data matches 1 run scoreboard players set #end_z_warden_forest switch.data 10131
 execute if score #scan_warden_forest switch.data matches 1 run scoreboard players operation #curr_x_warden_forest switch.data = #start_x_warden_forest switch.data
 execute if score #scan_warden_forest switch.data matches 1 run scoreboard players operation #curr_y_warden_forest switch.data = #start_y_warden_forest switch.data
@@ -43,30 +43,30 @@ execute if score #scan_warden_forest switch.data matches 1 run data modify stora
 execute if score #scan_warden_forest switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_warden_forest switch.data matches 30.. summon marker run function switch:maps/survival/warden_forest/scan_doors_on_marker
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10000 10000 10019 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10000 10000 10019 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10000 10000 10019 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10000 10000 10019 10132
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10019 10000 10038 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10019 10000 10038 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10019 10000 10038 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10019 10000 10038 10132
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10038 10000 10057 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10038 10000 10057 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10038 10000 10057 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10038 10000 10057 10132
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10057 10000 10075 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10057 10000 10075 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10057 10000 10075 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10057 10000 10075 10132
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10075 10000 10094 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10075 10000 10094 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10075 10000 10094 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10075 10000 10094 10132
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10094 10000 10113 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10094 10000 10113 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10094 10000 10113 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10094 10000 10113 10132
 
-execute if score #scan_warden_forest switch.data matches 247 in minecraft:overworld run forceload remove 10113 10000 10132 10132
-execute if score #scan_warden_forest switch.data matches 247 in switch:game run forceload remove 10113 10000 10132 10132
+execute if score #scan_warden_forest switch.data matches 92 in minecraft:overworld run forceload remove 10113 10000 10132 10132
+execute if score #scan_warden_forest switch.data matches 92 in switch:game run forceload remove 10113 10000 10132 10132
 
-execute if score #scan_warden_forest switch.data matches 247 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"warden_forest","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #scan_warden_forest switch.data matches 247 run data remove storage switch:maps to_scan.warden_forest
-execute if score #scan_warden_forest switch.data matches 247 run scoreboard players reset #scan_warden_forest switch.data
+execute if score #scan_warden_forest switch.data matches 92 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"warden_forest","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #scan_warden_forest switch.data matches 92 run data remove storage switch:maps to_scan.warden_forest
+execute if score #scan_warden_forest switch.data matches 92 run scoreboard players reset #scan_warden_forest switch.data
 
 execute if score #scan_warden_forest switch.data matches 1.. run schedule function switch:maps/survival/warden_forest/scan_doors 1t
 

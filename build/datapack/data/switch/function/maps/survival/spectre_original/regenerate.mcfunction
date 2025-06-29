@@ -27,18 +27,14 @@ execute if score #rg_spectre_original switch.data matches 345.. run data remove 
 
 execute if score #rg_spectre_original switch.data matches 345.. in minecraft:overworld run forceload remove 2500 2500 2522 2595
 execute if score #rg_spectre_original switch.data matches 345.. in switch:game run forceload remove 2500 2500 2522 2595
-
 execute if score #rg_spectre_original switch.data matches 345.. in minecraft:overworld run forceload remove 2522 2500 2543 2595
 execute if score #rg_spectre_original switch.data matches 345.. in switch:game run forceload remove 2522 2500 2543 2595
-
 execute if score #rg_spectre_original switch.data matches 345.. in minecraft:overworld run forceload remove 2543 2500 2564 2595
 execute if score #rg_spectre_original switch.data matches 345.. in switch:game run forceload remove 2543 2500 2564 2595
-
 execute if score #rg_spectre_original switch.data matches 345.. in minecraft:overworld run forceload remove 2564 2500 2586 2595
 execute if score #rg_spectre_original switch.data matches 345.. in switch:game run forceload remove 2564 2500 2586 2595
 
 execute if score #rg_spectre_original switch.data matches 345.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Spectre Original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_spectre_original switch.data matches 345.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Spectre Original` just regenerated!"}'
 execute if score #rg_spectre_original switch.data matches 345.. run function switch:engine/log_message/apply
 

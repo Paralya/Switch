@@ -33,27 +33,20 @@ execute if score #rg_jn_murder_mystery switch.data matches 442.. run data remove
 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134000 134000 134021 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134000 134000 134021 134123
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134021 134000 134043 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134021 134000 134043 134123
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134043 134000 134064 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134043 134000 134064 134123
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134064 134000 134085 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134064 134000 134085 134123
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134085 134000 134106 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134085 134000 134106 134123
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134106 134000 134128 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134106 134000 134128 134123
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134128 134000 134149 134123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134128 134000 134149 134123
 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Murder Mystery","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Murder Mystery` just regenerated!"}'
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run function switch:engine/log_message/apply
 

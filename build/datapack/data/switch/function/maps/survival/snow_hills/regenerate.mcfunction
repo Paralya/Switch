@@ -49,51 +49,36 @@ execute if score #rg_snow_hills switch.data matches 916.. run data remove storag
 
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50000 50000 50016 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50000 50000 50016 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50016 50000 50032 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50016 50000 50032 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50032 50000 50048 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50032 50000 50048 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50048 50000 50064 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50048 50000 50064 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50064 50000 50080 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50064 50000 50080 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50080 50000 50096 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50080 50000 50096 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50096 50000 50112 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50096 50000 50112 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50112 50000 50127 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50112 50000 50127 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50127 50000 50143 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50127 50000 50143 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50143 50000 50159 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50143 50000 50159 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50159 50000 50175 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50159 50000 50175 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50175 50000 50191 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50175 50000 50191 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50191 50000 50207 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50191 50000 50207 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50207 50000 50223 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50207 50000 50223 50185
-
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove 50223 50000 50239 50185
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove 50223 50000 50239 50185
 
 execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_snow_hills switch.data matches 916.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Snow Hills` just regenerated!"}'
 execute if score #rg_snow_hills switch.data matches 916.. run function switch:engine/log_message/apply
 

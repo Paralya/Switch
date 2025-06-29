@@ -31,24 +31,18 @@ execute if score #rg_survival_boat switch.data matches 601.. run data remove sto
 
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79000 79000 79021 79102
 execute if score #rg_survival_boat switch.data matches 601.. in switch:game run forceload remove 79000 79000 79021 79102
-
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79021 79000 79042 79102
 execute if score #rg_survival_boat switch.data matches 601.. in switch:game run forceload remove 79021 79000 79042 79102
-
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79042 79000 79063 79102
 execute if score #rg_survival_boat switch.data matches 601.. in switch:game run forceload remove 79042 79000 79063 79102
-
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79063 79000 79084 79102
 execute if score #rg_survival_boat switch.data matches 601.. in switch:game run forceload remove 79063 79000 79084 79102
-
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79084 79000 79105 79102
 execute if score #rg_survival_boat switch.data matches 601.. in switch:game run forceload remove 79084 79000 79105 79102
-
 execute if score #rg_survival_boat switch.data matches 601.. in minecraft:overworld run forceload remove 79105 79000 79126 79102
 execute if score #rg_survival_boat switch.data matches 601.. in switch:game run forceload remove 79105 79000 79126 79102
 
 execute if score #rg_survival_boat switch.data matches 601.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Survival Boat","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"30","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_survival_boat switch.data matches 601.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Survival Boat` just regenerated!"}'
 execute if score #rg_survival_boat switch.data matches 601.. run function switch:engine/log_message/apply
 

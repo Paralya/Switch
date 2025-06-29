@@ -31,24 +31,18 @@ execute if score #rg_jn_countries_castle switch.data matches 265.. run data remo
 
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132000 132000 132020 132120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132000 132000 132020 132120
-
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132020 132000 132040 132120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132020 132000 132040 132120
-
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132040 132000 132060 132120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132040 132000 132060 132120
-
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132060 132000 132080 132120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132060 132000 132080 132120
-
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132080 132000 132100 132120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132080 132000 132100 132120
-
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove 132100 132000 132120 132120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132100 132000 132120 132120
 
 execute if score #rg_jn_countries_castle switch.data matches 265.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Countries Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_jn_countries_castle switch.data matches 265.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Countries Castle` just regenerated!"}'
 execute if score #rg_jn_countries_castle switch.data matches 265.. run function switch:engine/log_message/apply
 

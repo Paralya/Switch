@@ -49,51 +49,36 @@ execute if score #rg_snow_travel switch.data matches 1306.. run data remove stor
 
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23000 23000 23014 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23000 23000 23014 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23014 23000 23028 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23014 23000 23028 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23028 23000 23041 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23028 23000 23041 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23041 23000 23055 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23041 23000 23055 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23055 23000 23069 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23055 23000 23069 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23069 23000 23083 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23069 23000 23083 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23083 23000 23097 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23083 23000 23097 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23097 23000 23110 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23097 23000 23110 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23110 23000 23124 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23110 23000 23124 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23124 23000 23138 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23124 23000 23138 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23138 23000 23152 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23138 23000 23152 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23152 23000 23166 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23152 23000 23166 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23166 23000 23179 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23166 23000 23179 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23179 23000 23193 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23179 23000 23193 23205
-
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove 23193 23000 23207 23205
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove 23193 23000 23207 23205
 
 execute if score #rg_snow_travel switch.data matches 1306.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Travel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_snow_travel switch.data matches 1306.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Snow Travel` just regenerated!"}'
 execute if score #rg_snow_travel switch.data matches 1306.. run function switch:engine/log_message/apply
 

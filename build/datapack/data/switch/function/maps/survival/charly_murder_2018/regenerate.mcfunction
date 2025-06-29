@@ -23,12 +23,10 @@ execute if score #rg_charly_murder_2018 switch.data matches 65.. run data remove
 
 execute if score #rg_charly_murder_2018 switch.data matches 65.. in minecraft:overworld run forceload remove 136000 136000 136026 136053
 execute if score #rg_charly_murder_2018 switch.data matches 65.. in switch:game run forceload remove 136000 136000 136026 136053
-
 execute if score #rg_charly_murder_2018 switch.data matches 65.. in minecraft:overworld run forceload remove 136026 136000 136052 136053
 execute if score #rg_charly_murder_2018 switch.data matches 65.. in switch:game run forceload remove 136026 136000 136052 136053
 
 execute if score #rg_charly_murder_2018 switch.data matches 65.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"MurderUHC House (2018)","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_charly_murder_2018 switch.data matches 65.. run data modify storage switch:main MessageToLog set value '{"text":"Map `MurderUHC House (2018)` just regenerated!"}'
 execute if score #rg_charly_murder_2018 switch.data matches 65.. run function switch:engine/log_message/apply
 

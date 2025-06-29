@@ -25,15 +25,12 @@ execute if score #rg_de_a_coudre_1 switch.data matches 322.. run data remove sto
 
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in minecraft:overworld run forceload remove 29000 29000 29028 29049
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run forceload remove 29000 29000 29028 29049
-
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in minecraft:overworld run forceload remove 29028 29000 29055 29049
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run forceload remove 29028 29000 29055 29049
-
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in minecraft:overworld run forceload remove 29055 29000 29083 29049
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run forceload remove 29055 29000 29083 29049
 
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dé à coudre 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"16","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Dé à coudre 1` just regenerated!"}'
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run function switch:engine/log_message/apply
 

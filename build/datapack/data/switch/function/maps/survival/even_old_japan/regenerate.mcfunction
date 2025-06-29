@@ -29,21 +29,16 @@ execute if score #rg_even_old_japan switch.data matches 266.. run data remove st
 
 execute if score #rg_even_old_japan switch.data matches 266.. in minecraft:overworld run forceload remove 162000 162000 162020 162100
 execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run forceload remove 162000 162000 162020 162100
-
 execute if score #rg_even_old_japan switch.data matches 266.. in minecraft:overworld run forceload remove 162020 162000 162040 162100
 execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run forceload remove 162020 162000 162040 162100
-
 execute if score #rg_even_old_japan switch.data matches 266.. in minecraft:overworld run forceload remove 162040 162000 162060 162100
 execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run forceload remove 162040 162000 162060 162100
-
 execute if score #rg_even_old_japan switch.data matches 266.. in minecraft:overworld run forceload remove 162060 162000 162080 162100
 execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run forceload remove 162060 162000 162080 162100
-
 execute if score #rg_even_old_japan switch.data matches 266.. in minecraft:overworld run forceload remove 162080 162000 162100 162100
 execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run forceload remove 162080 162000 162100 162100
 
 execute if score #rg_even_old_japan switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Old Japan","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_even_old_japan switch.data matches 266.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Old Japan` just regenerated!"}'
 execute if score #rg_even_old_japan switch.data matches 266.. run function switch:engine/log_message/apply
 

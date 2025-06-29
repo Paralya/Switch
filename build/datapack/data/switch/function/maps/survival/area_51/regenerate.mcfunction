@@ -31,24 +31,18 @@ execute if score #rg_area_51 switch.data matches 565.. run data remove storage s
 
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2000 2000 2018 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2000 2000 2018 2126
-
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2018 2000 2036 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2018 2000 2036 2126
-
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2036 2000 2054 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2036 2000 2054 2126
-
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2054 2000 2072 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2054 2000 2072 2126
-
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2072 2000 2090 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2072 2000 2090 2126
-
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 2090 2000 2108 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 2090 2000 2108 2126
 
 execute if score #rg_area_51 switch.data matches 565.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Area 51","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_area_51 switch.data matches 565.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Area 51` just regenerated!"}'
 execute if score #rg_area_51 switch.data matches 565.. run function switch:engine/log_message/apply
 

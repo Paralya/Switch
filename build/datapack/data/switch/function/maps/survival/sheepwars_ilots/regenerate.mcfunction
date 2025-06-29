@@ -29,21 +29,16 @@ execute if score #rg_sheepwars_ilots switch.data matches 471.. run data remove s
 
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in minecraft:overworld run forceload remove 145000 145000 145018 145122
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run forceload remove 145000 145000 145018 145122
-
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in minecraft:overworld run forceload remove 145018 145000 145037 145122
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run forceload remove 145018 145000 145037 145122
-
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in minecraft:overworld run forceload remove 145037 145000 145055 145122
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run forceload remove 145037 145000 145055 145122
-
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in minecraft:overworld run forceload remove 145055 145000 145074 145122
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run forceload remove 145055 145000 145074 145122
-
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in minecraft:overworld run forceload remove 145074 145000 145092 145122
 execute if score #rg_sheepwars_ilots switch.data matches 471.. in switch:game run forceload remove 145074 145000 145092 145122
 
 execute if score #rg_sheepwars_ilots switch.data matches 471.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Ilots","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_sheepwars_ilots switch.data matches 471.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sheepwars Ilots` just regenerated!"}'
 execute if score #rg_sheepwars_ilots switch.data matches 471.. run function switch:engine/log_message/apply
 

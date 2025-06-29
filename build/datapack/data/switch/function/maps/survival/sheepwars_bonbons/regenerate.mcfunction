@@ -27,18 +27,14 @@ execute if score #rg_sheepwars_bonbons switch.data matches 337.. run data remove
 
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in minecraft:overworld run forceload remove 143000 143000 143021 143114
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in switch:game run forceload remove 143000 143000 143021 143114
-
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in minecraft:overworld run forceload remove 143021 143000 143042 143114
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in switch:game run forceload remove 143021 143000 143042 143114
-
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in minecraft:overworld run forceload remove 143042 143000 143062 143114
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in switch:game run forceload remove 143042 143000 143062 143114
-
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in minecraft:overworld run forceload remove 143062 143000 143083 143114
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. in switch:game run forceload remove 143062 143000 143083 143114
 
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Bonbons","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"16","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sheepwars Bonbons` just regenerated!"}'
 execute if score #rg_sheepwars_bonbons switch.data matches 337.. run function switch:engine/log_message/apply
 

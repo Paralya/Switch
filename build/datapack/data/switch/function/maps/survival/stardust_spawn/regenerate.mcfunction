@@ -31,24 +31,18 @@ execute if score #rg_stardust_spawn switch.data matches 547.. run data remove st
 
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101000 101000 101020 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101000 101000 101020 101120
-
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101020 101000 101040 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101020 101000 101040 101120
-
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101040 101000 101060 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101040 101000 101060 101120
-
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101060 101000 101080 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101060 101000 101080 101120
-
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101080 101000 101100 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101080 101000 101100 101120
-
 execute if score #rg_stardust_spawn switch.data matches 547.. in minecraft:overworld run forceload remove 101100 101000 101120 101120
 execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run forceload remove 101100 101000 101120 101120
 
 execute if score #rg_stardust_spawn switch.data matches 547.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"27","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_stardust_spawn switch.data matches 547.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Stardust Spawn` just regenerated!"}'
 execute if score #rg_stardust_spawn switch.data matches 547.. run function switch:engine/log_message/apply
 

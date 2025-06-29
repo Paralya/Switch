@@ -41,39 +41,28 @@ execute if score #rg_dark_forest_hills switch.data matches 782.. run data remove
 
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39000 39000 39013 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39000 39000 39013 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39013 39000 39026 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39013 39000 39026 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39026 39000 39039 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39026 39000 39039 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39039 39000 39052 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39039 39000 39052 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39052 39000 39065 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39052 39000 39065 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39065 39000 39078 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39065 39000 39078 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39078 39000 39091 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39078 39000 39091 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39091 39000 39104 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39091 39000 39104 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39104 39000 39117 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39104 39000 39117 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39117 39000 39130 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39117 39000 39130 39221
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. in minecraft:overworld run forceload remove 39130 39000 39143 39221
 execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run forceload remove 39130 39000 39143 39221
 
 execute if score #rg_dark_forest_hills switch.data matches 782.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dark Forest Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"39","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_dark_forest_hills switch.data matches 782.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Dark Forest Hills` just regenerated!"}'
 execute if score #rg_dark_forest_hills switch.data matches 782.. run function switch:engine/log_message/apply
 

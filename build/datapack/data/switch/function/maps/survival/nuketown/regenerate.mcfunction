@@ -51,54 +51,38 @@ execute if score #rg_nuketown switch.data matches 833.. run data remove storage 
 
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72000 72000 72013 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72000 72000 72013 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72013 72000 72026 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72013 72000 72026 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72026 72000 72039 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72026 72000 72039 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72039 72000 72052 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72039 72000 72052 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72052 72000 72065 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72052 72000 72065 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72065 72000 72078 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72065 72000 72078 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72078 72000 72091 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72078 72000 72091 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72091 72000 72104 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72091 72000 72104 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72104 72000 72116 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72104 72000 72116 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72116 72000 72129 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72116 72000 72129 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72129 72000 72142 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72129 72000 72142 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72142 72000 72155 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72142 72000 72155 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72155 72000 72168 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72155 72000 72168 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72168 72000 72181 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72168 72000 72181 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72181 72000 72194 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72181 72000 72194 72220
-
 execute if score #rg_nuketown switch.data matches 833.. in minecraft:overworld run forceload remove 72194 72000 72207 72220
 execute if score #rg_nuketown switch.data matches 833.. in switch:game run forceload remove 72194 72000 72207 72220
 
 execute if score #rg_nuketown switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nuketown","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_nuketown switch.data matches 833.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nuketown` just regenerated!"}'
 execute if score #rg_nuketown switch.data matches 833.. run function switch:engine/log_message/apply
 

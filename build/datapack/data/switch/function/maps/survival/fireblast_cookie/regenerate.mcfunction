@@ -25,15 +25,12 @@ execute if score #rg_fireblast_cookie switch.data matches 154.. run data remove 
 
 execute if score #rg_fireblast_cookie switch.data matches 154.. in minecraft:overworld run forceload remove 164000 164000 164025 164075
 execute if score #rg_fireblast_cookie switch.data matches 154.. in switch:game run forceload remove 164000 164000 164025 164075
-
 execute if score #rg_fireblast_cookie switch.data matches 154.. in minecraft:overworld run forceload remove 164025 164000 164050 164075
 execute if score #rg_fireblast_cookie switch.data matches 154.. in switch:game run forceload remove 164025 164000 164050 164075
-
 execute if score #rg_fireblast_cookie switch.data matches 154.. in minecraft:overworld run forceload remove 164050 164000 164075 164075
 execute if score #rg_fireblast_cookie switch.data matches 154.. in switch:game run forceload remove 164050 164000 164075 164075
 
 execute if score #rg_fireblast_cookie switch.data matches 154.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Smol Cookie","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_fireblast_cookie switch.data matches 154.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Smol Cookie` just regenerated!"}'
 execute if score #rg_fireblast_cookie switch.data matches 154.. run function switch:engine/log_message/apply
 

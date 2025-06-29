@@ -41,39 +41,28 @@ execute if score #rg_plains_routine switch.data matches 562.. run data remove st
 
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20126 19727 20141 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20126 19727 20141 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20141 19727 20157 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20141 19727 20157 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20157 19727 20172 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20157 19727 20172 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20172 19727 20187 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20172 19727 20187 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20187 19727 20202 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20187 19727 20202 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20202 19727 20218 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20202 19727 20218 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20218 19727 20233 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20218 19727 20233 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20233 19727 20248 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20233 19727 20248 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20248 19727 20263 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20248 19727 20263 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20263 19727 20279 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20263 19727 20279 19911
-
 execute if score #rg_plains_routine switch.data matches 562.. in minecraft:overworld run forceload remove 20279 19727 20294 19911
 execute if score #rg_plains_routine switch.data matches 562.. in switch:game run forceload remove 20279 19727 20294 19911
 
 execute if score #rg_plains_routine switch.data matches 562.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Plains Routine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_plains_routine switch.data matches 562.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Plains Routine` just regenerated!"}'
 execute if score #rg_plains_routine switch.data matches 562.. run function switch:engine/log_message/apply
 

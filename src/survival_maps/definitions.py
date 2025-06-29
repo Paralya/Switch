@@ -27,7 +27,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (7000, 100, 7000), (7060, 149, 7060), ("enchanting_island", "Enchanting Island", "Stoupy, ?"), view=(7061.03, 139.35, 7015.43, 64.78, 27.65))
 	clone_survival(100, (8000, 100, 8000), (8048, 131, 8048), ("friends_oneforall", "FriendsCube OneForAll", "AirDox, TheFRcRaZy"), view=(8004.36, 119.48, 8009.13, 306.36, 24.97))
 	clone_survival(100, (9000, 100, 9000), (9035, 192, 9032), ("friends_cube_jump", "FriendsCube Jump", "Stoupy"), view=(9023.97, 101.24, 9004.81, 43.17, -61.65))
-	clone_survival(100, (10000, 100, 10000), (10132, 164, 10132), ("warden_forest", "Warden Forest", "Stoupy"), view=(10065.74, 106.68, 10021.88, 4.01, -10.98))
+	clone_survival(100, (10000, 100, 10000), (10132, 119, 10132), ("warden_forest", "Warden Forest", "Stoupy"), view=(10065.74, 106.68, 10021.88, 4.01, -10.98))
 	clone_survival(100, (11000, 100, 11000), (11065, 142, 11065), ("friends_pvpbox_ice", "FriendsCube PvPbox Ice", "Jugou2"), view=(11012.23, 123.22, 11043.81, 247.65, 10.96))
 	clone_survival(100, (12000, 100, 12000), (12090, 167, 12090), ("friends_pvpbox_hills", "FriendsCube PvPbox Hills", "Jugou2"), view=(12059.29, 121.67, 12010.18, 22.08, -1.65))
 	clone_survival(100, (13000, 100, 13000), (13091, 133, 13090), ("friends_pvpbox_end", "FriendsCube PvPbox End", "Jugou2"), view=(13042.52, 113.62, 13065.88, 204.05, 3.63))

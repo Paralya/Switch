@@ -29,21 +29,16 @@ execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run data re
 
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in minecraft:overworld run forceload remove 100000 100000 100021 100103
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:game run forceload remove 100000 100000 100021 100103
-
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in minecraft:overworld run forceload remove 100021 100000 100043 100103
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:game run forceload remove 100021 100000 100043 100103
-
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in minecraft:overworld run forceload remove 100043 100000 100064 100103
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:game run forceload remove 100043 100000 100064 100103
-
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in minecraft:overworld run forceload remove 100064 100000 100086 100103
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:game run forceload remove 100064 100000 100086 100103
-
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in minecraft:overworld run forceload remove 100086 100000 100107 100103
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:game run forceload remove 100086 100000 100107 100103
 
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Dirigeables","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sheepwars Dirigeables` just regenerated!"}'
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run function switch:engine/log_message/apply
 

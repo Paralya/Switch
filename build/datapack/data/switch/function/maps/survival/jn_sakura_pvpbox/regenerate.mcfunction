@@ -29,21 +29,16 @@ execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run data remove 
 
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove 135000 135000 135020 135100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove 135000 135000 135020 135100
-
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove 135020 135000 135040 135100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove 135020 135000 135040 135100
-
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove 135040 135000 135060 135100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove 135040 135000 135060 135100
-
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove 135060 135000 135080 135100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove 135060 135000 135080 135100
-
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove 135080 135000 135100 135100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove 135080 135000 135100 135100
 
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sakura PVP Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sakura PVP Box` just regenerated!"}'
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run function switch:engine/log_message/apply
 

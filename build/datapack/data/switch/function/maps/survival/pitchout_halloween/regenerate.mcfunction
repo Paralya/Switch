@@ -31,24 +31,18 @@ execute if score #rg_pitchout_halloween switch.data matches 175.. run data remov
 
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125000 125000 125020 125122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 125000 125000 125020 125122
-
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125020 125000 125041 125122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 125020 125000 125041 125122
-
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125041 125000 125061 125122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 125041 125000 125061 125122
-
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125061 125000 125081 125122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 125061 125000 125081 125122
-
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125081 125000 125102 125122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 125081 125000 125102 125122
-
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 125102 125000 125122 125122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 125102 125000 125122 125122
 
 execute if score #rg_pitchout_halloween switch.data matches 175.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Pitchout Halloween","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_pitchout_halloween switch.data matches 175.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Pitchout Halloween` just regenerated!"}'
 execute if score #rg_pitchout_halloween switch.data matches 175.. run function switch:engine/log_message/apply
 

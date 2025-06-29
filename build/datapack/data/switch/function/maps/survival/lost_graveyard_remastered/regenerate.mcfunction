@@ -35,30 +35,22 @@ execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run dat
 
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127000 127000 127019 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127000 127000 127019 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127019 127000 127038 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127019 127000 127038 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127038 127000 127056 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127038 127000 127056 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127056 127000 127075 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127056 127000 127075 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127075 127000 127094 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127075 127000 127094 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127094 127000 127112 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127094 127000 127112 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127112 127000 127131 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127112 127000 127131 127134
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 127131 127000 127150 127134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 127131 127000 127150 127134
 
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Lost Graveyard Remastered","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"25","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Lost Graveyard Remastered` just regenerated!"}'
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run function switch:engine/log_message/apply
 

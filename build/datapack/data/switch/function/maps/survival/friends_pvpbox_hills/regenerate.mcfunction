@@ -27,18 +27,14 @@ execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run data rem
 
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in minecraft:overworld run forceload remove 12000 12000 12022 12090
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in switch:game run forceload remove 12000 12000 12022 12090
-
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in minecraft:overworld run forceload remove 12022 12000 12045 12090
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in switch:game run forceload remove 12022 12000 12045 12090
-
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in minecraft:overworld run forceload remove 12045 12000 12068 12090
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in switch:game run forceload remove 12045 12000 12068 12090
-
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in minecraft:overworld run forceload remove 12068 12000 12090 12090
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in switch:game run forceload remove 12068 12000 12090 12090
 
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube PvPbox Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run data modify storage switch:main MessageToLog set value '{"text":"Map `FriendsCube PvPbox Hills` just regenerated!"}'
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run function switch:engine/log_message/apply
 

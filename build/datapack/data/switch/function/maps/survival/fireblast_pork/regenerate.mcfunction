@@ -25,15 +25,12 @@ execute if score #rg_fireblast_pork switch.data matches 154.. run data remove st
 
 execute if score #rg_fireblast_pork switch.data matches 154.. in minecraft:overworld run forceload remove 165000 165000 165025 165075
 execute if score #rg_fireblast_pork switch.data matches 154.. in switch:game run forceload remove 165000 165000 165025 165075
-
 execute if score #rg_fireblast_pork switch.data matches 154.. in minecraft:overworld run forceload remove 165025 165000 165050 165075
 execute if score #rg_fireblast_pork switch.data matches 154.. in switch:game run forceload remove 165025 165000 165050 165075
-
 execute if score #rg_fireblast_pork switch.data matches 154.. in minecraft:overworld run forceload remove 165050 165000 165075 165075
 execute if score #rg_fireblast_pork switch.data matches 154.. in switch:game run forceload remove 165050 165000 165075 165075
 
 execute if score #rg_fireblast_pork switch.data matches 154.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Vegan Pork","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_fireblast_pork switch.data matches 154.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Vegan Pork` just regenerated!"}'
 execute if score #rg_fireblast_pork switch.data matches 154.. run function switch:engine/log_message/apply
 

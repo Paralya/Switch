@@ -39,36 +39,26 @@ execute if score #rg_traitor_original switch.data matches 901.. run data remove 
 
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1500 1500 1518 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1500 1500 1518 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1518 1500 1537 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1518 1500 1537 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1537 1500 1555 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1537 1500 1555 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1555 1500 1574 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1555 1500 1574 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1574 1500 1592 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1574 1500 1592 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1592 1500 1610 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1592 1500 1610 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1610 1500 1629 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1610 1500 1629 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1629 1500 1647 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1629 1500 1647 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1647 1500 1666 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1647 1500 1666 1655
-
 execute if score #rg_traitor_original switch.data matches 901.. in minecraft:overworld run forceload remove 1666 1500 1684 1655
 execute if score #rg_traitor_original switch.data matches 901.. in switch:game run forceload remove 1666 1500 1684 1655
 
 execute if score #rg_traitor_original switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Traitor Original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_traitor_original switch.data matches 901.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Traitor Original` just regenerated!"}'
 execute if score #rg_traitor_original switch.data matches 901.. run function switch:engine/log_message/apply
 

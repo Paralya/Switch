@@ -31,24 +31,18 @@ execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run data 
 
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove 138000 138000 138023 138100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove 138000 138000 138023 138100
-
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove 138023 138000 138047 138100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove 138023 138000 138047 138100
-
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove 138047 138000 138070 138100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove 138047 138000 138070 138100
-
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove 138070 138000 138093 138100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove 138070 138000 138093 138100
-
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove 138093 138000 138117 138100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove 138093 138000 138117 138100
-
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove 138117 138000 138140 138100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove 138117 138000 138140 138100
 
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Multi-biomes Boxes 2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Multi-biomes Boxes 2` just regenerated!"}'
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run function switch:engine/log_message/apply
 

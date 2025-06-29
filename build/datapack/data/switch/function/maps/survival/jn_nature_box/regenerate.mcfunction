@@ -39,36 +39,26 @@ execute if score #rg_jn_nature_box switch.data matches 811.. run data remove sto
 
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130000 130000 130019 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130000 130000 130019 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130019 130000 130038 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130019 130000 130038 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130038 130000 130058 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130038 130000 130058 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130058 130000 130077 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130058 130000 130077 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130077 130000 130096 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130077 130000 130096 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130096 130000 130115 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130096 130000 130115 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130115 130000 130134 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130115 130000 130134 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130134 130000 130154 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130134 130000 130154 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130154 130000 130173 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130154 130000 130173 130134
-
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 130173 130000 130192 130134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 130173 130000 130192 130134
 
 execute if score #rg_jn_nature_box switch.data matches 811.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nature Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_jn_nature_box switch.data matches 811.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nature Box` just regenerated!"}'
 execute if score #rg_jn_nature_box switch.data matches 811.. run function switch:engine/log_message/apply
 

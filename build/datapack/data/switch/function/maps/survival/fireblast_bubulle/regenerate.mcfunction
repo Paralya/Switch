@@ -25,15 +25,12 @@ execute if score #rg_fireblast_bubulle switch.data matches 154.. run data remove
 
 execute if score #rg_fireblast_bubulle switch.data matches 154.. in minecraft:overworld run forceload remove 163000 163000 163025 163075
 execute if score #rg_fireblast_bubulle switch.data matches 154.. in switch:game run forceload remove 163000 163000 163025 163075
-
 execute if score #rg_fireblast_bubulle switch.data matches 154.. in minecraft:overworld run forceload remove 163025 163000 163050 163075
 execute if score #rg_fireblast_bubulle switch.data matches 154.. in switch:game run forceload remove 163025 163000 163050 163075
-
 execute if score #rg_fireblast_bubulle switch.data matches 154.. in minecraft:overworld run forceload remove 163050 163000 163075 163075
 execute if score #rg_fireblast_bubulle switch.data matches 154.. in switch:game run forceload remove 163050 163000 163075 163075
 
 execute if score #rg_fireblast_bubulle switch.data matches 154.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Bubulle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_fireblast_bubulle switch.data matches 154.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Bubulle` just regenerated!"}'
 execute if score #rg_fireblast_bubulle switch.data matches 154.. run function switch:engine/log_message/apply
 

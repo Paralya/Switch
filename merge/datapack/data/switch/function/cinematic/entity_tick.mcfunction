@@ -2,6 +2,7 @@
 # Make sure the player is spectating the entity
 scoreboard players operation #player_id switch.id = @s switch.id
 tag @p[predicate=switch:has_same_id] add switch.temp
+tp @p[tag=switch.temp] @s
 spectate @s @p[tag=switch.temp]
 
 # Handle delay before starting the cinematic

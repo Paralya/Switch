@@ -35,30 +35,22 @@ execute if score #rg_ctf_forest_castles switch.data matches 521.. run data remov
 
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150000 150000 150013 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150000 150000 150013 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150013 150000 150025 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150013 150000 150025 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150025 150000 150038 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150025 150000 150038 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150038 150000 150050 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150038 150000 150050 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150050 150000 150063 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150050 150000 150063 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150063 150000 150076 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150063 150000 150076 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150076 150000 150088 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150076 150000 150088 150216
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove 150088 150000 150101 150216
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove 150088 150000 150101 150216
 
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Forest Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Forest Castle` just regenerated!"}'
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run function switch:engine/log_message/apply
 

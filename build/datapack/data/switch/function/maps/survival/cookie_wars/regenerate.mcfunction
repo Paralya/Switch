@@ -47,48 +47,34 @@ execute if score #rg_cookie_wars switch.data matches 673.. run data remove stora
 
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49000 49000 49014 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49000 49000 49014 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49014 49000 49029 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49014 49000 49029 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49029 49000 49043 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49029 49000 49043 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49043 49000 49057 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49043 49000 49057 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49057 49000 49071 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49057 49000 49071 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49071 49000 49086 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49071 49000 49086 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49086 49000 49100 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49086 49000 49100 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49100 49000 49114 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49100 49000 49114 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49114 49000 49129 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49114 49000 49129 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49129 49000 49143 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49129 49000 49143 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49143 49000 49157 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49143 49000 49157 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49157 49000 49171 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49157 49000 49171 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49171 49000 49186 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49171 49000 49186 49200
-
 execute if score #rg_cookie_wars switch.data matches 673.. in minecraft:overworld run forceload remove 49186 49000 49200 49200
 execute if score #rg_cookie_wars switch.data matches 673.. in switch:game run forceload remove 49186 49000 49200 49200
 
 execute if score #rg_cookie_wars switch.data matches 673.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cookie Wars","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"33","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_cookie_wars switch.data matches 673.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cookie Wars` just regenerated!"}'
 execute if score #rg_cookie_wars switch.data matches 673.. run function switch:engine/log_message/apply
 

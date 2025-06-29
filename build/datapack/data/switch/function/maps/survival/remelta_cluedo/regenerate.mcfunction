@@ -25,15 +25,12 @@ execute if score #rg_remelta_cluedo switch.data matches 130.. run data remove st
 
 execute if score #rg_remelta_cluedo switch.data matches 130.. in minecraft:overworld run forceload remove 118000 118000 118030 118066
 execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run forceload remove 118000 118000 118030 118066
-
 execute if score #rg_remelta_cluedo switch.data matches 130.. in minecraft:overworld run forceload remove 118030 118000 118059 118066
 execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run forceload remove 118030 118000 118059 118066
-
 execute if score #rg_remelta_cluedo switch.data matches 130.. in minecraft:overworld run forceload remove 118059 118000 118089 118066
 execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run forceload remove 118059 118000 118089 118066
 
 execute if score #rg_remelta_cluedo switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_remelta_cluedo switch.data matches 130.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cluedo` just regenerated!"}'
 execute if score #rg_remelta_cluedo switch.data matches 130.. run function switch:engine/log_message/apply
 

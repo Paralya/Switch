@@ -37,33 +37,24 @@ execute if score #rg_stardust_prison switch.data matches 523.. run data remove s
 
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106000 106000 106015 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106000 106000 106015 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106015 106000 106029 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106015 106000 106029 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106029 106000 106044 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106029 106000 106044 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106044 106000 106059 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106044 106000 106059 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106059 106000 106073 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106059 106000 106073 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106073 106000 106088 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106073 106000 106088 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106088 106000 106103 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106088 106000 106103 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106103 106000 106117 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106103 106000 106117 106178
-
 execute if score #rg_stardust_prison switch.data matches 523.. in minecraft:overworld run forceload remove 106117 106000 106132 106178
 execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run forceload remove 106117 106000 106132 106178
 
 execute if score #rg_stardust_prison switch.data matches 523.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Prison","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_stardust_prison switch.data matches 523.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Stardust Prison` just regenerated!"}'
 execute if score #rg_stardust_prison switch.data matches 523.. run function switch:engine/log_message/apply
 

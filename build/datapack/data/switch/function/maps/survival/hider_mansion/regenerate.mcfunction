@@ -39,36 +39,26 @@ execute if score #rg_hider_mansion switch.data matches 711.. run data remove sto
 
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71000 71000 71017 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71000 71000 71017 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71017 71000 71034 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71017 71000 71034 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71034 71000 71051 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71034 71000 71051 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71051 71000 71068 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71051 71000 71068 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71068 71000 71085 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71068 71000 71085 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71085 71000 71102 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71085 71000 71102 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71102 71000 71119 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71102 71000 71119 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71119 71000 71136 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71119 71000 71136 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71136 71000 71153 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71136 71000 71153 71160
-
 execute if score #rg_hider_mansion switch.data matches 711.. in minecraft:overworld run forceload remove 71153 71000 71170 71160
 execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run forceload remove 71153 71000 71170 71160
 
 execute if score #rg_hider_mansion switch.data matches 711.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Hider Mansion","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_hider_mansion switch.data matches 711.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Hider Mansion` just regenerated!"}'
 execute if score #rg_hider_mansion switch.data matches 711.. run function switch:engine/log_message/apply
 

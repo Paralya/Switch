@@ -37,33 +37,24 @@ execute if score #rg_jayl_dark_forest switch.data matches 820.. run data remove 
 
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34000 34000 34021 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34000 34000 34021 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34021 34000 34042 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34021 34000 34042 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34042 34000 34062 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34042 34000 34062 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34062 34000 34083 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34062 34000 34083 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34083 34000 34104 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34083 34000 34104 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34104 34000 34125 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34104 34000 34125 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34125 34000 34145 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34125 34000 34145 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34145 34000 34166 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34145 34000 34166 34127
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in minecraft:overworld run forceload remove 34166 34000 34187 34127
 execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run forceload remove 34166 34000 34187 34127
 
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Jayl Dark Forest","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Jayl Dark Forest` just regenerated!"}'
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run function switch:engine/log_message/apply
 

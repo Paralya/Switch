@@ -31,24 +31,18 @@ execute if score #rg_mushroom_plains switch.data matches 313.. run data remove s
 
 execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:overworld run forceload remove 4000 4000 4020 4122
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4000 4000 4020 4122
-
 execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:overworld run forceload remove 4020 4000 4041 4122
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4020 4000 4041 4122
-
 execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:overworld run forceload remove 4041 4000 4061 4122
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4041 4000 4061 4122
-
 execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:overworld run forceload remove 4061 4000 4081 4122
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4061 4000 4081 4122
-
 execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:overworld run forceload remove 4081 4000 4102 4122
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4081 4000 4102 4122
-
 execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:overworld run forceload remove 4102 4000 4122 4122
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4102 4000 4122 4122
 
 execute if score #rg_mushroom_plains switch.data matches 313.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Mushroom Plains","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_mushroom_plains switch.data matches 313.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Mushroom Plains` just regenerated!"}'
 execute if score #rg_mushroom_plains switch.data matches 313.. run function switch:engine/log_message/apply
 

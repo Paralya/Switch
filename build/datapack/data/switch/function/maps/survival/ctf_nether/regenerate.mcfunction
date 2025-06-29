@@ -67,78 +67,54 @@ execute if score #rg_ctf_nether switch.data matches 2641.. run data remove stora
 
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149000 149000 149008 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149000 149000 149008 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149008 149000 149017 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149008 149000 149017 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149017 149000 149025 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149017 149000 149025 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149025 149000 149034 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149025 149000 149034 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149034 149000 149042 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149034 149000 149042 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149042 149000 149050 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149042 149000 149050 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149050 149000 149059 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149050 149000 149059 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149059 149000 149067 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149059 149000 149067 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149067 149000 149076 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149067 149000 149076 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149076 149000 149084 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149076 149000 149084 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149084 149000 149093 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149084 149000 149093 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149093 149000 149101 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149093 149000 149101 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149101 149000 149109 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149101 149000 149109 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149109 149000 149118 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149109 149000 149118 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149118 149000 149126 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149118 149000 149126 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149126 149000 149135 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149126 149000 149135 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149135 149000 149143 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149135 149000 149143 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149143 149000 149152 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149143 149000 149152 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149152 149000 149160 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149152 149000 149160 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149160 149000 149168 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149160 149000 149168 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149168 149000 149177 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149168 149000 149177 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149177 149000 149185 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149177 149000 149185 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149185 149000 149194 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149185 149000 149194 149350
-
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove 149194 149000 149202 149350
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove 149194 149000 149202 149350
 
 execute if score #rg_ctf_nether switch.data matches 2641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fiery Wastes","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_ctf_nether switch.data matches 2641.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Fiery Wastes` just regenerated!"}'
 execute if score #rg_ctf_nether switch.data matches 2641.. run function switch:engine/log_message/apply
 

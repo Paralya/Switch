@@ -55,60 +55,42 @@ execute if score #rg_baby_park switch.data matches 1729.. run data remove storag
 
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21000 21000 21015 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21000 21000 21015 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21015 21000 21030 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21015 21000 21030 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21030 21000 21045 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21030 21000 21045 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21045 21000 21060 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21045 21000 21060 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21060 21000 21075 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21060 21000 21075 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21075 21000 21090 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21075 21000 21090 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21090 21000 21105 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21090 21000 21105 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21105 21000 21120 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21105 21000 21120 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21120 21000 21135 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21120 21000 21135 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21135 21000 21150 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21135 21000 21150 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21150 21000 21165 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21150 21000 21165 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21165 21000 21180 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21165 21000 21180 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21180 21000 21195 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21180 21000 21195 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21195 21000 21210 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21195 21000 21210 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21210 21000 21225 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21210 21000 21225 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21225 21000 21240 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21225 21000 21240 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21240 21000 21255 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21240 21000 21255 21191
-
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove 21255 21000 21270 21191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove 21255 21000 21270 21191
 
 execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Baby Park","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
-
 execute if score #rg_baby_park switch.data matches 1729.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Baby Park` just regenerated!"}'
 execute if score #rg_baby_park switch.data matches 1729.. run function switch:engine/log_message/apply
 
