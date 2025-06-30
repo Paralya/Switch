@@ -5,20 +5,20 @@
 #
 
 # Starter kit
-item replace entity @s[team=switch.temp.civil] armor.head with leather_helmet[enchantments={protection:5,unbreaking:4}]
-item replace entity @s[team=switch.temp.civil] armor.chest with leather_chestplate[enchantments={fire_protection:4,unbreaking:4}]
-item replace entity @s[team=switch.temp.civil] armor.legs with leather_leggings[enchantments={protection:4,unbreaking:4}]
-item replace entity @s[team=switch.temp.civil] armor.feet with iron_boots[enchantments={protection:4,unbreaking:2,feather_falling:2}]
-item replace entity @s[team=switch.temp.civil] hotbar.0 with wooden_sword[enchantments={sharpness:6,unbreaking:10}]
+item replace entity @s[team=switch.temp.civil] armor.head with iron_helmet
+item replace entity @s[team=switch.temp.civil] armor.chest with diamond_chestplate
+item replace entity @s[team=switch.temp.civil] armor.legs with chainmail_leggings
+item replace entity @s[team=switch.temp.civil] armor.feet with iron_boots[enchantments={feather_falling:2}]
+item replace entity @s[team=switch.temp.civil] weapon.offhand with oak_planks 64
+item replace entity @s[team=switch.temp.civil] hotbar.0 with iron_sword[enchantments={sharpness:5}]
 item replace entity @s[team=switch.temp.civil] hotbar.1 with bow
-item replace entity @s[team=switch.temp.civil] hotbar.3 with oak_planks 64
 item replace entity @s[team=switch.temp.civil] hotbar.7 with water_bucket
 item replace entity @s[team=switch.temp.civil] hotbar.8 with golden_apple 5
 item replace entity @s[team=switch.temp.civil] inventory.0 with arrow 16
 
-item replace entity @s[team=switch.temp.king] armor.head with golden_helmet[enchantments={protection:5,unbreaking:3}]
+item replace entity @s[team=switch.temp.king] armor.head with golden_helmet[enchantments={protection:3,unbreaking:10}]
 item replace entity @s[team=switch.temp.king] hotbar.0 with water_bucket
-item replace entity @s[team=switch.temp.king] hotbar.1 with golden_sword[enchantments={unbreaking:3,sharpness:2}]
+item replace entity @s[team=switch.temp.king] hotbar.1 with golden_sword[enchantments={unbreaking:3,sharpness:3}]
 item replace entity @s[team=switch.temp.king] hotbar.3 with bow[enchantments={flame:1,punch:1}]
 item replace entity @s[team=switch.temp.king] hotbar.7 with golden_apple 8
 item replace entity @s[team=switch.temp.king] hotbar.8 with oak_planks 64

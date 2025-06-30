@@ -27,9 +27,7 @@ scoreboard players set #beat_the_kings_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard objectives add switch.temp.damages dummy {"text":" Coups infligés ","color":"aqua"}
 scoreboard objectives add switch.temp.killed_kings teamkill.dark_purple
-scoreboard objectives setdisplay sidebar switch.temp.damages
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items
@@ -48,4 +46,8 @@ give @r[team=switch.temp.king] splash_potion[item_name={"text":"Potion de malnut
 give @r[team=switch.temp.king] splash_potion[item_name={"text":"Potion dévastatrice du tyran"},lore=[{"text":"À lancer sur les civils","color":"white","italic":false}],potion_contents={potion:"minecraft:water",custom_color:7039516,custom_effects:[{id:"slowness",amplifier:0b,duration:400,show_particles:0b},{id:"mining_fatigue",amplifier:0b,duration:400,show_particles:0b},{id:"blindness",amplifier:0b,duration:110,show_particles:0b}]}]
 give @r[team=switch.temp.king] splash_potion[item_name={"text":"Potion destructrice du tyran"},lore=[{"text":"À lancer sur les civils","color":"white","italic":false}],potion_contents={potion:"minecraft:water",custom_color:5711412,custom_effects:[{id:"slowness",amplifier:0b,duration:400,show_particles:0b},{id:"nausea",amplifier:1b,duration:200,show_particles:0b},{id:"poison",amplifier:0b,duration:320,show_particles:0b}]}]
 give @r[team=switch.temp.king] splash_potion[item_name={"text":"Potion de malnutrition du tyran"},lore=[{"text":"À lancer sur les civils","color":"white","italic":false}],potion_contents={custom_color:12763581,custom_effects:[{id:"mining_fatigue",amplifier:1b,duration:60},{id:"hunger",amplifier:1b,duration:300},{id:"poison",amplifier:1b,duration:40}]}]
+
+# Teleportation des joueurs ensemble (par team)
+tp @a[team=switch.temp.civil] @r[team=switch.temp.civil]
+tp @a[team=switch.temp.king] @r[team=switch.temp.king]
 

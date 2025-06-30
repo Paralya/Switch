@@ -1,9 +1,9 @@
 
 # Spawn text display for map name with fade-in effect
-$summon text_display ^ ^0.0 ^1.5 {text_opacity:-127b,brightness:{block:15,sky:15},billboard:"center",text:{"text":"$(map_name)","color":"yellow"},background:0,shadow:true,Tags:["switch.intro_spread.map_name","switch.intro_spread.display"]}
+$summon text_display ^ ^0.0 ^1.5 {brightness:{block:15,sky:15},billboard:"center",text:{"text":"$(map_name)","color":"yellow"},background:0,shadow:true,Tags:["switch.intro_spread.map_name","switch.intro_spread.display"]}
 
 # Spawn text display for credits with fade-in effect
-$summon text_display ^ ^-0.4 ^2.5 {text_opacity:-127b,brightness:{block:15,sky:15},billboard:"center",text:{"text":"$(credits)","color":"white"},background:0,shadow:true,Tags:["switch.intro_spread.credits","switch.intro_spread.display"]}
+$summon text_display ^ ^-0.4 ^2.5 {brightness:{block:15,sky:15},billboard:"center",text:{"text":"$(credits)","color":"white"},background:0,shadow:true,Tags:["switch.intro_spread.credits","switch.intro_spread.display"]}
 
 # Apply scale transformation
 execute as @e[tag=switch.intro_spread.map_name] run data modify entity @s transformation.scale set value [100.0f,100.0f,1.0f]

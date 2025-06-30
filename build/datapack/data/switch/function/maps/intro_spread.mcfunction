@@ -1,7 +1,7 @@
 
 #> switch:maps/intro_spread
 #
-# @within	???
+# @within	switch:engine/signals/start
 #
 
 # Launch the intro spread for the survival maps

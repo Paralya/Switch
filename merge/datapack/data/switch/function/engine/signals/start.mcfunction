@@ -8,6 +8,9 @@ data modify storage switch:main input set value {id:""}
 data modify storage switch:main input.id set from storage switch:main current_game
 function switch:engine/signals/macro_start with storage switch:main input
 
+# Start map intro
+function switch:maps/intro_spread
+
 # Increment total games played
 execute if score #test_mode switch.data matches 1.. run return 1
 data modify storage switch:main input set value {id:""}
