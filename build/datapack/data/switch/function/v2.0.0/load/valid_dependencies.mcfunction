@@ -15,7 +15,7 @@ scoreboard players set #mcload_error switch.data 0
 execute unless score #game_version switch.data matches 4435.. run scoreboard players set #mcload_error switch.data 1
 
 # Decode errors
-execute if score #mcload_error switch.data matches 1 run tellraw @a {"text":"Switch Error: This version is made for Minecraft 1.21.6+.","color":"red"}
+execute if score #mcload_error switch.data matches 1 run tellraw @a {"text":"Switch Error: This version is made for Minecraft 1.21.7+.","color":"red"}
 execute if score #dependency_error switch.data matches 1 run tellraw @a {"text":"Switch Error: Libraries are missing\nplease download the right Switch datapack\nor download each of these libraries one by one:","color":"red"}
 execute if score #dependency_error switch.data matches 1 unless score #common_signals.major load.status matches 0.. run tellraw @a {"text":"- [Common Signals (v0.1.0+)]","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/Stoupy51/CommonSignals"}}
 execute if score #dependency_error switch.data matches 1 if score #common_signals.major load.status matches 0 unless score #common_signals.minor load.status matches 1.. run tellraw @a {"text":"- [Common Signals (v0.1.0+)]","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/Stoupy51/CommonSignals"}}
