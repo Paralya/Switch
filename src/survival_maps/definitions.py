@@ -69,7 +69,7 @@ def generate_folders_for_survival_maps() -> None:
 	##	41000	(undefined)	: empty
 	clone_survival(100, (42000, 100, 42000), (42070, 125, 42056), ("ghost_town", "Ghost Town", "FanSarwet46"), view=(42012.45, 112.27, 42034.30, -120.51, 1.25))
 	clone_survival(100, (43000, 100, 43000), (43082, 132, 43082), ("abandoned_city_spawn_circle", "Abandoned City Spawn Circle", "Viator"), view=(43069.79, 128.06, 43063.05, 124.76, 23.65))
-	clone_survival(100, (43999, -1, 43999), (45001, 259, 46001), ("abandoned_city", "Abandoned City", "Viator"), view=(44634.21, 97.01, 44772.98, 153.77, 26.87))
+	clone_survival(100, (43999, -1, 43999), (45001, 259, 46001), ("abandoned_city", "Abandoned City", "Viator"), view=(44634.21, 197.01, 44772.98, 153.77, 26.87))
 	##	46000	(undefined)	: empty
 	##	47000	(undefined)	: empty
 	clone_survival(100, (48000, 100, 48000), (48093, 141, 48093), ("new_grounds", "New Grounds", "Unknown"), view=(48065.56, 118.22, 48062.48, 128.08, 19.39))
