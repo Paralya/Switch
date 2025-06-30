@@ -16,5 +16,5 @@ execute as @e[type=armor_stand,tag=switch.ball] at @s run function switch:modes/
 # End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/bombardement/process_end
+execute if score #bombardement_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/bombardement/process_end
 
