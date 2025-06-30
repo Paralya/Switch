@@ -22,6 +22,9 @@ execute if score #capture_the_flag_seconds switch.data matches 0 run effect clea
 execute if score #capture_the_flag_seconds switch.data matches 0 run effect clear @a[tag=!detached] darkness
 execute if score #capture_the_flag_seconds switch.data matches 0 as @a[tag=!detached] run attribute @s jump_strength base reset
 
+# Clear empty glass bottles from players
+execute if score #capture_the_flag_seconds switch.data matches 1.. run clear @a[tag=!detached] glass_bottle
+
 # Summon the flags when game starts
 execute if score #capture_the_flag_seconds switch.data matches 0 run function switch:modes/capture_the_flag/flags_summon
 

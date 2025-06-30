@@ -6,8 +6,6 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance 15 255 true
 effect give @a[tag=!detached] regeneration 10 255 true
 effect give @a[tag=!detached] weakness 15 255 true
-effect give @a[tag=!detached] blindness 10 255 true
-effect give @a[tag=!detached] slowness 8 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
@@ -22,7 +20,7 @@ function switch:translations/modes_beat_the_kings_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901
-scoreboard players set #beat_the_kings_seconds switch.data -1
+scoreboard players set #beat_the_kings_seconds switch.data -10
 scoreboard players set #beat_the_kings_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

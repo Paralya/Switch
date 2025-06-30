@@ -1,8 +1,4 @@
 
-effect give @a[tag=!detached] resistance 10 255 true
-effect give @a[tag=!detached] saturation 10 255 true
-effect give @a[tag=!detached] regeneration 10 255 true
-effect give @a[tag=!detached] weakness 10 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
@@ -59,4 +55,11 @@ scoreboard players set #capture_the_flag_seconds switch.data -10
 scoreboard players set #capture_the_flag_ticks switch.data 0
 tag @a remove switch.has_blue_flag
 tag @a remove switch.has_red_flag
+
+# Spawn effects
+effect clear @a[tag=!detached]
+effect give @a[tag=!detached] resistance 10 255 true
+effect give @a[tag=!detached] saturation 10 255 true
+effect give @a[tag=!detached] regeneration 10 255 true
+effect give @a[tag=!detached] weakness 10 255 true
 

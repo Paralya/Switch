@@ -61,7 +61,7 @@ def generate_folders_for_survival_maps() -> None:
 	##	33000	(undefined)	: empty
 	clone_survival(100, (34000, 100, 34000), (34187, 190, 34127), ("jayl_dark_forest", "Jayl Dark Forest", "JxyL, Stoupy"), view=(34158.12, 160.42, 34106.90, 115.80, 14.32))
 	##	35000	(undefined)	: arti_mansion			(not done yet)
-	clone_survival(100, (35827, -64, 35668), (36340, 99, 36180), ("operation_pigclaw", "Operation Pigclaw", "TheFRcRaZy, Jugou2"), view=(36068.47, -143.77, 36081.37, 172.34, 2.45))
+	clone_survival(100, (35827, -64, 35668), (36340, 99, 36180), ("operation_pigclaw", "Operation Pigclaw", "TheFRcRaZy, Jugou2"), view=(36068.47, 143.77, 36081.37, 172.34, 2.45))
 	clone_survival(100, (37000, 100, 37000), (37510, 218, 37367), ("trackmania_stadium_2", "Trackmania Stadium 2", "Stoupy"), view=(37392.24, 175.88, 37147.97, 74.93, 35.09), racing_pos=((37356.5, 110.69, 37180.5), 180, 28))
 	##	38000	(undefined)	: empty
 	clone_survival(100, (39000, 100, 39000), (39143, 170, 39221), ("dark_forest_hills", "Dark Forest Hills", "Stoupy"), view=(39051.36, 135.94, 39191.41, 198.68, 15.82))
