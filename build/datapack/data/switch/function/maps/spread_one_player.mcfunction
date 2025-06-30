@@ -1,7 +1,8 @@
 
 #> switch:maps/spread_one_player
 #
-# @within	switch:modes/coin_chaser/respawn
+# @within	switch:modes/block_party/core/pick_random_art
+#			switch:modes/coin_chaser/respawn
 #			switch:modes/coin_chaser/summon_gold
 #			switch:modes/creeper_apocalypse/second
 #			switch:modes/fish_fight/teams_tp/only_one_winner

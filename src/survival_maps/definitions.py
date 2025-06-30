@@ -134,7 +134,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (107000, 100, 107000), (107113, 150, 107085), ("stardust_vip_zone", "Stardust VIP Zone", "Stoupy, Jugou2"), view=(107056.85, 118.73, 107016.80, 29.24, 14.46))
 	##	108000	(undefined)	: empty
 	clone_survival(100, (109000, 100, 109000), (109059, 168, 109046), ("tnt_run_futuristic", "TNT Run Futuristic", "Stoupy, Jugou2"), view=(108992.51, 136.29, 109061.09, 222.34, 9.07))
-	clone_survival(100, (109993, -63, 109993), (110087, 117, 110087), ("block_party", "Block Party", "👉 You 👈"), view=(109951.05, 42.21, 110071.73, 249.32, 2.55))
+	clone_survival(100, (109993, -63, 109993), (110087, 117, 110087), ("block_party", "Block Party", "👉 You 👈"), view=(109951.05, 206.21, 110071.73, 249.32, 2.55))
 	clone_survival(100, (111000, 100, 111000), (111207, 151, 111220), ("nuketown_no_barrier", "Nuketown No Barrier", "Qiuye, Cube Horizon"), view=(72087.17, 117.13, 72105.28, 243.59, 15.91))
 	clone_survival(100, (112000, 100, 112000), (112043, 133, 112042), ("snowball_painter", "Snowball Painter", "Stoupy, ?"), view=(112036.42, 110.64, 112002.87, 29.00, 8.65))
 	clone_survival(100, (114000, 100, 114000), (114070, 149, 114058), ("gay_shooter", "Guy Shooter", "scartvol (Survisland)"), view=(114060.54, 135.63, 114016.48, 47.54, 14.09))

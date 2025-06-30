@@ -11,7 +11,7 @@ execute store result score #remaining_players switch.data if entity @a[tag=!deta
 
 # Basic timer & particles
 execute if score #remaining_players switch.data matches 2.. run scoreboard players add #block_party_ticks switch.data 1
-execute if score #block_party_ticks switch.data matches -100.. run particle note 110040 104 110040 64 2 64 1 8
+execute if score #block_party_ticks switch.data matches -100.. run particle note 110040 267 110040 64 2 64 1 8
 
 # Paint cow advancement
 execute unless score #test_mode switch.data matches 1 if score #block_party_ticks switch.data matches -130 if score #block_party_round switch.data matches 10.. at @e[type=marker,tag=switch.paint_marker] positioned ~-2 ~-1 ~-2 run advancement grant @a[tag=!detached,gamemode=!spectator,dx=4,dy=5,dz=4] only switch:visible/71
@@ -33,6 +33,6 @@ function switch:modes/block_party/xp_bar
 
 
 ## End game
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/block_party/process_end
+execute if score #block_party_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/block_party/process_end
 execute if score #block_party_seconds switch.data matches 1800.. run function switch:modes/block_party/process_end
 
