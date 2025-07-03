@@ -29,7 +29,7 @@ function switch:translations/modes_glassrunner_start
 
 scoreboard players set #process_end switch.data 0
 scoreboard players set #glassrunner_ticks switch.data 0
-scoreboard players set #glassrunner_seconds switch.data 0
+scoreboard players set #glassrunner_seconds switch.data -10
 
 scoreboard players set #glassrunner_point_to_win switch.data 32
 

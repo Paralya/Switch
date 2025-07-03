@@ -1,3 +1,3 @@
 
-$function switch:modes/$(id)/calls/stop
+$execute in switch:game run function switch:modes/$(id)/calls/stop
 
