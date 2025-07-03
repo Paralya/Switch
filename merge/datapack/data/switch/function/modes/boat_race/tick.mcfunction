@@ -12,8 +12,8 @@ execute store result score #alives switch.data if entity @a[scores={switch.alive
 execute store result score #finished switch.data if entity @a[scores={switch.alive=-1}]
 execute if score #alives switch.data = #finished switch.data run scoreboard players set #detect_end switch.data 1
 
-execute in minecraft:overworld as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=5033,y=105,z=5000,dx=3,dy=4,dz=4] at @s run function switch:modes/boat_race/finish
-execute in minecraft:overworld as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=50997,y=92,z=50964,dx=6,dy=4,dz=5] at @s run function switch:modes/boat_race/finish
+execute in switch:game as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=5033,y=105,z=5000,dx=3,dy=4,dz=4] at @s run function switch:modes/boat_race/finish
+execute in switch:game as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=50997,y=92,z=50964,dx=6,dy=4,dz=5] at @s run function switch:modes/boat_race/finish
 
 # Prevent leaving boat
 execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @n[type=#minecraft:boat,predicate=!shopping_kart:have_player_passenger,distance=..10,sort=nearest,limit=1]

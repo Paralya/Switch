@@ -6,9 +6,9 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 time set 18000
 
-execute in minecraft:overworld run gamerule showDeathMessages false
-execute in minecraft:overworld run gamerule naturalRegeneration false
-execute in minecraft:overworld run gamerule keepInventory true
+execute in switch:game run gamerule showDeathMessages false
+execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule keepInventory true
 execute in switch:game run gamerule showDeathMessages false
 execute in switch:game run gamerule naturalRegeneration false
 execute in switch:game run gamerule keepInventory true

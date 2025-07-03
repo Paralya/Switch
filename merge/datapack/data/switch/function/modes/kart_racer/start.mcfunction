@@ -8,7 +8,7 @@ execute as @a[tag=!detached] run attribute @s gravity base set 0
 function switch:utils/set_dynamic_time
 
 execute in switch:game run gamerule fallDamage false
-execute in minecraft:overworld run gamerule fallDamage false
+execute in switch:game run gamerule fallDamage false
 
 function switch:translations/modes_kart_racer_start
 

@@ -22,11 +22,11 @@ function switch:utils/on_death_run_function {function:"switch:modes/kart_racer/j
 kill @e[type=item]
 
 # Maps tick for special events
-execute if data storage switch:main {map:"plains_routine"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/plains_routine
-execute if data storage switch:main {map:"airship_fortress"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/airship_fortress
-execute if data storage switch:main {map:"dk_mountain"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/dk_mountain
-execute if data storage switch:main {map:"clock_circuit"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/clock_circuit
-execute if data storage switch:main {map:"trackmania_stadium_2"} in minecraft:overworld run function switch:modes/kart_racer/map_tick/trackmania_stadium_2
+execute if data storage switch:main {map:"plains_routine"} in switch:game run function switch:modes/kart_racer/map_tick/plains_routine
+execute if data storage switch:main {map:"airship_fortress"} in switch:game run function switch:modes/kart_racer/map_tick/airship_fortress
+execute if data storage switch:main {map:"dk_mountain"} in switch:game run function switch:modes/kart_racer/map_tick/dk_mountain
+execute if data storage switch:main {map:"clock_circuit"} in switch:game run function switch:modes/kart_racer/map_tick/clock_circuit
+execute if data storage switch:main {map:"trackmania_stadium_2"} in switch:game run function switch:modes/kart_racer/map_tick/trackmania_stadium_2
 
 ## Fin de la partie
 execute if score #detect_end switch.data matches 1.. run function switch:modes/kart_racer/process_end

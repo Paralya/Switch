@@ -47,6 +47,6 @@ execute store result storage switch:main input.index int 1 run scoreboard player
 function switch:modes/build_battle/preparation/get_theme with storage switch:main input
 
 # Display the themes in the inventory
-execute as @a[tag=!detached] in minecraft:overworld run function switch:modes/build_battle/preparation/display_themes
+execute as @a[tag=!detached] in switch:game run function switch:modes/build_battle/preparation/display_themes
 
 
