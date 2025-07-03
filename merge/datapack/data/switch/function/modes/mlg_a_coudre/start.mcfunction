@@ -1,7 +1,6 @@
 
 clear @a[tag=!detached]
 effect clear @a[tag=!detached]
-gamemode spectator @a[tag=!detached]
 team leave @a[tag=!detached]
 
 kill @e[type=item]
@@ -21,7 +20,7 @@ execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_mlg_a_coudre_start
 
-scoreboard players set #mlg_a_coudre_seconds switch.data 0
+scoreboard players set #mlg_a_coudre_seconds switch.data -9
 scoreboard players set #mlg_a_coudre_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
@@ -35,4 +34,8 @@ scoreboard players set #position switch.data 0
 scoreboard players set #next switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/mlg_a_coudre/define_order
 scoreboard players operation #max switch.data = #position switch.data
+
+# Teleport all players to the jump place
+execute as @a[tag=!detached] run function switch:modes/mlg_a_coudre/next_player_teleport
+gamemode spectator @a[tag=!detached]
 
