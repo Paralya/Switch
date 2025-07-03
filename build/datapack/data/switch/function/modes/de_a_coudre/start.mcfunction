@@ -4,7 +4,6 @@
 # @within	switch:modes/de_a_coudre/calls/start
 #
 
-gamemode spectator @a[tag=!detached]
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
@@ -14,7 +13,7 @@ function switch:utils/choose_map_for {id:"de_a_coudre", maps:["de_a_coudre_1"]}
 execute in switch:game run gamerule showDeathMessages false
 execute in switch:game run gamerule keepInventory true
 
-scoreboard players set #de_a_coudre_seconds switch.data 0
+scoreboard players set #de_a_coudre_seconds switch.data -9
 scoreboard players set #de_a_coudre_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
@@ -40,4 +39,8 @@ execute if score #max switch.data matches 25..32 run scoreboard players set #rou
 execute if score #max switch.data matches 33.. run scoreboard players set #rounds switch.data 1
 scoreboard players operation #max_rounds switch.data = #rounds switch.data
 function switch:translations/modes_de_a_coudre_start
+
+# Teleport all players to the jump place
+execute as @a[tag=!detached] run function switch:modes/de_a_coudre/next_player_teleport
+gamemode spectator @a[tag=!detached]
 
