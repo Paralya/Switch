@@ -24,7 +24,7 @@ scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.blocks_run dummy
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
-scoreboard players set #pitchout_seconds switch.data -5
+scoreboard players set #pitchout_seconds switch.data -10
 scoreboard players set #pitchout_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
