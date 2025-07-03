@@ -20,7 +20,7 @@ function switch:translations/modes_murder_mystery_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 245
-scoreboard players set #murder_mystery_seconds switch.data -8
+scoreboard players set #murder_mystery_seconds switch.data -15
 scoreboard players set #murder_mystery_ticks switch.data 0
 scoreboard players set #detective_reload switch.data 0
 scoreboard players set #murderer_reload switch.data 0
