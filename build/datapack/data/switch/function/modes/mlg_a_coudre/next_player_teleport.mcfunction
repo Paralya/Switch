@@ -2,6 +2,7 @@
 #> switch:modes/mlg_a_coudre/next_player_teleport
 #
 # @within	switch:modes/mlg_a_coudre/next_player
+#			switch:modes/mlg_a_coudre/start
 #
 
 scoreboard players set #success switch.data 1

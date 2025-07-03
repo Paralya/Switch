@@ -29,6 +29,6 @@ function switch:utils/on_death_run_function {function:"switch:modes/moutron/deat
 ## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=!spectator]
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/moutron/process_end
+execute if score #moutron_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/moutron/process_end
 execute if score #moutron_seconds switch.data matches 600.. run function switch:modes/moutron/process_end
 

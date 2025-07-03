@@ -23,11 +23,8 @@ scoreboard objectives add switch.temp.moutron dummy
 scoreboard objectives add switch.temp.color dummy
 scoreboard objectives add switch.temp.kill dummy
 
-scoreboard players set #moutron_seconds switch.data -10
+scoreboard players set #moutron_seconds switch.data -16
 scoreboard players set #moutron_ticks switch.data -100
 scoreboard players set #process_end switch.data 0
 scoreboard players set #life_time switch.data 20
-
-scoreboard players set #next_model switch.data 0
-execute as @a[tag=!detached] at @s run function switch:modes/moutron/summon_kart
 

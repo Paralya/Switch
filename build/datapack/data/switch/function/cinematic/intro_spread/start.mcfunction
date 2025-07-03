@@ -78,9 +78,9 @@
 #			switch:maps/survival/tnt_run_futuristic/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"TNT Run Futuristic",credits:"Stoupy, Jugou2",with:{}}
 #			switch:maps/survival/block_party/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Block Party",credits:"👉 You 👈",with:{}}
 #			switch:maps/survival/nuketown_no_barrier/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Nuketown No Barrier",credits:"Qiuye, Cube Horizon",with:{}}
-#			switch:maps/survival/snowball_painter/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Snowball Painter",credits:"Stoupy, ?",with:{}}
+#			switch:maps/survival/snowball_painter/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Snowball Painter",credits:"Stoupy, Fanto Vakkin",with:{}}
 #			switch:maps/survival/gay_shooter/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Guy Shooter",credits:"scartvol (Survisland)",with:{}}
-#			switch:maps/survival/the_four_elements/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"The Four Elements",credits:"Stoupy, ?",with:{}}
+#			switch:maps/survival/the_four_elements/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"The Four Elements",credits:"Stoupy, Fanto Vakkin",with:{}}
 #			switch:maps/survival/remelta_cluedo/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Cluedo",credits:"Remelta",with:{}}
 #			switch:maps/survival/arti_box/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Arti Box",credits:"Arti",with:{}}
 #			switch:maps/survival/bombardement/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Bombardement",credits:"Stoupy",with:{}}

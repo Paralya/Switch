@@ -136,9 +136,9 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (109000, 100, 109000), (109059, 168, 109046), ("tnt_run_futuristic", "TNT Run Futuristic", "Stoupy, Jugou2"), view=(108992.51, 136.29, 109061.09, 222.34, 9.07))
 	clone_survival(100, (109993, -63, 109993), (110087, 117, 110087), ("block_party", "Block Party", "👉 You 👈"), view=(109951.05, 206.21, 110071.73, 249.32, 2.55))
 	clone_survival(100, (111000, 100, 111000), (111207, 151, 111220), ("nuketown_no_barrier", "Nuketown No Barrier", "Qiuye, Cube Horizon"), view=(111087.17, 117.13, 111105.28, 243.59, 15.91))
-	clone_survival(100, (112000, 100, 112000), (112043, 133, 112042), ("snowball_painter", "Snowball Painter", "Stoupy, ?"), view=(112036.42, 110.64, 112002.87, 29.00, 8.65))
+	clone_survival(100, (112000, 100, 112000), (112043, 133, 112042), ("snowball_painter", "Snowball Painter", "Stoupy, Fanto Vakkin"), view=(112036.42, 110.64, 112002.87, 29.00, 8.65))
 	clone_survival(100, (114000, 100, 114000), (114070, 149, 114058), ("gay_shooter", "Guy Shooter", "scartvol (Survisland)"), view=(114060.54, 135.63, 114016.48, 47.54, 14.09))
-	clone_survival(100, (115000, 100, 115000), (115101, 133, 115101), ("the_four_elements", "The Four Elements", "Stoupy, ?"), view=(115089.76, 125.47, 115008.43, 38.50, 32.30))
+	clone_survival(100, (115000, 100, 115000), (115101, 133, 115101), ("the_four_elements", "The Four Elements", "Stoupy, Fanto Vakkin"), view=(115089.76, 125.47, 115008.43, 38.50, 32.30))
 	##	116000	(undefined)	: empty
 	##	117000	(undefined)	: empty
 	clone_survival(100, (118000, 100, 118000), (118089, 142, 118066), ("remelta_cluedo", "Cluedo", "Remelta"), view=(118027.17, 107.72, 118026.11, -62.95, -1.90))
