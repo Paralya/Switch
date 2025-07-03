@@ -18,6 +18,6 @@ execute store result score #creeper_count switch.data if entity @e[type=creeper]
 function switch:translations/modes_creeper_apocalypse_tick
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute if score #remaining_time switch.data matches 1.. unless entity @a[scores={switch.alive=1..}] run function switch:modes/creeper_apocalypse/process_end
+execute if score #creeper_apocalypse_seconds switch.data matches 1.. if score #remaining_time switch.data matches 1.. unless entity @a[scores={switch.alive=1..}] run function switch:modes/creeper_apocalypse/process_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/creeper_apocalypse/process_end
 

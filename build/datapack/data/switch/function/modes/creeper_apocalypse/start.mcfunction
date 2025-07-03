@@ -12,6 +12,7 @@ effect give @a[tag=!detached] resistance 12 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs + give d'items
+scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main"]}
 
 execute in switch:game run gamerule mobGriefing true
@@ -22,7 +23,7 @@ execute in switch:game run gamerule keepInventory true
 function switch:translations/modes_creeper_apocalypse_start
 
 scoreboard players set #remaining_time switch.data 105
-scoreboard players set #creeper_apocalypse_seconds switch.data -5
+scoreboard players set #creeper_apocalypse_seconds switch.data -10
 scoreboard players set #creeper_apocalypse_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
