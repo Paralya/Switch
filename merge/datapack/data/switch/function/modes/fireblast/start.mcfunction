@@ -1,5 +1,4 @@
 
-effect give @a[tag=!detached] blindness 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
