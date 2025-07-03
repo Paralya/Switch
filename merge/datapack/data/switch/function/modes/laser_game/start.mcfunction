@@ -14,7 +14,6 @@ effect give @a[tag=!detached] weakness infinite 255 true
 time set 18000
 
 ## Traitement des joueurs
-scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"laser_game", maps:["laser_game"]}
 
 scoreboard players set #team_boolean switch.data 0
@@ -31,7 +30,7 @@ scoreboard objectives add switch.temp.dead_cooldown dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-scoreboard players set #laser_game_seconds switch.data 0
+scoreboard players set #laser_game_seconds switch.data -10
 scoreboard players set #laser_game_ticks switch.data 0
 scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
