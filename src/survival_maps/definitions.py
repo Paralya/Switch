@@ -188,7 +188,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (149000, 100, 149000), (149202, 209, 149350), ("ctf_nether", "Fiery Wastes", "JeSuisMister, Zougly, Maxmos"), view=(149056.38, 157.56, 149204.54, 221.45, 15.91))
 	clone_survival(100, (150000, 100, 150000), (150101, 164, 150216), ("ctf_forest_castles", "Forest Castle", "Stolen_capes, Ace_Unhacked"), view=(150019.35, 133.90, 150071.48, 328.43, 21.35))
 	clone_survival(100, (151000, 100, 151000), (151056, 136, 151055), ("luxio_fish_fight", "Fish Fight Island", "Luxio"), view=(151012.14, 126.63, 151019.28, 295.73, 16.32))
-	clone_survival(100, (152000, 100, 152000), (152020, 173, 152020), ("arti_tnt_run_tower", "TNT Run Tower", "Arti"), view=(152032.51, 144.70, 152056.72, 153.46, 9.31))
+	clone_survival(100, (152000, 100, 152000), (152020, 182, 152020), ("arti_tnt_run_tower", "TNT Run Tower", "Arti"), view=(152032.51, 144.70, 152056.72, 153.46, 9.31))
 	clone_survival(100, (153000, 100, 153000), (153029, 116, 153036), ("memory_mine", "Memory Mine", "Stoupy"), view=(153025.83, 104.76, 153033.63, 139.04, 17.55))
 	clone_survival(100, (154000, 100, 154000), (154107, 169, 154106), ("sheepwars_colored_sheeps", "Colored Sheeps", "AirDox"), view=(154062.01, 148.53, 154018.31, 15.33, 13.04))
 	clone_survival(100, (155000, 100, 155000), (155042, 175, 155042), ("elza_dual_biomes", "Dual Biomes", "Elzariia"), view=(155036.25, 114.40, 155032.59, 122.22, 16.40))

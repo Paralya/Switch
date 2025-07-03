@@ -21,9 +21,9 @@ execute in switch:game run gamerule fallDamage false
 
 function switch:translations/modes_thunder_spear_start
 
-scoreboard players set #thunder_spear_seconds switch.data -5
+scoreboard players set #thunder_spear_seconds switch.data -10
 scoreboard players set #thunder_spear_ticks switch.data 0
-scoreboard players set #remaining_time switch.data 155
+scoreboard players set #remaining_time switch.data 160
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.reload dummy
 scoreboard objectives add switch.temp.kills playerKillCount {"text":" Joueurs tués ","color":"red"}

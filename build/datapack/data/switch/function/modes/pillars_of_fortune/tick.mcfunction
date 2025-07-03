@@ -16,6 +16,6 @@ execute if score #pillars_of_fortune_seconds switch.data matches ..0 as @a[tag=!
 ## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/pillars_of_fortune/process_end
+execute if score #pillars_of_fortune_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/pillars_of_fortune/process_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/pillars_of_fortune/process_end
 

@@ -15,7 +15,7 @@ summon marker 13975 99 14050 {Tags:["switch.rush_the_point.zone","switch.rush_th
 summon marker 13975 99 13950 {Tags:["switch.rush_the_point.zone","switch.rush_the_point.side"]}
 
 scoreboard players set #remaining_time switch.data 610
-scoreboard players set #rush_the_point_seconds switch.data -10
+scoreboard players set #rush_the_point_seconds switch.data -20
 scoreboard players set #rush_the_point_ticks switch.data 0
 scoreboard objectives add switch.temp.zone_capture dummy
 

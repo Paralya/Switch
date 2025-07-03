@@ -18,7 +18,7 @@ execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard p
 execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #start_y_arti_tnt_run_tower switch.data 101
 execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #start_z_arti_tnt_run_tower switch.data 152001
 execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #end_x_arti_tnt_run_tower switch.data 152019
-execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #end_y_arti_tnt_run_tower switch.data 172
+execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #end_y_arti_tnt_run_tower switch.data 181
 execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players set #end_z_arti_tnt_run_tower switch.data 152019
 execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players operation #curr_x_arti_tnt_run_tower switch.data = #start_x_arti_tnt_run_tower switch.data
 execute if score #scan_arti_tnt_run_tower switch.data matches 1 run scoreboard players operation #curr_y_arti_tnt_run_tower switch.data = #start_y_arti_tnt_run_tower switch.data

@@ -25,7 +25,7 @@ function switch:utils/choose_map_for {id:"pitch_creep", maps:["pitch_creep_1","o
 function switch:translations/modes_pitch_creep_start
 
 scoreboard players set #remaining_time switch.data 95
-scoreboard players set #pitch_creep_seconds switch.data -5
+scoreboard players set #pitch_creep_seconds switch.data -10
 scoreboard players set #pitch_creep_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.shot minecraft.used:minecraft.bow

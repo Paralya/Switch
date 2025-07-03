@@ -18,6 +18,6 @@ execute at @a[tag=!detached,gamemode=survival] run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 pow
 ## End game
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/spleef/process_end
+execute if score #spleef_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/spleef/process_end
 execute if score #spleef_seconds switch.data matches 300.. run function switch:modes/spleef/process_end
 

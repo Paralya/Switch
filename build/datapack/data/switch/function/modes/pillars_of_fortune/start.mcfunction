@@ -5,7 +5,6 @@
 #
 
 gamemode survival @a[tag=!detached]
-effect give @a[tag=!detached] blindness 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] saturation 5 255 true
 effect give @a[tag=!detached] resistance 5 255 true
@@ -20,7 +19,7 @@ function switch:translations/modes_pillars_of_fortune_start
 execute in switch:game run gamerule mobGriefing true
 
 scoreboard players set #remaining_time switch.data 605
-scoreboard players set #pillars_of_fortune_seconds switch.data -5
+scoreboard players set #pillars_of_fortune_seconds switch.data -10
 scoreboard players set #pillars_of_fortune_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health

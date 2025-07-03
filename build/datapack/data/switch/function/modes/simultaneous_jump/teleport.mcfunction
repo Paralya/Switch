@@ -4,7 +4,6 @@
 # @within	switch:modes/simultaneous_jump/death
 #			switch:modes/simultaneous_jump/done
 #			switch:modes/simultaneous_jump/joined
-#			switch:modes/simultaneous_jump/second
 #			switch:modes/simultaneous_jump/start
 #
 

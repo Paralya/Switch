@@ -9,17 +9,6 @@
 scoreboard players add #rush_the_point_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
-# During preparation phase (negative seconds), apply effects and remove blocks
-execute if score #rush_the_point_seconds switch.data matches ..-1 as @a[tag=!detached] run attribute @s jump_strength base set 0
-execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a[tag=!detached] slowness 100 250 true
-execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a[tag=!detached] blindness 100 250 true
-execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a[tag=!detached] night_vision 100 250 true
-execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a[tag=!detached] darkness 100 250 true
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 13925 air
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14000 air
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14075 air
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 86 14000 air
-
 # When game starts (0 seconds), reset player attributes and clear effects
 execute if score #rush_the_point_seconds switch.data matches 0 as @a[tag=!detached] run attribute @s jump_strength base reset
 execute if score #rush_the_point_seconds switch.data matches 0 run effect clear @a[tag=!detached]

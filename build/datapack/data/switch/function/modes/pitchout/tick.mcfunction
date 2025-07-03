@@ -44,7 +44,7 @@ function switch:utils/on_death_run_function {function:"switch:modes/pitchout/dea
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,scores={switch.alive=1..}]
 # End game if only 1 or fewer players remain
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/pitchout/process_end
+execute if score #pitchout_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/pitchout/process_end
 # End game after 600 seconds (10 minutes)
 execute if score #pitchout_seconds switch.data matches 600.. run function switch:modes/pitchout/process_end
 
