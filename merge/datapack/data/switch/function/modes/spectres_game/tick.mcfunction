@@ -8,10 +8,14 @@ function switch:utils/on_death_run_function {function:"switch:modes/spectres_gam
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/spectres_game/death/detect
 execute if score #spectres_game_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function switch:modes/spectres_game/death/for_global
 
-#si un joueur casse la crying obsidienne executer une fonction
+# Si un joueur casse la crying obsidienne executer une fonction
 execute as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}] run function switch:modes/spectres_game/obsidian_effect
-#clear les crying obsidiennes des inventaires
+
+# Clear les crying obsidiennes des inventaires
 clear @a[tag=!detached] crying_obsidian
+
+# Obsidienne poulet
+execute as @e[type=falling_block] at @s unless block ~ ~-2 ~ minecraft:air run ride @s dismount
 
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
@@ -30,5 +34,3 @@ execute unless score #test_mode switch.data matches 1 run advancement grant @a[t
 execute if score #spectres_game_seconds switch.data matches 1..900 run function switch:modes/spectres_game/detect_end
 execute if score #spectres_game_seconds switch.data matches 901.. run function switch:modes/spectres_game/process_end
 
-# obsidienne poulmet
-execute as @e[type=falling_block] at @s unless block ~ ~-2 ~ minecraft:air run ride @s dismount
