@@ -2,8 +2,6 @@
 effect give @a[tag=!detached] hunger 5 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
-effect give @a[tag=!detached] blindness 5 255 true
-effect give @a[tag=!detached] darkness 5 255 true
 effect give @a[tag=!detached] slowness 5 255 true
 function switch:utils/set_dynamic_time
 
@@ -16,8 +14,8 @@ execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @
 
 # Default: 20 seconds delay between the give of sheeps (decrease every minute)
 scoreboard players set #sheep_give_delay switch.data 20
-scoreboard players set #remaining_time switch.data 90500
-scoreboard players set #sheepwars_seconds switch.data -5
+scoreboard players set #remaining_time switch.data 910
+scoreboard players set #sheepwars_seconds switch.data -10
 scoreboard players set #sheepwars_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #blue_fire_arrows switch.data 0

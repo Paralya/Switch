@@ -33,6 +33,6 @@ execute if score #sheepwars_night switch.data matches 3 run scoreboard players s
 
 
 ## Détection de fin de partie
-execute if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
+execute if score #sheepwars_seconds switch.data matches 1.. if score #remaining_time switch.data matches 1.. run function switch:modes/sheepwars/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/sheepwars/process_end
 
