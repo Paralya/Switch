@@ -20,7 +20,7 @@ execute in switch:game run gamerule keepInventory true
 function switch:translations/modes_feed_fast_start
 
 scoreboard players set #remaining_time switch.data 50
-scoreboard players set #feed_fast_seconds switch.data -5
+scoreboard players set #feed_fast_seconds switch.data -10
 scoreboard players set #feed_fast_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
