@@ -8,6 +8,6 @@ function switch:utils/on_death_run_function {function:"switch:modes/panic_chase/
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/panic_chase/no_drop
 
 # Détection de fin de partie
-execute if score #remaining_time switch.data matches 0.. run function switch:modes/panic_chase/detect_end
+execute if score #panic_chase_seconds switch.data matches 1.. if score #remaining_time switch.data matches 0.. run function switch:modes/panic_chase/detect_end
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/panic_chase/process_end
 
