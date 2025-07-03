@@ -20,5 +20,5 @@ execute if score #respawn_marker_count switch.data matches 33.. run function swi
 ## Détection de fin de partie
 execute if score #winner switch.data matches 0 if entity @a[tag=!detached,scores={switch.temp.kills=30..}] run scoreboard players set #winner switch.data 1
 execute if score #winner switch.data matches 1 run function switch:modes/one_shot/process_end
-#execute if score #one_shot_seconds switch.data matches 600.. run function switch:modes/one_shot/process_end
+execute if score #one_shot_seconds switch.data matches 600.. run function switch:modes/one_shot/process_end
 
