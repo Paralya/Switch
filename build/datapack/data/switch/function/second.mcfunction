@@ -10,7 +10,7 @@ scoreboard players add #score switch.reconnect 1
 scoreboard players operation @a switch.reconnect = #score switch.reconnect
 
 # Others
-execute if score #engine_state switch.data matches 3 in switch:game run function switch:engine/signals/second
+execute if score #engine_state switch.data matches 3 run function switch:engine/signals/second
 
 # Last death timer & play time
 scoreboard players add @a switch.last_death 1

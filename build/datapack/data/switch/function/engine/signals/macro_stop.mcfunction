@@ -4,5 +4,5 @@
 # @within	switch:engine/signals/stop with storage switch:main input
 #
 
-$function switch:modes/$(id)/calls/stop
+$execute in switch:game run function switch:modes/$(id)/calls/stop
 

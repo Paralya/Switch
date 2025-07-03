@@ -47,6 +47,6 @@ function switch:modes/fish_fight/block_disappear/global_tick
 ## Détection de fin de partie
 scoreboard players set #remaining_players switch.data 0
 execute store result score #remaining_players switch.data if entity @a[tag=!detached,scores={switch.alive=1..}]
-execute if score #remaining_players switch.data matches ..1 run function switch:modes/fish_fight/process_end
+execute if score #fish_fight_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/fish_fight/process_end
 execute if score #fish_fight_seconds switch.data matches 600.. run function switch:modes/fish_fight/process_end
 

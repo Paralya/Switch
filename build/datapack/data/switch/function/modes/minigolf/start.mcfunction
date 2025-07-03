@@ -10,10 +10,10 @@ effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
-execute in minecraft:overworld run gamerule fallDamage false
-execute in minecraft:overworld run gamerule fireDamage false
-execute in minecraft:overworld run gamerule drowningDamage false
-execute in minecraft:overworld run gamerule freezeDamage false
+execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule fireDamage false
+execute in switch:game run gamerule drowningDamage false
+execute in switch:game run gamerule freezeDamage false
 
 ## Téléportation des joueurs
 scoreboard players set #dont_regenerate switch.data 1
@@ -28,17 +28,17 @@ scoreboard objectives add switch.temp.respawn dummy
 scoreboard players set #default_do_collision golf_ball.data 0
 
 # Choose map
-execute if data storage switch:main {map:"gg_grass_1"} in minecraft:overworld run tp @a[tag=!detached] 124021 121 124070
-execute if data storage switch:main {map:"gg_grass_2"} in minecraft:overworld run tp @a[tag=!detached] 124020 124 124023
-execute if data storage switch:main {map:"gg_grass_3"} in minecraft:overworld run tp @a[tag=!detached] 124144 125 124112
-execute if data storage switch:main {map:"gg_snow_1"} in minecraft:overworld run tp @a[tag=!detached] 124068 120 124016
-execute if data storage switch:main {map:"gg_snow_2"} in minecraft:overworld run tp @a[tag=!detached] 124062 125 124069
-execute if data storage switch:main {map:"gg_ice_1"} in minecraft:overworld run tp @a[tag=!detached] 124103 115 124070
-execute if data storage switch:main {map:"gg_temple"} in minecraft:overworld run tp @a[tag=!detached] 124103 117 124013
-execute if data storage switch:main {map:"gg_volcano"} in minecraft:overworld run tp @a[tag=!detached] 124136 130 124035
-execute if data storage switch:main {map:"gg_desert_1"} in minecraft:overworld run tp @a[tag=!detached] 124144 125 124069
-execute if data storage switch:main {map:"gg_end_1"} in minecraft:overworld run tp @a[tag=!detached] 124102 135 124114
-execute if data storage switch:main {map:"gg_chamber"} in minecraft:overworld run tp @a[tag=!detached] 124064 129 124118
+execute if data storage switch:main {map:"gg_grass_1"} in switch:game run tp @a[tag=!detached] 124021 121 124070
+execute if data storage switch:main {map:"gg_grass_2"} in switch:game run tp @a[tag=!detached] 124020 124 124023
+execute if data storage switch:main {map:"gg_grass_3"} in switch:game run tp @a[tag=!detached] 124144 125 124112
+execute if data storage switch:main {map:"gg_snow_1"} in switch:game run tp @a[tag=!detached] 124068 120 124016
+execute if data storage switch:main {map:"gg_snow_2"} in switch:game run tp @a[tag=!detached] 124062 125 124069
+execute if data storage switch:main {map:"gg_ice_1"} in switch:game run tp @a[tag=!detached] 124103 115 124070
+execute if data storage switch:main {map:"gg_temple"} in switch:game run tp @a[tag=!detached] 124103 117 124013
+execute if data storage switch:main {map:"gg_volcano"} in switch:game run tp @a[tag=!detached] 124136 130 124035
+execute if data storage switch:main {map:"gg_desert_1"} in switch:game run tp @a[tag=!detached] 124144 125 124069
+execute if data storage switch:main {map:"gg_end_1"} in switch:game run tp @a[tag=!detached] 124102 135 124114
+execute if data storage switch:main {map:"gg_chamber"} in switch:game run tp @a[tag=!detached] 124064 129 124118
 
 # Record
 scoreboard players reset #new_record switch.data

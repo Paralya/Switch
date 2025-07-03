@@ -53,14 +53,12 @@ scoreboard players set @a[team=!detached] switch.temp.axolotl_killed 0
 
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
-scoreboard players set #fish_fight_seconds switch.data 0
+scoreboard players set #fish_fight_seconds switch.data -10
 scoreboard players set #fish_fight_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 # gamemode survival
 gamemode survival @a[tag=!detached]
-# donner blindness et slownees pendant 5 secondes
-effect give @a[tag=!detached] minecraft:blindness 5 2 true
-effect give @a[tag=!detached] minecraft:slowness 5 2 true
+effect give @a[tag=!detached] slowness 5 2 true
 effect give @a[tag=!detached] resistance infinite 0 true
 

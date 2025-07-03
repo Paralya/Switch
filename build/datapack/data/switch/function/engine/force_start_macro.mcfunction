@@ -65,7 +65,7 @@ scoreboard players reset #do_spreadplayers switch.data
 scoreboard players reset #dont_regenerate switch.data
 function switch:utils/reset_players
 function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached]"}
-execute in switch:game run function switch:engine/signals/start
+function switch:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 scoreboard players remove @a[tag=!detached] switch.win_streak 5

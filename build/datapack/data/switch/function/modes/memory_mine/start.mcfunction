@@ -20,5 +20,5 @@ scoreboard players set #memory_mine_seconds switch.data -5
 scoreboard players set #memory_mine_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
-execute in minecraft:overworld run spreadplayers 153013 153016 0 15 under 105 false @a[tag=!detached]
+execute in switch:game run spreadplayers 153013 153016 0 15 under 105 false @a[tag=!detached]
 

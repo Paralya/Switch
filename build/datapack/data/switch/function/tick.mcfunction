@@ -12,10 +12,10 @@ scoreboard players set @a[scores={switch.death=1..}] switch.death 0
 scoreboard players add #tick switch.data 1
 scoreboard players set #players_in_lobby switch.data 0
 execute as @a[sort=random] at @s run function switch:player/tick
-execute if score #tick switch.data matches 20.. in switch:game run function switch:second
+execute if score #tick switch.data matches 20.. run function switch:second
 
 # Engine : games ticks, start, stop
-execute if score #engine_state switch.data matches 3 in switch:game run function switch:engine/signals/tick
+execute if score #engine_state switch.data matches 3 run function switch:engine/signals/tick
 execute if score #engine_state switch.data matches 0 if entity @a[tag=!detached] run function switch:engine/start
 execute unless score #engine_state switch.data matches 0 unless entity @a[tag=!detached] run function switch:engine/stop
 

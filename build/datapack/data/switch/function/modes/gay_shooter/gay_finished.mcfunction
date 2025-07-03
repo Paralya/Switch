@@ -4,7 +4,7 @@
 # @within	switch:modes/gay_shooter/tick
 #
 
-execute if data storage switch:main {map:"gay_shooter"} in minecraft:overworld run tp @s 114028 125 114010
+execute if data storage switch:main {map:"gay_shooter"} in switch:game run tp @s 114028 125 114010
 
 clear @s
 # loot give @s loot stardust:i/ultimate_sniper

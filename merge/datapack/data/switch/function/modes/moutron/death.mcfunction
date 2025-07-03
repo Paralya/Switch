@@ -4,7 +4,7 @@ execute if entity @s[gamemode=!spectator] at @s as @p[gamemode=!spectator,distan
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 
 ride @s dismount
-execute if entity @s[gamemode=spectator] at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~
+execute if entity @s[gamemode=spectator] at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
 gamemode spectator @s
 effect clear @s
 effect give @s night_vision infinite 255 true
