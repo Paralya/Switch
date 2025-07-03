@@ -18,6 +18,6 @@ item replace entity @a[tag=!detached] hotbar.0 with snowball 16
 execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.snowballs_shot=42..}] only switch:visible/72
 
 # Process end
-execute unless entity @a[scores={switch.alive=1..}] run function switch:modes/warden_escape/process_end
+execute if score #warden_escape_seconds switch.data matches 1.. unless entity @a[scores={switch.alive=1..}] run function switch:modes/warden_escape/process_end
 execute if score #remaining_time switch.data matches 0 run function switch:modes/warden_escape/process_end
 

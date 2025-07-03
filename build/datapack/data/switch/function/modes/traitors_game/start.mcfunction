@@ -24,7 +24,7 @@ function switch:translations/modes_traitors_game_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 1210
-scoreboard players set #traitors_game_seconds switch.data -10
+scoreboard players set #traitors_game_seconds switch.data -15
 scoreboard players set #traitors_game_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
