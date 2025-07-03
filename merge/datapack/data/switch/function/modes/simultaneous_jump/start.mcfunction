@@ -1,5 +1,4 @@
 
-gamemode spectator @a[tag=!detached]
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
@@ -11,7 +10,7 @@ execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_simultaneous_jump_start
 
-scoreboard players set #simultaneous_jump_seconds switch.data -5
+scoreboard players set #simultaneous_jump_seconds switch.data -8
 scoreboard players set #simultaneous_jump_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 65
 scoreboard players set #process_end switch.data 0
@@ -27,4 +26,5 @@ scoreboard players set #next switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/simultaneous_jump/define_color
 scoreboard players operation #max switch.data = #position switch.data
 execute as @a[tag=!detached] run function switch:modes/simultaneous_jump/teleport
+gamemode adventure @a[tag=!detached]
 
