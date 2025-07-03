@@ -11,7 +11,7 @@ function switch:utils/choose_map_for {id:"spleef", maps:["spleef_1"]}
 
 function switch:translations/modes_spleef_start
 
-scoreboard players set #spleef_seconds switch.data -5
+scoreboard players set #spleef_seconds switch.data -10
 scoreboard players set #spleef_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
