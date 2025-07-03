@@ -1,4 +1,7 @@
 
+# Global variable indicating number of players in the lobby
+scoreboard players add #players_in_lobby switch.data 1
+
 gamemode adventure @s[gamemode=creative,tag=!can_creative]
 team join switch.detached @s[team=!switch.tutorial]
 tp @s[team=switch.tutorial] -500 69.69 -500 0 0

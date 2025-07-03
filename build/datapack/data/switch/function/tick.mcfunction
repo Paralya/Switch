@@ -10,6 +10,7 @@ scoreboard players set @a[scores={switch.death=1..}] switch.death 0
 
 ## Timer and tick related
 scoreboard players add #tick switch.data 1
+scoreboard players set #players_in_lobby switch.data 0
 execute as @a[sort=random] at @s run function switch:player/tick
 execute if score #tick switch.data matches 20.. in switch:game run function switch:second
 

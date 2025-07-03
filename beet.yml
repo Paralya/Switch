@@ -18,9 +18,11 @@ resource_pack:
     name: resource_pack
     load: ["merge/resource_pack"]
 
+require:
+    - "stewbeet.plugins.initialize"
+
 # A list of strings or dicts representing "plugins".
 pipeline:
-    - "stewbeet.plugins.initialize"
     - "src.setup_definitions" # User code
     - "stewbeet.plugins.verify_definitions"
     - "stewbeet.plugins.resource_pack.sounds"
@@ -38,6 +40,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.basic_datapack_structure"
     - "stewbeet.plugins.finalyze.dependencies"
     - "stewbeet.plugins.finalyze.check_unused_textures"
+    - "stewbeet.plugins.finalyze.last_final"
     # - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.headers"
     - "stewbeet.plugins.archive"
