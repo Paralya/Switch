@@ -1,8 +1,8 @@
 
 ## Maps spawn
 # Map Rush The Point 1
-execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.red] run tp @s 13930 100.69 14000 -90 0
-execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.blue] run tp @s 14070 100.69 14000 90 0
+execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.red] in switch:game run tp @s 13930 100.69 14000 -90 0
+execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.blue] in switch:game run tp @s 14070 100.69 14000 90 0
 
 
 ## Items to choose a class
@@ -11,9 +11,7 @@ clear @s
 attribute @s jump_strength base set 0
 effect give @s resistance infinite 250 true
 effect give @s slowness infinite 250 true
-effect give @s blindness infinite 250 true
 effect give @s night_vision infinite 250 true
-effect give @s darkness infinite 250 true
 gamemode adventure @s
 scoreboard players set @s switch.temp.chosen_class 0
 item replace entity @s hotbar.0 with diamond_sword[item_name={"text":"Guerrier","color":"red","italic":false},item_model="switch:stardust_sword",custom_data={switch:{class_item:1b,rtp_class:true}},consumable={consume_seconds:1024}]
