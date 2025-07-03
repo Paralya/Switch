@@ -90,6 +90,17 @@
 #			switch:maps/survival/nether_storm/regenerate
 #			switch:maps/survival/shoot_da_sheep/regenerate
 #			switch:maps/survival/minigolf/regenerate
+#			switch:maps/survival/gg_grass_1/regenerate
+#			switch:maps/survival/gg_grass_2/regenerate
+#			switch:maps/survival/gg_grass_3/regenerate
+#			switch:maps/survival/gg_snow_1/regenerate
+#			switch:maps/survival/gg_snow_2/regenerate
+#			switch:maps/survival/gg_ice_1/regenerate
+#			switch:maps/survival/gg_temple/regenerate
+#			switch:maps/survival/gg_volcano/regenerate
+#			switch:maps/survival/gg_desert_1/regenerate
+#			switch:maps/survival/gg_end_1/regenerate
+#			switch:maps/survival/gg_chamber/regenerate
 #			switch:maps/survival/pitchout_halloween/regenerate
 #			switch:maps/survival/cigogne/regenerate
 #			switch:maps/survival/ancienne_egypte_2013/regenerate

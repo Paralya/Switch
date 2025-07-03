@@ -92,6 +92,17 @@ execute if data storage switch:main {map:"bombardement"} run function switch:map
 execute if data storage switch:main {map:"nether_storm"} run function switch:maps/survival/nether_storm/regenerate
 execute if data storage switch:main {map:"shoot_da_sheep"} run function switch:maps/survival/shoot_da_sheep/regenerate
 execute if data storage switch:main {map:"minigolf"} run function switch:maps/survival/minigolf/regenerate
+execute if data storage switch:main {map:"gg_grass_1"} run function switch:maps/survival/gg_grass_1/regenerate
+execute if data storage switch:main {map:"gg_grass_2"} run function switch:maps/survival/gg_grass_2/regenerate
+execute if data storage switch:main {map:"gg_grass_3"} run function switch:maps/survival/gg_grass_3/regenerate
+execute if data storage switch:main {map:"gg_snow_1"} run function switch:maps/survival/gg_snow_1/regenerate
+execute if data storage switch:main {map:"gg_snow_2"} run function switch:maps/survival/gg_snow_2/regenerate
+execute if data storage switch:main {map:"gg_ice_1"} run function switch:maps/survival/gg_ice_1/regenerate
+execute if data storage switch:main {map:"gg_temple"} run function switch:maps/survival/gg_temple/regenerate
+execute if data storage switch:main {map:"gg_volcano"} run function switch:maps/survival/gg_volcano/regenerate
+execute if data storage switch:main {map:"gg_desert_1"} run function switch:maps/survival/gg_desert_1/regenerate
+execute if data storage switch:main {map:"gg_end_1"} run function switch:maps/survival/gg_end_1/regenerate
+execute if data storage switch:main {map:"gg_chamber"} run function switch:maps/survival/gg_chamber/regenerate
 execute if data storage switch:main {map:"pitchout_halloween"} run function switch:maps/survival/pitchout_halloween/regenerate
 execute if data storage switch:main {map:"cigogne"} run function switch:maps/survival/cigogne/regenerate
 execute if data storage switch:main {map:"ancienne_egypte_2013"} run function switch:maps/survival/ancienne_egypte_2013/regenerate

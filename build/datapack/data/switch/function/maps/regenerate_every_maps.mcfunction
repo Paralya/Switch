@@ -89,6 +89,17 @@ data modify storage switch:maps to_regenerate.bombardement set value 1b
 data modify storage switch:maps to_regenerate.nether_storm set value 1b
 data modify storage switch:maps to_regenerate.shoot_da_sheep set value 1b
 data modify storage switch:maps to_regenerate.minigolf set value 1b
+data modify storage switch:maps to_regenerate.gg_grass_1 set value 1b
+data modify storage switch:maps to_regenerate.gg_grass_2 set value 1b
+data modify storage switch:maps to_regenerate.gg_grass_3 set value 1b
+data modify storage switch:maps to_regenerate.gg_snow_1 set value 1b
+data modify storage switch:maps to_regenerate.gg_snow_2 set value 1b
+data modify storage switch:maps to_regenerate.gg_ice_1 set value 1b
+data modify storage switch:maps to_regenerate.gg_temple set value 1b
+data modify storage switch:maps to_regenerate.gg_volcano set value 1b
+data modify storage switch:maps to_regenerate.gg_desert_1 set value 1b
+data modify storage switch:maps to_regenerate.gg_end_1 set value 1b
+data modify storage switch:maps to_regenerate.gg_chamber set value 1b
 data modify storage switch:maps to_regenerate.pitchout_halloween set value 1b
 data modify storage switch:maps to_regenerate.cigogne set value 1b
 data modify storage switch:maps to_regenerate.ancienne_egypte_2013 set value 1b

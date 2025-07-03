@@ -87,6 +87,17 @@
 #			switch:maps/survival/nether_storm/regenerate {name:"nether_storm"}
 #			switch:maps/survival/shoot_da_sheep/regenerate {name:"shoot_da_sheep"}
 #			switch:maps/survival/minigolf/regenerate {name:"minigolf"}
+#			switch:maps/survival/gg_grass_1/regenerate {name:"gg_grass_1"}
+#			switch:maps/survival/gg_grass_2/regenerate {name:"gg_grass_2"}
+#			switch:maps/survival/gg_grass_3/regenerate {name:"gg_grass_3"}
+#			switch:maps/survival/gg_snow_1/regenerate {name:"gg_snow_1"}
+#			switch:maps/survival/gg_snow_2/regenerate {name:"gg_snow_2"}
+#			switch:maps/survival/gg_ice_1/regenerate {name:"gg_ice_1"}
+#			switch:maps/survival/gg_temple/regenerate {name:"gg_temple"}
+#			switch:maps/survival/gg_volcano/regenerate {name:"gg_volcano"}
+#			switch:maps/survival/gg_desert_1/regenerate {name:"gg_desert_1"}
+#			switch:maps/survival/gg_end_1/regenerate {name:"gg_end_1"}
+#			switch:maps/survival/gg_chamber/regenerate {name:"gg_chamber"}
 #			switch:maps/survival/pitchout_halloween/regenerate {name:"pitchout_halloween"}
 #			switch:maps/survival/cigogne/regenerate {name:"cigogne"}
 #			switch:maps/survival/ancienne_egypte_2013/regenerate {name:"ancienne_egypte_2013"}

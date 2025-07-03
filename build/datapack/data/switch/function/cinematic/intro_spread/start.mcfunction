@@ -87,6 +87,17 @@
 #			switch:maps/survival/nether_storm/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Nether Storm",credits:"Arti, TreekoZ",with:{}}
 #			switch:maps/survival/shoot_da_sheep/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Shoot Da Sheep",credits:"Stoupy",with:{}}
 #			switch:maps/survival/minigolf/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Minigolf",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_grass_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Gracy Grass",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_grass_2/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Bridgy Grass",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_grass_3/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Cavy Grass",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_snow_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Snow Cloud",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_snow_2/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Château des bleds",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_ice_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Icy Rage",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_temple/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Temple des Dieux",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_volcano/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Volcany-chan",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_desert_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Y fait chaud ici!",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_end_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Back to the overworld",credits:"Remelta, Fhara",with:{}}
+#			switch:maps/survival/gg_chamber/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Chambre de Stoupette",credits:"Remelta, Fhara",with:{}}
 #			switch:maps/survival/pitchout_halloween/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Pitchout Halloween",credits:"Even, Stoupy",with:{}}
 #			switch:maps/survival/cigogne/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Cigogne",credits:"JustNoob",with:{}}
 #			switch:maps/survival/ancienne_egypte_2013/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Ancienne Egypte 2013",credits:"Farrel, Snowa, Jowjow (Rebuilt by Stoupy, Shazin, Thitanas)",with:{}}

@@ -4,6 +4,7 @@
 # @within	switch:modes/minigolf/calls/start
 #
 
+gamemode spectator @a[tag=!detached]
 team join switch.no_pvp @a[tag=!detached]
 team modify switch.no_pvp seeFriendlyInvisibles false
 effect give @a[tag=!detached] resistance infinite 255 true
@@ -16,10 +17,9 @@ execute in switch:game run gamerule drowningDamage false
 execute in switch:game run gamerule freezeDamage false
 
 ## Téléportation des joueurs
-scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
 
-scoreboard players set #minigolf_seconds switch.data -5
+scoreboard players set #minigolf_seconds switch.data -9
 scoreboard players set #minigolf_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 245
 scoreboard players set #process_end switch.data 0
@@ -28,17 +28,7 @@ scoreboard objectives add switch.temp.respawn dummy
 scoreboard players set #default_do_collision golf_ball.data 0
 
 # Choose map
-execute if data storage switch:main {map:"gg_grass_1"} in switch:game run tp @a[tag=!detached] 124021 121 124070
-execute if data storage switch:main {map:"gg_grass_2"} in switch:game run tp @a[tag=!detached] 124020 124 124023
-execute if data storage switch:main {map:"gg_grass_3"} in switch:game run tp @a[tag=!detached] 124144 125 124112
-execute if data storage switch:main {map:"gg_snow_1"} in switch:game run tp @a[tag=!detached] 124068 120 124016
-execute if data storage switch:main {map:"gg_snow_2"} in switch:game run tp @a[tag=!detached] 124062 125 124069
-execute if data storage switch:main {map:"gg_ice_1"} in switch:game run tp @a[tag=!detached] 124103 115 124070
-execute if data storage switch:main {map:"gg_temple"} in switch:game run tp @a[tag=!detached] 124103 117 124013
-execute if data storage switch:main {map:"gg_volcano"} in switch:game run tp @a[tag=!detached] 124136 130 124035
-execute if data storage switch:main {map:"gg_desert_1"} in switch:game run tp @a[tag=!detached] 124144 125 124069
-execute if data storage switch:main {map:"gg_end_1"} in switch:game run tp @a[tag=!detached] 124102 135 124114
-execute if data storage switch:main {map:"gg_chamber"} in switch:game run tp @a[tag=!detached] 124064 129 124118
+function switch:modes/minigolf/teleport_all
 
 # Record
 scoreboard players reset #new_record switch.data

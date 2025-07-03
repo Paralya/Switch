@@ -85,6 +85,17 @@
 #			switch:maps/survival/nether_storm/scan_doors_on_marker {name:"nether_storm",additional_height:0}
 #			switch:maps/survival/shoot_da_sheep/scan_doors_on_marker {name:"shoot_da_sheep",additional_height:0}
 #			switch:maps/survival/minigolf/scan_doors_on_marker {name:"minigolf",additional_height:16}
+#			switch:maps/survival/gg_grass_1/scan_doors_on_marker {name:"gg_grass_1",additional_height:16}
+#			switch:maps/survival/gg_grass_2/scan_doors_on_marker {name:"gg_grass_2",additional_height:16}
+#			switch:maps/survival/gg_grass_3/scan_doors_on_marker {name:"gg_grass_3",additional_height:16}
+#			switch:maps/survival/gg_snow_1/scan_doors_on_marker {name:"gg_snow_1",additional_height:16}
+#			switch:maps/survival/gg_snow_2/scan_doors_on_marker {name:"gg_snow_2",additional_height:16}
+#			switch:maps/survival/gg_ice_1/scan_doors_on_marker {name:"gg_ice_1",additional_height:16}
+#			switch:maps/survival/gg_temple/scan_doors_on_marker {name:"gg_temple",additional_height:16}
+#			switch:maps/survival/gg_volcano/scan_doors_on_marker {name:"gg_volcano",additional_height:16}
+#			switch:maps/survival/gg_desert_1/scan_doors_on_marker {name:"gg_desert_1",additional_height:16}
+#			switch:maps/survival/gg_end_1/scan_doors_on_marker {name:"gg_end_1",additional_height:16}
+#			switch:maps/survival/gg_chamber/scan_doors_on_marker {name:"gg_chamber",additional_height:16}
 #			switch:maps/survival/pitchout_halloween/scan_doors_on_marker {name:"pitchout_halloween",additional_height:0}
 #			switch:maps/survival/cigogne/scan_doors_on_marker {name:"cigogne",additional_height:0}
 #			switch:maps/survival/ancienne_egypte_2013/scan_doors_on_marker {name:"ancienne_egypte_2013",additional_height:0}

@@ -91,6 +91,17 @@ execute if score #rg_bombardement switch.data matches 1.. run function switch:ma
 execute if score #rg_nether_storm switch.data matches 1.. run function switch:maps/survival/nether_storm/regenerate
 execute if score #rg_shoot_da_sheep switch.data matches 1.. run function switch:maps/survival/shoot_da_sheep/regenerate
 execute if score #rg_minigolf switch.data matches 1.. run function switch:maps/survival/minigolf/regenerate
+execute if score #rg_gg_grass_1 switch.data matches 1.. run function switch:maps/survival/gg_grass_1/regenerate
+execute if score #rg_gg_grass_2 switch.data matches 1.. run function switch:maps/survival/gg_grass_2/regenerate
+execute if score #rg_gg_grass_3 switch.data matches 1.. run function switch:maps/survival/gg_grass_3/regenerate
+execute if score #rg_gg_snow_1 switch.data matches 1.. run function switch:maps/survival/gg_snow_1/regenerate
+execute if score #rg_gg_snow_2 switch.data matches 1.. run function switch:maps/survival/gg_snow_2/regenerate
+execute if score #rg_gg_ice_1 switch.data matches 1.. run function switch:maps/survival/gg_ice_1/regenerate
+execute if score #rg_gg_temple switch.data matches 1.. run function switch:maps/survival/gg_temple/regenerate
+execute if score #rg_gg_volcano switch.data matches 1.. run function switch:maps/survival/gg_volcano/regenerate
+execute if score #rg_gg_desert_1 switch.data matches 1.. run function switch:maps/survival/gg_desert_1/regenerate
+execute if score #rg_gg_end_1 switch.data matches 1.. run function switch:maps/survival/gg_end_1/regenerate
+execute if score #rg_gg_chamber switch.data matches 1.. run function switch:maps/survival/gg_chamber/regenerate
 execute if score #rg_pitchout_halloween switch.data matches 1.. run function switch:maps/survival/pitchout_halloween/regenerate
 execute if score #rg_cigogne switch.data matches 1.. run function switch:maps/survival/cigogne/regenerate
 execute if score #rg_ancienne_egypte_2013 switch.data matches 1.. run function switch:maps/survival/ancienne_egypte_2013/regenerate

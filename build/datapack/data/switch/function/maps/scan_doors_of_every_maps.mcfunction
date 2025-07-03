@@ -89,6 +89,17 @@ data modify storage switch:maps to_scan.bombardement set value 1b
 data modify storage switch:maps to_scan.nether_storm set value 1b
 data modify storage switch:maps to_scan.shoot_da_sheep set value 1b
 data modify storage switch:maps to_scan.minigolf set value 1b
+data modify storage switch:maps to_scan.gg_grass_1 set value 1b
+data modify storage switch:maps to_scan.gg_grass_2 set value 1b
+data modify storage switch:maps to_scan.gg_grass_3 set value 1b
+data modify storage switch:maps to_scan.gg_snow_1 set value 1b
+data modify storage switch:maps to_scan.gg_snow_2 set value 1b
+data modify storage switch:maps to_scan.gg_ice_1 set value 1b
+data modify storage switch:maps to_scan.gg_temple set value 1b
+data modify storage switch:maps to_scan.gg_volcano set value 1b
+data modify storage switch:maps to_scan.gg_desert_1 set value 1b
+data modify storage switch:maps to_scan.gg_end_1 set value 1b
+data modify storage switch:maps to_scan.gg_chamber set value 1b
 data modify storage switch:maps to_scan.pitchout_halloween set value 1b
 data modify storage switch:maps to_scan.cigogne set value 1b
 data modify storage switch:maps to_scan.ancienne_egypte_2013 set value 1b

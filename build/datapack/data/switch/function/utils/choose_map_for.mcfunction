@@ -22,6 +22,7 @@
 #			switch:modes/laser_game/start {id:"laser_game", maps:["laser_game"]}
 #			switch:modes/layers_2_teams/start {id:"layers_2_teams", maps:["layers_2_teams"]}
 #			switch:modes/layers_4_teams/start {id:"layers_4_teams", maps:["layers_4_teams"]}
+#			switch:modes/memory_mine/start {id:"memory_mine", maps:["memory_mine"]}
 #			switch:modes/minigolf/start {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
 #			switch:modes/mlg_a_coudre/start {id:"mlg_a_coudre", maps:["mlg_a_coudre_1"]}
 #			switch:modes/moutron/start {id:"moutron", maps:["whity_lab","the_four_elements","arti_ancient_city"]}

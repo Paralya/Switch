@@ -8,6 +8,10 @@ execute if score #success switch.data matches 1 run return 1
 # Finished
 scoreboard players set #finished switch.data 0
 execute positioned over world_surface if block ~ ~-1 ~ barrier if entity @s[distance=..5] run scoreboard players set #finished switch.data 1
+execute if block ~ ~-1 ~ barrier run scoreboard players set #finished switch.data 1
+execute if block ~ ~-2 ~ barrier run scoreboard players set #finished switch.data 1
+execute if block ~ ~-3 ~ barrier run scoreboard players set #finished switch.data 1
+execute if block ~ ~-4 ~ barrier run scoreboard players set #finished switch.data 1
 execute if score #finished switch.data matches 1 run scoreboard players operation @s switch.alive = #minigolf_seconds switch.data
 execute unless score #test_mode switch.data matches 1 if score #finished switch.data matches 1 if score @s golf_ball.shots matches ..5 run advancement grant @s only switch:visible/48
 
