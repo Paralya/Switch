@@ -15,9 +15,9 @@ execute on attacker if score @s switch.infected.zombie_strength matches 6 run sc
 execute on attacker if score @s switch.infected.zombie_strength matches 7 run scoreboard players set #damage switch.data 315
 execute on attacker if score @s switch.infected.zombie_strength matches 8 run scoreboard players set #damage switch.data 320
 
-# If only one zombie is left, triple the damage
+# If only one zombie is left, double the damage
 execute store result score #current_zombie_count switch.data if entity @a[tag=!detached,team=switch.temp.zombie]
-execute if score #current_zombie_count switch.data matches 1 run scoreboard players operation #damage switch.data *= #3 switch.data
+execute if score #current_zombie_count switch.data matches 1 run scoreboard players operation #damage switch.data *= #2 switch.data
 
 # If less than 10% are zombies, double the damage
 execute if score #current_zombie_count switch.data matches 2.. run function switch:modes/infected/advancements/entity_hurt_player/check_double_damage

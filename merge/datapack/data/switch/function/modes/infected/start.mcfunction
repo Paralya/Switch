@@ -19,7 +19,7 @@ scoreboard objectives add switch.temp.kills playerKillCount
 scoreboard objectives add switch.temp.hits_gotten dummy
 scoreboard players set #remaining_time switch.data 462
 scoreboard players set #infected_secret switch.data 0
-scoreboard players set #infected_seconds switch.data -12
+scoreboard players set #infected_seconds switch.data -20
 scoreboard players set #infected_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health
