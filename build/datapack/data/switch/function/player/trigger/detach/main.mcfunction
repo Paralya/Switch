@@ -2,7 +2,6 @@
 #> switch:player/trigger/detach/main
 #
 # @within	switch:player/joined
-#			switch:player/trigger/lang/main
 #			switch:player/trigger/lang/tick_undefined
 #			switch:player/trigger/main
 #
