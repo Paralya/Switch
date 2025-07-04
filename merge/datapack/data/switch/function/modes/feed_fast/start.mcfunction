@@ -20,7 +20,7 @@ scoreboard players set #feed_fast_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 scoreboard objectives add switch.temp.previous_food dummy
-scoreboard objectives add switch.temp.points dummy {"text":" Points ","color":"red"}
+scoreboard objectives add switch.temp.points dummy {"text":"Points","color":"red"}
 scoreboard objectives setdisplay sidebar switch.temp.points
 
 scoreboard players set @a[tag=!detached] switch.temp.previous_food 20

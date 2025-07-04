@@ -23,7 +23,7 @@ execute in switch:game run gamerule fallDamage false
 
 function switch:translations/modes_laser_game_start
 
-scoreboard objectives add switch.temp.individual_points dummy {"text":" Points Individuels ","color":"yellow"}
+scoreboard objectives add switch.temp.individual_points dummy {"text":"Individual Points","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.dead_cooldown dummy
@@ -41,9 +41,9 @@ scoreboard players set #base_reload switch.data 15
 team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
 team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
 team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
-team modify switch.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"0","color":"yellow"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
 team join switch.temp.sidebar.3 §3

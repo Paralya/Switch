@@ -30,7 +30,7 @@ scoreboard players set #mlg_a_coudre_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 scoreboard objectives add switch.temp.order dummy
-scoreboard objectives add switch.temp.lives dummy {"text":" Vies Restantes ","color":"red"}
+scoreboard objectives add switch.temp.lives dummy {"text":"Remaining Lives","color":"red"}
 scoreboard objectives add switch.temp.nb_de_a_coudre dummy
 scoreboard objectives setdisplay sidebar switch.temp.lives
 

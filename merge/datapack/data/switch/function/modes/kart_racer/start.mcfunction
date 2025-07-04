@@ -32,7 +32,7 @@ scoreboard objectives add switch.temp.checkpoint dummy
 scoreboard objectives add switch.temp.classement dummy
 scoreboard objectives add switch.temp.pv_classement dummy
 scoreboard objectives add switch.temp.pos_on_last_lap dummy
-scoreboard objectives add switch.temp.sidebar dummy {"text":" Ranking ","color":"dark_purple"}
+scoreboard objectives add switch.temp.sidebar dummy {"text":"Ranking","color":"dark_purple"}
 scoreboard objectives add switch.respawn_cp_id dummy
 scoreboard objectives add switch.hard_respawn_cp_id dummy
 scoreboard objectives add switch.checkpoint dummy
