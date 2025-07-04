@@ -1,8 +1,6 @@
 
 ## File attribut: Ignore translations
 
-tag Stoupy51 add convention.debug
-
 scoreboard objectives add switch.lang dummy
 
 scoreboard objectives add switch.id dummy
