@@ -64,8 +64,8 @@ execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectre
 execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 8 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.sp_arrows 1
 execute if score @s switch.trigger.shop matches 10501 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 9 run scoreboard players add @s switch.money 360
-execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 9 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.sp_arrows 1
+execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 9.. run scoreboard players add @s switch.money 360
+execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 9.. store success score #success switch.data run scoreboard players remove @s switch.spectres_game.sp_arrows 1
 execute if score @s switch.trigger.shop matches 10501 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Number of TNT
@@ -90,8 +90,8 @@ execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectre
 execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 2 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.sp_tnt 1
 execute if score @s switch.trigger.shop matches 10502 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 3 run scoreboard players add @s switch.money 120
-execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 3 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.sp_tnt 1
+execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 3.. run scoreboard players add @s switch.money 120
+execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 3.. store success score #success switch.data run scoreboard players remove @s switch.spectres_game.sp_tnt 1
 execute if score @s switch.trigger.shop matches 10502 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Number of arrows
@@ -146,8 +146,8 @@ execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectre
 execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 7 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.vi_arrows 1
 execute if score @s switch.trigger.shop matches 10503 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 8 run scoreboard players add @s switch.money 320
-execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 8 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.vi_arrows 1
+execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 8.. run scoreboard players add @s switch.money 320
+execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 8.. store success score #success switch.data run scoreboard players remove @s switch.spectres_game.vi_arrows 1
 execute if score @s switch.trigger.shop matches 10503 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Number of TNT
@@ -172,8 +172,8 @@ execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectre
 execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 2 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.vi_tnt 1
 execute if score @s switch.trigger.shop matches 10504 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 3 run scoreboard players add @s switch.money 120
-execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 3 store success score #success switch.data run scoreboard players remove @s switch.spectres_game.vi_tnt 1
+execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 3.. run scoreboard players add @s switch.money 120
+execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 3.. store success score #success switch.data run scoreboard players remove @s switch.spectres_game.vi_tnt 1
 execute if score @s switch.trigger.shop matches 10504 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Messages

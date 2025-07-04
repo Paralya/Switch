@@ -70,8 +70,8 @@ execute if score @s switch.trigger.shop matches 10201 if score @s switch.infecte
 execute if score @s switch.trigger.shop matches 10201 if score @s switch.infected.sword matches 9 store success score #success switch.data run scoreboard players remove @s switch.infected.sword 1
 execute if score @s switch.trigger.shop matches 10201 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10201 if score @s switch.infected.sword matches 10 run scoreboard players add @s switch.money 400
-execute if score @s switch.trigger.shop matches 10201 if score @s switch.infected.sword matches 10 store success score #success switch.data run scoreboard players remove @s switch.infected.sword 1
+execute if score @s switch.trigger.shop matches 10201 if score @s switch.infected.sword matches 10.. run scoreboard players add @s switch.money 400
+execute if score @s switch.trigger.shop matches 10201 if score @s switch.infected.sword matches 10.. store success score #success switch.data run scoreboard players remove @s switch.infected.sword 1
 execute if score @s switch.trigger.shop matches 10201 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Armor
@@ -138,8 +138,8 @@ execute if score @s switch.trigger.shop matches 10202 if score @s switch.infecte
 execute if score @s switch.trigger.shop matches 10202 if score @s switch.infected.armor matches 9 store success score #success switch.data run scoreboard players remove @s switch.infected.armor 1
 execute if score @s switch.trigger.shop matches 10202 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10202 if score @s switch.infected.armor matches 10 run scoreboard players add @s switch.money 400
-execute if score @s switch.trigger.shop matches 10202 if score @s switch.infected.armor matches 10 store success score #success switch.data run scoreboard players remove @s switch.infected.armor 1
+execute if score @s switch.trigger.shop matches 10202 if score @s switch.infected.armor matches 10.. run scoreboard players add @s switch.money 400
+execute if score @s switch.trigger.shop matches 10202 if score @s switch.infected.armor matches 10.. store success score #success switch.data run scoreboard players remove @s switch.infected.armor 1
 execute if score @s switch.trigger.shop matches 10202 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Zombie speed
@@ -206,8 +206,8 @@ execute if score @s switch.trigger.shop matches 10203 if score @s switch.infecte
 execute if score @s switch.trigger.shop matches 10203 if score @s switch.infected.zombie_speed matches 9 store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_speed 1
 execute if score @s switch.trigger.shop matches 10203 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10203 if score @s switch.infected.zombie_speed matches 10 run scoreboard players add @s switch.money 400
-execute if score @s switch.trigger.shop matches 10203 if score @s switch.infected.zombie_speed matches 10 store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_speed 1
+execute if score @s switch.trigger.shop matches 10203 if score @s switch.infected.zombie_speed matches 10.. run scoreboard players add @s switch.money 400
+execute if score @s switch.trigger.shop matches 10203 if score @s switch.infected.zombie_speed matches 10.. store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_speed 1
 execute if score @s switch.trigger.shop matches 10203 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Zombie strength
@@ -262,8 +262,8 @@ execute if score @s switch.trigger.shop matches 10204 if score @s switch.infecte
 execute if score @s switch.trigger.shop matches 10204 if score @s switch.infected.zombie_strength matches 7 store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_strength 1
 execute if score @s switch.trigger.shop matches 10204 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10204 if score @s switch.infected.zombie_strength matches 8 run scoreboard players add @s switch.money 320
-execute if score @s switch.trigger.shop matches 10204 if score @s switch.infected.zombie_strength matches 8 store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_strength 1
+execute if score @s switch.trigger.shop matches 10204 if score @s switch.infected.zombie_strength matches 8.. run scoreboard players add @s switch.money 320
+execute if score @s switch.trigger.shop matches 10204 if score @s switch.infected.zombie_strength matches 8.. store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_strength 1
 execute if score @s switch.trigger.shop matches 10204 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Zombie jump height
@@ -276,8 +276,8 @@ execute if score @s switch.trigger.shop matches 205 if score #success switch.dat
 
 # Selling Zombie jump height
 
-execute if score @s switch.trigger.shop matches 10205 if score @s switch.infected.zombie_jump matches 1 run scoreboard players add @s switch.money 160
-execute if score @s switch.trigger.shop matches 10205 if score @s switch.infected.zombie_jump matches 1 store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_jump 1
+execute if score @s switch.trigger.shop matches 10205 if score @s switch.infected.zombie_jump matches 1.. run scoreboard players add @s switch.money 160
+execute if score @s switch.trigger.shop matches 10205 if score @s switch.infected.zombie_jump matches 1.. store success score #success switch.data run scoreboard players remove @s switch.infected.zombie_jump 1
 execute if score @s switch.trigger.shop matches 10205 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Messages

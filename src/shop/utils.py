@@ -97,8 +97,8 @@ execute if score @s switch.trigger.shop matches {sell_counter} if score #success
 			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
 
 			write_function(path, f"""
-execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level} run scoreboard players add @s switch.money {refund}
-execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level} store success score #success switch.data run scoreboard players remove @s switch.{shop_name}.{upgrade_id} 1
+execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level}.. run scoreboard players add @s switch.money {refund}
+execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level}.. store success score #success switch.data run scoreboard players remove @s switch.{shop_name}.{upgrade_id} 1
 execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 """)
 
@@ -251,17 +251,18 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 					tellraw_json.append({"text":" [+]","color":"gray"})
 
 				# Write the tellraw text
+				is_max: str = '' if not (j == (len(upgrades) - 1)) else '..'
 				if shop_name != "sheepwars":
 					dump: str = stp.super_json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j} run tellraw {selector} {dump}")
+					write_function(path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
 				else:
 					tellraw_json[0]["click_event"] = {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
 					dump: str = stp.super_json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute unless score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {dump}")
+					write_function(path, f"execute unless score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
 					tellraw_json[0]["color"] = "green"
 					del tellraw_json[0]["click_event"]
 					dump = stp.super_json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute if score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j} run tellraw {selector} {dump}")
+					write_function(path, f"execute if score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
 
 
 

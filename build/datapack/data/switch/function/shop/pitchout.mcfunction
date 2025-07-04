@@ -44,8 +44,8 @@ execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchou
 execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 4 store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
 execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5 store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5.. store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
 execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Ender pearls
@@ -64,8 +64,8 @@ execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchou
 execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 1 store success score #success switch.data run scoreboard players remove @s switch.pitchout.ender_pearl 1
 execute if score @s switch.trigger.shop matches 10102 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2 run scoreboard players add @s switch.money 128
-execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2 store success score #success switch.data run scoreboard players remove @s switch.pitchout.ender_pearl 1
+execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2.. run scoreboard players add @s switch.money 128
+execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2.. store success score #success switch.data run scoreboard players remove @s switch.pitchout.ender_pearl 1
 execute if score @s switch.trigger.shop matches 10102 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Messages

@@ -46,8 +46,8 @@ execute if score @s switch.trigger.shop matches 10301 if score @s switch.spleef.
 execute if score @s switch.trigger.shop matches 10301 if score @s switch.spleef.snow_block matches 5 store success score #success switch.data run scoreboard players remove @s switch.spleef.snow_block 1
 execute if score @s switch.trigger.shop matches 10301 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10301 if score @s switch.spleef.snow_block matches 6 run scoreboard players add @s switch.money 240
-execute if score @s switch.trigger.shop matches 10301 if score @s switch.spleef.snow_block matches 6 store success score #success switch.data run scoreboard players remove @s switch.spleef.snow_block 1
+execute if score @s switch.trigger.shop matches 10301 if score @s switch.spleef.snow_block matches 6.. run scoreboard players add @s switch.money 240
+execute if score @s switch.trigger.shop matches 10301 if score @s switch.spleef.snow_block matches 6.. store success score #success switch.data run scoreboard players remove @s switch.spleef.snow_block 1
 execute if score @s switch.trigger.shop matches 10301 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Powder snow
@@ -78,8 +78,8 @@ execute if score @s switch.trigger.shop matches 10302 if score @s switch.spleef.
 execute if score @s switch.trigger.shop matches 10302 if score @s switch.spleef.powder_snow matches 3 store success score #success switch.data run scoreboard players remove @s switch.spleef.powder_snow 1
 execute if score @s switch.trigger.shop matches 10302 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10302 if score @s switch.spleef.powder_snow matches 4 run scoreboard players add @s switch.money 160
-execute if score @s switch.trigger.shop matches 10302 if score @s switch.spleef.powder_snow matches 4 store success score #success switch.data run scoreboard players remove @s switch.spleef.powder_snow 1
+execute if score @s switch.trigger.shop matches 10302 if score @s switch.spleef.powder_snow matches 4.. run scoreboard players add @s switch.money 160
+execute if score @s switch.trigger.shop matches 10302 if score @s switch.spleef.powder_snow matches 4.. store success score #success switch.data run scoreboard players remove @s switch.spleef.powder_snow 1
 execute if score @s switch.trigger.shop matches 10302 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Messages

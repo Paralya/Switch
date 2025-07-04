@@ -45,8 +45,8 @@ execute if score @s switch.trigger.shop matches 10401 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10401 if score @s switch.sheepwars.kit_health matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_health 1
 execute if score @s switch.trigger.shop matches 10401 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10401 if score @s switch.sheepwars.kit_health matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10401 if score @s switch.sheepwars.kit_health matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_health 1
+execute if score @s switch.trigger.shop matches 10401 if score @s switch.sheepwars.kit_health matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10401 if score @s switch.sheepwars.kit_health matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_health 1
 execute if score @s switch.trigger.shop matches 10401 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Kit 'Better Bow'
@@ -77,8 +77,8 @@ execute if score @s switch.trigger.shop matches 10402 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10402 if score @s switch.sheepwars.kit_bow matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_bow 1
 execute if score @s switch.trigger.shop matches 10402 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10402 if score @s switch.sheepwars.kit_bow matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10402 if score @s switch.sheepwars.kit_bow matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_bow 1
+execute if score @s switch.trigger.shop matches 10402 if score @s switch.sheepwars.kit_bow matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10402 if score @s switch.sheepwars.kit_bow matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_bow 1
 execute if score @s switch.trigger.shop matches 10402 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Kit 'Better Sword'
@@ -109,8 +109,8 @@ execute if score @s switch.trigger.shop matches 10403 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10403 if score @s switch.sheepwars.kit_sword matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_sword 1
 execute if score @s switch.trigger.shop matches 10403 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10403 if score @s switch.sheepwars.kit_sword matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10403 if score @s switch.sheepwars.kit_sword matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_sword 1
+execute if score @s switch.trigger.shop matches 10403 if score @s switch.sheepwars.kit_sword matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10403 if score @s switch.sheepwars.kit_sword matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_sword 1
 execute if score @s switch.trigger.shop matches 10403 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Kit 'More sheep'
@@ -141,8 +141,8 @@ execute if score @s switch.trigger.shop matches 10404 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10404 if score @s switch.sheepwars.kit_more_sheep matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_more_sheep 1
 execute if score @s switch.trigger.shop matches 10404 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10404 if score @s switch.sheepwars.kit_more_sheep matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10404 if score @s switch.sheepwars.kit_more_sheep matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_more_sheep 1
+execute if score @s switch.trigger.shop matches 10404 if score @s switch.sheepwars.kit_more_sheep matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10404 if score @s switch.sheepwars.kit_more_sheep matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_more_sheep 1
 execute if score @s switch.trigger.shop matches 10404 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Kit 'Builder'
@@ -173,8 +173,8 @@ execute if score @s switch.trigger.shop matches 10405 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10405 if score @s switch.sheepwars.kit_builder matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_builder 1
 execute if score @s switch.trigger.shop matches 10405 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10405 if score @s switch.sheepwars.kit_builder matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10405 if score @s switch.sheepwars.kit_builder matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_builder 1
+execute if score @s switch.trigger.shop matches 10405 if score @s switch.sheepwars.kit_builder matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10405 if score @s switch.sheepwars.kit_builder matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_builder 1
 execute if score @s switch.trigger.shop matches 10405 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Kit 'Mobility'
@@ -205,8 +205,8 @@ execute if score @s switch.trigger.shop matches 10406 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10406 if score @s switch.sheepwars.kit_mobility matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_mobility 1
 execute if score @s switch.trigger.shop matches 10406 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10406 if score @s switch.sheepwars.kit_mobility matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10406 if score @s switch.sheepwars.kit_mobility matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_mobility 1
+execute if score @s switch.trigger.shop matches 10406 if score @s switch.sheepwars.kit_mobility matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10406 if score @s switch.sheepwars.kit_mobility matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_mobility 1
 execute if score @s switch.trigger.shop matches 10406 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Kit 'Armored sheep'
@@ -237,8 +237,8 @@ execute if score @s switch.trigger.shop matches 10407 if score @s switch.sheepwa
 execute if score @s switch.trigger.shop matches 10407 if score @s switch.sheepwars.kit_armored_sheep matches 3 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_armored_sheep 1
 execute if score @s switch.trigger.shop matches 10407 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
-execute if score @s switch.trigger.shop matches 10407 if score @s switch.sheepwars.kit_armored_sheep matches 4 run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10407 if score @s switch.sheepwars.kit_armored_sheep matches 4 store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_armored_sheep 1
+execute if score @s switch.trigger.shop matches 10407 if score @s switch.sheepwars.kit_armored_sheep matches 4.. run scoreboard players add @s switch.money 200
+execute if score @s switch.trigger.shop matches 10407 if score @s switch.sheepwars.kit_armored_sheep matches 4.. store success score #success switch.data run scoreboard players remove @s switch.sheepwars.kit_armored_sheep 1
 execute if score @s switch.trigger.shop matches 10407 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Messages
