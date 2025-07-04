@@ -55,7 +55,8 @@ execute unless entity @s[tag=switch.easter_egg.friends_cube] if entity @s[tag=sw
 tellraw @s[scores={switch.lobby_easter_egg_counter=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu as trouvé un easter egg sur 8 !","color":"green"}]
 tellraw @s[scores={switch.lobby_easter_egg_counter=2..}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu as trouvé ","color":"green"},{"score":{"name":"@s","objective":"switch.lobby_easter_egg_counter"},"color":"gold"},{"text":" easter eggs sur 8 !","color":"green"}]
 
-
+# Grant advancement if all easter eggs are found
+execute if score @s switch.lobby_easter_egg_counter matches 8 run advancement grant @s only switch:visible/83
 
 $tag @s remove $(tag).temp
 $tag @s add $(tag)
