@@ -14,7 +14,7 @@ tag @s add switch.stardust_block
 tag @s add switch.vanilla.minecraft_diamond_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"text": "Stardust Block","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Stardust Block"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="switch:stardust_block"]

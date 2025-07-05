@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:ruby_ore",
-								"minecraft:item_name": {
-									"text": "Ruby Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ruby Ore",
 								"minecraft:lore": [
 									[
 										"",

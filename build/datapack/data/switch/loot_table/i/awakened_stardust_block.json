@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:awakened_stardust_block",
-								"minecraft:item_name": {
-									"text": "Awakened Stardust Block",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Awakened Stardust Block",
 								"minecraft:lore": [
 									[
 										"",

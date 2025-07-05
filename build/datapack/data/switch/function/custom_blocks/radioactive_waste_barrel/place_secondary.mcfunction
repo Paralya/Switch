@@ -14,7 +14,7 @@ tag @s add switch.radioactive_waste_barrel
 tag @s add switch.vanilla.minecraft_emerald_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"text": "Radioactive Waste Barrel","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Radioactive Waste Barrel"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="switch:radioactive_waste_barrel"]

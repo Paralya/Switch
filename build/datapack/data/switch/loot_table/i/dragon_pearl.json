@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:dragon_pearl",
-								"minecraft:item_name": {
-									"text": "Dragon Pearl",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Dragon Pearl",
 								"minecraft:lore": [
 									[
 										"",

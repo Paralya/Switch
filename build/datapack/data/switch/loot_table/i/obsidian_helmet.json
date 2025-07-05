@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_helmet",
-								"minecraft:item_name": {
-									"text": "Obsidian Helmet",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Obsidian Helmet",
 								"minecraft:lore": [
 									[
 										"",

@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:deepslate_topaz_ore",
-								"minecraft:item_name": {
-									"text": "Deepslate Topaz Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Deepslate Topaz Ore",
 								"minecraft:lore": [
 									[
 										"",

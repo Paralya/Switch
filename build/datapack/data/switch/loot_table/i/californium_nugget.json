@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:californium_nugget",
-								"minecraft:item_name": {
-									"text": "Californium Nugget",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Nugget",
 								"minecraft:lore": [
 									[
 										"",

@@ -34,11 +34,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_helmet",
-								"minecraft:item_name": {
-									"text": "Steel Helmet",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Steel Helmet",
 								"minecraft:lore": [
 									[
 										"",

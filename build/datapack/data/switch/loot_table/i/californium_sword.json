@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_sword",
-								"minecraft:item_name": {
-									"text": "Californium Sword",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Sword",
 								"minecraft:lore": [
 									[
 										"",

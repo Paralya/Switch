@@ -22,11 +22,7 @@
 				}
 			},
 			"minecraft:item_model": "switch:awakened_stardust",
-			"minecraft:item_name": {
-				"text": "Awakened Stardust",
-				"italic": false,
-				"color": "white"
-			},
+			"minecraft:item_name": "Awakened Stardust",
 			"minecraft:lore": [
 				[
 					"",

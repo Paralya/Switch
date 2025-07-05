@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:wormhole_potion",
-								"minecraft:item_name": {
-									"text": "Wormhole Potion",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Wormhole Potion",
 								"minecraft:lore": [
 									[
 										"",

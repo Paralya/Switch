@@ -21,11 +21,7 @@
 									"saturation": 9.6
 								},
 								"minecraft:item_model": "switch:stardust_apple",
-								"minecraft:item_name": {
-									"text": "Stardust Apple",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Stardust Apple",
 								"minecraft:lore": [
 									[
 										"",

@@ -56,11 +56,7 @@
 				}
 			],
 			"minecraft:item_model": "switch:emerald_axe",
-			"minecraft:item_name": {
-				"text": "Emerald Axe",
-				"italic": false,
-				"color": "white"
-			},
+			"minecraft:item_name": "Emerald Axe",
 			"minecraft:lore": [
 				[
 					"",

@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_hoe",
-								"minecraft:item_name": {
-									"text": "Uranium Hoe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Uranium Hoe",
 								"minecraft:lore": [
 									[
 										"",

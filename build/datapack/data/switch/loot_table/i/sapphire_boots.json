@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_boots",
-								"minecraft:item_name": {
-									"text": "Sapphire Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Sapphire Boots",
 								"minecraft:lore": [
 									[
 										"",

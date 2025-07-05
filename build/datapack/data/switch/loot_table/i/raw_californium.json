@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:raw_californium",
-								"minecraft:item_name": {
-									"text": "Raw Californium",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Raw Californium",
 								"minecraft:lore": [
 									[
 										"",

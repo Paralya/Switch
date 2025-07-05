@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:souls_bag_half_filled",
-								"minecraft:item_name": {
-									"text": "Souls Bag Half Filled",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Souls Bag Half Filled",
 								"minecraft:lore": [
 									[
 										"",

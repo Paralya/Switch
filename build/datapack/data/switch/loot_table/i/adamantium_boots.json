@@ -48,11 +48,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_boots",
-								"minecraft:item_name": {
-									"text": "Adamantium Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Adamantium Boots",
 								"minecraft:lore": [
 									[
 										"",

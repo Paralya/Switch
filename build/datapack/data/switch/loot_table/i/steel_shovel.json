@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_shovel",
-								"minecraft:item_name": {
-									"text": "Steel Shovel",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Steel Shovel",
 								"minecraft:lore": [
 									[
 										"",

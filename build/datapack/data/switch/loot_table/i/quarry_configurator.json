@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:quarry_configurator",
-								"minecraft:item_name": {
-									"text": "Quarry Configurator",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Quarry Configurator",
 								"minecraft:lore": [
 									[
 										"",

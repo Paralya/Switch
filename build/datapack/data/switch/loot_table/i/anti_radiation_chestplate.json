@@ -30,11 +30,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:anti_radiation_chestplate",
-								"minecraft:item_name": {
-									"text": "Anti Radiation Chestplate",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Anti Radiation Chestplate",
 								"minecraft:lore": [
 									[
 										"",

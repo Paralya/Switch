@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_chestplate",
-								"minecraft:item_name": {
-									"text": "Californium Chestplate",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Chestplate",
 								"minecraft:lore": [
 									[
 										"",

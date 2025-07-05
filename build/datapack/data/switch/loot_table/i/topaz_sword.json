@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_sword",
-								"minecraft:item_name": {
-									"text": "Topaz Sword",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Topaz Sword",
 								"minecraft:lore": [
 									[
 										"",

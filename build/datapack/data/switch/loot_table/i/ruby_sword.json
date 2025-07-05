@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_sword",
-								"minecraft:item_name": {
-									"text": "Ruby Sword",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ruby Sword",
 								"minecraft:lore": [
 									[
 										"",

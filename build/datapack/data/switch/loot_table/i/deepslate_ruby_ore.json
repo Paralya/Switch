@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:deepslate_ruby_ore",
-								"minecraft:item_name": {
-									"text": "Deepslate Ruby Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Deepslate Ruby Ore",
 								"minecraft:lore": [
 									[
 										"",

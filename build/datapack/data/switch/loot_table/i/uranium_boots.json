@@ -51,11 +51,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_boots",
-								"minecraft:item_name": {
-									"text": "Uranium Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Uranium Boots",
 								"minecraft:lore": [
 									[
 										"",

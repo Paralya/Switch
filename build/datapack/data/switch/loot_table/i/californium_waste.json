@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:californium_waste",
-								"minecraft:item_name": {
-									"text": "Californium Waste",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Waste",
 								"minecraft:lore": [
 									[
 										"",

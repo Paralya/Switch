@@ -16,11 +16,7 @@
 									"saturation": 6
 								},
 								"minecraft:item_model": "switch:banana",
-								"minecraft:item_name": {
-									"text": "Banana",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Banana",
 								"minecraft:lore": [
 									[
 										"",

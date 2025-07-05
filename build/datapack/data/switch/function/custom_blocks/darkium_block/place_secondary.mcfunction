@@ -14,7 +14,7 @@ tag @s add switch.darkium_block
 tag @s add switch.vanilla.minecraft_black_concrete
 
 # Add a custom name
-data merge entity @s {"CustomName": {"text": "Darkium Block","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Darkium Block"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="switch:darkium_block"]

@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:steel_ore",
-								"minecraft:item_name": {
-									"text": "Steel Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Steel Ore",
 								"minecraft:lore": [
 									[
 										"",

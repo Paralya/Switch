@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_leggings",
-								"minecraft:item_name": {
-									"text": "Topaz Leggings",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Topaz Leggings",
 								"minecraft:lore": [
 									[
 										"",

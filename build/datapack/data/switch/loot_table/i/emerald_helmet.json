@@ -48,11 +48,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:emerald_helmet",
-								"minecraft:item_name": {
-									"text": "Emerald Helmet",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Emerald Helmet",
 								"minecraft:lore": [
 									[
 										"",

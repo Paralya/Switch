@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:anti_radiation_glove",
-								"minecraft:item_name": {
-									"text": "Anti Radiation Glove",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Anti Radiation Glove",
 								"minecraft:lore": [
 									[
 										"",

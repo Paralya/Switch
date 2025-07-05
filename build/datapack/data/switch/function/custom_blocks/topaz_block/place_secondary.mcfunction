@@ -14,7 +14,7 @@ tag @s add switch.topaz_block
 tag @s add switch.vanilla.minecraft_diamond_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"text": "Topaz Block","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Topaz Block"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="switch:topaz_block"]

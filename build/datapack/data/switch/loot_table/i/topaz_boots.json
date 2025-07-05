@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_boots",
-								"minecraft:item_name": {
-									"text": "Topaz Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Topaz Boots",
 								"minecraft:lore": [
 									[
 										"",

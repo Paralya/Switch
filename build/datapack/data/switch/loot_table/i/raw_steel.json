@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:raw_steel",
-								"minecraft:item_name": {
-									"text": "Raw Steel",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Raw Steel",
 								"minecraft:lore": [
 									[
 										"",

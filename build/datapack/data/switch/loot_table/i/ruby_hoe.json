@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_hoe",
-								"minecraft:item_name": {
-									"text": "Ruby Hoe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ruby Hoe",
 								"minecraft:lore": [
 									[
 										"",

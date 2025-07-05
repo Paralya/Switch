@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_axe",
-								"minecraft:item_name": {
-									"text": "Steel Axe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Steel Axe",
 								"minecraft:lore": [
 									[
 										"",

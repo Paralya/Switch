@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_helmet",
-								"minecraft:item_name": {
-									"text": "Sapphire Helmet",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Sapphire Helmet",
 								"minecraft:lore": [
 									[
 										"",

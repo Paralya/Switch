@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_helmet",
-								"minecraft:item_name": {
-									"text": "Californium Helmet",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Helmet",
 								"minecraft:lore": [
 									[
 										"",

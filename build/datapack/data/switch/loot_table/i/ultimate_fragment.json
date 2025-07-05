@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:ultimate_fragment",
-								"minecraft:item_name": {
-									"text": "Ultimate Fragment",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ultimate Fragment",
 								"minecraft:lore": [
 									[
 										"",

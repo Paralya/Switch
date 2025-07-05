@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:darkium_ingot",
-								"minecraft:item_name": {
-									"text": "Darkium Ingot",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Darkium Ingot",
 								"minecraft:lore": [
 									[
 										"",

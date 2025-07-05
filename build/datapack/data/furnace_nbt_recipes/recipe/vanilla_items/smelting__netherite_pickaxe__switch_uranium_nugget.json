@@ -22,11 +22,7 @@
 				}
 			},
 			"minecraft:item_model": "switch:uranium_nugget",
-			"minecraft:item_name": {
-				"text": "Uranium Nugget",
-				"italic": false,
-				"color": "white"
-			},
+			"minecraft:item_name": "Uranium Nugget",
 			"minecraft:lore": [
 				[
 					"",

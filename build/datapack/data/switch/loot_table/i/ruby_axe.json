@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_axe",
-								"minecraft:item_name": {
-									"text": "Ruby Axe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ruby Axe",
 								"minecraft:lore": [
 									[
 										"",

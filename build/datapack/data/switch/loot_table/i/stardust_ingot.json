@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:stardust_ingot",
-								"minecraft:item_name": {
-									"text": "Stardust Ingot",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Stardust Ingot",
 								"minecraft:lore": [
 									[
 										"",

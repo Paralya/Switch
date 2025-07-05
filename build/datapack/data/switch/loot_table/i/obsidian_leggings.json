@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_leggings",
-								"minecraft:item_name": {
-									"text": "Obsidian Leggings",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Obsidian Leggings",
 								"minecraft:lore": [
 									[
 										"",

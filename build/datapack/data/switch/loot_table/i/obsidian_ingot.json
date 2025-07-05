@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:obsidian_ingot",
-								"minecraft:item_name": {
-									"text": "Obsidian Ingot",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Obsidian Ingot",
 								"minecraft:lore": [
 									[
 										"",

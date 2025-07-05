@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_boots",
-								"minecraft:item_name": {
-									"text": "Californium Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Boots",
 								"minecraft:lore": [
 									[
 										"",

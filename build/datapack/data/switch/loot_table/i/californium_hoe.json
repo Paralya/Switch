@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_hoe",
-								"minecraft:item_name": {
-									"text": "Californium Hoe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Californium Hoe",
 								"minecraft:lore": [
 									[
 										"",

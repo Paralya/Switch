@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:steel_stick",
-								"minecraft:item_name": {
-									"text": "Steel Stick",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Steel Stick",
 								"minecraft:lore": [
 									[
 										"",

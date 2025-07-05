@@ -34,11 +34,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_boots",
-								"minecraft:item_name": {
-									"text": "Steel Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Steel Boots",
 								"minecraft:lore": [
 									[
 										"",

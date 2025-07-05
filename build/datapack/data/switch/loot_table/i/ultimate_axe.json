@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:ultimate_axe",
-								"minecraft:item_name": {
-									"text": "Ultimate Axe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ultimate Axe",
 								"minecraft:lore": [
 									[
 										"",

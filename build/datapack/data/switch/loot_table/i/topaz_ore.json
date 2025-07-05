@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:topaz_ore",
-								"minecraft:item_name": {
-									"text": "Topaz Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Topaz Ore",
 								"minecraft:lore": [
 									[
 										"",

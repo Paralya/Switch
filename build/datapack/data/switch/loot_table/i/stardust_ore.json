@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:stardust_ore",
-								"minecraft:item_name": {
-									"text": "Stardust Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Stardust Ore",
 								"minecraft:lore": [
 									[
 										"",

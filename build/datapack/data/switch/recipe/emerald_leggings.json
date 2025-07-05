@@ -59,11 +59,7 @@
 				}
 			],
 			"minecraft:item_model": "switch:emerald_leggings",
-			"minecraft:item_name": {
-				"text": "Emerald Leggings",
-				"italic": false,
-				"color": "white"
-			},
+			"minecraft:item_name": "Emerald Leggings",
 			"minecraft:lore": [
 				[
 					"",

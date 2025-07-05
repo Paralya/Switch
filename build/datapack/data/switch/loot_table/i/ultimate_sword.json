@@ -37,11 +37,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:ultimate_sword",
-								"minecraft:item_name": {
-									"text": "Ultimate Sword",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ultimate Sword",
 								"minecraft:lore": [
 									[
 										"",

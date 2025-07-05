@@ -41,11 +41,7 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_boots",
-								"minecraft:item_name": {
-									"text": "Ruby Boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Ruby Boots",
 								"minecraft:lore": [
 									[
 										"",

@@ -14,7 +14,7 @@ tag @s add switch.deepslate_ruby_ore
 tag @s add switch.vanilla.minecraft_polished_deepslate
 
 # Add a custom name
-data merge entity @s {"CustomName": {"text": "Deepslate Ruby Ore","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Deepslate Ruby Ore"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="switch:deepslate_ruby_ore"]

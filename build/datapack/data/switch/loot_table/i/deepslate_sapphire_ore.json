@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "switch:deepslate_sapphire_ore",
-								"minecraft:item_name": {
-									"text": "Deepslate Sapphire Ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Deepslate Sapphire Ore",
 								"minecraft:lore": [
 									[
 										"",
