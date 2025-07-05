@@ -1,0 +1,50 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_stack_size": 1,
+								"minecraft:equippable": {
+									"slot": "head",
+									"asset_id": "switch:zombie_armor"
+								},
+								"minecraft:enchantment_glint_override": false,
+								"minecraft:enchantments": {
+									"binding_curse": 1,
+									"vanishing_curse": 1
+								},
+								"minecraft:tooltip_display": {
+									"hide_tooltip": true
+								},
+								"minecraft:item_model": "minecraft:rotten_flesh",
+								"minecraft:item_name": "Zombie Head",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"switch": {
+										"zombie_head": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

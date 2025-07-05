@@ -2169,5 +2169,53 @@
 		"attribute_modifiers": [{"type": "armor","slot": "chest","id": "switch.armor","amount": 4.5,"operation": "add_value"}],
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"infected_armor_10": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zombie_head": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "head","asset_id": "switch:zombie_armor"},
+		"enchantment_glint_override": false,
+		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
+		"tooltip_display": {"hide_tooltip": true},
+		"item_model": "minecraft:rotten_flesh",
+		"item_name": "Zombie Head",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"zombie_head": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zombie_chest": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "switch:zombie_armor"},
+		"enchantment_glint_override": false,
+		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
+		"tooltip_display": {"hide_tooltip": true},
+		"item_model": "minecraft:rotten_flesh",
+		"item_name": "Zombie Chest",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"zombie_chest": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zombie_legs": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "legs","asset_id": "switch:zombie_armor"},
+		"enchantment_glint_override": false,
+		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
+		"tooltip_display": {"hide_tooltip": true},
+		"item_model": "minecraft:rotten_flesh",
+		"item_name": "Zombie Legs",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"zombie_legs": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zombie_feet": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "feet","asset_id": "switch:zombie_armor"},
+		"enchantment_glint_override": false,
+		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
+		"tooltip_display": {"hide_tooltip": true},
+		"item_model": "minecraft:rotten_flesh",
+		"item_name": "Zombie Feet",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"zombie_feet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}
 }

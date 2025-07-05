@@ -1,13 +1,14 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, Mem
+from stewbeet.core import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, Equipment, Mem, Texture, set_json_encoder
 
 
 # Setup infected items
 def setup_infected_items() -> None:
 	""" Setup all infected items such as swords, chestplates, etc. """
 	ns: str = Mem.ctx.project_id
+	textures_folder: str = Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "assets/textures")
 
 	# Remaining items
 	Mem.definitions["element_115"] = {
@@ -63,4 +64,24 @@ def setup_infected_items() -> None:
 			"item_model": armor_model, "item_name": f"{material} Chestplate",
 			"unbreakable": {}, "attribute_modifiers": armor_attribute
 		}
+
+	# Add zombie armor
+	for slot in ["head", "chest", "legs", "feet"]:
+		Mem.definitions[f"zombie_{slot}"] = {
+			"id": CUSTOM_ITEM_VANILLA,
+			"max_stack_size": 1,
+			"equippable": {"slot": slot,"asset_id": f"{ns}:zombie_armor"},
+			"enchantment_glint_override": False,
+			"enchantments": {"binding_curse": 1, "vanishing_curse": 1},
+			"tooltip_display": {"hide_tooltip": True},
+			"item_model": "minecraft:rotten_flesh"
+		}
+	for layer in ["humanoid", "humanoid_leggings"]:
+		Mem.ctx.assets[ns].textures[f"entity/equipment/{layer}/zombie_armor"] = Texture(source_path=f"{textures_folder}/zombie_armor.png")
+	Mem.ctx.assets[ns].equipments["zombie_armor"] = set_json_encoder(Equipment({
+		"layers": {
+			"humanoid": [{"texture": f"{ns}:zombie_armor"}],
+			"humanoid_leggings": [{"texture": f"{ns}:zombie_armor"}]
+		}
+	}))
 

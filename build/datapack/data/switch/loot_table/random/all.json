@@ -6599,6 +6599,22 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/infected_armor_10"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/zombie_head"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/zombie_chest"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/zombie_legs"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/zombie_feet"
 				}
 			]
 		}

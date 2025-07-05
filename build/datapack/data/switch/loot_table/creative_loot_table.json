@@ -215,6 +215,10 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_armor_7"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_armor_8"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_armor_9"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_armor_10"}]}
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_armor_10"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/zombie_head"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/zombie_chest"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/zombie_legs"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/zombie_feet"}]}
 	]
 }

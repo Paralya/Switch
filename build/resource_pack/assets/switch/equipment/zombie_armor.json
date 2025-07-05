@@ -1,0 +1,6 @@
+{
+	"layers": {
+		"humanoid": [{"texture": "switch:zombie_armor"}],
+		"humanoid_leggings": [{"texture": "switch:zombie_armor"}]
+	}
+}
