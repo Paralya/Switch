@@ -6510,6 +6510,10 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/zombie_hands"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/infected_sword_0"
 				},
 				{

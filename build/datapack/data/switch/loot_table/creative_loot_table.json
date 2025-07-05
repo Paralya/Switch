@@ -193,6 +193,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/souls_bag_half_filled"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/souls_bag_filled"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/element_115"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/zombie_hands"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_sword_0"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_sword_1"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/infected_sword_2"}]},

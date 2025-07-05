@@ -4,8 +4,8 @@ scoreboard players add #infected_ticks switch.data 1
 # Détection de la mort
 function switch:utils/on_death_run_function {function:"switch:modes/infected/death/zombie_spawn"}
 
-# Saturation qui ne régène pas en mode OP
-execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
+# Ticking function on all players
+execute as @a[tag=!detached] run function switch:modes/infected/player_tick
 
 # Prevent drop + kill arrow
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/infected/no_drop

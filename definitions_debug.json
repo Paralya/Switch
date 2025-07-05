@@ -1920,6 +1920,14 @@
 		"item_model": "switch:stardust_ingot",
 		"custom_data": {"switch": {"element_115": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"zombie_hands": {
+		"id": "minecraft:command_block",
+		"tooltip_display": {"hide_tooltip": true},
+		"item_model": "switch:zombie_hands",
+		"item_name": "Zombie Hands",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"zombie_hands": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"infected_sword_0": {
 		"id": "minecraft:iron_sword",
 		"rarity": "epic",
