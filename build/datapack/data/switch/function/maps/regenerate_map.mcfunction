@@ -61,7 +61,11 @@ execute if data storage switch:main {map:"boat_race_2"} run function switch:maps
 execute if data storage switch:main {map:"vilarles_castillo"} run function switch:maps/survival/vilarles_castillo/regenerate
 execute if data storage switch:main {map:"zonweeb_highschool"} run function switch:maps/survival/zonweeb_highschool/regenerate
 execute if data storage switch:main {map:"scartmania"} run function switch:maps/survival/scartmania/regenerate
-execute if data storage switch:main {map:"pillars_of_fortune"} run function switch:maps/survival/pillars_of_fortune/regenerate
+execute if data storage switch:main {map:"slimy_ground"} run function switch:maps/survival/slimy_ground/regenerate
+execute if data storage switch:main {map:"eternal_void"} run function switch:maps/survival/eternal_void/regenerate
+execute if data storage switch:main {map:"floor_is_lava"} run function switch:maps/survival/floor_is_lava/regenerate
+execute if data storage switch:main {map:"leather_boots"} run function switch:maps/survival/leather_boots/regenerate
+execute if data storage switch:main {map:"ocean_waste"} run function switch:maps/survival/ocean_waste/regenerate
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/regenerate
 execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/regenerate
 execute if data storage switch:main {map:"nuketown"} run function switch:maps/survival/nuketown/regenerate

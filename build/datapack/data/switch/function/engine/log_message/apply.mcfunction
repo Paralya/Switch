@@ -59,7 +59,11 @@
 #			switch:maps/survival/vilarles_castillo/regenerate
 #			switch:maps/survival/zonweeb_highschool/regenerate
 #			switch:maps/survival/scartmania/regenerate
-#			switch:maps/survival/pillars_of_fortune/regenerate
+#			switch:maps/survival/slimy_ground/regenerate
+#			switch:maps/survival/eternal_void/regenerate
+#			switch:maps/survival/floor_is_lava/regenerate
+#			switch:maps/survival/leather_boots/regenerate
+#			switch:maps/survival/ocean_waste/regenerate
 #			switch:maps/survival/warden_escape_statue/regenerate
 #			switch:maps/survival/hider_mansion/regenerate
 #			switch:maps/survival/nuketown/regenerate
@@ -134,6 +138,7 @@
 #			switch:maps/survival/yeti_in_panic/regenerate
 #			switch:maps/survival/cluedo_casino/regenerate
 #			switch:maps/survival/octogone_nether_ice/regenerate
+#			switch:maps/survival/pillars_of_fortune/regenerate
 #			switch:maps/survival/even_old_japan/regenerate
 #			switch:maps/survival/fireblast_bubulle/regenerate
 #			switch:maps/survival/fireblast_cookie/regenerate

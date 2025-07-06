@@ -29,7 +29,7 @@
 #			switch:modes/murder_mystery/start {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino"]}
 #			switch:modes/one_shot/start {id:"one_shot", maps:["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"]}
 #			switch:modes/panic_chase/start {id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}
-#			switch:modes/pillars_of_fortune/start {id:"pillars_of_fortune", maps:["pillars_of_fortune"]}
+#			switch:modes/pillars_of_fortune/start {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste"]}
 #			switch:modes/pitch_creep/start {id:"pitch_creep", maps:["pitch_creep_1","octogone_nether_ice"]}
 #			switch:modes/pitchout/start {id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}
 #			switch:modes/protect_the_king/start {id:"protect_the_king", maps:["traitor_original","mushroom_plains","baby_park","snow_travel","cathedrale_liege","jayl_dark_forest","operation_pigclaw","dark_forest_hills","paralya_lobby_noel","zonweeb_highschool","hider_mansion","nuketown_no_barrier","lightium_spawn","paralya_lobby","stardust_spawn","stardust_boss_zone","stardust_boss_zone_nether","stardust_pvp_zone","jn_biomes_relief"]}

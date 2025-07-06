@@ -58,7 +58,11 @@ data modify storage switch:maps to_scan.boat_race_2 set value 1b
 data modify storage switch:maps to_scan.vilarles_castillo set value 1b
 data modify storage switch:maps to_scan.zonweeb_highschool set value 1b
 data modify storage switch:maps to_scan.scartmania set value 1b
-data modify storage switch:maps to_scan.pillars_of_fortune set value 1b
+data modify storage switch:maps to_scan.slimy_ground set value 1b
+data modify storage switch:maps to_scan.eternal_void set value 1b
+data modify storage switch:maps to_scan.floor_is_lava set value 1b
+data modify storage switch:maps to_scan.leather_boots set value 1b
+data modify storage switch:maps to_scan.ocean_waste set value 1b
 data modify storage switch:maps to_scan.warden_escape_statue set value 1b
 data modify storage switch:maps to_scan.hider_mansion set value 1b
 data modify storage switch:maps to_scan.nuketown set value 1b

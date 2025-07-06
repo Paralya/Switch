@@ -60,8 +60,12 @@ execute unless data storage switch:maps to_regenerate.snow_hills if data storage
 execute unless data storage switch:maps to_regenerate.boat_race_2 if data storage switch:maps to_regenerate{vilarles_castillo:1b} run function switch:maps/survival/vilarles_castillo/regenerate
 execute unless data storage switch:maps to_regenerate.vilarles_castillo if data storage switch:maps to_regenerate{zonweeb_highschool:1b} run function switch:maps/survival/zonweeb_highschool/regenerate
 execute unless data storage switch:maps to_regenerate.zonweeb_highschool if data storage switch:maps to_regenerate{scartmania:1b} run function switch:maps/survival/scartmania/regenerate
-execute unless data storage switch:maps to_regenerate.scartmania if data storage switch:maps to_regenerate{pillars_of_fortune:1b} run function switch:maps/survival/pillars_of_fortune/regenerate
-execute unless data storage switch:maps to_regenerate.pillars_of_fortune if data storage switch:maps to_regenerate{warden_escape_statue:1b} run function switch:maps/survival/warden_escape_statue/regenerate
+execute unless data storage switch:maps to_regenerate.scartmania if data storage switch:maps to_regenerate{slimy_ground:1b} run function switch:maps/survival/slimy_ground/regenerate
+execute unless data storage switch:maps to_regenerate.slimy_ground if data storage switch:maps to_regenerate{eternal_void:1b} run function switch:maps/survival/eternal_void/regenerate
+execute unless data storage switch:maps to_regenerate.eternal_void if data storage switch:maps to_regenerate{floor_is_lava:1b} run function switch:maps/survival/floor_is_lava/regenerate
+execute unless data storage switch:maps to_regenerate.floor_is_lava if data storage switch:maps to_regenerate{leather_boots:1b} run function switch:maps/survival/leather_boots/regenerate
+execute unless data storage switch:maps to_regenerate.leather_boots if data storage switch:maps to_regenerate{ocean_waste:1b} run function switch:maps/survival/ocean_waste/regenerate
+execute unless data storage switch:maps to_regenerate.ocean_waste if data storage switch:maps to_regenerate{warden_escape_statue:1b} run function switch:maps/survival/warden_escape_statue/regenerate
 execute unless data storage switch:maps to_regenerate.warden_escape_statue if data storage switch:maps to_regenerate{hider_mansion:1b} run function switch:maps/survival/hider_mansion/regenerate
 execute unless data storage switch:maps to_regenerate.hider_mansion if data storage switch:maps to_regenerate{nuketown:1b} run function switch:maps/survival/nuketown/regenerate
 execute unless data storage switch:maps to_regenerate.nuketown if data storage switch:maps to_regenerate{layers_4_teams:1b} run function switch:maps/survival/layers_4_teams/regenerate

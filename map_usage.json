@@ -53,7 +53,11 @@
 		"new_grounds": ["warden_escape"],
 		"boat_race_2": ["boat_race"],
 		"vilarles_castillo": ["thunder_spear"],
-		"pillars_of_fortune": ["pillars_of_fortune"],
+		"slimy_ground": ["pillars_of_fortune"],
+		"eternal_void": ["pillars_of_fortune"],
+		"floor_is_lava": ["pillars_of_fortune"],
+		"leather_boots": ["pillars_of_fortune"],
+		"ocean_waste": ["pillars_of_fortune"],
 		"warden_escape_statue": ["warden_escape"],
 		"layers_4_teams": ["layers_4_teams"],
 		"survival_boat": ["sheepwars"],
@@ -115,6 +119,7 @@
 		"yeti_in_panic": ["panic_chase"],
 		"cluedo_casino": ["murder_mystery"],
 		"octogone_nether_ice": ["pitch_creep"],
+		"pillars_of_fortune": ["pillars_of_fortune"],
 		"fireblast_bubulle": ["fireblast"],
 		"fireblast_cookie": ["fireblast"],
 		"fireblast_pork": ["fireblast"],
@@ -178,7 +183,7 @@
 		"memory_mine": ["memory_mine"],
 		"fish_fight": ["luxio_fish_fight"],
 		"one_shot": ["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"],
-		"pillars_of_fortune": ["pillars_of_fortune"],
+		"pillars_of_fortune": ["pillars_of_fortune","slimy_ground","eternal_void","floor_is_lava","leather_boots","ocean_waste"],
 		"fireblast": ["fireblast_bubulle","fireblast_cookie","fireblast_pork"]
 	}
 ]

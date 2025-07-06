@@ -60,7 +60,11 @@ execute if score #rg_boat_race_2 switch.data matches 1.. run function switch:map
 execute if score #rg_vilarles_castillo switch.data matches 1.. run function switch:maps/survival/vilarles_castillo/regenerate
 execute if score #rg_zonweeb_highschool switch.data matches 1.. run function switch:maps/survival/zonweeb_highschool/regenerate
 execute if score #rg_scartmania switch.data matches 1.. run function switch:maps/survival/scartmania/regenerate
-execute if score #rg_pillars_of_fortune switch.data matches 1.. run function switch:maps/survival/pillars_of_fortune/regenerate
+execute if score #rg_slimy_ground switch.data matches 1.. run function switch:maps/survival/slimy_ground/regenerate
+execute if score #rg_eternal_void switch.data matches 1.. run function switch:maps/survival/eternal_void/regenerate
+execute if score #rg_floor_is_lava switch.data matches 1.. run function switch:maps/survival/floor_is_lava/regenerate
+execute if score #rg_leather_boots switch.data matches 1.. run function switch:maps/survival/leather_boots/regenerate
+execute if score #rg_ocean_waste switch.data matches 1.. run function switch:maps/survival/ocean_waste/regenerate
 execute if score #rg_warden_escape_statue switch.data matches 1.. run function switch:maps/survival/warden_escape_statue/regenerate
 execute if score #rg_hider_mansion switch.data matches 1.. run function switch:maps/survival/hider_mansion/regenerate
 execute if score #rg_nuketown switch.data matches 1.. run function switch:maps/survival/nuketown/regenerate

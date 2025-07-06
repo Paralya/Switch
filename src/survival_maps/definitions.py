@@ -84,11 +84,11 @@ def generate_folders_for_survival_maps() -> None:
 	##	57000	(undefined)	: empty
 	clone_survival(100, (58000, 100, 58000), (58160, 191, 58188), ("scartmania", "Scartmania", "Stoupy (Survisland)"), view=(58103.72, 244.52, 58043.93, 19.96, 78.09))
 	##	59000	(undefined)	: empty
-	clone_survival(100, (161000, 100, 161000), (161100, 190, 161100), ("pillars_of_fortune", "Icy ground circle", "Stoupy"), view=(161070.03, 137.81, 161006.29, 19.81, 42.61))
-	##	61000	(undefined)	: empty
-	##	62000	(undefined)	: empty
-	##	63000	(undefined)	: empty
-	##	64000	(undefined)	: empty
+	clone_survival(100, (60000, 100, 60000), (60100, 190, 60100), ("slimy_ground", "Slimy Ground", "Stoupy"), view=(60070.03, 137.81, 60006.29, 19.81, 42.61))
+	clone_survival(100, (61000, 100, 61000), (61100, 190, 61100), ("eternal_void", "Eternal Void", "Stoupy"), view=(61070.03, 137.81, 61006.29, 19.81, 42.61))
+	clone_survival(100, (62000, 100, 62000), (62100, 190, 62100), ("floor_is_lava", "The floor is probably lava", "Stoupy"), view=(62070.03, 137.81, 62006.29, 19.81, 42.61))
+	clone_survival(100, (63000, 100, 63000), (63100, 190, 63100), ("leather_boots", "Where\\'re my leather boots?", "Stoupy"), view=(63070.03, 137.81, 63006.29, 19.81, 42.61))
+	clone_survival(100, (64000, 100, 64000), (64100, 190, 64100), ("ocean_waste", "Ocean Waste", "Stoupy"), view=(64070.03, 137.81, 64006.29, 19.81, 42.61))
 	##	65000	(undefined)	: empty
 	##	66000	(undefined)	: empty
 	##	67000	(undefined)	: empty
@@ -197,7 +197,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (158000, 100, 158000), (158077, 167, 158070), ("yeti_in_panic", "Yeti in Panic", "TreekoZ, Arti, Chara"), view=(158003.67, 119.48, 158053.31, 239.07, 6.47))
 	clone_survival(100, (159000, 100, 159000), (159075, 159, 159069), ("cluedo_casino", "Cluedo Casino", "Remelta, Fhara"), view=(159037.45, 121.93, 159015.02, 38.99, 17.87))
 	clone_survival(100, (160000, 100, 160000), (160080, 162, 160080), ("octogone_nether_ice", "Octogone Nether Ice", "Stoupy, TreekoZ"), view=(160031.22, 132.41, 160043.15, -104.97, 13.10))
-	clone_survival(100, (161000, 100, 161000), (161100, 190, 161100), ("pillars_of_fortune", "Icy ground circle", "Stoupy"), view=(161070.03, 137.81, 161006.29, 19.81, 42.61))
+	clone_survival(100, (161000, 100, 161000), (161100, 190, 161100), ("pillars_of_fortune", "Icy Ground Circle", "Stoupy"), view=(161070.03, 137.81, 161006.29, 19.81, 42.61))
 	clone_survival(100, (162000, 100, 162000), (162100, 152, 162100), ("even_old_japan", "Old Japan", "Even"), view=(162054.95, 105.40, 162021.91, 16.36, -5.44))
 	clone_survival(100, (163000, 100, 163000), (163075, 156, 163075), ("fireblast_bubulle", "Bubulle", "Stoupy"), view=(163021.55, 167.39, 163033.03, -88.89, 68.41))
 	clone_survival(100, (164000, 100, 164000), (164075, 156, 164075), ("fireblast_cookie", "Smol Cookie", "Stoupy"), view=(164022.16, 153.99, 164035.08, 271.69, 75.49))
