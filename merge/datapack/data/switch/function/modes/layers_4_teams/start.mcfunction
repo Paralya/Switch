@@ -43,4 +43,5 @@ scoreboard players set #total switch.temp.killed_blue 0
 scoreboard players set #total switch.temp.killed_green 0
 scoreboard players set #total switch.temp.killed_yellow 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/layers_4_teams/team_and_give
+gamemode survival @a[tag=!detached]
 

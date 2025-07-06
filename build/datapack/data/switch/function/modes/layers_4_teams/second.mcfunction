@@ -8,8 +8,10 @@
 scoreboard players add #layers_4_teams_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
-# Mise en survie au début du jeu
-execute if score #layers_4_teams_seconds switch.data matches 0 run gamemode survival @a[tag=!detached,gamemode=adventure]
+# Keep obsidian walls until 30s
+execute if score #layers_4_teams_seconds switch.data matches ..29 run fill 74018 102 74001 74018 157 74061 minecraft:obsidian replace air
+execute if score #layers_4_teams_seconds switch.data matches ..29 run fill 74001 102 74031 74035 157 74031 minecraft:obsidian replace air
+execute if score #layers_4_teams_seconds switch.data matches 30 as @a[tag=!detached] at @s run playsound entity.wither.hurt ambient @s
 
 # Affichage du temps restants
 scoreboard players operation #mins switch.data = #remaining_time switch.data

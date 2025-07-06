@@ -19,3 +19,6 @@ execute as @n[tag=switch.respawn_max] run function switch:modes/one_shot/respawn
 # Spawn a new marker
 execute summon marker run function switch:modes/one_shot/respawn/spawn_marker
 
+# Give invisibility to the player for 2 seconds
+effect give @s invisibility 2 0 true
+

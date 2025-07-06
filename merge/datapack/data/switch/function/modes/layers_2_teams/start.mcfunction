@@ -1,7 +1,7 @@
 
 effect give @a[tag=!detached] night_vision infinite 255 true
 effect give @a[tag=!detached] saturation 15 255 true
-effect give @a[tag=!detached] resistance 60 255 true
+effect give @a[tag=!detached] resistance 30 255 true
 function switch:utils/set_dynamic_time
 
 ## Chargement de la map
@@ -28,4 +28,5 @@ team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/layers_2_teams/team_and_give
+gamemode survival @a[tag=!detached]
 
