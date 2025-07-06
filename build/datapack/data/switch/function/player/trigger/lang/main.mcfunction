@@ -18,6 +18,5 @@ execute if score @s switch.trigger.lang matches 10 run tellraw @s [{"text":"Vous
 execute if score @s switch.trigger.lang matches 11 run tellraw @s [{"text":"You have chosen the English language!\nType '/lang' to change the language","color":"aqua"}]
 
 # Clear the effects and reset the trigger score
-execute if score @s switch.trigger.lang matches 10.. run effect clear @s
 scoreboard players set @s switch.trigger.lang 0
 
