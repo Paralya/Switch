@@ -15,3 +15,6 @@ execute store result block 0 7 0 Items[0].components."minecraft:lodestone_tracke
 item replace entity @s hotbar.4 from block 0 7 0 container.0
 setblock 0 7 0 air
 
+# Allow to see players waypoints
+attribute @s waypoint_receive_range base reset
+

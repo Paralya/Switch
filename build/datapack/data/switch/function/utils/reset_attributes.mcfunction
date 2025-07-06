@@ -40,3 +40,9 @@ attribute @s sneaking_speed base reset
 attribute @s submerged_mining_speed base reset
 attribute @s sweeping_damage_ratio base reset
 
+# 1.21.6
+attribute @s camera_distance base reset
+attribute @s waypoint_receive_range base reset
+attribute @s waypoint_transmit_range base reset
+waypoint modify @s color reset
+

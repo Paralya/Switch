@@ -6,6 +6,7 @@ execute if score #success switch.data matches 1 run function switch:utils/death_
 execute unless score #success switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
 
 # Clear & spectator
+attribute @s waypoint_transmit_range base set 0
 gamemode spectator @s
 effect clear @s
 clear @s

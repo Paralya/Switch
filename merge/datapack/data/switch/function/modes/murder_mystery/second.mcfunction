@@ -2,7 +2,6 @@
 # Timer
 scoreboard players add #murder_mystery_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
-function switch:modes/murder_mystery/xp_bar
 
 # Annonce des rôles
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

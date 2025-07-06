@@ -18,7 +18,6 @@
 #			switch:modes/minigolf/xp_bar
 #			switch:modes/mlg_a_coudre/xp_bar
 #			switch:modes/moutron/xp_bar
-#			switch:modes/murder_mystery/xp_bar
 #			switch:modes/panic_chase/xp_bar
 #			switch:modes/pillars_of_fortune/xp_bar
 #			switch:modes/pitch_creep/xp_bar

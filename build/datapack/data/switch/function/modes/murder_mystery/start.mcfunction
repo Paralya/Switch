@@ -46,10 +46,17 @@ execute as @a[tag=!detached] run function switch:modes/murder_mystery/percentage
 function switch:modes/murder_mystery/percentage/select_roles
 
 # Hide nametags
-team add switch.temp {"text":"[Temp]"}
-team modify switch.temp nametagVisibility never
-team join switch.temp @a[tag=!detached]
+team add switch.temp.murder_mystery {"text":"[Murder Mystery]"}
+#team modify switch.temp.murder_mystery prefix {"text":"[Murder Mystery] ","color":"aqua"}
+team modify switch.temp.murder_mystery nametagVisibility never
+team join switch.temp.murder_mystery @a[tag=!detached]
 
 # Teleport players override
 execute if data storage switch:main {map:"jn_murder_mystery"} run scoreboard players set #remaining_time switch.data 305
+
+## Waypoints
+# Remove everyone's waypoint receive range
+execute as @a[tag=!detached] run attribute @s waypoint_receive_range base set 0
+execute as @a[tag=!detached] run waypoint modify @s color green
+execute as @a[tag=!detached,scores={switch.temp.role=3}] run waypoint modify @s color red
 

@@ -52,8 +52,8 @@ team modify switch.no_pvp friendlyFire false
 team modify switch.no_pvp color white
 team modify switch.detached friendlyFire false
 team modify switch.detached color gray
-team modify switch.detached prefix {"text":"[Détaché] ","color":"dark_gray"}
-team modify switch.tutorial prefix {"text":"[En tutoriel] ","color":"yellow"}
+team modify switch.detached prefix {"text":"[Lobby] ","color":"dark_gray"}
+team modify switch.tutorial prefix {"text":"[Tutorial] ","color":"yellow"}
 team modify switch.tutorial color gold
 
 gamerule maxCommandChainLength 2147483647
