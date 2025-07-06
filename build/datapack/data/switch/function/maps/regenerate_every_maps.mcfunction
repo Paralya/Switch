@@ -58,6 +58,7 @@ data modify storage switch:maps to_regenerate.boat_race_2 set value 1b
 data modify storage switch:maps to_regenerate.vilarles_castillo set value 1b
 data modify storage switch:maps to_regenerate.zonweeb_highschool set value 1b
 data modify storage switch:maps to_regenerate.scartmania set value 1b
+data modify storage switch:maps to_regenerate.pillars_of_fortune set value 1b
 data modify storage switch:maps to_regenerate.warden_escape_statue set value 1b
 data modify storage switch:maps to_regenerate.hider_mansion set value 1b
 data modify storage switch:maps to_regenerate.nuketown set value 1b

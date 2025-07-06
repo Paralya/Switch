@@ -56,6 +56,7 @@
 #			switch:maps/survival/vilarles_castillo/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Castillo",credits:"Vilarles",with:{}}
 #			switch:maps/survival/zonweeb_highschool/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"A Japanese High School",credits:"Minami310, ComputerGraphics, Stoupy",with:{}}
 #			switch:maps/survival/scartmania/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Scartmania",credits:"Stoupy (Survisland)",with:{}}
+#			switch:maps/survival/pillars_of_fortune/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Icy ground circle",credits:"Stoupy",with:{}}
 #			switch:maps/survival/warden_escape_statue/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Warden Escape Statue",credits:"?, Oraclette, math730 (Survisland)",with:{}}
 #			switch:maps/survival/hider_mansion/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Hider Mansion",credits:"?, Oraclette, math730 (Survisland)",with:{}}
 #			switch:maps/survival/nuketown/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Nuketown",credits:"Qiuye, Cube Horizon",with:{}}
@@ -130,7 +131,6 @@
 #			switch:maps/survival/yeti_in_panic/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Yeti in Panic",credits:"TreekoZ, Arti, Chara",with:{}}
 #			switch:maps/survival/cluedo_casino/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Cluedo Casino",credits:"Remelta, Fhara",with:{}}
 #			switch:maps/survival/octogone_nether_ice/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Octogone Nether Ice",credits:"Stoupy, TreekoZ",with:{}}
-#			switch:maps/survival/pillars_of_fortune/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Icy ground circle",credits:"Stoupy",with:{}}
 #			switch:maps/survival/even_old_japan/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Old Japan",credits:"Even",with:{}}
 #			switch:maps/survival/fireblast_bubulle/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Bubulle",credits:"Stoupy",with:{}}
 #			switch:maps/survival/fireblast_cookie/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Smol Cookie",credits:"Stoupy",with:{}}

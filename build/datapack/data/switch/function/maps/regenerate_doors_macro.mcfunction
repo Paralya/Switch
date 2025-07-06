@@ -56,6 +56,7 @@
 #			switch:maps/survival/vilarles_castillo/regenerate {name:"vilarles_castillo"}
 #			switch:maps/survival/zonweeb_highschool/regenerate {name:"zonweeb_highschool"}
 #			switch:maps/survival/scartmania/regenerate {name:"scartmania"}
+#			switch:maps/survival/pillars_of_fortune/regenerate {name:"pillars_of_fortune"}
 #			switch:maps/survival/warden_escape_statue/regenerate {name:"warden_escape_statue"}
 #			switch:maps/survival/hider_mansion/regenerate {name:"hider_mansion"}
 #			switch:maps/survival/nuketown/regenerate {name:"nuketown"}
@@ -130,7 +131,6 @@
 #			switch:maps/survival/yeti_in_panic/regenerate {name:"yeti_in_panic"}
 #			switch:maps/survival/cluedo_casino/regenerate {name:"cluedo_casino"}
 #			switch:maps/survival/octogone_nether_ice/regenerate {name:"octogone_nether_ice"}
-#			switch:maps/survival/pillars_of_fortune/regenerate {name:"pillars_of_fortune"}
 #			switch:maps/survival/even_old_japan/regenerate {name:"even_old_japan"}
 #			switch:maps/survival/fireblast_bubulle/regenerate {name:"fireblast_bubulle"}
 #			switch:maps/survival/fireblast_cookie/regenerate {name:"fireblast_cookie"}

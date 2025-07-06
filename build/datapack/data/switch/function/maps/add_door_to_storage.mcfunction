@@ -54,6 +54,7 @@
 #			switch:maps/survival/vilarles_castillo/scan_doors_on_marker {name:"vilarles_castillo",additional_height:0}
 #			switch:maps/survival/zonweeb_highschool/scan_doors_on_marker {name:"zonweeb_highschool",additional_height:0}
 #			switch:maps/survival/scartmania/scan_doors_on_marker {name:"scartmania",additional_height:0}
+#			switch:maps/survival/pillars_of_fortune/scan_doors_on_marker {name:"pillars_of_fortune",additional_height:0}
 #			switch:maps/survival/warden_escape_statue/scan_doors_on_marker {name:"warden_escape_statue",additional_height:0}
 #			switch:maps/survival/hider_mansion/scan_doors_on_marker {name:"hider_mansion",additional_height:0}
 #			switch:maps/survival/nuketown/scan_doors_on_marker {name:"nuketown",additional_height:0}
@@ -128,7 +129,6 @@
 #			switch:maps/survival/yeti_in_panic/scan_doors_on_marker {name:"yeti_in_panic",additional_height:0}
 #			switch:maps/survival/cluedo_casino/scan_doors_on_marker {name:"cluedo_casino",additional_height:0}
 #			switch:maps/survival/octogone_nether_ice/scan_doors_on_marker {name:"octogone_nether_ice",additional_height:0}
-#			switch:maps/survival/pillars_of_fortune/scan_doors_on_marker {name:"pillars_of_fortune",additional_height:0}
 #			switch:maps/survival/even_old_japan/scan_doors_on_marker {name:"even_old_japan",additional_height:0}
 #			switch:maps/survival/fireblast_bubulle/scan_doors_on_marker {name:"fireblast_bubulle",additional_height:0}
 #			switch:maps/survival/fireblast_cookie/scan_doors_on_marker {name:"fireblast_cookie",additional_height:0}

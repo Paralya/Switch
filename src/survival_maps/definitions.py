@@ -84,7 +84,7 @@ def generate_folders_for_survival_maps() -> None:
 	##	57000	(undefined)	: empty
 	clone_survival(100, (58000, 100, 58000), (58160, 191, 58188), ("scartmania", "Scartmania", "Stoupy (Survisland)"), view=(58103.72, 244.52, 58043.93, 19.96, 78.09))
 	##	59000	(undefined)	: empty
-	##	60000	(undefined)	: empty
+	clone_survival(100, (161000, 100, 161000), (161100, 190, 161100), ("pillars_of_fortune", "Icy ground circle", "Stoupy"), view=(161070.03, 137.81, 161006.29, 19.81, 42.61))
 	##	61000	(undefined)	: empty
 	##	62000	(undefined)	: empty
 	##	63000	(undefined)	: empty
@@ -199,7 +199,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (160000, 100, 160000), (160080, 162, 160080), ("octogone_nether_ice", "Octogone Nether Ice", "Stoupy, TreekoZ"), view=(160031.22, 132.41, 160043.15, -104.97, 13.10))
 	clone_survival(100, (161000, 100, 161000), (161100, 190, 161100), ("pillars_of_fortune", "Icy ground circle", "Stoupy"), view=(161070.03, 137.81, 161006.29, 19.81, 42.61))
 	clone_survival(100, (162000, 100, 162000), (162100, 152, 162100), ("even_old_japan", "Old Japan", "Even"), view=(162054.95, 105.40, 162021.91, 16.36, -5.44))
-	clone_survival(100, (163000, 100, 163000), (163075, 150, 163075), ("fireblast_bubulle", "Bubulle", "Stoupy"), view=(163021.55, 167.39, 163033.03, -88.89, 68.41))
-	clone_survival(100, (164000, 100, 164000), (164075, 150, 164075), ("fireblast_cookie", "Smol Cookie", "Stoupy"), view=(164022.16, 153.99, 164035.08, 271.69, 75.49))
-	clone_survival(100, (165000, 100, 165000), (165075, 150, 165075), ("fireblast_pork", "Vegan Pork", "Stoupy"), view=(165047.44, 155.84, 165052.22, 143.50, 67.83))
+	clone_survival(100, (163000, 100, 163000), (163075, 156, 163075), ("fireblast_bubulle", "Bubulle", "Stoupy"), view=(163021.55, 167.39, 163033.03, -88.89, 68.41))
+	clone_survival(100, (164000, 100, 164000), (164075, 156, 164075), ("fireblast_cookie", "Smol Cookie", "Stoupy"), view=(164022.16, 153.99, 164035.08, 271.69, 75.49))
+	clone_survival(100, (165000, 100, 165000), (165075, 156, 165075), ("fireblast_pork", "Vegan Pork", "Stoupy"), view=(165047.44, 155.84, 165052.22, 143.50, 67.83))
 
