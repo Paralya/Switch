@@ -53,7 +53,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (25000, 100, 25000), (25493, 217, 25348), ("trackmania_stadium_1", "Trackmania Stadium 1", "Stoupy"), view=(25349.85, 158.73, 25099.32, 40.90, 37.81), racing_pos=((25348.5, 110.69, 25171.5), 180, 32))
 	clone_survival(100, (26000, 100, 26000), (26138, 265, 26084), ("cathedrale_liege", "Cathédrale Saint-Lambert de Liège", "Simonay"), view=(26033.99, 122.30, 26052.67, 281.50, -4.14))
 	clone_survival(100, (27000, 100, 27000), (27036, 162, 27062), ("layers_2_teams", "Layers 2 Teams", "Stoupy"), view=(26990.28, 107.53, 27079.30, 215.00, -23.18))
-	clone_survival(87, (27969, 63, 27969), (28031, 82, 28031), ("spleef_1", "Spleef 1", "Stoupy, ?"), view=(28025.16, 107.52, 28028.77, 142.38, 25.30))
+	clone_survival(85, (27960, 61, 27960), (28040, 88, 28040), ("spleef_1", "Spleef 1", "Stoupy"), view=(28025.16, 107.52, 28028.77, 142.38, 25.30))
 	clone_survival(100, (29000, 100, 29000), (29083, 206, 29049), ("de_a_coudre_1", "Dé à coudre 1", "Stoupy, Jugou2"), view=(29043.46 ,174.26 ,29035.74, 145.00, 75.14))
 	##	30000	(undefined)	: empty
 	clone_survival(100, (31000, 100, 31000), (31075, 229, 31090), ("mlg_a_coudre_1", "MLG à coudre 1", "Stoupy, Jugou2"), view=(31089.27, 217.57, 31063.11, 107.48, 35.42))

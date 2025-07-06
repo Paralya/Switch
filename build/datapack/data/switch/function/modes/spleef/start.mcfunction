@@ -13,6 +13,7 @@ execute in switch:game run gamerule doTileDrops false
 
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"spleef", maps:["spleef_1"]}
+execute if data storage switch:main {map:"spleef_1"} run tp @a[tag=!detached] 28000 101 28000
 
 function switch:translations/modes_spleef_start
 

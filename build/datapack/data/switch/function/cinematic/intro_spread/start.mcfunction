@@ -37,7 +37,7 @@
 #			switch:maps/survival/trackmania_stadium_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Trackmania Stadium 1",credits:"Stoupy",with:{}}
 #			switch:maps/survival/cathedrale_liege/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Cathédrale Saint-Lambert de Liège",credits:"Simonay",with:{}}
 #			switch:maps/survival/layers_2_teams/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Layers 2 Teams",credits:"Stoupy",with:{}}
-#			switch:maps/survival/spleef_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Spleef 1",credits:"Stoupy, ?",with:{}}
+#			switch:maps/survival/spleef_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Spleef 1",credits:"Stoupy",with:{}}
 #			switch:maps/survival/de_a_coudre_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Dé à coudre 1",credits:"Stoupy, Jugou2",with:{}}
 #			switch:maps/survival/mlg_a_coudre_1/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"MLG à coudre 1",credits:"Stoupy, Jugou2",with:{}}
 #			switch:maps/survival/zonweeb_main/intro_spread {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Zonweeb Main",credits:"Stoupy",with:{}}
