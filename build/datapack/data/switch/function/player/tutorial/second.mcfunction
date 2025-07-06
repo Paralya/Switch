@@ -13,8 +13,8 @@
 # End
 
 # Init dialog
-execute if score @s switch.tutorial matches 0 run data modify storage switch:temp cutted_username set string entity @s equipment.offhand.components."minecraft:profile".name 0 4
-execute if score @s switch.tutorial matches 0 run data modify storage switch:temp username set from entity @s equipment.offhand.components."minecraft:profile".name
+execute if score @s switch.tutorial matches 0 run data modify storage switch:temp cutted_username set string entity @s equipment.head.components."minecraft:profile".name 0 4
+execute if score @s switch.tutorial matches 0 run data modify storage switch:temp username set from entity @s equipment.head.components."minecraft:profile".name
 execute if score @s switch.tutorial matches 0 run scoreboard players operation #dialog_type switch.data = @s switch.id
 execute if score @s switch.tutorial matches 0 run scoreboard players operation #dialog_type switch.data %= #6 switch.data
 
