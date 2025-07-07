@@ -6,8 +6,9 @@ execute on origin run tag @s remove switch.origin
 
 # Summon tnt
 data modify storage switch:temp Owner set from entity @s Owner
-execute summon tnt run data modify entity @s Owner set from storage switch:temp Owner
+execute summon tnt run function switch:modes/thunder_spear/on_new_tnt
 playsound switch:explosion ambient @a[distance=..50]
+
 # Kill the arrow
 kill @s
 

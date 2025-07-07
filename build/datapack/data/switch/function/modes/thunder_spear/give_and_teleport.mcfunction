@@ -16,6 +16,7 @@ gamemode survival @s
 scoreboard players add @s switch.temp.kills 0
 
 # Give items
+item replace entity @s hotbar.0 with crossbow[charged_projectiles=[{id:"minecraft:arrow"}]]
 loot replace entity @s weapon.offhand loot grappling_hook:v1.4.0/items/normal_grappling_hook
 item modify entity @s weapon.offhand switch:unbreakable
 scoreboard players set @s switch.temp.reload -60
