@@ -2,17 +2,31 @@
 #> switch:modes/build_battle/preparation/display_themes
 #
 # @within	switch:modes/build_battle/preparation/main
-#			switch:modes/build_battle/tick with storage switch:main themes
+#			switch:modes/build_battle/tick
 #
 
-# Place the papers in a shulker box with their name
+## Place the papers in a shulker box with their name
 setblock 0 5 0 air
 setblock 0 5 0 yellow_shulker_box
-$item replace block 0 5 0 container.0 with paper[item_name={"text":"$(theme1)","color":"yellow","italic":false},lore=[""]]
-$item replace block 0 5 0 container.1 with paper[item_name={"text":"$(theme2)","color":"yellow","italic":false},lore=[""]]
-$item replace block 0 5 0 container.2 with paper[item_name={"text":"$(theme3)","color":"yellow","italic":false},lore=[""]]
-$item replace block 0 5 0 container.3 with paper[item_name={"text":"$(theme4)","color":"yellow","italic":false},lore=[""]]
-$item replace block 0 5 0 container.4 with paper[item_name={"text":"$(theme5)","color":"yellow","italic":false},lore=[""]]
+item replace block 0 5 0 container.0 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
+item replace block 0 5 0 container.1 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
+item replace block 0 5 0 container.2 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
+item replace block 0 5 0 container.3 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
+item replace block 0 5 0 container.4 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
+
+# French
+execute if score @s switch.lang matches 0 run data modify block 0 5 0 Items[0].components."minecraft:item_name".text set from storage switch:main themes.theme1.fr
+execute if score @s switch.lang matches 0 run data modify block 0 5 0 Items[1].components."minecraft:item_name".text set from storage switch:main themes.theme2.fr
+execute if score @s switch.lang matches 0 run data modify block 0 5 0 Items[2].components."minecraft:item_name".text set from storage switch:main themes.theme3.fr
+execute if score @s switch.lang matches 0 run data modify block 0 5 0 Items[3].components."minecraft:item_name".text set from storage switch:main themes.theme4.fr
+execute if score @s switch.lang matches 0 run data modify block 0 5 0 Items[4].components."minecraft:item_name".text set from storage switch:main themes.theme5.fr
+
+# English
+execute if score @s switch.lang matches 1 run data modify block 0 5 0 Items[0].components."minecraft:item_name".text set from storage switch:main themes.theme1.en
+execute if score @s switch.lang matches 1 run data modify block 0 5 0 Items[1].components."minecraft:item_name".text set from storage switch:main themes.theme2.en
+execute if score @s switch.lang matches 1 run data modify block 0 5 0 Items[2].components."minecraft:item_name".text set from storage switch:main themes.theme3.en
+execute if score @s switch.lang matches 1 run data modify block 0 5 0 Items[3].components."minecraft:item_name".text set from storage switch:main themes.theme4.en
+execute if score @s switch.lang matches 1 run data modify block 0 5 0 Items[4].components."minecraft:item_name".text set from storage switch:main themes.theme5.en
 
 # Change the paper Count depending on their number of votes
 execute if score #vote_theme_1 switch.data matches 1.. store result block 0 5 0 Items[0].count int 1 run scoreboard players get #vote_theme_1 switch.data

@@ -10,11 +10,10 @@ execute as @a[tag=!detached] run attribute @s minecraft:gravity base set 0.0
 
 ## Choose themes
 # Get the themes list in storage switch:main build_battle_themes
-execute store success score #success switch.data run data get storage switch:main build_battle_themes[5]
-execute if score #success switch.data matches 0 run function switch:modes/build_battle/preparation/themes_list
+execute unless data storage switch:main build_battle_themes[5] run function switch:modes/build_battle/preparation/themes_list
 
 # Pick 5 random themes by getting random numbers between 0 and the number of themes
-data modify storage switch:main themes set value {theme1:"", theme2:"", theme3:"", theme4:"", theme5:""}
+data modify storage switch:main themes set value {theme1:{}, theme2:{}, theme3:{}, theme4:{}, theme5:{}}
 
 data modify storage switch:main input set value {theme:1, index:0}
 execute store result score #modulo_rand switch.data run data get storage switch:main build_battle_themes
@@ -48,5 +47,4 @@ function switch:modes/build_battle/preparation/get_theme with storage switch:mai
 
 # Display the themes in the inventory
 execute as @a[tag=!detached] in switch:game run function switch:modes/build_battle/preparation/display_themes
-
 
