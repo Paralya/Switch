@@ -10,7 +10,7 @@ execute as @e[tag=switch.intro_spread.map_name] run data modify entity @s transf
 execute as @e[tag=switch.intro_spread.credits] run data modify entity @s transformation.scale set value [0.0f,0.69f,1.0f]
 
 # Apply fade-in effect by updating opacity from 0 to 255
-schedule function switch:cinematic/intro_spread/fade_in 20t replace
+schedule function switch:cinematic/intro_spread/fade_in 30t replace
 
 # Schedule fade-out based on display_time
 $schedule function switch:cinematic/intro_spread/fade_out $(display_time)t

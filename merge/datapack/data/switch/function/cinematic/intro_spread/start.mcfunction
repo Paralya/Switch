@@ -14,7 +14,7 @@
 #
 # @description		Spawn players at view coordinates, display map info with fade effects, then launch cinematic
 #
-# @example			/execute positioned 36.29 102.97 81.36 rotated 145.55 21.76 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"Switch Lobby",credits:"Stoupy",with:{}}
+# @example			/execute positioned 36.29 102.97 81.36 rotated 145.55 21.76 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Switch Lobby",credits:"Stoupy",with:{}}
 #
 
 # Get arguments

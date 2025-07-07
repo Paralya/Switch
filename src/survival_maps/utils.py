@@ -516,7 +516,7 @@ kill @s
 
 	# Write the intro_spread file
 	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
-execute in switch:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{}}}}
+execute in switch:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{}}}}
 """)
 
 	# Add the map to the list of the generated maps and return
@@ -604,7 +604,7 @@ kill @s
 
 	# Write the intro_spread file
 	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
-execute positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:120,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{}}}}
+execute positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{}}}}
 """)
 
 	# Add the map to the list of the generated maps and return

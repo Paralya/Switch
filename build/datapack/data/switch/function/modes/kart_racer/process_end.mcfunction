@@ -17,5 +17,5 @@ function switch:utils/safe_kill_macro {selector:"@e[tag=shopping_kart.kart]"}
 function switch:utils/safe_kill_macro {selector:"@e[tag=switch.checkpoint]"}
 
 # Obligatoire
-execute if score #process_end switch.data matches 200 run function switch:engine/restart
+execute if score #process_end switch.data matches 100 run function switch:engine/restart
 

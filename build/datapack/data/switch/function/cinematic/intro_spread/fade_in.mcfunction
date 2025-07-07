@@ -1,7 +1,7 @@
 
 #> switch:cinematic/intro_spread/fade_in
 #
-# @within	switch:cinematic/intro_spread/display_start 20t replace
+# @within	switch:cinematic/intro_spread/display_start 30t replace
 #
 
 # Set text displays to visible with fade-in effect
