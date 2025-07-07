@@ -10,8 +10,8 @@ scoreboard players set #z switch.data 8
 scoreboard players set #next_id switch.temp.id 0
 execute as @a[tag=!detached] summon marker run function switch:modes/build_battle/preparation/summon_marker
 
-# Give everyone effects
-effect give @a[tag=!detached] levitation infinite 255 true
+# Remove gravity for every player
+execute as @a[tag=!detached] run attribute @s minecraft:gravity base set 0.0
 
 ## Choose themes
 # Get the themes list in storage switch:main build_battle_themes

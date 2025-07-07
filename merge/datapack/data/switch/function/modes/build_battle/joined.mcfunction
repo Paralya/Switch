@@ -8,7 +8,7 @@ execute if score #reconnect switch.data matches 0 if score #build_battle_state s
 execute if score #reconnect switch.data matches 0 if score #build_battle_state switch.data matches 0..1 summon marker run function switch:modes/build_battle/preparation/summon_marker
 execute if score #reconnect switch.data matches 0 if score #build_battle_state switch.data matches 1 run gamemode creative @s
 execute if score #reconnect switch.data matches 0 if score #build_battle_state switch.data matches 0 run gamemode adventure @s
-execute if score #reconnect switch.data matches 0 if score #build_battle_state switch.data matches 0 run effect give @s levitation infinite 255 true
+execute if score #reconnect switch.data matches 0 if score #build_battle_state switch.data matches 0 run attribute @s minecraft:gravity base set 0.0
 
 # Final phase, make the player spectator
 execute if score #reconnect switch.data matches 0 if score #build_battle_state switch.data matches 2 run gamemode spectator @s

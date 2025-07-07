@@ -7,7 +7,7 @@
 # Change game state
 scoreboard players set #build_battle_state switch.data 1
 scoreboard players set #remaining_time switch.data 300
-effect clear @a[tag=!detached] levitation
+execute as @a[tag=!detached] run attribute @s minecraft:gravity base reset
 gamemode creative @a[tag=!detached]
 clear @a[tag=!detached]
 
