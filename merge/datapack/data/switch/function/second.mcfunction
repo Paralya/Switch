@@ -25,3 +25,6 @@ execute if score #engine_state switch.data matches 3 as @e[type=item] at @s if b
 # Tutorial second loop
 execute as @a[team=switch.tutorial] at @s run function switch:player/tutorial/second
 
+# If players in the lobby, show title action bar with the current game and number of players
+execute if score #players_in_lobby switch.data matches 1.. run function switch:player/detached_action_bar
+
