@@ -1,7 +1,8 @@
 
 #> switch:stats/macro_add_to_new_player_arrays
 #
-# @within	switch:stats/loop_player_stats with storage switch:temp indexes
+# @within	switch:stats/async/work_loop_player_stats with storage switch:temp indexes
+#			switch:stats/loop_player_stats with storage switch:temp indexes
 #
 
 $data modify storage switch:temp new_played append from storage switch:temp played[$(played)]

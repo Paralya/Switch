@@ -1,7 +1,7 @@
 
 # For each player, update their stats storage, then sort player stats arrays
 execute as @a run function switch:player/update_stats_storage/main
-function switch:stats/sort_player_stats
+function switch:stats/async/sort_player_stats
 
 # Stop the engine and launch stop signal
 execute in switch:game run function switch:engine/stop

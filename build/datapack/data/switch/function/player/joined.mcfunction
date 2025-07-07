@@ -15,7 +15,7 @@ function switch:advancements/update_percentages
 
 # Update player storage
 function switch:player/update_stats_storage/main
-#function switch:stats/sort_player_stats
+function switch:stats/async/sort_player_stats
 
 # On détecte si c'est une reconnexion ou non
 scoreboard players set #reconnect switch.data 0
