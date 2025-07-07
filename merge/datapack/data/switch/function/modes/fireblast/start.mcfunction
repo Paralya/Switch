@@ -21,4 +21,5 @@ scoreboard players set #fireblast_seconds switch.data -10
 scoreboard players set #fireblast_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.cooldown dummy
+scoreboard objectives add switch.temp.reload_boost dummy
 

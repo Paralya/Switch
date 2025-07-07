@@ -5,6 +5,7 @@
 #			switch:modes/coin_chaser/respawn
 #			switch:modes/coin_chaser/summon_gold
 #			switch:modes/creeper_apocalypse/second
+#			switch:modes/fireblast/place_power_up
 #			switch:modes/fish_fight/teams_tp/only_one_winner
 #			switch:modes/fish_fight/teams_tp/tp_give
 #			switch:modes/fish_fight/tick
