@@ -18,6 +18,7 @@
 #			switch:advancements/jumps/yellow
 #			switch:advancements/medium
 #			switch:player/set_id
+#			switch:player/trigger/coupdetat/launch_vote
 #			switch:player/tutorial/finish
 #			switch:shop/trigger
 #

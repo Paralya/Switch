@@ -12,6 +12,10 @@ gamemode survival @s
 summon vindicator 18011 112 18008 {Tags:["switch.coupdetat.boss"],Health:100.0f,attributes:[{id:"minecraft:max_health",base:100}],active_effects:[{id:"minecraft:resistance",amplifier:1,duration:-1,show_particles:0b}],equipment:{head:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{name:"Stoupy51"}}}},Glowing:1b}
 summon wolf 18011 112 18008 {Tags:["switch.coupdetat.stoupy"],active_effects:[{id:"minecraft:resistance",amplifier:4,duration:-1,show_particles:0b}],AngerTime:1000,variant:"chestnut",CollarColor:15b,CustomName:"Stoupy",CustomNameVisible:1b}
 
+# Stop the coup d'état vote
+scoreboard players set #coupdetat switch.data 0
+scoreboard objectives remove switch.coupdetat_vote
+
 # Create the bossbar
 bossbar add switch:coupdetat {"text":"Coup d'état","color":"green"}
 bossbar set switch:coupdetat players @a[tag=!detached]

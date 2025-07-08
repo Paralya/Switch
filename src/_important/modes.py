@@ -400,8 +400,8 @@ def add_lore():
 			mode[lore_key] = lore
 
 		# Add keys for index and index*100 (utility for things such as /rating, /coupdetat, etc.)
-		mode["index"] = i
-		mode["index_hundred"] = i * 100
+		mode["index"] = i + 1
+		mode["index_hundred"] = (i + 1) * 100
 
 		del mode["description"]
 

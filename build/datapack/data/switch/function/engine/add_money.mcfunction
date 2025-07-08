@@ -18,6 +18,7 @@
 #			switch:advancements/jumps/yellow
 #			switch:advancements/medium
 #			switch:engine/add_win
+#			switch:modes/_coupdetat/process_end
 #			switch:modes/build_battle/add_money
 #
 
