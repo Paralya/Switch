@@ -47,6 +47,7 @@ scoreboard objectives add switch.stats.kills playerKillCount
 scoreboard objectives add switch.stats.deaths deathCount
 scoreboard objectives add switch.stats.played dummy
 scoreboard objectives add switch.stats.wins dummy
+scoreboard objectives add switch.stats.winrate dummy
 
 scoreboard objectives add switch.win_streak dummy
 scoreboard objectives add switch.lobby_easter_egg_counter dummy
