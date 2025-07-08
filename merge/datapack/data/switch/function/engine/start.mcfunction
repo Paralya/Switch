@@ -7,8 +7,6 @@ execute if score #coupdetat switch.data matches 1 run function switch:engine/che
 execute if score #coupdetat switch.data matches 1 as @n[tag=switch.coupdetat] in switch:game run return run function switch:modes/_coupdetat/_force_start
 
 # Check if there are enough players to start the game
-execute if score #nb_attached switch.data >= #min_required switch.data run scoreboard players set #engine_state switch.data 1
-execute if score #nb_attached switch.data >= #min_required switch.data run gamerule sendCommandFeedback false
 execute if score #nb_attached switch.data >= #min_required switch.data run function switch:engine/voting_time/main
 
 # Else,

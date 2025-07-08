@@ -1,6 +1,6 @@
 
+gamerule sendCommandFeedback false
 scoreboard players set #engine_state switch.data 2
-
 scoreboard players set #voting_timer switch.data 399
 
 execute store result score #modulo_rand switch.data run data get storage switch:main minigames

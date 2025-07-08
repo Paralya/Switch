@@ -6,7 +6,7 @@
 #
 
 # Randomly select a minigame based on weights
-function #bs.random:weighted_choice
+execute in minecraft:overworld run function #bs.random:weighted_choice
 execute store result score #random switch.data run data get storage bs:out random.weighted_choice
 
 scoreboard players set #wrong switch.data 0
