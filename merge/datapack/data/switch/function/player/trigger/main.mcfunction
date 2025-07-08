@@ -14,6 +14,7 @@ execute unless score @s switch.trigger.succes matches 0 in minecraft:overworld r
 execute unless score @s switch.trigger.rating matches 0 run function switch:player/trigger/rating/main
 execute unless score @s switch.trigger.night_vision matches 0 run function switch:player/trigger/night_vision/main
 execute unless score @s switch.trigger.music matches 0 run function switch:player/trigger/music/main
+execute unless score @s switch.trigger.coupdetat matches 0 run function switch:player/trigger/coupdetat/main
 
 function switch:player/trigger/enable
 

@@ -384,7 +384,7 @@ LANG_PRETEXT: dict[str, dict[str, str]] = {
 
 # Add the lores to the modes
 def add_lore():
-	for mode in MODES:
+	for i, mode in enumerate(MODES):
 		description: dict[str, list[dict]] = mode["description"]
 
 		# Add the missing lore for each language
@@ -398,6 +398,10 @@ def add_lore():
 			lore.append({"text":f"\n[{pretext['developed']} {mode['developed_by']}]","color":"aqua"})
 			lore_key: str = f"lore_{lang}"
 			mode[lore_key] = lore
+
+		# Add keys for index and index*100 (utility for things such as /rating, /coupdetat, etc.)
+		mode["index"] = i
+		mode["index_hundred"] = i * 100
 
 		del mode["description"]
 

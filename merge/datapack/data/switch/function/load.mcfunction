@@ -36,6 +36,7 @@ scoreboard objectives add switch.trigger.succes trigger
 scoreboard objectives add switch.trigger.rating trigger
 scoreboard objectives add switch.trigger.night_vision trigger
 scoreboard objectives add switch.trigger.music trigger
+scoreboard objectives add switch.trigger.coupdetat trigger
 
 scoreboard objectives add switch.stats.kills playerKillCount
 scoreboard objectives add switch.stats.deaths deathCount

@@ -19,4 +19,5 @@ scoreboard players enable @s switch.trigger.succes
 scoreboard players enable @s switch.trigger.rating
 scoreboard players enable @s switch.trigger.night_vision
 scoreboard players enable @s switch.trigger.music
+scoreboard players enable @s switch.trigger.coupdetat
 
