@@ -71,3 +71,5 @@ execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s 
 scoreboard players remove @a[tag=!detached] switch.win_streak 5
 scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5
 
+function switch:translations/engine_force_start_macro
+
