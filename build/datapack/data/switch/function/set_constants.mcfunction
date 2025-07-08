@@ -221,6 +221,7 @@ scoreboard players set #98 switch.data 98
 scoreboard players set #99 switch.data 99
 scoreboard players set #100 switch.data 100
 scoreboard players set #120 switch.data 120
+scoreboard players set #200 switch.data 200
 scoreboard players set #500 switch.data 500
 scoreboard players set #1000 switch.data 1000
 scoreboard players set #10000 switch.data 10000

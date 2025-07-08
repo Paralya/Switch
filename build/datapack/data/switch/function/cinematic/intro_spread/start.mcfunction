@@ -20,6 +20,7 @@
 #			switch:maps/survival/friends_pvpbox_end/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"FriendsCube PvPbox End",credits:"Jugou2",with:{}}
 #			switch:maps/survival/rush_the_point_1/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Rush the Point 1",credits:"Jugou2",with:{}}
 #			switch:maps/survival/friends_cube_lobby/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"FriendsCube Lobby",credits:"Jugou2",with:{}}
+#			switch:maps/survival/coupdetat/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Coup d\'état",credits:"Stoupy",with:{}}
 #			switch:maps/survival/flamingosaurus_mariokart/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Main Island",credits:"Flamingosaurus & co",with:{}}
 #			switch:maps/survival/mario_circuit/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Mario Circuit",credits:"Flamingosaurus & co",with:{}}
 #			switch:maps/survival/fast_circuit/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Fast Circuit",credits:"Flamingosaurus & co",with:{}}

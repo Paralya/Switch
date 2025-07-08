@@ -23,6 +23,7 @@ execute if data storage switch:main {map:"friends_pvpbox_hills"} run function sw
 execute if data storage switch:main {map:"friends_pvpbox_end"} run function switch:maps/survival/friends_pvpbox_end/main
 execute if data storage switch:main {map:"rush_the_point_1"} run function switch:maps/survival/rush_the_point_1/main
 execute if data storage switch:main {map:"friends_cube_lobby"} run function switch:maps/survival/friends_cube_lobby/main
+execute if data storage switch:main {map:"coupdetat"} run function switch:maps/survival/coupdetat/main
 execute if data storage switch:main {map:"flamingosaurus_mariokart"} run function switch:maps/survival/flamingosaurus_mariokart/main
 execute if data storage switch:main {map:"mario_circuit"} run function switch:maps/survival/mario_circuit/main
 execute if data storage switch:main {map:"fast_circuit"} run function switch:maps/survival/fast_circuit/main

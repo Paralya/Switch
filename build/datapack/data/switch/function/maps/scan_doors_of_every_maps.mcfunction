@@ -22,6 +22,7 @@ data modify storage switch:maps to_scan.friends_pvpbox_ice set value 1b
 data modify storage switch:maps to_scan.friends_pvpbox_hills set value 1b
 data modify storage switch:maps to_scan.friends_pvpbox_end set value 1b
 data modify storage switch:maps to_scan.friends_cube_lobby set value 1b
+data modify storage switch:maps to_scan.coupdetat set value 1b
 data modify storage switch:maps to_scan.flamingosaurus_mariokart set value 1b
 data modify storage switch:maps to_scan.mario_circuit set value 1b
 data modify storage switch:maps to_scan.fast_circuit set value 1b

@@ -22,6 +22,7 @@ data modify storage switch:maps to_regenerate.friends_pvpbox_ice set value 1b
 data modify storage switch:maps to_regenerate.friends_pvpbox_hills set value 1b
 data modify storage switch:maps to_regenerate.friends_pvpbox_end set value 1b
 data modify storage switch:maps to_regenerate.friends_cube_lobby set value 1b
+data modify storage switch:maps to_regenerate.coupdetat set value 1b
 data modify storage switch:maps to_regenerate.flamingosaurus_mariokart set value 1b
 data modify storage switch:maps to_regenerate.mario_circuit set value 1b
 data modify storage switch:maps to_regenerate.fast_circuit set value 1b

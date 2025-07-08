@@ -3,6 +3,7 @@
 #
 # @within	switch:engine/force_start_macro
 #			switch:engine/launch_game/main
+#			switch:modes/_coupdetat/_force_start
 #
 
 # Log message

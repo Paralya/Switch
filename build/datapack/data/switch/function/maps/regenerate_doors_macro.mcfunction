@@ -20,6 +20,7 @@
 #			switch:maps/survival/friends_pvpbox_end/regenerate {name:"friends_pvpbox_end"}
 #			switch:maps/survival/rush_the_point_1/regenerate {name:"rush_the_point_1"}
 #			switch:maps/survival/friends_cube_lobby/regenerate {name:"friends_cube_lobby"}
+#			switch:maps/survival/coupdetat/regenerate {name:"coupdetat"}
 #			switch:maps/survival/flamingosaurus_mariokart/regenerate {name:"flamingosaurus_mariokart"}
 #			switch:maps/survival/mario_circuit/regenerate {name:"mario_circuit"}
 #			switch:maps/survival/fast_circuit/regenerate {name:"fast_circuit"}

@@ -24,7 +24,8 @@ execute unless data storage switch:maps to_regenerate.warden_forest if data stor
 execute unless data storage switch:maps to_regenerate.friends_pvpbox_ice if data storage switch:maps to_regenerate{friends_pvpbox_hills:1b} run function switch:maps/survival/friends_pvpbox_hills/regenerate
 execute unless data storage switch:maps to_regenerate.friends_pvpbox_hills if data storage switch:maps to_regenerate{friends_pvpbox_end:1b} run function switch:maps/survival/friends_pvpbox_end/regenerate
 execute unless data storage switch:maps to_regenerate.friends_pvpbox_end if data storage switch:maps to_regenerate{friends_cube_lobby:1b} run function switch:maps/survival/friends_cube_lobby/regenerate
-execute unless data storage switch:maps to_regenerate.friends_cube_lobby if data storage switch:maps to_regenerate{flamingosaurus_mariokart:1b} run function switch:maps/survival/flamingosaurus_mariokart/regenerate
+execute unless data storage switch:maps to_regenerate.friends_cube_lobby if data storage switch:maps to_regenerate{coupdetat:1b} run function switch:maps/survival/coupdetat/regenerate
+execute unless data storage switch:maps to_regenerate.coupdetat if data storage switch:maps to_regenerate{flamingosaurus_mariokart:1b} run function switch:maps/survival/flamingosaurus_mariokart/regenerate
 execute unless data storage switch:maps to_regenerate.flamingosaurus_mariokart if data storage switch:maps to_regenerate{mario_circuit:1b} run function switch:maps/survival/mario_circuit/regenerate
 execute unless data storage switch:maps to_regenerate.mario_circuit if data storage switch:maps to_regenerate{fast_circuit:1b} run function switch:maps/survival/fast_circuit/regenerate
 execute unless data storage switch:maps to_regenerate.fast_circuit if data storage switch:maps to_regenerate{plains_routine:1b} run function switch:maps/survival/plains_routine/regenerate

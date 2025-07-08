@@ -1,7 +1,8 @@
 
 #> switch:utils/on_death_run_function
 #
-# @within	switch:modes/beat_the_kings/tick {function:"switch:modes/beat_the_kings/death/player"}
+# @within	switch:modes/_coupdetat/tick {function:"switch:utils/classic_death"}
+#			switch:modes/beat_the_kings/tick {function:"switch:modes/beat_the_kings/death/player"}
 #			switch:modes/block_party/tick {function:"switch:modes/block_party/death"}
 #			switch:modes/boat_race/tick {function:"switch:modes/boat_race/death/"}
 #			switch:modes/bombardement/tick {function:"switch:modes/bombardement/death"}

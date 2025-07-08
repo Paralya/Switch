@@ -23,6 +23,7 @@
 #			switch:maps/survival/friends_pvpbox_end/regenerate
 #			switch:maps/survival/rush_the_point_1/regenerate
 #			switch:maps/survival/friends_cube_lobby/regenerate
+#			switch:maps/survival/coupdetat/regenerate
 #			switch:maps/survival/flamingosaurus_mariokart/regenerate
 #			switch:maps/survival/mario_circuit/regenerate
 #			switch:maps/survival/fast_circuit/regenerate

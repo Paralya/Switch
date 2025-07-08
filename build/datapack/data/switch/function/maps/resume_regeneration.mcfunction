@@ -24,6 +24,7 @@ execute if score #rg_friends_pvpbox_hills switch.data matches 1.. run function s
 execute if score #rg_friends_pvpbox_end switch.data matches 1.. run function switch:maps/survival/friends_pvpbox_end/regenerate
 execute if score #rg_rush_the_point_1 switch.data matches 1.. run function switch:maps/survival/rush_the_point_1/regenerate
 execute if score #rg_friends_cube_lobby switch.data matches 1.. run function switch:maps/survival/friends_cube_lobby/regenerate
+execute if score #rg_coupdetat switch.data matches 1.. run function switch:maps/survival/coupdetat/regenerate
 execute if score #rg_flamingosaurus_mariokart switch.data matches 1.. run function switch:maps/survival/flamingosaurus_mariokart/regenerate
 execute if score #rg_mario_circuit switch.data matches 1.. run function switch:maps/survival/mario_circuit/regenerate
 execute if score #rg_fast_circuit switch.data matches 1.. run function switch:maps/survival/fast_circuit/regenerate

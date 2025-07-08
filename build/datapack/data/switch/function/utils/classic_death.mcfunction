@@ -1,7 +1,8 @@
 
 #> switch:utils/classic_death
 #
-# @within	switch:modes/beat_the_kings/death/player
+# @within	switch:modes/_coupdetat/joined
+#			switch:modes/beat_the_kings/death/player
 #			switch:modes/capture_the_flag/death/player
 #			switch:modes/castagne/death
 #			switch:modes/cigogne/death

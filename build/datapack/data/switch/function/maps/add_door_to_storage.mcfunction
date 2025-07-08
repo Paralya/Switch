@@ -18,6 +18,7 @@
 #			switch:maps/survival/friends_pvpbox_hills/scan_doors_on_marker {name:"friends_pvpbox_hills",additional_height:0}
 #			switch:maps/survival/friends_pvpbox_end/scan_doors_on_marker {name:"friends_pvpbox_end",additional_height:0}
 #			switch:maps/survival/friends_cube_lobby/scan_doors_on_marker {name:"friends_cube_lobby",additional_height:0}
+#			switch:maps/survival/coupdetat/scan_doors_on_marker {name:"coupdetat",additional_height:0}
 #			switch:maps/survival/flamingosaurus_mariokart/scan_doors_on_marker {name:"flamingosaurus_mariokart",additional_height:0}
 #			switch:maps/survival/mario_circuit/scan_doors_on_marker {name:"mario_circuit",additional_height:0}
 #			switch:maps/survival/fast_circuit/scan_doors_on_marker {name:"fast_circuit",additional_height:0}

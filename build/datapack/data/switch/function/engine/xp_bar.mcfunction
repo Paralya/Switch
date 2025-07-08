@@ -1,7 +1,8 @@
 
 #> switch:engine/xp_bar
 #
-# @within	switch:modes/beat_the_kings/xp_bar
+# @within	switch:modes/_coupdetat/xp_bar
+#			switch:modes/beat_the_kings/xp_bar
 #			switch:modes/block_party/xp_bar
 #			switch:modes/boat_race/xp_bar
 #			switch:modes/build_battle/xp_bar_preparation

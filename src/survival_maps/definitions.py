@@ -35,7 +35,7 @@ def generate_folders_for_survival_maps() -> None:
 	##	15000	(undefined)	: skywars_1		(not done yet)
 	##	16000	(undefined)	: skywars_2		(not done yet)
 	clone_survival(100, (17000, 100, 17000), (17080, 145, 17080), ("friends_cube_lobby", "FriendsCube Lobby", "Jugou2"), view=(17032.36, 117.35, 17065.43, 205.20, 2.80))
-	##	18000	(undefined)	: empty
+	clone_survival(100, (18000, 100, 18000), (18023, 123, 18022), ("coupdetat","Coup d\\'état", "Stoupy"), view=(18009.41, 108.95, 18015.66, 212.16, 13.02))
 	clone_survival(39, (19437, 39, 19376), (20781, 256, 20668), ("flamingosaurus_mariokart", "Main Island", "Flamingosaurus & co"), view=(19992.17, 194.79, 19796.70, 324.97, 21.22))
 	clone_survival(85, (20378, 85, 19516), (20525, 138, 19658), ("mario_circuit", "Mario Circuit", "Flamingosaurus & co"), view=(20505.74, 122.80, 19539.18, 50.94, 36.96), racing_pos=((20403.5, 100.69, 19590.5), 180, 20))
 	clone_survival(85, (20153, 85, 19522), (20230, 119, 19650), ("fast_circuit", "Fast Circuit", "Flamingosaurus & co"), view=(20172.83, 101.81, 19537.89, 335.12, 21.38), racing_pos=((20209.0, 90.69, 19587.5), 0, 20))

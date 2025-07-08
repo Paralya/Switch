@@ -122,7 +122,7 @@ INFECTED: dict = {
 		},
 		"upgrade_name": {"fr": "Hauteur de saut en zombie", "en": "Zombie jump height"},
 		"upgrades": [
-			{"price": 200, "hover_text": {"en": "jump boost 1 -> jump boost 2"}},
+			{"price": 200, "hover_text": {"en": "Jump boost 1 -> Jump boost 2"}},
 		]
 	},
 }
