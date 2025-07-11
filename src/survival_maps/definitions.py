@@ -55,42 +55,42 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (27000, 100, 27000), (27036, 162, 27062), ("layers_2_teams", "Layers 2 Teams", "Stoupy"), view=(26990.28, 107.53, 27079.30, 215.00, -23.18))
 	clone_survival(85, (27960, 61, 27960), (28040, 88, 28040), ("spleef_1", "Spleef 1", "Stoupy"), view=(28025.16, 107.52, 28028.77, 142.38, 25.30))
 	clone_survival(100, (29000, 100, 29000), (29083, 206, 29049), ("de_a_coudre_1", "Dé à coudre 1", "Stoupy, Jugou2"), view=(29043.46 ,174.26 ,29035.74, 145.00, 75.14))
-	##	30000	(undefined)	: empty
+	##	30000	(undefined)	: empty arobaze battle royale
 	clone_survival(100, (31000, 100, 31000), (31075, 229, 31090), ("mlg_a_coudre_1", "MLG à coudre 1", "Stoupy, Jugou2"), view=(31089.27, 217.57, 31063.11, 107.48, 35.42))
 	clone_survival(100, (32000, 100, 32000), (32100, 144, 32100), ("zonweeb_main", "Zonweeb Main", "Stoupy"), view=(32056.17, 121.68, 32031.92, 16.74, 11.85))
-	##	33000	(undefined)	: empty
+	clone_survival(100, (33000, 100, 33000), (33206, 257, 33205), ("adraik_big_ball", "Adraik\\'s Big Ball", "Stoupy"), view=(33148.29, 126.52, 33070.65, 34.59, 17.78))
 	clone_survival(100, (34000, 100, 34000), (34187, 190, 34127), ("jayl_dark_forest", "Jayl Dark Forest", "JxyL, Stoupy"), view=(34158.12, 160.42, 34106.90, 115.80, 14.32))
 	##	35000	(undefined)	: arti_mansion			(not done yet)
 	clone_survival(100, (35827, -64, 35668), (36340, 99, 36180), ("operation_pigclaw", "Operation Pigclaw", "TheFRcRaZy, Jugou2"), view=(36068.47, 143.77, 36081.37, 172.34, 2.45))
 	clone_survival(100, (37000, 100, 37000), (37510, 218, 37367), ("trackmania_stadium_2", "Trackmania Stadium 2", "Stoupy"), view=(37392.24, 175.88, 37147.97, 74.93, 35.09), racing_pos=((37356.5, 110.69, 37180.5), 180, 28))
-	##	38000	(undefined)	: empty
+	clone_survival(100, (38000, 100, 38000), (38260, 173, 38258), ("bancalvivor_s4", "Bancalvivor S4", "Lykos"), view=(38153.65, 117.15, 38120.62, -321.50, 18.05))
 	clone_survival(100, (39000, 100, 39000), (39143, 170, 39221), ("dark_forest_hills", "Dark Forest Hills", "Stoupy"), view=(39051.36, 135.94, 39191.41, 198.68, 15.82))
 	clone_survival(100, (40000, 100, 40000), (40200, 264, 40200), ("paralya_lobby_noel", "Paralya Lobby Noel", "Jugou2"), view=(40153.12, 204.86, 40096.92, 76.71, 9.64))
-	##	41000	(undefined)	: empty
+	clone_survival(100, (41000, 100, 41000), (41238, 151, 41256), ("caddie_league", "Caddie League", "Oraclette, math730 (Survisland)"), view=(41062.56, 122.89, 41061.38, -411.94, 13.02))
 	clone_survival(100, (42000, 100, 42000), (42070, 125, 42056), ("ghost_town", "Ghost Town", "FanSarwet46"), view=(42012.45, 112.27, 42034.30, -120.51, 1.25))
 	clone_survival(100, (43000, 100, 43000), (43082, 132, 43082), ("abandoned_city_spawn_circle", "Abandoned City Spawn Circle", "Viator"), view=(43069.79, 128.06, 43063.05, 124.76, 23.65))
 	clone_survival(100, (43999, -1, 43999), (45001, 259, 46001), ("abandoned_city", "Abandoned City", "Viator"), view=(44634.21, 197.01, 44772.98, 153.77, 26.87))
-	##	46000	(undefined)	: empty
-	##	47000	(undefined)	: empty
+	##	46000	(undefined)	: empty (Remelta_TLOU.schem + scart/ragiel?_escapehorreur #TODO: l'étendre vers une map Infected)
+	clone_survival(100, (47000, 100, 47000), (47100, 151, 47100), ("old_japan", "Old Japan", "Even"), view=(47057.79, 106.46, 47078.62, 205.07, -3.08))
 	clone_survival(100, (48000, 100, 48000), (48093, 141, 48093), ("new_grounds", "New Grounds", "Unknown"), view=(48065.56, 118.22, 48062.48, 128.08, 19.39))
 	clone_survival(100, (49000, 100, 49000), (49200, 147, 49200), ("cookie_wars", "Cookie Wars", "Stoupy, Arobaze"), view=(49148.12, 141.36, 49129.67, 118.87, 30.35))
 	clone_survival(100, (50000, 100, 50000), (50239, 160, 50185), ("snow_hills", "Snow Hills", "Stoupy"), view=(50066.89, 151.85, 50095.16, 263.80, 28.89))
 	clone_survival(100, (51000, 100, 51000), (51099, 180, 51123), ("boat_race_2", "Boat Race 2", "Marcus (Survisland)"), view=(51005.01, 168.14, 51040.46, -71.72, 42.03), racing_pos=((51069.5, 159, 51091.5), 180, 32))
 	clone_survival(100, (52000, 100, 52000), (52177, 256, 52173), ("vilarles_castillo", "Castillo", "Vilarles"), view=(52053.77, 175.12, 52166.47, -158.81, 15.64))
 	clone_survival(100, (53000, 100, 53000), (53125, 158, 53218), ("zonweeb_highschool", "A Japanese High School", "Minami310, ComputerGraphics, Stoupy"), view=(53115.10, 109.14, 53116.11, 72.04, -9.97))
-	##	54000	(undefined)	: empty
-	##	55000	(undefined)	: empty
+	clone_survival(100, (54000, 100, 54000), (54112, 123, 54094), ("cluedo_camping", "Cluedo Camping", "Remelta, Fhara (Survisland)"), view=(54016.95, 113.26, 54016.06, -48.03, 10.19))
+	clone_survival(100, (55000, 100, 55000), (55122, 217, 55138), ("sudoku_craft", "Sudoku Craft", "Oraclette, Shazin (Survisland)"), view=(55017.79, 154.27, 55027.61, 317.00, -0.99))
 	##	56000	(undefined)	: CSGO Map, faut trouver le nom	(not done yet)
-	##	57000	(undefined)	: empty
+	clone_survival(100, (57000, 100, 57000), (57124, 136, 57124), ("la_juste_recette", "La Juste Recette", "M4TOUW (Survisland)"), view=(57028.66, 121.76, 57012.66, -33.08, 9.83))
 	clone_survival(100, (58000, 100, 58000), (58160, 191, 58188), ("scartmania", "Scartmania", "Stoupy (Survisland)"), view=(58103.72, 244.52, 58043.93, 19.96, 78.09))
-	##	59000	(undefined)	: empty
+	clone_survival(100, (59000, 100, 59000), (59099, 166, 59099), ("la_fromagerie", "La Fromagerie", "Fhara, Fashion, M4TOUW (Survisland)"), view=(59066.84, 116.31, 59089.69, 137.63, -2.56))
 	clone_survival(100, (60000, 100, 60000), (60100, 190, 60100), ("slimy_ground", "Slimy Ground", "Stoupy"), view=(60070.03, 137.81, 60006.29, 19.81, 42.61))
 	clone_survival(100, (61000, 100, 61000), (61100, 190, 61100), ("eternal_void", "Eternal Void", "Stoupy"), view=(61070.03, 137.81, 61006.29, 19.81, 42.61))
 	clone_survival(100, (62000, 100, 62000), (62100, 190, 62100), ("floor_is_lava", "The floor is probably lava", "Stoupy"), view=(62070.03, 137.81, 62006.29, 19.81, 42.61))
 	clone_survival(100, (63000, 100, 63000), (63100, 190, 63100), ("leather_boots", "Where\\'re my leather boots?", "Stoupy"), view=(63070.03, 137.81, 63006.29, 19.81, 42.61))
 	clone_survival(100, (64000, 100, 64000), (64100, 190, 64100), ("ocean_waste", "Ocean Waste", "Stoupy"), view=(64070.03, 137.81, 64006.29, 19.81, 42.61))
-	##	65000	(undefined)	: empty
-	##	66000	(undefined)	: empty
+	clone_survival(100, (65000, 100, 65000), (65100, 126, 65100), ("thyx_rumble_oneshot", "Thyx Rumble OneShot", "TreekoZ"), view=(65005.40, 119.47, 65038.56, 280.87, 13.76))
+	clone_survival(100, (66001, 100, 66000), (66605, 318, 66662), ("smithed_summit_2024", "Smithed Summit 2024", "Smithed Community"), view=(66273.08, 168.66, 66353.60, -11.32, -16.09))
 	##	67000	(undefined)	: empty
 	##	68000	(undefined)	: empty
 	clone_survival(100, (69000, 100, 69000), (69148, 223, 69106), ("warden_escape_statue", "Warden Escape Statue", "?, Oraclette, math730 (Survisland)"), view=(69017.77, 136.85, 69078.56, 239.72, -1.32))

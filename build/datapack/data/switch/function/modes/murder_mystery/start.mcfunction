@@ -14,7 +14,7 @@ execute in switch:game run gamerule keepInventory true
 
 ## Chargement de la map
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino"]}
+function switch:utils/choose_map_for {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino","cluedo_camping"]}
 
 function switch:translations/modes_murder_mystery_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

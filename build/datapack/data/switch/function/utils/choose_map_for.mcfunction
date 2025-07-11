@@ -7,9 +7,9 @@
 #			switch:modes/bombardement/start {id:"bombardement", maps:["bombardement"]}
 #			switch:modes/build_battle/start {id:"build_battle", maps:["build_battle"]}
 #			switch:modes/capture_the_flag/choose_map_for {id:"capture_the_flag", maps:["operation_pigclaw","ctf_plains_castles","ctf_mountains_castles","ctf_flowers","ctf_nether","ctf_forest_castles"]}
-#			switch:modes/castagne/start {id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box"]}
+#			switch:modes/castagne/start {id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box","adraik_big_ball"]}
 #			switch:modes/cigogne/start {id:"cigogne", maps:["cigogne"]}
-#			switch:modes/coin_chaser/start {id:"coin_chaser", maps:["paralya_lobby"]}
+#			switch:modes/coin_chaser/start {id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}
 #			switch:modes/creeper_apocalypse/start {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main"]}
 #			switch:modes/de_a_coudre/start {id:"de_a_coudre", maps:["de_a_coudre_1"]}
 #			switch:modes/feed_fast/start {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","nature_house"]}
@@ -26,7 +26,7 @@
 #			switch:modes/minigolf/start {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
 #			switch:modes/mlg_a_coudre/start {id:"mlg_a_coudre", maps:["mlg_a_coudre_1"]}
 #			switch:modes/moutron/start {id:"moutron", maps:["whity_lab","the_four_elements","arti_ancient_city"]}
-#			switch:modes/murder_mystery/start {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino"]}
+#			switch:modes/murder_mystery/start {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino","cluedo_camping"]}
 #			switch:modes/one_shot/start {id:"one_shot", maps:["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"]}
 #			switch:modes/panic_chase/start {id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}
 #			switch:modes/pillars_of_fortune/start {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste"]}
@@ -39,11 +39,11 @@
 #			switch:modes/shoot_da_sheep/start {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}
 #			switch:modes/simultaneous_jump/start {id:"simultaneous_jump", maps:["de_a_coudre_1","mlg_a_coudre_1"]}
 #			switch:modes/snowball_painter/start {id:"snowball_painter", maps:["snowball_painter"]}
-#			switch:modes/spectres_game/start {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake"]}
+#			switch:modes/spectres_game/start {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake","old_japan","cluedo_camping","la_juste_recette","thyx_rumble_oneshot"]}
 #			switch:modes/spleef/start {id:"spleef", maps:["spleef_1"]}
-#			switch:modes/thunder_spear/start {id:"thunder_spear", maps:["dark_forest_hills","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone"]}
+#			switch:modes/thunder_spear/start {id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft","smithed_summit_2024"]}
 #			switch:modes/tnt_run/start {id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}
-#			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","zonweeb_highschool","hider_mansion","nuketown_no_barrier","stardust_pvp_zone"]}
+#			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","zonweeb_highschool","hider_mansion","bancalvivor_s4","stardust_pvp_zone","la_fromagerie"]}
 #			switch:modes/warden_escape/start {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 #
 
