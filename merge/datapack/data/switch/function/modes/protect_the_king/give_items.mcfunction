@@ -1,10 +1,10 @@
 
 # Starter kit
 loot replace entity @s armor.chest loot switch:i/steel_chestplate
-item replace entity @s armor.legs with chainmail_leggings
+item replace entity @s armor.legs with chainmail_leggings[enchantments={protection:2}]
 item replace entity @s armor.feet with chainmail_boots[enchantments={projectile_protection:5}]
 loot replace entity @s hotbar.0 loot switch:i/steel_sword
-item modify entity @s hotbar.0 {function:"minecraft:set_enchantments",enchantments:{"minecraft:sharpness":1,"minecraft:knockback":1}}
+item modify entity @s hotbar.0 {function:"minecraft:set_enchantments",enchantments:{"minecraft:knockback":1}}
 item replace entity @s hotbar.1 with bow
 item replace entity @s hotbar.3 with stone_axe
 item replace entity @s hotbar.6 with arrow 28
