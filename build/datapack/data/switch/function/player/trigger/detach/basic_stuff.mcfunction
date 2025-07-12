@@ -5,6 +5,7 @@
 #			switch:player/trigger/detach/main
 #
 
+execute in minecraft:overworld run spawnpoint @s 0 70 0
 scoreboard players set @s switch.lobby_respawn 0
 effect clear @s
 function switch:utils/reset_attributes
