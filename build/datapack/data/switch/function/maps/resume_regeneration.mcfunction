@@ -74,7 +74,7 @@ execute if score #rg_eternal_void switch.data matches 1.. run function switch:ma
 execute if score #rg_floor_is_lava switch.data matches 1.. run function switch:maps/survival/floor_is_lava/regenerate
 execute if score #rg_leather_boots switch.data matches 1.. run function switch:maps/survival/leather_boots/regenerate
 execute if score #rg_ocean_waste switch.data matches 1.. run function switch:maps/survival/ocean_waste/regenerate
-execute if score #rg_thyx_rumble_oneshot switch.data matches 1.. run function switch:maps/survival/thyx_rumble_oneshot/regenerate
+execute if score #rg_torg_arena switch.data matches 1.. run function switch:maps/survival/torg_arena/regenerate
 execute if score #rg_smithed_summit_2024 switch.data matches 1.. run function switch:maps/survival/smithed_summit_2024/regenerate
 execute if score #rg_warden_escape_statue switch.data matches 1.. run function switch:maps/survival/warden_escape_statue/regenerate
 execute if score #rg_hider_mansion switch.data matches 1.. run function switch:maps/survival/hider_mansion/regenerate

@@ -74,8 +74,8 @@ execute unless data storage switch:maps to_regenerate.slimy_ground if data stora
 execute unless data storage switch:maps to_regenerate.eternal_void if data storage switch:maps to_regenerate{floor_is_lava:1b} run function switch:maps/survival/floor_is_lava/regenerate
 execute unless data storage switch:maps to_regenerate.floor_is_lava if data storage switch:maps to_regenerate{leather_boots:1b} run function switch:maps/survival/leather_boots/regenerate
 execute unless data storage switch:maps to_regenerate.leather_boots if data storage switch:maps to_regenerate{ocean_waste:1b} run function switch:maps/survival/ocean_waste/regenerate
-execute unless data storage switch:maps to_regenerate.ocean_waste if data storage switch:maps to_regenerate{thyx_rumble_oneshot:1b} run function switch:maps/survival/thyx_rumble_oneshot/regenerate
-execute unless data storage switch:maps to_regenerate.thyx_rumble_oneshot if data storage switch:maps to_regenerate{smithed_summit_2024:1b} run function switch:maps/survival/smithed_summit_2024/regenerate
+execute unless data storage switch:maps to_regenerate.ocean_waste if data storage switch:maps to_regenerate{torg_arena:1b} run function switch:maps/survival/torg_arena/regenerate
+execute unless data storage switch:maps to_regenerate.torg_arena if data storage switch:maps to_regenerate{smithed_summit_2024:1b} run function switch:maps/survival/smithed_summit_2024/regenerate
 execute unless data storage switch:maps to_regenerate.smithed_summit_2024 if data storage switch:maps to_regenerate{warden_escape_statue:1b} run function switch:maps/survival/warden_escape_statue/regenerate
 execute unless data storage switch:maps to_regenerate.warden_escape_statue if data storage switch:maps to_regenerate{hider_mansion:1b} run function switch:maps/survival/hider_mansion/regenerate
 execute unless data storage switch:maps to_regenerate.hider_mansion if data storage switch:maps to_regenerate{nuketown:1b} run function switch:maps/survival/nuketown/regenerate

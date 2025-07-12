@@ -89,7 +89,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (62000, 100, 62000), (62100, 190, 62100), ("floor_is_lava", "The floor is probably lava", "Stoupy"), view=(62070.03, 137.81, 62006.29, 19.81, 42.61))
 	clone_survival(100, (63000, 100, 63000), (63100, 190, 63100), ("leather_boots", "Where\\'re my leather boots?", "Stoupy"), view=(63070.03, 137.81, 63006.29, 19.81, 42.61))
 	clone_survival(100, (64000, 100, 64000), (64100, 190, 64100), ("ocean_waste", "Ocean Waste", "Stoupy"), view=(64070.03, 137.81, 64006.29, 19.81, 42.61))
-	clone_survival(100, (65000, 100, 65000), (65100, 126, 65100), ("thyx_rumble_oneshot", "Thyx Rumble OneShot", "TreekoZ"), view=(65005.40, 119.47, 65038.56, 280.87, 13.76))
+	clone_survival(100, (65000, 100, 65000), (65100, 126, 65100), ("torg_arena", "Torg Arena", "TreekoZ"), view=(65005.40, 119.47, 65038.56, 280.87, 13.76))
 	clone_survival(100, (66001, 100, 66000), (66605, 318, 66662), ("smithed_summit_2024", "Smithed Summit 2024", "Smithed Community"), view=(66273.08, 168.66, 66353.60, -11.32, -16.09))
 	##	67000	(undefined)	: empty
 	##	68000	(undefined)	: empty

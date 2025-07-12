@@ -70,7 +70,7 @@
 #			switch:maps/survival/floor_is_lava/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"The floor is probably lava",credits:"Stoupy",with:{particle:1}}
 #			switch:maps/survival/leather_boots/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Where\'re my leather boots?",credits:"Stoupy",with:{particle:1}}
 #			switch:maps/survival/ocean_waste/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Ocean Waste",credits:"Stoupy",with:{particle:1}}
-#			switch:maps/survival/thyx_rumble_oneshot/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Thyx Rumble OneShot",credits:"TreekoZ",with:{particle:1}}
+#			switch:maps/survival/torg_arena/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Torg Arena",credits:"TreekoZ",with:{particle:1}}
 #			switch:maps/survival/smithed_summit_2024/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Smithed Summit 2024",credits:"Smithed Community",with:{particle:1}}
 #			switch:maps/survival/warden_escape_statue/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Warden Escape Statue",credits:"?, Oraclette, math730 (Survisland)",with:{particle:1}}
 #			switch:maps/survival/hider_mansion/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Hider Mansion",credits:"?, Oraclette, math730 (Survisland)",with:{particle:1}}

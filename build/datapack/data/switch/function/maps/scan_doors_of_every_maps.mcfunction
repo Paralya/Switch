@@ -72,7 +72,7 @@ data modify storage switch:maps to_scan.eternal_void set value 1b
 data modify storage switch:maps to_scan.floor_is_lava set value 1b
 data modify storage switch:maps to_scan.leather_boots set value 1b
 data modify storage switch:maps to_scan.ocean_waste set value 1b
-data modify storage switch:maps to_scan.thyx_rumble_oneshot set value 1b
+data modify storage switch:maps to_scan.torg_arena set value 1b
 data modify storage switch:maps to_scan.smithed_summit_2024 set value 1b
 data modify storage switch:maps to_scan.warden_escape_statue set value 1b
 data modify storage switch:maps to_scan.hider_mansion set value 1b

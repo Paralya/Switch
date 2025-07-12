@@ -72,7 +72,7 @@ data modify storage switch:maps to_regenerate.eternal_void set value 1b
 data modify storage switch:maps to_regenerate.floor_is_lava set value 1b
 data modify storage switch:maps to_regenerate.leather_boots set value 1b
 data modify storage switch:maps to_regenerate.ocean_waste set value 1b
-data modify storage switch:maps to_regenerate.thyx_rumble_oneshot set value 1b
+data modify storage switch:maps to_regenerate.torg_arena set value 1b
 data modify storage switch:maps to_regenerate.smithed_summit_2024 set value 1b
 data modify storage switch:maps to_regenerate.warden_escape_statue set value 1b
 data modify storage switch:maps to_regenerate.hider_mansion set value 1b

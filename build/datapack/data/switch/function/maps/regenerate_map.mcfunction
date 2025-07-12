@@ -75,7 +75,7 @@ execute if data storage switch:main {map:"eternal_void"} run function switch:map
 execute if data storage switch:main {map:"floor_is_lava"} run function switch:maps/survival/floor_is_lava/regenerate
 execute if data storage switch:main {map:"leather_boots"} run function switch:maps/survival/leather_boots/regenerate
 execute if data storage switch:main {map:"ocean_waste"} run function switch:maps/survival/ocean_waste/regenerate
-execute if data storage switch:main {map:"thyx_rumble_oneshot"} run function switch:maps/survival/thyx_rumble_oneshot/regenerate
+execute if data storage switch:main {map:"torg_arena"} run function switch:maps/survival/torg_arena/regenerate
 execute if data storage switch:main {map:"smithed_summit_2024"} run function switch:maps/survival/smithed_summit_2024/regenerate
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/regenerate
 execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/regenerate

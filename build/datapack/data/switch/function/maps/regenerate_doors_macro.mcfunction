@@ -70,7 +70,7 @@
 #			switch:maps/survival/floor_is_lava/regenerate {name:"floor_is_lava"}
 #			switch:maps/survival/leather_boots/regenerate {name:"leather_boots"}
 #			switch:maps/survival/ocean_waste/regenerate {name:"ocean_waste"}
-#			switch:maps/survival/thyx_rumble_oneshot/regenerate {name:"thyx_rumble_oneshot"}
+#			switch:maps/survival/torg_arena/regenerate {name:"torg_arena"}
 #			switch:maps/survival/smithed_summit_2024/regenerate {name:"smithed_summit_2024"}
 #			switch:maps/survival/warden_escape_statue/regenerate {name:"warden_escape_statue"}
 #			switch:maps/survival/hider_mansion/regenerate {name:"hider_mansion"}

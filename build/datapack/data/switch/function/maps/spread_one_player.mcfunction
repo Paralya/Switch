@@ -89,7 +89,7 @@ execute if data storage switch:main {map:"eternal_void"} run function switch:map
 execute if data storage switch:main {map:"floor_is_lava"} run function switch:maps/survival/floor_is_lava/spread_one_player
 execute if data storage switch:main {map:"leather_boots"} run function switch:maps/survival/leather_boots/spread_one_player
 execute if data storage switch:main {map:"ocean_waste"} run function switch:maps/survival/ocean_waste/spread_one_player
-execute if data storage switch:main {map:"thyx_rumble_oneshot"} run function switch:maps/survival/thyx_rumble_oneshot/spread_one_player
+execute if data storage switch:main {map:"torg_arena"} run function switch:maps/survival/torg_arena/spread_one_player
 execute if data storage switch:main {map:"smithed_summit_2024"} run function switch:maps/survival/smithed_summit_2024/spread_one_player
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/spread_one_player
 execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/spread_one_player

@@ -68,7 +68,7 @@
 #			switch:maps/survival/floor_is_lava/scan_doors_on_marker {name:"floor_is_lava",additional_height:0}
 #			switch:maps/survival/leather_boots/scan_doors_on_marker {name:"leather_boots",additional_height:0}
 #			switch:maps/survival/ocean_waste/scan_doors_on_marker {name:"ocean_waste",additional_height:0}
-#			switch:maps/survival/thyx_rumble_oneshot/scan_doors_on_marker {name:"thyx_rumble_oneshot",additional_height:0}
+#			switch:maps/survival/torg_arena/scan_doors_on_marker {name:"torg_arena",additional_height:0}
 #			switch:maps/survival/smithed_summit_2024/scan_doors_on_marker {name:"smithed_summit_2024",additional_height:0}
 #			switch:maps/survival/warden_escape_statue/scan_doors_on_marker {name:"warden_escape_statue",additional_height:0}
 #			switch:maps/survival/hider_mansion/scan_doors_on_marker {name:"hider_mansion",additional_height:0}

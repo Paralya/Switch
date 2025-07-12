@@ -73,7 +73,7 @@
 #			switch:maps/survival/floor_is_lava/regenerate
 #			switch:maps/survival/leather_boots/regenerate
 #			switch:maps/survival/ocean_waste/regenerate
-#			switch:maps/survival/thyx_rumble_oneshot/regenerate
+#			switch:maps/survival/torg_arena/regenerate
 #			switch:maps/survival/smithed_summit_2024/regenerate
 #			switch:maps/survival/warden_escape_statue/regenerate
 #			switch:maps/survival/hider_mansion/regenerate
