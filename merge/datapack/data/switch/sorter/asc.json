@@ -1,0 +1,11 @@
+{
+	"algorithm": "selection_sort",
+	"functions_location": "switch:utils/list/asc",
+	"to_sort": {
+		"storage": "switch:temp",
+		"target": "list"
+	},
+	"key": "value",
+	"scale": 1000,
+	"limit": 15
+}

@@ -6,7 +6,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "adamantium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:netherite_block","apply_facing": false},
 		"item_model": "switch:adamantium_block",
-		"item_name": "Adamantium Block",
+		"item_name": {"text": "Adamantium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_ore": {
@@ -16,7 +16,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "adamantium_fragment",
 		"item_model": "switch:adamantium_ore",
-		"item_name": "Adamantium Ore",
+		"item_name": {"text": "Adamantium Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"deepslate_adamantium_ore": {
@@ -26,7 +26,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "adamantium_fragment",
 		"item_model": "switch:deepslate_adamantium_ore",
-		"item_name": "Deepslate Adamantium Ore",
+		"item_name": {"text": "Deepslate Adamantium Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_helmet": {
@@ -38,7 +38,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:adamantium"},
 		"attribute_modifiers": [{"type": "armor","amount": 3.2,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "switch:knockback_resistance.head"}],
 		"item_model": "switch:adamantium_helmet",
-		"item_name": "Adamantium Helmet",
+		"item_name": {"text": "Adamantium Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_chestplate": {
@@ -50,7 +50,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:adamantium"},
 		"attribute_modifiers": [{"type": "armor","amount": 8.2,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "switch:knockback_resistance.chest"}],
 		"item_model": "switch:adamantium_chestplate",
-		"item_name": "Adamantium Chestplate",
+		"item_name": {"text": "Adamantium Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_leggings": {
@@ -62,7 +62,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:adamantium"},
 		"attribute_modifiers": [{"type": "armor","amount": 6.2,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "legs","id": "switch:knockback_resistance.legs"}],
 		"item_model": "switch:adamantium_leggings",
-		"item_name": "Adamantium Leggings",
+		"item_name": {"text": "Adamantium Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_boots": {
@@ -74,7 +74,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:adamantium"},
 		"attribute_modifiers": [{"type": "armor","amount": 3.2,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "switch:knockback_resistance.feet"}],
 		"item_model": "switch:adamantium_boots",
-		"item_name": "Adamantium Boots",
+		"item_name": {"text": "Adamantium Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_sword": {
@@ -85,7 +85,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 7.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:adamantium_sword",
-		"item_name": "Adamantium Sword",
+		"item_name": {"text": "Adamantium Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_pickaxe": {
@@ -96,7 +96,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:adamantium_pickaxe",
-		"item_name": "Adamantium Pickaxe",
+		"item_name": {"text": "Adamantium Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_axe": {
@@ -107,7 +107,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 9.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:adamantium_axe",
-		"item_name": "Adamantium Axe",
+		"item_name": {"text": "Adamantium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_shovel": {
@@ -118,7 +118,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.7,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:adamantium_shovel",
-		"item_name": "Adamantium Shovel",
+		"item_name": {"text": "Adamantium Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_hoe": {
@@ -129,7 +129,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:adamantium_hoe",
-		"item_name": "Adamantium Hoe",
+		"item_name": {"text": "Adamantium Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_fragment": {
@@ -138,7 +138,7 @@
 		"custom_data": {"smithed": {"dict": {"fragment": {"adamantium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"adamantium_fragment": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "adamantium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"adamantium_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "adamantium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"adamantium_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "adamantium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"adamantium_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "adamantium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_adamantium_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "adamantium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_adamantium_ore": true}}}}}],
 		"item_model": "switch:adamantium_fragment",
-		"item_name": "Adamantium Fragment",
+		"item_name": {"text": "Adamantium Fragment"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_block": {
@@ -148,7 +148,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "sapphire","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
 		"item_model": "switch:sapphire_block",
-		"item_name": "Sapphire Block",
+		"item_name": {"text": "Sapphire Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_ore": {
@@ -158,7 +158,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "sapphire",
 		"item_model": "switch:sapphire_ore",
-		"item_name": "Sapphire Ore",
+		"item_name": {"text": "Sapphire Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"deepslate_sapphire_ore": {
@@ -168,7 +168,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "sapphire",
 		"item_model": "switch:deepslate_sapphire_ore",
-		"item_name": "Deepslate Sapphire Ore",
+		"item_name": {"text": "Deepslate Sapphire Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_helmet": {
@@ -180,7 +180,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:sapphire"},
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}],
 		"item_model": "switch:sapphire_helmet",
-		"item_name": "Sapphire Helmet",
+		"item_name": {"text": "Sapphire Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_chestplate": {
@@ -192,7 +192,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:sapphire"},
 		"attribute_modifiers": [{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}],
 		"item_model": "switch:sapphire_chestplate",
-		"item_name": "Sapphire Chestplate",
+		"item_name": {"text": "Sapphire Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_leggings": {
@@ -204,7 +204,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:sapphire"},
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}],
 		"item_model": "switch:sapphire_leggings",
-		"item_name": "Sapphire Leggings",
+		"item_name": {"text": "Sapphire Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_boots": {
@@ -216,7 +216,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:sapphire"},
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}],
 		"item_model": "switch:sapphire_boots",
-		"item_name": "Sapphire Boots",
+		"item_name": {"text": "Sapphire Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_sword": {
@@ -227,7 +227,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:sapphire_sword",
-		"item_name": "Sapphire Sword",
+		"item_name": {"text": "Sapphire Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_pickaxe": {
@@ -238,7 +238,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:sapphire_pickaxe",
-		"item_name": "Sapphire Pickaxe",
+		"item_name": {"text": "Sapphire Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_axe": {
@@ -249,7 +249,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:sapphire_axe",
-		"item_name": "Sapphire Axe",
+		"item_name": {"text": "Sapphire Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_shovel": {
@@ -260,7 +260,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:sapphire_shovel",
-		"item_name": "Sapphire Shovel",
+		"item_name": {"text": "Sapphire Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_hoe": {
@@ -271,7 +271,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:sapphire_hoe",
-		"item_name": "Sapphire Hoe",
+		"item_name": {"text": "Sapphire Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire": {
@@ -280,7 +280,7 @@
 		"custom_data": {"smithed": {"dict": {"sapphire": {"sapphire": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"sapphire": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "sapphire","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"sapphire_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "sapphire","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"sapphire_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "sapphire","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"sapphire_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "sapphire","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_sapphire_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "sapphire","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_sapphire_ore": true}}}}}],
 		"item_model": "switch:sapphire",
-		"item_name": "Sapphire",
+		"item_name": {"text": "Sapphire"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_block": {
@@ -290,7 +290,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "ruby","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
 		"item_model": "switch:ruby_block",
-		"item_name": "Ruby Block",
+		"item_name": {"text": "Ruby Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_ore": {
@@ -300,7 +300,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "ruby",
 		"item_model": "switch:ruby_ore",
-		"item_name": "Ruby Ore",
+		"item_name": {"text": "Ruby Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"deepslate_ruby_ore": {
@@ -310,7 +310,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "ruby",
 		"item_model": "switch:deepslate_ruby_ore",
-		"item_name": "Deepslate Ruby Ore",
+		"item_name": {"text": "Deepslate Ruby Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_helmet": {
@@ -322,7 +322,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:ruby"},
 		"attribute_modifiers": [{"type": "armor","amount": 3.5,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}],
 		"item_model": "switch:ruby_helmet",
-		"item_name": "Ruby Helmet",
+		"item_name": {"text": "Ruby Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_chestplate": {
@@ -334,7 +334,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:ruby"},
 		"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}],
 		"item_model": "switch:ruby_chestplate",
-		"item_name": "Ruby Chestplate",
+		"item_name": {"text": "Ruby Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_leggings": {
@@ -346,7 +346,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:ruby"},
 		"attribute_modifiers": [{"type": "armor","amount": 6.5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}],
 		"item_model": "switch:ruby_leggings",
-		"item_name": "Ruby Leggings",
+		"item_name": {"text": "Ruby Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_boots": {
@@ -358,7 +358,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:ruby"},
 		"attribute_modifiers": [{"type": "armor","amount": 3.5,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}],
 		"item_model": "switch:ruby_boots",
-		"item_name": "Ruby Boots",
+		"item_name": {"text": "Ruby Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_sword": {
@@ -369,7 +369,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:ruby_sword",
-		"item_name": "Ruby Sword",
+		"item_name": {"text": "Ruby Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_pickaxe": {
@@ -380,7 +380,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:ruby_pickaxe",
-		"item_name": "Ruby Pickaxe",
+		"item_name": {"text": "Ruby Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_axe": {
@@ -391,7 +391,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:ruby_axe",
-		"item_name": "Ruby Axe",
+		"item_name": {"text": "Ruby Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_shovel": {
@@ -402,7 +402,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:ruby_shovel",
-		"item_name": "Ruby Shovel",
+		"item_name": {"text": "Ruby Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_hoe": {
@@ -413,7 +413,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:ruby_hoe",
-		"item_name": "Ruby Hoe",
+		"item_name": {"text": "Ruby Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby": {
@@ -422,7 +422,7 @@
 		"custom_data": {"smithed": {"dict": {"ruby": {"ruby": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ruby": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "ruby","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"ruby_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "ruby","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"ruby_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "ruby","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"ruby_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "ruby","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_ruby_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "ruby","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_ruby_ore": true}}}}}],
 		"item_model": "switch:ruby",
-		"item_name": "Ruby",
+		"item_name": {"text": "Ruby"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_block": {
@@ -432,7 +432,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "topaz","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
 		"item_model": "switch:topaz_block",
-		"item_name": "Topaz Block",
+		"item_name": {"text": "Topaz Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_ore": {
@@ -442,7 +442,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "topaz",
 		"item_model": "switch:topaz_ore",
-		"item_name": "Topaz Ore",
+		"item_name": {"text": "Topaz Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"deepslate_topaz_ore": {
@@ -452,7 +452,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "topaz",
 		"item_model": "switch:deepslate_topaz_ore",
-		"item_name": "Deepslate Topaz Ore",
+		"item_name": {"text": "Deepslate Topaz Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_helmet": {
@@ -464,7 +464,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:topaz"},
 		"attribute_modifiers": [{"type": "armor","amount": 4.0,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}],
 		"item_model": "switch:topaz_helmet",
-		"item_name": "Topaz Helmet",
+		"item_name": {"text": "Topaz Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_chestplate": {
@@ -476,7 +476,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:topaz"},
 		"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}],
 		"item_model": "switch:topaz_chestplate",
-		"item_name": "Topaz Chestplate",
+		"item_name": {"text": "Topaz Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_leggings": {
@@ -488,7 +488,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:topaz"},
 		"attribute_modifiers": [{"type": "armor","amount": 7.0,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}],
 		"item_model": "switch:topaz_leggings",
-		"item_name": "Topaz Leggings",
+		"item_name": {"text": "Topaz Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_boots": {
@@ -500,7 +500,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:topaz"},
 		"attribute_modifiers": [{"type": "armor","amount": 4.0,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}],
 		"item_model": "switch:topaz_boots",
-		"item_name": "Topaz Boots",
+		"item_name": {"text": "Topaz Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_sword": {
@@ -511,7 +511,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 7.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:topaz_sword",
-		"item_name": "Topaz Sword",
+		"item_name": {"text": "Topaz Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_pickaxe": {
@@ -522,7 +522,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:topaz_pickaxe",
-		"item_name": "Topaz Pickaxe",
+		"item_name": {"text": "Topaz Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_axe": {
@@ -533,7 +533,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 9.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:topaz_axe",
-		"item_name": "Topaz Axe",
+		"item_name": {"text": "Topaz Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_shovel": {
@@ -544,7 +544,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:topaz_shovel",
-		"item_name": "Topaz Shovel",
+		"item_name": {"text": "Topaz Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_hoe": {
@@ -555,7 +555,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 1.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:topaz_hoe",
-		"item_name": "Topaz Hoe",
+		"item_name": {"text": "Topaz Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz": {
@@ -564,7 +564,7 @@
 		"custom_data": {"smithed": {"dict": {"topaz": {"topaz": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"topaz": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "topaz","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"topaz_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "topaz","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"topaz_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "topaz","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"topaz_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "topaz","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_topaz_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "topaz","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_topaz_ore": true}}}}}],
 		"item_model": "switch:topaz",
-		"item_name": "Topaz",
+		"item_name": {"text": "Topaz"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_helmet": {
@@ -576,7 +576,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:obsidian"},
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}],
 		"item_model": "switch:obsidian_helmet",
-		"item_name": "Obsidian Helmet",
+		"item_name": {"text": "Obsidian Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_chestplate": {
@@ -588,7 +588,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:obsidian"},
 		"attribute_modifiers": [{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}],
 		"item_model": "switch:obsidian_chestplate",
-		"item_name": "Obsidian Chestplate",
+		"item_name": {"text": "Obsidian Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_leggings": {
@@ -600,7 +600,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:obsidian"},
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}],
 		"item_model": "switch:obsidian_leggings",
-		"item_name": "Obsidian Leggings",
+		"item_name": {"text": "Obsidian Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_boots": {
@@ -612,7 +612,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:obsidian"},
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}],
 		"item_model": "switch:obsidian_boots",
-		"item_name": "Obsidian Boots",
+		"item_name": {"text": "Obsidian Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_sword": {
@@ -623,7 +623,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:obsidian_sword",
-		"item_name": "Obsidian Sword",
+		"item_name": {"text": "Obsidian Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_pickaxe": {
@@ -634,7 +634,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 3.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": -0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:obsidian_pickaxe",
-		"item_name": "Obsidian Pickaxe",
+		"item_name": {"text": "Obsidian Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_axe": {
@@ -645,7 +645,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 7.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": -0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:obsidian_axe",
-		"item_name": "Obsidian Axe",
+		"item_name": {"text": "Obsidian Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_shovel": {
@@ -656,7 +656,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4.3,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": -0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:obsidian_shovel",
-		"item_name": "Obsidian Shovel",
+		"item_name": {"text": "Obsidian Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_hoe": {
@@ -667,7 +667,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": -0.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": -0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:obsidian_hoe",
-		"item_name": "Obsidian Hoe",
+		"item_name": {"text": "Obsidian Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_ingot": {
@@ -675,7 +675,7 @@
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"ingot": {"obsidian": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"obsidian_ingot": true}},
 		"item_model": "switch:obsidian_ingot",
-		"item_name": "Obsidian Ingot",
+		"item_name": {"text": "Obsidian Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_block": {
@@ -685,7 +685,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "steel","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
 		"item_model": "switch:steel_block",
-		"item_name": "Steel Block",
+		"item_name": {"text": "Steel Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_ore": {
@@ -695,7 +695,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "raw_steel",
 		"item_model": "switch:steel_ore",
-		"item_name": "Steel Ore",
+		"item_name": {"text": "Steel Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"deepslate_steel_ore": {
@@ -705,7 +705,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "raw_steel",
 		"item_model": "switch:deepslate_steel_ore",
-		"item_name": "Deepslate Steel Ore",
+		"item_name": {"text": "Deepslate Steel Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"raw_steel_block": {
@@ -715,7 +715,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "steel","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:raw_iron_block","apply_facing": false},
 		"item_model": "switch:raw_steel_block",
-		"item_name": "Raw Steel Block",
+		"item_name": {"text": "Raw Steel Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_helmet": {
@@ -727,7 +727,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:steel"},
 		"attribute_modifiers": [{"type": "armor","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor.head"}],
 		"item_model": "switch:steel_helmet",
-		"item_name": "Steel Helmet",
+		"item_name": {"text": "Steel Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_chestplate": {
@@ -739,7 +739,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:steel"},
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "chest","id": "switch:armor.chest"}],
 		"item_model": "switch:steel_chestplate",
-		"item_name": "Steel Chestplate",
+		"item_name": {"text": "Steel Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_leggings": {
@@ -751,7 +751,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:steel"},
 		"attribute_modifiers": [{"type": "armor","amount": 5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"}],
 		"item_model": "switch:steel_leggings",
-		"item_name": "Steel Leggings",
+		"item_name": {"text": "Steel Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_boots": {
@@ -763,7 +763,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:steel"},
 		"attribute_modifiers": [{"type": "armor","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor.feet"}],
 		"item_model": "switch:steel_boots",
-		"item_name": "Steel Boots",
+		"item_name": {"text": "Steel Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_sword": {
@@ -774,7 +774,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:steel_sword",
-		"item_name": "Steel Sword",
+		"item_name": {"text": "Steel Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_pickaxe": {
@@ -785,7 +785,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 3,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:steel_pickaxe",
-		"item_name": "Steel Pickaxe",
+		"item_name": {"text": "Steel Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_axe": {
@@ -796,7 +796,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.1,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:steel_axe",
-		"item_name": "Steel Axe",
+		"item_name": {"text": "Steel Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_shovel": {
@@ -807,7 +807,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 3.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:steel_shovel",
-		"item_name": "Steel Shovel",
+		"item_name": {"text": "Steel Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_hoe": {
@@ -818,7 +818,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -1.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:steel_hoe",
-		"item_name": "Steel Hoe",
+		"item_name": {"text": "Steel Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_ingot": {
@@ -827,7 +827,7 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "steel","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"steel_block": true}}}}]},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "steel","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_nugget": true}}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_steel_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_steel_ore": true}}}}}],
 		"item_model": "switch:steel_ingot",
-		"item_name": "Steel Ingot",
+		"item_name": {"text": "Steel Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_nugget": {
@@ -836,7 +836,7 @@
 		"custom_data": {"smithed": {"dict": {"nugget": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_nugget": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "steel","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}]},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_helmet": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_chestplate": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_leggings": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_boots": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_sword": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_pickaxe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_axe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_shovel": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_hoe": true}}}}}],
 		"item_model": "switch:steel_nugget",
-		"item_name": "Steel Nugget",
+		"item_name": {"text": "Steel Nugget"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"raw_steel": {
@@ -844,7 +844,7 @@
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"raw": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"raw_steel": true}},
 		"item_model": "switch:raw_steel",
-		"item_name": "Raw Steel",
+		"item_name": {"text": "Raw Steel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_dust": {
@@ -854,7 +854,7 @@
 		"result_of_crafting": [{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_steel": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_ore": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "steel","ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_steel_ore": true}}}}}],
 		"used_for_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "steel","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"steel_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}],
 		"item_model": "switch:steel_dust",
-		"item_name": "Steel Dust",
+		"item_name": {"text": "Steel Dust"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_stick": {
@@ -863,7 +863,7 @@
 		"custom_data": {"smithed": {"dict": {"stick": {"steel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_stick": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 4,"category": "misc","shape": ["X","X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
 		"item_model": "switch:steel_stick",
-		"item_name": "Steel Stick",
+		"item_name": {"text": "Steel Stick"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_helmet": {
@@ -875,7 +875,7 @@
 		"equippable": {"slot": "head","asset_id": "switch:emerald"},
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}],
 		"item_model": "switch:emerald_helmet",
-		"item_name": "Emerald Helmet",
+		"item_name": {"text": "Emerald Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_chestplate": {
@@ -887,7 +887,7 @@
 		"equippable": {"slot": "chest","asset_id": "switch:emerald"},
 		"attribute_modifiers": [{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "chest","id": "switch:luck.chest"}],
 		"item_model": "switch:emerald_chestplate",
-		"item_name": "Emerald Chestplate",
+		"item_name": {"text": "Emerald Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_leggings": {
@@ -899,7 +899,7 @@
 		"equippable": {"slot": "legs","asset_id": "switch:emerald"},
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "legs","id": "switch:luck.legs"}],
 		"item_model": "switch:emerald_leggings",
-		"item_name": "Emerald Leggings",
+		"item_name": {"text": "Emerald Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_boots": {
@@ -911,7 +911,7 @@
 		"equippable": {"slot": "feet","asset_id": "switch:emerald"},
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "feet","id": "switch:luck.feet"}],
 		"item_model": "switch:emerald_boots",
-		"item_name": "Emerald Boots",
+		"item_name": {"text": "Emerald Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_sword": {
@@ -922,7 +922,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:emerald_sword",
-		"item_name": "Emerald Sword",
+		"item_name": {"text": "Emerald Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_pickaxe": {
@@ -933,7 +933,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:emerald_pickaxe",
-		"item_name": "Emerald Pickaxe",
+		"item_name": {"text": "Emerald Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_axe": {
@@ -944,7 +944,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:emerald_axe",
-		"item_name": "Emerald Axe",
+		"item_name": {"text": "Emerald Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_shovel": {
@@ -955,7 +955,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:emerald_shovel",
-		"item_name": "Emerald Shovel",
+		"item_name": {"text": "Emerald Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_hoe": {
@@ -966,14 +966,14 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:emerald_hoe",
-		"item_name": "Emerald Hoe",
+		"item_name": {"text": "Emerald Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_block": {
 		"id": "minecraft:furnace",
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
 		"item_model": "switch:stardust_block",
-		"item_name": "Stardust Block",
+		"item_name": {"text": "Stardust Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -984,7 +984,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "stardust_ingot",
 		"item_model": "switch:stardust_ore",
-		"item_name": "Stardust Ore",
+		"item_name": {"text": "Stardust Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"deepslate_stardust_ore": {
@@ -994,7 +994,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "stardust_ingot",
 		"item_model": "switch:deepslate_stardust_ore",
-		"item_name": "Deepslate Stardust Ore",
+		"item_name": {"text": "Deepslate Stardust Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_helmet": {
@@ -1005,7 +1005,7 @@
 		"max_damage": 421,
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}],
 		"item_model": "switch:stardust_helmet",
-		"item_name": "Stardust Helmet",
+		"item_name": {"text": "Stardust Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_chestplate": {
@@ -1016,7 +1016,7 @@
 		"max_damage": 612,
 		"attribute_modifiers": [{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}],
 		"item_model": "switch:stardust_chestplate",
-		"item_name": "Stardust Chestplate",
+		"item_name": {"text": "Stardust Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_leggings": {
@@ -1027,7 +1027,7 @@
 		"max_damage": 574,
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}],
 		"item_model": "switch:stardust_leggings",
-		"item_name": "Stardust Leggings",
+		"item_name": {"text": "Stardust Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_boots": {
@@ -1038,7 +1038,7 @@
 		"max_damage": 497,
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}],
 		"item_model": "switch:stardust_boots",
-		"item_name": "Stardust Boots",
+		"item_name": {"text": "Stardust Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_sword": {
@@ -1049,7 +1049,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:stardust_sword",
-		"item_name": "Stardust Sword",
+		"item_name": {"text": "Stardust Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_pickaxe": {
@@ -1060,7 +1060,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:stardust_pickaxe",
-		"item_name": "Stardust Pickaxe",
+		"item_name": {"text": "Stardust Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_axe": {
@@ -1071,7 +1071,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:stardust_axe",
-		"item_name": "Stardust Axe",
+		"item_name": {"text": "Stardust Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_ingot": {
@@ -1080,13 +1080,13 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"stardust": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "stardust","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"stardust_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"stardust_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"stardust_ore": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_stardust_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"deepslate_stardust_ore": true}}}}}],
 		"item_model": "switch:stardust_ingot",
-		"item_name": "Stardust Ingot",
+		"item_name": {"text": "Stardust Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_fragment": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:stardust_fragment",
-		"item_name": "Stardust Fragment",
+		"item_name": {"text": "Stardust Fragment"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1094,7 +1094,7 @@
 		"id": "minecraft:furnace",
 		"vanilla_block": {"id": "minecraft:stone","apply_facing": false},
 		"item_model": "switch:awakened_stardust_block",
-		"item_name": "Awakened Stardust Block",
+		"item_name": {"text": "Awakened Stardust Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"awakened_stardust_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1105,7 +1105,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "awakened_stardust",
 		"item_model": "switch:awakened_stardust_ore",
-		"item_name": "Awakened Stardust Ore",
+		"item_name": {"text": "Awakened Stardust Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"awakened_stardust": {
@@ -1115,14 +1115,14 @@
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "awakened_stardust","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_block": true}}}}]},{"type": "smelting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_ore": true}}}}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "awakened_stardust","ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}}},{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "awakened_stardust","ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust_ore": true}}}}}],
 		"used_for_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "awakened_stardust","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}},"result": {"components": {"minecraft:custom_data": {"switch": {"awakened_stardust": true}}}}}],
 		"item_model": "switch:awakened_stardust",
-		"item_name": "Awakened Stardust",
+		"item_name": {"text": "Awakened Stardust"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"legendarium_block": {
 		"id": "minecraft:furnace",
 		"vanilla_block": {"id": "minecraft:lime_concrete","apply_facing": false},
 		"item_model": "switch:legendarium_block",
-		"item_name": "Legendarium Block",
+		"item_name": {"text": "Legendarium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"legendarium_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1134,7 +1134,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"legendarium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:legendarium_sword",
-		"item_name": "Legendarium Sword",
+		"item_name": {"text": "Legendarium Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"legendarium_pickaxe": {
@@ -1145,7 +1145,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"legendarium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:legendarium_pickaxe",
-		"item_name": "Legendarium Pickaxe",
+		"item_name": {"text": "Legendarium Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"legendarium_axe": {
@@ -1156,7 +1156,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"legendarium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:legendarium_axe",
-		"item_name": "Legendarium Axe",
+		"item_name": {"text": "Legendarium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"legendarium_ingot": {
@@ -1165,14 +1165,14 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"legendarium_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "legendarium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"legendarium_block": true}}}}]}],
 		"item_model": "switch:legendarium_ingot",
-		"item_name": "Legendarium Ingot",
+		"item_name": {"text": "Legendarium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"solarium_block": {
 		"id": "minecraft:furnace",
 		"vanilla_block": {"id": "minecraft:orange_concrete","apply_facing": false},
 		"item_model": "switch:solarium_block",
-		"item_name": "Solarium Block",
+		"item_name": {"text": "Solarium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"solarium_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1184,7 +1184,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"solarium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:solarium_sword",
-		"item_name": "Solarium Sword",
+		"item_name": {"text": "Solarium Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"solarium_pickaxe": {
@@ -1195,7 +1195,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"solarium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:solarium_pickaxe",
-		"item_name": "Solarium Pickaxe",
+		"item_name": {"text": "Solarium Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"solarium_axe": {
@@ -1206,7 +1206,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"solarium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:solarium_axe",
-		"item_name": "Solarium Axe",
+		"item_name": {"text": "Solarium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"solarium_ingot": {
@@ -1215,14 +1215,14 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"solarium_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "solarium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"solarium_block": true}}}}]}],
 		"item_model": "switch:solarium_ingot",
-		"item_name": "Solarium Ingot",
+		"item_name": {"text": "Solarium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"darkium_block": {
 		"id": "minecraft:furnace",
 		"vanilla_block": {"id": "minecraft:black_concrete","apply_facing": false},
 		"item_model": "switch:darkium_block",
-		"item_name": "Darkium Block",
+		"item_name": {"text": "Darkium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"darkium_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1234,7 +1234,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"darkium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:darkium_sword",
-		"item_name": "Darkium Sword",
+		"item_name": {"text": "Darkium Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"darkium_pickaxe": {
@@ -1245,7 +1245,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"darkium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:darkium_pickaxe",
-		"item_name": "Darkium Pickaxe",
+		"item_name": {"text": "Darkium Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"darkium_axe": {
@@ -1256,7 +1256,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"darkium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:darkium_axe",
-		"item_name": "Darkium Axe",
+		"item_name": {"text": "Darkium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"darkium_ingot": {
@@ -1265,7 +1265,7 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"darkium_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "darkium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"darkium_block": true}}}}]}],
 		"item_model": "switch:darkium_ingot",
-		"item_name": "Darkium Ingot",
+		"item_name": {"text": "Darkium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ultimate_sword": {
@@ -1276,7 +1276,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ultimate_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:ultimate_sword",
-		"item_name": "Ultimate Sword",
+		"item_name": {"text": "Ultimate Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ultimate_pickaxe": {
@@ -1287,7 +1287,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ultimate_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:ultimate_pickaxe",
-		"item_name": "Ultimate Pickaxe",
+		"item_name": {"text": "Ultimate Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ultimate_axe": {
@@ -1298,7 +1298,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ultimate_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:ultimate_axe",
-		"item_name": "Ultimate Axe",
+		"item_name": {"text": "Ultimate Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ultimate_ingot": {
@@ -1306,13 +1306,13 @@
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"ingot": {"ultimate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ultimate_ingot": true}},
 		"item_model": "switch:ultimate_ingot",
-		"item_name": "Ultimate Ingot",
+		"item_name": {"text": "Ultimate Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ultimate_fragment": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:ultimate_fragment",
-		"item_name": "Ultimate Fragment",
+		"item_name": {"text": "Ultimate Fragment"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1324,7 +1324,7 @@
 		"max_damage": 165,
 		"attribute_modifiers": [{"type": "armor","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor.head"}],
 		"item_model": "switch:anti_radiation_helmet",
-		"item_name": "Anti Radiation Helmet",
+		"item_name": {"text": "Anti Radiation Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"anti_radiation_chestplate": {
@@ -1335,7 +1335,7 @@
 		"max_damage": 240,
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "chest","id": "switch:armor.chest"}],
 		"item_model": "switch:anti_radiation_chestplate",
-		"item_name": "Anti Radiation Chestplate",
+		"item_name": {"text": "Anti Radiation Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"anti_radiation_leggings": {
@@ -1346,7 +1346,7 @@
 		"max_damage": 225,
 		"attribute_modifiers": [{"type": "armor","amount": 5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"}],
 		"item_model": "switch:anti_radiation_leggings",
-		"item_name": "Anti Radiation Leggings",
+		"item_name": {"text": "Anti Radiation Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"anti_radiation_boots": {
@@ -1357,7 +1357,7 @@
 		"max_damage": 195,
 		"attribute_modifiers": [{"type": "armor","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor.feet"}],
 		"item_model": "switch:anti_radiation_boots",
-		"item_name": "Anti Radiation Boots",
+		"item_name": {"text": "Anti Radiation Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_block": {
@@ -1367,7 +1367,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "californium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
 		"item_model": "switch:californium_block",
-		"item_name": "Californium Block",
+		"item_name": {"text": "Californium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_ore": {
@@ -1377,7 +1377,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "raw_californium",
 		"item_model": "switch:californium_ore",
-		"item_name": "Californium Ore",
+		"item_name": {"text": "Californium Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_helmet": {
@@ -1388,7 +1388,7 @@
 		"max_damage": 454,
 		"attribute_modifiers": [{"type": "armor","amount": 3.2,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"}],
 		"item_model": "switch:californium_helmet",
-		"item_name": "Californium Helmet",
+		"item_name": {"text": "Californium Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_chestplate": {
@@ -1399,7 +1399,7 @@
 		"max_damage": 660,
 		"attribute_modifiers": [{"type": "armor","amount": 8.2,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"}],
 		"item_model": "switch:californium_chestplate",
-		"item_name": "Californium Chestplate",
+		"item_name": {"text": "Californium Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_leggings": {
@@ -1410,7 +1410,7 @@
 		"max_damage": 619,
 		"attribute_modifiers": [{"type": "armor","amount": 6.2,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"}],
 		"item_model": "switch:californium_leggings",
-		"item_name": "Californium Leggings",
+		"item_name": {"text": "Californium Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_boots": {
@@ -1421,7 +1421,7 @@
 		"max_damage": 536,
 		"attribute_modifiers": [{"type": "armor","amount": 3.2,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"}],
 		"item_model": "switch:californium_boots",
-		"item_name": "Californium Boots",
+		"item_name": {"text": "Californium Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_sword": {
@@ -1432,7 +1432,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 6.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 		"item_model": "switch:californium_sword",
-		"item_name": "Californium Sword",
+		"item_name": {"text": "Californium Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_pickaxe": {
@@ -1443,7 +1443,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:californium_pickaxe",
-		"item_name": "Californium Pickaxe",
+		"item_name": {"text": "Californium Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_axe": {
@@ -1454,7 +1454,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 8.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:californium_axe",
-		"item_name": "Californium Axe",
+		"item_name": {"text": "Californium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_shovel": {
@@ -1465,7 +1465,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 4.7,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:californium_shovel",
-		"item_name": "Californium Shovel",
+		"item_name": {"text": "Californium Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_hoe": {
@@ -1476,7 +1476,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:californium_hoe",
-		"item_name": "Californium Hoe",
+		"item_name": {"text": "Californium Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_ingot": {
@@ -1485,7 +1485,7 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"californium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "californium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"californium_block": true}}}}]},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "californium","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_nugget": true}}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "californium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_californium": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "californium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_californium": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "californium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "californium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_ore": true}}}}}],
 		"item_model": "switch:californium_ingot",
-		"item_name": "Californium Ingot",
+		"item_name": {"text": "Californium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_nugget": {
@@ -1494,7 +1494,7 @@
 		"custom_data": {"smithed": {"dict": {"nugget": {"californium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_nugget": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "californium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}]},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_helmet": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_chestplate": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_leggings": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_boots": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_sword": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_pickaxe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_axe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_shovel": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"californium_hoe": true}}}}}],
 		"item_model": "switch:californium_nugget",
-		"item_name": "Californium Nugget",
+		"item_name": {"text": "Californium Nugget"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"raw_californium": {
@@ -1502,7 +1502,7 @@
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"raw": {"californium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"raw_californium": true}},
 		"item_model": "switch:raw_californium",
-		"item_name": "Raw Californium",
+		"item_name": {"text": "Raw Californium"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_block": {
@@ -1512,7 +1512,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"group": "uranium","category": "misc","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
 		"item_model": "switch:uranium_block",
-		"item_name": "Uranium Block",
+		"item_name": {"text": "Uranium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_ore": {
@@ -1522,7 +1522,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "raw_uranium",
 		"item_model": "switch:uranium_ore",
-		"item_name": "Uranium Ore",
+		"item_name": {"text": "Uranium Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_helmet": {
@@ -1533,7 +1533,7 @@
 		"max_damage": 363,
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "switch:knockback_resistance.head"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}],
 		"item_model": "switch:uranium_helmet",
-		"item_name": "Uranium Helmet",
+		"item_name": {"text": "Uranium Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_chestplate": {
@@ -1544,7 +1544,7 @@
 		"max_damage": 528,
 		"attribute_modifiers": [{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "switch:knockback_resistance.chest"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "chest","id": "switch:luck.chest"}],
 		"item_model": "switch:uranium_chestplate",
-		"item_name": "Uranium Chestplate",
+		"item_name": {"text": "Uranium Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_leggings": {
@@ -1555,7 +1555,7 @@
 		"max_damage": 495,
 		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "legs","id": "switch:knockback_resistance.legs"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "legs","id": "switch:luck.legs"}],
 		"item_model": "switch:uranium_leggings",
-		"item_name": "Uranium Leggings",
+		"item_name": {"text": "Uranium Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_boots": {
@@ -1566,7 +1566,7 @@
 		"max_damage": 429,
 		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "switch:knockback_resistance.feet"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "feet","id": "switch:luck.feet"}],
 		"item_model": "switch:uranium_boots",
-		"item_name": "Uranium Boots",
+		"item_name": {"text": "Uranium Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_sword": {
@@ -1577,7 +1577,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 7,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:uranium_sword",
-		"item_name": "Uranium Sword",
+		"item_name": {"text": "Uranium Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_pickaxe": {
@@ -1588,7 +1588,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:uranium_pickaxe",
-		"item_name": "Uranium Pickaxe",
+		"item_name": {"text": "Uranium Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_axe": {
@@ -1599,7 +1599,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 9,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:uranium_axe",
-		"item_name": "Uranium Axe",
+		"item_name": {"text": "Uranium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_shovel": {
@@ -1610,7 +1610,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 5.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:uranium_shovel",
-		"item_name": "Uranium Shovel",
+		"item_name": {"text": "Uranium Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_hoe": {
@@ -1621,7 +1621,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}},"S": {"item": "minecraft:stick"}}}],
 		"attribute_modifiers": [{"type": "attack_damage","amount": 0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:uranium_hoe",
-		"item_name": "Uranium Hoe",
+		"item_name": {"text": "Uranium Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_ingot": {
@@ -1630,7 +1630,7 @@
 		"custom_data": {"smithed": {"dict": {"ingot": {"uranium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_ingot": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "uranium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"uranium_block": true}}}}]},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "uranium","shape": ["XXX","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_nugget": true}}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "uranium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_uranium": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "uranium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"raw_uranium": true}}}}},{"type": "smelting","result_count": 1,"category": "misc","group": "uranium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_ore": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "uranium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_ore": true}}}}}],
 		"item_model": "switch:uranium_ingot",
-		"item_name": "Uranium Ingot",
+		"item_name": {"text": "Uranium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_nugget": {
@@ -1639,7 +1639,7 @@
 		"custom_data": {"smithed": {"dict": {"nugget": {"uranium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_nugget": true}},
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "uranium","ingredients": [{"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}]},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_helmet": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_chestplate": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_leggings": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_boots": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_sword": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_pickaxe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_axe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_shovel": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"switch": {"uranium_hoe": true}}}}}],
 		"item_model": "switch:uranium_nugget",
-		"item_name": "Uranium Nugget",
+		"item_name": {"text": "Uranium Nugget"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"raw_uranium": {
@@ -1647,7 +1647,7 @@
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"raw": {"uranium": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"raw_uranium": true}},
 		"item_model": "switch:raw_uranium",
-		"item_name": "Raw Uranium",
+		"item_name": {"text": "Raw Uranium"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"shazinho": {
@@ -1663,77 +1663,77 @@
 	"awakened_stardust_bow": {
 		"id": "minecraft:bow",
 		"item_model": "switch:awakened_stardust_bow",
-		"item_name": "Awakened Stardust Bow",
+		"item_name": {"text": "Awakened Stardust Bow"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"awakened_stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"awakened_stardust_sniper": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:awakened_stardust_sniper",
-		"item_name": "Awakened Stardust Sniper",
+		"item_name": {"text": "Awakened Stardust Sniper"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"awakened_stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stardust_bow": {
 		"id": "minecraft:bow",
 		"item_model": "switch:stardust_bow",
-		"item_name": "Stardust Bow",
+		"item_name": {"text": "Stardust Bow"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stardust_sniper": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:stardust_sniper",
-		"item_name": "Stardust Sniper",
+		"item_name": {"text": "Stardust Sniper"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"ultimate_bow": {
 		"id": "minecraft:bow",
 		"item_model": "switch:ultimate_bow",
-		"item_name": "Ultimate Bow",
+		"item_name": {"text": "Ultimate Bow"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"ultimate_sniper": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:ultimate_sniper",
-		"item_name": "Ultimate Sniper",
+		"item_name": {"text": "Ultimate Sniper"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"ultimate_elytra": {
 		"id": "minecraft:elytra",
 		"item_model": "switch:ultimate_elytra",
-		"item_name": "Ultimate Elytra",
+		"item_name": {"text": "Ultimate Elytra"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"ultimate_bullet": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:ultimate_bullet",
-		"item_name": "Ultimate Bullet",
+		"item_name": {"text": "Ultimate Bullet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_bullet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"ultimate_core": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:ultimate_core",
-		"item_name": "Ultimate Core",
+		"item_name": {"text": "Ultimate Core"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ultimate_core": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stardust_essence": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:stardust_essence",
-		"item_name": "Stardust Essence",
+		"item_name": {"text": "Stardust Essence"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_essence": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stardust_config": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:stardust_config",
-		"item_name": "Stardust Config",
+		"item_name": {"text": "Stardust Config"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_config": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1742,7 +1742,7 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "stardust_essence",
 		"item_model": "switch:ender_stardust_ore",
-		"item_name": "Ender Stardust Ore",
+		"item_name": {"text": "Ender Stardust Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"ender_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1751,21 +1751,21 @@
 		"vanilla_block": {"id": "minecraft:polished_deepslate","apply_facing": false},
 		"no_silk_touch_drop": "stardust_ingot",
 		"item_model": "switch:nether_stardust_ore",
-		"item_name": "Nether Stardust Ore",
+		"item_name": {"text": "Nether Stardust Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"nether_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"dragon_pearl": {
 		"id": "minecraft:ender_pearl",
 		"item_model": "switch:dragon_pearl",
-		"item_name": "Dragon Pearl",
+		"item_name": {"text": "Dragon Pearl"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"dragon_pearl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"life_crystal": {
 		"id": "minecraft:golden_apple",
 		"item_model": "switch:life_crystal",
-		"item_name": "Life Crystal",
+		"item_name": {"text": "Life Crystal"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1774,35 +1774,35 @@
 		"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},
 		"food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},
 		"item_model": "switch:stardust_apple",
-		"item_name": "Stardust Apple",
+		"item_name": {"text": "Stardust Apple"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"dog_excrement": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:dog_excrement",
-		"item_name": "Dog Excrement",
+		"item_name": {"text": "Dog Excrement"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"dog_excrement": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"quarry_configurator": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:quarry_configurator",
-		"item_name": "Quarry Configurator",
+		"item_name": {"text": "Quarry Configurator"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"travel_staff": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:travel_staff",
-		"item_name": "Travel Staff",
+		"item_name": {"text": "Travel Staff"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"travel_staff": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"wormhole_potion": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:wormhole_potion",
-		"item_name": "Wormhole Potion",
+		"item_name": {"text": "Wormhole Potion"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"wormhole_potion": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1810,35 +1810,35 @@
 		"id": "minecraft:command_block",
 		"food": {"can_always_eat": true,"nutrition": 5,"saturation": 6},
 		"item_model": "switch:banana",
-		"item_name": "Banana",
+		"item_name": {"text": "Banana"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"banana": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"anti_radiation_glove": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:anti_radiation_glove",
-		"item_name": "Anti Radiation Glove",
+		"item_name": {"text": "Anti Radiation Glove"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"anti_radiation_glove": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"californium_core": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:californium_core",
-		"item_name": "Californium Core",
+		"item_name": {"text": "Californium Core"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"californium_core": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"californium_waste": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:californium_waste",
-		"item_name": "Californium Waste",
+		"item_name": {"text": "Californium Waste"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"californium_waste": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"radioactive_waste": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:radioactive_waste",
-		"item_name": "Radioactive Waste",
+		"item_name": {"text": "Radioactive Waste"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"radioactive_waste": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1846,70 +1846,70 @@
 		"id": "minecraft:furnace",
 		"vanilla_block": {"id": "minecraft:emerald_block","apply_facing": false},
 		"item_model": "switch:radioactive_waste_barrel",
-		"item_name": "Radioactive Waste Barrel",
+		"item_name": {"text": "Radioactive Waste Barrel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"radioactive_waste_barrel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"uranium_shard": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:uranium_shard",
-		"item_name": "Uranium Shard",
+		"item_name": {"text": "Uranium Shard"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"uranium_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"chargeless_wand": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:chargeless_wand",
-		"item_name": "Chargeless Wand",
+		"item_name": {"text": "Chargeless Wand"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"chargeless_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"fertilizer_wand": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:fertilizer_wand",
-		"item_name": "Fertilizer Wand",
+		"item_name": {"text": "Fertilizer Wand"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"fertilizer_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"fireball_wand": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:fireball_wand",
-		"item_name": "Fireball Wand",
+		"item_name": {"text": "Fireball Wand"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"fireball_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"shield_wand": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:shield_wand",
-		"item_name": "Shield Wand",
+		"item_name": {"text": "Shield Wand"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"shield_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"storm_wand": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:storm_wand",
-		"item_name": "Storm Wand",
+		"item_name": {"text": "Storm Wand"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"storm_wand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"souls_bag": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:souls_bag",
-		"item_name": "Souls Bag",
+		"item_name": {"text": "Souls Bag"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"souls_bag": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"souls_bag_half_filled": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:souls_bag_half_filled",
-		"item_name": "Souls Bag Half Filled",
+		"item_name": {"text": "Souls Bag Half Filled"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"souls_bag_half_filled": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"souls_bag_filled": {
 		"id": "minecraft:command_block",
 		"item_model": "switch:souls_bag_filled",
-		"item_name": "Souls Bag Filled",
+		"item_name": {"text": "Souls Bag Filled"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"souls_bag_filled": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1924,7 +1924,7 @@
 		"id": "minecraft:command_block",
 		"tooltip_display": {"hide_tooltip": true},
 		"item_model": "switch:zombie_hands",
-		"item_name": "Zombie Hands",
+		"item_name": {"text": "Zombie Hands"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"zombie_hands": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -2178,7 +2178,7 @@
 		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
 		"tooltip_display": {"hide_tooltip": true},
 		"item_model": "minecraft:rotten_flesh",
-		"item_name": "Zombie Head",
+		"item_name": {"text": "Zombie Head"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"zombie_head": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -2190,7 +2190,7 @@
 		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
 		"tooltip_display": {"hide_tooltip": true},
 		"item_model": "minecraft:rotten_flesh",
-		"item_name": "Zombie Chest",
+		"item_name": {"text": "Zombie Chest"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"zombie_chest": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -2202,7 +2202,7 @@
 		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
 		"tooltip_display": {"hide_tooltip": true},
 		"item_model": "minecraft:rotten_flesh",
-		"item_name": "Zombie Legs",
+		"item_name": {"text": "Zombie Legs"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"zombie_legs": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -2214,7 +2214,7 @@
 		"enchantments": {"binding_curse": 1,"vanishing_curse": 1},
 		"tooltip_display": {"hide_tooltip": true},
 		"item_model": "minecraft:rotten_flesh",
-		"item_name": "Zombie Feet",
+		"item_name": {"text": "Zombie Feet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
 		"custom_data": {"switch": {"zombie_feet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}

@@ -31,13 +31,3 @@ $execute store result score #total_games switch.data run data get storage switch
 $execute store result score #max_played switch.data run data get storage switch:stats all.modes.$(id).played[0].value
 $execute if score #max_played switch.data > #total_games switch.data store result storage switch:stats all.modes.$(id).total_games int 1 run scoreboard players get #max_played switch.data
 
-# Initial list
-data modify storage switch:temp list set value \
-	[{name:"Stoupy", value:20.05d}, {name:"Misode", value:20.15d}, {name:"Darukshock", value:20.03d}]
-
-# Sort the list in descending order
-function switch:utils/list/desc/sort
-
-# Now the list is sorted in descending order:
-# [{name:"Misode", value:20.15d}, {name:"Stoupy", value:20.05d}, {name:"Darukshock", value:20.03d}]
-
