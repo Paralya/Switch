@@ -1,7 +1,9 @@
 
 #> switch:modes/fish_fight/teams_tp/teams
 #
-# @within	switch:modes/fish_fight/start
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:modes/fish_fight/start [ as @a[tag=!detached,sort=random] ]
 #
 
 # Répartition en équipes

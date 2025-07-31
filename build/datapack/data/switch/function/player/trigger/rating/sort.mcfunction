@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/rating/sort
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/rating/note
 #
 

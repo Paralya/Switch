@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/start
 #
-# @within	switch:modes/glassrunner/calls/start
+# @executed	positioned 3000 128 3000
+#
+# @within	switch:modes/glassrunner/calls/start [ positioned 3000 128 3000 ]
 #
 
 ## Item custom

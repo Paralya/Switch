@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/stardust_vip_zone/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/stardust_vip_zone/teleport_players
 #
 

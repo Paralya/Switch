@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/throw/advancement
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:murder_mystery/right_click
 #
 

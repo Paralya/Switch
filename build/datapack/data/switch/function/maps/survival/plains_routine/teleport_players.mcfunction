@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/plains_routine/teleport_players
 #
-# @within	switch:maps/survival/plains_routine/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/plains_routine/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 20224.0 103.69 19801.5 run tp @s ~0 ~ ~-0 90 0

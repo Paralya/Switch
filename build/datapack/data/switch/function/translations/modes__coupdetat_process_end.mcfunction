@@ -1,7 +1,9 @@
 
 #> switch:translations/modes__coupdetat_process_end
 #
-# @within	switch:modes/_coupdetat/process_end
+# @executed	as @p[tag=switch.coupdetat]
+#
+# @within	switch:modes/_coupdetat/process_end [ as @p[tag=switch.coupdetat] ]
 #
 
 # French

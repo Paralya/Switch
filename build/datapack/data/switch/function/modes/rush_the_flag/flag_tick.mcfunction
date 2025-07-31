@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_flag/flag_tick
 #
-# @within	switch:modes/rush_the_flag/tick
+# @executed	as @e[type=item_display,tag=switch.flag,sort=random] & at @s & positioned ~ ~-2 ~
+#
+# @within	switch:modes/rush_the_flag/tick [ as @e[type=item_display,tag=switch.flag,sort=random] & at @s & positioned ~ ~-2 ~ ]
 #
 
 # If the flag is free and a player is nearby, the flag is picked up

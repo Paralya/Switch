@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/blocks/no_steering
 #
-# @within	switch:modes/kart_racer/blocks/tick
+# @executed	at @s
+#
+# @within	switch:modes/kart_racer/blocks/tick [ at @s ]
 #
 
 ## No steering block

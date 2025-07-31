@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/attach/real_attach
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/attach/main
 #
 

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/airship_fortress/teleport_players
 #
-# @within	switch:maps/survival/airship_fortress/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/airship_fortress/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 20728.5 121.69 20323.0 run tp @s ~0 ~ ~-0 90 0

@@ -1,7 +1,9 @@
 
 #> switch:modes/one_shot/no_drop
 #
-# @within	switch:modes/one_shot/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/one_shot/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/checkpoints/check_player_pos
 #
-# @within	switch:modes/kart_racer/checkpoints/tick
+# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+#
+# @within	switch:modes/kart_racer/checkpoints/tick [ as @a[tag=!detached,predicate=switch:has_same_checkpoint] ]
 #
 
 execute store result score #px switch.data run data get entity @s Pos[0]

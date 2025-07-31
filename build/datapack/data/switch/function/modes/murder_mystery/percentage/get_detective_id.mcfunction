@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/percentage/get_detective_id
 #
-# @within	switch:modes/murder_mystery/percentage/choose_pair
+# @executed	as @a[scores={switch.temp.role=1}]
+#
+# @within	switch:modes/murder_mystery/percentage/choose_pair [ as @a[scores={switch.temp.role=1}] ]
 #
 
 # Store ID in storage

@@ -1,7 +1,11 @@
 
 #> switch:modes/infected/secrets/ancienne_egypte/next_state
 #
-# @within	switch:modes/infected/secrets/ancienne_egypte/_tick
+# @executed	positioned 128069 120 128084
+#
+# @within	switch:modes/infected/secrets/ancienne_egypte/_tick [ positioned 128069 120 128084 ]
+#			switch:modes/infected/secrets/ancienne_egypte/_tick [ positioned 128069 115 128087 ]
+#			switch:modes/infected/secrets/ancienne_egypte/_tick [ positioned 128077 110 128046 & as @a[tag=!detached,team=switch.temp.human,distance=..4] ]
 #			switch:modes/infected/secrets/ancienne_egypte/button_black
 #			switch:modes/infected/secrets/ancienne_egypte/button_red
 #

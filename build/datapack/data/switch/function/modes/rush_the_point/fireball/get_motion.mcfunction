@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/fireball/get_motion
 #
-# @within	switch:modes/rush_the_point/fireball/right_click
+# @executed	positioned 0 0 0
+#
+# @within	switch:modes/rush_the_point/fireball/right_click [ positioned 0 0 0 ]
 #
 
 data modify entity @s Rotation set from storage switch:main Rotation

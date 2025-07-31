@@ -1,6 +1,8 @@
 
 #> switch:modes/spectres_game/percentage/get_spectre_id_loop
 #
+# @executed	as @a[team=switch.temp.visible]
+#
 # @within	switch:modes/spectres_game/percentage/get_spectre_id
 #			switch:modes/spectres_game/percentage/get_spectre_id_loop
 #

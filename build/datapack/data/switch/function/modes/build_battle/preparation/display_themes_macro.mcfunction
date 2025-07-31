@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/preparation/display_themes_macro
 #
+# @executed	as @a[tag=!detached] & in switch:game
+#
 # @within	switch:modes/build_battle/preparation/display_themes with storage switch:main input
 #
 

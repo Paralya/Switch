@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:life_crystal",
-								"minecraft:item_name": "Life Crystal",
+								"minecraft:item_name": {
+									"text": "Life Crystal"
+								},
 								"minecraft:lore": [
 									[
 										"",

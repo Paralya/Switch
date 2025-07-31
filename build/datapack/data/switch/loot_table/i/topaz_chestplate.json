@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_chestplate",
-								"minecraft:item_name": "Topaz Chestplate",
+								"minecraft:item_name": {
+									"text": "Topaz Chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

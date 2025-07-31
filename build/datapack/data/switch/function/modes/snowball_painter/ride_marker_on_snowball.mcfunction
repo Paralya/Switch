@@ -1,7 +1,9 @@
 
 #> switch:modes/snowball_painter/ride_marker_on_snowball
 #
-# @within	switch:modes/snowball_painter/tick
+# @executed	as @e[type=snowball,tag=!switch.marker] & at @s
+#
+# @within	switch:modes/snowball_painter/tick [ as @e[type=snowball,tag=!switch.marker] & at @s ]
 #
 
 # Summon marker and make it ride the player

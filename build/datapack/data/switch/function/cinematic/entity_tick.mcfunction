@@ -1,7 +1,9 @@
 
 #> switch:cinematic/entity_tick
 #
-# @within	switch:tick
+# @executed	as @e[type=item_display,tag=switch.cinematic]
+#
+# @within	switch:tick [ as @e[type=item_display,tag=switch.cinematic] ]
 #
 
 # Make sure the player is spectating the entity

@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/utils/verify_a_block
 #
-# @within	switch:modes/replicate_the_build/round/6
+# @executed	as @e[tag=switch.rtb.verify_island] & at @s
+#
+# @within	switch:modes/replicate_the_build/round/6 [ as @e[tag=switch.rtb.verify_island] & at @s ]
 #
 
 # -29999997 22 1603

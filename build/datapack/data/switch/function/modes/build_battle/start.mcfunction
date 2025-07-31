@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/start
 #
-# @within	switch:modes/build_battle/calls/start
+# @executed	in switch:build_battle
+#
+# @within	switch:modes/build_battle/calls/start [ in switch:build_battle ]
 #
 
 effect give @a[tag=!detached] saturation infinite 255 true

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/shoot_da_sheep/teleport_players
 #
-# @within	switch:maps/survival/shoot_da_sheep/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/shoot_da_sheep/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [123012.5d, 114.5d, 123003.5d]

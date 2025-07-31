@@ -1,7 +1,9 @@
 
 #> switch:modes/creeper_apocalypse/ocelot_advancement
 #
-# @within	switch:modes/creeper_apocalypse/second
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/creeper_apocalypse/second [ as @a[tag=!detached] ]
 #
 
 execute store result score #health switch.data run data get entity @s Health

@@ -1,6 +1,8 @@
 
 #> switch:modes/sheepwars/advancements/lightning_strike
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:sheepwars/lightning_strike
 #
 

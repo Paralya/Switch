@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/ctf_flowers/teleport_players
 #
-# @within	switch:maps/survival/ctf_flowers/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/ctf_flowers/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [148071.5d, 140.5d, 148027.5d]

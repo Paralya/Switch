@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/blocks/tick
 #
-# @within	switch:modes/kart_racer/tick
+# @executed	at @s
+#
+# @within	switch:modes/kart_racer/tick [ at @s ]
 #
 
 ## Out of map

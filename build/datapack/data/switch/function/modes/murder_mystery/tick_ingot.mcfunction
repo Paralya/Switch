@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/tick_ingot
 #
-# @within	switch:modes/murder_mystery/tick
+# @executed	as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{id:"minecraft:gold_ingot"}]}]
+#
+# @within	switch:modes/murder_mystery/tick [ as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{id:"minecraft:gold_ingot"}]}] ]
 #
 
 scoreboard players set #count switch.data 0

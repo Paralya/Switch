@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/bancalvivor_s4/teleport_players
 #
-# @within	switch:maps/survival/bancalvivor_s4/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/bancalvivor_s4/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [38154.5d, 117.5d, 38121.5d]

@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:adamantium_block",
-								"minecraft:item_name": "Adamantium Block",
+								"minecraft:item_name": {
+									"text": "Adamantium Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

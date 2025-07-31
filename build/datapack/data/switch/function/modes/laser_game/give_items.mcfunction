@@ -1,7 +1,9 @@
 
 #> switch:modes/laser_game/give_items
 #
-# @within	switch:modes/laser_game/tick
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/laser_game/tick [ as @a[tag=!detached] ]
 #
 
 ## TO ADVANCEMENT

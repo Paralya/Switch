@@ -1,7 +1,10 @@
 
 #> switch:modes/rush_the_point/explode_tnt
 #
-# @within	switch:modes/rush_the_point/tick_common
+# @executed	as @e[type=tnt,nbt={Fuse:1s}] & at @s
+#
+# @within	switch:modes/rush_the_point/tick_common [ as @e[type=tnt,nbt={Fuse:1s}] & at @s ]
+#			switch:modes/rush_the_point/tick_common [ as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle] & at @s & positioned ~ ~-1 ~ ]
 #
 
 kill @s

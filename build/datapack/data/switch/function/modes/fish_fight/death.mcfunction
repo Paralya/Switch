@@ -2,7 +2,8 @@
 #> switch:modes/fish_fight/death
 #
 # @within	switch:modes/fish_fight/joined
-#			switch:modes/fish_fight/tick
+#			switch:modes/fish_fight/tick [ as @a[tag=!detached,gamemode=survival,scores={switch.temp.deathCooldown=60..}] ]
+#			switch:modes/fish_fight/tick [ as @a[scores={switch.alive=1..},predicate=switch:in_water,sort=random] ]
 #
 
 function switch:translations/modes_fish_fight_death

@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/fireball/explosion
 #
-# @within	switch:modes/glassrunner/tick
+# @executed	as @e[tag=switch.glassrunner.fireball] & at @s
+#
+# @within	switch:modes/glassrunner/tick [ as @e[tag=switch.glassrunner.fireball] & at @s ]
 #
 
 particle minecraft:flame ~ ~ ~ 1 1 1 .1 5

@@ -1,7 +1,9 @@
 
 #> switch:modes/minigolf/record_save
 #
-# @within	switch:modes/minigolf/process_end with storage switch:records minigolf
+# @executed	as @a[tag=!...]
+#
+# @within	switch:modes/minigolf/process_end with storage switch:records minigolf [ as @a[tag=!...] ]
 #
 
 # Get username

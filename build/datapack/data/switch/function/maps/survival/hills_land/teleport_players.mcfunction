@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/hills_land/teleport_players
 #
-# @within	switch:maps/survival/hills_land/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/hills_land/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 20446.5 100.69 20076.5 run tp @s ~0 ~ ~-0 90 0

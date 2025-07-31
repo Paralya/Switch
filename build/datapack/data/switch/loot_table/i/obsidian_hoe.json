@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_hoe",
-								"minecraft:item_name": "Obsidian Hoe",
+								"minecraft:item_name": {
+									"text": "Obsidian Hoe"
+								},
 								"minecraft:lore": [
 									[
 										"",

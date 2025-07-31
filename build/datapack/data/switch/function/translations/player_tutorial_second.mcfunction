@@ -1,6 +1,8 @@
 
 #> switch:translations/player_tutorial_second
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tutorial/second
 #
 

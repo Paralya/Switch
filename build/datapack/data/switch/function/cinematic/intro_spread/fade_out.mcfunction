@@ -1,6 +1,8 @@
 
 #> switch:cinematic/intro_spread/fade_out
 #
+# @executed	positioned ~ ~1.6 ~
+#
 # @within	switch:cinematic/intro_spread/display_start $(display_time)t
 #
 

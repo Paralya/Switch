@@ -1,6 +1,8 @@
 
 #> switch:engine/launch_game/get_random_max
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/launch_game/main
 #
 

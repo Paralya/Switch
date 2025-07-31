@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:solarium_axe",
-								"minecraft:item_name": "Solarium Axe",
+								"minecraft:item_name": {
+									"text": "Solarium Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

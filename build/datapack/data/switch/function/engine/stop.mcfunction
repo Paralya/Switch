@@ -1,8 +1,10 @@
 
 #> switch:engine/stop
 #
-# @within	switch:engine/disable
-#			switch:engine/restart
+# @executed	in switch:game
+#
+# @within	switch:engine/disable [ in switch:game ]
+#			switch:engine/restart [ in switch:game ]
 #			switch:tick
 #
 

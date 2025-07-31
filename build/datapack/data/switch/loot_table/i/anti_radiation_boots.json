@@ -30,7 +30,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:anti_radiation_boots",
-								"minecraft:item_name": "Anti Radiation Boots",
+								"minecraft:item_name": {
+									"text": "Anti Radiation Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

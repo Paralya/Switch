@@ -2,7 +2,7 @@
 #> switch:modes/mlg_a_coudre/death
 #
 # @within	switch:modes/mlg_a_coudre/joined
-#			switch:modes/mlg_a_coudre/process_end
+#			switch:modes/mlg_a_coudre/process_end [ as @a[tag=!detached] ]
 #
 
 execute if score @s switch.temp.lives matches 1.. run scoreboard players remove @s switch.temp.lives 1

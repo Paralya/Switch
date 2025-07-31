@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_fireblast_fireball_no_cooldown
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.right_click=1..},nbt={SelectedItem:{components:{}}}] & at @s
+#
 # @within	switch:modes/fireblast/fireball/no_cooldown
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/calls/killed_ninja
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:traitors_game/killed_ninja
 #
 

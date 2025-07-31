@@ -1,7 +1,9 @@
 
 #> switch:modes/sheepwars/team_and_give
 #
-# @within	switch:modes/sheepwars/start
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
+# @within	switch:modes/sheepwars/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 # Team selection

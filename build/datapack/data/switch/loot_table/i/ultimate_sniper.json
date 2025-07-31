@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:ultimate_sniper",
-								"minecraft:item_name": "Ultimate Sniper",
+								"minecraft:item_name": {
+									"text": "Ultimate Sniper"
+								},
 								"minecraft:lore": [
 									[
 										"",

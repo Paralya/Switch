@@ -1,7 +1,9 @@
 
 #> switch:modes/block_party/core/paint_cow
 #
-# @within	switch:modes/block_party/tick
+# @executed	at @s
+#
+# @within	switch:modes/block_party/tick [ at @s ]
 #
 
 ## Function executed as and at the paint cow

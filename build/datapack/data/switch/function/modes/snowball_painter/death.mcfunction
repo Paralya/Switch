@@ -2,7 +2,7 @@
 #> switch:modes/snowball_painter/death
 #
 # @within	switch:modes/snowball_painter/joined
-#			switch:modes/snowball_painter/process_end
+#			switch:modes/snowball_painter/process_end [ as @a[tag=!detached] ]
 #
 
 gamemode spectator @s

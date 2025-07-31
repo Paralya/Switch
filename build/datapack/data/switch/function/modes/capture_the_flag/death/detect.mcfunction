@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/death/detect
 #
-# @within	switch:modes/capture_the_flag/tick
+# @executed	as @e[type=marker,tag=...]
+#
+# @within	switch:modes/capture_the_flag/tick [ as @e[type=marker,tag=...] ]
 #
 
 # Detect if linked player is missing

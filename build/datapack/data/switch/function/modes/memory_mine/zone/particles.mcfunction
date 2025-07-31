@@ -1,7 +1,9 @@
 
 #> switch:modes/memory_mine/zone/particles
 #
-# @within	switch:modes/memory_mine/second
+# @executed	at @e[type=marker,tag=switch.zone]
+#
+# @within	switch:modes/memory_mine/second [ at @e[type=marker,tag=switch.zone] ]
 #
 
 # Particles

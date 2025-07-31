@@ -1,7 +1,9 @@
 
 #> switch:modes/traitors_game/death/to_tp
 #
-# @within	switch:modes/traitors_game/tick
+# @executed	as @a[tag=!...]
+#
+# @within	switch:modes/traitors_game/tick [ as @a[tag=!...] ]
 #
 
 function switch:maps/spread_one_player

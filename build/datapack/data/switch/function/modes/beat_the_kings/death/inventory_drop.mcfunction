@@ -1,7 +1,9 @@
 
 #> switch:modes/beat_the_kings/death/inventory_drop
 #
-# @within	switch:modes/beat_the_kings/death/for_global
+# @executed	at @s
+#
+# @within	switch:modes/beat_the_kings/death/for_global [ at @s ]
 #			switch:modes/beat_the_kings/death/inventory_drop
 #
 

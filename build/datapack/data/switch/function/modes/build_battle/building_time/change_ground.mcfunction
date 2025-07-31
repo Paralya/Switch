@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/building_time/change_ground
 #
+# @executed	as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=5] & at @s
+#
 # @within	switch:modes/build_battle/tick_marker
 #
 

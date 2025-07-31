@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/secrets/ancienne_egypte/item_tick
 #
-# @within	switch:modes/infected/secrets/ancienne_egypte/_tick
+# @executed	at @s
+#
+# @within	switch:modes/infected/secrets/ancienne_egypte/_tick [ at @s ]
 #
 
 # Owner become nearest human

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/clock_circuit/teleport_players
 #
-# @within	switch:maps/survival/clock_circuit/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/clock_circuit/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 19565.0 143.69 20393.0 run tp @s ~0 ~ ~-0 90 0

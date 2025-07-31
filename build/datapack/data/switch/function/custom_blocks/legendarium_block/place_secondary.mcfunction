@@ -1,7 +1,9 @@
 
 #> switch:custom_blocks/legendarium_block/place_secondary
 #
-# @within	switch:custom_blocks/legendarium_block/place_main
+# @executed	at @s
+#
+# @within	switch:custom_blocks/legendarium_block/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag
@@ -14,10 +16,10 @@ tag @s add switch.legendarium_block
 tag @s add switch.vanilla.minecraft_lime_concrete
 
 # Add a custom name
-data merge entity @s {"CustomName": "Legendarium Block"}
+data merge entity @s {"CustomName": {"text": "Legendarium Block"}}
 
 # Modify item display entity to match the custom block
-item replace entity @s container.0 with minecraft:furnace[item_model="switch:legendarium_block"]
+item replace entity @s contents with minecraft:furnace[item_model="switch:legendarium_block"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 data modify entity @s brightness set value {block:15,sky:15}
 

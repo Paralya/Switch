@@ -1,8 +1,10 @@
 
 #> switch:modes/block_party/core/remake_list/get_art_count_loop
 #
-# @within	switch:modes/block_party/core/remake_list/get_art_count_loop
-#			switch:modes/block_party/core/remake_list/main
+# @executed	positioned ~ ~-2 ~
+#
+# @within	switch:modes/block_party/core/remake_list/get_art_count_loop [ positioned ~ ~-2 ~ ]
+#			switch:modes/block_party/core/remake_list/main [ positioned 110008 248 110008 ]
 #
 
 # Add position to the list

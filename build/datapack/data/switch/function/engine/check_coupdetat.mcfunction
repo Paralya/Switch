@@ -1,6 +1,8 @@
 
 #> switch:engine/check_coupdetat
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/start
 #
 

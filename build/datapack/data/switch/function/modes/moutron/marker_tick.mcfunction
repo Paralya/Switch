@@ -1,7 +1,9 @@
 
 #> switch:modes/moutron/marker_tick
 #
-# @within	switch:modes/moutron/tick
+# @executed	as @e[type=marker,tag=switch.moutron_marker] & at @s
+#
+# @within	switch:modes/moutron/tick [ as @e[type=marker,tag=switch.moutron_marker] & at @s ]
 #
 
 # Increase score

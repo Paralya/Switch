@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/cathedrale_liege/teleport_players
 #
-# @within	switch:maps/survival/cathedrale_liege/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/cathedrale_liege/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [26034.5d, 122.5d, 26053.5d]

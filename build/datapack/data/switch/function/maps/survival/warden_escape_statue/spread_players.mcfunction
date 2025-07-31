@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/warden_escape_statue/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/warden_escape_statue/teleport_players
 #
 

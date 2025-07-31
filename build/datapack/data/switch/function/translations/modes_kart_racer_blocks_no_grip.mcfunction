@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_blocks_no_grip
 #
+# @executed	at @s
+#
 # @within	switch:modes/kart_racer/blocks/no_grip
 #
 

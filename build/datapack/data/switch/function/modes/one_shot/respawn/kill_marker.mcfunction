@@ -1,9 +1,11 @@
 
 #> switch:modes/one_shot/respawn/kill_marker
 #
-# @within	switch:modes/one_shot/respawn/kill_worst_marker
-#			switch:modes/one_shot/respawn/main
-#			switch:modes/one_shot/respawn/spawn_marker
+# @executed	as @e[tag=switch.respawn]
+#
+# @within	switch:modes/one_shot/respawn/kill_worst_marker [ as @e[tag=switch.respawn] ]
+#			switch:modes/one_shot/respawn/main [ as @n[tag=switch.respawn_max] ]
+#			switch:modes/one_shot/respawn/spawn_marker [ at @s ]
 #
 
 # Debug armor stand with glowing

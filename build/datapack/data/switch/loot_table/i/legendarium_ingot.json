@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:legendarium_ingot",
-								"minecraft:item_name": "Legendarium Ingot",
+								"minecraft:item_name": {
+									"text": "Legendarium Ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

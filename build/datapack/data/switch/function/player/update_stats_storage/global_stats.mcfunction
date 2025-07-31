@@ -1,6 +1,8 @@
 
 #> switch:player/update_stats_storage/global_stats
 #
+# @executed	as @a
+#
 # @within	switch:player/update_stats_storage/main with storage switch:main input
 #			switch:player/update_stats_storage/of_player with storage switch:main input
 #

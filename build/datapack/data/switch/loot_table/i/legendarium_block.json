@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:legendarium_block",
-								"minecraft:item_name": "Legendarium Block",
+								"minecraft:item_name": {
+									"text": "Legendarium Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/laser_game/teleport_players
 #
-# @within	switch:maps/survival/laser_game/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/laser_game/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [518.5d, 111.5d, 518.5d]

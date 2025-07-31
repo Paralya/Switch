@@ -1,6 +1,8 @@
 
 #> switch:player/tutorial/next_dialogue
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/main
 #
 

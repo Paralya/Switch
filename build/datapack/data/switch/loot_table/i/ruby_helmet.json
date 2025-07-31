@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_helmet",
-								"minecraft:item_name": "Ruby Helmet",
+								"minecraft:item_name": {
+									"text": "Ruby Helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

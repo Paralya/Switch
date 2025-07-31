@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/death/red
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/death/death
 #
 

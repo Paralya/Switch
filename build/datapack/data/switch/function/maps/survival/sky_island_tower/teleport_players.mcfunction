@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/sky_island_tower/teleport_players
 #
-# @within	switch:maps/survival/sky_island_tower/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/sky_island_tower/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [77027.5d, 171.5d, 77100.5d]

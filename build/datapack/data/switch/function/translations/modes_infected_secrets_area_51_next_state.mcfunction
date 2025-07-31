@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_infected_secrets_area_51_next_state
 #
+# @executed	positioned 2069 151 2051
+#
 # @within	switch:modes/infected/secrets/area_51/next_state
 #
 

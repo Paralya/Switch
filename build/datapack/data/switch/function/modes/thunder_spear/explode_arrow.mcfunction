@@ -1,7 +1,9 @@
 
 #> switch:modes/thunder_spear/explode_arrow
 #
-# @within	switch:modes/thunder_spear/tick
+# @executed	at @s
+#
+# @within	switch:modes/thunder_spear/tick [ at @s ]
 #
 
 # Explosion damage

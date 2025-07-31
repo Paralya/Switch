@@ -1,6 +1,8 @@
 
 #> switch:modes/replicate_the_build/utils/summon_verify_2
 #
+# @executed	as @e[type=marker,tag=switch.rtb.island] & at @s & positioned ~-3 ~ ~1
+#
 # @within	switch:modes/replicate_the_build/utils/summon_verify
 #
 

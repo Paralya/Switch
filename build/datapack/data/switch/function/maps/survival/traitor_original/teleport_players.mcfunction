@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/traitor_original/teleport_players
 #
-# @within	switch:maps/survival/traitor_original/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/traitor_original/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [1566.5d, 122.5d, 1534.5d]

@@ -1,9 +1,11 @@
 
 #> switch:modes/glassrunner/death/death
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/joined
 #			switch:modes/glassrunner/start/team
-#			switch:modes/glassrunner/start
+#			switch:modes/glassrunner/start [ as @a[tag=!detached] & at @s ]
 #
 
 clear @s snowball

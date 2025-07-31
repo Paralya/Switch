@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:ultimate_fragment",
-								"minecraft:item_name": "Ultimate Fragment",
+								"minecraft:item_name": {
+									"text": "Ultimate Fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,6 +1,8 @@
 
 #> switch:modes/beat_the_kings/roles/marker
 #
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
 # @within	switch:modes/beat_the_kings/roles/main
 #
 

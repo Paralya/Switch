@@ -1,7 +1,9 @@
 
 #> switch:modes/laser_game/right_click
 #
-# @within	switch:modes/laser_game/tick
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..},sort=random] & at @s
+#
+# @within	switch:modes/laser_game/tick [ as @a[tag=!detached,scores={switch.right_click=1..},sort=random] & at @s ]
 #
 
 scoreboard players reset @s switch.right_click

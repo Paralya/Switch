@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/obsidian_effect
 #
-# @within	switch:modes/spectres_game/tick
+# @executed	as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}]
+#
+# @within	switch:modes/spectres_game/tick [ as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}] ]
 #
 
 # Tirage au sort du bonus pour les visibles

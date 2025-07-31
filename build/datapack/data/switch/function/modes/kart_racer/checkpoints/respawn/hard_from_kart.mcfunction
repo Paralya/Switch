@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/checkpoints/respawn/hard_from_kart
 #
-# @within	switch:modes/kart_racer/checkpoints/respawn/hard
+# @executed	at @e[tag=switch.checkpoint,predicate=switch:has_same_respawn_cp_id] & as @e[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger]
+#
+# @within	switch:modes/kart_racer/checkpoints/respawn/hard [ at @e[tag=switch.checkpoint,predicate=switch:has_same_respawn_cp_id] & as @e[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger] ]
 #
 
 tp @s ~ ~ ~ ~ ~

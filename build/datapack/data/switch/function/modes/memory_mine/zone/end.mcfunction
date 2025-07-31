@@ -1,7 +1,9 @@
 
 #> switch:modes/memory_mine/zone/end
 #
-# @within	switch:modes/memory_mine/second
+# @executed	as @e[type=marker,tag=switch.zone] & at @s
+#
+# @within	switch:modes/memory_mine/second [ as @e[type=marker,tag=switch.zone] & at @s ]
 #
 
 execute as @a[tag=!detached,gamemode=adventure,distance=3..50] at @s run function switch:modes/memory_mine/death

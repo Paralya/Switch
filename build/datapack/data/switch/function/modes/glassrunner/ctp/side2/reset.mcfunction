@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/ctp/side2/reset
 #
-# @within	switch:modes/glassrunner/second
+# @executed	positioned 3074 128 2924
+#
+# @within	switch:modes/glassrunner/second [ positioned 3074 128 2924 ]
 #
 
 scoreboard players set #glassrunner.ctp.side2.red.timer switch.data 0

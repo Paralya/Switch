@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/flamingosaurus_mariokart/teleport_players
 #
-# @within	switch:maps/survival/flamingosaurus_mariokart/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/flamingosaurus_mariokart/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [19992.5d, 195.5d, 19797.5d]

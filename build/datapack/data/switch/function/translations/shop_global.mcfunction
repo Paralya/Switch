@@ -1,6 +1,8 @@
 
 #> switch:translations/shop_global
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:shop/global
 #
 

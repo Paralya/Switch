@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_boat_race_finish
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=5033,y=105,z=5000,dx=3,dy=4,dz=4] & at @s
+#
 # @within	switch:modes/boat_race/finish
 #
 

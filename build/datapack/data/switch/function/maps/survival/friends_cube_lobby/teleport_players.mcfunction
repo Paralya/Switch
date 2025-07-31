@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/friends_cube_lobby/teleport_players
 #
-# @within	switch:maps/survival/friends_cube_lobby/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/friends_cube_lobby/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [17032.5d, 117.5d, 17065.5d]

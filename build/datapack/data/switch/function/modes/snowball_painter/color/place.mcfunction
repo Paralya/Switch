@@ -1,7 +1,35 @@
 
 #> switch:modes/snowball_painter/color/place
 #
-# @within	switch:modes/snowball_painter/explode_marker
+# @executed	positioned ~1 ~1 ~1
+#
+# @within	switch:modes/snowball_painter/explode_marker [ positioned ~1 ~1 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~1 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~1 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~0 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~0 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~0 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~-1 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~-1 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~1 ~-1 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~1 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~1 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~1 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~0 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~0 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~0 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~-1 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~-1 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~0 ~-1 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~1 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~1 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~1 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~0 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~0 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~0 ~-1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~-1 ~1 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~-1 ~0 ]
+#			switch:modes/snowball_painter/explode_marker [ positioned ~-1 ~-1 ~-1 ]
 #
 
 # Depending on the color, place the corresponding block

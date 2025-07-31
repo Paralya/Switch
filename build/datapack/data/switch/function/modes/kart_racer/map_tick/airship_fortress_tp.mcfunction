@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/map_tick/airship_fortress_tp
 #
-# @within	switch:modes/kart_racer/map_tick/airship_fortress
+# @executed	as @e[tag=shopping_kart.kart,scores={switch.temp.compteur=1..}]
+#
+# @within	switch:modes/kart_racer/map_tick/airship_fortress [ as @e[tag=shopping_kart.kart,scores={switch.temp.compteur=1..}] ]
 #
 
 # l1 = [20662, 110, 20382]

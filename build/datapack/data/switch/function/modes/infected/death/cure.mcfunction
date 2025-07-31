@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/death/cure
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/infected/advancements/antidote
 #
 

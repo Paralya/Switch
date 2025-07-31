@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_pickaxe",
-								"minecraft:item_name": "Steel Pickaxe",
+								"minecraft:item_name": {
+									"text": "Steel Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

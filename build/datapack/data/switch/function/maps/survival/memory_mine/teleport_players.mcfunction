@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/memory_mine/teleport_players
 #
-# @within	switch:maps/survival/memory_mine/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/memory_mine/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [153026.5d, 105.5d, 153034.5d]

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/jn_sakura_pvpbox/teleport_players
 #
-# @within	switch:maps/survival/jn_sakura_pvpbox/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/jn_sakura_pvpbox/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [135079.5d, 118.5d, 135085.5d]

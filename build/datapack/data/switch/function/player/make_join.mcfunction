@@ -1,6 +1,8 @@
 
 #> switch:player/make_join
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/joined
 #
 

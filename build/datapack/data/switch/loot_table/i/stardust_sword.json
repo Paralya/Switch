@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_sword",
-								"minecraft:item_name": "Stardust Sword",
+								"minecraft:item_name": {
+									"text": "Stardust Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

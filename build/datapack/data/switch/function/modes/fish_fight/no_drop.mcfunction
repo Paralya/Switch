@@ -1,7 +1,9 @@
 
 #> switch:modes/fish_fight/no_drop
 #
-# @within	switch:modes/fish_fight/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/fish_fight/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

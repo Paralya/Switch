@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/fireball/use
 #
-# @within	switch:modes/glassrunner/tick
+# @executed	at @s
+#
+# @within	switch:modes/glassrunner/tick [ at @s ]
 #
 
 execute positioned ~ ~1.8 ~ run summon fireball ^ ^ ^1.5 {Tags:["switch.glassrunner.fireball"]}

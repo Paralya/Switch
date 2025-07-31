@@ -1,6 +1,8 @@
 
 #> switch:modes/thunder_spear/on_new_tnt
 #
+# @executed	at @s
+#
 # @within	switch:modes/thunder_spear/explode_arrow
 #
 

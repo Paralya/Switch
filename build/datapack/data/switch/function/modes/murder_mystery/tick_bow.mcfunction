@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/tick_bow
 #
-# @within	switch:modes/murder_mystery/tick
+# @executed	as @e[type=item_display,tag=switch.detective_bow] & at @s & positioned ~ ~-1 ~
+#
+# @within	switch:modes/murder_mystery/tick [ as @e[type=item_display,tag=switch.detective_bow] & at @s & positioned ~ ~-1 ~ ]
 #
 
 # Rotate the bow

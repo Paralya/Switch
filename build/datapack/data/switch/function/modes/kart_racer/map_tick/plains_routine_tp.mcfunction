@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/map_tick/plains_routine_tp
 #
-# @within	switch:modes/kart_racer/map_tick/plains_routine
+# @executed	at @s
+#
+# @within	switch:modes/kart_racer/map_tick/plains_routine [ at @s ]
 #
 
 execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine

@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/start/random_island
 #
-# @within	switch:modes/replicate_the_build/round/3
+# @executed	as @e[tag=switch.rtb.island,type=marker,sort=random]
+#
+# @within	switch:modes/replicate_the_build/round/3 [ as @e[tag=switch.rtb.island,type=marker,sort=random] ]
 #
 
 scoreboard players add #rtbteam switch.data 1

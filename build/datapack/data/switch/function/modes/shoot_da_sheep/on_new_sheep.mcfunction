@@ -1,7 +1,9 @@
 
 #> switch:modes/shoot_da_sheep/on_new_sheep
 #
-# @within	switch:modes/shoot_da_sheep/summon_sheep
+# @executed	at @n[type=marker,tag=switch.selected_map] & positioned ~ 2048 ~
+#
+# @within	switch:modes/shoot_da_sheep/summon_sheep [ at @n[type=marker,tag=switch.selected_map] & positioned ~ 2048 ~ ]
 #
 
 # Add absorption to prevent killing, NoGravity, and remove loot table

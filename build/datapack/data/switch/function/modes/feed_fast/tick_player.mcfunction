@@ -1,7 +1,9 @@
 
 #> switch:modes/feed_fast/tick_player
 #
-# @within	switch:modes/feed_fast/tick
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
+# @within	switch:modes/feed_fast/tick [ as @a[tag=!detached,gamemode=!spectator] ]
 #
 
 # Si son niveau de Food est supérieur à son ancien, ajouter la différence

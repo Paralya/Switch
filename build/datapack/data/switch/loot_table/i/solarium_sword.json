@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:solarium_sword",
-								"minecraft:item_name": "Solarium Sword",
+								"minecraft:item_name": {
+									"text": "Solarium Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

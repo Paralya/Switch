@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/rating_time/end_calculation
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/process_end
 #
 

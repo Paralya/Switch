@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/the_four_elements/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/the_four_elements/teleport_players
 #
 

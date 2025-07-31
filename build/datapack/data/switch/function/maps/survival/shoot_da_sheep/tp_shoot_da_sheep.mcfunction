@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/shoot_da_sheep/tp_shoot_da_sheep
 #
-# @within	switch:modes/shoot_da_sheep/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/shoot_da_sheep/start [ as @a[tag=!detached] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game run tp @s 123017 111.69 123000 90 0

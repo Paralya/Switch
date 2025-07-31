@@ -1,7 +1,9 @@
 
 #> switch:modes/laser_game/xp_bar
 #
-# @within	switch:modes/laser_game/tick
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/laser_game/tick [ as @a[tag=!detached] ]
 #
 
 scoreboard players add @s switch.temp.cooldown 0

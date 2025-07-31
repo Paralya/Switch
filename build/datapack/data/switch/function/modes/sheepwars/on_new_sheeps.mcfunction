@@ -1,7 +1,9 @@
 
 #> switch:modes/sheepwars/on_new_sheeps
 #
-# @within	switch:modes/sheepwars/tick
+# @executed	as @e[type=sheep,tag=!switch.checked]
+#
+# @within	switch:modes/sheepwars/tick [ as @e[type=sheep,tag=!switch.checked] ]
 #
 
 # Tag as checked

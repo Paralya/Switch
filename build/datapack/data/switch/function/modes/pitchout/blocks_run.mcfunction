@@ -1,7 +1,9 @@
 
 #> switch:modes/pitchout/blocks_run
 #
-# @within	switch:modes/pitchout/second
+# @executed	as @a[tag=!detached,gamemode=adventure]
+#
+# @within	switch:modes/pitchout/second [ as @a[tag=!detached,gamemode=adventure] ]
 #
 
 execute store result score #x switch.data run data get entity @s Pos[0]

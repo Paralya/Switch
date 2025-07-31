@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/rainbow_road/teleport_players
 #
-# @within	switch:maps/survival/rainbow_road/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/rainbow_road/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 24040.5 139.69 24076.5 run tp @s ~0 ~ ~-0 90 0

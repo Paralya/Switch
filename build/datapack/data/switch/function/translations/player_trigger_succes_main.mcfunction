@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_succes_main
 #
+# @executed	in minecraft:overworld
+#
 # @within	switch:player/trigger/succes/main with storage switch:main input
 #
 

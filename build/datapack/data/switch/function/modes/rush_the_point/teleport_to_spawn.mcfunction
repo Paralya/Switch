@@ -2,7 +2,8 @@
 #> switch:modes/rush_the_point/teleport_to_spawn
 #
 # @within	switch:modes/rush_the_flag/joined
-#			switch:modes/rush_the_flag/score_point
+#			switch:modes/rush_the_flag/score_point [ as @p[tag=switch.has_blue_flag] ]
+#			switch:modes/rush_the_flag/score_point [ as @p[tag=switch.has_red_flag] ]
 #			switch:modes/rush_the_point/classes/main
 #			switch:modes/rush_the_point/joined
 #			switch:modes/rush_the_point/roles/main

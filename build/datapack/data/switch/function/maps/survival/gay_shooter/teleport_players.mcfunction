@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/gay_shooter/teleport_players
 #
-# @within	switch:maps/survival/gay_shooter/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/gay_shooter/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [114061.5d, 136.5d, 114016.5d]

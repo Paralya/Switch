@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/map_tick/trackmania_stadium_2_tp
 #
-# @within	switch:modes/kart_racer/map_tick/trackmania_stadium_2
+# @executed	as @e[tag=shopping_kart.kart,scores={switch.temp.compteur=1..}]
+#
+# @within	switch:modes/kart_racer/map_tick/trackmania_stadium_2 [ as @e[tag=shopping_kart.kart,scores={switch.temp.compteur=1..}] ]
 #
 
 # l1 = [37091, 139, 37015]

@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_blocks_cruise_control
 #
+# @executed	at @s
+#
 # @within	switch:modes/kart_racer/blocks/cruise_control
 #
 

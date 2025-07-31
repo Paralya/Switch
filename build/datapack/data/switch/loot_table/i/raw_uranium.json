@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:raw_uranium",
-								"minecraft:item_name": "Raw Uranium",
+								"minecraft:item_name": {
+									"text": "Raw Uranium"
+								},
 								"minecraft:lore": [
 									[
 										"",

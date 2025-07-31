@@ -1,6 +1,8 @@
 
 #> switch:modes/laser_game/shoot
 #
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..},sort=random] & at @s
+#
 # @within	switch:modes/laser_game/right_click
 #
 

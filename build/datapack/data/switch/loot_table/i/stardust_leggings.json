@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_leggings",
-								"minecraft:item_name": "Stardust Leggings",
+								"minecraft:item_name": {
+									"text": "Stardust Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

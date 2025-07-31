@@ -1,7 +1,9 @@
 
 #> switch:modes/spleef/give_items
 #
-# @within	switch:modes/spleef/second
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/spleef/second [ as @a[tag=!detached] & at @s ]
 #
 
 setblock 0 10 0 air

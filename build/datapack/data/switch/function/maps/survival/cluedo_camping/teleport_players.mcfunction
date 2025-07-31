@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/cluedo_camping/teleport_players
 #
-# @within	switch:maps/survival/cluedo_camping/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/cluedo_camping/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [54017.5d, 113.5d, 54016.5d]

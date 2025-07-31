@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/lightium_spawn/teleport_players
 #
-# @within	switch:maps/survival/lightium_spawn/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/lightium_spawn/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [97073.5d, 118.5d, 97054.5d]

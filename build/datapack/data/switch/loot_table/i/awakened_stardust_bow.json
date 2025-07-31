@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:awakened_stardust_bow",
-								"minecraft:item_name": "Awakened Stardust Bow",
+								"minecraft:item_name": {
+									"text": "Awakened Stardust Bow"
+								},
 								"minecraft:lore": [
 									[
 										"",

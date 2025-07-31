@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_axe",
-								"minecraft:item_name": "Obsidian Axe",
+								"minecraft:item_name": {
+									"text": "Obsidian Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

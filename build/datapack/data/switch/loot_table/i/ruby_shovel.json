@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_shovel",
-								"minecraft:item_name": "Ruby Shovel",
+								"minecraft:item_name": {
+									"text": "Ruby Shovel"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,6 +1,8 @@
 
 #> switch:translations/player_joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/joined
 #
 

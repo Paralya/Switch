@@ -1,6 +1,8 @@
 
 #> switch:modes/memory_mine/place_mine
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:memory_mine/right_click
 #
 

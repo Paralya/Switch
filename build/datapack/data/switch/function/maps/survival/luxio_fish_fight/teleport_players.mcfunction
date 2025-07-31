@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/luxio_fish_fight/teleport_players
 #
-# @within	switch:maps/survival/luxio_fish_fight/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/luxio_fish_fight/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [151012.5d, 127.5d, 151019.5d]

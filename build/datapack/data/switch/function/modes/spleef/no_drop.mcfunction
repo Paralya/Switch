@@ -1,7 +1,9 @@
 
 #> switch:modes/spleef/no_drop
 #
-# @within	switch:modes/spleef/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/spleef/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

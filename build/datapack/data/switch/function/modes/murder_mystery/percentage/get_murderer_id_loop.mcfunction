@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/percentage/get_murderer_id_loop
 #
+# @executed	as @a[scores={switch.temp.role=1}]
+#
 # @within	switch:modes/murder_mystery/percentage/get_murderer_id
 #			switch:modes/murder_mystery/percentage/get_murderer_id_loop
 #

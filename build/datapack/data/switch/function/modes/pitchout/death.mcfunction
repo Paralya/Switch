@@ -2,7 +2,7 @@
 #> switch:modes/pitchout/death
 #
 # @within	switch:modes/pitchout/joined
-#			switch:modes/pitchout/tick
+#			switch:modes/pitchout/tick [ as @a[tag=!detached,scores={switch.alive=1..},predicate=switch:in_water,sort=random] ]
 #
 
 function switch:translations/modes_pitchout_death

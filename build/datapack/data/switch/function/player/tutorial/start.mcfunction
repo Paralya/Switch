@@ -1,6 +1,8 @@
 
 #> switch:player/tutorial/start
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/set_id
 #
 

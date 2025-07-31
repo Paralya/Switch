@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/secrets/old_japan_apocalypse/item_tick
 #
-# @within	switch:modes/infected/secrets/old_japan_apocalypse/_tick
+# @executed	at @s
+#
+# @within	switch:modes/infected/secrets/old_japan_apocalypse/_tick [ at @s ]
 #
 
 # Owner become nearest human

@@ -1,8 +1,10 @@
 
 #> switch:modes/one_shot/respawn/compare_distance
 #
-# @within	switch:modes/one_shot/respawn/get_marker_distance
-#			switch:modes/one_shot/respawn/get_player_distance
+# @executed	at @s & as @n[tag=switch.respawn,distance=0.1..]
+#
+# @within	switch:modes/one_shot/respawn/get_marker_distance [ at @s & as @n[tag=switch.respawn,distance=0.1..] ]
+#			switch:modes/one_shot/respawn/get_player_distance [ as @a[tag=!detached] ]
 #
 
 ## Real

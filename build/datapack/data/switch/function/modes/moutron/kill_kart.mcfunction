@@ -1,7 +1,9 @@
 
 #> switch:modes/moutron/kill_kart
 #
-# @within	switch:modes/moutron/tick
+# @executed	as @e[tag=shopping_kart.kart,scores={shopping_kart.engine=..300}]
+#
+# @within	switch:modes/moutron/tick [ as @e[tag=shopping_kart.kart,scores={shopping_kart.engine=..300}] ]
 #
 
 # Dismount passengers and kill them

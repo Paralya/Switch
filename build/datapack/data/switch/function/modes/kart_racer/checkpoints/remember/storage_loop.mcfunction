@@ -1,6 +1,8 @@
 
 #> switch:modes/kart_racer/checkpoints/remember/storage_loop
 #
+# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+#
 # @within	switch:modes/kart_racer/checkpoints/remember/main
 #			switch:modes/kart_racer/checkpoints/remember/storage_loop
 #

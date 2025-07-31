@@ -1,6 +1,8 @@
 
 #> switch:engine/voting_time/player_join
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/make_join
 #			switch:player/trigger/attach/real_attach
 #

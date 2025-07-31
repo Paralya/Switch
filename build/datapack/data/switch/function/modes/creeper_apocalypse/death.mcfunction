@@ -2,7 +2,7 @@
 #> switch:modes/creeper_apocalypse/death
 #
 # @within	switch:modes/creeper_apocalypse/joined
-#			switch:modes/creeper_apocalypse/process_end
+#			switch:modes/creeper_apocalypse/process_end [ as @a[tag=!detached,sort=random] ]
 #
 
 function switch:translations/modes_creeper_apocalypse_death

@@ -2,8 +2,8 @@
 #> switch:modes/boat_race/death
 #
 # @within	switch:modes/boat_race/joined
-#			switch:modes/boat_race/process_end
-#			switch:modes/boat_race/tick
+#			switch:modes/boat_race/process_end [ as @a[tag=!detached,sort=random] ]
+#			switch:modes/boat_race/tick [ as @a[scores={switch.alive=1..}] & at @s ]
 #
 
 scoreboard players set @s switch.alive 0

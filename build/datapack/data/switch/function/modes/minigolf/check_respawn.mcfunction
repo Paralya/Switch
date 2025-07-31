@@ -1,7 +1,9 @@
 
 #> switch:modes/minigolf/check_respawn
 #
-# @within	switch:modes/minigolf/tick
+# @executed	as @a[scores={switch.alive=1},predicate=golf_ball:has_vehicle] & at @s
+#
+# @within	switch:modes/minigolf/tick [ as @a[scores={switch.alive=1},predicate=golf_ball:has_vehicle] & at @s ]
 #
 
 execute if block ~ ~.5 ~ structure_void run scoreboard players add @s switch.temp.respawn 10

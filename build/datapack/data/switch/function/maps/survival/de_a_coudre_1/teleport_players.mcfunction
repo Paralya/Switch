@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/de_a_coudre_1/teleport_players
 #
-# @within	switch:maps/survival/de_a_coudre_1/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/de_a_coudre_1/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [29043.5d, 174.5d, 29036.5d]

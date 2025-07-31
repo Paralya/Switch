@@ -48,7 +48,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_leggings",
-								"minecraft:item_name": "Adamantium Leggings",
+								"minecraft:item_name": {
+									"text": "Adamantium Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

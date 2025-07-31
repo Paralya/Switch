@@ -1,6 +1,8 @@
 
 #> switch:modes/block_party/record_tellraw
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
 # @within	switch:modes/block_party/record_save with storage switch:records block_party
 #			switch:modes/block_party/start with storage switch:records block_party
 #

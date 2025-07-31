@@ -2,7 +2,7 @@
 #> switch:modes/one_shot/respawn/main
 #
 # @within	switch:modes/one_shot/death
-#			switch:modes/one_shot/start
+#			switch:modes/one_shot/start [ as @a[tag=!detached] ]
 #
 
 # Get the respawn point with the highest distance to a player

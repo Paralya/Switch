@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_rush_the_point_fireball_no_cooldown
 #
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..},nbt={...}] & at @s
+#
 # @within	switch:modes/rush_the_point/fireball/no_cooldown
 #
 

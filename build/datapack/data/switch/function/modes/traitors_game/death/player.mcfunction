@@ -2,7 +2,7 @@
 #> switch:modes/traitors_game/death/player
 #
 # @within	switch:modes/traitors_game/joined
-#			switch:modes/traitors_game/process_end
+#			switch:modes/traitors_game/process_end [ as @a[tag=!detached,sort=random] ]
 #
 
 # Voleur (Floupy role = 7)

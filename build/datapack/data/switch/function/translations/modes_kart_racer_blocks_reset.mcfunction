@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_blocks_reset
 #
+# @executed	at @s
+#
 # @within	switch:modes/kart_racer/blocks/reset
 #
 

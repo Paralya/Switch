@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_pickaxe",
-								"minecraft:item_name": "Adamantium Pickaxe",
+								"minecraft:item_name": {
+									"text": "Adamantium Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

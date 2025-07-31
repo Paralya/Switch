@@ -1,7 +1,9 @@
 
 #> switch:modes/pillars_of_fortune/swap/player_1
 #
-# @within	switch:modes/pillars_of_fortune/swap/main
+# @executed	as @r[tag=switch.to_swap] & at @s
+#
+# @within	switch:modes/pillars_of_fortune/swap/main [ as @r[tag=switch.to_swap] & at @s ]
 #
 
 # Summon temporary marker to keep player's position

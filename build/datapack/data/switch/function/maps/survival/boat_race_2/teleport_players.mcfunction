@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/boat_race_2/teleport_players
 #
-# @within	switch:maps/survival/boat_race_2/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/boat_race_2/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 51069.5 159 51091.5 run tp @s ~0 ~ ~0 180 0

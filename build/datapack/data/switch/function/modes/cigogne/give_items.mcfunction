@@ -1,7 +1,9 @@
 
 #> switch:modes/cigogne/give_items
 #
-# @within	switch:modes/cigogne/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/cigogne/start [ as @a[tag=!detached] ]
 #
 
 attribute @s attack_speed base set 1024

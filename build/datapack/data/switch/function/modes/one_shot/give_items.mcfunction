@@ -2,7 +2,7 @@
 #> switch:modes/one_shot/give_items
 #
 # @within	switch:modes/one_shot/joined
-#			switch:modes/one_shot/second
+#			switch:modes/one_shot/second [ as @a[tag=!detached] & at @s ]
 #
 
 # Give items to the player

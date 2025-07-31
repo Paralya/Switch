@@ -1,6 +1,8 @@
 
 #> switch:translations/engine_check_coupdetat
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/check_coupdetat
 #
 

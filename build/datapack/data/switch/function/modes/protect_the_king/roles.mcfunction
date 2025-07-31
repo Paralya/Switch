@@ -1,7 +1,9 @@
 
 #> switch:modes/protect_the_king/roles
 #
-# @within	switch:modes/protect_the_king/start
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
+# @within	switch:modes/protect_the_king/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 # Role selection

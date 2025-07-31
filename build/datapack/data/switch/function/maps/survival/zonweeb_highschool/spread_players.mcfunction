@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/zonweeb_highschool/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/zonweeb_highschool/teleport_players
 #
 

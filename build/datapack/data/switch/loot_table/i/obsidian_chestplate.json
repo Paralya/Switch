@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_chestplate",
-								"minecraft:item_name": "Obsidian Chestplate",
+								"minecraft:item_name": {
+									"text": "Obsidian Chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

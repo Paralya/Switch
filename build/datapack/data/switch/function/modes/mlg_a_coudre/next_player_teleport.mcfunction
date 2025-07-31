@@ -1,8 +1,10 @@
 
 #> switch:modes/mlg_a_coudre/next_player_teleport
 #
-# @within	switch:modes/mlg_a_coudre/next_player
-#			switch:modes/mlg_a_coudre/start
+# @executed	as @a[scores={switch.temp.lives=1..}]
+#
+# @within	switch:modes/mlg_a_coudre/next_player [ as @a[scores={switch.temp.lives=1..}] ]
+#			switch:modes/mlg_a_coudre/start [ as @a[tag=!detached] ]
 #
 
 scoreboard players set #success switch.data 1

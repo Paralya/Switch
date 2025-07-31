@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/fireball/set_motion
 #
-# @within	switch:modes/fireblast/fireball/right_click
+# @executed	as @e[type=fireball,tag=switch.new]
+#
+# @within	switch:modes/fireblast/fireball/right_click [ as @e[type=fireball,tag=switch.new] ]
 #
 
 execute store result entity @s Motion[0] double 0.001 run data get storage switch:main Pos[0]

@@ -48,7 +48,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_helmet",
-								"minecraft:item_name": "Adamantium Helmet",
+								"minecraft:item_name": {
+									"text": "Adamantium Helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

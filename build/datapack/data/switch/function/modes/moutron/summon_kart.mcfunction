@@ -1,7 +1,9 @@
 
 #> switch:modes/moutron/summon_kart
 #
-# @within	switch:modes/moutron/second
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/moutron/second [ as @a[tag=!detached] & at @s ]
 #
 
 # Tag the current player to ride the new kart

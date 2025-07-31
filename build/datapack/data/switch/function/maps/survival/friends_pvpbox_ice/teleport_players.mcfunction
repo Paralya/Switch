@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/friends_pvpbox_ice/teleport_players
 #
-# @within	switch:maps/survival/friends_pvpbox_ice/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/friends_pvpbox_ice/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [11012.5d, 123.5d, 11044.5d]

@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_point/advancements/break_obsidian
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:rush_the_point/break_obsidian
 #
 

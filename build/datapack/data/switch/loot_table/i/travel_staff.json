@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:travel_staff",
-								"minecraft:item_name": "Travel Staff",
+								"minecraft:item_name": {
+									"text": "Travel Staff"
+								},
 								"minecraft:lore": [
 									[
 										"",

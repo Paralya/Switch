@@ -1,7 +1,9 @@
 
 #> switch:player/kill_out_of_map
 #
-# @within	switch:tick
+# @executed	as @a[tag=!detached,gamemode=!spectator] & at @s
+#
+# @within	switch:tick [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
 #
 
 function switch:translations/player_kill_out_of_map

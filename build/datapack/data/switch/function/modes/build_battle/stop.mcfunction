@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/stop
 #
-# @within	switch:modes/build_battle/calls/stop
+# @executed	in switch:build_battle
+#
+# @within	switch:modes/build_battle/calls/stop [ in switch:build_battle ]
 #
 
 execute as @e[tag=switch.build_battle_marker] at @s run function switch:modes/build_battle/kill_marker

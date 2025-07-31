@@ -1,6 +1,8 @@
 
 #> switch:modes/capture_the_flag/right_click
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:capture_the_flag/right_click
 #
 

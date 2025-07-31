@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/sudoku_craft/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/sudoku_craft/teleport_players
 #
 

@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_boots",
-								"minecraft:item_name": "Californium Boots",
+								"minecraft:item_name": {
+									"text": "Californium Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

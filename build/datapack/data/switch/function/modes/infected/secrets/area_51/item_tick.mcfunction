@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/secrets/area_51/item_tick
 #
-# @within	switch:modes/infected/secrets/area_51/_tick
+# @executed	at @s
+#
+# @within	switch:modes/infected/secrets/area_51/_tick [ at @s ]
 #
 
 # Owner become nearest human

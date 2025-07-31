@@ -56,7 +56,9 @@
 				}
 			],
 			"minecraft:item_model": "switch:emerald_sword",
-			"minecraft:item_name": "Emerald Sword",
+			"minecraft:item_name": {
+				"text": "Emerald Sword"
+			},
 			"minecraft:lore": [
 				[
 					"",

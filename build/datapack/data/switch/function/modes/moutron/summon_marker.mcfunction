@@ -1,7 +1,9 @@
 
 #> switch:modes/moutron/summon_marker
 #
-# @within	switch:modes/moutron/tick
+# @executed	at @s & positioned ~ ~.5 ~
+#
+# @within	switch:modes/moutron/tick [ at @s & positioned ~ ~.5 ~ ]
 #
 
 # Remove jump strength

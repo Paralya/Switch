@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/joined
 #
-# @within	switch:modes/build_battle/calls/joined
+# @executed	in switch:build_battle
+#
+# @within	switch:modes/build_battle/calls/joined [ in switch:build_battle ]
 #
 
 ## New player

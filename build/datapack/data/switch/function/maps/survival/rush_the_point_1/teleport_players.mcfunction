@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/rush_the_point_1/teleport_players
 #
-# @within	switch:maps/survival/rush_the_point_1/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/rush_the_point_1/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [14039.5d, 141.5d, 13963.5d]

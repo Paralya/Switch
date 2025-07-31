@@ -3,7 +3,7 @@
 #
 # @within	switch:modes/pitchout/map_1/tp_give
 #			switch:modes/pitchout/map_halloween/tp_give
-#			switch:modes/pitchout/start
+#			switch:modes/pitchout/start [ as @a[tag=!detached] ]
 #
 
 execute if entity @s[scores={switch.alive=1}] run scoreboard players set #points switch.data 333

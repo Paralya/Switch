@@ -24,7 +24,9 @@
 									"hide_tooltip": true
 								},
 								"minecraft:item_model": "minecraft:rotten_flesh",
-								"minecraft:item_name": "Zombie Head",
+								"minecraft:item_name": {
+									"text": "Zombie Head"
+								},
 								"minecraft:lore": [
 									[
 										"",

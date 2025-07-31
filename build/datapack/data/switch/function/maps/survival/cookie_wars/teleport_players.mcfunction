@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/cookie_wars/teleport_players
 #
-# @within	switch:maps/survival/cookie_wars/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/cookie_wars/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [49148.5d, 141.5d, 49130.5d]

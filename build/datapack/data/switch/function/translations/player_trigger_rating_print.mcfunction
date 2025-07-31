@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_rating_print
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/rating/print with storage switch:temp input
 #
 

@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:deepslate_adamantium_ore",
-								"minecraft:item_name": "Deepslate Adamantium Ore",
+								"minecraft:item_name": {
+									"text": "Deepslate Adamantium Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

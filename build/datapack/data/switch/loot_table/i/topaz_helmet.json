@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_helmet",
-								"minecraft:item_name": "Topaz Helmet",
+								"minecraft:item_name": {
+									"text": "Topaz Helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,6 +1,8 @@
 
 #> switch:utils/get_random/macro
 #
+# @executed	in switch:game
+#
 # @within	switch:utils/get_random/main with storage switch:main temp
 #
 

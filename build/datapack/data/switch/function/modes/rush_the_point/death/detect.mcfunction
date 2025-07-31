@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/death/detect
 #
-# @within	switch:modes/rush_the_point/tick_common
+# @executed	as @e[type=marker,tag=...]
+#
+# @within	switch:modes/rush_the_point/tick_common [ as @e[type=marker,tag=...] ]
 #
 
 # Detect if linked player is missing

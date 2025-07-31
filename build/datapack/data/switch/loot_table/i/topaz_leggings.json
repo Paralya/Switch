@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_leggings",
-								"minecraft:item_name": "Topaz Leggings",
+								"minecraft:item_name": {
+									"text": "Topaz Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

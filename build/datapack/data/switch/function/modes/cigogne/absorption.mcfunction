@@ -1,7 +1,9 @@
 
 #> switch:modes/cigogne/absorption
 #
-# @within	switch:modes/cigogne/tick
+# @executed	as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption"}]}]
+#
+# @within	switch:modes/cigogne/tick [ as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption"}]}] ]
 #
 
 effect clear @s absorption

@@ -1,7 +1,9 @@
 
 #> switch:player/trigger/succes/entry
 #
-# @within	switch:player/trigger/main
+# @executed	in minecraft:overworld
+#
+# @within	switch:player/trigger/main [ in minecraft:overworld ]
 #
 
 scoreboard players set @s switch.trigger.succes 0

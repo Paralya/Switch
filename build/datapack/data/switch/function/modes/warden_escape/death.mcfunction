@@ -2,7 +2,7 @@
 #> switch:modes/warden_escape/death
 #
 # @within	switch:modes/warden_escape/joined
-#			switch:modes/warden_escape/process_end
+#			switch:modes/warden_escape/process_end [ as @a[tag=!detached,sort=random] ]
 #
 
 function switch:translations/modes_warden_escape_death

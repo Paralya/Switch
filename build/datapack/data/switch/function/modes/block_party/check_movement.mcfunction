@@ -1,7 +1,9 @@
 
 #> switch:modes/block_party/check_movement
 #
-# @within	switch:modes/block_party/second
+# @executed	as @a[tag=!detached,gamemode=adventure]
+#
+# @within	switch:modes/block_party/second [ as @a[tag=!detached,gamemode=adventure] ]
 #
 
 execute store result score #x switch.data run data get entity @s Pos[0] 10

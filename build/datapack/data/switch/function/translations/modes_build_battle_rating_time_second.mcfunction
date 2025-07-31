@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_build_battle_rating_time_second
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/rating_time/second
 #
 

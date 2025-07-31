@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:solarium_block",
-								"minecraft:item_name": "Solarium Block",
+								"minecraft:item_name": {
+									"text": "Solarium Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

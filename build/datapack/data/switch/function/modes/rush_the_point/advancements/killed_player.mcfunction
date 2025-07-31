@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_point/advancements/killed_player
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:rush_the_point/killed_player
 #
 

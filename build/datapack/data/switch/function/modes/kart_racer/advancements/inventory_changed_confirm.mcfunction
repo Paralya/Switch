@@ -1,8 +1,10 @@
 
 #> switch:modes/kart_racer/advancements/inventory_changed_confirm
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/kart_racer/advancements/inventory_changed
-#			switch:modes/kart_racer/give_items
+#			switch:modes/kart_racer/give_items [ as @a[tag=!detached] & at @s ]
 #
 
 data modify storage switch:main Inventory set from entity @s Inventory

@@ -51,7 +51,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_helmet",
-								"minecraft:item_name": "Uranium Helmet",
+								"minecraft:item_name": {
+									"text": "Uranium Helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

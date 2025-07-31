@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/player_tick
 #
-# @within	switch:modes/infected/tick
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/infected/tick [ as @a[tag=!detached] ]
 #
 
 # Give saturation not indefinitely

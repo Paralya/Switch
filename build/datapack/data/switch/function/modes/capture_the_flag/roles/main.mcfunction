@@ -2,7 +2,7 @@
 #> switch:modes/capture_the_flag/roles/main
 #
 # @within	switch:modes/capture_the_flag/joined
-#			switch:modes/capture_the_flag/start
+#			switch:modes/capture_the_flag/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 tag @s add switch.temp

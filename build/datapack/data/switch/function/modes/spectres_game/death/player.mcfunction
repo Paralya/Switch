@@ -2,7 +2,7 @@
 #> switch:modes/spectres_game/death/player
 #
 # @within	switch:modes/spectres_game/joined
-#			switch:modes/spectres_game/process_end
+#			switch:modes/spectres_game/process_end [ as @a[tag=!detached,sort=random] ]
 #
 
 function switch:utils/classic_death

@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/death/detect
 #
-# @within	switch:modes/spectres_game/tick
+# @executed	as @e[type=marker,tag=...]
+#
+# @within	switch:modes/spectres_game/tick [ as @e[type=marker,tag=...] ]
 #
 
 # Detect if linked player is missing

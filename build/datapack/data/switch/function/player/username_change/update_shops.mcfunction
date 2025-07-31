@@ -1,6 +1,8 @@
 
 #> switch:player/username_change/update_shops
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/username_change/update_everything {username:"$(username)", old_username:"$(old_username)"}
 #
 

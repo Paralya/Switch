@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:darkium_sword",
-								"minecraft:item_name": "Darkium Sword",
+								"minecraft:item_name": {
+									"text": "Darkium Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

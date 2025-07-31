@@ -1,7 +1,10 @@
 
 #> switch:modes/rush_the_flag/flag_hotbar
 #
-# @within	switch:modes/rush_the_flag/tick
+# @executed	as @a[tag=switch.has_blue_flag]
+#
+# @within	switch:modes/rush_the_flag/tick [ as @a[tag=switch.has_blue_flag] ]
+#			switch:modes/rush_the_flag/tick [ as @a[tag=switch.has_red_flag] ]
 #
 
 item replace entity @s weapon.offhand with air

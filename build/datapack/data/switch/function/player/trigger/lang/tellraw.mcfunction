@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/lang/tellraw
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/lang/main
 #			switch:player/trigger/lang/tick_undefined
 #

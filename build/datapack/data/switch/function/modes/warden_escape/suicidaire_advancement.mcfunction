@@ -1,7 +1,9 @@
 
 #> switch:modes/warden_escape/suicidaire_advancement
 #
-# @within	switch:modes/warden_escape/second
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/warden_escape/second [ as @a[tag=!detached] ]
 #
 
 scoreboard players set #count switch.data 0

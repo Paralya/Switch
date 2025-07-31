@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_glassrunner_shop_turtle
 #
+# @executed	as @a[tag=!detached] & at @s
+#
 # @within	switch:modes/glassrunner/shop/turtle
 #
 

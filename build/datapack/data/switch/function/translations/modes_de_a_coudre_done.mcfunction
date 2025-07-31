@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_de_a_coudre_done
 #
+# @executed	at @s
+#
 # @within	switch:modes/de_a_coudre/done
 #
 

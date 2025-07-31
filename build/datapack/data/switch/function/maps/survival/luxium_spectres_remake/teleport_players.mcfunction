@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/luxium_spectres_remake/teleport_players
 #
-# @within	switch:maps/survival/luxium_spectres_remake/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/luxium_spectres_remake/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [142098.5d, 143.5d, 142069.5d]

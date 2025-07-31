@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/trackmania_stadium_2/teleport_players
 #
-# @within	switch:maps/survival/trackmania_stadium_2/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/trackmania_stadium_2/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 37356.5 110.69 37180.5 run tp @s ~0 ~ ~0 180 0

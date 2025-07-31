@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_boots",
-								"minecraft:item_name": "Ruby Boots",
+								"minecraft:item_name": {
+									"text": "Ruby Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

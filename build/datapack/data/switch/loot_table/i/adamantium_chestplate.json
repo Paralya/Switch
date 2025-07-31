@@ -48,7 +48,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_chestplate",
-								"minecraft:item_name": "Adamantium Chestplate",
+								"minecraft:item_name": {
+									"text": "Adamantium Chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

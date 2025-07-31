@@ -1,6 +1,8 @@
 
 #> switch:translations/engine_add_money
 #
+# @executed	as the player & at current position
+#
 # @within	switch:engine/add_money
 #
 

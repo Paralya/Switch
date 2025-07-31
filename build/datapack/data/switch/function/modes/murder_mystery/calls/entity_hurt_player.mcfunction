@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/calls/entity_hurt_player
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:murder_mystery/entity_hurt_player
 #
 

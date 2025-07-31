@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/succes/main
 #
+# @executed	in minecraft:overworld
+#
 # @within	switch:player/trigger/succes/entry with storage switch:main input
 #
 

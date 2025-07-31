@@ -1,6 +1,8 @@
 
 #> switch:advancements/jumps/pink
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:visible/jump_pink
 #
 

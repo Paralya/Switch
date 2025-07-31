@@ -2,7 +2,7 @@
 #> switch:modes/infected/death/early_respawn
 #
 # @within	switch:modes/infected/joined
-#			switch:modes/infected/start
+#			switch:modes/infected/start [ as @a[tag=!detached] ]
 #
 
 team join switch.temp.human @s

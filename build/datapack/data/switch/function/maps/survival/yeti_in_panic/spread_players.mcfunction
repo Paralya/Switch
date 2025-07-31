@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/yeti_in_panic/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/yeti_in_panic/teleport_players
 #
 

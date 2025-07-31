@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/coupdetat/launch_vote
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/coupdetat/action with storage switch:temp input
 #
 

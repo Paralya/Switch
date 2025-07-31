@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/rating_time/next_rating
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/rating_time/time_up
 #
 

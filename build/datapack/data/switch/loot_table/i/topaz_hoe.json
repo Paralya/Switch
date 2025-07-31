@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_hoe",
-								"minecraft:item_name": "Topaz Hoe",
+								"minecraft:item_name": {
+									"text": "Topaz Hoe"
+								},
 								"minecraft:lore": [
 									[
 										"",

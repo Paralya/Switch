@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/fireblast_bubulle/teleport_players
 #
-# @within	switch:maps/survival/fireblast_bubulle/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/fireblast_bubulle/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [163022.5d, 167.5d, 163033.5d]

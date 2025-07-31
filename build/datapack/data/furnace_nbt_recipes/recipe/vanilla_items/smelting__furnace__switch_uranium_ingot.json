@@ -22,7 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "switch:uranium_ingot",
-			"minecraft:item_name": "Uranium Ingot",
+			"minecraft:item_name": {
+				"text": "Uranium Ingot"
+			},
 			"minecraft:lore": [
 				[
 					"",

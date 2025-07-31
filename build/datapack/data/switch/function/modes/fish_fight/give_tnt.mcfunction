@@ -1,7 +1,9 @@
 
 #> switch:modes/fish_fight/give_tnt
 #
-# @within	switch:modes/fish_fight/second
+# @executed	as @r[tag=!detached,gamemode=!spectator]
+#
+# @within	switch:modes/fish_fight/second [ as @r[tag=!detached,gamemode=!spectator] ]
 #
 
 give @s tnt

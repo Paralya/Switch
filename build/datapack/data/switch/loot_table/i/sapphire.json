@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:sapphire",
-								"minecraft:item_name": "Sapphire",
+								"minecraft:item_name": {
+									"text": "Sapphire"
+								},
 								"minecraft:lore": [
 									[
 										"",

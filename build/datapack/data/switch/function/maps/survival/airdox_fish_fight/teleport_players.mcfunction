@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/airdox_fish_fight/teleport_players
 #
-# @within	switch:maps/survival/airdox_fish_fight/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/airdox_fish_fight/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [156111.5d, 120.5d, 156087.5d]

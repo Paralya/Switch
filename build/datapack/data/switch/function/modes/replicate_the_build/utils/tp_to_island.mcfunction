@@ -1,6 +1,8 @@
 
 #> switch:modes/replicate_the_build/utils/tp_to_island
 #
+# @executed	as @a[scores={switch.alive=1..},sort=random]
+#
 # @within	switch:modes/replicate_the_build/start/select_teams
 #
 

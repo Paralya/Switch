@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:steel_ingot",
-								"minecraft:item_name": "Steel Ingot",
+								"minecraft:item_name": {
+									"text": "Steel Ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

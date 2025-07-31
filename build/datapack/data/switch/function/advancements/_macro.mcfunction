@@ -1,6 +1,8 @@
 
 #> switch:advancements/_macro
 #
+# @executed	as the player & at current position
+#
 # @within	switch:advancements/_pre_macro with storage switch:main input
 #
 

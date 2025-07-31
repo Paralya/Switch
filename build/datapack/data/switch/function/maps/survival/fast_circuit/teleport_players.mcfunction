@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/fast_circuit/teleport_players
 #
-# @within	switch:maps/survival/fast_circuit/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/fast_circuit/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 20209.0 90.69 19587.5 run tp @s ~0 ~ ~-0 0 0

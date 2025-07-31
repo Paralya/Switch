@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:darkium_block",
-								"minecraft:item_name": "Darkium Block",
+								"minecraft:item_name": {
+									"text": "Darkium Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

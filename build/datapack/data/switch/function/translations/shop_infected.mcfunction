@@ -1,6 +1,8 @@
 
 #> switch:translations/shop_infected
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:shop/infected
 #
 

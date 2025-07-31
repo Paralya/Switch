@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_axe",
-								"minecraft:item_name": "Uranium Axe",
+								"minecraft:item_name": {
+									"text": "Uranium Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

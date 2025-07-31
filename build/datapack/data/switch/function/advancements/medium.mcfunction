@@ -1,6 +1,8 @@
 
 #> switch:advancements/medium
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:visible/6
 #			advancement switch:visible/10
 #			advancement switch:visible/15

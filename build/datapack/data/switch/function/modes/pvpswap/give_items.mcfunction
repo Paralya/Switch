@@ -1,7 +1,9 @@
 
 #> switch:modes/pvpswap/give_items
 #
-# @within	switch:modes/pvpswap/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/pvpswap/start [ as @a[tag=!detached] ]
 #
 
 item replace entity @s armor.head with leather_helmet[enchantments={projectile_protection:2}]

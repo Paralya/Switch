@@ -1,22 +1,28 @@
 
 #> switch:maps/spread_one_player
 #
-# @within	switch:modes/block_party/core/pick_random_art
+# @executed	as @e[tag=switch.block_party_mob]
+#
+# @within	switch:modes/block_party/core/pick_random_art [ as @e[tag=switch.block_party_mob] ]
 #			switch:modes/coin_chaser/respawn
-#			switch:modes/coin_chaser/summon_gold
-#			switch:modes/creeper_apocalypse/second
+#			switch:modes/coin_chaser/summon_gold [ as @e[type=item,tag=switch.new_coin] ]
+#			switch:modes/creeper_apocalypse/second [ as @e[limit=8] ]
+#			switch:modes/creeper_apocalypse/second [ as @e[limit=48] ]
+#			switch:modes/creeper_apocalypse/second [ as @e[limit=6] ]
+#			switch:modes/creeper_apocalypse/second [ as @e[limit=24] ]
 #			switch:modes/fireblast/place_power_up
-#			switch:modes/fish_fight/teams_tp/only_one_winner
+#			switch:modes/fish_fight/teams_tp/only_one_winner [ as @a[tag=!detached] ]
 #			switch:modes/fish_fight/teams_tp/tp_give
-#			switch:modes/fish_fight/tick
+#			switch:modes/fish_fight/tick [ as @a[scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] ]
+#			switch:modes/fish_fight/tick [ as @e[type=axolotl,predicate=switch:in_water] ]
 #			switch:modes/one_shot/respawn/spawn_marker
-#			switch:modes/protect_the_king/better_tp
+#			switch:modes/protect_the_king/better_tp [ at @s ]
 #			switch:modes/spectres_game/death/revive_visible
-#			switch:modes/spectres_game/obsidian_effect
-#			switch:modes/spectres_game/task_obsidian
+#			switch:modes/spectres_game/obsidian_effect [ as @e[type=iron_golem,tag=switch.new] ]
+#			switch:modes/spectres_game/task_obsidian [ as @e[type=chicken,tag=switch.new] ]
 #			switch:modes/thunder_spear/give_and_teleport
 #			switch:modes/traitors_game/death/to_tp
-#			switch:modes/traitors_game/summon_lootboxes
+#			switch:modes/traitors_game/summon_lootboxes [ as @e[type=chest_minecart,tag=switch.new] ]
 #
 
 # Spread one player on the survival maps

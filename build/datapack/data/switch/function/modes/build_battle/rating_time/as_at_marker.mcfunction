@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/rating_time/as_at_marker
 #
-# @within	switch:modes/build_battle/rating_time/choose_player
+# @executed	as @e[tag=switch.build_battle_marker,predicate=switch:has_same_temp_id] & at @s
+#
+# @within	switch:modes/build_battle/rating_time/choose_player [ as @e[tag=switch.build_battle_marker,predicate=switch:has_same_temp_id] & at @s ]
 #
 
 # Add a temporary tag

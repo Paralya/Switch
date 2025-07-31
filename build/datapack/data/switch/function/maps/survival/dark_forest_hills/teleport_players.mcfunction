@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/dark_forest_hills/teleport_players
 #
-# @within	switch:maps/survival/dark_forest_hills/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/dark_forest_hills/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [39051.5d, 136.5d, 39191.5d]

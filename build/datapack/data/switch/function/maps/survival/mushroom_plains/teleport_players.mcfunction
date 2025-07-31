@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/mushroom_plains/teleport_players
 #
-# @within	switch:maps/survival/mushroom_plains/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/mushroom_plains/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [4043.5d, 134.5d, 4117.5d]

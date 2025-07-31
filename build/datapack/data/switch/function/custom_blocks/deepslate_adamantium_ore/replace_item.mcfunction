@@ -1,7 +1,9 @@
 
 #> switch:custom_blocks/deepslate_adamantium_ore/replace_item
 #
-# @within	switch:custom_blocks/deepslate_adamantium_ore/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:polished_deepslate"}},distance=..1]
+#
+# @within	switch:custom_blocks/deepslate_adamantium_ore/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:polished_deepslate"}},distance=..1] ]
 #
 
 # If silk touch applied

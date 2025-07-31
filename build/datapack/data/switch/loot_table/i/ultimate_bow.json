@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:ultimate_bow",
-								"minecraft:item_name": "Ultimate Bow",
+								"minecraft:item_name": {
+									"text": "Ultimate Bow"
+								},
 								"minecraft:lore": [
 									[
 										"",

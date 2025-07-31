@@ -48,7 +48,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:emerald_boots",
-								"minecraft:item_name": "Emerald Boots",
+								"minecraft:item_name": {
+									"text": "Emerald Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

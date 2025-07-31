@@ -1,6 +1,8 @@
 
 #> switch:modes/kart_racer/advancements/inventory_changed
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:kart_racer/inventory_changed
 #
 

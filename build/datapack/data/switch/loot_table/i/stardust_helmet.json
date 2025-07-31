@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_helmet",
-								"minecraft:item_name": "Stardust Helmet",
+								"minecraft:item_name": {
+									"text": "Stardust Helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

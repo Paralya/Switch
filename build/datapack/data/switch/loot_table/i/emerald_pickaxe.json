@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:emerald_pickaxe",
-								"minecraft:item_name": "Emerald Pickaxe",
+								"minecraft:item_name": {
+									"text": "Emerald Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

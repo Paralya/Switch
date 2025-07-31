@@ -22,7 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "switch:topaz",
-			"minecraft:item_name": "Topaz",
+			"minecraft:item_name": {
+				"text": "Topaz"
+			},
 			"minecraft:lore": [
 				[
 					"",

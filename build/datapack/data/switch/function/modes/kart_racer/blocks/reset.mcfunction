@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/blocks/reset
 #
-# @within	switch:modes/kart_racer/blocks/tick
+# @executed	at @s
+#
+# @within	switch:modes/kart_racer/blocks/tick [ at @s ]
 #
 
 ## Reset block

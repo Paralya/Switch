@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/zonweeb_highschool/teleport_players
 #
-# @within	switch:maps/survival/zonweeb_highschool/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/zonweeb_highschool/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [53115.5d, 109.5d, 53116.5d]

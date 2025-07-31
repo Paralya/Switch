@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/shop/arrow
 #
+# @executed	as @a[tag=!detached] & at @s
+#
 # @within	switch:modes/glassrunner/tick_player
 #
 

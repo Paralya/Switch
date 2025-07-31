@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/apply_properties_to_zombie
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/murder_mystery/kill_player
 #
 

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/nuketown/teleport_players
 #
-# @within	switch:maps/survival/nuketown/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/nuketown/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [72087.5d, 117.5d, 72105.5d]

@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/death/human_spawn
 #
-# @within	switch:modes/infected/second_start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/infected/second_start [ as @a[tag=!detached] & at @s ]
 #
 
 team join switch.temp.human @s

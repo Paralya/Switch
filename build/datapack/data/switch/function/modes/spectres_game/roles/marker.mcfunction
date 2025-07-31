@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/roles/marker
 #
-# @within	switch:modes/spectres_game/roles/main
+# @executed	as @e[tag=switch.new]
+#
+# @within	switch:modes/spectres_game/roles/main [ as @e[tag=switch.new] ]
 #
 
 scoreboard players operation @s switch.id = #player_id switch.id

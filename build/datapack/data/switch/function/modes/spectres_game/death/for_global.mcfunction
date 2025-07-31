@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/death/for_global
 #
-# @within	switch:modes/spectres_game/tick
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
+# @within	switch:modes/spectres_game/tick [ as @e[type=marker,tag=switch.player_dead] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

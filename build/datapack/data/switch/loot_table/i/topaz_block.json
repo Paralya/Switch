@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:topaz_block",
-								"minecraft:item_name": "Topaz Block",
+								"minecraft:item_name": {
+									"text": "Topaz Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

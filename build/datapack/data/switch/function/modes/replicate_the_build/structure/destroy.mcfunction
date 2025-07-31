@@ -1,10 +1,14 @@
 
 #> switch:modes/replicate_the_build/structure/destroy
 #
-# @within	switch:modes/replicate_the_build/round/4_end
-#			switch:modes/replicate_the_build/round/8_end
-#			switch:modes/replicate_the_build/stop
-#			switch:modes/replicate_the_build/utils/explose_island
+# @executed	as @e[type=marker,tag=switch.rtb.island]
+#
+# @within	switch:modes/replicate_the_build/round/4_end [ as @e[type=marker,tag=switch.rtb.island] ]
+#			switch:modes/replicate_the_build/round/8_end [ as @e[type=marker,tag=switch.rtb.island] ]
+#			switch:modes/replicate_the_build/round/8_end [ as @e[type=marker,tag=switch.rtb.center] ]
+#			switch:modes/replicate_the_build/stop [ as @e[type=marker,tag=switch.rtb.island] ]
+#			switch:modes/replicate_the_build/stop [ as @e[type=marker,tag=switch.rtb.center] ]
+#			switch:modes/replicate_the_build/utils/explose_island [ as @e[type=marker,tag=switch.rtb.island] & at @s ]
 #
 
 execute at @s positioned ~ ~ ~4 run fill ~-5 ~-3 ~-5 ~5 ~10 ~5 moving_piston replace air

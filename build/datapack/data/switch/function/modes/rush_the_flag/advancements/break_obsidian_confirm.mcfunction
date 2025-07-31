@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_flag/advancements/break_obsidian_confirm
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/rush_the_flag/advancements/break_obsidian
 #
 

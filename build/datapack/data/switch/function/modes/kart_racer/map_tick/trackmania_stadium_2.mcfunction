@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/map_tick/trackmania_stadium_2
 #
-# @within	switch:modes/kart_racer/tick
+# @executed	in switch:game
+#
+# @within	switch:modes/kart_racer/tick [ in switch:game ]
 #
 
 scoreboard players set @e[tag=shopping_kart.kart,x=37094,y=139,z=37015,distance=..2] switch.temp.compteur 1

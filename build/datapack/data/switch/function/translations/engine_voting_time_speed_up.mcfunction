@@ -1,6 +1,8 @@
 
 #> switch:translations/engine_voting_time_speed_up
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/voting_time/speed_up
 #
 

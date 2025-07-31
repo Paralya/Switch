@@ -1,7 +1,9 @@
 
 #> switch:modes/bombardement/record_save
 #
-# @within	switch:modes/bombardement/process_end
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
+# @within	switch:modes/bombardement/process_end [ as @a[tag=!detached,gamemode=!spectator] ]
 #
 
 loot replace entity @s hotbar.0 loot switch:get_username

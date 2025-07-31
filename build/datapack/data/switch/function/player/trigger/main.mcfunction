@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tick
 #			switch:player/trigger/rating/print_current_game
 #

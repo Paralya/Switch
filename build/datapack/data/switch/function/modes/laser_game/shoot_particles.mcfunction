@@ -1,8 +1,10 @@
 
 #> switch:modes/laser_game/shoot_particles
 #
-# @within	switch:modes/laser_game/shoot
-#			switch:modes/laser_game/shoot_particles
+# @executed	as @e[tag=iris.ray] & at @s
+#
+# @within	switch:modes/laser_game/shoot [ as @e[tag=iris.ray] & at @s ]
+#			switch:modes/laser_game/shoot_particles [ at @s ]
 #
 
 tp @s ~ ~ ~ facing entity @p[tag=switch.temp] eyes

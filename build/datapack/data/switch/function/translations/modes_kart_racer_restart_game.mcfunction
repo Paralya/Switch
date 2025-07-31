@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_restart_game
 #
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..}]
+#
 # @within	switch:modes/kart_racer/restart_game
 #
 

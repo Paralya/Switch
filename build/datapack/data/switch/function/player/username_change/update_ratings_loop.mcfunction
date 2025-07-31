@@ -1,6 +1,8 @@
 
 #> switch:player/username_change/update_ratings_loop
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/username_change/update_everything with storage switch:temp copy[0]
 #			switch:player/username_change/update_ratings_loop with storage switch:temp copy[0]
 #

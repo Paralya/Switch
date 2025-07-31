@@ -1,7 +1,9 @@
 
 #> switch:modes/warden_escape/player_tick
 #
-# @within	switch:modes/warden_escape/tick
+# @executed	as @a[tag=!detached,gamemode=adventure] & at @s
+#
+# @within	switch:modes/warden_escape/tick [ as @a[tag=!detached,gamemode=adventure] & at @s ]
 #
 
 data modify storage switch:main sus set value {anger:150}

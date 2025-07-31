@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_sword",
-								"minecraft:item_name": "Steel Sword",
+								"minecraft:item_name": {
+									"text": "Steel Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

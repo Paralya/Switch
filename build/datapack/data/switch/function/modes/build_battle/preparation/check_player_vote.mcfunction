@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/preparation/check_player_vote
 #
-# @within	switch:modes/build_battle/tick
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/build_battle/tick [ as @a[tag=!detached] ]
 #
 
 # Get new vote

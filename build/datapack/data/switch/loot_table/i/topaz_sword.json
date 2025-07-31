@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_sword",
-								"minecraft:item_name": "Topaz Sword",
+								"minecraft:item_name": {
+									"text": "Topaz Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,7 +1,9 @@
 
 #> switch:modes/protect_the_king/give_items
 #
-# @within	switch:modes/protect_the_king/start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/protect_the_king/start [ as @a[tag=!detached] & at @s ]
 #
 
 # Starter kit

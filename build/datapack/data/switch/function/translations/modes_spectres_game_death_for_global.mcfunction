@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_spectres_game_death_for_global
 #
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
 # @within	switch:modes/spectres_game/death/for_global
 #
 

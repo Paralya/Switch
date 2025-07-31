@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_minigolf_record_tellraw_macro
 #
+# @executed	as @a[tag=!...]
+#
 # @within	switch:modes/minigolf/record_tellraw_macro {shots:"$(shots)",player:"$(player)",time:"$(time)"}
 #
 

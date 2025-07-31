@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_blocks_engine_off
 #
+# @executed	at @s
+#
 # @within	switch:modes/kart_racer/blocks/engine_off
 #
 

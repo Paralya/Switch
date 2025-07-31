@@ -1,7 +1,9 @@
 
 #> switch:modes/beat_the_kings/death/detect
 #
-# @within	switch:modes/beat_the_kings/tick
+# @executed	as @e[type=marker,tag=...]
+#
+# @within	switch:modes/beat_the_kings/tick [ as @e[type=marker,tag=...] ]
 #
 
 # Detect if linked player is missing

@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/got_power_up
 #
-# @within	switch:modes/fireblast/tick
+# @executed	as @a[tag=!detached,gamemode=!spectator] & at @s
+#
+# @within	switch:modes/fireblast/tick [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
 #
 
 # Sugar: Speed 2 for 20s

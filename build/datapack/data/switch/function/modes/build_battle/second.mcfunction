@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/second
 #
-# @within	switch:modes/build_battle/calls/second
+# @executed	in switch:build_battle
+#
+# @within	switch:modes/build_battle/calls/second [ in switch:build_battle ]
 #
 
 scoreboard players add #build_battle_seconds switch.data 1

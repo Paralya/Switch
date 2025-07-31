@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/stats/sort_loop
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/stats/main
 #			switch:player/trigger/stats/sort_loop
 #

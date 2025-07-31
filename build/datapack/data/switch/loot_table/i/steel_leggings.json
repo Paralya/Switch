@@ -34,7 +34,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_leggings",
-								"minecraft:item_name": "Steel Leggings",
+								"minecraft:item_name": {
+									"text": "Steel Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

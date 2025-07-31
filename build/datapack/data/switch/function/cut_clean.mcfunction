@@ -1,7 +1,9 @@
 
 #> switch:cut_clean
 #
-# @within	switch:tick
+# @executed	as @e[type=item,tag=!switch.cut_clean,nbt={Age:2s}]
+#
+# @within	switch:tick [ as @e[type=item,tag=!switch.cut_clean,nbt={Age:2s}] ]
 #
 
 tag @s add switch.cut_clean

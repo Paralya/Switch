@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_shovel",
-								"minecraft:item_name": "Sapphire Shovel",
+								"minecraft:item_name": {
+									"text": "Sapphire Shovel"
+								},
 								"minecraft:lore": [
 									[
 										"",

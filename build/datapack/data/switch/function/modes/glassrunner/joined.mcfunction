@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/joined
 #
-# @within	switch:modes/glassrunner/calls/joined
+# @executed	positioned 3000 128 3000
+#
+# @within	switch:modes/glassrunner/calls/joined [ positioned 3000 128 3000 ]
 #
 
 clear @s

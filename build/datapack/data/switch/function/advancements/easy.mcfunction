@@ -1,6 +1,8 @@
 
 #> switch:advancements/easy
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:visible/1
 #			advancement switch:visible/2
 #			advancement switch:visible/3

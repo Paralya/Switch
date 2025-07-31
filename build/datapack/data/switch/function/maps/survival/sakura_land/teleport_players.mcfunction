@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/sakura_land/teleport_players
 #
-# @within	switch:maps/survival/sakura_land/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/sakura_land/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 19917.5 114.69 20039.5 run tp @s ~-0 ~ ~0 270 0

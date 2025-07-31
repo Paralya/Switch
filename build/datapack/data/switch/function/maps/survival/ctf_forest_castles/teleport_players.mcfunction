@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/ctf_forest_castles/teleport_players
 #
-# @within	switch:maps/survival/ctf_forest_castles/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/ctf_forest_castles/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [150019.5d, 134.5d, 150071.5d]

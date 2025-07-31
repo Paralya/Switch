@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/paralya_uhc_lobbies/teleport_players
 #
-# @within	switch:maps/survival/paralya_uhc_lobbies/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/paralya_uhc_lobbies/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [98027.5d, 154.5d, 98060.5d]

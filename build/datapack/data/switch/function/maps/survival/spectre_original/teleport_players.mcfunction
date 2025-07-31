@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/spectre_original/teleport_players
 #
-# @within	switch:maps/survival/spectre_original/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/spectre_original/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [2526.5d, 150.5d, 2573.5d]

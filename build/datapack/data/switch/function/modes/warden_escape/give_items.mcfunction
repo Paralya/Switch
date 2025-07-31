@@ -1,7 +1,9 @@
 
 #> switch:modes/warden_escape/give_items
 #
-# @within	switch:modes/warden_escape/start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/warden_escape/start [ as @a[tag=!detached] & at @s ]
 #
 
 

@@ -2,7 +2,7 @@
 #> switch:modes/traitors_game/death/drop_inventory
 #
 # @within	switch:modes/traitors_game/death/drop_inventory
-#			switch:modes/traitors_game/death/for_global
+#			switch:modes/traitors_game/death/for_global [ at @s ]
 #
 
 loot spawn ~ ~ ~ loot switch:temp_item

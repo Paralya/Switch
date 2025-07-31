@@ -1,6 +1,8 @@
 
 #> switch:modes/castagne/entity_hurt_player
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/castagne/calls/entity_hurt_player
 #
 

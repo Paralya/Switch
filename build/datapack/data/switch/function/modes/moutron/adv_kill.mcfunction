@@ -1,7 +1,9 @@
 
 #> switch:modes/moutron/adv_kill
 #
-# @within	switch:modes/moutron/death
+# @executed	at @s & as @p[gamemode=!spectator,distance=0.001..12]
+#
+# @within	switch:modes/moutron/death [ at @s & as @p[gamemode=!spectator,distance=0.001..12] ]
 #
 
 scoreboard players add @s switch.temp.kill 1

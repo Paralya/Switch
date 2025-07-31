@@ -3,7 +3,7 @@
 #
 # @within	switch:modes/moutron/joined
 #			switch:modes/moutron/kill_kart
-#			switch:modes/moutron/process_end
+#			switch:modes/moutron/process_end [ as @a[tag=!detached] ]
 #
 
 function switch:translations/modes_moutron_death

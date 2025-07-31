@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:solarium_ingot",
-								"minecraft:item_name": "Solarium Ingot",
+								"minecraft:item_name": {
+									"text": "Solarium Ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

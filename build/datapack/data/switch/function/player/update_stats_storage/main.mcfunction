@@ -1,7 +1,9 @@
 
 #> switch:player/update_stats_storage/main
 #
-# @within	switch:engine/restart
+# @executed	as @a
+#
+# @within	switch:engine/restart [ as @a ]
 #			switch:player/joined
 #			switch:stats/util_update_player
 #

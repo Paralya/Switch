@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/pitchout_halloween/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/pitchout_halloween/teleport_players
 #
 

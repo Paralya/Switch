@@ -1,7 +1,9 @@
 
 #> switch:modes/warden_escape/warden_sus
 #
-# @within	switch:modes/warden_escape/player_tick
+# @executed	as @e[type=warden,distance=..3,sort=nearest]
+#
+# @within	switch:modes/warden_escape/player_tick [ as @e[type=warden,distance=..3,sort=nearest] ]
 #
 
 scoreboard players set #success switch.data 0

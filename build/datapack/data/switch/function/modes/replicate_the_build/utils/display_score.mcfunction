@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/utils/display_score
 #
-# @within	switch:modes/replicate_the_build/round/7
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/replicate_the_build/round/7 [ as @a[tag=!detached] ]
 #
 
 tag @s add switch.temp

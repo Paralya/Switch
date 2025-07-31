@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_axe",
-								"minecraft:item_name": "Topaz Axe",
+								"minecraft:item_name": {
+									"text": "Topaz Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

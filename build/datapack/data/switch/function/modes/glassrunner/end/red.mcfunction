@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/end/red
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/tick
 #
 

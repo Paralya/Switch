@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:emerald_hoe",
-								"minecraft:item_name": "Emerald Hoe",
+								"minecraft:item_name": {
+									"text": "Emerald Hoe"
+								},
 								"minecraft:lore": [
 									[
 										"",

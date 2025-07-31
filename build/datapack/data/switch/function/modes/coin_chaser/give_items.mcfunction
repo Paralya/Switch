@@ -2,7 +2,7 @@
 #> switch:modes/coin_chaser/give_items
 #
 # @within	switch:modes/coin_chaser/respawn
-#			switch:modes/coin_chaser/start
+#			switch:modes/coin_chaser/start [ as @a[tag=!detached] ]
 #
 
 clear @s

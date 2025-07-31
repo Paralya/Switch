@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/advancements/entity_hurt_player/confirm
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/infected/advancements/entity_hurt_player/main
 #
 

@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:awakened_stardust_ore",
-								"minecraft:item_name": "Awakened Stardust Ore",
+								"minecraft:item_name": {
+									"text": "Awakened Stardust Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_axe",
-								"minecraft:item_name": "Ruby Axe",
+								"minecraft:item_name": {
+									"text": "Ruby Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

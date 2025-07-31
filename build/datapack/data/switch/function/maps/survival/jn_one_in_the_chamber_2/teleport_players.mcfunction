@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/jn_one_in_the_chamber_2/teleport_players
 #
-# @within	switch:maps/survival/jn_one_in_the_chamber_2/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/jn_one_in_the_chamber_2/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [138054.5d, 110.5d, 138013.5d]

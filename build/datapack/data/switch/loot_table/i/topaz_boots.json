@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:topaz_boots",
-								"minecraft:item_name": "Topaz Boots",
+								"minecraft:item_name": {
+									"text": "Topaz Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

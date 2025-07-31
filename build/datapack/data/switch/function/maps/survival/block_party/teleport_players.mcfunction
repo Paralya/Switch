@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/block_party/teleport_players
 #
-# @within	switch:maps/survival/block_party/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/block_party/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [109951.5d, 206.5d, 110072.5d]

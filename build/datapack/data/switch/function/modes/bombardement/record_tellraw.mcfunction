@@ -1,6 +1,8 @@
 
 #> switch:modes/bombardement/record_tellraw
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
 # @within	switch:modes/bombardement/record_save with storage switch:records bombardement
 #			switch:modes/bombardement/start with storage switch:records bombardement
 #

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/arti_tnt_run_tower/teleport_players
 #
-# @within	switch:maps/survival/arti_tnt_run_tower/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/arti_tnt_run_tower/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [152033.5d, 145.5d, 152057.5d]

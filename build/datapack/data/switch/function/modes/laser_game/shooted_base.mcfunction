@@ -1,7 +1,9 @@
 
 #> switch:modes/laser_game/shooted_base
 #
-# @within	switch:modes/laser_game/shoot
+# @executed	at @e[tag=iris.ray]
+#
+# @within	switch:modes/laser_game/shoot [ at @e[tag=iris.ray] ]
 #
 
 scoreboard players set #color switch.data 0

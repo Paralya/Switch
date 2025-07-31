@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/gg_volcano/teleport_players
 #
-# @within	switch:maps/survival/gg_volcano/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/gg_volcano/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [124126.5d, 122.5d, 124041.5d]

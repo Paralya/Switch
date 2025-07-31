@@ -1,6 +1,8 @@
 
 #> switch:engine/signals/stop
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/stop
 #
 

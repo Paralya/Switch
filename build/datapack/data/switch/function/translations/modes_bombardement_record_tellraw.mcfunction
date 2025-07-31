@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_bombardement_record_tellraw
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
 # @within	switch:modes/bombardement/record_tellraw with storage switch:records bombardement
 #
 

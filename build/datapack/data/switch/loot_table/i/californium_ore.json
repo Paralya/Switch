@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:californium_ore",
-								"minecraft:item_name": "Californium Ore",
+								"minecraft:item_name": {
+									"text": "Californium Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

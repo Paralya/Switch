@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/survival_boat/tp_red_player
 #
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
 # @within	switch:modes/sheepwars/team_and_give
 #
 

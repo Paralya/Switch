@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/sheepwars_dirigeables/teleport_players
 #
-# @within	switch:maps/survival/sheepwars_dirigeables/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/sheepwars_dirigeables/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [100089.5d, 160.5d, 100057.5d]

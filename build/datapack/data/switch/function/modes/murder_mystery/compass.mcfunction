@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/compass
 #
-# @within	switch:modes/murder_mystery/second
+# @executed	as @a[scores={switch.temp.role=3}] & at @s
+#
+# @within	switch:modes/murder_mystery/second [ as @a[scores={switch.temp.role=3}] & at @s ]
 #
 
 # Track nearest player with compass

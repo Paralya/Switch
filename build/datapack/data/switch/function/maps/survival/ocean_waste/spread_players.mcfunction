@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/ocean_waste/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/ocean_waste/teleport_players
 #
 

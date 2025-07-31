@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/detach/basic_stuff
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/make_join
 #			switch:player/trigger/detach/main
 #

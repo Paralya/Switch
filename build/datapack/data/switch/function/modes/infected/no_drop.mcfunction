@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/no_drop
 #
-# @within	switch:modes/infected/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/infected/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

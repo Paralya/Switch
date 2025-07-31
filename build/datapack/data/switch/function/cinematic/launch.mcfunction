@@ -1,6 +1,8 @@
 
 #> switch:cinematic/launch
 #
+# @executed	in switch:game & positioned 517.62 111.36 518.34 & rotated -31.98 9.81
+#
 # @within	switch:cinematic/intro_spread/cinematic_start with storage switch:temp player_cinematic
 #			switch:player/tick_detach {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}
 #			switch:player/tick_detach {x:0.5,y:70.1,z:-9.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
@@ -18,8 +20,6 @@
 #			switch:player/tick_detach {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
 #			switch:player/trigger/detach/basic_stuff {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
 #
-# @executed			as the player & at current position
-# 
 # @input macro		x : float - target x position
 # @input macro		y : float - target y position
 # @input macro		z : float - target z position

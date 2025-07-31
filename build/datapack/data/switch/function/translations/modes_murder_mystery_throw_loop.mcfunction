@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_murder_mystery_throw_loop
 #
+# @executed	as @e[type=armor_stand,tag=switch.thrown] & at @s
+#
 # @within	switch:modes/murder_mystery/throw/loop
 #
 

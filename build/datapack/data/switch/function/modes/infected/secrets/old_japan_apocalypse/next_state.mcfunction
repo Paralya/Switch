@@ -1,7 +1,13 @@
 
 #> switch:modes/infected/secrets/old_japan_apocalypse/next_state
 #
-# @within	switch:modes/infected/secrets/old_japan_apocalypse/_tick
+# @executed	positioned 129035 110 129025
+#
+# @within	switch:modes/infected/secrets/old_japan_apocalypse/_tick [ positioned 129035 110 129025 ]
+#			switch:modes/infected/secrets/old_japan_apocalypse/_tick [ positioned 129027 104 129016 ]
+#			switch:modes/infected/secrets/old_japan_apocalypse/_tick
+#			switch:modes/infected/secrets/old_japan_apocalypse/_tick [ as @p[tag=!detached,team=switch.temp.human,nbt={Inventory:[{id:"minecraft:nether_star"}]}] ]
+#			switch:modes/infected/secrets/old_japan_apocalypse/_tick [ positioned 129018 137 129082 ]
 #
 
 # Open the bunker door

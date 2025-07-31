@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/items_check
 #
-# @within	switch:modes/rush_the_point/tick_common
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/rush_the_point/tick_common [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

@@ -1,7 +1,9 @@
 
 #> switch:modes/creeper_apocalypse/give_items
 #
-# @within	switch:modes/creeper_apocalypse/start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/creeper_apocalypse/start [ as @a[tag=!detached] & at @s ]
 #
 
 give @s golden_apple 5

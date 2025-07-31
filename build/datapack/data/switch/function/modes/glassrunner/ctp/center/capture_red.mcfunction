@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/ctp/center/capture_red
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/ctp/center/red
 #
 

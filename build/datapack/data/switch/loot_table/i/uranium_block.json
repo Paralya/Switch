@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:uranium_block",
-								"minecraft:item_name": "Uranium Block",
+								"minecraft:item_name": {
+									"text": "Uranium Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

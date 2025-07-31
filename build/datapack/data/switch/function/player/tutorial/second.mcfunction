@@ -1,8 +1,10 @@
 
 #> switch:player/tutorial/second
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tutorial/next_dialogue
-#			switch:second
+#			switch:second [ as @a[team=switch.tutorial] & at @s ]
 #
 
 ## Objectives:

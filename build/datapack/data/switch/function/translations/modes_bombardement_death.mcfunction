@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_bombardement_death
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator,distance=..1.5] & at @s
+#
 # @within	switch:modes/bombardement/death
 #
 

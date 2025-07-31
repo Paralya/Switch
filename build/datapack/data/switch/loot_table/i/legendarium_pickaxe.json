@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:legendarium_pickaxe",
-								"minecraft:item_name": "Legendarium Pickaxe",
+								"minecraft:item_name": {
+									"text": "Legendarium Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

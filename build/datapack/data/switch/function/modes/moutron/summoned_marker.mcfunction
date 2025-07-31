@@ -1,6 +1,8 @@
 
 #> switch:modes/moutron/summoned_marker
 #
+# @executed	at @s & positioned ~ ~.5 ~
+#
 # @within	switch:modes/moutron/summon_marker
 #
 

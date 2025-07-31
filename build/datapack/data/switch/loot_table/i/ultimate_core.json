@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:ultimate_core",
-								"minecraft:item_name": "Ultimate Core",
+								"minecraft:item_name": {
+									"text": "Ultimate Core"
+								},
 								"minecraft:lore": [
 									[
 										"",

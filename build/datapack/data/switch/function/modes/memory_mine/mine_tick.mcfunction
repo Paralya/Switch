@@ -1,7 +1,9 @@
 
 #> switch:modes/memory_mine/mine_tick
 #
-# @within	switch:modes/memory_mine/tick
+# @executed	at @s
+#
+# @within	switch:modes/memory_mine/tick [ at @s ]
 #
 
 execute unless score @s switch.temp.cooldown matches 60 run scoreboard players add @s switch.temp.cooldown 1

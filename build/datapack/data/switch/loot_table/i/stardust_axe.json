@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_axe",
-								"minecraft:item_name": "Stardust Axe",
+								"minecraft:item_name": {
+									"text": "Stardust Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

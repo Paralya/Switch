@@ -1,7 +1,9 @@
 
 #> switch:modes/beat_the_kings/teleport_to_death
 #
-# @within	switch:modes/beat_the_kings/tick
+# @executed	as @a[tag=!...]
+#
+# @within	switch:modes/beat_the_kings/tick [ as @a[tag=!...] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

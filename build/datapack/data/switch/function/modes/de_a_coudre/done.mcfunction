@@ -1,7 +1,9 @@
 
 #> switch:modes/de_a_coudre/done
 #
-# @within	switch:modes/de_a_coudre/tick
+# @executed	at @s
+#
+# @within	switch:modes/de_a_coudre/tick [ at @s ]
 #
 
 scoreboard players operation #block switch.data = @s switch.temp.color

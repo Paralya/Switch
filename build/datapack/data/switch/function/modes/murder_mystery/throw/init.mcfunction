@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/throw/init
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/murder_mystery/throw/advancement
 #
 

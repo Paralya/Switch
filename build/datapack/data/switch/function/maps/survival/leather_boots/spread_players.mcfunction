@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/leather_boots/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/leather_boots/teleport_players
 #
 

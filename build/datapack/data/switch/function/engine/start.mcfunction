@@ -1,7 +1,9 @@
 
 #> switch:engine/start
 #
-# @within	switch:engine/restart
+# @executed	in switch:game
+#
+# @within	switch:engine/restart [ in switch:game ]
 #			switch:tick
 #
 

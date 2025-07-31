@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_axe",
-								"minecraft:item_name": "Sapphire Axe",
+								"minecraft:item_name": {
+									"text": "Sapphire Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

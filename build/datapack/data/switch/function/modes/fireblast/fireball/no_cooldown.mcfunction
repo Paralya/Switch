@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/fireball/no_cooldown
 #
-# @within	switch:modes/fireblast/tick
+# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.right_click=1..},nbt={SelectedItem:{components:{}}}] & at @s
+#
+# @within	switch:modes/fireblast/tick [ as @a[tag=!detached,gamemode=!spectator,scores={switch.right_click=1..},nbt={SelectedItem:{components:{}}}] & at @s ]
 #
 
 # Playsound

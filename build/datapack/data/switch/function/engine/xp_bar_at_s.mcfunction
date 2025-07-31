@@ -1,6 +1,8 @@
 
 #> switch:engine/xp_bar_at_s
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
 # @within	switch:modes/fireblast/xp_bar
 #			switch:modes/fish_fight/xp_bar
 #			switch:modes/laser_game/xp_bar

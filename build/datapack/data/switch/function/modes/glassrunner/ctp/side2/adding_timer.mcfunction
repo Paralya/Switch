@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/ctp/side2/adding_timer
 #
-# @within	switch:modes/glassrunner/second
+# @executed	positioned 3074 128 2924 & as @a[tag=!detached,dx=2,dy=3,dz=2]
+#
+# @within	switch:modes/glassrunner/second [ positioned 3074 128 2924 & as @a[tag=!detached,dx=2,dy=3,dz=2] ]
 #
 
 execute if entity @s[team=switch.glassrunner.red] run scoreboard players add #glassrunner.ctp.side2.red.timer switch.data 1

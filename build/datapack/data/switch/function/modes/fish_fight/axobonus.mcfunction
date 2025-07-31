@@ -1,7 +1,9 @@
 
 #> switch:modes/fish_fight/axobonus
 #
-# @within	switch:modes/fish_fight/tick
+# @executed	as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}]
+#
+# @within	switch:modes/fish_fight/tick [ as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}] ]
 #
 
 # Tirage au sort du bonus 

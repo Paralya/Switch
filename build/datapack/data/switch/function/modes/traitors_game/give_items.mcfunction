@@ -1,7 +1,9 @@
 
 #> switch:modes/traitors_game/give_items
 #
-# @within	switch:modes/traitors_game/start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/traitors_game/start [ as @a[tag=!detached] & at @s ]
 #
 
 function switch:utils/reset_attributes

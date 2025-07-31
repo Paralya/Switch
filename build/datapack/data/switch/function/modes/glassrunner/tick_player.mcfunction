@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/tick_player
 #
-# @within	switch:modes/glassrunner/tick
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/glassrunner/tick [ as @a[tag=!detached] & at @s ]
 #
 
 execute if score @s switch.glassrunner.use_snowball matches 1.. run function switch:modes/glassrunner/snowball/use

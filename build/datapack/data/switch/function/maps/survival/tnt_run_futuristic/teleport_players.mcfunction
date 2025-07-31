@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/tnt_run_futuristic/teleport_players
 #
-# @within	switch:maps/survival/tnt_run_futuristic/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/tnt_run_futuristic/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [108993.5d, 136.5d, 109061.5d]

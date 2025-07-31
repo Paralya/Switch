@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/roles/marker
 #
-# @within	switch:modes/rush_the_point/roles/main
+# @executed	as @e[tag=switch.new]
+#
+# @within	switch:modes/rush_the_point/roles/main [ as @e[tag=switch.new] ]
 #
 
 scoreboard players operation @s switch.id = #player_id switch.id

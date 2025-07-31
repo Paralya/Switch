@@ -1,8 +1,11 @@
 
 #> switch:modes/murder_mystery/kill_player
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/murder_mystery/entity_hurt_player
-#			switch:modes/murder_mystery/throw/loop
+#			switch:modes/murder_mystery/entity_hurt_player [ at @s ]
+#			switch:modes/murder_mystery/throw/loop [ at @s & as @a[tag=!detached,gamemode=adventure,distance=..1] & at @s ]
 #
 
 # Playsound & Spectator

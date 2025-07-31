@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/roles/marker
 #
-# @within	switch:modes/capture_the_flag/roles/main
+# @executed	as @e[tag=switch.new]
+#
+# @within	switch:modes/capture_the_flag/roles/main [ as @e[tag=switch.new] ]
 #
 
 scoreboard players operation @s switch.id = #player_id switch.id

@@ -1,7 +1,9 @@
 
 #> switch:modes/tnt_run/is_on_ground
 #
-# @within	switch:modes/tnt_run/tick
+# @executed	as @a[tag=!detached,gamemode=adventure] & at @s
+#
+# @within	switch:modes/tnt_run/tick [ as @a[tag=!detached,gamemode=adventure] & at @s ]
 #
 
 # Get the player's motion in the y direction

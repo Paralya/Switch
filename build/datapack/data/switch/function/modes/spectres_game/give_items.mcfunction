@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/give_items
 #
-# @within	switch:modes/spectres_game/start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/spectres_game/start [ as @a[tag=!detached] & at @s ]
 #
 
 # Spectre gear

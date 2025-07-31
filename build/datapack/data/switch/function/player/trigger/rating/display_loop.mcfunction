@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/rating/display_loop
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/rating/display with storage switch:temp copy[0]
 #			switch:player/trigger/rating/display_loop with storage switch:temp copy[0]
 #

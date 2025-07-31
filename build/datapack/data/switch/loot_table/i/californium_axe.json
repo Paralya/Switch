@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_axe",
-								"minecraft:item_name": "Californium Axe",
+								"minecraft:item_name": {
+									"text": "Californium Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

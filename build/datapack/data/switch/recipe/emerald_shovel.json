@@ -56,7 +56,9 @@
 				}
 			],
 			"minecraft:item_model": "switch:emerald_shovel",
-			"minecraft:item_name": "Emerald Shovel",
+			"minecraft:item_name": {
+				"text": "Emerald Shovel"
+			},
 			"minecraft:lore": [
 				[
 					"",

@@ -2,7 +2,7 @@
 #> switch:modes/laser_game/teleport_players
 #
 # @within	switch:modes/laser_game/joined
-#			switch:modes/laser_game/start
+#			switch:modes/laser_game/start [ as @a[tag=!detached,sort=random] ]
 #
 
 tag @s remove global.ignore

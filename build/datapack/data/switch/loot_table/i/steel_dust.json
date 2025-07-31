@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:steel_dust",
-								"minecraft:item_name": "Steel Dust",
+								"minecraft:item_name": {
+									"text": "Steel Dust"
+								},
 								"minecraft:lore": [
 									[
 										"",

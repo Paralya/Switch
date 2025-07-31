@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:sapphire_block",
-								"minecraft:item_name": "Sapphire Block",
+								"minecraft:item_name": {
+									"text": "Sapphire Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

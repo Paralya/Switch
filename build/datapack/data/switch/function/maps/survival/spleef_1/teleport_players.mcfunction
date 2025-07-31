@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/spleef_1/teleport_players
 #
-# @within	switch:maps/survival/spleef_1/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/spleef_1/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [28025.5d, 108.5d, 28029.5d]

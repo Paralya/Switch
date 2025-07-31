@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/tick_glass_bridge
 #
-# @within	switch:modes/glassrunner/tick
+# @executed	as @e[tag=switch.glassrunner.glass_bridge,distance=..150] & at @s
+#
+# @within	switch:modes/glassrunner/tick [ as @e[tag=switch.glassrunner.glass_bridge,distance=..150] & at @s ]
 #
 
 scoreboard players add @s switch.glassrunner.use_snowball 1

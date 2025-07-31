@@ -1,6 +1,8 @@
 
 #> switch:engine/add_money
 #
+# @executed	as the player & at current position
+#
 # @within	switch:advancements/easy
 #			switch:advancements/hard
 #			switch:advancements/jumps/blue
@@ -18,7 +20,7 @@
 #			switch:advancements/jumps/yellow
 #			switch:advancements/medium
 #			switch:engine/add_win
-#			switch:modes/_coupdetat/process_end
+#			switch:modes/_coupdetat/process_end [ as @p[tag=switch.coupdetat] ]
 #			switch:modes/build_battle/add_money
 #
 

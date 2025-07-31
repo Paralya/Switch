@@ -1,6 +1,8 @@
 
 #> switch:player/set_id
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tick
 #
 

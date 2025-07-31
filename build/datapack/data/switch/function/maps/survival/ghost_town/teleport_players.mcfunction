@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/ghost_town/teleport_players
 #
-# @within	switch:maps/survival/ghost_town/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/ghost_town/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [42012.5d, 112.5d, 42034.5d]

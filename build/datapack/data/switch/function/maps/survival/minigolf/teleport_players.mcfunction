@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/minigolf/teleport_players
 #
-# @within	switch:maps/survival/minigolf/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/minigolf/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [124082.5d, 204.5d, 124069.5d]

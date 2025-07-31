@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/gg_grass_1/teleport_players
 #
-# @within	switch:maps/survival/gg_grass_1/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/gg_grass_1/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [124012.5d, 118.5d, 124050.5d]

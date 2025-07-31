@@ -1,10 +1,12 @@
 
 #> switch:custom_blocks/destroy
 #
-# @within	switch:v2.0.0/tick_2
-#			switch:v2.0.0/second
-#			switch:v2.0.0/second_5
-#			switch:calls/common_signals/on_ore_destroyed
+# @executed	as @e[type=item_display,tag=...,predicate=!switch:check_vanilla_blocks] & at @s
+#
+# @within	switch:v2.0.0/tick_2 [ as @e[type=item_display,tag=...,predicate=!switch:check_vanilla_blocks] & at @s ]
+#			switch:v2.0.0/second [ as @e[type=#switch:custom_blocks,tag=...,predicate=!switch:advanced_check_vanilla_blocks] & at @s ]
+#			switch:v2.0.0/second_5 [ as @e[type=item_display,tag=switch.custom_block,predicate=!switch:advanced_check_vanilla_blocks] & at @s ]
+#			switch:calls/common_signals/on_ore_destroyed [ as @e[tag=switch.custom_block,dx=0,dy=0,dz=0] & at @s ]
 #
 
 execute if score #total_vanilla_black_concrete switch.data matches 1.. if entity @s[tag=switch.vanilla.minecraft_black_concrete] unless block ~ ~ ~ minecraft:black_concrete run function switch:custom_blocks/_groups/minecraft_black_concrete

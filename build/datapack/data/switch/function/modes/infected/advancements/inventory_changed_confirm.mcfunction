@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/advancements/inventory_changed_confirm
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/infected/advancements/inventory_changed
 #
 

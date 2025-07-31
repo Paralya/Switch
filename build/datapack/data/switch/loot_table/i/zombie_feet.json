@@ -24,7 +24,9 @@
 									"hide_tooltip": true
 								},
 								"minecraft:item_model": "minecraft:rotten_flesh",
-								"minecraft:item_name": "Zombie Feet",
+								"minecraft:item_name": {
+									"text": "Zombie Feet"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,8 +1,10 @@
 
 #> switch:modes/de_a_coudre/next_player_teleport
 #
-# @within	switch:modes/de_a_coudre/next_player
-#			switch:modes/de_a_coudre/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/de_a_coudre/next_player [ as @a[tag=!detached] ]
+#			switch:modes/de_a_coudre/start [ as @a[tag=!detached] ]
 #
 
 scoreboard players set #success switch.data 1

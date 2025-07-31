@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/paralya_lobby_noel/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/paralya_lobby_noel/teleport_players
 #
 

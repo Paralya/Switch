@@ -1,6 +1,8 @@
 
 #> switch:modes/capture_the_flag/classes/warrior
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/capture_the_flag/classes/main
 #
 

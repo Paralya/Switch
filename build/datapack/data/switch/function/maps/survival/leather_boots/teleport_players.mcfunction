@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/leather_boots/teleport_players
 #
-# @within	switch:maps/survival/leather_boots/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/leather_boots/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [63070.5d, 138.5d, 63006.5d]

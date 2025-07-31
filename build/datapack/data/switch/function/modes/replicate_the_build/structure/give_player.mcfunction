@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/structure/give_player
 #
-# @within	switch:modes/replicate_the_build/round/4_end
+# @executed	positioned -29999997 24 1603
+#
+# @within	switch:modes/replicate_the_build/round/4_end [ positioned -29999997 24 1603 ]
 #
 
 give @a[scores={switch.alive=1..}] diamond_pickaxe[unbreakable={},enchantments={silk_touch:1}]

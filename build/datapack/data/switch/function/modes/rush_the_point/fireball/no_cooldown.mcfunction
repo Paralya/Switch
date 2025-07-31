@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/fireball/no_cooldown
 #
-# @within	switch:modes/rush_the_point/tick_common
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..},nbt={...}] & at @s
+#
+# @within	switch:modes/rush_the_point/tick_common [ as @a[tag=!detached,scores={switch.right_click=1..},nbt={...}] & at @s ]
 #
 
 # Playsound

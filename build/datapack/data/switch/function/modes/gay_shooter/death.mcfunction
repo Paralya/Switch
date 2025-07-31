@@ -2,7 +2,7 @@
 #> switch:modes/gay_shooter/death
 #
 # @within	switch:modes/gay_shooter/joined
-#			switch:modes/gay_shooter/process_end
+#			switch:modes/gay_shooter/process_end [ as @a[tag=!detached] ]
 #
 
 execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~

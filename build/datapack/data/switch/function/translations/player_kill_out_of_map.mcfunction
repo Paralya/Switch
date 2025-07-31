@@ -1,6 +1,8 @@
 
 #> switch:translations/player_kill_out_of_map
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator] & at @s
+#
 # @within	switch:player/kill_out_of_map
 #
 

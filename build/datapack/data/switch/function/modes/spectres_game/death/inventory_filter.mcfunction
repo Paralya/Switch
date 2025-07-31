@@ -1,6 +1,8 @@
 
 #> switch:modes/spectres_game/death/inventory_filter
 #
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
 # @within	switch:modes/spectres_game/death/for_global
 #
 

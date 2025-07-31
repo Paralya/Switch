@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_murder_mystery_percentage_title
 #
+# @executed	as @a[tag=!detached]
+#
 # @within	switch:modes/murder_mystery/percentage/title
 #
 

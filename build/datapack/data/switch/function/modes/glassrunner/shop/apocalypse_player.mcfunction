@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/shop/apocalypse_player
 #
+# @executed	as @a[tag=!detached] & at @s
+#
 # @within	switch:modes/glassrunner/tick_player
 #
 

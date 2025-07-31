@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:steel_ore",
-								"minecraft:item_name": "Steel Ore",
+								"minecraft:item_name": {
+									"text": "Steel Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

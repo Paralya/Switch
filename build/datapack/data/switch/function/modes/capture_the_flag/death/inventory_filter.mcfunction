@@ -1,6 +1,8 @@
 
 #> switch:modes/capture_the_flag/death/inventory_filter
 #
+# @executed	as @e[type=marker,tag=...]
+#
 # @within	switch:modes/capture_the_flag/death/for_global
 #
 

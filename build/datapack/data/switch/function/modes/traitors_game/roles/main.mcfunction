@@ -1,7 +1,9 @@
 
 #> switch:modes/traitors_game/roles/main
 #
-# @within	switch:modes/traitors_game/start
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
+# @within	switch:modes/traitors_game/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 tag @s add switch.temp

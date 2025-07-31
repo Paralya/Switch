@@ -1,7 +1,9 @@
 
 #> switch:modes/memory_mine/zone/summon
 #
-# @within	switch:modes/memory_mine/second
+# @executed	in switch:game
+#
+# @within	switch:modes/memory_mine/second [ in switch:game ]
 #
 
 # Summon marker in a random place

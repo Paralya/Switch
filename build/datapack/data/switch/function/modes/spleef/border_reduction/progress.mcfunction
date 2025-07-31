@@ -1,7 +1,9 @@
 
 #> switch:modes/spleef/border_reduction/progress
 #
-# @within	switch:modes/spleef/tick
+# @executed	as @e[type=marker,tag=switch.spleef_border] & at @s
+#
+# @within	switch:modes/spleef/tick [ as @e[type=marker,tag=switch.spleef_border] & at @s ]
 #
 
 # Fill snow blocks with air

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/stardust_spawn/teleport_players
 #
-# @within	switch:maps/survival/stardust_spawn/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/stardust_spawn/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [101041.5d, 175.5d, 101026.5d]

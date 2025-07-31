@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/bowser_castle/teleport_players
 #
-# @within	switch:maps/survival/bowser_castle/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/bowser_castle/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 22065.5 130.69 21680.5 run tp @s ~0 ~ ~0 180 0

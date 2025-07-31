@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:californium_block",
-								"minecraft:item_name": "Californium Block",
+								"minecraft:item_name": {
+									"text": "Californium Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/nuketown_no_barrier/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/nuketown_no_barrier/teleport_players
 #
 

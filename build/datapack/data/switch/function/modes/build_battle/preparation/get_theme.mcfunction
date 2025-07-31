@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/preparation/get_theme
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/preparation/main with storage switch:main input
 #
 

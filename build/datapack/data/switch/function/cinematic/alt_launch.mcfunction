@@ -1,10 +1,10 @@
 
 #> switch:cinematic/alt_launch
 #
+# @executed	as the player & at current position
+#
 # @within	???
 #
-# @executed			as the player & at current position
-# 
 # @input macro		target : string - target selector for position and rotation source
 # @input macro		time : int - time in ticks
 # @input macro		with : compound - additional arguments (optional)

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/la_juste_recette/teleport_players
 #
-# @within	switch:maps/survival/la_juste_recette/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/la_juste_recette/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [57029.5d, 122.5d, 57013.5d]

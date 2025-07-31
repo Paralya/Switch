@@ -1,7 +1,9 @@
 
 #> switch:modes/tnt_run/destroy_block
 #
-# @within	switch:modes/tnt_run/tick
+# @executed	as @e[tag=switch.tnt_run,scores={switch.data=8..}] & at @s
+#
+# @within	switch:modes/tnt_run/tick [ as @e[tag=switch.tnt_run,scores={switch.data=8..}] & at @s ]
 #
 
 # Fill to remove tnt_run blocks

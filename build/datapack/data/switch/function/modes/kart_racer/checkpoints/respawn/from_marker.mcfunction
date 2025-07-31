@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/checkpoints/respawn/from_marker
 #
-# @within	switch:modes/kart_racer/checkpoints/respawn/classic
+# @executed	at @s & positioned 0 0 0
+#
+# @within	switch:modes/kart_racer/checkpoints/respawn/classic [ at @s & positioned 0 0 0 ]
 #
 
 data modify entity @s Pos set from storage switch:main copy[0].Pos

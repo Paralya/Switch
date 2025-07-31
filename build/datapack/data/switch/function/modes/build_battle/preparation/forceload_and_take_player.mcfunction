@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/preparation/forceload_and_take_player
 #
-# @within	switch:modes/build_battle/preparation/summon_marker
+# @executed	at @s
+#
+# @within	switch:modes/build_battle/preparation/summon_marker [ at @s ]
 #
 
 # Forceload

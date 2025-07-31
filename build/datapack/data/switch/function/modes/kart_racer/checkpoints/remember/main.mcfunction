@@ -1,6 +1,8 @@
 
 #> switch:modes/kart_racer/checkpoints/remember/main
 #
+# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+#
 # @within	switch:modes/kart_racer/checkpoints/player_in
 #
 

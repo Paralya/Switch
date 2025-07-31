@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/old_japan_apocalypse/teleport_players
 #
-# @within	switch:maps/survival/old_japan_apocalypse/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/old_japan_apocalypse/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [129066.5d, 114.5d, 129021.5d]

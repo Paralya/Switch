@@ -1,6 +1,8 @@
 
 #> switch:modes/capture_the_flag/flag_pickup
 #
+# @executed	as @e[type=item_display,tag=switch.flag,sort=random] & at @s & positioned ~ ~ ~
+#
 # @within	switch:modes/capture_the_flag/flag_tick
 #
 

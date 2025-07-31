@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:ruby",
-								"minecraft:item_name": "Ruby",
+								"minecraft:item_name": {
+									"text": "Ruby"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,7 +1,9 @@
 
 #> switch:modes/minigolf/teleport_all
 #
-# @within	switch:modes/minigolf/second
+# @executed	in switch:game
+#
+# @within	switch:modes/minigolf/second [ in switch:game ]
 #			switch:modes/minigolf/start
 #
 

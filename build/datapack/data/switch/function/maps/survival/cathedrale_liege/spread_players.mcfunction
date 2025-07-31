@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/cathedrale_liege/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/cathedrale_liege/teleport_players
 #
 

@@ -1,8 +1,10 @@
 
 #> switch:modes/spectres_game/roles/main
 #
+# @executed	as @r[tag=!detached,team=switch.temp.visible,scores={switch.alive=0}]
+#
 # @within	switch:modes/spectres_game/death/revive_visible
-#			switch:modes/spectres_game/start
+#			switch:modes/spectres_game/start [ as @a[tag=!detached] ]
 #
 
 tag @s add switch.temp

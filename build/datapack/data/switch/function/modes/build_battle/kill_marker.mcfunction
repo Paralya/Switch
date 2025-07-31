@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/kill_marker
 #
-# @within	switch:modes/build_battle/stop
+# @executed	as @e[tag=switch.build_battle_marker] & at @s
+#
+# @within	switch:modes/build_battle/stop [ as @e[tag=switch.build_battle_marker] & at @s ]
 #
 
 # Remove build

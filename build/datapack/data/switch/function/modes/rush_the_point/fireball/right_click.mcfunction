@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/fireball/right_click
 #
-# @within	switch:modes/rush_the_point/tick_common
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..},nbt={...}] & at @s
+#
+# @within	switch:modes/rush_the_point/tick_common [ as @a[tag=!detached,scores={switch.right_click=1..},nbt={...}] & at @s ]
 #
 
 summon fireball ^ ^1 ^1 {Tags:["switch.new"],ExplosionPower:0b,NoGravity:true,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}]}

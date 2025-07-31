@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/sudoku_craft/teleport_players
 #
-# @within	switch:maps/survival/sudoku_craft/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/sudoku_craft/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [55018.5d, 154.5d, 55028.5d]

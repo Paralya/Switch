@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/death/inventory_drop
 #
-# @within	switch:modes/rush_the_point/death/for_global
+# @executed	at @s
+#
+# @within	switch:modes/rush_the_point/death/for_global [ at @s ]
 #			switch:modes/rush_the_point/death/inventory_drop
 #
 

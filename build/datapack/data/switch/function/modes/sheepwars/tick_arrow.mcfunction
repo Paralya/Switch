@@ -1,7 +1,9 @@
 
 #> switch:modes/sheepwars/tick_arrow
 #
-# @within	switch:modes/sheepwars/tick
+# @executed	as @e[type=arrow]
+#
+# @within	switch:modes/sheepwars/tick [ as @e[type=arrow] ]
 #
 
 # If the arrow is in a block, kill it 1 tick after

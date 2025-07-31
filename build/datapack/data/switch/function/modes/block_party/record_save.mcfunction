@@ -1,7 +1,9 @@
 
 #> switch:modes/block_party/record_save
 #
-# @within	switch:modes/block_party/process_end
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
+# @within	switch:modes/block_party/process_end [ as @a[tag=!detached,gamemode=!spectator] ]
 #
 
 clear @s

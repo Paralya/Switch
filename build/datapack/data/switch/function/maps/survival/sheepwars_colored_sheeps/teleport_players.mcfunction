@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/sheepwars_colored_sheeps/teleport_players
 #
-# @within	switch:maps/survival/sheepwars_colored_sheeps/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/sheepwars_colored_sheeps/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [154062.5d, 149.5d, 154018.5d]

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/snow_hills/teleport_players
 #
-# @within	switch:maps/survival/snow_hills/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/snow_hills/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [50067.5d, 152.5d, 50095.5d]

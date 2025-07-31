@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:stardust_essence",
-								"minecraft:item_name": "Stardust Essence",
+								"minecraft:item_name": {
+									"text": "Stardust Essence"
+								},
 								"minecraft:lore": [
 									[
 										"",

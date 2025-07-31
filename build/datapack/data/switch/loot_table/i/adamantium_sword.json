@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_sword",
-								"minecraft:item_name": "Adamantium Sword",
+								"minecraft:item_name": {
+									"text": "Adamantium Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

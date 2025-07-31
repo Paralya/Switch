@@ -1,6 +1,8 @@
 
 #> switch:modes/gay_shooter/shot_player
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:gay_shooter/shot_player
 #
 

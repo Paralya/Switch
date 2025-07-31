@@ -1,6 +1,8 @@
 
 #> switch:modes/cigogne/killed_player
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:cigogne/killed_player
 #
 

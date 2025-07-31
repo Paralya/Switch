@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/teleport_to_death
 #
-# @within	switch:modes/rush_the_point/tick_common
+# @executed	as @e[tag=!...,type=player]
+#
+# @within	switch:modes/rush_the_point/tick_common [ as @e[tag=!...,type=player] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

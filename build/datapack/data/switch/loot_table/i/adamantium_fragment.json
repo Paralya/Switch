@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:adamantium_fragment",
-								"minecraft:item_name": "Adamantium Fragment",
+								"minecraft:item_name": {
+									"text": "Adamantium Fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",

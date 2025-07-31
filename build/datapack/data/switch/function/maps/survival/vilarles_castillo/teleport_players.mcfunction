@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/vilarles_castillo/teleport_players
 #
-# @within	switch:maps/survival/vilarles_castillo/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/vilarles_castillo/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [52054.5d, 175.5d, 52166.5d]

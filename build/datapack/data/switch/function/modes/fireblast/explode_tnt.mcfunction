@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/explode_tnt
 #
-# @within	switch:modes/fireblast/tick
+# @executed	as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle] & at @s
+#
+# @within	switch:modes/fireblast/tick [ as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle] & at @s ]
 #
 
 kill @s

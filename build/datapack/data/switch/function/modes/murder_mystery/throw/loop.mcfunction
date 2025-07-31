@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/throw/loop
 #
-# @within	switch:modes/murder_mystery/tick
+# @executed	as @e[type=armor_stand,tag=switch.thrown] & at @s
+#
+# @within	switch:modes/murder_mystery/tick [ as @e[type=armor_stand,tag=switch.thrown] & at @s ]
 #
 
 # Go forward and rotate

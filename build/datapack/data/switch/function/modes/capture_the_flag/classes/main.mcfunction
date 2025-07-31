@@ -1,8 +1,10 @@
 
 #> switch:modes/capture_the_flag/classes/main
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/capture_the_flag/right_click
-#			switch:modes/capture_the_flag/tick
+#			switch:modes/capture_the_flag/tick [ as @a[scores={switch.temp.chosen_class=0}] ]
 #
 
 # Get which class got chosen

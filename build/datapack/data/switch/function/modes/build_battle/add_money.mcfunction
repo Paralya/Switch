@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/add_money
 #
-# @within	switch:modes/build_battle/process_end
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/build_battle/process_end [ as @a[tag=!detached] & at @s ]
 #
 
 scoreboard players set #add_override switch.money 50

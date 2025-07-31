@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/abandoned_city_spawn_circle/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/abandoned_city_spawn_circle/teleport_players
 #
 

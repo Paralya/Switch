@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_build_battle_rating_time_right_click
 #
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..}] & at @s
+#
 # @within	switch:modes/build_battle/rating_time/right_click
 #
 

@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/right_click
 #
-# @within	switch:modes/kart_racer/tick
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..}]
+#
+# @within	switch:modes/kart_racer/tick [ as @a[tag=!detached,scores={switch.right_click=1..}] ]
 #
 
 # Manage Respawns

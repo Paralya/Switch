@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/stats/main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/stats/entry with storage switch:main input
 #
 

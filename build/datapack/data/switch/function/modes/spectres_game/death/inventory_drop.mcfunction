@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/death/inventory_drop
 #
-# @within	switch:modes/spectres_game/death/for_global
+# @executed	at @s
+#
+# @within	switch:modes/spectres_game/death/for_global [ at @s ]
 #			switch:modes/spectres_game/death/inventory_drop
 #
 

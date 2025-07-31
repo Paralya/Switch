@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_point/classes/archer
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/rush_the_point/classes/main
 #
 

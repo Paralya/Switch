@@ -2,7 +2,7 @@
 #> switch:modes/block_party/death
 #
 # @within	switch:modes/block_party/joined
-#			switch:modes/block_party/tick
+#			switch:modes/block_party/tick [ as @a[tag=!detached,gamemode=!spectator,sort=random] & at @s ]
 #
 
 function switch:translations/modes_block_party_death

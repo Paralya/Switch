@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/death/for_global
 #
-# @within	switch:modes/capture_the_flag/tick
+# @executed	as @e[type=marker,tag=...]
+#
+# @within	switch:modes/capture_the_flag/tick [ as @e[type=marker,tag=...] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

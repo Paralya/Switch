@@ -1,6 +1,8 @@
 
 #> switch:modes/warden_escape/calls/laser_beam
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:warden_escape/laser_beam
 #
 

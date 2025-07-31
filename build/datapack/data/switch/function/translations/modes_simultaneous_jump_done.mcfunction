@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_simultaneous_jump_done
 #
+# @executed	at @s
+#
 # @within	switch:modes/simultaneous_jump/done
 #
 

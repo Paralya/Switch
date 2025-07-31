@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/give_arrow/main
 #
-# @within	switch:modes/infected/second_regen
+# @executed	as @a[team=switch.temp.human]
+#
+# @within	switch:modes/infected/second_regen [ as @a[team=switch.temp.human] ]
 #
 
 # Try to get slot and count

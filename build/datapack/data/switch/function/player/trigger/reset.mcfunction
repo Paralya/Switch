@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/reset
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tutorial/start
 #
 

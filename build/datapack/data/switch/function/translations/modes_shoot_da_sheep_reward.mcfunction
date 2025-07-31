@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_shoot_da_sheep_reward
 #
+# @executed	as @e[type=sheep] & at @s
+#
 # @within	switch:modes/shoot_da_sheep/reward
 #
 

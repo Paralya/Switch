@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/place_power_up
 #
-# @within	switch:modes/fireblast/summon_power_up
+# @executed	as @e[type=item,tag=switch.new]
+#
+# @within	switch:modes/fireblast/summon_power_up [ as @e[type=item,tag=switch.new] ]
 #
 
 # Replace temporary tag with permanent tag

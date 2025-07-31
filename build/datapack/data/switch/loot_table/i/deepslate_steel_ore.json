@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:deepslate_steel_ore",
-								"minecraft:item_name": "Deepslate Steel Ore",
+								"minecraft:item_name": {
+									"text": "Deepslate Steel Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

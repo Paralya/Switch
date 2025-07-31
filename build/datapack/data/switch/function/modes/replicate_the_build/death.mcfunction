@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/death
 #
-# @within	switch:modes/replicate_the_build/process_end
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:modes/replicate_the_build/process_end [ as @a[tag=!detached,sort=random] ]
 #
 
 function switch:utils/classic_death

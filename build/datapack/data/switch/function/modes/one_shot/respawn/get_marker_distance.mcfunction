@@ -1,7 +1,9 @@
 
 #> switch:modes/one_shot/respawn/get_marker_distance
 #
-# @within	switch:modes/one_shot/respawn/kill_worst_marker
+# @executed	as @e[tag=switch.respawn]
+#
+# @within	switch:modes/one_shot/respawn/kill_worst_marker [ as @e[tag=switch.respawn] ]
 #
 
 # Calculate the distance to the closest marker (sum of the absolute values of the coordinates difference)

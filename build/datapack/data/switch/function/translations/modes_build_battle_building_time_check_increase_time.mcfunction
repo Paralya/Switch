@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_build_battle_building_time_check_increase_time
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/building_time/check_increase_time
 #
 

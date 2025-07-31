@@ -1,7 +1,9 @@
 
 #> switch:modes/beat_the_kings/roles/main
 #
-# @within	switch:modes/beat_the_kings/start
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
+# @within	switch:modes/beat_the_kings/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 # Role selection (1/4 kings)

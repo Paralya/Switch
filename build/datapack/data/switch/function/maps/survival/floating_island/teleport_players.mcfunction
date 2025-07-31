@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/floating_island/teleport_players
 #
-# @within	switch:maps/survival/floating_island/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/floating_island/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [94050.5d, 158.5d, 94066.5d]

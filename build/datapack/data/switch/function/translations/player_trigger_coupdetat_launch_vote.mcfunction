@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_coupdetat_launch_vote
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/coupdetat/launch_vote
 #
 

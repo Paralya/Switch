@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_build_battle_preparation_themes_list
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/preparation/themes_list
 #
 

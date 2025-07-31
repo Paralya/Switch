@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/octogone_nether_ice/teleport_players
 #
-# @within	switch:maps/survival/octogone_nether_ice/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/octogone_nether_ice/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [160031.5d, 132.5d, 160043.5d]

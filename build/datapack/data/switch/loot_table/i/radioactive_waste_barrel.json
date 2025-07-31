@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:radioactive_waste_barrel",
-								"minecraft:item_name": "Radioactive Waste Barrel",
+								"minecraft:item_name": {
+									"text": "Radioactive Waste Barrel"
+								},
 								"minecraft:lore": [
 									[
 										"",

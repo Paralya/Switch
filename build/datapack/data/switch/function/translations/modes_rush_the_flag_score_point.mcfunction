@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_rush_the_flag_score_point
 #
+# @executed	positioned ~ ~2 ~
+#
 # @within	switch:modes/rush_the_flag/score_point
 #
 

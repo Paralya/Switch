@@ -1,6 +1,8 @@
 
 #> switch:player/username_change/with_macro
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/username_change/check with storage switch:temp input
 #
 

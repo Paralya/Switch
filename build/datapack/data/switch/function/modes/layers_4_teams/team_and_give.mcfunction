@@ -1,7 +1,9 @@
 
 #> switch:modes/layers_4_teams/team_and_give
 #
-# @within	switch:modes/layers_4_teams/start
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
+# @within	switch:modes/layers_4_teams/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 # Team selection

@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_fish_fight_axobonus
 #
+# @executed	as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}]
+#
 # @within	switch:modes/fish_fight/axobonus
 #
 

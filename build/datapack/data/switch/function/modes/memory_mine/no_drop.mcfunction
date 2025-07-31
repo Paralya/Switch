@@ -1,7 +1,9 @@
 
 #> switch:modes/memory_mine/no_drop
 #
-# @within	switch:modes/memory_mine/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/memory_mine/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

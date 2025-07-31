@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_leggings",
-								"minecraft:item_name": "Sapphire Leggings",
+								"minecraft:item_name": {
+									"text": "Sapphire Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

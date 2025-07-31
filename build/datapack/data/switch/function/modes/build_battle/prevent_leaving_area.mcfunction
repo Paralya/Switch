@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/prevent_leaving_area
 #
-# @within	switch:modes/build_battle/second
+# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.id=0..}]
+#
+# @within	switch:modes/build_battle/second [ as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.id=0..}] ]
 #
 
 # Execute at the linked marker,

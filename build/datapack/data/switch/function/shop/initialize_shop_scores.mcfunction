@@ -1,6 +1,8 @@
 
 #> switch:shop/initialize_shop_scores
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/joined
 #			switch:player/tutorial/second
 #

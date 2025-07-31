@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/pillars_of_fortune/teleport_players
 #
-# @within	switch:maps/survival/pillars_of_fortune/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/pillars_of_fortune/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [161070.5d, 138.5d, 161006.5d]

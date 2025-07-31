@@ -1,7 +1,9 @@
 
 #> switch:modes/panic_chase/no_drop
 #
-# @within	switch:modes/panic_chase/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/panic_chase/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

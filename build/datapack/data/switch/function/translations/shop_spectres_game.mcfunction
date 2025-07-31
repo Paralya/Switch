@@ -1,6 +1,8 @@
 
 #> switch:translations/shop_spectres_game
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:shop/spectres_game
 #
 

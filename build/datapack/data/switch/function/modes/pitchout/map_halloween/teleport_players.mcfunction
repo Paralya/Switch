@@ -2,7 +2,7 @@
 #> switch:modes/pitchout/map_halloween/teleport_players
 #
 # @within	switch:modes/pitchout/map_halloween/tp_give
-#			switch:modes/pitchout/tick
+#			switch:modes/pitchout/tick [ as @a[tag=!detached,scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] ]
 #
 
 execute if score #spawn_count switch.data matches 0 in switch:game run tp @s 125061 112 125061

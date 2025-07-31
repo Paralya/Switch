@@ -1,6 +1,8 @@
 
 #> switch:modes/mlg_a_coudre/mlg_a_coudre
 #
+# @executed	at @s
+#
 # @within	switch:modes/mlg_a_coudre/done
 #
 

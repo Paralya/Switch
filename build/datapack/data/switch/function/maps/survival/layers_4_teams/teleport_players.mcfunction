@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/layers_4_teams/teleport_players
 #
-# @within	switch:maps/survival/layers_4_teams/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/layers_4_teams/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [73990.5d, 108.5d, 74079.5d]

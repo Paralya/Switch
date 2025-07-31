@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/remelta_cluedo/teleport_players
 #
-# @within	switch:maps/survival/remelta_cluedo/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/remelta_cluedo/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [118027.5d, 108.5d, 118026.5d]

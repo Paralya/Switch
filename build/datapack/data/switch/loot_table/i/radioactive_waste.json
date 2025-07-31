@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:radioactive_waste",
-								"minecraft:item_name": "Radioactive Waste",
+								"minecraft:item_name": {
+									"text": "Radioactive Waste"
+								},
 								"minecraft:lore": [
 									[
 										"",

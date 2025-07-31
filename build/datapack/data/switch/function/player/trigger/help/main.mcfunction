@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/help/main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/main
 #			switch:player/tutorial/second
 #

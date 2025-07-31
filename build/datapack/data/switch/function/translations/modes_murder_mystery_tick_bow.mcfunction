@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_murder_mystery_tick_bow
 #
+# @executed	as @e[type=item_display,tag=switch.detective_bow] & at @s & positioned ~ ~-1 ~
+#
 # @within	switch:modes/murder_mystery/tick_bow
 #
 

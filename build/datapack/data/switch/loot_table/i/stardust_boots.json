@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_boots",
-								"minecraft:item_name": "Stardust Boots",
+								"minecraft:item_name": {
+									"text": "Stardust Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

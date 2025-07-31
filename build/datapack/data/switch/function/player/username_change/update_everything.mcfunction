@@ -1,6 +1,8 @@
 
 #> switch:player/username_change/update_everything
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/username_change/compare_usernames with storage switch:temp input
 #
 

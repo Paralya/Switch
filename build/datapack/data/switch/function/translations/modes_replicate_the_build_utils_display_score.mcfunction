@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_replicate_the_build_utils_display_score
 #
+# @executed	as @a[tag=!detached]
+#
 # @within	switch:modes/replicate_the_build/utils/display_score
 #
 

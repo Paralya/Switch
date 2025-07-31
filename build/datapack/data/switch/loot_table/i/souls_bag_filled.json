@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:souls_bag_filled",
-								"minecraft:item_name": "Souls Bag Filled",
+								"minecraft:item_name": {
+									"text": "Souls Bag Filled"
+								},
 								"minecraft:lore": [
 									[
 										"",

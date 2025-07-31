@@ -1,8 +1,10 @@
 
 #> switch:modes/build_battle/preparation/summon_marker
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/joined
-#			switch:modes/build_battle/preparation/main
+#			switch:modes/build_battle/preparation/main [ as @a[tag=!detached] ]
 #
 
 # Get coordinates of marker

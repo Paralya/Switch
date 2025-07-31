@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:darkium_axe",
-								"minecraft:item_name": "Darkium Axe",
+								"minecraft:item_name": {
+									"text": "Darkium Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

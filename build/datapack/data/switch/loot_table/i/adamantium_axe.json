@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_axe",
-								"minecraft:item_name": "Adamantium Axe",
+								"minecraft:item_name": {
+									"text": "Adamantium Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

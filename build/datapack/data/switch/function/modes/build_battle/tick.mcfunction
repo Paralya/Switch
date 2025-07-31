@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/tick
 #
-# @within	switch:modes/build_battle/calls/tick
+# @executed	in switch:build_battle
+#
+# @within	switch:modes/build_battle/calls/tick [ in switch:build_battle ]
 #
 
 scoreboard players add #build_battle_ticks switch.data 1

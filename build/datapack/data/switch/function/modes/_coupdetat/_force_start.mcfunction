@@ -1,7 +1,9 @@
 
 #> switch:modes/_coupdetat/_force_start
 #
-# @within	switch:engine/start
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
+# @within	switch:engine/start [ as @n[tag=switch.coupdetat] & in switch:game ]
 #
 
 # Stop everything

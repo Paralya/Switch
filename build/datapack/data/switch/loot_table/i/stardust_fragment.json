@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:stardust_fragment",
-								"minecraft:item_name": "Stardust Fragment",
+								"minecraft:item_name": {
+									"text": "Stardust Fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",

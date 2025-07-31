@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_leggings",
-								"minecraft:item_name": "Californium Leggings",
+								"minecraft:item_name": {
+									"text": "Californium Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

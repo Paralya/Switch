@@ -3,7 +3,7 @@
 #
 # @within	switch:modes/rush_the_flag/joined
 #			switch:modes/rush_the_point/joined
-#			switch:modes/rush_the_point/start_common
+#			switch:modes/rush_the_point/start_common [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 tag @s add switch.temp

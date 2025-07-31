@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/arrow_explosion
 #
-# @within	switch:modes/glassrunner/tick
+# @executed	at @s
+#
+# @within	switch:modes/glassrunner/tick [ at @s ]
 #
 
 function switch:modes/glassrunner/destroy_glass_around

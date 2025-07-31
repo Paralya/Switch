@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/ctp/side1/red
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/second
 #
 

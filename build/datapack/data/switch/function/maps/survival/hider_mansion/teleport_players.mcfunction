@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/hider_mansion/teleport_players
 #
-# @within	switch:maps/survival/hider_mansion/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/hider_mansion/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [71153.5d, 115.5d, 71047.5d]

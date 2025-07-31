@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/items_check
 #
-# @within	switch:modes/capture_the_flag/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/capture_the_flag/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

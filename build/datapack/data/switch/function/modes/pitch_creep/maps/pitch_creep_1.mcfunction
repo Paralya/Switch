@@ -1,7 +1,9 @@
 
 #> switch:modes/pitch_creep/maps/pitch_creep_1
 #
-# @within	switch:modes/pitch_creep/start
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:modes/pitch_creep/start [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game run tp @s 3520 121.69 3511 0 0

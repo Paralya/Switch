@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/rating_time/find_player
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/rating_time/next_rating
 #			switch:modes/build_battle/rating_time/start 1t replace
 #

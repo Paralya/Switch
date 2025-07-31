@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_block_party_core_get_block_count_loop
 #
+# @executed	positioned ~ ~ ~1
+#
 # @within	switch:modes/block_party/core/get_block_count_loop
 #
 

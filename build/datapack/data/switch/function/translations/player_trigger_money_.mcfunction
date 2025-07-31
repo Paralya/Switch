@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_money_
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/money/main
 #
 

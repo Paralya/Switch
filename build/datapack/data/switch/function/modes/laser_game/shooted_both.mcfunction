@@ -1,6 +1,8 @@
 
 #> switch:modes/laser_game/shooted_both
 #
+# @executed	as @e[tag=...,scores={switch.alive=10}] & at @s
+#
 # @within	switch:modes/laser_game/shooted_player_blue
 #			switch:modes/laser_game/shooted_player_red
 #

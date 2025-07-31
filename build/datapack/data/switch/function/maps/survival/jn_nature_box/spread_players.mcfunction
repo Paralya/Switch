@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/jn_nature_box/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/jn_nature_box/teleport_players
 #
 

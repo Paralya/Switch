@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_traitors_game_death_for_detective
 #
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
 # @within	switch:modes/traitors_game/death/for_detective
 #
 

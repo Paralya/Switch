@@ -1,6 +1,8 @@
 
 #> switch:stats/util_update_player
 #
+# @executed	as the player & at current position
+#
 # @within	switch:advancements/easy
 #			switch:advancements/hard
 #			switch:advancements/jumps/blue

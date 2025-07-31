@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/player_setup_id
 #
-# @within	switch:modes/kart_racer/post_load
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/kart_racer/post_load [ as @a[tag=!detached] ]
 #
 
 # Apply ID for Respawn

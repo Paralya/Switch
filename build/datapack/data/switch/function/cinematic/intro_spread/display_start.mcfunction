@@ -1,7 +1,9 @@
 
 #> switch:cinematic/intro_spread/display_start
 #
-# @within	switch:cinematic/intro_spread/start with storage switch:temp intro
+# @executed	positioned ~ ~1.6 ~
+#
+# @within	switch:cinematic/intro_spread/start with storage switch:temp intro [ positioned ~ ~1.6 ~ ]
 #
 
 # Spawn text display for map name with fade-in effect

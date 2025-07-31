@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:deepslate_stardust_ore",
-								"minecraft:item_name": "Deepslate Stardust Ore",
+								"minecraft:item_name": {
+									"text": "Deepslate Stardust Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

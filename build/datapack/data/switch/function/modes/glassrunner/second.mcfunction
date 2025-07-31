@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/second
 #
-# @within	switch:modes/glassrunner/calls/second
+# @executed	positioned 3000 128 3000
+#
+# @within	switch:modes/glassrunner/calls/second [ positioned 3000 128 3000 ]
 #
 
 scoreboard players add #glassrunner_seconds switch.data 1

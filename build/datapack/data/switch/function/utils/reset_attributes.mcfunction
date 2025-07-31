@@ -7,7 +7,7 @@
 #			switch:modes/traitors_game/give_items
 #			switch:player/joined
 #			switch:player/trigger/detach/basic_stuff
-#			switch:utils/reset_players
+#			switch:utils/reset_players [ as @a[tag=!detached] ]
 #
 
 attribute @s armor base reset

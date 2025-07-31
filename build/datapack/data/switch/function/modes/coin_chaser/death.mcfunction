@@ -1,7 +1,9 @@
 
 #> switch:modes/coin_chaser/death
 #
-# @within	switch:modes/coin_chaser/process_end
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/coin_chaser/process_end [ as @a[tag=!detached] ]
 #
 
 gamemode spectator @s

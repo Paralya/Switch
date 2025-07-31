@@ -1,6 +1,8 @@
 
 #> switch:music/actions/previous
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/music/main
 #
 

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/baby_park/teleport_players
 #
-# @within	switch:maps/survival/baby_park/main
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:maps/survival/baby_park/main [ as @a[tag=!detached,sort=random] ]
 #
 
 execute if score #count switch.data matches 0 in switch:game positioned 21143.5 131.69 21106.5 run tp @s ~0 ~ ~-0 90 0

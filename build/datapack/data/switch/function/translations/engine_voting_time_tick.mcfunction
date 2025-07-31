@@ -1,6 +1,8 @@
 
 #> switch:translations/engine_voting_time_tick
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/voting_time/tick
 #
 

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/elytra_box/teleport_players
 #
-# @within	switch:maps/survival/elytra_box/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/elytra_box/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [5997.5d, 158.5d, 6004.5d]

@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/death/zombie_transform
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/infected/death/infection_second
 #
 

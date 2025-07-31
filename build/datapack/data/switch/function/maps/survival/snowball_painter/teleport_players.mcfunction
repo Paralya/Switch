@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/snowball_painter/teleport_players
 #
-# @within	switch:maps/survival/snowball_painter/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/snowball_painter/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [112036.5d, 111.5d, 112003.5d]

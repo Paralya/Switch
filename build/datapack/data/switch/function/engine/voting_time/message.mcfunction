@@ -1,9 +1,11 @@
 
 #> switch:engine/voting_time/message
 #
-# @within	switch:engine/voting_time/main
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:engine/voting_time/main [ as @a[tag=!detached] ]
 #			switch:engine/voting_time/player_join
-#			switch:engine/voting_time/tick
+#			switch:engine/voting_time/tick [ as @a[tag=!detached] ]
 #			switch:player/tutorial/second
 #
 

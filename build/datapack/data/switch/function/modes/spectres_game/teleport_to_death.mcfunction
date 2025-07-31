@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/teleport_to_death
 #
-# @within	switch:modes/spectres_game/tick
+# @executed	as @a[tag=!...]
+#
+# @within	switch:modes/spectres_game/tick [ as @a[tag=!...] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

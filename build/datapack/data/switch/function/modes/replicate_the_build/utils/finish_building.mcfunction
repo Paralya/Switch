@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/utils/finish_building
 #
-# @within	switch:modes/replicate_the_build/round/5
+# @executed	as @e[type=marker,tag=switch.rtb.island] & at @s
+#
+# @within	switch:modes/replicate_the_build/round/5 [ as @e[type=marker,tag=switch.rtb.island] & at @s ]
 #
 
 scoreboard players operation #rtb_search switch.data = @s switch.rtb.id

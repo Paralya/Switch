@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/percentage/title
 #
-# @within	switch:modes/murder_mystery/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/murder_mystery/start [ as @a[tag=!detached] ]
 #
 
 # Calculate percentages

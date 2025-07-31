@@ -1,7 +1,12 @@
 
 #> switch:modes/infected/secrets/area_51/next_state
 #
-# @within	switch:modes/infected/secrets/area_51/_tick
+# @executed	positioned 2069 151 2051
+#
+# @within	switch:modes/infected/secrets/area_51/_tick [ positioned 2069 151 2051 ]
+#			switch:modes/infected/secrets/area_51/_tick [ positioned 2064 114 2104 & positioned 2064 113 2106 ]
+#			switch:modes/infected/secrets/area_51/_tick
+#			switch:modes/infected/secrets/area_51/_tick [ positioned 2033 123 2043 ]
 #
 
 # Generator

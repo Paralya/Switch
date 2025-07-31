@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/caddie_league/teleport_players
 #
-# @within	switch:maps/survival/caddie_league/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/caddie_league/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [41063.5d, 123.5d, 41061.5d]

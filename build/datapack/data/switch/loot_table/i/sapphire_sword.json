@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_sword",
-								"minecraft:item_name": "Sapphire Sword",
+								"minecraft:item_name": {
+									"text": "Sapphire Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

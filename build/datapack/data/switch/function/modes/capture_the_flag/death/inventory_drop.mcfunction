@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/death/inventory_drop
 #
-# @within	switch:modes/capture_the_flag/death/for_global
+# @executed	at @s
+#
+# @within	switch:modes/capture_the_flag/death/for_global [ at @s ]
 #			switch:modes/capture_the_flag/death/inventory_drop
 #
 

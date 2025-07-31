@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/death/player
 #
-# @within	switch:modes/capture_the_flag/process_end
+# @executed	as @a[tag=!detached,sort=random]
+#
+# @within	switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,sort=random] ]
 #
 
 function switch:utils/classic_death

@@ -1,6 +1,8 @@
 
 #> switch:shop/trigger
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/main
 #
 

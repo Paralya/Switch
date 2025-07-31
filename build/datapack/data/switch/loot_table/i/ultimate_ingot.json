@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:ultimate_ingot",
-								"minecraft:item_name": "Ultimate Ingot",
+								"minecraft:item_name": {
+									"text": "Ultimate Ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

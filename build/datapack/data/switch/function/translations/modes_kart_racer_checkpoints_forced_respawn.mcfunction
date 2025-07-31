@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_checkpoints_forced_respawn
 #
+# @executed	as @a[tag=!detached,predicate=switch:has_vehicle_with_tag,limit=1] & at @s
+#
 # @within	switch:modes/kart_racer/checkpoints/forced_respawn
 #
 

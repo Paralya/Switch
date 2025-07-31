@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/ancienne_egypte_2013/teleport_players
 #
-# @within	switch:maps/survival/ancienne_egypte_2013/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/ancienne_egypte_2013/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [128023.5d, 147.5d, 128030.5d]

@@ -1,7 +1,9 @@
 
 #> switch:modes/creeper_apocalypse/creeper_exploded
 #
-# @within	switch:modes/creeper_apocalypse/tick
+# @executed	as @e[type=area_effect_cloud] & at @s
+#
+# @within	switch:modes/creeper_apocalypse/tick [ as @e[type=area_effect_cloud] & at @s ]
 #
 
 execute if predicate switch:chance/0.5 run summon creeper ~.5 ~ ~1 {AbsorptionAmount:2048.0f,Motion:[0.3d,1.69d,0.5d],attributes:[{id:"minecraft:max_absorption",base:2048.0}],powered:true}

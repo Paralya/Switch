@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_capture_the_flag_score_point
 #
+# @executed	positioned ~ ~-2 ~
+#
 # @within	switch:modes/capture_the_flag/score_point
 #
 

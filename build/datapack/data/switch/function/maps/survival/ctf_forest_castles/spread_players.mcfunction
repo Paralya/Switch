@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/ctf_forest_castles/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/ctf_forest_castles/teleport_players
 #
 

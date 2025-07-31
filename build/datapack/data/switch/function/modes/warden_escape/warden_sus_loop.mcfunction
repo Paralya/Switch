@@ -1,6 +1,8 @@
 
 #> switch:modes/warden_escape/warden_sus_loop
 #
+# @executed	as @e[type=warden,distance=..3,sort=nearest]
+#
 # @within	switch:modes/warden_escape/warden_sus
 #			switch:modes/warden_escape/warden_sus_loop
 #

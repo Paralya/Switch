@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/score_point
 #
-# @within	switch:modes/capture_the_flag/flag_tick
+# @executed	positioned ~ ~-2 ~
+#
+# @within	switch:modes/capture_the_flag/flag_tick [ positioned ~ ~-2 ~ ]
 #
 
 # Tellraw + sound + fireworks

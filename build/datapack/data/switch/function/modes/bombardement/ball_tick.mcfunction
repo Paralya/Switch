@@ -1,7 +1,9 @@
 
 #> switch:modes/bombardement/ball_tick
 #
-# @within	switch:modes/bombardement/tick
+# @executed	as @e[type=armor_stand,tag=switch.ball] & at @s
+#
+# @within	switch:modes/bombardement/tick [ as @e[type=armor_stand,tag=switch.ball] & at @s ]
 #
 
 tp @s ^ ^ ^1

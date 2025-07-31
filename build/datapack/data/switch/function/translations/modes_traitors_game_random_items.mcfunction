@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_traitors_game_random_items
 #
+# @executed	as @a[tag=!detached] & at @s
+#
 # @within	switch:modes/traitors_game/random_items
 #
 

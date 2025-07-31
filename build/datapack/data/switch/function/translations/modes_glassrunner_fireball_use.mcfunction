@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_glassrunner_fireball_use
 #
+# @executed	at @s
+#
 # @within	switch:modes/glassrunner/fireball/use
 #
 

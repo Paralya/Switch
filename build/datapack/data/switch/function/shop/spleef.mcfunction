@@ -1,6 +1,8 @@
 
 #> switch:shop/spleef
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:shop/trigger
 #
 

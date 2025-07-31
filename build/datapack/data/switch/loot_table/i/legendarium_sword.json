@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:legendarium_sword",
-								"minecraft:item_name": "Legendarium Sword",
+								"minecraft:item_name": {
+									"text": "Legendarium Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

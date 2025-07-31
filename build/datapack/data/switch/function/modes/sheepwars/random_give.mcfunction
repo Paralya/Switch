@@ -1,7 +1,9 @@
 
 #> switch:modes/sheepwars/random_give
 #
-# @within	switch:modes/sheepwars/second
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
+# @within	switch:modes/sheepwars/second [ as @a[tag=!detached,gamemode=!spectator] ]
 #
 
 # If player has More Sheep kit

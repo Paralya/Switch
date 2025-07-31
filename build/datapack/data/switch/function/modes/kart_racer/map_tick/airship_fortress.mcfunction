@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/map_tick/airship_fortress
 #
-# @within	switch:modes/kart_racer/tick
+# @executed	in switch:game
+#
+# @within	switch:modes/kart_racer/tick [ in switch:game ]
 #
 
 scoreboard players set @e[tag=shopping_kart.kart,x=20654,y=109,z=20382,distance=..5] switch.temp.compteur 1

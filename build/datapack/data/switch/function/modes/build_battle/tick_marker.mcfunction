@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/tick_marker
 #
-# @within	switch:modes/build_battle/tick
+# @executed	as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=5] & at @s
+#
+# @within	switch:modes/build_battle/tick [ as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=5] & at @s ]
 #
 
 # Prevent players from breaking zone

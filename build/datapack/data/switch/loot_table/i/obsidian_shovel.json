@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_shovel",
-								"minecraft:item_name": "Obsidian Shovel",
+								"minecraft:item_name": {
+									"text": "Obsidian Shovel"
+								},
 								"minecraft:lore": [
 									[
 										"",

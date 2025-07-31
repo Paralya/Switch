@@ -1,7 +1,9 @@
 
 #> switch:npc/tick
 #
-# @within	switch:npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"}
+# @executed	as @e[type=armor_stand,tag=switch.npc.ofchara] & at @s
+#
+# @within	switch:npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"} [ as @e[type=armor_stand,tag=switch.npc.ofchara] & at @s ]
 #
 
 # If body is locked, set a score

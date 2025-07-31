@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:uranium_ore",
-								"minecraft:item_name": "Uranium Ore",
+								"minecraft:item_name": {
+									"text": "Uranium Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

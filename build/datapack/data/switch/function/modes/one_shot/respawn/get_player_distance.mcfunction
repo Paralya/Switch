@@ -1,7 +1,9 @@
 
 #> switch:modes/one_shot/respawn/get_player_distance
 #
-# @within	switch:modes/one_shot/respawn/main
+# @executed	as @e[tag=switch.respawn] & at @s
+#
+# @within	switch:modes/one_shot/respawn/main [ as @e[tag=switch.respawn] & at @s ]
 #
 
 # At every player that is not dead, calculate the minimal distance

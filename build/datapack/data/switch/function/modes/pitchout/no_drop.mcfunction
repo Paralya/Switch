@@ -1,7 +1,9 @@
 
 #> switch:modes/pitchout/no_drop
 #
-# @within	switch:modes/pitchout/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/pitchout/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

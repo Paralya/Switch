@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/whity_lab/teleport_players
 #
-# @within	switch:maps/survival/whity_lab/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/whity_lab/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [91081.5d, 133.5d, 91003.5d]

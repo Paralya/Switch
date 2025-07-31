@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_murder_mystery_kill_player
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/murder_mystery/kill_player
 #
 

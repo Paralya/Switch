@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:adamantium_hoe",
-								"minecraft:item_name": "Adamantium Hoe",
+								"minecraft:item_name": {
+									"text": "Adamantium Hoe"
+								},
 								"minecraft:lore": [
 									[
 										"",

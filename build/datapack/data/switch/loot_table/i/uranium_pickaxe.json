@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_pickaxe",
-								"minecraft:item_name": "Uranium Pickaxe",
+								"minecraft:item_name": {
+									"text": "Uranium Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

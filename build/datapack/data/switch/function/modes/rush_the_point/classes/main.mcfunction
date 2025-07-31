@@ -1,8 +1,10 @@
 
 #> switch:modes/rush_the_point/classes/main
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/rush_the_point/right_click
-#			switch:modes/rush_the_point/tick_common
+#			switch:modes/rush_the_point/tick_common [ as @a[tag=!detached,scores={switch.temp.chosen_class=0}] ]
 #
 
 # Get which class got chosen

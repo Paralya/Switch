@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/floor_is_lava/teleport_players
 #
-# @within	switch:maps/survival/floor_is_lava/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/floor_is_lava/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [62070.5d, 138.5d, 62006.5d]

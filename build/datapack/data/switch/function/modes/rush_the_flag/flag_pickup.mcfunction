@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_flag/flag_pickup
 #
+# @executed	as @e[type=item_display,tag=switch.flag,sort=random] & at @s & positioned ~ ~-2 ~
+#
 # @within	switch:modes/rush_the_flag/flag_tick
 #
 

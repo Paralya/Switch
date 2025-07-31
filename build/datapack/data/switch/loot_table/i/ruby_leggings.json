@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:ruby_leggings",
-								"minecraft:item_name": "Ruby Leggings",
+								"minecraft:item_name": {
+									"text": "Ruby Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/start/team
 #
-# @within	switch:modes/glassrunner/start
+# @executed	as @a[tag=!detached,sort=random] & at @s
+#
+# @within	switch:modes/glassrunner/start [ as @a[tag=!detached,sort=random] & at @s ]
 #
 
 execute if score #count switch.data matches 0 run team join switch.glassrunner.red @s

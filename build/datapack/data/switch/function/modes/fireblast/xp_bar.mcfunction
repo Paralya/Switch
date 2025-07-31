@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/xp_bar
 #
-# @within	switch:modes/fireblast/tick
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
+# @within	switch:modes/fireblast/tick [ as @a[tag=!detached,gamemode=!spectator] ]
 #
 
 # 50 seconds = 100%

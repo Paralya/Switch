@@ -1,7 +1,9 @@
 
 #> switch:modes/coin_chaser/no_drop
 #
-# @within	switch:modes/coin_chaser/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/coin_chaser/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/detach/main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/joined
 #			switch:player/trigger/lang/tick_undefined
 #			switch:player/trigger/main

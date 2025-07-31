@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_minigolf_check_lost_ball
 #
+# @executed	as @a[scores={switch.alive=1},predicate=!golf_ball:has_vehicle] & at @s
+#
 # @within	switch:modes/minigolf/check_lost_ball
 #
 

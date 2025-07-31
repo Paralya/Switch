@@ -1,6 +1,8 @@
 
 #> switch:modes/shoot_da_sheep/reward
 #
+# @executed	as @e[type=sheep] & at @s
+#
 # @within	switch:modes/shoot_da_sheep/sheep_tick
 #
 

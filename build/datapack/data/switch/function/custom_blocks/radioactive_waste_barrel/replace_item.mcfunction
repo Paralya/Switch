@@ -1,7 +1,9 @@
 
 #> switch:custom_blocks/radioactive_waste_barrel/replace_item
 #
-# @within	switch:custom_blocks/radioactive_waste_barrel/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:emerald_block"}},distance=..1]
+#
+# @within	switch:custom_blocks/radioactive_waste_barrel/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:emerald_block"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage switch:items all.radioactive_waste_barrel.components

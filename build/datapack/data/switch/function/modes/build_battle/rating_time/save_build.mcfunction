@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/rating_time/save_build
 #
-# @within	switch:modes/build_battle/rating_time/time_up
+# @executed	as @e[type=marker,tag=switch.build_battle_save,limit=1] & at @s
+#
+# @within	switch:modes/build_battle/rating_time/time_up [ as @e[type=marker,tag=switch.build_battle_save,limit=1] & at @s ]
 #
 
 # Save the temporary build at this position

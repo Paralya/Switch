@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/jn_countries_castle/teleport_players
 #
-# @within	switch:maps/survival/jn_countries_castle/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/jn_countries_castle/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [132034.5d, 124.5d, 132106.5d]

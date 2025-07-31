@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/friends_cube_jump/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/friends_cube_jump/teleport_players
 #
 

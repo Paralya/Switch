@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_glassrunner_apocalypse_start
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/apocalypse/start
 #
 

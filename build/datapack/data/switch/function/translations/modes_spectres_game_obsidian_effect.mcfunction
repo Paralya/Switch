@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_spectres_game_obsidian_effect
 #
+# @executed	as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}]
+#
 # @within	switch:modes/spectres_game/obsidian_effect
 #
 

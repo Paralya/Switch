@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/warden_forest/teleport_players
 #
-# @within	switch:maps/survival/warden_forest/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/warden_forest/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [10066.5d, 107.5d, 10022.5d]

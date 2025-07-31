@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/jn_murder_mystery/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/jn_murder_mystery/teleport_players
 #
 

@@ -22,7 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "switch:stardust_ingot",
-			"minecraft:item_name": "Stardust Ingot",
+			"minecraft:item_name": {
+				"text": "Stardust Ingot"
+			},
 			"minecraft:lore": [
 				[
 					"",

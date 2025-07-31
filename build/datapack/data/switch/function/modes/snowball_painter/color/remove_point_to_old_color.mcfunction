@@ -1,6 +1,8 @@
 
 #> switch:modes/snowball_painter/color/remove_point_to_old_color
 #
+# @executed	positioned ~1 ~1 ~1
+#
 # @within	switch:modes/snowball_painter/color/place
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/shop/reset_item
 #
+# @executed	positioned 3000 128 3000
+#
 # @within	switch:modes/glassrunner/death/both
 #			switch:modes/glassrunner/shop/apocalypse
 #			switch:modes/glassrunner/shop/arrow

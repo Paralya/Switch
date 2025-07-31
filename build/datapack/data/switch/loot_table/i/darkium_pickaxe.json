@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:darkium_pickaxe",
-								"minecraft:item_name": "Darkium Pickaxe",
+								"minecraft:item_name": {
+									"text": "Darkium Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

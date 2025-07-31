@@ -59,7 +59,9 @@
 				}
 			],
 			"minecraft:item_model": "switch:emerald_chestplate",
-			"minecraft:item_name": "Emerald Chestplate",
+			"minecraft:item_name": {
+				"text": "Emerald Chestplate"
+			},
 			"minecraft:lore": [
 				[
 					"",

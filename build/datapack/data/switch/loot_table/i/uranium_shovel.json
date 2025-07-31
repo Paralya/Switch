@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_shovel",
-								"minecraft:item_name": "Uranium Shovel",
+								"minecraft:item_name": {
+									"text": "Uranium Shovel"
+								},
 								"minecraft:lore": [
 									[
 										"",

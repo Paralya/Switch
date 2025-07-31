@@ -1,6 +1,8 @@
 
 #> switch:engine/log_message/apply
 #
+# @executed	Don't care
+#
 # @within	switch:engine/signals/start
 #			switch:engine/signals/stop
 #			switch:maps/load
@@ -155,8 +157,6 @@
 #			switch:maps/survival/fireblast_cookie/regenerate
 #			switch:maps/survival/fireblast_pork/regenerate
 #
-# @executed			Don't care
-# 
 # @input storage	switch:main MessageToLog
 # 
 # @description		Interprets the message and logs it to the console

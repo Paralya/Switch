@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/xp_bar_preparation
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/preparation/second
 #
 

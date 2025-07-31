@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/update_sidebar_macro
 #
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
 # @within	switch:modes/traitors_game/update_sidebar with storage switch:main input
 #
 

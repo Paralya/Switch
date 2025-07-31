@@ -1,7 +1,10 @@
 
 #> switch:utils/reset_gamerules
 #
-# @within	switch:engine/stop
+# @executed	in minecraft:overworld
+#
+# @within	switch:engine/stop [ in minecraft:overworld ]
+#			switch:engine/stop [ in switch:game ]
 #
 
 gamerule maxCommandChainLength 2147483647

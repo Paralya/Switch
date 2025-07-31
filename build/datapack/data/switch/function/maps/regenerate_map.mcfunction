@@ -1,6 +1,8 @@
 
 #> switch:maps/regenerate_map
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/stop
 #			switch:modes/sheepwars/process_end
 #

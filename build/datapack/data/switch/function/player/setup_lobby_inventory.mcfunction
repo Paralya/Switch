@@ -1,6 +1,8 @@
 
 #> switch:player/setup_lobby_inventory
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tick_detach
 #
 

@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_pickaxe",
-								"minecraft:item_name": "Stardust Pickaxe",
+								"minecraft:item_name": {
+									"text": "Stardust Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

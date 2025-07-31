@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/stats/remove_max
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/stats/sort_loop with storage switch:main max
 #
 

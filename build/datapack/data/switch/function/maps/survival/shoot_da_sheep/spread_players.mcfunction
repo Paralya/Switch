@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/shoot_da_sheep/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/shoot_da_sheep/teleport_players
 #
 

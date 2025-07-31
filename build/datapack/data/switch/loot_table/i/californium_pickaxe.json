@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_pickaxe",
-								"minecraft:item_name": "Californium Pickaxe",
+								"minecraft:item_name": {
+									"text": "Californium Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,6 +1,8 @@
 
 #> switch:cinematic/intro_spread/playsound
 #
+# @executed	positioned ~ ~1.6 ~
+#
 # @within	switch:cinematic/intro_spread/fade_in 10t
 #
 

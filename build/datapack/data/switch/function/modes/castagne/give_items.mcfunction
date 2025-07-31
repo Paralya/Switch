@@ -1,7 +1,9 @@
 
 #> switch:modes/castagne/give_items
 #
-# @within	switch:modes/castagne/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/castagne/start [ as @a[tag=!detached] ]
 #
 
 item replace entity @s armor.head with leather_helmet[enchantments={projectile_protection:2}]

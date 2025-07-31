@@ -2,7 +2,7 @@
 #> switch:modes/thunder_spear/give_and_teleport
 #
 # @within	switch:modes/thunder_spear/joined
-#			switch:modes/thunder_spear/start
+#			switch:modes/thunder_spear/start [ as @a[tag=!detached] ]
 #
 
 ## Starter kit

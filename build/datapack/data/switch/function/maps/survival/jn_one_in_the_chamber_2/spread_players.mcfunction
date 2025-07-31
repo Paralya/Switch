@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/jn_one_in_the_chamber_2/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/jn_one_in_the_chamber_2/teleport_players
 #
 

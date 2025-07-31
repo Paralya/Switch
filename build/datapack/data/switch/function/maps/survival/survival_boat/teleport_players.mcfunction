@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/survival_boat/teleport_players
 #
-# @within	switch:maps/survival/survival_boat/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/survival_boat/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [79030.5d, 116.5d, 79042.5d]

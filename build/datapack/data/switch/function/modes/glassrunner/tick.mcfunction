@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/tick
 #
-# @within	switch:modes/glassrunner/calls/tick
+# @executed	positioned 3000 128 3000
+#
+# @within	switch:modes/glassrunner/calls/tick [ positioned 3000 128 3000 ]
 #
 
 scoreboard players add #glassrunner_ticks switch.data 1

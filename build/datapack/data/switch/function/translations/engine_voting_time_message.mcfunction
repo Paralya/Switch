@@ -1,6 +1,8 @@
 
 #> switch:translations/engine_voting_time_message
 #
+# @executed	as @a[tag=!detached]
+#
 # @within	switch:engine/voting_time/message
 #
 

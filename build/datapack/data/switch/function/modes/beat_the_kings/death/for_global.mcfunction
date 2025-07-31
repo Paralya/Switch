@@ -1,7 +1,9 @@
 
 #> switch:modes/beat_the_kings/death/for_global
 #
-# @within	switch:modes/beat_the_kings/tick
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
+# @within	switch:modes/beat_the_kings/tick [ as @e[type=marker,tag=switch.player_dead] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

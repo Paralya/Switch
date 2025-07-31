@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/no_drop
 #
-# @within	switch:modes/murder_mystery/tick
+# @executed	as @e[type=item,tag=!switch.checked]
+#
+# @within	switch:modes/murder_mystery/tick [ as @e[type=item,tag=!switch.checked] ]
 #
 
 tag @s add switch.checked

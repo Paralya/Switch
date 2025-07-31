@@ -1,6 +1,8 @@
 
 #> switch:shop/pitchout
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tutorial/second
 #			switch:shop/trigger
 #

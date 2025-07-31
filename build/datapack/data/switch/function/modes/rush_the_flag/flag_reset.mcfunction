@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_flag/flag_reset
 #
+# @executed	as @e[type=item_display,tag=switch.flag,sort=random] & at @s & positioned ~ ~-2 ~
+#
 # @within	switch:modes/rush_the_flag/flag_tick
 #			switch:modes/rush_the_flag/score_point
 #

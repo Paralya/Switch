@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:souls_bag",
-								"minecraft:item_name": "Souls Bag",
+								"minecraft:item_name": {
+									"text": "Souls Bag"
+								},
 								"minecraft:lore": [
 									[
 										"",

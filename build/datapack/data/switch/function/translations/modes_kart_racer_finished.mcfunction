@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_kart_racer_finished
 #
+# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+#
 # @within	switch:modes/kart_racer/finished
 #
 

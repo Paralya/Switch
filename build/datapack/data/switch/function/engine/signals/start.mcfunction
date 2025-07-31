@@ -2,7 +2,7 @@
 #> switch:engine/signals/start
 #
 # @within	switch:engine/force_start_macro
-#			switch:engine/launch_game/main
+#			switch:engine/launch_game/main [ in switch:game ]
 #			switch:modes/_coupdetat/_force_start
 #
 

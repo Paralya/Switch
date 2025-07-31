@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_murder_mystery_throw_feedback
 #
+# @executed	as @a[scores={switch.temp.role=3}] & at @s
+#
 # @within	switch:modes/murder_mystery/throw/feedback
 #
 

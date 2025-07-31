@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/bancalvivor_s4/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/bancalvivor_s4/teleport_players
 #
 

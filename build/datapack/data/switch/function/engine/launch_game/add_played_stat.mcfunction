@@ -1,6 +1,8 @@
 
 #> switch:engine/launch_game/add_played_stat
 #
+# @executed	in switch:game
+#
 # @within	switch:engine/launch_game/main with storage switch:main
 #
 

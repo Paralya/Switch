@@ -1,8 +1,10 @@
 
 #> switch:modes/block_party/core/get_block_count_loop
 #
-# @within	switch:modes/block_party/core/get_block_count_loop
-#			switch:modes/block_party/core/pick_random_art
+# @executed	positioned ~ ~ ~1
+#
+# @within	switch:modes/block_party/core/get_block_count_loop [ positioned ~ ~ ~1 ]
+#			switch:modes/block_party/core/pick_random_art [ at @s & positioned ~ ~ ~65 ]
 #
 
 # Add block count and continue loop if not air

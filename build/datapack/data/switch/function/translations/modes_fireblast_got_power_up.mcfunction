@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_fireblast_got_power_up
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator] & at @s
+#
 # @within	switch:modes/fireblast/got_power_up
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:player/username_change/compare_usernames
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/username_change/with_macro {UUID:"$(UUID)",username:"$(username)"}
 #
 

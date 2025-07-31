@@ -1,7 +1,9 @@
 
 #> switch:player/tick
 #
-# @within	switch:tick
+# @executed	as @a[sort=random] & at @s
+#
+# @within	switch:tick [ as @a[sort=random] & at @s ]
 #
 
 # Check if new username

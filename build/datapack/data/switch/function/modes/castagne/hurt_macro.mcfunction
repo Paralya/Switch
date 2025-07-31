@@ -1,6 +1,8 @@
 
 #> switch:modes/castagne/hurt_macro
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/castagne/entity_hurt_player with storage switch:temp input
 #
 

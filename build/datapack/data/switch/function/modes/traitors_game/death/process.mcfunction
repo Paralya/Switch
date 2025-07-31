@@ -1,7 +1,9 @@
 
 #> switch:modes/traitors_game/death/process
 #
-# @within	switch:modes/traitors_game/tick
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
+# @within	switch:modes/traitors_game/tick [ as @e[type=marker,tag=switch.player_dead] ]
 #
 
 scoreboard players add @s switch.temp.cooldown 1

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/coupdetat/teleport_players
 #
-# @within	switch:maps/survival/coupdetat/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/coupdetat/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [18009.5d, 109.5d, 18016.5d]

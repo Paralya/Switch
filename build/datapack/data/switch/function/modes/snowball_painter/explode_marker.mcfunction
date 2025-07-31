@@ -1,7 +1,9 @@
 
 #> switch:modes/snowball_painter/explode_marker
 #
-# @within	switch:modes/snowball_painter/tick
+# @executed	as @e[type=marker,tag=switch.marker,predicate=!switch:has_vehicle,sort=random] & at @s
+#
+# @within	switch:modes/snowball_painter/tick [ as @e[type=marker,tag=switch.marker,predicate=!switch:has_vehicle,sort=random] & at @s ]
 #
 
 # Search the player corresponding with the score

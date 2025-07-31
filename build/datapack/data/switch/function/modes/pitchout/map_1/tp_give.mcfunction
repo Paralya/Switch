@@ -2,7 +2,7 @@
 #> switch:modes/pitchout/map_1/tp_give
 #
 # @within	switch:modes/pitchout/death
-#			switch:modes/pitchout/start
+#			switch:modes/pitchout/start [ as @a[tag=!detached,sort=random] ]
 #
 
 function switch:modes/pitchout/map_1/teleport_players

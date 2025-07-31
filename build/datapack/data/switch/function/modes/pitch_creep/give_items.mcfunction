@@ -1,7 +1,9 @@
 
 #> switch:modes/pitch_creep/give_items
 #
-# @within	switch:modes/pitch_creep/second
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/pitch_creep/second [ as @a[tag=!detached] & at @s ]
 #
 
 # Give sword

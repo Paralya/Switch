@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:californium_ingot",
-								"minecraft:item_name": "Californium Ingot",
+								"minecraft:item_name": {
+									"text": "Californium Ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

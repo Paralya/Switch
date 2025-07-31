@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:uranium_sword",
-								"minecraft:item_name": "Uranium Sword",
+								"minecraft:item_name": {
+									"text": "Uranium Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

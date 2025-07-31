@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:ruby_block",
-								"minecraft:item_name": "Ruby Block",
+								"minecraft:item_name": {
+									"text": "Ruby Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,6 +1,8 @@
 
 #> switch:engine/xp_bar_levels_at_s
 #
+# @executed	as @a[tag=!detached,gamemode=!spectator]
+#
 # @within	switch:modes/fireblast/xp_bar
 #
 

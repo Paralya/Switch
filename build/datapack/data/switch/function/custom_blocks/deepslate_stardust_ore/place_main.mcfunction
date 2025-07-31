@@ -1,7 +1,13 @@
 
 #> switch:custom_blocks/deepslate_stardust_ore/place_main
 #
-# @within	switch:modes/infected/secrets/lost_graveyard/_load
+# @executed	positioned 127121 113 127047
+#
+# @within	switch:modes/infected/secrets/lost_graveyard/_load [ positioned 127121 113 127047 ]
+#			switch:modes/infected/secrets/lost_graveyard/_load [ positioned 127122 113 127055 ]
+#			switch:modes/infected/secrets/lost_graveyard/_load [ positioned 127115 114 127062 ]
+#			switch:modes/infected/secrets/lost_graveyard/_load [ positioned 127118 119 127068 ]
+#			switch:modes/infected/secrets/lost_graveyard/_load [ positioned 127109 117 127062 ]
 #			switch:custom_blocks/place
 #
 

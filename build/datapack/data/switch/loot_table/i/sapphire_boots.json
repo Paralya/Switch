@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_boots",
-								"minecraft:item_name": "Sapphire Boots",
+								"minecraft:item_name": {
+									"text": "Sapphire Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

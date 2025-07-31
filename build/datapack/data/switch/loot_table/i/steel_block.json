@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:steel_block",
-								"minecraft:item_name": "Steel Block",
+								"minecraft:item_name": {
+									"text": "Steel Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

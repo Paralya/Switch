@@ -1,7 +1,9 @@
 
 #> switch:modes/infected/secrets/lost_graveyard/item_tick
 #
-# @within	switch:modes/infected/secrets/lost_graveyard/_tick
+# @executed	at @s
+#
+# @within	switch:modes/infected/secrets/lost_graveyard/_tick [ at @s ]
 #
 
 # Owner become nearest human

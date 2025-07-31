@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/layers_4_teams/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/layers_4_teams/teleport_players
 #
 

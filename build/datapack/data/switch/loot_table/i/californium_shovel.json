@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:californium_shovel",
-								"minecraft:item_name": "Californium Shovel",
+								"minecraft:item_name": {
+									"text": "Californium Shovel"
+								},
 								"minecraft:lore": [
 									[
 										"",

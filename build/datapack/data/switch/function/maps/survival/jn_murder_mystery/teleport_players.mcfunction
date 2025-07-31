@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/jn_murder_mystery/teleport_players
 #
-# @within	switch:maps/survival/jn_murder_mystery/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/jn_murder_mystery/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [134121.5d, 128.5d, 134089.5d]

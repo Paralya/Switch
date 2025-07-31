@@ -1,7 +1,9 @@
 
 #> switch:modes/fish_fight/give_items
 #
-# @within	switch:modes/fish_fight/second
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/fish_fight/second [ as @a[tag=!detached] & at @s ]
 #			switch:modes/fish_fight/teams_tp/tp_give
 #
 

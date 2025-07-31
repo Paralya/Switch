@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_infected_secrets_ancienne_egypte_next_state
 #
+# @executed	positioned 128069 120 128084
+#
 # @within	switch:modes/infected/secrets/ancienne_egypte/next_state
 #
 

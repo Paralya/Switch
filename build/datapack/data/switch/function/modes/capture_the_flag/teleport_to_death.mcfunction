@@ -1,7 +1,9 @@
 
 #> switch:modes/capture_the_flag/teleport_to_death
 #
-# @within	switch:modes/capture_the_flag/tick
+# @executed	as @e[type=player,tag=switch.to_tp]
+#
+# @within	switch:modes/capture_the_flag/tick [ as @e[type=player,tag=switch.to_tp] ]
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

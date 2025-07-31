@@ -1,7 +1,9 @@
 
 #> switch:modes/pillars_of_fortune/swap/player_2
 #
-# @within	switch:modes/pillars_of_fortune/swap/player_1
+# @executed	as @r[tag=switch.to_swap] & at @s
+#
+# @within	switch:modes/pillars_of_fortune/swap/player_1 [ as @r[tag=switch.to_swap] & at @s ]
 #
 
 # Teleport player 1 to self

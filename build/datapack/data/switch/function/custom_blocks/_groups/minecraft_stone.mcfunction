@@ -1,6 +1,8 @@
 
 #> switch:custom_blocks/_groups/minecraft_stone
 #
+# @executed	as @e[type=item_display,tag=...,predicate=!switch:check_vanilla_blocks] & at @s
+#
 # @within	switch:custom_blocks/destroy
 #
 

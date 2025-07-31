@@ -1,7 +1,9 @@
 
 #> switch:modes/rush_the_point/tick_zone
 #
-# @within	switch:modes/rush_the_point/tick
+# @executed	at @s
+#
+# @within	switch:modes/rush_the_point/tick [ at @s ]
 #
 
 scoreboard players add @s switch.temp.zone_capture 0

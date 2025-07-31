@@ -1,7 +1,9 @@
 
 #> switch:modes/pitchout/give_items
 #
-# @within	switch:modes/pitchout/second
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/pitchout/second [ as @a[tag=!detached] & at @s ]
 #
 
 # Give sword

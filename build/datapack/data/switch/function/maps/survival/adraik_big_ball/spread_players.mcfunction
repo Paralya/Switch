@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/adraik_big_ball/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/adraik_big_ball/teleport_players
 #
 

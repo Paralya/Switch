@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/rating_time/macro_sign
 #
+# @executed	as @e[type=marker,tag=switch.build_battle_save,limit=1] & at @s
+#
 # @within	switch:modes/build_battle/rating_time/save_build with storage switch:main input
 #
 

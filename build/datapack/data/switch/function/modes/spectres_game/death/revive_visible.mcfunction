@@ -1,7 +1,9 @@
 
 #> switch:modes/spectres_game/death/revive_visible
 #
-# @within	switch:modes/spectres_game/obsidian_effect
+# @executed	as @r[tag=!detached,team=switch.temp.visible,scores={switch.alive=0}]
+#
+# @within	switch:modes/spectres_game/obsidian_effect [ as @r[tag=!detached,team=switch.temp.visible,scores={switch.alive=0}] ]
 #
 
 scoreboard players set #next_role switch.data 1

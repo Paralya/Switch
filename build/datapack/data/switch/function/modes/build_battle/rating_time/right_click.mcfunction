@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/rating_time/right_click
 #
-# @within	switch:modes/build_battle/tick
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..}] & at @s
+#
+# @within	switch:modes/build_battle/tick [ as @a[tag=!detached,scores={switch.right_click=1..}] & at @s ]
 #
 
 # Get slot

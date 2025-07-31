@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/rating_time/choose_player
 #
-# @within	switch:modes/build_battle/rating_time/find_player
+# @executed	as @r[scores={switch.temp.to_rate=1}]
+#
+# @within	switch:modes/build_battle/rating_time/find_player [ as @r[scores={switch.temp.to_rate=1}] ]
 #
 
 # Change the player state to rating (1 = waiting, 2 = rating)

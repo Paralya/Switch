@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/utils/finish_building_player
 #
-# @within	switch:modes/replicate_the_build/utils/finish_building
+# @executed	as @a[scores={switch.alive=1..},gamemode=survival]
+#
+# @within	switch:modes/replicate_the_build/utils/finish_building [ as @a[scores={switch.alive=1..},gamemode=survival] ]
 #
 
 gamemode spectator @s

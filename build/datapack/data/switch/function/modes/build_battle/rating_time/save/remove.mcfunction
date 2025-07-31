@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/rating_time/save/remove
 #
+# @executed	as @e[tag=switch.build_battle_marker,predicate=switch:has_same_temp_id] & at @s
+#
 # @within	switch:modes/build_battle/rating_time/save/place_2 1s
 #
 

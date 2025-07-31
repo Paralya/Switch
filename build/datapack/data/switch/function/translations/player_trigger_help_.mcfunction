@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_help_
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/help/main
 #
 

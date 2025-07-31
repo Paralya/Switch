@@ -1,7 +1,9 @@
 
 #> switch:modes/replicate_the_build/utils/explose_island
 #
-# @within	switch:modes/replicate_the_build/round/7_end
+# @executed	as @p[tag=switch.looser]
+#
+# @within	switch:modes/replicate_the_build/round/7_end [ as @p[tag=switch.looser] ]
 #
 
 scoreboard players operation #rtb_search switch.data = @s switch.rtb.id

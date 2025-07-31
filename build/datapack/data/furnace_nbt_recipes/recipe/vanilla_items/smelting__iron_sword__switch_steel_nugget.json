@@ -22,7 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "switch:steel_nugget",
-			"minecraft:item_name": "Steel Nugget",
+			"minecraft:item_name": {
+				"text": "Steel Nugget"
+			},
 			"minecraft:lore": [
 				[
 					"",

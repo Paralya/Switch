@@ -1,6 +1,8 @@
 
 #> switch:cinematic/finish
 #
+# @executed	as @e[type=item_display,tag=switch.cinematic]
+#
 # @within	switch:cinematic/entity_tick
 #
 

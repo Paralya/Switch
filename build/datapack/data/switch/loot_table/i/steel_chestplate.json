@@ -34,7 +34,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:steel_chestplate",
-								"minecraft:item_name": "Steel Chestplate",
+								"minecraft:item_name": {
+									"text": "Steel Chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

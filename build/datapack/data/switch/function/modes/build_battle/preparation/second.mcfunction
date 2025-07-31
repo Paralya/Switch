@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/preparation/second
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/second
 #
 

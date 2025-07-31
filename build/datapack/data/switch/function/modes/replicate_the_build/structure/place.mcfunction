@@ -1,9 +1,11 @@
 
 #> switch:modes/replicate_the_build/structure/place
 #
-# @within	switch:modes/replicate_the_build/round/3
-#			switch:modes/replicate_the_build/round/4_end
-#			switch:modes/replicate_the_build/round/5_end
+# @executed	as @e[type=marker,tag=switch.rtb.island] & at @s & positioned ~-3 ~ ~1
+#
+# @within	switch:modes/replicate_the_build/round/3 [ as @e[type=marker,tag=switch.rtb.island] & at @s & positioned ~-3 ~ ~1 ]
+#			switch:modes/replicate_the_build/round/4_end [ positioned -29999997 24 1603 ]
+#			switch:modes/replicate_the_build/round/5_end [ as @e[type=marker,tag=switch.rtb.center] & at @s & positioned ~-3 ~ ~1 ]
 #
 
 execute if score #random switch.data matches 0 run place template switch:replicate_the_build/full_blue

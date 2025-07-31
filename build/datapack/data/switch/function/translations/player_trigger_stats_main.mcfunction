@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_stats_main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/stats/main with storage switch:main input
 #
 

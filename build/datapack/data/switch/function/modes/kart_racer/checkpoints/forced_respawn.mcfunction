@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/checkpoints/forced_respawn
 #
-# @within	switch:modes/kart_racer/out_of_map
+# @executed	as @a[tag=!detached,predicate=switch:has_vehicle_with_tag,limit=1] & at @s
+#
+# @within	switch:modes/kart_racer/out_of_map [ as @a[tag=!detached,predicate=switch:has_vehicle_with_tag,limit=1] & at @s ]
 #
 
 function switch:modes/kart_racer/checkpoints/respawn/hard

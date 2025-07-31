@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:shield_wand",
-								"minecraft:item_name": "Shield Wand",
+								"minecraft:item_name": {
+									"text": "Shield Wand"
+								},
 								"minecraft:lore": [
 									[
 										"",

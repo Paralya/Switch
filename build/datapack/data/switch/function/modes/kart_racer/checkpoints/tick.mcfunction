@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/checkpoints/tick
 #
-# @within	switch:modes/kart_racer/tick
+# @executed	at @s
+#
+# @within	switch:modes/kart_racer/tick [ at @s ]
 #
 
 execute store result score #x switch.data run data get entity @s Pos[0]

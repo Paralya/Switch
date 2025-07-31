@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:raw_steel_block",
-								"minecraft:item_name": "Raw Steel Block",
+								"minecraft:item_name": {
+									"text": "Raw Steel Block"
+								},
 								"minecraft:lore": [
 									[
 										"",

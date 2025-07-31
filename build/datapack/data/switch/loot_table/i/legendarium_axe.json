@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:legendarium_axe",
-								"minecraft:item_name": "Legendarium Axe",
+								"minecraft:item_name": {
+									"text": "Legendarium Axe"
+								},
 								"minecraft:lore": [
 									[
 										"",

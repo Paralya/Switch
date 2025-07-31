@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/snowball/repart
 #
-# @within	switch:modes/glassrunner/snowball/use
+# @executed	as @e[type=minecraft:snowball,distance=..5,tag=!switch.glassrunner.snowball]
+#
+# @within	switch:modes/glassrunner/snowball/use [ as @e[type=minecraft:snowball,distance=..5,tag=!switch.glassrunner.snowball] ]
 #
 
 tag @s add switch.glassrunner.snowball

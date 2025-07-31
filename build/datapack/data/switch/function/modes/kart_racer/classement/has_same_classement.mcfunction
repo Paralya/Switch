@@ -1,7 +1,9 @@
 
 #> switch:modes/kart_racer/classement/has_same_classement
 #
-# @within	switch:modes/kart_racer/classement/try
+# @executed	at @s
+#
+# @within	switch:modes/kart_racer/classement/try [ at @s ]
 #
 
 scoreboard players operation #checkpoint switch.data = @s switch.temp.checkpoint

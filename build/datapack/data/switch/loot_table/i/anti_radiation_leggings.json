@@ -30,7 +30,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:anti_radiation_leggings",
-								"minecraft:item_name": "Anti Radiation Leggings",
+								"minecraft:item_name": {
+									"text": "Anti Radiation Leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

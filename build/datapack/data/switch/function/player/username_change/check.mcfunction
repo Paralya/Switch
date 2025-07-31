@@ -1,6 +1,8 @@
 
 #> switch:player/username_change/check
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/joined
 #			switch:player/tick
 #

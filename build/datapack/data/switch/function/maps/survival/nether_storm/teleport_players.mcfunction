@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/nether_storm/teleport_players
 #
-# @within	switch:maps/survival/nether_storm/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/nether_storm/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [122018.5d, 126.5d, 122025.5d]

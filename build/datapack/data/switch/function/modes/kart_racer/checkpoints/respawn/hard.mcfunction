@@ -1,6 +1,8 @@
 
 #> switch:modes/kart_racer/checkpoints/respawn/hard
 #
+# @executed	as @a[tag=!detached,predicate=switch:has_vehicle_with_tag,limit=1] & at @s
+#
 # @within	switch:modes/kart_racer/checkpoints/forced_respawn
 #			switch:modes/kart_racer/right_click
 #

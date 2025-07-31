@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/calls/ninja_revenge
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:traitors_game/ninja_revenge
 #
 

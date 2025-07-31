@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/torg_arena/teleport_players
 #
-# @within	switch:maps/survival/torg_arena/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/torg_arena/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [65005.5d, 119.5d, 65039.5d]

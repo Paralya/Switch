@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/abandoned_city/teleport_players
 #
-# @within	switch:maps/survival/abandoned_city/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/abandoned_city/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [44634.5d, 197.5d, 44773.5d]

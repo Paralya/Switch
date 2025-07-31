@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_boots",
-								"minecraft:item_name": "Obsidian Boots",
+								"minecraft:item_name": {
+									"text": "Obsidian Boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

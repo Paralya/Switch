@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/rating_time/set_inventory
 #
-# @within	switch:modes/build_battle/rating_time/second
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/build_battle/rating_time/second [ as @a[tag=!detached] ]
 #
 
 clear @s

@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/advancements/hurt_player
 #
+# @executed	as the player & at current position
+#
 # @within	advancement switch:pitchout/hurt_entity
 #
 

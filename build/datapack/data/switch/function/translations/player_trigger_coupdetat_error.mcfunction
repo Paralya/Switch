@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_coupdetat_error
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/coupdetat/error
 #
 

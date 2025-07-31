@@ -1,6 +1,8 @@
 
 #> switch:translations/player_trigger_attach_
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/attach/main
 #
 

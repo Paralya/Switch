@@ -1,7 +1,9 @@
 
 #> switch:modes/simultaneous_jump/done
 #
-# @within	switch:modes/simultaneous_jump/tick
+# @executed	at @s
+#
+# @within	switch:modes/simultaneous_jump/tick [ at @s ]
 #
 
 scoreboard players operation #block switch.data = @s switch.temp.color

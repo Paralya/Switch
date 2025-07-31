@@ -1,7 +1,9 @@
 
 #> switch:modes/snowball_painter/color/actionbar
 #
-# @within	switch:modes/snowball_painter/second
+# @executed	as @a[tag=!detached,gamemode=adventure]
+#
+# @within	switch:modes/snowball_painter/second [ as @a[tag=!detached,gamemode=adventure] ]
 #
 
 ## File attribut: Ignore translations

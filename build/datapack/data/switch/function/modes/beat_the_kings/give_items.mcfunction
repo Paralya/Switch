@@ -1,7 +1,9 @@
 
 #> switch:modes/beat_the_kings/give_items
 #
-# @within	switch:modes/beat_the_kings/start
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/beat_the_kings/start [ as @a[tag=!detached] & at @s ]
 #
 
 # Starter kit

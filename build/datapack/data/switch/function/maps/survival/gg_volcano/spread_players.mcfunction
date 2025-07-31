@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/gg_volcano/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/gg_volcano/teleport_players
 #
 

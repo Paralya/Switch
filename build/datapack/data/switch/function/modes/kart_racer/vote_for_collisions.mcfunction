@@ -1,6 +1,8 @@
 
 #> switch:modes/kart_racer/vote_for_collisions
 #
+# @executed	as @a[tag=!detached,scores={switch.right_click=1..}]
+#
 # @within	switch:modes/kart_racer/right_click
 #
 

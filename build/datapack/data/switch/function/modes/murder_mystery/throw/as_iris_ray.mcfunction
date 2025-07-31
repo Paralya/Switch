@@ -1,7 +1,9 @@
 
 #> switch:modes/murder_mystery/throw/as_iris_ray
 #
-# @within	switch:modes/murder_mystery/throw/throw
+# @executed	as @e[tag=iris.ray] & at @s
+#
+# @within	switch:modes/murder_mystery/throw/throw [ as @e[tag=iris.ray] & at @s ]
 #
 
 function iris:set_coordinates

@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_pickaxe",
-								"minecraft:item_name": "Obsidian Pickaxe",
+								"minecraft:item_name": {
+									"text": "Obsidian Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

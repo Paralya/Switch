@@ -1,7 +1,9 @@
 
 #> switch:modes/creeper_apocalypse/kill_creeper_if_too_close
 #
-# @within	switch:modes/creeper_apocalypse/second
+# @executed	as @e[type=creeper] & at @s
+#
+# @within	switch:modes/creeper_apocalypse/second [ as @e[type=creeper] & at @s ]
 #
 
 # Comptage des creepers à proximité

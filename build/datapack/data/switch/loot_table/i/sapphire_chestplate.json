@@ -41,7 +41,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:sapphire_chestplate",
-								"minecraft:item_name": "Sapphire Chestplate",
+								"minecraft:item_name": {
+									"text": "Sapphire Chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

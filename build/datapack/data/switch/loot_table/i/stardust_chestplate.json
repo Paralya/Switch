@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:stardust_chestplate",
-								"minecraft:item_name": "Stardust Chestplate",
+								"minecraft:item_name": {
+									"text": "Stardust Chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

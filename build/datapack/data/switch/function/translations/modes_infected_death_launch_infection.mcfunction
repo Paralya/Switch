@@ -1,6 +1,8 @@
 
 #> switch:translations/modes_infected_death_launch_infection
 #
+# @executed	as the player & at current position
+#
 # @within	switch:modes/infected/death/launch_infection
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/glassrunner/destroy_glass_around
 #
+# @executed	at @s
+#
 # @within	switch:modes/glassrunner/arrow_explosion
 #
 

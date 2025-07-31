@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:solarium_pickaxe",
-								"minecraft:item_name": "Solarium Pickaxe",
+								"minecraft:item_name": {
+									"text": "Solarium Pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

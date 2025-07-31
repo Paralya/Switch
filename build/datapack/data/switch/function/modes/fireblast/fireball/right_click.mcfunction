@@ -1,7 +1,9 @@
 
 #> switch:modes/fireblast/fireball/right_click
 #
-# @within	switch:modes/fireblast/tick
+# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.right_click=1..},nbt={SelectedItem:{components:{}}}] & at @s
+#
+# @within	switch:modes/fireblast/tick [ as @a[tag=!detached,gamemode=!spectator,scores={switch.right_click=1..},nbt={SelectedItem:{components:{}}}] & at @s ]
 #
 
 execute anchored eyes run summon fireball ~ ~1 ~ {Tags:["switch.new"],ExplosionPower:0b,NoGravity:true,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}]}

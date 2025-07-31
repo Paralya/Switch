@@ -1,7 +1,9 @@
 
 #> switch:modes/pitchout/advancements/setup_player
 #
-# @within	switch:modes/pitchout/start
+# @executed	as @a[tag=!detached]
+#
+# @within	switch:modes/pitchout/start [ as @a[tag=!detached] ]
 #
 
 data modify storage switch:temp temp set value {id:0,killed_by:[]}

@@ -1,7 +1,11 @@
 
 #> switch:modes/infected/secrets/lost_graveyard/next_state
 #
-# @within	switch:modes/infected/secrets/lost_graveyard/_tick
+# @executed	positioned 127123 113 127051 & as @a[tag=!detached,team=switch.temp.human,distance=..12,scores={switch.temp.secret_kills=1..}]
+#
+# @within	switch:modes/infected/secrets/lost_graveyard/_tick [ positioned 127123 113 127051 & as @a[tag=!detached,team=switch.temp.human,distance=..12,scores={switch.temp.secret_kills=1..}] ]
+#			switch:modes/infected/secrets/lost_graveyard/_tick [ as @p[tag=!detached,team=switch.temp.human,nbt={Inventory:[{id:"minecraft:tnt"}]}] ]
+#			switch:modes/infected/secrets/lost_graveyard/_tick [ positioned 127131 122 127114 ]
 #
 
 # First zombie kill near the hidden meteorite in the volcano

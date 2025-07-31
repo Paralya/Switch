@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/mlg_a_coudre_1/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/mlg_a_coudre_1/teleport_players
 #
 

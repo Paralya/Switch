@@ -2,7 +2,6 @@
 #> switch:stats/sort_minigames_stats/loop_played_and_wins
 #
 # @within	switch:stats/sort_minigames_stats/loop_played_and_wins
-#			switch:stats/sort_minigames_stats/update_minigame
 #
 
 # Copy the played and wins arrays to the temp arrays

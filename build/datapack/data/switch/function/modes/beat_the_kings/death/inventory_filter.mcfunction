@@ -1,6 +1,8 @@
 
 #> switch:modes/beat_the_kings/death/inventory_filter
 #
+# @executed	as @e[type=marker,tag=switch.player_dead]
+#
 # @within	switch:modes/beat_the_kings/death/for_global
 #
 

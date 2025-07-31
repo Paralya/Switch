@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/coupdetat/display_loop
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/trigger/coupdetat/display with storage switch:temp copy[0]
 #			switch:player/trigger/coupdetat/display_loop with storage switch:temp copy[0]
 #

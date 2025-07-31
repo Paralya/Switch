@@ -1,7 +1,9 @@
 
 #> switch:modes/build_battle/rating_time/summon_save_zone
 #
-# @within	switch:modes/build_battle/rating_time/as_at_marker
+# @executed	positioned -76 100 0
+#
+# @within	switch:modes/build_battle/rating_time/as_at_marker [ positioned -76 100 0 ]
 #
 
 tag @s add switch.build_battle_save

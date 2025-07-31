@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "switch:stardust_bow",
-								"minecraft:item_name": "Stardust Bow",
+								"minecraft:item_name": {
+									"text": "Stardust Bow"
+								},
 								"minecraft:lore": [
 									[
 										"",

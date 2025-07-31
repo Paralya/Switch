@@ -1,6 +1,8 @@
 
 #> switch:modes/build_battle/xp_bar_rating
 #
+# @executed	in switch:build_battle
+#
 # @within	switch:modes/build_battle/rating_time/second
 #
 

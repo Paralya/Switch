@@ -30,7 +30,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:anti_radiation_helmet",
-								"minecraft:item_name": "Anti Radiation Helmet",
+								"minecraft:item_name": {
+									"text": "Anti Radiation Helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

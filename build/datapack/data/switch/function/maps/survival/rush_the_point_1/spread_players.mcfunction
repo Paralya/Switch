@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/rush_the_point_1/spread_players
 #
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
 # @within	switch:maps/survival/rush_the_point_1/teleport_players
 #
 

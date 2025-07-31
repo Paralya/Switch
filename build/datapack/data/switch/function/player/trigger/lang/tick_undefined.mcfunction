@@ -1,6 +1,8 @@
 
 #> switch:player/trigger/lang/tick_undefined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/tick
 #
 

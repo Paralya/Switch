@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/operation_pigclaw/teleport_players
 #
-# @within	switch:maps/survival/operation_pigclaw/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/operation_pigclaw/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [36068.5d, 144.5d, 36081.5d]

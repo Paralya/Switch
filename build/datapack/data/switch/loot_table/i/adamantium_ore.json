@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "switch:adamantium_ore",
-								"minecraft:item_name": "Adamantium Ore",
+								"minecraft:item_name": {
+									"text": "Adamantium Ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

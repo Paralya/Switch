@@ -2,7 +2,7 @@
 #> switch:modes/de_a_coudre/death
 #
 # @within	switch:modes/de_a_coudre/joined
-#			switch:modes/de_a_coudre/process_end
+#			switch:modes/de_a_coudre/process_end [ as @a[tag=!detached] ]
 #
 
 function switch:translations/modes_de_a_coudre_death

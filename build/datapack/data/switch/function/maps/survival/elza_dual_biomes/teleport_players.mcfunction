@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/elza_dual_biomes/teleport_players
 #
-# @within	switch:maps/survival/elza_dual_biomes/main
+# @executed	as @e[type=marker,tag=switch.selected_map] & at @s
+#
+# @within	switch:maps/survival/elza_dual_biomes/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
 data modify entity @s Pos set value [155036.5d, 114.5d, 155033.5d]

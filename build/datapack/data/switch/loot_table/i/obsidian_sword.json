@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "switch:obsidian_sword",
-								"minecraft:item_name": "Obsidian Sword",
+								"minecraft:item_name": {
+									"text": "Obsidian Sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

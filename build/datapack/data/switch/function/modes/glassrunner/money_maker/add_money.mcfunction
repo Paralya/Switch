@@ -1,7 +1,9 @@
 
 #> switch:modes/glassrunner/money_maker/add_money
 #
-# @within	switch:modes/glassrunner/tick
+# @executed	as @a[scores={switch.glassrunner.money_maker=60..}]
+#
+# @within	switch:modes/glassrunner/tick [ as @a[scores={switch.glassrunner.money_maker=60..}] ]
 #
 
 scoreboard players add @s switch.glassrunner.money 2
