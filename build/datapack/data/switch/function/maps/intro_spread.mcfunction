@@ -76,6 +76,7 @@ execute if data storage switch:main {map:"leather_boots"} run function switch:ma
 execute if data storage switch:main {map:"ocean_waste"} run function switch:maps/survival/ocean_waste/intro_spread
 execute if data storage switch:main {map:"torg_arena"} run function switch:maps/survival/torg_arena/intro_spread
 execute if data storage switch:main {map:"smithed_summit_2024"} run function switch:maps/survival/smithed_summit_2024/intro_spread
+execute if data storage switch:main {map:"trials_run"} run function switch:maps/survival/trials_run/intro_spread
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/intro_spread
 execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/intro_spread
 execute if data storage switch:main {map:"nuketown"} run function switch:maps/survival/nuketown/intro_spread

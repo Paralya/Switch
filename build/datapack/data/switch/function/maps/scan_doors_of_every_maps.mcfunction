@@ -74,6 +74,7 @@ data modify storage switch:maps to_scan.leather_boots set value 1b
 data modify storage switch:maps to_scan.ocean_waste set value 1b
 data modify storage switch:maps to_scan.torg_arena set value 1b
 data modify storage switch:maps to_scan.smithed_summit_2024 set value 1b
+data modify storage switch:maps to_scan.trials_run set value 1b
 data modify storage switch:maps to_scan.warden_escape_statue set value 1b
 data modify storage switch:maps to_scan.hider_mansion set value 1b
 data modify storage switch:maps to_scan.nuketown set value 1b

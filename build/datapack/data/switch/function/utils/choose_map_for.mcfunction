@@ -43,7 +43,7 @@
 #			switch:modes/spleef/start {id:"spleef", maps:["spleef_1"]}
 #			switch:modes/thunder_spear/start {id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft","smithed_summit_2024"]}
 #			switch:modes/tnt_run/start {id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}
-#			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","zonweeb_highschool","hider_mansion","bancalvivor_s4","stardust_pvp_zone","la_fromagerie"]}
+#			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s4","stardust_pvp_zone","la_fromagerie"]}
 #			switch:modes/warden_escape/start {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 #
 

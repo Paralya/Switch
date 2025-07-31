@@ -117,7 +117,6 @@ data modify storage switch:main build_battle_themes append value {"fr":"Mathéma
 data modify storage switch:main build_battle_themes append value {"fr":"Philosophie","en":"Philosophy"}
 data modify storage switch:main build_battle_themes append value {"fr":"Professeur","en":"Teacher"}
 data modify storage switch:main build_battle_themes append value {"fr":"Galaxie","en":"Galaxy"}
-data modify storage switch:main build_battle_themes append value {"fr":"Gay","en":"Gay"}
 data modify storage switch:main build_battle_themes append value {"fr":"Windobe","en":"Windobe"}
 data modify storage switch:main build_battle_themes append value {"fr":"Linux","en":"Linux"}
 data modify storage switch:main build_battle_themes append value {"fr":"Révolution française","en":"French Revolution"}
