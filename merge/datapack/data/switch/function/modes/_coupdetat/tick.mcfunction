@@ -20,10 +20,16 @@ loot replace entity @n[tag=switch.coupdetat.boss] weapon loot switch:i/solarium_
 # Store boss health in the bossbar
 execute store result bossbar switch:coupdetat value run data get entity @n[tag=switch.coupdetat.boss] Health
 
+# Actionbar with remaining seconds
+execute if score #remaining_time switch.data matches 1.. run function switch:translations/modes__coupdetat_tick
+
 ## End game
+# 1 = boss killed (success)
+# 2 = player died (failure)
+# 3 = time expired (failure)
 execute if score #coupdetat_ticks switch.data matches ..50 run return 0
 execute if score #detect_end switch.data matches 0 unless entity @n[tag=switch.coupdetat.boss] run scoreboard players set #detect_end switch.data 1
-execute if score #detect_end switch.data matches 0 unless entity @p[tag=!detached,gamemode=survival] run scoreboard players set #detect_end switch.data 2
+execute if score #detect_end switch.data matches 0 unless entity @p[tag=!detached,gamemode=!spectator] run scoreboard players set #detect_end switch.data 2
 execute if score #detect_end switch.data matches 0 if score #remaining_time switch.data matches ..0 run scoreboard players set #detect_end switch.data 3
 execute if score #detect_end switch.data matches 1.. run function switch:modes/_coupdetat/process_end
 
