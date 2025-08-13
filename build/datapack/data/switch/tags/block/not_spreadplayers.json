@@ -1,6 +1,8 @@
 {
 	"values": [
 		"minecraft:barrier",
-		"minecraft:powder_snow"
+		"minecraft:powder_snow",
+		"minecraft:moving_piston",
+		"minecraft:tripwire"
 	]
 }

@@ -4,7 +4,9 @@
 # @within	switch:modes/_coupdetat/tick
 #
 
-# #detect_end switch.data = 1 is successful, #detect_end switch.data = 2 is unsuccessful
+# 1 = boss killed (success)
+# 2 = player died (failure)
+# 3 = time expired (failure)
 # Tellraw and playsound if successful or not
 scoreboard players add #process_end switch.data 1
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] at @s run playsound minecraft:item.totem.use ambient @s

@@ -29,8 +29,8 @@ bossbar set switch:coupdetat value 100
 bossbar set switch:coupdetat color green
 bossbar set switch:coupdetat style notched_12
 
-# 50 seconds for the coup d'état
-scoreboard players set #remaining_time switch.data 50
+# 60 seconds for the coup d'état
+scoreboard players set #remaining_time switch.data 60
 scoreboard players operation #remaining_time switch.data *= #20 switch.data
 
 scoreboard players set #coupdetat_ticks switch.data 0
