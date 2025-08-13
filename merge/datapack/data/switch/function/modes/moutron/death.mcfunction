@@ -1,6 +1,6 @@
 
 function switch:translations/modes_moutron_death
-execute if entity @s[gamemode=!spectator] at @s as @p[gamemode=!spectator,distance=0.001..12] run function switch:modes/moutron/adv_kill
+execute if entity @s[gamemode=!spectator] at @s as @p[tag=switch.moutron_killer] run function switch:modes/moutron/adv_kill
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 
 ride @s dismount
