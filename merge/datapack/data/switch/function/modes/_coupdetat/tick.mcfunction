@@ -2,6 +2,8 @@
 # Timers and xp bar
 scoreboard players add #coupdetat_ticks switch.data 1
 scoreboard players remove #remaining_time switch.data 1
+scoreboard players operation #remaining_seconds switch.data = #remaining_time switch.data
+scoreboard players operation #remaining_seconds switch.data /= #20 switch.data
 function switch:modes/_coupdetat/xp_bar
 
 # Detect death system
@@ -21,7 +23,7 @@ loot replace entity @n[tag=switch.coupdetat.boss] weapon loot switch:i/solarium_
 execute store result bossbar switch:coupdetat value run data get entity @n[tag=switch.coupdetat.boss] Health
 
 # Actionbar with remaining seconds
-execute if score #remaining_time switch.data matches 1.. run function switch:translations/modes__coupdetat_tick
+execute if score #remaining_seconds switch.data matches 1.. run function switch:translations/modes__coupdetat_tick
 
 ## End game
 # 1 = boss killed (success)
