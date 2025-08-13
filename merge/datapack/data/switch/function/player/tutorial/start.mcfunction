@@ -8,7 +8,7 @@ execute unless score @s switch.money matches 100.. run scoreboard players set @s
 function switch:player/trigger/reset
 
 # Teleport & Get username
-tp @s -500 69.69 -500 0 0
+execute in minecraft:overworld run tp @s -500 69.69 -500 0 0
 gamemode adventure @s
 clear @s
 loot replace entity @s armor.head loot switch:get_username
