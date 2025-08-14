@@ -157,6 +157,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/uranium_nugget"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/raw_uranium"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/shazinho"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/letter"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/awakened_stardust_bow"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/awakened_stardust_sniper"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "switch:i/stardust_bow"}]},

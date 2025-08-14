@@ -1660,6 +1660,13 @@
 		"item_model": "switch:shazinho",
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
+	"letter": {
+		"id": "minecraft:command_block",
+		"item_model": "switch:letter",
+		"item_name": {"text": "Letter"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]],
+		"custom_data": {"switch": {"letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"awakened_stardust_bow": {
 		"id": "minecraft:bow",
 		"item_model": "switch:awakened_stardust_bow",

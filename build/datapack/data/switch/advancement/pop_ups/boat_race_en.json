@@ -1,0 +1,17 @@
+{
+	"display": {
+		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:letter"}},
+		"title": [{"text": "'","color": "aqua"},{"text": "Boat Race","color": "yellow"},{"text": "' selected!"}],
+		"description": "",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false,
+		"hidden": true
+	},
+	"criteria": {
+		"requirement": {"trigger": "minecraft:impossible"}
+	},
+	"rewards": {
+		"function": "switch:engine/pop_ups/revoke"
+	}
+}

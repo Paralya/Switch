@@ -6366,6 +6366,10 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/letter"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/awakened_stardust_bow"
 				},
 				{

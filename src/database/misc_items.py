@@ -6,6 +6,7 @@ from stewbeet.core import CUSTOM_BLOCK_VANILLA, CUSTOM_ITEM_VANILLA, NO_SILK_TOU
 # Setup misc items
 def setup_misc_items() -> None:
 	""" Setup misc items """
+	Mem.definitions["letter"] = {"id": CUSTOM_ITEM_VANILLA}
 	Mem.definitions["awakened_stardust_bow"] = {"id": "minecraft:bow"}
 	Mem.definitions["awakened_stardust_sniper"] = {"id": CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL: {"parent": "minecraft:item/handheld"}}
 	Mem.definitions["awakened_stardust_block"] = {"id": CUSTOM_BLOCK_VANILLA, VANILLA_BLOCK: {"id": "minecraft:stone", "apply_facing": False}}

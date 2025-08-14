@@ -8,6 +8,7 @@ from .advancements.main import main as automatic_advancements
 from .misc_links.memory_mine import main as memory_mine
 from .misc_links.note_block_studio import main as note_block_studio
 from .misc_links.random_loot_table import main as random_loot_table
+from .misc_links.starting_pop_ups import main as starting_pop_ups
 from .shop.main import main as shop
 from .special_fonts.main import main as special_fonts
 from .survival_maps.main import main as generate_survival_maps
@@ -32,6 +33,7 @@ def beet_default(ctx: Context) -> None:
 	write_modes_load_file()
 
 	# Call all links
+	starting_pop_ups()
 	random_loot_table()
 	note_block_studio()
 	memory_mine()

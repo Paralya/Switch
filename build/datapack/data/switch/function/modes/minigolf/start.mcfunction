@@ -19,7 +19,7 @@ execute in switch:game run gamerule freezeDamage false
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
 
-scoreboard players set #minigolf_seconds switch.data -9
+scoreboard players set #minigolf_seconds switch.data -10
 scoreboard players set #minigolf_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 245
 scoreboard players set #process_end switch.data 0
