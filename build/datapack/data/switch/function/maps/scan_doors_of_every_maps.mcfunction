@@ -5,6 +5,7 @@
 #
 
 data modify storage switch:maps to_scan set value {}
+data modify storage switch:maps to_scan.switch_space set value 1b
 data modify storage switch:maps to_scan.laser_game set value 1b
 data modify storage switch:maps to_scan.pitchout_1 set value 1b
 data modify storage switch:maps to_scan.traitor_original set value 1b

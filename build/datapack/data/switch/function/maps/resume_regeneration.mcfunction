@@ -5,6 +5,7 @@
 #
 
 # Resume the regeneration of the survival maps
+execute if score #rg_switch_space switch.data matches 1.. run function switch:maps/survival/switch_space/regenerate
 execute if score #rg_laser_game switch.data matches 1.. run function switch:maps/survival/laser_game/regenerate
 execute if score #rg_pitchout_1 switch.data matches 1.. run function switch:maps/survival/pitchout_1/regenerate
 execute if score #rg_traitor_original switch.data matches 1.. run function switch:maps/survival/traitor_original/regenerate

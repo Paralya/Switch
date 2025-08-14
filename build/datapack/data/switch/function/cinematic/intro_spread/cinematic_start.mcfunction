@@ -1,7 +1,7 @@
 
 #> switch:cinematic/intro_spread/cinematic_start
 #
-# @executed	in switch:game & positioned 517.62 111.36 518.34 & rotated -31.98 9.81
+# @executed	in switch:game & positioned 44.38 127.17 260.0 & rotated 151.06 28.47
 #
 # @within	switch:cinematic/intro_spread/start with storage switch:temp intro
 #

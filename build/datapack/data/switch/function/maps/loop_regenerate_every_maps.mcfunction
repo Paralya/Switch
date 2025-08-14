@@ -6,8 +6,9 @@
 #
 
 execute if data storage switch:maps to_regenerate{fireblast_pork:1b} run schedule function switch:maps/loop_regenerate_every_maps 1t
-execute if data storage switch:maps to_regenerate{laser_game:1b} run function switch:maps/survival/laser_game/regenerate
+execute if data storage switch:maps to_regenerate{switch_space:1b} run function switch:maps/survival/switch_space/regenerate
 
+execute unless data storage switch:maps to_regenerate.switch_space if data storage switch:maps to_regenerate{laser_game:1b} run function switch:maps/survival/laser_game/regenerate
 execute unless data storage switch:maps to_regenerate.laser_game if data storage switch:maps to_regenerate{pitchout_1:1b} run function switch:maps/survival/pitchout_1/regenerate
 execute unless data storage switch:maps to_regenerate.pitchout_1 if data storage switch:maps to_regenerate{traitor_original:1b} run function switch:maps/survival/traitor_original/regenerate
 execute unless data storage switch:maps to_regenerate.traitor_original if data storage switch:maps to_regenerate{area_51:1b} run function switch:maps/survival/area_51/regenerate

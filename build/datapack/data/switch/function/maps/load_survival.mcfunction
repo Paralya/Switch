@@ -4,6 +4,7 @@
 # @within	switch:maps/load_gamemode
 #
 
+execute if data storage switch:main {map:"switch_space"} run function switch:maps/survival/switch_space/main
 execute if data storage switch:main {map:"laser_game"} run function switch:maps/survival/laser_game/main
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/survival/pitchout_1/main
 execute if data storage switch:main {map:"traitor_original"} run function switch:maps/survival/traitor_original/main

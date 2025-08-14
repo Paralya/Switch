@@ -3,7 +3,8 @@
 #
 # @executed	at @s
 #
-# @within	switch:maps/survival/laser_game/scan_doors_on_marker {name:"laser_game",additional_height:0} [ at @s ]
+# @within	switch:maps/survival/switch_space/scan_doors_on_marker {name:"switch_space",additional_height:164} [ at @s ]
+#			switch:maps/survival/laser_game/scan_doors_on_marker {name:"laser_game",additional_height:0} [ at @s ]
 #			switch:maps/survival/pitchout_1/scan_doors_on_marker {name:"pitchout_1",additional_height:0} [ at @s ]
 #			switch:maps/survival/traitor_original/scan_doors_on_marker {name:"traitor_original",additional_height:0} [ at @s ]
 #			switch:maps/survival/area_51/scan_doors_on_marker {name:"area_51",additional_height:0} [ at @s ]

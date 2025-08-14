@@ -3,7 +3,8 @@
 #
 # @executed	in switch:game
 #
-# @within	switch:maps/survival/laser_game/regenerate {name:"laser_game"} [ in switch:game ]
+# @within	switch:maps/survival/switch_space/regenerate {name:"switch_space"} [ in switch:game ]
+#			switch:maps/survival/laser_game/regenerate {name:"laser_game"} [ in switch:game ]
 #			switch:maps/survival/pitchout_1/regenerate {name:"pitchout_1"} [ in switch:game ]
 #			switch:maps/survival/traitor_original/regenerate {name:"traitor_original"} [ in switch:game ]
 #			switch:maps/survival/area_51/regenerate {name:"area_51"} [ in switch:game ]

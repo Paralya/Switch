@@ -6,6 +6,7 @@
 # @within	switch:engine/signals/start
 #			switch:engine/signals/stop
 #			switch:maps/load
+#			switch:maps/survival/switch_space/regenerate
 #			switch:maps/survival/laser_game/regenerate
 #			switch:maps/survival/pitchout_1/regenerate
 #			switch:maps/survival/traitor_original/regenerate

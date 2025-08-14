@@ -5,6 +5,7 @@
 #
 
 data modify storage switch:maps to_regenerate set value {}
+data modify storage switch:maps to_regenerate.switch_space set value 1b
 data modify storage switch:maps to_regenerate.laser_game set value 1b
 data modify storage switch:maps to_regenerate.pitchout_1 set value 1b
 data modify storage switch:maps to_regenerate.traitor_original set value 1b

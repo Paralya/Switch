@@ -14,6 +14,7 @@ def generate_folders_for_survival_maps() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
+	clone_survival(100, (-160, -64, -160), (160, 256, 160), ("switch_space", "Switch Space", "Stoupy and Switch community"), view=(44.38, 127.17, 260.00, 151.06, 28.47))
 	clone_survival(100, (500, 100, 500), (552, 143, 552), ("laser_game", "LaserGame51 (2010 IRL layout)", "Stoupy, Ikinox"), view=(517.62, 111.36, 518.34, -31.98, 9.81))
 	clone_survival(100, (1000, 100, 1000), (1100, 144, 1100), ("pitchout_1", "Wet Wood Dome", "Stoupy, ?"), view=(1081.19, 117.69, 1065.08, 114.72, 15.66))
 	clone_survival(100, (1500, 100, 1500), (1684, 189, 1655), ("traitor_original", "Traitor Original", "Stoupy, Luxio, Jugou2, etc. (Paralya)"), view=(1566.00, 122.20, 1533.79, -56.61, 8.90))

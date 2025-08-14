@@ -8,6 +8,7 @@
 #
 
 # Regenerate the survival maps
+execute if data storage switch:main {map:"switch_space"} run function switch:maps/survival/switch_space/regenerate
 execute if data storage switch:main {map:"laser_game"} run function switch:maps/survival/laser_game/regenerate
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/survival/pitchout_1/regenerate
 execute if data storage switch:main {map:"traitor_original"} run function switch:maps/survival/traitor_original/regenerate

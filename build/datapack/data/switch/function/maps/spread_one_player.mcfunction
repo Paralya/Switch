@@ -26,6 +26,7 @@
 #
 
 # Spread one player on the survival maps
+execute if data storage switch:main {map:"switch_space"} run function switch:maps/survival/switch_space/spread_one_player
 execute if data storage switch:main {map:"laser_game"} run function switch:maps/survival/laser_game/spread_one_player
 execute if data storage switch:main {map:"pitchout_1"} run function switch:maps/survival/pitchout_1/spread_one_player
 execute if data storage switch:main {map:"traitor_original"} run function switch:maps/survival/traitor_original/spread_one_player
