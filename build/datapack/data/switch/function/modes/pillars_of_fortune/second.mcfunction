@@ -16,7 +16,7 @@ execute if score #pillars_of_fortune_seconds switch.data matches 1 run kill @e[t
 # Give random item every 2 seconds
 scoreboard players operation #temp switch.data = #pillars_of_fortune_seconds switch.data
 scoreboard players operation #temp switch.data %= #2 switch.data
-execute if score #pillars_of_fortune_seconds switch.data matches 1.. if score #temp switch.data matches 0 as @a[tag=!detached,gamemode=survival] run loot give @s loot switch:random/all
+execute if score #pillars_of_fortune_seconds switch.data matches 1.. if score #temp switch.data matches 0 as @a[tag=!detached,gamemode=survival] run loot give @s loot switch:random/vanilla
 
 # Forbidden effects
 effect clear @a[tag=!detached] mining_fatigue
