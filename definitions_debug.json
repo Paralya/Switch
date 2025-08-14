@@ -873,7 +873,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
 		"max_damage": 171,
 		"equippable": {"slot": "head","asset_id": "switch:emerald"},
-		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}],
+		"attribute_modifiers": [{"type": "armor","amount": 2.5,"operation": "add_value","slot": "head","id": "switch:armor.head"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "head","id": "switch:armor_toughness.head"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "head","id": "switch:luck.head"}],
 		"item_model": "switch:emerald_helmet",
 		"item_name": {"text": "Emerald Helmet"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -885,7 +885,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
 		"max_damage": 248,
 		"equippable": {"slot": "chest","asset_id": "switch:emerald"},
-		"attribute_modifiers": [{"type": "armor","amount": 8,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "chest","id": "switch:luck.chest"}],
+		"attribute_modifiers": [{"type": "armor","amount": 7.5,"operation": "add_value","slot": "chest","id": "switch:armor.chest"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "chest","id": "switch:armor_toughness.chest"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "chest","id": "switch:luck.chest"}],
 		"item_model": "switch:emerald_chestplate",
 		"item_name": {"text": "Emerald Chestplate"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -897,7 +897,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
 		"max_damage": 233,
 		"equippable": {"slot": "legs","asset_id": "switch:emerald"},
-		"attribute_modifiers": [{"type": "armor","amount": 6,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "legs","id": "switch:luck.legs"}],
+		"attribute_modifiers": [{"type": "armor","amount": 5.5,"operation": "add_value","slot": "legs","id": "switch:armor.legs"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "legs","id": "switch:armor_toughness.legs"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "legs","id": "switch:luck.legs"}],
 		"item_model": "switch:emerald_leggings",
 		"item_name": {"text": "Emerald Leggings"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -909,7 +909,7 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
 		"max_damage": 202,
 		"equippable": {"slot": "feet","asset_id": "switch:emerald"},
-		"attribute_modifiers": [{"type": "armor","amount": 3,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "feet","id": "switch:luck.feet"}],
+		"attribute_modifiers": [{"type": "armor","amount": 2.5,"operation": "add_value","slot": "feet","id": "switch:armor.feet"},{"type": "armor_toughness","amount": 2,"operation": "add_value","slot": "feet","id": "switch:armor_toughness.feet"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "feet","id": "switch:luck.feet"}],
 		"item_model": "switch:emerald_boots",
 		"item_name": {"text": "Emerald Boots"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -920,7 +920,7 @@
 		"custom_data": {"smithed": {"dict": {"tools": {"emerald": true,"sword": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_sword": true}},
 		"max_damage": 736,
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","X","S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
-		"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 5.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
 		"item_model": "switch:emerald_sword",
 		"item_name": {"text": "Emerald Sword"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -931,7 +931,7 @@
 		"custom_data": {"smithed": {"dict": {"tools": {"emerald": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_pickaxe": true}},
 		"max_damage": 736,
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX"," S "," S "],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
-		"attribute_modifiers": [{"type": "attack_damage","amount": 4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 3.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"},{"type": "mining_efficiency","amount": -0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:emerald_pickaxe",
 		"item_name": {"text": "Emerald Pickaxe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -942,7 +942,7 @@
 		"custom_data": {"smithed": {"dict": {"tools": {"emerald": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_axe": true}},
 		"max_damage": 736,
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX","XS"," S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
-		"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 7.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"},{"type": "mining_efficiency","amount": -0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:emerald_axe",
 		"item_name": {"text": "Emerald Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -953,7 +953,7 @@
 		"custom_data": {"smithed": {"dict": {"tools": {"emerald": true,"shovel": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_shovel": true}},
 		"max_damage": 736,
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X","S","S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
-		"attribute_modifiers": [{"type": "attack_damage","amount": 4.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 4.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"},{"type": "mining_efficiency","amount": -0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:emerald_shovel",
 		"item_name": {"text": "Emerald Shovel"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
@@ -964,7 +964,7 @@
 		"custom_data": {"smithed": {"dict": {"tools": {"emerald": true,"hoe": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_hoe": true}},
 		"max_damage": 736,
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XX"," S"," S"],"ingredients": {"X": {"item": "minecraft:emerald"},"S": {"item": "minecraft:stick"}}}],
-		"attribute_modifiers": [{"type": "attack_damage","amount": 0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"}],
+		"attribute_modifiers": [{"type": "attack_damage","amount": -0.5,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": 0.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "luck","amount": 0.25,"operation": "add_value","slot": "mainhand","id": "switch:luck.mainhand"},{"type": "mining_efficiency","amount": -0.1,"operation": "add_value","slot": "mainhand","id": "switch:mining_efficiency.mainhand"}],
 		"item_model": "switch:emerald_hoe",
 		"item_name": {"text": "Emerald Hoe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]

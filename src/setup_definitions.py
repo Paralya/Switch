@@ -31,7 +31,7 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	"topaz":				EquipmentsConfig(DefaultOre.DIAMOND,	1281,	{"attack_damage": 1.0, "armor": 1.0}),
 	"obsidian_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	3902,	{"attack_damage": -0.2, "mining_efficiency": -0.2}),
 	"steel_ingot":			EquipmentsConfig(DefaultOre.IRON,		444,	{"mining_efficiency": 0.1}),
-	"minecraft:emerald":	EquipmentsConfig(DefaultOre.DIAMOND,	736,	{"luck": 0.25}),
+	"minecraft:emerald":	EquipmentsConfig(DefaultOre.DIAMOND,	736,	{"luck": 0.25, "attack_damage": -0.5, "armor": -0.5, "mining_efficiency": -0.1}),
 
 	# Custom materials from Stardust Fragment
 	"stardust_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),

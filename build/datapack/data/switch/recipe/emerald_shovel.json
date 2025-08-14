@@ -35,7 +35,7 @@
 			"minecraft:attribute_modifiers": [
 				{
 					"type": "attack_damage",
-					"amount": 4.5,
+					"amount": 4.0,
 					"operation": "add_value",
 					"slot": "mainhand",
 					"id": "minecraft:base_attack_damage"
@@ -53,6 +53,13 @@
 					"operation": "add_value",
 					"slot": "mainhand",
 					"id": "switch:luck.mainhand"
+				},
+				{
+					"type": "mining_efficiency",
+					"amount": -0.1,
+					"operation": "add_value",
+					"slot": "mainhand",
+					"id": "switch:mining_efficiency.mainhand"
 				}
 			],
 			"minecraft:item_model": "switch:emerald_shovel",

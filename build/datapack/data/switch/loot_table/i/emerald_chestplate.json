@@ -27,7 +27,7 @@
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 8,
+										"amount": 7.5,
 										"operation": "add_value",
 										"slot": "chest",
 										"id": "switch:armor.chest"

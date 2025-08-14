@@ -37,7 +37,7 @@
 			"minecraft:attribute_modifiers": [
 				{
 					"type": "armor",
-					"amount": 3,
+					"amount": 2.5,
 					"operation": "add_value",
 					"slot": "feet",
 					"id": "switch:armor.feet"
