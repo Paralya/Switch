@@ -4,7 +4,7 @@
 data modify storage switch:main previous_map set from storage switch:main map
 scoreboard players set #try switch.data 5
 scoreboard players set #modulo_rand switch.data 0
-execute store result score #modulo_rand switch.data run data get storage switch:main maps_to_choose
+execute store result score #modulo_rand switch.data run data get storage switch:temp maps_to_choose
 function switch:maps/find_map
 
 # Copy map

@@ -3,7 +3,7 @@ scoreboard players remove #try switch.data 1
 
 function switch:utils/get_random/main
 
-data modify storage switch:main copy set from storage switch:main maps_to_choose
+data modify storage switch:main copy set from storage switch:temp maps_to_choose
 execute unless score #random switch.data matches 0 run function switch:maps/choose_loop
 
 scoreboard players set #success switch.data 0
