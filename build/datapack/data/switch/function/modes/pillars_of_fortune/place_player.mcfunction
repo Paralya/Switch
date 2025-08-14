@@ -8,6 +8,7 @@
 #			switch:modes/pillars_of_fortune/start with storage switch:temp input [ in switch:game & positioned 62050 142 62050 & rotated 0 0 & as @e[tag=switch.place_pillar,sort=random,limit=1] ]
 #			switch:modes/pillars_of_fortune/start with storage switch:temp input [ in switch:game & positioned 63050 142 63050 & rotated 0 0 & as @e[tag=switch.place_pillar,sort=random,limit=1] ]
 #			switch:modes/pillars_of_fortune/start with storage switch:temp input [ in switch:game & positioned 64050 142 64050 & rotated 0 0 & as @e[tag=switch.place_pillar,sort=random,limit=1] ]
+#			switch:modes/pillars_of_fortune/start with storage switch:temp input [ in switch:game & positioned 68050 142 68050 & rotated 0 0 & as @e[tag=switch.place_pillar,sort=random,limit=1] ]
 #
 
 # Remove temporary tag

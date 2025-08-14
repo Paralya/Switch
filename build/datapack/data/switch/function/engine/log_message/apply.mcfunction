@@ -78,6 +78,7 @@
 #			switch:maps/survival/torg_arena/regenerate
 #			switch:maps/survival/smithed_summit_2024/regenerate
 #			switch:maps/survival/trials_run/regenerate
+#			switch:maps/survival/void_desert/regenerate
 #			switch:maps/survival/warden_escape_statue/regenerate
 #			switch:maps/survival/hider_mansion/regenerate
 #			switch:maps/survival/nuketown/regenerate

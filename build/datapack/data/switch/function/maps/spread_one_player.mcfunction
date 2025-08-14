@@ -98,6 +98,7 @@ execute if data storage switch:main {map:"ocean_waste"} run function switch:maps
 execute if data storage switch:main {map:"torg_arena"} run function switch:maps/survival/torg_arena/spread_one_player
 execute if data storage switch:main {map:"smithed_summit_2024"} run function switch:maps/survival/smithed_summit_2024/spread_one_player
 execute if data storage switch:main {map:"trials_run"} run function switch:maps/survival/trials_run/spread_one_player
+execute if data storage switch:main {map:"void_desert"} run function switch:maps/survival/void_desert/spread_one_player
 execute if data storage switch:main {map:"warden_escape_statue"} run function switch:maps/survival/warden_escape_statue/spread_one_player
 execute if data storage switch:main {map:"hider_mansion"} run function switch:maps/survival/hider_mansion/spread_one_player
 execute if data storage switch:main {map:"nuketown"} run function switch:maps/survival/nuketown/spread_one_player

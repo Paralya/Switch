@@ -8,7 +8,7 @@ function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 0
-function switch:utils/choose_map_for {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste"]}
+function switch:utils/choose_map_for {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste", "void_desert"]}
 function switch:translations/modes_pillars_of_fortune_start
 
 execute in switch:game run gamerule mobGriefing true
@@ -48,4 +48,5 @@ execute if data storage switch:main {map:"eternal_void"} in switch:game position
 execute if data storage switch:main {map:"floor_is_lava"} in switch:game positioned 62050 142 62050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
 execute if data storage switch:main {map:"leather_boots"} in switch:game positioned 63050 142 63050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
 execute if data storage switch:main {map:"ocean_waste"} in switch:game positioned 64050 142 64050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
+execute if data storage switch:main {map:"void_desert"} in switch:game positioned 68050 142 68050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
 

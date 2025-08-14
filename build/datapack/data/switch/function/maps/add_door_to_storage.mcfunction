@@ -73,6 +73,7 @@
 #			switch:maps/survival/torg_arena/scan_doors_on_marker {name:"torg_arena",additional_height:0} [ at @s ]
 #			switch:maps/survival/smithed_summit_2024/scan_doors_on_marker {name:"smithed_summit_2024",additional_height:0} [ at @s ]
 #			switch:maps/survival/trials_run/scan_doors_on_marker {name:"trials_run",additional_height:0} [ at @s ]
+#			switch:maps/survival/void_desert/scan_doors_on_marker {name:"void_desert",additional_height:0} [ at @s ]
 #			switch:maps/survival/warden_escape_statue/scan_doors_on_marker {name:"warden_escape_statue",additional_height:0} [ at @s ]
 #			switch:maps/survival/hider_mansion/scan_doors_on_marker {name:"hider_mansion",additional_height:0} [ at @s ]
 #			switch:maps/survival/nuketown/scan_doors_on_marker {name:"nuketown",additional_height:0} [ at @s ]

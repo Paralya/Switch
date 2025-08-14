@@ -92,7 +92,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (65000, 100, 65000), (65100, 126, 65100), ("torg_arena", "Torg Arena", "TreekoZ"), view=(65005.40, 119.47, 65038.56, 280.87, 13.76))
 	clone_survival(100, (66001, 100, 66000), (66605, 318, 66662), ("smithed_summit_2024", "Smithed Summit 2024", "Smithed Community"), view=(66273.08, 168.66, 66353.60, -11.32, -16.09))
 	clone_survival(100, (67000, 100, 67000), (67300, 314, 67300), ("trials_run", "Trials Run", "JulDragonne, Fannne"), view=(67079.71, 177.88, 67203.42, 203.27, -1.21))
-	##	68000	(undefined)	: empty
+	clone_survival(100, (68000, 100, 68000), (68100, 190, 68100), ("void_desert", "Void Desert", "Stoupy"), view=(68070.03, 137.81, 68006.29, 19.81, 42.61))
 	clone_survival(100, (69000, 100, 69000), (69148, 223, 69106), ("warden_escape_statue", "Warden Escape Statue", "?, Oraclette, math730 (Survisland)"), view=(69017.77, 136.85, 69078.56, 239.72, -1.32))
 	##	70000	(undefined)	: empty
 	clone_survival(100, (71000, 100, 71000), (71170, 170, 71160), ("hider_mansion", "Hider Mansion", "?, Oraclette, math730 (Survisland)"), view=(71152.74, 114.70, 71047.07, 60.38, -5.03))

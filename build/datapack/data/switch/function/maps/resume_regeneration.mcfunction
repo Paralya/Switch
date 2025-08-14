@@ -77,6 +77,7 @@ execute if score #rg_ocean_waste switch.data matches 1.. run function switch:map
 execute if score #rg_torg_arena switch.data matches 1.. run function switch:maps/survival/torg_arena/regenerate
 execute if score #rg_smithed_summit_2024 switch.data matches 1.. run function switch:maps/survival/smithed_summit_2024/regenerate
 execute if score #rg_trials_run switch.data matches 1.. run function switch:maps/survival/trials_run/regenerate
+execute if score #rg_void_desert switch.data matches 1.. run function switch:maps/survival/void_desert/regenerate
 execute if score #rg_warden_escape_statue switch.data matches 1.. run function switch:maps/survival/warden_escape_statue/regenerate
 execute if score #rg_hider_mansion switch.data matches 1.. run function switch:maps/survival/hider_mansion/regenerate
 execute if score #rg_nuketown switch.data matches 1.. run function switch:maps/survival/nuketown/regenerate

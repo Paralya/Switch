@@ -67,6 +67,7 @@
 		"ocean_waste": ["pillars_of_fortune"],
 		"torg_arena": ["spectres_game"],
 		"trials_run": ["traitors_game"],
+		"void_desert": ["pillars_of_fortune"],
 		"warden_escape_statue": ["warden_escape"],
 		"layers_4_teams": ["layers_4_teams"],
 		"survival_boat": ["sheepwars"],
@@ -195,7 +196,7 @@
 		"memory_mine": ["memory_mine"],
 		"fish_fight": ["luxio_fish_fight"],
 		"one_shot": ["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"],
-		"pillars_of_fortune": ["pillars_of_fortune","slimy_ground","eternal_void","floor_is_lava","leather_boots","ocean_waste"],
+		"pillars_of_fortune": ["pillars_of_fortune","slimy_ground","eternal_void","floor_is_lava","leather_boots","ocean_waste","void_desert"],
 		"fireblast": ["fireblast_bubulle","fireblast_cookie","fireblast_pork"]
 	}
 ]

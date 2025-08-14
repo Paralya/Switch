@@ -75,6 +75,7 @@ data modify storage switch:maps to_regenerate.ocean_waste set value 1b
 data modify storage switch:maps to_regenerate.torg_arena set value 1b
 data modify storage switch:maps to_regenerate.smithed_summit_2024 set value 1b
 data modify storage switch:maps to_regenerate.trials_run set value 1b
+data modify storage switch:maps to_regenerate.void_desert set value 1b
 data modify storage switch:maps to_regenerate.warden_escape_statue set value 1b
 data modify storage switch:maps to_regenerate.hider_mansion set value 1b
 data modify storage switch:maps to_regenerate.nuketown set value 1b

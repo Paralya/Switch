@@ -77,7 +77,8 @@ execute unless data storage switch:maps to_regenerate.leather_boots if data stor
 execute unless data storage switch:maps to_regenerate.ocean_waste if data storage switch:maps to_regenerate{torg_arena:1b} run function switch:maps/survival/torg_arena/regenerate
 execute unless data storage switch:maps to_regenerate.torg_arena if data storage switch:maps to_regenerate{smithed_summit_2024:1b} run function switch:maps/survival/smithed_summit_2024/regenerate
 execute unless data storage switch:maps to_regenerate.smithed_summit_2024 if data storage switch:maps to_regenerate{trials_run:1b} run function switch:maps/survival/trials_run/regenerate
-execute unless data storage switch:maps to_regenerate.trials_run if data storage switch:maps to_regenerate{warden_escape_statue:1b} run function switch:maps/survival/warden_escape_statue/regenerate
+execute unless data storage switch:maps to_regenerate.trials_run if data storage switch:maps to_regenerate{void_desert:1b} run function switch:maps/survival/void_desert/regenerate
+execute unless data storage switch:maps to_regenerate.void_desert if data storage switch:maps to_regenerate{warden_escape_statue:1b} run function switch:maps/survival/warden_escape_statue/regenerate
 execute unless data storage switch:maps to_regenerate.warden_escape_statue if data storage switch:maps to_regenerate{hider_mansion:1b} run function switch:maps/survival/hider_mansion/regenerate
 execute unless data storage switch:maps to_regenerate.hider_mansion if data storage switch:maps to_regenerate{nuketown:1b} run function switch:maps/survival/nuketown/regenerate
 execute unless data storage switch:maps to_regenerate.nuketown if data storage switch:maps to_regenerate{layers_4_teams:1b} run function switch:maps/survival/layers_4_teams/regenerate

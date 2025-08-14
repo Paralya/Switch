@@ -75,6 +75,7 @@
 #			switch:maps/survival/torg_arena/regenerate {name:"torg_arena"} [ in switch:game ]
 #			switch:maps/survival/smithed_summit_2024/regenerate {name:"smithed_summit_2024"} [ in switch:game ]
 #			switch:maps/survival/trials_run/regenerate {name:"trials_run"} [ in switch:game ]
+#			switch:maps/survival/void_desert/regenerate {name:"void_desert"} [ in switch:game ]
 #			switch:maps/survival/warden_escape_statue/regenerate {name:"warden_escape_statue"} [ in switch:game ]
 #			switch:maps/survival/hider_mansion/regenerate {name:"hider_mansion"} [ in switch:game ]
 #			switch:maps/survival/nuketown/regenerate {name:"nuketown"} [ in switch:game ]
