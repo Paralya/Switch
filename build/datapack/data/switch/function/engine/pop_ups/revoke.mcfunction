@@ -9,9 +9,8 @@
 #			advancement switch:pop_ups/pitchout_fr
 #			advancement switch:pop_ups/creeper_apocalypse_fr
 #			advancement switch:pop_ups/traitors_game_fr
-#			advancement switch:pop_ups/boat_race_fr
 #			advancement switch:pop_ups/spectres_game_fr
-#			advancement switch:pop_ups/kart_racer_fr
+#			advancement switch:pop_ups/race_fr
 #			advancement switch:pop_ups/rush_the_point_fr
 #			advancement switch:pop_ups/rush_the_flag_fr
 #			advancement switch:pop_ups/spleef_fr
@@ -53,9 +52,8 @@
 #			advancement switch:pop_ups/pitchout_en
 #			advancement switch:pop_ups/creeper_apocalypse_en
 #			advancement switch:pop_ups/traitors_game_en
-#			advancement switch:pop_ups/boat_race_en
 #			advancement switch:pop_ups/spectres_game_en
-#			advancement switch:pop_ups/kart_racer_en
+#			advancement switch:pop_ups/race_en
 #			advancement switch:pop_ups/rush_the_point_en
 #			advancement switch:pop_ups/rush_the_flag_en
 #			advancement switch:pop_ups/spleef_en

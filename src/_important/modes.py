@@ -62,14 +62,14 @@ MODES: list[dict] = [
 			"en": [{"text":"Traitors are hinding among players.\n"},{"text":"Innocents versus Traitors, which side will win?\n"}]
 		},
 	},
-	{
-		"min_players":1, "max_players":-1, "id":"boat_race", "name_fr":"Boat Race",
-		"estimated_time": "3-8 mins", "inspiration": "Expiration", "suggested_by": "Stoupy", "developed_by": "LTHCTheMaster",
-		"description": {
-			"fr": [{"text":"Battez-vous pour atteindre la ligne d'arrivée\n"},{"text":"en premier pour remporter la partie !\n"}],
-			"en": [{"text":"Race for reaching the finish line\n"},{"text":"in first to claim the win!\n"}]
-		},
-	},
+	# {
+	# 	"min_players":1, "max_players":-1, "id":"boat_race", "name_fr":"Boat Race",
+	# 	"estimated_time": "3-8 mins", "inspiration": "Expiration", "suggested_by": "Stoupy", "developed_by": "LTHCTheMaster",
+	# 	"description": {
+	# 		"fr": [{"text":"Battez-vous pour atteindre la ligne d'arrivée\n"},{"text":"en premier pour remporter la partie !\n"}],
+	# 		"en": [{"text":"Race for reaching the finish line\n"},{"text":"in first to claim the win!\n"}]
+	# 	},
+	# },
 	{
 		"min_players":1, "max_players":-1, "id":"spectres_game", "name_fr":"Spectres Game",
 		"estimated_time": "4-10 mins", "inspiration": "Expiration", "suggested_by": "Luxio", "developed_by": "Stoupy",
@@ -79,11 +79,11 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"kart_racer", "name_fr":"Kart Racer",
+		"min_players":1, "max_players":-1, "id":"race", "name_fr":"Race",
 		"estimated_time": "3-6 mins", "inspiration": "Racing games", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
-			"fr": [{"text":"Affrontez les autres joueurs sur des\n"},{"text":"circuits et soyez le premier arrivé !\n"}],
-			"en": [{"text":"Compete against other players on circuits\n"},{"text":"and be the first to reach the finish line!\n"}]
+			"fr": [{"text":"Battez-vous pour atteindre la ligne d'arrivée\n"},{"text":"en premier pour remporter la partie !\n"}],
+			"en": [{"text":"Race for reaching the finish line\n"},{"text":"in first to claim the win!\n"}]
 		},
 	},
 	{
