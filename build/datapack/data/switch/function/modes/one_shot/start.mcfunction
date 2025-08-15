@@ -25,6 +25,7 @@ scoreboard objectives setdisplay sidebar switch.temp.kills
 
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
+scoreboard players set #remaining_time switch.data 600
 scoreboard players set #one_shot_seconds switch.data -10
 scoreboard players set #one_shot_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
@@ -38,7 +39,7 @@ effect give @a[tag=!detached] resistance infinite 0 true
 # Summon 64 markers for respawn system
 scoreboard players set #respawn_marker_count switch.data 0
 execute summon marker run function switch:modes/one_shot/respawn/spawn_marker
-execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] summon marker run function switch:modes/one_shot/respawn/spawn_marker
+execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] summon marker run function switch:modes/one_shot/respawn/spawn_marker
 
 # Make players spawn
 execute as @a[tag=!detached] run function switch:modes/one_shot/respawn/main

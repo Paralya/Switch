@@ -6,7 +6,6 @@
 # @within	switch:modes/fireblast/xp_bar
 #			switch:modes/fish_fight/xp_bar
 #			switch:modes/laser_game/xp_bar
-#			switch:modes/one_shot/xp_bar
 #			switch:modes/pitchout/xp_bar
 #
 
