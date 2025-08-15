@@ -35,6 +35,7 @@
 #			switch:modes/pitchout/process_end
 #			switch:modes/protect_the_king/process_end
 #			switch:modes/pvpswap/process_end
+#			switch:modes/race/process_end
 #			switch:modes/replicate_the_build/process_end
 #			switch:modes/rush_the_flag/process_end
 #			switch:modes/rush_the_point/process_end

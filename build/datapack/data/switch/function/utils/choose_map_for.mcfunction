@@ -34,6 +34,7 @@
 #			switch:modes/pitchout/start {id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}
 #			switch:modes/protect_the_king/start {id:"protect_the_king", maps:["traitor_original","mushroom_plains","baby_park","snow_travel","cathedrale_liege","jayl_dark_forest","operation_pigclaw","dark_forest_hills","paralya_lobby_noel","zonweeb_highschool","hider_mansion","nuketown_no_barrier","lightium_spawn","paralya_lobby","stardust_spawn","stardust_boss_zone","stardust_boss_zone_nether","stardust_pvp_zone","jn_biomes_relief"]}
 #			switch:modes/pvpswap/start {id:"pvpswap", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box"]}
+#			switch:modes/race/start {id:"race", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit"]}
 #			switch:modes/rush_the_point/start_common {id:"rush_the_point", maps:["rush_the_point_1"]}
 #			switch:modes/sheepwars/start {id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}
 #			switch:modes/shoot_da_sheep/start {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}

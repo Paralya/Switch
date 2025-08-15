@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/snow_travel/if_race
 #
-# @within	switch:maps/survival/snow_travel/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/snow_travel/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 3

@@ -119,7 +119,7 @@ def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[tuple, in
 		write_function(PATH, f"execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value {tp_coords}\n")
 		write_function(PATH, "scoreboard players set #count switch.data 0")
 		write_function(PATH, f"execute as @a[tag=!detached,sort=random] run function switch:maps/survival/{name}/teleport_players\n")
-		write_function(PATH, f"execute if score #is_race switch.data matches 1 run function switch:maps/survival/{name}/if_race")
+		write_function(PATH, f"execute if score #is_race switch.data matches 1 in switch:game run function switch:maps/survival/{name}/if_race")
 
 
 def create_teleport_players_file(name: str, view: tuple, racing_pos: tuple[tuple, int, int] = ()) -> None:

@@ -33,6 +33,7 @@
 #			switch:modes/pitchout/tick {function:"switch:modes/pitchout/death"}
 #			switch:modes/protect_the_king/tick {function:"switch:modes/protect_the_king/death"}
 #			switch:modes/pvpswap/tick {function:"switch:modes/pvpswap/death"}
+#			switch:modes/race/tick {function:"switch:modes/race/joined"}
 #			switch:modes/replicate_the_build/tick {function:"switch:modes/replicate_the_build/death"}
 #			switch:modes/rush_the_point/tick_common {function:"switch:modes/rush_the_point/death/player"}
 #			switch:modes/sheepwars/tick {function:"switch:modes/sheepwars/death"}

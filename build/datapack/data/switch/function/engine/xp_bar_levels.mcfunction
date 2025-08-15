@@ -25,6 +25,7 @@
 #			switch:modes/pillars_of_fortune/xp_bar
 #			switch:modes/pitch_creep/xp_bar
 #			switch:modes/protect_the_king/xp_bar
+#			switch:modes/race/xp_bar
 #			switch:modes/rush_the_point/xp_bar
 #			switch:modes/shoot_da_sheep/xp_bar
 #			switch:modes/simultaneous_jump/xp_bar

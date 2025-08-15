@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/sakura_land/if_race
 #
-# @within	switch:maps/survival/sakura_land/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/sakura_land/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 3

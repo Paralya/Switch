@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/airship_fortress/if_race
 #
-# @within	switch:maps/survival/airship_fortress/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/airship_fortress/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 3

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/boat_race_2/if_race
 #
-# @within	switch:maps/survival/boat_race_2/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/boat_race_2/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 1

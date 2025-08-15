@@ -1,0 +1,16 @@
+
+#> switch:modes/race/checkpoints/remember/storage_loop
+#
+# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+#
+# @within	switch:modes/race/checkpoints/remember/main
+#			switch:modes/race/checkpoints/remember/storage_loop
+#
+
+execute store result score #id switch.data run data get storage switch:main copy[0].id
+execute if score @s switch.temp.id = #id switch.data run data modify storage switch:main new append from storage switch:main temp
+execute unless score @s switch.temp.id = #id switch.data run data modify storage switch:main new append from storage switch:main copy[0]
+
+data remove storage switch:main copy[0]
+execute if data storage switch:main copy[0] run function switch:modes/race/checkpoints/remember/storage_loop
+

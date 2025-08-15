@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/plains_routine/if_race
 #
-# @within	switch:maps/survival/plains_routine/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/plains_routine/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 3

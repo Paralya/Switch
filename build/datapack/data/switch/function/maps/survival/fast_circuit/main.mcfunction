@@ -10,5 +10,5 @@ execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos
 scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:maps/survival/fast_circuit/teleport_players
 
-execute if score #is_race switch.data matches 1 run function switch:maps/survival/fast_circuit/if_race
+execute if score #is_race switch.data matches 1 in switch:game run function switch:maps/survival/fast_circuit/if_race
 

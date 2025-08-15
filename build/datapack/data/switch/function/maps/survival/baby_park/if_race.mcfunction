@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/baby_park/if_race
 #
-# @within	switch:maps/survival/baby_park/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/baby_park/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 7

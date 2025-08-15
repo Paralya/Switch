@@ -13,6 +13,10 @@
 #			switch:modes/kart_racer/stop {selector:"@e[tag=shopping_kart.kart]"}
 #			switch:modes/kart_racer/stop {selector:"@e[tag=switch.checkpoint]"}
 #			switch:modes/pitch_creep/second {selector:"@e[type=creeper,distance=..100]"} [ at @n[type=marker,tag=switch.selected_map] ]
+#			switch:modes/race/process_end {selector:"@e[tag=shopping_kart.kart]"}
+#			switch:modes/race/process_end {selector:"@e[tag=switch.checkpoint]"}
+#			switch:modes/race/stop {selector:"@e[tag=shopping_kart.kart]"}
+#			switch:modes/race/stop {selector:"@e[tag=switch.checkpoint]"}
 #
 
 $execute as $(selector) on passengers run ride @s[type=player] dismount

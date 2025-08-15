@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/dk_mountain/if_race
 #
-# @within	switch:maps/survival/dk_mountain/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/dk_mountain/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 3

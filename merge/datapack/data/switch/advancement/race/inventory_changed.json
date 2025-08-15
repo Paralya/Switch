@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed"
+		}
+	},
+	"rewards": {
+		"function": "switch:modes/race/advancements/inventory_changed"
+	}
+}

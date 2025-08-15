@@ -36,6 +36,7 @@
 #			switch:modes/pitchout/process_end [ as @a[tag=!detached] ]
 #			switch:modes/protect_the_king/process_end [ as @a[tag=!detached] ]
 #			switch:modes/pvpswap/process_end [ as @a[tag=!detached] ]
+#			switch:modes/race/process_end [ as @a[tag=!detached] ]
 #			switch:modes/replicate_the_build/process_end [ as @a[tag=!detached] ]
 #			switch:modes/rush_the_flag/process_end [ as @a[tag=!detached] ]
 #			switch:modes/rush_the_point/process_end [ as @a[tag=!detached] ]

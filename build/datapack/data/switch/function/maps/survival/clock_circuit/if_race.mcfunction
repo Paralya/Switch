@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/clock_circuit/if_race
 #
-# @within	switch:maps/survival/clock_circuit/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/clock_circuit/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 3

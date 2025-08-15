@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/trackmania_stadium_2/if_race
 #
-# @within	switch:maps/survival/trackmania_stadium_2/main
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/trackmania_stadium_2/main [ in switch:game ]
 #
 
 scoreboard players set #total_laps switch.data 1

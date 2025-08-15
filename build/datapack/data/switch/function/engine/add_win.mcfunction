@@ -50,6 +50,7 @@
 #			switch:modes/protect_the_king/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s ]
 #			switch:modes/protect_the_king/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] & at @s ]
 #			switch:modes/pvpswap/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
+#			switch:modes/race/process_end [ as @a[tag=!detached,scores={switch.alive=2}] & at @s ]
 #			switch:modes/replicate_the_build/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/rush_the_flag/process_end [ at @s ]
 #			switch:modes/rush_the_point/process_end [ at @s ]
