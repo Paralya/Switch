@@ -19,6 +19,6 @@ forceload add 20631 20336
 forceload add 20639 20375
 forceload add 20750 20382
 
-summon marker 20639 108 20336 {Tags:["switch.effect_block","switch.race.engine_off_block"]}
+summon marker 20639 108 20336 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
 forceload add 20639 20336
 

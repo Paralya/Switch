@@ -14,10 +14,10 @@ forceload add 23125 23080
 forceload add 23106 23130
 forceload add 23040 23112
 
-summon marker 23067 136 23042 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 23067 136 23046 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 23143 133 23103 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 23107 132 23058 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
+summon marker 23067 136 23042 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 23067 136 23046 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 23143 133 23103 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 23107 132 23058 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
 
 forceload add 23067 23042
 forceload add 23067 23046

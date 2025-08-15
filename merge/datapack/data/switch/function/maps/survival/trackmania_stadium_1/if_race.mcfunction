@@ -18,15 +18,15 @@ forceload add 25026 24980
 forceload add 25057 24929
 forceload add 25052 25038
 
-summon marker 25102 101 25031 {Tags:["switch.effect_block","switch.race.reset_block"]}
-summon marker 24972 102 25043 {Tags:["switch.effect_block","switch.race.cruise_control_block"]}
-summon marker 24968 102 25042 {Tags:["switch.effect_block","switch.race.cruise_control_block"]}
-summon marker 25066 115 25027 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 25071 115 25027 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 25071 115 25031 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 25066 115 25031 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 25047 115 25011 {Tags:["switch.effect_block","switch.race.no_grip_block"]}
-summon marker 25043 115 25011 {Tags:["switch.effect_block","switch.race.no_grip_block"]}
+summon marker 25102 101 25031 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
+summon marker 24972 102 25043 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
+summon marker 24968 102 25042 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
+summon marker 25066 115 25027 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 25071 115 25027 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 25071 115 25031 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 25066 115 25031 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 25047 115 25011 {Tags:["switch.effect_block","switch.tm_blocks.no_grip"]}
+summon marker 25043 115 25011 {Tags:["switch.effect_block","switch.tm_blocks.no_grip"]}
 
 forceload add 25102 25031
 forceload add 24972 25043

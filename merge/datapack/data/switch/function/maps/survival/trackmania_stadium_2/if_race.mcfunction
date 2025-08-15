@@ -33,22 +33,22 @@ forceload add 37052 36963
 forceload add 37077 37056
 forceload add 37034 36956
 
-summon marker 37104 101 36995 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 37108 101 36995 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 37104 114 36932 {Tags:["switch.effect_block","switch.race.reset_block"]}
-summon marker 37108 114 36932 {Tags:["switch.effect_block","switch.race.reset_block"]}
-summon marker 37059 114 36939 {Tags:["switch.effect_block","switch.race.cruise_control_block"]}
-summon marker 37059 114 36942 {Tags:["switch.effect_block","switch.race.no_steering_block"]}
-summon marker 37061 114 36974 {Tags:["switch.effect_block","switch.race.engine_off_block"]}
-summon marker 37057 114 36974 {Tags:["switch.effect_block","switch.race.engine_off_block"]}
-summon marker 37085 127 37024 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 37001 131 37030 {Tags:["switch.effect_block","switch.race.reset_block"]}
-summon marker 36957 122 37030 {Tags:["switch.effect_block","switch.race.cruise_control_block"]}
-summon marker 36998 139 37053 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 36907 151 36963 {Tags:["switch.effect_block","switch.race.engine_off_block"]}
-summon marker 37086 101 36963 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
-summon marker 37074 101 37056 {Tags:["switch.effect_block","switch.race.no_grip_block"]}
-summon marker 37034 101 37057 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
+summon marker 37104 101 36995 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 37108 101 36995 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 37104 114 36932 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
+summon marker 37108 114 36932 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
+summon marker 37059 114 36939 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
+summon marker 37059 114 36942 {Tags:["switch.effect_block","switch.tm_blocks.no_steering"]}
+summon marker 37061 114 36974 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
+summon marker 37057 114 36974 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
+summon marker 37085 127 37024 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 37001 131 37030 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
+summon marker 36957 122 37030 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
+summon marker 36998 139 37053 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 36907 151 36963 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
+summon marker 37086 101 36963 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 37074 101 37056 {Tags:["switch.effect_block","switch.tm_blocks.no_grip"]}
+summon marker 37034 101 37057 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
 
 forceload add 37104 36995
 forceload add 37108 36995

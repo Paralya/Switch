@@ -21,6 +21,6 @@ forceload add 20142 19794
 forceload add 20161 19786
 forceload add 20293 19797
 
-summon marker 20152 100 19807 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
+summon marker 20152 100 19807 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
 forceload add 20152 19807
 
