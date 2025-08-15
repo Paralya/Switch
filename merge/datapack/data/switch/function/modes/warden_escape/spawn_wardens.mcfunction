@@ -1,4 +1,5 @@
 
+# Depending on the map, spawn two wardens for each spawn
 execute if data storage switch:main {map:"warden_forest"} as @e[limit=2] run summon warden 10000 102.69 10000
 execute if data storage switch:main {map:"warden_forest"} as @e[limit=2] run summon warden 10040 102.69 10040
 execute if data storage switch:main {map:"warden_forest"} as @e[limit=2] run summon warden 9960 102.69 10040
@@ -20,6 +21,11 @@ execute if data storage switch:main {map:"warden_escape_statue"} as @e[limit=2] 
 execute if data storage switch:main {map:"warden_escape_statue"} as @e[limit=2] run summon warden 69078 126 69072
 execute if data storage switch:main {map:"warden_escape_statue"} as @e[limit=2] run summon warden 69033 126 69072
 execute if data storage switch:main {map:"warden_escape_statue"} as @e[limit=2] run summon warden 69033 126 69027
+
+# Summon 5 small spiders per new warden also
+execute at @e[type=warden,tag=!switch.glowed] as @e[limit=5] run summon spider ~ ~ ~ {attributes:[{id:"minecraft:scale",base:0.25}]}
+
+# Make the new wardens glow 2 seconds
 effect give @e[type=warden,tag=!switch.glowed] glowing 2 255 true
 tag @e[type=warden,tag=!switch.glowed] add switch.glowed
 
