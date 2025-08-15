@@ -16,8 +16,8 @@ scoreboard players set #is_race switch.data 1
 
 # Setup starting variables
 scoreboard players set #can_vote switch.data 1
-scoreboard players set #remaining_time switch.data 610
-scoreboard players set #race_seconds switch.data -10
+scoreboard players set #remaining_time switch.data 615
+scoreboard players set #race_seconds switch.data -15
 scoreboard players set #race_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0

@@ -2,7 +2,6 @@
 #> switch:modes/race/stop
 #
 # @within	switch:modes/race/calls/stop
-#			switch:modes/race/restart_game
 #
 
 execute at @e[tag=switch.checkpoint] run forceload remove ~ ~

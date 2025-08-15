@@ -6,5 +6,9 @@
 	"shazinho": {
 		"subtitle": "shazinho",
 		"sounds": [{"name": "switch:shazinho","stream": true}]
+	},
+	"wormhole_potion": {
+		"subtitle": "wormhole_potion",
+		"sounds": ["switch:wormhole_potion"]
 	}
 }

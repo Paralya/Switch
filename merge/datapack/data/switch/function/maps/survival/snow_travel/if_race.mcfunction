@@ -2,23 +2,25 @@
 scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 3
 
-summon marker 22961 136 22948 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:7}}
-summon marker 23048 136 22973 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:3, dy:5, dz:1}}
-summon marker 23038 136 22984 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:1, dy:5, dz:3}}
-summon marker 23011 133 23031 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:4, dy:5, dz:4}}
-summon marker 22936 134 23014 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:3, dx:3, dy:5, dz:1}}
+summon marker 23065 136 23044 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:7}}
+summon marker 23152 136 23068 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:3, dy:5, dz:1}}
+summon marker 23125 138 23080 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:1, dy:5, dz:3}}
+summon marker 23106 133 23130 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:4, dy:5, dz:4}}
+summon marker 23040 134 23112 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:3, dx:3, dy:5, dz:1}}
 
-forceload add 22961 22948
-forceload add 23048 22973
-forceload add 23038 22984
-forceload add 23011 23031
-forceload add 22936 23014
+forceload add 23065 23044
+forceload add 23152 23068
+forceload add 23125 23080
+forceload add 23106 23130
+forceload add 23040 23112
 
-summon marker 22963 136 22946 {Tags:["switch.effect_block","switch.kart_racer.reactor_boost_block"]}
-summon marker 22963 136 22950 {Tags:["switch.effect_block","switch.kart_racer.reactor_boost_block"]}
-summon marker 23039 134 23007 {Tags:["switch.effect_block","switch.kart_racer.reactor_boost_block"]}
+summon marker 23067 136 23042 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
+summon marker 23067 136 23046 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
+summon marker 23143 133 23103 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
+summon marker 23107 132 23058 {Tags:["switch.effect_block","switch.race.reactor_boost_block"]}
 
-forceload add 22963 22946
-forceload add 22963 22950
-forceload add 23039 23007
+forceload add 23067 23042
+forceload add 23067 23046
+forceload add 23143 23103
+forceload add 23107 23058
 
