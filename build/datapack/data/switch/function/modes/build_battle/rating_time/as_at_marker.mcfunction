@@ -10,7 +10,7 @@
 tag @s add switch.marker_temp
 
 # Save the build in the structure switch:temp
-schedule function switch:modes/build_battle/rating_time/save/place_1 1s
+schedule function switch:modes/build_battle/rating_time/save/place_1 10t
 
 # Forceload the save zone
 execute positioned -76 100 0 summon marker run function switch:modes/build_battle/rating_time/summon_save_zone

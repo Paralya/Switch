@@ -7,7 +7,7 @@ setblock 0 5 0 yellow_shulker_box destroy
 execute as @p[scores={switch.temp.to_rate=2}] run loot insert 0 5 0 loot switch:get_username
 setblock ~19 ~29 ~19 barrier
 data modify storage switch:main input set value {theme:"",username:""}
-data modify storage switch:main input.theme set from storage switch:main current_theme
+data modify storage switch:main input.theme set from storage switch:main current_theme.en
 data modify storage switch:main input.username set from block 0 5 0 Items[0].components."minecraft:profile".name
 function switch:modes/build_battle/rating_time/macro_sign with storage switch:main input
 setblock 0 5 0 air

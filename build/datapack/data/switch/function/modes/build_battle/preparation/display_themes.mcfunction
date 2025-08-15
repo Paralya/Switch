@@ -4,7 +4,7 @@
 # @executed	as @a[tag=!detached] & in switch:game
 #
 # @within	switch:modes/build_battle/preparation/main [ as @a[tag=!detached] & in switch:game ]
-#			switch:modes/build_battle/tick [ as @a[tag=!detached] & in switch:game ]
+#			switch:modes/build_battle/tick [ as @a[tag=!detached] & in switch:build_battle ]
 #
 
 ## Place the papers in a shulker box with their name

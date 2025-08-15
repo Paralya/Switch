@@ -8,7 +8,7 @@ execute as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=5] at
 # While people are voting, display the themes in inventory and check their votes
 execute if score #build_battle_state switch.data matches 0 run kill @e[type=item]
 execute if score #build_battle_state switch.data matches 0 as @a[tag=!detached] if data entity @s Inventory[0] run function switch:modes/build_battle/preparation/check_player_vote
-execute if score #build_battle_state switch.data matches 0 as @a[tag=!detached] in switch:game run function switch:modes/build_battle/preparation/display_themes
+execute if score #build_battle_state switch.data matches 0 as @a[tag=!detached] in switch:build_battle run function switch:modes/build_battle/preparation/display_themes
 
 # Check players that voted during rating time
 execute if score #build_battle_state switch.data matches 2 as @a[tag=!detached,scores={switch.right_click=1..}] at @s run function switch:modes/build_battle/rating_time/right_click
