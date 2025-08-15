@@ -7,19 +7,22 @@
 # scoreboard value "#player_nearby switch.data" is set to 1 if there is a player nearby, and set to 0 if there is no player nearby
 # scoreboard value "#display_nearby switch.data" is set to 1 if there is a display nearby, and set to 0 if there is no display nearby
 
+# Stop if not in overworld
+execute unless dimension minecraft:overworld run return fail
+
 # Set scoreboard values
 $scoreboard players set #mode switch.data $(mode)
 scoreboard players set #player_nearby switch.data 0
-execute if score #mode switch.data matches 1 if entity @a[distance=..12] run scoreboard players set #player_nearby switch.data 1
-execute if score #mode switch.data matches 2 if entity @a[distance=..24] run scoreboard players set #player_nearby switch.data 1
-execute if score #mode switch.data matches 3 if entity @a[distance=..24] run scoreboard players set #player_nearby switch.data 1
+execute if score #mode switch.data matches 1 if entity @a[distance=0.1..12] run scoreboard players set #player_nearby switch.data 1
+execute if score #mode switch.data matches 2 if entity @a[distance=0.1..24] run scoreboard players set #player_nearby switch.data 1
+execute if score #mode switch.data matches 3 if entity @a[distance=0.1..24] run scoreboard players set #player_nearby switch.data 1
 execute if score #mode switch.data matches 3 run scoreboard players set #mode switch.data 1
 scoreboard players set #display_nearby switch.data 0
-$execute if score #display_$(path) switch.data matches 1 if entity @e[tag=$(path),limit=1,distance=..1] run scoreboard players set #display_nearby switch.data 1
+$execute if score #display_$(path) switch.data matches 1 if entity @n[tag=$(path),distance=..1] run scoreboard players set #display_nearby switch.data 1
 $execute if score #display_$(path) switch.data matches 1 if score #display_nearby switch.data matches 0 run scoreboard players set #display_$(path) switch.data 0
 
 # If there is no player nearby and the display is alive, kill it
-$execute if score #player_nearby switch.data matches 0 if score #display_nearby switch.data matches 1 run kill @e[tag=$(path),limit=1,distance=..1]
+$execute if score #player_nearby switch.data matches 0 if score #display_nearby switch.data matches 1 run kill @n[tag=$(path),distance=..1]
 $execute if score #player_nearby switch.data matches 0 if score #display_nearby switch.data matches 1 run scoreboard players set #display_$(path) switch.data 0
 
 # If there is a player nearby and the display is dead, summon it
