@@ -1,9 +1,9 @@
 
 #> switch:cinematic/intro_spread/start
 #
-# @executed	in switch:game & positioned 44.38 127.17 260.0 & rotated 151.06 28.47
+# @executed	in switch:game & positioned 44.38 127.17 99.81 & rotated 151.06 28.47
 #
-# @within	switch:maps/survival/switch_space/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Switch Space",credits:"Stoupy and Switch community",with:{particle:1}} [ in switch:game & positioned 44.38 127.17 260.0 & rotated 151.06 28.47 ]
+# @within	switch:maps/survival/switch_space/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Switch Space",credits:"Stoupy and Switch community",with:{particle:1}} [ in switch:game & positioned 44.38 127.17 99.81 & rotated 151.06 28.47 ]
 #			switch:maps/survival/laser_game/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"LaserGame51 (2010 IRL layout)",credits:"Stoupy, Ikinox",with:{particle:1}} [ in switch:game & positioned 517.62 111.36 518.34 & rotated -31.98 9.81 ]
 #			switch:maps/survival/pitchout_1/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Wet Wood Dome",credits:"Stoupy, ?",with:{particle:1}} [ in switch:game & positioned 1081.19 117.69 1065.08 & rotated 114.72 15.66 ]
 #			switch:maps/survival/traitor_original/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Traitor Original",credits:"Stoupy, Luxio, Jugou2, etc. (Paralya)",with:{particle:1}} [ in switch:game & positioned 1566.0 122.2 1533.79 & rotated -56.61 8.9 ]
