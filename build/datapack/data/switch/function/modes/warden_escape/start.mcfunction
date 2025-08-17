@@ -4,10 +4,10 @@
 # @within	switch:modes/warden_escape/calls/start
 #
 
+team join switch.no_pvp @a[tag=!detached]
 scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
-effect give @a[tag=!detached] weakness infinite 255 true
 time set 18000
 
 ## Téléportation des joueurs
@@ -24,6 +24,7 @@ execute in switch:game run gamerule keepInventory true
 
 function switch:translations/modes_warden_escape_start
 
+team add switch.temp.mobs
 scoreboard players set #remaining_time switch.data 100
 scoreboard players set #warden_escape_seconds switch.data -15
 scoreboard players set #warden_escape_ticks switch.data 0
