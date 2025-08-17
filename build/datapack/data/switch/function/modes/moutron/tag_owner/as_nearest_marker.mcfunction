@@ -1,9 +1,9 @@
 
 #> switch:modes/moutron/tag_owner/as_nearest_marker
 #
-# @executed	as @n[type=marker,tag=switch.moutron_marker]
+# @executed	as @n[type=marker,tag=switch.moutron_marker,distance=1..3]
 #
-# @within	switch:modes/moutron/kill_kart [ as @n[type=marker,tag=switch.moutron_marker] ]
+# @within	switch:modes/moutron/kill_kart [ as @n[type=marker,tag=switch.moutron_marker,distance=1..3] ]
 #
 
 # Retrieve owner UUID

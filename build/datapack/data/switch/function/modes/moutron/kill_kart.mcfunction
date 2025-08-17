@@ -7,7 +7,7 @@
 #
 
 # Add a temporary tag to the owner of the block that killed the kart
-execute as @n[type=marker,tag=switch.moutron_marker] run function switch:modes/moutron/tag_owner/as_nearest_marker
+execute as @n[type=marker,tag=switch.moutron_marker,distance=1..3] run function switch:modes/moutron/tag_owner/as_nearest_marker
 
 # Dismount passengers and kill them
 execute on passengers run function switch:modes/moutron/death

@@ -7,7 +7,7 @@ execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kar
 execute as @e[type=marker,tag=switch.moutron_marker] at @s run function switch:modes/moutron/marker_tick
 
 # Force riding the kart
-execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @e[tag=shopping_kart.kart,predicate=!shopping_kart:has_player_passenger,sort=nearest,limit=1]
+execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @n[tag=shopping_kart.kart,predicate=!switch:has_player_passenger]
 
 # If a kart is below 300 for engine, kill it and the player
 execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart,scores={shopping_kart.engine=..300}] at @s run function switch:modes/moutron/kill_kart
