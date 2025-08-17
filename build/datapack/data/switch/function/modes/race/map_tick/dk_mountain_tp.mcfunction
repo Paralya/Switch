@@ -1,9 +1,9 @@
 
 #> switch:modes/race/map_tick/dk_mountain_tp
 #
-# @executed	as @e[tag=shopping_kart.kart,scores={switch.temp.compteur=1..}]
+# @executed	as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}]
 #
-# @within	switch:modes/race/map_tick/dk_mountain [ as @e[tag=shopping_kart.kart,scores={switch.temp.compteur=1..}] ]
+# @within	switch:modes/race/map_tick/dk_mountain [ as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}] ]
 #
 
 # l1 = [19982, 117, 20542]

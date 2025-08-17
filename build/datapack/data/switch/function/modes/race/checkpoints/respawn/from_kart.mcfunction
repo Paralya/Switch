@@ -1,9 +1,9 @@
 
 #> switch:modes/race/checkpoints/respawn/from_kart
 #
-# @executed	at @s & as @n[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger]
+# @executed	at @s & as @n[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]
 #
-# @within	switch:modes/race/checkpoints/respawn/from_marker [ at @s & as @n[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger] ]
+# @within	switch:modes/race/checkpoints/respawn/from_marker [ at @s & as @n[tag=switch.vehicle,predicate=switch:have_temp_player_passenger] ]
 #
 
 # copy[0] is the respawn state

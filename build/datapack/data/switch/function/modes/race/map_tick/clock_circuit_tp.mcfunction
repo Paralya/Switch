@@ -1,9 +1,9 @@
 
 #> switch:modes/race/map_tick/clock_circuit_tp
 #
-# @executed	at @s
+# @executed	as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}] & at @s
 #
-# @within	switch:modes/race/map_tick/clock_circuit [ at @s ]
+# @within	switch:modes/race/map_tick/clock_circuit [ as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}] & at @s ]
 #
 
 execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine

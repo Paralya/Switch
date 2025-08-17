@@ -13,7 +13,7 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] run fun
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 # Safe kill karts and checkpoints
-function switch:utils/safe_kill_macro {selector:"@e[tag=shopping_kart.kart]"}
+function switch:utils/safe_kill_macro {selector:"@e[tag=switch.vehicle]"}
 function switch:utils/safe_kill_macro {selector:"@e[tag=switch.checkpoint]"}
 
 # Obligatoire

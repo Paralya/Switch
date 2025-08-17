@@ -8,7 +8,7 @@ execute at @e[tag=switch.checkpoint] run forceload remove ~ ~
 execute at @e[tag=switch.effect_block] run forceload remove ~ ~
 
 # Safe kill karts and checkpoints
-function switch:utils/safe_kill_macro {selector:"@e[tag=shopping_kart.kart]"}
+function switch:utils/safe_kill_macro {selector:"@e[tag=switch.vehicle]"}
 function switch:utils/safe_kill_macro {selector:"@e[tag=switch.checkpoint]"}
 
 schedule clear switch:modes/race/give_items

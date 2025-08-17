@@ -1,7 +1,7 @@
 
 #> switch:modes/race/tm_blocks/reset_checkpoint
 #
-# @executed	as @e[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger]
+# @executed	as @e[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]
 #
 # @within	switch:modes/race/checkpoints/remember/get_from_kart
 #

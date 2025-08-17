@@ -17,7 +17,7 @@ scoreboard players add @s switch.temp.checkpoint 1000000
 scoreboard players operation @s switch.temp.checkpoint -= #race_ticks switch.data
 
 tag @s add switch.temp
-kill @e[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger]
+function switch:utils/safe_kill_macro {selector:"@e[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]"}
 kill @e[type=item]
 tag @s remove switch.temp
 

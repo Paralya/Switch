@@ -13,14 +13,15 @@ execute if score #detect_end switch.data matches 0 as @e[type=marker,tag=switch.
 execute if score #detect_end switch.data matches 0 as @a[tag=!detached,scores={switch.right_click=1..}] run function switch:modes/race/right_click
 
 # Start fixes -7
-execute if score #race_seconds switch.data matches -7..-1 run team join switch.temp.kart @e[tag=shopping_kart.kart]
-execute if score #race_seconds switch.data matches -7..-1 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 1b
-execute if score #race_seconds switch.data matches ..-8 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
-execute if score #race_seconds switch.data matches -7..-1 run scoreboard players set @e[tag=shopping_kart.kart,scores={shopping_kart.engine=200..}] shopping_kart.engine 200
-execute if score #race_seconds switch.data matches 0 as @e[tag=shopping_kart.kart] run data modify entity @s NoAI set value 0b
+execute if score #race_seconds switch.data matches -7..-1 run team join switch.temp.kart @e[tag=switch.vehicle]
+execute if score #race_seconds switch.data matches -7..-1 as @e[tag=switch.vehicle] run data modify entity @s NoAI set value 1b
+execute if score #race_seconds switch.data matches -7..-1 as @e[tag=switch.vehicle] run tp @s @s
+execute if score #race_seconds switch.data matches ..-8 if score #map_type switch.data matches 0 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
+execute if score #race_seconds switch.data matches -7..-1 if score #map_type switch.data matches 0 run scoreboard players set @e[tag=shopping_kart.kart,scores={shopping_kart.engine=200..}] shopping_kart.engine 200
+execute if score #race_seconds switch.data matches 0 as @e[tag=switch.vehicle] run data modify entity @s NoAI set value 0b
 
 # Force riding the kart
-execute as @a[tag=!detached,gamemode=adventure,predicate=!switch:has_vehicle] at @s run ride @s mount @n[tag=shopping_kart.kart,predicate=!switch:has_player_passenger,distance=..100]
+execute as @a[tag=!detached,gamemode=adventure,predicate=!switch:has_vehicle] at @s run ride @s mount @n[tag=switch.vehicle,predicate=!switch:has_player_passenger,distance=..100]
 
 # Remove items and death prevention
 function switch:utils/on_death_run_function {function:"switch:modes/race/joined"}
