@@ -2,7 +2,7 @@
 scoreboard players add #fish_fight_seconds switch.data 1
 
 
-execute if score #fish_fight_seconds switch.data matches 3 as @a[tag=!detached] at @s run function switch:modes/fish_fight/give_items
+execute if score #fish_fight_seconds switch.data matches 1 as @a[tag=!detached] at @s run function switch:modes/fish_fight/give_items
 
 
 # spawn axolot
@@ -16,6 +16,7 @@ execute if score #temp switch.data matches 0 as @a[tag=!detached] at @s run play
 
 scoreboard players operation #temp_2 switch.data = #fish_fight_seconds switch.data
 scoreboard players operation #temp_2 switch.data %= #6 switch.data
+execute if score #fish_fight_seconds switch.data matches ..0 run scoreboard players set #temp_2 switch.data 1
 execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 0 run give @a[tag=!detached] white_concrete 1
 execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.blue] blue_concrete 1 
 execute if score #temp_2 switch.data matches 0 if score #TEAM_FISH switch.data matches 1 run give @a[team=switch.temp.red] red_concrete 1
