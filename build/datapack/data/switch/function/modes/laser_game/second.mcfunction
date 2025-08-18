@@ -9,21 +9,16 @@ scoreboard players add #laser_game_seconds switch.data 1
 scoreboard players remove #remaining_time switch.data 1
 
 # Start thing
-execute if score #laser_game_seconds switch.data matches 10 run kill @e[tag=switch.laser_game.base]
-execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"laser_game"} in switch:game run summon item_frame 517 113 524 {Tags:["switch.laser_game.base"],Facing:2b,Invisible:true,Invulnerable:true,Fixed:true,Silent:true,Glowing:true}
+execute if score #laser_game_seconds switch.data matches 0 run kill @e[tag=switch.laser_game.base]
+execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 517.0 113 524.0 {Tags:["switch.laser_game.base"],block_state:{Name:"minecraft:dark_oak_trapdoor",Properties:{powered:"true",facing:"north",half:"bottom",open:"true"}}}
+execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 539.0 105 530.0 {Tags:["switch.laser_game.base"],block_state:{Name:"minecraft:dark_oak_trapdoor",Properties:{powered:"true",facing:"east",half:"bottom",open:"true"}}}
+execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 542.0 114 547.0 {Tags:["switch.laser_game.base"],block_state:{Name:"minecraft:dark_oak_trapdoor",Properties:{powered:"true",facing:"south",half:"bottom",open:"true"}}}
 
 # Base reload
 scoreboard players remove #base_reload switch.data 1
 function switch:translations/modes_laser_game_second
-execute if score #base_reload switch.data matches 0 in switch:game run setblock 517 113 524 iron_trapdoor[powered=true,open=true]
-execute if score #base_reload switch.data matches 0 in switch:game run setblock 36041 149 36011 iron_trapdoor[powered=true,open=true,facing=east]
-execute if score #base_reload switch.data matches 0 in switch:game run setblock 36041 149 36012 iron_trapdoor[powered=true,open=true,facing=east]
-execute if score #base_reload switch.data matches 0 in switch:game run setblock 72114 112 72090 iron_trapdoor[powered=true,open=true,facing=north]
-execute if score #base_reload switch.data matches 0 as @e[tag=switch.laser_game.base] run data modify entity @s Item set value {id:"experience_bottle",count:1}
-execute if score #base_reload switch.data matches 1.. in switch:game run setblock 517 113 524 dark_oak_trapdoor[powered=true,open=true]
-execute if score #base_reload switch.data matches 1.. in switch:game run setblock 36041 149 36011 dark_oak_trapdoor[powered=true,open=true,facing=east]
-execute if score #base_reload switch.data matches 1.. in switch:game run setblock 36041 149 36012 dark_oak_trapdoor[powered=true,open=true,facing=east]
-execute if score #base_reload switch.data matches 1.. in switch:game run setblock 72114 112 72090 dark_oak_trapdoor[powered=true,open=true,facing=north]
+execute if score #base_reload switch.data matches 0 as @e[tag=switch.laser_game.base,sort=random,limit=1] run data merge entity @s {Glowing:true,block_state:{Name:"minecraft:iron_trapdoor"}}
+execute if score #base_reload switch.data matches 1.. as @e[tag=switch.laser_game.base] run data merge entity @s {Glowing:false,block_state:{Name:"minecraft:dark_oak_trapdoor"}}
 
 # Bonus mitraillette + change color
 scoreboard players remove #mitraillette switch.data 1

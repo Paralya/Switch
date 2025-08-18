@@ -7,6 +7,10 @@
 		"subtitle": "shazinho",
 		"sounds": [{"name": "switch:shazinho","stream": true}]
 	},
+	"laser_gun": {
+		"subtitle": "laser_gun",
+		"sounds": ["switch:laser_gun"]
+	},
 	"wormhole_potion": {
 		"subtitle": "wormhole_potion",
 		"sounds": ["switch:wormhole_potion"]
