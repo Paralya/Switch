@@ -17,7 +17,7 @@ execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @n[tag=s
 # If a kart is below 300 for engine, kill it and the player
 execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kart.kart,scores={shopping_kart.engine=..300}] at @s run function switch:modes/moutron/kill_kart
 
-# Durée des trainées
+# Trails duration
 scoreboard players operation #temp switch.data = #life_time switch.data
 scoreboard players operation #temp switch.data /= #20 switch.data
 function switch:translations/modes_moutron_tick
