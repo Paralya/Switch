@@ -76,17 +76,17 @@ execute if score #random switch.data matches 7 run effect give @s regeneration 8
 execute if score #random switch.data matches 7 run effect give @s speed 10 0 true
 
 # si le score est 8, on summon des puffer fish
-execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151040 124 151032 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151015 124 151020 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151040 124 151032 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151015 124 151020 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
 
-execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 155 155998 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
+execute if score #random switch.data matches 8 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Bubulle","color":"green","bold":true}}
 
 execute if score #random switch.data matches 8 as @a[tag=!detached] at @s run playsound entity.zombie.ambient ambient @s
 execute if score #random switch.data matches 8 run effect give @s regeneration 8 1 true
