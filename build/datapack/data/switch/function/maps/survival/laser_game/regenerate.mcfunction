@@ -26,8 +26,8 @@ execute if score #rg_laser_game switch.data matches 89.. in switch:game run forc
 execute if score #rg_laser_game switch.data matches 89.. in minecraft:overworld run forceload remove 526 500 552 552
 execute if score #rg_laser_game switch.data matches 89.. in switch:game run forceload remove 526 500 552 552
 
-execute if score #rg_laser_game switch.data matches 89.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"LaserGame51 (2010 IRL layout)","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_laser_game switch.data matches 89.. run data modify storage switch:main MessageToLog set value '{"text":"Map `LaserGame51 (2010 IRL layout)` just regenerated!"}'
+execute if score #rg_laser_game switch.data matches 89.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"LaserGame51 (2010 IRL)","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_laser_game switch.data matches 89.. run data modify storage switch:main MessageToLog set value '{"text":"Map `LaserGame51 (2010 IRL)` just regenerated!"}'
 execute if score #rg_laser_game switch.data matches 89.. run function switch:engine/log_message/apply
 
 execute if score #rg_laser_game switch.data matches 89.. in switch:game run function switch:maps/regenerate_doors_macro {name:"laser_game"}
