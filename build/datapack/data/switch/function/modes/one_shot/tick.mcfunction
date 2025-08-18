@@ -13,11 +13,10 @@ execute as @e[type=item,tag=!switch.checked] run function switch:modes/one_shot/
 execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
 function switch:utils/on_death_run_function {function:"switch:modes/one_shot/death"}
 
-# Cooldown invincibilité
-scoreboard players remove @a[scores={switch.temp.cooldown=1..}] switch.temp.cooldown 1
-item replace entity @a[scores={switch.temp.cooldown=0}] armor.chest with air
+# Kill arrows that are in ground
+kill @e[type=arrow,nbt={inGround:1b}]
 
-## Dynamique spawn marker for respawn system (Always spawn new marker and kill the worst one)
+## Dynamic spawn marker for respawn system (Always spawn new marker and kill the worst one)
 execute if score #respawn_marker_count switch.data matches ..8 summon marker run function switch:modes/one_shot/respawn/spawn_marker
 execute if score #respawn_marker_count switch.data matches 9.. run function switch:modes/one_shot/respawn/kill_worst_marker
 

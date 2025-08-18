@@ -9,7 +9,6 @@ scoreboard players add #laser_game_seconds switch.data 1
 scoreboard players remove #remaining_time switch.data 1
 
 # Start thing
-execute if score #laser_game_seconds switch.data matches ..9 run kill @e[type=!player,type=!marker]
 execute if score #laser_game_seconds switch.data matches 10 run kill @e[tag=switch.laser_game.base]
 execute if score #laser_game_seconds switch.data matches 10 if data storage switch:main {map:"laser_game"} in switch:game run summon item_frame 517 113 524 {Tags:["switch.laser_game.base"],Facing:2b,Invisible:true,Invulnerable:true,Fixed:true,Silent:true,Glowing:true}
 

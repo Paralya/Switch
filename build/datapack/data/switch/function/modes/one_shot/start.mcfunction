@@ -19,11 +19,8 @@ function switch:utils/choose_map_for {id:"one_shot", maps:["friends_pvpbox_hills
 function switch:translations/modes_one_shot_start
 
 scoreboard objectives add switch.temp.damages dummy
-scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.kills playerKillCount {"text":"[Goal: 30 Kills]","color":"gold"}
 scoreboard objectives setdisplay sidebar switch.temp.kills
-
-scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
 scoreboard players set #remaining_time switch.data 600
 scoreboard players set #one_shot_seconds switch.data -10

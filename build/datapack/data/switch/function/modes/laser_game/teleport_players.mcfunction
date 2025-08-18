@@ -7,7 +7,7 @@
 
 tag @s remove global.ignore
 
-gamemode adventure @s[tag=!detached,gamemode=!adventure]
+gamemode adventure @s
 effect give @s saturation infinite 255 true
 effect give @s regeneration 5 255 true
 effect give @s weakness infinite 255 true

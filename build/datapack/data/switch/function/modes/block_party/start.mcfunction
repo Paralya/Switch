@@ -4,6 +4,10 @@
 # @within	switch:modes/block_party/calls/start
 #
 
+# Make sure the map if fully regenerated before starting
+execute if score #rg_block_party switch.data matches 1.. run function switch:modes/block_party/verify_regeneration
+schedule clear switch:maps/survival/block_party/regenerate
+
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true

@@ -13,7 +13,7 @@ function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs + give d'items
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_pvpbox_hills","friends_cube_lobby","zonweeb_main"]}
+function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_cube_lobby","zonweeb_main","jn_countries_castle","even_old_japan"]}
 
 execute in switch:game run gamerule mobGriefing true
 execute in switch:game run gamerule showDeathMessages false

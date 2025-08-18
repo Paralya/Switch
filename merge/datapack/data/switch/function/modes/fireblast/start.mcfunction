@@ -17,7 +17,7 @@ function switch:utils/choose_map_for {id:"fireblast", maps:["fireblast_bubulle",
 function switch:translations/modes_fireblast_start
 
 scoreboard players set #remaining_time switch.data 605
-scoreboard players set #fireblast_seconds switch.data -10
+scoreboard players set #fireblast_seconds switch.data -12
 scoreboard players set #fireblast_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.cooldown dummy

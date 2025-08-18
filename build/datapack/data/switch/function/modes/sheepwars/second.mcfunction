@@ -24,7 +24,7 @@ execute if score #minute_clock switch.data matches 30 if score #sheep_give_delay
 scoreboard players operation #sheep_give switch.data = #sheepwars_seconds switch.data
 scoreboard players operation #sheep_give switch.data %= #sheep_give_delay switch.data
 execute if score #APOCALYPSE_GAME switch.data matches 1 run scoreboard players operation #sheep_give switch.data %= #2 switch.data
-execute if score #sheep_give switch.data matches 0 as @a[tag=!detached,gamemode=!spectator] run function switch:modes/sheepwars/random_give
+execute if score #sheep_give switch.data matches 1 as @a[tag=!detached,gamemode=!spectator] run function switch:modes/sheepwars/random_give
 
 # Magic wool every 30 seconds (if apocalypse, at 5 and 20 seconds out of 30 seconds)
 scoreboard players operation #magic_wool switch.data = #sheepwars_seconds switch.data
