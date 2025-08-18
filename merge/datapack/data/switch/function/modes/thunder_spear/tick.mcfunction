@@ -5,7 +5,8 @@ function switch:utils/on_death_run_function {function:"switch:modes/thunder_spea
 
 # Summon tnt to arrows on ground and remove them & Modify arrow damage & Kill all items
 execute as @e[type=arrow,nbt={inBlockState:{}}] at @s run function switch:modes/thunder_spear/explode_arrow
-execute as @e[type=arrow] run data modify entity @s damage set value 100.0d
+execute as @e[type=arrow,nbt=!{weapon:{components:{}}}] run data modify entity @s damage set value 100.0d
+execute as @e[type=arrow,nbt={weapon:{components:{}}}] run data modify entity @s damage set value 0.0d
 kill @e[type=item]
 
 # Auto reload system
