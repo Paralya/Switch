@@ -16,3 +16,7 @@ execute at @s run playsound ui.toast.challenge_complete ambient @s
 
 advancement revoke @s only switch:tutorial
 
+# Empty title (fix for LunarClient first title not showing up)
+title @s title ""
+title @s subtitle ""
+
