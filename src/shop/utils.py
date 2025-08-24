@@ -61,7 +61,7 @@ scoreboard players add @s switch.sheepwars.chosen_kit 0
 		# Write the upgrades checks
 		for i, upgrade in enumerate(data['upgrades']):
 			price: int = upgrade['price']
-			write_function(path, f"\nexecute if score @s switch.trigger.shop matches {counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} if score @s switch.money matches {price}.. store success score #success switch.data run scoreboard players remove @s switch.money {price}")
+			write_function(path, f"execute if score @s switch.trigger.shop matches {counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} if score @s switch.money matches {price}.. store success score #success switch.data run scoreboard players remove @s switch.money {price}")
 
 		# If success, add the upgrade
 		write_function(path, f"""
