@@ -63,17 +63,22 @@ scoreboard players add @s switch.sheepwars.chosen_kit 0
 			price: int = upgrade['price']
 			write_function(path, f"execute if score @s switch.trigger.shop matches {counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} if score @s switch.money matches {price}.. store success score #success switch.data run scoreboard players remove @s switch.money {price}")
 
+		# Special case: Current game is infected and player is human, refresh their equipments
+		refresh_equipment: str = ""
+		if shop_name == "infected" and upgrade_id in ("sword", "armor"):
+			refresh_equipment = f"execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. if entity @s[team=switch.temp.human] run function switch:modes/infected/death/human_give"
+
 		# If success, add the upgrade
 		write_function(path, f"""
 execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run scoreboard players add @s switch.{shop_name}.{upgrade_id} 1
 execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
+{refresh_equipment}
 """)
 
 		# Selling logic - Add code for selling upgrades
 		write_function(path, f"\n# Selling {upgrade_name}")
-		# Use counter+10000 as the trigger value for selling to avoid conflicts
-		sell_counter = counter + 10000
+		sell_counter: int = counter + 10000		# Use counter+10000 as the trigger value for selling to avoid conflicts
 
 		# For each level (except level 0), add a sell option
 		for i in range(len(data['upgrades'])):
@@ -84,22 +89,25 @@ execute if score @s switch.trigger.shop matches {counter} if score #success swit
 			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
 
 			# Check if player has this level and wants to sell
-			write_function(path, f"""
-execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} run scoreboard players add @s switch.money {refund}
-execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} store success score #success switch.data run scoreboard players remove @s switch.{shop_name}.{upgrade_id} 1
-execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
-""")
+			write_function(path, f"execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} store success score #success switch.data run scoreboard players add @s switch.money {refund}")
 
 		# Add handling for max level (selling from max level to the previous level)
 		max_level = len(data['upgrades'])
 		if max_level > 0:  # Make sure there are upgrades to sell
 			price: int = data['upgrades'][-1]['price']  # Get price of the last upgrade
 			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
+			write_function(path, f"execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level}.. store success score #success switch.data run scoreboard players add @s switch.money {refund}")
 
-			write_function(path, f"""
-execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level}.. run scoreboard players add @s switch.money {refund}
-execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level}.. store success score #success switch.data run scoreboard players remove @s switch.{shop_name}.{upgrade_id} 1
-execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
+		# Special case: Current game is infected and player is human, refresh their equipments
+		refresh_equipment: str = ""
+		if shop_name == "infected" and upgrade_id in ("sword", "armor"):
+			refresh_equipment = f"execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. if entity @s[team=switch.temp.human] run function switch:modes/infected/death/human_give"
+
+		# If success, remove the upgrade
+		write_function(path, f"""
+execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run scoreboard players remove @s switch.{shop_name}.{upgrade_id} 1
+execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
+{refresh_equipment}
 """)
 
 	# Call messages

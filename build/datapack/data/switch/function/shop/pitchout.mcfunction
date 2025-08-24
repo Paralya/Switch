@@ -23,27 +23,17 @@ execute if score @s switch.trigger.shop matches 101 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 execute if score @s switch.trigger.shop matches 101 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
+
 # Selling Leather boots
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 1 store success score #success switch.data run scoreboard players add @s switch.money 40
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 2 store success score #success switch.data run scoreboard players add @s switch.money 80
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 3 store success score #success switch.data run scoreboard players add @s switch.money 120
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 4 store success score #success switch.data run scoreboard players add @s switch.money 160
+execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5.. store success score #success switch.data run scoreboard players add @s switch.money 200
 
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 1 run scoreboard players add @s switch.money 40
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 1 store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
-execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
+execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run scoreboard players remove @s switch.pitchout.boots 1
+execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 2 run scoreboard players add @s switch.money 80
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 2 store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
-execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
-
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 3 run scoreboard players add @s switch.money 120
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 3 store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
-execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
-
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 4 run scoreboard players add @s switch.money 160
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 4 store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
-execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
-
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5.. run scoreboard players add @s switch.money 200
-execute if score @s switch.trigger.shop matches 10101 if score @s switch.pitchout.boots matches 5.. store success score #success switch.data run scoreboard players remove @s switch.pitchout.boots 1
-execute if score @s switch.trigger.shop matches 10101 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Ender pearls
 execute if score @s switch.trigger.shop matches 102 if score @s switch.pitchout.ender_pearl matches 0 if score @s switch.money matches 80.. store success score #success switch.data run scoreboard players remove @s switch.money 80
@@ -53,15 +43,14 @@ execute if score @s switch.trigger.shop matches 102 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 execute if score @s switch.trigger.shop matches 102 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
+
 # Selling Ender pearls
+execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 1 store success score #success switch.data run scoreboard players add @s switch.money 64
+execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2.. store success score #success switch.data run scoreboard players add @s switch.money 128
 
-execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 1 run scoreboard players add @s switch.money 64
-execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 1 store success score #success switch.data run scoreboard players remove @s switch.pitchout.ender_pearl 1
-execute if score @s switch.trigger.shop matches 10102 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
+execute if score @s switch.trigger.shop matches 10102 if score #success switch.data matches 1.. run scoreboard players remove @s switch.pitchout.ender_pearl 1
+execute if score @s switch.trigger.shop matches 10102 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 
-execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2.. run scoreboard players add @s switch.money 128
-execute if score @s switch.trigger.shop matches 10102 if score @s switch.pitchout.ender_pearl matches 2.. store success score #success switch.data run scoreboard players remove @s switch.pitchout.ender_pearl 1
-execute if score @s switch.trigger.shop matches 10102 if score #success switch.data matches 1.. run playsound entity.experience_orb.pickup ambient @s
 
 # Messages
 execute if score @s switch.trigger.shop matches 100 run playsound block.note_block.bell ambient @s
