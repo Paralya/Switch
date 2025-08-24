@@ -8,8 +8,8 @@ execute if entity @s[tag=switch.rush_the_point.center] if entity @a[tag=!detache
 execute if entity @s[tag=switch.rush_the_point.side] if entity @a[tag=!detached,team=switch.rush_the_point.red,distance=..4] run scoreboard players add #state switch.data 1
 execute if entity @s[tag=switch.rush_the_point.side] if entity @a[tag=!detached,team=switch.rush_the_point.blue,distance=..4] run scoreboard players add #state switch.data 2
 
-execute if score #state switch.data matches 1 if score @s switch.temp.zone_capture matches -59.. run scoreboard players remove @s switch.temp.zone_capture 1
-execute if score #state switch.data matches 2 if score @s switch.temp.zone_capture matches ..59 run scoreboard players add @s switch.temp.zone_capture 1
+execute if score #state switch.data matches 1 if score @s switch.temp.zone_capture matches -60.. run scoreboard players remove @s switch.temp.zone_capture 1
+execute if score #state switch.data matches 2 if score @s switch.temp.zone_capture matches ..60 run scoreboard players add @s switch.temp.zone_capture 1
 execute if score #state switch.data matches 3 if score @s switch.temp.zone_capture matches ..-1 run scoreboard players add @s switch.temp.zone_capture 1
 execute if score #state switch.data matches 3 if score @s switch.temp.zone_capture matches 1.. run scoreboard players remove @s switch.temp.zone_capture 1
 
@@ -35,4 +35,10 @@ execute if score @s switch.temp.zone_capture matches 60.. if entity @s[tag=switc
 execute if score @s switch.temp.zone_capture matches 60.. if entity @s[tag=switch.rush_the_point.center] run fill ~-10 ~-1 ~-10 ~10 ~ ~10 blue_wool replace #minecraft:wool
 execute if score @s switch.temp.zone_capture matches 60.. if entity @s[tag=switch.rush_the_point.side] if predicate switch:chance/0.2 run scoreboard players add #blue_points switch.data 1
 execute if score @s switch.temp.zone_capture matches 60.. if entity @s[tag=switch.rush_the_point.center] if predicate switch:chance/0.2 run scoreboard players add #blue_points switch.data 1
+execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run scoreboard players add #blue_points switch.data 1
+
+# Event when capturing
+execute if score @s switch.temp.zone_capture matches -60 if score #state switch.data matches 1 run playsound entity.player.levelup ambient @a[tag=!detached,distance=..5]
+execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run playsound entity.player.levelup ambient @a[tag=!detached,distance=..5]
+function switch:translations/modes_rush_the_point_tick_zone
 
