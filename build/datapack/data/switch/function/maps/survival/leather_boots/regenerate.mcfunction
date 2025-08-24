@@ -38,7 +38,7 @@ execute if score #rg_leather_boots switch.data matches 456.. in switch:game run 
 execute if score #rg_leather_boots switch.data matches 456.. in minecraft:overworld run forceload remove 63080 63000 63100 63100
 execute if score #rg_leather_boots switch.data matches 456.. in switch:game run forceload remove 63080 63000 63100 63100
 
-execute if score #rg_leather_boots switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Where\'re my leather boots?","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_leather_boots switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Where're my leather boots?","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_leather_boots switch.data matches 456.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Where\'re my leather boots?` just regenerated!"}'
 execute if score #rg_leather_boots switch.data matches 456.. run function switch:engine/log_message/apply
 
