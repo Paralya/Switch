@@ -7,6 +7,7 @@
 #			switch:engine/stop [ in switch:game ]
 #
 
+gamerule maxCommandForkCount 2147483647
 gamerule maxCommandChainLength 2147483647
 gamerule sendCommandFeedback true
 gamerule mobGriefing false
