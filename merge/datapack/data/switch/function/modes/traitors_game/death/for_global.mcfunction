@@ -15,8 +15,10 @@ data modify storage switch:temp stolen set value ""
 execute if entity @s[tag=switch.floupy] run data modify storage switch:temp stolen set value " (flouped)"
 
 # Add solitaire message
-data modify storage switch:temp solitaire set value ""
-execute if entity @s[tag=switch.solitaire] run data modify storage switch:temp stolen set value " (solitaire)"
+data modify storage switch:temp solitaireFR set value ""
+data modify storage switch:temp solitaireEN set value ""
+execute if entity @s[tag=switch.solitaire] run data modify storage switch:temp solitaireFR set value " (solitaire)"
+execute if entity @s[tag=switch.solitaire] run data modify storage switch:temp solitaireEN set value " (solitary)"
 
 function switch:translations/modes_traitors_game_death_for_global
 
