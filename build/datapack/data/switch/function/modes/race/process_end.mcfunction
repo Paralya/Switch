@@ -6,7 +6,7 @@
 
 scoreboard players add #process_end switch.data 1
 
-execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.alive=2}] at @s run function switch:engine/add_win
+execute if score #process_end switch.data matches 1 as @a[team=switch.temp.1,tag=!detached,scores={switch.alive=2}] at @s run function switch:engine/add_win
 function switch:translations/modes_race_process_end
 execute if score #process_end switch.data matches 1 run scoreboard players reset @a[tag=!detached] switch.alive
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/race/complete
