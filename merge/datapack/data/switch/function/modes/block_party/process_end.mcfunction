@@ -6,5 +6,5 @@ execute if score #process_end switch.data matches 1 if score #remaining_players 
 execute if score #process_end switch.data matches 1 if score #remaining_players switch.data matches 1 as @a[tag=!detached,gamemode=!spectator] run function switch:modes/block_party/record_save
 function switch:translations/modes_block_party_process_end
 
-execute if score #process_end switch.data matches 100 run function switch:engine/restart
+execute if score #process_end switch.data matches 200 run function switch:engine/restart
 
