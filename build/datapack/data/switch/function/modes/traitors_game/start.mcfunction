@@ -13,7 +13,7 @@ function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s4","stardust_pvp_zone","la_fromagerie"]}
+function switch:utils/choose_map_for {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}
 
 execute in switch:game run gamerule mobGriefing true
 execute in switch:game run gamerule showDeathMessages false

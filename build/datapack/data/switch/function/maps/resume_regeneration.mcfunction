@@ -51,7 +51,7 @@ execute if score #rg_adraik_big_ball switch.data matches 1.. run function switch
 execute if score #rg_jayl_dark_forest switch.data matches 1.. run function switch:maps/survival/jayl_dark_forest/regenerate
 execute if score #rg_operation_pigclaw switch.data matches 1.. run function switch:maps/survival/operation_pigclaw/regenerate
 execute if score #rg_trackmania_stadium_2 switch.data matches 1.. run function switch:maps/survival/trackmania_stadium_2/regenerate
-execute if score #rg_bancalvivor_s4 switch.data matches 1.. run function switch:maps/survival/bancalvivor_s4/regenerate
+execute if score #rg_bancalvivor_s3 switch.data matches 1.. run function switch:maps/survival/bancalvivor_s3/regenerate
 execute if score #rg_dark_forest_hills switch.data matches 1.. run function switch:maps/survival/dark_forest_hills/regenerate
 execute if score #rg_paralya_lobby_noel switch.data matches 1.. run function switch:maps/survival/paralya_lobby_noel/regenerate
 execute if score #rg_caddie_league switch.data matches 1.. run function switch:maps/survival/caddie_league/regenerate

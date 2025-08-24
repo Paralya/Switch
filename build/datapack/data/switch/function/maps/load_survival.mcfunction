@@ -50,7 +50,7 @@ execute if data storage switch:main {map:"adraik_big_ball"} run function switch:
 execute if data storage switch:main {map:"jayl_dark_forest"} run function switch:maps/survival/jayl_dark_forest/main
 execute if data storage switch:main {map:"operation_pigclaw"} run function switch:maps/survival/operation_pigclaw/main
 execute if data storage switch:main {map:"trackmania_stadium_2"} run function switch:maps/survival/trackmania_stadium_2/main
-execute if data storage switch:main {map:"bancalvivor_s4"} run function switch:maps/survival/bancalvivor_s4/main
+execute if data storage switch:main {map:"bancalvivor_s3"} run function switch:maps/survival/bancalvivor_s3/main
 execute if data storage switch:main {map:"dark_forest_hills"} run function switch:maps/survival/dark_forest_hills/main
 execute if data storage switch:main {map:"paralya_lobby_noel"} run function switch:maps/survival/paralya_lobby_noel/main
 execute if data storage switch:main {map:"caddie_league"} run function switch:maps/survival/caddie_league/main

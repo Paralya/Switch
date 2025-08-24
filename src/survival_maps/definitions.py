@@ -64,7 +64,7 @@ def generate_folders_for_survival_maps() -> None:
 	##	35000	(undefined)	: arti_mansion			(not done yet)
 	clone_survival(100, (35827, -64, 35668), (36340, 99, 36180), ("operation_pigclaw", "Operation Pigclaw", "TheFRcRaZy, Jugou2"), view=(36068.47, 143.77, 36081.37, 172.34, 2.45))
 	clone_survival(100, (37000, 100, 37000), (37510, 218, 37367), ("trackmania_stadium_2", "Trackmania Stadium 2", "Stoupy"), view=(37392.24, 175.88, 37147.97, 74.93, 35.09), racing_pos=((37356.5, 110.69, 37180.5), 180, 28))
-	clone_survival(100, (38000, 100, 38000), (38260, 173, 38258), ("bancalvivor_s4", "Bancalvivor S4", "Lykos"), view=(38153.65, 117.15, 38120.62, 38.50, 18.05))
+	clone_survival(100, (38000, 100, 38000), (38260, 173, 38258), ("bancalvivor_s3", "Bancalvivor S3", "Lykos"), view=(38153.65, 117.15, 38120.62, 38.50, 18.05))
 	clone_survival(100, (39000, 100, 39000), (39143, 170, 39221), ("dark_forest_hills", "Dark Forest Hills", "Stoupy"), view=(39051.36, 135.94, 39191.41, 198.68, 15.82))
 	clone_survival(100, (40000, 100, 40000), (40200, 264, 40200), ("paralya_lobby_noel", "Paralya Lobby Noel", "Jugou2"), view=(40153.12, 204.86, 40096.92, 76.71, 9.64))
 	clone_survival(100, (41000, 100, 41000), (41238, 151, 41256), ("caddie_league", "Caddie League", "Oraclette, math730 (Survisland)"), view=(41062.56, 122.89, 41061.38, 308.06, 13.02))

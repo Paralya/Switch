@@ -49,7 +49,7 @@
 #			switch:maps/survival/jayl_dark_forest/regenerate {name:"jayl_dark_forest"} [ in switch:game ]
 #			switch:maps/survival/operation_pigclaw/regenerate {name:"operation_pigclaw"} [ in switch:game ]
 #			switch:maps/survival/trackmania_stadium_2/regenerate {name:"trackmania_stadium_2"} [ in switch:game ]
-#			switch:maps/survival/bancalvivor_s4/regenerate {name:"bancalvivor_s4"} [ in switch:game ]
+#			switch:maps/survival/bancalvivor_s3/regenerate {name:"bancalvivor_s3"} [ in switch:game ]
 #			switch:maps/survival/dark_forest_hills/regenerate {name:"dark_forest_hills"} [ in switch:game ]
 #			switch:maps/survival/paralya_lobby_noel/regenerate {name:"paralya_lobby_noel"} [ in switch:game ]
 #			switch:maps/survival/caddie_league/regenerate {name:"caddie_league"} [ in switch:game ]

@@ -51,8 +51,8 @@ execute unless data storage switch:maps to_regenerate.zonweeb_main if data stora
 execute unless data storage switch:maps to_regenerate.adraik_big_ball if data storage switch:maps to_regenerate{jayl_dark_forest:1b} run function switch:maps/survival/jayl_dark_forest/regenerate
 execute unless data storage switch:maps to_regenerate.jayl_dark_forest if data storage switch:maps to_regenerate{operation_pigclaw:1b} run function switch:maps/survival/operation_pigclaw/regenerate
 execute unless data storage switch:maps to_regenerate.operation_pigclaw if data storage switch:maps to_regenerate{trackmania_stadium_2:1b} run function switch:maps/survival/trackmania_stadium_2/regenerate
-execute unless data storage switch:maps to_regenerate.trackmania_stadium_2 if data storage switch:maps to_regenerate{bancalvivor_s4:1b} run function switch:maps/survival/bancalvivor_s4/regenerate
-execute unless data storage switch:maps to_regenerate.bancalvivor_s4 if data storage switch:maps to_regenerate{dark_forest_hills:1b} run function switch:maps/survival/dark_forest_hills/regenerate
+execute unless data storage switch:maps to_regenerate.trackmania_stadium_2 if data storage switch:maps to_regenerate{bancalvivor_s3:1b} run function switch:maps/survival/bancalvivor_s3/regenerate
+execute unless data storage switch:maps to_regenerate.bancalvivor_s3 if data storage switch:maps to_regenerate{dark_forest_hills:1b} run function switch:maps/survival/dark_forest_hills/regenerate
 execute unless data storage switch:maps to_regenerate.dark_forest_hills if data storage switch:maps to_regenerate{paralya_lobby_noel:1b} run function switch:maps/survival/paralya_lobby_noel/regenerate
 execute unless data storage switch:maps to_regenerate.paralya_lobby_noel if data storage switch:maps to_regenerate{caddie_league:1b} run function switch:maps/survival/caddie_league/regenerate
 execute unless data storage switch:maps to_regenerate.caddie_league if data storage switch:maps to_regenerate{ghost_town:1b} run function switch:maps/survival/ghost_town/regenerate

@@ -49,7 +49,7 @@ data modify storage switch:maps to_scan.adraik_big_ball set value 1b
 data modify storage switch:maps to_scan.jayl_dark_forest set value 1b
 data modify storage switch:maps to_scan.operation_pigclaw set value 1b
 data modify storage switch:maps to_scan.trackmania_stadium_2 set value 1b
-data modify storage switch:maps to_scan.bancalvivor_s4 set value 1b
+data modify storage switch:maps to_scan.bancalvivor_s3 set value 1b
 data modify storage switch:maps to_scan.dark_forest_hills set value 1b
 data modify storage switch:maps to_scan.paralya_lobby_noel set value 1b
 data modify storage switch:maps to_scan.caddie_league set value 1b

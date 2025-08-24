@@ -52,7 +52,7 @@
 #			switch:maps/survival/jayl_dark_forest/regenerate
 #			switch:maps/survival/operation_pigclaw/regenerate
 #			switch:maps/survival/trackmania_stadium_2/regenerate
-#			switch:maps/survival/bancalvivor_s4/regenerate
+#			switch:maps/survival/bancalvivor_s3/regenerate
 #			switch:maps/survival/dark_forest_hills/regenerate
 #			switch:maps/survival/paralya_lobby_noel/regenerate
 #			switch:maps/survival/caddie_league/regenerate

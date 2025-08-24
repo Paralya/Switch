@@ -49,7 +49,7 @@ data modify storage switch:maps to_regenerate.adraik_big_ball set value 1b
 data modify storage switch:maps to_regenerate.jayl_dark_forest set value 1b
 data modify storage switch:maps to_regenerate.operation_pigclaw set value 1b
 data modify storage switch:maps to_regenerate.trackmania_stadium_2 set value 1b
-data modify storage switch:maps to_regenerate.bancalvivor_s4 set value 1b
+data modify storage switch:maps to_regenerate.bancalvivor_s3 set value 1b
 data modify storage switch:maps to_regenerate.dark_forest_hills set value 1b
 data modify storage switch:maps to_regenerate.paralya_lobby_noel set value 1b
 data modify storage switch:maps to_regenerate.caddie_league set value 1b

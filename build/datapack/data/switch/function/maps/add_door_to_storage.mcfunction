@@ -47,7 +47,7 @@
 #			switch:maps/survival/jayl_dark_forest/scan_doors_on_marker {name:"jayl_dark_forest",additional_height:0} [ at @s ]
 #			switch:maps/survival/operation_pigclaw/scan_doors_on_marker {name:"operation_pigclaw",additional_height:164} [ at @s ]
 #			switch:maps/survival/trackmania_stadium_2/scan_doors_on_marker {name:"trackmania_stadium_2",additional_height:0} [ at @s ]
-#			switch:maps/survival/bancalvivor_s4/scan_doors_on_marker {name:"bancalvivor_s4",additional_height:0} [ at @s ]
+#			switch:maps/survival/bancalvivor_s3/scan_doors_on_marker {name:"bancalvivor_s3",additional_height:0} [ at @s ]
 #			switch:maps/survival/dark_forest_hills/scan_doors_on_marker {name:"dark_forest_hills",additional_height:0} [ at @s ]
 #			switch:maps/survival/paralya_lobby_noel/scan_doors_on_marker {name:"paralya_lobby_noel",additional_height:0} [ at @s ]
 #			switch:maps/survival/caddie_league/scan_doors_on_marker {name:"caddie_league",additional_height:0} [ at @s ]
