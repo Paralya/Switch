@@ -28,7 +28,7 @@ scoreboard objectives setdisplay list switch.health
 execute store result score #count switch.data if entity @a[tag=!detached]
 scoreboard players operation #count switch.data *= #15 switch.data
 scoreboard players operation #remaining_time switch.data += #count switch.data
-execute if score #remaining_time switch.data matches 912.. run scoreboard players set #remaining_time switch.data 912
+execute if score #remaining_time switch.data matches 600.. run scoreboard players set #remaining_time switch.data 600
 
 # Choix des rôles + give d'items
 team add switch.temp.human {"text":"[Human]","color":"light_purple"}
