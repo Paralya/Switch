@@ -3,7 +3,7 @@
 #
 # @executed	as @a[sort=random] & at @s
 #
-# @within	switch:player/trigger/attach/main
+# @within	switch:player/trigger/detach/main
 #
 
 team leave @s
