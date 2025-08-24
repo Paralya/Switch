@@ -5,7 +5,7 @@
 #
 
 # Tag the Floupy and copy new role
-tag @p[tag=!detached,scores={switch.temp.kills=-1,switch.temp.role=7}] add switch.temp.floupy
+tag @p[tag=!detached,scores={switch.temp.kills=-1..,switch.temp.role=7}] add switch.temp.floupy
 scoreboard players operation #role switch.data = @s switch.temp.role
 scoreboard players operation #player_id switch.id = @p[tag=switch.temp.floupy] switch.id
 scoreboard players operation @p[tag=switch.temp.floupy] switch.temp.role = #role switch.data

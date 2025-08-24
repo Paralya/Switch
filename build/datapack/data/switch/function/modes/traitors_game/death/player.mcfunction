@@ -6,7 +6,7 @@
 #
 
 # Voleur (Floupy role = 7)
-execute if entity @a[tag=!detached,scores={switch.temp.kills=-1,switch.temp.role=7}] run function switch:modes/traitors_game/roles/vol
+execute if entity @a[tag=!detached,scores={switch.temp.kills=-1..,switch.temp.role=7}] run function switch:modes/traitors_game/roles/vol
 
 # Death management
 execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
