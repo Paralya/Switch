@@ -367,7 +367,7 @@ MODES: list[dict] = [
 		},
 	},
 	# {
-	# 	"min_players":1, "max_players":32, "id":"pvpswap", "name_fr":"PvPSwap",
+	# 	"min_players":2, "max_players":32, "id":"pvpswap", "name_fr":"PvPSwap",
 	# 	"estimated_time": "1-2 mins", "inspiration": "Épicube", "suggested_by": "Arobaze", "developed_by": "Arobaze",
 	# 	"description": {
 	# 		"fr": [{"text":"Éliminez les autres joueurs au travers\n"},{"text":"des changements inopinés de positions !\n"}],

@@ -13,7 +13,7 @@ execute unless score #engine_state switch.data matches 2 run return 1
 # Check for new votes and update
 scoreboard players set #success switch.data 0
 execute if entity @a[tag=!detached,scores={switch.trigger.game_vote=1..}] run function switch:engine/voting_time/update_votes
-execute if score #success switch.data matches 1 as @a[tag=!detached] run function switch:engine/voting_time/message
+execute if score #success switch.data matches 1 run schedule function switch:engine/voting_time/schedule_message 1s replace
 
 # Count total players and votes
 scoreboard players set #vote_count switch.data 0
