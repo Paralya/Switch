@@ -10,6 +10,7 @@ scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1 run team join switch.temp.inspector @s
 execute if score #next_role switch.data matches 1 run scoreboard players set @s switch.temp.role 1
 execute if score #next_role switch.data matches 1 run attribute @s max_health base set 16
+execute if score #next_role switch.data matches 1 run item replace entity @s hotbar.1 with bow[enchantments={power:2},attribute_modifiers=[{type:"movement_speed",slot:"mainhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"},{type:"movement_speed",slot:"offhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"}]]
 # Traitre
 execute if score #next_role switch.data matches 2 run scoreboard players set @s switch.temp.role 5
 # Ninja
@@ -19,6 +20,7 @@ execute if score #next_role switch.data matches 3 run attribute @s movement_spee
 execute if score #next_role switch.data matches 4 run scoreboard players set @s switch.temp.role 5
 # Innocents (but first is Floupy if scenario)
 execute if score #next_role switch.data matches 5..6 run scoreboard players set @s switch.temp.role 2
+execute if score #next_role switch.data matches 5 if score #sc_floupy switch.data matches 1 run function switch:modes/traitors_game/random_items
 execute if score #next_role switch.data matches 5 if score #sc_floupy switch.data matches 1 run scoreboard players set @s switch.temp.role 7
 execute if score #next_role switch.data matches 5 if score #sc_floupy switch.data matches 1 run tag @s add switch.floupy
 # Gros Traitre

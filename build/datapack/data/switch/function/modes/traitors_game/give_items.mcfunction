@@ -24,7 +24,6 @@ execute if score #armor switch.data matches 1 run item replace entity @s armor.f
 execute if score #sword switch.data matches 1 run item replace entity @s hotbar.0 with diamond_sword[enchantments={sharpness:1}]
 execute if score #sword switch.data matches 0 run item replace entity @s hotbar.0 with iron_sword[enchantments={sharpness:2}]
 item replace entity @s hotbar.1 with bow[enchantments={power:1}]
-item replace entity @s[scores={switch.temp.role=1}] hotbar.1 with bow[enchantments={power:2},attribute_modifiers=[{type:"movement_speed",slot:"mainhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"},{type:"movement_speed",slot:"offhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"}]]
 item replace entity @s hotbar.3 with stone_axe[attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:4,operation:"add_value"}]]
 item replace entity @s hotbar.4 with apple 16
 item replace entity @s hotbar.8 with golden_apple 6
