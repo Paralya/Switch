@@ -3,7 +3,7 @@
 attribute @s jump_strength base set 0
 
 # Get owner of the sheep
-execute on vehicle run data modify storage switch:temp Owner set from entity @s UUID
+execute on passengers if entity @s[type=player] run data modify storage switch:temp Owner set from entity @s UUID
 
 # Summon marker with sheep color
 execute store result score #color switch.data run data get entity @s Color
