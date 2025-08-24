@@ -45,5 +45,5 @@ function switch:translations/modes_simultaneous_jump_done
 scoreboard players operation @s switch.temp.points += #points switch.data
 
 function switch:modes/simultaneous_jump/teleport
-execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
+execute at @s run playsound entity.player.levelup ambient @s
 
