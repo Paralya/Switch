@@ -23,7 +23,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"laser_game", "name_fr":"Laser Game",
+		"min_players":2, "max_players":-1, "id":"laser_game", "name_fr":"Laser Game",
 		"estimated_time": "2m30s", "inspiration": "The physical world", "suggested_by": "Vigo", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Affrontez l'équipe adverse grâce à vos fusils-laser et faites\n"},{"text":"le plus d'élimination possible pendant un temps imparti !\n"}],
@@ -39,7 +39,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"pitchout", "name_fr":"Pitchout",
+		"min_players":2, "max_players":-1, "id":"pitchout", "name_fr":"Pitchout",
 		"estimated_time": "1-5 mins", "inspiration": "Épicube", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Poussez vos adversaires dans l'eau\n"},{"text":"et soyez le dernier survivant !\n"}],
@@ -55,7 +55,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"traitors_game", "name_fr":"Traitors Game",
+		"min_players":4, "max_players":-1, "id":"traitors_game", "name_fr":"Traitors Game",
 		"estimated_time": "4-10 mins", "inspiration": "Taupe Gun UHC", "suggested_by": "Luxio", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Des traitres se cachent parmi les joueurs.\n"},{"text":"Innocents contre Traitres, quel camp va-t-il gagner ?\n"}],
@@ -71,7 +71,7 @@ MODES: list[dict] = [
 	# 	},
 	# },
 	{
-		"min_players":1, "max_players":-1, "id":"spectres_game", "name_fr":"Spectres Game",
+		"min_players":2, "max_players":-1, "id":"spectres_game", "name_fr":"Spectres Game",
 		"estimated_time": "4-10 mins", "inspiration": "Expiration", "suggested_by": "Luxio", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Deux camps : un avec que des joueurs visibles,\n"},{"text":"l'autre avec des spectres, quel camp va-t-il gagner ?\n"}],
@@ -87,7 +87,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"rush_the_point", "name_fr":"Rush The Point",
+		"min_players":8, "max_players":-1, "id":"rush_the_point", "name_fr":"Rush The Point",
 		"estimated_time": "7-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Capturez les points centraux dans le vide\n"},{"text":"avec vos classes spéciales.\n"}],
@@ -95,7 +95,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"rush_the_flag", "name_fr":"Rush The Flag",
+		"min_players":8, "max_players":-1, "id":"rush_the_flag", "name_fr":"Rush The Flag",
 		"estimated_time": "5-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Volez le drapeau ennemi\n"},{"text":"avec vos classes spéciales.\n"}],
@@ -135,7 +135,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"protect_the_king", "name_fr":"Protect The King",
+		"min_players":2, "max_players":-1, "id":"protect_the_king", "name_fr":"Protect The King",
 		"estimated_time": "1-4 mins", "inspiration": "Charlemagne", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Tuez le roi ennemi ou\n"},{"text":"protégez le vôtre !\n"}],
@@ -143,7 +143,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"castagne", "name_fr":"Castagne RP",
+		"min_players":2, "max_players":-1, "id":"castagne", "name_fr":"Castagne RP",
 		"estimated_time": "1-5 mins", "inspiration": "Domestic Violence", "suggested_by": "JustNoob", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Battez-vous au corps à corps\n"},{"text":"et soyez le dernier survivant !\n"}],
@@ -151,7 +151,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"layers_2_teams", "name_fr":"Layers 2 Teams",
+		"min_players":2, "max_players":-1, "id":"layers_2_teams", "name_fr":"Layers 2 Teams",
 		"estimated_time": "4-10 mins", "inspiration": "PenguinGames", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Équipez-vous rapidement et détruisez\n"},{"text":"l'équipe adverse située de l'autre côté du mur !\n"}],
@@ -159,7 +159,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":8, "max_players":-1, "id":"layers_4_teams", "name_fr":"Layers 4 Teams",
+		"min_players":4, "max_players":-1, "id":"layers_4_teams", "name_fr":"Layers 4 Teams",
 		"estimated_time": "4-10 mins", "inspiration": "PenguinGames", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Course d'équipement entre\n"},{"text":"4 équipes, éliminez vos ennemis !\n"}],
@@ -167,7 +167,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"thunder_spear", "name_fr":"Thunder Spear",
+		"min_players":2, "max_players":-1, "id":"thunder_spear", "name_fr":"Thunder Spear",
 		"estimated_time": "2m30s", "inspiration": "SNK/Attack On Titan", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Utilisez votre équipement tridimensionnel\n"},{"text":"et vos lances explosives !\n"}],
@@ -175,7 +175,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"tnt_run", "name_fr":"TNT Run",
+		"min_players":2, "max_players":-1, "id":"tnt_run", "name_fr":"TNT Run",
 		"estimated_time": "1-4 mins", "inspiration": "Grian (2013)", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Restez en mouvement, les blocs\n"},{"text":"disparaissent sous vos pieds !\n"}],
@@ -183,7 +183,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"sheepwars", "name_fr":"SheepWars",
+		"min_players":2, "max_players":-1, "id":"sheepwars", "name_fr":"SheepWars",
 		"estimated_time": "2-6 mins", "inspiration": "Épicube", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Lancez des moutons explosifs\n"},{"text":"sur l'équipe ennemie !\n"}],
@@ -191,7 +191,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"block_party", "name_fr":"Block Party",
+		"min_players":2, "max_players":-1, "id":"block_party", "name_fr":"Block Party",
 		"estimated_time": "1-5 mins", "inspiration": "HiveMC", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Quand la musique s'arrête,\n"},{"text":"trouvez la bonne couleur !\n"}],
@@ -199,7 +199,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"moutron", "name_fr":"Moutron",
+		"min_players":2, "max_players":16, "id":"moutron", "name_fr":"Moutron",
 		"estimated_time": "1-3 mins", "inspiration": "Épicube", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Montez un mouton qui laisse\n"},{"text":"une traînée mortelle !\n"}],
@@ -207,7 +207,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":45, "id":"snowball_painter", "name_fr":"Snowball Painter",
+		"min_players":2, "max_players":45, "id":"snowball_painter", "name_fr":"Snowball Painter",
 		"estimated_time": "45s", "inspiration": "Party Games/Hypixel", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Peignez le plus de blocs possible\n"},{"text":"avec vos boules de neige !\n"}],
@@ -215,7 +215,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"gay_shooter", "name_fr":"Guy Shooter",
+		"min_players":2, "max_players":-1, "id":"gay_shooter", "name_fr":"Guy Shooter",
 		"estimated_time": "1-5 mins", "inspiration": "a Survisland Event", "suggested_by": "GoldVision & scartvol", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Archers contre grimpeurs :\n"},{"text":"empêchez-les d'atteindre le sommet !\n"}],
@@ -223,7 +223,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"build_battle", "name_fr":"Build Battle",
+		"min_players":2, "max_players":-1, "id":"build_battle", "name_fr":"Build Battle",
 		"estimated_time": "5-7 mins", "inspiration": "Hypixel", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Construisez sur un thème\n"},{"text":"et votez pour le meilleur build !\n"}],
@@ -231,7 +231,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"beat_the_kings", "name_fr":"Beat The Kings",
+		"min_players":2, "max_players":-1, "id":"beat_the_kings", "name_fr":"Beat The Kings",
 		"estimated_time": "3-5 mins", "inspiration": "Henry IV/Louis XVI", "suggested_by": "Luxio", "developed_by": "Luxio",
 		"description": {
 			"fr": [{"text":"Révolutionnaires contre rois :\n"},{"text":"qui survivra à la bataille ?\n"}],
@@ -247,7 +247,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"murder_mystery", "name_fr":"Murder Mystery",
+		"min_players":2, "max_players":-1, "id":"murder_mystery", "name_fr":"Murder Mystery",
 		"estimated_time": "1-4 mins", "inspiration": "Hypixel", "suggested_by": "GoldVision", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Un meurtrier, un détective,\n"},{"text":"et des innocents dans une map pleine d'or !\n"}],
@@ -255,7 +255,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"panic_chase", "name_fr":"Panic Chase",
+		"min_players":4, "max_players":-1, "id":"panic_chase", "name_fr":"Panic Chase",
 		"estimated_time": "1-2 mins", "inspiration": "Le chat et la souris", "suggested_by": "Arti", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Survivez aux chasseurs dans\n"},{"text":"une petite arène fermée !\n"}],
@@ -271,7 +271,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"bombardement", "name_fr":"Bombardment",
+		"min_players":2, "max_players":-1, "id":"bombardement", "name_fr":"Bombardment",
 		"estimated_time": "1-2 mins", "inspiration": "Hypixel", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Esquivez les tirs de ce bâteau volant\n"},{"text":"afin d'être le dernier survivant !\n"}],
@@ -295,7 +295,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"cigogne", "name_fr":"Cigogne",
+		"min_players":2, "max_players":-1, "id":"cigogne", "name_fr":"Cigogne",
 		"estimated_time": "1-4 mins", "inspiration": "ShoupZ/JustNoob", "suggested_by": "GoldVision", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Combat de spectres puissants\n"},{"text":"dans une salle fermée !\n"}],
@@ -311,7 +311,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"glassrunner", "name_fr":"GlassRunner",
+		"min_players":2, "max_players":-1, "id":"glassrunner", "name_fr":"GlassRunner",
 		"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
 		"description": {
 			"fr": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
@@ -327,7 +327,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"memory_mine", "name_fr":"Memory Mine",
+		"min_players":2, "max_players":-1, "id":"memory_mine", "name_fr":"Memory Mine",
 		"estimated_time": "1-2 mins", "inspiration": "Pico Party", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Mémorisez la position des mines\n"},{"text":"qui clignotent et disparaissent !\n"}],
@@ -335,7 +335,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"fish_fight", "name_fr":"Fish Fight",
+		"min_players":2, "max_players":-1, "id":"fish_fight", "name_fr":"Fish Fight",
 		"estimated_time": "2-4 mins", "inspiration": "Findus", "suggested_by": "Luxio", "developed_by": "Luxio",
 		"description": {
 			"fr": [{"text":"Éjectez vos adversaires\n"},{"text":"avec votre poisson !\n"}],
@@ -343,7 +343,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"one_shot", "name_fr":"One Shot",
+		"min_players":2, "max_players":10, "id":"one_shot", "name_fr":"One Shot",
 		"estimated_time": "2-4 mins", "inspiration": "OneShot", "suggested_by": "Luxio", "developed_by": "Luxio",
 		"description": {
 			"fr": [{"text":"Éliminez vos adversaires grâce à votre arc\n"},{"text":"surpuissant et votre épée pour remporter la victoire !\n"}],
@@ -351,7 +351,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":4, "max_players":-1, "id":"pillars_of_fortune", "name_fr":"Pillars of Fortune",
+		"min_players":2, "max_players":-1, "id":"pillars_of_fortune", "name_fr":"Pillars of Fortune",
 		"estimated_time": "1-6 mins", "inspiration": "Cubecraft", "suggested_by": "TreekoZ", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Recevez des objets aléatoires\n"},{"text":"sur de grands piliers !\n"}],
@@ -359,7 +359,7 @@ MODES: list[dict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"fireblast", "name_fr":"Fireblast",
+		"min_players":2, "max_players":-1, "id":"fireblast", "name_fr":"Fireblast",
 		"estimated_time": "1-2 mins", "inspiration": "LifeCraft", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Éjectez tous les joueurs de la plateforme\n"},{"text":"en utilisant des boules de feu explosives !\n"}],
