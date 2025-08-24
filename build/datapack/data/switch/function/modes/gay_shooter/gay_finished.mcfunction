@@ -1,12 +1,12 @@
 
 #> switch:modes/gay_shooter/gay_finished
 #
-# @executed	in switch:game & as @a[tag=!detached,gamemode=adventure,x=114005,y=132,z=114033,distance=..1]
+# @executed	in switch:game & as @a[tag=!detached,gamemode=adventure,x=114011,y=142,z=114041,distance=..1]
 #
-# @within	switch:modes/gay_shooter/tick [ in switch:game & as @a[tag=!detached,gamemode=adventure,x=114005,y=132,z=114033,distance=..1] ]
+# @within	switch:modes/gay_shooter/tick [ in switch:game & as @a[tag=!detached,gamemode=adventure,x=114011,y=142,z=114041,distance=..1] ]
 #
 
-execute if data storage switch:main {map:"gay_shooter"} in switch:game run tp @s 114028 125 114010
+execute if data storage switch:main {map:"gay_shooter"} in switch:game run tp @s 114034 137 114017
 
 clear @s
 # loot give @s loot stardust:i/ultimate_sniper

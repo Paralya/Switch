@@ -1,5 +1,5 @@
 
-execute if data storage switch:main {map:"gay_shooter"} in switch:game run tp @s 114028 125 114010
+execute if data storage switch:main {map:"gay_shooter"} in switch:game run tp @s 114034 137 114017
 
 clear @s
 # loot give @s loot stardust:i/ultimate_sniper
