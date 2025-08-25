@@ -1,6 +1,8 @@
 
 #> switch:translations/player_detached_action_bar
 #
+# @executed	in minecraft:overworld & positioned 0 69 0
+#
 # @within	switch:player/detached_action_bar
 #
 

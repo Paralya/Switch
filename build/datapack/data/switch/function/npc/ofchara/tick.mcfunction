@@ -1,7 +1,9 @@
 
 #> switch:npc/ofchara/tick
 #
-# @within	???
+# @executed	positioned -22 69.8 3
+#
+# @within	switch:lobby_tick [ positioned -22 69.8 3 ]
 #
 
 # If OfChara is not present in a radius of 1 block, spawn it.

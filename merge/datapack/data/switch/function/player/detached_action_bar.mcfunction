@@ -6,4 +6,3 @@ execute if score #players_in_game switch.data matches 0 run return fail
 # Title action bar
 function switch:translations/player_detached_action_bar
 
-

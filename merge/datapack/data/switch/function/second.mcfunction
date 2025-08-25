@@ -27,6 +27,6 @@ scoreboard players operation #temp switch.data = #second switch.data
 scoreboard players operation #temp switch.data %= #5 switch.data
 execute if score #temp switch.data matches 0 as @a[team=switch.tutorial] at @s run function switch:player/tutorial/second
 
-# If players in the lobby, show title action bar with the current game and number of players
-execute if score #players_in_lobby switch.data matches 1.. run function switch:player/detached_action_bar
+# Lobby second
+execute if score #players_in_lobby switch.data matches 1.. in minecraft:overworld positioned 0 69 0 run function switch:lobby_second
 

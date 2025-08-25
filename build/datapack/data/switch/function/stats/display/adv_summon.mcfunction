@@ -1,6 +1,8 @@
 
 #> switch:stats/display/adv_summon
 #
+# @executed	positioned -8 81.5 -22
+#
 # @within	switch:stats/display/tick_adv {path:"$(path)",label:"$(label)",adv_path:"$(adv_path)"}
 #
 

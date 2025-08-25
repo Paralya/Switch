@@ -1,6 +1,8 @@
 
 #> switch:npc/ofchara/summon
 #
+# @executed	positioned -22 69.8 3
+#
 # @within	switch:npc/ofchara/tick
 #
 

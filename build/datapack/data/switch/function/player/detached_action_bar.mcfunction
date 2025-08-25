@@ -1,7 +1,9 @@
 
 #> switch:player/detached_action_bar
 #
-# @within	switch:second
+# @executed	in minecraft:overworld & positioned 0 69 0
+#
+# @within	switch:lobby_second
 #
 
 # Get the number of players in-game and stop if no players are found

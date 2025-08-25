@@ -1,6 +1,8 @@
 
 #> switch:stats/display/summon
 #
+# @executed	positioned 47.5 70.5 -2
+#
 # @within	switch:stats/display/tick_macro {path:"$(path)",label:"$(label)"}
 #
 
