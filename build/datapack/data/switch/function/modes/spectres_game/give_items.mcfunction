@@ -67,5 +67,6 @@ attribute @s attack_speed base set 1024
 execute if score #SPECTROR_GAME switch.data matches 1 run give @s[scores={switch.temp.spectror=1}] golden_apple 2
 
 # Emerald pickaxe if task game
-execute if score #TASKS_GAME switch.data matches 1 run loot give @s loot switch:i/emerald_pickaxe
+execute if score #TASKS_GAME switch.data matches 1 run loot replace entity @s hotbar.4 loot switch:i/emerald_pickaxe
+execute if score #TASKS_GAME switch.data matches 1 run item modify entity @s hotbar.4 {"function":"minecraft:set_components","components":{"minecraft:max_damage":10}}
 
