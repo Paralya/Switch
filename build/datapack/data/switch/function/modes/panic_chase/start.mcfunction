@@ -5,6 +5,7 @@
 #
 
 effect give @a[tag=!detached] saturation infinite 255 true
+effect give @a[tag=!detached] regeneration 15 255 true
 effect give @a[tag=!detached] resistance 15 255 true
 function switch:utils/set_dynamic_time
 
