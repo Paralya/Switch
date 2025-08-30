@@ -19,7 +19,7 @@ execute as @e[type=falling_block] at @s unless block ~ ~-2 ~ minecraft:air run r
 
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
-execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
+execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air,predicate=switch:is_moving] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 
 # On enlève les particules d'absorption
 execute as @a[tag=!detached,nbt={active_effects:[{id:"minecraft:absorption"}]}] unless data entity @s active_effects[{id:"minecraft:absorption"}].show_particles run function switch:modes/spectres_game/absorption
