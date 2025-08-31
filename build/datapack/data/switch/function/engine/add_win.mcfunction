@@ -40,7 +40,7 @@
 #			switch:modes/moutron/process_end [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
 #			switch:modes/murder_mystery/detect_end [ as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1..2}] & at @s ]
 #			switch:modes/murder_mystery/detect_end [ as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=3}] & at @s ]
-#			switch:modes/one_shot/process_end [ as @a[tag=!detached,scores={switch.temp.kills=30..}] & at @s ]
+#			switch:modes/one_shot/process_end [ as @a[tag=!detached,scores={switch.temp.kills=18..}] & at @s ]
 #			switch:modes/panic_chase/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.mouse] & at @s ]
 #			switch:modes/panic_chase/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.hunter] & at @s ]
 #			switch:modes/pillars_of_fortune/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
