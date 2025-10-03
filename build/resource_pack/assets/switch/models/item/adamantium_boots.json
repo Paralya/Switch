@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_boots",
+	"parent": "minecraft:item/netherite_boots",
 	"textures": {
-		"layer0": "switch:item/adamantium_boots",
-		"layer1": "switch:item/adamantium_boots"
+		"layer0": "switch:item/adamantium_boots"
 	}
 }

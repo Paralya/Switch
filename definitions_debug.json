@@ -30,7 +30,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:netherite_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"adamantium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"adamantium_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
@@ -42,7 +42,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:netherite_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"adamantium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"adamantium_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
@@ -54,7 +54,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:netherite_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"adamantium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"adamantium_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
@@ -66,7 +66,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"adamantium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:netherite_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"adamantium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"adamantium_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"adamantium_fragment": true}}}}}}],
@@ -172,7 +172,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"sapphire": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"sapphire_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
@@ -184,7 +184,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"sapphire": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"sapphire_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
@@ -196,7 +196,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"sapphire": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"sapphire_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
@@ -208,7 +208,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"sapphire_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"sapphire": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"sapphire_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"sapphire": true}}}}}}],
@@ -314,7 +314,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"ruby": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ruby_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
@@ -326,7 +326,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"ruby": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ruby_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
@@ -338,7 +338,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"ruby": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ruby_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
@@ -350,7 +350,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"ruby_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"ruby": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"ruby_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"ruby": true}}}}}}],
@@ -456,7 +456,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"topaz": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"topaz_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
@@ -468,7 +468,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"topaz": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"topaz_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
@@ -480,7 +480,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"topaz": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"topaz_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
@@ -492,7 +492,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"topaz_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"topaz": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"topaz_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"topaz": true}}}}}}],
@@ -568,7 +568,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"obsidian": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"obsidian_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}}}}],
@@ -580,7 +580,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"obsidian": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"obsidian_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}}}}],
@@ -592,7 +592,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"obsidian": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"obsidian_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}}}}],
@@ -604,7 +604,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"obsidian_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"obsidian": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"obsidian_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"obsidian_ingot": true}}}}}}],
@@ -719,7 +719,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:iron_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"steel": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
@@ -731,7 +731,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:iron_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"steel": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
@@ -743,7 +743,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:iron_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"steel": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
@@ -755,7 +755,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"steel_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:iron_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"steel": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"steel_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"steel_ingot": true}}}}}}],
@@ -867,7 +867,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"emerald": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
@@ -879,7 +879,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"emerald": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
@@ -891,7 +891,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"emerald": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
@@ -903,7 +903,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"emerald_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"emerald": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"emerald_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"item": "minecraft:emerald"}}}],
@@ -998,7 +998,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"stardust": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}}}}],
@@ -1009,7 +1009,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}}}}],
@@ -1020,7 +1020,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"stardust": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}}}}],
@@ -1031,7 +1031,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"stardust_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"stardust": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"stardust_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"stardust_ingot": true}}}}}}],
@@ -1317,7 +1317,7 @@
 		"custom_data": {"switch": {"ultimate_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"anti_radiation_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:iron_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"anti_radiation": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"anti_radiation_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"anti_radiation_stuff": true}}}}}}],
@@ -1328,7 +1328,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"anti_radiation_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:iron_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"anti_radiation": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"anti_radiation_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"anti_radiation_stuff": true}}}}}}],
@@ -1339,7 +1339,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"anti_radiation_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:iron_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"anti_radiation": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"anti_radiation_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"anti_radiation_stuff": true}}}}}}],
@@ -1350,7 +1350,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"anti_radiation_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:iron_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"anti_radiation": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"anti_radiation_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"anti_radiation_stuff": true}}}}}}],
@@ -1381,7 +1381,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"californium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
@@ -1392,7 +1392,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"californium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
@@ -1403,7 +1403,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"californium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
@@ -1414,7 +1414,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"californium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"californium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"californium_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"californium_ingot": true}}}}}}],
@@ -1526,7 +1526,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:netherite_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"uranium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],
@@ -1537,7 +1537,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:netherite_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"uranium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],
@@ -1548,7 +1548,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:netherite_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"uranium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],
@@ -1559,7 +1559,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "switch:icons"},{"text": " Switch","italic": true,"color": "blue"}]]
 	},
 	"uranium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:netherite_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"uranium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"switch": {"uranium_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"switch": {"uranium_ingot": true}}}}}}],

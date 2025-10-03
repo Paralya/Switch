@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_helmet",
+	"parent": "minecraft:item/diamond_helmet",
 	"textures": {
-		"layer0": "switch:item/obsidian_helmet",
-		"layer1": "switch:item/obsidian_helmet"
+		"layer0": "switch:item/obsidian_helmet"
 	}
 }

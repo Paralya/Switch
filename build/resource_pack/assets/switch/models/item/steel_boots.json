@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_boots",
+	"parent": "minecraft:item/iron_boots",
 	"textures": {
-		"layer0": "switch:item/steel_boots",
-		"layer1": "switch:item/steel_boots"
+		"layer0": "switch:item/steel_boots"
 	}
 }

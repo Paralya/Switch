@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_boots",
+	"parent": "minecraft:item/diamond_boots",
 	"textures": {
-		"layer0": "switch:item/sapphire_boots",
-		"layer1": "switch:item/sapphire_boots"
+		"layer0": "switch:item/sapphire_boots"
 	}
 }

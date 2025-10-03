@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_leggings",
+	"parent": "minecraft:item/diamond_leggings",
 	"textures": {
-		"layer0": "switch:item/obsidian_leggings",
-		"layer1": "switch:item/obsidian_leggings"
+		"layer0": "switch:item/obsidian_leggings"
 	}
 }

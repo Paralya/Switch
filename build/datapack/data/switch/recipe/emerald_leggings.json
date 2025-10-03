@@ -10,7 +10,7 @@
 		"X": "minecraft:emerald"
 	},
 	"result": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"count": 1,
 		"components": {
 			"minecraft:custom_data": {

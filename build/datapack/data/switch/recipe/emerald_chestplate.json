@@ -10,7 +10,7 @@
 		"X": "minecraft:emerald"
 	},
 	"result": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"count": 1,
 		"components": {
 			"minecraft:custom_data": {

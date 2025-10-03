@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_chestplate",
+	"parent": "minecraft:item/diamond_chestplate",
 	"textures": {
-		"layer0": "switch:item/sapphire_chestplate",
-		"layer1": "switch:item/sapphire_chestplate"
+		"layer0": "switch:item/sapphire_chestplate"
 	}
 }

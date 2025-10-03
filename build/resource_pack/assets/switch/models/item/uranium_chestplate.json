@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_chestplate",
+	"parent": "minecraft:item/netherite_chestplate",
 	"textures": {
-		"layer0": "switch:item/uranium_chestplate",
-		"layer1": "switch:item/uranium_chestplate"
+		"layer0": "switch:item/uranium_chestplate"
 	}
 }

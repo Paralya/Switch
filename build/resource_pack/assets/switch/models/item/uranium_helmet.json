@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_helmet",
+	"parent": "minecraft:item/netherite_helmet",
 	"textures": {
-		"layer0": "switch:item/uranium_helmet",
-		"layer1": "switch:item/uranium_helmet"
+		"layer0": "switch:item/uranium_helmet"
 	}
 }
