@@ -16,6 +16,7 @@
 
 # If player is not in the tutorial area, teleport them
 execute in minecraft:overworld positioned -500 69.69 -500 unless entity @s[distance=..50] run tp @s ~ ~ ~ 0 0
+gamemode adventure @s[gamemode=!adventure]
 
 # Init dialog
 execute if score @s switch.tutorial matches 0 run data modify storage switch:temp cutted_username set string entity @s equipment.head.components."minecraft:profile".name 0 4
