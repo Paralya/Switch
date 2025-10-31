@@ -33,8 +33,8 @@ scoreboard players set #angle_difference switch.data 360000
 scoreboard players operation #angle_difference switch.data /= #count switch.data
 
 ## Compute the radius
-# distance = 1.25 * count
-scoreboard players set #distance_to_center switch.data 1250
+# distance = 1.4 * count
+scoreboard players set #distance_to_center switch.data 1400
 scoreboard players operation #distance_to_center switch.data *= #count switch.data
 # Clamp between 5000 (5 blocks) and 45000 (45 blocks)
 execute if score #distance_to_center switch.data matches ..4999 run scoreboard players set #distance_to_center switch.data 5000

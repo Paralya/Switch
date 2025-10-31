@@ -12,7 +12,7 @@ execute store result score #game_version switch.data run data get entity @p Data
 
 # Check if the game version is supported
 scoreboard players set #mcload_error switch.data 0
-execute unless score #game_version switch.data matches 4435.. run scoreboard players set #mcload_error switch.data 1
+execute unless score #game_version switch.data matches 4440.. run scoreboard players set #mcload_error switch.data 1
 
 # Decode errors
 execute if score #mcload_error switch.data matches 1 run tellraw @a {"text":"Switch Error: This version is made for Minecraft 1.21.8+.","color":"red"}

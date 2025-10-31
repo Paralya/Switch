@@ -5738,6 +5738,10 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/adamantium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/adamantium_block"
 				},
 				{
@@ -5786,7 +5790,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/adamantium_fragment"
+					"value": "switch:i/sapphire"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -5838,7 +5842,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/sapphire"
+					"value": "switch:i/ruby"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -5890,7 +5894,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/ruby"
+					"value": "switch:i/topaz"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -5942,7 +5946,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/topaz"
+					"value": "switch:i/obsidian_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -5982,7 +5986,23 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/obsidian_ingot"
+					"value": "switch:i/steel_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_nugget"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/raw_steel"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_dust"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/steel_stick"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6038,26 +6058,6 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/steel_ingot"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/steel_nugget"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/raw_steel"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/steel_dust"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/steel_stick"
-				},
-				{
-					"type": "minecraft:loot_table",
 					"value": "switch:i/emerald_helmet"
 				},
 				{
@@ -6091,6 +6091,14 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/emerald_hoe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/stardust_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6134,11 +6142,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/stardust_ingot"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/stardust_fragment"
+					"value": "switch:i/awakened_stardust"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6150,7 +6154,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/awakened_stardust"
+					"value": "switch:i/legendarium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6170,7 +6174,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/legendarium_ingot"
+					"value": "switch:i/solarium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6190,7 +6194,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/solarium_ingot"
+					"value": "switch:i/darkium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6210,7 +6214,11 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/darkium_ingot"
+					"value": "switch:i/ultimate_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ultimate_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6223,14 +6231,6 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/ultimate_axe"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/ultimate_ingot"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/ultimate_fragment"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6247,6 +6247,18 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/anti_radiation_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/californium_nugget"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/raw_californium"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6294,15 +6306,15 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/californium_ingot"
+					"value": "switch:i/uranium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/californium_nugget"
+					"value": "switch:i/uranium_nugget"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "switch:i/raw_californium"
+					"value": "switch:i/raw_uranium"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6347,18 +6359,6 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/uranium_hoe"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/uranium_ingot"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/uranium_nugget"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/raw_uranium"
 				},
 				{
 					"type": "minecraft:loot_table",
