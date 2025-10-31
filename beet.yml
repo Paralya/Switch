@@ -4,7 +4,7 @@ id: "switch"
 name: "Switch"
 author: "Stoupy51"
 version: "2.0.0"
-minecraft: "1.21.8"
+minecraft: "1.21.10"
 
 # More directories
 directory: "."
