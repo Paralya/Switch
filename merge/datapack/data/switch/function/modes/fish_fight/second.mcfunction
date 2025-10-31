@@ -76,7 +76,7 @@ execute if score #fish_fight_seconds switch.data matches 115 if score #random sw
 # clear items useless
 clear @s dirt
 clear @s wheat_seeds
-clear @s chain
+clear @s #minecraft:chains
 clear @s stone
 clear @s podzol
 clear @s mycelium
