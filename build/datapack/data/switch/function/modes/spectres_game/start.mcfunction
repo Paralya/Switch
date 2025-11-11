@@ -16,13 +16,13 @@ execute store result score #new_players switch.data if entity @a[tag=!detached,s
 ## Partie spectror game aléatoire
 scoreboard objectives add switch.temp.spectror dummy
 scoreboard players set #SPECTROR_GAME switch.data 0
-execute unless score #new_players switch.data matches 2.. if score #count switch.data matches 8.. if predicate switch:chance/0.33 run scoreboard players set #SPECTROR_GAME switch.data 1
+execute unless score #new_players switch.data matches 2.. if predicate switch:chance/0.33 run scoreboard players set #SPECTROR_GAME switch.data 1
 #mettre le score à 1
 
 ## Partie TASKS GAME aléatoire
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.crying_obsidian
 scoreboard players set #TASKS_GAME switch.data 0
-execute unless score #new_players switch.data matches 2.. if score #count switch.data matches 8.. if predicate switch:chance/0.33 run scoreboard players set #TASKS_GAME switch.data 1
+execute unless score #new_players switch.data matches 2.. if predicate switch:chance/0.33 run scoreboard players set #TASKS_GAME switch.data 1
 #mettre le score à 1
 
 

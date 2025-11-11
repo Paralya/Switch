@@ -6,7 +6,7 @@
 # @within	switch:v2.0.0/tick_2 [ as @e[type=item_display,tag=...,predicate=!switch:check_vanilla_blocks] & at @s ]
 #			switch:v2.0.0/second [ as @e[type=#switch:custom_blocks,tag=...,predicate=!switch:advanced_check_vanilla_blocks] & at @s ]
 #			switch:v2.0.0/second_5 [ as @e[type=item_display,tag=switch.custom_block,predicate=!switch:advanced_check_vanilla_blocks] & at @s ]
-#			switch:calls/common_signals/on_ore_destroyed [ as @e[tag=switch.custom_block,dx=0,dy=0,dz=0] & at @s ]
+#			switch:calls/common_signals/custom_block_destroy [ as @e[tag=switch.custom_block,dx=0,dy=0,dz=0] & at @s ]
 #
 
 # Check for missing vanilla blocks

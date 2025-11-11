@@ -13,5 +13,5 @@ execute store result score #item_count switch.data run data get entity @s Item.c
 execute store success score #is_silk_touch switch.data if data entity @s Item.components."minecraft:custom_data".common_signals.silk_touch
 
 # Try to destroy the block
-execute as @e[tag=switch.custom_block,dx=0,dy=0,dz=0] at @s run function switch:custom_blocks/destroy
+function switch:calls/common_signals/custom_block_destroy
 

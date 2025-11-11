@@ -491,7 +491,7 @@ def clone_survival(
 		dz = (k[3] - k[1]) // 2
 		write_function(PATH, f"""
 execute if score #rg_{namespace}_mod switch.data matches {i} at @s in switch:game run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force
-execute if score #rg_{namespace}_mod switch.data matches {i} at @s run clone from minecraft:overworld {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} to switch:game {k[0]} ~{dy} {k[1]} replace force
+execute if score #rg_{namespace}_mod switch.data matches {i} at @s run clone from minecraft:overworld {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} to switch:game {k[0]} ~{dy} {k[1]} strict replace force
 """)
 		i += 1
 

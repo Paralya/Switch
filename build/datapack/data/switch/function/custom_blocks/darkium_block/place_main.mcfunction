@@ -5,7 +5,7 @@
 #
 
 tag @s add switch.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:black_concrete
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function switch:custom_blocks/darkium_block/place_secondary
 tag @s remove switch.placer

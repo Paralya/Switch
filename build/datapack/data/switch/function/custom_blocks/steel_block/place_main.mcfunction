@@ -5,7 +5,7 @@
 #
 
 tag @s add switch.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:iron_block
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function switch:custom_blocks/steel_block/place_secondary
 tag @s remove switch.placer

@@ -80,7 +80,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (52000, 100, 52000), (52177, 256, 52173), ("vilarles_castillo", "Castillo", "Vilarles"), view=(52053.77, 175.12, 52166.47, -158.81, 15.64))
 	clone_survival(100, (53000, 100, 53000), (53125, 158, 53218), ("zonweeb_highschool", "A Japanese High School", "Minami310, ComputerGraphics, Stoupy"), view=(53115.10, 109.14, 53116.11, 72.04, -9.97))
 	clone_survival(100, (54000, 100, 54000), (54112, 123, 54094), ("cluedo_camping", "Cluedo Camping", "Remelta, Fhara (Survisland)"), view=(54016.95, 113.26, 54016.06, -48.03, 10.19))
-	clone_survival(100, (55000, 100, 55000), (55122, 217, 55138), ("sudoku_craft", "Sudoku Craft", "Oraclette, Shazin (Survisland)"), view=(55017.79, 154.27, 55027.61, 317.00, -0.99))
+	clone_survival(100, (55000, 100, 55000), (55122, 217, 55138), ("sudoku_craft", "Sudoku Craft", "Oraclette, Shazin, Kchouky (Survisland)"), view=(55017.79, 154.27, 55027.61, 317.00, -0.99))
 	##	56000	(undefined)	: CSGO Map, faut trouver le nom	(not done yet)
 	clone_survival(100, (57000, 100, 57000), (57124, 136, 57124), ("la_juste_recette", "La Juste Recette", "M4TOUW (Survisland)"), view=(57028.66, 121.76, 57012.66, -33.08, 9.83))
 	clone_survival(100, (58000, 100, 58000), (58160, 191, 58188), ("scartmania", "Scartmania", "Stoupy (Survisland)"), view=(58103.72, 244.52, 58043.93, 19.96, 78.09))
