@@ -18,6 +18,10 @@
 #			switch:lobby_second {adv_path:"all[{id:\\\"jump_obsidian\\\"}].players",path:"jump_obsidian",label:"Completion Order"} [ positioned 36 83.5 -73 ]
 #			switch:stats/display/tick_adv {adv_path:"all[{id:\"jump_bricks\"}].players",path:"jump_bricks",label:"Ordre de Complétion"}
 #
+# @args		path (string)
+#			label (string)
+#			adv_path (string)
+#
 
 ## Input macro: path = "jump_brown", label = "Ordre de complétion"
 ## Ex: execute positioned ~ 70.5 ~ run function switch:stats/display/tick_adv {adv_path:"all[{id:\"jump_bricks\"}].players",path:"jump_bricks",label:"Ordre de Complétion"}

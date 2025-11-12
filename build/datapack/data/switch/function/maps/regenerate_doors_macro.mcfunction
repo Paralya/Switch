@@ -157,6 +157,8 @@
 #			switch:maps/survival/fireblast_cookie/regenerate {name:"fireblast_cookie"} [ in switch:game ]
 #			switch:maps/survival/fireblast_pork/regenerate {name:"fireblast_pork"} [ in switch:game ]
 #
+# @args		name (string)
+#
 
 # Get doors
 $data modify storage switch:temp doors set from storage switch:doors $(name)

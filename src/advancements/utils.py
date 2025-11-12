@@ -53,6 +53,8 @@ scoreboard players set @s switch.advancements 0
 	for adv in ALL_ADVANCEMENTS:
 		id: str = adv["id"]
 		string_id: str = adv["string_id"]
+		if not string_id.startswith('"') and not string_id.endswith('"'):
+			string_id = f'"{string_id}"'
 		write_function(UPDATE_PERCENTAGES_FILE, f"execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}")
 
 	# Write the last part of the file

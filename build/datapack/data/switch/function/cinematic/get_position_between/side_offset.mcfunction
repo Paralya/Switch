@@ -3,6 +3,8 @@
 #
 # @within	switch:cinematic/get_position_between/main with storage switch:temp forward
 #
+# @args		amount (unknown)
+#
 
 # Go to the half position
 data modify entity @s Pos set from storage switch:temp half_position

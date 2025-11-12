@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/coupdetat/action with storage switch:temp input
 #
+# @args		index_hundred (int)
+#
 
 # Extract the wanted minigame by using the index_hundred
 $data modify storage switch:main coupdetat set from storage switch:main minigames[{index_hundred:$(index_hundred)}]

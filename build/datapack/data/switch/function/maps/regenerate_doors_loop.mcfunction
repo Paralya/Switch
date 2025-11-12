@@ -4,6 +4,11 @@
 # @within	switch:maps/regenerate_doors_loop with storage switch:temp doors[0]
 #			switch:maps/regenerate_doors_macro with storage switch:temp doors[0]
 #
+# @args		x (unknown)
+#			y (unknown)
+#			z (unknown)
+#			door (unknown)
+#
 
 # Setblock door
 $setblock $(x) $(y) $(z) $(door)

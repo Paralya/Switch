@@ -4,6 +4,8 @@
 # @within	switch:player/update_stats_storage/every_player with storage switch:temp players[0]
 #			switch:player/update_stats_storage/every_player_loop with storage switch:temp players[0]
 #
+# @args		username (unknown)
+#
 
 $function switch:player/update_stats_storage/of_player {player:"$(username)"}
 

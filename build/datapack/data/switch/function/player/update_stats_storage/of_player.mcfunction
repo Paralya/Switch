@@ -3,6 +3,8 @@
 #
 # @within	switch:player/update_stats_storage/every_player_loop {player:"$(username)"}
 #
+# @args		player (unknown)
+#
 
 # Get username
 $data modify storage switch:main input set value {player:"$(player)"}

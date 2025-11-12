@@ -5,6 +5,9 @@
 #
 # @within	switch:player/username_change/with_macro {UUID:"$(UUID)",username:"$(username)"}
 #
+# @args		UUID (list)
+#			username (string)
+#
 
 $data modify storage switch:temp old_username set from storage switch:main UUIDs[{UUID:"$(UUID)"}].username
 $data modify storage switch:temp copy set value "$(username)"

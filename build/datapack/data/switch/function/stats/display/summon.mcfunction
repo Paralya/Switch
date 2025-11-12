@@ -5,6 +5,9 @@
 #
 # @within	switch:stats/display/tick_macro {path:"$(path)",label:"$(label)"}
 #
+# @args		path (string)
+#			label (string)
+#
 
 ## Input macro: path = "all.modes.pitch_creep.played", label = "Parties jouées\n"
 ## Input scoreboard: #mode switch.data

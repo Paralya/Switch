@@ -6,6 +6,8 @@
 # @within	switch:player/update_stats_storage/main with storage switch:main input
 #			switch:player/update_stats_storage/of_player with storage switch:main input
 #
+# @args		player (string)
+#
 
 ## storage switch:stats all run data modify storage switch:stats all set value {
 # player:{

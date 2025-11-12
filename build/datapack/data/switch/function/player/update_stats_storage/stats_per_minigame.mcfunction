@@ -7,6 +7,9 @@
 #			switch:player/update_stats_storage/of_player with storage switch:main copy[0]
 #			switch:player/update_stats_storage/stats_per_minigame with storage switch:main copy[0]
 #
+# @args		player (string)
+#			id (unknown)
+#
 
 ## storage switch:stats all run data modify storage switch:stats all set value {
 # player:{

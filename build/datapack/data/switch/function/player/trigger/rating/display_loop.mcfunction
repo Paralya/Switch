@@ -6,6 +6,8 @@
 # @within	switch:player/trigger/rating/display with storage switch:temp copy[0]
 #			switch:player/trigger/rating/display_loop with storage switch:temp copy[0]
 #
+# @args		id (unknown)
+#
 
 # Tellraw
 data modify storage switch:temp temp set from storage switch:temp copy[0]

@@ -5,6 +5,9 @@
 #
 # @within	switch:modes/infected/give_arrow/main with storage switch:temp input
 #
+# @args		Slot (byte)
+#			count (int)
+#
 
 $item replace entity @s container.$(Slot) with arrow $(count)
 

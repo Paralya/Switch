@@ -5,6 +5,9 @@
 #
 # @within	switch:player/trigger/rating/action with storage switch:temp input
 #
+# @args		index (int)
+#			player (unknown)
+#
 
 # Macro input {index:0,index_hundred:0,digits:0}
 

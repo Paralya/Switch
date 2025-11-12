@@ -5,6 +5,8 @@
 #
 # @within	switch:npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"} [ as @e[type=armor_stand,tag=switch.npc.ofchara] & at @s ]
 #
+# @args		facing (string)
+#
 
 # If body is locked, set a score
 execute store success score #body_locked switch.data if entity @s[tag=switch.npc.body_locked]

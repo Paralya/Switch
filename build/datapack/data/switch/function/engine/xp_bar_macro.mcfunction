@@ -6,6 +6,10 @@
 #			switch:engine/xp_bar_levels with storage switch:main temp
 #			switch:engine/xp_bar_levels_at_s with storage switch:main temp
 #
+# @args		selector (string)
+#			xp (int)
+#			type (string)
+#
 
 $xp set $(selector) $(xp)$(type)
 

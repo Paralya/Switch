@@ -4,6 +4,11 @@
 # @within	switch:player/trigger/stats/get_loop with storage switch:main copy[0]
 #			switch:player/trigger/stats/main with storage switch:main copy[0]
 #
+# @args		name_fr (string)
+#			name_en (string)
+#			player (unknown)
+#			id (unknown)
+#
 
 # Prepare compound
 $data modify storage switch:main temp set value {name_fr:"$(name_fr)", name_en:"$(name_en)", count:0, wins:0, winrate:0}

@@ -5,6 +5,9 @@
 #
 # @within	switch:player/username_change/update_everything {username:"$(username)", old_username:"$(old_username)"}
 #
+# @args		username (unknown)
+#			old_username (unknown)
+#
 
 $scoreboard players operation $(username) switch.pitchout.boots = $(old_username) switch.pitchout.boots
 $scoreboard players operation $(username) switch.pitchout.ender_pearl = $(old_username) switch.pitchout.ender_pearl

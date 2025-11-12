@@ -5,6 +5,9 @@
 #
 # @within	switch:advancements/_pre_macro with storage switch:main input
 #
+# @args		id (unknown)
+#			username (unknown)
+#
 
 # [
 # 	{"text": "Aider à la construction d'une map ou la création d'un mini-jeu\n", "color": "aqua"},

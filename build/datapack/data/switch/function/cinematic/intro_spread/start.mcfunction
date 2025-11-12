@@ -157,6 +157,13 @@
 #			switch:maps/survival/fireblast_cookie/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Smol Cookie",credits:"Stoupy",with:{particle:1}} [ in switch:game & positioned 164022.16 153.99 164035.08 & rotated 271.69 75.49 ]
 #			switch:maps/survival/fireblast_pork/intro_spread {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Vegan Pork",credits:"Stoupy",with:{particle:1}} [ in switch:game & positioned 165047.44 155.84 165052.22 & rotated 143.5 67.83 ]
 #
+# @args		selector (string)
+#			display_time (int)
+#			cinematic_time (int)
+#			map_name (string)
+#			credits (string)
+#			with (compound)
+#
 # @input macro		selector : string - target selector for players
 # @input macro		display_time : int - display duration in ticks
 # @input macro		cinematic_time : int - cinematic duration in ticks

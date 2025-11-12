@@ -5,6 +5,8 @@
 #
 # @within	switch:engine/launch_game/main with storage switch:main
 #
+# @args		current_game (unknown)
+#
 
 # If test mode is enabled, stop right now
 execute if score #test_mode switch.data matches 1.. run return 1

@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/rating/print with storage switch:temp input
 #
+# @args		index (unknown)
+#
 
 # French
 $tellraw @s[scores={switch.lang=0}] [{"text":"[","color":"aqua"},{"nbt":"minigames[{index:$(index)}].name_fr","storage":"switch:main","interpret":false,"color":"aqua"},{"text":"] ","color":"aqua"},{"text":"Notez ce mini-jeu : ","color":"white"},{"text":"✮","color":"yellow","hover_event":{"action":"show_text","value":{"text":"Noter 1 étoile","color":"gray"}},"click_event":{"action":"run_command","command":"/trigger switch.trigger.rating set $(index)01"}},{"text":"✮","color":"yellow","hover_event":{"action":"show_text","value":{"text":"Noter 2 étoiles","color":"gray"}},"click_event":{"action":"run_command","command":"/trigger switch.trigger.rating set $(index)02"}},{"text":"✮","color":"yellow","hover_event":{"action":"show_text","value":{"text":"Noter 3 étoiles","color":"gray"}},"click_event":{"action":"run_command","command":"/trigger switch.trigger.rating set $(index)03"}},{"text":"✮","color":"yellow","hover_event":{"action":"show_text","value":{"text":"Noter 4 étoiles","color":"gray"}},"click_event":{"action":"run_command","command":"/trigger switch.trigger.rating set $(index)04"}},{"text":"✮","color":"yellow","hover_event":{"action":"show_text","value":{"text":"Noter 5 étoiles","color":"gray"}},"click_event":{"action":"run_command","command":"/trigger switch.trigger.rating set $(index)05"}}]

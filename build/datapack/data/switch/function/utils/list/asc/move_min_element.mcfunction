@@ -3,6 +3,8 @@
 #
 # @within	switch:utils/list/asc/selection_sort_loop with storage sorter:temp args
 #
+# @args		min_index (unknown)
+#
 
 # Add the minimum element to the sorted array
 $data modify storage sorter:temp sorted_array append from storage sorter:temp original_array[$(min_index)]

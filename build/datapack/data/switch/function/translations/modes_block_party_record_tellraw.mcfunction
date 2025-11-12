@@ -5,6 +5,9 @@
 #
 # @within	switch:modes/block_party/record_tellraw with storage switch:records block_party
 #
+# @args		round (unknown)
+#			player (unknown)
+#
 
 # French
 $execute if score #block_party_round switch.data > #record switch.data run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Nouveau record de $(round) manches par $(player) !","color":"yellow"}]

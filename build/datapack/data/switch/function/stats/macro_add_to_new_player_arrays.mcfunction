@@ -4,6 +4,14 @@
 # @within	switch:stats/async/work_loop_player_stats with storage switch:temp indexes
 #			switch:stats/loop_player_stats with storage switch:temp indexes
 #
+# @args		played (int)
+#			wins (int)
+#			kills (int)
+#			deaths (int)
+#			money (int)
+#			played_win_ratio (int)
+#			advancement_count (int)
+#
 
 $data modify storage switch:temp new_played append from storage switch:temp played[$(played)]
 $data modify storage switch:temp new_wins append from storage switch:temp wins[$(wins)]

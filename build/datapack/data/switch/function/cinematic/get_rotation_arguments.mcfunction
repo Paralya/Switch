@@ -3,6 +3,9 @@
 #
 # @within	switch:cinematic/common_launch with storage switch:temp with
 #
+# @args		yaw (unknown)
+#			pitch (unknown)
+#
 
 # Get the target rotation as float type
 $data modify storage switch:temp temp set value [$(yaw), $(pitch)]

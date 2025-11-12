@@ -3,6 +3,8 @@
 #
 # @within	switch:engine/signals/start with storage switch:main input
 #
+# @args		id (string)
+#
 
 # Grant the minigame starting pop-up to everyone
 $advancement grant @a[scores={switch.lang=0}] only switch:pop_ups/$(id)_fr

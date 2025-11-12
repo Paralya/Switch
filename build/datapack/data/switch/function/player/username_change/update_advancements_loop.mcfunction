@@ -4,6 +4,10 @@
 # @within	switch:player/username_change/update_advancements_loop with storage switch:temp copy[0]
 #			switch:player/username_change/update_everything with storage switch:temp copy[0]
 #
+# @args		name (unknown)
+#			username (unknown)
+#			old_username (unknown)
+#
 
 # Update username
 $data remove storage switch:advancements all[{name:"$(name)"}].players[{name:"$(username)"}]

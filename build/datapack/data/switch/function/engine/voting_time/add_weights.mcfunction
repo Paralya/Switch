@@ -4,6 +4,8 @@
 # @within	switch:engine/voting_time/add_weights with storage switch:temp copy[0]
 #			switch:engine/voting_time/main with storage switch:temp copy[0]
 #
+# @args		id (unknown)
+#
 
 # Add time_since_last_play to the weights
 data modify storage switch:temp weight set value 1

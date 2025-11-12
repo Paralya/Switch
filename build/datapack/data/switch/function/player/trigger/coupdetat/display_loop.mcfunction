@@ -6,6 +6,10 @@
 # @within	switch:player/trigger/coupdetat/display with storage switch:temp copy[0]
 #			switch:player/trigger/coupdetat/display_loop with storage switch:temp copy[0]
 #
+# @args		index_hundred (unknown)
+#			name_fr (unknown)
+#			name_en (unknown)
+#
 
 # Prepare the TextComponent for this minigame
 $data modify storage switch:temp text_component set value [{"text":"X","color":"aqua","hover_event":{"action":"show_text","value":[]},"click_event":{"action":"run_command","command":"/trigger switch.trigger.coupdetat set $(index_hundred)"}},{"text":", ","color":"gray"}]

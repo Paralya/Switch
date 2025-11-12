@@ -10,6 +10,9 @@
 #			switch:modes/pillars_of_fortune/start with storage switch:temp input [ in switch:game & positioned 64050 142 64050 & rotated 0 0 & as @e[tag=switch.place_pillar,sort=random,limit=1] ]
 #			switch:modes/pillars_of_fortune/start with storage switch:temp input [ in switch:game & positioned 68050 142 68050 & rotated 0 0 & as @e[tag=switch.place_pillar,sort=random,limit=1] ]
 #
+# @args		distance_to_center (float)
+#			angle_difference (float)
+#
 
 # Remove temporary tag
 tag @s remove switch.place_pillar

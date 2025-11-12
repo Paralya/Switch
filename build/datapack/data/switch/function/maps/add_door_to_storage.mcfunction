@@ -155,6 +155,9 @@
 #			switch:maps/survival/fireblast_cookie/scan_doors_on_marker {name:"fireblast_cookie",additional_height:0} [ at @s ]
 #			switch:maps/survival/fireblast_pork/scan_doors_on_marker {name:"fireblast_pork",additional_height:0} [ at @s ]
 #
+# @args		additional_height (int)
+#			name (string)
+#
 
 data modify storage switch:temp compound set value {x:0,y:0,z:0,door:""}
 execute store result storage switch:temp compound.x int 1 run data get entity @s Pos[0]

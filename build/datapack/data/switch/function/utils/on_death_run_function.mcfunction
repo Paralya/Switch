@@ -47,6 +47,8 @@
 #			switch:modes/traitors_game/tick {function:"switch:modes/traitors_game/death/player"}
 #			switch:modes/warden_escape/tick {function:"switch:modes/warden_escape/death"}
 #
+# @args		function (string)
+#
 
 $execute as @a[tag=!detached,predicate=switch:is_at_spawn] run function $(function)
 

@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/stats/entry with storage switch:main input
 #
+# @args		player (string)
+#
 
 # Bases
 function switch:translations/player_trigger_stats_main with storage switch:main input

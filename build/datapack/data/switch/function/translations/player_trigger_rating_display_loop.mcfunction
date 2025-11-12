@@ -5,6 +5,10 @@
 #
 # @within	switch:player/trigger/rating/display_loop with storage switch:temp temp
 #
+# @args		index_hundred (unknown)
+#			int (unknown)
+#			digits (unknown)
+#
 
 # French
 $execute if score #digits switch.data matches ..9 run tellraw @s[scores={switch.lang=0}] [{"text":"➤ ","color":"aqua","hover_event":{"action":"show_text","value":{"text":"Cliquez pour noter","color":"gray"}},"click_event":{"action":"run_command","command":"/trigger switch.trigger.rating set $(index_hundred)"}},{"nbt":"name_fr","storage":"switch:temp","interpret":false,"color":"dark_aqua"},{"text":" avec un score de "},{"text":"$(int).0$(digits)","color":"yellow"},{"text":" (","color":"gray"},{"score":{"name":"#nb_ratings","objective":"switch.data"},"color":"gray"},{"text":" notes)","color":"gray"}]

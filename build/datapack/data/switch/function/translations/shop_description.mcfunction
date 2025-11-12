@@ -3,6 +3,8 @@
 #
 # @within	switch:shop/description {id:"$(id)"}
 #
+# @args		id (unknown)
+#
 
 # French
 $tellraw @s[scores={switch.lang=0}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_fr","storage":"switch:main","interpret":true},"\n"]

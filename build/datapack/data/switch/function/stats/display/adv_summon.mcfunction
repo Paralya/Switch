@@ -5,6 +5,10 @@
 #
 # @within	switch:stats/display/tick_adv {path:"$(path)",label:"$(label)",adv_path:"$(adv_path)"}
 #
+# @args		adv_path (string)
+#			path (string)
+#			label (string)
+#
 
 ## Input macro: path = "jump_brown", label = "Ordre de complétion", mode = 4
 

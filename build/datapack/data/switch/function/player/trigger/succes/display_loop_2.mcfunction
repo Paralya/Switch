@@ -4,6 +4,8 @@
 # @within	switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
 #			switch:player/trigger/succes/main with storage switch:temp copy[0]
 #
+# @args		player (unknown)
+#
 
 # Tellraw
 data modify storage switch:temp temp set from storage switch:temp copy[0]

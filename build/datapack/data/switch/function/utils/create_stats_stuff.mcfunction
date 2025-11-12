@@ -3,6 +3,11 @@
 #
 # @within	switch:auto_index with storage switch:main temp
 #
+# @args		id (unknown)
+#			name_fr (unknown)
+#			name_en (unknown)
+#			index (unknown)
+#
 
 # Create scoreboard objectives
 $scoreboard objectives add switch.stats.played.$(id) dummy

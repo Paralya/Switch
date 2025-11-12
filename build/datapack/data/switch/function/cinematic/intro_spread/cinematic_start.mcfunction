@@ -5,6 +5,8 @@
 #
 # @within	switch:cinematic/intro_spread/start with storage switch:temp intro
 #
+# @args		target_function (string)
+#
 
 # Spread player on the map
 $function $(target_function)

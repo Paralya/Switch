@@ -5,6 +5,8 @@
 #
 # @within	switch:modes/minigolf/process_end with storage switch:records minigolf [ as @a[tag=!...] ]
 #
+# @args		current_map (unknown)
+#
 
 # Get username
 loot replace entity @s hotbar.0 loot switch:get_username

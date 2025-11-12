@@ -7,6 +7,8 @@
 #			switch:stats/sort_minigames_stats/async/loop_minigame_macro with storage switch:main input
 #			switch:stats/sort_minigames_stats/loop_minigame with storage switch:main input
 #
+# @args		id (string)
+#
 
 ## Storage Format: switch:stats all.modes = {pitch_creep:{total_games:0,played:[],wins:[]}, minigolf:{...}, ...}
 # Sort in descending order the played array

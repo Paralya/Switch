@@ -10,6 +10,8 @@
 #			switch:player/easter_egg_give {tag:\"switch.easter_egg.luxium\"}"}},{"text":""},{"text":""}]}}]
 #			switch:player/easter_egg_give {tag:\"switch.easter_egg.friends_cube\"}"}},{"text":""},{"text":""}]}}]
 #
+# @args		tag (unknown)
+#
 
 # Tak
 

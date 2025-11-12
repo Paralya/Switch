@@ -50,6 +50,8 @@
 #			switch:modes/traitors_game/_force_start {id:"traitors_game"}
 #			switch:modes/warden_escape/_force_start {id:"warden_escape"}
 #
+# @args		id (string)
+#
 
 # Stop everything
 function switch:engine/disable

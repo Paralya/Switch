@@ -6,6 +6,8 @@
 # @within	switch:engine/launch_game/add_played_stat with storage switch:temp copy[0]
 #			switch:engine/launch_game/increment_time_since_last_play with storage switch:temp copy[0]
 #
+# @args		id (unknown)
+#
 
 # Increment the current game time_since_last_play
 scoreboard players set #temp switch.data 0

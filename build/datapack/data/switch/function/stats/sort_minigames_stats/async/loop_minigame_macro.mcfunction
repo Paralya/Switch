@@ -3,6 +3,8 @@
 #
 # @within	switch:stats/sort_minigames_stats/async/loop_minigame_no_macro with storage switch:main sms_copy[0]
 #
+# @args		id (unknown)
+#
 
 # Update the minigame
 $data modify storage switch:main input set value {id:"$(id)"}

@@ -3,6 +3,8 @@
 #
 # @within	switch:modes/pitchout/advancements/death_macro {my_id:$(my_id)}
 #
+# @args		my_id (int)
+#
 
 # input storage $(my_id), & switch:temp pitchout[{id:$(my_id)}].killed_by[{id:X}, {id:Y}, ...]
 

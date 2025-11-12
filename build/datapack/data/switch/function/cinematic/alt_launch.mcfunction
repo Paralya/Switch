@@ -5,6 +5,10 @@
 #
 # @within	???
 #
+# @args		time (unknown)
+#			target (unknown)
+#			with (unknown)
+#
 # @input macro		target : string - target selector for position and rotation source
 # @input macro		time : int - time in ticks
 # @input macro		with : compound - additional arguments (optional)

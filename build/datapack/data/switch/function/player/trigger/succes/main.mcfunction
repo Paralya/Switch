@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/succes/entry with storage switch:main input
 #
+# @args		player (string)
+#
 
 ## File attribut: Ignore translations
 

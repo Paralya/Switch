@@ -5,6 +5,9 @@
 #
 # @within	switch:player/username_change/compare_usernames with storage switch:temp input
 #
+# @args		username (unknown)
+#			old_username (unknown)
+#
 
 # Basic objectives
 $scoreboard players operation $(username) switch.id = $(old_username) switch.id

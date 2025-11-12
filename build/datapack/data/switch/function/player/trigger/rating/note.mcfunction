@@ -5,6 +5,10 @@
 #
 # @within	switch:player/trigger/rating/action with storage switch:temp input
 #
+# @args		index (int)
+#			digits (int)
+#			player (unknown)
+#
 
 ## Advancement
 scoreboard objectives add switch.rates_given dummy

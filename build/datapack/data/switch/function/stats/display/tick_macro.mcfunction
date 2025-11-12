@@ -144,6 +144,10 @@
 #			switch:lobby_second {path:"all.modes.traitors_game.wins",label:"Victories",mode:1} [ positioned -13 70.5 -6 ]
 #			switch:stats/display/tick_macro {path:"all.modes.minigolf.played",label:"Parties jouées",mode:1}
 #
+# @args		mode (int)
+#			path (string)
+#			label (string)
+#
 
 ## Input macro: path = "all.modes.pitch_creep.played", label = "Parties jouées\n", mode = 1
 ## Ex: execute positioned ~ 70.5 ~ run function switch:stats/display/tick_macro {path:"all.modes.minigolf.played",label:"Parties jouées",mode:1}

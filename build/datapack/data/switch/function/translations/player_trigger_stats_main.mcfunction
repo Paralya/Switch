@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/stats/main with storage switch:main input
 #
+# @args		player (unknown)
+#
 
 # French
 execute if data storage switch:main input{player:"@s"} run tellraw @s[scores={switch.lang=0}] ["",{"nbt":"ParalyaStats","storage":"switch:main","interpret":true},{"text":" Voici vos statistiques :\n"}]

@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/rating/note with storage switch:temp input
 #
+# @args		digits (unknown)
+#
 
 # French
 $execute if score #temp switch.data matches 1 run tellraw @s[scores={switch.lang=0}] [{"text":"Vous avez voté pour $(digits) étoile !","color":"green"}]

@@ -3,6 +3,12 @@
 #
 # @within	switch:modes/rush_the_point/update_sidebar with storage switch:main input
 #
+# @args		minutes (int)
+#			optional_zero (string)
+#			seconds (int)
+#			blue (int)
+#			red (int)
+#
 
 $team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"$(minutes)","color":"yellow"},{"text":"m"},{"text":"$(optional_zero)$(seconds)","color":"yellow"},{"text":"s"}]
 $team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"$(blue)","color":"yellow"}]

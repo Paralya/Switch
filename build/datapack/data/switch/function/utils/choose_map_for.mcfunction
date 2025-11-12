@@ -47,6 +47,9 @@
 #			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}
 #			switch:modes/warden_escape/start {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 #
+# @args		id (string)
+#			maps (list)
+#
 
 ## Vérification de la liste des maps
 # Détection du nombre restant de maps à charger

@@ -5,6 +5,8 @@
 #
 # @within	switch:player/trigger/rating/sort_loop with storage switch:main max
 #
+# @args		index (unknown)
+#
 
 $data remove storage switch:ratings all[{index:$(index)}]
 

@@ -20,6 +20,12 @@
 #			switch:player/tick_detach {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
 #			switch:player/trigger/detach/basic_stuff {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
 #
+# @args		x (double)
+#			y (double)
+#			z (double)
+#			time (int)
+#			with (compound)
+#
 # @input macro		x : float - target x position
 # @input macro		y : float - target y position
 # @input macro		z : float - target z position

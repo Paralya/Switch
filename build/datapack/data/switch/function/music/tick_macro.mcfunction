@@ -3,6 +3,9 @@
 #
 # @within	???
 #
+# @args		name (unknown)
+#			tick (unknown)
+#
 
 $function switch:music/$(name)/$(tick)
 

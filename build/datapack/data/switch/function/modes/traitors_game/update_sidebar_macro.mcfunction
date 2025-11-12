@@ -5,6 +5,13 @@
 #
 # @within	switch:modes/traitors_game/update_sidebar with storage switch:main input
 #
+# @args		inspecteur (int)
+#			ninja (int)
+#			innocent (int)
+#			traitre (int)
+#			gros_traitre (int)
+#			floupy (int)
+#
 
 $team modify switch.temp.sidebar.5 suffix [{"text":"Inspector: ","color":"green"},{"text":"$(inspecteur)","color":"yellow"}]
 $team modify switch.temp.sidebar.4 suffix [{"text":"Ninja: ","color":"green"},{"text":"$(ninja)","color":"yellow"}]

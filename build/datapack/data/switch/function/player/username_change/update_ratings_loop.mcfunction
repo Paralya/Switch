@@ -6,6 +6,10 @@
 # @within	switch:player/username_change/update_everything with storage switch:temp copy[0]
 #			switch:player/username_change/update_ratings_loop with storage switch:temp copy[0]
 #
+# @args		id (unknown)
+#			username (unknown)
+#			old_username (unknown)
+#
 
 # Update username
 $data remove storage switch:ratings all[{id:"$(id)"}].players[{name:"$(username)"}]

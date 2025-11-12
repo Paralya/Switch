@@ -5,6 +5,9 @@
 #
 # @within	switch:player/username_change/check with storage switch:temp input
 #
+# @args		UUID (list)
+#			username (string)
+#
 
 # Compare usernames
 $execute if data storage switch:main UUIDs[{UUID:"$(UUID)"}] run function switch:player/username_change/compare_usernames {UUID:"$(UUID)",username:"$(username)"}

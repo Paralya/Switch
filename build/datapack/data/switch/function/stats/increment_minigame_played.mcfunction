@@ -3,6 +3,8 @@
 #
 # @within	switch:engine/signals/start with storage switch:main input
 #
+# @args		id (string)
+#
 
 scoreboard players set #total_games switch.data 0
 $execute store result score #total_games switch.data run data get storage switch:stats all.modes.$(id).total_games
