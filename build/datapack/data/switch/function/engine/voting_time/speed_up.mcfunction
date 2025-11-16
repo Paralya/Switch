@@ -1,8 +1,6 @@
 
 #> switch:engine/voting_time/speed_up
 #
-# @executed	in switch:game
-#
 # @within	switch:engine/voting_time/tick
 #
 

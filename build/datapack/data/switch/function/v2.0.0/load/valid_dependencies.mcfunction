@@ -2,7 +2,7 @@
 #> switch:v2.0.0/load/valid_dependencies
 #
 # @within	switch:v2.0.0/load/secondary
-#			switch:v2.0.0/load/valid_dependencies 1t replace
+#			switch:v2.0.0/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found

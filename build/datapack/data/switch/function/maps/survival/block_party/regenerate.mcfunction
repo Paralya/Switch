@@ -2,7 +2,7 @@
 #> switch:maps/survival/block_party/regenerate
 #
 # @within	switch:modes/block_party/verify_regeneration
-#			switch:maps/survival/block_party/regenerate 1t
+#			switch:maps/survival/block_party/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration

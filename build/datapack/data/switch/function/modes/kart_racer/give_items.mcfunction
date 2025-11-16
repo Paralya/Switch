@@ -1,7 +1,7 @@
 
 #> switch:modes/kart_racer/give_items
 #
-# @within	switch:modes/kart_racer/start 1s
+# @within	switch:modes/kart_racer/start 1s [ scheduled ]
 #
 
 kill @e[type=marker,tag=switch.selected_map]

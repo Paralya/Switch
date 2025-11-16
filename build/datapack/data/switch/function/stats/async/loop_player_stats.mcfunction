@@ -1,8 +1,8 @@
 
 #> switch:stats/async/loop_player_stats
 #
-# @within	switch:stats/async/loop_player_stats 1t
-#			switch:stats/async/sort_player_stats 1t replace
+# @within	switch:stats/async/loop_player_stats 1t [ scheduled ]
+#			switch:stats/async/sort_player_stats 1t replace [ scheduled ]
 #
 
 # Make the work (3 players by 3 players)

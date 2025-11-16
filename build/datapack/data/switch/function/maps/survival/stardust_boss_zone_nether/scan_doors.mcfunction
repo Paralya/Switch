@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/stardust_boss_zone_nether/scan_doors
 #
-# @within	switch:maps/survival/stardust_boss_zone_nether/scan_doors 1t
+# @within	switch:maps/survival/stardust_boss_zone_nether/scan_doors 1t [ scheduled ]
 #			switch:maps/loop_scan_doors_of_every_maps
 #
 

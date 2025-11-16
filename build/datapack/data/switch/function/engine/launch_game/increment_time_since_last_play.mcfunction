@@ -1,8 +1,6 @@
 
 #> switch:engine/launch_game/increment_time_since_last_play
 #
-# @executed	in switch:game
-#
 # @within	switch:engine/launch_game/add_played_stat with storage switch:temp copy[0]
 #			switch:engine/launch_game/increment_time_since_last_play with storage switch:temp copy[0]
 #

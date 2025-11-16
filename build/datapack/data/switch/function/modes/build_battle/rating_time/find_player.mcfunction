@@ -4,7 +4,7 @@
 # @executed	in switch:build_battle
 #
 # @within	switch:modes/build_battle/rating_time/next_rating
-#			switch:modes/build_battle/rating_time/start 1t replace
+#			switch:modes/build_battle/rating_time/start 1t replace [ scheduled ]
 #
 
 # Execute as a random player that has not been rated yet

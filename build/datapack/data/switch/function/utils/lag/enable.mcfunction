@@ -1,7 +1,7 @@
 
 #> switch:utils/lag/enable
 #
-# @within	switch:utils/lag/enable 1t
+# @within	switch:utils/lag/enable 1t [ scheduled ]
 #
 
 # Kill previous

@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/glassrunner/regenerate
 #
-# @within	switch:maps/survival/glassrunner/regenerate 1t
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/glassrunner/regenerate 1t [ scheduled ]
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration
 #

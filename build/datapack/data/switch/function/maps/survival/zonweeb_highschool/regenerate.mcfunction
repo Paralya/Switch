@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/zonweeb_highschool/regenerate
 #
-# @within	switch:maps/survival/zonweeb_highschool/regenerate 1t
+# @within	switch:maps/survival/zonweeb_highschool/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration

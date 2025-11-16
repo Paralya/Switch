@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/pillars_of_fortune/regenerate
 #
-# @within	switch:maps/survival/pillars_of_fortune/regenerate 1t
+# @within	switch:maps/survival/pillars_of_fortune/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration

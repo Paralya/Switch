@@ -2,11 +2,20 @@
 	"pack": {
 		"pack_format": 88,
 		"description": "Switch [2.0.0] by Stoupy51",
-		"min_format": [88,0],
-		"max_format": [1000,0]
+		"min_format": [
+			88,
+			0
+		],
+		"max_format": [
+			1000,
+			0
+		]
 	},
 	"id": "switch",
 	"filter": {
-		"block": [{"namespace": "minecraft","path": "advancement"},{"namespace": "grappling_hook","path": "advancement/.*first_guide.*"}]
+		"block": [
+			{"namespace": "minecraft","path": "advancement"},
+			{"namespace": "grappling_hook","path": "advancement/.*first_guide.*"}
+		]
 	}
 }

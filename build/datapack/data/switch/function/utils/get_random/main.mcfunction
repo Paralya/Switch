@@ -1,8 +1,6 @@
 
 #> switch:utils/get_random/main
 #
-# @executed	in switch:game
-#
 # @within	switch:engine/launch_game/get_random_max
 #			switch:maps/find_map
 #			switch:modes/block_party/core/pick_random_art

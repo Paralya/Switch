@@ -1,7 +1,7 @@
 
 #> switch:modes/kart_racer/post_load
 #
-# @within	switch:modes/kart_racer/start 9s
+# @within	switch:modes/kart_racer/start 9s [ scheduled ]
 #
 
 scoreboard players operation #modulo switch.data = #total_checkpoints switch.data

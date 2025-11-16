@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/paralya_uhc_lobbies/regenerate
 #
-# @within	switch:maps/survival/paralya_uhc_lobbies/regenerate 1t
+# @within	switch:maps/survival/paralya_uhc_lobbies/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration

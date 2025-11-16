@@ -1,8 +1,6 @@
 
 #> switch:translations/engine_launch_game_
 #
-# @executed	in switch:game
-#
 # @within	switch:engine/launch_game/main
 #
 

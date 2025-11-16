@@ -2,7 +2,7 @@
 #> switch:maps/survival/coupdetat/regenerate
 #
 # @within	switch:modes/_coupdetat/process_end
-#			switch:maps/survival/coupdetat/regenerate 1t
+#			switch:maps/survival/coupdetat/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration

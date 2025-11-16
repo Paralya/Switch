@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/bowser_castle/regenerate
 #
-# @within	switch:maps/survival/bowser_castle/regenerate 1t
+# @within	switch:maps/survival/bowser_castle/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration

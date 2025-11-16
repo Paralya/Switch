@@ -1,7 +1,9 @@
 
 #> switch:maps/survival/rush_the_point_1/regenerate
 #
-# @within	switch:maps/survival/rush_the_point_1/regenerate 1t
+# @executed	in switch:game
+#
+# @within	switch:maps/survival/rush_the_point_1/regenerate 1t [ scheduled ]
 #			switch:maps/regenerate_map
 #			switch:maps/resume_regeneration
 #

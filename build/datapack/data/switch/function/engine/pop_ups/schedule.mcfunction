@@ -1,9 +1,7 @@
 
 #> switch:engine/pop_ups/schedule
 #
-# @executed	as the player & at current position
-#
-# @within	switch:engine/pop_ups/revoke 1s
+# @within	switch:engine/pop_ups/revoke 1s [ scheduled ]
 #
 
 advancement revoke @a only switch:pop_ups/pitch_creep_fr

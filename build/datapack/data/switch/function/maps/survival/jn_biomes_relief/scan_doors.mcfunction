@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/jn_biomes_relief/scan_doors
 #
-# @within	switch:maps/survival/jn_biomes_relief/scan_doors 1t
+# @within	switch:maps/survival/jn_biomes_relief/scan_doors 1t [ scheduled ]
 #			switch:maps/loop_scan_doors_of_every_maps
 #
 

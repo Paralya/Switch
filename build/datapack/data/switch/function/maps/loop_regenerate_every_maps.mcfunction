@@ -1,8 +1,8 @@
 
 #> switch:maps/loop_regenerate_every_maps
 #
-# @within	switch:maps/regenerate_every_maps 1t
-#			switch:maps/loop_regenerate_every_maps 1t
+# @within	switch:maps/regenerate_every_maps 1t [ scheduled ]
+#			switch:maps/loop_regenerate_every_maps 1t [ scheduled ]
 #
 
 execute if data storage switch:maps to_regenerate{fireblast_pork:1b} run schedule function switch:maps/loop_regenerate_every_maps 1t

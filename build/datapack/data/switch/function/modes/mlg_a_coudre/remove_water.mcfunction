@@ -1,9 +1,7 @@
 
 #> switch:modes/mlg_a_coudre/remove_water
 #
-# @executed	at @s
-#
-# @within	switch:modes/mlg_a_coudre/done 1s
+# @within	switch:modes/mlg_a_coudre/done 1s [ scheduled ]
 #
 
 # Maps

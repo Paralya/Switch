@@ -1,7 +1,7 @@
 
 #> switch:modes/race/give_items
 #
-# @within	switch:modes/race/start 1s
+# @within	switch:modes/race/start 1s [ scheduled ]
 #
 
 # Load map checkpoints
