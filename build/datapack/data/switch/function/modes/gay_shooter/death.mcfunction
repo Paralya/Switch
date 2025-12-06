@@ -5,7 +5,7 @@
 #			switch:modes/gay_shooter/process_end [ as @a[tag=!detached] ]
 #
 
-execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score #process_end switch.data matches 1 run tp @s 114057 119 114044
 gamemode spectator @s[team=!switch.temp.gays]
 effect clear @s
 clear @s

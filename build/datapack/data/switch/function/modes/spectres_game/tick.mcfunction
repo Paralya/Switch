@@ -20,7 +20,7 @@ execute as @a[tag=!detached,scores={switch.temp.break_obsidian=1..}] run functio
 clear @a[tag=!detached] crying_obsidian
 
 # Obsidienne poulet
-execute as @e[type=falling_block] at @s unless block ~ ~-2 ~ minecraft:air run ride @s dismount
+execute as @e[tag=switch.task_obsidian] at @s unless block ~ ~-2 ~ #minecraft:air run function switch:modes/spectres_game/place_obsidian_from_chicken
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
 execute at @a[tag=!detached,team=switch.temp.spectre,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air,predicate=switch:is_moving] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
