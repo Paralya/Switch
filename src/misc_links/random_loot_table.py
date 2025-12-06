@@ -45,11 +45,11 @@ def main() -> None:
 		loot_table["pools"][0]["entries"].append(get_entry(item))
 
 	# Save the vanilla loot table
-	Mem.ctx.data["switch"].loot_tables["random/vanilla"] = LootTable(stp.super_json_dump(loot_table, max_level = -1))
+	Mem.ctx.data["switch"].loot_tables["random/vanilla"] = LootTable(stp.json_dump(loot_table, max_level = -1))
 
 	# For each item in the item definitions, add it to the loot table and save it
 	for item in Mem.definitions.keys():
 		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"switch:i/{item}"})
-	Mem.ctx.data["switch"].loot_tables["random/all"] = LootTable(stp.super_json_dump(loot_table, max_level = -1))
+	Mem.ctx.data["switch"].loot_tables["random/all"] = LootTable(stp.json_dump(loot_table, max_level = -1))
 	stp.progress("The random loot tables 'vanilla.json' and 'all.json' have been generated")
 

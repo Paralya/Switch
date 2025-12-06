@@ -74,7 +74,7 @@ def hidden_advancements() -> None:
 				"parent": f"switch:visible/{id}"
 			}
 			adv = Advancement(json_dict)
-			adv.encoder = lambda x: stp.super_json_dump(x, max_level=1)
+			adv.encoder = lambda x: stp.json_dump(x, max_level=1)
 			Mem.ctx.data["switch"].advancements[f"hidden_ends/{id}"] = adv
 
 
@@ -103,6 +103,6 @@ def visible_advancements() -> None:
 			"parent": f"switch:visible/{adv['parent']}"
 		}
 		adv = Advancement(json_dict)
-		adv.encoder = lambda x: stp.super_json_dump(x, max_level=2)
+		adv.encoder = lambda x: stp.json_dump(x, max_level=2)
 		Mem.ctx.data["switch"].advancements[f"visible/{id}"] = adv
 

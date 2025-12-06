@@ -69,7 +69,7 @@ def main() -> None:
 				objectives.append((song[1], length, bpm))
 
 		# Add a pack.mcmeta file
-		lib.writestr("pack.mcmeta", stp.super_json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
+		lib.writestr("pack.mcmeta", stp.json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
 		pass
 
 		# Write the objectives

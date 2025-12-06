@@ -38,5 +38,5 @@ title @s title {{"text":"{SharedMemory.BLACK_PIXEL_CHAR}","font":"switch:main"}}
 
 # Functions
 def write_final_file() -> None:
-	Mem.ctx.assets.fonts[SharedMemory.FONT_FILE_PATH] = Font(stp.super_json_dump({"providers": SharedMemory.providers}))
+	Mem.ctx.assets.fonts[SharedMemory.FONT_FILE_PATH] = Font(stp.json_dump({"providers": SharedMemory.providers}))
 

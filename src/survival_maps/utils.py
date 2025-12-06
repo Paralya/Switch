@@ -778,5 +778,5 @@ def generate_map_usage_file() -> None:
 
 	# Write the map_usage.json file
 	with stp.super_open(PATH, "w") as f:
-		f.write(stp.super_json_dump([maps_usage, modes_usage], max_level=2))
+		f.write(stp.json_dump([maps_usage, modes_usage], max_level=2))
 

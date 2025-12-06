@@ -37,6 +37,11 @@ scoreboard players set §r switch.temp.sidebar 4
 scoreboard players set §3 switch.temp.sidebar 3
 scoreboard players set §2 switch.temp.sidebar 2
 scoreboard players set §1 switch.temp.sidebar 1
+scoreboard players display numberformat §5 switch.temp.sidebar blank
+scoreboard players display numberformat §r switch.temp.sidebar blank
+scoreboard players display numberformat §3 switch.temp.sidebar blank
+scoreboard players display numberformat §2 switch.temp.sidebar blank
+scoreboard players display numberformat §1 switch.temp.sidebar blank
 
 # Choix des rôles + give d'items
 team add switch.temp.red {"text":"[Red]","color":"red"}
