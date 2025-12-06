@@ -303,40 +303,39 @@ def create_spread_players_file(name: str, start_pos: tuple[int, ...], end_pos: t
 	maxRange: int = min(dx, dz)
 	if maxRange < 10:
 		maxRange = 10
-	spread_distance: int = maxRange // 2
 	max_height: int = (end_pos[1] - start_pos[1]) + paste_start_height - 10
 	y: int = start_pos[1]
 	dy: int = paste_start_height - 1 - y
 
 	## Spread players file
 	# Create the file
-	PATH: str = f"switch:maps/survival/{name}/spread_players"
+	path: str = f"switch:maps/survival/{name}/spread_players"
 
 	# Write the spreadplayers command and the assurance commands
-	write_function(PATH, f"""
-execute in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @a[tag=!detached]
+	write_function(path, f"""
+execute in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @a[tag=!detached]
 
 ## Assurance commands
 """)
 	for _ in range(SharedMemory.NB_SPREAD_PLAYERS):
-		write_function(PATH, f"""
-execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
-execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
+		write_function(path, f"""
+execute as @a[tag=!detached] at @s if entity @s[y={y},dy={dy}] in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
+execute as @a[tag=!detached] at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
 """)
 
 	## Spread one player file
-	PATH: str = f"switch:maps/survival/{name}/spread_one_player"
-	write_function(PATH, f"""
-execute in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
+	path: str = f"switch:maps/survival/{name}/spread_one_player"
+	write_function(path, f"""
+execute in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
 
 ## Assurance commands
 """)
 	for _ in range(SharedMemory.NB_SPREAD_PLAYERS):
-		write_function(PATH, f"""
-execute at @s if entity @s[y={y},dy={dy}] in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
-execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
-execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers {x} {z} {spread_distance} {maxRange} under {max_height} false @s
+		write_function(path, f"""
+execute at @s if entity @s[y={y},dy={dy}] in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
+execute at @s if block ~ ~-2 ~ barrier in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
+execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spreadplayers {x} {z} 0 {maxRange} under {max_height} false @s
 """)
 
 
