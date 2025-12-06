@@ -3,6 +3,9 @@
 		"minecraft:barrier",
 		"minecraft:powder_snow",
 		"minecraft:moving_piston",
-		"minecraft:tripwire"
+		"minecraft:tripwire",
+		"minecraft:light",
+		"minecraft:structure_void",
+		"#minecraft:air"
 	]
 }
