@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"category": "equipment",
+	"group": "emerald_boots",
 	"pattern": [
 		"X X",
 		"X X"

@@ -13,8 +13,8 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"cigogne", maps:["cigogne"]}
 
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_cigogne_start
 

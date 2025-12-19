@@ -9,8 +9,8 @@
 scoreboard players set @a[tag=!detached] switch.alive 3
 function switch:utils/set_dynamic_time
 
-execute in switch:game run gamerule fallDamage false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:fall_damage false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 # partie en équipe aléatoire
 scoreboard players set #TEAM_FISH switch.data 0

@@ -9,8 +9,8 @@ scoreboard players set #dont_regenerate switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","nature_house"]}
 
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_feed_fast_start
 

@@ -11,7 +11,7 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"pvpswap", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box"]}
 
-execute in switch:game run gamerule naturalRegeneration false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
 
 function switch:translations/modes_pvpswap_start
 

@@ -16,7 +16,7 @@ from .utils import (
 
 
 # Main function
-@stp.measure_time(stp.progress, "Generated the survival maps")
+@stp.measure_time(message="Generated the survival maps")
 def main() -> None:
 
 	# Generate the folders for the survival maps

@@ -6,7 +6,7 @@ from .utils import *
 
 
 # Main function
-@stp.measure_time(stp.progress, "Generated the shops")
+@stp.measure_time(message="Generated the shops")
 def main() -> None:
 
 	# Generate all the shops

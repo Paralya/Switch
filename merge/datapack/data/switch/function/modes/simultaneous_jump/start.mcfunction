@@ -5,8 +5,8 @@ function switch:utils/set_dynamic_time
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"simultaneous_jump", maps:["de_a_coudre_1","mlg_a_coudre_1"]}
 
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_simultaneous_jump_start
 

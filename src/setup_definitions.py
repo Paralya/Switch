@@ -48,7 +48,7 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 }
 
 # Main function should return a database
-@stp.measure_time(stp.progress, "Setup definitions")
+@stp.measure_time(message="Setup definitions")
 def beet_default(ctx: Context):
 	if Mem.ctx is None:
 		Mem.ctx = ctx

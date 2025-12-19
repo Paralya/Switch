@@ -8,7 +8,7 @@ from .._important.modes import LANG_PRETEXT, MODES
 
 
 # Main function
-@stp.measure_time(stp.progress, "Generated starting pop-ups for every game mode")
+@stp.measure_time(message="Generated starting pop-ups for every game mode")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 

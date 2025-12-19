@@ -7,7 +7,7 @@ effect give @a[tag=!detached] resistance infinite 255 true
 execute as @a[tag=!detached] run attribute @s gravity base set 0
 function switch:utils/set_dynamic_time
 
-gamerule fallDamage false
+gamerule minecraft:fall_damage false
 
 function switch:translations/modes_race_start
 

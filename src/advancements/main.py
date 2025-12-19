@@ -6,7 +6,7 @@ from .utils import *
 
 
 # Main function
-@stp.measure_time(stp.progress, "Generated the advancements")
+@stp.measure_time(message="Generated the advancements")
 def main() -> None:
 	generate_adv_dictionnary()
 	make_load_file()

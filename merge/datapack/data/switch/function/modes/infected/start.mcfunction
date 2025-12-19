@@ -7,10 +7,10 @@ execute as @a[tag=!detached] run function switch:modes/infected/death/early_resp
 function switch:translations/modes_infected_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule doTileDrops false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:block_drops false
 
 scoreboard objectives add switch.temp.dont_want_to_be_infected trigger
 scoreboard objectives add switch.temp.infection dummy

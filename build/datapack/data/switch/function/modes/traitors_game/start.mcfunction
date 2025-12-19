@@ -15,10 +15,10 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}
 
-execute in switch:game run gamerule mobGriefing true
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:mob_griefing true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_traitors_game_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

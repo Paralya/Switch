@@ -28,8 +28,8 @@ scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/death
 
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_glassrunner_start
 

@@ -16,8 +16,8 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft","smithed_summit_2024"]}
 execute as @a[tag=!detached] run function switch:modes/thunder_spear/give_and_teleport
 
-execute in switch:game run gamerule keepInventory true
-execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule minecraft:keep_inventory true
+execute in switch:game run gamerule minecraft:fall_damage false
 
 function switch:translations/modes_thunder_spear_start
 

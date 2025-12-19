@@ -27,10 +27,10 @@ execute unless score #new_players switch.data matches 2.. if predicate switch:ch
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake","old_japan","cluedo_camping","la_juste_recette","torg_arena"]}
 
-execute in switch:game run gamerule mobGriefing true
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:mob_griefing true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_spectres_game_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

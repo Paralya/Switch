@@ -1,5 +1,5 @@
 
-gamerule sendCommandFeedback true
+gamerule minecraft:send_command_feedback true
 
 scoreboard players set #engine_state switch.data 3
 scoreboard players add total_games switch.last_total_games 1

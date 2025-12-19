@@ -6,7 +6,7 @@ from .utils import *
 
 
 # Main function
-@stp.measure_time(stp.progress, "Generated all the special fonts")
+@stp.measure_time(message="Generated all the special fonts")
 def main() -> None:
 
 	# Generate all the fonts

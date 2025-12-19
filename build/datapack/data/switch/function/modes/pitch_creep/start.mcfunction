@@ -11,12 +11,12 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 time set 18000
 
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #dont_regenerate switch.data 1

@@ -18,9 +18,9 @@ execute if data storage switch:main {map:"cathedrale_liege"} run tp @a[tag=!deta
 execute if data storage switch:main {map:"new_grounds"} run tp @a[tag=!detached] 48047 113 48047
 execute if data storage switch:main {map:"warden_escape_statue"} run tp @a[tag=!detached] 69056.0 136 69050.0
 
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_warden_escape_start
 

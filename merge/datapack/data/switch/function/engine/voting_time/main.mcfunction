@@ -1,5 +1,5 @@
 
-gamerule sendCommandFeedback false
+gamerule minecraft:send_command_feedback false
 scoreboard players set #engine_state switch.data 2
 scoreboard players set #voting_timer switch.data 399
 

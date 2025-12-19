@@ -1,7 +1,7 @@
 
 # Imports
 import stouputils as stp
-from stewbeet.core import Context, Mem, official_lib_used, write_load_file, write_tick_file
+from stewbeet.core import Context, official_lib_used, write_load_file, write_tick_file
 
 from ._important.modes import main as write_modes_load_file
 from .advancements.main import main as automatic_advancements
@@ -16,10 +16,8 @@ from .survival_maps.main import main as generate_survival_maps
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 @stp.handle_error
-@stp.measure_time(stp.debug, message="Execution time of 'src.link'")
+@stp.measure_time(message="Execution time of 'src.link'")
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None:
-		Mem.ctx = ctx
 
 	# Load the real load function and tick the real tick function
 	write_load_file("function switch:load")

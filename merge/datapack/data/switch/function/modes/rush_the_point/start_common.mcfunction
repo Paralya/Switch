@@ -8,9 +8,9 @@ function switch:utils/set_dynamic_time
 ## Placement de la map et des joueurs
 function switch:utils/choose_map_for {id:"rush_the_point", maps:["rush_the_point_1"]}
 
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
-execute in switch:game run gamerule doTileDrops false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
+execute in switch:game run gamerule minecraft:block_drops false
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.fireball_cooldown dummy

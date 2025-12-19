@@ -13,8 +13,8 @@ effect give @a[tag=!detached] resistance infinite 255 true
 execute as @a[tag=!detached] run attribute @s gravity base set 0
 function switch:utils/set_dynamic_time
 
-execute in switch:game run gamerule fallDamage false
-execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule minecraft:fall_damage false
+execute in switch:game run gamerule minecraft:fall_damage false
 
 function switch:translations/modes_kart_racer_start
 

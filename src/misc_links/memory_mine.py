@@ -12,7 +12,7 @@ ROUND_PRECISION: int = 5
 FUNCTION_PATH: str = "switch:modes/memory_mine/zone/particles"
 
 # Main function
-@stp.measure_time(stp.progress, "Generated the particles for the memory mine zone")
+@stp.measure_time(message="Generated the particles for the memory mine zone")
 def main() -> None:
 
 	# On file

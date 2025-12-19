@@ -1652,7 +1652,7 @@
 	},
 	"shazinho": {
 		"id": "minecraft:command_block",
-		"custom_data": {"switch": {"shazinho": true},"smithed": {"dict": {"record": {"shazinho": true,"item_name": "Shazinho"}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"switch": {"shazinho": true},"smithed": {"dict": {"record": {"shazinho": true,"item_name": "Shazinho"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 128,"sound_event": {"sound_id": "switch:shazinho"},"description": {"text": "Shazinho"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "switch:shazinho",
 		"max_stack_size": 1,

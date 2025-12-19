@@ -15,10 +15,10 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_island","friends_cube_lobby","zonweeb_main","jn_countries_castle","even_old_japan"]}
 
-execute in switch:game run gamerule mobGriefing true
-execute in switch:game run gamerule showDeathMessages false
-execute in switch:game run gamerule naturalRegeneration false
-execute in switch:game run gamerule keepInventory true
+execute in switch:game run gamerule minecraft:mob_griefing true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:translations/modes_creeper_apocalypse_start
 

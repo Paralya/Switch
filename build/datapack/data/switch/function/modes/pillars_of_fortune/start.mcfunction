@@ -16,7 +16,7 @@ scoreboard players set #do_spreadplayers switch.data 0
 function switch:utils/choose_map_for {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste", "void_desert"]}
 function switch:translations/modes_pillars_of_fortune_start
 
-execute in switch:game run gamerule mobGriefing true
+execute in switch:game run gamerule minecraft:mob_griefing true
 
 scoreboard players set #remaining_time switch.data 605
 scoreboard players set #pillars_of_fortune_seconds switch.data -10

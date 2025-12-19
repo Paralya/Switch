@@ -9,7 +9,7 @@ execute if score #infected_secret switch.data matches 2 positioned 127132 113 12
 execute if score #infected_secret switch.data matches 2 positioned 127132 113 127051 as @e[limit=2] as @e[limit=2] as @e[limit=2] run summon zombie
 
 # Crafted TNT
-execute if score #infected_secret switch.data matches 3 run gamerule doTileDrops false
+execute if score #infected_secret switch.data matches 3 run gamerule minecraft:block_drops false
 
 # TNT exploded (end)
 execute if score #infected_secret switch.data matches 4 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/52

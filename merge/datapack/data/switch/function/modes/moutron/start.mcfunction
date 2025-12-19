@@ -10,7 +10,7 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"moutron", maps:["whity_lab","the_four_elements","arti_ancient_city"]}
 execute if data storage switch:main {map:"whity_lab"} run function switch:modes/moutron/spread_players/whity_lab
 
-execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule minecraft:fall_damage false
 
 function switch:translations/modes_moutron_start
 

@@ -3,7 +3,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
 function switch:utils/set_dynamic_time
 
-execute in switch:game run gamerule fallDamage false
+execute in switch:game run gamerule minecraft:fall_damage false
 
 ## Téléportation des joueurs
 scoreboard players set #dont_regenerate switch.data 1

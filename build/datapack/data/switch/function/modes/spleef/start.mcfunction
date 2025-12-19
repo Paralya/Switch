@@ -9,7 +9,7 @@ effect give @a[tag=!detached] mining_fatigue 5 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
-execute in switch:game run gamerule doTileDrops false
+execute in switch:game run gamerule minecraft:block_drops false
 
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"spleef", maps:["spleef_1"]}

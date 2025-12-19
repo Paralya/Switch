@@ -6,10 +6,10 @@ effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
-execute in switch:game run gamerule fallDamage false
-execute in switch:game run gamerule fireDamage false
-execute in switch:game run gamerule drowningDamage false
-execute in switch:game run gamerule freezeDamage false
+execute in switch:game run gamerule minecraft:fall_damage false
+execute in switch:game run gamerule minecraft:fire_damage false
+execute in switch:game run gamerule minecraft:drowning_damage false
+execute in switch:game run gamerule minecraft:freeze_damage false
 
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}

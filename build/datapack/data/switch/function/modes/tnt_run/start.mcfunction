@@ -13,8 +13,8 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}
 
-execute in switch:game run gamerule fallDamage false
-execute in switch:game run gamerule doTileDrops false
+execute in switch:game run gamerule minecraft:fall_damage false
+execute in switch:game run gamerule minecraft:block_drops false
 
 function switch:translations/modes_tnt_run_start
 

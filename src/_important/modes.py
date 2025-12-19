@@ -405,7 +405,7 @@ def add_lore():
 
 		del mode["description"]
 
-@stp.measure_time(stp.progress, "Generated modes load file")
+@stp.measure_time(message="Generated modes load file")
 def main():
 	add_lore()
 	append_lines: list[str] = ["data modify storage switch:main minigames append value " + json.dumps(mode, ensure_ascii=False) for mode in MODES]

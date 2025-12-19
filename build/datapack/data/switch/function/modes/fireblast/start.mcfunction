@@ -12,9 +12,9 @@ effect give @a[tag=!detached] night_vision infinite 255 true
 effect give @a[tag=!detached] glowing infinite 255 true
 time set 6000
 
-execute in switch:game run gamerule keepInventory true
-execute in switch:game run gamerule doTileDrops false
-execute in switch:game run gamerule mobGriefing true
+execute in switch:game run gamerule minecraft:keep_inventory true
+execute in switch:game run gamerule minecraft:block_drops false
+execute in switch:game run gamerule minecraft:mob_griefing true
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1

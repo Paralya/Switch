@@ -58,7 +58,7 @@ team modify switch.detached prefix {"text":"[Lobby] ","color":"dark_gray"}
 team modify switch.tutorial prefix {"text":"[Tutorial] ","color":"yellow"}
 team modify switch.tutorial color gold
 
-gamerule maxCommandChainLength 2147483647
+gamerule minecraft:max_command_sequence_length 2147483647
 forceload add 0 0
 execute in switch:game run forceload add 0 0
 execute store result score #cinematic_entities switch.data if entity @e[tag=switch.cinematic]

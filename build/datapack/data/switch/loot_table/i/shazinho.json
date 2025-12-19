@@ -15,7 +15,7 @@
 										"shazinho": true
 									},
 									"smithed": {
-										"dict": {"record": {"shazinho": true,"item_name": "Shazinho"}},
+										"dict": {"record": {"shazinho": true,"item_name": "Shazinho"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 128,"sound_event": {"sound_id": "switch:shazinho"},"description": {"text": "Shazinho"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
