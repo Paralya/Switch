@@ -8,7 +8,7 @@
 
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
-gamerule commandModificationBlockLimit 262144
+gamerule minecraft:max_block_modifications 262144
 
 ## Téléportation des joueurs
 function switch:utils/choose_map_for {id:"build_battle", maps:["build_battle"]}
