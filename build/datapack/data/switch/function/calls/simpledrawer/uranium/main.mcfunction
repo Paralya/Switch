@@ -14,7 +14,7 @@ scoreboard players set #ingot_in_block simpledrawer.io 9
 scoreboard players set #nugget_in_ingot simpledrawer.io 9
 
 # Set the material data
-data modify storage simpledrawer:io material set value {material: "switch.uranium", material_name:'Uranium'}
+data modify storage simpledrawer:io material set value {material: "switch.uranium", material_name:"Uranium"}
 
 # Fill the NBT with your own items
 data modify storage simpledrawer:io material.block.item set from storage switch:items all.uranium_block

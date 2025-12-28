@@ -7,7 +7,7 @@
 tag @s add switch.placer
 setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:raw_iron_block
-execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function switch:custom_blocks/raw_steel_block/place_secondary
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function switch:custom_blocks/raw_steel_block/place_secondary
 tag @s remove switch.placer
 
 # Increment count scores
