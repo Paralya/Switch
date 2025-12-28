@@ -785,6 +785,11 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:camel_husk_spawn_egg",
+					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:camel_spawn_egg",
 					"weight": 2
 				},
@@ -1223,6 +1228,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:copper_nautilus_armor"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:copper_nugget"
 				},
 				{
@@ -1236,6 +1245,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:copper_shovel"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_spear"
 				},
 				{
 					"type": "minecraft:item",
@@ -1754,6 +1767,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:diamond_nautilus_armor"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:diamond_ore"
 				},
 				{
@@ -1763,6 +1780,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:diamond_shovel"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_spear"
 				},
 				{
 					"type": "minecraft:item",
@@ -2269,11 +2290,19 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:golden_nautilus_armor"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:golden_pickaxe"
 				},
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:golden_shovel"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:golden_spear"
 				},
 				{
 					"type": "minecraft:item",
@@ -2626,6 +2655,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:iron_nautilus_armor"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:iron_nugget"
 				},
 				{
@@ -2639,6 +2672,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:iron_shovel"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:iron_spear"
 				},
 				{
 					"type": "minecraft:item",
@@ -3414,6 +3451,11 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:nautilus_spawn_egg",
+					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:nether_brick"
 				},
 				{
@@ -3486,11 +3528,19 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:netherite_horse_armor"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:netherite_ingot"
 				},
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:netherite_leggings"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_nautilus_armor"
 				},
 				{
 					"type": "minecraft:item",
@@ -3503,6 +3553,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:netherite_shovel"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_spear"
 				},
 				{
 					"type": "minecraft:item",
@@ -3853,6 +3907,11 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:paper"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:parched_spawn_egg",
+					"weight": 2
 				},
 				{
 					"type": "minecraft:item",
@@ -5033,6 +5092,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:stone_spear"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:stone_stairs"
 				},
 				{
@@ -5926,6 +5989,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:wooden_spear"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:wooden_sword"
 				},
 				{
@@ -6008,6 +6075,11 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:zombie_horse_spawn_egg",
+					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:zombie_nautilus_spawn_egg",
 					"weight": 2
 				},
 				{

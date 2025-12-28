@@ -1,10 +1,10 @@
 {
 	"pack": {
-		"pack_format": 88,
+		"pack_format": 94,
 		"description": "Switch [2.0.0] by Stoupy51",
 		"min_format": [
-			88,
-			0
+			94,
+			1
 		],
 		"max_format": [
 			1000,

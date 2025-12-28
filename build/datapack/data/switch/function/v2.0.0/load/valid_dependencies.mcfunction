@@ -12,10 +12,10 @@ execute store result score #game_version switch.data run data get entity @p Data
 
 # Check if the game version is supported
 scoreboard players set #mcload_error switch.data 0
-execute unless score #game_version switch.data matches 4556.. run scoreboard players set #mcload_error switch.data 1
+execute unless score #game_version switch.data matches 4669.. run scoreboard players set #mcload_error switch.data 1
 
 # Decode errors
-execute if score #mcload_error switch.data matches 1 run tellraw @a {"text":"Switch Error: This version is made for Minecraft 1.21.10+.","color":"red"}
+execute if score #mcload_error switch.data matches 1 run tellraw @a {"text":"Switch Error: This version is made for Minecraft 1.21.11+.","color":"red"}
 execute if score #dependency_error switch.data matches 1 run tellraw @a {"text":"Switch Error: Libraries are missing\nplease download the right Switch datapack\nor download each of these libraries one by one:","color":"red"}
 execute if score #dependency_error switch.data matches 1 unless score #common_signals.major load.status matches 0.. run tellraw @a {"text":"- [Common Signals (v0.2.0+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}
 execute if score #dependency_error switch.data matches 1 if score #common_signals.major load.status matches 0 unless score #common_signals.minor load.status matches 2.. run tellraw @a {"text":"- [Common Signals (v0.2.0+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}
