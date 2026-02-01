@@ -17,11 +17,12 @@ gamemode spectator @s
 setblock 0 7 0 yellow_shulker_box
 loot insert 0 7 0 loot switch:get_username
 data modify storage switch:main Rotation set from entity @s Rotation
-execute summon zombie run function switch:modes/murder_mystery/apply_properties_to_zombie
+execute summon mannequin run function switch:modes/murder_mystery/apply_properties_to_mannequin
 setblock 0 7 0 air
 
 # Drop bow if detective
 execute if data entity @s Inventory[].components."minecraft:custom_data".switch.detective_bow run summon item_display ~ ~1 ~ {item:{id:"bow",count:1},Tags:["switch.detective_bow"],Glowing:true}
+execute if data entity @s equipment.offhand.components."minecraft:custom_data".switch.detective_bow run summon item_display ~ ~1 ~ {item:{id:"bow",count:1},Tags:["switch.detective_bow"],Glowing:true}
 
 # Title & clear
 function switch:translations/modes_murder_mystery_kill_player

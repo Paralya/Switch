@@ -7,6 +7,7 @@
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/topaz_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/steel_ingot_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/steel_nugget_x9"}
+#			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/raw_steel_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_ingot_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/awakened_stardust_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/legendarium_ingot_x9"}
