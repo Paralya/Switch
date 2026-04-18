@@ -3,7 +3,7 @@
 #
 # @executed	anchored eyes & positioned ^ ^ ^
 #
-# @within	switch:modes/laser_game/shoot {with:{entities:true,max_distance:25.6,on_targeted_entity:"function switch:modes/laser_game/shoot_hit_entity",on_entry_point:"function switch:modes/laser_game/shoot_hit_point"}} [ anchored eyes & positioned ^ ^ ^ ]
+# @within	switch:modes/laser_game/shoot {with:{entities:true,max_distance:128,on_targeted_entity:"function switch:modes/laser_game/shoot_hit_entity",on_entry_point:"function switch:modes/laser_game/shoot_hit_point"}} [ anchored eyes & positioned ^ ^ ^ ]
 #
 
 summon marker ~ ~ ~ {Tags:["switch.shoot_ray"]}

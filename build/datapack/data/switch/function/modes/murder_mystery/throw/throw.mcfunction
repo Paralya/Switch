@@ -11,7 +11,7 @@
 effect clear @s slowness
 
 # Use Bookshelf Raycast to get destination
-execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:true,entities:false,max_distance:25.6,on_entry_point:"function switch:modes/murder_mystery/throw/as_iris_ray"}}
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:true,entities:false,max_distance:128,on_entry_point:"function switch:modes/murder_mystery/throw/on_entry_point"}}
 
 # Summon the item
 data modify storage switch:main Rotation set from entity @s Rotation

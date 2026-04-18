@@ -1,0 +1,50 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": "minecraft:furnace",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"fragment": {
+							"stardust": true
+						}
+					},
+					"id": "switch:stardust_fragment",
+					"origin": "switch",
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"switch": {
+					"stardust_fragment": true
+				}
+			},
+			"minecraft:item_model": "switch:stardust_fragment",
+			"minecraft:item_name": {
+				"text": "Stardust Fragment"
+			},
+			"minecraft:lore": [
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "switch:icons"
+					},
+					{
+						"text": " Switch",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 200
+}

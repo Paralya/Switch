@@ -6,6 +6,8 @@
 		{"id": "#furnace_nbt_recipes:load","required": false},
 		{"id": "#realistic_explosion:load","required": false},
 		{"id": "#bs.load:load","required": false},
-		{"id": "#sheepwars:load","required": false}
+		{"id": "#sheepwars:load","required": false},
+		{"id": "#golf_ball:load","required": false},
+		{"id": "#shopping_kart:load","required": false}
 	]
 }

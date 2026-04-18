@@ -10,27 +10,6 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_model": "switch:stardust_block",
-								"minecraft:item_name": {
-									"text": "Stardust Block"
-								},
-								"minecraft:lore": [
-									[
-										"",
-										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
-										{"text": " Switch","italic": true,"color": "blue"}
-									]
-								],
-								"minecraft:custom_data": {
-									"switch": {
-										"stardust_block": true
-									},
-									"smithed": {
-										"id": "switch:stardust_block",
-										"origin": "switch",
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								},
 								"minecraft:container": [
 									{
 										"slot": 0,
@@ -41,7 +20,29 @@
 									"hidden_components": [
 										"minecraft:container"
 									]
-								}
+								},
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"block": {"stardust": true}},
+										"id": "switch:stardust_block",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"stardust_block": true
+									}
+								},
+								"minecraft:item_model": "switch:stardust_block",
+								"minecraft:item_name": {
+									"text": "Stardust Block"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								]
 							}
 						}
 					]

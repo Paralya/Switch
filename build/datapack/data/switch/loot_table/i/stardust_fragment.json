@@ -10,6 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"fragment": {"stardust": true}},
+										"id": "switch:stardust_fragment",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"stardust_fragment": true
+									}
+								},
 								"minecraft:item_model": "switch:stardust_fragment",
 								"minecraft:item_name": {
 									"text": "Stardust Fragment"
@@ -20,17 +31,7 @@
 										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
 										{"text": " Switch","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"switch": {
-										"stardust_fragment": true
-									},
-									"smithed": {
-										"id": "switch:stardust_fragment",
-										"origin": "switch",
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

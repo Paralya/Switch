@@ -8,6 +8,7 @@
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/steel_ingot_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/steel_nugget_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/raw_steel_x9"}
+#			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_fragment_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_ingot_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/awakened_stardust_x9"}
 #			switch:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/legendarium_ingot_x9"}
@@ -88,6 +89,7 @@
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/emerald_axe"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/emerald_shovel"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/emerald_hoe"}
+#			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_block"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_helmet"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_chestplate"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_leggings"}
@@ -95,12 +97,16 @@
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_sword"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_pickaxe"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/stardust_axe"}
+#			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/awakened_stardust_block"}
+#			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/legendarium_block"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/legendarium_sword"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/legendarium_pickaxe"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/legendarium_axe"}
+#			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/solarium_block"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/solarium_sword"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/solarium_pickaxe"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/solarium_axe"}
+#			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/darkium_block"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/darkium_sword"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/darkium_pickaxe"}
 #			switch:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot switch:i/darkium_axe"}

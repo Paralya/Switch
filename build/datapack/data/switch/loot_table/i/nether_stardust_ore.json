@@ -10,6 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:nether_stardust_ore","from": "switch"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
 								"minecraft:item_model": "switch:nether_stardust_ore",
 								"minecraft:item_name": {
 									"text": "Nether Stardust Ore"
@@ -30,17 +41,6 @@
 										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
-								},
-								"minecraft:container": [
-									{
-										"slot": 0,
-										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "switch:nether_stardust_ore","from": "switch"}}}}}
-									}
-								],
-								"minecraft:tooltip_display": {
-									"hidden_components": [
-										"minecraft:container"
-									]
 								}
 							}
 						}

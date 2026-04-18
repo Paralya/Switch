@@ -10,6 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"fragment": {"ultimate": true}},
+										"id": "switch:ultimate_fragment",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"ultimate_fragment": true
+									}
+								},
 								"minecraft:item_model": "switch:ultimate_fragment",
 								"minecraft:item_name": {
 									"text": "Ultimate Fragment"
@@ -20,17 +31,7 @@
 										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
 										{"text": " Switch","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"switch": {
-										"ultimate_fragment": true
-									},
-									"smithed": {
-										"id": "switch:ultimate_fragment",
-										"origin": "switch",
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

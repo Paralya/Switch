@@ -36,5 +36,11 @@ execute if score #dependency_error switch.data matches 0 unless score $bs.string
 execute if score #dependency_error switch.data matches 0 if score $bs.string.major load.status matches 3 unless score $bs.string.minor load.status matches 2.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 if score $bs.string.major load.status matches 3 if score $bs.string.minor load.status matches 2 unless score $bs.string.patch load.status matches 2.. run scoreboard players set #dependency_error switch.data 1
 execute if score #dependency_error switch.data matches 0 unless score #sheepwars.major load.status matches 2.. run scoreboard players set #dependency_error switch.data 1
-execute if score #dependency_error switch.data matches 0 if score #sheepwars.major load.status matches 2 unless score #sheepwars.minor load.status matches 1.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 if score #sheepwars.major load.status matches 2 unless score #sheepwars.minor load.status matches 4.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 unless score #golf_ball.major load.status matches 1.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 if score #golf_ball.major load.status matches 1 unless score #golf_ball.minor load.status matches 4.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 if score #golf_ball.major load.status matches 1 if score #golf_ball.minor load.status matches 4 unless score #golf_ball.patch load.status matches 5.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 unless score #shopping_kart.major load.status matches 1.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 if score #shopping_kart.major load.status matches 1 unless score #shopping_kart.minor load.status matches 3.. run scoreboard players set #dependency_error switch.data 1
+execute if score #dependency_error switch.data matches 0 if score #shopping_kart.major load.status matches 1 if score #shopping_kart.minor load.status matches 3 unless score #shopping_kart.patch load.status matches 4.. run scoreboard players set #dependency_error switch.data 1
 
