@@ -1,7 +1,7 @@
 
 #> switch:translations/modes_laser_game_shooted_both
 #
-# @executed	as @e[tag=...,scores={switch.alive=10}] & at @s
+# @executed	anchored eyes & positioned ^ ^ ^
 #
 # @within	switch:modes/laser_game/shooted_both
 #

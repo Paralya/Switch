@@ -1,7 +1,7 @@
 
 #> switch:translations/modes_laser_game_shooted_base
 #
-# @executed	at @e[tag=iris.ray]
+# @executed	anchored eyes & positioned ^ ^ ^
 #
 # @within	switch:modes/laser_game/shooted_base
 #

@@ -2,11 +2,8 @@
 # Clear slowness
 effect clear @s slowness
 
-# Use Iris to get destination
-function iris:setup/load
-data merge storage iris:input {MaxRecursionDepth:256, TargetEntities:0b}
-execute anchored eyes positioned ^ ^ ^ run function iris:get_target
-execute as @e[tag=iris.ray] at @s run function switch:modes/murder_mystery/throw/as_iris_ray
+# Use Bookshelf Raycast to get destination
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:true,entities:false,max_distance:128,on_entry_point:"function switch:modes/murder_mystery/throw/on_entry_point"}}
 
 # Summon the item
 data modify storage switch:main Rotation set from entity @s Rotation

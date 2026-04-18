@@ -1,9 +1,9 @@
 
 #> switch:modes/laser_game/shooted_player_red
 #
-# @executed	as @e[tag=...,scores={switch.alive=11}] & at @s
+# @executed	anchored eyes & positioned ^ ^ ^
 #
-# @within	switch:modes/laser_game/shoot [ as @e[tag=...,scores={switch.alive=11}] & at @s ]
+# @within	switch:modes/laser_game/shoot_hit_entity
 #
 
 function switch:modes/laser_game/shooted_both

@@ -1,9 +1,9 @@
 
 #> switch:modes/laser_game/shoot_particles
 #
-# @executed	as @e[tag=iris.ray] & at @s
+# @executed	as @e[type=marker,tag=switch.shoot_ray,limit=1] & at @s
 #
-# @within	switch:modes/laser_game/shoot [ as @e[tag=iris.ray] & at @s ]
+# @within	switch:modes/laser_game/shoot [ as @e[type=marker,tag=switch.shoot_ray,limit=1] & at @s ]
 #			switch:modes/laser_game/shoot_particles [ at @s ]
 #
 
