@@ -5,9 +5,9 @@
 #
 # @within	switch:modes/minigolf/record_tellraw_macro {shots:"$(shots)",player:"$(player)",time:"$(time)"}
 #
-# @args		shots (unknown)
-#			player (unknown)
-#			time (unknown)
+# @args		shots (string)
+#			player (string)
+#			time (string)
 #
 
 # French

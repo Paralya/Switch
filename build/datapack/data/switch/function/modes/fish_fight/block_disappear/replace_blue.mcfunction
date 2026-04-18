@@ -1,7 +1,9 @@
 
 #> switch:modes/fish_fight/block_disappear/replace_blue
 #
-# @within	???
+# @executed	at @a[tag=!detached]
+#
+# @within	switch:modes/fish_fight/block_disappear/global_tick replace blue_concrete [ at @a[tag=!detached] ]
 #
 
 setblock ~ ~ ~ minecraft:blue_wool

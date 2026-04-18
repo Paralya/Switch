@@ -12,6 +12,8 @@
 							"topaz": true
 						}
 					},
+					"id": "switch:topaz",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

@@ -21,6 +21,8 @@
 							"helmet": true
 						}
 					},
+					"id": "switch:emerald_helmet",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

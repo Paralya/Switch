@@ -13,6 +13,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"armor": {"stardust": true,"helmet": true}},
+										"id": "switch:stardust_helmet",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

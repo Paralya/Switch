@@ -13,6 +13,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"raw": {"californium": true}},
+										"id": "switch:raw_californium",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

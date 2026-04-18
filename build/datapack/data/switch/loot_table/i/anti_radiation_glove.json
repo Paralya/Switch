@@ -26,6 +26,8 @@
 										"anti_radiation_glove": true
 									},
 									"smithed": {
+										"id": "switch:anti_radiation_glove",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

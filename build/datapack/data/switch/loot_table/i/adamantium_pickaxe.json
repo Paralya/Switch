@@ -13,6 +13,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"tools": {"adamantium": true,"pickaxe": true}},
+										"id": "switch:adamantium_pickaxe",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

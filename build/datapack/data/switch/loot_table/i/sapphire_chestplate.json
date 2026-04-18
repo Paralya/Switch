@@ -13,6 +13,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"armor": {"sapphire": true,"chestplate": true}},
+										"id": "switch:sapphire_chestplate",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

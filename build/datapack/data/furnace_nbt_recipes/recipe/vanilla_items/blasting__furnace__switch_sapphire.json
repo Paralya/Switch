@@ -12,6 +12,8 @@
 							"sapphire": true
 						}
 					},
+					"id": "switch:sapphire",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

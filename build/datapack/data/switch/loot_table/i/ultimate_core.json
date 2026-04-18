@@ -26,6 +26,8 @@
 										"ultimate_core": true
 									},
 									"smithed": {
+										"id": "switch:ultimate_core",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

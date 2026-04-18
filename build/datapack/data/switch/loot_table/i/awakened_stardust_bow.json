@@ -26,6 +26,8 @@
 										"awakened_stardust_bow": true
 									},
 									"smithed": {
+										"id": "switch:awakened_stardust_bow",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

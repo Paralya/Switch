@@ -26,6 +26,8 @@
 										"stardust_essence": true
 									},
 									"smithed": {
+										"id": "switch:stardust_essence",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

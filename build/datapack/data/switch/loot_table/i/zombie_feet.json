@@ -39,6 +39,8 @@
 										"zombie_feet": true
 									},
 									"smithed": {
+										"id": "switch:zombie_feet",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

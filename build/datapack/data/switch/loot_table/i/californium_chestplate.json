@@ -13,6 +13,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"armor": {"californium": true,"chestplate": true}},
+										"id": "switch:californium_chestplate",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

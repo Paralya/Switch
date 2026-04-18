@@ -26,6 +26,8 @@
 										"quarry_configurator": true
 									},
 									"smithed": {
+										"id": "switch:quarry_configurator",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

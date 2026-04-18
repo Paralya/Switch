@@ -26,6 +26,8 @@
 										"uranium_shard": true
 									},
 									"smithed": {
+										"id": "switch:uranium_shard",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"californium_waste": true
 									},
 									"smithed": {
+										"id": "switch:californium_waste",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

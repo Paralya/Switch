@@ -26,6 +26,8 @@
 										"californium_core": true
 									},
 									"smithed": {
+										"id": "switch:californium_core",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"stardust_fragment": true
 									},
 									"smithed": {
+										"id": "switch:stardust_fragment",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

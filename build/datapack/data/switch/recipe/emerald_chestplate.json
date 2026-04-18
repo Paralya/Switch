@@ -22,6 +22,8 @@
 							"chestplate": true
 						}
 					},
+					"id": "switch:emerald_chestplate",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

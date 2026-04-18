@@ -21,6 +21,8 @@
 							"boots": true
 						}
 					},
+					"id": "switch:emerald_boots",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

@@ -23,6 +23,8 @@
 							"pickaxe": true
 						}
 					},
+					"id": "switch:emerald_pickaxe",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

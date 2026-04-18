@@ -24,6 +24,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"block": {"sapphire": true}},
+										"id": "switch:sapphire_block",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

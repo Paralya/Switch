@@ -3,7 +3,7 @@
 #
 # @within	switch:shop/description {id:"$(id)"}
 #
-# @args		id (unknown)
+# @args		id (string)
 #
 
 # French

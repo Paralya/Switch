@@ -36,6 +36,8 @@
 										"stardust_apple": true
 									},
 									"smithed": {
+										"id": "switch:stardust_apple",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

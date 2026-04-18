@@ -26,6 +26,8 @@
 										"stardust_config": true
 									},
 									"smithed": {
+										"id": "switch:stardust_config",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

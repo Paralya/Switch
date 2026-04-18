@@ -26,6 +26,8 @@
 										"ultimate_fragment": true
 									},
 									"smithed": {
+										"id": "switch:ultimate_fragment",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

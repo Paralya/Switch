@@ -12,6 +12,8 @@
 							"uranium": true
 						}
 					},
+					"id": "switch:uranium_nugget",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

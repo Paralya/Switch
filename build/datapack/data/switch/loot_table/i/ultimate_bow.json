@@ -26,6 +26,8 @@
 										"ultimate_bow": true
 									},
 									"smithed": {
+										"id": "switch:ultimate_bow",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

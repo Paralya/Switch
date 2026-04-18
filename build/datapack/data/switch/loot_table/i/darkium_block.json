@@ -26,6 +26,8 @@
 										"darkium_block": true
 									},
 									"smithed": {
+										"id": "switch:darkium_block",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

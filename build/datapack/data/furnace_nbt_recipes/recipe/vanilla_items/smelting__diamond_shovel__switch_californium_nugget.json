@@ -12,6 +12,8 @@
 							"californium": true
 						}
 					},
+					"id": "switch:californium_nugget",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

@@ -22,6 +22,8 @@
 							"leggings": true
 						}
 					},
+					"id": "switch:emerald_leggings",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

@@ -26,6 +26,8 @@
 										"ender_stardust_ore": true
 									},
 									"smithed": {
+										"id": "switch:ender_stardust_ore",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

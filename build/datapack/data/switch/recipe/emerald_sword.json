@@ -23,6 +23,8 @@
 							"sword": true
 						}
 					},
+					"id": "switch:emerald_sword",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

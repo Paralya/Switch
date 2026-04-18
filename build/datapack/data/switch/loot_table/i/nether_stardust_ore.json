@@ -26,6 +26,8 @@
 										"nether_stardust_ore": true
 									},
 									"smithed": {
+										"id": "switch:nether_stardust_ore",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

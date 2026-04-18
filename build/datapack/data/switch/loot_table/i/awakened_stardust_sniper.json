@@ -26,6 +26,8 @@
 										"awakened_stardust_sniper": true
 									},
 									"smithed": {
+										"id": "switch:awakened_stardust_sniper",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -31,6 +31,8 @@
 										"banana": true
 									},
 									"smithed": {
+										"id": "switch:banana",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

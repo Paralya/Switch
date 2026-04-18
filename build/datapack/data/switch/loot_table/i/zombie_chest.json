@@ -39,6 +39,8 @@
 										"zombie_chest": true
 									},
 									"smithed": {
+										"id": "switch:zombie_chest",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

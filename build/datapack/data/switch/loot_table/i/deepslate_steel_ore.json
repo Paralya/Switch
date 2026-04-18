@@ -24,6 +24,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"block": {"steel": true},"ore": {"steel": true}},
+										"id": "switch:deepslate_steel_ore",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

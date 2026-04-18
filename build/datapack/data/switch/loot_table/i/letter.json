@@ -26,6 +26,8 @@
 										"letter": true
 									},
 									"smithed": {
+										"id": "switch:letter",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

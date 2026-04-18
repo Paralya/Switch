@@ -24,6 +24,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"block": {"ruby": true},"ore": {"ruby": true}},
+										"id": "switch:ruby_ore",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

@@ -12,6 +12,8 @@
 							"adamantium": true
 						}
 					},
+					"id": "switch:adamantium_fragment",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

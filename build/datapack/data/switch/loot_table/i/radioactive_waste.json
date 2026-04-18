@@ -26,6 +26,8 @@
 										"radioactive_waste": true
 									},
 									"smithed": {
+										"id": "switch:radioactive_waste",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

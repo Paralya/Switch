@@ -24,6 +24,8 @@
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"block": {"awakened_stardust": true},"ore": {"awakened_stardust": true}},
+										"id": "switch:awakened_stardust_ore",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									},
 									"switch": {

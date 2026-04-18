@@ -28,6 +28,8 @@
 										"element_115": true
 									},
 									"smithed": {
+										"id": "switch:element_115",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

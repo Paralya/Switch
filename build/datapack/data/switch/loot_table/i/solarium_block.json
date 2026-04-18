@@ -26,6 +26,8 @@
 										"solarium_block": true
 									},
 									"smithed": {
+										"id": "switch:solarium_block",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

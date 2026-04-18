@@ -23,6 +23,8 @@
 							"axe": true
 						}
 					},
+					"id": "switch:emerald_axe",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

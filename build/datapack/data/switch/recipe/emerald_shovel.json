@@ -23,6 +23,8 @@
 							"shovel": true
 						}
 					},
+					"id": "switch:emerald_shovel",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

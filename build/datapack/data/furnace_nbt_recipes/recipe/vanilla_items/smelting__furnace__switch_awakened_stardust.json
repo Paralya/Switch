@@ -12,6 +12,8 @@
 							"awakened_stardust": true
 						}
 					},
+					"id": "switch:awakened_stardust",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

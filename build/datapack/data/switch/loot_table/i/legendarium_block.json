@@ -26,6 +26,8 @@
 										"legendarium_block": true
 									},
 									"smithed": {
+										"id": "switch:legendarium_block",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

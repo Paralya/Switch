@@ -26,6 +26,8 @@
 										"dog_excrement": true
 									},
 									"smithed": {
+										"id": "switch:dog_excrement",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

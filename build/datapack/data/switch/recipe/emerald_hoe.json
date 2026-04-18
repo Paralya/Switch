@@ -23,6 +23,8 @@
 							"hoe": true
 						}
 					},
+					"id": "switch:emerald_hoe",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

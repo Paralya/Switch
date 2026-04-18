@@ -26,6 +26,8 @@
 										"travel_staff": true
 									},
 									"smithed": {
+										"id": "switch:travel_staff",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

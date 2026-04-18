@@ -5,7 +5,7 @@
 #
 # @within	switch:player/username_change/with_macro {UUID:"$(UUID)",username:"$(username)"}
 #
-# @args		UUID (list)
+# @args		UUID (string)
 #			username (string)
 #
 

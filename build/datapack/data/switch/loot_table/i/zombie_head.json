@@ -39,6 +39,8 @@
 										"zombie_head": true
 									},
 									"smithed": {
+										"id": "switch:zombie_head",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"storm_wand": true
 									},
 									"smithed": {
+										"id": "switch:storm_wand",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

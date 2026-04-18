@@ -26,6 +26,8 @@
 										"dragon_pearl": true
 									},
 									"smithed": {
+										"id": "switch:dragon_pearl",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

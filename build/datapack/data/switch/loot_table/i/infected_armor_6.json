@@ -40,6 +40,8 @@
 										"infected_armor_6": true
 									},
 									"smithed": {
+										"id": "switch:infected_armor_6",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

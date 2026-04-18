@@ -3,7 +3,7 @@
 #
 # @within	switch:player/update_stats_storage/every_player_loop {player:"$(username)"}
 #
-# @args		player (unknown)
+# @args		player (string)
 #
 
 # Get username

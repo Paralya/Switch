@@ -12,6 +12,8 @@
 							"stardust": true
 						}
 					},
+					"id": "switch:stardust_ingot",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

@@ -26,6 +26,8 @@
 										"ultimate_bullet": true
 									},
 									"smithed": {
+										"id": "switch:ultimate_bullet",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

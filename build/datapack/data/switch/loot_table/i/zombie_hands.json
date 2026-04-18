@@ -29,6 +29,8 @@
 										"zombie_hands": true
 									},
 									"smithed": {
+										"id": "switch:zombie_hands",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

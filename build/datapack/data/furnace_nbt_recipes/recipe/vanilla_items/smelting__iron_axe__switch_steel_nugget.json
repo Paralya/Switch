@@ -12,6 +12,8 @@
 							"steel": true
 						}
 					},
+					"id": "switch:steel_nugget",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

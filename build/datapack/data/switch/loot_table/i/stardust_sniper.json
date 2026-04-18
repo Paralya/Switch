@@ -26,6 +26,8 @@
 										"stardust_sniper": true
 									},
 									"smithed": {
+										"id": "switch:stardust_sniper",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

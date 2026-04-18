@@ -26,6 +26,8 @@
 										"wormhole_potion": true
 									},
 									"smithed": {
+										"id": "switch:wormhole_potion",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

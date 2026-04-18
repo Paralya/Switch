@@ -35,6 +35,8 @@
 										"infected_sword_6": true
 									},
 									"smithed": {
+										"id": "switch:infected_sword_6",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

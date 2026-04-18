@@ -26,6 +26,8 @@
 										"ultimate_elytra": true
 									},
 									"smithed": {
+										"id": "switch:ultimate_elytra",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

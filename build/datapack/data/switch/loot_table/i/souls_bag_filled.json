@@ -26,6 +26,8 @@
 										"souls_bag_filled": true
 									},
 									"smithed": {
+										"id": "switch:souls_bag_filled",
+										"origin": "switch",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

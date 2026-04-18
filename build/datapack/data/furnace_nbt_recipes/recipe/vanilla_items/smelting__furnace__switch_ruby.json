@@ -12,6 +12,8 @@
 							"ruby": true
 						}
 					},
+					"id": "switch:ruby",
+					"origin": "switch",
 					"ignore": {
 						"functionality": true,
 						"crafting": true
