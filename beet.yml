@@ -63,7 +63,7 @@ meta:
         # Optional list of destination paths where generated files will be copied
         build_copy_destinations:
             # Paths to copy the datapack(s) to
-            datapack: ["_switch_dump"]
+            datapack: ["_switch_dump","sftp://switch_paralya@coll.paralya.fr/sftp/Switch/datapacks"]
             # Paths to copy the resource pack(s) to
             resource_pack: ["D:/minecraft/snapshot/resourcepacks", "D:/minecraft/latest/resourcepacks"]
 
