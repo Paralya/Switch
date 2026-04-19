@@ -3,9 +3,9 @@
 $data modify storage switch:main coupdetat set from storage switch:main minigames[{index_hundred:$(index_hundred)}]
 
 # Set up score vote
-scoreboard objectives remove switch.coupdetat_vote
-scoreboard objectives add switch.coupdetat_vote trigger
-scoreboard players enable @a[tag=!detached] switch.coupdetat_vote
+scoreboard objectives remove switch.trigger.coupdetat_vote
+scoreboard objectives add switch.trigger.coupdetat_vote trigger
+scoreboard players enable @a[tag=!detached] switch.trigger.coupdetat_vote
 scoreboard players set #coupdetat switch.data 1
 
 # Remove 100 sapphires from the player

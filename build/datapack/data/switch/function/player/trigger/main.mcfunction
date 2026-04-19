@@ -23,6 +23,7 @@ execute unless score @s switch.trigger.rating matches 0 run function switch:play
 execute unless score @s switch.trigger.night_vision matches 0 run function switch:player/trigger/night_vision/main
 execute unless score @s switch.trigger.music matches 0 run function switch:player/trigger/music/main
 execute unless score @s switch.trigger.coupdetat matches 0 run function switch:player/trigger/coupdetat/main
+execute if score @s switch.trigger.coupdetat_vote matches 1 run function switch:player/trigger/coupdetat/player_vote
 
 function switch:player/trigger/enable
 

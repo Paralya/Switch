@@ -14,7 +14,7 @@ summon wolf 18011 112 18008 {Tags:["switch.coupdetat.stoupy"],active_effects:[{i
 
 # Stop the coup d'état vote
 scoreboard players set #coupdetat switch.data 0
-scoreboard objectives remove switch.coupdetat_vote
+scoreboard objectives remove switch.trigger.coupdetat_vote
 
 # Create the bossbar
 bossbar add switch:coupdetat {"text":"Coup d'état","color":"green"}
