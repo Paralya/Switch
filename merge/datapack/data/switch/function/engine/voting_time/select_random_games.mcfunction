@@ -13,6 +13,8 @@ execute if score #index switch.data matches 3.. if score #random switch.data = #
 execute if score #index switch.data matches 4.. if score #random switch.data = #game_3 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #index switch.data matches 5.. if score #random switch.data = #game_4 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #index switch.data matches 6.. if score #random switch.data = #game_5 switch.data run scoreboard players add #wrong switch.data 1
+execute if score #index switch.data matches 7.. if score #random switch.data = #game_6 switch.data run scoreboard players add #wrong switch.data 1
+execute if score #index switch.data matches 8.. if score #random switch.data = #game_7 switch.data run scoreboard players add #wrong switch.data 1
 execute if score #wrong switch.data matches 0 if score #player_count switch.data < #min_players switch.data run scoreboard players add #wrong switch.data 1
 execute if score #wrong switch.data matches 0 if score #player_count switch.data > #max_players switch.data run scoreboard players add #wrong switch.data 1
 
@@ -22,9 +24,11 @@ execute if score #wrong switch.data matches 0 if score #index switch.data matche
 execute if score #wrong switch.data matches 0 if score #index switch.data matches 4 run scoreboard players operation #game_4 switch.data = #random switch.data
 execute if score #wrong switch.data matches 0 if score #index switch.data matches 5 run scoreboard players operation #game_5 switch.data = #random switch.data
 execute if score #wrong switch.data matches 0 if score #index switch.data matches 6 run scoreboard players operation #game_6 switch.data = #random switch.data
+execute if score #wrong switch.data matches 0 if score #index switch.data matches 7 run scoreboard players operation #game_7 switch.data = #random switch.data
+execute if score #wrong switch.data matches 0 if score #index switch.data matches 8 run scoreboard players operation #game_8 switch.data = #random switch.data
 execute if score #index switch.data matches 2.. if score #wrong switch.data matches 0 run scoreboard players add #index switch.data 1
 execute if score #index switch.data matches 1 run scoreboard players add #index switch.data 1
 
 scoreboard players remove #max_tries switch.data 1
-execute if score #max_tries switch.data matches 1.. if score #index switch.data matches ..6 run function switch:engine/voting_time/select_random_games
+execute if score #max_tries switch.data matches 1.. if score #index switch.data matches ..8 run function switch:engine/voting_time/select_random_games
 

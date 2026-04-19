@@ -11,6 +11,8 @@ scoreboard players set #vote_game_3 switch.data 0
 scoreboard players set #vote_game_4 switch.data 0
 scoreboard players set #vote_game_5 switch.data 0
 scoreboard players set #vote_game_6 switch.data 0
+scoreboard players set #vote_game_7 switch.data 0
+scoreboard players set #vote_game_8 switch.data 0
 
 tag @a[tag=!detached,scores={switch.trigger.game_vote=1..}] add switch.temp
 execute as @a[tag=switch.temp] at @s run playsound ui.button.click ambient @s
@@ -21,6 +23,8 @@ execute store result score #vote_game_3 switch.data if entity @a[tag=!detached,s
 execute store result score #vote_game_4 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-4}]
 execute store result score #vote_game_5 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-5}]
 execute store result score #vote_game_6 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-6}]
+execute store result score #vote_game_7 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-7}]
+execute store result score #vote_game_8 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-8}]
 
 scoreboard players set #success switch.data 1
 

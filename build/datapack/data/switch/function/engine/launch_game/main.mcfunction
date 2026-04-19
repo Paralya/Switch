@@ -11,6 +11,7 @@ scoreboard players add total_games switch.last_total_games 1
 
 function switch:engine/voting_time/update_votes
 
+# max_game is used an advancement below (we exclude random)
 scoreboard players set #max switch.data 0
 scoreboard players set #max_game switch.data -10
 execute if score #vote_game_1 switch.data > #max switch.data run scoreboard players set #max_game switch.data -1
@@ -23,7 +24,11 @@ execute if score #vote_game_4 switch.data > #max switch.data run scoreboard play
 execute if score #vote_game_4 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_4 switch.data
 execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players set #max_game switch.data -5
 execute if score #vote_game_5 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_5 switch.data
+execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players set #max_game switch.data -6
 execute if score #vote_game_6 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_6 switch.data
+execute if score #vote_game_7 switch.data > #max switch.data run scoreboard players set #max_game switch.data -7
+execute if score #vote_game_7 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_7 switch.data
+execute if score #vote_game_8 switch.data > #max switch.data run scoreboard players operation #max switch.data = #vote_game_8 switch.data
 
 data modify storage switch:main voted_games set value []
 data modify storage switch:main current_game set value ""
@@ -33,6 +38,8 @@ execute if score #vote_game_3 switch.data = #max switch.data run data modify sto
 execute if score #vote_game_4 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[3]
 execute if score #vote_game_5 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[4]
 execute if score #vote_game_6 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[5]
+execute if score #vote_game_7 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[6]
+execute if score #vote_game_8 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[7]
 
 execute store result score #modulo_rand switch.data run data get storage switch:main voted_games
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game set from storage switch:main voted_games[0].id
@@ -43,7 +50,6 @@ function switch:translations/engine_launch_game_
 
 # Advancement
 execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"feed_fast"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"laser_game"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
 execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"mlg_a_coudre"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
 execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"de_a_coudre"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
 execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"thunder_spear"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
