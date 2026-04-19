@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/block_disappear/on_new_marker
 #
-# @executed	at @a[tag=!detached]
+# @executed	at @a[tag=!detached,gamemode=!spectator]
 #
 # @within	switch:modes/fish_fight/block_disappear/replace_blue
 #			switch:modes/fish_fight/block_disappear/replace_red

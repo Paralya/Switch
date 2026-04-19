@@ -10,7 +10,7 @@ scoreboard players add #one_shot_ticks switch.data 1
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/one_shot/no_drop
 
 # Custom Saturation & Mort
-execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
+execute as @a[tag=!detached,gamemode=!spectator] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
 function switch:utils/on_death_run_function {function:"switch:modes/one_shot/death"}
 
 # Kill arrows that are in ground

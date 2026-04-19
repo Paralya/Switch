@@ -6,11 +6,11 @@
 # @within	switch:tick [ as @e[type=item_display,tag=switch.cinematic] ]
 #
 
-# Make sure the player is spectating the entity
+# Make sure the player is spectating the entity (one time per second)
 scoreboard players operation #player_id switch.id = @s switch.id
 tag @p[predicate=switch:has_same_id] add switch.temp
-tp @p[tag=switch.temp] @s
-spectate @s @p[tag=switch.temp]
+execute if score #tick switch.data matches 5 run tp @p[tag=switch.temp] @s
+execute if score #tick switch.data matches 5 run spectate @s @p[tag=switch.temp]
 
 # Handle delay before starting the cinematic
 execute store result score #cinematic_delay switch.data run data get entity @s item.components."minecraft:custom_data".delay

@@ -5,7 +5,7 @@ scoreboard players add #fish_fight_ticks switch.data 1
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/fish_fight/no_drop
 
 # Custom Saturation
-execute as @a[tag=!detached] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
+execute as @a[tag=!detached,gamemode=!spectator] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
 
 # Détection si un joueur/axolotl est en mer
 execute if data storage switch:main {map:"airdox_fish_fight"} as @a[tag=!detached,gamemode=survival,scores={switch.alive=1..,switch.temp.cooldown=1..}] at @s if entity @s[y=20,dy=105] run function switch:modes/fish_fight/tp_airdox

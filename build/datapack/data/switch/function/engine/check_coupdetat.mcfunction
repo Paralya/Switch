@@ -7,10 +7,10 @@
 #
 
 # Check if there is a coup d'état in progress, if so, check if the vote is successful (>= 50% of players)
-execute store result score #coupdetat_votes switch.data if entity @a[scores={switch.trigger.coupdetat_vote=1},tag=!detached]
-scoreboard players operation #percentage switch.data = #nb_attached switch.data
+execute store result score #coupdetat_votes switch.data if entity @a[scores={switch.trigger.coupdetat_vote=-1},tag=!detached]
+scoreboard players operation #percentage switch.data = #coupdetat_votes switch.data
 scoreboard players operation #percentage switch.data *= #100 switch.data
-scoreboard players operation #percentage switch.data /= #coupdetat_votes switch.data
+scoreboard players operation #percentage switch.data /= #nb_attached switch.data
 
 # If the number of votes is < 50% of the players, the coup d'état is unsuccessful
 execute if score #percentage switch.data matches ..49 run scoreboard players set #coupdetat switch.data 0
