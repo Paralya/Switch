@@ -14,7 +14,7 @@ SPECTRES_GAME: dict = {
 			"fr": "Vous avez vendu un niveau de fleches pour votre classe Spectre !",
 			"en": "You have sold a level of arrows for your Spectre class!"
 		},
-		"upgrade_name": {"fr": "Nombre de fleches", "en": "Number of arrows"},
+		"upgrade_name": {"fr": "Nombre de fleches (spectre)", "en": "Number of arrows (spectre)"},
 		"upgrades": [
 			{"price": 50, "hover_text": {"fr": "24 -> 26 fleches", "en": "24 -> 26 arrows"}},
 			{"price": 100, "hover_text": {"fr": "26 -> 28 fleches", "en": "26 -> 28 arrows"}},
@@ -40,7 +40,7 @@ SPECTRES_GAME: dict = {
 			"fr": "Vous avez vendu un niveau de TNT pour votre classe Spectre !",
 			"en": "You have sold a level of TNT for your Spectre class!"
 		},
-		"upgrade_name": {"fr": "Nombre de TNT", "en": "Number of TNT"},
+		"upgrade_name": {"fr": "Nombre de TNT (spectre)", "en": "Number of TNT (spectre)"},
 		"upgrades": [
 			{"price": 50, "hover_text": {"fr": "3 -> 4 TNT", "en": "3 -> 4 TNT"}},
 			{"price": 100, "hover_text": {"fr": "4 -> 5 TNT", "en": "4 -> 5 TNT"}},
@@ -60,7 +60,7 @@ SPECTRES_GAME: dict = {
 			"fr": "Vous avez vendu un niveau de fleches pour votre classe Visible !",
 			"en": "You have sold a level of arrows for your Visible class!"
 		},
-		"upgrade_name": {"fr": "Nombre de fleches", "en": "Number of arrows"},
+		"upgrade_name": {"fr": "Nombre de fleches (visible)", "en": "Number of arrows (visible)"},
 		"upgrades": [
 			{"price": 50, "hover_text": {"fr": "16 -> 18 fleches", "en": "16 -> 18 arrows"}},
 			{"price": 100, "hover_text": {"fr": "18 -> 20 fleches", "en": "18 -> 20 arrows"}},
@@ -85,7 +85,7 @@ SPECTRES_GAME: dict = {
 			"fr": "Vous avez vendu un niveau de TNT pour votre classe Visible !",
 			"en": "You have sold a level of TNT for your Visible class!"
 		},
-		"upgrade_name": {"fr": "Nombre de TNT", "en": "Number of TNT"},
+		"upgrade_name": {"fr": "Nombre de TNT (visible)", "en": "Number of TNT (visible)"},
 		"upgrades": [
 			{"price": 50, "hover_text": {"fr": "3 -> 4 TNT", "en": "3 -> 4 TNT"}},
 			{"price": 100, "hover_text": {"fr": "4 -> 5 TNT", "en": "4 -> 5 TNT"}},

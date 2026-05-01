@@ -8,7 +8,7 @@
 
 ## File attribut: Ignore translations
 
-# Number of arrows
+# Number of arrows (spectre)
 execute if score @s switch.trigger.shop matches 501 if score @s switch.spectres_game.sp_arrows matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 501 if score @s switch.spectres_game.sp_arrows matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 501 if score @s switch.spectres_game.sp_arrows matches 2 if score @s switch.money matches 150.. store success score #success switch.data run scoreboard players remove @s switch.money 150
@@ -24,7 +24,7 @@ execute if score @s switch.trigger.shop matches 501 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 501 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 
-# Selling Number of arrows
+# Selling Number of arrows (spectre)
 execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 1 store success score #success switch.data run scoreboard players add @s switch.money 40
 execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 2 store success score #success switch.data run scoreboard players add @s switch.money 80
 execute if score @s switch.trigger.shop matches 10501 if score @s switch.spectres_game.sp_arrows matches 3 store success score #success switch.data run scoreboard players add @s switch.money 120
@@ -39,7 +39,7 @@ execute if score @s switch.trigger.shop matches 10501 if score #success switch.d
 execute if score @s switch.trigger.shop matches 10501 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 
 
-# Number of TNT
+# Number of TNT (spectre)
 execute if score @s switch.trigger.shop matches 502 if score @s switch.spectres_game.sp_tnt matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 502 if score @s switch.spectres_game.sp_tnt matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 502 if score @s switch.spectres_game.sp_tnt matches 2 if score @s switch.money matches 150.. store success score #success switch.data run scoreboard players remove @s switch.money 150
@@ -49,7 +49,7 @@ execute if score @s switch.trigger.shop matches 502 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 502 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 
-# Selling Number of TNT
+# Selling Number of TNT (spectre)
 execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 1 store success score #success switch.data run scoreboard players add @s switch.money 40
 execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 2 store success score #success switch.data run scoreboard players add @s switch.money 80
 execute if score @s switch.trigger.shop matches 10502 if score @s switch.spectres_game.sp_tnt matches 3.. store success score #success switch.data run scoreboard players add @s switch.money 120
@@ -58,7 +58,7 @@ execute if score @s switch.trigger.shop matches 10502 if score #success switch.d
 execute if score @s switch.trigger.shop matches 10502 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 
 
-# Number of arrows
+# Number of arrows (visible)
 execute if score @s switch.trigger.shop matches 503 if score @s switch.spectres_game.vi_arrows matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 503 if score @s switch.spectres_game.vi_arrows matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 503 if score @s switch.spectres_game.vi_arrows matches 2 if score @s switch.money matches 150.. store success score #success switch.data run scoreboard players remove @s switch.money 150
@@ -73,7 +73,7 @@ execute if score @s switch.trigger.shop matches 503 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 503 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 
-# Selling Number of arrows
+# Selling Number of arrows (visible)
 execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 1 store success score #success switch.data run scoreboard players add @s switch.money 40
 execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 2 store success score #success switch.data run scoreboard players add @s switch.money 80
 execute if score @s switch.trigger.shop matches 10503 if score @s switch.spectres_game.vi_arrows matches 3 store success score #success switch.data run scoreboard players add @s switch.money 120
@@ -87,7 +87,7 @@ execute if score @s switch.trigger.shop matches 10503 if score #success switch.d
 execute if score @s switch.trigger.shop matches 10503 if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
 
 
-# Number of TNT
+# Number of TNT (visible)
 execute if score @s switch.trigger.shop matches 504 if score @s switch.spectres_game.vi_tnt matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 504 if score @s switch.spectres_game.vi_tnt matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100
 execute if score @s switch.trigger.shop matches 504 if score @s switch.spectres_game.vi_tnt matches 2 if score @s switch.money matches 150.. store success score #success switch.data run scoreboard players remove @s switch.money 150
@@ -97,7 +97,7 @@ execute if score @s switch.trigger.shop matches 504 if score #success switch.dat
 execute if score @s switch.trigger.shop matches 504 if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 
 
-# Selling Number of TNT
+# Selling Number of TNT (visible)
 execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 1 store success score #success switch.data run scoreboard players add @s switch.money 40
 execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 2 store success score #success switch.data run scoreboard players add @s switch.money 80
 execute if score @s switch.trigger.shop matches 10504 if score @s switch.spectres_game.vi_tnt matches 3.. store success score #success switch.data run scoreboard players add @s switch.money 120
