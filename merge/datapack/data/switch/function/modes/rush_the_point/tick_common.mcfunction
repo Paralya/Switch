@@ -22,6 +22,10 @@ execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={SelectedItem:{c
 execute as @a[tag=!detached,scores={switch.right_click=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{switch:{"fireball_wand":true}}}}}] unless score @s switch.temp.fireball_cooldown matches 1.. at @s run function switch:modes/rush_the_point/fireball/right_click
 execute as @e[type=armor_stand,tag=switch.fireball,predicate=!switch:has_vehicle] at @s positioned ~ ~-1 ~ run function switch:modes/rush_the_point/explode_tnt
 
+# Kill withers after 60s
+scoreboard players add @e[type=wither] switch.temp.cooldown 1
+kill @e[type=wither,scores={switch.temp.cooldown=1200..}]
+
 # Kill all arrows in ground & Manage snowballs
 execute at @e[type=snowball] positioned ~ ~-2 ~ run fill ~-0.25 ~ ~-0.25 ~0.25 ~ ~0.25 cut_sandstone replace air
 kill @e[type=arrow,nbt={inBlockState:{}}]
