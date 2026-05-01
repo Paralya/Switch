@@ -13,6 +13,9 @@ function switch:engine/log_message/apply
 # Clear voting message
 schedule clear switch:engine/voting_time/schedule_message
 
+# Repair dependencies libraries
+function #switch:dependencies
+
 # Launch start signal
 data modify storage switch:main input set value {id:""}
 data modify storage switch:main input.id set from storage switch:main current_game
