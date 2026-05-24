@@ -7,6 +7,7 @@ kill @e[type=sheep,distance=..200]
 kill @e[type=falling_block,distance=..200,nbt={Time:20}]
 
 # Duality Jump (tick)
+# TODO: optimize merge block
 execute if score #players_in_lobby switch.data matches 1.. run data merge block 20 80 93 {Lock:"jump_duo",Items:[{Count:1b,id:"minecraft:spectral_arrow"}]}
 execute if score #players_in_lobby switch.data matches 1.. run data merge block 27 80 90 {Lock:"jump_duo",Items:[{Count:1b,id:"minecraft:spectral_arrow"}]}
 execute if score #players_in_lobby switch.data matches 1.. if block 45 87 90 stone_button[powered=true] run setblock 44 86 90 water

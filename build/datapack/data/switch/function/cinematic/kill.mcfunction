@@ -1,7 +1,7 @@
 
 #> switch:cinematic/kill
 #
-# @executed	as @e[type=item_display,tag=switch.cinematic]
+# @executed	at @a[tag=switch.temp,limit=1]
 #
 # @within	switch:cinematic/finish
 #			switch:player/trigger/detach/basic_stuff [ as @e[tag=switch.cinematic,predicate=switch:has_same_id] ]

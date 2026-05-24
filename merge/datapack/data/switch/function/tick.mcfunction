@@ -18,7 +18,7 @@ execute unless score #engine_state switch.data matches 0 unless entity @a[tag=!d
 execute if score #cut_clean switch.data matches 1 as @e[type=item,tag=!switch.cut_clean,nbt={Age:2s}] run function switch:cut_clean
 
 # Cinematic entities
-execute if score #cinematic_entities switch.data matches 1.. as @e[type=item_display,tag=switch.cinematic] run function switch:cinematic/entity_tick
+execute if score #cinematic_entities switch.data matches 1.. as @e[type=item_display,tag=switch.cinematic] at @s run function switch:cinematic/entity_tick_at_self
 
 # Kill players out of the map
 execute if score #engine_state switch.data matches 3 as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ #switch:out_of_map run function switch:player/kill_out_of_map

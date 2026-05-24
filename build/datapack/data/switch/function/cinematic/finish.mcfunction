@@ -1,16 +1,16 @@
 
 #> switch:cinematic/finish
 #
-# @executed	as @e[type=item_display,tag=switch.cinematic]
+# @executed	at @a[tag=switch.temp,limit=1]
 #
-# @within	switch:cinematic/entity_tick
+# @within	switch:cinematic/entity_tick_at_player
 #
 
 # Restore the player's gamemode
-execute at @s run tp @a[tag=switch.temp] ~ ~-1.6 ~ ~ ~
-execute if entity @s[tag=switch.was_survival] run gamemode survival @a[tag=switch.temp]
-execute if entity @s[tag=switch.was_adventure] run gamemode adventure @a[tag=switch.temp]
-execute if entity @s[tag=switch.was_creative] run gamemode creative @a[tag=switch.temp]
+execute at @s run tp @a[tag=switch.temp,limit=1] ~ ~-1.6 ~ ~ ~
+execute if entity @s[tag=switch.was_survival] positioned ~ ~-1.6 ~ run gamemode survival @a[distance=0,tag=switch.temp,limit=1]
+execute if entity @s[tag=switch.was_adventure] positioned ~ ~-1.6 ~ run gamemode adventure @a[distance=0,tag=switch.temp,limit=1]
+execute if entity @s[tag=switch.was_creative] positioned ~ ~-1.6 ~ run gamemode creative @a[distance=0,tag=switch.temp,limit=1]
 
 # Kill the entity
 function switch:cinematic/kill
