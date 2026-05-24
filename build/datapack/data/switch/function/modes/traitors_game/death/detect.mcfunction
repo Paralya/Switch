@@ -13,14 +13,15 @@ execute store success score #success switch.data run tag @a[scores={switch.alive
 
 execute if score #success switch.data matches 0 run tag @s add switch.player_dead
 execute if score #success switch.data matches 1 run tp @s @p[tag=switch.temp]
-execute if score #success switch.data matches 1 run data modify storage switch:temp Inventory set from entity @p[tag=switch.temp] Inventory
-execute if score #success switch.data matches 1 run data modify storage switch:temp equipment set from entity @p[tag=switch.temp] equipment
-execute if score #success switch.data matches 1 run data modify storage switch:temp Inventory append from storage switch:temp equipment.head
-execute if score #success switch.data matches 1 run data modify storage switch:temp Inventory append from storage switch:temp equipment.chest
-execute if score #success switch.data matches 1 run data modify storage switch:temp Inventory append from storage switch:temp equipment.legs
-execute if score #success switch.data matches 1 run data modify storage switch:temp Inventory append from storage switch:temp equipment.feet
-execute if score #success switch.data matches 1 run data modify storage switch:temp Inventory append from storage switch:temp equipment.offhand
-execute if score #success switch.data matches 1 run data modify entity @s data.Inventory set from storage switch:temp Inventory
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory set from entity @p[tag=switch.temp] Inventory
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp equipment set from entity @p[tag=switch.temp] equipment
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.head
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.chest
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.legs
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.feet
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.offhand
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify entity @s data.Inventory set from storage switch:temp Inventory
+execute if score #success switch.data matches 1 run tag @p[tag=switch.temp,tag=switch.temp.inventory_changed] remove switch.temp.inventory_changed
 
 tag @a remove switch.temp
 
