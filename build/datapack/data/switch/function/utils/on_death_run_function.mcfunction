@@ -35,7 +35,7 @@
 #			switch:modes/pvpswap/tick {function:"switch:modes/pvpswap/death"}
 #			switch:modes/race/tick {function:"switch:modes/race/joined"}
 #			switch:modes/replicate_the_build/tick {function:"switch:modes/replicate_the_build/death"}
-#			switch:modes/rush_the_point/tick_common {function:"switch:modes/rush_the_point/death/player"}
+#			switch:modes/rush_the_point/tick_common {function:"switch:modes/rush_the_point/teleport_to_death"}
 #			switch:modes/sheepwars/tick {function:"switch:modes/sheepwars/death"}
 #			switch:modes/shoot_da_sheep/tick {function:"switch:modes/shoot_da_sheep/joined"}
 #			switch:modes/simultaneous_jump/tick {function:"switch:modes/simultaneous_jump/death"}

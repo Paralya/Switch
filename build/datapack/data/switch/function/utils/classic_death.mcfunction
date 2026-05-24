@@ -18,7 +18,6 @@
 #			switch:modes/protect_the_king/death
 #			switch:modes/pvpswap/death
 #			switch:modes/replicate_the_build/death
-#			switch:modes/rush_the_point/death/player
 #			switch:modes/sheepwars/death
 #			switch:modes/shoot_da_sheep/joined
 #			switch:modes/spectres_game/death/player
