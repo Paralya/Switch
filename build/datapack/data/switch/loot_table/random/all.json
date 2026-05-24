@@ -6871,6 +6871,10 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/bg_black_hole"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/element_115"
 				},
 				{

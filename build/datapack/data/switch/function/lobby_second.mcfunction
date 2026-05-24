@@ -27,6 +27,10 @@ execute positioned -123 79.5 -11 run function switch:stats/display/tick_adv {adv
 execute positioned -83 100.5 71 run function switch:stats/display/tick_adv {adv_path:"all[{id:\\\"jump_graviglitch\\\"}].players",path:"jump_graviglitch",label:"Completion Order"}
 execute positioned 36 83.5 -73 run function switch:stats/display/tick_adv {adv_path:"all[{id:\\\"jump_obsidian\\\"}].players",path:"jump_obsidian",label:"Completion Order"}
 
+# Black holes (lobby and tutorial area)
+execute positioned 0 69 0 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000001 run summon item_display ~ ~ ~ {UUID:uuid("20180612-2024-2025-2026-000000000001"),item:{id:"stone",count:1,components:{"item_model":"switch:bg_black_hole"}},Tags:["switch.black_hole_lobby"],transformation:{scale:[-300f,-300f,-300f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
+execute positioned -500 69 -500 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000002 run summon item_display ~ ~ ~ {UUID:uuid("20180612-2024-2025-2026-000000000002"),item:{id:"stone",count:1,components:{"item_model":"switch:bg_black_hole"}},Tags:["switch.black_hole_tutorial"],transformation:{scale:[-100f,-100f,-100f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
+
 ### Minigames stats
 ## None
 execute positioned 47.5 70.5 -2 run function switch:stats/display/tick_macro {path:"all.modes.TODO2.total_games",label:"???",mode:2}

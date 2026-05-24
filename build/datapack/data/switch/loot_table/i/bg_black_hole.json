@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "switch:bg_black_hole",
+								"minecraft:item_name": {
+									"text": "Bg Black Hole"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"switch": {
+										"bg_black_hole": true
+									},
+									"smithed": {
+										"id": "switch:bg_black_hole",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

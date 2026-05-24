@@ -61,3 +61,6 @@ def setup_misc_items() -> None:
 	Item(id="souls_bag_half_filled")
 	Item(id="souls_bag_filled")
 
+	# Shaders background
+	Item(id="bg_black_hole", override_model={"parent":"minecraft:block/cube_all"})
+
