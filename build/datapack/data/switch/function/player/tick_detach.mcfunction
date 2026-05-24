@@ -16,7 +16,6 @@ tp @s[team=switch.tutorial] -500 69.69 -500 0 0
 effect give @s[gamemode=survival] mining_fatigue 1 127 true
 effect give @s[gamemode=!creative,gamemode=!spectator] resistance 1 127 true
 effect give @s[gamemode=!creative,gamemode=!spectator] weakness 1 127 true
-execute if entity @s[gamemode=!creative,gamemode=!spectator] unless data entity @s {foodLevel:20} run effect give @s saturation 1 0 true
 attribute @s[gamemode=!creative,gamemode=!spectator] safe_fall_distance base set 1024
 
 ## Teleport inventory
@@ -81,7 +80,8 @@ execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity
 advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_graviglitch
 
 # GraviGlitch jump gives
-execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run clear @s suspicious_gravel[minecraft:custom_data~{switch:{"to_place":true}}]
-execute if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,nbt=!{Inventory:[{id:"minecraft:suspicious_gravel",count:42}]}] run give @s suspicious_gravel[can_place_on={blocks:["smooth_red_sandstone","orange_wall_banner","red_sandstone_wall"]},custom_data={"switch":{"to_place":true}}] 42
+execute store success score #graviglitch_give switch.data if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,predicate=!switch:nbt/enough_gravel]
+execute if score #graviglitch_give switch.data matches 1 run clear @s suspicious_gravel[minecraft:custom_data~{switch:{"to_place":true}}]
+execute if score #graviglitch_give switch.data matches 1 run give @s suspicious_gravel[can_place_on={blocks:["smooth_red_sandstone","orange_wall_banner","red_sandstone_wall"]},custom_data={"switch":{"to_place":true}}] 42
 execute unless entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37] run clear @s suspicious_gravel[custom_data~{"switch":{"to_place":true}}]
 

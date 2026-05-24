@@ -10,13 +10,13 @@
 scoreboard players set #player_nearby switch.data 0
 scoreboard players set #display_nearby switch.data 0
 execute if entity @a[distance=..64] run scoreboard players set #player_nearby switch.data 1
-$execute if score #display_$(path) switch.data matches 1 if entity @e[tag=$(path),limit=1,distance=..1] run scoreboard players set #display_nearby switch.data 1
+$execute if score #display_$(path) switch.data matches 1 if entity $(uuid) run scoreboard players set #display_nearby switch.data 1
 $execute if score #display_$(path) switch.data matches 1 if score #display_nearby switch.data matches 0 run scoreboard players set #display_$(path) switch.data 0
 
 # If there is no player nearby and the display is alive, kill it
-$execute if score #player_nearby switch.data matches 0 if score #display_nearby switch.data matches 1 run kill @e[tag=$(path),limit=1,distance=..1]
+$execute if score #player_nearby switch.data matches 0 if score #display_nearby switch.data matches 1 run kill $(uuid)
 $execute if score #player_nearby switch.data matches 0 if score #display_nearby switch.data matches 1 run scoreboard players set #display_$(path) switch.data 0
 
 # If there is a player nearby and the display is dead, summon it
-$execute if score #player_nearby switch.data matches 1 if score #display_nearby switch.data matches 0 run function switch:stats/display/adv_summon {path:"$(path)",label:"$(label)",adv_path:"$(adv_path)"}
+$execute if score #player_nearby switch.data matches 1 if score #display_nearby switch.data matches 0 run function switch:stats/display/adv_summon {path:"$(path)",label:"$(label)",adv_path:"$(adv_path)",uuid:"$(uuid)"}
 

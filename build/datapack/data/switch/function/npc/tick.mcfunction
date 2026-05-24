@@ -1,9 +1,9 @@
 
 #> switch:npc/tick
 #
-# @executed	as @e[type=armor_stand,tag=switch.npc.ofchara] & at @s
+# @executed	as 20180612-2024-2025-2026-300000000002 & at @s
 #
-# @within	switch:npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"} [ as @e[type=armor_stand,tag=switch.npc.ofchara] & at @s ]
+# @within	switch:npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"} [ as 20180612-2024-2025-2026-300000000002 & at @s ]
 #
 # @args		facing (string)
 #
@@ -30,5 +30,5 @@ execute if entity @s[tag=switch.npc.body_locked] run tp @s ~ ~ ~ ~ ~
 execute if score #body_locked switch.data matches 0 run data modify entity @s Pose.Head[1] set value 0.0f
 
 # Make sure the armor stand is riding the interaction entity
-ride @s mount @n[type=interaction,tag=switch.npc,distance=..5]
+ride @s[predicate=!switch:has_vehicle] mount @n[type=interaction,tag=switch.npc,distance=..5]
 

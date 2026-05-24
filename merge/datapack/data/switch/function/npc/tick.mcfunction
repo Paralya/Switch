@@ -21,5 +21,5 @@ execute if entity @s[tag=switch.npc.body_locked] run tp @s ~ ~ ~ ~ ~
 execute if score #body_locked switch.data matches 0 run data modify entity @s Pose.Head[1] set value 0.0f
 
 # Make sure the armor stand is riding the interaction entity
-ride @s mount @n[type=interaction,tag=switch.npc,distance=..5]
+ride @s[predicate=!switch:has_vehicle] mount @n[type=interaction,tag=switch.npc,distance=..5]
 
