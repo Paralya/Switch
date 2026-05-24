@@ -1,6 +1,8 @@
 
 # ruff: noqa: E501
 # Constants
+from stewbeet import JsonDict
+
 LOAD_FILE: str = "switch:advancements/_load"
 UPDATE_PERCENTAGES_FILE: str = "switch:advancements/update_percentages"
 CHALLENGES: list[str] = ["50", "51", "52", "53", "54", "jump_obsidian"]
@@ -106,7 +108,7 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:stone", "components": {"minecraft:item_model": "switch:stardust_sniper"}}	72	77	Stoupy	easy	Pour l'équipe !	Tirer sur la base de bonus dans une partie de Laser Game	Shoot the bonus base in Laser Game
 {"id": "minecraft:cake"}	77	78	TreekoZ	easy	Banger sucré au sucre	Préparez un gâteau en une partie de Cooking Festival	Bake a cake in Cooking Festival
 {"id": "minecraft:coal"}	78	79	Thakeax	easy	Le boulet	Mourir du premier coup de canon en Bombardment	Die from the first cannon shot in Bombardment
-{"id": "minecraft:observer"}	15	80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery	Get killed by another murderer as a murderer in Murder Myster
+{"id": "minecraft:observer"}	15	80	ArtiGrrr	medium	Ooopsy	Se faire tuer par un autre meutrier en tant que meurtrier en Murder Mystery	Get killed by another murderer as a murderer in Murder Mystery
 {"id": "minecraft:white_banner"}	79	81	ArtiGrrr	easy	Reviens par ici	Replacer le drapeau de son équipe en une partie de Capture/Rush The Flag	Return your team's flag in a game of Capture/Rush The Flag
 {"id": "minecraft:turtle_egg"}	24	82	Stoupy	hard	Bien placé	Survivre 25 secondes sans bouger en Block Party	Survive 25 seconds without moving in Block Party
 {"id": "minecraft:turtle_egg"}	24	83	AirDox	medium	Chercheur Acharné	Trouver tous les Easter Eggs du lobby	Find all the Easter Eggs in the lobby
@@ -119,7 +121,7 @@ def get_id(string: str) -> str:
 	except ValueError:
 		return f'"{string}"'
 
-def convert_line_to_dict(line: str) -> dict[str, str]:
+def convert_line_to_dict(line: str) -> JsonDict:
 	splitted: list[str] = line.split("\t")
 	return {
 		"icon": splitted[0],
@@ -134,19 +136,18 @@ def convert_line_to_dict(line: str) -> dict[str, str]:
 		"children": [],
 	}
 
-ALL_ADVANCEMENTS: list[dict[str, str]] = []
+ALL_ADVANCEMENTS: list[JsonDict] = []
 
 def generate_adv_dictionnary() -> None:
-	global ALL_ADVANCEMENTS
-	ALL_ADVANCEMENTS += [convert_line_to_dict(line) for line in GOOGLE_SHEET.strip().split("\n")]
+	ALL_ADVANCEMENTS.extend([convert_line_to_dict(line) for line in GOOGLE_SHEET.strip().split("\n")])
 
 	# Create lookup dict for faster access
-	adv_by_id: dict[str, dict[str, str]] = {adv["id"]: adv for adv in ALL_ADVANCEMENTS}
+	adv_by_id: dict[str, JsonDict] = {adv["id"]: adv for adv in ALL_ADVANCEMENTS}
 
 	# Process each advancement once
 	for adv in ALL_ADVANCEMENTS:
 		parent_id: str = adv["parent"]
 		if parent_id and parent_id in adv_by_id:
-			parent: dict[str, str] = adv_by_id[parent_id]
+			parent: JsonDict = adv_by_id[parent_id]
 			parent["children"].append(adv["id"])
 
