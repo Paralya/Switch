@@ -14,9 +14,10 @@ kill @e[type=sheep,distance=..200]
 kill @e[type=falling_block,distance=..200,nbt={Time:20}]
 
 # Duality Jump (tick)
-# TODO: optimize merge block
-execute if score #players_in_lobby switch.data matches 1.. run data merge block 20 80 93 {Lock:"jump_duo",Items:[{Count:1b,id:"minecraft:spectral_arrow"}]}
-execute if score #players_in_lobby switch.data matches 1.. run data merge block 27 80 90 {Lock:"jump_duo",Items:[{Count:1b,id:"minecraft:spectral_arrow"}]}
+execute if score #players_in_lobby switch.data matches 1.. if block 20 79 94 stone_button[powered=true] run summon spectral_arrow 21.00 80.38 93.50 {Motion:[1.5,0.085,0.0],Rotation:[90f,0f],pickup:0b,life:1170s}
+execute if score #players_in_lobby switch.data matches 1.. if block 20 79 94 stone_button[powered=true] run setblock 20 79 94 stone_button[face=wall,facing=south,powered=false]
+execute if score #players_in_lobby switch.data matches 1.. if block 28 79 90 stone_button[powered=true] run summon spectral_arrow 26.95 80.38 90.50 {Motion:[-1.5,0.093,0.0],Rotation:[-90f,0f],pickup:0b,life:1170s}
+execute if score #players_in_lobby switch.data matches 1.. if block 28 79 90 stone_button[powered=true] run setblock 28 79 90 stone_button[face=wall,facing=east,powered=false]
 execute if score #players_in_lobby switch.data matches 1.. if block 45 87 90 stone_button[powered=true] run setblock 44 86 90 water
 execute if score #players_in_lobby switch.data matches 1.. unless block 45 87 90 stone_button[powered=true] run setblock 44 86 90 air
 

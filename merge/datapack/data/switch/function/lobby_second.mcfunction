@@ -127,7 +127,7 @@ execute positioned 6 70.5 115 run function switch:stats/display/tick_macro {path
 execute positioned 2 70.5 124.5 run function switch:stats/display/tick_macro {path:"all.modes.fireblast.total_games",label:"Fireblast",mode:2,uuid:"20180612-2024-2025-2026-119000000001"}
 execute positioned 6 70.5 123 run function switch:stats/display/tick_macro {path:"all.modes.fireblast.played",label:"Games played",mode:1,uuid:"20180612-2024-2025-2026-119000000002"}
 execute positioned 6 70.5 126 run function switch:stats/display/tick_macro {path:"all.modes.fireblast.wins",label:"Victories",mode:1,uuid:"20180612-2024-2025-2026-119000000003"}
-execute unless entity @e[tag=switch.fireblast_lobby,type=small_fireball] run summon small_fireball 6 70.42 124.5 {Tags:["switch.fireblast_lobby"]}
+execute unless entity 20180612-2024-2025-2026-119000000004 run summon small_fireball 6 70.42 124.5 {UUID:uuid("20180612-2024-2025-2026-119000000004")}
 
 # Race
 execute positioned 2 70.5 135.5 run function switch:stats/display/tick_macro {path:"all.modes.race.total_games",label:"Race",mode:2,uuid:"20180612-2024-2025-2026-120000000001"}
@@ -232,8 +232,8 @@ execute positioned -71 70.5 6 run function switch:stats/display/tick_macro {path
 execute positioned -80.5 70.5 2 run function switch:stats/display/tick_macro {path:"all.modes.glassrunner.total_games",label:"GlassRunner",mode:2,uuid:"20180612-2024-2025-2026-139000000001"}
 execute positioned -79 70.5 7 run function switch:stats/display/tick_macro {path:"all.modes.glassrunner.played",label:"Games played",mode:1,uuid:"20180612-2024-2025-2026-139000000002"}
 execute positioned -82 70.5 7 run function switch:stats/display/tick_macro {path:"all.modes.glassrunner.wins",label:"Victories",mode:1,uuid:"20180612-2024-2025-2026-139000000003"}
-execute unless entity @e[tag=switch.glassrunner.snowball1,type=snowball] run summon snowball -80.42 72.20 6.05 {NoGravity:1b,Tags:["switch.glassrunner.snowball1"]}
-execute unless entity @e[tag=switch.glassrunner.snowball2,type=snowball] run summon snowball -80.48 73.40 7.30 {NoGravity:1b,Tags:["switch.glassrunner.snowball2"]}
+execute unless entity 20180612-2024-2025-2026-139000000004 run summon snowball -80.42 72.20 6.05 {NoGravity:1b,UUID:uuid("20180612-2024-2025-2026-139000000004")}
+execute unless entity 20180612-2024-2025-2026-139000000005 run summon snowball -80.48 73.40 7.30 {NoGravity:1b,UUID:uuid("20180612-2024-2025-2026-139000000005")}
 
 # Laser game
 execute positioned -69.5 70.5 -2 run function switch:stats/display/tick_macro {path:"all.modes.laser_game.total_games",label:"Laser Game",mode:2,uuid:"20180612-2024-2025-2026-140000000001"}
