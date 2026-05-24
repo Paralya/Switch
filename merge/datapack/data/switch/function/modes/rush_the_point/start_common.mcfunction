@@ -25,6 +25,8 @@ scoreboard players set #bonus_reload switch.data 30
 scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #red_flag_pickups switch.data 0
+scoreboard players set #blue_flag_pickups switch.data 0
 
 team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
 team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}

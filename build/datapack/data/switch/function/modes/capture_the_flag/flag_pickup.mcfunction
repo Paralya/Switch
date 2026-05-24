@@ -13,6 +13,8 @@ tag @s remove switch.free
 # Depending on the flag color, tag the respective player
 execute if entity @s[tag=switch.blue_flag] run tag @p[team=switch.temp.red,distance=..1] add switch.has_blue_flag
 execute if entity @s[tag=switch.red_flag] run tag @p[team=switch.temp.blue,distance=..1] add switch.has_red_flag
+execute if entity @s[tag=switch.blue_flag] run scoreboard players add #red_flag_pickups switch.data 1
+execute if entity @s[tag=switch.red_flag] run scoreboard players add #blue_flag_pickups switch.data 1
 function switch:translations/modes_capture_the_flag_flag_pickup
 
 # Translation & Playsound
