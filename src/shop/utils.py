@@ -4,13 +4,13 @@
 import json
 
 import stouputils as stp
-from stewbeet.core import write_function
+from stewbeet import JsonDict, write_function
 
 from .shared_memory import *
 
 
 # Functions
-def load_username_change(shop_name: str, shop_dict: dict) -> None:
+def load_username_change(shop_name: str, shop_dict: JsonDict) -> None:
 	""" Add lines for the load function, the username change function
 
 	Args:
@@ -23,7 +23,7 @@ def load_username_change(shop_name: str, shop_dict: dict) -> None:
 		write_function(INITIALIZE_SHOP_SCORES_PATH, f"scoreboard players add @s switch.{shop_name}.{upgrade_id} 0")
 
 
-def write_technicals(index: int, shop_name: str, shop_dict: dict) -> None:
+def write_technicals(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	""" Write the technical part of the shop
 
 	Args:
@@ -118,7 +118,7 @@ function switch:translations/shop_{shop_name}
 """)
 
 
-def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
+def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	""" Write the translations of the shop
 	Args:
 		index		(int):	The index of the shop, e.g. 1 for pitchout
@@ -156,7 +156,7 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 			upgrade_name: str = data["upgrade_name"].get(lang_id, data["upgrade_name"]["en"])
 			ok_message: str = data["ok_messages"].get(lang_id, data["ok_messages"]["en"])
 			error_message: str = data["error_messages"].get(lang_id, data["error_messages"]["en"])
-			upgrades: list[dict] = data["upgrades"] + [{"price": -1}]	# Add a final fake upgrade
+			upgrades: list[JsonDict] = data["upgrades"] + [{"price": -1}]	# Add a final fake upgrade
 
 			# Get the custom downgrade message if available
 			sell_ok_message: str = ""
@@ -195,7 +195,7 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 						downgrade_hover_text = hover_text_dict.get(lang_id, hover_text_dict.get("en", "")).replace("->", "<-")
 
 					# Tellraw text with buy [+] and sell [-] buttons
-					tellraw_json: list[dict] = [
+					tellraw_json: list[JsonDict] = [
 						{"text": upgrade_name, "color": "aqua"},
 						{"text": " | ", "bold": True, "color": "dark_gray"},
 						{"text": yellow_stars, "color": "yellow"},
@@ -204,7 +204,7 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 
 					# Add sell button [-] if player has at least one level (j > 0)
 					if j > 0:
-						hover_value = []
+						hover_value: list[JsonDict] = []
 						if downgrade_hover_text:
 							hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
 						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}", "color": "yellow"})
@@ -229,7 +229,7 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 				else:
 					# Max level case
 					yellow_stars: str = STAR * (len(upgrades) - 1)
-					tellraw_json: list[dict] = [
+					tellraw_json: list[JsonDict] = [
 						{"text": upgrade_name, "color": "aqua"},
 						{"text": " | ", "bold": True, "color": "dark_gray"},
 						{"text": yellow_stars, "color": "yellow"},
@@ -275,7 +275,7 @@ def write_translations(index: int, shop_name: str, shop_dict: dict) -> None:
 
 
 # All in one function
-def generate_shop(index: int, shop_name: str, shop_dict: dict) -> None:
+def generate_shop(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	""" Generate all the shop files for a specific shop
 
 	Args:

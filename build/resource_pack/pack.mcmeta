@@ -1,9 +1,9 @@
 {
 	"pack": {
-		"pack_format": 75,
+		"pack_format": 84,
 		"description": "Switch [2.0.0] by Stoupy51",
 		"min_format": [
-			75,
+			84,
 			0
 		],
 		"max_format": [

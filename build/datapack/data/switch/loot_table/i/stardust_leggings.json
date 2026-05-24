@@ -22,6 +22,10 @@
 									}
 								},
 								"minecraft:max_damage": 574,
+								"minecraft:equippable": {
+									"slot": "legs",
+									"asset_id": "switch:stardust"
+								},
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

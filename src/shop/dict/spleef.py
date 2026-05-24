@@ -1,6 +1,8 @@
 
 # Spleef shop
-SPLEEF: dict = {
+from stouputils import JsonDict
+
+SPLEEF: JsonDict = {
 	"snow_block": {
 		"ok_messages": {
 			"fr": "Votre achat pour augmenter votre nombre de blocs de neige a été effectué !",

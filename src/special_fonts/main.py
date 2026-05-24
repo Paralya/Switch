@@ -2,7 +2,7 @@
 # Imports
 import stouputils as stp
 
-from .utils import *
+from .utils import generate_few_textures, write_black_transition, write_final_file
 
 
 # Main function

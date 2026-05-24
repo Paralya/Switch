@@ -1,0 +1,63 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"legendarium": true,"leggings": true}},
+										"id": "switch:legendarium_leggings",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"legendarium_leggings": true
+									}
+								},
+								"minecraft:max_damage": 574,
+								"minecraft:equippable": {
+									"slot": "legs",
+									"asset_id": "switch:legendarium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 6,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:armor.legs"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "switch:armor_toughness.legs"
+									}
+								],
+								"minecraft:item_model": "switch:legendarium_leggings",
+								"minecraft:item_name": {
+									"text": "Legendarium Leggings"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

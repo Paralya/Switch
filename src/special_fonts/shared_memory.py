@@ -1,6 +1,9 @@
 
 
 # Constants
+from stewbeet import JsonDict
+
+
 class SharedMemory:
 
 	# Constants
@@ -9,5 +12,5 @@ class SharedMemory:
 	BLACK_PIXEL_CHAR: str = "B"
 
 	# Variables
-	providers: list[dict] = []	# Providers variables (used for the final font file)  # noqa: RUF012
+	providers: list[JsonDict] = []	# Providers variables (used for the final font file)  # noqa: RUF012
 

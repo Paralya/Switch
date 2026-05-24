@@ -39,7 +39,7 @@
 									},
 									{
 										"type": "mining_efficiency",
-										"amount": -0.2,
+										"amount": -2,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "switch:mining_efficiency.mainhand"

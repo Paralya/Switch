@@ -8,12 +8,12 @@ data modify storage switch:temp custom_data set from entity @s item.components."
 execute store result score #cinematic_delay switch.data run data get storage switch:temp custom_data.delay
 execute if score #cinematic_delay switch.data matches 1.. run scoreboard players remove #cinematic_delay switch.data 1
 execute if score #cinematic_delay switch.data matches 1.. store result storage switch:temp custom_data.delay int 1 run scoreboard players get #cinematic_delay switch.data
-execute if score #cinematic_delay switch.data matches 1.. run return fail
+execute if score #cinematic_delay switch.data matches 1.. run return run data modify entity @s item.components."minecraft:custom_data" set from storage switch:temp custom_data
 
 # Only pass 1/Interpolation of the time
 scoreboard players add @s switch.data 1
 execute store result score #cinematic_interpolation switch.data run data get storage switch:temp custom_data.interpolation
-execute if score @s switch.data < #cinematic_interpolation switch.data run return fail
+execute if score @s switch.data < #cinematic_interpolation switch.data run return run data modify entity @s item.components."minecraft:custom_data" set from storage switch:temp custom_data
 execute if score @s switch.data >= #cinematic_interpolation switch.data run scoreboard players set @s switch.data 0
 
 # Teleport to the next point and remove it from the list

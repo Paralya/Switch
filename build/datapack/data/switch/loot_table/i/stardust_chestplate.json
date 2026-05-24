@@ -22,6 +22,10 @@
 									}
 								},
 								"minecraft:max_damage": 612,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "switch:stardust"
+								},
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

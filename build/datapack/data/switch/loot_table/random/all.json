@@ -2274,6 +2274,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:golden_dandelion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:golden_helmet"
 				},
 				{
@@ -6455,6 +6459,34 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_sword"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_pickaxe"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/ancient_stardust_axe"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/stardust_fragment"
 				},
 				{
@@ -6523,6 +6555,22 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/legendarium_boots"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/legendarium_sword"
 				},
 				{
@@ -6535,11 +6583,31 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/solarium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/solarium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/solarium_boots"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6555,11 +6623,31 @@
 				},
 				{
 					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
 					"value": "switch:i/darkium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/darkium_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_helmet"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_chestplate"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_leggings"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"value": "switch:i/darkium_boots"
 				},
 				{
 					"type": "minecraft:loot_table",
@@ -6720,10 +6808,6 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "switch:i/uranium_hoe"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "switch:i/shazinho"
 				},
 				{
 					"type": "minecraft:loot_table",

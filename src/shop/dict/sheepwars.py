@@ -1,6 +1,8 @@
 
 # Sheepwars shop
-SHEEPWARS: dict = {
+from stouputils import JsonDict
+
+SHEEPWARS: JsonDict = {
 	"chosen_kit": {},
 	"kit_health": {
 		"ok_messages": {

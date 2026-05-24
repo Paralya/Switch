@@ -1,6 +1,8 @@
 
 # Pitchout shop
-PITCHOUT: dict = {
+from stouputils import JsonDict
+
+PITCHOUT: JsonDict = {
 	"boots": {
 		"ok_messages": {
 			"fr": "Votre achat pour les bottes en cuir a été effectué !",

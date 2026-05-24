@@ -1,6 +1,6 @@
 {
 	"layers": {
-		"humanoid": [{"texture": "switch:sapphire_layer_1"}],
-		"humanoid_leggings": [{"texture": "switch:sapphire_layer_2"}]
+		"humanoid": [{"texture": "switch:iyc/sapphire_layer_1"}],
+		"humanoid_leggings": [{"texture": "switch:iyc/sapphire_layer_2"}]
 	}
 }

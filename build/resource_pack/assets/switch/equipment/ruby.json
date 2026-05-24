@@ -1,6 +1,6 @@
 {
 	"layers": {
-		"humanoid": [{"texture": "switch:ruby_layer_1"}],
-		"humanoid_leggings": [{"texture": "switch:ruby_layer_2"}]
+		"humanoid": [{"texture": "switch:iyc/ruby_layer_1"}],
+		"humanoid_leggings": [{"texture": "switch:iyc/ruby_layer_2"}]
 	}
 }

@@ -1,0 +1,63 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"darkium": true,"chestplate": true}},
+										"id": "switch:darkium_chestplate",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"darkium_chestplate": true
+									}
+								},
+								"minecraft:max_damage": 612,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "switch:darkium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 8,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "switch:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "switch:armor_toughness.chest"
+									}
+								],
+								"minecraft:item_model": "switch:darkium_chestplate",
+								"minecraft:item_name": {
+									"text": "Darkium Chestplate"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

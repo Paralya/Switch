@@ -1,0 +1,63 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"darkium": true,"helmet": true}},
+										"id": "switch:darkium_helmet",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"darkium_helmet": true
+									}
+								},
+								"minecraft:max_damage": 421,
+								"minecraft:equippable": {
+									"slot": "head",
+									"asset_id": "switch:darkium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 3,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "switch:armor_toughness.head"
+									}
+								],
+								"minecraft:item_model": "switch:darkium_helmet",
+								"minecraft:item_name": {
+									"text": "Darkium Helmet"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

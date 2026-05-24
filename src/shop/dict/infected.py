@@ -1,6 +1,8 @@
 
 # Infected shop
-INFECTED: dict = {
+from stouputils import JsonDict
+
+INFECTED: JsonDict = {
 	"sword": {
 		"ok_messages": {
 			"fr": "Votre achat pour améliorer votre épée a été effectué !",

@@ -5,7 +5,7 @@ from beet import Font, Texture
 from PIL import Image
 from stewbeet.core import Mem, write_function
 
-from .shared_memory import *
+from .shared_memory import SharedMemory
 
 
 # Generate few textures

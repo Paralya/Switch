@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"fragment": {"darkium": true}},
+										"id": "switch:darkium_fragment",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"darkium_fragment": true
+									}
+								},
+								"minecraft:item_model": "switch:darkium_fragment",
+								"minecraft:item_name": {
+									"text": "Darkium Fragment"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

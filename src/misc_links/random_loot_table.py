@@ -4,17 +4,16 @@ import os
 
 import requests
 import stouputils as stp
-from beet import LootTable
-from stewbeet.core import Mem
+from stewbeet import JsonDict, LootTable, Mem
 
 # Constants
-ITEMS_LINK: str = "https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/MAJOR.MINOR/releases/MAJOR.MINOR.PATCH/custom-generated/registries/item.txt"
+ITEMS_LINK: str = "https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/MAJOR/releases/MAJOR.MINOR.PATCH/custom-generated/registries/item.txt"
 SPAWN_EGG_WEIGHT: int = 2
 IGNORE_SPAWN_EGG: list[str] = ["wither", "ghast"]
 
 # Function to convert loot table name to entry
-def get_entry(item: str) -> dict[str, str|int]:
-	entry = {"type": "minecraft:item", "name": item}
+def get_entry(item: str) -> JsonDict:
+	entry: JsonDict = {"type": "minecraft:item", "name": item}
 	if "spawn_egg" in item and all(ignore not in item for ignore in IGNORE_SPAWN_EGG):
 		entry["weight"] = SPAWN_EGG_WEIGHT
 	return entry
@@ -33,12 +32,12 @@ def main() -> None:
 
 	# Get all items
 	major, minor, patch = Mem.ctx.minecraft_version.split(".")
-	updated_link: str = ITEMS_LINK.replace("MAJOR.MINOR", f"{major}.{minor}").replace("PATCH", patch)
+	updated_link: str = ITEMS_LINK.replace("MAJOR", major).replace("MINOR", minor).replace("PATCH", patch)
 	items: list[str] = requests.get(updated_link).text.strip().split("\n")
 	items = [item for item in items if item not in ["", "minecraft:air"]]
 
 	# Insert all items into the loot table
-	loot_table: dict[str, list[dict[str, str|int]]] = {"pools": [{"rolls": 1, "entries": []}]}
+	loot_table: JsonDict = {"pools": [{"rolls": 1, "entries": []}]}
 	for item in items:
 		if "ender_dragon_spawn_egg" in item or item == "":
 			continue

@@ -1,6 +1,6 @@
 {
 	"layers": {
-		"humanoid": [{"texture": "switch:adamantium_layer_1"}],
-		"humanoid_leggings": [{"texture": "switch:adamantium_layer_2"}]
+		"humanoid": [{"texture": "switch:iyc/adamantium_layer_1"}],
+		"humanoid_leggings": [{"texture": "switch:iyc/adamantium_layer_2"}]
 	}
 }

@@ -1,6 +1,8 @@
 
 # Spectres Game shop
-SPECTRES_GAME: dict = {
+from stouputils import JsonDict
+
+SPECTRES_GAME: JsonDict = {
 	"sp_arrows": {
 		"ok_messages": {
 			"fr": "Votre achat pour augmenter le nombre de fleches pour votre classe Spectre a été effectué !",

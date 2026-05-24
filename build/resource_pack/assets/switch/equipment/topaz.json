@@ -1,6 +1,6 @@
 {
 	"layers": {
-		"humanoid": [{"texture": "switch:topaz_layer_1"}],
-		"humanoid_leggings": [{"texture": "switch:topaz_layer_2"}]
+		"humanoid": [{"texture": "switch:iyc/topaz_layer_1"}],
+		"humanoid_leggings": [{"texture": "switch:iyc/topaz_layer_2"}]
 	}
 }

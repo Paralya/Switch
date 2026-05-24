@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet.core import Block, Item, VanillaBlock, VANILLA_BLOCK_FOR_ORES
+from stewbeet.core import VANILLA_BLOCK_FOR_ORES, Block, Item, VanillaBlock
 
 
 # Setup misc items

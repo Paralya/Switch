@@ -1,5 +1,7 @@
 
 # Imports
+from stewbeet import JsonDict
+
 from .dict.infected import INFECTED
 from .dict.pitchout import PITCHOUT
 from .dict.sheepwars import SHEEPWARS
@@ -8,7 +10,7 @@ from .dict.spleef import SPLEEF
 
 # Constants
 STAR: str = "✮"
-MONEY: dict[str, dict[str, str]] = {
+MONEY: dict[str, JsonDict] = {
 	"fr": {"nbt":"SapphireFR","storage":"switch:main","interpret":True},
 	"en": {"nbt":"SapphireEN","storage":"switch:main","interpret":True}
 }
@@ -22,7 +24,7 @@ SHEEPWARS_CHOOSE_KIT: dict[str, str] = {
 	"en": "Select a kit by clicking on the name!"
 }
 SHEEPWARS_KIT_OFFSET: int = 50
-SHOPS: dict[str, dict[str, dict]] = {
+SHOPS: dict[str, dict[str, JsonDict]] = {
 	"pitchout": PITCHOUT,
 	"infected": INFECTED,
 	"spleef": SPLEEF,

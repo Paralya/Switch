@@ -1,0 +1,63 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_boots",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"legendarium": true,"boots": true}},
+										"id": "switch:legendarium_boots",
+										"origin": "switch",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"switch": {
+										"legendarium_boots": true
+									}
+								},
+								"minecraft:max_damage": 497,
+								"minecraft:equippable": {
+									"slot": "feet",
+									"asset_id": "switch:legendarium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 3,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "switch:armor.feet"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "switch:armor_toughness.feet"
+									}
+								],
+								"minecraft:item_model": "switch:legendarium_boots",
+								"minecraft:item_name": {
+									"text": "Legendarium Boots"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
+										{"text": " Switch","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
