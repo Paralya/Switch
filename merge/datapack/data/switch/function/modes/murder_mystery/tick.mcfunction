@@ -19,6 +19,7 @@ execute as @e[type=item_display,tag=switch.detective_bow] at @s positioned ~ ~-1
 
 # Allow the murderer to throw their knife
 scoreboard players add #rotation switch.data 30
+scoreboard players operation #rotation switch.data %= #360 switch.data
 execute as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/throw/player_tick
 execute as @e[type=armor_stand,tag=switch.thrown] at @s run function switch:modes/murder_mystery/throw/loop
 

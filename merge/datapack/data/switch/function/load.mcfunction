@@ -97,7 +97,6 @@ execute unless data storage switch:ratings all run data modify storage switch:ra
 execute unless data storage switch:main UUIDs run data modify storage switch:main UUIDs set value []
 
 # Scoreboard constants, shop load, advancements, and music load
-function switch:set_constants
 function switch:shop/_load
 function switch:advancements/_load
 function switch:music/load

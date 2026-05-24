@@ -24,6 +24,7 @@ execute as @e[type=item_display,tag=switch.detective_bow] at @s positioned ~ ~-1
 
 # Allow the murderer to throw their knife
 scoreboard players add #rotation switch.data 30
+scoreboard players operation #rotation switch.data %= #360 switch.data
 execute as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/throw/player_tick
 execute as @e[type=armor_stand,tag=switch.thrown] at @s run function switch:modes/murder_mystery/throw/loop
 
@@ -31,6 +32,6 @@ execute as @e[type=armor_stand,tag=switch.thrown] at @s run function switch:mode
 #execute as @a[tag=!detached,scores={switch.right_click=1..}] at @s run function switch:modes/murder_mystery/throw/throw
 
 ## Détection de fin de partie
-execute if score #murder_mystery_seconds switch.data matches 1.. if score #remaining_time switch.data matches 1.. run function switch:modes/murder_mystery/detect_end
-execute if score #remaining_time switch.data matches ..0 run function switch:modes/murder_mystery/process_end
+# execute if score #murder_mystery_seconds switch.data matches 1.. if score #remaining_time switch.data matches 1.. run function switch:modes/murder_mystery/detect_end
+# execute if score #remaining_time switch.data matches ..0 run function switch:modes/murder_mystery/process_end
 

@@ -42,6 +42,7 @@ pipeline:
     # - "stewbeet.plugins.finalyze.unload"
     - "stewbeet.plugins.finalyze.check_unused_textures.silent"
     - "stewbeet.plugins.finalyze.last_final.silent"
+    - "stewbeet.plugins.auto.scoreboard_constants.silent"
     # - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.headers.silent"
     - "stewbeet.plugins.archive"
