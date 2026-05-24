@@ -24,5 +24,9 @@ execute if score #capture_the_flag_seconds switch.data matches 1.. run clear @a[
 execute if score #capture_the_flag_seconds switch.data matches 0 run function switch:modes/capture_the_flag/flags_summon
 
 # Display game messages
+scoreboard players operation #mins switch.data = #remaining_time switch.data
+scoreboard players operation #mins switch.data /= #60 switch.data
+scoreboard players operation #secs switch.data = #remaining_time switch.data
+scoreboard players operation #secs switch.data %= #60 switch.data
 function switch:translations/modes_capture_the_flag_second
 

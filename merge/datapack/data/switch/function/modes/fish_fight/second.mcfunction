@@ -82,5 +82,10 @@ clear @s podzol
 clear @s mycelium
 clear @s pufferfish
 
+# Displays
+scoreboard players operation #mins switch.data = #fish_fight_seconds switch.data
+scoreboard players operation #mins switch.data /= #60 switch.data
+scoreboard players operation #secs switch.data = #fish_fight_seconds switch.data
+scoreboard players operation #secs switch.data %= #60 switch.data
 function switch:translations/modes_fish_fight_second
 

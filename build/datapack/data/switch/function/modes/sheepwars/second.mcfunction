@@ -35,5 +35,10 @@ execute if score #remaining_time switch.data matches 1.. if score #magic_wool sw
 # Humm Charal advancement
 execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.killed_sheep=10..}] only switch:visible/45
 
+# Translations
+scoreboard players operation #mins switch.data = #remaining_time switch.data
+scoreboard players operation #mins switch.data /= #60 switch.data
+scoreboard players operation #secs switch.data = #remaining_time switch.data
+scoreboard players operation #secs switch.data %= #60 switch.data
 function switch:translations/modes_sheepwars_second
 

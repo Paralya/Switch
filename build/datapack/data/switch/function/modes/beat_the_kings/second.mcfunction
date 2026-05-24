@@ -13,5 +13,10 @@ execute if score #beat_the_kings_seconds switch.data matches 0 run function swit
 
 execute if score #beat_the_kings_seconds switch.data matches 30 as @a[tag=!detached,team=switch.temp.king] at @s run playsound entity.experience_orb.pickup ambient @s
 
+# Remaining time
+scoreboard players operation #mins switch.data = #remaining_time switch.data
+scoreboard players operation #mins switch.data /= #60 switch.data
+scoreboard players operation #secs switch.data = #remaining_time switch.data
+scoreboard players operation #secs switch.data %= #60 switch.data
 function switch:translations/modes_beat_the_kings_second
 

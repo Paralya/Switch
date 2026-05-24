@@ -11,6 +11,7 @@ execute if score #fish_fight_seconds switch.data matches 69 run tellraw @a[score
 execute if score #fish_fight_seconds switch.data matches 125 run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des TNT ont été donnés à des joueurs aléatoires !\n","color":"white"}]
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des poissons mécontents envahissent le terrain !\n","color":"white"}]
 execute if score #fish_fight_seconds switch.data matches 116 if score #random switch.data matches 1 run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Des poissons mécontents envahissent le terrain !\n","color":"white"}]
+title @a[scores={switch.lang=0},tag=!detached,gamemode=spectator] actionbar [{"text":"Temps écoulé : ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
 title @a[scores={switch.lang=0},tag=!detached,gamemode=!spectator] actionbar {"text":"Attention : PVP 1.9+","color":"red"}
 
 # English
@@ -20,5 +21,6 @@ execute if score #fish_fight_seconds switch.data matches 69 run tellraw @a[score
 execute if score #fish_fight_seconds switch.data matches 125 run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"TNTs were given to random players!\n","color":"white"}]
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Disgruntled Fish invade!\n","color":"white"}]
 execute if score #fish_fight_seconds switch.data matches 116 if score #random switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"Fish Event","bold":true,"color":"#FAB7FA"},{"text":" \u2022 ","bold":true,"color":"gray"},{"text":"Disgruntled Fish Invade!\n","color":"white"}]
+title @a[scores={switch.lang=1},tag=!detached,gamemode=spectator] actionbar [{"text":"Elapsed time: ","color":"gray"},{"score":{"name":"#mins","objective":"switch.data"},"color":"white"},{"text":"m"},{"score":{"name":"#secs","objective":"switch.data"},"color":"white"},{"text":"s"}]
 title @a[scores={switch.lang=1},tag=!detached,gamemode=!spectator] actionbar {"text":"Careful: PVP 1.9+","color":"red"}
 

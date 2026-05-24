@@ -24,5 +24,9 @@ execute if score #pillars_of_fortune_seconds switch.data matches 180.. if score 
 execute if score #pillars_of_fortune_seconds switch.data matches 180.. if score #swap switch.data matches 55 run give @a[tag=!detached,gamemode=survival] mangrove_planks 16
 
 # Title action bar
+scoreboard players operation #mins switch.data = #remaining_time switch.data
+scoreboard players operation #mins switch.data /= #60 switch.data
+scoreboard players operation #secs switch.data = #remaining_time switch.data
+scoreboard players operation #secs switch.data %= #60 switch.data
 function switch:translations/modes_pillars_of_fortune_second
 
