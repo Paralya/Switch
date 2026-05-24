@@ -1,8 +1,10 @@
 
 #> switch:modes/pitchout/map_1/teleport_players
 #
-# @within	switch:modes/pitchout/map_1/tp_give
-#			switch:modes/pitchout/tick [ as @a[tag=!detached,scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] ]
+# @executed	as @a[tag=!detached,scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water]
+#
+# @within	switch:modes/pitchout/in_water_with_cooldown
+#			switch:modes/pitchout/map_1/tp_give
 #
 
 execute if score #spawn_count switch.data matches 0 in switch:game run tp @s 1060 111 1060 135 0

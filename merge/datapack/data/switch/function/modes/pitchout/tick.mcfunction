@@ -6,8 +6,7 @@ scoreboard players add #pitchout_ticks switch.data 1
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/pitchout/no_drop
 
 # Teleport players back to spawn if they fall in water and have cooldown
-execute as @a[tag=!detached,scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] if data storage switch:main {map:"pitchout_1"} run function switch:modes/pitchout/map_1/teleport_players
-execute as @a[tag=!detached,scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] if data storage switch:main {map:"pitchout_halloween"} run function switch:modes/pitchout/map_halloween/teleport_players
+execute as @a[tag=!detached,scores={switch.alive=1..,switch.temp.cooldown=1..},predicate=switch:in_water] run function switch:modes/pitchout/in_water_with_cooldown
 
 # Kill players who fall in water (if no cooldown)
 execute as @a[tag=!detached,scores={switch.alive=1..},predicate=switch:in_water,sort=random] run function switch:modes/pitchout/death
