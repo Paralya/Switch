@@ -8,7 +8,7 @@ function switch:utils/on_death_run_function {function:"switch:modes/spleef/death
 execute if score #spleef_seconds switch.data matches 30.. as @e[type=marker,tag=switch.spleef_border] at @s run function switch:modes/spleef/border_reduction/progress
 
 ## Snow Powder
-execute at @a[tag=!detached,gamemode=survival] run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 powder_snow replace white_shulker_box
+execute as @a[tag=!detached,gamemode=survival,scores={switch.temp.placed_shulker=1..}] at @s run function switch:modes/spleef/replace_shulker
 
 ## End game
 scoreboard players set #remaining_players switch.data 0

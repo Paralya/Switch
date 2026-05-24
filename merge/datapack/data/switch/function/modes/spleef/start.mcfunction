@@ -12,6 +12,8 @@ execute if data storage switch:main {map:"spleef_1"} run tp @a[tag=!detached] 28
 
 function switch:translations/modes_spleef_start
 
+scoreboard objectives add switch.temp.placed_shulker minecraft.used:minecraft.white_shulker_box
+
 scoreboard players set #spleef_seconds switch.data -10
 scoreboard players set #spleef_ticks switch.data 0
 scoreboard players set #process_end switch.data 0

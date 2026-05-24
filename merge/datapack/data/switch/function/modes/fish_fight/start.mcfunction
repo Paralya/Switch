@@ -43,6 +43,9 @@ scoreboard objectives add switch.temp.axolotl_killed_const minecraft.killed:mine
 #création d'un score pour compter les axolotls tués par les joueurs
 scoreboard objectives add switch.temp.axolotl_killed minecraft.killed:minecraft.axolotl
 scoreboard objectives setdisplay sidebar switch.temp.axolotl_killed_const
+scoreboard objectives add switch.temp.placed_white minecraft.used:minecraft.white_concrete
+scoreboard objectives add switch.temp.placed_blue minecraft.used:minecraft.blue_concrete
+scoreboard objectives add switch.temp.placed_red minecraft.used:minecraft.red_concrete
 
 scoreboard players set @a[team=!detached] switch.temp.axolotl_killed 0
 
