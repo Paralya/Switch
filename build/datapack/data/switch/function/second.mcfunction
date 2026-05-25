@@ -37,5 +37,5 @@ execute if score #temp switch.data matches 0 as @a[team=switch.tutorial] at @s r
 execute if score #players_in_lobby switch.data matches 1.. in minecraft:overworld positioned 0 69 0 run function switch:lobby_second
 
 # Additional black hole for switch_space in switch:game
-execute in switch:game positioned 0 69 0 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000003 run summon item_display ~ ~ ~ {UUID:uuid("20180612-2024-2025-2026-000000000003"),item:{id:"stone",count:1,components:{"item_model":"switch:bg_black_hole"}},Tags:["switch.black_hole_lobby"],transformation:{scale:[-300f,-300f,-300f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
+execute in switch:game positioned 0 100 0 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000003 run summon item_display ~ ~ ~ {UUID:uuid("20180612-2024-2025-2026-000000000003"),item:{id:"stone",count:1,components:{"item_model":"switch:bg_black_hole"}},Tags:["switch.black_hole_lobby"],transformation:{scale:[-300f,-200f,-300f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
 
