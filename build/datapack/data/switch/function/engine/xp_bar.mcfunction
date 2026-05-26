@@ -15,7 +15,6 @@
 #			switch:modes/feed_fast/xp_bar
 #			switch:modes/gay_shooter/xp_bar
 #			switch:modes/infected/xp_bar
-#			switch:modes/kart_racer/xp_bar
 #			switch:modes/minigolf/xp_bar
 #			switch:modes/mlg_a_coudre/xp_bar
 #			switch:modes/moutron/xp_bar

@@ -1,7 +1,8 @@
 
 #> switch:modes/race/xp_bar
 #
-# @within	switch:modes/race/second
+# @within	switch:modes/kart_racer/xp_bar
+#			switch:modes/race/second
 #
 
 # 300 seconds = 100%

@@ -1,9 +1,10 @@
 
 #> switch:modes/race/tm_blocks/reset_checkpoint
 #
-# @executed	as @e[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]
+# @executed	as @e[tag=shopping_kart.kart,predicate=switch:have_temp_player_passenger]
 #
-# @within	switch:modes/race/checkpoints/remember/get_from_kart
+# @within	switch:modes/kart_racer/blocks/reset_checkpoint
+#			switch:modes/race/checkpoints/remember/get_from_kart
 #
 
 ## Reset effects due to crossing a checkpoint

@@ -3,7 +3,8 @@
 #
 # @executed	as @a[tag=!detached]
 #
-# @within	switch:modes/race/classement/find_anyone_in_same_cp
+# @within	switch:modes/kart_racer/classement/find_anyone_in_same_cp_more
+#			switch:modes/race/classement/find_anyone_in_same_cp
 #
 
 tag @s add switch.temp
