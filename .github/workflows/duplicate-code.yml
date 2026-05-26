@@ -13,10 +13,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+
       - name: Install jscpd
         run: npm install -g jscpd
+
       - name: Run duplicate detection on merge folder
-        run: jscpd ./merge -r consoleFull
+        run: |
+          jscpd ./merge \
+            --reporters consoleFull \
+            --mode weak \
+            --min-lines 3 \
+            --min-tokens 8 \
+            --formats-exts "txt:mcfunction"
+
       - name: Run duplicate detection on src folder
-        run: jscpd ./src -r consoleFull
+        run: |
+          jscpd ./src \
+            --reporters consoleFull \
+            --mode weak \
+            --min-lines 3 \
+            --min-tokens 8 \
 
