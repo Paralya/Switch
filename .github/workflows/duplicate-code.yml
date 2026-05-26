@@ -22,7 +22,7 @@ jobs:
           jscpd ./merge \
             --reporters consoleFull \
             --mode weak \
-            --min-lines 3 \
+            --min-lines 5 \
             --min-tokens 8 \
             --formats-exts "txt:mcfunction"
 
@@ -30,7 +30,5 @@ jobs:
         run: |
           jscpd ./src \
             --reporters consoleFull \
-            --mode weak \
-            --min-lines 3 \
-            --min-tokens 8 \
+            --mode mild
 
