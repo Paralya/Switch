@@ -8,10 +8,6 @@
 #			switch:modes/boat_race/second {selector:"@e[type=#minecraft:boat]"}
 #			switch:modes/infected/secrets/area_51/giant {selector:"@e[tag=switch.giant,distance=..100]"} [ positioned 2053 105 2104 ]
 #			switch:modes/infected/secrets/area_51/slime {selector:"@e[type=slime,distance=..500]"} [ positioned 2092 122 2087 ]
-#			switch:modes/kart_racer/process_end {selector:"@e[tag=shopping_kart.kart]"}
-#			switch:modes/kart_racer/process_end {selector:"@e[tag=switch.checkpoint]"}
-#			switch:modes/kart_racer/stop {selector:"@e[tag=shopping_kart.kart]"}
-#			switch:modes/kart_racer/stop {selector:"@e[tag=switch.checkpoint]"}
 #			switch:modes/pitch_creep/second {selector:"@e[type=creeper,distance=..100]"} [ at @n[type=marker,tag=switch.selected_map] ]
 #			switch:modes/race/finished {selector:"@e[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]"}
 #			switch:modes/race/process_end {selector:"@e[tag=switch.vehicle]"}

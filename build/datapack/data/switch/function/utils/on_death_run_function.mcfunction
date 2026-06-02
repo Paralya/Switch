@@ -18,7 +18,6 @@
 #			switch:modes/gay_shooter/tick {function:"switch:modes/gay_shooter/death"}
 #			switch:modes/glassrunner/tick {function:"switch:modes/glassrunner/death/death"}
 #			switch:modes/infected/tick {function:"switch:modes/infected/death/zombie_spawn"}
-#			switch:modes/kart_racer/tick {function:"switch:modes/kart_racer/joined"}
 #			switch:modes/laser_game/tick {function:"switch:modes/laser_game/teleport_players"}
 #			switch:modes/layers_2_teams/tick {function:"switch:modes/layers_2_teams/death"}
 #			switch:modes/layers_4_teams/tick {function:"switch:modes/layers_4_teams/death"}

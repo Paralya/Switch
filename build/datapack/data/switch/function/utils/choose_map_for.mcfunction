@@ -18,7 +18,6 @@
 #			switch:modes/gay_shooter/start {id:"gay_shooter", maps:["gay_shooter"]}
 #			switch:modes/glassrunner/start {id:"glassrunner", maps:["glassrunner"]}
 #			switch:modes/infected/start {id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}
-#			switch:modes/kart_racer/start {id:"kart_racer", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit"]}
 #			switch:modes/laser_game/start {id:"laser_game", maps:["laser_game"]}
 #			switch:modes/layers_2_teams/start {id:"layers_2_teams", maps:["layers_2_teams"]}
 #			switch:modes/layers_4_teams/start {id:"layers_4_teams", maps:["layers_4_teams"]}

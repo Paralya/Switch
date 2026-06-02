@@ -14,7 +14,7 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] if scor
 
 # Give the winner money and tellraw
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_win
-function switch:translations/modes_shoot_da_sheep_process_end
+function switch:translations/common/process_end_winner_points
 execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
 
 # Other stuff

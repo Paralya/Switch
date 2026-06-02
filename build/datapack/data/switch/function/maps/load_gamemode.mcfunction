@@ -2,7 +2,6 @@
 #> switch:maps/load_gamemode
 #
 # @within	switch:maps/load
-#			switch:modes/kart_racer/give_items
 #			switch:modes/race/give_items
 #
 

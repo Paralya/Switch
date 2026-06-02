@@ -19,7 +19,6 @@
 #			switch:modes/gay_shooter/_force_start {id:"gay_shooter"}
 #			switch:modes/glassrunner/_force_start {id:"glassrunner"}
 #			switch:modes/infected/_force_start {id:"infected"}
-#			switch:modes/kart_racer/_force_start {id:"kart_racer"}
 #			switch:modes/laser_game/_force_start {id:"laser_game"}
 #			switch:modes/layers_2_teams/_force_start {id:"layers_2_teams"}
 #			switch:modes/layers_4_teams/_force_start {id:"layers_4_teams"}

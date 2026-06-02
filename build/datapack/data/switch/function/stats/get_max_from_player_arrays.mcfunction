@@ -1,9 +1,8 @@
 
 #> switch:stats/get_max_from_player_arrays
 #
-# @within	switch:stats/async/work_loop_player_stats
+# @within	switch:stats/_player_stats_loop_body
 #			switch:stats/get_max_from_player_arrays
-#			switch:stats/loop_player_stats
 #
 
 # Compare for the played array

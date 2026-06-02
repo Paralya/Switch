@@ -4,6 +4,6 @@
 # @within	???
 #
 
-function switch:translations/modes_simultaneous_jump_death
+function switch:translations/common/death_missed_jump
 function switch:modes/simultaneous_jump/teleport
 

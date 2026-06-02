@@ -33,5 +33,5 @@ scoreboard players operation #mins switch.data = #remaining_time switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-function switch:translations/modes_rush_the_point_second_common
+function switch:translations/common/basic_actionbar
 

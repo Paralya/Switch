@@ -32,5 +32,5 @@ execute if score #is_alive switch.data matches 0 run scoreboard players operatio
 execute if score #is_alive switch.data matches 0 run scoreboard players operation #points switch.data *= #-10 switch.data
 
 # Apply
-function switch:engine/xp_bar_at_s
+function switch:modes/_common/xp_bar/points_at_s
 

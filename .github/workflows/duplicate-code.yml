@@ -18,6 +18,7 @@ jobs:
         run: npm install -g jscpd
 
       - name: Run duplicate detection on merge folder
+	    # npx jscpd ./merge -r consoleFull --mode weak --min-lines 5 --min-tokens 8 --formats-exts "txt:mcfunction"
         run: |
           jscpd ./merge \
             --reporters consoleFull \

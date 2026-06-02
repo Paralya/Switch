@@ -1,10 +1,9 @@
 
 #> switch:modes/race/map_tick/plains_routine_tp
 #
-# @executed	at @s
+# @executed	as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}] & at @s
 #
-# @within	switch:modes/kart_racer/map_tick/plains_routine_tp
-#			switch:modes/race/map_tick/plains_routine [ as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}] & at @s ]
+# @within	switch:modes/race/map_tick/plains_routine [ as @e[tag=switch.vehicle,scores={switch.temp.compteur=1..}] & at @s ]
 #
 
 execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine

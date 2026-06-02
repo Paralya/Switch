@@ -10,8 +10,8 @@
 scoreboard players operation #points switch.data = #thunder_spear_seconds switch.data
 scoreboard players operation #points switch.data *= #1000000 switch.data
 scoreboard players set #divide switch.data 150000
-function switch:engine/xp_bar
+function switch:modes/_common/xp_bar/points
 
 scoreboard players operation #levels switch.data = #remaining_time switch.data
-function switch:engine/xp_bar_levels
+function switch:modes/_common/xp_bar/levels
 

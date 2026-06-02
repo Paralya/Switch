@@ -13,7 +13,6 @@
 #			switch:modes/feed_fast/start
 #			switch:modes/fish_fight/start
 #			switch:modes/gay_shooter/start
-#			switch:modes/kart_racer/start
 #			switch:modes/layers_2_teams/start
 #			switch:modes/layers_4_teams/start
 #			switch:modes/memory_mine/start

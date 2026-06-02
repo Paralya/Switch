@@ -12,7 +12,7 @@ function switch:utils/set_dynamic_time
 ## Chargement de la map
 function switch:utils/choose_map_for {id:"layers_2_teams", maps:["layers_2_teams"]}
 
-function switch:translations/modes_layers_2_teams_start
+function switch:translations/common/layers_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 610

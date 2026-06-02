@@ -1,8 +1,7 @@
 
 #> switch:modes/race/stop_cleanup
 #
-# @within	switch:modes/kart_racer/stop
-#			switch:modes/race/stop
+# @within	switch:modes/race/stop
 #
 
 scoreboard objectives remove switch.temp

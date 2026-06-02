@@ -3,9 +3,9 @@
 #
 # @executed	in switch:build_battle
 #
-# @within	switch:modes/build_battle/preparation/main with storage switch:main input
+# @within	switch:modes/build_battle/preparation/get_random_theme with storage switch:main input
 #
-# @args		theme (int)
+# @args		theme (unknown)
 #			index (int)
 #
 

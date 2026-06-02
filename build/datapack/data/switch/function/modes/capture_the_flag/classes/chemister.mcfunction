@@ -6,10 +6,8 @@
 # @within	switch:modes/capture_the_flag/classes/main
 #
 
-clear @s
-effect clear @s
-item replace entity @s[team=switch.temp.red] armor.head with leather_helmet[dyed_color=16711680]
-item replace entity @s[team=switch.temp.blue] armor.head with leather_helmet[dyed_color=255]
+function switch:modes/capture_the_flag/classes/_common
+
 item replace entity @s armor.chest with golden_chestplate
 item replace entity @s armor.legs with diamond_leggings
 item replace entity @s armor.feet with golden_boots

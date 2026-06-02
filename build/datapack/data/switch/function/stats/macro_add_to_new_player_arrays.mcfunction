@@ -1,8 +1,7 @@
 
 #> switch:stats/macro_add_to_new_player_arrays
 #
-# @within	switch:stats/async/work_loop_player_stats with storage switch:temp indexes
-#			switch:stats/loop_player_stats with storage switch:temp indexes
+# @within	switch:stats/_player_stats_loop_body with storage switch:temp indexes
 #
 # @args		played (int)
 #			wins (int)

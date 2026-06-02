@@ -25,7 +25,6 @@
 #			switch:modes/glassrunner/end/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/infected/process_end [ as @a[tag=!detached,team=switch.temp.human] & at @s ]
 #			switch:modes/infected/process_end [ at @s ]
-#			switch:modes/kart_racer/process_end [ as @a[tag=!detached,scores={switch.alive=2}] & at @s ]
 #			switch:modes/laser_game/process_end [ as @a[tag=!detached,scores={switch.alive=11}] & at @s ]
 #			switch:modes/laser_game/process_end [ as @a[tag=!detached,scores={switch.alive=10}] & at @s ]
 #			switch:modes/layers_2_teams/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s ]

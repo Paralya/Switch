@@ -1,8 +1,5 @@
 
-clear @s
-effect clear @s
-attribute @s attack_speed base set 2048
-attribute @s jump_strength base reset
+function switch:modes/rush_the_point/classes/_common
 
 item replace entity @s armor.chest with elytra[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]}]
 

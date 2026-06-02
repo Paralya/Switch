@@ -14,5 +14,5 @@ scoreboard players operation #mins switch.data = #remaining_time switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-function switch:translations/modes_castagne_second
+function switch:translations/common/actionbar_time_pvp19
 

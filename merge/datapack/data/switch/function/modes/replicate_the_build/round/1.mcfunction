@@ -1,10 +1,4 @@
+
 function switch:translations/modes_replicate_the_build_round_1
-scoreboard players add #rtb_round_state switch.data 1
+function switch:modes/replicate_the_build/round/_common
 
-
-execute at @a[tag=!detached] run playsound minecraft:block.note_block.harp ambient @a[tag=!detached] ~ ~ ~ 1 1
-
-
-kill @e[type=item]
-kill @e[type=arrow]
-kill @e[tag=switch.rtb.verify,type=marker]

@@ -20,7 +20,6 @@
 #			switch:modes/gay_shooter/process_end [ as @a[tag=!detached] ]
 #			switch:modes/glassrunner/end/process_end [ as @a[tag=!detached] ]
 #			switch:modes/infected/process_end [ as @a[tag=!detached] ]
-#			switch:modes/kart_racer/process_end [ as @a[tag=!detached] ]
 #			switch:modes/laser_game/process_end [ as @a[tag=!detached] ]
 #			switch:modes/layers_2_teams/process_end [ as @a[tag=!detached] ]
 #			switch:modes/layers_4_teams/process_end [ as @a[tag=!detached] ]

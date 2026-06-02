@@ -1,5 +1,5 @@
 
-function switch:translations/modes_de_a_coudre_death
+function switch:translations/common/death_missed_jump
 
 gamemode spectator @s
 execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~

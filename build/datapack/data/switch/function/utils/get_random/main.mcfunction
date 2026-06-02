@@ -5,9 +5,8 @@
 #			switch:maps/find_map
 #			switch:modes/block_party/core/pick_random_art
 #			switch:modes/block_party/core/remake_list/shuffle
-#			switch:modes/build_battle/preparation/main
-#			switch:modes/murder_mystery/percentage/choose_pair
-#			switch:modes/spectres_game/percentage/choose_spectre
+#			switch:modes/build_battle/preparation/get_random_theme
+#			switch:modes/murder_mystery/percentage/_choose_from_list
 #			switch:music/actions/random
 #			switch:profiling/content
 #

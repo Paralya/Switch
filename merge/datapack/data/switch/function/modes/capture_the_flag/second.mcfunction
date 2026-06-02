@@ -28,5 +28,5 @@ scoreboard players operation #mins switch.data = #remaining_time switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-function switch:translations/modes_capture_the_flag_second
+function switch:translations/common/basic_actionbar
 

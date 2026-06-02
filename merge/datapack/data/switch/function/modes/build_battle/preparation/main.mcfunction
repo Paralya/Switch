@@ -15,35 +15,16 @@ execute unless data storage switch:main build_battle_themes[5] run function swit
 # Pick 5 random themes by getting random numbers between 0 and the number of themes
 data modify storage switch:main themes set value {theme1:{}, theme2:{}, theme3:{}, theme4:{}, theme5:{}}
 
-data modify storage switch:main input set value {theme:1, index:0}
-execute store result score #modulo_rand switch.data run data get storage switch:main build_battle_themes
-function switch:utils/get_random/main
-execute store result storage switch:main input.index int 1 run scoreboard players get #random switch.data
-function switch:modes/build_battle/preparation/get_theme with storage switch:main input
-
-data modify storage switch:main input set value {theme:2, index:0}
-execute store result score #modulo_rand switch.data run data get storage switch:main build_battle_themes
-function switch:utils/get_random/main
-execute store result storage switch:main input.index int 1 run scoreboard players get #random switch.data
-function switch:modes/build_battle/preparation/get_theme with storage switch:main input
-
-data modify storage switch:main input set value {theme:3, index:0}
-execute store result score #modulo_rand switch.data run data get storage switch:main build_battle_themes
-function switch:utils/get_random/main
-execute store result storage switch:main input.index int 1 run scoreboard players get #random switch.data
-function switch:modes/build_battle/preparation/get_theme with storage switch:main input
-
-data modify storage switch:main input set value {theme:4, index:0}
-execute store result score #modulo_rand switch.data run data get storage switch:main build_battle_themes
-function switch:utils/get_random/main
-execute store result storage switch:main input.index int 1 run scoreboard players get #random switch.data
-function switch:modes/build_battle/preparation/get_theme with storage switch:main input
-
-data modify storage switch:main input set value {theme:5, index:0}
-execute store result score #modulo_rand switch.data run data get storage switch:main build_battle_themes
-function switch:utils/get_random/main
-execute store result storage switch:main input.index int 1 run scoreboard players get #random switch.data
-function switch:modes/build_battle/preparation/get_theme with storage switch:main input
+data modify storage switch:main theme_select set value {theme:1}
+function switch:modes/build_battle/preparation/get_random_theme with storage switch:main theme_select
+data modify storage switch:main theme_select.theme set value 2
+function switch:modes/build_battle/preparation/get_random_theme with storage switch:main theme_select
+data modify storage switch:main theme_select.theme set value 3
+function switch:modes/build_battle/preparation/get_random_theme with storage switch:main theme_select
+data modify storage switch:main theme_select.theme set value 4
+function switch:modes/build_battle/preparation/get_random_theme with storage switch:main theme_select
+data modify storage switch:main theme_select.theme set value 5
+function switch:modes/build_battle/preparation/get_random_theme with storage switch:main theme_select
 
 # Display the themes in the inventory
 execute as @a[tag=!detached] in switch:game run function switch:modes/build_battle/preparation/display_themes

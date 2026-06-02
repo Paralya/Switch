@@ -55,7 +55,10 @@ meta:
     stewbeet:
         # More directories
         textures_folder: "assets/textures"
-        sounds_folder: "assets/sounds"
+        sounds:
+            folder: "assets/sounds"
+            # Optional: glob patterns to exclude from processing
+            exclude_patterns: []
         records_folder: "assets/records"
         libs_folder: "libs"
 

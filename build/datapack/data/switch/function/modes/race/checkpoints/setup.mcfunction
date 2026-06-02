@@ -3,8 +3,7 @@
 #
 # @executed	as @e[type=marker,tag=switch.checkpoint]
 #
-# @within	switch:modes/kart_racer/checkpoints/setup
-#			switch:modes/race/post_load [ as @e[type=marker,tag=switch.checkpoint] ]
+# @within	switch:modes/race/post_load [ as @e[type=marker,tag=switch.checkpoint] ]
 #
 
 # Apply Checkpoint ID for Respawn

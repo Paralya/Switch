@@ -1,7 +1,7 @@
 
 #> switch:modes/murder_mystery/percentage/get_id_from_list
 #
-# @within	switch:modes/murder_mystery/percentage/choose_pair with storage switch:temp input
+# @within	switch:modes/murder_mystery/percentage/_choose_from_list with storage switch:temp input
 #
 # @args		index (int)
 #

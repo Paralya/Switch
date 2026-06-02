@@ -19,7 +19,6 @@
 #			switch:modes/gay_shooter/process_end
 #			switch:modes/glassrunner/end/process_end
 #			switch:modes/infected/process_end
-#			switch:modes/kart_racer/process_end
 #			switch:modes/laser_game/process_end
 #			switch:modes/layers_2_teams/process_end
 #			switch:modes/layers_4_teams/process_end

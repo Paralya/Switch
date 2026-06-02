@@ -1,4 +1,5 @@
 
+## Summon 10 gold coins at origin (will be spread by spread_one_player)
 summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
 summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
 summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
