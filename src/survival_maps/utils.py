@@ -741,7 +741,7 @@ def generate_map_usage_file() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	from src._important.modes import MODES
+	from .._modes.definitions import MODES
 	PATH: str = f"{Mem.ctx.directory}/map_usage.json"
 	CHOOSE_MAP_FOR: str = "function switch:utils/choose_map_for"
 

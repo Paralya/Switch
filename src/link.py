@@ -3,7 +3,7 @@
 import stouputils as stp
 from stewbeet.core import Context, official_lib_used, write_load_file, write_tick_file
 
-from ._important.modes import main as write_modes_load_file
+from ._modes import generate_all_modes
 from .advancements.main import main as automatic_advancements
 from .misc_links.memory_mine import main as memory_mine
 from .misc_links.note_block_studio import main as note_block_studio
@@ -27,8 +27,8 @@ def beet_default(ctx: Context) -> None:
 		{"namespace": "grappling_hook", "path": "advancement/.*first_guide.*"}
 	]}
 
-	# Generate the important stuff
-	write_modes_load_file()
+	# Generate all modes related logics
+	generate_all_modes()
 
 	# Call all links
 	starting_pop_ups()

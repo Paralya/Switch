@@ -1,10 +1,11 @@
 
 # Imports
 import stouputils as stp
+from stouputils.typing import JsonDict
 from beet import Advancement
-from stewbeet.core import Mem, set_json_encoder, write_function
+from stewbeet import Mem, set_json_encoder, write_function
 
-from .._important.modes import LANG_PRETEXT, MODES
+from .._modes.definitions import LANG_PRETEXT, MODES
 
 
 # Main function
@@ -21,7 +22,7 @@ def main() -> None:
 			mode_name: str = mode["name_fr"] if lang == "fr" else mode.get(f"name_{lang}", mode["name_fr"])
 
 			# Prepare the title of the advancement
-			title: list[dict] = [{"text":"'","color":"aqua"},{"text":mode_name,"color":"yellow"}]
+			title: list[JsonDict] = [{"text":"'","color":"aqua"},{"text":mode_name,"color":"yellow"}]
 			if lang == "fr":
 				title.append({"text":"' sélectionné !"})
 			elif lang == "en":
