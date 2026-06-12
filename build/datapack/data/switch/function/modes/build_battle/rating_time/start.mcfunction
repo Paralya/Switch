@@ -16,5 +16,5 @@ clear @a[tag=!detached]
 scoreboard players set @a[scores={switch.temp.id=0..}] switch.temp.to_rate 1
 
 # Tellraw start + playsound
-function switch:translations/modes_build_battle_rating_time_start
+function switch:modes/build_battle/translations/rating_time/start
 

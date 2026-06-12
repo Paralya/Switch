@@ -21,7 +21,7 @@ execute in switch:game run gamerule minecraft:mob_griefing true
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_beat_the_kings_start
+function switch:modes/beat_the_kings/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901

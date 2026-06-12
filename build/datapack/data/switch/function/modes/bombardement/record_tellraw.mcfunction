@@ -1,12 +1,10 @@
 
 #> switch:modes/bombardement/record_tellraw
 #
-# @executed	as @a[tag=!detached,gamemode=!spectator]
-#
-# @within	switch:modes/bombardement/record_save with storage switch:records bombardement
-#			switch:modes/bombardement/start with storage switch:records bombardement
+# @within	switch:modes/bombardement/start with storage switch:records bombardement
+#			switch:modes/bombardement/record_save with storage switch:records bombardement
 #
 
-function switch:translations/modes_bombardement_record_tellraw with storage switch:records bombardement
+function switch:modes/bombardement/translations/record_tellraw with storage switch:records bombardement
 scoreboard players reset #record switch.data
 

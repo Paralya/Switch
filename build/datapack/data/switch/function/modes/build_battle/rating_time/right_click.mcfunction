@@ -11,7 +11,7 @@ scoreboard players set #slot switch.data 0
 execute store result score #slot switch.data run data get entity @s SelectedItemSlot
 
 # Depending on slot, print message and playsound cat
-function switch:translations/modes_build_battle_rating_time_right_click
+function switch:modes/build_battle/translations/rating_time/right_click
 execute if score #slot switch.data matches 0 run playsound entity.cat.ambient ambient @s ~ ~ ~ 1 0.33
 execute if score #slot switch.data matches 1 run playsound entity.cat.ambient ambient @s ~ ~ ~ 1 0.66
 execute if score #slot switch.data matches 2 run playsound entity.cat.ambient ambient @s ~ ~ ~ 1 1.00

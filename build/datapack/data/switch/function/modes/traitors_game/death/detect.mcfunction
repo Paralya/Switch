@@ -3,9 +3,9 @@
 #
 # @executed	as @e[type=marker,tag=...]
 #
-# @within	switch:modes/beat_the_kings/death/detect
-#			switch:modes/capture_the_flag/death/detect
+# @within	switch:modes/capture_the_flag/death/detect
 #			switch:modes/traitors_game/tick [ as @e[type=marker,tag=...] ]
+#			switch:modes/beat_the_kings/death/detect
 #
 
 # Detect if linked player is missing

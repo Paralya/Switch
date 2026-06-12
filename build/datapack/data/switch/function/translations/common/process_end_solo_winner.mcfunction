@@ -1,9 +1,9 @@
 
 #> switch:translations/common/process_end_solo_winner
 #
-# @within	switch:modes/block_party/process_end
+# @within	switch:modes/moutron/process_end
+#			switch:modes/block_party/process_end
 #			switch:modes/bombardement/process_end
-#			switch:modes/moutron/process_end
 #
 
 # French

@@ -51,7 +51,7 @@ item replace entity @a[tag=!detached,gamemode=!spectator] hotbar.8 from block 0 
 # Title players
 
 # Tellraw players
-function switch:translations/modes_block_party_core_give_block
+function switch:modes/block_party/translations/core_give_block
 
 # Playsound and remove shulker box
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s

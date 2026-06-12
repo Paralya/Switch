@@ -6,8 +6,9 @@
 # @within	switch:modes/build_battle/preparation/main
 #
 
-function switch:translations/modes_build_battle_preparation_themes_list
+function switch:modes/build_battle/translations/preparation/themes_list
 data modify storage switch:main build_battle_themes set value []
+
 data modify storage switch:main build_battle_themes append value {"fr":"Maison traditionnelle","en":"Traditional House"}
 data modify storage switch:main build_battle_themes append value {"fr":"France","en":"France"}
 data modify storage switch:main build_battle_themes append value {"fr":"États-Unis","en":"United States"}

@@ -1,10 +1,7 @@
 
 #> switch:maps/spread_one_player
 #
-# @executed	as @e[tag=switch.block_party_mob]
-#
-# @within	switch:modes/block_party/core/pick_random_art [ as @e[tag=switch.block_party_mob] ]
-#			switch:modes/coin_chaser/respawn
+# @within	switch:modes/coin_chaser/respawn
 #			switch:modes/coin_chaser/summon_gold [ as @e[type=item,tag=switch.new_coin] ]
 #			switch:modes/creeper_apocalypse/second [ as @e[limit=8] ]
 #			switch:modes/creeper_apocalypse/second [ as @e[limit=48] ]
@@ -23,6 +20,7 @@
 #			switch:modes/thunder_spear/give_and_teleport
 #			switch:modes/traitors_game/death/to_tp
 #			switch:modes/traitors_game/summon_lootboxes [ as @e[type=chest_minecart,tag=switch.new] ]
+#			switch:modes/block_party/core/pick_random_art [ as @e[tag=switch.block_party_mob] ]
 #
 
 # Spread one player on the survival maps

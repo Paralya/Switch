@@ -2,11 +2,6 @@
 #> switch:engine/force_start_macro
 #
 # @within	switch:modes/_coupdetat/process_end with storage switch:main coupdetat
-#			switch:modes/beat_the_kings/_force_start {id:"beat_the_kings"}
-#			switch:modes/block_party/_force_start {id:"block_party"}
-#			switch:modes/boat_race/_force_start {id:"boat_race"}
-#			switch:modes/bombardement/_force_start {id:"bombardement"}
-#			switch:modes/build_battle/_force_start {id:"build_battle"}
 #			switch:modes/capture_the_flag/_force_start {id:"capture_the_flag"}
 #			switch:modes/castagne/_force_start {id:"castagne"}
 #			switch:modes/cigogne/_force_start {id:"cigogne"}
@@ -48,6 +43,10 @@
 #			switch:modes/traitors_game/_force_start {id:"traitors_game"}
 #			switch:modes/warden_escape/_force_start {id:"warden_escape"}
 #			switch:modes/pitch_creep/_force_start {id:"pitch_creep"}
+#			switch:modes/block_party/_force_start {id:"block_party"}
+#			switch:modes/build_battle/_force_start {id:"build_battle"}
+#			switch:modes/beat_the_kings/_force_start {id:"beat_the_kings"}
+#			switch:modes/bombardement/_force_start {id:"bombardement"}
 #
 # @args		id (string)
 #

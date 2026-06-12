@@ -1,8 +1,6 @@
 
 #> switch:maps/survival/ancienne_egypte_2013/spread_one_player
 #
-# @executed	as @e[tag=switch.block_party_mob]
-#
 # @within	switch:maps/spread_one_player
 #
 

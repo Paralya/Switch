@@ -3,8 +3,8 @@
 #
 # @executed	in switch:build_battle
 #
-# @within	switch:modes/build_battle/rating_time/time_up
-#			switch:modes/build_battle/tick
+# @within	switch:modes/build_battle/tick
+#			switch:modes/build_battle/rating_time/time_up
 #
 
 scoreboard players add #process_end switch.data 1

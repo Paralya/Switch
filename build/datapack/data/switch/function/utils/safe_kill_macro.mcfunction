@@ -5,7 +5,6 @@
 #			switch:engine/launch_game/main {selector:"@e[type=!player]"}
 #			switch:engine/stop {selector:"@e[type=!player]"}
 #			switch:modes/_coupdetat/_force_start {selector:"@e[type=!player,tag=!detached]"}
-#			switch:modes/boat_race/second {selector:"@e[type=#minecraft:boat]"}
 #			switch:modes/infected/secrets/area_51/giant {selector:"@e[tag=switch.giant,distance=..100]"} [ positioned 2053 105 2104 ]
 #			switch:modes/infected/secrets/area_51/slime {selector:"@e[type=slime,distance=..500]"} [ positioned 2092 122 2087 ]
 #			switch:modes/race/finished {selector:"@e[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]"}

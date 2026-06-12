@@ -1,8 +1,6 @@
 
 #> switch:maps/survival/paralya_uhc_lobbies/spread_one_player
 #
-# @executed	as @e[tag=switch.block_party_mob]
-#
 # @within	switch:maps/spread_one_player
 #
 

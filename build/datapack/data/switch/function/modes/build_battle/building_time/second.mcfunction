@@ -27,7 +27,7 @@ execute if score #remaining_time switch.data matches 5 as @a[tag=!detached] at @
 execute if score #remaining_time switch.data matches 4 as @a[tag=!detached] at @s run playsound block.note_block.pling ambient @s
 execute if score #remaining_time switch.data matches 3 as @a[tag=!detached] at @s run playsound block.note_block.pling ambient @s
 execute if score #remaining_time switch.data matches 2 as @a[tag=!detached] at @s run playsound block.note_block.pling ambient @s
-function switch:translations/modes_build_battle_building_time_second
+function switch:modes/build_battle/translations/building_time/second
 execute if score #remaining_time switch.data matches 1 as @a[tag=!detached] at @s run playsound block.note_block.pling ambient @s
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/build_battle/rating_time/start
 

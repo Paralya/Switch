@@ -2,11 +2,6 @@
 #> switch:engine/restart
 #
 # @within	switch:modes/_coupdetat/process_end
-#			switch:modes/beat_the_kings/process_end
-#			switch:modes/block_party/process_end
-#			switch:modes/boat_race/process_end
-#			switch:modes/bombardement/process_end
-#			switch:modes/build_battle/process_end
 #			switch:modes/capture_the_flag/process_end
 #			switch:modes/castagne/process_end
 #			switch:modes/cigogne/process_end
@@ -48,6 +43,10 @@
 #			switch:modes/traitors_game/process_end
 #			switch:modes/warden_escape/process_end
 #			switch:modes/pitch_creep/process_end
+#			switch:modes/block_party/process_end
+#			switch:modes/build_battle/process_end
+#			switch:modes/beat_the_kings/process_end
+#			switch:modes/bombardement/process_end
 #
 
 # For each player, update their stats storage, then sort player stats arrays

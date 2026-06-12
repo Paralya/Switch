@@ -18,7 +18,7 @@ execute as @a[scores={switch.temp.id=0..}] at @a[scores={switch.temp.id=0..}] if
 
 # Show 1st, 2nd, 3rd, and own rank
 scoreboard objectives setdisplay sidebar switch.temp.points
-function switch:translations/modes_build_battle_rating_time_end_calculation
+function switch:modes/build_battle/translations/rating_time/end_calculation
 
 # Remove rank objective
 execute as @a[scores={switch.temp.rank=1}] at @s run function switch:engine/add_win

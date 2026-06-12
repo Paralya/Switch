@@ -1,8 +1,6 @@
 
 #> switch:maps/survival/gg_grass_3/spread_one_player
 #
-# @executed	as @e[tag=switch.block_party_mob]
-#
 # @within	switch:maps/spread_one_player
 #
 

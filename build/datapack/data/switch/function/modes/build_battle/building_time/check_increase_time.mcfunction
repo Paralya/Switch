@@ -23,6 +23,6 @@ execute if score #success switch.data matches 1 run scoreboard players add #rema
 execute if score #success switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.villager.yes ambient @s
 
 # Else, tell the players that the vote failed
-function switch:translations/modes_build_battle_building_time_check_increase_time
+function switch:modes/build_battle/translations/building_time/check_increase_time
 execute unless score #success switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.villager.no ambient @s
 

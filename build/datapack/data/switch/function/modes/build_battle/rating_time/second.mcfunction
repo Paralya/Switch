@@ -7,7 +7,7 @@
 #
 
 # Show Current theme
-function switch:translations/modes_build_battle_rating_time_second
+function switch:modes/build_battle/translations/rating_time/second
 
 # Avoid build changes during rating time
 execute at @e[tag=switch.marker_temp,limit=1] run place template switch:temp ~5 ~ ~5

@@ -47,7 +47,7 @@ execute at @s run loot insert 0 4 0 mine ~ ~ ~ diamond_pickaxe
 
 ## Others
 # Tellraw, Playsound, and Clear all
-function switch:translations/modes_block_party_core_pick_random_art
+function switch:modes/block_party/translations/core_pick_random_art
 execute as @a[tag=!detached] at @s run playsound entity.villager.ambient ambient @s
 clear @a[tag=!detached,gamemode=adventure]
 
@@ -73,10 +73,10 @@ execute if score #random switch.data matches 17 as @a[tag=!detached] at @s run p
 execute if score #random switch.data matches 18 as @a[tag=!detached] at @s run playsound music_disc.ward record @s ~ ~ ~ 10000 1 1
 
 # Summon a paint cow randomly (1/3 chance)
-execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:{"text":"Gertrude","color":"yellow"},CustomNameVisible:true,Tags:["switch.paint_cow", "switch.block_party_mob"],AbsorptionAmount:2048.0f,DeathLootTable:"empty",attributes:[{id:"max_absorption",base:2048.0},{id:"movement_speed",base:5.0d}]}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon cow ~ ~ ~ {CustomName:{"text":"Gertrude","color":"yellow"},CustomNameVisible:true,Tags:["switch.paint_cow","switch.block_party_mob"],AbsorptionAmount:2048.0f,DeathLootTable:"empty",attributes:[{id:"max_absorption",base:2048.0},{id:"movement_speed",base:5.0d}]}
 
 # Summon ravager (1/4 chance)
-execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:true,CustomName:{"text":"Vachette","color":"red"},CustomNameVisible:true,Tags:["switch.ravager", "switch.block_party_mob"],DeathLootTable:"empty"}
+execute if predicate switch:chance/0.33 at @e[tag=switch.selected_map,limit=1] run summon ravager ~ ~ ~ {Invulnerable:true,CustomName:{"text":"Vachette","color":"red"},CustomNameVisible:true,Tags:["switch.ravager","switch.block_party_mob"],DeathLootTable:"empty"}
 
 # Spreadplayers the entities
 execute as @e[tag=switch.block_party_mob] run function switch:maps/spread_one_player

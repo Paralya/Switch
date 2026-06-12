@@ -1,3 +1,0 @@
-
-function switch:modes/beat_the_kings/death/player
-

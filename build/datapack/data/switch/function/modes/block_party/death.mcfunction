@@ -1,11 +1,13 @@
 
 #> switch:modes/block_party/death
 #
-# @within	switch:modes/block_party/joined
-#			switch:modes/block_party/tick [ as @a[tag=!detached,gamemode=!spectator,sort=random] & at @s ]
+# @executed	as @a[tag=!detached,gamemode=!spectator,sort=random] & at @s
+#
+# @within	switch:modes/block_party/tick [ as @a[tag=!detached,gamemode=!spectator,sort=random] & at @s ]
+#			switch:modes/block_party/joined
 #
 
-function switch:translations/modes_block_party_death
+function switch:modes/block_party/translations/death
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 execute if entity @s[gamemode=!spectator] run summon lightning_bolt ~ ~-5 ~
 execute if entity @s[gamemode=!spectator] run tag @s add switch.temp

@@ -2,7 +2,6 @@
 #> switch:utils/classic_death
 #
 # @within	switch:modes/_coupdetat/joined
-#			switch:modes/beat_the_kings/death/player
 #			switch:modes/capture_the_flag/death/player
 #			switch:modes/castagne/death
 #			switch:modes/cigogne/death
@@ -23,6 +22,7 @@
 #			switch:modes/thunder_spear/death
 #			switch:modes/warden_escape/death
 #			switch:modes/pitch_creep/death
+#			switch:modes/beat_the_kings/death/player
 #
 
 # If just died, teleport to the death pos, else teleport back to the map

@@ -36,6 +36,6 @@ execute if score #index switch.data matches 4 run data modify storage switch:mai
 execute if score #index switch.data matches 5 run data modify storage switch:main current_theme set from storage switch:main themes.theme5
 
 # Tellraw start + playsound
-function switch:translations/modes_build_battle_building_time_start
+function switch:modes/build_battle/translations/building_time/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
