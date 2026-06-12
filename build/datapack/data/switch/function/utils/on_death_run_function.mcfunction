@@ -28,7 +28,6 @@
 #			switch:modes/one_shot/tick {function:"switch:modes/one_shot/death"}
 #			switch:modes/panic_chase/tick {function:"switch:modes/panic_chase/death"}
 #			switch:modes/pillars_of_fortune/tick {function:"switch:modes/pillars_of_fortune/death"}
-#			switch:modes/pitch_creep/tick {function:"switch:modes/pitch_creep/death"}
 #			switch:modes/pitchout/tick {function:"switch:modes/pitchout/death"}
 #			switch:modes/protect_the_king/tick {function:"switch:modes/protect_the_king/death"}
 #			switch:modes/pvpswap/tick {function:"switch:modes/pvpswap/death"}
@@ -45,6 +44,7 @@
 #			switch:modes/tnt_run/tick {function:"switch:modes/tnt_run/death"}
 #			switch:modes/traitors_game/tick {function:"switch:modes/traitors_game/death/player"}
 #			switch:modes/warden_escape/tick {function:"switch:modes/warden_escape/death"}
+#			switch:modes/pitch_creep/tick {function:"switch:modes/pitch_creep/death"}
 #
 # @args		function (string)
 #

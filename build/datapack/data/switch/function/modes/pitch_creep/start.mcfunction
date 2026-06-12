@@ -22,7 +22,7 @@ execute in switch:game run gamerule minecraft:keep_inventory true
 scoreboard players set #dont_regenerate switch.data 1
 function switch:utils/choose_map_for {id:"pitch_creep", maps:["pitch_creep_1","octogone_nether_ice"]}
 
-function switch:translations/modes_pitch_creep_start
+function switch:modes/pitch_creep/translations/start
 
 scoreboard players set #remaining_time switch.data 95
 scoreboard players set #pitch_creep_seconds switch.data -10

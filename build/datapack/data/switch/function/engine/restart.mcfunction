@@ -30,7 +30,6 @@
 #			switch:modes/one_shot/process_end
 #			switch:modes/panic_chase/process_end
 #			switch:modes/pillars_of_fortune/process_end
-#			switch:modes/pitch_creep/process_end
 #			switch:modes/pitchout/process_end
 #			switch:modes/protect_the_king/process_end
 #			switch:modes/pvpswap/process_end
@@ -48,6 +47,7 @@
 #			switch:modes/tnt_run/process_end
 #			switch:modes/traitors_game/process_end
 #			switch:modes/warden_escape/process_end
+#			switch:modes/pitch_creep/process_end
 #
 
 # For each player, update their stats storage, then sort player stats arrays

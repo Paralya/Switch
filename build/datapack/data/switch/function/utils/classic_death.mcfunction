@@ -14,7 +14,6 @@
 #			switch:modes/murder_mystery/death
 #			switch:modes/panic_chase/death
 #			switch:modes/pillars_of_fortune/death
-#			switch:modes/pitch_creep/death
 #			switch:modes/protect_the_king/death
 #			switch:modes/pvpswap/death
 #			switch:modes/replicate_the_build/death
@@ -23,6 +22,7 @@
 #			switch:modes/spectres_game/death/player
 #			switch:modes/thunder_spear/death
 #			switch:modes/warden_escape/death
+#			switch:modes/pitch_creep/death
 #
 
 # If just died, teleport to the death pos, else teleport back to the map

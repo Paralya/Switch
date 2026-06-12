@@ -43,7 +43,6 @@
 #			switch:modes/panic_chase/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.mouse] & at @s ]
 #			switch:modes/panic_chase/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.hunter] & at @s ]
 #			switch:modes/pillars_of_fortune/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
-#			switch:modes/pitch_creep/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/pitchout/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/protect_the_king/detect_end [ at @s ]
 #			switch:modes/protect_the_king/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s ]
@@ -70,6 +69,7 @@
 #			switch:modes/traitors_game/detect_end [ as @a[tag=!...,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/traitors_game/detect_end [ as @a[scores={switch.alive=1..,switch.temp.role=..4}] & at @s ]
 #			switch:modes/warden_escape/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
+#			switch:modes/pitch_creep/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #
 
 execute if score #test_mode switch.data matches 1.. run return 1

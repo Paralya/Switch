@@ -21,7 +21,6 @@
 #			switch:modes/one_shot/xp_bar
 #			switch:modes/panic_chase/xp_bar
 #			switch:modes/pillars_of_fortune/xp_bar
-#			switch:modes/pitch_creep/xp_bar
 #			switch:modes/protect_the_king/xp_bar
 #			switch:modes/race/xp_bar
 #			switch:modes/rush_the_point/xp_bar
@@ -33,6 +32,7 @@
 #			switch:modes/tnt_run/xp_bar
 #			switch:modes/traitors_game/xp_bar
 #			switch:modes/warden_escape/xp_bar
+#			switch:modes/pitch_creep/xp_bar
 #
 
 # Divide points

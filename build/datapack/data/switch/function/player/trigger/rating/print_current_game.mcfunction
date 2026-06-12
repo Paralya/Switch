@@ -31,7 +31,6 @@
 #			switch:modes/one_shot/process_end [ as @a[tag=!detached] ]
 #			switch:modes/panic_chase/process_end [ as @a[tag=!detached] ]
 #			switch:modes/pillars_of_fortune/process_end [ as @a[tag=!detached] ]
-#			switch:modes/pitch_creep/process_end [ as @a[tag=!detached] ]
 #			switch:modes/pitchout/process_end [ as @a[tag=!detached] ]
 #			switch:modes/protect_the_king/process_end [ as @a[tag=!detached] ]
 #			switch:modes/pvpswap/process_end [ as @a[tag=!detached] ]
@@ -49,6 +48,7 @@
 #			switch:modes/tnt_run/process_end [ as @a[tag=!detached] ]
 #			switch:modes/traitors_game/process_end [ as @a[tag=!detached] ]
 #			switch:modes/warden_escape/process_end [ as @a[tag=!detached] ]
+#			switch:modes/pitch_creep/process_end [ as @a[tag=!detached] ]
 #
 
 scoreboard players operation @s switch.trigger.rating = #game_1 switch.data

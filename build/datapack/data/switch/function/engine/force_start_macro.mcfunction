@@ -30,7 +30,6 @@
 #			switch:modes/one_shot/_force_start {id:"one_shot"}
 #			switch:modes/panic_chase/_force_start {id:"panic_chase"}
 #			switch:modes/pillars_of_fortune/_force_start {id:"pillars_of_fortune"}
-#			switch:modes/pitch_creep/_force_start {id:"pitch_creep"}
 #			switch:modes/pitchout/_force_start {id:"pitchout"}
 #			switch:modes/protect_the_king/_force_start {id:"protect_the_king"}
 #			switch:modes/pvpswap/_force_start {id:"pvpswap"}
@@ -48,6 +47,7 @@
 #			switch:modes/tnt_run/_force_start {id:"tnt_run"}
 #			switch:modes/traitors_game/_force_start {id:"traitors_game"}
 #			switch:modes/warden_escape/_force_start {id:"warden_escape"}
+#			switch:modes/pitch_creep/_force_start {id:"pitch_creep"}
 #
 # @args		id (string)
 #
