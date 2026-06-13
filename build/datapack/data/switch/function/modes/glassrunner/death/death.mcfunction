@@ -4,8 +4,8 @@
 # @executed	positioned 3000 128 3000
 #
 # @within	switch:modes/glassrunner/joined
-#			switch:modes/glassrunner/start/team
 #			switch:modes/glassrunner/start [ as @a[tag=!detached] & at @s ]
+#			switch:modes/glassrunner/start/team
 #
 
 clear @s snowball

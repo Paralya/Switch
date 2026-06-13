@@ -16,7 +16,7 @@ execute if score #laser_game_seconds switch.data matches 0 if data storage switc
 
 # Base reload
 scoreboard players remove #base_reload switch.data 1
-function switch:translations/modes_laser_game_second
+function switch:modes/laser_game/translations/second
 execute if score #base_reload switch.data matches 0 as @e[tag=switch.laser_game.base,sort=random,limit=1] run data merge entity @s {Glowing:true,block_state:{Name:"minecraft:iron_trapdoor"}}
 execute if score #base_reload switch.data matches 1.. as @e[tag=switch.laser_game.base] run data merge entity @s {Glowing:false,block_state:{Name:"minecraft:dark_oak_trapdoor"}}
 

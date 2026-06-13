@@ -25,7 +25,7 @@ execute if score #infected_secret switch.data matches 14 positioned 129027 104 1
 # Humans victory
 execute if score #infected_secret switch.data matches 17 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/50
 execute if score #infected_secret switch.data matches 17 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
-function switch:translations/modes_infected_secrets_old_japan_apocalypse_next_state
+function switch:modes/infected/translations/secrets_old_japan_apocalypse_next_state
 
 # Next state
 scoreboard players add #infected_secret switch.data 1

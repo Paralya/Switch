@@ -4,7 +4,7 @@
 # @within	switch:modes/fish_fight/start
 #
 
-function switch:translations/modes_fish_fight_teams_tp_setup
+function switch:modes/fish_fight/translations/teams_tp_setup
 
 team add switch.temp.red {"text":"[Red]","color":"red"}
 team add switch.temp.blue {"text":"[Blue]","color":"blue"}

@@ -34,7 +34,7 @@ execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] un
 execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 execute if score #fish_fight_seconds switch.data matches 70 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
-# tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires 
+# tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires
 
 execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
 execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached,gamemode=!spectator] run function switch:modes/fish_fight/give_tnt
@@ -45,7 +45,7 @@ execute if score #fish_fight_seconds switch.data matches 125 as @r[tag=!detached
 
 # tellraw  pour annoncer qu'une tnt a été donnée à des joueurs aléatoires
 
-# event pufferfish 
+# event pufferfish
 execute if score #fish_fight_seconds switch.data matches 86 store result score #random switch.data run random value 0..2
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
@@ -87,5 +87,5 @@ scoreboard players operation #mins switch.data = #fish_fight_seconds switch.data
 scoreboard players operation #mins switch.data /= #60 switch.data
 scoreboard players operation #secs switch.data = #fish_fight_seconds switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
-function switch:translations/modes_fish_fight_second
+function switch:modes/fish_fight/translations/second
 

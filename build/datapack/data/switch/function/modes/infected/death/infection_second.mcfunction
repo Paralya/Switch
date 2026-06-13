@@ -1,10 +1,10 @@
 
 #> switch:modes/infected/death/infection_second
 #
-# @executed	as the player & at current position
+# @executed	at @s
 #
-# @within	switch:modes/infected/death/launch_infection
-#			switch:modes/infected/second [ at @s ]
+# @within	switch:modes/infected/second [ at @s ]
+#			switch:modes/infected/death/launch_infection
 #
 
 damage @s 0.00001

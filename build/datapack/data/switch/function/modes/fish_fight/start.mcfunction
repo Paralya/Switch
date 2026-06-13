@@ -35,7 +35,7 @@ execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FIS
 # execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
 # execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
 
-function switch:translations/modes_fish_fight_start
+function switch:modes/fish_fight/translations/start
 
 scoreboard objectives setdisplay list switch.health
 scoreboard objectives add switch.temp.damages dummy

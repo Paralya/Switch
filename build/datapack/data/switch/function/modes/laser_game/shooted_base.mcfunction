@@ -14,7 +14,7 @@ execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @
 execute if score #color switch.data matches 0 run tag @a[scores={switch.alive=10}] add switch.message
 execute if score #color switch.data matches 1 run tag @a[scores={switch.alive=11}] add switch.message
 execute store result score #random switch.data run random value 0..5
-function switch:translations/modes_laser_game_shooted_base
+function switch:modes/laser_game/translations/shooted_base
 tag @a remove switch.message
 
 execute if score #random switch.data matches 0 run scoreboard players set @s switch.temp.shield 5

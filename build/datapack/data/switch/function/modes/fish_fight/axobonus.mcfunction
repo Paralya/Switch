@@ -6,7 +6,7 @@
 # @within	switch:modes/fish_fight/tick [ as @a[tag=!detached,scores={switch.temp.axolotl_killed=1..}] ]
 #
 
-# Tirage au sort du bonus 
+# Tirage au sort du bonus
 execute store result score #random switch.data run random value 0..12
 
 # si le score est 0, on donne un effet de slow falling au détenteur du score axolotl killed
@@ -120,7 +120,7 @@ execute if score #random switch.data matches 12 if score #TEAM_FISH switch.data 
 execute if score #random switch.data matches 12 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.red] run effect give @a[team=switch.temp.red] jump_boost 8 1 true
 execute if score #random switch.data matches 12 if score #TEAM_FISH switch.data matches 1 if entity @s[team=switch.temp.blue] run effect give @a[team=switch.temp.blue] jump_boost 8 1 true
 execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run playsound entity.drink ambient @s
-function switch:translations/modes_fish_fight_axobonus
+function switch:modes/fish_fight/translations/axobonus
 execute if score #random switch.data matches 12 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 12 run effect give @s speed 10 0 true
 

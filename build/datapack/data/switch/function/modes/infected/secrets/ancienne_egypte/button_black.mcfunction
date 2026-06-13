@@ -15,7 +15,7 @@ execute if score #success switch.data matches 0 run return 0
 
 # Else,
 execute store result score #random switch.data run random value 0..1
-function switch:translations/modes_infected_secrets_ancienne_egypte_button_black
+function switch:modes/infected/translations/secrets_ancienne_egypte_button_black
 fill 128065 116 128092 128065 116 128090 air destroy
 setblock 128067 114 128089 air destroy
 

@@ -14,6 +14,6 @@ scoreboard players add @a[tag=!detached,tag=switch.temp] switch.temp.individual_
 execute if score @s switch.temp.shield matches 1.. run scoreboard players remove @s switch.temp.shield 1
 
 execute unless score @s switch.temp.shield matches 1.. run tag @s add global.ignore
-function switch:translations/modes_laser_game_shooted_both
+function switch:modes/laser_game/translations/shooted_both
 execute unless score @s switch.temp.shield matches 1.. run scoreboard players set @s switch.temp.dead_cooldown -100
 

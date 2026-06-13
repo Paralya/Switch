@@ -6,7 +6,7 @@
 #			switch:modes/fish_fight/tick [ as @a[scores={switch.alive=1..},predicate=switch:in_water,sort=random] ]
 #
 
-function switch:translations/modes_fish_fight_death
+function switch:modes/fish_fight/translations/death
 
 scoreboard players remove @s switch.alive 1
 execute if entity @s[scores={switch.alive=1..}] run function switch:modes/fish_fight/teams_tp/tp_give

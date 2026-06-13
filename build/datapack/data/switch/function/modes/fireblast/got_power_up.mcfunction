@@ -19,7 +19,7 @@ execute if items entity @s container.* rabbit_foot[custom_data~{switch:{power_up
 execute if items entity @s container.* rabbit_foot[custom_data~{switch:{power_up:true}}] run playsound minecraft:entity.rabbit.ambient player @s ~ ~ ~ 0.8 1.2
 
 # Tellraw messages
-function switch:translations/modes_fireblast_got_power_up
+function switch:modes/fireblast/translations/got_power_up
 
 # Remove the power-up item from inventory after applying effects
 clear @s *[custom_data~{switch:{power_up:true}}]

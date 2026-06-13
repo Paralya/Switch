@@ -5,14 +5,14 @@
 #			switch:engine/launch_game/main {selector:"@e[type=!player]"}
 #			switch:engine/stop {selector:"@e[type=!player]"}
 #			switch:modes/_coupdetat/_force_start {selector:"@e[type=!player,tag=!detached]"}
-#			switch:modes/infected/secrets/area_51/giant {selector:"@e[tag=switch.giant,distance=..100]"} [ positioned 2053 105 2104 ]
-#			switch:modes/infected/secrets/area_51/slime {selector:"@e[type=slime,distance=..500]"} [ positioned 2092 122 2087 ]
 #			switch:modes/race/finished {selector:"@e[tag=switch.vehicle,predicate=switch:have_temp_player_passenger]"}
 #			switch:modes/race/process_end {selector:"@e[tag=switch.vehicle]"}
 #			switch:modes/race/process_end {selector:"@e[tag=switch.checkpoint]"}
 #			switch:modes/race/stop {selector:"@e[tag=switch.vehicle]"}
 #			switch:modes/race/stop {selector:"@e[tag=switch.checkpoint]"}
 #			switch:modes/pitch_creep/second {selector:"@e[type=creeper,distance=..100]"} [ at @n[type=marker,tag=switch.selected_map] ]
+#			switch:modes/infected/secrets/area_51/giant {selector:"@e[tag=switch.giant,distance=..100]"} [ positioned 2053 105 2104 ]
+#			switch:modes/infected/secrets/area_51/slime {selector:"@e[type=slime,distance=..500]"} [ positioned 2092 122 2087 ]
 #
 # @args		selector (string)
 #

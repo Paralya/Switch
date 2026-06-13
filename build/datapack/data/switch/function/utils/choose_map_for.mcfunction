@@ -1,17 +1,7 @@
 
 #> switch:utils/choose_map_for
 #
-# @within	switch:modes/coin_chaser/start {id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}
-#			switch:modes/creeper_apocalypse/start {id:"creeper_apocalypse", maps:["enchanting_island","friends_cube_lobby","zonweeb_main","jn_countries_castle","even_old_japan"]}
-#			switch:modes/de_a_coudre/start {id:"de_a_coudre", maps:["de_a_coudre_1"]}
-#			switch:modes/feed_fast/start {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","nature_house"]}
-#			switch:modes/fireblast/start {id:"fireblast", maps:["fireblast_bubulle","fireblast_cookie","fireblast_pork"]}
-#			switch:modes/fish_fight/start {id:"fish_fight", maps:["luxio_fish_fight"]}
-#			switch:modes/gay_shooter/start {id:"gay_shooter", maps:["gay_shooter"]}
-#			switch:modes/glassrunner/start {id:"glassrunner", maps:["glassrunner"]}
-#			switch:modes/infected/start {id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}
-#			switch:modes/laser_game/start {id:"laser_game", maps:["laser_game"]}
-#			switch:modes/layers_2_teams/start {id:"layers_2_teams", maps:["layers_2_teams"]}
+# @within	switch:modes/layers_2_teams/start {id:"layers_2_teams", maps:["layers_2_teams"]}
 #			switch:modes/layers_4_teams/start {id:"layers_4_teams", maps:["layers_4_teams"]}
 #			switch:modes/memory_mine/start {id:"memory_mine", maps:["memory_mine"]}
 #			switch:modes/minigolf/start {id:"minigolf", maps:["gg_grass_1","gg_grass_2","gg_grass_3","gg_snow_1","gg_snow_2","gg_ice_1","gg_temple","gg_volcano","gg_desert_1","gg_end_1","gg_chamber"]}
@@ -37,13 +27,23 @@
 #			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}
 #			switch:modes/warden_escape/start {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 #			switch:modes/pitch_creep/start {id:"pitch_creep", maps:["pitch_creep_1","octogone_nether_ice"]}
+#			switch:modes/laser_game/start {id:"laser_game", maps:["laser_game"]}
+#			switch:modes/creeper_apocalypse/start {id:"creeper_apocalypse", maps:["enchanting_island","friends_cube_lobby","zonweeb_main","jn_countries_castle","even_old_japan"]}
+#			switch:modes/de_a_coudre/start {id:"de_a_coudre", maps:["de_a_coudre_1"]}
+#			switch:modes/feed_fast/start {id:"feed_fast", maps:["mushroom_plains","friends_pvpbox_ice","friends_pvpbox_hills","friends_pvpbox_end","kart_racer_relai","nature_house"]}
 #			switch:modes/castagne/start {id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box","adraik_big_ball"]}
 #			switch:modes/block_party/start {id:"block_party", maps:["block_party"]}
+#			switch:modes/gay_shooter/start {id:"gay_shooter", maps:["gay_shooter"]}
 #			switch:modes/build_battle/start {id:"build_battle", maps:["build_battle"]}
 #			switch:modes/beat_the_kings/start {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
+#			switch:modes/coin_chaser/start {id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}
 #			switch:modes/bombardement/start {id:"bombardement", maps:["bombardement"]}
 #			switch:modes/cigogne/start {id:"cigogne", maps:["cigogne"]}
+#			switch:modes/infected/start {id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}
+#			switch:modes/glassrunner/start {id:"glassrunner", maps:["glassrunner"]}
 #			switch:modes/capture_the_flag/choose_map_for {id:"capture_the_flag", maps:["operation_pigclaw","ctf_plains_castles","ctf_mountains_castles","ctf_flowers","ctf_nether","ctf_forest_castles"]}
+#			switch:modes/fish_fight/start {id:"fish_fight", maps:["luxio_fish_fight"]}
+#			switch:modes/fireblast/start {id:"fireblast", maps:["fireblast_bubulle","fireblast_cookie","fireblast_pork"]}
 #
 # @args		id (string)
 #			maps (list)

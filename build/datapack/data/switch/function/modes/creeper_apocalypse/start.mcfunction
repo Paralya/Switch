@@ -20,7 +20,7 @@ execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_creeper_apocalypse_start
+function switch:modes/creeper_apocalypse/translations/start
 
 scoreboard players set #remaining_time switch.data 105
 scoreboard players set #creeper_apocalypse_seconds switch.data -10

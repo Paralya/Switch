@@ -23,7 +23,7 @@ execute if score #infected_secret switch.data matches 3 run gamerule minecraft:b
 # TNT exploded (end)
 execute if score #infected_secret switch.data matches 4 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/52
 execute if score #infected_secret switch.data matches 4 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
-function switch:translations/modes_infected_secrets_lost_graveyard_next_state
+function switch:modes/infected/translations/secrets_lost_graveyard_next_state
 execute if score #infected_secret switch.data matches 4 run kill @e[tag=stardust.nether_stardust_ore]
 execute if score #infected_secret switch.data matches 4 run function switch:modes/infected/secrets/drop_element_115
 

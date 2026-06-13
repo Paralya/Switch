@@ -9,7 +9,7 @@ time set 18000
 function switch:utils/choose_map_for {id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}
 execute as @a[tag=!detached] run function switch:modes/infected/death/early_respawn
 
-function switch:translations/modes_infected_start
+function switch:modes/infected/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 execute in switch:game run gamerule minecraft:natural_health_regeneration false

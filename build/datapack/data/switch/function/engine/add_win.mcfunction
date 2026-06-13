@@ -1,23 +1,9 @@
 
 #> switch:engine/add_win
 #
-# @executed	as @a[tag=!...] & at @s
+# @executed	as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s
 #
-# @within	switch:modes/coin_chaser/process_end [ as @a[tag=!...] & at @s ]
-#			switch:modes/creeper_apocalypse/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
-#			switch:modes/de_a_coudre/process_end [ as @a[tag=!...] & at @s ]
-#			switch:modes/feed_fast/process_end [ as @a[tag=!...] & at @s ]
-#			switch:modes/fireblast/process_end [ as @a[tag=!detached,gamemode=adventure] & at @s ]
-#			switch:modes/fish_fight/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
-#			switch:modes/fish_fight/teams_tp/only_one_winner [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
-#			switch:modes/gay_shooter/detect_end [ as @a[tag=!detached,gamemode=adventure,team=switch.temp.gays] & at @s ]
-#			switch:modes/gay_shooter/detect_end [ as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] & at @s ]
-#			switch:modes/glassrunner/end/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
-#			switch:modes/infected/process_end [ as @a[tag=!detached,team=switch.temp.human] & at @s ]
-#			switch:modes/infected/process_end [ at @s ]
-#			switch:modes/laser_game/process_end [ as @a[tag=!detached,scores={switch.alive=11}] & at @s ]
-#			switch:modes/laser_game/process_end [ as @a[tag=!detached,scores={switch.alive=10}] & at @s ]
-#			switch:modes/layers_2_teams/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s ]
+# @within	switch:modes/layers_2_teams/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s ]
 #			switch:modes/layers_2_teams/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] & at @s ]
 #			switch:modes/layers_4_teams/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s ]
 #			switch:modes/layers_4_teams/detect_end [ as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] & at @s ]
@@ -60,15 +46,29 @@
 #			switch:modes/traitors_game/detect_end [ as @a[scores={switch.alive=1..,switch.temp.role=..4}] & at @s ]
 #			switch:modes/warden_escape/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/pitch_creep/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
+#			switch:modes/laser_game/process_end [ as @a[tag=!detached,scores={switch.alive=11}] & at @s ]
+#			switch:modes/laser_game/process_end [ as @a[tag=!detached,scores={switch.alive=10}] & at @s ]
+#			switch:modes/creeper_apocalypse/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
+#			switch:modes/de_a_coudre/process_end [ as @a[tag=!...] & at @s ]
+#			switch:modes/feed_fast/process_end [ as @a[tag=!...] & at @s ]
 #			switch:modes/castagne/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
 #			switch:modes/block_party/process_end [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
+#			switch:modes/gay_shooter/detect_end [ as @a[tag=!detached,gamemode=adventure,team=switch.temp.gays] & at @s ]
+#			switch:modes/gay_shooter/detect_end [ as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] & at @s ]
 #			switch:modes/build_battle/rating_time/end_calculation [ as @a[scores={switch.temp.rank=1}] & at @s ]
 #			switch:modes/beat_the_kings/detect_end [ as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.civil] & at @s ]
 #			switch:modes/beat_the_kings/detect_end [ at @s ]
+#			switch:modes/coin_chaser/process_end [ as @a[tag=!...] & at @s ]
 #			switch:modes/bombardement/process_end [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
 #			switch:modes/cigogne/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
+#			switch:modes/infected/process_end [ as @a[tag=!detached,team=switch.temp.human] & at @s ]
+#			switch:modes/infected/process_end [ at @s ]
+#			switch:modes/glassrunner/end/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,team=switch.temp.red] & at @s ]
 #			switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,team=switch.temp.blue] & at @s ]
+#			switch:modes/fish_fight/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
+#			switch:modes/fish_fight/teams_tp/only_one_winner [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
+#			switch:modes/fireblast/process_end [ as @a[tag=!detached,gamemode=adventure] & at @s ]
 #
 
 execute if score #test_mode switch.data matches 1.. run return 1

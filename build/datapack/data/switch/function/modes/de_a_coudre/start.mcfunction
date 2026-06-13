@@ -38,7 +38,7 @@ execute if score #max switch.data matches 17..24 run scoreboard players set #rou
 execute if score #max switch.data matches 25..32 run scoreboard players set #rounds switch.data 2
 execute if score #max switch.data matches 33.. run scoreboard players set #rounds switch.data 1
 scoreboard players operation #max_rounds switch.data = #rounds switch.data
-function switch:translations/modes_de_a_coudre_start
+function switch:modes/de_a_coudre/translations/start
 
 # Teleport all players to the jump place
 execute as @a[tag=!detached] run function switch:modes/de_a_coudre/next_player_teleport

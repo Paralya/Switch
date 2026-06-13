@@ -19,7 +19,7 @@ execute if score #gay_shooter_seconds switch.data matches 300.. run scoreboard p
 execute if score #game_state switch.data matches 1..4 run scoreboard players set #gay_shooter_seconds switch.data 100000
 
 # Cas des vainqueurs
-function switch:translations/modes_gay_shooter_detect_end
+function switch:modes/gay_shooter/translations/detect_end
 
 execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=adventure,team=switch.temp.gays] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=adventure,team=switch.temp.shooters] at @s run function switch:engine/add_win

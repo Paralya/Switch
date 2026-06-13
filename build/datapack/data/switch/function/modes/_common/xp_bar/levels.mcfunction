@@ -2,12 +2,6 @@
 #> switch:modes/_common/xp_bar/levels
 #
 # @within	switch:modes/_coupdetat/xp_bar
-#			switch:modes/coin_chaser/xp_bar
-#			switch:modes/creeper_apocalypse/xp_bar
-#			switch:modes/de_a_coudre/xp_bar
-#			switch:modes/feed_fast/xp_bar
-#			switch:modes/gay_shooter/xp_bar
-#			switch:modes/infected/xp_bar
 #			switch:modes/minigolf/xp_bar
 #			switch:modes/mlg_a_coudre/xp_bar
 #			switch:modes/moutron/xp_bar
@@ -26,13 +20,19 @@
 #			switch:modes/traitors_game/xp_bar
 #			switch:modes/warden_escape/xp_bar
 #			switch:modes/pitch_creep/xp_bar
+#			switch:modes/creeper_apocalypse/xp_bar
+#			switch:modes/de_a_coudre/xp_bar
+#			switch:modes/feed_fast/xp_bar
 #			switch:modes/castagne/xp_bar
 #			switch:modes/block_party/xp_bar
+#			switch:modes/gay_shooter/xp_bar
 #			switch:modes/build_battle/xp_bar_preparation
 #			switch:modes/build_battle/xp_bar_rating
 #			switch:modes/beat_the_kings/xp_bar
+#			switch:modes/coin_chaser/xp_bar
 #			switch:modes/bombardement/xp_bar
 #			switch:modes/cigogne/xp_bar
+#			switch:modes/infected/xp_bar
 #
 
 # Set XP levels

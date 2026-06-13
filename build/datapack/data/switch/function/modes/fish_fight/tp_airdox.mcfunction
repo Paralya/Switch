@@ -4,10 +4,10 @@
 # @executed	as @a[tag=!detached,sort=random]
 #
 # @within	switch:modes/fish_fight/start [ as @a[tag=!detached,sort=random] ]
-#			switch:modes/fish_fight/teams_tp/only_one_winner [ as @a[tag=!detached] ]
-#			switch:modes/fish_fight/teams_tp/tp_give
 #			switch:modes/fish_fight/tick [ as @a[tag=!detached,gamemode=survival,scores={switch.alive=1..,switch.temp.cooldown=1..}] & at @s ]
 #			switch:modes/fish_fight/tick [ as @e[type=axolotl] & at @s ]
+#			switch:modes/fish_fight/teams_tp/only_one_winner [ as @a[tag=!detached] ]
+#			switch:modes/fish_fight/teams_tp/tp_give
 #
 
 execute store result score #tp_random switch.data run random value 1..5

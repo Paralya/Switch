@@ -14,5 +14,5 @@ function switch:modes/_common/xp_bar/points
 scoreboard players operation #levels switch.data = #remaining_time switch.data
 function switch:modes/_common/xp_bar/levels
 
-function switch:translations/modes_gay_shooter_xp_bar
+function switch:modes/gay_shooter/translations/xp_bar
 

@@ -1,9 +1,9 @@
 
 #> switch:translations/common/joined_reconnect
 #
-# @within	switch:modes/laser_game/joined
-#			switch:modes/rush_the_flag/joined
+# @within	switch:modes/rush_the_flag/joined
 #			switch:modes/rush_the_point/joined
+#			switch:modes/laser_game/joined
 #			switch:modes/capture_the_flag/joined
 #
 

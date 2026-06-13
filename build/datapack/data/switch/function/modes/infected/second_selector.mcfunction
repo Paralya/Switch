@@ -31,5 +31,5 @@ execute if score #infected_seconds switch.data matches 25.. run scoreboard playe
 execute if score #infected_seconds switch.data matches 25.. run tag @a[tag=switch.to_infect] remove switch.to_infect
 
 # Display translated messages to players about the infection process
-function switch:translations/modes_infected_second_selector
+function switch:modes/infected/translations/second_selector
 

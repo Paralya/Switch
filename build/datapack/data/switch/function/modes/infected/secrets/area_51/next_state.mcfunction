@@ -40,7 +40,7 @@ execute if score #infected_secret switch.data matches 8 at @e[limit=24] at @e[ta
 # End (killed the giant)
 execute if score #infected_secret switch.data matches 9 unless score #test_mode switch.data matches 1 run advancement grant @a[team=switch.temp.human] only switch:visible/53
 execute if score #infected_secret switch.data matches 9 as @a[team=switch.temp.human] run function switch:modes/infected/secrets/check_if_all_secrets
-function switch:translations/modes_infected_secrets_area_51_next_state
+function switch:modes/infected/translations/secrets_area_51_next_state
 
 # Next state
 scoreboard players add #infected_secret switch.data 1

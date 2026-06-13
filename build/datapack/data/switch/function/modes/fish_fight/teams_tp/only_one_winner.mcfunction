@@ -4,7 +4,7 @@
 # @within	switch:modes/fish_fight/second
 #
 
-function switch:translations/modes_fish_fight_teams_tp_only_one_winner
+function switch:modes/fish_fight/translations/teams_tp_only_one_winner
 playsound entity.zombified_piglin.ambient ambient @s
 execute as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_win
 

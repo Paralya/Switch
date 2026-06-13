@@ -2,16 +2,6 @@
 #> switch:utils/on_death_run_function
 #
 # @within	switch:modes/_coupdetat/tick {function:"switch:utils/classic_death"}
-#			switch:modes/coin_chaser/tick {function:"switch:modes/coin_chaser/respawn"}
-#			switch:modes/creeper_apocalypse/tick {function:"switch:modes/creeper_apocalypse/death"}
-#			switch:modes/de_a_coudre/tick {function:"switch:modes/de_a_coudre/death"}
-#			switch:modes/feed_fast/tick {function:"switch:modes/feed_fast/death"}
-#			switch:modes/fireblast/tick {function:"switch:modes/fireblast/death"}
-#			switch:modes/fish_fight/tick {function:"switch:modes/fish_fight/death"}
-#			switch:modes/gay_shooter/tick {function:"switch:modes/gay_shooter/death"}
-#			switch:modes/glassrunner/tick {function:"switch:modes/glassrunner/death/death"}
-#			switch:modes/infected/tick {function:"switch:modes/infected/death/zombie_spawn"}
-#			switch:modes/laser_game/tick {function:"switch:modes/laser_game/teleport_players"}
 #			switch:modes/layers_2_teams/tick {function:"switch:modes/layers_2_teams/death"}
 #			switch:modes/layers_4_teams/tick {function:"switch:modes/layers_4_teams/death"}
 #			switch:modes/memory_mine/tick {function:"switch:modes/memory_mine/death"}
@@ -38,12 +28,22 @@
 #			switch:modes/traitors_game/tick {function:"switch:modes/traitors_game/death/player"}
 #			switch:modes/warden_escape/tick {function:"switch:modes/warden_escape/death"}
 #			switch:modes/pitch_creep/tick {function:"switch:modes/pitch_creep/death"}
+#			switch:modes/laser_game/tick {function:"switch:modes/laser_game/teleport_players"}
+#			switch:modes/creeper_apocalypse/tick {function:"switch:modes/creeper_apocalypse/death"}
+#			switch:modes/de_a_coudre/tick {function:"switch:modes/de_a_coudre/death"}
+#			switch:modes/feed_fast/tick {function:"switch:modes/feed_fast/death"}
 #			switch:modes/castagne/tick {function:"switch:modes/castagne/death"}
 #			switch:modes/block_party/tick {function:"switch:modes/block_party/death"}
+#			switch:modes/gay_shooter/tick {function:"switch:modes/gay_shooter/death"}
 #			switch:modes/beat_the_kings/tick {function:"switch:modes/beat_the_kings/death/player"}
+#			switch:modes/coin_chaser/tick {function:"switch:modes/coin_chaser/respawn"}
 #			switch:modes/bombardement/tick {function:"switch:modes/bombardement/death"}
 #			switch:modes/cigogne/tick {function:"switch:modes/cigogne/death"}
+#			switch:modes/infected/tick {function:"switch:modes/infected/death/zombie_spawn"}
+#			switch:modes/glassrunner/tick {function:"switch:modes/glassrunner/death/death"}
 #			switch:modes/capture_the_flag/tick {function:"switch:modes/capture_the_flag/death/player"}
+#			switch:modes/fish_fight/tick {function:"switch:modes/fish_fight/death"}
+#			switch:modes/fireblast/tick {function:"switch:modes/fireblast/death"}
 #
 # @args		function (string)
 #

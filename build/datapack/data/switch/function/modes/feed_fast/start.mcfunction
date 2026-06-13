@@ -17,7 +17,7 @@ function switch:utils/choose_map_for {id:"feed_fast", maps:["mushroom_plains","f
 execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_feed_fast_start
+function switch:modes/feed_fast/translations/start
 
 scoreboard players set #remaining_time switch.data 50
 scoreboard players set #feed_fast_seconds switch.data -10

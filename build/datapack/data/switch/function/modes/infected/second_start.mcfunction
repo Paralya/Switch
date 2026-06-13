@@ -18,5 +18,5 @@ execute if score #infected_seconds switch.data matches 0 run function switch:mod
 execute if score #infected_seconds switch.data matches 0 as @a[tag=!detached] at @s run function switch:modes/infected/death/human_spawn
 
 # Tellraws
-function switch:translations/modes_infected_second_start
+function switch:modes/infected/translations/second_start
 

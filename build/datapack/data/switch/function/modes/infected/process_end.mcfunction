@@ -7,7 +7,7 @@
 scoreboard players add #process_end switch.data 1
 
 # Victory
-function switch:translations/modes_infected_process_end
+function switch:modes/infected/translations/process_end
 
 # Advancements
 execute if score #process_end switch.data matches 1 if score #game_state switch.data matches 0 unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,team=switch.temp.human,scores={switch.temp.hits_gotten=0}] only switch:visible/57

@@ -31,7 +31,7 @@ execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/d
 execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_glassrunner_start
+function switch:modes/glassrunner/translations/start
 
 scoreboard players set #process_end switch.data 0
 scoreboard players set #glassrunner_ticks switch.data 0
