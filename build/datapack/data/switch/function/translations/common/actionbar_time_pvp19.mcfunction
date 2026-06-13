@@ -1,8 +1,8 @@
 
 #> switch:translations/common/actionbar_time_pvp19
 #
-# @within	switch:modes/castagne/second
-#			switch:modes/protect_the_king/second
+# @within	switch:modes/protect_the_king/second
+#			switch:modes/castagne/second
 #
 
 # French

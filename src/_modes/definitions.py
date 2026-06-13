@@ -10,8 +10,8 @@
 import json
 
 import stouputils as stp
-from stouputils.typing import JsonDict
 from stewbeet import TextComponent, write_function
+from stouputils.typing import JsonDict
 
 # Modes list
 MODES: list[JsonDict] = [

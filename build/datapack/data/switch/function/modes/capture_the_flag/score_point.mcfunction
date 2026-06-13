@@ -7,7 +7,7 @@
 #
 
 # Tellraw + sound + fireworks
-function switch:translations/modes_capture_the_flag_score_point
+function switch:modes/capture_the_flag/translations/score_point
 execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.blue_flag] run advancement grant @p[tag=switch.has_blue_flag] only switch:visible/33
 execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[tag=switch.has_red_flag] only switch:visible/33
 execute as @a[tag=!detached] at @s run playsound entity.firework_rocket.blast ambient @s

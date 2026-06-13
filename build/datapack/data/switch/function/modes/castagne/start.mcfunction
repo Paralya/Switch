@@ -16,7 +16,7 @@ function switch:utils/choose_map_for {id:"castagne", maps:["kart_racer_relai","n
 
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 
-function switch:translations/modes_castagne_start
+function switch:modes/castagne/translations/start
 
 scoreboard players set #remaining_time switch.data 910
 scoreboard players set #castagne_seconds switch.data -10

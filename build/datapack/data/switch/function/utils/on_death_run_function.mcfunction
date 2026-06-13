@@ -2,9 +2,6 @@
 #> switch:utils/on_death_run_function
 #
 # @within	switch:modes/_coupdetat/tick {function:"switch:utils/classic_death"}
-#			switch:modes/capture_the_flag/tick {function:"switch:modes/capture_the_flag/death/player"}
-#			switch:modes/castagne/tick {function:"switch:modes/castagne/death"}
-#			switch:modes/cigogne/tick {function:"switch:modes/cigogne/death"}
 #			switch:modes/coin_chaser/tick {function:"switch:modes/coin_chaser/respawn"}
 #			switch:modes/creeper_apocalypse/tick {function:"switch:modes/creeper_apocalypse/death"}
 #			switch:modes/de_a_coudre/tick {function:"switch:modes/de_a_coudre/death"}
@@ -41,9 +38,12 @@
 #			switch:modes/traitors_game/tick {function:"switch:modes/traitors_game/death/player"}
 #			switch:modes/warden_escape/tick {function:"switch:modes/warden_escape/death"}
 #			switch:modes/pitch_creep/tick {function:"switch:modes/pitch_creep/death"}
+#			switch:modes/castagne/tick {function:"switch:modes/castagne/death"}
 #			switch:modes/block_party/tick {function:"switch:modes/block_party/death"}
 #			switch:modes/beat_the_kings/tick {function:"switch:modes/beat_the_kings/death/player"}
 #			switch:modes/bombardement/tick {function:"switch:modes/bombardement/death"}
+#			switch:modes/cigogne/tick {function:"switch:modes/cigogne/death"}
+#			switch:modes/capture_the_flag/tick {function:"switch:modes/capture_the_flag/death/player"}
 #
 # @args		function (string)
 #

@@ -7,7 +7,7 @@
 scoreboard players add #process_end switch.data 1
 
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/capture_the_flag/death/player
-function switch:translations/modes_capture_the_flag_process_end
+function switch:modes/capture_the_flag/translations/process_end
 execute if score #process_end switch.data matches 1 if score #red_points switch.data > #blue_points switch.data as @a[tag=!detached,team=switch.temp.red] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 if score #red_points switch.data < #blue_points switch.data as @a[tag=!detached,team=switch.temp.blue] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 if score #red_points switch.data = #blue_points switch.data if score #red_flag_pickups switch.data > #blue_flag_pickups switch.data as @a[tag=!detached,team=switch.temp.red] at @s run function switch:engine/add_win

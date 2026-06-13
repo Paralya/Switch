@@ -1,10 +1,7 @@
 
 #> switch:utils/set_dynamic_time
 #
-# @within	switch:modes/capture_the_flag/start
-#			switch:modes/castagne/start
-#			switch:modes/cigogne/start
-#			switch:modes/coin_chaser/start
+# @within	switch:modes/coin_chaser/start
 #			switch:modes/creeper_apocalypse/start
 #			switch:modes/de_a_coudre/start
 #			switch:modes/feed_fast/start
@@ -34,8 +31,11 @@
 #			switch:modes/thunder_spear/start
 #			switch:modes/tnt_run/start
 #			switch:modes/traitors_game/start
+#			switch:modes/castagne/start
 #			switch:modes/build_battle/start
 #			switch:modes/beat_the_kings/start
+#			switch:modes/cigogne/start
+#			switch:modes/capture_the_flag/start
 #
 
 execute store result score #random switch.data run random value 0..2

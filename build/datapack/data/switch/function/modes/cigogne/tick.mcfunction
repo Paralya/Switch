@@ -21,7 +21,7 @@ scoreboard players remove @a[tag=!detached,gamemode=!spectator,predicate=!switch
 effect give @a[tag=!detached,scores={switch.temp.sneak=100..}] glowing 1 0 true
 scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=100..}] switch.temp.sneak 100
 scoreboard players set @a[tag=!detached,scores={switch.temp.sneak=..0}] switch.temp.sneak 0
-function switch:translations/modes_cigogne_tick
+function switch:modes/cigogne/translations/tick
 
 ## End game
 scoreboard players set #remaining_players switch.data 0

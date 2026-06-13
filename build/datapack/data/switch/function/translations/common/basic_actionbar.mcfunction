@@ -1,9 +1,9 @@
 
 #> switch:translations/common/basic_actionbar
 #
-# @within	switch:modes/capture_the_flag/second
-#			switch:modes/rush_the_point/second_common
+# @within	switch:modes/rush_the_point/second_common
 #			switch:modes/sheepwars/second
+#			switch:modes/capture_the_flag/second
 #
 
 # French

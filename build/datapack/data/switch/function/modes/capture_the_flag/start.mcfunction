@@ -23,7 +23,7 @@ scoreboard players set #process_end switch.data 0
 scoreboard players set #red_flag_pickups switch.data 0
 scoreboard players set #blue_flag_pickups switch.data 0
 
-function switch:translations/modes_capture_the_flag_start
+function switch:modes/capture_the_flag/translations/start
 
 team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
 team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}

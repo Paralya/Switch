@@ -1,10 +1,11 @@
 
 # Imports
 import importlib
-import pkgutil
+
 import stouputils as stp
 
-from .definitions import write_modes_load_file, MODES
+from .definitions import MODES, write_modes_load_file
+
 
 # Main function
 @stp.measure_time(message="Generated modes files")

@@ -2,10 +2,10 @@
 #> switch:modes/capture_the_flag/teleport_to_spawn
 #
 # @within	switch:modes/capture_the_flag/joined
-#			switch:modes/capture_the_flag/roles/main
 #			switch:modes/capture_the_flag/score_point [ as @p[tag=switch.has_blue_flag] ]
 #			switch:modes/capture_the_flag/score_point [ as @p[tag=switch.has_red_flag] ]
 #			switch:modes/capture_the_flag/teleport_to_death
+#			switch:modes/capture_the_flag/roles/main
 #
 
 ## Maps spawn

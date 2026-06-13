@@ -7,7 +7,7 @@
 #
 
 # Drop the flag
-function switch:translations/modes_capture_the_flag_flag_drop
+function switch:modes/capture_the_flag/translations/flag_drop
 execute if entity @s[tag=switch.blue_flag] run kill @a[tag=switch.has_blue_flag]
 execute if entity @s[tag=switch.red_flag] run kill @a[tag=switch.has_red_flag]
 execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag

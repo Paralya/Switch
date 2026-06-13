@@ -23,7 +23,7 @@ execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] 
 
 # Flag Reset Red
 execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
-function switch:translations/modes_capture_the_flag_flag_reset
+function switch:modes/capture_the_flag/translations/flag_reset
 
 # Reset Banner
 tag @s add switch.original_pos

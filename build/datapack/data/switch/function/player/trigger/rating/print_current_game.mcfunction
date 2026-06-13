@@ -3,10 +3,7 @@
 #
 # @executed	as @a[tag=!detached]
 #
-# @within	switch:modes/capture_the_flag/process_end [ as @a[tag=!detached] ]
-#			switch:modes/castagne/process_end [ as @a[tag=!detached] ]
-#			switch:modes/cigogne/process_end [ as @a[tag=!detached] ]
-#			switch:modes/coin_chaser/process_end [ as @a[tag=!detached] ]
+# @within	switch:modes/coin_chaser/process_end [ as @a[tag=!detached] ]
 #			switch:modes/creeper_apocalypse/process_end [ as @a[tag=!detached] ]
 #			switch:modes/de_a_coudre/process_end [ as @a[tag=!detached] ]
 #			switch:modes/feed_fast/process_end [ as @a[tag=!detached] ]
@@ -44,10 +41,13 @@
 #			switch:modes/traitors_game/process_end [ as @a[tag=!detached] ]
 #			switch:modes/warden_escape/process_end [ as @a[tag=!detached] ]
 #			switch:modes/pitch_creep/process_end [ as @a[tag=!detached] ]
+#			switch:modes/castagne/process_end [ as @a[tag=!detached] ]
 #			switch:modes/block_party/process_end [ as @a[tag=!detached] ]
 #			switch:modes/build_battle/process_end [ as @a[tag=!detached] ]
 #			switch:modes/beat_the_kings/process_end [ as @a[tag=!detached] ]
 #			switch:modes/bombardement/process_end [ as @a[tag=!detached] ]
+#			switch:modes/cigogne/process_end [ as @a[tag=!detached] ]
+#			switch:modes/capture_the_flag/process_end [ as @a[tag=!detached] ]
 #
 
 scoreboard players operation @s switch.trigger.rating = #game_1 switch.data

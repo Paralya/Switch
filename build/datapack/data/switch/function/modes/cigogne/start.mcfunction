@@ -21,7 +21,7 @@ function switch:utils/choose_map_for {id:"cigogne", maps:["cigogne"]}
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_cigogne_start
+function switch:modes/cigogne/translations/start
 
 scoreboard players set #remaining_time switch.data 910
 scoreboard players set #cigogne_seconds switch.data -10

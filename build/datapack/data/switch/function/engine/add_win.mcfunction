@@ -1,13 +1,9 @@
 
 #> switch:engine/add_win
 #
-# @executed	as @a[tag=!detached,team=switch.temp.red] & at @s
+# @executed	as @a[tag=!...] & at @s
 #
-# @within	switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,team=switch.temp.red] & at @s ]
-#			switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,team=switch.temp.blue] & at @s ]
-#			switch:modes/castagne/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
-#			switch:modes/cigogne/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
-#			switch:modes/coin_chaser/process_end [ as @a[tag=!...] & at @s ]
+# @within	switch:modes/coin_chaser/process_end [ as @a[tag=!...] & at @s ]
 #			switch:modes/creeper_apocalypse/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/de_a_coudre/process_end [ as @a[tag=!...] & at @s ]
 #			switch:modes/feed_fast/process_end [ as @a[tag=!...] & at @s ]
@@ -64,11 +60,15 @@
 #			switch:modes/traitors_game/detect_end [ as @a[scores={switch.alive=1..,switch.temp.role=..4}] & at @s ]
 #			switch:modes/warden_escape/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
 #			switch:modes/pitch_creep/process_end [ as @a[tag=!detached,scores={switch.alive=1..}] & at @s ]
+#			switch:modes/castagne/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
 #			switch:modes/block_party/process_end [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
 #			switch:modes/build_battle/rating_time/end_calculation [ as @a[scores={switch.temp.rank=1}] & at @s ]
 #			switch:modes/beat_the_kings/detect_end [ as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.civil] & at @s ]
 #			switch:modes/beat_the_kings/detect_end [ at @s ]
 #			switch:modes/bombardement/process_end [ as @a[tag=!detached,gamemode=!spectator] & at @s ]
+#			switch:modes/cigogne/process_end [ as @a[tag=!detached,gamemode=survival] & at @s ]
+#			switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,team=switch.temp.red] & at @s ]
+#			switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,team=switch.temp.blue] & at @s ]
 #
 
 execute if score #test_mode switch.data matches 1.. run return 1
