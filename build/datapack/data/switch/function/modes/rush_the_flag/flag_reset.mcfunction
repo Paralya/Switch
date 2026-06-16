@@ -20,7 +20,7 @@ execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] 
 execute if entity @s[tag=switch.red_flag] on vehicle run tp @s 13923 99 14000 90 0
 execute if entity @s[tag=switch.red_flag] run data modify entity @s Rotation[0] set value 90.0f
 execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
-function switch:translations/modes_rush_the_flag_flag_reset
+function switch:modes/rush_the_flag/translations/flag_reset
 
 # Reset Banner
 data modify entity @s[tag=switch.blue_flag] item set value {id:"blue_banner",count:1}

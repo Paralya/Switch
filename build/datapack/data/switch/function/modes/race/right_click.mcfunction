@@ -7,7 +7,7 @@
 #
 
 # Manage Respawns
-function switch:translations/modes_race_right_click
+function switch:modes/race/translations/right_click
 execute if score #race_seconds switch.data matches 3.. unless score @s switch.respawn_cp_id matches -1 if data entity @s SelectedItem.components."minecraft:custom_data".switch.classic_respawn run function switch:modes/race/checkpoints/respawn/classic
 execute if score #race_seconds switch.data matches 3.. if data entity @s SelectedItem.components."minecraft:custom_data".switch.hard_respawn run function switch:modes/race/checkpoints/respawn/hard
 

@@ -16,7 +16,7 @@ execute if entity @s[tag=switch.solitaire] run tag @p[tag=switch.temp.floupy] ad
 execute if entity @s[tag=switch.solitaire] run tag @e[type=marker,predicate=switch:has_same_id] add switch.solitaire
 
 # Tellraws
-function switch:translations/modes_traitors_game_roles_vol
+function switch:modes/traitors_game/translations/roles_vol
 
 # Effects
 execute if score #role switch.data matches 1 run attribute @p[tag=switch.temp.floupy] max_health base set 16

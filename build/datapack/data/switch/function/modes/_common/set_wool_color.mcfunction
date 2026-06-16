@@ -3,9 +3,9 @@
 #
 # @executed	at @s
 #
-# @within	switch:modes/mlg_a_coudre/done
+# @within	switch:modes/de_a_coudre/done
+#			switch:modes/mlg_a_coudre/done
 #			switch:modes/simultaneous_jump/done
-#			switch:modes/de_a_coudre/done
 #
 
 scoreboard players operation #block switch.data %= #16 switch.data

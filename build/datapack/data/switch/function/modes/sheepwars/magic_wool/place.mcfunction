@@ -21,5 +21,5 @@ execute if data storage switch:main {map:"sheepwars_ilots"} positioned 145046 14
 execute if data storage switch:main {map:"sheepwars_colored_sheeps"} positioned 154054 147 154053 run function sheepwars:magic_wool/summon
 
 # Message
-function switch:translations/modes_sheepwars_magic_wool_place
+function switch:modes/sheepwars/translations/magic_wool_place
 

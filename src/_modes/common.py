@@ -1,7 +1,5 @@
 
 # Imports
-import stouputils as stp
-from .definitions import write_modes_load_file
 from stewbeet import Mem, write_function
 
 

@@ -3,8 +3,8 @@
 #
 # @executed	as the player & at current position
 #
-# @within	switch:modes/rush_the_point/classes/main
-#			switch:modes/capture_the_flag/classes/main
+# @within	switch:modes/capture_the_flag/classes/main
+#			switch:modes/rush_the_point/classes/main
 #
 
 # Get which class got chosen

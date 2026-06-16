@@ -1,0 +1,14 @@
+
+#> switch:modes/murder_mystery/translations/throw_loop
+#
+# @executed	as @e[type=armor_stand,tag=switch.thrown] & at @s
+#
+# @within	switch:modes/murder_mystery/throw/loop
+#
+
+# French
+# tellraw @a[scores={switch.lang=0}] [{"score":{"name":"#x","objective":"switch.data"}},{"score":{"name":"#y","objective":"switch.data"}},{"score":{"name":"#z","objective":"switch.data"}}]
+# tellraw @a[scores={switch.lang=0}] [{"score":{"name":"#dest_x","objective":"switch.data"}},{"score":{"name":"#dest_y","objective":"switch.data"}},{"score":{"name":"#dest_z","objective":"switch.data"}}]
+
+# English
+

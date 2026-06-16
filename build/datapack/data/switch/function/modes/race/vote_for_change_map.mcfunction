@@ -15,7 +15,7 @@ execute store result score #votes_max switch.data if entity @a[tag=!detached,gam
 scoreboard players operation #votes_max switch.data /= #2 switch.data
 scoreboard players add #votes_max switch.data 1
 
-function switch:translations/modes_race_vote_for_change_map
+function switch:modes/race/translations/vote_for_change_map
 
 execute if score #votes switch.data >= #votes_max switch.data run function switch:modes/race/restart_game
 

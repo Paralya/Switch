@@ -23,7 +23,7 @@ execute if score #points switch.data matches 1..4 run summon firework_rocket ~ ~
 execute if score #points switch.data matches 5 run scoreboard players set #points switch.data 6
 execute if score #points switch.data matches 6 run scoreboard players add @s switch.temp.nb_de_a_coudre 1
 execute unless score #test_mode switch.data matches 1 if score @s switch.temp.nb_de_a_coudre matches 3 run advancement grant @s only switch:visible/21
-function switch:translations/modes_simultaneous_jump_done
+function switch:modes/simultaneous_jump/translations/done
 scoreboard players operation @s switch.temp.points += #points switch.data
 
 function switch:modes/simultaneous_jump/teleport

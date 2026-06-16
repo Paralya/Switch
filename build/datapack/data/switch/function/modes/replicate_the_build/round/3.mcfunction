@@ -8,7 +8,7 @@ kill @e[type=item]
 kill @e[type=arrow]
 kill @e[tag=switch.rtb.verify,type=marker]
 
-function switch:translations/modes_replicate_the_build_round_3
+function switch:modes/replicate_the_build/translations/round_3
 scoreboard players add #rtb_round_state switch.data 1
 
 scoreboard objectives remove switch.rtb.id

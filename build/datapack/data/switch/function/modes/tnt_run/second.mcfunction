@@ -10,5 +10,5 @@ function switch:modes/tnt_run/xp_bar
 
 # Start countdown
 execute if score #tnt_run_seconds switch.data matches -5..0 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
-function switch:translations/modes_tnt_run_second
+function switch:modes/tnt_run/translations/second
 

@@ -7,6 +7,6 @@
 #
 
 tag @s add switch.temp
-function switch:translations/modes_replicate_the_build_utils_display_score
+function switch:modes/replicate_the_build/translations/utils_display_score
 tag @s remove switch.temp
 

@@ -16,7 +16,7 @@ execute in switch:game run gamerule minecraft:keep_inventory true
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino","cluedo_camping"]}
 
-function switch:translations/modes_murder_mystery_start
+function switch:modes/murder_mystery/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 245

@@ -19,5 +19,5 @@ execute if score #pz switch.data matches ..-1 run scoreboard players operation #
 
 execute if score #px switch.data <= #dx switch.data if score #py switch.data <= #dy switch.data if score #pz switch.data <= #dz switch.data run function switch:modes/race/checkpoints/player_in
 
-function switch:translations/modes_race_checkpoints_check_player_pos
+function switch:modes/race/translations/checkpoints_check_player_pos
 

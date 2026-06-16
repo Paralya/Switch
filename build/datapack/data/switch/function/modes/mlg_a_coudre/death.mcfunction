@@ -6,7 +6,7 @@
 #
 
 execute if score @s switch.temp.lives matches 1.. run scoreboard players remove @s switch.temp.lives 1
-function switch:translations/modes_mlg_a_coudre_death
+function switch:modes/mlg_a_coudre/translations/death
 execute if score @s switch.temp.lives matches 0 run scoreboard players reset @s switch.temp.lives
 
 gamemode spectator @s

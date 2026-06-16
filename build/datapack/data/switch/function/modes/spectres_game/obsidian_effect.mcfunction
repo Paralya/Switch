@@ -83,7 +83,7 @@ execute if score #random switch.data matches 11 as @a[tag=!detached] at @s run p
 #si le score est 12, on donne un effet de water breathing aux visibles
 execute if score #random switch.data matches 12 run effect give @a[tag=!detached,team=switch.temp.visible] water_breathing 40 0 true
 execute if score #random switch.data matches 12 as @a[tag=!detached] at @s run playsound block.water.ambient ambient @s
-function switch:translations/modes_spectres_game_obsidian_effect
+function switch:modes/spectres_game/translations/obsidian_effect
 
 # on reset le score de break obsidian
 scoreboard players remove @s switch.temp.break_obsidian 1

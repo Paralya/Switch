@@ -6,7 +6,7 @@
 #			switch:modes/moutron/process_end [ as @a[tag=!detached] ]
 #
 
-function switch:translations/modes_moutron_death
+function switch:modes/moutron/translations/death
 execute if entity @s[gamemode=!spectator] at @s as @p[tag=switch.moutron_killer] run function switch:modes/moutron/adv_kill
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
 

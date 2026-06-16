@@ -14,7 +14,7 @@ execute if score #moutron_seconds switch.data matches ..-1 run scoreboard player
 
 # Start countdown
 execute if score #moutron_seconds switch.data matches -5..0 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
-function switch:translations/modes_moutron_second
+function switch:modes/moutron/translations/second
 
 # Increase markers life_time
 execute if score #moutron_seconds switch.data matches 0.. run scoreboard players add #life_time switch.data 3

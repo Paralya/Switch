@@ -17,7 +17,7 @@ execute in switch:game run gamerule minecraft:block_drops false
 ## Téléportation des joueurs
 tp @a[tag=!detached] 102000 100 102000
 #define bossbar rtb.all
-function switch:translations/modes_replicate_the_build_start
+function switch:modes/replicate_the_build/translations/start
 
 scoreboard players set #replicate_the_build_seconds switch.data -5
 scoreboard players set #replicate_the_build_ticks switch.data 0

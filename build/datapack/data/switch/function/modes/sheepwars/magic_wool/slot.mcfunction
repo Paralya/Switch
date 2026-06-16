@@ -35,7 +35,7 @@ execute if score #random switch.data matches 7 if entity @s[team=switch.temp.red
 execute if score #random switch.data matches 8 if entity @s[team=switch.temp.red] run effect give @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] glowing 10 0 true
 
 # Print message
-function switch:translations/modes_sheepwars_magic_wool_slot
+function switch:modes/sheepwars/translations/magic_wool_slot
 
 # Playsound
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 0.5

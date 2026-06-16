@@ -5,7 +5,7 @@
 #
 
 function switch:modes/rush_the_point/start_common
-function switch:translations/modes_rush_the_point_start
+function switch:modes/rush_the_point/translations/start
 
 # Summon the points markers
 summon marker 14000 99 14000 {Tags:["switch.rush_the_point.zone","switch.rush_the_point.center"]}

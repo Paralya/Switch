@@ -42,7 +42,7 @@ execute if score #game_state switch.data matches 4 unless score #test_mode switc
 execute if score #traitors_game_seconds switch.data matches 1200 if score #game_state switch.data matches 1 as @a[scores={switch.alive=1..,switch.temp.role=..4}] at @s run function switch:engine/add_win
 
 # Cas des égalités
-function switch:translations/modes_traitors_game_detect_end
+function switch:modes/traitors_game/translations/detect_end
 
 # Visuel de fin de partie
 execute if score #traitors_game_seconds switch.data matches 1200.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s

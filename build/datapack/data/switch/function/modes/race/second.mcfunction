@@ -9,7 +9,7 @@ scoreboard players add #race_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. if entity @a[tag=!detached,gamemode=adventure] run scoreboard players remove #remaining_time switch.data 1
 
 # Start countdown
-function switch:translations/modes_race_second
+function switch:modes/race/translations/second
 
 # Start sounds
 execute if score #race_seconds switch.data matches -5..-1 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 100

@@ -18,7 +18,7 @@ execute unless entity @a[scores={switch.alive=1..}] run scoreboard players set #
 execute if score #game_state switch.data matches 1..4 run scoreboard players set #spectres_game_seconds switch.data 100000
 
 # Cas des vainqueurs
-function switch:translations/modes_spectres_game_detect_end
+function switch:modes/spectres_game/translations/detect_end
 
 execute if score #game_state switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.visible] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.spectre] unless score @s switch.temp.spectror matches 1 at @s run function switch:engine/add_win

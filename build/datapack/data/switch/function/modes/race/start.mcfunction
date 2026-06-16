@@ -14,7 +14,7 @@ function switch:utils/set_dynamic_time
 
 gamerule minecraft:fall_damage false
 
-function switch:translations/modes_race_start
+function switch:modes/race/translations/start
 
 # Tell map loading that it's race game mode
 scoreboard players set #is_race switch.data 1

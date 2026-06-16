@@ -13,7 +13,7 @@ execute as @a[tag=!detached] run attribute @s safe_fall_distance base set 1024
 execute as @a[tag=!detached] run attribute @s jump_strength base set 0
 
 function switch:utils/choose_map_for {id:"memory_mine", maps:["memory_mine"]}
-function switch:translations/modes_memory_mine_start
+function switch:modes/memory_mine/translations/start
 
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard players set #memory_mine_seconds switch.data -10

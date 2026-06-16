@@ -1,7 +1,7 @@
 
 #> switch:engine/add_win_macro
 #
-# @executed	as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] & at @s
+# @executed	as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.civil] & at @s
 #
 # @within	switch:engine/add_win with storage switch:main
 #

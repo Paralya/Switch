@@ -47,5 +47,5 @@ execute if score @s switch.temp.zone_capture matches 60 if score #state switch.d
 # Event when capturing
 execute if score @s switch.temp.zone_capture matches -60 if score #state switch.data matches 1 run playsound entity.player.levelup ambient @a[tag=!detached,distance=..5]
 execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run playsound entity.player.levelup ambient @a[tag=!detached,distance=..5]
-function switch:translations/modes_rush_the_point_tick_zone
+function switch:modes/rush_the_point/translations/tick_zone
 

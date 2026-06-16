@@ -22,7 +22,7 @@ scoreboard players operation #second switch.data = #remaining_time switch.data
 scoreboard players operation #minute switch.data = #remaining_time switch.data
 scoreboard players operation #second switch.data %= #60 switch.data
 scoreboard players operation #minute switch.data /= #60 switch.data
-function switch:translations/modes_panic_chase_second
+function switch:modes/panic_chase/translations/second
 execute if score #second switch.data matches 0 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
 execute if score #second switch.data matches 20 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true
 execute if score #second switch.data matches 40 run effect give @a[tag=!detached,gamemode=!spectator] glowing 2 0 true

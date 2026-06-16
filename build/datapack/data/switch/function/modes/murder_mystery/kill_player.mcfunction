@@ -25,7 +25,7 @@ execute if data entity @s Inventory[].components."minecraft:custom_data".switch.
 execute if data entity @s equipment.offhand.components."minecraft:custom_data".switch.detective_bow run summon item_display ~ ~1 ~ {item:{id:"bow",count:1},Tags:["switch.detective_bow"],Glowing:true}
 
 # Title & clear
-function switch:translations/modes_murder_mystery_kill_player
+function switch:modes/murder_mystery/translations/kill_player
 clear @s
 
 # Killed by murderer as murderer?

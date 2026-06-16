@@ -28,5 +28,5 @@ execute if score #mins switch.data matches ..4 as @e[tag=switch.layers_2_teams.m
 execute if score #mins switch.data matches ..4 if score #pos_y switch.data matches 109.. as @e[tag=switch.layers_2_teams.marker] at @s run tp @s ~ ~-0.5 ~
 execute if score #mins switch.data matches ..4 if score #pos_y switch.data matches ..108 run kill @e[tag=switch.layers_2_teams.marker]
 
-function switch:translations/modes_layers_2_teams_second
+function switch:modes/layers_2_teams/translations/second
 

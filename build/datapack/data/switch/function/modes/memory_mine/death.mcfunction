@@ -23,7 +23,7 @@ execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.s
 # Tag the owner of the mine
 execute as @a[tag=!detached] if score @s switch.id = #owner_id switch.data run tag @s add switch.owner
 # Send tellraw
-function switch:translations/modes_memory_mine_death
+function switch:modes/memory_mine/translations/death
 # Remove the owner tag
 tag @a[tag=switch.owner] remove switch.owner
 

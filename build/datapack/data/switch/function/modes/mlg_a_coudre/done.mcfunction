@@ -11,7 +11,7 @@ function switch:modes/_common/set_wool_color
 
 scoreboard players set #success switch.data 0
 execute unless block ~1 ~ ~ water unless block ~-1 ~ ~ water unless block ~ ~ ~1 water unless block ~ ~ ~-1 water unless block ~1 ~ ~ air unless block ~-1 ~ ~ air unless block ~ ~ ~1 air unless block ~ ~ ~-1 air run function switch:modes/mlg_a_coudre/mlg_a_coudre
-function switch:translations/modes_mlg_a_coudre_done
+function switch:modes/mlg_a_coudre/translations/done
 
 schedule function switch:modes/mlg_a_coudre/remove_water 1s
 

@@ -13,7 +13,7 @@ function switch:utils/choose_map_for {id:"simultaneous_jump", maps:["de_a_coudre
 execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_simultaneous_jump_start
+function switch:modes/simultaneous_jump/translations/start
 
 scoreboard players set #simultaneous_jump_seconds switch.data -8
 scoreboard players set #simultaneous_jump_ticks switch.data 0

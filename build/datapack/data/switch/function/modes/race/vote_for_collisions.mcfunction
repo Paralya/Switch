@@ -16,7 +16,7 @@ scoreboard players operation #votes_max switch.data /= #2 switch.data
 scoreboard players add #votes_max switch.data 1
 
 execute if score #votes switch.data >= #votes_max switch.data run scoreboard players set @a[tag=!detached] switch.temp.vote_collisions 1
-function switch:translations/modes_race_vote_for_collisions
+function switch:modes/race/translations/vote_for_collisions
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.kart collisionRule always
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.1 collisionRule always
 execute if score #votes switch.data >= #votes_max switch.data run team modify switch.temp.2 collisionRule always

@@ -28,7 +28,7 @@ data modify storage switch:temp solitaireEN set value ""
 execute if entity @s[tag=switch.solitaire] run data modify storage switch:temp solitaireFR set value " (solitaire)"
 execute if entity @s[tag=switch.solitaire] run data modify storage switch:temp solitaireEN set value " (solitary)"
 
-function switch:translations/modes_traitors_game_death_for_global
+function switch:modes/traitors_game/translations/death_for_global
 
 kill @s
 execute unless score #sc_silencieux switch.data matches 1 run function switch:modes/traitors_game/update_sidebar

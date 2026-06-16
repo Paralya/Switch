@@ -39,5 +39,5 @@ execute if score #random switch.data matches 8 if score #color switch.data match
 execute if score #random switch.data matches 9 if score #color switch.data matches 1 run effect give @a[tag=!detached,team=switch.rush_the_point.red] weakness 60 0 true
 
 # Messages
-function switch:translations/modes_rush_the_flag_advancements_break_obsidian_confirm
+function switch:modes/rush_the_flag/translations/advancements_break_obsidian_confirm
 

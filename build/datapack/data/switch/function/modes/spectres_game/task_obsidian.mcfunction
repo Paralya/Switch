@@ -22,6 +22,6 @@ execute as @e[type=chicken,tag=switch.new] at @s positioned over world_surface r
 tag @e[type=chicken,tag=switch.new] remove switch.new
 
 # Tellraw & playsound
-function switch:translations/modes_spectres_game_task_obsidian
+function switch:modes/spectres_game/translations/task_obsidian
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 

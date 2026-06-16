@@ -22,6 +22,6 @@ execute as @e[type=chest_minecart,tag=switch.new] run function switch:maps/sprea
 tag @e[type=chest_minecart,tag=switch.new] remove switch.new
 
 # Tellraw & playsound
-function switch:translations/modes_traitors_game_summon_lootboxes
+function switch:modes/traitors_game/translations/summon_lootboxes
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 

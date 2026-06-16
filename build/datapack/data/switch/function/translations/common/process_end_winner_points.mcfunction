@@ -1,11 +1,11 @@
 
 #> switch:translations/common/process_end_winner_points
 #
-# @within	switch:modes/shoot_da_sheep/process_end
+# @within	switch:modes/coin_chaser/process_end
+#			switch:modes/feed_fast/process_end
+#			switch:modes/shoot_da_sheep/process_end
 #			switch:modes/simultaneous_jump/process_end
 #			switch:modes/snowball_painter/process_end
-#			switch:modes/feed_fast/process_end
-#			switch:modes/coin_chaser/process_end
 #
 
 # French

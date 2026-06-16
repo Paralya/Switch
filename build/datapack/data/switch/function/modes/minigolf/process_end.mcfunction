@@ -15,7 +15,7 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={
 # Give the winner money and tellraw
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] run function switch:modes/minigolf/record_save with storage switch:records minigolf
-function switch:translations/modes_minigolf_process_end
+function switch:modes/minigolf/translations/process_end
 execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
 
 # Other stuff

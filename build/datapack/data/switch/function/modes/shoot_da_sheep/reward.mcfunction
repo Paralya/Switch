@@ -14,7 +14,7 @@ execute if score #color switch.data matches 10..11 run scoreboard players add @s
 execute if score #color switch.data matches 12..13 run scoreboard players add @s switch.temp.points 8
 execute if score #color switch.data matches 14 run scoreboard players add @s switch.temp.points 10
 execute if score #color switch.data matches 15 run scoreboard players operation @s switch.temp.points /= #2 switch.data
-function switch:translations/modes_shoot_da_sheep_reward
+function switch:modes/shoot_da_sheep/translations/reward
 execute at @s run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 1 2
 
 # Advancement

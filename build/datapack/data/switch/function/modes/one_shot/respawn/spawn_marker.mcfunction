@@ -1,10 +1,10 @@
 
 #> switch:modes/one_shot/respawn/spawn_marker
 #
-# @within	switch:modes/one_shot/respawn/main
-#			switch:modes/one_shot/start
+# @within	switch:modes/one_shot/start
 #			switch:modes/one_shot/start [ as @e[limit=2] & as @e[limit=2] & as @e[limit=2] & as @e[limit=2] & as @e[limit=2] & as @e[limit=2] ]
 #			switch:modes/one_shot/tick
+#			switch:modes/one_shot/respawn/main
 #
 
 # Spawn a new marker

@@ -42,5 +42,5 @@ tag @a remove switch.coupdetat
 tag @s add switch.coupdetat
 function switch:modes/_coupdetat/give_items
 
-function switch:translations/modes__coupdetat_start
+function switch:modes/_coupdetat/translations/start
 

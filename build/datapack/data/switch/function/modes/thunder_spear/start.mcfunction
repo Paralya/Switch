@@ -19,7 +19,7 @@ execute as @a[tag=!detached] run function switch:modes/thunder_spear/give_and_te
 execute in switch:game run gamerule minecraft:keep_inventory true
 execute in switch:game run gamerule minecraft:fall_damage false
 
-function switch:translations/modes_thunder_spear_start
+function switch:modes/thunder_spear/translations/start
 
 scoreboard players set #thunder_spear_seconds switch.data -10
 scoreboard players set #thunder_spear_ticks switch.data 0

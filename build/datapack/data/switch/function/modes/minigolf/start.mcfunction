@@ -35,5 +35,5 @@ scoreboard players reset #new_record switch.data
 execute unless data storage switch:records minigolf run data modify storage switch:records minigolf set value {}
 data modify storage switch:records minigolf.current_map set from storage switch:main map
 function switch:modes/minigolf/record_tellraw with storage switch:records minigolf
-function switch:translations/modes_minigolf_start
+function switch:modes/minigolf/translations/start
 

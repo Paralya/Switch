@@ -1,10 +1,11 @@
 
 # Imports
 import importlib
+from pathlib import Path
 
 import stouputils as stp
 
-from .definitions import MODES, write_modes_load_file
+from .definitions import write_modes_load_file
 
 
 # Main function
@@ -12,16 +13,15 @@ from .definitions import MODES, write_modes_load_file
 def generate_all_modes():
 	write_modes_load_file()
 
-	# For each submodules in this directory import and run "write_mode" (dynamically)
-	# TODO: do not depend on MODES
-	for mode in MODES:
-		mode_id = mode["id"]
-		try:
-			module = importlib.import_module(f".{mode_id}.main", package=__package__)
-			if hasattr(module, "write_mode"):
-				module.write_mode()
+	# Dynamically import and run "write_mode" for every submodule package in this directory
+	# (does not depend on MODES: a mode generates even if commented out in the minigames list)
+	package_dir: Path = Path(__file__).parent
+	for entry in sorted(package_dir.iterdir()):
+		if not entry.is_dir() or entry.name == "__pycache__":
+			continue
+		if not (entry / "main.py").is_file():
+			continue
 
-		# Skip packages without main.py
-		except ModuleNotFoundError:
-			pass
-
+		module = importlib.import_module(f".{entry.name}.main", package=__package__)
+		if hasattr(module, "write_mode"):
+			module.write_mode()

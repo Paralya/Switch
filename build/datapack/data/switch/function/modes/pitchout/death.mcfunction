@@ -5,7 +5,7 @@
 #			switch:modes/pitchout/tick [ as @a[tag=!detached,scores={switch.alive=1..},predicate=switch:in_water,sort=random] ]
 #
 
-function switch:translations/modes_pitchout_death
+function switch:modes/pitchout/translations/death
 
 scoreboard players remove @s switch.alive 1
 execute if entity @s[scores={switch.alive=1..}] if data storage switch:main {map:"pitchout_1"} run function switch:modes/pitchout/map_1/tp_give

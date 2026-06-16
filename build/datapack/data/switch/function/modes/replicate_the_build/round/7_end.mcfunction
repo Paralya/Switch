@@ -19,7 +19,7 @@ execute as @a[scores={switch.alive=1..}] if score @s switch.rtb.time = #max_time
 
 tag @r[scores={switch.alive=1..},tag=switch.looser_score,tag=switch.looser_time,limit=1] add switch.looser
 
-function switch:translations/modes_replicate_the_build_round_7_end
+function switch:modes/replicate_the_build/translations/round_7_end
 
 execute in switch:game run gamerule minecraft:block_drops false
 

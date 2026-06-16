@@ -23,7 +23,7 @@ execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_mlg_a_coudre_start
+function switch:modes/mlg_a_coudre/translations/start
 
 scoreboard players set #mlg_a_coudre_seconds switch.data -9
 scoreboard players set #mlg_a_coudre_ticks switch.data 0

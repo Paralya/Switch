@@ -20,7 +20,7 @@ execute if score #moutron_seconds switch.data matches 0.. as @e[tag=shopping_kar
 # Trails duration
 scoreboard players operation #temp switch.data = #life_time switch.data
 scoreboard players operation #temp switch.data /= #20 switch.data
-function switch:translations/modes_moutron_tick
+function switch:modes/moutron/translations/tick
 execute unless score #test_mode switch.data matches 1 if score #temp switch.data matches 15.. run advancement grant @a[tag=!detached,gamemode=adventure] only switch:visible/38
 
 # Unknown death

@@ -3,12 +3,12 @@
 #
 # @within	switch:engine/launch_game/get_random_max
 #			switch:maps/find_map
-#			switch:modes/murder_mystery/percentage/_choose_from_list
 #			switch:music/actions/random
 #			switch:profiling/content
 #			switch:modes/block_party/core/pick_random_art
 #			switch:modes/block_party/core/remake_list/shuffle
 #			switch:modes/build_battle/preparation/get_random_theme
+#			switch:modes/murder_mystery/percentage/_choose_from_list
 #
 
 data modify storage switch:main temp set value {max:0}

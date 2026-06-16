@@ -19,7 +19,7 @@ function switch:utils/choose_map_for {id:"protect_the_king", maps:["traitor_orig
 
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 
-function switch:translations/modes_protect_the_king_start
+function switch:modes/protect_the_king/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901

@@ -35,5 +35,5 @@ execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if sc
 execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_green = #total switch.temp.killed_green run advancement grant @s only switch:visible/42
 execute unless score #test_mode switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.killed_yellow = #total switch.temp.killed_yellow run advancement grant @s only switch:visible/42
 
-function switch:translations/modes_layers_4_teams_second
+function switch:modes/layers_4_teams/translations/second
 

@@ -18,7 +18,7 @@ execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard playe
 execute if score #game_state switch.data matches 1..3 run scoreboard players set #remaining_time switch.data 0
 
 # Cas des vainqueurs
-function switch:translations/modes_sheepwars_detect_end
+function switch:modes/sheepwars/translations/detect_end
 
 execute if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] at @s run function switch:engine/add_win
 execute if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] at @s run function switch:engine/add_win

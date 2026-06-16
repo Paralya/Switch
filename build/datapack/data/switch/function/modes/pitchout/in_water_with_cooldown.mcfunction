@@ -11,5 +11,5 @@ execute if data storage switch:main {map:"pitchout_1"} run function switch:modes
 execute if data storage switch:main {map:"pitchout_halloween"} run function switch:modes/pitchout/map_halloween/teleport_players
 
 # Message to player
-function switch:translations/modes_pitchout_in_water_with_cooldown
+function switch:modes/pitchout/translations/in_water_with_cooldown
 

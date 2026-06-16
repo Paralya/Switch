@@ -35,7 +35,7 @@ scoreboard players operation #minute switch.data = #remaining_time switch.data
 scoreboard players operation #second switch.data %= #60 switch.data
 scoreboard players operation #minute switch.data /= #60 switch.data
 execute if score #murder_mystery_seconds switch.data matches 0 store result score #nb_murderers switch.data if entity @a[tag=!detached,scores={switch.temp.role=3}]
-function switch:translations/modes_murder_mystery_second
+function switch:modes/murder_mystery/translations/second
 
 # Track nearest player with compass
 execute if score #murder_mystery_seconds switch.data matches 60.. as @a[scores={switch.temp.role=3}] at @s run function switch:modes/murder_mystery/compass

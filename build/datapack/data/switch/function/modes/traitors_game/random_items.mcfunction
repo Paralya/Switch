@@ -7,7 +7,7 @@
 #			switch:modes/traitors_game/roles/main
 #
 
-function switch:translations/modes_traitors_game_random_items
+function switch:modes/traitors_game/translations/random_items
 
 execute store result score #random switch.data run random value 0..46
 execute if score #random switch.data matches 0 run give @s iron_ore 32

@@ -4,6 +4,6 @@
 # @within	switch:modes/replicate_the_build/second
 #
 
-function switch:translations/modes_replicate_the_build_round_0
+function switch:modes/replicate_the_build/translations/round_0
 function switch:modes/replicate_the_build/round/_common
 

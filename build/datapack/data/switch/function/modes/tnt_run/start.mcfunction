@@ -16,7 +16,7 @@ function switch:utils/choose_map_for {id:"tnt_run", maps:["tnt_run_futuristic","
 execute in switch:game run gamerule minecraft:fall_damage false
 execute in switch:game run gamerule minecraft:block_drops false
 
-function switch:translations/modes_tnt_run_start
+function switch:modes/tnt_run/translations/start
 
 scoreboard players set #tnt_run_seconds switch.data -15
 scoreboard players set #tnt_run_ticks switch.data 0

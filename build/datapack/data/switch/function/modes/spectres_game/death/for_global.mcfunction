@@ -19,7 +19,7 @@ execute if predicate switch:chance/0.5 run scoreboard players set #success switc
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 execute if entity @a[tag=switch.temp,scores={switch.temp.spectror=1}] run scoreboard players set @s switch.alive 3
 
-function switch:translations/modes_spectres_game_death_for_global
+function switch:modes/spectres_game/translations/death_for_global
 
 execute if entity @s[scores={switch.alive=1}] run scoreboard players add #nb_dead_spectres switch.data 1
 execute if entity @s[scores={switch.alive=2}] run scoreboard players add #nb_dead_visibles switch.data 1

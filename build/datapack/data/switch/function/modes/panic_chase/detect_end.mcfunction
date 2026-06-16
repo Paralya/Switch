@@ -17,7 +17,7 @@ execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard playe
 execute if score #game_state switch.data matches 1..3 run scoreboard players set #remaining_time switch.data -1
 
 # Cas des vainqueurs
-function switch:translations/modes_panic_chase_detect_end
+function switch:modes/panic_chase/translations/detect_end
 
 # Points
 execute if score #remaining_time switch.data matches 0 if score #game_state switch.data matches 0 as @a[tag=!detached,gamemode=!spectator,team=switch.temp.mouse] at @s run function switch:engine/add_win

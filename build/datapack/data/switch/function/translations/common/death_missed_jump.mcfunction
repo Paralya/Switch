@@ -1,8 +1,8 @@
 
 #> switch:translations/common/death_missed_jump
 #
-# @within	switch:modes/simultaneous_jump/death
-#			switch:modes/de_a_coudre/death
+# @within	switch:modes/de_a_coudre/death
+#			switch:modes/simultaneous_jump/death
 #
 
 # French

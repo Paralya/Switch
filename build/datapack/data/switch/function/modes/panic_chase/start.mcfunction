@@ -17,7 +17,7 @@ execute in switch:game run gamerule minecraft:fall_damage false
 
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
-function switch:translations/modes_panic_chase_start
+function switch:modes/panic_chase/translations/start
 execute if data storage switch:main {map:"arti_box"} run scoreboard players set #remaining_time switch.data 150
 execute if data storage switch:main {map:"arti_box"} run scoreboard players set #panic_chase_seconds switch.data -30
 execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #remaining_time switch.data 240

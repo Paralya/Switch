@@ -34,7 +34,7 @@ scoreboard objectives setdisplay list switch.health
 # Apocalypse
 scoreboard players set #APOCALYPSE_GAME switch.data 0
 execute if predicate switch:chance/0.05 run scoreboard players set #APOCALYPSE_GAME switch.data 1
-function switch:translations/modes_sheepwars_start
+function switch:modes/sheepwars/translations/start
 execute if score #APOCALYPSE_GAME switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.wither.death ambient @s
 
 # Choix des teams + give d'items

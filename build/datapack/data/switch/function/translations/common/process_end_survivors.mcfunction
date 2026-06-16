@@ -1,9 +1,9 @@
 
 #> switch:translations/common/process_end_survivors
 #
-# @within	switch:modes/replicate_the_build/process_end
+# @within	switch:modes/creeper_apocalypse/process_end
+#			switch:modes/replicate_the_build/process_end
 #			switch:modes/warden_escape/process_end
-#			switch:modes/creeper_apocalypse/process_end
 #
 
 # French

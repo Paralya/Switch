@@ -20,7 +20,7 @@ execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-function switch:translations/modes_traitors_game_start
+function switch:modes/traitors_game/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 1210

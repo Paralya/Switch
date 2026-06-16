@@ -2,6 +2,24 @@
 #> switch:engine/force_start_macro
 #
 # @within	switch:modes/_coupdetat/process_end with storage switch:main coupdetat
+#			switch:modes/beat_the_kings/_force_start {id:"beat_the_kings"}
+#			switch:modes/block_party/_force_start {id:"block_party"}
+#			switch:modes/boat_race/_force_start {id:"boat_race"}
+#			switch:modes/bombardement/_force_start {id:"bombardement"}
+#			switch:modes/build_battle/_force_start {id:"build_battle"}
+#			switch:modes/capture_the_flag/_force_start {id:"capture_the_flag"}
+#			switch:modes/castagne/_force_start {id:"castagne"}
+#			switch:modes/cigogne/_force_start {id:"cigogne"}
+#			switch:modes/coin_chaser/_force_start {id:"coin_chaser"}
+#			switch:modes/creeper_apocalypse/_force_start {id:"creeper_apocalypse"}
+#			switch:modes/de_a_coudre/_force_start {id:"de_a_coudre"}
+#			switch:modes/feed_fast/_force_start {id:"feed_fast"}
+#			switch:modes/fireblast/_force_start {id:"fireblast"}
+#			switch:modes/fish_fight/_force_start {id:"fish_fight"}
+#			switch:modes/gay_shooter/_force_start {id:"gay_shooter"}
+#			switch:modes/glassrunner/_force_start {id:"glassrunner"}
+#			switch:modes/infected/_force_start {id:"infected"}
+#			switch:modes/laser_game/_force_start {id:"laser_game"}
 #			switch:modes/layers_2_teams/_force_start {id:"layers_2_teams"}
 #			switch:modes/layers_4_teams/_force_start {id:"layers_4_teams"}
 #			switch:modes/memory_mine/_force_start {id:"memory_mine"}
@@ -12,6 +30,7 @@
 #			switch:modes/one_shot/_force_start {id:"one_shot"}
 #			switch:modes/panic_chase/_force_start {id:"panic_chase"}
 #			switch:modes/pillars_of_fortune/_force_start {id:"pillars_of_fortune"}
+#			switch:modes/pitch_creep/_force_start {id:"pitch_creep"}
 #			switch:modes/pitchout/_force_start {id:"pitchout"}
 #			switch:modes/protect_the_king/_force_start {id:"protect_the_king"}
 #			switch:modes/pvpswap/_force_start {id:"pvpswap"}
@@ -29,24 +48,6 @@
 #			switch:modes/tnt_run/_force_start {id:"tnt_run"}
 #			switch:modes/traitors_game/_force_start {id:"traitors_game"}
 #			switch:modes/warden_escape/_force_start {id:"warden_escape"}
-#			switch:modes/pitch_creep/_force_start {id:"pitch_creep"}
-#			switch:modes/laser_game/_force_start {id:"laser_game"}
-#			switch:modes/creeper_apocalypse/_force_start {id:"creeper_apocalypse"}
-#			switch:modes/de_a_coudre/_force_start {id:"de_a_coudre"}
-#			switch:modes/feed_fast/_force_start {id:"feed_fast"}
-#			switch:modes/castagne/_force_start {id:"castagne"}
-#			switch:modes/block_party/_force_start {id:"block_party"}
-#			switch:modes/gay_shooter/_force_start {id:"gay_shooter"}
-#			switch:modes/build_battle/_force_start {id:"build_battle"}
-#			switch:modes/beat_the_kings/_force_start {id:"beat_the_kings"}
-#			switch:modes/coin_chaser/_force_start {id:"coin_chaser"}
-#			switch:modes/bombardement/_force_start {id:"bombardement"}
-#			switch:modes/cigogne/_force_start {id:"cigogne"}
-#			switch:modes/infected/_force_start {id:"infected"}
-#			switch:modes/glassrunner/_force_start {id:"glassrunner"}
-#			switch:modes/capture_the_flag/_force_start {id:"capture_the_flag"}
-#			switch:modes/fish_fight/_force_start {id:"fish_fight"}
-#			switch:modes/fireblast/_force_start {id:"fireblast"}
 #
 # @args		id (string)
 #

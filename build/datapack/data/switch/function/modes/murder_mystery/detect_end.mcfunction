@@ -24,7 +24,7 @@ execute if score #remaining_time switch.data matches ..1 if score #game_state sw
 execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 1 as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=3}] at @s run function switch:engine/add_win
 execute if score #remaining_time switch.data matches ..1 if score #game_state switch.data matches 2 as @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1..2}] at @s run function switch:engine/add_win
 
-function switch:translations/modes_murder_mystery_detect_end
+function switch:modes/murder_mystery/translations/detect_end
 execute if score #remaining_time switch.data matches ..1 unless score #test_mode switch.data matches 1 as @a[scores={switch.temp.role=3}] on attacker run advancement grant @s[scores={switch.temp.role=1}] only switch:visible/61
 
 # Visuel de fin de partie

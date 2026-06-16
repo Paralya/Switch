@@ -1,10 +1,10 @@
 
 #> switch:translations/common/joined_reconnect
 #
-# @within	switch:modes/rush_the_flag/joined
-#			switch:modes/rush_the_point/joined
+# @within	switch:modes/capture_the_flag/joined
 #			switch:modes/laser_game/joined
-#			switch:modes/capture_the_flag/joined
+#			switch:modes/rush_the_flag/joined
+#			switch:modes/rush_the_point/joined
 #
 
 # French

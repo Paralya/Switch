@@ -15,5 +15,5 @@ scoreboard players operation #percentage_detective switch.data *= #100 switch.da
 scoreboard players operation #percentage_detective switch.data /= #total_detective switch.data
 
 # Display
-function switch:translations/modes_murder_mystery_percentage_title
+function switch:modes/murder_mystery/translations/percentage_title
 

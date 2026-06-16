@@ -15,7 +15,7 @@ execute if entity @s[tag=switch.blue_flag] run tag @p[team=switch.rush_the_point
 execute if entity @s[tag=switch.red_flag] run tag @p[team=switch.rush_the_point.blue,distance=..1] add switch.has_red_flag
 execute if entity @s[tag=switch.blue_flag] run scoreboard players add #red_flag_pickups switch.data 1
 execute if entity @s[tag=switch.red_flag] run scoreboard players add #blue_flag_pickups switch.data 1
-function switch:translations/modes_rush_the_flag_flag_pickup
+function switch:modes/rush_the_flag/translations/flag_pickup
 data remove entity @s item
 
 # Translation & Playsound

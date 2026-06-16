@@ -28,7 +28,7 @@ loot replace entity @n[tag=switch.coupdetat.boss] weapon loot switch:i/solarium_
 execute store result bossbar switch:coupdetat value run data get entity @n[tag=switch.coupdetat.boss] Health
 
 # Actionbar with remaining seconds
-execute if score #remaining_seconds switch.data matches 1.. run function switch:translations/modes__coupdetat_tick
+execute if score #remaining_seconds switch.data matches 1.. run function switch:modes/_coupdetat/translations/tick
 
 ## End game
 # 1 = boss killed (success)

@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/de_a_coudre_1/spread_one_player
 #
+# @executed	as @e[tag=switch.block_party_mob]
+#
 # @within	switch:maps/spread_one_player
 #
 

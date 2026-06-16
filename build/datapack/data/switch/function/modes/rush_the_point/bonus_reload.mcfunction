@@ -11,7 +11,7 @@ execute if score #random switch.data matches 1 run setblock 14000 100 14000 obsi
 execute if score #random switch.data matches 2 run setblock 14000 100 14075 obsidian
 execute if score #random switch.data matches 3 run setblock 14000 86 14000 obsidian
 
-function switch:translations/modes_rush_the_point_bonus_reload
+function switch:modes/rush_the_point/translations/bonus_reload
 execute as @a[tag=!detached] at @s run playsound entity.villager.hurt ambient @s
 execute as @a[tag=!detached] at @s run playsound entity.villager.hurt ambient @s
 execute as @a[tag=!detached] at @s run playsound entity.villager.hurt ambient @s

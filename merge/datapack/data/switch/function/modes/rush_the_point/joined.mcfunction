@@ -1,5 +1,0 @@
-
-execute if score #reconnect switch.data matches 0 run function switch:modes/rush_the_point/roles/main
-function switch:translations/common/joined_reconnect
-execute if score #reconnect switch.data matches 1 run function switch:modes/rush_the_point/teleport_to_spawn
-

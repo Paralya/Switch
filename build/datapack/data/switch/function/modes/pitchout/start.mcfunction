@@ -20,7 +20,7 @@ execute if data storage switch:main {map:"pitchout_1"} as @a[tag=!detached,sort=
 execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
 execute as @a[tag=!detached] run function switch:modes/pitchout/xp_bar
 
-function switch:translations/modes_pitchout_start
+function switch:modes/pitchout/translations/start
 
 scoreboard objectives add switch.temp.damages dummy
 scoreboard objectives add switch.temp.cooldown dummy

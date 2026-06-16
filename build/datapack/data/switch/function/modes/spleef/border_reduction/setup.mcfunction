@@ -5,7 +5,7 @@
 #
 
 # Message d'annonce
-function switch:translations/modes_spleef_border_reduction_setup
+function switch:modes/spleef/translations/border_reduction_setup
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 
 # Summon entity depending on map

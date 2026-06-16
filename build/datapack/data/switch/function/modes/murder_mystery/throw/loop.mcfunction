@@ -40,7 +40,7 @@ execute store result score #z switch.data run data get entity @s Pos[2] 10
 execute on passengers store result score #dest_x switch.data run data get entity @s item.components."minecraft:custom_data".destination[0] 10
 execute on passengers store result score #dest_y switch.data run data get entity @s item.components."minecraft:custom_data".destination[1] 10
 execute on passengers store result score #dest_z switch.data run data get entity @s item.components."minecraft:custom_data".destination[2] 10
-function switch:translations/modes_murder_mystery_throw_loop
+function switch:modes/murder_mystery/translations/throw_loop
 scoreboard players operation #x switch.data -= #dest_x switch.data
 scoreboard players operation #y switch.data -= #dest_y switch.data
 scoreboard players operation #z switch.data -= #dest_z switch.data

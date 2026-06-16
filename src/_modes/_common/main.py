@@ -1,0 +1,175 @@
+
+# Imports
+from stewbeet import Mem, write_function
+
+
+def write_mode():
+	""" Write the shared _common helper functions at switch:modes/_common/* (no calls, no translations) """
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:modes/_common"
+
+	# /death_spectator
+	write_function(f"{path}/death_spectator", """
+execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
+
+gamemode spectator @s
+execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
+effect clear @s
+clear @s
+""")
+
+	# /detect_chosen_class
+	write_function(f"{path}/detect_chosen_class", """
+# Get which class got chosen
+execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.0 * run scoreboard players set @s switch.temp.chosen_class 1
+execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.1 * run scoreboard players set @s switch.temp.chosen_class 2
+execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.2 * run scoreboard players set @s switch.temp.chosen_class 3
+execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.3 * run scoreboard players set @s switch.temp.chosen_class 4
+execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.4 * run scoreboard players set @s switch.temp.chosen_class 5
+""")
+
+	# /racing_start_setup (brace-heavy team definitions: plain string)
+	write_function(f"{path}/racing_start_setup", """
+scoreboard objectives add switch.temp dummy
+scoreboard objectives add switch.temp.old_speed dummy
+scoreboard objectives add switch.temp.compteur dummy
+scoreboard objectives add switch.temp.dx dummy
+scoreboard objectives add switch.temp.dy dummy
+scoreboard objectives add switch.temp.dz dummy
+scoreboard objectives add switch.temp.id dummy
+scoreboard objectives add switch.temp.vote_collisions dummy
+scoreboard objectives add switch.temp.change_map dummy
+scoreboard objectives add switch.temp.checkpoint dummy
+scoreboard objectives add switch.temp.classement dummy
+scoreboard objectives add switch.temp.pv_classement dummy
+scoreboard objectives add switch.temp.pos_on_last_lap dummy
+scoreboard objectives add switch.temp.sidebar dummy {"text":"Ranking","color":"dark_purple"}
+scoreboard objectives add switch.respawn_cp_id dummy
+scoreboard objectives add switch.hard_respawn_cp_id dummy
+scoreboard objectives add switch.checkpoint dummy
+scoreboard objectives add switch.lap dummy
+scoreboard objectives add switch.effects.last dummy
+scoreboard objectives add switch.effects.timer dummy
+scoreboard players set @a[tag=!detached] switch.respawn_cp_id -1
+scoreboard players set @a[tag=!detached] switch.hard_respawn_cp_id -1
+scoreboard players set @a[tag=!detached] switch.temp.checkpoint 0
+scoreboard players set @a[tag=!detached] switch.checkpoint 0
+scoreboard players set @a[tag=!detached] switch.lap 1
+scoreboard objectives setdisplay sidebar switch.temp.sidebar
+
+team add switch.temp.kart {"text":"[Kart]"}
+team add switch.temp.1 {"text":"[1st]","color":"#FFE700"}
+team add switch.temp.2 {"text":"[2nd]","color":"#C0C0C0"}
+team add switch.temp.3 {"text":"[3rd]","color":"#CD7F32"}
+team add switch.temp.4 {"text":"[4th]","color":"#696969"}
+team add switch.temp.5 {"text":"[5th]","color":"#696969"}
+team add switch.temp.6 {"text":"[6th]","color":"#696969"}
+team add switch.temp.7 {"text":"[7th]","color":"#696969"}
+team add switch.temp.8 {"text":"[8th]","color":"#696969"}
+team add switch.temp.9 {"text":"[9th]","color":"#696969"}
+team add switch.temp.10 {"text":"[10th]","color":"#696969"}
+team add switch.temp.10+ {"text":"[10+th]","color":"#9200DF"}
+team modify switch.temp.kart collisionRule never
+team modify switch.temp.1 collisionRule never
+team modify switch.temp.2 collisionRule never
+team modify switch.temp.3 collisionRule never
+team modify switch.temp.4 collisionRule never
+team modify switch.temp.5 collisionRule never
+team modify switch.temp.6 collisionRule never
+team modify switch.temp.7 collisionRule never
+team modify switch.temp.8 collisionRule never
+team modify switch.temp.9 collisionRule never
+team modify switch.temp.10 collisionRule never
+team modify switch.temp.10+ collisionRule never
+team modify switch.temp.1 suffix {"text":" [1st]","color":"#FFE700"}
+team modify switch.temp.2 suffix {"text":" [2nd]","color":"#C0C0C0"}
+team modify switch.temp.3 suffix {"text":" [3rd]","color":"#CD7F32"}
+team modify switch.temp.4 suffix {"text":" [4th]","color":"#696969"}
+team modify switch.temp.5 suffix {"text":" [5th]","color":"#696969"}
+team modify switch.temp.6 suffix {"text":" [6th]","color":"#696969"}
+team modify switch.temp.7 suffix {"text":" [7th]","color":"#696969"}
+team modify switch.temp.8 suffix {"text":" [8th]","color":"#696969"}
+team modify switch.temp.9 suffix {"text":" [9th]","color":"#696969"}
+team modify switch.temp.10 suffix {"text":" [10th]","color":"#696969"}
+team modify switch.temp.10+ suffix {"text":" [10+th]","color":"#9200DF"}
+
+## Number of checkpoints and laps per map
+scoreboard players set #total_laps switch.data 3
+scoreboard players set #total_checkpoints switch.data 1
+""")
+
+	# /set_wool_color
+	write_function(f"{path}/set_wool_color", """
+scoreboard players operation #block switch.data %= #16 switch.data
+scoreboard players add #block switch.data 1
+
+execute if score #block switch.data matches 1 run setblock ~ ~ ~ white_wool
+execute if score #block switch.data matches 2 run setblock ~ ~ ~ orange_wool
+execute if score #block switch.data matches 3 run setblock ~ ~ ~ magenta_wool
+execute if score #block switch.data matches 4 run setblock ~ ~ ~ light_blue_wool
+execute if score #block switch.data matches 5 run setblock ~ ~ ~ yellow_wool
+execute if score #block switch.data matches 6 run setblock ~ ~ ~ lime_wool
+execute if score #block switch.data matches 7 run setblock ~ ~ ~ pink_wool
+execute if score #block switch.data matches 8 run setblock ~ ~ ~ gray_wool
+execute if score #block switch.data matches 9 run setblock ~ ~ ~ light_gray_wool
+execute if score #block switch.data matches 10 run setblock ~ ~ ~ cyan_wool
+execute if score #block switch.data matches 11 run setblock ~ ~ ~ purple_wool
+execute if score #block switch.data matches 12 run setblock ~ ~ ~ blue_wool
+execute if score #block switch.data matches 13 run setblock ~ ~ ~ brown_wool
+execute if score #block switch.data matches 14 run setblock ~ ~ ~ green_wool
+execute if score #block switch.data matches 15 run setblock ~ ~ ~ red_wool
+execute if score #block switch.data matches 16 run setblock ~ ~ ~ black_wool
+""")
+
+	# /xp_bar/levels
+	write_function(f"{path}/xp_bar/levels", """
+# Set XP levels
+data modify storage switch:main temp set value {selector:"@a[tag=!detached]", xp:0, type:" levels"}
+execute store result storage switch:main temp.xp int 1 run scoreboard players get #levels switch.data
+function switch:modes/_common/xp_bar/macro with storage switch:main temp
+""")
+
+	# /xp_bar/levels_at_s
+	write_function(f"{path}/xp_bar/levels_at_s", """
+# Set XP levels
+data modify storage switch:main temp set value {selector:"@s", xp:0, type:" levels"}
+execute store result storage switch:main temp.xp int 1 run scoreboard players get #levels switch.data
+function switch:modes/_common/xp_bar/macro with storage switch:main temp
+""")
+
+	# /xp_bar/macro (macro function with $ line)
+	write_function(f"{path}/xp_bar/macro", """
+$xp set $(selector) $(xp)$(type)
+""")
+
+	# /xp_bar/points
+	write_function(f"{path}/xp_bar/points", """
+# Divide points
+scoreboard players operation #points switch.data /= #divide switch.data
+scoreboard players set #divide switch.data 1
+execute if score #points switch.data matches ..0 run scoreboard players set #points switch.data 0
+execute if score #points switch.data matches 1000.. run scoreboard players set #points switch.data 1000
+
+# XP from 0 to 1000 points
+xp set @a[tag=!detached] 130 levels
+data modify storage switch:main temp set value {selector:"@a[tag=!detached]", xp:0, type:""}
+execute store result storage switch:main temp.xp int 1 run scoreboard players get #points switch.data
+function switch:modes/_common/xp_bar/macro with storage switch:main temp
+xp set @a[tag=!detached] 0 levels
+""")
+
+	# /xp_bar/points_at_s
+	write_function(f"{path}/xp_bar/points_at_s", """
+# Divide points
+scoreboard players operation #points switch.data /= #divide switch.data
+scoreboard players set #divide switch.data 1
+execute if score #points switch.data matches ..0 run scoreboard players set #points switch.data 0
+execute if score #points switch.data matches 1000.. run scoreboard players set #points switch.data 1000
+
+# XP from 0 to 1000 points
+xp set @s 130 levels
+data modify storage switch:main temp set value {selector:"@s", xp:0, type:""}
+execute store result storage switch:main temp.xp int 1 run scoreboard players get #points switch.data
+function switch:modes/_common/xp_bar/macro with storage switch:main temp
+xp set @s 0 levels
+""")

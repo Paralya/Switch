@@ -7,7 +7,7 @@
 #
 
 setblock ~ ~ ~ emerald_block
-function switch:translations/modes_mlg_a_coudre_mlg_a_coudre
+function switch:modes/mlg_a_coudre/translations/mlg_a_coudre
 execute if score @s switch.temp.lives matches ..1 run scoreboard players add @s switch.temp.lives 1
 scoreboard players set #success switch.data 1
 
