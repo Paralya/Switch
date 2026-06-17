@@ -1,7 +1,7 @@
 
 #> switch:advancements/_pre_macro
 #
-# @executed	as the player & at current position
+# @executed	as @a[sort=random] & at @s
 #
 # @within	switch:advancements/update_percentages {id:"jump_green"}
 #			switch:advancements/update_percentages {id:"jump_white"}

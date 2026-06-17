@@ -1,7 +1,7 @@
 
 #> switch:advancements/_macro
 #
-# @executed	as the player & at current position
+# @executed	as @a[sort=random] & at @s
 #
 # @within	switch:advancements/_pre_macro with storage switch:main input
 #

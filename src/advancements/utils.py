@@ -106,3 +106,98 @@ def visible_advancements() -> None:
 		adv.encoder = lambda x: stp.json_dump(x, max_level=2)
 		Mem.ctx.data["switch"].advancements[f"visible/{id}"] = adv
 
+
+
+# Reward functions (easy/medium/hard difficulties + the 13 parkour jumps).
+# All share the same 4-line body, differing only by the money reward.
+DIFFICULTY_REWARDS: dict[str, int] = {"easy": 25, "medium": 50, "hard": 100}
+JUMP_REWARDS: dict[str, int] = {
+	"blue": 151, "white": 123, "red": 350, "yellow": 151, "green": 51,
+	"brown": 450, "pink": 400, "purple": 500, "dripstone": 169,
+	"obsidian": 1234, "bricks": 500, "duality": 400, "graviglitch": 500,
+}
+
+
+def _reward_function(name: str, money: int) -> None:
+	write_function(f"switch:advancements/{name}", f"""
+scoreboard players set #add_override switch.money {money}
+function switch:engine/add_money
+function switch:stats/util_update_player
+function switch:advancements/update_percentages
+""")
+
+
+def make_reward_functions() -> None:
+	""" Generates the difficulty + jump reward functions (identical bodies, different money values). """
+	for name, money in DIFFICULTY_REWARDS.items():
+		_reward_function(name, money)
+	for color, money in JUMP_REWARDS.items():
+		_reward_function(f"jumps/{color}", money)
+
+
+def make_percentages_recalculations() -> None:
+	""" Generates the percentages recalculation loop (recomputes every advancement's % on demand). """
+	write_function("switch:advancements/percentages_recalculations", """
+data modify storage switch:temp copy set from storage switch:advancements all
+data modify storage switch:temp new set value []
+execute if data storage switch:temp copy[0] run function switch:advancements/percentages_recalculation_loop
+data modify storage switch:advancements all set from storage switch:temp new
+""")
+	write_function("switch:advancements/percentages_recalculation_loop", """
+## Calculation
+# Get local and global totals
+execute store result score #local_total switch.data run data get storage switch:temp copy[0].total
+scoreboard players operation #total_players switch.data = #next_id switch.id
+
+# Calculate percentages
+scoreboard players operation #local_total switch.data *= #100000 switch.data
+scoreboard players operation #local_total switch.data /= #total_players switch.data
+scoreboard players operation #digits switch.data = #local_total switch.data
+scoreboard players operation #digits switch.data %= #1000 switch.data
+scoreboard players operation #local_total switch.data /= #1000 switch.data
+
+# Store the results
+execute store result storage switch:temp copy[0].percent.int int 1 run scoreboard players get #local_total switch.data
+execute store result storage switch:temp copy[0].percent.digits int 1 run scoreboard players get #digits switch.data
+
+# Append to the new list
+data modify storage switch:temp new append from storage switch:temp copy[0]
+
+# Continue loop
+data remove storage switch:temp copy[0]
+execute if data storage switch:temp copy[0] run function switch:advancements/percentages_recalculation_loop
+""")
+
+
+def make_advancement_macros() -> None:
+	""" Generates the per-player advancement grant macro (registers a player and updates the global %). """
+	write_function("switch:advancements/_pre_macro", """
+scoreboard players add @s switch.advancements 1
+
+$data modify storage switch:main input.id set value $(id)
+function switch:advancements/_macro with storage switch:main input
+""")
+	write_function("switch:advancements/_macro", r"""
+# [
+# 	{"text": "Aider à la construction d'une map ou la création d'un mini-jeu\n", "color": "aqua"},
+# 	{"nbt": "all.1.percent.int", "storage": "switch:advancements", "color":"green"},
+# 	{"text":".", "color":"green"},
+# 	{"nbt": "all.1.percent.digits", "storage": "switch:advancements", "color":"green"},
+# 	{"text":"% des joueurs", "color":"green"}
+# ]
+
+scoreboard players set #success switch.data 0
+$execute if data storage switch:advancements all[{id:$(id)}].players[{name:"$(username)"}] run scoreboard players set #success switch.data 1
+$execute if score #success switch.data matches 0 store result score #local_total switch.data run data get storage switch:advancements all[{id:$(id)}].total
+execute if score #success switch.data matches 0 run scoreboard players add #local_total switch.data 1
+$execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].total int 1 run scoreboard players get #local_total switch.data
+execute if score #success switch.data matches 0 run scoreboard players operation #total_players switch.data = #next_id switch.id
+execute if score #success switch.data matches 0 run scoreboard players operation #local_total switch.data *= #100000 switch.data
+execute if score #success switch.data matches 0 run scoreboard players operation #local_total switch.data /= #total_players switch.data
+execute if score #success switch.data matches 0 run scoreboard players operation #digits switch.data = #local_total switch.data
+execute if score #success switch.data matches 0 run scoreboard players operation #digits switch.data %= #1000 switch.data
+execute if score #success switch.data matches 0 run scoreboard players operation #local_total switch.data /= #1000 switch.data
+$execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].percent.int int 1 run scoreboard players get #local_total switch.data
+$execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].percent.digits int 1 run scoreboard players get #digits switch.data
+$execute if score #success switch.data matches 0 run data modify storage switch:advancements all[{id:$(id)}].players append value {name:"$(username)"}
+""")

@@ -1,8 +1,10 @@
 
 #> switch:music/actions/random
 #
-# @within	switch:music/actions/random
-#			switch:player/trigger/music/main
+# @executed	as @a[sort=random] & at @s
+#
+# @within	switch:player/trigger/music/main
+#			switch:music/actions/random
 #
 
 scoreboard players operation #modulo_rand switch.data = #last_index switch.music.current

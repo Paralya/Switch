@@ -1,3 +1,0 @@
-
-# Function that does nothing
-

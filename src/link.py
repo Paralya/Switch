@@ -9,9 +9,13 @@ from .misc_links.memory_mine import main as memory_mine
 from .misc_links.note_block_studio import main as note_block_studio
 from .misc_links.random_loot_table import main as random_loot_table
 from .misc_links.starting_pop_ups import main as starting_pop_ups
+from .music.main import main as music
+from .npc.main import main as npc
+from .root.main import main as root
 from .shop.main import main as shop
 from .special_fonts.main import main as special_fonts
 from .survival_maps.main import main as generate_survival_maps
+from .translations.main import main as shared_translations
 
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
@@ -31,6 +35,10 @@ def beet_default(ctx: Context) -> None:
 	generate_all_modes()
 
 	# Call all links
+	shared_translations()
+	root()
+	music()
+	npc()
 	starting_pop_ups()
 	random_loot_table()
 	note_block_studio()

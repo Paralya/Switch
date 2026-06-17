@@ -1,7 +1,7 @@
 
 #> switch:translations/engine_add_money
 #
-# @executed	as the player & at current position
+# @executed	as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.civil] & at @s
 #
 # @within	switch:engine/add_money
 #

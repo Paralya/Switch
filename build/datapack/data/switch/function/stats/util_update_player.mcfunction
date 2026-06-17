@@ -1,27 +1,27 @@
 
 #> switch:stats/util_update_player
 #
-# @executed	as the player & at current position
+# @executed	as @a[sort=random] & at @s
 #
-# @within	switch:advancements/easy
-#			switch:advancements/hard
-#			switch:advancements/jumps/blue
-#			switch:advancements/jumps/bricks
-#			switch:advancements/jumps/brown
-#			switch:advancements/jumps/dripstone
-#			switch:advancements/jumps/duality
-#			switch:advancements/jumps/graviglitch
-#			switch:advancements/jumps/green
-#			switch:advancements/jumps/obsidian
-#			switch:advancements/jumps/pink
-#			switch:advancements/jumps/purple
-#			switch:advancements/jumps/red
-#			switch:advancements/jumps/white
-#			switch:advancements/jumps/yellow
-#			switch:advancements/medium
-#			switch:player/set_id
+# @within	switch:player/set_id
 #			switch:player/trigger/coupdetat/launch_vote
 #			switch:player/tutorial/finish
+#			switch:advancements/easy
+#			switch:advancements/medium
+#			switch:advancements/hard
+#			switch:advancements/jumps/blue
+#			switch:advancements/jumps/white
+#			switch:advancements/jumps/red
+#			switch:advancements/jumps/yellow
+#			switch:advancements/jumps/green
+#			switch:advancements/jumps/brown
+#			switch:advancements/jumps/pink
+#			switch:advancements/jumps/purple
+#			switch:advancements/jumps/dripstone
+#			switch:advancements/jumps/obsidian
+#			switch:advancements/jumps/bricks
+#			switch:advancements/jumps/duality
+#			switch:advancements/jumps/graviglitch
 #			switch:shop/trigger
 #
 

@@ -1,8 +1,8 @@
 
 #> switch:auto_index
 #
-# @within	switch:auto_index
-#			switch:load
+# @within	switch:load
+#			switch:auto_index
 #
 
 # Copy the minigames list to a temporary storage and add an index
