@@ -62,7 +62,7 @@ $execute store result score #game_1 switch.data run data get storage switch:main
 tag @s remove detached
 
 # Tellraw message (unless removed)
-execute unless score #no_force_start_msg switch.data matches 1 run function switch:translations/engine_force_start_macro
+execute unless score #no_force_start_msg switch.data matches 1 run function switch:engine/translations/force_start_macro
 scoreboard players reset #no_force_start_msg switch.data
 
 # Start the game with the right state

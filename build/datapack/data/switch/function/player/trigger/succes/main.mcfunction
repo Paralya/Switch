@@ -11,7 +11,7 @@
 ## File attribut: Ignore translations
 
 ## For each of the advancements, print it in order : [done:{green,yellow,red},not done:{green,yellow,red}]
-function switch:translations/player_trigger_succes_main with storage switch:main input
+function switch:player/translations/trigger_succes_main with storage switch:main input
 
 # Done advancements
 data modify storage switch:temp copy set value []

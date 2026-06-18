@@ -1,10 +1,10 @@
 
 #> switch:stats/async/sort_player_stats
 #
-# @within	switch:engine/restart
-#			switch:player/joined
-#			switch:stats/_update_every_single_stat
+# @within	switch:stats/_update_every_single_stat
 #			switch:stats/util_update_player
+#			switch:engine/restart
+#			switch:player/joined
 #
 
 function switch:stats/_sort_player_stats_setup

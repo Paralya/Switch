@@ -17,5 +17,5 @@ execute unless entity @s[team=switch.tutorial] if score #engine_state switch.dat
 
 # Check if enough players
 execute store result score #nb_attached switch.data if entity @a[tag=!detached]
-function switch:translations/player_trigger_attach_real_attach
+function switch:player/translations/trigger_attach_real_attach
 

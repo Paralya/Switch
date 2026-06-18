@@ -1,8 +1,6 @@
 
 #> switch:utils/list/desc/find_min
 #
-# @executed	in switch:game
-#
 # @within	switch:utils/list/desc/selection_sort_loop
 #			switch:utils/list/desc/find_min
 #

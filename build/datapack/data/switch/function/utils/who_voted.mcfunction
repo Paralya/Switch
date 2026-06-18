@@ -4,5 +4,5 @@
 # @within	???
 #
 
-function switch:translations/utils_who_voted
+function switch:utils/translations/who_voted
 

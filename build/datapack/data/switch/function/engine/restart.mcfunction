@@ -59,7 +59,7 @@ execute in switch:game run function switch:engine/stop
 
 # Check if enough players
 execute store result score #nb_attached switch.data if entity @a[tag=!detached]
-function switch:translations/engine_restart
+function switch:engine/translations/restart
 
 # Start the engine and launch start signal
 execute in switch:game run function switch:engine/start

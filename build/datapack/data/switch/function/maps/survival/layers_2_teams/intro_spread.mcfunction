@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/layers_2_teams/intro_spread
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/intro_spread
 #
 

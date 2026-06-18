@@ -1,8 +1,6 @@
 
 #> switch:utils/list/desc/sort
 #
-# @executed	in switch:game
-#
 # @within	switch:stats/sort_minigames_stats/update_minigame
 #
 

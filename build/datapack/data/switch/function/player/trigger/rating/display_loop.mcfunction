@@ -15,7 +15,7 @@ $data modify storage switch:temp name_fr set from storage switch:main minigames[
 $data modify storage switch:temp name_en set from storage switch:main minigames[{id:"$(id)"}].name_en
 execute store result score #digits switch.data run data get storage switch:temp temp.digits
 execute store result score #nb_ratings switch.data if data storage switch:temp temp.players[]
-function switch:translations/player_trigger_rating_display_loop with storage switch:temp temp
+function switch:player/translations/trigger_rating_display_loop with storage switch:temp temp
 
 # Continue loop
 data remove storage switch:temp copy[0]

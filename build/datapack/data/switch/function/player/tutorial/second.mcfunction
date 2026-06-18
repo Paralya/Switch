@@ -1,10 +1,10 @@
 
 #> switch:player/tutorial/second
 #
-# @executed	as @a[sort=random] & at @s
+# @executed	as @a[team=switch.tutorial] & at @s
 #
-# @within	switch:player/tutorial/next_dialogue
-#			switch:second [ as @a[team=switch.tutorial] & at @s ]
+# @within	switch:second [ as @a[team=switch.tutorial] & at @s ]
+#			switch:player/tutorial/next_dialogue
 #
 
 ## Objectives:
@@ -50,5 +50,5 @@ execute if score @s switch.tutorial matches 6 run scoreboard players set @s swit
 execute if score @s switch.tutorial matches 6 run function switch:player/trigger/help/main
 
 # Go next dialog
-function switch:translations/player_tutorial_second
+function switch:player/translations/tutorial_second
 

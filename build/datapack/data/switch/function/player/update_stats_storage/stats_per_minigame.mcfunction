@@ -1,7 +1,7 @@
 
 #> switch:player/update_stats_storage/stats_per_minigame
 #
-# @executed	as @a
+# @executed	as @a[sort=random] & at @s
 #
 # @within	switch:player/update_stats_storage/main with storage switch:main copy[0]
 #			switch:player/update_stats_storage/of_player with storage switch:main copy[0]

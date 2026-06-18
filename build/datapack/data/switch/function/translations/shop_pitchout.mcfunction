@@ -1,7 +1,7 @@
 
 #> switch:translations/shop_pitchout
 #
-# @executed	as @a[sort=random] & at @s
+# @executed	as @a[team=switch.tutorial] & at @s
 #
 # @within	switch:shop/pitchout
 #

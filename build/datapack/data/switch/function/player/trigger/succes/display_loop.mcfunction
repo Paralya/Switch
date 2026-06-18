@@ -9,7 +9,7 @@
 
 # Tellraw
 data modify storage switch:temp temp set from storage switch:temp copy[0]
-function switch:translations/player_trigger_succes_display_loop with storage switch:temp temp
+function switch:player/translations/trigger_succes_display_loop with storage switch:temp temp
 
 # Continue loop
 data remove storage switch:temp copy[0]

@@ -1,10 +1,8 @@
 
 #> switch:engine/start
 #
-# @executed	in switch:game
-#
-# @within	switch:engine/restart [ in switch:game ]
-#			switch:tick
+# @within	switch:tick
+#			switch:engine/restart [ in switch:game ]
 #
 
 # Get the number of players currently attached to the switch engine

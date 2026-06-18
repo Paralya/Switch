@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/ocean_waste/intro_spread
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/intro_spread
 #
 

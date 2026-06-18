@@ -7,7 +7,7 @@
 #
 
 ## For each of the game, print it in order
-function switch:translations/player_trigger_coupdetat_display
+function switch:player/translations/trigger_coupdetat_display
 
 # Create a list of all minigames (with clickable text)
 scoreboard players set #alternate switch.data 0

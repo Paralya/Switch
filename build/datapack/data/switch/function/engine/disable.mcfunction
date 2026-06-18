@@ -1,8 +1,10 @@
 
 #> switch:engine/disable
 #
-# @within	switch:engine/force_start_macro
-#			switch:modes/_coupdetat/_force_start
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
+# @within	switch:modes/_coupdetat/_force_start
+#			switch:engine/force_start_macro
 #
 
 scoreboard players set #engine_state switch.data 3

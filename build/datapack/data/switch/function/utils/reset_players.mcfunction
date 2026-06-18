@@ -1,10 +1,12 @@
 
 #> switch:utils/reset_players
 #
-# @within	switch:engine/force_start_macro
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
+# @within	switch:modes/_coupdetat/_force_start
+#			switch:engine/force_start_macro
 #			switch:engine/launch_game/main
 #			switch:engine/stop
-#			switch:modes/_coupdetat/_force_start
 #
 
 # Attributes

@@ -114,7 +114,7 @@ execute if score @s switch.trigger.shop matches {sell_counter} if score #success
 	write_function(path, f"""
 # Messages
 execute if score @s switch.trigger.shop matches {mini} run playsound block.note_block.bell ambient @s
-function switch:translations/shop_{shop_name}
+function switch:shop/translations/{shop_name}
 """)
 
 
@@ -125,7 +125,7 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 		shop_name	(str):	The name of the shop, e.g. "pitchout"
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
-	path: str = f"switch:translations/shop_{shop_name}"
+	path: str = f"switch:shop/translations/{shop_name}"
 	titled: str = shop_name.replace("_", " ").title()
 	mini: int = get_shop_range(index)[0]
 
@@ -319,7 +319,7 @@ scoreboard players set @s switch.trigger.shop 0
 def general_translations() -> None:
 	""" Write the general translations of the shop """
 		# Write the general shop translations
-	path: str = "switch:translations/shop_global"
+	path: str = "switch:shop/translations/global"
 	for lang_id, (lang_score, lang_name, label, _, access_text) in LANGUAGE_SCORES.items():
 		selector: str = f"@s[scores={{switch.lang={lang_score}}}]"
 		write_function(path, f"""
@@ -335,3 +335,26 @@ tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X
 	# Write the empty line
 	write_function(path, 'tellraw @s ""')
 
+
+
+def write_raw_functions() -> None:
+	""" Migrate the 3 hand-authored shop functions and the macro description translation. """
+	write_function("switch:shop/global", """
+playsound block.note_block.bell ambient @s
+function switch:shop/translations/global
+""")
+	write_function("switch:shop/description", """
+$function switch:shop/translations/description {id:"$(id)"}
+playsound block.note_block.bell ambient @s
+""")
+	write_function("switch:shop/pitchout", """
+# Tutorial stuff
+execute if score @s switch.tutorial matches 3 run scoreboard players set @s switch.tutorial 4
+""")
+	write_function("switch:shop/translations/description", r"""
+# French
+$tellraw @s[scores={switch.lang=0}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_fr","storage":"switch:main","interpret":true},"\n"]
+
+# English
+$tellraw @s[scores={switch.lang=1}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_en","storage":"switch:main","interpret":true},"\n"]
+""")

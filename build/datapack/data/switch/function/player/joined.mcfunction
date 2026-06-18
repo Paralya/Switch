@@ -29,7 +29,7 @@ execute if score #reconnect switch.data matches 0 run function switch:utils/rese
 # Si le joueur n'a pas joué depuis plus de 600 secondes, on le détache
 scoreboard players operation @s switch.reconnect -= #score switch.reconnect
 execute if score @s[tag=!detached] switch.reconnect matches -600.. run function switch:player/make_join
-function switch:translations/player_joined
+function switch:player/translations/joined
 execute unless score @s switch.reconnect matches -600.. run function switch:player/trigger/detach/main
 
 # Prevent calling this function again

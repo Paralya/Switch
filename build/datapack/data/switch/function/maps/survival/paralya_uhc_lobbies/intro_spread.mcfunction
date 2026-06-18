@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/paralya_uhc_lobbies/intro_spread
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/intro_spread
 #
 

@@ -124,3 +124,21 @@ execute if score #test_mode switch.data matches 0 run tellraw @a[scores={switch.
 execute if score #test_mode switch.data matches 1 run tellraw @a[scores={switch.lang=1}] {"text":"Test mode is now ON","color":"green"}
 execute if score #test_mode switch.data matches 0 run tellraw @a[scores={switch.lang=1}] {"text":"Test mode is now OFF","color":"red"}
 """)
+
+	# /changelog
+	write_function(f"{path}/changelog", r"""
+# French
+tellraw @s[scores={switch.lang=0}] [{"text":"\n[Accédez aux changelog en clickant ici]\n","color":"red","click_event":{"action":"open_url","url":"https://github.com/Paralya/Switch/releases"}}]
+
+# English
+tellraw @s[scores={switch.lang=1}] [{"text":"\n[Access the changelog by clicking here]\n","color":"red","click_event":{"action":"open_url","url":"https://github.com/Paralya/Switch/releases"}}]
+""")
+
+	# /post_load
+	write_function(f"{path}/post_load", """
+# French
+tellraw @a[scores={switch.lang=0},tag=convention.debug] {"text":"[Loaded Switch v1.0.0]","italic":false,"color":"green"}
+
+# English
+tellraw @a[scores={switch.lang=1},tag=convention.debug] {"text":"[Loaded Switch v1.0.0]","italic":false,"color":"green"}
+""")

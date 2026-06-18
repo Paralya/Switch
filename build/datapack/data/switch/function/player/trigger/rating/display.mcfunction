@@ -7,7 +7,7 @@
 #
 
 ## For each of the game, print it in order
-function switch:translations/player_trigger_rating_display
+function switch:player/translations/trigger_rating_display
 
 # Done advancements
 data modify storage switch:temp copy set from storage switch:ratings all

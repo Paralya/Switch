@@ -1,8 +1,6 @@
 
 #> switch:utils/list/desc/move_min_element
 #
-# @executed	in switch:game
-#
 # @within	switch:utils/list/desc/selection_sort_loop with storage sorter:temp args
 #
 # @args		min_index (unknown)

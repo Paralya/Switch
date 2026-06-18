@@ -5,17 +5,23 @@ from stewbeet.core import Context, official_lib_used, write_load_file, write_tic
 
 from ._modes import generate_all_modes
 from .advancements.main import main as automatic_advancements
+from .cinematic.main import main as cinematic
+from .engine.main import main as engine
 from .misc_links.memory_mine import main as memory_mine
 from .misc_links.note_block_studio import main as note_block_studio
 from .misc_links.random_loot_table import main as random_loot_table
 from .misc_links.starting_pop_ups import main as starting_pop_ups
+from .maps.main import main as maps
 from .music.main import main as music
 from .npc.main import main as npc
+from .player.main import main as player
 from .root.main import main as root
 from .shop.main import main as shop
 from .special_fonts.main import main as special_fonts
+from .stats.main import main as stats
 from .survival_maps.main import main as generate_survival_maps
 from .translations.main import main as shared_translations
+from .utils.main import main as utils
 
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
@@ -37,8 +43,14 @@ def beet_default(ctx: Context) -> None:
 	# Call all links
 	shared_translations()
 	root()
+	utils()
+	maps()
 	music()
 	npc()
+	cinematic()
+	stats()
+	engine()
+	player()
 	starting_pop_ups()
 	random_loot_table()
 	note_block_studio()

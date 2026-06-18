@@ -1,8 +1,8 @@
 
 #> switch:maps/find_map
 #
-# @within	switch:maps/find_map
-#			switch:maps/load
+# @within	switch:maps/load
+#			switch:maps/find_map
 #
 
 scoreboard players remove #try switch.data 1

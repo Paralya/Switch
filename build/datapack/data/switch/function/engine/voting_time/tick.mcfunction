@@ -29,7 +29,7 @@ scoreboard players set #remaining switch.data 0
 scoreboard players operation #remaining switch.data = #voting_timer switch.data
 scoreboard players operation #remaining switch.data /= #20 switch.data
 scoreboard players add #remaining switch.data 1
-function switch:translations/engine_voting_time_tick
+function switch:engine/translations/voting_time_tick
 
 # End of voting sequence (kill players to remove arrows for example)
 execute if score #voting_timer switch.data matches 12 as @a[tag=!detached] run function switch:utils/black_transition

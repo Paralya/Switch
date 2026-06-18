@@ -1,8 +1,6 @@
 
 #> switch:maps/survival/rush_the_point_1/regeneration_on_marker
 #
-# @executed	in switch:game
-#
 # @within	switch:maps/survival/rush_the_point_1/regenerate
 #
 

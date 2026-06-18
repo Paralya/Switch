@@ -1,3 +1,0 @@
-
-$kick $(username) "Ratio"
-

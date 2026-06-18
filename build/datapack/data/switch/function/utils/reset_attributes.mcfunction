@@ -1,15 +1,13 @@
 
 #> switch:utils/reset_attributes
 #
-# @executed	as @a[sort=random] & at @s
-#
-# @within	switch:player/joined
-#			switch:player/trigger/detach/basic_stuff
-#			switch:utils/reset_players [ as @a[tag=!detached] ]
-#			switch:modes/de_a_coudre/joined
+# @within	switch:modes/de_a_coudre/joined
 #			switch:modes/mlg_a_coudre/joined
 #			switch:modes/simultaneous_jump/joined
 #			switch:modes/traitors_game/give_items
+#			switch:utils/reset_players [ as @a[tag=!detached] ]
+#			switch:player/joined
+#			switch:player/trigger/detach/basic_stuff
 #
 
 attribute @s armor base reset

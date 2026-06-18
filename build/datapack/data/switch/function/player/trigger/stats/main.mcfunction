@@ -9,7 +9,7 @@
 #
 
 # Bases
-function switch:translations/player_trigger_stats_main with storage switch:main input
+function switch:player/translations/trigger_stats_main with storage switch:main input
 
 # Prepare a compound list containing the number of games played and the name for each game
 data modify storage switch:main stats set value []

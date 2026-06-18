@@ -8,5 +8,5 @@
 
 # Playsound and tellraw
 playsound entity.villager.no ambient @s
-function switch:translations/player_trigger_coupdetat_error
+function switch:player/translations/trigger_coupdetat_error
 

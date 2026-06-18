@@ -11,5 +11,5 @@ execute store result score #players_in_game switch.data if entity @a[tag=!detach
 execute if score #players_in_game switch.data matches 0 run return fail
 
 # Title action bar
-function switch:translations/player_detached_action_bar
+function switch:player/translations/detached_action_bar
 

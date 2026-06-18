@@ -1,8 +1,6 @@
 
 #> switch:utils/list/desc/append_remaining
 #
-# @executed	in switch:game
-#
 # @within	switch:utils/list/desc/selection_sort_loop
 #
 

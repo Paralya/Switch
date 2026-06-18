@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/friends_pvpbox_end/intro_spread
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/intro_spread
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/octogone_nether_ice/intro_spread
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/intro_spread
 #
 

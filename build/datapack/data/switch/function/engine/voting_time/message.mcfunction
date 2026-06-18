@@ -27,6 +27,6 @@ data modify storage switch:main selections[7].lore_en set value ["",{"text":"[Ra
 data modify storage switch:main selections[7].name_en set value "Random"
 
 # Tellraw
-function switch:translations/engine_voting_time_message
+function switch:engine/translations/voting_time_message
 scoreboard players reset #for_tutorial switch.data
 

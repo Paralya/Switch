@@ -1,8 +1,6 @@
 
 #> switch:maps/survival/glassrunner/regeneration_on_marker
 #
-# @executed	in switch:game
-#
 # @within	switch:maps/survival/glassrunner/regenerate
 #
 

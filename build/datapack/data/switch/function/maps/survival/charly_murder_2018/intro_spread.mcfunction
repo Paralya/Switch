@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/charly_murder_2018/intro_spread
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/intro_spread
 #
 

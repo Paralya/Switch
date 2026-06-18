@@ -1,8 +1,6 @@
 
 #> switch:utils/list/desc/selection_sort_loop
 #
-# @executed	in switch:game
-#
 # @within	switch:utils/list/desc/sort
 #			switch:utils/list/desc/selection_sort_loop
 #

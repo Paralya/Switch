@@ -1,11 +1,11 @@
 
 #> switch:player/update_stats_storage/main
 #
-# @executed	as @a
+# @executed	as @a[sort=random] & at @s
 #
-# @within	switch:engine/restart [ as @a ]
+# @within	switch:stats/util_update_player
+#			switch:engine/restart [ as @a ]
 #			switch:player/joined
-#			switch:stats/util_update_player
 #
 
 # Get username

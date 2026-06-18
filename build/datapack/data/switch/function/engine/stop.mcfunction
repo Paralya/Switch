@@ -1,11 +1,9 @@
 
 #> switch:engine/stop
 #
-# @executed	in switch:game
-#
-# @within	switch:engine/disable [ in switch:game ]
+# @within	switch:tick
+#			switch:engine/disable [ in switch:game ]
 #			switch:engine/restart [ in switch:game ]
-#			switch:tick
 #
 
 execute unless score #engine_state switch.data matches 3 unless score #disable switch.data matches 1 run tp @a[tag=!detached] 0 69 0

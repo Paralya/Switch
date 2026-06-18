@@ -1,8 +1,8 @@
 
 #> switch:maps/choose_loop
 #
-# @within	switch:maps/choose_loop
-#			switch:maps/find_map
+# @within	switch:maps/find_map
+#			switch:maps/choose_loop
 #
 
 data remove storage switch:main copy[0]

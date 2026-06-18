@@ -41,7 +41,7 @@ $execute store result storage switch:ratings all[{index:$(index)}].digits int 1 
 
 # Verbose
 $scoreboard players set #temp switch.data $(digits)
-function switch:translations/player_trigger_rating_note with storage switch:temp input
+function switch:player/translations/trigger_rating_note with storage switch:temp input
 
 # Sort all the ratings
 function switch:player/trigger/rating/sort

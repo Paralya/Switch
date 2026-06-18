@@ -26,5 +26,5 @@ tag @a remove switch.coupdetat
 tag @s add switch.coupdetat
 
 # Ask players to support the coup d'état
-function switch:translations/player_trigger_coupdetat_launch_vote
+function switch:player/translations/trigger_coupdetat_launch_vote
 

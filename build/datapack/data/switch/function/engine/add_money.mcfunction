@@ -1,11 +1,11 @@
 
 #> switch:engine/add_money
 #
-# @executed	as @a[tag=!detached,scores={switch.alive=1..},team=switch.temp.civil] & at @s
+# @executed	as @p[tag=switch.coupdetat]
 #
-# @within	switch:engine/add_win
-#			switch:modes/_coupdetat/process_end [ as @p[tag=switch.coupdetat] ]
+# @within	switch:modes/_coupdetat/process_end [ as @p[tag=switch.coupdetat] ]
 #			switch:modes/build_battle/add_money
+#			switch:engine/add_win
 #			switch:advancements/easy
 #			switch:advancements/medium
 #			switch:advancements/hard
@@ -40,7 +40,7 @@ scoreboard players operation @s switch.money += #add switch.money
 
 # Messages
 execute store result score #random switch.data run random value 0..5
-function switch:translations/engine_add_money
+function switch:engine/translations/add_money
 
 playsound entity.player.levelup ambient @s ^ ^ ^ .2
 

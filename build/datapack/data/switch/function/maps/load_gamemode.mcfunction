@@ -1,8 +1,8 @@
 
 #> switch:maps/load_gamemode
 #
-# @within	switch:maps/load
-#			switch:modes/race/give_items
+# @within	switch:modes/race/give_items
+#			switch:maps/load
 #
 
 # Kill map marker
