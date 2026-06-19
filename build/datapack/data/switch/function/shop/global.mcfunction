@@ -7,5 +7,5 @@
 #
 
 playsound block.note_block.bell ambient @s
-function switch:translations/shop_global
+function switch:shop/translations/global
 

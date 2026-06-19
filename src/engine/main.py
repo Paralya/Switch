@@ -503,7 +503,7 @@ execute if score #index switch.data matches 8 if score #list_index switch.data =
 data remove storage switch:main copy[0]
 scoreboard players add #list_index switch.data 1
 execute if score #success switch.data matches 0 if data storage switch:main copy[0] run function switch:engine/voting_time/get/index_information
-""")
+""")  # noqa: E501
 
 	# /voting_time/get/index_max_players
 	write_function(f"{path}/voting_time/get/index_max_players", """

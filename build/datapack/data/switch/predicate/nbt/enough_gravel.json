@@ -2,11 +2,6 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"slots": {
-			"hotbar.*": {
-				"items": "minecraft:suspicious_gravel",
-				"count": 42
-			}
-		}
+		"slots": {"hotbar.*": {"items": "minecraft:suspicious_gravel","count": 42}}
 	}
 }

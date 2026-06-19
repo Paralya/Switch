@@ -19,6 +19,8 @@ from .database.blocks_behaviors import setup_blocks_behaviors
 from .database.infected import setup_infected_items
 from .database.misc_items import setup_misc_items
 from .database.pvpswap import setup_pvpswap
+from .datapack.main import load_datapack_json
+from .resource_pack.main import load_resource_pack_json
 
 # Configuration to generate everything about the material based on "steel_ingot"
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
@@ -50,6 +52,10 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 # Main function should return a database
 @stp.measure_time(message="Setup definitions")
 def beet_default(ctx: Context):
+
+	# Load the hand-authored datapack + resource pack JSON (must run before the relevant plugins)
+	load_datapack_json(ctx)
+	load_resource_pack_json(ctx)
 
 	# Generate ores in database & custom disc records
 	generate_everything_about_these_materials(ORES_CONFIGS)

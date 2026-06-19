@@ -1,14 +1,14 @@
 
 #> switch:utils/get_random/main
 #
-# @within	switch:profiling/content
-#			switch:modes/block_party/core/pick_random_art
+# @within	switch:modes/block_party/core/pick_random_art
 #			switch:modes/block_party/core/remake_list/shuffle
 #			switch:modes/build_battle/preparation/get_random_theme
 #			switch:modes/murder_mystery/percentage/_choose_from_list
 #			switch:maps/find_map
 #			switch:music/actions/random
 #			switch:engine/launch_game/get_random_max
+#			switch:profiling/content
 #
 
 data modify storage switch:main temp set value {max:0}

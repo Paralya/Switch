@@ -1,6 +1,6 @@
 {
-    "values": [
-        "#switch:glassrunner/tier_1",
-        "#switch:glassrunner/air"
-    ]
+	"values": [
+		"#switch:glassrunner/tier_1",
+		"#switch:glassrunner/air"
+	]
 }

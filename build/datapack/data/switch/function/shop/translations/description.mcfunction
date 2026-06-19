@@ -1,0 +1,14 @@
+
+#> switch:shop/translations/description
+#
+# @within	switch:shop/description {id:"$(id)"}
+#
+# @args		id (string)
+#
+
+# French
+$tellraw @s[scores={switch.lang=0}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_fr","storage":"switch:main","interpret":true},"\n"]
+
+# English
+$tellraw @s[scores={switch.lang=1}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_en","storage":"switch:main","interpret":true},"\n"]
+

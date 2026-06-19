@@ -2,10 +2,6 @@
 	"condition": "minecraft:location_check",
 	"offsetY": -1,
 	"predicate": {
-		"block": {
-			"blocks": [
-				"minecraft:air"
-			]
-		}
+		"block": {"blocks": ["minecraft:air"]}
 	}
 }

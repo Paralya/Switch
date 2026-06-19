@@ -15,6 +15,7 @@ from .maps.main import main as maps
 from .music.main import main as music
 from .npc.main import main as npc
 from .player.main import main as player
+from .profiling.main import main as profiling
 from .root.main import main as root
 from .shop.main import main as shop
 from .special_fonts.main import main as special_fonts
@@ -51,6 +52,7 @@ def beet_default(ctx: Context) -> None:
 	stats()
 	engine()
 	player()
+	profiling()
 	starting_pop_ups()
 	random_loot_table()
 	note_block_studio()

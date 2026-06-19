@@ -1,0 +1,24 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"switch.temp.role": {
+								"min": 3,
+								"max": 4
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "switch:modes/traitors_game/calls/killed_ninja"
+	}
+}

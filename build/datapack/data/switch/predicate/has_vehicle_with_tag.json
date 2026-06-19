@@ -2,8 +2,6 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"vehicle": {
-			"nbt": "{Tags:[\"switch.temp\"]}"
-		}
+		"vehicle": {"nbt": "{Tags:[\"switch.temp\"]}"}
 	}
 }

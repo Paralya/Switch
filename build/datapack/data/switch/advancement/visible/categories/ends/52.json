@@ -1,13 +1,9 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:tick"
-    }
-  },
-  "requirements": [
-    [
-      "requirement"
-    ]
-  ],
-  "parent": "switch:visible/52"
+	"criteria": {
+		"requirement": {"trigger": "minecraft:tick"}
+	},
+	"requirements": [
+		["requirement"]
+	],
+	"parent": "switch:visible/52"
 }

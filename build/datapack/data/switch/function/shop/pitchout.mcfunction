@@ -54,5 +54,5 @@ execute if score @s switch.trigger.shop matches 10102 if score #success switch.d
 
 # Messages
 execute if score @s switch.trigger.shop matches 100 run playsound block.note_block.bell ambient @s
-function switch:translations/shop_pitchout
+function switch:shop/translations/pitchout
 

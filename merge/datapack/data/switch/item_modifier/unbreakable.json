@@ -1,9 +1,0 @@
-{
-	"function": "minecraft:set_components",
-	"components": {
-		"minecraft:unbreakable": {},
-		"minecraft:tooltip_display": {
-			"hidden_components": ["minecraft:unbreakable"]
-		}
-	}
-}

@@ -1,6 +1,6 @@
 {
-    "values": [
-        "#switch:glassrunner/glass",
-        "#switch:glassrunner/air"
-    ]
+	"values": [
+		"#switch:glassrunner/glass",
+		"#switch:glassrunner/air"
+	]
 }

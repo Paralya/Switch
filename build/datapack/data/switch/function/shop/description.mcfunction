@@ -6,6 +6,6 @@
 # @args		id (unknown)
 #
 
-$function switch:translations/shop_description {id:"$(id)"}
+$function switch:shop/translations/description {id:"$(id)"}
 playsound block.note_block.bell ambient @s
 

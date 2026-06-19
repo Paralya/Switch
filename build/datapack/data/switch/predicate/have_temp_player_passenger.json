@@ -2,9 +2,6 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"passenger": {
-			"type": "minecraft:player",
-			"nbt": "{Tags:[\"switch.temp\"]}"
-		}
+		"passenger": {"type": "minecraft:player","nbt": "{Tags:[\"switch.temp\"]}"}
 	}
 }

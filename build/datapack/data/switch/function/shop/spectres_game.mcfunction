@@ -108,5 +108,5 @@ execute if score @s switch.trigger.shop matches 10504 if score #success switch.d
 
 # Messages
 execute if score @s switch.trigger.shop matches 500 run playsound block.note_block.bell ambient @s
-function switch:translations/shop_spectres_game
+function switch:shop/translations/spectres_game
 
