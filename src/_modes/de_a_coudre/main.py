@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -201,15 +201,4 @@ execute if score #detect_end switch.data matches 1 run function {path}/process_e
 """)
 
 	# /xp_bar
-	write_function(f"{path}/xp_bar", """
-# 15 seconds = 100%	(function runned every tick so 15s = 300 ticks)
-# 0 seconds = 0%
-scoreboard players operation #points switch.data = #remaining_time switch.data
-scoreboard players operation #points switch.data *= #1000000 switch.data
-scoreboard players set #divide switch.data 300000
-function switch:modes/_common/xp_bar/points
-
-scoreboard players operation #levels switch.data = #remaining_time switch.data
-scoreboard players operation #levels switch.data /= #20 switch.data
-function switch:modes/_common/xp_bar/levels
-""")
+	write_time_xp_bar(f"{path}/xp_bar", 300)

@@ -64,21 +64,19 @@ data modify entity @s PickupDelay set value 0s
 """)
 
 
-def write_time_xp_bar(path: str, seconds: int) -> None:
-	""" Write a time-based XP bar updater: full bar at `seconds` remaining, empty at 0.
+def write_time_xp_bar(path: str, seconds: int, points_score: str = "#remaining_time", levels_score: str = "#remaining_time") -> None:
+	""" Write a time-based XP bar updater: full bar at `seconds`, empty at 0.
+
+	Delegates the shared logic to the switch:modes/_common/xp_bar/time macro so every
+	mode's xp_bar is a one-liner. Only the divide value and the two source scores vary.
 
 	Args:
-		path    (str):  Full function path, e.g. f"{path}/xp_bar".
-		seconds (int):  Total game duration in seconds (full bar value).
+		path         (str):  Full function path, e.g. f"{path}/xp_bar".
+		seconds      (int):  Full-bar value in seconds (the bar fills the #points score over seconds*1000).
+		points_score (str):  Score driving the progress bar (#points). Defaults to #remaining_time.
+		levels_score (str):  Score driving the XP level number. Defaults to #remaining_time.
 	"""
 	write_function(path, f"""
-# {seconds} seconds = 100%
-# 0 seconds = 0%
-scoreboard players operation #points switch.data = #remaining_time switch.data
-scoreboard players operation #points switch.data *= #1000000 switch.data
 scoreboard players set #divide switch.data {seconds * 1000}
-function switch:modes/_common/xp_bar/points
-
-scoreboard players operation #levels switch.data = #remaining_time switch.data
-function switch:modes/_common/xp_bar/levels
+function switch:modes/_common/xp_bar/time {{points_score:"{points_score}",levels_score:"{levels_score}"}}
 """)

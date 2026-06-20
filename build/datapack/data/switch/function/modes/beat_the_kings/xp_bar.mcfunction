@@ -4,12 +4,6 @@
 # @within	switch:modes/beat_the_kings/second
 #
 
-# 900 seconds = 100%
-scoreboard players operation #points switch.data = #remaining_time switch.data
-scoreboard players operation #points switch.data *= #1000000 switch.data
 scoreboard players set #divide switch.data 900000
-function switch:modes/_common/xp_bar/points
-
-scoreboard players operation #levels switch.data = #remaining_time switch.data
-function switch:modes/_common/xp_bar/levels
+function switch:modes/_common/xp_bar/time {points_score:"#remaining_time",levels_score:"#remaining_time"}
 

@@ -126,6 +126,15 @@ function switch:modes/_common/xp_bar/macro with storage switch:main temp
 $xp set $(selector) $(xp)$(type)
 """)
 
+	# /xp_bar/time (shared time-based XP bar preamble; caller sets #divide beforehand)
+	write_function(f"{path}/xp_bar/time", """
+$scoreboard players operation #points switch.data = $(points_score) switch.data
+scoreboard players operation #points switch.data *= #1000000 switch.data
+function switch:modes/_common/xp_bar/points
+$scoreboard players operation #levels switch.data = $(levels_score) switch.data
+function switch:modes/_common/xp_bar/levels
+""")
+
 	# /xp_bar/points
 	write_function(f"{path}/xp_bar/points", """
 # Divide points
