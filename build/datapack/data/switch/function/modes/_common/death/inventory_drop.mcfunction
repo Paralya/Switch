@@ -5,6 +5,7 @@
 #			switch:modes/beat_the_kings/death/for_global [ at @s ]
 #			switch:modes/capture_the_flag/death/for_global [ at @s ]
 #			switch:modes/rush_the_point/death/for_global [ at @s ]
+#			switch:modes/spectres_game/death/for_global [ at @s ]
 #			switch:modes/traitors_game/death/for_global [ at @s ]
 #
 

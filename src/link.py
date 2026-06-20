@@ -7,11 +7,11 @@ from ._modes import generate_all_modes
 from .advancements.main import main as automatic_advancements
 from .cinematic.main import main as cinematic
 from .engine.main import main as engine
+from .maps.main import main as maps
 from .misc_links.memory_mine import main as memory_mine
 from .misc_links.note_block_studio import main as note_block_studio
 from .misc_links.random_loot_table import main as random_loot_table
 from .misc_links.starting_pop_ups import main as starting_pop_ups
-from .maps.main import main as maps
 from .music.main import main as music
 from .npc.main import main as npc
 from .player.main import main as player
