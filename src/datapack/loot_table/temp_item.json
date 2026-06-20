@@ -12,7 +12,11 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_data": "{\"switch\":{\"temp_item\":true}}"
+								"minecraft:custom_data": {
+									"switch": {
+										"temp_item": true
+									}
+								}
 							}
 						}
 					]

@@ -11,7 +11,7 @@ tag @a[tag=!detached,predicate=switch:has_same_id] add switch.temp
 clear @a[tag=switch.temp]
 
 function switch:modes/spectres_game/death/inventory_filter
-execute at @s run function switch:modes/spectres_game/death/inventory_drop
+execute at @s run function switch:modes/_modes/death/inventory_drop
 
 scoreboard players set #success switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1

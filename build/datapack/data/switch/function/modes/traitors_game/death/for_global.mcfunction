@@ -9,7 +9,7 @@
 
 scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
-execute at @s run function switch:modes/traitors_game/death/drop_inventory
+execute at @s run function switch:modes/_common/death/inventory_drop
 
 scoreboard players set #success switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1

@@ -400,7 +400,7 @@ execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=s
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function {path}/death/for_global
 
 # Update sidebar & Flag tick
-function {path}/update_sidebar
+function switch:modes/_common/update_sidebar
 execute as @e[type=item_display,tag=switch.flag,sort=random] at @s positioned ~ ~ ~ run function {path}/flag_tick
 
 # Hotbar when having a flag
@@ -413,30 +413,7 @@ execute if score #remaining_time switch.data matches 1.. if score #blue_points s
 execute if score #remaining_time switch.data matches ..0 run function {path}/process_end
 """)
 
-	# /update_sidebar
-	write_function(f"{path}/update_sidebar", f"""
-data modify storage switch:main input set value {{blue:0,red:0,minutes:0,seconds:0,optional_zero:""}}
-execute store result storage switch:main input.blue int 1 run scoreboard players get #blue_points switch.data
-execute store result storage switch:main input.red int 1 run scoreboard players get #red_points switch.data
 
-scoreboard players operation #minutes switch.data = #remaining_time switch.data
-scoreboard players operation #minutes switch.data /= #60 switch.data
-scoreboard players operation #seconds switch.data = #remaining_time switch.data
-scoreboard players operation #seconds switch.data %= #60 switch.data
-
-execute store result storage switch:main input.minutes int 1 run scoreboard players get #minutes switch.data
-execute store result storage switch:main input.seconds int 1 run scoreboard players get #seconds switch.data
-execute if score #seconds switch.data matches 0..9 run data modify storage switch:main input.optional_zero set value "0"
-
-function {path}/update_sidebar_macro with storage switch:main input
-""")
-
-	# /update_sidebar_macro
-	write_function(f"{path}/update_sidebar_macro", """
-$team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"$(minutes)","color":"yellow"},{"text":"m"},{"text":"$(optional_zero)$(seconds)","color":"yellow"},{"text":"s"}]
-$team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"$(blue)","color":"yellow"}]
-$team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"$(red)","color":"yellow"}]
-""")
 
 	# /classes/main
 	write_function(f"{path}/classes/main", f"""
@@ -585,20 +562,12 @@ scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
 
 function {path}/death/inventory_filter
-execute if data entity @s data.Inventory[0] at @s run function {path}/death/inventory_drop
+execute if data entity @s data.Inventory[0] at @s run function switch:modes/_common/death/inventory_drop
 
 tag @s add switch.processed
 tp @s 0 69 0
 """)
 
-	# /death/inventory_drop
-	write_function(f"{path}/death/inventory_drop", f"""
-loot spawn ~ ~ ~ loot switch:temp_item
-data modify entity @e[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{switch:{{"temp_item":true}}}}}}}}}},limit=1] Item set from entity @s data.Inventory[0]
-data remove entity @s data.Inventory[0]
-
-execute if data entity @s data.Inventory[0] run function {path}/death/inventory_drop
-""")
 
 	# /death/inventory_filter
 	write_function(f"{path}/death/inventory_filter", """

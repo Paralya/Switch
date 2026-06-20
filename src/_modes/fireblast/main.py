@@ -195,13 +195,6 @@ execute if score @s switch.temp.cooldown matches 1.. run scoreboard players add 
 function switch:modes/_common/xp_bar/levels_at_s
 """)
 
-	# /fireball/get_motion
-	write_function(f"{path}/fireball/get_motion", """
-data modify entity @s Rotation set from storage switch:main Rotation
-execute at @s run tp @s ^ ^ ^1000
-data modify storage switch:main Pos set from entity @s Pos
-kill @s
-""")
 
 	# /fireball/no_cooldown
 	write_function(f"{path}/fireball/no_cooldown", f"""
@@ -220,12 +213,12 @@ function {translations}/fireball_no_cooldown
 """)
 
 	# /fireball/right_click
-	write_function(f"{path}/fireball/right_click", f"""
-execute anchored eyes run summon fireball ~ ~1 ~ {{Tags:["switch.new"],ExplosionPower:0b,NoGravity:true,Passengers:[{{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}}]}}
+	write_function(f"{path}/fireball/right_click", """
+execute anchored eyes run summon fireball ~ ~1 ~ {Tags:["switch.new"],ExplosionPower:0b,NoGravity:true,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}]}
 
 data modify storage switch:main Rotation set from entity @s Rotation
-execute positioned 0 0 0 summon marker run function {path}/fireball/get_motion
-execute as @e[type=fireball,tag=switch.new] run function {path}/fireball/set_motion
+execute positioned 0 0 0 summon marker run function switch:modes/_common/fireball/get_motion
+execute as @e[type=fireball,tag=switch.new] run function switch:modes/_common/fireball/set_motion
 playsound entity.ghast.shoot ambient @s
 
 # Set cooldown based on reload boost
@@ -233,10 +226,3 @@ execute if score @s switch.temp.reload_boost matches 1.. run scoreboard players 
 execute unless score @s switch.temp.reload_boost matches 1.. run scoreboard players set @s[gamemode=!creative] switch.temp.cooldown 50
 """)
 
-	# /fireball/set_motion
-	write_function(f"{path}/fireball/set_motion", """
-execute store result entity @s Motion[0] double 0.001 run data get storage switch:main Pos[0]
-execute store result entity @s Motion[1] double 0.001 run data get storage switch:main Pos[1]
-execute store result entity @s Motion[2] double 0.001 run data get storage switch:main Pos[2]
-tag @s remove switch.new
-""")

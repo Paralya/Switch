@@ -84,7 +84,7 @@ scoreboard objectives remove switch.temp.killed_kings
 	write_function(f"{path}/tick", f"""
 scoreboard players add #beat_the_kings_ticks switch.data 1
 
-execute as @a[tag=!detached,tag=switch.to_tp] run function {path}/teleport_to_death
+execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/_common/teleport_to_death
 
 function switch:utils/on_death_run_function {{function:"{path}/death/player"}}
 execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function {path}/death/detect
@@ -194,12 +194,6 @@ scoreboard players operation #levels switch.data = #remaining_time switch.data
 function switch:modes/_common/xp_bar/levels
 """)
 
-	# /teleport_to_death
-	write_function(f"{path}/teleport_to_death", """
-scoreboard players operation #player_id switch.id = @s switch.id
-tp @s @e[type=!player,predicate=switch:has_same_id,limit=1]
-tag @s remove switch.to_tp
-""")
 
 
 	# /death/player
@@ -220,19 +214,11 @@ scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
 
 function {path}/death/inventory_filter
-execute at @s run function {path}/death/inventory_drop
+execute at @s run function switch:modes/_common/death/inventory_drop
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 kill @s
 """)
 
-	# /death/inventory_drop
-	write_function(f"{path}/death/inventory_drop", f"""
-loot spawn ~ ~ ~ loot switch:temp_item
-data modify entity @e[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{switch:{{"temp_item":true}}}}}}}}}},limit=1] Item set from entity @s data.Inventory[0]
-data remove entity @s data.Inventory[0]
-
-execute if data entity @s data.Inventory[0] run function {path}/death/inventory_drop
-""")
 
 	# /death/inventory_filter
 	write_function(f"{path}/death/inventory_filter", """

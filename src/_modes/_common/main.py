@@ -173,3 +173,61 @@ execute store result storage switch:main temp.xp int 1 run scoreboard players ge
 function switch:modes/_common/xp_bar/macro with storage switch:main temp
 xp set @s 0 levels
 """)
+
+	# /teleport_to_death (teleport @s onto the matching marker, used by id-based death systems)
+	write_function(f"{path}/teleport_to_death", """
+scoreboard players operation #player_id switch.id = @s switch.id
+tp @s @e[type=!player,predicate=switch:has_same_id,limit=1]
+tag @s remove switch.to_tp
+""")
+
+	# /update_sidebar (compute Red/Blue points + remaining time, then call the macro)
+	write_function(f"{path}/update_sidebar", """
+data modify storage switch:main input set value {blue:0,red:0,minutes:0,seconds:0,optional_zero:""}
+execute store result storage switch:main input.blue int 1 run scoreboard players get #blue_points switch.data
+execute store result storage switch:main input.red int 1 run scoreboard players get #red_points switch.data
+
+scoreboard players operation #minutes switch.data = #remaining_time switch.data
+scoreboard players operation #minutes switch.data /= #60 switch.data
+scoreboard players operation #seconds switch.data = #remaining_time switch.data
+scoreboard players operation #seconds switch.data %= #60 switch.data
+
+execute store result storage switch:main input.minutes int 1 run scoreboard players get #minutes switch.data
+execute store result storage switch:main input.seconds int 1 run scoreboard players get #seconds switch.data
+execute if score #seconds switch.data matches 0..9 run data modify storage switch:main input.optional_zero set value "0"
+
+function switch:modes/_common/update_sidebar_macro with storage switch:main input
+""")
+
+	# /update_sidebar_macro (Red/Blue team sidebar with remaining time)
+	write_function(f"{path}/update_sidebar_macro", """
+$team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"$(minutes)","color":"yellow"},{"text":"m"},{"text":"$(optional_zero)$(seconds)","color":"yellow"},{"text":"s"}]
+$team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"$(blue)","color":"yellow"}]
+$team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"$(red)","color":"yellow"}]
+""")
+
+	# /fireball/get_motion (sample a launch direction by teleporting a marker forward)
+	write_function(f"{path}/fireball/get_motion", """
+data modify entity @s Rotation set from storage switch:main Rotation
+execute at @s run tp @s ^ ^ ^1000
+data modify storage switch:main Pos set from entity @s Pos
+kill @s
+""")
+
+	# /fireball/set_motion (apply the sampled direction as the fireball's motion)
+	write_function(f"{path}/fireball/set_motion", """
+execute store result entity @s Motion[0] double 0.001 run data get storage switch:main Pos[0]
+execute store result entity @s Motion[1] double 0.001 run data get storage switch:main Pos[1]
+execute store result entity @s Motion[2] double 0.001 run data get storage switch:main Pos[2]
+tag @s remove switch.new
+""")
+
+	# /death/inventory_drop (drop the dead player's inventory items one by one)
+	write_function(f"{path}/death/inventory_drop", f"""
+loot spawn ~ ~ ~ loot switch:temp_item
+data modify entity @n[type=item,distance=..1,nbt={{Item:{{components:{{"minecraft:custom_data":{{switch:{{"temp_item":true}}}}}}}}}}] Item set from entity @s data.Inventory[0]
+data remove entity @s data.Inventory[0]
+
+execute if data entity @s data.Inventory[0] run function {path}/death/inventory_drop
+""")
+

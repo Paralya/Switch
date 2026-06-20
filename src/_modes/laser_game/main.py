@@ -97,7 +97,7 @@ execute if score #change_color switch.data matches ..0 run team join switch.lase
 execute if score #change_color switch.data matches ..0 run tag @a[tag=!detached,tag=switch.bonus.color] remove switch.bonus.color
 
 # Update sidebar
-function switch:modes/laser_game/update_sidebar
+function switch:modes/_common/update_sidebar
 """)
 
 	# /shoot
@@ -317,30 +317,7 @@ function switch:utils/on_death_run_function {function:"switch:modes/laser_game/t
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/laser_game/process_end
 """)
 
-	# /update_sidebar
-	write_function(f"{path}/update_sidebar", """
-data modify storage switch:main input set value {blue:0,red:0,minutes:0,seconds:0,optional_zero:""}
-execute store result storage switch:main input.blue int 1 run scoreboard players get #blue_points switch.data
-execute store result storage switch:main input.red int 1 run scoreboard players get #red_points switch.data
 
-scoreboard players operation #minutes switch.data = #remaining_time switch.data
-scoreboard players operation #minutes switch.data /= #60 switch.data
-scoreboard players operation #seconds switch.data = #remaining_time switch.data
-scoreboard players operation #seconds switch.data %= #60 switch.data
-
-execute store result storage switch:main input.minutes int 1 run scoreboard players get #minutes switch.data
-execute store result storage switch:main input.seconds int 1 run scoreboard players get #seconds switch.data
-execute if score #seconds switch.data matches 0..9 run data modify storage switch:main input.optional_zero set value "0"
-
-function switch:modes/laser_game/update_sidebar_macro with storage switch:main input
-""")
-
-	# /update_sidebar_macro
-	write_function(f"{path}/update_sidebar_macro", """
-$team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"$(minutes)","color":"yellow"},{"text":"m"},{"text":"$(optional_zero)$(seconds)","color":"yellow"},{"text":"s"}]
-$team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"$(blue)","color":"yellow"}]
-$team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"$(red)","color":"yellow"}]
-""")
 
 	# /xp_bar
 	write_function(f"{path}/xp_bar", """

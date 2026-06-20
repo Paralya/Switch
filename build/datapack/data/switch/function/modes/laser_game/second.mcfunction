@@ -29,5 +29,5 @@ execute if score #change_color switch.data matches ..0 run team join switch.lase
 execute if score #change_color switch.data matches ..0 run tag @a[tag=!detached,tag=switch.bonus.color] remove switch.bonus.color
 
 # Update sidebar
-function switch:modes/laser_game/update_sidebar
+function switch:modes/_common/update_sidebar
 

@@ -1,4 +1,5 @@
 
+# ruff: noqa: E501
 # Imports
 import stouputils as stp
 from stewbeet import write_function
@@ -248,7 +249,7 @@ scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.
 
 # Depending on the game, add a score
 function switch:engine/launch_game/add_played_stat with storage switch:main
-""")  # noqa: E501
+""")
 
 	# /log_message/apply
 	write_function(f"{path}/log_message/apply", """
@@ -503,7 +504,7 @@ execute if score #index switch.data matches 8 if score #list_index switch.data =
 data remove storage switch:main copy[0]
 scoreboard players add #list_index switch.data 1
 execute if score #success switch.data matches 0 if data storage switch:main copy[0] run function switch:engine/voting_time/get/index_information
-""")  # noqa: E501
+""")
 
 	# /voting_time/get/index_max_players
 	write_function(f"{path}/voting_time/get/index_max_players", """
@@ -765,3 +766,4 @@ scoreboard players set #success switch.data 1
 execute as @a[tag=switch.temp] run function switch:engine/voting_time/message
 tag @a[tag=switch.temp] remove switch.temp
 """)
+

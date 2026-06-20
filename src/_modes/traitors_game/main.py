@@ -1,6 +1,8 @@
 
+# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
+
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -61,15 +63,6 @@ execute if score #success switch.data matches 1 run tag @p[tag=switch.temp,tag=s
 tag @a remove switch.temp
 """)
 
-	# /death/drop_inventory
-	write_function(f"{path}/death/drop_inventory", """
-loot spawn ~ ~ ~ loot switch:temp_item
-data modify entity @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{switch:{"temp_item":true}}}}},limit=1] Item set from entity @s data.Inventory[0]
-data remove entity @s data.Inventory[0]
-
-execute if data entity @s data.Inventory[0] run function switch:modes/traitors_game/death/drop_inventory
-""")
-
 	# /death/for_detective (translation ref rewritten)
 	write_function(f"{path}/death/for_detective", """
 scoreboard players set #success switch.data 0
@@ -83,7 +76,7 @@ function switch:modes/traitors_game/translations/death_for_detective
 	write_function(f"{path}/death/for_global", """
 scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
-execute at @s run function switch:modes/traitors_game/death/drop_inventory
+execute at @s run function switch:modes/_common/death/inventory_drop
 
 scoreboard players set #success switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
@@ -589,12 +582,6 @@ function switch:modes/traitors_game/translations/summon_lootboxes
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 """)
 
-	# /teleport_to_death
-	write_function(f"{path}/teleport_to_death", """
-scoreboard players operation #player_id switch.id = @s switch.id
-tp @s @e[type=!player,predicate=switch:has_same_id,limit=1]
-tag @s remove switch.to_tp
-""")
 
 	# /tick
 	write_function(f"{path}/tick", """
@@ -603,7 +590,7 @@ scoreboard players add #traitors_game_ticks switch.data 1
 tp @e[type=vex] 0 -10000 0
 kill @e[type=item,nbt={Item:{id:"minecraft:chest_minecart"}}]
 execute as @e[type=chest_minecart] unless data entity @s Items[0] unless data entity @s LootTable run kill @s
-execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/traitors_game/teleport_to_death
+execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/_common/teleport_to_death
 execute as @a[tag=!detached,tag=switch.ninja_death] run function switch:modes/traitors_game/death/to_tp
 
 # Glow particles pour le détective, particules rouges pour traitres (si >= 5 joueurs)

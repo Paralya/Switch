@@ -45,5 +45,5 @@ execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=s
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function switch:modes/rush_the_point/death/for_global
 
 # Update sidebar
-function switch:modes/rush_the_point/update_sidebar
+function switch:modes/_common/update_sidebar
 

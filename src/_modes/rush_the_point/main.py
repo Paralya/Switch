@@ -1,6 +1,8 @@
 
+# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
+
 from ..common import write_modes_calls
 from .translations import write_translations
 
@@ -275,19 +277,10 @@ scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
 
 function switch:modes/rush_the_point/death/inventory_filter
-execute if data entity @s data.Inventory[0] at @s run function switch:modes/rush_the_point/death/inventory_drop
+execute if data entity @s data.Inventory[0] at @s run function switch:modes/_common/death/inventory_drop
 
 tag @s add switch.processed
 tp @s 0 69 0
-""")
-
-	# /death/inventory_drop
-	write_function(f"{path}/death/inventory_drop", """
-loot spawn ~ ~ ~ loot switch:temp_item
-data modify entity @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{switch:{"temp_item":true}}}}},limit=1] Item set from entity @s data.Inventory[0]
-data remove entity @s data.Inventory[0]
-
-execute if data entity @s data.Inventory[0] run function switch:modes/rush_the_point/death/inventory_drop
 """)
 
 	# /death/inventory_filter
@@ -312,13 +305,6 @@ fill ~-2 ~ ~-3 ~2 ~ ~3 air replace #switch:rush_the_point/can_break
 fill ~-3 ~ ~-2 ~3 ~ ~2 air replace #switch:rush_the_point/can_break
 """)
 
-	# /fireball/get_motion
-	write_function(f"{path}/fireball/get_motion", """
-data modify entity @s Rotation set from storage switch:main Rotation
-execute at @s run tp @s ^ ^ ^1000
-data modify storage switch:main Pos set from entity @s Pos
-kill @s
-""")
 
 	# /fireball/no_cooldown (translation ref rewritten)
 	write_function(f"{path}/fireball/no_cooldown", """
@@ -341,20 +327,13 @@ function switch:modes/rush_the_point/translations/fireball_no_cooldown
 summon fireball ^ ^1 ^1 {Tags:["switch.new"],ExplosionPower:0b,NoGravity:true,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}]}
 
 data modify storage switch:main Rotation set from entity @s Rotation
-execute positioned 0 0 0 summon marker run function switch:modes/rush_the_point/fireball/get_motion
-execute as @e[type=fireball,tag=switch.new] run function switch:modes/rush_the_point/fireball/set_motion
+execute positioned 0 0 0 summon marker run function switch:modes/_common/fireball/get_motion
+execute as @e[type=fireball,tag=switch.new] run function switch:modes/_common/fireball/set_motion
 
 scoreboard players set @s[gamemode=!creative] switch.temp.fireball_cooldown 200
 playsound entity.ghast.shoot ambient @s
 """)
 
-	# /fireball/set_motion
-	write_function(f"{path}/fireball/set_motion", """
-execute store result entity @s Motion[0] double 0.001 run data get storage switch:main Pos[0]
-execute store result entity @s Motion[1] double 0.001 run data get storage switch:main Pos[1]
-execute store result entity @s Motion[2] double 0.001 run data get storage switch:main Pos[2]
-tag @s remove switch.new
-""")
 
 	# /items_check
 	write_function(f"{path}/items_check", """
@@ -666,7 +645,7 @@ execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=s
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function switch:modes/rush_the_point/death/for_global
 
 # Update sidebar
-function switch:modes/rush_the_point/update_sidebar
+function switch:modes/_common/update_sidebar
 """)
 
 	# /tick_zone (translation ref rewritten)
@@ -715,31 +694,6 @@ execute if score @s switch.temp.zone_capture matches 60 if score #state switch.d
 function switch:modes/rush_the_point/translations/tick_zone
 """)
 
-	# /update_sidebar
-	write_function(f"{path}/update_sidebar", """
-data modify storage switch:main input set value {blue:0,red:0,minutes:0,seconds:0,optional_zero:""}
-execute store result storage switch:main input.blue int 1 run scoreboard players get #blue_points switch.data
-execute store result storage switch:main input.red int 1 run scoreboard players get #red_points switch.data
-
-scoreboard players operation #minutes switch.data = #remaining_time switch.data
-scoreboard players operation #minutes switch.data /= #60 switch.data
-scoreboard players operation #seconds switch.data = #remaining_time switch.data
-scoreboard players operation #seconds switch.data %= #60 switch.data
-
-execute store result storage switch:main input.minutes int 1 run scoreboard players get #minutes switch.data
-execute store result storage switch:main input.seconds int 1 run scoreboard players get #seconds switch.data
-execute if score #seconds switch.data matches 0..9 run data modify storage switch:main input.optional_zero set value "0"
-
-function switch:modes/rush_the_point/update_sidebar_macro with storage switch:main input
-""")
-
-	# /update_sidebar_macro (macro function with $ lines)
-	write_function(f"{path}/update_sidebar_macro", """
-$team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"$(minutes)","color":"yellow"},{"text":"m"},{"text":"$(optional_zero)$(seconds)","color":"yellow"},{"text":"s"}]
-$team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"$(blue)","color":"yellow"}]
-$team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"$(red)","color":"yellow"}]
-""")
-
 	# /xp_bar
 	write_function(f"{path}/xp_bar", """
 # 600 seconds = 100%
@@ -752,3 +706,4 @@ function switch:modes/_common/xp_bar/points
 scoreboard players operation #levels switch.data = #remaining_time switch.data
 function switch:modes/_common/xp_bar/levels
 """)
+

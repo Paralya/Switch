@@ -1,6 +1,8 @@
 
+# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
+
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -50,7 +52,7 @@ tag @a[tag=!detached,predicate=switch:has_same_id] add switch.temp
 clear @a[tag=switch.temp]
 
 function switch:modes/spectres_game/death/inventory_filter
-execute at @s run function switch:modes/spectres_game/death/inventory_drop
+execute at @s run function switch:modes/_modes/death/inventory_drop
 
 scoreboard players set #success switch.data 0
 execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
@@ -68,15 +70,6 @@ execute if entity @s[scores={switch.alive=2}] run scoreboard players add #nb_dea
 # Kill marker and remove player temp tag
 tag @a[tag=switch.temp] remove switch.temp
 kill @s
-""")
-
-	# /death/inventory_drop
-	write_function(f"{path}/death/inventory_drop", """
-loot spawn ~ ~ ~ loot switch:temp_item
-data modify entity @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{switch:{"temp_item":true}}}}},limit=1] Item set from entity @s data.Inventory[0]
-data remove entity @s data.Inventory[0]
-
-execute if data entity @s data.Inventory[0] run function switch:modes/spectres_game/death/inventory_drop
 """)
 
 	# /death/inventory_filter
@@ -582,18 +575,12 @@ function switch:modes/spectres_game/translations/task_obsidian
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 """)
 
-	# /teleport_to_death
-	write_function(f"{path}/teleport_to_death", """
-scoreboard players operation #player_id switch.id = @s switch.id
-tp @s @e[type=!player,predicate=switch:has_same_id,limit=1]
-tag @s remove switch.to_tp
-""")
 
 	# /tick
 	write_function(f"{path}/tick", """
 scoreboard players add #spectres_game_ticks switch.data 1
 
-execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/spectres_game/teleport_to_death
+execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/_common/teleport_to_death
 kill @e[type=item,nbt={Age:200s}]
 
 function switch:utils/on_death_run_function {function:"switch:modes/spectres_game/death/player"}
