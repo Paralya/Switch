@@ -2,6 +2,7 @@
 # ruff: noqa: E501
 # Imports
 import json
+from typing import Any
 
 import stouputils as stp
 from beet import Function
@@ -86,7 +87,7 @@ def get_middle_from_start_and_end(start_pos: tuple[int, ...], end_pos: tuple[int
 	return x, y, z
 
 
-def create_tp_coords_string_from_view(view: tuple) -> str:
+def create_tp_coords_string_from_view(view: tuple[float, float, float, float, float]) -> str:
 	""" Creates a string with the tp coordinates
 
 	Args:
@@ -100,7 +101,7 @@ def create_tp_coords_string_from_view(view: tuple) -> str:
 	return f"[{round(x)}.5d, {round(y)}.5d, {round(z)}.5d]"
 
 
-def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[tuple, int, int] = ()) -> None:
+def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[Any, ...] = ()) -> None:
 	""" Creates the "main.mcfunction" file
 
 	Args:
@@ -122,7 +123,7 @@ def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[tuple, in
 		write_function(PATH, f"execute if score #is_race switch.data matches 1 in switch:game run function switch:maps/survival/{name}/if_race")
 
 
-def create_teleport_players_file(name: str, view: tuple, racing_pos: tuple[tuple, int, int] = ()) -> None:
+def create_teleport_players_file(name: str, view: tuple, racing_pos: tuple[tuple, int, int] | tuple[()] = ()) -> None:
 	""" Creates the "teleport_players.mcfunction" file\n
 	Args:
 		name 		(str)	: The name of the map
@@ -428,7 +429,7 @@ def clone_survival(
 	end_pos: tuple,
 	identity: tuple[str, ...],
 	view: tuple[float, float, float, float, float],
-	racing_pos: tuple[tuple, int, int] = ()
+	racing_pos: tuple[tuple, int, int] | tuple[()] = ()
 ) -> None:
 	""" Generates a folder for a gamemode using /clone for regeneration
 	Args:
@@ -449,7 +450,7 @@ def clone_survival(
 
 	# DEBUG
 	if True:
-		yaw: str = view[-2] % 360
+		yaw: float = view[-2] % 360
 		if not (-180 < view[-2] < 360):
 			stp.warning(f"Map '{namespace}': Yaw is {view[-2]} instead of {yaw:.2f}.")
 
@@ -531,7 +532,7 @@ def fill_survival(
 	identity: tuple[str, ...],
 	block_that_replace: str,
 	block_tag_to_replace: str,
-	view: tuple[float, float, float, float]
+	view: tuple[float, float, float, float, float]
 ) -> None:
 	""" Generate a folder for a gamemode with regeneration using the fill command
 

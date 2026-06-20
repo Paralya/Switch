@@ -6,7 +6,20 @@ import json
 import stouputils as stp
 from stewbeet import JsonDict, write_function
 
-from .shared_memory import *
+from .shared_memory import (
+	INITIALIZE_SHOP_SCORES_PATH,
+	LANGUAGE_SCORES,
+	LOAD_PATH,
+	MONEY,
+	REFUND_PERCENTAGE,
+	SHEEPWARS_CHOOSE_KIT,
+	SHEEPWARS_KIT_OFFSET,
+	SHOPS,
+	STAR,
+	TRIGGER_PATH,
+	USERNAME_CHANGE_PATH,
+	get_shop_range,
+)
 
 
 # Functions

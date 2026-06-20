@@ -2,7 +2,13 @@
 # Imports
 import stouputils as stp
 
-from .utils import *
+from .shared_memory import SHOPS
+from .utils import (
+	general_translations,
+	generate_shop,
+	generate_trigger,
+	write_raw_functions,
+)
 
 
 # Main function

@@ -15,7 +15,8 @@ LIB_TO_WRITE: str = "datapack/switch_music.zip"
 
 # Main function
 def main() -> None:
-	lib_file = f"{Mem.ctx.meta.stewbeet.libs_folder}/{LIB_TO_WRITE}"
+	libs_folder: str = str(Mem.ctx.meta.get("stewbeet", {}).get("libs_folder", "libs"))
+	lib_file = f"{libs_folder}/{LIB_TO_WRITE}"
 
 	# Cache the zip file
 	if os.path.exists(lib_file):
@@ -64,9 +65,9 @@ def main() -> None:
 							length = max(length, int(note))
 
 				# Add the objective
-				song: str = file.replace(".zip", "").replace(" ", "_").split("_sss_")
-				authors.append(song[0])
-				objectives.append((song[1], length, bpm))
+				song_parts: list[str] = file.replace(".zip", "").replace(" ", "_").split("_sss_")
+				authors.append(song_parts[0])
+				objectives.append((song_parts[1], length, bpm))
 
 		# Add a pack.mcmeta file
 		lib.writestr("pack.mcmeta", stp.json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
@@ -115,9 +116,8 @@ tellraw @s ["\\n",{"nbt":"ParalyaMusic","storage":"switch:main","interpret":true
 # For each music, write a line"""
 
 		for i, (song, length, bpm) in enumerate(objectives):
-			duration: int = int(length // 20 // (bpm / ALL_BPM))
-			if duration > 60:
-				duration: str = f"{duration // 60}m{duration % 60:02}"
+			duration_seconds: int = int(length // 20 // (bpm / ALL_BPM))
+			duration: str = f"{duration_seconds // 60}m{duration_seconds % 60:02}" if duration_seconds > 60 else str(duration_seconds)
 			display: str = authors[i].replace("_"," ") + " - " + song.replace("_"," ").title()
 			browser_content += f"""
 execute if score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","click_event":{{"action":"run_command","command":"/trigger switch.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]

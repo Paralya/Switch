@@ -2,7 +2,16 @@
 # Imports
 import stouputils as stp
 
-from .utils import *
+from .shared_memory import generate_adv_dictionnary
+from .utils import (
+	hidden_advancements,
+	make_advancement_macros,
+	make_load_file,
+	make_percentages_recalculations,
+	make_reward_functions,
+	make_update_percentages,
+	visible_advancements,
+)
 
 
 # Main function

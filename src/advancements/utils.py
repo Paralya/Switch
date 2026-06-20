@@ -7,7 +7,13 @@ import stouputils as stp
 from beet import Advancement
 from stewbeet.core import Mem, write_function
 
-from .shared_memory import *
+from .shared_memory import (
+	ALL_ADVANCEMENTS,
+	CATEGORIES_COLOR,
+	CHALLENGES,
+	LOAD_FILE,
+	UPDATE_PERCENTAGES_FILE,
+)
 
 
 def make_load_file() -> None:
