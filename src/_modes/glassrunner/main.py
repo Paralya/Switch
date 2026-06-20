@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_modes_calls
 from .translations import write_translations
 
 
@@ -8,20 +9,12 @@ def write_mode():
 	ns: str = Mem.ctx.project_id
 	mode: str = "glassrunner"
 	path: str = f"{ns}:modes/{mode}"
-	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
 	# glassrunner calls are positioned at 3000 128 3000
-	for call in ("joined", "second", "start", "stop", "tick"):
-		write_function(f"{ns}:modes/{mode}/calls/{call}", f"""
-execute if data storage switch:main {{current_game:"{mode}"}} positioned 3000 128 3000 run function {path}/{call}
-""")
+	write_modes_calls(mode, context="positioned 3000 128 3000 ")
 	write_translations()
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /arrow_explosion
 	write_function(f"{path}/arrow_explosion", """

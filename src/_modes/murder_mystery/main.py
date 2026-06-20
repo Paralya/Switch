@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_classic_death, write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -21,10 +21,6 @@ advancement revoke @s only switch:murder_mystery/entity_hurt_player
 execute if score #engine_state switch.data matches 3 if data storage switch:main {{current_game:"{mode}"}} if score #murder_mystery_seconds switch.data matches 0.. run function {path}/entity_hurt_player
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /apply_properties_to_mannequin
 	write_function(f"{path}/apply_properties_to_mannequin", """
@@ -56,9 +52,7 @@ attribute @s waypoint_receive_range base reset
 """)
 
 	# /death
-	write_function(f"{path}/death", """
-function switch:utils/classic_death
-""")
+	write_classic_death(f"{path}/death")
 
 	# /detect_end (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/detect_end", """
@@ -139,11 +133,7 @@ execute unless score #test_mode switch.data matches 1 if score #murderer_killer 
 """)
 
 	# /no_drop
-	write_function(f"{path}/no_drop", """
-tag @s add switch.checked
-data modify entity @s Owner set from entity @s Thrower
-data modify entity @s PickupDelay set value 0s
-""")
+	write_no_drop(f"{path}/no_drop")
 
 	# /process_end
 	write_function(f"{path}/process_end", """

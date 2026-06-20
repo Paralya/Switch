@@ -191,7 +191,3 @@ scoreboard players operation #levels switch.data = #bombardement_seconds switch.
 function switch:modes/_common/xp_bar/levels
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")

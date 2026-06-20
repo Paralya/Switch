@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -9,16 +9,11 @@ def write_mode():
 	ns: str = Mem.ctx.project_id
 	mode: str = "simultaneous_jump"
 	path: str = f"{ns}:modes/{mode}"
-	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
 	write_modes_calls(mode)
 	write_translations()
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /death
 	write_function(f"{path}/death", f"""
@@ -170,14 +165,4 @@ execute if score #remaining_time switch.data matches ..0 run function {path}/pro
 """)
 
 	# /xp_bar
-	write_function(f"{path}/xp_bar", """
-# 60 seconds = 100%
-# 0 seconds = 0%
-scoreboard players operation #points switch.data = #remaining_time switch.data
-scoreboard players operation #points switch.data *= #1000000 switch.data
-scoreboard players set #divide switch.data 60000
-function switch:modes/_common/xp_bar/points
-
-scoreboard players operation #levels switch.data = #remaining_time switch.data
-function switch:modes/_common/xp_bar/levels
-""")
+	write_time_xp_bar(f"{path}/xp_bar", 60)

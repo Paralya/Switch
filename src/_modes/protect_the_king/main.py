@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -15,10 +15,6 @@ def write_mode():
 	write_modes_calls(mode)
 	write_translations()
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /better_tp
 	write_function(f"{path}/better_tp", """
@@ -36,9 +32,7 @@ execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=s
 """)
 
 	# /death
-	write_function(f"{path}/death", """
-function switch:utils/classic_death
-""")
+	write_classic_death(f"{path}/death")
 
 	# /detect_end
 	write_function(f"{path}/detect_end", f"""
@@ -252,14 +246,4 @@ execute if score #protect_the_king_seconds switch.data matches 901.. run functio
 """)
 
 	# /xp_bar
-	write_function(f"{path}/xp_bar", """
-# 900 seconds = 100%
-# 0 seconds = 0%
-scoreboard players operation #points switch.data = #remaining_time switch.data
-scoreboard players operation #points switch.data *= #1000000 switch.data
-scoreboard players set #divide switch.data 900000
-function switch:modes/_common/xp_bar/points
-
-scoreboard players operation #levels switch.data = #remaining_time switch.data
-function switch:modes/_common/xp_bar/levels
-""")
+	write_time_xp_bar(f"{path}/xp_bar", 900)

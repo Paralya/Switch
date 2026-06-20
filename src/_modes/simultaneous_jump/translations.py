@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -19,10 +20,4 @@ execute if score #points switch.data matches 2.. run tellraw @a[scores={switch.l
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Simultaneous Jump dans 5 secondes ! Comme le Dé à Coudre, vous devez marquer le plus de points en sautant dans des points d'eau encerclé de blocs, mais en même temps que tout le monde et avec le PvP d'activé !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Simultaneous Jump game starts in 5 seconds! Like the Dé à Coudre, you have to score the most points by jumping into water spots surrounded by blocks, but at the same time as everyone else and with PvP enabled!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Simultaneous Jump dans 5 secondes ! Comme le Dé à Coudre, vous devez marquer le plus de points en sautant dans des points d'eau encerclé de blocs, mais en même temps que tout le monde et avec le PvP d'activé !", "Simultaneous Jump game starts in 5 seconds! Like the Dé à Coudre, you have to score the most points by jumping into water spots surrounded by blocks, but at the same time as everyone else and with PvP enabled!")

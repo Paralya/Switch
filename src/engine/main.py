@@ -248,7 +248,7 @@ scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.
 
 # Depending on the game, add a score
 function switch:engine/launch_game/add_played_stat with storage switch:main
-""")
+""")  # noqa: E501
 
 	# /log_message/apply
 	write_function(f"{path}/log_message/apply", """

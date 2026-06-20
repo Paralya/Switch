@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -31,10 +32,4 @@ execute if score #color switch.data matches 15 run tellraw @s[scores={switch.lan
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Shoot Da'Sheep dans 5 secondes, votre objectif est de marquer le plus de point en tirant sur les moutons en rapportant le plus !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Shoot Da'Sheep game starts in 5 seconds, your goal is to score the most points by shooting the sheep with the most points!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Shoot Da'Sheep dans 5 secondes, votre objectif est de marquer le plus de point en tirant sur les moutons en rapportant le plus !", "Shoot Da'Sheep game starts in 5 seconds, your goal is to score the most points by shooting the sheep with the most points!")

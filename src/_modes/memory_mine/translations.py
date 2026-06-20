@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -19,10 +20,4 @@ execute if entity @s[gamemode=!spectator] if entity @p[tag=switch.owner] run tel
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Memory Mine dans 5 secondes, votre objectif est de rejoindre le cercle à chaque fois qu'il apparaît et d'éviter les mines que vous ou les autres joueurs posent !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Memory Mine game starts in 5 seconds, your objective is to reach the circle each time it appears and avoid the mines you or the other players lay!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Memory Mine dans 5 secondes, votre objectif est de rejoindre le cercle à chaque fois qu'il apparaît et d'éviter les mines que vous ou les autres joueurs posent !", "Memory Mine game starts in 5 seconds, your objective is to reach the circle each time it appears and avoid the mines you or the other players lay!")

@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -50,10 +51,4 @@ execute if score #process_end switch.data matches 1 unless score #remaining_play
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de Fireblast dans 5 secondes, soyez le dernier en vie !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Launch of Fireblast in 5 seconds, be the last man standing!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de Fireblast dans 5 secondes, soyez le dernier en vie !", "Launch of Fireblast in 5 seconds, be the last man standing!")

@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -15,10 +15,6 @@ def write_mode():
 	write_modes_calls(mode)
 	write_translations()
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /death
 	write_function(f"{path}/death", f"""
@@ -45,11 +41,7 @@ function {path}/give_items
 """)
 
 	# /no_drop
-	write_function(f"{path}/no_drop", """
-tag @s add switch.checked
-data modify entity @s Owner set from entity @s Thrower
-data modify entity @s PickupDelay set value 0s
-""")
+	write_no_drop(f"{path}/no_drop")
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""

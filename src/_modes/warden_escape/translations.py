@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -17,10 +18,4 @@ execute if entity @s[gamemode=!spectator] run tellraw @a[scores={switch.lang=1},
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Warden Escape dans 10 secondes, vous devez rester discrets afin de ne pas être pris pour cible par les Wardens !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Warden Escape game starts in 10 seconds, you must be discreet to avoid being targeted by the Wardens!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Warden Escape dans 10 secondes, vous devez rester discrets afin de ne pas être pris pour cible par les Wardens !", "Warden Escape game starts in 10 seconds, you must be discreet to avoid being targeted by the Wardens!")

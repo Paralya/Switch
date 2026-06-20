@@ -9,16 +9,11 @@ def write_mode():
 	ns: str = Mem.ctx.project_id
 	mode: str = "rush_the_flag"
 	path: str = f"{ns}:modes/{mode}"
-	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
 	write_modes_calls(mode)
 	write_translations()
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /advancements/break_obsidian
 	write_function(f"{path}/advancements/break_obsidian", """

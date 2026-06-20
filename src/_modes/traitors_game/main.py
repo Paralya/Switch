@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -32,10 +32,6 @@ advancement revoke @s only switch:traitors_game/ninja_revenge
 execute unless score #test_mode switch.data matches 1 if score #engine_state switch.data matches 3 if data storage switch:main {current_game:"traitors_game"} if score @s switch.temp.role matches 3..4 run advancement grant @s only switch:visible/41
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /announce_scenarios (translation ref rewritten)
 	write_function(f"{path}/announce_scenarios", """
@@ -657,14 +653,4 @@ $team modify switch.temp.sidebar.0 suffix [{"text":"Floupy: ","color":"gold"},{"
 """)
 
 	# /xp_bar
-	write_function(f"{path}/xp_bar", """
-# 900 seconds = 100%
-# 0 seconds = 0%
-scoreboard players operation #points switch.data = #remaining_time switch.data
-scoreboard players operation #points switch.data *= #1000000 switch.data
-scoreboard players set #divide switch.data 900000
-function switch:modes/_common/xp_bar/points
-
-scoreboard players operation #levels switch.data = #remaining_time switch.data
-function switch:modes/_common/xp_bar/levels
-""")
+	write_time_xp_bar(f"{path}/xp_bar", 900)

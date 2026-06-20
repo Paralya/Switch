@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -28,10 +29,4 @@ execute if score #thunder_spear_seconds switch.data matches 0 run tellraw @a[sco
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Thunder Spear dans 10 secondes, vous devez tuer le plus de joueurs grâce à vos lances foudroyantes, vous pouvez esquiver les attaques des autres joueurs en utilisant votre équipement tridimensionnel dans votre deuxième main !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Thunder Spear game starts in 10 seconds, you have to kill as many players as possible with your explosive armament, you can dodge other players' attacks using your three-dimensional maneuver gear in your second hand!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Thunder Spear dans 10 secondes, vous devez tuer le plus de joueurs grâce à vos lances foudroyantes, vous pouvez esquiver les attaques des autres joueurs en utilisant votre équipement tridimensionnel dans votre deuxième main !", "Thunder Spear game starts in 10 seconds, you have to kill as many players as possible with your explosive armament, you can dodge other players' attacks using your three-dimensional maneuver gear in your second hand!")

@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -8,13 +9,7 @@ def write_translations():
 	path: str = f"{Mem.ctx.project_id}:modes/bombardement/translations"
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Bombardment dans 10 secondes, esquivez les boulets de canon et ne tombez pas dans l'eau !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Bombing game starts in 10 seconds, dodge the cannonballs and don't fall in the water!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Bombardment dans 10 secondes, esquivez les boulets de canon et ne tombez pas dans l'eau !", "Bombing game starts in 10 seconds, dodge the cannonballs and don't fall in the water!")
 
 	# /death
 	write_function(f"{path}/death", """

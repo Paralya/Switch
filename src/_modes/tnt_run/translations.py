@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -36,10 +37,4 @@ execute if score #tnt_run_seconds switch.data matches 0 run title @a[scores={swi
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de TNT Run dans 10 secondes, ne vous arrêtez pas de courir car les blocs sous vos pieds vont disparaitre en continu !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" TNT Run game starts in 10 seconds, don't stop running because the blocks under your feet will disappear continuously!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de TNT Run dans 10 secondes, ne vous arrêtez pas de courir car les blocs sous vos pieds vont disparaitre en continu !", "TNT Run game starts in 10 seconds, don't stop running because the blocks under your feet will disappear continuously!")

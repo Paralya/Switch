@@ -159,10 +159,6 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] run fun
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /maps/pitch_creep_1
 	write_function(f"{path}/maps/pitch_creep_1", """

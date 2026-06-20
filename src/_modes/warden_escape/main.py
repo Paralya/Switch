@@ -21,10 +21,6 @@ advancement revoke @s only switch:warden_escape/laser_beam
 execute unless score #test_mode switch.data matches 1 if score #engine_state switch.data matches 3 if data storage switch:main {{current_game:"{mode}"}} run advancement grant @s only switch:visible/70
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /death
 	write_function(f"{path}/death", f"""

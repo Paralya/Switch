@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_modes_calls
 from .translations import write_translations
 
 
@@ -12,10 +13,7 @@ def write_mode():
 
 	# Write /calls/ and /translations/ functions
 	# build_battle runs in switch:build_battle dimension, so calls need the dimension specifier
-	for call in ("joined", "second", "start", "stop", "tick"):
-		write_function(f"{ns}:modes/{mode}/calls/{call}", f"""
-execute if data storage switch:main {{current_game:"{mode}"}} in switch:build_battle run function {path}/{call}
-""")
+	write_modes_calls(mode, context="in switch:build_battle ")
 	write_translations()
 
 	# /start
@@ -226,10 +224,6 @@ scoreboard players operation #levels switch.data = #remaining_time switch.data
 function switch:modes/_common/xp_bar/levels
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /building_time/change_ground
 	write_function(f"{path}/building_time/change_ground", """

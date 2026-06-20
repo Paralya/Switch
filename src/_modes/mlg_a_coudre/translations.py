@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -52,10 +53,4 @@ execute if score #process_end switch.data matches 1 unless score #position switc
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de MLG à Coudre, sautez et posez votre seau d'eau pour amortir votre chute !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Starting the MLG à Coudre game, jump and put down your bucket of water to cancel your fall damages!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de MLG à Coudre, sautez et posez votre seau d'eau pour amortir votre chute !", "Starting the MLG à Coudre game, jump and put down your bucket of water to cancel your fall damages!")

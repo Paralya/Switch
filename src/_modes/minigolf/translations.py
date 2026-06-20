@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -41,10 +42,4 @@ $execute unless score #new_record switch.data matches 1 run tellraw @a[scores={s
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de MiniGolf, vous avez 5 secondes de préparation !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Starting the MiniGolf game, you have 5 seconds to prepare!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de MiniGolf, vous avez 5 secondes de préparation !", "Starting the MiniGolf game, you have 5 seconds to prepare!")

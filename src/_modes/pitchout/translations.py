@@ -1,6 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
+from ..common import write_server_announce
 
 
 def write_translations():
@@ -41,10 +42,4 @@ execute if score #process_end switch.data matches 1 unless score #remaining_play
 """)
 
 	# /start
-	write_function(f"{path}/start", """
-# French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Lancement de la partie de Pitchout, votre objectif est d'expulser les autres joueurs grâce à vos équipements et d'être le dernier en vie à la fin !"}]
-
-# English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Starting the Pitchout game, your goal is to knockback the other players with your equipment and be the last one alive at the end!"}]
-""")
+	write_server_announce(f"{path}/start", "Lancement de la partie de Pitchout, votre objectif est d'expulser les autres joueurs grâce à vos équipements et d'être le dernier en vie à la fin !", "Starting the Pitchout game, your goal is to knockback the other players with your equipment and be the last one alive at the end!")

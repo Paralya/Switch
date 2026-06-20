@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_classic_death, write_modes_calls
 from .translations import write_translations
 
 
@@ -21,15 +21,9 @@ advancement revoke @s only switch:castagne/entity_hurt_player
 execute if data storage switch:main {{current_game:"{mode}"}} run function {path}/entity_hurt_player
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /death
-	write_function(f"{path}/death", """
-function switch:utils/classic_death
-""")
+	write_classic_death(f"{path}/death")
 
 	# /entity_hurt_player
 	write_function(f"{path}/entity_hurt_player", f"""

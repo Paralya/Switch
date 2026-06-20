@@ -201,10 +201,6 @@ tp @s @e[type=!player,predicate=switch:has_same_id,limit=1]
 tag @s remove switch.to_tp
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /death/player
 	write_function(f"{path}/death/player", """

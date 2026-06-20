@@ -187,10 +187,6 @@ function {translations}/record_tellraw with storage switch:records block_party
 scoreboard players reset #record switch.data
 """)
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /core/damage_cow
 	write_function(f"{path}/core/damage_cow", """

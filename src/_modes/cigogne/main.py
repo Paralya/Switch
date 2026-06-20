@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet import Mem, write_function
-from ..common import write_modes_calls
+from ..common import write_classic_death, write_modes_calls
 from .translations import write_translations
 
 
@@ -15,10 +15,6 @@ def write_mode():
 	write_modes_calls(mode)
 	write_translations()
 
-	# /_force_start
-	write_function(f"{path}/_force_start", f"""
-function switch:engine/force_start_macro {{id:"{mode}"}}
-""")
 
 	# /absorption
 	write_function(f"{path}/absorption", """
@@ -27,9 +23,7 @@ effect give @s absorption 120 0 true
 """)
 
 	# /death
-	write_function(f"{path}/death", """
-function switch:utils/classic_death
-""")
+	write_classic_death(f"{path}/death")
 
 	# /give_items
 	write_function(f"{path}/give_items", """
