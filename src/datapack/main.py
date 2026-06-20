@@ -4,7 +4,7 @@ import glob
 import os
 
 import stouputils as stp
-from beet import Advancement, BlockTag, Context, ItemModifier, ItemTag, LootTable, Predicate
+from beet import Advancement, BlockTag, Context, DataPack, ItemModifier, ItemTag, LootTable, Predicate
 from beet.contrib.worldgen import Dimension
 from stewbeet.plugins.datapack.sorters.constants import Sorter, SorterFile
 
@@ -53,3 +53,7 @@ def load_datapack_json(ctx: Context) -> None:
 		root: str = f"{_HERE}/tags/{sub}"
 		for path in glob.glob(f"{root}/**/*.json", recursive=True):
 			_register(ctx, file_type, root, path)
+
+	# Merge the static passthrough datapack (binary structures + third-party namespace
+	# integration hooks: sheepwars/smart_ore_generation) that can't be expressed as code.
+	ctx.data.merge(DataPack(path=f"{_HERE}/_static"))

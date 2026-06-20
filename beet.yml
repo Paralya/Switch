@@ -13,10 +13,8 @@ output: "build"
 # Takes a nested pack config, see PackConfig() documentation
 data_pack:
     name: "datapack"
-    load: ["merge/datapack"]
 resource_pack:
     name: resource_pack
-    load: ["merge/resource_pack"]
 
 require:
     - "stewbeet"
