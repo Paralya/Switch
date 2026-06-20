@@ -2,6 +2,19 @@
 # Imports
 from stewbeet import Mem, write_function
 
+# Vanilla dye colors, in scoreboard order (used by /set_wool_color)
+WOOL_COLORS: tuple[str, ...] = (
+	"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+	"light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",
+)
+
+# Race ranking teams: (suffix label, color) for positions 1..10, then the "10+" bucket
+RANKING_TEAMS: tuple[tuple[str, str], ...] = (
+	("1st", "#FFE700"), ("2nd", "#C0C0C0"), ("3rd", "#CD7F32"), ("4th", "#696969"),
+	("5th", "#696969"), ("6th", "#696969"), ("7th", "#696969"), ("8th", "#696969"),
+	("9th", "#696969"), ("10th", "#696969"),
+)
+
 
 def write_mode():
 	""" Write the shared _common helper functions at switch:modes/_common/* (no calls, no translations) """
@@ -28,8 +41,17 @@ execute if score @s switch.temp.chosen_class matches 0 unless items entity @s ho
 execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.4 * run scoreboard players set @s switch.temp.chosen_class 5
 """)
 
-	# /racing_start_setup (brace-heavy team definitions: plain string)
-	write_function(f"{path}/racing_start_setup", """
+	# /racing_start_setup (ranking teams generated from RANKING_TEAMS)
+	team_add: str = "\n".join(
+		f'team add switch.temp.{i} {{"text":"[{label}]","color":"{color}"}}'
+		for i, (label, color) in enumerate(RANKING_TEAMS, start=1)
+	)
+	team_collision: str = "\n".join(f"team modify switch.temp.{i} collisionRule never" for i in range(1, 11))
+	team_suffix: str = "\n".join(
+		f'team modify switch.temp.{i} suffix {{"text":" [{label}]","color":"{color}"}}'
+		for i, (label, color) in enumerate(RANKING_TEAMS, start=1)
+	)
+	write_function(f"{path}/racing_start_setup", f"""
 scoreboard objectives add switch.temp dummy
 scoreboard objectives add switch.temp.old_speed dummy
 scoreboard objectives add switch.temp.compteur dummy
@@ -43,7 +65,7 @@ scoreboard objectives add switch.temp.checkpoint dummy
 scoreboard objectives add switch.temp.classement dummy
 scoreboard objectives add switch.temp.pv_classement dummy
 scoreboard objectives add switch.temp.pos_on_last_lap dummy
-scoreboard objectives add switch.temp.sidebar dummy {"text":"Ranking","color":"dark_purple"}
+scoreboard objectives add switch.temp.sidebar dummy {{"text":"Ranking","color":"dark_purple"}}
 scoreboard objectives add switch.respawn_cp_id dummy
 scoreboard objectives add switch.hard_respawn_cp_id dummy
 scoreboard objectives add switch.checkpoint dummy
@@ -57,41 +79,14 @@ scoreboard players set @a[tag=!detached] switch.checkpoint 0
 scoreboard players set @a[tag=!detached] switch.lap 1
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-team add switch.temp.kart {"text":"[Kart]"}
-team add switch.temp.1 {"text":"[1st]","color":"#FFE700"}
-team add switch.temp.2 {"text":"[2nd]","color":"#C0C0C0"}
-team add switch.temp.3 {"text":"[3rd]","color":"#CD7F32"}
-team add switch.temp.4 {"text":"[4th]","color":"#696969"}
-team add switch.temp.5 {"text":"[5th]","color":"#696969"}
-team add switch.temp.6 {"text":"[6th]","color":"#696969"}
-team add switch.temp.7 {"text":"[7th]","color":"#696969"}
-team add switch.temp.8 {"text":"[8th]","color":"#696969"}
-team add switch.temp.9 {"text":"[9th]","color":"#696969"}
-team add switch.temp.10 {"text":"[10th]","color":"#696969"}
-team add switch.temp.10+ {"text":"[10+th]","color":"#9200DF"}
+team add switch.temp.kart {{"text":"[Kart]"}}
+{team_add}
+team add switch.temp.10+ {{"text":"[10+th]","color":"#9200DF"}}
 team modify switch.temp.kart collisionRule never
-team modify switch.temp.1 collisionRule never
-team modify switch.temp.2 collisionRule never
-team modify switch.temp.3 collisionRule never
-team modify switch.temp.4 collisionRule never
-team modify switch.temp.5 collisionRule never
-team modify switch.temp.6 collisionRule never
-team modify switch.temp.7 collisionRule never
-team modify switch.temp.8 collisionRule never
-team modify switch.temp.9 collisionRule never
-team modify switch.temp.10 collisionRule never
+{team_collision}
 team modify switch.temp.10+ collisionRule never
-team modify switch.temp.1 suffix {"text":" [1st]","color":"#FFE700"}
-team modify switch.temp.2 suffix {"text":" [2nd]","color":"#C0C0C0"}
-team modify switch.temp.3 suffix {"text":" [3rd]","color":"#CD7F32"}
-team modify switch.temp.4 suffix {"text":" [4th]","color":"#696969"}
-team modify switch.temp.5 suffix {"text":" [5th]","color":"#696969"}
-team modify switch.temp.6 suffix {"text":" [6th]","color":"#696969"}
-team modify switch.temp.7 suffix {"text":" [7th]","color":"#696969"}
-team modify switch.temp.8 suffix {"text":" [8th]","color":"#696969"}
-team modify switch.temp.9 suffix {"text":" [9th]","color":"#696969"}
-team modify switch.temp.10 suffix {"text":" [10th]","color":"#696969"}
-team modify switch.temp.10+ suffix {"text":" [10+th]","color":"#9200DF"}
+{team_suffix}
+team modify switch.temp.10+ suffix {{"text":" [10+th]","color":"#9200DF"}}
 
 ## Number of checkpoints and laps per map
 scoreboard players set #total_laps switch.data 3
@@ -99,26 +94,15 @@ scoreboard players set #total_checkpoints switch.data 1
 """)
 
 	# /set_wool_color
-	write_function(f"{path}/set_wool_color", """
+	setblocks: str = "\n".join(
+		f"execute if score #block switch.data matches {i} run setblock ~ ~ ~ {color}_wool"
+		for i, color in enumerate(WOOL_COLORS, start=1)
+	)
+	write_function(f"{path}/set_wool_color", f"""
 scoreboard players operation #block switch.data %= #16 switch.data
 scoreboard players add #block switch.data 1
 
-execute if score #block switch.data matches 1 run setblock ~ ~ ~ white_wool
-execute if score #block switch.data matches 2 run setblock ~ ~ ~ orange_wool
-execute if score #block switch.data matches 3 run setblock ~ ~ ~ magenta_wool
-execute if score #block switch.data matches 4 run setblock ~ ~ ~ light_blue_wool
-execute if score #block switch.data matches 5 run setblock ~ ~ ~ yellow_wool
-execute if score #block switch.data matches 6 run setblock ~ ~ ~ lime_wool
-execute if score #block switch.data matches 7 run setblock ~ ~ ~ pink_wool
-execute if score #block switch.data matches 8 run setblock ~ ~ ~ gray_wool
-execute if score #block switch.data matches 9 run setblock ~ ~ ~ light_gray_wool
-execute if score #block switch.data matches 10 run setblock ~ ~ ~ cyan_wool
-execute if score #block switch.data matches 11 run setblock ~ ~ ~ purple_wool
-execute if score #block switch.data matches 12 run setblock ~ ~ ~ blue_wool
-execute if score #block switch.data matches 13 run setblock ~ ~ ~ brown_wool
-execute if score #block switch.data matches 14 run setblock ~ ~ ~ green_wool
-execute if score #block switch.data matches 15 run setblock ~ ~ ~ red_wool
-execute if score #block switch.data matches 16 run setblock ~ ~ ~ black_wool
+{setblocks}
 """)
 
 	# /xp_bar/levels

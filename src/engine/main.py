@@ -176,7 +176,21 @@ execute if data storage switch:temp copy[0] run function switch:engine/launch_ga
 """)
 
 	# /launch_game/main
-	write_function(f"{path}/launch_game/main", """
+	voted_append: str = "\n".join(
+		f"execute if score #vote_game_{i} switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[{i - 1}]"
+		for i in range(1, 9)
+	)
+	# Modes that grant the "you voted for the winning game" advancement (switch:visible/10).
+	# Add a mode id here to include it; no need to copy a full command line anymore.
+	vote_win_advancement_modes: tuple[str, ...] = (
+		"feed_fast", "mlg_a_coudre", "de_a_coudre", "thunder_spear",
+		"snowball_painter", "coin_chaser", "shoot_da_sheep", "layers_2_teams",
+	)
+	vote_win_advancements: str = "\n".join(
+		f'execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {{current_game:"{mode}"}} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10'
+		for mode in vote_win_advancement_modes
+	)
+	write_function(f"{path}/launch_game/main", f"""
 gamerule minecraft:send_command_feedback true
 
 scoreboard players set #engine_state switch.data 3
@@ -205,14 +219,7 @@ execute if score #vote_game_8 switch.data > #max switch.data run scoreboard play
 
 data modify storage switch:main voted_games set value []
 data modify storage switch:main current_game set value ""
-execute if score #vote_game_1 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[0]
-execute if score #vote_game_2 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[1]
-execute if score #vote_game_3 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[2]
-execute if score #vote_game_4 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[3]
-execute if score #vote_game_5 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[4]
-execute if score #vote_game_6 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[5]
-execute if score #vote_game_7 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[6]
-execute if score #vote_game_8 switch.data = #max switch.data run data modify storage switch:main voted_games append from storage switch:main selections[7]
+{voted_append}
 
 execute store result score #modulo_rand switch.data run data get storage switch:main voted_games
 execute if score #modulo_rand switch.data matches 1 run data modify storage switch:main current_game set from storage switch:main voted_games[0].id
@@ -222,14 +229,7 @@ execute if score #modulo_rand switch.data matches 2.. run function switch:engine
 function switch:engine/translations/launch_game_
 
 # Advancement
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"feed_fast"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"mlg_a_coudre"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"de_a_coudre"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"thunder_spear"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"snowball_painter"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"coin_chaser"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"shoot_da_sheep"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
-execute unless score #test_mode switch.data matches 1 if score #max switch.data matches 8.. if data storage switch:main {current_game:"layers_2_teams"} as @a[tag=!detached] if score @s switch.trigger.game_vote = #max_game switch.data run advancement grant @s only switch:visible/10
+{vote_win_advancements}
 
 # Add game to history
 data modify storage switch:main history.games prepend from storage switch:main current_game
@@ -240,12 +240,12 @@ scoreboard players reset #set_spec switch.data
 scoreboard players reset #do_spreadplayers switch.data
 scoreboard players reset #dont_regenerate switch.data
 function switch:utils/reset_players
-function switch:utils/safe_kill_macro {selector:"@e[type=!player]"}
+function switch:utils/safe_kill_macro {{selector:"@e[type=!player]"}}
 execute in switch:game run function switch:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 scoreboard players remove @a[tag=!detached] switch.win_streak 5
-scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5
+scoreboard players set @a[tag=!detached,scores={{switch.win_streak=..-6}}] switch.win_streak -5
 
 # Depending on the game, add a score
 function switch:engine/launch_game/add_played_stat with storage switch:main
@@ -490,16 +490,13 @@ execute if data storage switch:temp copy[0] run function switch:engine/voting_ti
 """)
 
 	# /voting_time/get/index_information
-	write_function(f"{path}/voting_time/get/index_information", """
+	index_information: str = "\n".join(
+		f"execute if score #index switch.data matches {i} if score #list_index switch.data = #game_{i} switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]"
+		for i in range(1, 9)
+	)
+	write_function(f"{path}/voting_time/get/index_information", f"""
 scoreboard players set #success switch.data 0
-execute if score #index switch.data matches 1 if score #list_index switch.data = #game_1 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 2 if score #list_index switch.data = #game_2 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 3 if score #list_index switch.data = #game_3 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 4 if score #list_index switch.data = #game_4 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 5 if score #list_index switch.data = #game_5 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 6 if score #list_index switch.data = #game_6 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 7 if score #list_index switch.data = #game_7 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
-execute if score #index switch.data matches 8 if score #list_index switch.data = #game_8 switch.data store success score #success switch.data run data modify storage switch:main selections append from storage switch:main copy[0]
+{index_information}
 
 data remove storage switch:main copy[0]
 scoreboard players add #list_index switch.data 1
@@ -563,7 +560,12 @@ kill @s
 """)
 
 	# /voting_time/main
-	write_function(f"{path}/voting_time/main", """
+	# #game_1 uses `add` (preserve any pre-set value), #game_2..8 are reset to 0
+	game_reset: str = "scoreboard players add #game_1 switch.data 0\n" + "\n".join(
+		f"scoreboard players set #game_{i} switch.data 0" for i in range(2, 9)
+	)
+	vote_game_reset: str = "\n".join(f"scoreboard players set #vote_game_{i} switch.data 0" for i in range(1, 9))
+	write_function(f"{path}/voting_time/main", f"""
 gamerule minecraft:send_command_feedback false
 scoreboard players set #engine_state switch.data 2
 scoreboard players set #voting_timer switch.data 399
@@ -583,14 +585,7 @@ execute if data storage switch:temp copy[0] run function switch:engine/voting_ti
 
 
 # Set the vote counts to 0
-scoreboard players add #game_1 switch.data 0
-scoreboard players set #game_2 switch.data 0
-scoreboard players set #game_3 switch.data 0
-scoreboard players set #game_4 switch.data 0
-scoreboard players set #game_5 switch.data 0
-scoreboard players set #game_6 switch.data 0
-scoreboard players set #game_7 switch.data 0
-scoreboard players set #game_8 switch.data 0
+{game_reset}
 scoreboard players set #index switch.data 1
 
 scoreboard players set #player_count switch.data 0
@@ -603,14 +598,7 @@ data modify storage switch:main selections set value []
 scoreboard players set #index switch.data 1
 function switch:engine/voting_time/get/information
 
-scoreboard players set #vote_game_1 switch.data 0
-scoreboard players set #vote_game_2 switch.data 0
-scoreboard players set #vote_game_3 switch.data 0
-scoreboard players set #vote_game_4 switch.data 0
-scoreboard players set #vote_game_5 switch.data 0
-scoreboard players set #vote_game_6 switch.data 0
-scoreboard players set #vote_game_7 switch.data 0
-scoreboard players set #vote_game_8 switch.data 0
+{vote_game_reset}
 scoreboard players set @a switch.trigger.game_vote 0
 execute as @a[tag=!detached] run function switch:engine/voting_time/message
 
@@ -738,27 +726,18 @@ execute if score #voting_timer switch.data matches 1.. run schedule function swi
 """)
 
 	# /voting_time/update_votes
-	write_function(f"{path}/voting_time/update_votes", """
-scoreboard players set #vote_game_1 switch.data 0
-scoreboard players set #vote_game_2 switch.data 0
-scoreboard players set #vote_game_3 switch.data 0
-scoreboard players set #vote_game_4 switch.data 0
-scoreboard players set #vote_game_5 switch.data 0
-scoreboard players set #vote_game_6 switch.data 0
-scoreboard players set #vote_game_7 switch.data 0
-scoreboard players set #vote_game_8 switch.data 0
+	vote_reset: str = "\n".join(f"scoreboard players set #vote_game_{i} switch.data 0" for i in range(1, 9))
+	vote_count: str = "\n".join(
+		f"execute store result score #vote_game_{i} switch.data if entity @a[tag=!detached,scores={{switch.trigger.game_vote=-{i}}}]"
+		for i in range(1, 9)
+	)
+	write_function(f"{path}/voting_time/update_votes", f"""
+{vote_reset}
 
-tag @a[tag=!detached,scores={switch.trigger.game_vote=1..}] add switch.temp
+tag @a[tag=!detached,scores={{switch.trigger.game_vote=1..}}] add switch.temp
 execute as @a[tag=switch.temp] at @s run playsound ui.button.click ambient @s
 scoreboard players operation @a[tag=switch.temp] switch.trigger.game_vote *= #-1 switch.data
-execute store result score #vote_game_1 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-1}]
-execute store result score #vote_game_2 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-2}]
-execute store result score #vote_game_3 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-3}]
-execute store result score #vote_game_4 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-4}]
-execute store result score #vote_game_5 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-5}]
-execute store result score #vote_game_6 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-6}]
-execute store result score #vote_game_7 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-7}]
-execute store result score #vote_game_8 switch.data if entity @a[tag=!detached,scores={switch.trigger.game_vote=-8}]
+{vote_count}
 
 scoreboard players set #success switch.data 1
 

@@ -11,7 +11,7 @@ from .shared_memory import SharedMemory, generated_maps, survival_maps
 
 
 # Functions
-def convert_tick_to_strings(tick: int, name: str) -> tuple:
+def convert_tick_to_strings(tick: int, name: str) -> tuple[str, str]:
 	""" Converts "tick" in entry to formatted strings such as "XX seconds (XXmXXs)" or "XX seconds"
 	if the tick is less than 60 and a tellraw command to display the time
 
