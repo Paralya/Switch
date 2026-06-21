@@ -3,26 +3,26 @@
 import stouputils as stp
 from stewbeet.core import Context, official_lib_used, write_load_file, write_tick_file
 
-from ._modes import generate_all_modes
-from .advancements.main import main as automatic_advancements
-from .cinematic.main import main as cinematic
-from .engine.main import main as engine
-from .maps.main import main as maps
-from .misc_links.memory_mine import main as memory_mine
-from .misc_links.note_block_studio import main as note_block_studio
-from .misc_links.random_loot_table import main as random_loot_table
-from .misc_links.starting_pop_ups import main as starting_pop_ups
-from .music.main import main as music
-from .npc.main import main as npc
-from .player.main import main as player
-from .profiling.main import main as profiling
-from .root.main import main as root
-from .shop.main import main as shop
-from .special_fonts.main import main as special_fonts
-from .stats.main import main as stats
-from .survival_maps.main import main as generate_survival_maps
-from .translations.main import main as shared_translations
-from .utils.main import main as utils
+from .datapack.advancements.main import main as automatic_advancements
+from .datapack.cinematic.main import main as cinematic
+from .datapack.engine.main import main as engine
+from .datapack.maps.main import main as maps
+from .datapack.misc_links.memory_mine import main as memory_mine
+from .datapack.misc_links.note_block_studio import main as note_block_studio
+from .datapack.misc_links.random_loot_table import main as random_loot_table
+from .datapack.misc_links.starting_pop_ups import main as starting_pop_ups
+from .datapack.modes import generate_all_modes
+from .datapack.music.main import main as music
+from .datapack.npc.main import main as npc
+from .datapack.player.main import main as player
+from .datapack.profiling.main import main as profiling
+from .datapack.root.main import main as root
+from .datapack.shop.main import main as shop
+from .datapack.stats.main import main as stats
+from .datapack.survival_maps.main import main as generate_survival_maps
+from .datapack.translations.main import main as shared_translations
+from .datapack.utils.main import main as utils
+from .resource_pack.special_fonts.main import main as special_fonts
 
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)

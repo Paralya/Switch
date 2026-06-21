@@ -1,7 +1,0 @@
-{
-	"entity.generic.explode": {
-		"replace": true,
-		"sounds": [],
-		"subtitle": "subtitles.entity.generic.explode"
-	}
-}

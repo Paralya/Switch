@@ -1,59 +1,32 @@
 
 # Imports
-import glob
-import os
-
-import stouputils as stp
-from beet import Advancement, BlockTag, Context, DataPack, ItemModifier, ItemTag, LootTable, Predicate
+from beet import Context
 from beet.contrib.worldgen import Dimension
-from stewbeet.plugins.datapack.sorters.constants import Sorter, SorterFile
+from stewbeet.plugins.datapack.sorters.constants import SorterFile
 
-# Category folder (under this package) -> beet/stewbeet file type
-_CATEGORIES: dict[str, type] = {
-	"advancement": Advancement,
-	"predicate": Predicate,
-	"item_modifier": ItemModifier,
-	"loot_table": LootTable,
-	"dimension": Dimension,
-	"sorter": SorterFile,
-}
-# tags/<sub> -> tag file type
-_TAGS: dict[str, type] = {
-	"block": BlockTag,
-	"item": ItemTag,
-}
-
-_HERE: str = os.path.dirname(__file__)
-
-
-def _register(ctx: Context, file_type: type, root: str, path: str) -> None:
-	""" Load one JSON resource with stp.json_load and register it under the switch namespace. """
-	key: str = os.path.relpath(path, root).replace(os.sep, "/")[:-len(".json")]
-	data = stp.json_load(path)
-	# SorterFile is pydantic-backed: the downstream sorters plugin expects a Sorter model
-	obj = file_type(Sorter.model_validate(data)) if file_type is SorterFile else file_type(data)
-	obj.encoder = lambda x: stp.json_dump(x)
-	ctx.data["switch"][file_type][key] = obj
+from .definitions.advancements import write_advancements
+from .definitions.dimensions import write_dimensions
+from .definitions.integrations import write_integrations
+from .definitions.item_modifiers import write_item_modifiers
+from .definitions.loot_tables import write_loot_tables
+from .definitions.predicates import write_predicates
+from .definitions.sorters import write_sorters
+from .definitions.tags import write_tags
 
 
 def load_datapack_json(ctx: Context) -> None:
-	""" Move-and-load the hand-authored datapack JSON (advancements, tags, predicates, loot tables,
-		item modifiers, dimensions, sorters) from src/datapack/* into the build via Python. """
-	# Non-standard file types must be known by the pack before assignment
+	""" Build the shared/generic datapack definitions explicitly in Python. Mode-specific resources
+		(advancements, predicates, loot tables, tags, structures) live in each mode's resources.py. """
+	# Non-standard file types must be known by the pack before assignment (here and in mode resources)
 	for file_type in (Dimension, SorterFile):
 		if file_type not in ctx.data.extend_namespace:
 			ctx.data.extend_namespace.append(file_type)
 
-	for cat, file_type in _CATEGORIES.items():
-		root: str = f"{_HERE}/{cat}"
-		for path in glob.glob(f"{root}/**/*.json", recursive=True):
-			_register(ctx, file_type, root, path)
-
-	for sub, file_type in _TAGS.items():
-		root: str = f"{_HERE}/tags/{sub}"
-		for path in glob.glob(f"{root}/**/*.json", recursive=True):
-			_register(ctx, file_type, root, path)
-
-	# Merge the static passthrough datapack (binary structures + third-party namespace
-	# integration hooks: sheepwars/smart_ore_generation) that can't be expressed as code.
-	ctx.data.merge(DataPack(path=f"{_HERE}/_static"))
+	write_predicates()
+	write_item_modifiers()
+	write_dimensions()
+	write_sorters()
+	write_tags()
+	write_loot_tables()
+	write_advancements()
+	write_integrations()

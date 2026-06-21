@@ -1,0 +1,1 @@
+{ "typeCheckingMode": "strict", "include": ["src"], "exclude": ["**/__pycache__"] }

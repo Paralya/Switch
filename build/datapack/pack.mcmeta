@@ -1,14 +1,15 @@
 {
 	"pack": {
+		"pack_format": 107,
+		"description": "Switch [2.0.0] by Stoupy51",
 		"min_format": [
-			101,
+			107,
 			1
 		],
 		"max_format": [
-			101,
-			1
-		],
-		"description": "Switch [2.0.0] by Stoupy51\nAuthor: Stoupy51\nVersion: 2.0.0"
+			1000,
+			0
+		]
 	},
 	"id": "switch",
 	"filter": {

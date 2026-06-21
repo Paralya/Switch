@@ -1,5 +1,5 @@
 
-# ruff: noqa: E501
+# ruff: noqa: E501, RUF005
 # Imports
 from stewbeet.core import Equipment, Item, Mem, Texture, set_json_encoder
 
