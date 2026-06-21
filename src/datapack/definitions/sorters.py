@@ -1,7 +1,7 @@
 
 # Imports
 from stewbeet.core import Mem, set_json_encoder
-from stewbeet.plugins.datapack.sorters.constants import Sorter, SorterFile
+from stewbeet.plugins.datapack.sorters.constants import Sorter, SorterFile  # pyright: ignore[reportMissingTypeStubs]
 
 
 def write_sorters() -> None:
@@ -11,7 +11,7 @@ def write_sorters() -> None:
 	switch = Mem.ctx.data["switch"]
 
 	for name, scale in (("asc", 1000), ("desc", -1000)):
-		switch[SorterFile][name] = set_json_encoder(SorterFile(Sorter.model_validate({
+		switch[SorterFile][name] = set_json_encoder(SorterFile(Sorter.model_validate({  # pyright: ignore[reportArgumentType]
 			"algorithm": "selection_sort",
 			"functions_location": f"switch:utils/list/{name}",
 			"to_sort": {"storage": "switch:temp", "target": "list"},

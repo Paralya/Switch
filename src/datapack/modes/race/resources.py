@@ -1,5 +1,7 @@
 
 # Imports
+from typing import Any
+
 from beet import Advancement, BlockTag, Predicate
 from stewbeet.core import Mem, set_json_encoder
 
@@ -10,9 +12,9 @@ COLORS: tuple[str, ...] = (
 )
 
 
-def same_score(objective: str, target: str) -> dict:
+def same_score(objective: str, target: str) -> dict[str, Any]:
 	""" entity_scores predicate where 'objective' equals the fixed #target score on switch.data. """
-	bound: dict = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": target}, "score": "switch.data"}
+	bound: dict[str, Any] = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": target}, "score": "switch.data"}
 	return {"condition": "minecraft:entity_scores", "entity": "this", "scores": {objective: {"min": bound, "max": bound}}}
 
 

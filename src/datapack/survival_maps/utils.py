@@ -48,7 +48,7 @@ def convert_tick_to_strings(tick: int, name: str) -> tuple[str, str]:
 	return (f"{secs} seconds{parenthesis}", tellraw)
 
 
-def calculate_divider(start_pos: tuple, end_pos: tuple) -> int:
+def calculate_divider(start_pos: tuple[int, ...], end_pos: tuple[int, ...]) -> int:
 	""" Calculates the divider of the regeneration area depending on the area
 	The more the area is big, the more the divider is big
 	The divider is calculated so that the area is divided into 3200 blocks
@@ -108,37 +108,37 @@ def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[Any, ...]
 		name (str)	: The name of the map
 		racing_pos	(tuple)	: Start position (tuple), orientation (int), and count (int) for the start line
 	"""
-	PATH: str = f"switch:maps/survival/{name}/main"
+	path: str = f"switch:maps/survival/{name}/main"
 
 	# Write the first line
-	write_function(PATH, '\nsummon marker 0 0 0 {Tags:["switch.selected_map"]}')
+	write_function(path, '\nsummon marker 0 0 0 {Tags:["switch.selected_map"]}')
 
 	# If there is no race
 	if len(racing_pos) == 0:
-		write_function(PATH, f"execute as @e[type=marker,tag=switch.selected_map] at @s run function switch:maps/survival/{name}/teleport_players")
+		write_function(path, f"execute as @e[type=marker,tag=switch.selected_map] at @s run function switch:maps/survival/{name}/teleport_players")
 	else:
-		write_function(PATH, f"execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value {tp_coords}\n")
-		write_function(PATH, "scoreboard players set #count switch.data 0")
-		write_function(PATH, f"execute as @a[tag=!detached,sort=random] run function switch:maps/survival/{name}/teleport_players\n")
-		write_function(PATH, f"execute if score #is_race switch.data matches 1 in switch:game run function switch:maps/survival/{name}/if_race")
+		write_function(path, f"execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value {tp_coords}\n")
+		write_function(path, "scoreboard players set #count switch.data 0")
+		write_function(path, f"execute as @a[tag=!detached,sort=random] run function switch:maps/survival/{name}/teleport_players\n")
+		write_function(path, f"execute if score #is_race switch.data matches 1 in switch:game run function switch:maps/survival/{name}/if_race")
 
 
-def create_teleport_players_file(name: str, view: tuple, racing_pos: tuple[tuple, int, int] | tuple[()] = ()) -> None:
+def create_teleport_players_file(name: str, view: tuple[float, float, float, float, float], racing_pos: tuple[tuple[float, ...], int, int] | tuple[()] = ()) -> None:
 	""" Creates the "teleport_players.mcfunction" file\n
 	Args:
 		name 		(str)	: The name of the map
 		view		(tuple)	: The view position (x, y, z, yaw, pitch)
 		racing_pos	(tuple)	: Start position (tuple), orientation (int), and count (int) for the start line
 	"""
-	PATH: str = f"switch:maps/survival/{name}/teleport_players"
+	path: str = f"switch:maps/survival/{name}/teleport_players"
 
 	# If there is no race
 	if len(racing_pos) == 0:
-		write_function(PATH, f'data modify entity @s Pos set value {create_tp_coords_string_from_view(view)}')
-		write_function(PATH, 'execute at @s in switch:game run tp @s ~ ~ ~')
-		write_function(PATH, 'execute at @s run tp @a[tag=!detached] ~ ~ ~')
-		write_function(PATH, f'execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/{name}/spread_players')
-		write_function(PATH, 'scoreboard players reset #do_spreadplayers switch.data')
+		write_function(path, f'data modify entity @s Pos set value {create_tp_coords_string_from_view(view)}')
+		write_function(path, 'execute at @s in switch:game run tp @s ~ ~ ~')
+		write_function(path, 'execute at @s run tp @a[tag=!detached] ~ ~ ~')
+		write_function(path, f'execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/{name}/spread_players')
+		write_function(path, 'scoreboard players reset #do_spreadplayers switch.data')
 	else:
 		# Get variables
 		x, y, z = racing_pos[0]
@@ -162,19 +162,19 @@ def create_teleport_players_file(name: str, view: tuple, racing_pos: tuple[tuple
 				coords = f"~-{k*2} ~ ~{j*2}"
 
 			# Write the line
-			write_function(PATH, f"execute if score #count switch.data matches {i} in switch:game positioned {x} {y} {z} run tp @s {coords} {orientation} 0")
+			write_function(path, f"execute if score #count switch.data matches {i} in switch:game positioned {x} {y} {z} run tp @s {coords} {orientation} 0")
 
 		# Write the last lines
-		write_function(PATH, '\nscoreboard players add #count switch.data 1')
-		write_function(PATH, f"scoreboard players operation #count switch.data %= #{count} switch.data")
+		write_function(path, '\nscoreboard players add #count switch.data 1')
+		write_function(path, f"scoreboard players operation #count switch.data %= #{count} switch.data")
 
 	# Add a file to teleport @s to the coordinates
-	PATH: str = f"switch:maps/survival/{name}/tp_to_coords"
+	path: str = f"switch:maps/survival/{name}/tp_to_coords"
 	x, y, z, yaw, pitch = view
-	write_function(PATH, f"execute in minecraft:overworld run tp @s {x} {y} {z} {yaw} {pitch}")
+	write_function(path, f"execute in minecraft:overworld run tp @s {x} {y} {z} {yaw} {pitch}")
 
 
-def create_splitted_coordinates(start_pos: tuple, end_pos: tuple, divider: int) -> list[list]:
+def create_splitted_coordinates(start_pos: tuple[int, ...], end_pos: tuple[int, ...], divider: int) -> list[list[int]]:
 	""" Creates a list with the splitted coordinates of
 	the regeneration area depending on the divider argument
 
@@ -190,7 +190,7 @@ def create_splitted_coordinates(start_pos: tuple, end_pos: tuple, divider: int) 
 	d = (c1[2] - c1[0]) / divider
 
 	# Create the splitted coordinates
-	c = []
+	c: list[list[int]] = []
 	for i in range(divider):
 		# Calculate x1 (the first x coordinate of the clone command)
 		x1 = round(c1[0] + d*i)
@@ -206,7 +206,7 @@ def create_splitted_coordinates(start_pos: tuple, end_pos: tuple, divider: int) 
 	return c
 
 
-def write_first_lines_of_regenerate(name: str, base_condition: str, splitted_coordinates: list) -> None:
+def write_first_lines_of_regenerate(name: str, base_condition: str, splitted_coordinates: list[list[int]]) -> None:
 	""" Writes the "regenerate.mcfunction" file
 	Args:
 		name (str)					: The name of the map
@@ -215,19 +215,19 @@ def write_first_lines_of_regenerate(name: str, base_condition: str, splitted_coo
 	Returns:
 		(TextIOWrapper)				: The file
 	"""
-	PATH: str = f"switch:maps/survival/{name}/regenerate"
+	path: str = f"switch:maps/survival/{name}/regenerate"
 
 	# Write the first lines
-	write_function(PATH, f'\nscoreboard players add #rg_{name} switch.data 1')
-	write_function(PATH, f"{base_condition} 1 run data modify storage switch:maps to_regenerate.{name} set value 2b")
+	write_function(path, f'\nscoreboard players add #rg_{name} switch.data 1')
+	write_function(path, f"{base_condition} 1 run data modify storage switch:maps to_regenerate.{name} set value 2b")
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
-		write_function(PATH, f"{base_condition} 1 in minecraft:overworld run forceload add {x1} {x2} {z1} {z2}")
-		write_function(PATH, f"{base_condition} 1 in switch:game run forceload add {x1} {x2} {z1} {z2}")
+		write_function(path, f"{base_condition} 1 in minecraft:overworld run forceload add {x1} {x2} {z1} {z2}")
+		write_function(path, f"{base_condition} 1 in switch:game run forceload add {x1} {x2} {z1} {z2}")
 
 
-def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: str, splitted_coordinates: list, xyz: tuple, last_tick: int, divider: int, suffix: str = "") -> None:
+def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: str, splitted_coordinates: list[list[int]], xyz: tuple[int, int, int], last_tick: int, divider: int, suffix: str = "") -> None:
 	""" Writes the last lines of the "regenerate.mcfunction" file
 	Args:
 		f (TextIOWrapper)			: The file
@@ -240,7 +240,7 @@ def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: st
 		divider (int)				: The divider of the regeneration area
 		suffix (str)				: The suffix of the print function (like "[/clone]" or "[/fill]")
 	"""
-	PATH: str = f"switch:maps/survival/{namespace}/regenerate"
+	path: str = f"switch:maps/survival/{namespace}/regenerate"
 
 	# Get the time string and the tellraw command
 	timeStr, tellraw = convert_tick_to_strings(last_tick, name)
@@ -252,7 +252,7 @@ def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: st
 	## Write the last lines
 	# Write the scoreboard and summon commands
 	x, y, z = xyz
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_condition} 1 run scoreboard players set #rg_{namespace}_y switch.data {y}
 {base_condition} 1 run scoreboard players set #rg_{namespace}_mod switch.data 0
 {base_condition} ..{last_tick} summon marker run function switch:maps/survival/{namespace}/regeneration_on_marker
@@ -260,28 +260,28 @@ def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: st
 
 	# Write the kill command
 	last_tick += 1
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_condition} {last_tick}.. in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
 {base_condition} {last_tick}.. run data remove storage switch:maps to_regenerate.{namespace}
 """)
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
-		write_function(PATH, f"""
+		write_function(path, f"""
 {base_condition} {last_tick}.. in minecraft:overworld run forceload remove {x1} {x2} {z1} {z2}
 {base_condition} {last_tick}.. in switch:game run forceload remove {x1} {x2} {z1} {z2}
 """.strip())
 
 	# Write the tellraw command
 	encoded_name: str = name.replace("'", r"\'")
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_condition} {last_tick}.. run {tellraw}
 {base_condition} {last_tick}.. run data modify storage switch:main MessageToLog set value '{{\"text\":\"Map `{encoded_name}` just regenerated!\"}}'
 {base_condition} {last_tick}.. run function switch:engine/log_message/apply
 """)
 
 	# Write the door regeneration command, the reset command and the schedule command
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_condition} {last_tick}.. in switch:game run function switch:maps/regenerate_doors_macro {{name:\"{namespace}\"}}
 {base_condition} {last_tick}.. run scoreboard players reset #rg_{namespace} switch.data
 {base_condition} 1.. run schedule function switch:maps/survival/{namespace}/regenerate 1t
@@ -340,7 +340,7 @@ execute at @s if block ~ ~-1 ~ #switch:not_spreadplayers in switch:game run spre
 """)
 
 
-def scan_every_door_in_map(name: str, start_pos: tuple, end_pos: tuple, paste_start_height: int, splitted_coordinates: list) -> None:
+def scan_every_door_in_map(name: str, start_pos: tuple[int, ...], end_pos: tuple[int, ...], paste_start_height: int, splitted_coordinates: list[list[int]]) -> None:
 	""" Creates the "scan_doors.mcfunction" file.
 	It acts almost like the regeneration file\n
 	Args:
@@ -353,12 +353,12 @@ def scan_every_door_in_map(name: str, start_pos: tuple, end_pos: tuple, paste_st
 	base_cond = f"execute if score #scan_{name} switch.data matches"
 
 	# Create the file
-	PATH: str = f"switch:maps/survival/{name}/scan_doors"
-	write_function(PATH, f"\nscoreboard players add #scan_{name} switch.data 1")
+	path: str = f"switch:maps/survival/{name}/scan_doors"
+	write_function(path, f"\nscoreboard players add #scan_{name} switch.data 1")
 
 	# Write the forceload commands
 	for x1, x2, z1, z2 in splitted_coordinates:
-		write_function(PATH, f"""
+		write_function(path, f"""
 {base_cond} 1 in minecraft:overworld run forceload add {x1} {x2} {z1} {z2}
 {base_cond} 1 in switch:game run forceload add {x1} {x2} {z1} {z2}
 """)
@@ -368,7 +368,7 @@ def scan_every_door_in_map(name: str, start_pos: tuple, end_pos: tuple, paste_st
 	total_loops = total_blocks_to_scan // SharedMemory.DOOR_BLOCKS_PER_SECOND
 	if (total_blocks_to_scan % SharedMemory.DOOR_BLOCKS_PER_SECOND) > 0:
 		total_loops += 1
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_cond} 1 run data modify storage switch:maps to_scan.{name} set value 2b
 {base_cond} 1 run scoreboard players set #start_x_{name} switch.data {start_pos[0] + 1}
 {base_cond} 1 run scoreboard players set #start_y_{name} switch.data {start_pos[1] + 1}
@@ -384,18 +384,18 @@ def scan_every_door_in_map(name: str, start_pos: tuple, end_pos: tuple, paste_st
 
 	# Launch the scan on the next block
 	delay = 30
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_cond} {delay}.. run scoreboard players set #blocks_in_loop switch.data {SharedMemory.DOOR_BLOCKS_PER_SECOND}
 {base_cond} {delay}.. summon marker run function switch:maps/survival/{name}/scan_doors_on_marker
 """)
 
 	# Finish scan
 	for x1, x2, z1, z2 in splitted_coordinates:
-		write_function(PATH, f"""
+		write_function(path, f"""
 {base_cond} {total_loops + 30} in minecraft:overworld run forceload remove {x1} {x2} {z1} {z2}
 {base_cond} {total_loops + 30} in switch:game run forceload remove {x1} {x2} {z1} {z2}
 """)
-	write_function(PATH, f"""
+	write_function(path, f"""
 {base_cond} {total_loops + 30} run tellraw @a ["",{{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true}},{{"text":" Doors of map '","color":"yellow"}},{{"text":"{name}","color":"gold"}},{{"text":"' just been scanned in ","color":"yellow"}},{{"text":"{(total_loops + 30) // 20}","color":"gold"}},{{"text":"s","color":"yellow"}}]
 {base_cond} {total_loops + 30} run data remove storage switch:maps to_scan.{name}
 {base_cond} {total_loops + 30} run scoreboard players reset #scan_{name} switch.data
@@ -404,8 +404,8 @@ def scan_every_door_in_map(name: str, start_pos: tuple, end_pos: tuple, paste_st
 """)
 
 	## Create the "scan_doors_on_marker.mcfunction" file
-	PATH: str = f"switch:maps/survival/{name}/scan_doors_on_marker"
-	write_function(PATH, f"""
+	path: str = f"switch:maps/survival/{name}/scan_doors_on_marker"
+	write_function(path, f"""
 execute store result entity @s Pos[0] double 1 run scoreboard players get #curr_x_{name} switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #curr_y_{name} switch.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #curr_z_{name} switch.data
@@ -425,11 +425,11 @@ kill @s
 # Create the function that generates a folder for a gamemode with regeneration using /clone
 def clone_survival(
 	paste_start_height: int,
-	start_pos: tuple,
-	end_pos: tuple,
+	start_pos: tuple[int, ...],
+	end_pos: tuple[int, ...],
 	identity: tuple[str, ...],
 	view: tuple[float, float, float, float, float],
-	racing_pos: tuple[tuple, int, int] | tuple[()] = ()
+	racing_pos: tuple[tuple[float, ...], int, int] | tuple[()] = ()
 ) -> None:
 	""" Generates a folder for a gamemode using /clone for regeneration
 	Args:
@@ -479,8 +479,8 @@ def clone_survival(
 
 	## Write the marker part for the regeneration
 	# Create the file
-	PATH: str = f"switch:maps/survival/{namespace}/regeneration_on_marker"
-	write_function(PATH, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y switch.data")
+	path: str = f"switch:maps/survival/{namespace}/regeneration_on_marker"
+	write_function(path, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y switch.data")
 
 	# Write the clone and particle commands
 	i = 0
@@ -489,14 +489,14 @@ def clone_survival(
 	for k in splitted_coordinates:
 		dx = (k[2] - k[0]) // 2
 		dz = (k[3] - k[1]) // 2
-		write_function(PATH, f"""
+		write_function(path, f"""
 execute if score #rg_{namespace}_mod switch.data matches {i} at @s in switch:game run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force
 execute if score #rg_{namespace}_mod switch.data matches {i} at @s run clone from minecraft:overworld {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} to switch:game {k[0]} ~{dy} {k[1]} strict replace force
 """)
 		i += 1
 
 	# Write kill item entities command & the scoreboard commands
-	write_function(PATH, f"""
+	write_function(path, f"""
 scoreboard players add #rg_{namespace}_mod switch.data 1
 execute if score #rg_{namespace}_mod switch.data matches {len(splitted_coordinates)} in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
 execute if score #rg_{namespace}_mod switch.data matches {len(splitted_coordinates)} run scoreboard players add #rg_{namespace}_y switch.data 1
@@ -527,8 +527,8 @@ execute in switch:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]
 
 # Create the function that generates a folder for a gamemode with regeneration using the fill command
 def fill_survival(
-	start_pos: tuple,
-	end_pos: tuple,
+	start_pos: tuple[int, ...],
+	end_pos: tuple[int, ...],
 	identity: tuple[str, ...],
 	block_that_replace: str,
 	block_tag_to_replace: str,
@@ -575,21 +575,21 @@ def fill_survival(
 	write_first_lines_of_regenerate(namespace, base_condition, splitted_coordinates)
 
 	## Write the marker part for the regeneration
-	PATH: str = f"switch:maps/survival/{namespace}/regeneration_on_marker"
-	write_function(PATH, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y switch.data\n")
+	path: str = f"switch:maps/survival/{namespace}/regeneration_on_marker"
+	write_function(path, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y switch.data\n")
 
 	# Write the clone and particle commands
 	particle_count = int(250 / len(splitted_coordinates)) + 1
 	for k in splitted_coordinates:
 		dx = (k[2] - k[0]) // 2
 		dz = (k[3] - k[1]) // 2
-		write_function(PATH, f"""
+		write_function(path, f"""
 execute at @s in switch:game run particle cloud {k[0] + dx} ~1 {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force
 execute at @s in switch:game run fill {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} {block_that_replace} replace {block_tag_to_replace}
 """)
 
 	# Write kill item entities command & the scoreboard commands
-	write_function(PATH, f"""
+	write_function(path, f"""
 execute in switch:game run kill @e[type=item,x={x},y={y},z={z},distance=..1000]
 scoreboard players add #rg_{namespace}_y switch.data 1
 
@@ -617,8 +617,8 @@ def generate_door_files() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/add_door_to_storage"
-	write_function(PATH, """
+	path: str = "switch:maps/add_door_to_storage"
+	write_function(path, """
 data modify storage switch:temp compound set value {x:0,y:0,z:0,door:""}
 execute store result storage switch:temp compound.x int 1 run data get entity @s Pos[0]
 execute store result score #y switch.data run data get entity @s Pos[1]
@@ -634,26 +634,26 @@ scoreboard players set #success switch.data 0
 				for hinge in SharedMemory.DOORS["hinge"]:
 					for is_open in SharedMemory.DOORS["open"]:
 						for powered in SharedMemory.DOORS["powered"]:
-							write_function(PATH, f'execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ {type}[facing={facing},half={half},hinge={hinge},open={is_open},powered={powered}] run data modify storage switch:temp compound.door set value "{type}[facing={facing},half={half},hinge={hinge},open={is_open},powered={powered}]"\n')
-	write_function(PATH, "$data modify storage switch:doors $(name) append from storage switch:temp compound")
+							write_function(path, f'execute if score #success switch.data matches 0 store success score #success switch.data if block ~ ~ ~ {type}[facing={facing},half={half},hinge={hinge},open={is_open},powered={powered}] run data modify storage switch:temp compound.door set value "{type}[facing={facing},half={half},hinge={hinge},open={is_open},powered={powered}]"\n')
+	write_function(path, "$data modify storage switch:doors $(name) append from storage switch:temp compound")
 
 	## Generate a file that launch the scan on every map progressively
-	PATH: str = "switch:maps/scan_doors_of_every_maps"
-	write_function(PATH, "data modify storage switch:maps to_scan set value {}")
+	path: str = "switch:maps/scan_doors_of_every_maps"
+	write_function(path, "data modify storage switch:maps to_scan set value {}")
 	for name in survival_maps:
-		write_function(PATH, f"data modify storage switch:maps to_scan.{name} set value 1b")
-	write_function(PATH, "schedule function switch:maps/loop_scan_doors_of_every_maps 1t")
+		write_function(path, f"data modify storage switch:maps to_scan.{name} set value 1b")
+	write_function(path, "schedule function switch:maps/loop_scan_doors_of_every_maps 1t")
 
 	## Generate the loop_scan_doors_of_every_maps file
-	PATH: str = "switch:maps/loop_scan_doors_of_every_maps"
-	write_function(PATH, f"""
+	path: str = "switch:maps/loop_scan_doors_of_every_maps"
+	write_function(path, f"""
 execute if data storage switch:maps to_scan{{{survival_maps[-1]}:1b}} run schedule function switch:maps/loop_scan_doors_of_every_maps 1t
 execute if data storage switch:maps to_scan{{{survival_maps[0]}:1b}} run function switch:maps/survival/{survival_maps[0]}/scan_doors
 """)
 	for i in range(1, len(survival_maps)):
 		previous_map = survival_maps[i - 1]
 		current_map = survival_maps[i]
-		write_function(PATH, f"execute unless data storage switch:maps to_scan.{previous_map} if data storage switch:maps to_scan{{{current_map}:1b}} run function switch:maps/survival/{current_map}/scan_doors")
+		write_function(path, f"execute unless data storage switch:maps to_scan.{previous_map} if data storage switch:maps to_scan{{{current_map}:1b}} run function switch:maps/survival/{current_map}/scan_doors")
 
 
 def generate_regenerate_every_maps_files() -> None:
@@ -661,22 +661,22 @@ def generate_regenerate_every_maps_files() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/regenerate_every_maps"
-	write_function(PATH, "data modify storage switch:maps to_regenerate set value {}")
+	path: str = "switch:maps/regenerate_every_maps"
+	write_function(path, "data modify storage switch:maps to_regenerate set value {}")
 	for name in survival_maps:
-		write_function(PATH, f"data modify storage switch:maps to_regenerate.{name} set value 1b")
-	write_function(PATH, "schedule function switch:maps/loop_regenerate_every_maps 1t")
+		write_function(path, f"data modify storage switch:maps to_regenerate.{name} set value 1b")
+	write_function(path, "schedule function switch:maps/loop_regenerate_every_maps 1t")
 
 	## Generate the loop_regenerate_every_maps file
-	PATH: str = "switch:maps/loop_regenerate_every_maps"
-	write_function(PATH, f"""
+	path: str = "switch:maps/loop_regenerate_every_maps"
+	write_function(path, f"""
 execute if data storage switch:maps to_regenerate{{{survival_maps[-1]}:1b}} run schedule function switch:maps/loop_regenerate_every_maps 1t
 execute if data storage switch:maps to_regenerate{{{survival_maps[0]}:1b}} run function switch:maps/survival/{survival_maps[0]}/regenerate
 """)
 	for i in range(1, len(survival_maps)):
 		previous_map = survival_maps[i - 1]
 		current_map = survival_maps[i]
-		write_function(PATH, f"execute unless data storage switch:maps to_regenerate.{previous_map} if data storage switch:maps to_regenerate{{{current_map}:1b}} run function switch:maps/survival/{current_map}/regenerate")
+		write_function(path, f"execute unless data storage switch:maps to_regenerate.{previous_map} if data storage switch:maps to_regenerate{{{current_map}:1b}} run function switch:maps/survival/{current_map}/regenerate")
 
 
 def generate_load_file() -> None:
@@ -684,9 +684,9 @@ def generate_load_file() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/load_survival"
+	path: str = "switch:maps/load_survival"
 	for name in generated_maps:
-		write_function(PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/main')
+		write_function(path, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/main')
 
 
 def generate_regenerate_map_file() -> None:
@@ -694,14 +694,14 @@ def generate_regenerate_map_file() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/regenerate_map"
-	write_function(PATH, "# Regenerate the survival maps")
+	path: str = "switch:maps/regenerate_map"
+	write_function(path, "# Regenerate the survival maps")
 	for name in generated_maps:
-		write_function(PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/regenerate')
+		write_function(path, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/regenerate')
 
 	# Write the last lines
-	write_function(PATH, "\n# Remove the map from the storage\ndata remove storage switch:main map")
-	write_function(PATH, "\n# Change score of already regenerated map\nscoreboard players set #already_regenerated switch.data 1")
+	write_function(path, "\n# Remove the map from the storage\ndata remove storage switch:main map")
+	write_function(path, "\n# Change score of already regenerated map\nscoreboard players set #already_regenerated switch.data 1")
 
 
 def generate_resume_regeneration_file() -> None:
@@ -709,10 +709,10 @@ def generate_resume_regeneration_file() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/resume_regeneration"
-	write_function(PATH, "# Resume the regeneration of the survival maps")
+	path: str = "switch:maps/resume_regeneration"
+	write_function(path, "# Resume the regeneration of the survival maps")
 	for name in generated_maps:
-		write_function(PATH, f"execute if score #rg_{name} switch.data matches 1.. run function switch:maps/survival/{name}/regenerate")
+		write_function(path, f"execute if score #rg_{name} switch.data matches 1.. run function switch:maps/survival/{name}/regenerate")
 
 
 def generate_spread_one_player_file() -> None:
@@ -720,20 +720,20 @@ def generate_spread_one_player_file() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/spread_one_player"
-	write_function(PATH, "# Spread one player on the survival maps")
+	path: str = "switch:maps/spread_one_player"
+	write_function(path, "# Spread one player on the survival maps")
 	for name in generated_maps:
-		write_function(PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/spread_one_player')
+		write_function(path, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/spread_one_player')
 
 def generate_intro_spread_file() -> None:
 	""" Generate the intro_spread file for the survival maps
 	Args:
 		config (dict): The configuration of the project
 	"""
-	PATH: str = "switch:maps/intro_spread"
-	write_function(PATH, "# Launch the intro spread for the survival maps")
+	path: str = "switch:maps/intro_spread"
+	write_function(path, "# Launch the intro spread for the survival maps")
 	for name in generated_maps:
-		write_function(PATH, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/intro_spread')
+		write_function(path, f'execute if data storage switch:main {{map:"{name}"}} run function switch:maps/survival/{name}/intro_spread')
 
 
 @stp.measure_time(message="Generated the map usage file")
@@ -743,7 +743,7 @@ def generate_map_usage_file() -> None:
 		config (dict): The configuration of the project
 	"""
 	from ..modes.definitions import MODES
-	PATH: str = f"{Mem.ctx.directory}/map_usage.json"
+	path: str = f"{Mem.ctx.directory}/map_usage.json"
 	CHOOSE_MAP_FOR: str = "function switch:utils/choose_map_for"
 
 	# Get for each modes the maps they use
@@ -777,6 +777,6 @@ def generate_map_usage_file() -> None:
 	maps_usage = dict(sorted(maps_usage.items(), key=lambda item: len(item[1])))
 
 	# Write the map_usage.json file
-	with stp.super_open(PATH, "w") as f:
+	with stp.super_open(path, "w") as f:
 		f.write(stp.json_dump([maps_usage, modes_usage], max_level=2))
 

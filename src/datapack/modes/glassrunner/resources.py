@@ -1,12 +1,14 @@
 
 # Imports
+from typing import Any
+
 from beet import BlockTag, ItemModifier, LootTable, Predicate
 from stewbeet.core import Mem, set_json_encoder
 
 from ..common import register_structures
 
 
-def holding_predicate(flag: str) -> dict:
+def holding_predicate(flag: str) -> dict[str, Any]:
 	""" entity_properties predicate: holding a glassrunner item flagged in custom_data. """
 	return {
 		"condition": "minecraft:entity_properties",
@@ -17,7 +19,7 @@ def holding_predicate(flag: str) -> dict:
 	}
 
 
-def bridge_loot(flag: str, name: str, color: str) -> dict:
+def bridge_loot(flag: str, name: str, color: str) -> dict[str, Any]:
 	""" A snowball 'glass bridge' item loot table. """
 	return {"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:item",
@@ -29,7 +31,7 @@ def bridge_loot(flag: str, name: str, color: str) -> dict:
 	}]}]}
 
 
-def bridge_count_loot(value: str, count: int) -> dict:
+def bridge_count_loot(value: str, count: int) -> dict[str, Any]:
 	""" A loot table giving N copies of another glass-bridge loot table. """
 	return {"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:loot_table",
@@ -52,7 +54,7 @@ def write_resources() -> None:
 	switch.predicates["holding_destroying_crossbow"] = set_json_encoder(Predicate(holding_predicate("destroying_crossbow")))
 
 	# Item modifiers: a crossbow charged with 3 destroying arrows, and a cleared one
-	arrow: dict = {"id": "minecraft:arrow", "components": {"minecraft:custom_data": {"glassrunner": {"destroying_arrow": 1}}}}
+	arrow: dict[str, Any] = {"id": "minecraft:arrow", "components": {"minecraft:custom_data": {"glassrunner": {"destroying_arrow": 1}}}}
 	switch.item_modifiers["charged"] = set_json_encoder(ItemModifier({
 		"function": "minecraft:set_components",
 		"components": {"minecraft:charged_projectiles": [dict(arrow), dict(arrow), dict(arrow)]},

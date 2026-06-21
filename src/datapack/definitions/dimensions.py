@@ -1,11 +1,13 @@
 
 # Imports
+from typing import Any
+
 from beet.contrib.worldgen import Dimension
 from stewbeet.core import Mem, set_json_encoder
 
 
-def void_generator() -> dict:
-	""" A fresh flat-void generator dict (shared shape by the game & void dimensions). """
+def void_generator() -> dict[str, Any]:
+	""" A fresh flat-void generator dict[str, Any] (shared shape by the game & void dimensions). """
 	return {
 		"type": "minecraft:overworld",
 		"generator": {

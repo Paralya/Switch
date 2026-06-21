@@ -1,5 +1,7 @@
 
 # Imports
+from typing import Any
+
 from beet import Predicate
 from stewbeet.core import Mem, set_json_encoder
 
@@ -10,23 +12,23 @@ CHANCES: dict[str, float] = {
 }
 
 
-def entity_properties(predicate: dict) -> dict:
+def entity_properties(predicate: dict[str, Any]) -> dict[str, Any]:
 	""" entity_properties predicate on 'this'. """
 	return {"condition": "minecraft:entity_properties", "entity": "this", "predicate": predicate}
 
 
-def block_at(block: str, offset_y: int | None = None) -> dict:
+def block_at(block: str, offset_y: int | None = None) -> dict[str, Any]:
 	""" location_check predicate matching a block (optionally with a Y offset). """
-	out: dict = {"condition": "minecraft:location_check"}
+	out: dict[str, Any] = {"condition": "minecraft:location_check"}
 	if offset_y is not None:
 		out["offsetY"] = offset_y
 	out["predicate"] = {"block": {"blocks": [block]}}
 	return out
 
 
-def same_score(objective: str, target: str, score: str) -> dict:
+def same_score(objective: str, target: str, score: str) -> dict[str, Any]:
 	""" entity_scores predicate where 'objective' equals the fixed score 'target'.'score'. """
-	bound: dict = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": target}, "score": score}
+	bound: dict[str, Any] = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": target}, "score": score}
 	return {"condition": "minecraft:entity_scores", "entity": "this", "scores": {objective: {"min": bound, "max": bound}}}
 
 

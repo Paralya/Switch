@@ -2,7 +2,7 @@
 # Imports
 from beet import Context
 from beet.contrib.worldgen import Dimension
-from stewbeet.plugins.datapack.sorters.constants import SorterFile
+from stewbeet.plugins.datapack.sorters.constants import SorterFile  # pyright: ignore[reportMissingTypeStubs]
 
 from .definitions.advancements import write_advancements
 from .definitions.dimensions import write_dimensions

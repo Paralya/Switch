@@ -2,6 +2,7 @@
 # ruff: noqa: E501
 # Imports
 import json
+from typing import Any
 
 import stouputils as stp
 from beet import Advancement
@@ -74,7 +75,7 @@ def hidden_advancements() -> None:
 	for adv in ALL_ADVANCEMENTS:
 		if len(adv["children"]) == 0:
 			id: str = adv["id"]
-			json_dict: dict = {
+			json_dict: dict[str, Any] = {
 				"criteria": {"requirement": {"trigger": "minecraft:tick"}},
 				"requirements": [["requirement"]],
 				"parent": f"switch:visible/{id}"
@@ -93,7 +94,7 @@ def visible_advancements() -> None:
 		if category == "jump":
 			category = "jumps/" + id.replace("jump_", "")
 
-		json_dict: dict = {
+		json_dict: dict[str, Any] = {
 			"display": {
 				"icon": json.loads(adv["icon"]),
 				"title": {"text": adv["title"], "color": "yellow"},

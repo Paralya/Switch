@@ -1,10 +1,12 @@
 
 # Imports
+from typing import Any
+
 from beet import LootTable
 from stewbeet.core import Mem, set_json_encoder
 
 
-def single_block_drop(name: str, functions: list[dict]) -> dict:
+def single_block_drop(name: str, functions: list[dict[str, Any]]) -> dict[str, Any]:
 	""" A block loot table dropping a single item with the given functions. """
 	return {
 		"type": "minecraft:block",

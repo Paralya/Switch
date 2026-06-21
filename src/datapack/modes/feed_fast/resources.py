@@ -1,5 +1,7 @@
 
 # Imports
+from typing import Any
+
 from beet import LootTable
 from stewbeet.core import Mem, set_json_encoder
 
@@ -15,7 +17,7 @@ FOODS: tuple[str, ...] = (
 
 def write_resources() -> None:
 	""" Datapack resources owned by the feed_fast mode. """
-	entries: list[dict] = [{"type": "minecraft:item", "name": f"minecraft:{food}"} for food in FOODS]
+	entries: list[dict[str, Any]] = [{"type": "minecraft:item", "name": f"minecraft:{food}"} for food in FOODS]
 	entries.append({"type": "minecraft:item", "name": "minecraft:potion", "functions": [{
 		"function": "minecraft:set_components",
 		"components": {"minecraft:potion_contents": {"custom_color": 10569486, "custom_effects": [{"id": "minecraft:saturation", "amplifier": 4}]}},

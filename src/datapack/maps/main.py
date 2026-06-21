@@ -7,7 +7,7 @@ from stewbeet import write_function
 from .translations import write_translations
 
 # Race checkpoint layouts: name -> (laps, checkpoints, [(x,y,z,cp,dx,dy,dz)...], [(x,y,z,effect_tag)...])
-RACE_CHECKPOINTS: dict[str, tuple] = {
+RACE_CHECKPOINTS: dict[str, tuple[int, int, list[tuple[str, ...]], list[tuple[str, ...]]]] = {
 	'airship_fortress': (3, 3, [('20725', '121', '20319', '0', '1', '5', '5'), ('20631', '122', '20336', '1', '5', '5', '1'), ('20639', '108', '20375', '2', '2', '5', '1'), ('20750', '131', '20382', '3', '4', '5', '1')], [('20639', '108', '20336', 'switch.tm_blocks.engine_off')]),
 	'baby_park': (7, 3, [('21000', '131', '21011', '0', '2', '5', '8'), ('20958', '131', '21000', '1', '8', '5', '2'), ('21001', '131', '20989', '2', '2', '5', '8'), ('21043', '131', '21000', '3', '8', '5', '2')], []),
 	'boat_race_1': (1, 8, [('5201', '160', '5139', '0', '3', '5', '8'), ('5095', '151', '5100', '1', '3', '5', '8'), ('5122', '118', '5167', '2', '3', '5', '8'), ('5214', '112', '5078', '3', '3', '5', '8'), ('5115', '139', '5074', '4', '3', '5', '8'), ('5111', '127', '5107', '5', '3', '5', '8'), ('5195', '127', '5089', '6', '3', '5', '8'), ('5246', '126', '5162', '7', '3', '5', '8'), ('5231', '155', '5156', '8', '3', '5', '8')], []),
@@ -27,7 +27,7 @@ RACE_CHECKPOINTS: dict[str, tuple] = {
 }
 
 # Arena spawn cycles: "map/file" -> (score_var, ["x y z yaw pitch"...])
-TP_CYCLES: dict[str, tuple] = {
+TP_CYCLES: dict[str, tuple[str, list[str]]] = {
 	'sheepwars_bonbons/tp_blue_player': ('s_bonbons_blue', ['143037 130 143089 -90 0', '143022 139 143088 -90 0', '143032 131 143066 -90 0', '143021 142 143070 -90 0', '143022 142 143063 -90 0', '143026 141 143048 -90 0', '143034 136 143038 -90 0', '143027 139 143040 -90 0', '143026 141 143024 -90 0', '143028 149 143022 -90 0', '143037 135 143018 -90 0']),
 	'sheepwars_bonbons/tp_red_player': ('s_bonbons_red', ['143054 131 143023 90 0', '143067 139 143024 90 0', '143057 131 143046 90 0', '143068 142 143041 90 0', '143067 142 143050 90 0', '143063 141 143064 90 0', '143054 136 143075 90 0', '143063 139 143077 90 0', '143063 142 143089 90 0', '143062 154 143091 90 0', '143052 135 143094 90 0']),
 	'sheepwars_colored_sheeps/tp_blue_player': ('s_colored_sheeps_blue', ['154072 148 154042 90 0', '154066 148 154061 90 0', '154075 144 154078 90 0', '154072 140 154049 90 0', '154072 140 154057 90 0', '154069 128 154046 90 0', '154069 128 154061 90 0', '154072 147 154051 90 0']),
@@ -43,23 +43,23 @@ TP_CYCLES: dict[str, tuple] = {
 }
 
 
-def write_if_race(name: str, laps: int, checkpoints: int, cps: list, fx: list) -> None:
+def write_if_race(name: str, laps: int, checkpoints: int, cps: list[tuple[str, ...]], fx: list[tuple[str, ...]]) -> None:
 	""" Summon a race map's checkpoint + effect-block markers and forceload their chunks. """
 	lines: list[str] = [f"scoreboard players set #total_laps switch.data {laps}", f"scoreboard players set #total_checkpoints switch.data {checkpoints}", ""]
 	for x, y, z, cp, dx, dy, dz in cps:
 		lines.append(f'summon marker {x} {y} {z} {{Tags:["switch.checkpoint","switch.can_hard_reset"],data:{{cp:{cp}, dx:{dx}, dy:{dy}, dz:{dz}}}}}')
 	lines.append("")
-	lines += [f"forceload add {x} {z}" for x, y, z, *_ in cps]
+	lines += [f"forceload add {c[0]} {c[2]}" for c in cps]
 	if fx:
 		lines.append("")
 		lines += [f'summon marker {x} {y} {z} {{Tags:["switch.effect_block","{tag}"]}}' for x, y, z, tag in fx]
 		if len(fx) > 1:
 			lines.append("")
-		lines += [f"forceload add {x} {z}" for x, y, z, _tag in fx]
+		lines += [f"forceload add {c[0]} {c[2]}" for c in fx]
 	write_function(f"switch:maps/survival/{name}/if_race", "\n".join(lines) + "\n")
 
 
-def write_tp_cycle(key: str, var: str, coords: list) -> None:
+def write_tp_cycle(key: str, var: str, coords: list[str]) -> None:
 	""" Round-robin spawn cycle: bump a score and teleport @s to the matching coordinate. """
 	lines: list[str] = [f"scoreboard players add #{var} switch.data 1", ""]
 	lines += [f"execute if score #{var} switch.data matches {i} run tp @s {c}" for i, c in enumerate(coords, 1)]

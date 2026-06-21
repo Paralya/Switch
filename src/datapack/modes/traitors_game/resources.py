@@ -1,10 +1,12 @@
 
 # Imports
+from typing import Any
+
 from beet import Advancement, LootTable
 from stewbeet.core import Mem, set_json_encoder
 
 
-def ninja_kill(objective: str, bounds: dict) -> dict:
+def ninja_kill(objective: str, bounds: dict[str, Any]) -> dict[str, Any]:
 	""" player_killed_entity advancement gated on a temp score range. """
 	return {
 		"criteria": {"requirement": {

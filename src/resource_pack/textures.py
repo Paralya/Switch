@@ -1,23 +1,26 @@
 
 # Imports
+from typing import Any
+
 import stouputils as stp
 from beet import Texture, TextureMcmeta
-from stewbeet.core import Mem, set_json_encoder, texture_mcmeta
+from stewbeet.core import Mem, set_json_encoder
+
 # FIXME: in stewbeet there is a write helper for textures ("texture_mcmeta"), may consider using it
 
 ROOT: str = stp.get_root_path(__file__)
 
 
-def nine_slice(border: int, stretch_inner: bool = False) -> dict:
+def nine_slice(border: int, stretch_inner: bool = False) -> dict[str, Any]:
 	""" A GUI nine-slice scaling mcmeta. """
-	scaling: dict = {"type": "nine_slice", "width": 100, "height": 100, "border": border}
+	scaling: dict[str, Any] = {"type": "nine_slice", "width": 100, "height": 100, "border": border}
 	if stretch_inner:
 		scaling["stretch_inner"] = True
 	return {"gui": {"scaling": scaling}}
 
 
 # Tooltip sprite name -> its mcmeta
-TOOLTIPS: dict[str, dict] = {
+TOOLTIPS: dict[str, dict[str, Any]] = {
 	"success_background": nine_slice(30),
 	"success_frame": nine_slice(15, stretch_inner=True),
 	"failure_background": nine_slice(30),

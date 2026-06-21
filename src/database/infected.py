@@ -1,6 +1,8 @@
 
 # ruff: noqa: E501, RUF005
 # Imports
+from typing import Any
+
 from stewbeet.core import Equipment, Item, Mem, Texture, set_json_encoder
 
 
@@ -33,7 +35,7 @@ def setup_infected_items() -> None:
 	for i, sword in enumerate(SWORDS):
 		material: str = sword.split(":")[1].title()
 		sword_model: str = f"{sword}_sword"
-		sword_attribute: list[dict] = [{
+		sword_attribute: list[dict[str, Any]] = [{
 			"type": "attack_damage", "slot": "mainhand", "id": "base_attack_damage",
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
@@ -46,7 +48,7 @@ def setup_infected_items() -> None:
 	for i, armor in enumerate(CHESTPLATES):
 		material: str = armor.split(":")[1].title()
 		armor_model: str = f"{armor}_chestplate"
-		armor_attribute: list[dict] = [{
+		armor_attribute: list[dict[str, Any]] = [{
 			"type": "armor", "slot": "chest", "id": "switch.armor",
 			"amount": 4.00 + (0.05 * i), "operation": "add_value"
 		}]
