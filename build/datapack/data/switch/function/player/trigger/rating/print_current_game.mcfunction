@@ -4,6 +4,7 @@
 # @executed	as @a[tag=!detached]
 #
 # @within	switch:modes/_common/process_end/last_survivor [ as @a[tag=!detached] ]
+#			switch:modes/_common/process_end/spectate_only [ as @a[tag=!detached] ]
 #			switch:modes/beat_the_kings/process_end [ as @a[tag=!detached] ]
 #			switch:modes/block_party/process_end [ as @a[tag=!detached] ]
 #			switch:modes/boat_race/process_end [ as @a[tag=!detached] ]
@@ -22,8 +23,6 @@
 #			switch:modes/glassrunner/end/process_end [ as @a[tag=!detached] ]
 #			switch:modes/infected/process_end [ as @a[tag=!detached] ]
 #			switch:modes/laser_game/process_end [ as @a[tag=!detached] ]
-#			switch:modes/layers_2_teams/process_end [ as @a[tag=!detached] ]
-#			switch:modes/layers_4_teams/process_end [ as @a[tag=!detached] ]
 #			switch:modes/minigolf/process_end [ as @a[tag=!detached] ]
 #			switch:modes/mlg_a_coudre/process_end [ as @a[tag=!detached] ]
 #			switch:modes/moutron/process_end [ as @a[tag=!detached] ]

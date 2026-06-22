@@ -1,0 +1,12 @@
+
+#> switch:modes/_common/process_end/spectate_only
+#
+# @within	switch:modes/layers_2_teams/process_end
+#			switch:modes/layers_4_teams/process_end
+#
+
+scoreboard players add #process_end switch.data 1
+execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
+execute if score #process_end switch.data matches 200 run function switch:engine/restart
+

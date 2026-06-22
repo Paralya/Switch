@@ -2,6 +2,7 @@
 #> switch:engine/restart
 #
 # @within	switch:modes/_common/process_end/last_survivor
+#			switch:modes/_common/process_end/spectate_only
 #			switch:modes/_coupdetat/process_end
 #			switch:modes/beat_the_kings/process_end
 #			switch:modes/block_party/process_end
@@ -21,8 +22,6 @@
 #			switch:modes/glassrunner/end/process_end
 #			switch:modes/infected/process_end
 #			switch:modes/laser_game/process_end
-#			switch:modes/layers_2_teams/process_end
-#			switch:modes/layers_4_teams/process_end
 #			switch:modes/minigolf/process_end
 #			switch:modes/mlg_a_coudre/process_end
 #			switch:modes/moutron/process_end

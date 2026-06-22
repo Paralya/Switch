@@ -17,11 +17,5 @@ execute if data storage switch:main {map:"layers_2_teams"} if entity @s[team=swi
 execute if data storage switch:main {map:"layers_2_teams"} if entity @s[team=switch.temp.blue] run tp @s 27009 159 27031 -90 0
 
 # Starter kit
-attribute @s attack_speed base set 2048
-give @s stone_pickaxe
-give @s stone_axe
-give @s netherite_upgrade_smithing_template 5
-give @s apple 12
-give @s tnt 4
-give @s flint_and_steel 1
+function switch:modes/_common/layers_starter_kit
 

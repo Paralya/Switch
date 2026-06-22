@@ -49,6 +49,17 @@ scoreboard players operation #secs switch.data = #remaining_time switch.data
 scoreboard players operation #secs switch.data %= #60 switch.data
 """)
 
+	# /layers_starter_kit (shared stone-tools loadout for the layers_2_teams / layers_4_teams modes)
+	write_function(f"{path}/layers_starter_kit", """
+attribute @s attack_speed base set 2048
+give @s stone_pickaxe
+give @s stone_axe
+give @s netherite_upgrade_smithing_template 5
+give @s apple 12
+give @s tnt 4
+give @s flint_and_steel 1
+""")
+
 	# /racing_start_setup (ranking teams generated from RANKING_TEAMS)
 	team_add: str = "\n".join(
 		f'team add switch.temp.{i} {{"text":"[{label}]","color":"{color}"}}'
@@ -257,6 +268,15 @@ execute if score #process_end switch.data matches 1 run gamemode spectator @a[ta
 $execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function $(death)
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
+execute if score #process_end switch.data matches 200 run function switch:engine/restart
+""")
+
+	# /process_end/spectate_only (process_end for modes that reward the winner elsewhere, e.g. in
+	# detect_end: just spectate everyone, rate the game, then loop to restart.)
+	write_function(f"{path}/process_end/spectate_only", """
+scoreboard players add #process_end switch.data 1
+execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 """)
 
