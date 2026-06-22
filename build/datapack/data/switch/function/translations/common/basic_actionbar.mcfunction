@@ -1,9 +1,15 @@
 
 #> switch:translations/common/basic_actionbar
 #
-# @within	switch:modes/capture_the_flag/second
+# @within	switch:modes/beat_the_kings/translations/second
+#			switch:modes/capture_the_flag/second
+#			switch:modes/layers_2_teams/translations/second
+#			switch:modes/layers_4_teams/translations/second
+#			switch:modes/one_shot/translations/second
 #			switch:modes/rush_the_point/second_common
 #			switch:modes/sheepwars/second
+#			switch:modes/spectres_game/translations/second
+#			switch:modes/traitors_game/translations/second
 #
 
 # French

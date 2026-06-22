@@ -423,6 +423,12 @@ kill @s
 
 
 # Create the function that generates a folder for a gamemode with regeneration using /clone
+def check_view_and_identity(view: tuple[float, float, float, float, float], identity: tuple[str, ...]) -> tuple[str, str, str]:
+	""" Validate the view tuple (5 elements) and unpack (namespace, name, credits) from identity (credits optional). """
+	assert len(view) == 5, f"The view tuple must contain 5 elements: (x, y, z, yaw, pitch), got {len(view)} for {identity[0]}."
+	return identity[0], identity[1], identity[2] if len(identity) > 2 else ""
+
+
 def clone_survival(
 	paste_start_height: int,
 	start_pos: tuple[int, ...],
@@ -440,13 +446,8 @@ def clone_survival(
 		view				(tuple)	: The coordinates and orientation to teleport the players
 		racing_pos			(tuple)	: Start position (tuple), orientation (int), and count (int) for the start line
 	"""
-	# Assertions
-	assert len(view) == 5, f"The view tuple must contain 5 elements: (x, y, z, yaw, pitch), got {len(view)} for {identity[0]}."
-
-	# Extract namespace, name and credits
-	namespace: str = identity[0]
-	name: str = identity[1]
-	credits: str = identity[2] if len(identity) > 2 else ""
+	# Validate view + extract identity (namespace, name, credits)
+	namespace, name, credits = check_view_and_identity(view, identity)
 
 	# DEBUG
 	if True:
@@ -544,13 +545,8 @@ def fill_survival(
 		block_tag_to_replace	(str)	: The block tag to replace
 		view					(tuple)	: The coordinates and orientation to teleport the players
 	"""
-	# Assertions
-	assert len(view) == 5, f"The view tuple must contain 5 elements: (x, y, z, yaw, pitch), got {len(view)} for {identity[0]}."
-
-	# Extract namespace, name and credits
-	namespace: str = identity[0]
-	name: str = identity[1]
-	credits: str = identity[2] if len(identity) > 2 else ""
+	# Validate view + extract identity (namespace, name, credits)
+	namespace, name, credits = check_view_and_identity(view, identity)
 
 	## Calculate the divider depending on the start and end positions
 	divider = calculate_divider(start_pos, end_pos)

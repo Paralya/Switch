@@ -952,49 +952,28 @@ setblock 0 13 0 air
 function switch:player/trigger/succes/main with storage switch:main input
 """)
 
-	# /trigger/succes/main
-	write_function(f"{path}/trigger/succes/main", """
+	# /trigger/succes/main (list each advancement done/not-done, grouped by category color)
+	SUCCES_COLORS: tuple[str, ...] = ("blue", "green", "yellow", "red")
+	def succes_blocks(loop: str) -> str:
+		return "\n".join(
+			"data modify storage switch:temp copy set value []\n"
+			f'data modify storage switch:temp copy append from storage switch:advancements all[{{color:"{c}"}}]\n'
+			'$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"\n'
+			f"execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/{loop} with storage switch:temp copy[0]"
+			for c in SUCCES_COLORS
+		)
+	write_function(f"{path}/trigger/succes/main", f"""
 ## File attribut: Ignore translations
 
-## For each of the advancements, print it in order : [done:{green,yellow,red},not done:{green,yellow,red}]
+## For each of the advancements, print it in order : [done:{{green,yellow,red}},not done:{{green,yellow,red}}]
 function switch:player/translations/trigger_succes_main with storage switch:main input
 
 # Done advancements
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"blue"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"green"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"yellow"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"red"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
+{succes_blocks("display_loop")}
 
 # Not done yet
 tellraw @s ""
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"blue"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"green"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"yellow"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
-data modify storage switch:temp copy set value []
-data modify storage switch:temp copy append from storage switch:advancements all[{color:"red"}]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
-execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
+{succes_blocks("display_loop_2")}
 """)
 
 	# /tutorial/finish
