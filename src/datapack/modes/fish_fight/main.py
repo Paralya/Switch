@@ -153,11 +153,7 @@ scoreboard players remove @s switch.alive 1
 execute if entity @s[scores={{switch.alive=1..}}] run function {path}/teams_tp/tp_give
 
 
-execute unless score @s switch.alive matches 1.. run scoreboard players add @s switch.stats.deaths 1
-execute unless score @s switch.alive matches 1.. run gamemode spectator @s
-execute unless score @s switch.alive matches 1.. at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
-execute unless score @s switch.alive matches 1.. run effect clear @s
-execute unless score @s switch.alive matches 1.. run clear @s
+function switch:modes/_common/death_spectator_lives
 
 
 
@@ -501,10 +497,7 @@ execute if score #tp_random switch.data matches 18 run tp @s 155989 151 155987
 
 	# /xp_bar
 	write_function(f"{path}/xp_bar", """
-execute if entity @s[scores={switch.alive=1}] run scoreboard players set #points switch.data 333
-execute if entity @s[scores={switch.alive=2}] run scoreboard players set #points switch.data 666
-execute if entity @s[scores={switch.alive=3}] run scoreboard players set #points switch.data 1000
-function switch:modes/_common/xp_bar/points_at_s
+function switch:modes/_common/xp_bar/three_lives
 """)
 
 	# /block_disappear/detect_color (macro)

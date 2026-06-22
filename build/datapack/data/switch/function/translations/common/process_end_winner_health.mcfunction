@@ -1,9 +1,7 @@
 
 #> switch:translations/common/process_end_winner_health
 #
-# @within	switch:modes/castagne/process_end
-#			switch:modes/cigogne/process_end
-#			switch:modes/pillars_of_fortune/process_end
+# @within	switch:modes/_common/process_end/winner_by_health
 #
 
 # French

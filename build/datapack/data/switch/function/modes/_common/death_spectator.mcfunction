@@ -1,7 +1,10 @@
 
 #> switch:modes/_common/death_spectator
 #
-# @within	switch:modes/spleef/death
+# @executed	at @s
+#
+# @within	switch:modes/bombardement/death
+#			switch:modes/spleef/death
 #			switch:modes/tnt_run/death
 #
 

@@ -1,12 +1,9 @@
 
 #> switch:modes/_common/xp_bar/points_at_s
 #
-# @executed	as @a[tag=!detached,gamemode=!spectator]
-#
-# @within	switch:modes/fireblast/xp_bar
-#			switch:modes/fish_fight/xp_bar
+# @within	switch:modes/_common/xp_bar/three_lives
+#			switch:modes/fireblast/xp_bar
 #			switch:modes/laser_game/xp_bar
-#			switch:modes/pitchout/xp_bar
 #
 
 # Divide points

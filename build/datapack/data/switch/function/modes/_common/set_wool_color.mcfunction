@@ -3,9 +3,8 @@
 #
 # @executed	at @s
 #
-# @within	switch:modes/de_a_coudre/done
+# @within	switch:modes/_common/place_wool_count_sides
 #			switch:modes/mlg_a_coudre/done
-#			switch:modes/simultaneous_jump/done
 #
 
 scoreboard players operation #block switch.data %= #16 switch.data

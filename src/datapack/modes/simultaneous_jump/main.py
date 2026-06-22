@@ -31,14 +31,7 @@ scoreboard players operation @s switch.temp.color = #position switch.data
 
 	# /done (translation ref rewritten)
 	write_function(f"{path}/done", """
-scoreboard players operation #block switch.data = @s switch.temp.color
-function switch:modes/_common/set_wool_color
-
-scoreboard players set #points switch.data 1
-execute positioned ~-1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
-execute positioned ~ ~ ~-1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
-execute positioned ~ ~ ~1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
-execute positioned ~1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
+function switch:modes/_common/place_wool_count_sides
 
 execute unless score #test_mode switch.data matches 1 if score #points switch.data matches 5 on attacker run advancement grant @s only switch:visible/44
 execute if score #points switch.data matches 5 run setblock ~ ~ ~ emerald_block

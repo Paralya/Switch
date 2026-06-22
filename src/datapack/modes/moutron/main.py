@@ -257,23 +257,9 @@ execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers 91
 """)
 
 	# /spread_players/whity_lab
-	write_function(f"{path}/spread_players/whity_lab", f"""
-spreadplayers 91051 91051 2 25 under 106 false @a[tag=!detached]
-
-## Assurance commands
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-function {path}/spread_players/_ensure_spread_whity_lab
-""")
+	write_function(f"{path}/spread_players/whity_lab",
+		"\nspreadplayers 91051 91051 2 25 under 106 false @a[tag=!detached]\n\n## Assurance commands\n"
+		+ f"function {path}/spread_players/_ensure_spread_whity_lab\n" * 12)
 
 	# /tag_owner/as_nearest_marker
 	write_function(f"{path}/tag_owner/as_nearest_marker", f"""
@@ -296,3 +282,4 @@ execute store success score #success switch.data run data modify storage switch:
 # Add temporary tag if it's player (copy not replaced = same data)
 execute if score #success switch.data matches 0 run tag @s add switch.moutron_killer
 """)
+

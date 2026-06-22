@@ -31,6 +31,16 @@ effect clear @s
 clear @s
 """)
 
+	# /death_spectator_lives (like death_spectator but gated on @s having no lives left,
+	# i.e. switch.alive < 1: count the death, spectate, return to the map marker, clear effects/items)
+	write_function(f"{path}/death_spectator_lives", """
+execute unless score @s switch.alive matches 1.. run scoreboard players add @s switch.stats.deaths 1
+execute unless score @s switch.alive matches 1.. run gamemode spectator @s
+execute unless score @s switch.alive matches 1.. at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score @s switch.alive matches 1.. run effect clear @s
+execute unless score @s switch.alive matches 1.. run clear @s
+""")
+
 	# /detect_chosen_class
 	write_function(f"{path}/detect_chosen_class", """
 # Get which class got chosen
@@ -112,6 +122,19 @@ scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 1
 """)
 
+	# /place_wool_count_sides (set @s's wool color block here, then count how many of the 4 horizontal
+	# neighbours are solid (not water/air) into #points 1..5; used by de_a_coudre / simultaneous_jump)
+	write_function(f"{path}/place_wool_count_sides", """
+scoreboard players operation #block switch.data = @s switch.temp.color
+function switch:modes/_common/set_wool_color
+
+scoreboard players set #points switch.data 1
+execute positioned ~-1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
+execute positioned ~ ~ ~-1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
+execute positioned ~ ~ ~1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
+execute positioned ~1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
+""")
+
 	# /set_wool_color
 	setblocks: str = "\n".join(
 		f"execute if score #block switch.data matches {i} run setblock ~ ~ ~ {color}_wool"
@@ -184,6 +207,14 @@ data modify storage switch:main temp set value {selector:"@s", xp:0, type:""}
 execute store result storage switch:main temp.xp int 1 run scoreboard players get #points switch.data
 function switch:modes/_common/xp_bar/macro with storage switch:main temp
 xp set @s 0 levels
+""")
+
+	# /xp_bar/three_lives (lives-based bar: 1/2/3 remaining lives -> 333/666/1000 points then points_at_s)
+	write_function(f"{path}/xp_bar/three_lives", """
+execute if entity @s[scores={switch.alive=1}] run scoreboard players set #points switch.data 333
+execute if entity @s[scores={switch.alive=2}] run scoreboard players set #points switch.data 666
+execute if entity @s[scores={switch.alive=3}] run scoreboard players set #points switch.data 1000
+function switch:modes/_common/xp_bar/points_at_s
 """)
 
 	# /teleport_to_death (teleport @s onto the matching marker, used by id-based death systems)
@@ -278,5 +309,18 @@ scoreboard players add #process_end switch.data 1
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
+""")
+
+	# /process_end/winner_by_health (shared core for survival last-standing modes: reward the lone
+	# survivor + show their health, run the mode's own death, then rate. The caller adds its own
+	# restart tail (and any extra logic). The per-mode death function is the {death:"..."} macro arg.)
+	write_function(f"{path}/process_end/winner_by_health", """
+scoreboard players add #process_end switch.data 1
+
+execute if score #process_end switch.data matches 1 if score #remaining_players switch.data matches 1 store result score #health switch.data run data get entity @r[gamemode=survival] Health
+execute if score #process_end switch.data matches 1 if score #remaining_players switch.data matches 1 as @a[tag=!detached,gamemode=survival] at @s run function switch:engine/add_win
+function switch:translations/common/process_end_winner_health
+$execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function $(death)
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 """)
 

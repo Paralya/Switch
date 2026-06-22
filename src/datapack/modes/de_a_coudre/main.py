@@ -36,14 +36,7 @@ scoreboard players operation @s switch.temp.order = #position switch.data
 
 	# /done
 	write_function(f"{path}/done", f"""
-scoreboard players operation #block switch.data = @s switch.temp.color
-function switch:modes/_common/set_wool_color
-
-scoreboard players set #points switch.data 1
-execute positioned ~-1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
-execute positioned ~ ~ ~-1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
-execute positioned ~ ~ ~1 unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
-execute positioned ~1 ~ ~ unless block ~ ~ ~ water unless block ~ ~ ~ air run scoreboard players add #points switch.data 1
+function switch:modes/_common/place_wool_count_sides
 
 execute if score #points switch.data matches 5 run setblock ~ ~ ~ emerald_block
 execute if score #points switch.data matches 5 run summon firework_rocket ~ ~1 ~ {{LifeTime:30,FireworksItem:{{id:"minecraft:firework_rocket",count:1,components:{{"minecraft:fireworks":{{explosions:[{{shape:"burst",has_twinkle:true,has_trail:true,colors:[I;65280]}}]}}}}}}}}

@@ -470,6 +470,20 @@ $team modify switch.glassrunner.p_red suffix [{"text": "Red: ","color":"red"},{"
 $team modify switch.glassrunner.p_blue suffix [{"text": "Blue: ","color":"blue"},{"text":"$(blue)","color":"dark_blue"},{"text":" points"}]
 """)
 
+	# /ctp/<loc>/capture_<color> (per capture point: reset its timer, award points + money + xp + sound)
+	for loc, pts in (("center", 2), ("side1", 1), ("side2", 1)):
+		for color in ("blue", "red"):
+			write_function(f"{path}/ctp/{loc}/capture_{color}", f"""
+scoreboard players set #glassrunner.ctp.{loc}.{color}.timer switch.data 0
+
+scoreboard players add #glassrunner.points.{color} switch.data {pts}
+scoreboard players add @a[tag=!detached,team=switch.glassrunner.{color}] switch.glassrunner.money 2
+xp add @a[tag=!detached,team=switch.glassrunner.{color}] 2 levels
+
+
+execute as @a[tag=!detached,team=switch.glassrunner.{color}] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
+""")
+
 	# /ctp/center/adding_timer
 	write_function(f"{path}/ctp/center/adding_timer", """
 execute if entity @s[team=switch.glassrunner.red] run scoreboard players add #glassrunner.ctp.center.red.timer switch.data 1
@@ -493,30 +507,6 @@ execute if score #glassrunner.ctp.center.blue.timer switch.data matches 11..12 r
 execute if score #glassrunner.ctp.center.blue.timer switch.data matches 13..14 run place template switch:glassrunner/center_blue/7 2997 127 2997
 execute if score #glassrunner.ctp.center.blue.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/center/capture_blue
 # /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/center/capture_blue
-	write_function(f"{path}/ctp/center/capture_blue", """
-scoreboard players set #glassrunner.ctp.center.blue.timer switch.data 0
-
-scoreboard players add #glassrunner.points.blue switch.data 2
-scoreboard players add @a[tag=!detached,team=switch.glassrunner.blue] switch.glassrunner.money 2
-xp add @a[tag=!detached,team=switch.glassrunner.blue] 2 levels
-
-
-execute as @a[tag=!detached,team=switch.glassrunner.blue] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
-""")
-
-	# /ctp/center/capture_red
-	write_function(f"{path}/ctp/center/capture_red", """
-scoreboard players set #glassrunner.ctp.center.red.timer switch.data 0
-
-scoreboard players add #glassrunner.points.red switch.data 2
-scoreboard players add @a[tag=!detached,team=switch.glassrunner.red] switch.glassrunner.money 2
-xp add @a[tag=!detached,team=switch.glassrunner.red] 2 levels
-
-
-execute as @a[tag=!detached,team=switch.glassrunner.red] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
 """)
 
 	# /ctp/center/red
@@ -562,30 +552,6 @@ execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 15.. run 
 # /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
 """)
 
-	# /ctp/side1/capture_blue
-	write_function(f"{path}/ctp/side1/capture_blue", """
-scoreboard players set #glassrunner.ctp.side1.blue.timer switch.data 0
-
-scoreboard players add #glassrunner.points.blue switch.data 1
-scoreboard players add @a[tag=!detached,team=switch.glassrunner.blue] switch.glassrunner.money 2
-xp add @a[tag=!detached,team=switch.glassrunner.blue] 2 levels
-
-
-execute as @a[tag=!detached,team=switch.glassrunner.blue] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
-""")
-
-	# /ctp/side1/capture_red
-	write_function(f"{path}/ctp/side1/capture_red", """
-scoreboard players set #glassrunner.ctp.side1.red.timer switch.data 0
-
-scoreboard players add #glassrunner.points.red switch.data 1
-scoreboard players add @a[tag=!detached,team=switch.glassrunner.red] switch.glassrunner.money 2
-xp add @a[tag=!detached,team=switch.glassrunner.red] 2 levels
-
-
-execute as @a[tag=!detached,team=switch.glassrunner.red] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
-""")
-
 	# /ctp/side1/red
 	write_function(f"{path}/ctp/side1/red", """
 execute if score #glassrunner.ctp.side1.red.timer switch.data matches 1..3 run place template switch:glassrunner/side1_red/1 2924 127 3074
@@ -625,30 +591,6 @@ execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 10..12 ru
 execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 13..15 run place template switch:glassrunner/side1_blue/5 3074 127 2924
 execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/side2/capture_blue
 # /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/side2/capture_blue
-	write_function(f"{path}/ctp/side2/capture_blue", """
-scoreboard players set #glassrunner.ctp.side2.blue.timer switch.data 0
-
-scoreboard players add #glassrunner.points.blue switch.data 1
-scoreboard players add @a[tag=!detached,team=switch.glassrunner.blue] switch.glassrunner.money 2
-xp add @a[tag=!detached,team=switch.glassrunner.blue] 2 levels
-
-
-execute as @a[tag=!detached,team=switch.glassrunner.blue] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
-""")
-
-	# /ctp/side2/capture_red
-	write_function(f"{path}/ctp/side2/capture_red", """
-scoreboard players set #glassrunner.ctp.side2.red.timer switch.data 0
-
-scoreboard players add #glassrunner.points.red switch.data 1
-scoreboard players add @a[tag=!detached,team=switch.glassrunner.red] switch.glassrunner.money 2
-xp add @a[tag=!detached,team=switch.glassrunner.red] 2 levels
-
-
-execute as @a[tag=!detached,team=switch.glassrunner.red] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
 """)
 
 	# /ctp/side2/red
