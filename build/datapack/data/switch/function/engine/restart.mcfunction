@@ -1,7 +1,8 @@
 
 #> switch:engine/restart
 #
-# @within	switch:modes/_coupdetat/process_end
+# @within	switch:modes/_common/process_end/last_survivor
+#			switch:modes/_coupdetat/process_end
 #			switch:modes/beat_the_kings/process_end
 #			switch:modes/block_party/process_end
 #			switch:modes/boat_race/process_end
@@ -22,7 +23,6 @@
 #			switch:modes/laser_game/process_end
 #			switch:modes/layers_2_teams/process_end
 #			switch:modes/layers_4_teams/process_end
-#			switch:modes/memory_mine/process_end
 #			switch:modes/minigolf/process_end
 #			switch:modes/mlg_a_coudre/process_end
 #			switch:modes/moutron/process_end
@@ -45,7 +45,6 @@
 #			switch:modes/spectres_game/process_end
 #			switch:modes/spleef/process_end
 #			switch:modes/thunder_spear/process_end
-#			switch:modes/tnt_run/process_end
 #			switch:modes/traitors_game/process_end
 #			switch:modes/warden_escape/process_end
 #

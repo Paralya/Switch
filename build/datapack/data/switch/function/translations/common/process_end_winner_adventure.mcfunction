@@ -1,8 +1,7 @@
 
 #> switch:translations/common/process_end_winner_adventure
 #
-# @within	switch:modes/memory_mine/process_end
-#			switch:modes/tnt_run/process_end
+# @within	switch:modes/_common/process_end/last_survivor
 #
 
 # French

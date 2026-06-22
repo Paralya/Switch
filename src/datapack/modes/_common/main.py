@@ -224,3 +224,31 @@ data remove entity @s data.Inventory[0]
 execute if data entity @s data.Inventory[0] run function {path}/death/inventory_drop
 """)
 
+	# /process_end/winner_by_points (shared end-of-game block for point-based modes: tag the
+	# highest-switch.temp.points player(s) as the winner, reward + announce. All lines self-guard on
+	# #process_end==1, so modes call this unconditionally inside their /process_end.)
+	write_function(f"{path}/process_end/winner_by_points", """
+execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
+execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data 0
+execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached] switch.temp.points
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] if score @s switch.temp.points = #max switch.data run tag @s add switch.winner
+execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_win
+function switch:translations/common/process_end_winner_points
+execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
+""")
+
+	# /process_end/last_survivor (shared full process_end for last-man-standing adventure modes:
+	# reward the lone survivor, announce, spectate everyone, run the mode's own death, then loop to
+	# restart. The per-mode death function is passed as the {death:"..."} macro argument.)
+	write_function(f"{path}/process_end/last_survivor", """
+scoreboard players add #process_end switch.data 1
+
+execute if score #process_end switch.data matches 1 if score #remaining_players switch.data matches 1 as @a[tag=!detached,gamemode=adventure] at @s run function switch:engine/add_win
+function switch:translations/common/process_end_winner_adventure
+execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
+$execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function $(death)
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
+
+execute if score #process_end switch.data matches 200 run function switch:engine/restart
+""")
+

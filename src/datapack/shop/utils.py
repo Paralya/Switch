@@ -131,6 +131,21 @@ function switch:shop/translations/{shop_name}
 """)
 
 
+def append_sell_button(tellraw_json: list[JsonDict], downgrade_hover_text: str, sell_label: str, sell_refund: int, sell_counter: int, lang_id: str) -> None:
+	""" Append the shop's sell [-] button (red, with refund + optional downgrade hover) to a tellraw line. """
+	hover_value: list[JsonDict] = []
+	if downgrade_hover_text:
+		hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
+	hover_value.append({"text": f"{sell_label} {sell_refund}", "color": "yellow"})
+	hover_value.append(MONEY[lang_id])
+
+	tellraw_json.append({
+		"text": " [-]", "color": "red",
+		"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {sell_counter}"},
+		"hover_event": {"action": "show_text", "value": hover_value}
+	})
+
+
 def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	""" Write the translations of the shop
 	Args:
@@ -217,17 +232,7 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 
 					# Add sell button [-] if player has at least one level (j > 0)
 					if j > 0:
-						hover_value: list[JsonDict] = []
-						if downgrade_hover_text:
-							hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
-						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}", "color": "yellow"})
-						hover_value.append(MONEY[lang_id])
-
-						tellraw_json.append({
-							"text": " [-]", "color": "red",
-							"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {sell_counter}"},
-							"hover_event": {"action": "show_text", "value": hover_value}
-						})
+						append_sell_button(tellraw_json, downgrade_hover_text, sell_text[lang_id], sell_refund, sell_counter, lang_id)
 
 					# Add buy button [+]
 					tellraw_json.append({
@@ -257,17 +262,7 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 						hover_text_dict: dict[str, str] = data['upgrades'][j-1]["hover_text"]
 						downgrade_hover_text = hover_text_dict.get(lang_id, hover_text_dict.get("en", "")).replace("->", "<-")
 
-						hover_value = []
-						if downgrade_hover_text:
-							hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
-						hover_value.append({"text": f"{sell_text[lang_id]} {sell_refund}", "color": "yellow"})
-						hover_value.append(MONEY[lang_id])
-
-						tellraw_json.append({
-							"text": " [-]", "color": "red",
-							"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {sell_counter}"},
-							"hover_event": {"action": "show_text", "value": hover_value}
-						})
+						append_sell_button(tellraw_json, downgrade_hover_text, sell_text[lang_id], sell_refund, sell_counter, lang_id)
 
 					tellraw_json.append({"text":" [+]","color":"gray"})
 

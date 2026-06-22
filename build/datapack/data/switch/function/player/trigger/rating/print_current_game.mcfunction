@@ -3,7 +3,8 @@
 #
 # @executed	as @a[tag=!detached]
 #
-# @within	switch:modes/beat_the_kings/process_end [ as @a[tag=!detached] ]
+# @within	switch:modes/_common/process_end/last_survivor [ as @a[tag=!detached] ]
+#			switch:modes/beat_the_kings/process_end [ as @a[tag=!detached] ]
 #			switch:modes/block_party/process_end [ as @a[tag=!detached] ]
 #			switch:modes/boat_race/process_end [ as @a[tag=!detached] ]
 #			switch:modes/bombardement/process_end [ as @a[tag=!detached] ]
@@ -23,7 +24,6 @@
 #			switch:modes/laser_game/process_end [ as @a[tag=!detached] ]
 #			switch:modes/layers_2_teams/process_end [ as @a[tag=!detached] ]
 #			switch:modes/layers_4_teams/process_end [ as @a[tag=!detached] ]
-#			switch:modes/memory_mine/process_end [ as @a[tag=!detached] ]
 #			switch:modes/minigolf/process_end [ as @a[tag=!detached] ]
 #			switch:modes/mlg_a_coudre/process_end [ as @a[tag=!detached] ]
 #			switch:modes/moutron/process_end [ as @a[tag=!detached] ]
@@ -46,7 +46,6 @@
 #			switch:modes/spectres_game/process_end [ as @a[tag=!detached] ]
 #			switch:modes/spleef/process_end [ as @a[tag=!detached] ]
 #			switch:modes/thunder_spear/process_end [ as @a[tag=!detached] ]
-#			switch:modes/tnt_run/process_end [ as @a[tag=!detached] ]
 #			switch:modes/traitors_game/process_end [ as @a[tag=!detached] ]
 #			switch:modes/warden_escape/process_end [ as @a[tag=!detached] ]
 #
