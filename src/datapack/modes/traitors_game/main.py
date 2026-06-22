@@ -433,10 +433,7 @@ execute as @e[type=chest_minecart] run data modify entity @s Glowing set value 1
 execute if score #sc_solitaire switch.data matches 1 if score #traitors_game_seconds switch.data matches 90 run function switch:modes/traitors_game/roles/choose_solitaire
 
 # Actionbar
-scoreboard players operation #mins switch.data = #remaining_time switch.data
-scoreboard players operation #mins switch.data /= #60 switch.data
-scoreboard players operation #secs switch.data = #remaining_time switch.data
-scoreboard players operation #secs switch.data %= #60 switch.data
+function switch:modes/_common/compute_mins_secs
 function switch:modes/traitors_game/translations/second
 """)
 

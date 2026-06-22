@@ -140,10 +140,7 @@ execute if score #protect_the_king_seconds switch.data matches 0 run team modify
 execute if score #protect_the_king_seconds switch.data matches 0 run team modify switch.temp.blue collisionRule always
 
 # Remaining time
-scoreboard players operation #mins switch.data = #remaining_time switch.data
-scoreboard players operation #mins switch.data /= #60 switch.data
-scoreboard players operation #secs switch.data = #remaining_time switch.data
-scoreboard players operation #secs switch.data %= #60 switch.data
+function switch:modes/_common/compute_mins_secs
 function switch:translations/common/actionbar_time_pvp19
 """)
 

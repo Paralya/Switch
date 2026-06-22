@@ -445,10 +445,7 @@ execute if score #TASKS_GAME switch.data matches 1 if score #temp switch.data ma
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,gamemode=survival,distance=0.1..48] run effect give @s glowing 2 0 true
 
 # Actionbar
-scoreboard players operation #mins switch.data = #remaining_time switch.data
-scoreboard players operation #mins switch.data /= #60 switch.data
-scoreboard players operation #secs switch.data = #remaining_time switch.data
-scoreboard players operation #secs switch.data %= #60 switch.data
+function switch:modes/_common/compute_mins_secs
 function switch:modes/spectres_game/translations/second
 """)
 

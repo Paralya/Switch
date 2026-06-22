@@ -20,9 +20,6 @@ scoreboard players operation #temp switch.data %= #31 switch.data
 execute if score #temp switch.data matches 0 run effect give @a[tag=!detached,gamemode=!spectator] glowing 4 2 true
 
 # PVP Warning & Remaining time
-scoreboard players operation #mins switch.data = #remaining_time switch.data
-scoreboard players operation #mins switch.data /= #60 switch.data
-scoreboard players operation #secs switch.data = #remaining_time switch.data
-scoreboard players operation #secs switch.data %= #60 switch.data
+function switch:modes/_common/compute_mins_secs
 function switch:modes/one_shot/translations/second
 

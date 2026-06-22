@@ -29,9 +29,6 @@ execute if score #bonus_reload switch.data matches 31 run summon item 14063 103 
 execute if score #bonus_reload switch.data matches 31 run summon item 13937 103 14000 {Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_name":{"text":"Bridge Snowball","color":"yellow","italic":false}}},NoGravity:true,Glowing:true,CustomName:{"text":"Bridge Snowball","color":"yellow","italic":false},CustomNameVisible:true}
 
 # Run translations
-scoreboard players operation #mins switch.data = #remaining_time switch.data
-scoreboard players operation #mins switch.data /= #60 switch.data
-scoreboard players operation #secs switch.data = #remaining_time switch.data
-scoreboard players operation #secs switch.data %= #60 switch.data
+function switch:modes/_common/compute_mins_secs
 function switch:translations/common/basic_actionbar
 

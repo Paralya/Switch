@@ -242,10 +242,7 @@ execute if score #capture_the_flag_seconds switch.data matches 1.. run clear @a[
 execute if score #capture_the_flag_seconds switch.data matches 0 run function {path}/flags_summon
 
 # Display game messages
-scoreboard players operation #mins switch.data = #remaining_time switch.data
-scoreboard players operation #mins switch.data /= #60 switch.data
-scoreboard players operation #secs switch.data = #remaining_time switch.data
-scoreboard players operation #secs switch.data %= #60 switch.data
+function switch:modes/_common/compute_mins_secs
 function switch:translations/common/basic_actionbar
 """)
 

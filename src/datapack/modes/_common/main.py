@@ -41,6 +41,14 @@ execute if score @s switch.temp.chosen_class matches 0 unless items entity @s ho
 execute if score @s switch.temp.chosen_class matches 0 unless items entity @s hotbar.4 * run scoreboard players set @s switch.temp.chosen_class 5
 """)
 
+	# /compute_mins_secs (split #remaining_time into #mins and #secs for actionbar/timer displays)
+	write_function(f"{path}/compute_mins_secs", """
+scoreboard players operation #mins switch.data = #remaining_time switch.data
+scoreboard players operation #mins switch.data /= #60 switch.data
+scoreboard players operation #secs switch.data = #remaining_time switch.data
+scoreboard players operation #secs switch.data %= #60 switch.data
+""")
+
 	# /racing_start_setup (ranking teams generated from RANKING_TEAMS)
 	team_add: str = "\n".join(
 		f'team add switch.temp.{i} {{"text":"[{label}]","color":"{color}"}}'
