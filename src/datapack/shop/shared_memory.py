@@ -2,11 +2,11 @@
 # Imports
 from stewbeet import JsonDict
 
-from .dict.infected import INFECTED
-from .dict.pitchout import PITCHOUT
-from .dict.sheepwars import SHEEPWARS
-from .dict.spectres_game import SPECTRES_GAME
-from .dict.spleef import SPLEEF
+from ..modes.infected.shop import INFECTED
+from ..modes.pitchout.shop import PITCHOUT
+from ..modes.sheepwars.shop import SHEEPWARS
+from ..modes.spectres_game.shop import SPECTRES_GAME
+from ..modes.spleef.shop import SPLEEF
 
 # Constants
 STAR: str = "✮"

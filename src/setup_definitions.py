@@ -16,10 +16,9 @@ from stewbeet.core import (
 )
 
 from .database.blocks_behaviors import setup_blocks_behaviors
-from .database.infected import setup_infected_items
 from .database.misc_items import setup_misc_items
-from .database.pvpswap import setup_pvpswap
 from .datapack.main import load_datapack_json
+from .datapack.modes.infected.items import setup_infected_items
 from .resource_pack.main import load_resource_pack_json
 
 # Configuration to generate everything about the material based on "steel_ingot"
@@ -65,7 +64,6 @@ def beet_default(ctx: Context):
 	setup_misc_items()
 	setup_blocks_behaviors()
 	setup_infected_items()
-	setup_pvpswap()
 
 	# Final adjustments, you definitively should keep them!
 	add_item_model_component(black_list = [])

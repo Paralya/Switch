@@ -11,9 +11,9 @@ N_POINTS: int = 100
 ROUND_PRECISION: int = 5
 FUNCTION_PATH: str = "switch:modes/memory_mine/zone/particles"
 
-# Main function
+# Generate the rotating green particle ring shown around the memory_mine zone marker
 @stp.measure_time(message="Generated the particles for the memory mine zone")
-def main() -> None:
+def write_zone_particles() -> None:
 
 	# On file
 	write_function(FUNCTION_PATH, """
