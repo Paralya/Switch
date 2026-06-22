@@ -41,28 +41,6 @@ function switch:modes/traitors_game/translations/announce_scenarios
 execute if score #sc_silencieux switch.data matches 1 run scoreboard objectives modify switch.temp.sidebar displayname {"text":"Rôles de départ","color":"gold"}
 """)
 
-	# /death/detect
-	write_function(f"{path}/death/detect", """
-# Detect if linked player is missing
-scoreboard players set #success switch.data 0
-scoreboard players operation #player_id switch.id = @s switch.id
-execute store success score #success switch.data run tag @a[scores={switch.alive=1..},predicate=switch:has_same_id] add switch.temp
-
-execute if score #success switch.data matches 0 run tag @s add switch.player_dead
-execute if score #success switch.data matches 1 run tp @s @p[tag=switch.temp]
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory set from entity @p[tag=switch.temp] Inventory
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp equipment set from entity @p[tag=switch.temp] equipment
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.head
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.chest
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.legs
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.feet
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.offhand
-execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify entity @s data.Inventory set from storage switch:temp Inventory
-execute if score #success switch.data matches 1 run tag @p[tag=switch.temp,tag=switch.temp.inventory_changed] remove switch.temp.inventory_changed
-
-tag @a remove switch.temp
-""")
-
 	# /death/for_detective (translation ref rewritten)
 	write_function(f"{path}/death/for_detective", """
 scoreboard players set #success switch.data 0
@@ -595,7 +573,7 @@ execute at @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1}] run
 execute if score #starting_count switch.data matches 5.. at @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6}] run particle dust{color:[1.0,0.0,0.0],scale:1.0} ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[scores={switch.temp.role=5..6}]
 
 function switch:utils/on_death_run_function {function:"switch:modes/traitors_game/death/player"}
-execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/traitors_game/death/detect
+execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/_common/death/detect
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/process
 
 # Voleur

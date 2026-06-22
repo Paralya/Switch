@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -13,12 +13,9 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
-
-	# /joined
-	write_classic_death(f"{path}/joined")
 
 	# /on_new_sheep
 	write_function(f"{path}/on_new_sheep", """
@@ -151,7 +148,7 @@ scoreboard players add #shoot_da_sheep_ticks switch.data 1
 execute as @e[type=sheep] at @s run function {path}/sheep_tick
 
 # Unknown death
-function switch:utils/on_death_run_function {{function:"{path}/joined"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 ## End game
 execute if score #remaining_time switch.data matches ..0 run function {path}/process_end

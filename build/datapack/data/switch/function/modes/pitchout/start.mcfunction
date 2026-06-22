@@ -18,7 +18,7 @@ function switch:utils/choose_map_for {id:"pitchout", maps:["pitchout_1","pitchou
 scoreboard players set #spawn_count switch.data 0
 execute if data storage switch:main {map:"pitchout_1"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_1/tp_give
 execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
-execute as @a[tag=!detached] run function switch:modes/pitchout/xp_bar
+execute as @a[tag=!detached] run function switch:modes/_common/xp_bar/three_lives
 
 function switch:modes/pitchout/translations/start
 

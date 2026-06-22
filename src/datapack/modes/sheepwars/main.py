@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls
+from ..common import write_modes_calls
 from .translations import write_translations
 
 
@@ -42,9 +42,6 @@ advancement revoke @s only switch:sheepwars/lightning_strike
 execute if score #engine_state switch.data matches 3 unless score #test_mode switch.data matches 1 if data storage switch:main {current_game:"sheepwars"} if entity @e[type=lightning_bolt,distance=..3] run advancement grant @s[scores={switch.last_death=..2}] only switch:visible/19
 """)
 
-	# /death
-	write_classic_death(f"{path}/death")
-
 	# /detect_end
 	write_function(f"{path}/detect_end", f"""
 # On regarde l'état de la partie
@@ -73,8 +70,8 @@ execute if score #remaining_time switch.data matches 1 as @a[tag=!detached] at @
 """)
 
 	# /joined
-	write_function(f"{path}/joined", f"""
-execute if score #reconnect switch.data matches 0 run function {path}/death
+	write_function(f"{path}/joined", """
+execute if score #reconnect switch.data matches 0 run function switch:utils/classic_death
 """)
 
 	# /magic_wool/place (translation ref rewritten)
@@ -392,7 +389,7 @@ scoreboard players add #sheepwars_ticks switch.data 1
 execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
-function switch:utils/on_death_run_function {function:"switch:modes/sheepwars/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id:"minecraft:wither"}]}] wither 2 2 true
 
 # Kill items without custom data and give saturation

@@ -11,7 +11,7 @@ scoreboard players add #sheepwars_ticks switch.data 1
 execute as @e[type=arrow] run function switch:modes/sheepwars/tick_arrow
 
 # Détection des morts
-function switch:utils/on_death_run_function {function:"switch:modes/sheepwars/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id:"minecraft:wither"}]}] wither 2 2 true
 
 # Kill items without custom data and give saturation

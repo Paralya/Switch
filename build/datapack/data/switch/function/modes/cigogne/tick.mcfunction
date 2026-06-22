@@ -7,7 +7,7 @@
 scoreboard players add #cigogne_ticks switch.data 1
 
 ## Death system
-function switch:utils/on_death_run_function {function:"switch:modes/cigogne/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
 execute at @a[tag=!detached,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal

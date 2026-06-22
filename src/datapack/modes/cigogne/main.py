@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
 
@@ -23,9 +23,6 @@ def write_mode():
 effect clear @s absorption
 effect give @s absorption 120 0 true
 """)
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /give_items
 	write_function(f"{path}/give_items", """
@@ -36,11 +33,6 @@ item replace entity @s hotbar.4 with bow[enchantments={flame:1}]
 item replace entity @s hotbar.8 with arrow 32
 """)
 
-	# /joined
-	write_function(f"{path}/joined", f"""
-function {path}/death
-""")
-
 	# /killed_player
 	write_function(f"{path}/killed_player", """
 advancement revoke @s only switch:cigogne/killed_player
@@ -48,13 +40,13 @@ execute if score #engine_state switch.data matches 3 if data storage switch:main
 """)
 
 	# /process_end
-	write_function(f"{path}/process_end", f"""
-function switch:modes/_common/process_end/winner_by_health {{death:"{path}/death"}}
+	write_function(f"{path}/process_end", """
+function switch:modes/_common/process_end/winner_by_health {death:"switch:utils/classic_death"}
 
 # Advancement
 execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data 0
-execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached,scores={{switch.temp.kill=1..}}] switch.temp.kill
-execute if score #process_end switch.data matches 1 unless score #test_mode switch.data matches 1 as @a[tag=!detached,scores={{switch.temp.kill=1..}}] if score #max switch.data = @s switch.temp.kill run advancement grant @s only switch:visible/23
+execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill
+execute if score #process_end switch.data matches 1 unless score #test_mode switch.data matches 1 as @a[tag=!detached,scores={switch.temp.kill=1..}] if score #max switch.data = @s switch.temp.kill run advancement grant @s only switch:visible/23
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 """)
@@ -119,7 +111,7 @@ scoreboard objectives remove switch.temp.sneak
 scoreboard players add #cigogne_ticks switch.data 1
 
 ## Death system
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
 execute at @a[tag=!detached,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal

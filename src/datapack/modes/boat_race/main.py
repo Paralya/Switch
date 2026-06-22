@@ -13,7 +13,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:modes/boat_race/death"})
 	write_translations()
 
 	# /start
@@ -82,12 +82,6 @@ execute if score #boat_race_seconds switch.data matches ..-1 in switch:game run 
 
 # Clear des anciens mobs si il y en a
 execute if score #boat_race_seconds switch.data matches ..-7 run function switch:utils/safe_kill_macro {{selector:"@e[type=#minecraft:boat]"}}
-""")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-# Ici : dans tous les cas, tuer la personne qui join
-function {path}/death
 """)
 
 	# /death

@@ -1,27 +1,28 @@
 
 #> switch:utils/classic_death
 #
-# @within	switch:modes/_coupdetat/joined
+# @within	switch:modes/_coupdetat/calls/joined
 #			switch:modes/beat_the_kings/death/player
 #			switch:modes/capture_the_flag/death/player
-#			switch:modes/castagne/death
-#			switch:modes/cigogne/death
+#			switch:modes/castagne/calls/joined
+#			switch:modes/cigogne/calls/joined
 #			switch:modes/creeper_apocalypse/death
 #			switch:modes/fireblast/death
-#			switch:modes/layers_2_teams/death
-#			switch:modes/layers_4_teams/death
-#			switch:modes/minigolf/joined
-#			switch:modes/murder_mystery/death
-#			switch:modes/panic_chase/death
-#			switch:modes/pillars_of_fortune/death
+#			switch:modes/layers_2_teams/joined
+#			switch:modes/layers_4_teams/joined
+#			switch:modes/minigolf/calls/joined
+#			switch:modes/murder_mystery/calls/joined
+#			switch:modes/panic_chase/calls/joined
+#			switch:modes/pillars_of_fortune/calls/joined
 #			switch:modes/pitch_creep/death
-#			switch:modes/protect_the_king/death
-#			switch:modes/pvpswap/death
+#			switch:modes/protect_the_king/joined
+#			switch:modes/pvpswap/calls/joined
+#			switch:modes/pvpswap/process_end [ as @a[tag=!detached] ]
 #			switch:modes/replicate_the_build/death
-#			switch:modes/sheepwars/death
-#			switch:modes/shoot_da_sheep/joined
+#			switch:modes/sheepwars/joined
+#			switch:modes/shoot_da_sheep/calls/joined
 #			switch:modes/spectres_game/death/player
-#			switch:modes/thunder_spear/death
+#			switch:modes/thunder_spear/process_end [ as @a[tag=!detached] ]
 #			switch:modes/warden_escape/death
 #
 

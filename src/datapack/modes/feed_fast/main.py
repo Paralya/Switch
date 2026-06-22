@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:modes/feed_fast/death"})
 	write_translations()
 
 
@@ -25,12 +25,6 @@ scoreboard players set @s switch.alive 0
 gamemode spectator @s
 effect clear @s
 clear @s
-""")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-# Ici : dans tous les cas, tuer la personne qui join
-function {path}/death
 """)
 
 	# /process_end

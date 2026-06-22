@@ -1,9 +1,9 @@
 
 #> switch:modes/_common/process_end/winner_by_health
 #
-# @within	switch:modes/castagne/process_end {death:"switch:modes/castagne/death"}
-#			switch:modes/cigogne/process_end {death:"switch:modes/cigogne/death"}
-#			switch:modes/pillars_of_fortune/process_end {death:"switch:modes/pillars_of_fortune/death"}
+# @within	switch:modes/castagne/process_end {death:"switch:utils/classic_death"}
+#			switch:modes/cigogne/process_end {death:"switch:utils/classic_death"}
+#			switch:modes/pillars_of_fortune/process_end {death:"switch:utils/classic_death"}
 #
 # @args		death (string)
 #

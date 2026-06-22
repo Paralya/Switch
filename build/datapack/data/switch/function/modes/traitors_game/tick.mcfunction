@@ -17,7 +17,7 @@ execute at @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=1}] run
 execute if score #starting_count switch.data matches 5.. at @a[tag=!detached,gamemode=!spectator,scores={switch.temp.role=5..6}] run particle dust{color:[1.0,0.0,0.0],scale:1.0} ~ ~2.1 ~ 0.2 0 0.2 0 1 force @a[scores={switch.temp.role=5..6}]
 
 function switch:utils/on_death_run_function {function:"switch:modes/traitors_game/death/player"}
-execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/traitors_game/death/detect
+execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/_common/death/detect
 execute if score #traitors_game_seconds switch.data matches 1..1200 as @e[type=marker,tag=switch.player_dead] run function switch:modes/traitors_game/death/process
 
 # Voleur

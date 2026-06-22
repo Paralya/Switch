@@ -19,7 +19,7 @@ def write_mode():
 
 	# /_tp_give_common
 	write_function(f"{path}/_tp_give_common", """
-function switch:modes/pitchout/xp_bar
+function switch:modes/_common/xp_bar/three_lives
 
 scoreboard players set @s switch.temp.cooldown 100
 item replace entity @s armor.chest with diamond_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
@@ -152,7 +152,7 @@ function switch:utils/choose_map_for {id:"pitchout", maps:["pitchout_1","pitchou
 scoreboard players set #spawn_count switch.data 0
 execute if data storage switch:main {map:"pitchout_1"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_1/tp_give
 execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
-execute as @a[tag=!detached] run function switch:modes/pitchout/xp_bar
+execute as @a[tag=!detached] run function switch:modes/_common/xp_bar/three_lives
 
 function switch:modes/pitchout/translations/start
 
@@ -229,11 +229,6 @@ execute store result score #remaining_players switch.data if entity @a[tag=!deta
 execute if score #pitchout_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function switch:modes/pitchout/process_end
 # End game after 600 seconds (10 minutes)
 execute if score #pitchout_seconds switch.data matches 600.. run function switch:modes/pitchout/process_end
-""")
-
-	# /xp_bar
-	write_function(f"{path}/xp_bar", """
-function switch:modes/_common/xp_bar/three_lives
 """)
 
 	# === advancements ===

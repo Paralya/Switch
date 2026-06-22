@@ -393,7 +393,7 @@ execute as @a[scores={{switch.temp.chosen_class=0}}] run function {path}/classes
 # Death System
 execute as @e[type=player,tag=switch.to_tp] run function {path}/teleport_to_death
 function switch:utils/on_death_run_function {{function:"{path}/death/player"}}
-execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function {path}/death/detect
+execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/_common/death/detect
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function {path}/death/for_global
 
 # Update sidebar & Flag tick
@@ -546,11 +546,6 @@ item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 12
 item replace entity @s hotbar.8 with bread 21
 
 function {path}/classes/_soldier_attrs
-""")
-
-	# /death/detect
-	write_function(f"{path}/death/detect", """
-function switch:modes/traitors_game/death/detect
 """)
 
 	# /death/for_global

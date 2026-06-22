@@ -1,8 +1,8 @@
 
 #> switch:modes/_common/process_end/spectate_only
 #
-# @within	switch:modes/layers_2_teams/process_end
-#			switch:modes/layers_4_teams/process_end
+# @within	switch:modes/layers_2_teams/tick
+#			switch:modes/layers_4_teams/tick
 #
 
 scoreboard players add #process_end switch.data 1

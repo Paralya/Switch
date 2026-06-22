@@ -13,7 +13,7 @@ def write_mode():
 	path: str = f"{ns}:modes/{mode}"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:modes/snowball_painter/death"})
 	write_translations()
 
 
@@ -129,11 +129,6 @@ scoreboard players add #position switch.data 1
 				explode.append(f"execute positioned ~{dx} ~{dy} ~{dz} if block ~ ~ ~ #switch:snowball_painter run function {path}/color/place")
 	explode += ["", "# Remove the temp tag", "tag @a[tag=!detached,tag=switch.temp] remove switch.temp", "", "# Kill marker", "kill @s"]
 	write_function(f"{path}/explode_marker", "\n".join(explode) + "\n")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-function {path}/death
-""")
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""

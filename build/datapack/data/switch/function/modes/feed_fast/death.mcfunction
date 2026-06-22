@@ -1,7 +1,7 @@
 
 #> switch:modes/feed_fast/death
 #
-# @within	switch:modes/feed_fast/joined
+# @within	switch:modes/feed_fast/calls/joined
 #			switch:modes/feed_fast/process_end [ as @a[tag=!detached] ]
 #
 

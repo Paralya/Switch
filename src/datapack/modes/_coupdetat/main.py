@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -12,7 +12,7 @@ def write_mode():
 	path: str = f"{ns}:modes/{mode}"
 
 	# Write standard /calls/ (only joined, start, tick are active here) and /translations/
-	write_modes_calls(mode, calls=("joined", "start", "tick"), force_start=False)
+	write_modes_calls(mode, calls=("joined", "start", "tick"), force_start=False, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
 	# Non-active calls: second and stop do nothing for _coupdetat
@@ -50,9 +50,6 @@ loot replace entity @s hotbar.1 loot switch:i/stardust_apple
 item replace entity @s hotbar.7 with tnt 2
 item replace entity @s hotbar.8 with flint_and_steel
 """)
-
-	# /joined
-	write_classic_death(f"{path}/joined")
 
 	# /process_end (translation ref rewritten)
 	write_function(f"{path}/process_end", """

@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -14,12 +14,9 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:modes/thunder_spear/give_and_teleport"})
 	write_translations()
 
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /explode_arrow
 	write_function(f"{path}/explode_arrow", f"""
@@ -59,11 +56,6 @@ scoreboard players set @s switch.temp.reload -60
 function switch:maps/spread_one_player
 """)
 
-	# /joined
-	write_function(f"{path}/joined", f"""
-function {path}/give_and_teleport
-""")
-
 	# /on_new_tnt
 	write_function(f"{path}/on_new_tnt", """
 # Modify Owner from storage
@@ -84,7 +76,7 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] if scor
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 store result score #remaining_players switch.data if entity @a[tag=!detached,tag=switch.winner]
 function {translations}/process_end
-execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function {path}/death
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:utils/classic_death
 execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 

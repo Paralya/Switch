@@ -5,7 +5,7 @@
 #			switch:modes/pitchout/map_halloween/tp_give
 #
 
-function switch:modes/pitchout/xp_bar
+function switch:modes/_common/xp_bar/three_lives
 
 scoreboard players set @s switch.temp.cooldown 100
 item replace entity @s armor.chest with diamond_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]

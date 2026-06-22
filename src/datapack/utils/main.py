@@ -4,13 +4,10 @@
 import stouputils as stp
 from stewbeet import write_function
 
-from .translations import write_translations
-
 
 @stp.measure_time(message="Generated utils files")
 def main() -> None:
 	path: str = "switch:utils"
-	write_translations()
 
 	# /choose_map_for
 	write_function(f"{path}/choose_map_for", """
@@ -252,7 +249,25 @@ scoreboard players operation #increment switch.data /= #2 switch.data
 execute if score #increment switch.data matches 1.. run function switch:utils/sqrt_loop
 """)
 
-	# /who_voted
+	# /who_voted (admin command: list which players voted for each game)
 	write_function(f"{path}/who_voted", """
-function switch:utils/translations/who_voted
+# French
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 1 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-1}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 2 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-2}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 3 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-3}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 4 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-4}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 5 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-5}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 6 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-6}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 7 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-7}]"}]
+tellraw @s[scores={switch.lang=0}] [{"text":"Vote 8 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-8}]"}]
+
+# English
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 1 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-1}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 2 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-2}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 3 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-3}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 4 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-4}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 5 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-5}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 6 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-6}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 7 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-7}]"}]
+tellraw @s[scores={switch.lang=1}] [{"text":"Vote 8 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-8}]"}]
 """)

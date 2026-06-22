@@ -7,7 +7,7 @@
 scoreboard players add #panic_chase_ticks switch.data 1
 
 # Détection de la mort d'un joueur
-function switch:utils/on_death_run_function {function:"switch:modes/panic_chase/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 
 # Prevent drops
 execute as @e[type=item,tag=!switch.checked] run function switch:modes/panic_chase/no_drop

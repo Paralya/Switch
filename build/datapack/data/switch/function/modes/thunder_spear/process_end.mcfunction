@@ -13,7 +13,7 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] if scor
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_win
 execute if score #process_end switch.data matches 1 store result score #remaining_players switch.data if entity @a[tag=!detached,tag=switch.winner]
 function switch:modes/thunder_spear/translations/process_end
-execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/thunder_spear/death
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:utils/classic_death
 execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 

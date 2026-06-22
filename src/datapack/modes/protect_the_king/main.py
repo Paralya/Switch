@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -32,9 +32,6 @@ execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=s
 execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
 execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
 """)
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /detect_end
 	write_function(f"{path}/detect_end", f"""
@@ -97,8 +94,8 @@ item replace entity @s[team=switch.temp.blue_king] armor.head with diamond_helme
 """)
 
 	# /joined
-	write_function(f"{path}/joined", f"""
-execute if score #reconnect switch.data matches 0 run function {path}/death
+	write_function(f"{path}/joined", """
+execute if score #reconnect switch.data matches 0 run function switch:utils/classic_death
 """)
 
 	# /process_end
@@ -217,7 +214,7 @@ bossbar remove switch.temp.blue_king
 scoreboard players add #protect_the_king_ticks switch.data 1
 
 # Détection de la mort
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 # Particules aux pieds des rois
 execute at @a[tag=!detached,gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] run particle glow ~ ~ ~ 0.2 0 0.2 0 5

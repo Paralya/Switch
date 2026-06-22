@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
 
@@ -57,9 +57,6 @@ execute if block ~ ~-.5 ~ water run scoreboard players add @s switch.temp.respaw
 execute if score @s switch.temp.respawn matches 20.. run function golf_ball:respawn
 execute if score @s switch.temp.respawn matches 20.. run scoreboard players reset @s switch.temp.respawn
 """)
-
-	# /joined
-	write_classic_death(f"{path}/joined")
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""

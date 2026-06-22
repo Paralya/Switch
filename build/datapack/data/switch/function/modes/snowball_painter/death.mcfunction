@@ -1,7 +1,7 @@
 
 #> switch:modes/snowball_painter/death
 #
-# @within	switch:modes/snowball_painter/joined
+# @within	switch:modes/snowball_painter/calls/joined
 #			switch:modes/snowball_painter/process_end [ as @a[tag=!detached] ]
 #
 

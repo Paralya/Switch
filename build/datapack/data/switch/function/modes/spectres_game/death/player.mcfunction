@@ -1,7 +1,7 @@
 
 #> switch:modes/spectres_game/death/player
 #
-# @within	switch:modes/spectres_game/joined
+# @within	switch:modes/spectres_game/calls/joined
 #			switch:modes/spectres_game/process_end [ as @a[tag=!detached,sort=random] ]
 #
 

@@ -1,4 +1,5 @@
 
+# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 
@@ -39,6 +40,29 @@ execute unless score @s switch.alive matches 1.. run gamemode spectator @s
 execute unless score @s switch.alive matches 1.. at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
 execute unless score @s switch.alive matches 1.. run effect clear @s
 execute unless score @s switch.alive matches 1.. run clear @s
+""")
+
+	# /death/detect (shared "linked-player missing?" check for marker-based death systems: if the
+	# linked player is gone, mark @s dead; otherwise teleport to them and sync inventory on change)
+	write_function(f"{path}/death/detect", """
+# Detect if linked player is missing
+scoreboard players set #success switch.data 0
+scoreboard players operation #player_id switch.id = @s switch.id
+execute store success score #success switch.data run tag @a[scores={switch.alive=1..},predicate=switch:has_same_id] add switch.temp
+
+execute if score #success switch.data matches 0 run tag @s add switch.player_dead
+execute if score #success switch.data matches 1 run tp @s @p[tag=switch.temp]
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory set from entity @p[tag=switch.temp] Inventory
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp equipment set from entity @p[tag=switch.temp] equipment
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.head
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.chest
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.legs
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.feet
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify storage switch:temp Inventory append from storage switch:temp equipment.offhand
+execute if score #success switch.data matches 1 if entity @p[tag=switch.temp,tag=switch.temp.inventory_changed] run data modify entity @s data.Inventory set from storage switch:temp Inventory
+execute if score #success switch.data matches 1 run tag @p[tag=switch.temp,tag=switch.temp.inventory_changed] remove switch.temp.inventory_changed
+
+tag @a remove switch.temp
 """)
 
 	# /detect_chosen_class

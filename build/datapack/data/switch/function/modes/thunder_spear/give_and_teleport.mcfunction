@@ -1,7 +1,7 @@
 
 #> switch:modes/thunder_spear/give_and_teleport
 #
-# @within	switch:modes/thunder_spear/joined
+# @within	switch:modes/thunder_spear/calls/joined
 #			switch:modes/thunder_spear/start [ as @a[tag=!detached] ]
 #
 

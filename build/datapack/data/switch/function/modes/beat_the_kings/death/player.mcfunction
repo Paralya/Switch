@@ -1,7 +1,7 @@
 
 #> switch:modes/beat_the_kings/death/player
 #
-# @within	switch:modes/beat_the_kings/joined
+# @within	switch:modes/beat_the_kings/calls/joined
 #			switch:modes/beat_the_kings/process_end [ as @a[tag=!detached] ]
 #
 

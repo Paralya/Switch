@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls
+from ..common import write_modes_calls
 from .translations import write_translations
 
 
@@ -17,9 +17,6 @@ def write_mode():
 	write_modes_calls(mode)
 	write_translations()
 
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /detect_end
 	write_function(f"{path}/detect_end", f"""
@@ -53,13 +50,8 @@ execute if score #remaining_time switch.data matches 0 as @a[tag=!detached] at @
 """)
 
 	# /joined
-	write_function(f"{path}/joined", f"""
-execute if score #reconnect switch.data matches 0 run function {path}/death
-""")
-
-	# /process_end
-	write_function(f"{path}/process_end", """
-function switch:modes/_common/process_end/spectate_only
+	write_function(f"{path}/joined", """
+execute if score #reconnect switch.data matches 0 run function switch:utils/classic_death
 """)
 
 	# /second
@@ -187,12 +179,12 @@ function switch:modes/_common/layers_starter_kit
 scoreboard players add #layers_4_teams_ticks switch.data 1
 
 # Détection des morts
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 # Enchantement efficiency 5 sur les pioches
 execute as @a[tag=!detached] run item modify entity @s weapon.mainhand switch:handheld/enchant_efficiency_5
 
 ## Détection de fin de partie
 execute if score #layers_4_teams_seconds switch.data matches 1.. if score #remaining_time switch.data matches 1.. run function {path}/detect_end
-execute if score #remaining_time switch.data matches ..0 run function {path}/process_end
+execute if score #remaining_time switch.data matches ..0 run function switch:modes/_common/process_end/spectate_only
 """)

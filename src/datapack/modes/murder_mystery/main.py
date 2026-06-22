@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_no_drop
+from ..common import write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
 	# /calls/entity_hurt_player (non-standard call)
@@ -52,9 +52,6 @@ setblock 0 7 0 air
 # Allow to see players waypoints
 attribute @s waypoint_receive_range base reset
 """)
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /detect_end (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/detect_end", """
@@ -98,12 +95,6 @@ execute on attacker run scoreboard players add @s switch.stats.kills 1
 
 # Kill the attacker if not murderer
 execute if entity @s[scores={switch.temp.role=1..2}] on attacker if entity @s[gamemode=!spectator,scores={switch.temp.role=1..2}] at @s run function switch:modes/murder_mystery/kill_player
-""")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-# Ici : dans tous les cas, tuer la personne qui join
-function {path}/death
 """)
 
 	# /kill_player (brace-heavy: plain string, translation ref rewritten)
@@ -273,7 +264,7 @@ execute if predicate switch:chance/0.1 at @r[gamemode=!spectator,tag=!detached] 
 scoreboard players add #murder_mystery_ticks switch.data 1
 
 # Détection des morts
-function switch:utils/on_death_run_function {function:"switch:modes/murder_mystery/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 
 # Give a bow with an arrow for players that have at least 10 golds
 execute as @a[tag=!detached,gamemode=!spectator,nbt={Inventory:[{id:"minecraft:gold_ingot"}]}] run function switch:modes/murder_mystery/tick_ingot

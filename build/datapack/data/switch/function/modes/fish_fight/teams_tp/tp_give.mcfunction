@@ -7,7 +7,7 @@
 execute if data storage switch:main {map:"luxio_fish_fight"} run function switch:maps/spread_one_player
 execute if data storage switch:main {map:"airdox_fish_fight"} run function switch:modes/fish_fight/tp_airdox
 
-function switch:modes/fish_fight/xp_bar
+function switch:modes/_common/xp_bar/three_lives
 
 scoreboard players set @s switch.temp.cooldown 100
 item replace entity @s armor.chest with golden_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]

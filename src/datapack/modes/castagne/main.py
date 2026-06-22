@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
 	# /calls/entity_hurt_player (non-standard call)
@@ -23,9 +23,6 @@ advancement revoke @s only switch:castagne/entity_hurt_player
 execute if data storage switch:main {{current_game:"{mode}"}} run function {path}/entity_hurt_player
 """)
 
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /entity_hurt_player
 	write_function(f"{path}/entity_hurt_player", f"""
@@ -67,14 +64,9 @@ $execute store result score #count switch.data run data get storage switch:temp 
 execute unless score #test_mode switch.data matches 1 if score #count switch.data >= #initial_count switch.data on attacker run advancement grant @s only switch:visible/29
 """)
 
-	# /joined
-	write_function(f"{path}/joined", f"""
-function {path}/death
-""")
-
 	# /process_end
-	write_function(f"{path}/process_end", f"""
-function switch:modes/_common/process_end/winner_by_health {{death:"{path}/death"}}
+	write_function(f"{path}/process_end", """
+function switch:modes/_common/process_end/winner_by_health {death:"switch:utils/classic_death"}
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 """)
@@ -133,7 +125,7 @@ data remove storage switch:temp castagne
 scoreboard players add #castagne_ticks switch.data 1
 
 ## Death system
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 # Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true

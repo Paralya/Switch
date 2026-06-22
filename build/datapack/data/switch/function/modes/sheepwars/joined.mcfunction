@@ -4,5 +4,5 @@
 # @within	switch:modes/sheepwars/calls/joined
 #
 
-execute if score #reconnect switch.data matches 0 run function switch:modes/sheepwars/death
+execute if score #reconnect switch.data matches 0 run function switch:utils/classic_death
 

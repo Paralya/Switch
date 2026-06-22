@@ -14,7 +14,7 @@ execute as @a[scores={switch.temp.chosen_class=0}] run function switch:modes/cap
 # Death System
 execute as @e[type=player,tag=switch.to_tp] run function switch:modes/capture_the_flag/teleport_to_death
 function switch:utils/on_death_run_function {function:"switch:modes/capture_the_flag/death/player"}
-execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/capture_the_flag/death/detect
+execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/_common/death/detect
 execute if score #remaining_time switch.data matches 1.. as @e[type=marker,tag=switch.player_dead,tag=!switch.processed] run function switch:modes/capture_the_flag/death/for_global
 
 # Update sidebar & Flag tick

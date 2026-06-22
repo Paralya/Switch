@@ -13,7 +13,7 @@ def write_mode():
 	path: str = f"{ns}:modes/{mode}"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:modes/spectres_game/death/player"})
 	write_translations()
 
 	# Non-standard call: inventory_changed
@@ -207,12 +207,6 @@ execute if score #SPECTROR_GAME switch.data matches 1 run give @s[scores={switch
 # Emerald pickaxe if task game
 execute if score #TASKS_GAME switch.data matches 1 run loot replace entity @s hotbar.4 loot switch:i/emerald_pickaxe
 execute if score #TASKS_GAME switch.data matches 1 run item modify entity @s hotbar.4 {"function":"minecraft:set_components","components":{"minecraft:max_damage":10}}
-""")
-
-	# /joined
-	write_function(f"{path}/joined", """
-# Ici : dans tous les cas, tuer la personne qui join
-function switch:modes/spectres_game/death/player
 """)
 
 	# /obsidian_effect (translation ref rewritten)

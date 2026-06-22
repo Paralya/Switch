@@ -33,7 +33,7 @@ execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FIS
 
 # lignes exemple
 # execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
-# execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
+# execute as @a[tag=!detached] run function switch:modes/_common/xp_bar/three_lives
 
 function switch:modes/fish_fight/translations/start
 

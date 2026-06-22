@@ -7,7 +7,7 @@
 scoreboard players add #pvpswap_ticks switch.data 1
 
 ## Death system
-function switch:utils/on_death_run_function {function:"switch:modes/pvpswap/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 
 # Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true

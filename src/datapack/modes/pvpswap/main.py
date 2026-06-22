@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls
+from ..common import write_modes_calls
 
 
 def write_mode():
@@ -15,7 +15,7 @@ def write_mode():
 	# Note: pvpswap has no translation files of its own; the
 	# `switch:translations/modes_pvpswap_*` references below are dangling in the
 	# original datapack and are preserved verbatim (no /translations/ relocation).
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 
 	# Non-standard call: entity_hurt_player
 	write_function(f"{path}/calls/entity_hurt_player", """
@@ -23,9 +23,6 @@ advancement revoke @s only switch:pvpswap/entity_hurt_player
 execute if data storage switch:main {current_game:"pvpswap"} run function switch:modes/pvpswap/entity_hurt_player
 """)
 
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /entity_hurt_player
 	write_function(f"{path}/entity_hurt_player", """
@@ -66,11 +63,6 @@ $execute store result score #count switch.data run data get storage switch:temp 
 execute unless score #test_mode switch.data matches 1 if score #count switch.data >= #initial_count switch.data on attacker run advancement grant @s only switch:visible/29
 """)
 
-	# /joined
-	write_function(f"{path}/joined", """
-function switch:modes/pvpswap/death
-""")
-
 	# /process_end (dangling translation ref preserved verbatim)
 	write_function(f"{path}/process_end", """
 scoreboard players add #process_end switch.data 1
@@ -78,7 +70,7 @@ scoreboard players add #process_end switch.data 1
 execute if score #process_end switch.data matches 1 if score #remaining_players switch.data matches 1 store result score #health switch.data run data get entity @r[gamemode=survival] Health
 execute if score #process_end switch.data matches 1 if score #remaining_players switch.data matches 1 as @a[tag=!detached,gamemode=survival] at @s run function switch:engine/add_win
 function switch:translations/modes_pvpswap_process_end
-execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/pvpswap/death
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:utils/classic_death
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
@@ -137,7 +129,7 @@ data remove storage switch:temp pvpswap
 scoreboard players add #pvpswap_ticks switch.data 1
 
 ## Death system
-function switch:utils/on_death_run_function {function:"switch:modes/pvpswap/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 
 # Glowing
 execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true

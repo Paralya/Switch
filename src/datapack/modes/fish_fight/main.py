@@ -343,7 +343,7 @@ execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FIS
 
 # lignes exemple
 # execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give
-# execute as @a[tag=!detached] run function switch:modes/fish_fight/xp_bar
+# execute as @a[tag=!detached] run function switch:modes/_common/xp_bar/three_lives
 
 function switch:modes/fish_fight/translations/start
 
@@ -495,11 +495,6 @@ execute if score #tp_random switch.data matches 17 run tp @s 155986 156 155995
 execute if score #tp_random switch.data matches 18 run tp @s 155989 151 155987
 """)
 
-	# /xp_bar
-	write_function(f"{path}/xp_bar", """
-function switch:modes/_common/xp_bar/three_lives
-""")
-
 	# /block_disappear/detect_color (macro)
 	write_function(f"{path}/block_disappear/detect_color", """
 # Replace every concrete to a command block (to spawn a marker)
@@ -633,7 +628,7 @@ execute if data storage switch:main {map:"luxio_fish_fight"} run function switch
 execute if data storage switch:main {map:"airdox_fish_fight"} run function switch:modes/fish_fight/tp_airdox
 
 
-function switch:modes/fish_fight/xp_bar
+function switch:modes/_common/xp_bar/three_lives
 
 scoreboard players set @s switch.temp.cooldown 100
 item replace entity @s armor.chest with golden_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]

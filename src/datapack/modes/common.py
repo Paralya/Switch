@@ -35,6 +35,7 @@ def write_modes_calls(
 	calls: tuple[str, ...] = ("joined", "second", "start", "stop", "tick"),
 	context: str = "",
 	force_start: bool = True,
+	targets: dict[str, str] | None = None,
 ) -> None:
 	""" Write the /calls/* dispatch functions (and the standard /_force_start) for a mode.
 
@@ -44,11 +45,16 @@ def write_modes_calls(
 		context     (str):              Optional execute sub-clause inserted before "run"
 			(e.g. "in switch:build_battle " or "positioned 3000 128 3000 ").
 		force_start (bool):             Whether to also write the standard /_force_start function.
+		targets     (dict[str, str]):   Optional per-call dispatch override, mapping call -> function
+			path (e.g. {"joined": "switch:utils/classic_death"}) so /calls/<call> dispatches straight
+			to that function instead of switch:modes/<mode>/<call> — lets pure-redirect hooks be dropped.
 	"""
 	ns: str = Mem.ctx.project_id
+	overrides: dict[str, str] = targets or {}
 	for call in calls:
+		target: str = overrides.get(call, f"switch:modes/{mode}/{call}")
 		write_function(f"{ns}:modes/{mode}/calls/{call}", f"""
-execute if data storage switch:main {{current_game:"{mode}"}} {context}run function switch:modes/{mode}/{call}
+execute if data storage switch:main {{current_game:"{mode}"}} {context}run function {target}
 """)
 
 	if force_start:
@@ -71,13 +77,6 @@ tellraw @a[scores={{switch.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","sto
 
 # English
 tellraw @a[scores={{switch.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"switch:main","interpret":true}},{{"text":" {en}"}}]
-""")
-
-
-def write_classic_death(path: str) -> None:
-	""" Write a function whose body is just the shared switch:utils/classic_death call. """
-	write_function(path, """
-function switch:utils/classic_death
 """)
 
 

@@ -8,7 +8,7 @@ scoreboard players add #pillars_of_fortune_ticks switch.data 1
 
 ## Death system
 execute in switch:game run spawnpoint @a[tag=!detached] 0 70 0
-function switch:utils/on_death_run_function {function:"switch:modes/pillars_of_fortune/death"}
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
 
 ## Don't move and make pillars
 execute if score #pillars_of_fortune_seconds switch.data matches ..0 as @a[tag=!detached,gamemode=survival,predicate=!switch:has_vehicle] at @s run ride @s mount @e[tag=switch.pillars_of_fortune,sort=nearest,limit=1]

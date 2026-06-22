@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_time_xp_bar
+from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -14,17 +14,9 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
-
-	# /death
-	write_classic_death(f"{path}/death")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-function {path}/death
-""")
 
 	# /place_player
 	write_function(f"{path}/place_player", f"""
@@ -42,8 +34,8 @@ $execute rotated ~$(angle_difference) 0 as @e[tag=switch.place_pillar,sort=rando
 """)
 
 	# /process_end
-	write_function(f"{path}/process_end", f"""
-function switch:modes/_common/process_end/winner_by_health {{death:"{path}/death"}}
+	write_function(f"{path}/process_end", """
+function switch:modes/_common/process_end/winner_by_health {death:"switch:utils/classic_death"}
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 """)
@@ -142,7 +134,7 @@ scoreboard players add #pillars_of_fortune_ticks switch.data 1
 
 ## Death system
 execute in switch:game run spawnpoint @a[tag=!detached] 0 70 0
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 ## Don't move and make pillars
 execute if score #pillars_of_fortune_seconds switch.data matches ..0 as @a[tag=!detached,gamemode=survival,predicate=!switch:has_vehicle] at @s run ride @s mount @e[tag=switch.pillars_of_fortune,sort=nearest,limit=1]

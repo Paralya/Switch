@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:modes/beat_the_kings/death/player"})
 	write_function(f"{path}/calls/inventory_changed", """
 tag @s add switch.temp.inventory_changed
 """)
@@ -89,7 +89,7 @@ scoreboard players add #beat_the_kings_ticks switch.data 1
 execute as @a[tag=!detached,tag=switch.to_tp] run function switch:modes/_common/teleport_to_death
 
 function switch:utils/on_death_run_function {{function:"{path}/death/player"}}
-execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function {path}/death/detect
+execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.temp.player,tag=!switch.player_dead] run function switch:modes/_common/death/detect
 execute if score #beat_the_kings_seconds switch.data matches 1..900 as @e[type=marker,tag=switch.player_dead] run function {path}/death/for_global
 
 # Advancement
@@ -114,11 +114,6 @@ execute if score #beat_the_kings_seconds switch.data matches 30 as @a[tag=!detac
 # Remaining time
 function switch:modes/_common/compute_mins_secs
 function {translations}/second
-""")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-function {path}/death/player
 """)
 
 	# /detect_end
@@ -191,11 +186,6 @@ attribute @s attack_speed base set 1024
 scoreboard players set @s switch.alive 0
 tag @s add switch.to_tp
 function switch:utils/classic_death
-""")
-
-	# /death/detect  (delegates to traitors_game)
-	write_function(f"{path}/death/detect", """
-function switch:modes/traitors_game/death/detect
 """)
 
 	# /death/for_global

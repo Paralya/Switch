@@ -484,131 +484,44 @@ xp add @a[tag=!detached,team=switch.glassrunner.{color}] 2 levels
 execute as @a[tag=!detached,team=switch.glassrunner.{color}] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
 """)
 
-	# /ctp/center/adding_timer
-	write_function(f"{path}/ctp/center/adding_timer", """
-execute if entity @s[team=switch.glassrunner.red] run scoreboard players add #glassrunner.ctp.center.red.timer switch.data 1
-execute if entity @s[team=switch.glassrunner.blue] run scoreboard players add #glassrunner.ctp.center.blue.timer switch.data 1
+	# /ctp/<loc>/{adding_timer,blue,red,reset} — data-driven capture-point logic per location:
+	# (detect-box, fill-area, staged template thresholds, and per-team template prefix + place coords)
+	CTP: dict[str, tuple[str, str, list[tuple[int, int]], tuple[str, str], tuple[str, str]]] = {
+		"center": ("dx=5,dy=3,dz=5", "2997 127 2997 3003 127 3003",
+			[(1, 2), (3, 4), (5, 6), (7, 8), (9, 10), (11, 12), (13, 14)],
+			("center_blue", "2997 127 2997"), ("center_red", "2997 127 2997")),
+		"side1": ("dx=2,dy=3,dz=2", "2926 127 3074 2924 127 3076",
+			[(1, 3), (4, 6), (7, 9), (10, 12), (13, 15)],
+			("side1_blue", "2926 127 3076 180"), ("side1_red", "2924 127 3074")),
+		"side2": ("dx=2,dy=3,dz=2", "3074 127 2926 3076 127 2924",
+			[(1, 3), (4, 6), (7, 9), (10, 12), (13, 15)],
+			("side1_blue", "3074 127 2924"), ("side1_red", "3074 127 2924 180")),
+	}
+	for loc, (detect, fill, stages, blue, red) in CTP.items():
+		write_function(f"{path}/ctp/{loc}/adding_timer", f"""
+execute if entity @s[team=switch.glassrunner.red] run scoreboard players add #glassrunner.ctp.{loc}.red.timer switch.data 1
+execute if entity @s[team=switch.glassrunner.blue] run scoreboard players add #glassrunner.ctp.{loc}.blue.timer switch.data 1
 
-execute store success score #temp switch.data if entity @s[team=switch.glassrunner.red] if entity @a[tag=!detached,dx=5,dy=3,dz=5,team=switch.glassrunner.blue] run scoreboard players set #glassrunner.ctp.center.red.timer switch.data 0
-execute store success score #temp2 switch.data if entity @s[team=switch.glassrunner.blue] if entity @a[tag=!detached,dx=5,dy=3,dz=5,team=switch.glassrunner.red] run scoreboard players set #glassrunner.ctp.center.blue.timer switch.data 0
+execute store success score #temp switch.data if entity @s[team=switch.glassrunner.red] if entity @a[tag=!detached,{detect},team=switch.glassrunner.blue] run scoreboard players set #glassrunner.ctp.{loc}.red.timer switch.data 0
+execute store success score #temp2 switch.data if entity @s[team=switch.glassrunner.blue] if entity @a[tag=!detached,{detect},team=switch.glassrunner.red] run scoreboard players set #glassrunner.ctp.{loc}.blue.timer switch.data 0
 
-execute if score #temp switch.data matches 1 run fill 2997 127 2997 3003 127 3003 minecraft:white_concrete
-execute if score #temp2 switch.data matches 1 run fill 2997 127 2997 3003 127 3003 minecraft:white_concrete
+execute if score #temp switch.data matches 1 run fill {fill} minecraft:white_concrete
+execute if score #temp2 switch.data matches 1 run fill {fill} minecraft:white_concrete
 """)
-
-	# /ctp/center/blue
-	write_function(f"{path}/ctp/center/blue", """
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 1..2 run place template switch:glassrunner/center_blue/1 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 3..4 run place template switch:glassrunner/center_blue/2 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 5..6 run place template switch:glassrunner/center_blue/3 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 7..8 run place template switch:glassrunner/center_blue/4 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 9..10 run place template switch:glassrunner/center_blue/5 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 11..12 run place template switch:glassrunner/center_blue/6 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 13..14 run place template switch:glassrunner/center_blue/7 2997 127 2997
-execute if score #glassrunner.ctp.center.blue.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/center/capture_blue
+		for color, (tpl, place) in (("blue", blue), ("red", red)):
+			stage_lines: str = "\n".join(
+				f"execute if score #glassrunner.ctp.{loc}.{color}.timer switch.data matches {lo}..{hi} run place template switch:glassrunner/{tpl}/{i} {place}"
+				for i, (lo, hi) in enumerate(stages, start=1)
+			)
+			write_function(f"{path}/ctp/{loc}/{color}", f"""
+{stage_lines}
+execute if score #glassrunner.ctp.{loc}.{color}.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/{loc}/capture_{color}
 # /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
 """)
-
-	# /ctp/center/red
-	write_function(f"{path}/ctp/center/red", """
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 1..2 run place template switch:glassrunner/center_red/1 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 3..4 run place template switch:glassrunner/center_red/2 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 5..6 run place template switch:glassrunner/center_red/3 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 7..8 run place template switch:glassrunner/center_red/4 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 9..10 run place template switch:glassrunner/center_red/5 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 11..12 run place template switch:glassrunner/center_red/6 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 13..14 run place template switch:glassrunner/center_red/7 2997 127 2997
-execute if score #glassrunner.ctp.center.red.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/center/capture_red
-# /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/center/reset
-	write_function(f"{path}/ctp/center/reset", """
-scoreboard players set #glassrunner.ctp.center.red.timer switch.data 0
-scoreboard players set #glassrunner.ctp.center.blue.timer switch.data 0
-fill 2997 127 2997 3003 127 3003 minecraft:white_concrete
-""")
-
-	# /ctp/side1/adding_timer
-	write_function(f"{path}/ctp/side1/adding_timer", """
-execute if entity @s[team=switch.glassrunner.red] run scoreboard players add #glassrunner.ctp.side1.red.timer switch.data 1
-execute if entity @s[team=switch.glassrunner.blue] run scoreboard players add #glassrunner.ctp.side1.blue.timer switch.data 1
-
-execute store success score #temp switch.data if entity @s[team=switch.glassrunner.red] if entity @a[tag=!detached,dx=2,dy=3,dz=2,team=switch.glassrunner.blue] run scoreboard players set #glassrunner.ctp.side1.red.timer switch.data 0
-execute store success score #temp2 switch.data if entity @s[team=switch.glassrunner.blue] if entity @a[tag=!detached,dx=2,dy=3,dz=2,team=switch.glassrunner.red] run scoreboard players set #glassrunner.ctp.side1.blue.timer switch.data 0
-
-execute if score #temp switch.data matches 1 run fill 2926 127 3074 2924 127 3076 minecraft:white_concrete
-execute if score #temp2 switch.data matches 1 run fill 2926 127 3074 2924 127 3076 minecraft:white_concrete
-""")
-
-	# /ctp/side1/blue
-	write_function(f"{path}/ctp/side1/blue", """
-execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 1..3 run place template switch:glassrunner/side1_blue/1 2926 127 3076 180
-execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 4..6 run place template switch:glassrunner/side1_blue/2 2926 127 3076 180
-execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 7..9 run place template switch:glassrunner/side1_blue/3 2926 127 3076 180
-execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 10..12 run place template switch:glassrunner/side1_blue/4 2926 127 3076 180
-execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 13..15 run place template switch:glassrunner/side1_blue/5 2926 127 3076 180
-execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/side1/capture_blue
-# /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/side1/red
-	write_function(f"{path}/ctp/side1/red", """
-execute if score #glassrunner.ctp.side1.red.timer switch.data matches 1..3 run place template switch:glassrunner/side1_red/1 2924 127 3074
-execute if score #glassrunner.ctp.side1.red.timer switch.data matches 4..6 run place template switch:glassrunner/side1_red/2 2924 127 3074
-execute if score #glassrunner.ctp.side1.red.timer switch.data matches 7..9 run place template switch:glassrunner/side1_red/3 2924 127 3074
-execute if score #glassrunner.ctp.side1.red.timer switch.data matches 10..12 run place template switch:glassrunner/side1_red/4 2924 127 3074
-execute if score #glassrunner.ctp.side1.red.timer switch.data matches 13..15 run place template switch:glassrunner/side1_red/5 2924 127 3074
-execute if score #glassrunner.ctp.side1.red.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/side1/capture_red
-# /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/side1/reset
-	write_function(f"{path}/ctp/side1/reset", """
-scoreboard players set #glassrunner.ctp.side1.red.timer switch.data 0
-scoreboard players set #glassrunner.ctp.side1.blue.timer switch.data 0
-fill 2926 127 3074 2924 127 3076 minecraft:white_concrete
-""")
-
-	# /ctp/side2/adding_timer
-	write_function(f"{path}/ctp/side2/adding_timer", """
-execute if entity @s[team=switch.glassrunner.red] run scoreboard players add #glassrunner.ctp.side2.red.timer switch.data 1
-execute if entity @s[team=switch.glassrunner.blue] run scoreboard players add #glassrunner.ctp.side2.blue.timer switch.data 1
-
-execute store success score #temp switch.data if entity @s[team=switch.glassrunner.red] if entity @a[tag=!detached,dx=2,dy=3,dz=2,team=switch.glassrunner.blue] run scoreboard players set #glassrunner.ctp.side2.red.timer switch.data 0
-execute store success score #temp2 switch.data if entity @s[team=switch.glassrunner.blue] if entity @a[tag=!detached,dx=2,dy=3,dz=2,team=switch.glassrunner.red] run scoreboard players set #glassrunner.ctp.side2.blue.timer switch.data 0
-
-execute if score #temp switch.data matches 1 run fill 3074 127 2926 3076 127 2924 minecraft:white_concrete
-execute if score #temp2 switch.data matches 1 run fill 3074 127 2926 3076 127 2924 minecraft:white_concrete
-""")
-
-	# /ctp/side2/blue
-	write_function(f"{path}/ctp/side2/blue", """
-execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 1..3 run place template switch:glassrunner/side1_blue/1 3074 127 2924
-execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 4..6 run place template switch:glassrunner/side1_blue/2 3074 127 2924
-execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 7..9 run place template switch:glassrunner/side1_blue/3 3074 127 2924
-execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 10..12 run place template switch:glassrunner/side1_blue/4 3074 127 2924
-execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 13..15 run place template switch:glassrunner/side1_blue/5 3074 127 2924
-execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/side2/capture_blue
-# /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/side2/red
-	write_function(f"{path}/ctp/side2/red", """
-execute if score #glassrunner.ctp.side2.red.timer switch.data matches 1..3 run place template switch:glassrunner/side1_red/1 3074 127 2924 180
-execute if score #glassrunner.ctp.side2.red.timer switch.data matches 4..6 run place template switch:glassrunner/side1_red/2 3074 127 2924 180
-execute if score #glassrunner.ctp.side2.red.timer switch.data matches 7..9 run place template switch:glassrunner/side1_red/3 3074 127 2924 180
-execute if score #glassrunner.ctp.side2.red.timer switch.data matches 10..12 run place template switch:glassrunner/side1_red/4 3074 127 2924 180
-execute if score #glassrunner.ctp.side2.red.timer switch.data matches 13..15 run place template switch:glassrunner/side1_red/5 3074 127 2924 180
-execute if score #glassrunner.ctp.side2.red.timer switch.data matches 15.. run function switch:modes/glassrunner/ctp/side2/capture_red
-# /var/opt/minecraft/crafty/crafty-4/servers/ae5e9828-b7de-49ba-b0b0-3ba9584969db/world/
-""")
-
-	# /ctp/side2/reset
-	write_function(f"{path}/ctp/side2/reset", """
-scoreboard players set #glassrunner.ctp.side2.red.timer switch.data 0
-scoreboard players set #glassrunner.ctp.side2.blue.timer switch.data 0
-fill 3074 127 2926 3076 127 2924 minecraft:white_concrete
+		write_function(f"{path}/ctp/{loc}/reset", f"""
+scoreboard players set #glassrunner.ctp.{loc}.red.timer switch.data 0
+scoreboard players set #glassrunner.ctp.{loc}.blue.timer switch.data 0
+fill {fill} minecraft:white_concrete
 """)
 
 	# /death/blue

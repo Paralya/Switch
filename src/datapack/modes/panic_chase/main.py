@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_classic_death, write_modes_calls, write_no_drop
+from ..common import write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -14,12 +14,9 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode)
+	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
 	write_translations()
 
-
-	# /death
-	write_classic_death(f"{path}/death")
 
 	# /detect_end
 	write_function(f"{path}/detect_end", f"""
@@ -66,12 +63,6 @@ execute if score #random switch.data matches 6 run item replace entity @s[team=s
 effect give @s[team=switch.temp.hunter] blindness infinite 0 true
 effect give @s[team=switch.temp.hunter] darkness infinite 0 true
 effect give @s[team=switch.temp.mouse] weakness infinite 255 true
-""")
-
-	# /joined
-	write_function(f"{path}/joined", f"""
-# Ici : dans tous les cas, tuer la personne qui join
-function {path}/death
 """)
 
 	# /no_drop
@@ -196,7 +187,7 @@ team remove switch.temp.mouse
 scoreboard players add #panic_chase_ticks switch.data 1
 
 # Détection de la mort d'un joueur
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
 
 # Prevent drops
 execute as @e[type=item,tag=!switch.checked] run function {path}/no_drop
