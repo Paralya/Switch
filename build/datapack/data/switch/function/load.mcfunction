@@ -4,8 +4,6 @@
 # @within	switch:v2.0.0/load/confirm_load
 #
 
-## File attribut: Ignore translations
-
 scoreboard objectives add switch.lang dummy
 
 scoreboard objectives add switch.id dummy

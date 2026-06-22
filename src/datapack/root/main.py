@@ -414,8 +414,6 @@ execute in switch:game positioned 0 100 0 if loaded ~ ~ ~ unless entity 20180612
 
 	# switch:load (called by the load function tag, registered in link.py)
 	write_function(f"{ns}:load", r"""
-## File attribut: Ignore translations
-
 scoreboard objectives add switch.lang dummy
 
 scoreboard objectives add switch.id dummy
