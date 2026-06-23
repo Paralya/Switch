@@ -8,10 +8,7 @@
 
 # Drop the flag
 function switch:modes/capture_the_flag/translations/flag_drop
-execute if entity @s[tag=switch.blue_flag] run kill @a[tag=switch.has_blue_flag]
-execute if entity @s[tag=switch.red_flag] run kill @a[tag=switch.has_red_flag]
-execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag
-execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
+function switch:modes/_common/flag/release_holders
 execute on vehicle run tp @s ~ ~-2 ~
 
 # Add free tag

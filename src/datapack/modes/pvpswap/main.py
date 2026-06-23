@@ -34,20 +34,7 @@ function switch:modes/pvpswap/hurt_macro with storage switch:temp input
 
 	# /give_items
 	write_function(f"{path}/give_items", """
-item replace entity @s armor.head with leather_helmet[enchantments={projectile_protection:2}]
-item replace entity @s armor.chest with leather_chestplate[enchantments={projectile_protection:2}]
-item replace entity @s armor.legs with leather_leggings[enchantments={projectile_protection:2}]
-item replace entity @s armor.feet with leather_boots[enchantments={projectile_protection:2}]
-item replace entity @s hotbar.0 with wooden_sword[enchantments={sharpness:1,knockback:1}]
-item replace entity @s hotbar.1 with bow
-item replace entity @s hotbar.2 with water_bucket
-item replace entity @s hotbar.3 with iron_pickaxe[enchantments={efficiency:1}]
-item replace entity @s hotbar.4 with iron_axe[enchantments={efficiency:1},attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:2,operation:"add_value"}]]
-item replace entity @s hotbar.6 with arrow 8
-item replace entity @s hotbar.7 with oak_planks 64
-item replace entity @s hotbar.8 with golden_apple 12
-item replace entity @s inventory.25 with tnt 4
-item replace entity @s inventory.26 with flint_and_steel
+function switch:modes/_common/pvp_arena/kit
 
 scoreboard players add #initial_count switch.data 1
 data modify storage switch:temp temp set value {id:0,hurt:[]}
@@ -128,18 +115,7 @@ data remove storage switch:temp pvpswap
 	write_function(f"{path}/tick", """
 scoreboard players add #pvpswap_ticks switch.data 1
 
-## Death system
-function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
-
-# Glowing
-execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true
-execute as @a[tag=!detached,gamemode=survival] at @s if entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect clear @s glowing
-
-# Advancement
-execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.kill=1..,switch.temp.cooldown_kill=1..}] only switch:visible/9
-scoreboard players set @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.cooldown_kill 200
-scoreboard players remove @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill 1
-scoreboard players remove @a[tag=!detached,scores={switch.temp.cooldown_kill=1..}] switch.temp.cooldown_kill 1
+function switch:modes/_common/pvp_arena/combat_tick
 
 ## End game
 scoreboard players set #remaining_players switch.data 0

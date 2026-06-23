@@ -15,7 +15,6 @@ CATEGORIES_COLOR: dict[str, str] = {
 
 # Format: [parent, id, author, category, title, desc_fr, desc_en]
 GOOGLE_SHEET: str = """
-
 {"id": "minecraft:lime_concrete"}	categories/jumps	jump_green	Stoupy	jump	The Green Jump	Finir le jump vert pour la première fois	Finish the green jump for the first time
 {"id": "minecraft:white_concrete"}	jump_green	jump_white	Stoupy	jump	The White Jump	Finir le jump blanc pour la première fois	Finish the white jump for the first time
 {"id": "minecraft:blue_concrete"}	jump_white	jump_blue	Stoupy	jump	The Blue Jump	Finir le jump bleu pour la première fois	Finish the blue jump for the first time

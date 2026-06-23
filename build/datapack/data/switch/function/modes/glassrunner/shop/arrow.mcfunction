@@ -13,8 +13,6 @@ clear @s flint[custom_data~{to_clear:true}]
 # lore : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
 
-
-
 execute if score @s switch.glassrunner.money matches 5.. run give @s arrow 5
 
 function switch:modes/glassrunner/translations/shop_arrow

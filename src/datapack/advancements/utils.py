@@ -70,7 +70,6 @@ scoreboard players set @s switch.advancements 0
 
 def hidden_advancements() -> None:
 	""" Generates the hidden advancements so that they show up in the advancement GUI. """
-
 	# For each advancement that doesn't have children, generate a hidden advancement
 	for adv in ALL_ADVANCEMENTS:
 		if len(adv["children"]) == 0:

@@ -425,7 +425,6 @@ scoreboard players reset @a[scores={switch.temp.role=3}] switch.games_not_being_
 
 	# /percentage/title (translation ref)
 	write_function(f"{path}/percentage/title", f"""
-
 # Calculate percentages
 scoreboard players operation #percentage_murderer switch.data = @s switch.games_not_being_murderer
 scoreboard players operation #percentage_murderer switch.data *= #100 switch.data

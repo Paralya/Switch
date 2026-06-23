@@ -37,10 +37,7 @@ execute if score #count switch.data matches ..14 if data storage switch:main {{m
 	write_function(f"{path}/flag_drop", f"""
 # Drop the flag
 function {translations}/flag_drop
-execute if entity @s[tag=switch.blue_flag] run kill @a[tag=switch.has_blue_flag]
-execute if entity @s[tag=switch.red_flag] run kill @a[tag=switch.has_red_flag]
-execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag
-execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
+function switch:modes/_common/flag/release_holders
 execute on vehicle run tp @s ~ ~-2 ~
 
 # Add free tag
@@ -197,17 +194,9 @@ function {path}/classes/main
 	write_function(f"{path}/score_point", f"""
 # Tellraw + sound + fireworks
 function {translations}/score_point
-execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.blue_flag] run advancement grant @p[tag=switch.has_blue_flag] only switch:visible/33
-execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[tag=switch.has_red_flag] only switch:visible/33
-execute as @a[tag=!detached] at @s run playsound entity.firework_rocket.blast ambient @s
+function switch:modes/_common/flag/score_fireworks
 
-
-execute if entity @s[tag=switch.blue_flag] run summon firework_rocket ~ ~ ~ {{LifeTime:0,FireworksItem:{{id:"minecraft:firework_rocket",count:1,components:{{"minecraft:firework_explosion":{{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[16711680],"fade_colors":[16711680]}}}}}}}}
-execute if entity @s[tag=switch.red_flag] run summon firework_rocket ~ ~ ~ {{LifeTime:0,FireworksItem:{{id:"minecraft:firework_rocket",count:1,components:{{"minecraft:firework_explosion":{{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[255],"fade_colors":[255]}}}}}}}}
-
-# Add point
-execute if entity @s[tag=switch.blue_flag] run scoreboard players add #red_points switch.data 1
-execute if entity @s[tag=switch.red_flag] run scoreboard players add #blue_points switch.data 1
+# Teleport the scorer back to spawn
 execute if entity @s[tag=switch.blue_flag] as @p[tag=switch.has_blue_flag] run function {path}/teleport_to_spawn
 execute if entity @s[tag=switch.red_flag] as @p[tag=switch.has_red_flag] run function {path}/teleport_to_spawn
 
@@ -275,24 +264,7 @@ team add switch.temp.sidebar.2 {{"text":"[Sidebar 2]"}}
 team add switch.temp.sidebar.1 {{"text":"[Sidebar 1]"}}
 team modify switch.temp.sidebar.5 suffix [{{"text":"Goal: "}},{{"text":"5","color":"yellow"}},{{"text":" flags"}}]
 team modify switch.temp.sidebar.3 suffix [{{"text":"Time remaining: "}},{{"text":"15","color":"yellow"}},{{"text":"m"}},{{"text":"00","color":"yellow"}},{{"text":"s"}}]
-team modify switch.temp.sidebar.2 suffix [{{"text":"Blue Team: ","color":"blue"}},{{"text":"0","color":"yellow"}}]
-team modify switch.temp.sidebar.1 suffix [{{"text":"Red Team: ","color":"red"}},{{"text":"0","color":"yellow"}}]
-team modify switch.temp.sidebar.2 color blue
-team modify switch.temp.sidebar.1 color red
-team join switch.temp.sidebar.5 §3
-team join switch.temp.sidebar.3 §5
-team join switch.temp.sidebar.2 §2
-team join switch.temp.sidebar.1 §1
-scoreboard players set §5 switch.temp.sidebar 5
-scoreboard players set §r switch.temp.sidebar 4
-scoreboard players set §3 switch.temp.sidebar 3
-scoreboard players set §2 switch.temp.sidebar 2
-scoreboard players set §1 switch.temp.sidebar 1
-scoreboard players display numberformat §5 switch.temp.sidebar blank
-scoreboard players display numberformat §r switch.temp.sidebar blank
-scoreboard players display numberformat §3 switch.temp.sidebar blank
-scoreboard players display numberformat §2 switch.temp.sidebar blank
-scoreboard players display numberformat §1 switch.temp.sidebar blank
+function switch:modes/_common/sidebar_setup
 
 # Choix des rôles + give d'items
 team add switch.temp.red {{"text":"[Red]","color":"red"}}
@@ -500,7 +472,6 @@ attribute @s jump_strength base reset
 
 	# /classes/demolisher
 	write_function(f"{path}/classes/demolisher", f"""
-
 function {path}/classes/_common
 
 function {path}/classes/_soldier_base
@@ -550,14 +521,7 @@ function {path}/classes/_soldier_attrs
 
 	# /death/for_global
 	write_function(f"{path}/death/for_global", f"""
-scoreboard players operation #player_id switch.id = @s switch.id
-clear @a[tag=!detached,predicate=switch:has_same_id]
-
-function {path}/death/inventory_filter
-execute if data entity @s data.Inventory[0] at @s run function switch:modes/_common/death/inventory_drop
-
-tag @s add switch.processed
-tp @s 0 69 0
+function switch:modes/_common/death/for_global {{filter:"switch:modes/capture_the_flag/death/inventory_filter"}}
 """)
 
 

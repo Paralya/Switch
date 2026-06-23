@@ -52,12 +52,7 @@ tag @a[tag=!detached,predicate=switch:has_same_id] add switch.temp
 clear @a[tag=switch.temp]
 
 function switch:modes/spectres_game/death/inventory_filter
-execute at @s run function switch:modes/_common/death/inventory_drop
-
-scoreboard players set #success switch.data 0
-execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
-
-execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
+function switch:modes/_common/death/global_effects
 execute if entity @a[tag=switch.temp,scores={switch.temp.spectror=1}] run scoreboard players set @s switch.alive 3
 
 
@@ -74,10 +69,7 @@ kill @s
 
 	# /death/inventory_filter
 	write_function(f"{path}/death/inventory_filter", """
-data modify storage switch:main Inventory set value []
-data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:golden_apple"}]
-data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:arrow"}]
-data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:tnt"}]
+function switch:modes/_common/death/keep_combat_items
 execute store result storage switch:main Inventory[{id:"minecraft:golden_apple"}].count int 0.25 run data get entity @s Inventory[{id:"minecraft:golden_apple"}].count
 data modify entity @s data.Inventory set from storage switch:main Inventory
 """)
@@ -91,7 +83,6 @@ tag @s add switch.to_tp
 
 	# /death/revive_visible
 	write_function(f"{path}/death/revive_visible", """
-
 scoreboard players set #next_role switch.data 1
 function switch:modes/spectres_game/roles/main
 
@@ -473,10 +464,7 @@ execute unless score #new_players switch.data matches 2.. if predicate switch:ch
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake","old_japan","cluedo_camping","la_juste_recette","torg_arena"]}
 
-execute in switch:game run gamerule minecraft:mob_griefing true
-execute in switch:game run gamerule minecraft:show_death_messages false
-execute in switch:game run gamerule minecraft:natural_health_regeneration false
-execute in switch:game run gamerule minecraft:keep_inventory true
+function switch:modes/_common/standard_combat_rules
 
 function switch:modes/spectres_game/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

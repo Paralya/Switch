@@ -9,12 +9,7 @@
 
 scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
-execute at @s run function switch:modes/_common/death/inventory_drop
-
-scoreboard players set #success switch.data 0
-execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
-
-execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
+function switch:modes/_common/death/global_effects
 
 execute if score #sc_silencieux switch.data matches 1 if predicate switch:chance/0.33 run scoreboard players set @s switch.temp.role 0
 

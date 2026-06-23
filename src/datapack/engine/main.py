@@ -108,6 +108,14 @@ execute unless score #no_force_start_msg switch.data matches 1 run function swit
 scoreboard players reset #no_force_start_msg switch.data
 
 # Start the game with the right state
+function switch:engine/start_state
+scoreboard players remove @a[tag=!detached] switch.win_streak 5
+scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5
+""")
+
+	# /start_state (shared: enter the playing state, reset players/entities, fire the start signal)
+	write_function(f"{path}/start_state", """
+# Start the game with the right state
 scoreboard players set #engine_state switch.data 3
 scoreboard players reset #set_spec switch.data
 scoreboard players reset #do_spreadplayers switch.data
@@ -117,8 +125,6 @@ function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached]"
 function switch:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
-scoreboard players remove @a[tag=!detached] switch.win_streak 5
-scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5
 """)
 
 	# /launch_game/add_played_stat

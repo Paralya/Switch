@@ -21,11 +21,8 @@ execute if score #glassrunner.apocalypse switch.data matches 30 run function swi
 
 execute if score #glassrunner.apocalypse switch.data matches 30.. run function switch:modes/glassrunner/apocalypse/end
 
-
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/tick_player
-
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
-
 execute as @e[type=arrow,nbt={inBlockState:{}},distance=..200] at @s run function switch:modes/glassrunner/arrow_explosion
 
 fill 3003 128 3003 2997 132 2997 air replace #switch:glassrunner/glass

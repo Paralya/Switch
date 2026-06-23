@@ -5,14 +5,8 @@
 #
 
 scoreboard players add #rtb_round_state switch.data 1
-
 scoreboard players set @a[tag=!detached] switch.rtb.time 0
-
 execute as @e[type=marker,tag=switch.rtb.island] run function switch:modes/replicate_the_build/structure/destroy
-
-
-
-
 
 bossbar set rtb.all name "Répliquez"
 bossbar set rtb.all color red

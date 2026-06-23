@@ -202,10 +202,7 @@ kill @s
 
 	# /death/inventory_filter
 	write_function(f"{path}/death/inventory_filter", """
-data modify storage switch:main Inventory set value []
-data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:golden_apple"}]
-data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:arrow"}]
-data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:tnt"}]
+function switch:modes/_common/death/keep_combat_items
 data modify entity @s data.Inventory set from storage switch:main Inventory
 """)
 

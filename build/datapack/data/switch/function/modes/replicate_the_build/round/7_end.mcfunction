@@ -11,7 +11,6 @@ scoreboard players operation #min_score switch.data < @a[tag=!detached] switch.r
 
 execute as @a[scores={switch.alive=1..}] if score @s switch.rtb.points = #min_score switch.data run tag @s add switch.looser_score
 
-
 scoreboard players set #max_time switch.data 0
 scoreboard players operation #max_time switch.data > @a[tag=!detached] switch.rtb.time
 

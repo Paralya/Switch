@@ -480,3 +480,4 @@ function switch:stats/_sort_player_stats_finalize
 function switch:player/update_stats_storage/main
 function switch:stats/async/sort_player_stats
 """)
+

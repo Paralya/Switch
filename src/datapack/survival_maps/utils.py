@@ -296,7 +296,6 @@ def create_spread_players_file(name: str, start_pos: tuple[int, ...], end_pos: t
 		end_pos (tuple)				: The end position of the regeneration area
 		paste_start_height (int)	: The height where the map is pasted
 	"""
-
 	# Get variables
 	x, _, z = get_middle_from_start_and_end(start_pos, end_pos, paste_start_height)
 	dx: int = end_pos[0] - x

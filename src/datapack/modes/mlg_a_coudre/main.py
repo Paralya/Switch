@@ -57,7 +57,6 @@ gamemode spectator @s
 
 	# /joined
 	write_function(f"{path}/joined", f"""
-
 # Reset attributes (like safe_fall_distance)
 function switch:utils/reset_attributes
 

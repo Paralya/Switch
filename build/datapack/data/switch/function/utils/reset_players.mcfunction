@@ -3,8 +3,7 @@
 #
 # @executed	as @n[tag=switch.coupdetat] & in switch:game
 #
-# @within	switch:modes/_coupdetat/_force_start
-#			switch:engine/force_start_macro
+# @within	switch:engine/start_state
 #			switch:engine/launch_game/main
 #			switch:engine/stop
 #

@@ -298,6 +298,40 @@ data remove entity @s data.Inventory[0]
 execute if data entity @s data.Inventory[0] run function {path}/death/inventory_drop
 """)
 
+	# /death/for_global (shared by capture_the_flag / rush_the_point: clear the dead player's linked
+	# copies, drop their mode-filtered inventory, then park the marker off-map. {filter} = that mode's
+	# death/inventory_filter function path.)
+	write_function(f"{path}/death/for_global", """
+scoreboard players operation #player_id switch.id = @s switch.id
+clear @a[tag=!detached,predicate=switch:has_same_id]
+
+$function $(filter)
+execute if data entity @s data.Inventory[0] at @s run function switch:modes/_common/death/inventory_drop
+
+tag @s add switch.processed
+tp @s 0 69 0
+""")
+
+	# /death/global_effects (shared spectres_game / traitors_game death/for_global core: drop the
+	# filtered inventory, roll a 50/50 #success, then clap thunder for everyone)
+	write_function(f"{path}/death/global_effects", """
+execute at @s run function switch:modes/_common/death/inventory_drop
+
+scoreboard players set #success switch.data 0
+execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
+
+execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
+""")
+
+	# /death/keep_combat_items (shared beat_the_kings / spectres_game inventory_filter head: rebuild
+	# the saved Inventory from only the golden apples, arrows and TNT the dead player was carrying)
+	write_function(f"{path}/death/keep_combat_items", """
+data modify storage switch:main Inventory set value []
+data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:golden_apple"}]
+data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:arrow"}]
+data modify storage switch:main Inventory append from entity @s data.Inventory[{id:"minecraft:tnt"}]
+""")
+
 	# /process_end/winner_by_points (shared end-of-game block for point-based modes: tag the
 	# highest-switch.temp.points player(s) as the winner, reward + announce. All lines self-guard on
 	# #process_end==1, so modes call this unconditionally inside their /process_end.)
@@ -346,5 +380,113 @@ execute if score #process_end switch.data matches 1 if score #remaining_players 
 function switch:translations/common/process_end_winner_health
 $execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function $(death)
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
+""")
+
+	# /flag/release_holders (shared by capture_the_flag / rush_the_flag flag_drop: kill whoever holds
+	# the flag matching @s's color and strip their has_*_flag tag)
+	write_function(f"{path}/flag/release_holders", """
+execute if entity @s[tag=switch.blue_flag] run kill @a[tag=switch.has_blue_flag]
+execute if entity @s[tag=switch.red_flag] run kill @a[tag=switch.has_red_flag]
+execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag
+execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
+""")
+
+	# /flag/score_fireworks (shared by capture_the_flag / rush_the_flag score_point: scoring
+	# advancement, blast sound, a colored firework, and the point increment for the scoring team)
+	write_function(f"{path}/flag/score_fireworks", """
+execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.blue_flag] run advancement grant @p[tag=switch.has_blue_flag] only switch:visible/33
+execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[tag=switch.has_red_flag] only switch:visible/33
+execute as @a[tag=!detached] at @s run playsound entity.firework_rocket.blast ambient @s
+
+execute if entity @s[tag=switch.blue_flag] run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:firework_explosion":{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[16711680],"fade_colors":[16711680]}}}}
+execute if entity @s[tag=switch.red_flag] run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:firework_explosion":{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[255],"fade_colors":[255]}}}}
+
+# Add point
+execute if entity @s[tag=switch.blue_flag] run scoreboard players add #red_points switch.data 1
+execute if entity @s[tag=switch.red_flag] run scoreboard players add #blue_points switch.data 1
+""")
+
+	# /pvp_arena/kit (shared melee loadout for castagne / pvpswap; castagne adds a fishing_rod on its own)
+	write_function(f"{path}/pvp_arena/kit", """
+item replace entity @s armor.head with leather_helmet[enchantments={projectile_protection:2}]
+item replace entity @s armor.chest with leather_chestplate[enchantments={projectile_protection:2}]
+item replace entity @s armor.legs with leather_leggings[enchantments={projectile_protection:2}]
+item replace entity @s armor.feet with leather_boots[enchantments={projectile_protection:2}]
+item replace entity @s hotbar.0 with wooden_sword[enchantments={sharpness:1,knockback:1}]
+item replace entity @s hotbar.1 with bow
+item replace entity @s hotbar.2 with water_bucket
+item replace entity @s hotbar.3 with iron_pickaxe[enchantments={efficiency:1}]
+item replace entity @s hotbar.4 with iron_axe[enchantments={efficiency:1},attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:2,operation:"add_value"}]]
+item replace entity @s hotbar.6 with arrow 8
+item replace entity @s hotbar.7 with oak_planks 64
+item replace entity @s hotbar.8 with golden_apple 12
+item replace entity @s inventory.25 with tnt 4
+item replace entity @s inventory.26 with flint_and_steel
+""")
+
+	# /pvp_arena/combat_tick (shared castagne / pvpswap tick body: classic-death detection, glow when
+	# isolated, and the kill-streak advancement with its cooldown bookkeeping)
+	write_function(f"{path}/pvp_arena/combat_tick", """
+## Death system
+function switch:utils/on_death_run_function {function:"switch:utils/classic_death"}
+
+# Glowing
+execute as @a[tag=!detached,gamemode=survival] at @s unless entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect give @s glowing 2 255 true
+execute as @a[tag=!detached,gamemode=survival] at @s if entity @a[tag=!detached,distance=0.001..25,gamemode=survival] run effect clear @s glowing
+
+# Advancement
+execute unless score #test_mode switch.data matches 1 run advancement grant @a[tag=!detached,scores={switch.temp.kill=1..,switch.temp.cooldown_kill=1..}] only switch:visible/9
+scoreboard players set @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.cooldown_kill 200
+scoreboard players remove @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill 1
+scoreboard players remove @a[tag=!detached,scores={switch.temp.cooldown_kill=1..}] switch.temp.cooldown_kill 1
+""")
+
+	# /standard_combat_rules (mob griefing on, hidden death messages, no natural regen, kept inventory;
+	# shared by creeper_apocalypse / spectres_game / traitors_game)
+	write_function(f"{path}/standard_combat_rules", """
+execute in switch:game run gamerule minecraft:mob_griefing true
+execute in switch:game run gamerule minecraft:show_death_messages false
+execute in switch:game run gamerule minecraft:natural_health_regeneration false
+execute in switch:game run gamerule minecraft:keep_inventory true
+""")
+
+	# /detect_2team_state (shared red/blue "who's left standing" check for the 2-team elimination modes
+	# layers_2_teams / sheepwars: #game_state = 1 red wins, 2 blue wins, 3 nobody left; ends the timer)
+	write_function(f"{path}/detect_2team_state", """
+# On regarde l'état de la partie
+scoreboard players set #game_state switch.data 0
+execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.red] unless entity @a[tag=!detached,gamemode=!spectator,team=!switch.temp.red] run scoreboard players add #game_state switch.data 1
+execute if entity @a[tag=!detached,gamemode=!spectator,team=switch.temp.blue] unless entity @a[tag=!detached,gamemode=!spectator,team=!switch.temp.blue] run scoreboard players add #game_state switch.data 2
+execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard players add #game_state switch.data 3
+
+# 1 = Victoire Rouge
+# 2 = Victoire Bleue
+# 3 = Plus personne
+
+# Cas de fin de partie
+execute if score #game_state switch.data matches 1..3 run scoreboard players set #remaining_time switch.data 0
+""")
+
+	# /sidebar_setup (shared Blue/Red sidebar rows + the fixed §-fakeplayer ordering, used by the
+	# Red-vs-Blue point modes; callers set their own sidebar.5 "Goal" and sidebar.3 "Time" suffixes)
+	write_function(f"{path}/sidebar_setup", """
+team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.2 color blue
+team modify switch.temp.sidebar.1 color red
+team join switch.temp.sidebar.5 §3
+team join switch.temp.sidebar.3 §5
+team join switch.temp.sidebar.2 §2
+team join switch.temp.sidebar.1 §1
+scoreboard players set §5 switch.temp.sidebar 5
+scoreboard players set §r switch.temp.sidebar 4
+scoreboard players set §3 switch.temp.sidebar 3
+scoreboard players set §2 switch.temp.sidebar 2
+scoreboard players set §1 switch.temp.sidebar 1
+scoreboard players display numberformat §5 switch.temp.sidebar blank
+scoreboard players display numberformat §r switch.temp.sidebar blank
+scoreboard players display numberformat §3 switch.temp.sidebar blank
+scoreboard players display numberformat §2 switch.temp.sidebar blank
+scoreboard players display numberformat §1 switch.temp.sidebar blank
 """)
 

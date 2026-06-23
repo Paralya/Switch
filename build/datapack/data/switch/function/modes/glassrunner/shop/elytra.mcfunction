@@ -13,9 +13,7 @@ clear @s elytra[custom_data~{to_clear:true}]
 #lore  : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
 
-
-
-execute if score @s switch.glassrunner.money matches 20.. run effect give @s minecraft:levitation 1 40 true 
+execute if score @s switch.glassrunner.money matches 20.. run effect give @s minecraft:levitation 1 40 true
 execute if score @s switch.glassrunner.money matches 20.. run scoreboard players set @s switch.glassrunner.elytra 20
 
 function switch:modes/glassrunner/translations/shop_elytra

@@ -28,7 +28,6 @@ clear @s
 
 	# /give_items
 	write_function(f"{path}/give_items", """
-
 clear @s
 loot replace entity @s hotbar.0 loot grappling_hook:v1.4.0/items/normal_grappling_hook
 loot replace entity @s weapon.offhand loot grappling_hook:v1.4.0/items/normal_grappling_hook

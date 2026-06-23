@@ -54,12 +54,7 @@ function switch:modes/traitors_game/translations/death_for_detective
 	write_function(f"{path}/death/for_global", """
 scoreboard players operation #player_id switch.id = @s switch.id
 clear @a[tag=!detached,predicate=switch:has_same_id]
-execute at @s run function switch:modes/_common/death/inventory_drop
-
-scoreboard players set #success switch.data 0
-execute if predicate switch:chance/0.5 run scoreboard players set #success switch.data 1
-
-execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
+function switch:modes/_common/death/global_effects
 
 execute if score #sc_silencieux switch.data matches 1 if predicate switch:chance/0.33 run scoreboard players set @s switch.temp.role 0
 
@@ -428,10 +423,7 @@ function switch:utils/set_dynamic_time
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:utils/choose_map_for {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}
 
-execute in switch:game run gamerule minecraft:mob_griefing true
-execute in switch:game run gamerule minecraft:show_death_messages false
-execute in switch:game run gamerule minecraft:natural_health_regeneration false
-execute in switch:game run gamerule minecraft:keep_inventory true
+function switch:modes/_common/standard_combat_rules
 
 function switch:modes/traitors_game/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

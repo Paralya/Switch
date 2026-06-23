@@ -65,10 +65,7 @@ function switch:modes/rush_the_flag/translations/advancements_break_obsidian_con
 	write_function(f"{path}/flag_drop", """
 # Drop the flag
 function switch:modes/rush_the_flag/translations/flag_drop
-execute if entity @s[tag=switch.blue_flag] run kill @a[tag=switch.has_blue_flag]
-execute if entity @s[tag=switch.red_flag] run kill @a[tag=switch.has_red_flag]
-execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag
-execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
+function switch:modes/_common/flag/release_holders
 data modify entity @s[tag=switch.blue_flag] item set value {id:"blue_banner",count:1}
 data modify entity @s[tag=switch.red_flag] item set value {id:"red_banner",count:1}
 data modify entity @s transformation.translation[1] set value -1.5f
@@ -210,16 +207,9 @@ execute if score #process_end switch.data matches 200 run function switch:engine
 	write_function(f"{path}/score_point", """
 # Tellraw + sound + fireworks
 function switch:modes/rush_the_flag/translations/score_point
-execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.blue_flag] run advancement grant @p[tag=switch.has_blue_flag] only switch:visible/33
-execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[tag=switch.has_red_flag] only switch:visible/33
-execute as @a[tag=!detached] at @s run playsound entity.firework_rocket.blast ambient @s
+function switch:modes/_common/flag/score_fireworks
 
-execute if entity @s[tag=switch.blue_flag] run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:firework_explosion":{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[16711680],"fade_colors":[16711680]}}}}
-execute if entity @s[tag=switch.red_flag] run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:firework_explosion":{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[255],"fade_colors":[255]}}}}
-
-# Add point
-execute if entity @s[tag=switch.blue_flag] run scoreboard players add #red_points switch.data 1
-execute if entity @s[tag=switch.red_flag] run scoreboard players add #blue_points switch.data 1
+# Teleport the scorer back to spawn
 execute if entity @s[tag=switch.blue_flag] as @p[tag=switch.has_blue_flag] run function switch:modes/rush_the_point/teleport_to_spawn
 execute if entity @s[tag=switch.red_flag] as @p[tag=switch.has_red_flag] run function switch:modes/rush_the_point/teleport_to_spawn
 

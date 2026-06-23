@@ -1,9 +1,7 @@
 
 #> switch:modes/rush_the_point/death/inventory_filter
 #
-# @executed	as @e[type=marker,tag=...]
-#
-# @within	switch:modes/rush_the_point/death/for_global
+# @within	???
 #
 
 data modify storage switch:main Inventory set value []

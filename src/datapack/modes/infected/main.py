@@ -637,7 +637,6 @@ execute if score #infected_secret switch.data matches 3.. positioned 128077 110 
 
 	# /secrets/ancienne_egypte/button_black (translation ref rewritten)
 	write_function(f"{path}/secrets/ancienne_egypte/button_black", """
-
 ## Black button: sacrificing the other room
 # Check if both sides are lit
 execute unless score #infected_secret switch.data matches 2 run return 0
@@ -659,7 +658,6 @@ function switch:modes/infected/secrets/ancienne_egypte/next_state
 
 	# /secrets/ancienne_egypte/button_red (translation ref rewritten)
 	write_function(f"{path}/secrets/ancienne_egypte/button_red", """
-
 ## Red button: sacrificing yourself
 # Check if both sides are lit
 execute unless score #infected_secret switch.data matches 2 run return 0

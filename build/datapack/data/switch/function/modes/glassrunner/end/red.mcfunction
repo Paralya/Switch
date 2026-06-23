@@ -7,6 +7,5 @@
 #
 
 function switch:modes/glassrunner/translations/end_red
-
 scoreboard players set #process_end switch.data 1
 

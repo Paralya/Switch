@@ -2,11 +2,9 @@
 #> switch:modes/_common/death/inventory_drop
 #
 # @within	switch:modes/_common/death/inventory_drop
+#			switch:modes/_common/death/for_global [ at @s ]
+#			switch:modes/_common/death/global_effects [ at @s ]
 #			switch:modes/beat_the_kings/death/for_global [ at @s ]
-#			switch:modes/capture_the_flag/death/for_global [ at @s ]
-#			switch:modes/rush_the_point/death/for_global [ at @s ]
-#			switch:modes/spectres_game/death/for_global [ at @s ]
-#			switch:modes/traitors_game/death/for_global [ at @s ]
 #
 
 loot spawn ~ ~ ~ loot switch:temp_item
