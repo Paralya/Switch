@@ -1,5 +1,5 @@
 
-# ruff: noqa: E501, W291, W293
+# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 
@@ -47,15 +47,11 @@ execute positioned 2997 128 2997 unless entity @a[tag=!detached,dx=5,dy=3,dz=5] 
 execute if score #glassrunner.ctp.center.red.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/center/red
 execute if score #glassrunner.ctp.center.blue.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/center/blue
 
-
-
 execute positioned 2924 128 3074 as @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side1/adding_timer
 execute positioned 2924 128 3074 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side1/reset
 
 execute if score #glassrunner.ctp.side1.red.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/side1/red
 execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/side1/blue
-
-
 
 execute positioned 3074 128 2924 as @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side2/adding_timer
 execute positioned 3074 128 2924 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side2/reset
@@ -93,7 +89,6 @@ function switch:utils/choose_map_for {id:"glassrunner", maps:["glassrunner"]}
 scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/glassrunner/start/team
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/death/death
-
 
 execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:keep_inventory true
@@ -133,8 +128,6 @@ team join switch.glassrunner.p_blue §P§B§r
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0
 
-
-
 execute in switch:game run summon text_display 3000 110 3000 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
 execute in switch:game run summon text_display 3084 131 3084 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
 execute in switch:game run summon text_display 2916 131 2916 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
@@ -162,7 +155,6 @@ scoreboard players add #glassrunner_ticks switch.data 1
 
 function switch:utils/on_death_run_function {function:"switch:modes/glassrunner/death/death"}
 
-
 execute if score #glassrunner.apocalypse switch.data matches 1 run function switch:modes/glassrunner/apocalypse/start
 execute if score #glassrunner.apocalypse switch.data matches 1.. run scoreboard players add #glassrunner.apocalypse switch.data 1
 execute if score #glassrunner.apocalypse switch.data matches 5 run function switch:modes/glassrunner/apocalypse/tick
@@ -174,12 +166,8 @@ execute if score #glassrunner.apocalypse switch.data matches 30 run function swi
 
 execute if score #glassrunner.apocalypse switch.data matches 30.. run function switch:modes/glassrunner/apocalypse/end
 
-
-
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/tick_player
-
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
-
 execute as @e[type=arrow,nbt={inBlockState:{}},distance=..200] at @s run function switch:modes/glassrunner/arrow_explosion
 
 fill 3003 128 3003 2997 132 2997 air replace #switch:glassrunner/glass
@@ -192,7 +180,6 @@ fill 2924 131 3076 2926 128 3074 air replace #switch:glassrunner/glass
 
 execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=15..}] at @s run function switch:modes/glassrunner/fireball/use
 execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/glassrunner/fireball/explosion
-
 
 execute as @e[tag=switch.glassrunner.money_maker] at @s run function switch:modes/glassrunner/money_maker/tick
 execute as @a[scores={switch.glassrunner.money_maker=60..}] run function switch:modes/glassrunner/money_maker/add_money
@@ -207,29 +194,19 @@ execute if score #process_end switch.data matches 1.. run function switch:modes/
 
 	# /tick_glass_bridge
 	write_function(f"{path}/tick_glass_bridge", """
+# Increase the snowball use counter
 scoreboard players add @s switch.glassrunner.use_snowball 1
-
-
 execute if entity @s[y=0,dy=70] run return 0
 
-
 # Normal snowball
-
-
 execute if score @s switch.glassrunner.use_snowball matches 5.. if entity @s[tag=switch.glassrunner.glass_bridge.red] facing entity @p[team=switch.glassrunner.red] eyes positioned ^ ^ ^2 run fill ~-0.3 ~-2.1 ~-0.3 ~0.3 ~-2.5 ~0.3 red_stained_glass replace #switch:glassrunner/tier_1
 execute if score @s switch.glassrunner.use_snowball matches 5.. if entity @s[tag=switch.glassrunner.glass_bridge.blue] facing entity @p[team=switch.glassrunner.blue] eyes positioned ^ ^ ^2 run fill ~-0.3 ~-2.1 ~-0.3 ~0.3 ~-2.5 ~0.3 blue_stained_glass replace #switch:glassrunner/tier_1
-
-
 execute if score @s switch.glassrunner.use_snowball matches 5.. if entity @s[tag=switch.glassrunner.glass_bridge.red] facing entity @p[team=switch.glassrunner.red] eyes positioned ^ ^ ^2 run fill ~-0.3 ~-2.1 ~-0.3 ~0.3 ~-2.5 ~0.3 pink_stained_glass replace air
 execute if score @s switch.glassrunner.use_snowball matches 5.. if entity @s[tag=switch.glassrunner.glass_bridge.blue] facing entity @p[team=switch.glassrunner.blue] eyes positioned ^ ^ ^2 run fill ~-0.3 ~-2.1 ~-0.3 ~0.3 ~-2.5 ~0.3 light_blue_stained_glass replace air
 
-
 # Renforced snowball
-
 execute if score @s switch.glassrunner.use_snowball matches 5.. if entity @s[tag=switch.glassrunner.renforced_glass_bridge.red] facing entity @p[team=switch.glassrunner.red] eyes positioned ^ ^ ^2 run fill ~-0.8 ~-2.3 ~-0.8 ~0.8 ~-2.8 ~0.8 red_stained_glass replace #switch:glassrunner/tier_1_air
 execute if score @s switch.glassrunner.use_snowball matches 5.. if entity @s[tag=switch.glassrunner.renforced_glass_bridge.blue] facing entity @p[team=switch.glassrunner.blue] eyes positioned ^ ^ ^2 run fill ~-0.8 ~-2.3 ~-0.8 ~0.8 ~-2.8 ~0.8 blue_stained_glass replace #switch:glassrunner/tier_1_air
-
-
 
 execute if score @s switch.glassrunner.use_snowball matches 200.. run kill @s
 """)
@@ -241,39 +218,28 @@ execute if score @s switch.glassrunner.use_snowball matches 1.. run function swi
 execute if predicate switch:holding_destroying_crossbow run item modify entity @s weapon.mainhand switch:charged
 execute if predicate switch:holding_destroying_crossbow run effect give @s slowness 1 3 true
 
-
-
 data remove storage switch:glassrunner temp.Inventory
 data modify storage switch:glassrunner temp.Inventory set from entity @s Inventory
 
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:13b}] run function switch:modes/glassrunner/shop/turtle
-
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:19b}] run function switch:modes/glassrunner/shop/snowball
-
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:21b}] run function switch:modes/glassrunner/shop/arrow
-
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:23b}] run function switch:modes/glassrunner/shop/igloo
-
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:25b}] run function switch:modes/glassrunner/shop/apocalypse
-
 execute unless data storage switch:glassrunner temp.Inventory[{Slot:31b}] run function switch:modes/glassrunner/shop/elytra
 
-
 execute if score @s switch.glassrunner.apocalypse matches 1.. run function switch:modes/glassrunner/shop/apocalypse_player
-
 
 item replace entity @s[scores={switch.glassrunner.turtle_helmet=1..}] armor.head with turtle_helmet[enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},attribute_modifiers=[{type:"knockback_resistance",id:"switch.knockback_resistance",amount:1,operation:"add_value"}]]
 item replace entity @s[scores={switch.glassrunner.turtle_helmet=..1}] armor.head with air
 
 scoreboard players remove @s[scores={switch.glassrunner.turtle_helmet=1..}] switch.glassrunner.turtle_helmet 1
 
-
 execute if data entity @s {OnGround:true} if predicate switch:glassrunner/in_elytra if entity @s[team=switch.glassrunner.blue] run item replace entity @s armor.chest with leather_chestplate[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=255]
 execute if data entity @s {OnGround:true} if predicate switch:glassrunner/in_elytra if entity @s[team=switch.glassrunner.red] run item replace entity @s armor.chest with leather_chestplate[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=16711680]
 
 execute if score @s switch.glassrunner.elytra matches 2 run item replace entity @s armor.chest with elytra[unbreakable={}]
 scoreboard players remove @s[scores={switch.glassrunner.elytra=1..}] switch.glassrunner.elytra 1
- 
 
 execute if entity @s[y=0,dy=70,gamemode=adventure] run kill @s
 """)
@@ -346,7 +312,6 @@ fill ~ ~-2 ~-1 ~ ~-2 ~1 light_blue_stained_glass replace blue_stained_glass
 
 	# /start/team
 	write_function(f"{path}/start/team", """
-
 execute if score #count switch.data matches 0 run team join switch.glassrunner.red @s
 execute if score #count switch.data matches 1 run team join switch.glassrunner.blue @s
 
@@ -372,8 +337,6 @@ function switch:modes/glassrunner/translations/apocalypse_start
 	write_function(f"{path}/apocalypse/tick", """
 execute as @a[tag=!detached,gamemode=!spectator] at @s run function switch:modes/glassrunner/apocalypse/tick_player
 
-
-
 summon lightning_bolt ~100 ~ ~100
 summon lightning_bolt ~-100 ~ ~-100
 summon lightning_bolt ~-100 ~ ~100
@@ -383,39 +346,20 @@ summon lightning_bolt ~100 ~ ~-100
 	# /apocalypse/tick_player
 	write_function(f"{path}/apocalypse/tick_player", """
 fill ~-10 ~-10 ~-10 ~10 ~10 ~10 air replace #switch:glassrunner/glass
-
-
 execute align xyz run summon creeper ~ ~2 ~ {DeathLootTable:"null",ExplosionRadius:10b,Fuse:0,ignited:true,Invulnerable:true}
 """)
 
 	# /money_maker/add_money
 	write_function(f"{path}/money_maker/add_money", """
-
-
-
-
 scoreboard players add @s switch.glassrunner.money 2
 scoreboard players set @s switch.glassrunner.money_maker 0
-
 xp add @s 2 levels
-
-
-
 execute at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
 """)
 
 	# /money_maker/tick
 	write_function(f"{path}/money_maker/tick", """
-
-
-
-
-
-
 execute positioned ~ ~-2 ~ as @a[distance=..3] at @s if block ~ ~-1 ~ gold_block run scoreboard players add @s switch.glassrunner.money_maker 1
-
-
-
 """)
 
 	# /snowball/repart
@@ -439,7 +383,6 @@ tag @s remove switch.glassrunner.owner
 
 scoreboard players remove @s switch.glassrunner.use_snowball 1
 
-
 execute positioned 2925 129 2925 if entity @s[team=switch.glassrunner.red,distance=..3] run loot give @s loot switch:glassrunner/snowball_bridge_red
 execute positioned 3075 129 3075 if entity @s[team=switch.glassrunner.blue,distance=..3] run loot give @s loot switch:glassrunner/snowball_bridge_blue
 """)
@@ -447,7 +390,6 @@ execute positioned 3075 129 3075 if entity @s[team=switch.glassrunner.blue,dista
 	# /fireball/explosion
 	write_function(f"{path}/fireball/explosion", """
 particle minecraft:flame ~ ~ ~ 1 1 1 .1 5
-
 
 fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace #switch:glassrunner/glass_air
 
@@ -478,7 +420,6 @@ scoreboard players set #glassrunner.ctp.{loc}.{color}.timer switch.data 0
 scoreboard players add #glassrunner.points.{color} switch.data {pts}
 scoreboard players add @a[tag=!detached,team=switch.glassrunner.{color}] switch.glassrunner.money 2
 xp add @a[tag=!detached,team=switch.glassrunner.{color}] 2 levels
-
 
 execute as @a[tag=!detached,team=switch.glassrunner.{color}] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
 """)
@@ -525,11 +466,9 @@ fill {fill} minecraft:white_concrete
 
 	# /death/blue
 	write_function(f"{path}/death/blue", """
-
 item replace entity @s armor.chest with leather_chestplate[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=255]
 item replace entity @s armor.legs with leather_leggings[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=255]
 item replace entity @s armor.feet with leather_boots[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=255]
-
 
 loot give @s loot switch:glassrunner/snowball_bridge_blue_x8
 """)
@@ -553,12 +492,10 @@ clear @s arrow
 effect clear @s
 
 execute if entity @s[team=!switch.glassrunner.red,team=!switch.glassrunner.blue] run function switch:modes/glassrunner/death/random
-
 execute if entity @s[team=switch.glassrunner.red] run function switch:modes/glassrunner/death/red
 execute if entity @s[team=switch.glassrunner.blue] run function switch:modes/glassrunner/death/blue
 
 function switch:modes/glassrunner/death/both
-
 spreadplayers 2925 2925 0 2 true @s[team=switch.glassrunner.red]
 spreadplayers 3075 3075 0 2 true @s[team=switch.glassrunner.blue]
 execute at @s facing 3000 128 3000 run tp ~ 129 ~
@@ -586,33 +523,24 @@ execute if score #nb_red switch.data <= #nb_blue switch.data run team join switc
 item replace entity @s armor.chest with leather_chestplate[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=16711680]
 item replace entity @s armor.legs with leather_leggings[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=16711680]
 item replace entity @s armor.feet with leather_boots[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={"hidden_components":["minecraft:enchantments"]},dyed_color=16711680]
-
 loot give @s loot switch:glassrunner/snowball_bridge_red_x8
 """)
 
 	# /end/blue (translation ref rewritten)
 	write_function(f"{path}/end/blue", """
 function switch:modes/glassrunner/translations/end_blue
-
 scoreboard players set #process_end switch.data 1
 """)
 
 	# /end/null (translation ref rewritten)
 	write_function(f"{path}/end/null", """
 function switch:modes/glassrunner/translations/end_null
-
-
 scoreboard players set #process_end switch.data 1
 """)
 
 	# /end/process_end
 	write_function(f"{path}/end/process_end", """
-
-
-
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_win
-
-
 
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/glassrunner/death/death
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
@@ -620,33 +548,23 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached] run fun
 
 # Obligatoire
 execute if score #process_end switch.data matches 200.. run function switch:engine/restart
-
 scoreboard players add #process_end switch.data 1
 """)
 
 	# /end/red (translation ref rewritten)
 	write_function(f"{path}/end/red", """
 function switch:modes/glassrunner/translations/end_red
-
 scoreboard players set #process_end switch.data 1
 """)
 
 	# /shop/apocalypse (translation ref rewritten)
 	write_function(f"{path}/shop/apocalypse", """
-
-
-
-
 clear @s ghast_tear[custom_data~{to_clear:true}]
 
 # item_name : Flèches x5
 # lore : Vous ravitaille en flèches !
 # lore : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
-
-
-
-
 
 execute if score @s switch.glassrunner.money matches 25.. if entity @s[team=switch.glassrunner.red] as @a[team=switch.glassrunner.blue] run scoreboard players add @s switch.glassrunner.apocalypse 10
 execute if score @s switch.glassrunner.money matches 25.. if entity @s[team=switch.glassrunner.blue] as @a[team=switch.glassrunner.red] run scoreboard players add @s switch.glassrunner.apocalypse 10
@@ -655,35 +573,18 @@ function switch:modes/glassrunner/translations/shop_apocalypse
 
 execute if score @s switch.glassrunner.money matches 25.. run xp add @s -25 levels
 execute if score @s switch.glassrunner.money matches 25.. run scoreboard players remove @s switch.glassrunner.money 25
-
-
-
 """)
 
 	# /shop/apocalypse_player
 	write_function(f"{path}/shop/apocalypse_player", """
-
-
-
-
 # effect give @s minecraft:levitation 1 80 true
-
-
-
 fill ~-5 ~-5 ~-5 ~5 ~5 ~5 air replace #switch:glassrunner/glass
-
-
 execute if score @s switch.glassrunner.apocalypse matches ..5 align xyz run summon creeper ~ ~3 ~ {DeathLootTable:"null",ExplosionRadius:5b,Fuse:0,ignited:true,Invulnerable:true}
-
 scoreboard players remove @s switch.glassrunner.apocalypse 1
 """)
 
 	# /shop/arrow (translation ref rewritten)
 	write_function(f"{path}/shop/arrow", """
-
-
-
-
 clear @s flint[custom_data~{to_clear:true}]
 
 # item_name : Flèches x5
@@ -691,27 +592,16 @@ clear @s flint[custom_data~{to_clear:true}]
 # lore : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
 
-
-
-
-
 execute if score @s switch.glassrunner.money matches 5.. run give @s arrow 5
 
 function switch:modes/glassrunner/translations/shop_arrow
 
 execute if score @s switch.glassrunner.money matches 5.. run xp add @s -5 levels
 execute if score @s switch.glassrunner.money matches 5.. run scoreboard players remove @s switch.glassrunner.money 5
-
-
-
 """)
 
 	# /shop/elytra (translation ref rewritten)
 	write_function(f"{path}/shop/elytra", """
-
-
-
-
 clear @s elytra[custom_data~{to_clear:true}]
 
 # item_name : Flèches x5
@@ -719,11 +609,7 @@ clear @s elytra[custom_data~{to_clear:true}]
 #lore  : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
 
-
-
-
-
-execute if score @s switch.glassrunner.money matches 20.. run effect give @s minecraft:levitation 1 40 true 
+execute if score @s switch.glassrunner.money matches 20.. run effect give @s minecraft:levitation 1 40 true
 execute if score @s switch.glassrunner.money matches 20.. run scoreboard players set @s switch.glassrunner.elytra 20
 
 function switch:modes/glassrunner/translations/shop_elytra
@@ -731,22 +617,15 @@ function switch:modes/glassrunner/translations/shop_elytra
 execute if score @s switch.glassrunner.money matches 20.. run xp add @s -20 levels
 execute if score @s switch.glassrunner.money matches 20.. run scoreboard players remove @s switch.glassrunner.money 20
 
-
-
 """)
 
 	# /shop/igloo (translation ref rewritten)
 	write_function(f"{path}/shop/igloo", """
-
 clear @s blue_ice[custom_data~{to_clear:true}]
-
 
 function switch:modes/glassrunner/shop/reset_item
 
-
-
-
-
+# Red
 execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=switch.glassrunner.red] run fill ~-3 ~-1 ~-3 ~-3 ~3 ~3 red_stained_glass replace #switch:glassrunner/tier_1
 execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=switch.glassrunner.red] run fill ~-3 ~-1 ~-3 ~3 ~3 ~-3 red_stained_glass replace #switch:glassrunner/tier_1
 
@@ -766,7 +645,7 @@ execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=swit
 execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=switch.glassrunner.red] run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 pink_stained_glass replace #switch:glassrunner/tier_1_air
 execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=switch.glassrunner.red] run fill ~-3 ~4 ~-3 ~3 ~4 ~3 pink_stained_glass replace #switch:glassrunner/tier_1_air
 
-
+# Blue
 execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=switch.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~-3 ~3 ~3 blue_stained_glass replace #switch:glassrunner/tier_1
 execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=switch.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~3 ~3 ~-3 blue_stained_glass replace #switch:glassrunner/tier_1
 
@@ -788,20 +667,12 @@ execute if score @s switch.glassrunner.money matches 20.. if entity @s[team=swit
 
 
 function switch:modes/glassrunner/translations/shop_igloo
-
 execute if score @s switch.glassrunner.money matches 20.. run xp add @s -20 levels
 execute if score @s switch.glassrunner.money matches 20.. run scoreboard players remove @s switch.glassrunner.money 20
-
-
-
 """)
 
 	# /shop/reset_item
 	write_function(f"{path}/shop/reset_item", """
-
-
-
-
 item replace entity @s inventory.4 with turtle_helmet[item_name={"text":"Casque de tortue","color":"white"},lore=[[{"text":"Met un anti knockback pendant 10 secondes","color":"dark_gray","italic":false}],[{"text":"Prix : ","color":"dark_gray","italic":false},{"text":"25 levels","color":"gold"}]],custom_data={to_clear:true}]
 item replace entity @s inventory.12 with flint[item_name={"text":"Flèches x5","color":"white"},lore=[[{"text":"Vous ravitaille en flèches !","color":"dark_gray","italic":false}],[{"text":"Prix : ","color":"dark_gray","italic":false},{"text":"5 levels","color":"gold"}]],custom_data={to_clear:true}]
 item replace entity @s inventory.10 with snow_block[item_name={"text":"Snowball renforcée x5","color":"white"},lore=[[{"text":"Permet de faire des bridges dirrectement en vitre foncée !","color":"dark_gray","italic":false}],[{"text":"Prix : ","color":"dark_gray","italic":false},{"text":"8 levels","color":"gold"}]],custom_data={to_clear:true}]
@@ -812,14 +683,12 @@ item replace entity @s inventory.22 with elytra[item_name={"text":"Elytra booste
 
 	# /shop/snowball (translation ref rewritten)
 	write_function(f"{path}/shop/snowball", """
-
 clear @s snow_block[custom_data~{to_clear:true}]
 
 # item_name : Snowball renforcée x5
 # lore : Permet de faire des bridges dirrectement en vitre foncée !
 # lore : Prix : 8 levels
 function switch:modes/glassrunner/shop/reset_item
-
 
 execute if score @s[team=switch.glassrunner.red] switch.glassrunner.money matches 8.. run loot give @s loot switch:glassrunner/renforced_snowball_bridge_red_x5
 execute if score @s[team=switch.glassrunner.blue] switch.glassrunner.money matches 8.. run loot give @s loot switch:glassrunner/renforced_snowball_bridge_blue_x5
@@ -832,25 +701,16 @@ execute if score @s switch.glassrunner.money matches 8.. run scoreboard players 
 
 	# /shop/turtle (translation ref rewritten)
 	write_function(f"{path}/shop/turtle", """
-
-
-
-
 clear @s turtle_helmet[custom_data~{to_clear:true}]
 
 # item_name : Flèches x5
 # lore : Vous ravitaille en flèches !
 # lore : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
-
-
-
-
-
 execute if score @s switch.glassrunner.money matches 12.. run scoreboard players add @s switch.glassrunner.turtle_helmet 200
-
 function switch:modes/glassrunner/translations/shop_turtle
 
 execute if score @s switch.glassrunner.money matches 12.. run xp add @s -12 levels
 execute if score @s switch.glassrunner.money matches 12.. run scoreboard players remove @s switch.glassrunner.money 12
 """)
+
