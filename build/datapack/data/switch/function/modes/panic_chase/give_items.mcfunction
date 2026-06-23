@@ -1,9 +1,7 @@
 
 #> switch:modes/panic_chase/give_items
 #
-# @executed	as @a[tag=!detached] & at @s
-#
-# @within	switch:modes/panic_chase/start [ as @a[tag=!detached] & at @s ]
+# @within	???
 #
 
 # Item give depending on random

@@ -13,8 +13,7 @@ execute if score @s switch.music.progress matches 1..99 if score @s switch.music
 execute if score @s switch.music.progress matches 1..99 if score @s switch.music.current matches 99 run scoreboard players operation @s switch.music.current = #last_index switch.music.current
 
 # In every case reset progress
-execute if score @s switch.music.progress matches 1.. run scoreboard players set @s switch.music.progress 1
-execute if score @s switch.music.progress matches ..-1 run scoreboard players set @s switch.music.progress -1
+function switch:music/reset_progress
 
 function switch:music/browser
 

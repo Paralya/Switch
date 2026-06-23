@@ -113,18 +113,13 @@ scoreboard objectives remove switch.temp.points
 """)
 
 	# /summon_gold
-	write_function(f"{path}/summon_gold", """
+	gold_coins: str = "\n".join(
+		r'summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}'
+		for _ in range(10)
+	)
+	write_function(f"{path}/summon_gold", f"""
 ## Summon 10 gold coins at origin (will be spread by spread_one_player)
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
-summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}
+{gold_coins}
 
 execute as @e[type=item,tag=switch.new_coin] run function switch:maps/spread_one_player
 tag @e[type=item,tag=switch.new_coin] remove switch.new_coin

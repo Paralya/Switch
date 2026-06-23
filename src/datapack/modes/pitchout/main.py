@@ -176,11 +176,7 @@ execute as @a[tag=!detached] store result score @s switch.temp.old_z run data ge
 
 	# /stop
 	write_function(f"{path}/stop", """
-scoreboard objectives remove switch.temp.damages
-scoreboard objectives remove switch.temp.cooldown
-scoreboard objectives remove switch.temp.old_x
-scoreboard objectives remove switch.temp.old_z
-scoreboard objectives remove switch.temp.blocks_run
+function switch:modes/_common/remove_movement_objectives
 
 data remove storage switch:temp pitchout
 """)

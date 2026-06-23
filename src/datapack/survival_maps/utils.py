@@ -428,6 +428,22 @@ def check_view_and_identity(view: tuple[float, float, float, float, float], iden
 	return identity[0], identity[1], identity[2] if len(identity) > 2 else ""
 
 
+def write_map_intro_spread(namespace: str, view: tuple[float, float, float, float, float], name: str, credits: str, in_game: bool = True) -> None:
+	""" Write the per-map intro_spread function (shared by clone_survival / fill_survival).
+
+	Args:
+		namespace	(str)	: The map namespace
+		view		(tuple)	: The coordinates and orientation to teleport the players
+		name		(str)	: The display name of the map
+		credits		(str)	: The credits of the map
+		in_game		(bool)	: Whether to force the switch:game dimension context (clone maps need it)
+	"""
+	context: str = "in switch:game " if in_game else ""
+	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
+execute {context}positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{particle:1}}}}
+""")
+
+
 def clone_survival(
 	paste_start_height: int,
 	start_pos: tuple[int, ...],
@@ -516,9 +532,7 @@ kill @s
 	scan_every_door_in_map(namespace, start_pos, end_pos, paste_start_height, splitted_coordinates)
 
 	# Write the intro_spread file
-	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
-execute in switch:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{particle:1}}}}
-""")
+	write_map_intro_spread(namespace, view, name, credits)
 
 	# Add the map to the list of the generated maps and return
 	generated_maps.append(namespace)
@@ -599,9 +613,7 @@ kill @s
 	create_spread_players_file(namespace, start_pos, end_pos, paste_start_height = y)
 
 	# Write the intro_spread file
-	write_function(f"switch:maps/survival/{namespace}/intro_spread", f"""
-execute positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function switch:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{particle:1}}}}
-""")
+	write_map_intro_spread(namespace, view, name, credits, in_game=False)
 
 	# Add the map to the list of the generated maps and return
 	generated_maps.append(namespace)

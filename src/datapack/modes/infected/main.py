@@ -677,12 +677,18 @@ setblock 128071 114 128089 air destroy
 function switch:modes/infected/secrets/ancienne_egypte/next_state
 """)
 
-	# /secrets/ancienne_egypte/item_tick
-	write_function(f"{path}/secrets/ancienne_egypte/item_tick", """
+	# /secrets/item_set_owner (shared by ancienne_egypte / area_51 item_tick: reset the item Owner then
+	# point it at the nearest human still missing this item type)
+	write_function(f"{path}/secrets/item_set_owner", """
 # Owner become nearest human
 data modify entity @s Owner set value [I;1,1,1,1]
 execute if entity @s[tag=switch.infected.stick] run data modify entity @s Owner set from entity @p[team=switch.temp.human,nbt=!{Inventory:[{id:"minecraft:stick"}]}] UUID
 execute if entity @s[tag=switch.infected.redstone] run data modify entity @s Owner set from entity @p[team=switch.temp.human,nbt=!{Inventory:[{id:"minecraft:redstone"}]}] UUID
+""")
+
+	# /secrets/ancienne_egypte/item_tick
+	write_function(f"{path}/secrets/ancienne_egypte/item_tick", """
+function switch:modes/infected/secrets/item_set_owner
 
 # Add switch.checked tag
 tag @s add switch.checked
@@ -766,10 +772,7 @@ summon zombie 2053 105 2104 {NoAI:true,Rotation:[180.0f,0.0f],Tags:["switch.gian
 
 	# /secrets/area_51/item_tick
 	write_function(f"{path}/secrets/area_51/item_tick", """
-# Owner become nearest human
-data modify entity @s Owner set value [I;1,1,1,1]
-execute if entity @s[tag=switch.infected.stick] run data modify entity @s Owner set from entity @p[team=switch.temp.human,nbt=!{Inventory:[{id:"minecraft:stick"}]}] UUID
-execute if entity @s[tag=switch.infected.redstone] run data modify entity @s Owner set from entity @p[team=switch.temp.human,nbt=!{Inventory:[{id:"minecraft:redstone"}]}] UUID
+function switch:modes/infected/secrets/item_set_owner
 execute if entity @s[tag=switch.infected.bottle] run data modify entity @s Owner set from entity @p[team=switch.temp.human,nbt=!{Inventory:[{id:"minecraft:glass_bottle"}]}] UUID
 
 # Add switch.checked tag

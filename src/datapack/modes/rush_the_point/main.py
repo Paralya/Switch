@@ -125,21 +125,40 @@ item replace entity @s[team=switch.rush_the_point.red] armor.legs with leather_l
 item replace entity @s[team=switch.rush_the_point.red] armor.feet with leather_boots[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=16731469,enchantments={"protection":2}]
 """)
 
-	# /classes/archer
-	write_function(f"{path}/classes/archer", """
+	# /classes/_healing_food (shared hotbar.6/7/8 healing potions + bread, used by every class kit)
+	write_function(f"{path}/classes/_healing_food", """
+item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
+item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
+item replace entity @s hotbar.8 with bread 42
+""")
+
+	# /classes/_kit_base (shared preamble for archer/builder/destroyer: _common reset, _armor, offhand wool)
+	write_function(f"{path}/classes/_kit_base", """
 function switch:modes/rush_the_point/classes/_common
 
 function switch:modes/rush_the_point/classes/_armor
 
 item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+""")
+
+	# /classes/_kit_swordsman (shared diamond sword + pickaxe + offhand/hotbar wool + healing, aviateur/guerrier)
+	write_function(f"{path}/classes/_kit_swordsman", """
+item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
+item replace entity @s hotbar.1 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
+item replace entity @s hotbar.2 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+function switch:modes/rush_the_point/classes/_healing_food
+""")
+
+	# /classes/archer
+	write_function(f"{path}/classes/archer", """
+function switch:modes/rush_the_point/classes/_kit_base
 item replace entity @s hotbar.0 with bow[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"power":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.1 with iron_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.3 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
 item replace entity @s hotbar.4 with ender_pearl
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
+function switch:modes/rush_the_point/classes/_healing_food
 item replace entity @s inventory.0 with arrow 64
 """)
 
@@ -157,49 +176,29 @@ item replace entity @s[team=switch.rush_the_point.red] armor.head with leather_h
 item replace entity @s[team=switch.rush_the_point.red] armor.legs with leather_leggings[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=13369344,enchantments={"protection":4}]
 item replace entity @s[team=switch.rush_the_point.red] armor.feet with leather_boots[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=13369344,enchantments={"protection":4}]
 
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.1 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.2 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
-
 scoreboard players set @s switch.temp.elytra_cooldown 120
+function switch:modes/rush_the_point/classes/_kit_swordsman
 """)
 
 	# /classes/builder
 	write_function(f"{path}/classes/builder", """
-function switch:modes/rush_the_point/classes/_common
-
-
-function switch:modes/rush_the_point/classes/_armor
-
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+function switch:modes/rush_the_point/classes/_kit_base
 item replace entity @s hotbar.0 with iron_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.1 with smooth_sandstone_stairs[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
 item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.3 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
 item replace entity @s hotbar.5 with ravager_spawn_egg[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}]
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
+function switch:modes/rush_the_point/classes/_healing_food
 """)
 
 	# /classes/destroyer
 	write_function(f"{path}/classes/destroyer", """
-function switch:modes/rush_the_point/classes/_common
-
-function switch:modes/rush_the_point/classes/_armor
-
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+function switch:modes/rush_the_point/classes/_kit_base
 item replace entity @s hotbar.0 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_name={"text":"Fireball Wand","color":"gold","italic":false},item_model="switch:fireball_wand",custom_data={switch:{fireball_wand:true}}]
 item replace entity @s hotbar.1 with iron_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
 item replace entity @s hotbar.3 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
+function switch:modes/rush_the_point/classes/_healing_food
 """)
 
 	# /classes/guerrier
@@ -216,13 +215,7 @@ item replace entity @s[team=switch.rush_the_point.red] armor.chest with leather_
 item replace entity @s[team=switch.rush_the_point.red] armor.legs with leather_leggings[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=16731469,enchantments={"protection":4}]
 item replace entity @s[team=switch.rush_the_point.red] armor.feet with leather_boots[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=13369344,enchantments={"protection":4}]
 
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.1 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.2 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
+function switch:modes/rush_the_point/classes/_kit_swordsman
 """)
 
 	# /classes/main (translation ref rewritten)
@@ -308,9 +301,7 @@ function switch:modes/rush_the_point/translations/fireball_no_cooldown
 	write_function(f"{path}/fireball/right_click", """
 summon fireball ^ ^1 ^1 {Tags:["switch.new"],ExplosionPower:0b,NoGravity:true,Passengers:[{id:"armor_stand",Tags:["switch.fireball"],NoGravity:true,Silent:true,Invulnerable:true,Marker:true,Invisible:true}]}
 
-data modify storage switch:main Rotation set from entity @s Rotation
-execute positioned 0 0 0 summon marker run function switch:modes/_common/fireball/get_motion
-execute as @e[type=fireball,tag=switch.new] run function switch:modes/_common/fireball/set_motion
+function switch:modes/_common/fireball/aim_and_launch
 
 scoreboard players set @s[gamemode=!creative] switch.temp.fireball_cooldown 200
 playsound entity.ghast.shoot ambient @s

@@ -330,14 +330,20 @@ data modify storage switch:temp sms_new_wins append from storage switch:temp sms
 data modify storage switch:temp sms_new_played_win_ratio append from storage switch:temp sms_played_win_ratio[]
 """)
 
-	# /sort_minigames_stats/async/loop_minigame_macro
-	write_function(f"{path}/sort_minigames_stats/async/loop_minigame_macro", """
+	# /sort_minigames_stats/update_and_remove (macro: apply one minigame update from $(id), then pop
+	# it off sms_copy; shared head of the sync loop_minigame and the async loop_minigame_macro)
+	write_function(f"{path}/sort_minigames_stats/update_and_remove", """
 # Update the minigame
 $data modify storage switch:main input set value {id:"$(id)"}
 function switch:stats/sort_minigames_stats/update_minigame with storage switch:main input
 
 # Go next minigame
 data remove storage switch:main sms_copy[0]
+""")
+
+	# /sort_minigames_stats/async/loop_minigame_macro
+	write_function(f"{path}/sort_minigames_stats/async/loop_minigame_macro", """
+function switch:stats/sort_minigames_stats/update_and_remove with storage switch:main sms_copy[0]
 execute if data storage switch:main sms_copy[0] run schedule function switch:stats/sort_minigames_stats/async/loop_minigame_no_macro 1t replace
 """)
 
@@ -380,12 +386,7 @@ execute if data storage switch:temp sms_copy_played[0] run function switch:stats
 
 	# /sort_minigames_stats/loop_minigame
 	write_function(f"{path}/sort_minigames_stats/loop_minigame", """
-# Update the minigame
-$data modify storage switch:main input set value {id:"$(id)"}
-function switch:stats/sort_minigames_stats/update_minigame with storage switch:main input
-
-# Go next minigame
-data remove storage switch:main sms_copy[0]
+function switch:stats/sort_minigames_stats/update_and_remove with storage switch:main sms_copy[0]
 execute if data storage switch:main sms_copy[0] run function switch:stats/sort_minigames_stats/loop_minigame with storage switch:main sms_copy[0]
 """)
 

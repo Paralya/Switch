@@ -5,13 +5,7 @@
 #
 
 gamemode survival @a[tag=!detached]
-effect give @a[tag=!detached] saturation 10 255 true
-effect give @a[tag=!detached] resistance 10 255 true
-effect give @a[tag=!detached] regeneration 10 255 true
-function switch:utils/set_dynamic_time
-
-## Téléportation des joueurs
-scoreboard players set #do_spreadplayers switch.data 1
+function switch:modes/_common/pvp_arena/start_common
 function switch:utils/choose_map_for {id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box","adraik_big_ball"]}
 
 execute in switch:game run gamerule minecraft:natural_health_regeneration false

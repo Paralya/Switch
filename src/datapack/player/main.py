@@ -914,6 +914,13 @@ function switch:player/trigger/stats/remove_max with storage switch:main max
 execute if data storage switch:main stats[0] run function switch:player/trigger/stats/sort_loop
 """)
 
+	# /trigger/succes/display_continue (macro: pop copy[0] then carry $(player) onto the next entry;
+	# shared continue-loop tail of display_loop and display_loop_2)
+	write_function(f"{path}/trigger/succes/display_continue", """
+data remove storage switch:temp copy[0]
+$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value $(player)
+""")
+
 	# /trigger/succes/display_loop
 	write_function(f"{path}/trigger/succes/display_loop", """
 # Tellraw
@@ -921,8 +928,7 @@ data modify storage switch:temp temp set from storage switch:temp copy[0]
 function switch:player/translations/trigger_succes_display_loop with storage switch:temp temp
 
 # Continue loop
-data remove storage switch:temp copy[0]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value $(player)
+function switch:player/trigger/succes/display_continue with storage switch:temp copy[0]
 execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
 """)
 
@@ -933,8 +939,7 @@ data modify storage switch:temp temp set from storage switch:temp copy[0]
 function switch:player/translations/trigger_succes_display_loop_2 with storage switch:temp temp
 
 # Continue loop
-data remove storage switch:temp copy[0]
-$execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value $(player)
+function switch:player/trigger/succes/display_continue with storage switch:temp copy[0]
 execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
 """)
 
@@ -1261,6 +1266,13 @@ execute if score #diff switch.data matches 1 run function switch:player/username
 $kick $(username) "Ratio"
 """)
 
+	# /username_change/continue_loop (pop copy[0] then merge the shared input onto the next entry;
+	# shared continue-loop prep of update_advancements_loop / update_ratings_loop / update_stats_loop)
+	write_function(f"{path}/username_change/continue_loop", """
+data remove storage switch:temp copy[0]
+execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0] merge from storage switch:temp input
+""")
+
 	# /username_change/update_advancements_loop
 	write_function(f"{path}/username_change/update_advancements_loop", """
 # Update username
@@ -1268,8 +1280,7 @@ $data remove storage switch:advancements all[{name:"$(name)"}].players[{name:"$(
 $execute if data storage switch:advancements all[{name:"$(name)"}].players[{name:"$(old_username)"}] run data modify storage switch:advancements all[{name:"$(name)"}].players[{name:"$(old_username)"}].name set value "$(username)"
 
 # Continue loop
-data remove storage switch:temp copy[0]
-execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0] merge from storage switch:temp input
+function switch:player/username_change/continue_loop
 execute if data storage switch:temp copy[0] run function switch:player/username_change/update_advancements_loop with storage switch:temp copy[0]
 """)
 
@@ -1325,8 +1336,7 @@ $data remove storage switch:ratings all[{id:"$(id)"}].players[{name:"$(username)
 $execute if data storage switch:ratings all[{id:"$(id)"}].players[{name:"$(old_username)"}] run data modify storage switch:ratings all[{id:"$(id)"}].players[{name:"$(old_username)"}].name set value "$(username)"
 
 # Continue loop
-data remove storage switch:temp copy[0]
-execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0] merge from storage switch:temp input
+function switch:player/username_change/continue_loop
 execute if data storage switch:temp copy[0] run function switch:player/username_change/update_ratings_loop with storage switch:temp copy[0]
 """)
 
@@ -1341,8 +1351,7 @@ $scoreboard players operation $(username) switch.stats.played.$(id) = $(old_user
 $scoreboard players operation $(username) switch.stats.wins.$(id) = $(old_username) switch.stats.wins.$(id)
 
 # Continue loop
-data remove storage switch:temp copy[0]
-execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0] merge from storage switch:temp input
+function switch:player/username_change/continue_loop
 execute if data storage switch:temp copy[0] run function switch:player/username_change/update_stats_loop with storage switch:temp copy[0]
 """)
 

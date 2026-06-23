@@ -2,6 +2,13 @@
 # Spectres Game shop
 from stouputils import JsonDict
 
+# Shared TNT upgrade tiers (identical for the Spectre and Visible TNT shops)
+TNT_UPGRADES: list[JsonDict] = [
+	{"price": 50, "hover_text": {"fr": "3 -> 4 TNT", "en": "3 -> 4 TNT"}},
+	{"price": 100, "hover_text": {"fr": "4 -> 5 TNT", "en": "4 -> 5 TNT"}},
+	{"price": 150, "hover_text": {"fr": "5 -> 6 TNT", "en": "5 -> 6 TNT"}},
+]
+
 SPECTRES_GAME: JsonDict = {
 	"sp_arrows": {
 		"ok_messages": {
@@ -43,11 +50,7 @@ SPECTRES_GAME: JsonDict = {
 			"en": "You have sold a level of TNT for your Spectre class!"
 		},
 		"upgrade_name": {"fr": "Nombre de TNT (spectre)", "en": "Number of TNT (spectre)"},
-		"upgrades": [
-			{"price": 50, "hover_text": {"fr": "3 -> 4 TNT", "en": "3 -> 4 TNT"}},
-			{"price": 100, "hover_text": {"fr": "4 -> 5 TNT", "en": "4 -> 5 TNT"}},
-			{"price": 150, "hover_text": {"fr": "5 -> 6 TNT", "en": "5 -> 6 TNT"}},
-		]
+		"upgrades": TNT_UPGRADES,
 	},
 	"vi_arrows": {
 		"ok_messages": {
@@ -88,11 +91,7 @@ SPECTRES_GAME: JsonDict = {
 			"en": "You have sold a level of TNT for your Visible class!"
 		},
 		"upgrade_name": {"fr": "Nombre de TNT (visible)", "en": "Number of TNT (visible)"},
-		"upgrades": [
-			{"price": 50, "hover_text": {"fr": "3 -> 4 TNT", "en": "3 -> 4 TNT"}},
-			{"price": 100, "hover_text": {"fr": "4 -> 5 TNT", "en": "4 -> 5 TNT"}},
-			{"price": 150, "hover_text": {"fr": "5 -> 6 TNT", "en": "5 -> 6 TNT"}},
-		]
+		"upgrades": TNT_UPGRADES,
 	},
 }
 

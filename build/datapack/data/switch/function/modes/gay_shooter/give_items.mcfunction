@@ -1,9 +1,7 @@
 
 #> switch:modes/gay_shooter/give_items
 #
-# @executed	as @a[tag=!detached] & at @s
-#
-# @within	switch:modes/gay_shooter/start [ as @a[tag=!detached] & at @s ]
+# @within	???
 #
 
 effect give @s[team=switch.temp.gays] saturation infinite 255 true

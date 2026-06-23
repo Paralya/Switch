@@ -460,9 +460,15 @@ tp @s[scores={switch.temp.compteur=39}] 20728.5 136.6 20382.0
 tp @s[scores={switch.temp.compteur=40}] 20730.25 137.3 20382.0
 tp @s[scores={switch.temp.compteur=41}] 20732.0 138.0 20382.0
 
+function switch:modes/race/map_tick/restore_speed {count:42}
+""")
+
+	# /map_tick/restore_speed (macro: shared tail of the per-map _tp climbs — advance the compteur,
+	# and once it reaches $(count) restore the kart engine speed and clear the compteur)
+	write_function(f"{path}/map_tick/restore_speed", """
 scoreboard players add @s switch.temp.compteur 1
-execute if score @s switch.temp.compteur matches 42.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
-scoreboard players reset @s[scores={switch.temp.compteur=42..}] switch.temp.compteur
+$execute if score @s switch.temp.compteur matches $(count).. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed
+$scoreboard players reset @s[scores={switch.temp.compteur=$(count)..}] switch.temp.compteur
 """)
 
 	# /map_tick/clock_circuit
@@ -525,9 +531,7 @@ tp @s[scores={switch.temp.compteur=46}] ~ ~-.1 ~-2
 tp @s[scores={switch.temp.compteur=47}] ~ ~-.1 ~-2
 data modify entity @s[scores={switch.temp.compteur=47}] NoAI set value 0b
 
-scoreboard players add @s switch.temp.compteur 1
-execute if score @s switch.temp.compteur matches 48.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
-scoreboard players reset @s[scores={switch.temp.compteur=48..}] switch.temp.compteur
+function switch:modes/race/map_tick/restore_speed {count:48}
 """)
 
 	# /map_tick/dk_mountain
@@ -633,9 +637,7 @@ tp @s[scores={switch.temp.compteur=79}] 19738.25 162.825 20544.925
 tp @s[scores={switch.temp.compteur=80}] 19735.125 163.4125 20544.9625
 tp @s[scores={switch.temp.compteur=81}] 19732.0 164.0 20545.0
 
-scoreboard players add @s switch.temp.compteur 1
-execute if score @s switch.temp.compteur matches 82.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
-scoreboard players reset @s[scores={switch.temp.compteur=82..}] switch.temp.compteur
+function switch:modes/race/map_tick/restore_speed {count:82}
 """)
 
 	# /map_tick/plains_routine
@@ -693,9 +695,7 @@ tp @s[scores={switch.temp.compteur=40}] ~1.5 ~-.5 ~
 tp @s[scores={switch.temp.compteur=41}] ~1.5 ~-.5 ~
 data modify entity @s[scores={switch.temp.compteur=41}] NoAI set value 0b
 
-scoreboard players add @s switch.temp.compteur 1
-execute if score @s switch.temp.compteur matches 42.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
-scoreboard players reset @s[scores={switch.temp.compteur=42..}] switch.temp.compteur
+function switch:modes/race/map_tick/restore_speed {count:42}
 """)
 
 	# /map_tick/trackmania_stadium_2

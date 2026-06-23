@@ -52,7 +52,5 @@ tp @s[scores={switch.temp.compteur=40}] ~1.5 ~-.5 ~
 tp @s[scores={switch.temp.compteur=41}] ~1.5 ~-.5 ~
 data modify entity @s[scores={switch.temp.compteur=41}] NoAI set value 0b
 
-scoreboard players add @s switch.temp.compteur 1
-execute if score @s switch.temp.compteur matches 42.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
-scoreboard players reset @s[scores={switch.temp.compteur=42..}] switch.temp.compteur
+function switch:modes/race/map_tick/restore_speed {count:42}
 

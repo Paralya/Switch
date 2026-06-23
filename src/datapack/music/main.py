@@ -15,8 +15,7 @@ scoreboard players add @s switch.music.current 1
 execute if score @s switch.music.current > #last_index switch.music.current run scoreboard players set @s switch.music.current 100
 
 # In every case reset progress
-execute if score @s switch.music.progress matches 1.. run scoreboard players set @s switch.music.progress 1
-execute if score @s switch.music.progress matches ..-1 run scoreboard players set @s switch.music.progress -1
+function switch:music/reset_progress
 
 function switch:music/browser
 """)
@@ -30,8 +29,7 @@ execute if score @s switch.music.progress matches 1..99 if score @s switch.music
 execute if score @s switch.music.progress matches 1..99 if score @s switch.music.current matches 99 run scoreboard players operation @s switch.music.current = #last_index switch.music.current
 
 # In every case reset progress
-execute if score @s switch.music.progress matches 1.. run scoreboard players set @s switch.music.progress 1
-execute if score @s switch.music.progress matches ..-1 run scoreboard players set @s switch.music.progress -1
+function switch:music/reset_progress
 
 function switch:music/browser
 """)
@@ -56,6 +54,12 @@ tellraw @s {"text":"Work in progress","color":"red"}
 
 	# /actions/repeat_only_same (intentionally empty)
 	write_function(f"{path}/actions/repeat_only_same", "\n")
+
+	# /reset_progress (clamp the song progress back to its idle bounds: 1.. -> 1, ..-1 -> -1)
+	write_function(f"{path}/reset_progress", """
+execute if score @s switch.music.progress matches 1.. run scoreboard players set @s switch.music.progress 1
+execute if score @s switch.music.progress matches ..-1 run scoreboard players set @s switch.music.progress -1
+""")
 
 	# /music_over
 	write_function(f"{path}/music_over", """

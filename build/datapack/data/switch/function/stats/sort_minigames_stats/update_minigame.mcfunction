@@ -1,8 +1,7 @@
 
 #> switch:stats/sort_minigames_stats/update_minigame
 #
-# @within	switch:stats/sort_minigames_stats/async/loop_minigame_macro with storage switch:main input
-#			switch:stats/sort_minigames_stats/loop_minigame with storage switch:main input
+# @within	switch:stats/sort_minigames_stats/update_and_remove with storage switch:main input
 #			switch:engine/stop with storage switch:main input
 #
 # @args		id (string)

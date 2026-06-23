@@ -3,10 +3,8 @@
 #
 # @executed	as the player & at current position
 #
-# @within	switch:modes/rush_the_point/classes/archer
+# @within	switch:modes/rush_the_point/classes/_kit_base
 #			switch:modes/rush_the_point/classes/aviateur
-#			switch:modes/rush_the_point/classes/builder
-#			switch:modes/rush_the_point/classes/destroyer
 #			switch:modes/rush_the_point/classes/guerrier
 #
 

@@ -4,12 +4,7 @@
 # @within	switch:modes/pitch_creep/calls/start
 #
 
-team join switch.no_pvp @a[tag=!detached]
-scoreboard players set @a[tag=!detached] switch.alive 1
-
-effect give @a[tag=!detached] saturation infinite 255 true
-effect give @a[tag=!detached] regeneration 5 255 true
-time set 18000
+function switch:modes/_common/no_pvp_start
 
 execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:natural_health_regeneration false

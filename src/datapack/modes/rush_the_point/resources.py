@@ -3,22 +3,14 @@
 from beet import Advancement, BlockTag
 from stewbeet.core import Mem, set_json_encoder
 
+from ..common import register_break_obsidian_advancement
+
 
 def write_resources() -> None:
 	""" Datapack resources owned by the rush_the_point mode. """
 	switch = Mem.ctx.data["switch"]
 
-	switch.advancements["rush_the_point/break_obsidian"] = set_json_encoder(Advancement({
-		"criteria": {"requirement": {
-			"trigger": "minecraft:tick",
-			"conditions": {"player": [{
-				"condition": "minecraft:entity_scores",
-				"entity": "this",
-				"scores": {"switch.temp.break_obsidian": {"min": 1}},
-			}]},
-		}},
-		"rewards": {"function": "switch:modes/rush_the_point/advancements/break_obsidian"},
-	}))
+	register_break_obsidian_advancement("rush_the_point")
 
 	switch.advancements["rush_the_point/killed_player"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {

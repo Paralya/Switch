@@ -5,7 +5,7 @@ import os
 
 import stouputils as stp
 from beet import Sound, Structure
-from stewbeet import Mem, write_function
+from stewbeet import Mem, write_advancement, write_function
 
 ROOT: str = stp.get_root_path(__file__)
 
@@ -78,6 +78,22 @@ tellraw @a[scores={{switch.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","sto
 # English
 tellraw @a[scores={{switch.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"switch:main","interpret":true}},{{"text":" {en}"}}]
 """)
+
+
+def register_break_obsidian_advancement(mode: str) -> None:
+	""" Register the shared break_obsidian tick advancement for a mode (rush_the_flag / rush_the_point):
+		grant once switch.temp.break_obsidian reaches 1, rewarding the mode's break_obsidian function. """
+	write_advancement(f"switch:{mode}/break_obsidian", {
+		"criteria": {"requirement": {
+			"trigger": "minecraft:tick",
+			"conditions": {"player": [{
+				"condition": "minecraft:entity_scores",
+				"entity": "this",
+				"scores": {"switch.temp.break_obsidian": {"min": 1}},
+			}]},
+		}},
+		"rewards": {"function": f"switch:modes/{mode}/advancements/break_obsidian"},
+	})
 
 
 def write_no_drop(path: str) -> None:

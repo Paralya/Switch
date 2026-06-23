@@ -1,11 +1,11 @@
 
 #> switch:utils/set_dynamic_time
 #
-# @within	switch:modes/beat_the_kings/start
+# @within	switch:modes/_common/pvp_arena/start_common
+#			switch:modes/beat_the_kings/start
 #			switch:modes/boat_race/start
 #			switch:modes/build_battle/start
 #			switch:modes/capture_the_flag/start
-#			switch:modes/castagne/start
 #			switch:modes/cigogne/start
 #			switch:modes/coin_chaser/start
 #			switch:modes/creeper_apocalypse/start
@@ -24,7 +24,6 @@
 #			switch:modes/pillars_of_fortune/start
 #			switch:modes/pitchout/start
 #			switch:modes/protect_the_king/start
-#			switch:modes/pvpswap/start
 #			switch:modes/race/start
 #			switch:modes/replicate_the_build/start
 #			switch:modes/rush_the_point/start_common

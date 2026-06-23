@@ -289,6 +289,14 @@ execute store result entity @s Motion[2] double 0.001 run data get storage switc
 tag @s remove switch.new
 """)
 
+	# /fireball/aim_and_launch (shared fireblast / rush_the_point launch core: sample the shooter's
+	# aim with a marker then apply it as the freshly summoned switch.new fireball's motion)
+	write_function(f"{path}/fireball/aim_and_launch", """
+data modify storage switch:main Rotation set from entity @s Rotation
+execute positioned 0 0 0 summon marker run function switch:modes/_common/fireball/get_motion
+execute as @e[type=fireball,tag=switch.new] run function switch:modes/_common/fireball/set_motion
+""")
+
 	# /death/inventory_drop (drop the dead player's inventory items one by one)
 	write_function(f"{path}/death/inventory_drop", f"""
 loot spawn ~ ~ ~ loot switch:temp_item
@@ -406,6 +414,15 @@ execute if entity @s[tag=switch.blue_flag] run scoreboard players add #red_point
 execute if entity @s[tag=switch.red_flag] run scoreboard players add #blue_points switch.data 1
 """)
 
+	# /flag/sync_motion (shared capture_the_flag / rush_the_flag flag_tick block: while carried, copy the
+	# holder's Motion onto the flag and round-trip its Rotation[0] through switch:main)
+	write_function(f"{path}/flag/sync_motion", """
+execute if entity @s[tag=!switch.free,tag=switch.blue_flag] on vehicle run data modify entity @s Motion set from entity @p[tag=switch.has_blue_flag] Motion
+execute if entity @s[tag=!switch.free,tag=switch.red_flag] on vehicle run data modify entity @s Motion set from entity @p[tag=switch.has_red_flag] Motion
+execute on vehicle run data modify storage switch:main Rotation set from entity @s Rotation[0]
+data modify entity @s Rotation[0] set from storage switch:main Rotation
+""")
+
 	# /pvp_arena/kit (shared melee loadout for castagne / pvpswap; castagne adds a fishing_rod on its own)
 	write_function(f"{path}/pvp_arena/kit", """
 item replace entity @s armor.head with leather_helmet[enchantments={projectile_protection:2}]
@@ -441,6 +458,18 @@ scoreboard players remove @a[tag=!detached,scores={switch.temp.kill=1..}] switch
 scoreboard players remove @a[tag=!detached,scores={switch.temp.cooldown_kill=1..}] switch.temp.cooldown_kill 1
 """)
 
+	# /pvp_arena/start_common (shared castagne / pvpswap /start middle: buff effects, dynamic time, then
+	# arm the spreadplayers flag; callers add their own gamemode/effects before and choose_map_for after)
+	write_function(f"{path}/pvp_arena/start_common", """
+effect give @a[tag=!detached] saturation 10 255 true
+effect give @a[tag=!detached] resistance 10 255 true
+effect give @a[tag=!detached] regeneration 10 255 true
+function switch:utils/set_dynamic_time
+
+## Téléportation des joueurs
+scoreboard players set #do_spreadplayers switch.data 1
+""")
+
 	# /standard_combat_rules (mob griefing on, hidden death messages, no natural regen, kept inventory;
 	# shared by creeper_apocalypse / spectres_game / traitors_game)
 	write_function(f"{path}/standard_combat_rules", """
@@ -465,6 +494,47 @@ execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard playe
 
 # Cas de fin de partie
 execute if score #game_state switch.data matches 1..3 run scoreboard players set #remaining_time switch.data 0
+""")
+
+	# /setup_teams_red_blue (shared Red/Blue team creation for the 2-team modes layers_2_teams / sheepwars:
+	# create both teams, friendly fire on, hide enemy nametags, then reset the role counter)
+	write_function(f"{path}/setup_teams_red_blue", """
+team add switch.temp.red {"text":"[Red]","color":"red"}
+team add switch.temp.blue {"text":"[Blue]","color":"blue"}
+team modify switch.temp.red color red
+team modify switch.temp.blue color blue
+team modify switch.temp.red friendlyFire true
+team modify switch.temp.blue friendlyFire true
+team modify switch.temp.red nametagVisibility hideForOtherTeams
+team modify switch.temp.blue nametagVisibility hideForOtherTeams
+scoreboard players set #next_role switch.data 0
+""")
+
+	# /no_pvp_start (shared pitch_creep / warden_escape /start head: no-pvp team, 1 life, buff effects, day)
+	write_function(f"{path}/no_pvp_start", """
+team join switch.no_pvp @a[tag=!detached]
+scoreboard players set @a[tag=!detached] switch.alive 1
+effect give @a[tag=!detached] saturation infinite 255 true
+effect give @a[tag=!detached] regeneration 5 255 true
+time set 18000
+""")
+
+	# /remove_movement_objectives (shared fish_fight / pitchout /stop cleanup of the run-tracking objectives)
+	write_function(f"{path}/remove_movement_objectives", """
+scoreboard objectives remove switch.temp.damages
+scoreboard objectives remove switch.temp.cooldown
+scoreboard objectives remove switch.temp.old_x
+scoreboard objectives remove switch.temp.old_z
+scoreboard objectives remove switch.temp.blocks_run
+""")
+
+	# /assign_random_roles (macro: shared gay_shooter / panic_chase role kickoff — reset the counters then
+	# hand out roles + items in random order. $(mode) is the caller's modes/<mode> function path.)
+	write_function(f"{path}/assign_random_roles", """
+scoreboard players set #next_role switch.data 0
+scoreboard players set #next_player_id switch.data 0
+$execute as @a[tag=!detached,sort=random] at @s run function $(mode)/roles
+$execute as @a[tag=!detached] at @s run function $(mode)/give_items
 """)
 
 	# /sidebar_setup (shared Blue/Red sidebar rows + the fixed §-fakeplayer ordering, used by the

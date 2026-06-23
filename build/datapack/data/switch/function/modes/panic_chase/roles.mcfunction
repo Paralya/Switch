@@ -1,9 +1,7 @@
 
 #> switch:modes/panic_chase/roles
 #
-# @executed	as @a[tag=!detached,sort=random] & at @s
-#
-# @within	switch:modes/panic_chase/start [ as @a[tag=!detached,sort=random] & at @s ]
+# @within	???
 #
 
 ## Role selection (1/6 chasseurs)

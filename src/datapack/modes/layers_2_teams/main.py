@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 
@@ -84,15 +83,7 @@ scoreboard players set #cut_clean switch.data 1
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
-team add switch.temp.red {{"text":"[Red]","color":"red"}}
-team add switch.temp.blue {{"text":"[Blue]","color":"blue"}}
-team modify switch.temp.red color red
-team modify switch.temp.blue color blue
-team modify switch.temp.red friendlyFire true
-team modify switch.temp.blue friendlyFire true
-team modify switch.temp.red nametagVisibility hideForOtherTeams
-team modify switch.temp.blue nametagVisibility hideForOtherTeams
-scoreboard players set #next_role switch.data 0
+function switch:modes/_common/setup_teams_red_blue
 execute as @a[tag=!detached,sort=random] at @s run function {path}/team_and_give
 gamemode survival @a[tag=!detached]
 """)

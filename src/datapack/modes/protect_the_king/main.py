@@ -18,19 +18,13 @@ def write_mode():
 	write_translations()
 
 
-	# /better_tp
-	write_function(f"{path}/better_tp", """
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
-execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player
+	# /better_tp (run the spread several times so the two kings end up far apart)
+	better_tp: str = "\n".join(
+		"execute as @a[tag=!detached,team=switch.temp.red_king] at @s if entity @p[team=switch.temp.blue_king,distance=..30] run function switch:maps/spread_one_player"
+		for _ in range(11)
+	)
+	write_function(f"{path}/better_tp", f"""
+{better_tp}
 """)
 
 	# /detect_end

@@ -61,7 +61,5 @@ tp @s[scores={switch.temp.compteur=39}] 20728.5 136.6 20382.0
 tp @s[scores={switch.temp.compteur=40}] 20730.25 137.3 20382.0
 tp @s[scores={switch.temp.compteur=41}] 20732.0 138.0 20382.0
 
-scoreboard players add @s switch.temp.compteur 1
-execute if score @s switch.temp.compteur matches 42.. run scoreboard players operation @s shopping_kart.engine = @s switch.temp.old_speed 
-scoreboard players reset @s[scores={switch.temp.compteur=42..}] switch.temp.compteur
+function switch:modes/race/map_tick/restore_speed {count:42}
 

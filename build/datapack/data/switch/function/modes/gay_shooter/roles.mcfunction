@@ -1,9 +1,7 @@
 
 #> switch:modes/gay_shooter/roles
 #
-# @executed	as @a[tag=!detached,sort=random] & at @s
-#
-# @within	switch:modes/gay_shooter/start [ as @a[tag=!detached,sort=random] & at @s ]
+# @within	???
 #
 
 # Role selection (1/4 shooters)

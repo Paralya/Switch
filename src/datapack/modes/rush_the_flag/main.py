@@ -157,11 +157,7 @@ execute if entity @s[tag=!switch.free,tag=switch.red_flag] unless entity @p[tag=
 execute if entity @s[tag=!switch.free,tag=switch.blue_flag] on vehicle at @p[tag=switch.has_blue_flag] run tp @s ~ ~ ~ ~180 0
 execute if entity @s[tag=!switch.free,tag=switch.red_flag] on vehicle at @p[tag=switch.has_red_flag] run tp @s ~ ~ ~ ~180 0
 
-# Get rotation and motion
-execute if entity @s[tag=!switch.free,tag=switch.blue_flag] on vehicle run data modify entity @s Motion set from entity @p[tag=switch.has_blue_flag] Motion
-execute if entity @s[tag=!switch.free,tag=switch.red_flag] on vehicle run data modify entity @s Motion set from entity @p[tag=switch.has_red_flag] Motion
-execute on vehicle run data modify storage switch:main Rotation set from entity @s Rotation[0]
-data modify entity @s Rotation[0] set from storage switch:main Rotation
+function switch:modes/_common/flag/sync_motion
 
 # If the flag is out of bounds, it is returned
 execute store result score #y switch.data on vehicle run data get entity @s Pos[1]
