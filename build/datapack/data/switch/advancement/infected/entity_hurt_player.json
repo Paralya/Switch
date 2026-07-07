@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"requirement": {"trigger": "minecraft:entity_hurt_player","conditions": {"damage": {"source_entity": {"type": "minecraft:player"}}}}
+		"requirement": {"trigger": "minecraft:entity_hurt_player","conditions": {"damage": {"source_entity": {"entity_type": "minecraft:player"}}}}
 	},
 	"requirements": [
 		["requirement"]

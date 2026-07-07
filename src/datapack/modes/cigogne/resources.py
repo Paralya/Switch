@@ -9,7 +9,7 @@ def write_resources() -> None:
 	Mem.ctx.data["switch"].advancements["cigogne/killed_player"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:player_killed_entity",
-			"conditions": {"entity": {"type": "player"}},
+			"conditions": {"entity": {"entity_type": "minecraft:player"}},
 		}},
 		"rewards": {"function": "switch:modes/cigogne/killed_player"},
 	}))

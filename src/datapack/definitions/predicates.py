@@ -59,8 +59,8 @@ def write_predicates() -> None:
 	predicates["has_vehicle"] = set_json_encoder(Predicate(entity_properties({"vehicle": {}})))
 	predicates["has_vehicle_with_tag"] = set_json_encoder(Predicate(entity_properties({"vehicle": {"nbt": "{Tags:[\"switch.temp\"]}"}})))
 	predicates["has_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {}})))
-	predicates["has_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"type": "minecraft:player"}})))
-	predicates["have_temp_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"type": "minecraft:player", "nbt": "{Tags:[\"switch.temp\"]}"}})))
+	predicates["has_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"entity_type": "minecraft:player"}})))
+	predicates["have_temp_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"entity_type": "minecraft:player", "nbt": "{Tags:[\"switch.temp\"]}"}})))
 	predicates["nbt/enough_gravel"] = set_json_encoder(Predicate(entity_properties({"slots": {"hotbar.*": {"items": "minecraft:suspicious_gravel", "count": 42}}})))
 
 	# Same-score checks (id / temp id / checkpoint / temp checkpoint)

@@ -12,7 +12,7 @@ def write_resources() -> None:
 		"criteria": {"requirement": {
 			"trigger": "minecraft:entity_killed_player",
 			"conditions": {
-				"entity": {"type": "minecraft:warden"},
+				"entity": {"entity_type": "minecraft:warden"},
 				"killing_blow": {"tags": [{"id": "minecraft:bypasses_armor", "expected": True}]},
 			},
 		}},

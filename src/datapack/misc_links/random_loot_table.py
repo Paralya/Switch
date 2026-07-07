@@ -7,7 +7,7 @@ import stouputils as stp
 from stewbeet import JsonDict, LootTable, Mem
 
 # Constants
-ITEMS_LINK: str = "https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/MAJOR/releases/MAJOR.MINOR.PATCH/custom-generated/registries/item.txt"
+ITEMS_LINK: str = "https://raw.githubusercontent.com/misode/mcmeta/VERSION-summary/registries/data.min.json"
 SPAWN_EGG_WEIGHT: int = 2
 IGNORE_SPAWN_EGG: list[str] = ["wither", "ghast"]
 
@@ -30,18 +30,11 @@ def main() -> None:
 		Mem.ctx.data["switch"].loot_tables["random/all"] = LootTable(source_path=all_path)
 		return stp.progress("The random loot tables 'vanilla.json' and 'all.json' already exists, skipping the generation")
 
-	# Get all items
-	splitted = Mem.ctx.minecraft_version.split(".")
-	if len(splitted) == 2:
-		major, minor = splitted
-		updated_link: str = ITEMS_LINK.replace("MAJOR", major).replace("MINOR", minor).replace(".PATCH", "")
-	elif len(splitted) == 3:
-		major, minor, patch = splitted
-		updated_link: str = ITEMS_LINK.replace("MAJOR", major).replace("MINOR", minor).replace("PATCH", patch)
-	else:
-		raise ValueError(f"Minecraft version {Mem.ctx.minecraft_version} is not supported")
-	items: list[str] = requests.get(updated_link).text.strip().split("\n")
-	items = [item for item in items if item not in ["", "minecraft:air"]]
+	# Get all items from the vanilla registries (mcmeta summary branch of the project's minecraft version)
+	response = requests.get(ITEMS_LINK.replace("VERSION", Mem.ctx.minecraft_version))
+	response.raise_for_status()
+	items: list[str] = [f"minecraft:{item}" for item in response.json()["item"]]
+	items = [item for item in items if item != "minecraft:air"]
 
 	# Insert all items into the loot table
 	loot_table: JsonDict = {"pools": [{"rolls": 1, "entries": []}]}

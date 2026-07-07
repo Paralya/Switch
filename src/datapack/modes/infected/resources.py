@@ -20,7 +20,7 @@ def write_resources() -> None:
 	switch.advancements["infected/entity_hurt_player"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:entity_hurt_player",
-			"conditions": {"damage": {"source_entity": {"type": "minecraft:player"}}},
+			"conditions": {"damage": {"source_entity": {"entity_type": "minecraft:player"}}},
 		}},
 		"requirements": [["requirement"]],
 		"rewards": {"function": "switch:modes/infected/advancements/entity_hurt_player/main"},
