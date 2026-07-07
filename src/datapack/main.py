@@ -30,3 +30,4 @@ def load_datapack_json(ctx: Context) -> None:
 	write_loot_tables()
 	write_advancements()
 	write_integrations()
+
