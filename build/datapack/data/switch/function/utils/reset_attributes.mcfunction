@@ -46,3 +46,10 @@ attribute @s waypoint_receive_range base reset
 attribute @s waypoint_transmit_range base reset
 waypoint modify @s color reset
 
+# 26.2
+attribute @s air_drag_modifier base reset
+attribute @s below_name_distance base reset
+attribute @s bounciness base reset
+attribute @s friction_modifier base reset
+attribute @s name_tag_distance base reset
+

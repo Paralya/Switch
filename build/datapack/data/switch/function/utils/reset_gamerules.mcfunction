@@ -28,4 +28,15 @@ gamerule minecraft:mob_drops true
 gamerule minecraft:immediate_respawn true
 gamerule minecraft:show_advancement_messages true
 gamerule minecraft:spawn_wandering_traders false
+gamerule minecraft:max_block_modifications 64000
+gamerule minecraft:spawn_monsters false
+gamerule minecraft:spawn_patrols false
+gamerule minecraft:spawn_phantoms false
+gamerule minecraft:spawn_wardens false
+gamerule minecraft:locator_bar true
+gamerule minecraft:pvp true
+gamerule minecraft:tnt_explodes true
+gamerule minecraft:projectiles_can_break_blocks true
+gamerule minecraft:random_tick_speed 3
+gamerule minecraft:ender_pearls_vanish_on_death true
 

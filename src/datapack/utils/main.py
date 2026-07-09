@@ -156,6 +156,13 @@ attribute @s camera_distance base reset
 attribute @s waypoint_receive_range base reset
 attribute @s waypoint_transmit_range base reset
 waypoint modify @s color reset
+
+# 26.2
+attribute @s air_drag_modifier base reset
+attribute @s below_name_distance base reset
+attribute @s bounciness base reset
+attribute @s friction_modifier base reset
+attribute @s name_tag_distance base reset
 """)
 
 	# /reset_gamerules
@@ -181,6 +188,17 @@ gamerule minecraft:mob_drops true
 gamerule minecraft:immediate_respawn true
 gamerule minecraft:show_advancement_messages true
 gamerule minecraft:spawn_wandering_traders false
+gamerule minecraft:max_block_modifications 64000
+gamerule minecraft:spawn_monsters false
+gamerule minecraft:spawn_patrols false
+gamerule minecraft:spawn_phantoms false
+gamerule minecraft:spawn_wardens false
+gamerule minecraft:locator_bar true
+gamerule minecraft:pvp true
+gamerule minecraft:tnt_explodes true
+gamerule minecraft:projectiles_can_break_blocks true
+gamerule minecraft:random_tick_speed 3
+gamerule minecraft:ender_pearls_vanish_on_death true
 """)
 
 	# /reset_players

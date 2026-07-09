@@ -305,3 +305,4 @@ def write_shaders() -> None:
 	minecraft.glsl_shaders["include/dynamictransforms"] = GlslShader(DYNAMICTRANSFORMS)
 	minecraft.glsl_shaders["include/globals"] = GlslShader(GLOBALS)
 	minecraft.glsl_shaders["include/projection"] = GlslShader(PROJECTION)
+
