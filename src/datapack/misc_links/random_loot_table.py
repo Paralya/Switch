@@ -4,7 +4,7 @@ import os
 
 import requests
 import stouputils as stp
-from stewbeet import JsonDict, LootTable, Mem
+from stewbeet import Item, JsonDict, LootTable, Mem
 
 # Constants
 ITEMS_LINK: str = "https://raw.githubusercontent.com/misode/mcmeta/VERSION-summary/registries/data.min.json"
@@ -46,8 +46,10 @@ def main() -> None:
 	# Save the vanilla loot table
 	Mem.ctx.data["switch"].loot_tables["random/vanilla"] = LootTable(stp.json_dump(loot_table, max_level=-1))
 
-	# For each item in the item definitions, add it to the loot table and save it
+	# For each item in the item definitions (except skipped ones), add it to the loot table and save it
 	for item in Mem.definitions.keys():
+		if Item.from_id(item).skip_gives:
+			continue
 		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"switch:i/{item}"})
 	Mem.ctx.data["switch"].loot_tables["random/all"] = LootTable(stp.json_dump(loot_table, max_level=-1))
 	stp.progress("The random loot tables 'vanilla.json' and 'all.json' have been generated")

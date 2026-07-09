@@ -6,6 +6,7 @@ from stewbeet.plugins.datapack.sorters.constants import SorterFile  # pyright: i
 
 from .definitions.advancements import write_advancements
 from .definitions.dimensions import write_dimensions
+from .definitions.enchantments import write_enchantments
 from .definitions.integrations import write_integrations
 from .definitions.item_modifiers import write_item_modifiers
 from .definitions.loot_tables import write_loot_tables
@@ -24,6 +25,7 @@ def load_datapack_json(ctx: Context) -> None:
 
 	write_predicates()
 	write_item_modifiers()
+	write_enchantments()
 	write_dimensions()
 	write_sorters()
 	write_tags()

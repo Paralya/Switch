@@ -57,6 +57,12 @@ def setup_misc_items() -> None:
 	Item(id="fireball_wand", override_model={"parent": "minecraft:item/handheld"})
 	Item(id="shield_wand", override_model={"parent": "minecraft:item/handheld"})
 	Item(id="storm_wand", override_model={"parent": "minecraft:item/handheld"})
+	# Stone with the switch:invulnerable enchantment (damage immunity in any slot, so holding it works too)
+	Item(id="invulnerable", components={
+		"item_model": "minecraft:air",
+		"enchantments": {"switch:invulnerable": 1},
+		"equippable": {"slot": "head", "equip_on_interact": True},
+	}, skip_gives=True)
 	Item(id="souls_bag")
 	Item(id="souls_bag_half_filled")
 	Item(id="souls_bag_filled")
