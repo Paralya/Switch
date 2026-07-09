@@ -6,7 +6,8 @@ from stewbeet.core import Mem, set_json_encoder
 
 def write_enchantments() -> None:
 	""" Build the shared/generic enchantments explicitly under the switch namespace. """
-	enchantments = Mem.ctx.data["switch"].enchantments
+	ns: str = Mem.ctx.project_id
+	enchantments = Mem.ctx.data[ns].enchantments
 
 	# Applies minecraft:damage_immunity in any slot (not obtainable through survival gameplay, hence the 99 costs)
 	enchantments["invulnerable"] = set_json_encoder(Enchantment({

@@ -20,7 +20,8 @@ def single_block_drop(name: str, functions: list[dict[str, Any]]) -> dict[str, A
 
 def write_loot_tables() -> None:
 	""" Build the shared/generic loot tables explicitly under the switch namespace. """
-	loot_tables = Mem.ctx.data["switch"].loot_tables
+	ns: str = Mem.ctx.project_id
+	loot_tables = Mem.ctx.data[ns].loot_tables
 
 	# A player head filled with the looter's name (used to fetch usernames)
 	loot_tables["get_username"] = set_json_encoder(LootTable(single_block_drop(
@@ -31,5 +32,5 @@ def write_loot_tables() -> None:
 	# A throwaway tagged stone item
 	loot_tables["temp_item"] = set_json_encoder(LootTable(single_block_drop(
 		"minecraft:stone",
-		[{"function": "minecraft:set_components", "components": {"minecraft:custom_data": {"switch": {"temp_item": True}}}}],
+		[{"function": "minecraft:set_components", "components": {"minecraft:custom_data": {ns: {"temp_item": True}}}}],
 	)))

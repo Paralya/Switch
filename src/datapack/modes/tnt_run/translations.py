@@ -8,34 +8,35 @@ from ..common import write_server_announce
 
 def write_translations():
 	""" Write the tnt_run translation functions at switch:modes/tnt_run/translations/* """
-	path: str = f"{Mem.ctx.project_id}:modes/tnt_run/translations"
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:modes/tnt_run/translations"
 
 	# /death
-	write_function(f"{path}/death", """
+	write_function(f"{path}/death", f"""
 # French
-execute if entity @s[gamemode=!spectator] run tellraw @a[scores={switch.lang=0},tag=!detached] [{"selector":"@s","color":"red"},{"text":" est mort, il a survécu "},{"score":{"name":"#tnt_run_seconds","objective":"switch.data"}},{"text":" secondes !"}]
+execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" est mort, il a survécu "}},{{"score":{{"name":"#tnt_run_seconds","objective":"{ns}.data"}}}},{{"text":" secondes !"}}]
 
 # English
-execute if entity @s[gamemode=!spectator] run tellraw @a[scores={switch.lang=1},tag=!detached] [{"selector":"@s","color":"red"},{"text":" died, survived "},{"score":{"name":"#tnt_run_seconds","objective":"switch.data"}},{"text":" seconds!"}]
+execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" died, survived "}},{{"score":{{"name":"#tnt_run_seconds","objective":"{ns}.data"}}}},{{"text":" seconds!"}}]
 """)
 
 	# /second
-	write_function(f"{path}/second", """
+	write_function(f"{path}/second", f"""
 # French
-execute if score #tnt_run_seconds switch.data matches -5 run title @a[scores={switch.lang=0},tag=!detached] title {"text":"5","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -4 run title @a[scores={switch.lang=0},tag=!detached] title {"text":"4","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -3 run title @a[scores={switch.lang=0},tag=!detached] title {"text":"3","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -2 run title @a[scores={switch.lang=0},tag=!detached] title {"text":"2","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -1 run title @a[scores={switch.lang=0},tag=!detached] title {"text":"1","color":"red"}
-execute if score #tnt_run_seconds switch.data matches 0 run title @a[scores={switch.lang=0},tag=!detached] title {"text":"GO !","color":"red"}
+execute if score #tnt_run_seconds {ns}.data matches -5 run title @a[scores={{{ns}.lang=0}},tag=!detached] title {{"text":"5","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -4 run title @a[scores={{{ns}.lang=0}},tag=!detached] title {{"text":"4","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -3 run title @a[scores={{{ns}.lang=0}},tag=!detached] title {{"text":"3","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -2 run title @a[scores={{{ns}.lang=0}},tag=!detached] title {{"text":"2","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -1 run title @a[scores={{{ns}.lang=0}},tag=!detached] title {{"text":"1","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches 0 run title @a[scores={{{ns}.lang=0}},tag=!detached] title {{"text":"GO !","color":"red"}}
 
 # English
-execute if score #tnt_run_seconds switch.data matches -5 run title @a[scores={switch.lang=1},tag=!detached] title {"text":"5","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -4 run title @a[scores={switch.lang=1},tag=!detached] title {"text":"4","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -3 run title @a[scores={switch.lang=1},tag=!detached] title {"text":"3","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -2 run title @a[scores={switch.lang=1},tag=!detached] title {"text":"2","color":"red"}
-execute if score #tnt_run_seconds switch.data matches -1 run title @a[scores={switch.lang=1},tag=!detached] title {"text":"1","color":"red"}
-execute if score #tnt_run_seconds switch.data matches 0 run title @a[scores={switch.lang=1},tag=!detached] title {"text":"GO !","color":"red"}
+execute if score #tnt_run_seconds {ns}.data matches -5 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"5","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -4 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"4","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -3 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"3","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -2 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"2","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches -1 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"1","color":"red"}}
+execute if score #tnt_run_seconds {ns}.data matches 0 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"GO !","color":"red"}}
 """)
 
 	# /start

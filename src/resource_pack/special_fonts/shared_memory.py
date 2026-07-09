@@ -6,9 +6,9 @@ from stewbeet import JsonDict
 
 class SharedMemory:
 
-	# Constants
-	FONT_FILE_PATH: str = "switch:main"
-	BLACK_PIXEL_TEXTURE_PATH: str = "switch:font/special/black_pixel"
+	# Constants (paths relative to the project namespace, e.g. f"{ns}:{FONT_FILE_PATH}")
+	FONT_FILE_PATH: str = "main"
+	BLACK_PIXEL_TEXTURE_PATH: str = "font/special/black_pixel"
 	BLACK_PIXEL_CHAR: str = "B"
 
 	# Variables

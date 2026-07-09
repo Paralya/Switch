@@ -34,7 +34,8 @@ def same_score(objective: str, target: str, score: str) -> dict[str, Any]:
 
 def write_predicates() -> None:
 	""" Build the shared/generic predicates explicitly under the switch namespace. """
-	predicates = Mem.ctx.data["switch"].predicates
+	ns: str = Mem.ctx.project_id
+	predicates = Mem.ctx.data[ns].predicates
 
 	# Random chances
 	for name, chance in CHANCES.items():
@@ -57,14 +58,14 @@ def write_predicates() -> None:
 	predicates["is_moving"] = set_json_encoder(Predicate(entity_properties({"movement": {"horizontal_speed": {"min": 0.1}}})))
 	predicates["is_sneaking"] = set_json_encoder(Predicate(entity_properties({"flags": {"is_sneaking": True}})))
 	predicates["has_vehicle"] = set_json_encoder(Predicate(entity_properties({"vehicle": {}})))
-	predicates["has_vehicle_with_tag"] = set_json_encoder(Predicate(entity_properties({"vehicle": {"nbt": "{Tags:[\"switch.temp\"]}"}})))
+	predicates["has_vehicle_with_tag"] = set_json_encoder(Predicate(entity_properties({"vehicle": {"nbt": f"{{Tags:[\"{ns}.temp\"]}}"}})))
 	predicates["has_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {}})))
 	predicates["has_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"entity_type": "minecraft:player"}})))
-	predicates["have_temp_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"entity_type": "minecraft:player", "nbt": "{Tags:[\"switch.temp\"]}"}})))
+	predicates["have_temp_player_passenger"] = set_json_encoder(Predicate(entity_properties({"passenger": {"entity_type": "minecraft:player", "nbt": f"{{Tags:[\"{ns}.temp\"]}}"}})))
 	predicates["nbt/enough_gravel"] = set_json_encoder(Predicate(entity_properties({"slots": {"hotbar.*": {"items": "minecraft:suspicious_gravel", "count": 42}}})))
 
 	# Same-score checks (id / temp id / checkpoint / temp checkpoint)
-	predicates["has_same_id"] = set_json_encoder(Predicate(same_score("switch.id", "#player_id", "switch.id")))
-	predicates["has_same_temp_id"] = set_json_encoder(Predicate(same_score("switch.temp.id", "#player_id", "switch.temp.id")))
-	predicates["has_same_checkpoint"] = set_json_encoder(Predicate(same_score("switch.checkpoint", "#checkpoint", "switch.data")))
-	predicates["has_same_temp_checkpoint"] = set_json_encoder(Predicate(same_score("switch.temp.checkpoint", "#checkpoint", "switch.data")))
+	predicates["has_same_id"] = set_json_encoder(Predicate(same_score(f"{ns}.id", "#player_id", f"{ns}.id")))
+	predicates["has_same_temp_id"] = set_json_encoder(Predicate(same_score(f"{ns}.temp.id", "#player_id", f"{ns}.temp.id")))
+	predicates["has_same_checkpoint"] = set_json_encoder(Predicate(same_score(f"{ns}.checkpoint", "#checkpoint", f"{ns}.data")))
+	predicates["has_same_temp_checkpoint"] = set_json_encoder(Predicate(same_score(f"{ns}.temp.checkpoint", "#checkpoint", f"{ns}.data")))

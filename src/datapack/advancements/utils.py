@@ -19,16 +19,17 @@ from .shared_memory import (
 
 def make_load_file() -> None:
 	""" Generates the load file which initializes and updates the advancements storage. """
-	write_function(LOAD_FILE, """
+	ns: str = Mem.ctx.project_id
+	write_function(f"{ns}:{LOAD_FILE}", f"""
 # Setup storages
-execute unless data storage switch:advancements all run data modify storage switch:advancements all set value []
+execute unless data storage {ns}:advancements all run data modify storage {ns}:advancements all set value []
 """)
 	for adv in ALL_ADVANCEMENTS:
 		string_id: str = adv["string_id"]
-		write_function(LOAD_FILE, f"execute unless data storage switch:advancements all[{{id:{string_id}}}] run data modify storage switch:advancements all append value {{id:{string_id}, percent:{{int:0, digits:0}}, players:[], total:0}}\n")
+		write_function(f"{ns}:{LOAD_FILE}", f"execute unless data storage {ns}:advancements all[{{id:{string_id}}}] run data modify storage {ns}:advancements all append value {{id:{string_id}, percent:{{int:0, digits:0}}, players:[], total:0}}\n")
 
 	# For each advancement, generate the merge line
-	write_function(LOAD_FILE, """
+	write_function(f"{ns}:{LOAD_FILE}", """
 # Update storages
 """)
 	for adv in ALL_ADVANCEMENTS:
@@ -38,22 +39,23 @@ execute unless data storage switch:advancements all run data modify storage swit
 		name: str = adv["title"]
 		desc_fr: str = adv["desc_fr"]
 		desc_en: str = adv["desc_en"]
-		write_function(LOAD_FILE, f"""data modify storage switch:advancements all[{{id:{string_id}}}] merge value {{color:"{color}", auteur:"{author}", name:"{name}", description:"{desc_fr}", desc_en:"{desc_en}"}}""")
+		write_function(f"{ns}:{LOAD_FILE}", f"""data modify storage {ns}:advancements all[{{id:{string_id}}}] merge value {{color:"{color}", auteur:"{author}", name:"{name}", description:"{desc_fr}", desc_en:"{desc_en}"}}""")
 
 
 def make_update_percentages() -> None:
 	""" Generates the update_percentages file which updates the advancements storage. """
+	ns: str = Mem.ctx.project_id
 	# Write the first part of the file
-	write_function(UPDATE_PERCENTAGES_FILE, """
+	write_function(f"{ns}:{UPDATE_PERCENTAGES_FILE}", f"""
 # Update percentage
 setblock 0 16 0 air
 setblock 0 16 0 yellow_shulker_box
-loot insert 0 16 0 loot switch:get_username
-data modify storage switch:main input set value {id:"", username:""}
-data modify storage switch:main input.username set from block 0 16 0 Items[0].components."minecraft:profile".name
+loot insert 0 16 0 loot {ns}:get_username
+data modify storage {ns}:main input set value {{id:"", username:""}}
+data modify storage {ns}:main input.username set from block 0 16 0 Items[0].components."minecraft:profile".name
 
 ## For each advancement, check if the player has the advancement
-scoreboard players set @s switch.advancements 0
+scoreboard players set @s {ns}.advancements 0
 """)
 
 	# For each advancement, generate the check line
@@ -62,14 +64,15 @@ scoreboard players set @s switch.advancements 0
 		string_id: str = adv["string_id"]
 		if not string_id.startswith('"') and not string_id.endswith('"'):
 			string_id = f'"{string_id}"'
-		write_function(UPDATE_PERCENTAGES_FILE, f"execute if entity @s[advancements={{switch:visible/{id}=true}}] run function switch:advancements/_pre_macro {{id:{string_id}}}")
+		write_function(f"{ns}:{UPDATE_PERCENTAGES_FILE}", f"execute if entity @s[advancements={{{ns}:visible/{id}=true}}] run function {ns}:advancements/_pre_macro {{id:{string_id}}}")
 
 	# Write the last part of the file
-	write_function(UPDATE_PERCENTAGES_FILE, "setblock 0 16 0 air")
+	write_function(f"{ns}:{UPDATE_PERCENTAGES_FILE}", "setblock 0 16 0 air")
 
 
 def hidden_advancements() -> None:
 	""" Generates the hidden advancements so that they show up in the advancement GUI. """
+	ns: str = Mem.ctx.project_id
 	# For each advancement that doesn't have children, generate a hidden advancement
 	for adv in ALL_ADVANCEMENTS:
 		if len(adv["children"]) == 0:
@@ -77,15 +80,16 @@ def hidden_advancements() -> None:
 			json_dict: dict[str, Any] = {
 				"criteria": {"requirement": {"trigger": "minecraft:tick"}},
 				"requirements": [["requirement"]],
-				"parent": f"switch:visible/{id}"
+				"parent": f"{ns}:visible/{id}"
 			}
 			adv = Advancement(json_dict)
 			adv.encoder = lambda x: stp.json_dump(x, max_level=-1)
-			Mem.ctx.data["switch"].advancements[f"hidden_ends/{id}"] = adv
+			Mem.ctx.data[ns].advancements[f"hidden_ends/{id}"] = adv
 
 
 def visible_advancements() -> None:
 	""" Generates the visible advancements. """
+	ns: str = Mem.ctx.project_id
 	# For each advancement, generate the file
 	for adv in ALL_ADVANCEMENTS:
 		id: str = adv["id"]
@@ -105,21 +109,21 @@ def visible_advancements() -> None:
 			},
 			"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 			"requirements": [["requirement"]],
-			"rewards": {"function": f"switch:advancements/{category}"},
-			"parent": f"switch:visible/{adv['parent']}"
+			"rewards": {"function": f"{ns}:advancements/{category}"},
+			"parent": f"{ns}:visible/{adv['parent']}"
 		}
 		adv = Advancement(json_dict)
 		adv.encoder = lambda x: stp.json_dump(x, max_level=2)
-		Mem.ctx.data["switch"].advancements[f"visible/{id}"] = adv
+		Mem.ctx.data[ns].advancements[f"visible/{id}"] = adv
 
 		# Display child on the advancement tree (one tick-trigger node per visible advancement)
 		end = Advancement({
 			"criteria": {"requirement": {"trigger": "minecraft:tick"}},
 			"requirements": [["requirement"]],
-			"parent": f"switch:visible/{id}",
+			"parent": f"{ns}:visible/{id}",
 		})
 		end.encoder = lambda x: stp.json_dump(x, max_level=2)
-		Mem.ctx.data["switch"].advancements[f"visible/categories/ends/{id}"] = end
+		Mem.ctx.data[ns].advancements[f"visible/categories/ends/{id}"] = end
 
 
 # Difficulty/category parent nodes shown under the tutorial root: name -> (icon, title, description)
@@ -133,6 +137,7 @@ CATEGORY_PARENTS: dict[str, tuple[str, str, str]] = {
 
 def category_advancements() -> None:
 	""" Generates the difficulty/category parent advancements (easy/medium/hard/jumps). """
+	ns: str = Mem.ctx.project_id
 	for name, (icon, title, description) in CATEGORY_PARENTS.items():
 		adv = Advancement({
 			"display": {
@@ -146,10 +151,10 @@ def category_advancements() -> None:
 			},
 			"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 			"requirements": [["requirement"]],
-			"parent": "switch:tutorial",
+			"parent": f"{ns}:tutorial",
 		})
 		adv.encoder = lambda x: stp.json_dump(x, max_level=2)
-		Mem.ctx.data["switch"].advancements[f"visible/categories/{name}"] = adv
+		Mem.ctx.data[ns].advancements[f"visible/categories/{name}"] = adv
 
 
 
@@ -164,11 +169,12 @@ JUMP_REWARDS: dict[str, int] = {
 
 
 def reward_function(name: str, money: int) -> None:
-	write_function(f"switch:advancements/{name}", f"""
-scoreboard players set #add_override switch.money {money}
-function switch:engine/add_money
-function switch:stats/util_update_player
-function switch:advancements/update_percentages
+	ns: str = Mem.ctx.project_id
+	write_function(f"{ns}:advancements/{name}", f"""
+scoreboard players set #add_override {ns}.money {money}
+function {ns}:engine/add_money
+function {ns}:stats/util_update_player
+function {ns}:advancements/update_percentages
 """)
 
 
@@ -182,67 +188,70 @@ def make_reward_functions() -> None:
 
 def make_percentages_recalculations() -> None:
 	""" Generates the percentages recalculation loop (recomputes every advancement's % on demand). """
-	write_function("switch:advancements/percentages_recalculations", """
-data modify storage switch:temp copy set from storage switch:advancements all
-data modify storage switch:temp new set value []
-execute if data storage switch:temp copy[0] run function switch:advancements/percentages_recalculation_loop
-data modify storage switch:advancements all set from storage switch:temp new
+	ns: str = Mem.ctx.project_id
+	write_function(f"{ns}:advancements/percentages_recalculations", f"""
+data modify storage {ns}:temp copy set from storage {ns}:advancements all
+data modify storage {ns}:temp new set value []
+execute if data storage {ns}:temp copy[0] run function {ns}:advancements/percentages_recalculation_loop
+data modify storage {ns}:advancements all set from storage {ns}:temp new
 """)
-	write_function("switch:advancements/percentages_recalculation_loop", """
+	write_function(f"{ns}:advancements/percentages_recalculation_loop", f"""
 ## Calculation
 # Get local and global totals
-execute store result score #local_total switch.data run data get storage switch:temp copy[0].total
-scoreboard players operation #total_players switch.data = #next_id switch.id
+execute store result score #local_total {ns}.data run data get storage {ns}:temp copy[0].total
+scoreboard players operation #total_players {ns}.data = #next_id {ns}.id
 
 # Calculate percentages
-scoreboard players operation #local_total switch.data *= #100000 switch.data
-scoreboard players operation #local_total switch.data /= #total_players switch.data
-scoreboard players operation #digits switch.data = #local_total switch.data
-scoreboard players operation #digits switch.data %= #1000 switch.data
-scoreboard players operation #local_total switch.data /= #1000 switch.data
+scoreboard players operation #local_total {ns}.data *= #100000 {ns}.data
+scoreboard players operation #local_total {ns}.data /= #total_players {ns}.data
+scoreboard players operation #digits {ns}.data = #local_total {ns}.data
+scoreboard players operation #digits {ns}.data %= #1000 {ns}.data
+scoreboard players operation #local_total {ns}.data /= #1000 {ns}.data
 
 # Store the results
-execute store result storage switch:temp copy[0].percent.int int 1 run scoreboard players get #local_total switch.data
-execute store result storage switch:temp copy[0].percent.digits int 1 run scoreboard players get #digits switch.data
+execute store result storage {ns}:temp copy[0].percent.int int 1 run scoreboard players get #local_total {ns}.data
+execute store result storage {ns}:temp copy[0].percent.digits int 1 run scoreboard players get #digits {ns}.data
 
 # Append to the new list
-data modify storage switch:temp new append from storage switch:temp copy[0]
+data modify storage {ns}:temp new append from storage {ns}:temp copy[0]
 
 # Continue loop
-data remove storage switch:temp copy[0]
-execute if data storage switch:temp copy[0] run function switch:advancements/percentages_recalculation_loop
+data remove storage {ns}:temp copy[0]
+execute if data storage {ns}:temp copy[0] run function {ns}:advancements/percentages_recalculation_loop
 """)
 
 
 def make_advancement_macros() -> None:
 	""" Generates the per-player advancement grant macro (registers a player and updates the global %). """
-	write_function("switch:advancements/_pre_macro", """
-scoreboard players add @s switch.advancements 1
+	ns: str = Mem.ctx.project_id
+	write_function(f"{ns}:advancements/_pre_macro", f"""
+scoreboard players add @s {ns}.advancements 1
 
-$data modify storage switch:main input.id set value $(id)
-function switch:advancements/_macro with storage switch:main input
+$data modify storage {ns}:main input.id set value $(id)
+function {ns}:advancements/_macro with storage {ns}:main input
 """)
-	write_function("switch:advancements/_macro", r"""
+	write_function(f"{ns}:advancements/_macro", rf"""
 # [
-# 	{"text": "Aider à la construction d'une map ou la création d'un mini-jeu\n", "color": "aqua"},
-# 	{"nbt": "all.1.percent.int", "storage": "switch:advancements", "color":"green"},
-# 	{"text":".", "color":"green"},
-# 	{"nbt": "all.1.percent.digits", "storage": "switch:advancements", "color":"green"},
-# 	{"text":"% des joueurs", "color":"green"}
+# 	{{"text": "Aider à la construction d'une map ou la création d'un mini-jeu\n", "color": "aqua"}},
+# 	{{"nbt": "all.1.percent.int", "storage": "{ns}:advancements", "color":"green"}},
+# 	{{"text":".", "color":"green"}},
+# 	{{"nbt": "all.1.percent.digits", "storage": "{ns}:advancements", "color":"green"}},
+# 	{{"text":"% des joueurs", "color":"green"}}
 # ]
 
-scoreboard players set #success switch.data 0
-$execute if data storage switch:advancements all[{id:$(id)}].players[{name:"$(username)"}] run scoreboard players set #success switch.data 1
-$execute if score #success switch.data matches 0 store result score #local_total switch.data run data get storage switch:advancements all[{id:$(id)}].total
-execute if score #success switch.data matches 0 run scoreboard players add #local_total switch.data 1
-$execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].total int 1 run scoreboard players get #local_total switch.data
-execute if score #success switch.data matches 0 run scoreboard players operation #total_players switch.data = #next_id switch.id
-execute if score #success switch.data matches 0 run scoreboard players operation #local_total switch.data *= #100000 switch.data
-execute if score #success switch.data matches 0 run scoreboard players operation #local_total switch.data /= #total_players switch.data
-execute if score #success switch.data matches 0 run scoreboard players operation #digits switch.data = #local_total switch.data
-execute if score #success switch.data matches 0 run scoreboard players operation #digits switch.data %= #1000 switch.data
-execute if score #success switch.data matches 0 run scoreboard players operation #local_total switch.data /= #1000 switch.data
-$execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].percent.int int 1 run scoreboard players get #local_total switch.data
-$execute if score #success switch.data matches 0 store result storage switch:advancements all[{id:$(id)}].percent.digits int 1 run scoreboard players get #digits switch.data
-$execute if score #success switch.data matches 0 run data modify storage switch:advancements all[{id:$(id)}].players append value {name:"$(username)"}
+scoreboard players set #success {ns}.data 0
+$execute if data storage {ns}:advancements all[{{id:$(id)}}].players[{{name:"$(username)"}}] run scoreboard players set #success {ns}.data 1
+$execute if score #success {ns}.data matches 0 store result score #local_total {ns}.data run data get storage {ns}:advancements all[{{id:$(id)}}].total
+execute if score #success {ns}.data matches 0 run scoreboard players add #local_total {ns}.data 1
+$execute if score #success {ns}.data matches 0 store result storage {ns}:advancements all[{{id:$(id)}}].total int 1 run scoreboard players get #local_total {ns}.data
+execute if score #success {ns}.data matches 0 run scoreboard players operation #total_players {ns}.data = #next_id {ns}.id
+execute if score #success {ns}.data matches 0 run scoreboard players operation #local_total {ns}.data *= #100000 {ns}.data
+execute if score #success {ns}.data matches 0 run scoreboard players operation #local_total {ns}.data /= #total_players {ns}.data
+execute if score #success {ns}.data matches 0 run scoreboard players operation #digits {ns}.data = #local_total {ns}.data
+execute if score #success {ns}.data matches 0 run scoreboard players operation #digits {ns}.data %= #1000 {ns}.data
+execute if score #success {ns}.data matches 0 run scoreboard players operation #local_total {ns}.data /= #1000 {ns}.data
+$execute if score #success {ns}.data matches 0 store result storage {ns}:advancements all[{{id:$(id)}}].percent.int int 1 run scoreboard players get #local_total {ns}.data
+$execute if score #success {ns}.data matches 0 store result storage {ns}:advancements all[{{id:$(id)}}].percent.digits int 1 run scoreboard players get #digits {ns}.data
+$execute if score #success {ns}.data matches 0 run data modify storage {ns}:advancements all[{{id:$(id)}}].players append value {{name:"$(username)"}}
 """)
+

@@ -8,17 +8,18 @@ from ..common import write_server_announce
 
 def write_translations():
 	""" Write the simultaneous_jump translation functions at switch:modes/simultaneous_jump/translations/* """
-	path: str = f"{Mem.ctx.project_id}:modes/simultaneous_jump/translations"
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:modes/simultaneous_jump/translations"
 
 	# /done
-	write_function(f"{path}/done", """
+	write_function(f"{path}/done", f"""
 # French
-execute if score #points switch.data matches 1 run tellraw @a[scores={switch.lang=0},tag=!detached] [{"selector":"@s","color":"green"},{"text":" valide son saut et fait "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" point !"}]
-execute if score #points switch.data matches 2.. run tellraw @a[scores={switch.lang=0},tag=!detached] [{"selector":"@s","color":"green"},{"text":" valide son saut et fait "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" points !"}]
+execute if score #points {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"selector":"@s","color":"green"}},{{"text":" valide son saut et fait "}},{{"score":{{"name":"#points","objective":"{ns}.data"}},"color":"aqua"}},{{"text":" point !"}}]
+execute if score #points {ns}.data matches 2.. run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"selector":"@s","color":"green"}},{{"text":" valide son saut et fait "}},{{"score":{{"name":"#points","objective":"{ns}.data"}},"color":"aqua"}},{{"text":" points !"}}]
 
 # English
-execute if score #points switch.data matches 1 run tellraw @a[scores={switch.lang=1},tag=!detached] [{"selector":"@s","color":"green"},{"text":" validates a jump and makes "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" point!"}]
-execute if score #points switch.data matches 2.. run tellraw @a[scores={switch.lang=1},tag=!detached] [{"selector":"@s","color":"green"},{"text":" validates a jump and makes "},{"score":{"name":"#points","objective":"switch.data"},"color":"aqua"},{"text":" points!"}]
+execute if score #points {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"green"}},{{"text":" validates a jump and makes "}},{{"score":{{"name":"#points","objective":"{ns}.data"}},"color":"aqua"}},{{"text":" point!"}}]
+execute if score #points {ns}.data matches 2.. run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"green"}},{{"text":" validates a jump and makes "}},{{"score":{{"name":"#points","objective":"{ns}.data"}},"color":"aqua"}},{{"text":" points!"}}]
 """)
 
 	# /start

@@ -22,20 +22,21 @@ def ninja_kill(objective: str, bounds: dict[str, Any]) -> dict[str, Any]:
 
 def write_resources() -> None:
 	""" Datapack resources owned by the traitors_game mode. """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 
-	killed = ninja_kill("switch.temp.role", {"min": 3, "max": 4})
-	killed["rewards"] = {"function": "switch:modes/traitors_game/calls/killed_ninja"}
+	killed = ninja_kill(f"{ns}.temp.role", {"min": 3, "max": 4})
+	killed["rewards"] = {"function": f"{ns}:modes/traitors_game/calls/killed_ninja"}
 	switch.advancements["traitors_game/killed_ninja"] = set_json_encoder(Advancement(killed))
 
-	revenge = ninja_kill("switch.temp.killed_ninja", {"min": 1})
-	revenge["rewards"] = {"function": "switch:modes/traitors_game/calls/ninja_revenge"}
+	revenge = ninja_kill(f"{ns}.temp.killed_ninja", {"min": 1})
+	revenge["rewards"] = {"function": f"{ns}:modes/traitors_game/calls/ninja_revenge"}
 	switch.advancements["traitors_game/ninja_revenge"] = set_json_encoder(Advancement(revenge))
 
 	switch.loot_tables["traitors_game/all_starter"] = set_json_encoder(LootTable({
 		"pools": [{"rolls": 1, "entries": [{
 			"type": "minecraft:loot_table",
-			"value": "switch:i/sapphire_pickaxe",
+			"value": f"{ns}:i/sapphire_pickaxe",
 			"functions": [{"function": "minecraft:set_enchantments", "enchantments": {"minecraft:efficiency": 1}}],
 		}]}],
 	}))

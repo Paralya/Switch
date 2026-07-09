@@ -6,7 +6,8 @@ from stewbeet.core import Mem, set_json_encoder
 
 def write_resources() -> None:
 	""" Datapack resources owned by the spectres_game mode. """
-	Mem.ctx.data["switch"].item_tags["spectres_game"] = set_json_encoder(ItemTag({"values": [
+	ns: str = Mem.ctx.project_id
+	Mem.ctx.data[ns].item_tags["spectres_game"] = set_json_encoder(ItemTag({"values": [
 		"minecraft:iron_sword",
 		"minecraft:iron_helmet",
 		"minecraft:iron_chestplate",

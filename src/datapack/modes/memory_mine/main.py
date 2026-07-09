@@ -20,31 +20,31 @@ def write_mode():
 	# /death
 	write_function(f"{path}/death", f"""
 # Indicate to the mine that it just killed a player
-scoreboard players set #success switch.data 1
+scoreboard players set #success {ns}.data 1
 
 # Grant advancement if player stepped on their own mine
-execute unless score #test_mode switch.data matches 1 if entity @s[gamemode=!spectator] if score @s switch.id = #owner_id switch.data run advancement grant @s only switch:visible/36
+execute unless score #test_mode {ns}.data matches 1 if entity @s[gamemode=!spectator] if score @s {ns}.id = #owner_id {ns}.data run advancement grant @s only {ns}:visible/36
 
 # Effect and particles on the death spot, and increment death stats
 execute if entity @s[gamemode=!spectator] run particle explosion ~ ~ ~ 0 0 0 1 1 force @a[distance=..50]
 execute if entity @s[gamemode=!spectator] run particle dust{{color:[0.66,0.33,0.0],scale:4.0}} ~ ~ ~ 0 0 0 1 1 force @a[distance=..50]
-execute if entity @s[gamemode=!spectator] run playsound switch:explosion ambient @a[distance=..50]
-execute if entity @s[gamemode=!spectator] run scoreboard players add @s switch.stats.deaths 1
+execute if entity @s[gamemode=!spectator] run playsound {ns}:explosion ambient @a[distance=..50]
+execute if entity @s[gamemode=!spectator] run scoreboard players add @s {ns}.stats.deaths 1
 
 
 ## Death message
 # Tag the owner of the mine
-execute as @a[tag=!detached] if score @s switch.id = #owner_id switch.data run tag @s add switch.owner
+execute as @a[tag=!detached] if score @s {ns}.id = #owner_id {ns}.data run tag @s add {ns}.owner
 # Send tellraw
 function {translations}/death
 # Remove the owner tag
-tag @a[tag=switch.owner] remove switch.owner
+tag @a[tag={ns}.owner] remove {ns}.owner
 
 
 # Spectator and other stuff
 gamemode spectator @s
 effect clear @s
-execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 clear @s
 """)
 
@@ -56,102 +56,102 @@ function {path}/death
 
 	# /mine_tick
 	write_function(f"{path}/mine_tick", f"""
-execute unless score @s switch.temp.cooldown matches 60 run scoreboard players add @s switch.temp.cooldown 1
-execute if score @s switch.temp.cooldown matches 60 run particle dust{{color:[1.0,0.0,0.0],scale:1.0}} ~ ~ ~ 0 0 0 1 1 force @a[gamemode=spectator,distance=..50]
-execute if score @s switch.temp.cooldown matches 60 if predicate switch:chance/0.01 run particle dust{{color:[1.0,0.0,0.0],scale:1.0}} ~ ~ ~ 0 0 0 1 100 force @a[distance=..50]
-execute if score @s switch.temp.cooldown matches 60 run scoreboard players set #success switch.data 0
-execute if score @s switch.temp.cooldown matches 60 run scoreboard players operation #owner_id switch.data = @s switch.id
-execute if score @s switch.temp.cooldown matches 60 as @a[tag=!detached,gamemode=adventure,distance=..0.5] run function {path}/death
-execute if score @s switch.temp.cooldown matches 60 run scoreboard players reset #owner_id switch.data
-execute if score @s switch.temp.cooldown matches 60 if score #success switch.data matches 1 run kill @s
+execute unless score @s {ns}.temp.cooldown matches 60 run scoreboard players add @s {ns}.temp.cooldown 1
+execute if score @s {ns}.temp.cooldown matches 60 run particle dust{{color:[1.0,0.0,0.0],scale:1.0}} ~ ~ ~ 0 0 0 1 1 force @a[gamemode=spectator,distance=..50]
+execute if score @s {ns}.temp.cooldown matches 60 if predicate {ns}:chance/0.01 run particle dust{{color:[1.0,0.0,0.0],scale:1.0}} ~ ~ ~ 0 0 0 1 100 force @a[distance=..50]
+execute if score @s {ns}.temp.cooldown matches 60 run scoreboard players set #success {ns}.data 0
+execute if score @s {ns}.temp.cooldown matches 60 run scoreboard players operation #owner_id {ns}.data = @s {ns}.id
+execute if score @s {ns}.temp.cooldown matches 60 as @a[tag=!detached,gamemode=adventure,distance=..0.5] run function {path}/death
+execute if score @s {ns}.temp.cooldown matches 60 run scoreboard players reset #owner_id {ns}.data
+execute if score @s {ns}.temp.cooldown matches 60 if score #success {ns}.data matches 1 run kill @s
 """)
 
 	# /no_drop
 	write_no_drop(f"{path}/no_drop")
 
 	# /place_mine
-	write_function(f"{path}/place_mine", """
+	write_function(f"{path}/place_mine", f"""
 # Revoke right click advancement
-advancement revoke @s only switch:memory_mine/right_click
+advancement revoke @s only {ns}:memory_mine/right_click
 
 clear @s tnt 1
-summon marker ~ 102 ~ {Tags:["switch.mine","switch.temp"]}
-scoreboard players set @s switch.temp.cooldown 100
-particle dust{color:[1.0,0.0,0.0],scale:4.0} ~ ~ ~ 0 0 0 1 25 force @a[distance=..50]
+summon marker ~ 102 ~ {{Tags:["{ns}.mine","{ns}.temp"]}}
+scoreboard players set @s {ns}.temp.cooldown 100
+particle dust{{color:[1.0,0.0,0.0],scale:4.0}} ~ ~ ~ 0 0 0 1 25 force @a[distance=..50]
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 1 0
 
 # Copy player ID for advancement
-scoreboard players operation @e[type=marker,tag=switch.temp,limit=1] switch.id = @s switch.id
-tag @e[type=marker,tag=switch.temp] remove switch.temp
+scoreboard players operation @e[type=marker,tag={ns}.temp,limit=1] {ns}.id = @s {ns}.id
+tag @e[type=marker,tag={ns}.temp] remove {ns}.temp
 """)
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
-function switch:modes/_common/process_end/last_survivor {{death:"{path}/death"}}
+function {ns}:modes/_common/process_end/last_survivor {{death:"{path}/death"}}
 """)
 
 	# /second
 	write_function(f"{path}/second", f"""
 # Classic timer
-scoreboard players add #memory_mine_seconds switch.data 1
-execute if score #memory_mine_seconds switch.data matches 0 run scoreboard players set @a[tag=!detached] switch.temp.cooldown 2
+scoreboard players add #memory_mine_seconds {ns}.data 1
+execute if score #memory_mine_seconds {ns}.data matches 0 run scoreboard players set @a[tag=!detached] {ns}.temp.cooldown 2
 
 # Every 30 seconds, make a zone where people need to be
-scoreboard players operation #temp switch.data = #memory_mine_seconds switch.data
-scoreboard players operation #temp switch.data %= #15 switch.data
-execute if score #temp switch.data matches 5 in switch:game run function {path}/zone/summon
-execute if score #temp switch.data matches 6..13 at @e[type=marker,tag=switch.zone] run function {path}/zone/particles
-execute if score #temp switch.data matches 14 as @e[type=marker,tag=switch.zone] at @s run function {path}/zone/end
+scoreboard players operation #temp {ns}.data = #memory_mine_seconds {ns}.data
+scoreboard players operation #temp {ns}.data %= #15 {ns}.data
+execute if score #temp {ns}.data matches 5 in {ns}:game run function {path}/zone/summon
+execute if score #temp {ns}.data matches 6..13 at @e[type=marker,tag={ns}.zone] run function {path}/zone/particles
+execute if score #temp {ns}.data matches 14 as @e[type=marker,tag={ns}.zone] at @s run function {path}/zone/end
 """)
 
 	# /start
 	write_function(f"{path}/start", f"""
 gamemode adventure @a[tag=!detached]
-team join switch.no_pvp @a[tag=!detached]
+team join {ns}.no_pvp @a[tag=!detached]
 effect give @a[tag=!detached] saturation infinite 255 true
-function switch:utils/set_dynamic_time
+function {ns}:utils/set_dynamic_time
 
 execute as @a[tag=!detached] run attribute @s safe_fall_distance base set 1024
 execute as @a[tag=!detached] run attribute @s jump_strength base set 0
 
-function switch:utils/choose_map_for {{id:"memory_mine", maps:["memory_mine"]}}
+function {ns}:utils/choose_map_for {{id:"memory_mine", maps:["memory_mine"]}}
 function {translations}/start
 
-scoreboard objectives add switch.temp.cooldown dummy
-scoreboard players set #memory_mine_seconds switch.data -10
-scoreboard players set #memory_mine_ticks switch.data 0
-scoreboard players set #process_end switch.data 0
+scoreboard objectives add {ns}.temp.cooldown dummy
+scoreboard players set #memory_mine_seconds {ns}.data -10
+scoreboard players set #memory_mine_ticks {ns}.data 0
+scoreboard players set #process_end {ns}.data 0
 
-execute in switch:game run spreadplayers 153013 153016 0 15 under 105 false @a[tag=!detached]
+execute in {ns}:game run spreadplayers 153013 153016 0 15 under 105 false @a[tag=!detached]
 """)
 
 	# /stop
-	write_function(f"{path}/stop", """
-scoreboard objectives remove switch.temp.cooldown
+	write_function(f"{path}/stop", f"""
+scoreboard objectives remove {ns}.temp.cooldown
 """)
 
 	# /tick
 	write_function(f"{path}/tick", f"""
-scoreboard players add #memory_mine_ticks switch.data 1
+scoreboard players add #memory_mine_ticks {ns}.data 1
 
 # No drop system
-execute as @e[type=item,tag=!switch.checked] run function {path}/no_drop
+execute as @e[type=item,tag=!{ns}.checked] run function {path}/no_drop
 
 # Give mines and decrease cooldown timer
-give @a[scores={{switch.temp.cooldown=1}}] tnt[custom_data={{switch:{{memory_mine:true}}}},consumable={{consume_seconds:1024}}]
-scoreboard players remove @a[scores={{switch.temp.cooldown=1..}}] switch.temp.cooldown 1
+give @a[scores={{{ns}.temp.cooldown=1}}] tnt[custom_data={{{ns}:{{memory_mine:true}}}},consumable={{consume_seconds:1024}}]
+scoreboard players remove @a[scores={{{ns}.temp.cooldown=1..}}] {ns}.temp.cooldown 1
 
 # Mine tick
-execute as @e[type=marker,tag=switch.mine] at @s run function {path}/mine_tick
+execute as @e[type=marker,tag={ns}.mine] at @s run function {path}/mine_tick
 
 # Unknown death
-function switch:utils/on_death_run_function {{function:"{path}/death"}}
+function {ns}:utils/on_death_run_function {{function:"{path}/death"}}
 
 ## End game
-scoreboard players set #remaining_players switch.data 0
-execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=adventure]
-execute if score #memory_mine_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function {path}/process_end
-execute if score #memory_mine_seconds switch.data matches 300.. run function {path}/process_end
+scoreboard players set #remaining_players {ns}.data 0
+execute store result score #remaining_players {ns}.data if entity @a[tag=!detached,gamemode=adventure]
+execute if score #memory_mine_seconds {ns}.data matches 1.. if score #remaining_players {ns}.data matches ..1 run function {path}/process_end
+execute if score #memory_mine_seconds {ns}.data matches 300.. run function {path}/process_end
 """)
 
 	# /zone/end
@@ -163,10 +163,10 @@ kill @s
 """)
 
 	# /zone/summon
-	write_function(f"{path}/zone/summon", """
+	write_function(f"{path}/zone/summon", f"""
 # Summon marker in a random place
-summon marker 0 0 0 {Tags:["switch.zone","switch.new"]}
-spreadplayers 153013 153016 0 8 under 105 false @e[type=marker,tag=switch.new]
-execute at @e[type=marker,tag=switch.new] run playsound block.anvil.fall ambient @a[distance=..50]
-tag @e[type=marker,tag=switch.new] remove switch.new
+summon marker 0 0 0 {{Tags:["{ns}.zone","{ns}.new"]}}
+spreadplayers 153013 153016 0 8 under 105 false @e[type=marker,tag={ns}.new]
+execute at @e[type=marker,tag={ns}.new] run playsound block.anvil.fall ambient @a[distance=..50]
+tag @e[type=marker,tag={ns}.new] remove {ns}.new
 """)

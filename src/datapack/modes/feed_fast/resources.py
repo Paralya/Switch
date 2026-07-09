@@ -17,13 +17,14 @@ FOODS: tuple[str, ...] = (
 
 def write_resources() -> None:
 	""" Datapack resources owned by the feed_fast mode. """
+	ns: str = Mem.ctx.project_id
 	entries: list[dict[str, Any]] = [{"type": "minecraft:item", "name": f"minecraft:{food}"} for food in FOODS]
 	entries.append({"type": "minecraft:item", "name": "minecraft:potion", "functions": [{
 		"function": "minecraft:set_components",
 		"components": {"minecraft:potion_contents": {"custom_color": 10569486, "custom_effects": [{"id": "minecraft:saturation", "amplifier": 4}]}},
 	}]})
 
-	Mem.ctx.data["switch"].loot_tables["feed_fast"] = set_json_encoder(LootTable({
+	Mem.ctx.data[ns].loot_tables["feed_fast"] = set_json_encoder(LootTable({
 		"pools": [{"rolls": 1, "entries": entries}],
-		"functions": [{"function": "minecraft:set_components", "components": {"minecraft:custom_data": "{\"switch\":{}}"}}],
+		"functions": [{"function": "minecraft:set_components", "components": {"minecraft:custom_data": f"{{\"{ns}\":{{}}}}"}}],
 	}))

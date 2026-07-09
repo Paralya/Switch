@@ -10,7 +10,7 @@
 import json
 
 import stouputils as stp
-from stewbeet import TextComponent, write_function
+from stewbeet import Mem, TextComponent, write_function
 from stouputils.typing import JsonDict
 
 # Modes list
@@ -408,7 +408,8 @@ def add_lore():
 
 @stp.measure_time(message="Generated modes load file")
 def write_modes_load_file():
+	ns: str = Mem.ctx.project_id
 	add_lore()
-	append_lines: list[str] = ["data modify storage switch:main minigames append value " + json.dumps(mode, ensure_ascii=False) for mode in MODES]
-	write_function("switch:modes/load", "\n".join(append_lines))
+	append_lines: list[str] = [f"data modify storage {ns}:main minigames append value " + json.dumps(mode, ensure_ascii=False) for mode in MODES]
+	write_function(f"{ns}:modes/load", "\n".join(append_lines))
 

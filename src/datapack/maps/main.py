@@ -2,28 +2,28 @@
 # ruff: noqa: E501
 # Imports
 import stouputils as stp
-from stewbeet import write_function
+from stewbeet import Mem, write_function
 
 from .translations import write_translations
 
 # Race checkpoint layouts: name -> (laps, checkpoints, [(x,y,z,cp,dx,dy,dz)...], [(x,y,z,effect_tag)...])
 RACE_CHECKPOINTS: dict[str, tuple[int, int, list[tuple[str, ...]], list[tuple[str, ...]]]] = {
-	'airship_fortress': (3, 3, [('20725', '121', '20319', '0', '1', '5', '5'), ('20631', '122', '20336', '1', '5', '5', '1'), ('20639', '108', '20375', '2', '2', '5', '1'), ('20750', '131', '20382', '3', '4', '5', '1')], [('20639', '108', '20336', 'switch.tm_blocks.engine_off')]),
+	'airship_fortress': (3, 3, [('20725', '121', '20319', '0', '1', '5', '5'), ('20631', '122', '20336', '1', '5', '5', '1'), ('20639', '108', '20375', '2', '2', '5', '1'), ('20750', '131', '20382', '3', '4', '5', '1')], [('20639', '108', '20336', 'tm_blocks.engine_off')]),
 	'baby_park': (7, 3, [('21000', '131', '21011', '0', '2', '5', '8'), ('20958', '131', '21000', '1', '8', '5', '2'), ('21001', '131', '20989', '2', '2', '5', '8'), ('21043', '131', '21000', '3', '8', '5', '2')], []),
 	'boat_race_1': (1, 8, [('5201', '160', '5139', '0', '3', '5', '8'), ('5095', '151', '5100', '1', '3', '5', '8'), ('5122', '118', '5167', '2', '3', '5', '8'), ('5214', '112', '5078', '3', '3', '5', '8'), ('5115', '139', '5074', '4', '3', '5', '8'), ('5111', '127', '5107', '5', '3', '5', '8'), ('5195', '127', '5089', '6', '3', '5', '8'), ('5246', '126', '5162', '7', '3', '5', '8'), ('5231', '155', '5156', '8', '3', '5', '8')], []),
 	'bowser_castle': (3, 4, [('22068', '130', '22165', '0', '5', '5', '2'), ('22110', '130', '22098', '1', '6', '5', '2'), ('22133', '135', '22116', '2', '2', '5', '2'), ('22137', '130', '22168', '3', '2', '5', '2'), ('22140', '136', '22193', '4', '2', '5', '2')], []),
 	'city_race': (3, 3, [('19938', '100', '19658', '0', '1', '5', '7'), ('19937', '113', '19669', '0', '1', '5', '4'), ('19997', '113', '19625', '1', '8', '5', '1'), ('19915', '113', '19596', '2', '8', '5', '1'), ('19986', '113', '19526', '2', '1', '5', '8'), ('19885', '113', '19559', '3', '8', '5', '1')], []),
 	'clock_circuit': (3, 3, [('19562', '143', '20390', '0', '1', '5', '6'), ('19544', '133', '20350', '1', '5', '5', '1'), ('19520', '132', '20324', '2', '1', '5', '6'), ('19580', '127', '20318', '3', '1', '5', '6')], []),
 	'dishorreur': (3, 2, [('32992', '101', '33000', '0', '1', '5', '4'), ('32972', '101', '33031', '1', '1', '5', '6'), ('33027', '101', '33019', '2', '3', '5', '1')], []),
-	'dk_mountain': (3, 2, [('19947', '107', '20556', '0', '1', '5', '7'), ('19716', '156', '20536', '1', '7', '5', '1'), ('19815', '124', '20526', '2', '1', '5', '7')], [('19881', '111', '20554', 'switch.tm_blocks.reactor_boost'), ('19880', '111', '20558', 'switch.tm_blocks.reactor_boost')]),
+	'dk_mountain': (3, 2, [('19947', '107', '20556', '0', '1', '5', '7'), ('19716', '156', '20536', '1', '7', '5', '1'), ('19815', '124', '20526', '2', '1', '5', '7')], [('19881', '111', '20554', 'tm_blocks.reactor_boost'), ('19880', '111', '20558', 'tm_blocks.reactor_boost')]),
 	'epsilon_lthc_circuit': (3, 4, [('18010', '101', '18000', '0', '1', '5', '5'), ('18011', '101', '18087', '1', '1', '5', '4'), ('17912', '101', '17999', '2', '4', '5', '1'), ('18036', '92', '17985', '3', '4', '5', '1'), ('17975', '108', '18042', '4', '4', '5', '1')], []),
 	'fast_circuit': (5, 1, [('20212', '91', '19584', '0', '6', '5', '1'), ('20175', '91', '19584', '1', '6', '5', '1')], []),
 	'hills_land': (3, 3, [('20443', '100', '20073', '0', '1', '5', '8'), ('20421', '100', '20130', '1', '1', '5', '4'), ('20480', '100', '20134', '2', '1', '5', '4'), ('20504', '116', '20098', '3', '4', '5', '1')], []),
 	'mario_circuit': (3, 2, [('20406', '100', '19587', '0', '8', '5', '2'), ('20476', '100', '19538', '1', '2', '5', '5'), ('20481', '100', '19606', '2', '2', '5', '3')], []),
-	'plains_routine': (3, 3, [('20221', '103', '19798', '0', '1', '5', '8'), ('20173', '106', '19899', '1', '1', '5', '5'), ('20142', '104', '19794', '2', '5', '5', '1'), ('20161', '100', '19786', '2', '1', '3', '1'), ('20293', '107', '19797', '3', '5', '5', '1')], [('20152', '100', '19807', 'switch.tm_blocks.reactor_boost')]),
+	'plains_routine': (3, 3, [('20221', '103', '19798', '0', '1', '5', '8'), ('20173', '106', '19899', '1', '1', '5', '5'), ('20142', '104', '19794', '2', '5', '5', '1'), ('20161', '100', '19786', '2', '1', '3', '1'), ('20293', '107', '19797', '3', '5', '5', '1')], [('20152', '100', '19807', 'tm_blocks.reactor_boost')]),
 	'rainbow_road': (3, 5, [('23982', '104', '23955', '0', '1', '3', '2'), ('24057', '79', '23960', '1', '2', '3', '1'), ('24029', '86', '23977', '2', '5', '5', '1'), ('24051', '87', '23999', '3', '1', '3', '2'), ('23987', '98', '24028', '4', '2', '3', '1'), ('24035', '82', '24015', '5', '1', '3', '2')], []),
-	'sakura_land': (3, 3, [('19920', '114', '20042', '0', '1', '5', '8'), ('19989', '108', '20137', '1', '1', '5', '8'), ('19915', '108', '20157', '2', '1', '5', '8'), ('19885', '114', '20085', '3', '8', '5', '1')], [('19943', '108', '20152', 'switch.tm_blocks.cruise_control'), ('19941', '108', '20151', 'switch.tm_blocks.cruise_control'), ('19880', '114', '20124', 'switch.tm_blocks.no_steering'), ('19884', '114', '20124', 'switch.tm_blocks.no_steering'), ('19888', '114', '20124', 'switch.tm_blocks.no_steering')]),
-	'snow_travel': (3, 3, [('23065', '136', '23044', '0', '1', '5', '7'), ('23152', '136', '23068', '1', '3', '5', '1'), ('23125', '138', '23080', '1', '1', '5', '3'), ('23106', '133', '23130', '2', '4', '5', '4'), ('23040', '134', '23112', '3', '3', '5', '1')], [('23067', '136', '23042', 'switch.tm_blocks.reactor_boost'), ('23067', '136', '23046', 'switch.tm_blocks.reactor_boost'), ('23143', '133', '23103', 'switch.tm_blocks.reactor_boost'), ('23107', '132', '23058', 'switch.tm_blocks.reactor_boost')]),
+	'sakura_land': (3, 3, [('19920', '114', '20042', '0', '1', '5', '8'), ('19989', '108', '20137', '1', '1', '5', '8'), ('19915', '108', '20157', '2', '1', '5', '8'), ('19885', '114', '20085', '3', '8', '5', '1')], [('19943', '108', '20152', 'tm_blocks.cruise_control'), ('19941', '108', '20151', 'tm_blocks.cruise_control'), ('19880', '114', '20124', 'tm_blocks.no_steering'), ('19884', '114', '20124', 'tm_blocks.no_steering'), ('19888', '114', '20124', 'tm_blocks.no_steering')]),
+	'snow_travel': (3, 3, [('23065', '136', '23044', '0', '1', '5', '7'), ('23152', '136', '23068', '1', '3', '5', '1'), ('23125', '138', '23080', '1', '1', '5', '3'), ('23106', '133', '23130', '2', '4', '5', '4'), ('23040', '134', '23112', '3', '3', '5', '1')], [('23067', '136', '23042', 'tm_blocks.reactor_boost'), ('23067', '136', '23046', 'tm_blocks.reactor_boost'), ('23143', '133', '23103', 'tm_blocks.reactor_boost'), ('23107', '132', '23058', 'tm_blocks.reactor_boost')]),
 }
 
 # Arena spawn cycles: "map/file" -> (score_var, ["x y z yaw pitch"...])
@@ -45,32 +45,35 @@ TP_CYCLES: dict[str, tuple[str, list[str]]] = {
 
 def write_if_race(name: str, laps: int, checkpoints: int, cps: list[tuple[str, ...]], fx: list[tuple[str, ...]]) -> None:
 	""" Summon a race map's checkpoint + effect-block markers and forceload their chunks. """
-	lines: list[str] = [f"scoreboard players set #total_laps switch.data {laps}", f"scoreboard players set #total_checkpoints switch.data {checkpoints}", ""]
+	ns: str = Mem.ctx.project_id
+	lines: list[str] = [f"scoreboard players set #total_laps {ns}.data {laps}", f"scoreboard players set #total_checkpoints {ns}.data {checkpoints}", ""]
 	for x, y, z, cp, dx, dy, dz in cps:
-		lines.append(f'summon marker {x} {y} {z} {{Tags:["switch.checkpoint","switch.can_hard_reset"],data:{{cp:{cp}, dx:{dx}, dy:{dy}, dz:{dz}}}}}')
+		lines.append(f'summon marker {x} {y} {z} {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:{cp}, dx:{dx}, dy:{dy}, dz:{dz}}}}}')
 	lines.append("")
 	lines += [f"forceload add {c[0]} {c[2]}" for c in cps]
 	if fx:
 		lines.append("")
-		lines += [f'summon marker {x} {y} {z} {{Tags:["switch.effect_block","{tag}"]}}' for x, y, z, tag in fx]
+		lines += [f'summon marker {x} {y} {z} {{Tags:["{ns}.effect_block","{ns}.{tag}"]}}' for x, y, z, tag in fx]
 		if len(fx) > 1:
 			lines.append("")
 		lines += [f"forceload add {c[0]} {c[2]}" for c in fx]
-	write_function(f"switch:maps/survival/{name}/if_race", "\n".join(lines) + "\n")
+	write_function(f"{ns}:maps/survival/{name}/if_race", "\n".join(lines) + "\n")
 
 
 def write_tp_cycle(key: str, var: str, coords: list[str]) -> None:
 	""" Round-robin spawn cycle: bump a score and teleport @s to the matching coordinate. """
-	lines: list[str] = [f"scoreboard players add #{var} switch.data 1", ""]
-	lines += [f"execute if score #{var} switch.data matches {i} run tp @s {c}" for i, c in enumerate(coords, 1)]
+	ns: str = Mem.ctx.project_id
+	lines: list[str] = [f"scoreboard players add #{var} {ns}.data 1", ""]
+	lines += [f"execute if score #{var} {ns}.data matches {i} run tp @s {c}" for i, c in enumerate(coords, 1)]
 	lines.append("")
-	lines.append(f"execute if score #{var} switch.data matches {len(coords)}.. run scoreboard players set #{var} switch.data 0")
-	write_function(f"switch:maps/survival/{key}", "\n".join(lines) + "\n")
+	lines.append(f"execute if score #{var} {ns}.data matches {len(coords)}.. run scoreboard players set #{var} {ns}.data 0")
+	write_function(f"{ns}:maps/survival/{key}", "\n".join(lines) + "\n")
 
 
 @stp.measure_time(message="Generated maps files")
 def main() -> None:
-	path: str = "switch:maps"
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:maps"
 	write_translations()
 
 	# Data-driven race checkpoints + arena spawn cycles
@@ -80,119 +83,119 @@ def main() -> None:
 		write_tp_cycle(key, var, coords)
 
 	# /load
-	write_function(f"{path}/load", """
+	write_function(f"{path}/load", f"""
 ## Choix d'une map random de la liste maps_to_choose
 ## Avec 5 essaies de choisir une map différente de la précédente
-data modify storage switch:main previous_map set from storage switch:main map
-scoreboard players set #try switch.data 5
-scoreboard players set #modulo_rand switch.data 0
-execute store result score #modulo_rand switch.data run data get storage switch:temp maps_to_choose
-function switch:maps/find_map
+data modify storage {ns}:main previous_map set from storage {ns}:main map
+scoreboard players set #try {ns}.data 5
+scoreboard players set #modulo_rand {ns}.data 0
+execute store result score #modulo_rand {ns}.data run data get storage {ns}:temp maps_to_choose
+function {ns}:maps/find_map
 
 # Copy map
-data modify storage switch:main map set from storage switch:main copy[0]
-data modify storage switch:main previous_map set from storage switch:main map
+data modify storage {ns}:main map set from storage {ns}:main copy[0]
+data modify storage {ns}:main previous_map set from storage {ns}:main map
 
 # Load map
-function switch:maps/load_gamemode
+function {ns}:maps/load_gamemode
 
 # Log message of which map is loaded
-data modify storage switch:main MessageToLog set value [{"text":"Selected map: `"},{"nbt":"map","storage":"switch:main","interpret":true},{"text":"`!"}]
-function switch:engine/log_message/apply
+data modify storage {ns}:main MessageToLog set value [{{"text":"Selected map: `"}},{{"nbt":"map","storage":"{ns}:main","interpret":true}},{{"text":"`!"}}]
+function {ns}:engine/log_message/apply
 
 # Add map to history
-data modify storage switch:main history.maps prepend from storage switch:main map
+data modify storage {ns}:main history.maps prepend from storage {ns}:main map
 
 # As a new map is loaded, it has not been already regenerated
-scoreboard players reset #already_regenerated switch.data
+scoreboard players reset #already_regenerated {ns}.data
 """)
 
 	# /find_map
-	write_function(f"{path}/find_map", """
-scoreboard players remove #try switch.data 1
+	write_function(f"{path}/find_map", f"""
+scoreboard players remove #try {ns}.data 1
 
-function switch:utils/get_random/main
+function {ns}:utils/get_random/main
 
-data modify storage switch:main copy set from storage switch:temp maps_to_choose
-execute unless score #random switch.data matches 0 run function switch:maps/choose_loop
+data modify storage {ns}:main copy set from storage {ns}:temp maps_to_choose
+execute unless score #random {ns}.data matches 0 run function {ns}:maps/choose_loop
 
-scoreboard players set #success switch.data 0
-data modify storage switch:main temp set from storage switch:main copy[0]
-execute store success score #success switch.data run data modify storage switch:main temp set from storage switch:main previous_map
+scoreboard players set #success {ns}.data 0
+data modify storage {ns}:main temp set from storage {ns}:main copy[0]
+execute store success score #success {ns}.data run data modify storage {ns}:main temp set from storage {ns}:main previous_map
 
-execute if score #try switch.data matches 1.. if score #success switch.data matches 0 run function switch:maps/find_map
+execute if score #try {ns}.data matches 1.. if score #success {ns}.data matches 0 run function {ns}:maps/find_map
 """)
 
 	# /load_gamemode
-	write_function(f"{path}/load_gamemode", """
+	write_function(f"{path}/load_gamemode", f"""
 # Kill map marker
-kill @e[type=marker,tag=switch.selected_map]
+kill @e[type=marker,tag={ns}.selected_map]
 
 # Maps that regenerate (gamemode survival, may be adventure):
-function switch:maps/load_survival
+function {ns}:maps/load_survival
 
 # Maps that doesn't (always gamemode adventure):
-function switch:maps/load_adventure
+function {ns}:maps/load_adventure
 """)
 
 	# /choose_loop
-	write_function(f"{path}/choose_loop", """
-data remove storage switch:main copy[0]
-scoreboard players remove #random switch.data 1
-execute unless score #random switch.data matches 0 run function switch:maps/choose_loop
+	write_function(f"{path}/choose_loop", f"""
+data remove storage {ns}:main copy[0]
+scoreboard players remove #random {ns}.data 1
+execute unless score #random {ns}.data matches 0 run function {ns}:maps/choose_loop
 """)
 
 	# /regenerate_doors_loop
-	write_function(f"{path}/regenerate_doors_loop", """
+	write_function(f"{path}/regenerate_doors_loop", f"""
 # Setblock door
 $setblock $(x) $(y) $(z) $(door)
 
 # While there are doors,
-data remove storage switch:temp doors[0]
-execute if data storage switch:temp doors[0] run function switch:maps/regenerate_doors_loop with storage switch:temp doors[0]
+data remove storage {ns}:temp doors[0]
+execute if data storage {ns}:temp doors[0] run function {ns}:maps/regenerate_doors_loop with storage {ns}:temp doors[0]
 """)
 
 	# /regenerate_doors_macro
-	write_function(f"{path}/regenerate_doors_macro", """
+	write_function(f"{path}/regenerate_doors_macro", f"""
 # Get doors
-$data modify storage switch:temp doors set from storage switch:doors $(name)
+$data modify storage {ns}:temp doors set from storage {ns}:doors $(name)
 
 # While there are doors,
-execute if data storage switch:temp doors[0] run function switch:maps/regenerate_doors_loop with storage switch:temp doors[0]
+execute if data storage {ns}:temp doors[0] run function {ns}:maps/regenerate_doors_loop with storage {ns}:temp doors[0]
 """)
 
 	# /storage_map_list/remove_from_storage
-	write_function(f"{path}/storage_map_list/remove_from_storage", """
-data modify storage switch:main new set value []
-execute if data storage switch:main copy[0] run function switch:maps/storage_map_list/remove_from_storage_loop
-function switch:maps/translations/storage_map_list_remove_from_storage
+	write_function(f"{path}/storage_map_list/remove_from_storage", f"""
+data modify storage {ns}:main new set value []
+execute if data storage {ns}:main copy[0] run function {ns}:maps/storage_map_list/remove_from_storage_loop
+function {ns}:maps/translations/storage_map_list_remove_from_storage
 """)
 
 	# /storage_map_list/remove_from_storage_loop
-	write_function(f"{path}/storage_map_list/remove_from_storage_loop", """
-data modify storage switch:main temp set from storage switch:main copy[0]
-scoreboard players set #success switch.data 1
-execute store success score #success switch.data run data modify storage switch:main temp set from storage switch:main map
-execute if score #success switch.data matches 1 run data modify storage switch:main new append from storage switch:main copy[0]
+	write_function(f"{path}/storage_map_list/remove_from_storage_loop", f"""
+data modify storage {ns}:main temp set from storage {ns}:main copy[0]
+scoreboard players set #success {ns}.data 1
+execute store success score #success {ns}.data run data modify storage {ns}:main temp set from storage {ns}:main map
+execute if score #success {ns}.data matches 1 run data modify storage {ns}:main new append from storage {ns}:main copy[0]
 
-data remove storage switch:main copy[0]
-execute if data storage switch:main copy[0] run function switch:maps/storage_map_list/remove_from_storage_loop
+data remove storage {ns}:main copy[0]
+execute if data storage {ns}:main copy[0] run function {ns}:maps/storage_map_list/remove_from_storage_loop
 """)
 
 	# /survival/boat_race_2/if_race (irregular layout -> verbatim)
-	write_function(f"{path}/survival/boat_race_2/if_race", """
-scoreboard players set #total_laps switch.data 1
-scoreboard players set #total_checkpoints switch.data 2
+	write_function(f"{path}/survival/boat_race_2/if_race", f"""
+scoreboard players set #total_laps {ns}.data 1
+scoreboard players set #total_checkpoints {ns}.data 2
 
 # Starting line
-summon marker 51072 159 51093 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:14, dy:4, dz:4}}
+summon marker 51072 159 51093 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:0, dx:14, dy:4, dz:4}}}}
 
 # Checkpoints
-summon marker 51066 135 51061 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:5, dy:4, dz:2}}
-summon marker 51046 121 51053 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:5, dy:4, dz:2}}
+summon marker 51066 135 51061 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:1, dx:5, dy:4, dz:2}}}}
+summon marker 51046 121 51053 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:2, dx:5, dy:4, dz:2}}}}
 
 # Finish line
-summon marker 51037 113 51020 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:4, dy:4, dz:4}}
+summon marker 51037 113 51020 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:0, dx:4, dy:4, dz:4}}}}
 
 forceload add 51072 51093
 forceload add 51066 51061
@@ -201,17 +204,17 @@ forceload add 51037 51020
 """)
 
 	# /survival/trackmania_stadium_1/if_race (irregular layout -> verbatim)
-	write_function(f"{path}/survival/trackmania_stadium_1/if_race", """
-scoreboard players set #total_laps switch.data 2
-scoreboard players set #total_checkpoints switch.data 6
+	write_function(f"{path}/survival/trackmania_stadium_1/if_race", f"""
+scoreboard players set #total_laps {ns}.data 2
+scoreboard players set #total_checkpoints {ns}.data 6
 
-summon marker 25106 101 24998 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:6, dy:5, dz:2}}
-summon marker 25025 106 24942 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:2, dy:5, dz:6}}
-summon marker 24970 102 24968 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:6, dy:5, dz:2}}
-summon marker 24998 112 25044 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:3, dx:6, dy:5, dz:2}}
-summon marker 25026 126 24980 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:4, dx:2, dy:5, dz:6}}
-summon marker 25057 115 24929 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:5, dx:6, dy:5, dz:2}}
-summon marker 25045 115 25008 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:6, dx:6, dy:5, dz:2}}
+summon marker 25106 101 24998 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:0, dx:6, dy:5, dz:2}}}}
+summon marker 25025 106 24942 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:1, dx:2, dy:5, dz:6}}}}
+summon marker 24970 102 24968 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:2, dx:6, dy:5, dz:2}}}}
+summon marker 24998 112 25044 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:3, dx:6, dy:5, dz:2}}}}
+summon marker 25026 126 24980 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:4, dx:2, dy:5, dz:6}}}}
+summon marker 25057 115 24929 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:5, dx:6, dy:5, dz:2}}}}
+summon marker 25045 115 25008 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:6, dx:6, dy:5, dz:2}}}}
 
 forceload add 25106 24998
 forceload add 25025 24942
@@ -221,15 +224,15 @@ forceload add 25026 24980
 forceload add 25057 24929
 forceload add 25052 25038
 
-summon marker 25102 101 25031 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
-summon marker 24972 102 25043 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
-summon marker 24968 102 25042 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
-summon marker 25066 115 25027 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 25071 115 25027 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 25071 115 25031 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 25066 115 25031 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 25047 115 25011 {Tags:["switch.effect_block","switch.tm_blocks.no_grip"]}
-summon marker 25043 115 25011 {Tags:["switch.effect_block","switch.tm_blocks.no_grip"]}
+summon marker 25102 101 25031 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reset"]}}
+summon marker 24972 102 25043 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.cruise_control"]}}
+summon marker 24968 102 25042 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.cruise_control"]}}
+summon marker 25066 115 25027 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 25071 115 25027 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 25071 115 25031 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 25066 115 25031 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 25047 115 25011 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.no_grip"]}}
+summon marker 25043 115 25011 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.no_grip"]}}
 
 forceload add 25102 25031
 forceload add 24972 25043
@@ -243,25 +246,25 @@ forceload add 25043 25011
 """)
 
 	# /survival/trackmania_stadium_2/if_race (irregular layout -> verbatim)
-	write_function(f"{path}/survival/trackmania_stadium_2/if_race", """
-scoreboard players set #total_laps switch.data 1
-scoreboard players set #total_checkpoints switch.data 12
-scoreboard players set #remaining_time switch.data 600
+	write_function(f"{path}/survival/trackmania_stadium_2/if_race", f"""
+scoreboard players set #total_laps {ns}.data 1
+scoreboard players set #total_checkpoints {ns}.data 12
+scoreboard players set #remaining_time {ns}.data 600
 
-summon marker 37106 101 36998 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:6, dy:5, dz:2}}
-summon marker 37106 114 36932 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:6, dy:5, dz:2}}
-summon marker 37076 114 36945 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:2, dy:5, dz:3}}
-summon marker 37059 114 36970 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:3, dx:6, dy:5, dz:2}}
-summon marker 37059 114 37024 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:4, dx:2, dy:5, dz:6}}
-summon marker 37022 137 37030 {Tags:["switch.checkpoint"]						,data:{cp:5, dx:2, dy:5, dz:5}}
-summon marker 36960 122 37030 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:6, dx:1, dy:5, dz:3}}
-summon marker 36960 139 37046 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:7, dx:3, dy:5, dz:2}}
-summon marker 36998 139 37053 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:8, dx:2, dy:5, dz:3}}
-summon marker 36896 151 37015 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:9, dx:2, dy:5, dz:2}}
-summon marker 36902 151 36983 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:10, dx:3, dy:5, dz:2}}
-summon marker 37052 129 36963 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:11, dx:2, dy:5, dz:3}}
-summon marker 37077 100 37056 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:12, dx:2, dy:5, dz:3}}
-summon marker 37034 111 36956 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:3, dy:5, dz:1}}
+summon marker 37106 101 36998 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:0, dx:6, dy:5, dz:2}}}}
+summon marker 37106 114 36932 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:1, dx:6, dy:5, dz:2}}}}
+summon marker 37076 114 36945 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:2, dx:2, dy:5, dz:3}}}}
+summon marker 37059 114 36970 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:3, dx:6, dy:5, dz:2}}}}
+summon marker 37059 114 37024 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:4, dx:2, dy:5, dz:6}}}}
+summon marker 37022 137 37030 {{Tags:["{ns}.checkpoint"]						,data:{{cp:5, dx:2, dy:5, dz:5}}}}
+summon marker 36960 122 37030 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:6, dx:1, dy:5, dz:3}}}}
+summon marker 36960 139 37046 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:7, dx:3, dy:5, dz:2}}}}
+summon marker 36998 139 37053 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:8, dx:2, dy:5, dz:3}}}}
+summon marker 36896 151 37015 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:9, dx:2, dy:5, dz:2}}}}
+summon marker 36902 151 36983 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:10, dx:3, dy:5, dz:2}}}}
+summon marker 37052 129 36963 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:11, dx:2, dy:5, dz:3}}}}
+summon marker 37077 100 37056 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:12, dx:2, dy:5, dz:3}}}}
+summon marker 37034 111 36956 {{Tags:["{ns}.checkpoint","{ns}.can_hard_reset"],data:{{cp:0, dx:3, dy:5, dz:1}}}}
 
 forceload add 37106 36998
 forceload add 37106 36932
@@ -278,22 +281,22 @@ forceload add 37052 36963
 forceload add 37077 37056
 forceload add 37034 36956
 
-summon marker 37104 101 36995 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 37108 101 36995 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 37104 114 36932 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
-summon marker 37108 114 36932 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
-summon marker 37059 114 36939 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
-summon marker 37059 114 36942 {Tags:["switch.effect_block","switch.tm_blocks.no_steering"]}
-summon marker 37061 114 36974 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
-summon marker 37057 114 36974 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
-summon marker 37085 127 37024 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 37001 131 37030 {Tags:["switch.effect_block","switch.tm_blocks.reset"]}
-summon marker 36957 122 37030 {Tags:["switch.effect_block","switch.tm_blocks.cruise_control"]}
-summon marker 36998 139 37053 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 36907 151 36963 {Tags:["switch.effect_block","switch.tm_blocks.engine_off"]}
-summon marker 37086 101 36963 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 37074 101 37056 {Tags:["switch.effect_block","switch.tm_blocks.no_grip"]}
-summon marker 37034 101 37057 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 37104 101 36995 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 37108 101 36995 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 37104 114 36932 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reset"]}}
+summon marker 37108 114 36932 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reset"]}}
+summon marker 37059 114 36939 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.cruise_control"]}}
+summon marker 37059 114 36942 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.no_steering"]}}
+summon marker 37061 114 36974 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.engine_off"]}}
+summon marker 37057 114 36974 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.engine_off"]}}
+summon marker 37085 127 37024 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 37001 131 37030 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reset"]}}
+summon marker 36957 122 37030 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.cruise_control"]}}
+summon marker 36998 139 37053 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 36907 151 36963 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.engine_off"]}}
+summon marker 37086 101 36963 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
+summon marker 37074 101 37056 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.no_grip"]}}
+summon marker 37034 101 37057 {{Tags:["{ns}.effect_block","{ns}.tm_blocks.reactor_boost"]}}
 
 forceload add 37104 36995
 forceload add 37108 36995
@@ -314,12 +317,12 @@ forceload add 37034 37057
 """)
 
 	# /survival/shoot_da_sheep/tp_shoot_da_sheep (verbatim)
-	write_function(f"{path}/survival/shoot_da_sheep/tp_shoot_da_sheep", """
-execute if score #count switch.data matches 0 in switch:game run tp @s 123037 114 123020 90 0
-execute if score #count switch.data matches 1 in switch:game run tp @s 123003 114 123020 -90 0
-execute if score #count switch.data matches 2 in switch:game run tp @s 123020 114 123037 180 0
-execute if score #count switch.data matches 3 in switch:game run tp @s 123020 114 123003 0 0
+	write_function(f"{path}/survival/shoot_da_sheep/tp_shoot_da_sheep", f"""
+execute if score #count {ns}.data matches 0 in {ns}:game run tp @s 123037 114 123020 90 0
+execute if score #count {ns}.data matches 1 in {ns}:game run tp @s 123003 114 123020 -90 0
+execute if score #count {ns}.data matches 2 in {ns}:game run tp @s 123020 114 123037 180 0
+execute if score #count {ns}.data matches 3 in {ns}:game run tp @s 123020 114 123003 0 0
 
-scoreboard players add #count switch.data 1
-scoreboard players operation #count switch.data %= #4 switch.data
+scoreboard players add #count {ns}.data 1
+scoreboard players operation #count {ns}.data %= #4 {ns}.data
 """)

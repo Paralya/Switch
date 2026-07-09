@@ -8,7 +8,8 @@ from ..common import register_sounds
 
 def write_resources() -> None:
 	""" Datapack resources owned by the warden_escape mode. """
-	Mem.ctx.data["switch"].advancements["warden_escape/laser_beam"] = set_json_encoder(Advancement({
+	ns: str = Mem.ctx.project_id
+	Mem.ctx.data[ns].advancements["warden_escape/laser_beam"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:entity_killed_player",
 			"conditions": {
@@ -16,7 +17,7 @@ def write_resources() -> None:
 				"killing_blow": {"tags": [{"id": "minecraft:bypasses_armor", "expected": True}]},
 			},
 		}},
-		"rewards": {"function": "switch:modes/warden_escape/calls/laser_beam"},
+		"rewards": {"function": f"{ns}:modes/warden_escape/calls/laser_beam"},
 	}))
 
 	# Binary vanilla warden sound overrides (minecraft namespace)

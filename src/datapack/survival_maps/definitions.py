@@ -1,6 +1,8 @@
 
 # ruff: noqa: E501
 # Imports
+from stewbeet import Mem
+
 from .utils import clone_survival, fill_survival
 
 
@@ -14,13 +16,14 @@ def generate_folders_for_survival_maps() -> None:
 	Args:
 		config (dict): The configuration of the project
 	"""
+	ns: str = Mem.ctx.project_id
 	clone_survival(-64, (-160, -64, -160), (160, 256, 160), ("switch_space", "Switch Space", "Stoupy and Switch community"), view=(44.38, 127.17, 99.81, 151.06, 28.47))
 	clone_survival(100, (500, 100, 500), (552, 143, 552), ("laser_game", "LaserGame51 (2010 IRL)", "Stoupy, Ikinox"), view=(517.62, 111.36, 518.34, -31.98, 9.81))
 	clone_survival(100, (1000, 100, 1000), (1100, 144, 1100), ("pitchout_1", "Wet Wood Dome", "Stoupy, ?"), view=(1081.19, 117.69, 1065.08, 114.72, 15.66))
 	clone_survival(100, (1500, 100, 1500), (1684, 189, 1655), ("traitor_original", "Traitor Original", "Stoupy, Luxio, Jugou2, etc. (Paralya)"), view=(1566.00, 122.20, 1533.79, -56.61, 8.90))
 	clone_survival(100, (2000, 100, 2000), (2108, 193, 2126), ("area_51", "Area 51", "Jugou2, Stoupy, TheFRcRaZy"), view=(2046.90, 105.29, 2056.55, 145.40, -2.02))
 	clone_survival(100, (2500, 100, 2500), (2586, 185, 2595), ("spectre_original", "Spectre Original", "DIocelot, Stoupy"), view=(2526.27, 150.48, 2573.21, -143.57, 25.80))
-	fill_survival((2750, -64, 2750), (3250, 320, 3250), ("glassrunner", "Glassrunner", "AirDox"), "air", "#switch:glassrunner/glass", view=(3003.25, 138.64, 2987.65, 12.58, 56.33))
+	fill_survival((2750, -64, 2750), (3250, 320, 3250), ("glassrunner", "Glassrunner", "AirDox"), "air", f"#{ns}:glassrunner/glass", view=(3003.25, 138.64, 2987.65, 12.58, 56.33))
 	clone_survival(100, (3500, 100, 3500), (3540, 140, 3540), ("pitch_creep_1", "Pitch Creep Wood", "Stoupy"), view=(3523.79, 120.80, 3513.55, 22.25, -8.74))
 	clone_survival(100, (4000, 100, 4000), (4122, 151, 4122), ("mushroom_plains", "Mushroom Plains", "LTHCTheMaster"), view=(4043.11, 134.50, 4116.71, 195.90, 27.19))
 	clone_survival(100, (5000, 100, 5000), (5342, 247, 5257), ("boat_race_1", "FriendsCube Boat Race", "Stoupy, TheFRcRaZy, Jugou2"), view=(5244.61, 205.14, 5055.73, 46.89, 33.85), racing_pos=((5199.5, 160.69, 5142.5), 90, 12))
@@ -32,7 +35,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (11000, 100, 11000), (11065, 142, 11065), ("friends_pvpbox_ice", "FriendsCube PvPbox Ice", "Jugou2"), view=(11012.23, 123.22, 11043.81, 247.65, 10.96))
 	clone_survival(100, (12000, 100, 12000), (12090, 167, 12090), ("friends_pvpbox_hills", "FriendsCube PvPbox Hills", "Jugou2"), view=(12059.29, 121.67, 12010.18, 22.08, -1.65))
 	clone_survival(100, (13000, 100, 13000), (13091, 133, 13090), ("friends_pvpbox_end", "FriendsCube PvPbox End", "Jugou2"), view=(13042.52, 113.62, 13065.88, 204.05, 3.63))
-	fill_survival((13901, 0, 13901), (14099, 255, 14099), ("rush_the_point_1", "Rush the Point 1", "Jugou2"), "air", "#switch:rush_the_point/can_break", view=(14039.28, 140.79, 13962.74, -1754.77, 55.30))
+	fill_survival((13901, 0, 13901), (14099, 255, 14099), ("rush_the_point_1", "Rush the Point 1", "Jugou2"), "air", f"#{ns}:rush_the_point/can_break", view=(14039.28, 140.79, 13962.74, -1754.77, 55.30))
 	##	15000	(undefined)	: skywars_1		(not done yet)
 	##	16000	(undefined)	: skywars_2		(not done yet)
 	clone_survival(100, (17000, 100, 17000), (17080, 145, 17080), ("friends_cube_lobby", "FriendsCube Lobby", "Jugou2"), view=(17032.36, 117.35, 17065.43, 205.20, 2.80))

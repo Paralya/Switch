@@ -12,6 +12,7 @@ COLORS: tuple[str, ...] = (
 
 def write_resources() -> None:
 	""" Datapack resources owned by the moutron mode. """
-	Mem.ctx.data["switch"].block_tags["moutron/glass"] = set_json_encoder(BlockTag({
+	ns: str = Mem.ctx.project_id
+	Mem.ctx.data[ns].block_tags["moutron/glass"] = set_json_encoder(BlockTag({
 		"values": [f"{c}_stained_glass" for c in COLORS],
 	}))

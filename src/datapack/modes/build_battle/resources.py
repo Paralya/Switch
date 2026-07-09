@@ -9,7 +9,8 @@ from ..common import register_structures
 
 def write_resources() -> None:
 	""" Datapack resources owned by the build_battle mode. """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 
 	# Flat-void dimension the build_battle plots live in (Dimension type registered in load_datapack_json)
 	switch[Dimension]["build_battle"] = set_json_encoder(Dimension({

@@ -14,7 +14,7 @@ def write_mode():
 	translations: str = f"{path}/translations"
 
 	# Write /calls/ and /translations/ functions
-	write_modes_calls(mode, targets={"joined": "switch:utils/classic_death"})
+	write_modes_calls(mode, targets={"joined": f"{ns}:utils/classic_death"})
 	write_translations()
 
 
@@ -34,36 +34,36 @@ item replace entity @s hotbar.8 with arrow 32
 """)
 
 	# /killed_player
-	write_function(f"{path}/killed_player", """
-advancement revoke @s only switch:cigogne/killed_player
-execute if score #engine_state switch.data matches 3 if data storage switch:main {current_game:"cigogne"} run give @s golden_apple 3
+	write_function(f"{path}/killed_player", f"""
+advancement revoke @s only {ns}:cigogne/killed_player
+execute if score #engine_state {ns}.data matches 3 if data storage {ns}:main {{current_game:"cigogne"}} run give @s golden_apple 3
 """)
 
 	# /process_end
-	write_function(f"{path}/process_end", """
-function switch:modes/_common/process_end/winner_by_health {death:"switch:utils/classic_death"}
+	write_function(f"{path}/process_end", f"""
+function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
 
 # Advancement
-execute if score #process_end switch.data matches 1 run scoreboard players set #max switch.data 0
-execute if score #process_end switch.data matches 1 run scoreboard players operation #max switch.data > @a[tag=!detached,scores={switch.temp.kill=1..}] switch.temp.kill
-execute if score #process_end switch.data matches 1 unless score #test_mode switch.data matches 1 as @a[tag=!detached,scores={switch.temp.kill=1..}] if score #max switch.data = @s switch.temp.kill run advancement grant @s only switch:visible/23
+execute if score #process_end {ns}.data matches 1 run scoreboard players set #max {ns}.data 0
+execute if score #process_end {ns}.data matches 1 run scoreboard players operation #max {ns}.data > @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] {ns}.temp.kill
+execute if score #process_end {ns}.data matches 1 unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] if score #max {ns}.data = @s {ns}.temp.kill run advancement grant @s only {ns}:visible/23
 
-execute if score #process_end switch.data matches 200 run function switch:engine/restart
+execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
 	# /second
 	write_function(f"{path}/second", f"""
 # Classic timer
-scoreboard players add #cigogne_seconds switch.data 1
-scoreboard players remove #remaining_time switch.data 1
+scoreboard players add #cigogne_seconds {ns}.data 1
+scoreboard players remove #remaining_time {ns}.data 1
 function {path}/xp_bar
 
 # Kill reward
-give @a[tag=!detached,gamemode=!spectator,scores={{switch.temp.playerKill=1..}}] golden_apple 4
-scoreboard players reset @a[scores={{switch.temp.playerKill=1..}}] switch.temp.playerKill
+give @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.playerKill=1..}}] golden_apple 4
+scoreboard players reset @a[scores={{{ns}.temp.playerKill=1..}}] {ns}.temp.playerKill
 
 # Glowing
-execute if score #cigogne_seconds switch.data matches 180.. run effect give @a[tag=!detached,gamemode=!spectator] glowing infinite 255 true
+execute if score #cigogne_seconds {ns}.data matches 180.. run effect give @a[tag=!detached,gamemode=!spectator] glowing infinite 255 true
 """)
 
 	# /start
@@ -76,63 +76,63 @@ effect give @a[tag=!detached] regeneration 10 255 true
 effect give @a[tag=!detached] speed infinite 1 true
 effect give @a[tag=!detached] jump_boost infinite 2 true
 effect give @a[tag=!detached] invisibility infinite 255 true
-function switch:utils/set_dynamic_time
+function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {{id:"cigogne", maps:["cigogne"]}}
+scoreboard players set #do_spreadplayers {ns}.data 1
+function {ns}:utils/choose_map_for {{id:"cigogne", maps:["cigogne"]}}
 
-execute in switch:game run gamerule minecraft:natural_health_regeneration false
-execute in switch:game run gamerule minecraft:keep_inventory true
+execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
+execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 function {translations}/start
 
-scoreboard players set #remaining_time switch.data 910
-scoreboard players set #cigogne_seconds switch.data -10
-scoreboard players set #cigogne_ticks switch.data 0
-scoreboard players set #process_end switch.data 0
-scoreboard objectives add switch.temp.kill playerKillCount
-scoreboard objectives add switch.temp.playerKill playerKillCount
-scoreboard objectives add switch.temp.sneak dummy
-scoreboard objectives setdisplay list switch.health
+scoreboard players set #remaining_time {ns}.data 910
+scoreboard players set #cigogne_seconds {ns}.data -10
+scoreboard players set #cigogne_ticks {ns}.data 0
+scoreboard players set #process_end {ns}.data 0
+scoreboard objectives add {ns}.temp.kill playerKillCount
+scoreboard objectives add {ns}.temp.playerKill playerKillCount
+scoreboard objectives add {ns}.temp.sneak dummy
+scoreboard objectives setdisplay list {ns}.health
 
 execute as @a[tag=!detached] run function {path}/give_items
 """)
 
 	# /stop
-	write_function(f"{path}/stop", """
-scoreboard objectives remove switch.temp.kill
-scoreboard objectives remove switch.temp.playerKill
-scoreboard objectives remove switch.temp.sneak
+	write_function(f"{path}/stop", f"""
+scoreboard objectives remove {ns}.temp.kill
+scoreboard objectives remove {ns}.temp.playerKill
+scoreboard objectives remove {ns}.temp.sneak
 """)
 
 	# /tick
 	write_function(f"{path}/tick", f"""
-scoreboard players add #cigogne_ticks switch.data 1
+scoreboard players add #cigogne_ticks {ns}.data 1
 
 ## Death system
-function switch:utils/on_death_run_function {{function:"switch:utils/classic_death"}}
+function {ns}:utils/on_death_run_function {{function:"{ns}:utils/classic_death"}}
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs
-execute at @a[tag=!detached,gamemode=!spectator,predicate=!switch:is_sneaking,predicate=!switch:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
+execute at @a[tag=!detached,gamemode=!spectator,predicate=!{ns}:is_sneaking,predicate=!{ns}:in_air] run particle dolphin ~ ~ ~ 0.2 0 0.2 0 2 normal
 
 # On enlève les particules d'absorption
 execute as @a[tag=!detached,nbt={{active_effects:[{{id:"minecraft:absorption"}}]}}] unless data entity @s active_effects[{{id:"minecraft:absorption"}}].show_particles run function {path}/absorption
 
 # Glowing time
-execute as @a[tag=!detached,gamemode=!spectator,predicate=switch:is_sneaking] run scoreboard players add @s switch.temp.sneak 1
-scoreboard players remove @a[tag=!detached,gamemode=!spectator,predicate=!switch:is_sneaking] switch.temp.sneak 2
-effect give @a[tag=!detached,scores={{switch.temp.sneak=100..}}] glowing 1 0 true
-scoreboard players set @a[tag=!detached,scores={{switch.temp.sneak=100..}}] switch.temp.sneak 100
-scoreboard players set @a[tag=!detached,scores={{switch.temp.sneak=..0}}] switch.temp.sneak 0
+execute as @a[tag=!detached,gamemode=!spectator,predicate={ns}:is_sneaking] run scoreboard players add @s {ns}.temp.sneak 1
+scoreboard players remove @a[tag=!detached,gamemode=!spectator,predicate=!{ns}:is_sneaking] {ns}.temp.sneak 2
+effect give @a[tag=!detached,scores={{{ns}.temp.sneak=100..}}] glowing 1 0 true
+scoreboard players set @a[tag=!detached,scores={{{ns}.temp.sneak=100..}}] {ns}.temp.sneak 100
+scoreboard players set @a[tag=!detached,scores={{{ns}.temp.sneak=..0}}] {ns}.temp.sneak 0
 function {translations}/tick
 
 
 ## End game
-scoreboard players set #remaining_players switch.data 0
-execute store result score #remaining_players switch.data if entity @a[tag=!detached,gamemode=survival]
-execute if score #cigogne_seconds switch.data matches 1.. if score #remaining_players switch.data matches ..1 run function {path}/process_end
-execute if score #remaining_time switch.data matches ..0 run function {path}/process_end
+scoreboard players set #remaining_players {ns}.data 0
+execute store result score #remaining_players {ns}.data if entity @a[tag=!detached,gamemode=survival]
+execute if score #cigogne_seconds {ns}.data matches 1.. if score #remaining_players {ns}.data matches ..1 run function {path}/process_end
+execute if score #remaining_time {ns}.data matches ..0 run function {path}/process_end
 """)
 
 	# /xp_bar

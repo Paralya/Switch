@@ -26,6 +26,7 @@ def void_generator() -> dict[str, Any]:
 def write_dimensions() -> None:
 	""" Build the shared dimensions explicitly under the switch namespace.
 		(Dimension is registered as a custom type in load_datapack_json beforehand.) """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 	switch[Dimension]["game"] = set_json_encoder(Dimension(void_generator()))
 	switch[Dimension]["void"] = set_json_encoder(Dimension(void_generator()))

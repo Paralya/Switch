@@ -20,14 +20,15 @@ def get_entry(item: str) -> JsonDict:
 
 # Main function
 def main() -> None:
-	loot_tables_path: str = f"{Mem.ctx.output_directory}/data/switch/loot_table"
+	ns: str = Mem.ctx.project_id
+	loot_tables_path: str = f"{Mem.ctx.output_directory}/data/{ns}/loot_table"
 	vanilla_path: str = stp.clean_path(f"{loot_tables_path}/random/vanilla.json")
 	all_path: str = stp.clean_path(f"{loot_tables_path}/random/all.json")
 
 	# If the loot tables already exists, prevent them from being deleted (cache system)
 	if all(os.path.exists(x) for x in [vanilla_path, all_path]):
-		Mem.ctx.data["switch"].loot_tables["random/vanilla"] = LootTable(source_path=vanilla_path)
-		Mem.ctx.data["switch"].loot_tables["random/all"] = LootTable(source_path=all_path)
+		Mem.ctx.data[ns].loot_tables["random/vanilla"] = LootTable(source_path=vanilla_path)
+		Mem.ctx.data[ns].loot_tables["random/all"] = LootTable(source_path=all_path)
 		return stp.progress("The random loot tables 'vanilla.json' and 'all.json' already exists, skipping the generation")
 
 	# Get all items from the vanilla registries (mcmeta summary branch of the project's minecraft version)
@@ -44,13 +45,13 @@ def main() -> None:
 		loot_table["pools"][0]["entries"].append(get_entry(item))
 
 	# Save the vanilla loot table
-	Mem.ctx.data["switch"].loot_tables["random/vanilla"] = LootTable(stp.json_dump(loot_table, max_level=-1))
+	Mem.ctx.data[ns].loot_tables["random/vanilla"] = LootTable(stp.json_dump(loot_table, max_level=-1))
 
 	# For each item in the item definitions (except skipped ones), add it to the loot table and save it
 	for item in Mem.definitions.keys():
 		if Item.from_id(item).skip_gives:
 			continue
-		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"switch:i/{item}"})
-	Mem.ctx.data["switch"].loot_tables["random/all"] = LootTable(stp.json_dump(loot_table, max_level=-1))
+		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"{ns}:i/{item}"})
+	Mem.ctx.data[ns].loot_tables["random/all"] = LootTable(stp.json_dump(loot_table, max_level=-1))
 	stp.progress("The random loot tables 'vanilla.json' and 'all.json' have been generated")
 

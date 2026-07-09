@@ -2,48 +2,49 @@
 # ruff: noqa: E501
 # Imports
 import stouputils as stp
-from stewbeet import write_function
+from stewbeet import Mem, write_function
 
 
 @stp.measure_time(message="Generated utils files")
 def main() -> None:
-	path: str = "switch:utils"
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:utils"
 
 	# /choose_map_for
-	write_function(f"{path}/choose_map_for", """
+	write_function(f"{path}/choose_map_for", f"""
 ## Vérification de la liste des maps
 # Détection du nombre restant de maps à charger
-scoreboard players set #mc switch.data 0
-$execute store result score #mc switch.data run data get storage switch:maps choose_from.$(id)
+scoreboard players set #mc {ns}.data 0
+$execute store result score #mc {ns}.data run data get storage {ns}:maps choose_from.$(id)
 
 # Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
-$execute if score #mc switch.data matches 0 run data modify storage switch:maps choose_from.$(id) set value $(maps)
+$execute if score #mc {ns}.data matches 0 run data modify storage {ns}:maps choose_from.$(id) set value $(maps)
 
 ## Chargement de la map
 # Passage en paramètre de la liste des maps à charger
-$data modify storage switch:temp maps_to_choose set from storage switch:maps choose_from.$(id)
+$data modify storage {ns}:temp maps_to_choose set from storage {ns}:maps choose_from.$(id)
 
 # Fonction de chargement de la map
-function switch:maps/load
+function {ns}:maps/load
 
 ## Suppression de la map chargée de la liste des maps à charger
 # Passage en paramètre de la liste des maps à charger
-$data modify storage switch:main copy set from storage switch:maps choose_from.$(id)
+$data modify storage {ns}:main copy set from storage {ns}:maps choose_from.$(id)
 
 # Suppression de la map chargée de la liste des maps à charger
-function switch:maps/storage_map_list/remove_from_storage
+function {ns}:maps/storage_map_list/remove_from_storage
 
 # Application de la nouvelle liste des maps à charger
-$data modify storage switch:maps choose_from.$(id) set from storage switch:main new
+$data modify storage {ns}:maps choose_from.$(id) set from storage {ns}:main new
 """)
 
 	# /classic_death
-	write_function(f"{path}/classic_death", """
+	write_function(f"{path}/classic_death", f"""
 # If just died, teleport to the death pos, else teleport back to the map
-scoreboard players set #success switch.data 0
-execute if score @s switch.last_death matches ..2 if score @s switch.reconnect = #score switch.reconnect run scoreboard players set #success switch.data 1
-execute if score #success switch.data matches 1 run function switch:utils/death_tp
-execute unless score #success switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
+scoreboard players set #success {ns}.data 0
+execute if score @s {ns}.last_death matches ..2 if score @s {ns}.reconnect = #score {ns}.reconnect run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 1 run function {ns}:utils/death_tp
+execute unless score #success {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 
 # Clear & spectator
 attribute @s waypoint_transmit_range base set 0
@@ -53,27 +54,27 @@ clear @s
 """)
 
 	# /create_stats_stuff
-	write_function(f"{path}/create_stats_stuff", """
+	write_function(f"{path}/create_stats_stuff", f"""
 # Create scoreboard objectives
-$scoreboard objectives add switch.stats.played.$(id) dummy
-$scoreboard objectives add switch.stats.wins.$(id) dummy
+$scoreboard objectives add {ns}.stats.played.$(id) dummy
+$scoreboard objectives add {ns}.stats.wins.$(id) dummy
 
 # Create storages if not defined
-$execute unless data storage switch:stats all.modes.$(id) run data modify storage switch:stats all.modes.$(id) set value {total_games:0,played:[],wins:[],played_win_ratio:[]}
-$execute unless data storage switch:ratings all[{id:"$(id)"}] run data modify storage switch:ratings all append value {id:"$(id)",name_fr:"",points:0,int:0,digits:0,players:[]}
-$data modify storage switch:ratings all[{id:"$(id)"}].name_fr set value "$(name_fr)"
-$data modify storage switch:ratings all[{id:"$(id)"}].name_en set value "$(name_en)"
-$data modify storage switch:ratings all[{id:"$(id)"}].index set value $(index)
-$data modify storage switch:ratings all[{id:"$(id)"}].index_hundred set value $(index)00
+$execute unless data storage {ns}:stats all.modes.$(id) run data modify storage {ns}:stats all.modes.$(id) set value {{total_games:0,played:[],wins:[],played_win_ratio:[]}}
+$execute unless data storage {ns}:ratings all[{{id:"$(id)"}}] run data modify storage {ns}:ratings all append value {{id:"$(id)",name_fr:"",points:0,int:0,digits:0,players:[]}}
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].name_fr set value "$(name_fr)"
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].name_en set value "$(name_en)"
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].index set value $(index)
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].index_hundred set value $(index)00
 """)
 
 	# /death_tp
-	write_function(f"{path}/death_tp", """
-data modify storage switch:temp input.x set from entity @s LastDeathLocation.pos[0]
-data modify storage switch:temp input.y set from entity @s LastDeathLocation.pos[1]
-data modify storage switch:temp input.z set from entity @s LastDeathLocation.pos[2]
-data modify storage switch:temp input.dimension set from entity @s LastDeathLocation.dimension
-function switch:utils/death_tp_2 with storage switch:temp input
+	write_function(f"{path}/death_tp", f"""
+data modify storage {ns}:temp input.x set from entity @s LastDeathLocation.pos[0]
+data modify storage {ns}:temp input.y set from entity @s LastDeathLocation.pos[1]
+data modify storage {ns}:temp input.z set from entity @s LastDeathLocation.pos[2]
+data modify storage {ns}:temp input.dimension set from entity @s LastDeathLocation.dimension
+function {ns}:utils/death_tp_2 with storage {ns}:temp input
 """)
 
 	# /death_tp_2
@@ -82,41 +83,41 @@ $execute in $(dimension) run tp @s $(x) $(y) $(z)
 """)
 
 	# /get_random/macro
-	write_function(f"{path}/get_random/macro", """
-$execute store result score #random switch.data run random value 0..$(max)
+	write_function(f"{path}/get_random/macro", f"""
+$execute store result score #random {ns}.data run random value 0..$(max)
 """)
 
 	# /get_random/main
-	write_function(f"{path}/get_random/main", """
-data modify storage switch:main temp set value {max:0}
-scoreboard players operation #temp switch.data = #modulo_rand switch.data
-scoreboard players remove #temp switch.data 1
-execute if score #temp switch.data matches ..-1 run return fail
-execute store result storage switch:main temp.max int 1 run scoreboard players get #temp switch.data
-function switch:utils/get_random/macro with storage switch:main temp
+	write_function(f"{path}/get_random/main", f"""
+data modify storage {ns}:main temp set value {{max:0}}
+scoreboard players operation #temp {ns}.data = #modulo_rand {ns}.data
+scoreboard players remove #temp {ns}.data 1
+execute if score #temp {ns}.data matches ..-1 run return fail
+execute store result storage {ns}:main temp.max int 1 run scoreboard players get #temp {ns}.data
+function {ns}:utils/get_random/macro with storage {ns}:main temp
 """)
 
 	# /lag/disable
-	write_function(f"{path}/lag/disable", """
-kill @e[tag=switch.lag_maker]
-schedule clear switch:utils/lag/enable
+	write_function(f"{path}/lag/disable", f"""
+kill @e[tag={ns}.lag_maker]
+schedule clear {ns}:utils/lag/enable
 """)
 
 	# /lag/enable
-	write_function(f"{path}/lag/enable", """
+	write_function(f"{path}/lag/enable", f"""
 # Kill previous
-kill @e[tag=switch.lag_maker]
+kill @e[tag={ns}.lag_maker]
 
 # Summon new
-execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=3] run summon zombie 0 10 0 {Tags:["switch.lag_maker"],DeathLootTable:"none"}
+execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=3] run summon zombie 0 10 0 {{Tags:["{ns}.lag_maker"],DeathLootTable:"none"}}
 
 # Recall
-schedule function switch:utils/lag/enable 1t
+schedule function {ns}:utils/lag/enable 1t
 """)
 
 	# /on_death_run_function
-	write_function(f"{path}/on_death_run_function", """
-$execute as @a[tag=!detached,predicate=switch:is_at_spawn] run function $(function)
+	write_function(f"{path}/on_death_run_function", f"""
+$execute as @a[tag=!detached,predicate={ns}:is_at_spawn] run function $(function)
 """)
 
 	# /reset_attributes
@@ -202,22 +203,22 @@ gamerule minecraft:ender_pearls_vanish_on_death true
 """)
 
 	# /reset_players
-	write_function(f"{path}/reset_players", """
+	write_function(f"{path}/reset_players", f"""
 # Attributes
-execute as @a[tag=!detached] run function switch:utils/reset_attributes
+execute as @a[tag=!detached] run function {ns}:utils/reset_attributes
 
 # Gamemode
-execute unless score #set_spec switch.data matches 1 run gamemode adventure @a[tag=!detached]
-execute if score #set_spec switch.data matches 1 run gamemode spectator @a[tag=!detached]
-scoreboard players reset #set_spec switch.data
+execute unless score #set_spec {ns}.data matches 1 run gamemode adventure @a[tag=!detached]
+execute if score #set_spec {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+scoreboard players reset #set_spec {ns}.data
 
 # Clear inventory (if /disable, clear only players that doesn't have convention.debug tag)
-execute unless score #disable switch.data matches 1 run clear @a[tag=!detached]
-execute if score #disable switch.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
+execute unless score #disable {ns}.data matches 1 run clear @a[tag=!detached]
+execute if score #disable {ns}.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
 
 # Other stuff
-team empty switch.no_pvp
-execute in switch:game run spawnpoint @a 0 70 0
+team empty {ns}.no_pvp
+execute in {ns}:game run spawnpoint @a 0 70 0
 xp set @a[tag=!detached] 0 levels
 xp set @a[tag=!detached] 0 points
 effect clear @a[tag=!detached]
@@ -238,54 +239,54 @@ $kill $(selector)
 """)
 
 	# /set_dynamic_time
-	write_function(f"{path}/set_dynamic_time", """
-execute store result score #random switch.data run random value 0..2
-execute if score #random switch.data matches 0 run time set 0
-execute if score #random switch.data matches 1 run time set 6000
-execute if score #random switch.data matches 2 run time set 12000
+	write_function(f"{path}/set_dynamic_time", f"""
+execute store result score #random {ns}.data run random value 0..2
+execute if score #random {ns}.data matches 0 run time set 0
+execute if score #random {ns}.data matches 1 run time set 6000
+execute if score #random {ns}.data matches 2 run time set 12000
 """)
 
 	# /sqrt
-	write_function(f"{path}/sqrt", """
+	write_function(f"{path}/sqrt", f"""
 # Initialize values
-scoreboard players set #output switch.data 0
-scoreboard players set #increment switch.data 32768
+scoreboard players set #output {ns}.data 0
+scoreboard players set #increment {ns}.data 32768
 # Execute recursive function
-function switch:utils/sqrt_loop
+function {ns}:utils/sqrt_loop
 """)
 
 	# /sqrt_loop
-	write_function(f"{path}/sqrt_loop", """
+	write_function(f"{path}/sqrt_loop", f"""
 # Compute test
-scoreboard players operation #test switch.data = #output switch.data
-scoreboard players operation #test switch.data += #increment switch.data
-scoreboard players operation #test switch.data *= #test switch.data
+scoreboard players operation #test {ns}.data = #output {ns}.data
+scoreboard players operation #test {ns}.data += #increment {ns}.data
+scoreboard players operation #test {ns}.data *= #test {ns}.data
 # Compare values
-execute if score #test switch.data <= #input switch.data run scoreboard players operation #output switch.data += #increment switch.data
+execute if score #test {ns}.data <= #input {ns}.data run scoreboard players operation #output {ns}.data += #increment {ns}.data
 # Execute recursive function
-scoreboard players operation #increment switch.data /= #2 switch.data
-execute if score #increment switch.data matches 1.. run function switch:utils/sqrt_loop
+scoreboard players operation #increment {ns}.data /= #2 {ns}.data
+execute if score #increment {ns}.data matches 1.. run function {ns}:utils/sqrt_loop
 """)
 
 	# /who_voted (admin command: list which players voted for each game)
-	write_function(f"{path}/who_voted", """
+	write_function(f"{path}/who_voted", f"""
 # French
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 1 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-1}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 2 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-2}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 3 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-3}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 4 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-4}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 5 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-5}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 6 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-6}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 7 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-7}]"}]
-tellraw @s[scores={switch.lang=0}] [{"text":"Vote 8 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-8}]"}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 1 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-1}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 2 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-2}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 3 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-3}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 4 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-4}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 5 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-5}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-6}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
 
 # English
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 1 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-1}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 2 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-2}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 3 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-3}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 4 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-4}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 5 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-5}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 6 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-6}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 7 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-7}]"}]
-tellraw @s[scores={switch.lang=1}] [{"text":"Vote 8 ","color":"aqua"},{"selector":"@a[scores={switch.trigger.game_vote=-8}]"}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 1 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-1}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 2 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-2}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 3 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-3}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 4 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-4}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 5 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-5}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-6}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
 """)

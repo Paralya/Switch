@@ -21,7 +21,8 @@ EXCLUDE: dict[str, str] = {
 
 def write_resources() -> None:
 	""" Datapack resources owned by the block_party mode (palette block tags). """
-	block_tags = Mem.ctx.data["switch"].block_tags
+	ns: str = Mem.ctx.project_id
+	block_tags = Mem.ctx.data[ns].block_tags
 	block_tags["block_party/all"] = set_json_encoder(BlockTag({"values": list(ALL)}))
 	for name, excluded in EXCLUDE.items():
 		block_tags[f"block_party/{name}"] = set_json_encoder(BlockTag({"values": [b for b in ALL if b != excluded]}))

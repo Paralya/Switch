@@ -15,6 +15,7 @@ LIB_TO_WRITE: str = "datapack/switch_music.zip"
 
 # Main function
 def main() -> None:
+	ns: str = Mem.ctx.project_id
 	libs_folder: str = str(Mem.ctx.meta.get("stewbeet", {}).get("libs_folder", "libs"))
 	lib_file = f"{libs_folder}/{LIB_TO_WRITE}"
 
@@ -58,7 +59,7 @@ def main() -> None:
 							music_namespace: str = splitted_destination[0]
 							note: str = splitted_destination[1].split(".")[0]
 							note = str(int(note) * ALL_BPM // bpm)
-							destination_file: str = f"data/switch/function/music/{music_namespace}/{note}.mcfunction"
+							destination_file: str = f"data/{ns}/function/music/{music_namespace}/{note}.mcfunction"
 							lib.writestr(destination_file, file_content.encode("utf-8"))
 
 							# Remember the highest length
@@ -76,42 +77,42 @@ def main() -> None:
 		# Write the objectives
 		# Write all objectives to a single string first
 		load_content = f"""
-scoreboard objectives add switch.music.current dummy
-scoreboard objectives add switch.music.progress dummy
-scoreboard objectives add switch.music.loop_state dummy
-scoreboard players set #last_index switch.music.current {len(objectives)+99}
+scoreboard objectives add {ns}.music.current dummy
+scoreboard objectives add {ns}.music.progress dummy
+scoreboard objectives add {ns}.music.loop_state dummy
+scoreboard players set #last_index {ns}.music.current {len(objectives)+99}
 """
 		for song, length, _ in objectives:
-			load_content += f"scoreboard players set #{song} switch.music.progress {length}\n"
+			load_content += f"scoreboard players set #{song} {ns}.music.progress {length}\n"
 
 		# Write the full content at once
-		lib.writestr("data/switch/function/music/load.mcfunction", load_content)
+		lib.writestr(f"data/{ns}/function/music/load.mcfunction", load_content)
 
 		# Write the tick functions
 		player_tick_content = ""
 		for i, (song, _, _) in enumerate(objectives):
-			player_tick_content += f"execute if score @s switch.music.current matches {i+100} run function switch:music/ticks/{song}\n"
+			player_tick_content += f"execute if score @s {ns}.music.current matches {i+100} run function {ns}:music/ticks/{song}\n"
 
 			tick_song_content = f"""
-scoreboard players add @s switch.music.progress 1
-data modify storage switch:temp input set value {{tick:0,name:"{song}"}}
-scoreboard players operation #temp switch.data = @s switch.music.progress
-scoreboard players remove #temp switch.data 20
-execute store result storage switch:temp input.tick int 1 run scoreboard players get #temp switch.data
-function switch:music/tick_macro with storage switch:temp input
+scoreboard players add @s {ns}.music.progress 1
+data modify storage {ns}:temp input set value {{tick:0,name:"{song}"}}
+scoreboard players operation #temp {ns}.data = @s {ns}.music.progress
+scoreboard players remove #temp {ns}.data 20
+execute store result storage {ns}:temp input.tick int 1 run scoreboard players get #temp {ns}.data
+function {ns}:music/tick_macro with storage {ns}:temp input
 
 # Stop if the music is over
-execute if score #temp switch.data >= #{song} switch.music.progress run function switch:music/music_over
+execute if score #temp {ns}.data >= #{song} {ns}.music.progress run function {ns}:music/music_over
 """
-			lib.writestr(f"data/switch/function/music/ticks/{song}.mcfunction", tick_song_content)
+			lib.writestr(f"data/{ns}/function/music/ticks/{song}.mcfunction", tick_song_content)
 
-		player_tick_content += "execute if score @s switch.music.current matches -1 run function switch:music/next_music"
-		lib.writestr("data/switch/function/music/player_tick.mcfunction", player_tick_content)
+		player_tick_content += f"execute if score @s {ns}.music.current matches -1 run function {ns}:music/next_music"
+		lib.writestr(f"data/{ns}/function/music/player_tick.mcfunction", player_tick_content)
 
 		# Write the browser file (tellraws)
-		browser_content = """
+		browser_content = f"""
 # Top
-tellraw @s ["\\n",{"nbt":"ParalyaMusic","storage":"switch:main","interpret":true},{"text":" [🔀]","color":"light_purple","click_event":{"action":"run_command","command":"/trigger switch.trigger.music set 2"},"hover_event":{"action":"show_text","value":{"text":"Randomize","color":"gray"}}},{"text":" [⏮]","color":"light_purple","click_event":{"action":"run_command","command":"/trigger switch.trigger.music set 3"},"hover_event":{"action":"show_text","value":{"text":"Previous","color":"gray"}}},{"text":" [⏯]","color":"light_purple","click_event":{"action":"run_command","command":"/trigger switch.trigger.music set 4"},"hover_event":{"action":"show_text","value":{"text":"Play/Pause","color":"gray"}}},{"text":" [⏭]","color":"light_purple","click_event":{"action":"run_command","command":"/trigger switch.trigger.music set 5"},"hover_event":{"action":"show_text","value":{"text":"Next","color":"gray"}}},{"text":" [🔁]","color":"light_purple","click_event":{"action":"run_command","command":"/trigger switch.trigger.music set 6"},"hover_event":{"action":"show_text","value":{"text":"Repeat","color":"gray"}}},"\\n"]
+tellraw @s ["\\n",{{"nbt":"ParalyaMusic","storage":"{ns}:main","interpret":true}},{{"text":" [🔀]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 2"}},"hover_event":{{"action":"show_text","value":{{"text":"Randomize","color":"gray"}}}}}},{{"text":" [⏮]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 3"}},"hover_event":{{"action":"show_text","value":{{"text":"Previous","color":"gray"}}}}}},{{"text":" [⏯]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 4"}},"hover_event":{{"action":"show_text","value":{{"text":"Play/Pause","color":"gray"}}}}}},{{"text":" [⏭]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 5"}},"hover_event":{{"action":"show_text","value":{{"text":"Next","color":"gray"}}}}}},{{"text":" [🔁]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 6"}},"hover_event":{{"action":"show_text","value":{{"text":"Repeat","color":"gray"}}}}}},"\\n"]
 
 # For each music, write a line"""
 
@@ -120,11 +121,11 @@ tellraw @s ["\\n",{"nbt":"ParalyaMusic","storage":"switch:main","interpret":true
 			duration: str = f"{duration_seconds // 60}m{duration_seconds % 60:02}" if duration_seconds > 60 else str(duration_seconds)
 			display: str = authors[i].replace("_"," ") + " - " + song.replace("_"," ").title()
 			browser_content += f"""
-execute if score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","click_event":{{"action":"run_command","command":"/trigger switch.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
-execute unless score @s switch.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display}","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger switch.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
+execute if score @s {ns}.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
+execute unless score @s {ns}.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display}","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
 """
 
-		lib.writestr("data/switch/function/music/browser.mcfunction", browser_content)
+		lib.writestr(f"data/{ns}/function/music/browser.mcfunction", browser_content)
 		pass
 
 	stp.progress(f"The NoteBlock Studio songs zip file has been generated at '{stp.relative_path(lib_file)}' with {len(objectives)} songs")

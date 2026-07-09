@@ -4,13 +4,12 @@
 import json
 
 import stouputils as stp
-from stewbeet import JsonDict, write_function
+from stewbeet import JsonDict, Mem, write_function
 
 from .shared_memory import (
 	INITIALIZE_SHOP_SCORES_PATH,
 	LANGUAGE_SCORES,
 	LOAD_PATH,
-	MONEY,
 	REFUND_PERCENTAGE,
 	SHEEPWARS_CHOOSE_KIT,
 	SHEEPWARS_KIT_OFFSET,
@@ -18,6 +17,7 @@ from .shared_memory import (
 	STAR,
 	TRIGGER_PATH,
 	USERNAME_CHANGE_PATH,
+	get_money,
 	get_shop_range,
 )
 
@@ -30,10 +30,11 @@ def load_username_change(shop_name: str, shop_dict: JsonDict) -> None:
 		shop_name	(str):	The name of the shop, e.g. "pitchout"
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
+	ns: str = Mem.ctx.project_id
 	for upgrade_id in shop_dict.keys():
-		write_function(LOAD_PATH, f"scoreboard objectives add switch.{shop_name}.{upgrade_id} dummy")
-		write_function(USERNAME_CHANGE_PATH, f"$scoreboard players operation $(username) switch.{shop_name}.{upgrade_id} = $(old_username) switch.{shop_name}.{upgrade_id}")
-		write_function(INITIALIZE_SHOP_SCORES_PATH, f"scoreboard players add @s switch.{shop_name}.{upgrade_id} 0")
+		write_function(f"{ns}:{LOAD_PATH}", f"scoreboard objectives add {ns}.{shop_name}.{upgrade_id} dummy")
+		write_function(f"{ns}:{USERNAME_CHANGE_PATH}", f"$scoreboard players operation $(username) {ns}.{shop_name}.{upgrade_id} = $(old_username) {ns}.{shop_name}.{upgrade_id}")
+		write_function(f"{ns}:{INITIALIZE_SHOP_SCORES_PATH}", f"scoreboard players add @s {ns}.{shop_name}.{upgrade_id} 0")
 
 
 def write_technicals(index: int, shop_name: str, shop_dict: JsonDict) -> None:
@@ -44,22 +45,23 @@ def write_technicals(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 		shop_name	(str):	The name of the shop, e.g. "pitchout"
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
+	ns: str = Mem.ctx.project_id
 	mini: int = get_shop_range(index)[0]
-	path: str = f"switch:shop/{shop_name}"
+	path: str = f"{ns}:shop/{shop_name}"
 	write_function(path, "## File attribut: Ignore translations")
 
 	# Special case for sheepwars
 	if shop_name == "sheepwars":
-		write_function(path, """
+		write_function(path, f"""
 # Kit Chosen
-scoreboard players add @s switch.sheepwars.chosen_kit 0
+scoreboard players add @s {ns}.sheepwars.chosen_kit 0
 """)
 		counter: int = 0
 		for upgrade in shop_dict.values():
 			if not upgrade:
 				continue
 			counter += 1
-			write_function(path, f"execute if score @s switch.trigger.shop matches {mini + counter + SHEEPWARS_KIT_OFFSET} run scoreboard players set @s switch.sheepwars.chosen_kit {counter}")
+			write_function(path, f"execute if score @s {ns}.trigger.shop matches {mini + counter + SHEEPWARS_KIT_OFFSET} run scoreboard players set @s {ns}.sheepwars.chosen_kit {counter}")
 
 	# Write the upgrades
 	counter: int = mini
@@ -74,18 +76,18 @@ scoreboard players add @s switch.sheepwars.chosen_kit 0
 		# Write the upgrades checks
 		for i, upgrade in enumerate(data['upgrades']):
 			price: int = upgrade['price']
-			write_function(path, f"execute if score @s switch.trigger.shop matches {counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} if score @s switch.money matches {price}.. store success score #success switch.data run scoreboard players remove @s switch.money {price}")
+			write_function(path, f"execute if score @s {ns}.trigger.shop matches {counter} if score @s {ns}.{shop_name}.{upgrade_id} matches {i} if score @s {ns}.money matches {price}.. store success score #success {ns}.data run scoreboard players remove @s {ns}.money {price}")
 
 		# Special case: Current game is infected and player is human, refresh their equipments
 		refresh_equipment: str = ""
 		if shop_name == "infected" and upgrade_id in ("sword", "armor"):
-			refresh_equipment = f"execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. if entity @s[team=switch.temp.human] run function switch:modes/infected/death/human_give"
+			refresh_equipment = f"execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. if entity @s[team={ns}.temp.human] run function {ns}:modes/infected/death/human_give"
 
 		# If success, add the upgrade
 		write_function(path, f"""
-execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run scoreboard players add @s switch.{shop_name}.{upgrade_id} 1
-execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
-execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
+execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run scoreboard players add @s {ns}.{shop_name}.{upgrade_id} 1
+execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run playsound entity.player.levelup ambient @s
+execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
 {refresh_equipment}
 """)
 
@@ -102,46 +104,47 @@ execute if score @s switch.trigger.shop matches {counter} if score #success swit
 			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
 
 			# Check if player has this level and wants to sell
-			write_function(path, f"execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {i} store success score #success switch.data run scoreboard players add @s switch.money {refund}")
+			write_function(path, f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score @s {ns}.{shop_name}.{upgrade_id} matches {i} store success score #success {ns}.data run scoreboard players add @s {ns}.money {refund}")
 
 		# Add handling for max level (selling from max level to the previous level)
 		max_level = len(data['upgrades'])
 		if max_level > 0:  # Make sure there are upgrades to sell
 			price: int = data['upgrades'][-1]['price']  # Get price of the last upgrade
 			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
-			write_function(path, f"execute if score @s switch.trigger.shop matches {sell_counter} if score @s switch.{shop_name}.{upgrade_id} matches {max_level}.. store success score #success switch.data run scoreboard players add @s switch.money {refund}")
+			write_function(path, f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score @s {ns}.{shop_name}.{upgrade_id} matches {max_level}.. store success score #success {ns}.data run scoreboard players add @s {ns}.money {refund}")
 
 		# Special case: Current game is infected and player is human, refresh their equipments
 		refresh_equipment: str = ""
 		if shop_name == "infected" and upgrade_id in ("sword", "armor"):
-			refresh_equipment = f"execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. if entity @s[team=switch.temp.human] run function switch:modes/infected/death/human_give"
+			refresh_equipment = f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. if entity @s[team={ns}.temp.human] run function {ns}:modes/infected/death/human_give"
 
 		# If success, remove the upgrade
 		write_function(path, f"""
-execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run scoreboard players remove @s switch.{shop_name}.{upgrade_id} 1
-execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run playsound entity.player.levelup ambient @s
+execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run scoreboard players remove @s {ns}.{shop_name}.{upgrade_id} 1
+execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run playsound entity.player.levelup ambient @s
 {refresh_equipment}
 """)
 
 	# Call messages
 	write_function(path, f"""
 # Messages
-execute if score @s switch.trigger.shop matches {mini} run playsound block.note_block.bell ambient @s
-function switch:shop/translations/{shop_name}
+execute if score @s {ns}.trigger.shop matches {mini} run playsound block.note_block.bell ambient @s
+function {ns}:shop/translations/{shop_name}
 """)
 
 
 def append_sell_button(tellraw_json: list[JsonDict], downgrade_hover_text: str, sell_label: str, sell_refund: int, sell_counter: int, lang_id: str) -> None:
 	""" Append the shop's sell [-] button (red, with refund + optional downgrade hover) to a tellraw line. """
+	ns: str = Mem.ctx.project_id
 	hover_value: list[JsonDict] = []
 	if downgrade_hover_text:
 		hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
 	hover_value.append({"text": f"{sell_label} {sell_refund}", "color": "yellow"})
-	hover_value.append(MONEY[lang_id])
+	hover_value.append(get_money()[lang_id])
 
 	tellraw_json.append({
 		"text": " [-]", "color": "red",
-		"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {sell_counter}"},
+		"click_event": {"action": "run_command", "command": f"/trigger {ns}.trigger.shop set {sell_counter}"},
 		"hover_event": {"action": "show_text", "value": hover_value}
 	})
 
@@ -153,7 +156,8 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 		shop_name	(str):	The name of the shop, e.g. "pitchout"
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
-	path: str = f"switch:shop/translations/{shop_name}"
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:shop/translations/{shop_name}"
 	titled: str = shop_name.replace("_", " ").title()
 	mini: int = get_shop_range(index)[0]
 
@@ -165,7 +169,7 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 
 	# For each language,
 	for lang_id, (lang_score, lang_name, label, buy_text, _) in LANGUAGE_SCORES.items():
-		selector: str = f"@s[scores={{switch.lang={lang_score}}}]"
+		selector: str = f"@s[scores={{{ns}.lang={lang_score}}}]"
 
 		# Write the first lines
 		write_function(path, f"""# {lang_name}\ntellraw {selector} [{{"text":"[{label.replace('X', titled)}]","color":"yellow"}}]""")
@@ -199,11 +203,11 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 				}.get(lang_id, f"You sold one level of {upgrade_name} and received a refund!")
 
 			# Write the ok and error messages for buying
-			write_function(path, f"""execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 1.. run tellraw {selector} [{{"text":"{ok_message}","color":"green"}}]""")
-			write_function(path, f"""execute if score @s switch.trigger.shop matches {counter} if score #success switch.data matches 0 run tellraw {selector} [{{"text":"{error_message}","color":"red"}}]""")
+			write_function(path, f"""execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run tellraw {selector} [{{"text":"{ok_message}","color":"green"}}]""")
+			write_function(path, f"""execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 0 run tellraw {selector} [{{"text":"{error_message}","color":"red"}}]""")
 
 			# Write only the ok message for selling (no error message since button is disabled if can't sell)
-			write_function(path, f"""execute if score @s switch.trigger.shop matches {sell_counter} if score #success switch.data matches 1.. run tellraw {selector} [{{"text":"{sell_ok_message}","color":"green"}}]""")
+			write_function(path, f"""execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run tellraw {selector} [{{"text":"{sell_ok_message}","color":"green"}}]""")
 
 			# For each upgrade
 			for j, upgrade in enumerate(upgrades):
@@ -237,11 +241,11 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 					# Add buy button [+]
 					tellraw_json.append({
 						"text": " [+]", "color": "green",
-						"click_event": {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter}"},
+						"click_event": {"action": "run_command", "command": f"/trigger {ns}.trigger.shop set {counter}"},
 						"hover_event": {"action": "show_text", "value": [
 							{"text":f"{hover_text}\n","color":"green"},
 							{"text":buy_text.replace("X", str(price)), "color":"yellow"},
-							MONEY[lang_id]
+							get_money()[lang_id]
 						]}
 					})
 				else:
@@ -270,15 +274,15 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 				is_max: str = '' if not (j == (len(upgrades) - 1)) else '..'
 				if shop_name != "sheepwars":
 					dump: str = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute if score @s switch.{shop_name}.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
+					write_function(path, f"execute if score @s {ns}.{shop_name}.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
 				else:
-					tellraw_json[0]["click_event"] = {"action": "run_command", "command": f"/trigger switch.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
+					tellraw_json[0]["click_event"] = {"action": "run_command", "command": f"/trigger {ns}.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
 					dump: str = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute unless score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
+					write_function(path, f"execute unless score @s {ns}.sheepwars.chosen_kit matches {counter - mini} if score @s {ns}.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
 					tellraw_json[0]["color"] = "green"
 					del tellraw_json[0]["click_event"]
 					dump = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute if score @s switch.sheepwars.chosen_kit matches {counter - mini} if score @s switch.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
+					write_function(path, f"execute if score @s {ns}.sheepwars.chosen_kit matches {counter - mini} if score @s {ns}.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
 
 
 
@@ -298,47 +302,49 @@ def generate_shop(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 
 def generate_trigger() -> None:
 	""" Generate the trigger function """
-	write_function(TRIGGER_PATH, """
+	ns: str = Mem.ctx.project_id
+	write_function(f"{ns}:{TRIGGER_PATH}", f"""
 # Global shop trigger
-scoreboard players set #success switch.data 0
-execute if score @s switch.trigger.shop matches 1..99 run function switch:shop/global
+scoreboard players set #success {ns}.data 0
+execute if score @s {ns}.trigger.shop matches 1..99 run function {ns}:shop/global
 
 # Minigames shops
 """)
 	for i, (shop_name, _) in enumerate(SHOPS.items()):
 		mini, maxi = get_shop_range(i)
-		write_function(TRIGGER_PATH, f"execute if score @s switch.trigger.shop matches {mini}..{maxi} run function switch:shop/{shop_name}")
+		write_function(f"{ns}:{TRIGGER_PATH}", f"execute if score @s {ns}.trigger.shop matches {mini}..{maxi} run function {ns}:shop/{shop_name}")
 
 		# Add trigger handling for sell commands (using counter+10000)
-		write_function(TRIGGER_PATH, f"execute if score @s switch.trigger.shop matches {mini+10000}..{maxi+10000} run function switch:shop/{shop_name}")
+		write_function(f"{ns}:{TRIGGER_PATH}", f"execute if score @s {ns}.trigger.shop matches {mini+10000}..{maxi+10000} run function {ns}:shop/{shop_name}")
 
-	write_function(TRIGGER_PATH, """
+	write_function(f"{ns}:{TRIGGER_PATH}", f"""
 # Tutorial thing
-execute if score @s switch.tutorial matches 4 if score @s switch.money matches ..99 run scoreboard players set @s switch.tutorial 5
+execute if score @s {ns}.tutorial matches 4 if score @s {ns}.money matches ..99 run scoreboard players set @s {ns}.tutorial 5
 
 # If the player bought something, update the stats
-execute if score #success switch.data matches 1.. run function switch:stats/util_update_player
+execute if score #success {ns}.data matches 1.. run function {ns}:stats/util_update_player
 
 # Reset the shop trigger score to 0
-scoreboard players set @s switch.trigger.shop 0
+scoreboard players set @s {ns}.trigger.shop 0
 """)
 
 
 def general_translations() -> None:
 	""" Write the general translations of the shop """
+	ns: str = Mem.ctx.project_id
 		# Write the general shop translations
-	path: str = "switch:shop/translations/global"
+	path: str = f"{ns}:shop/translations/global"
 	for lang_id, (lang_score, lang_name, label, _, access_text) in LANGUAGE_SCORES.items():
-		selector: str = f"@s[scores={{switch.lang={lang_score}}}]"
+		selector: str = f"@s[scores={{{ns}.lang={lang_score}}}]"
 		write_function(path, f"""
 # {lang_name}
-tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X', 'Switch')}","color":"blue"}},{{"text":"]","color":"#1b1796"}},{{"text":" - ","color":"blue"}},{{"score":{{"name":"@s","objective":"switch.money"}},"color":"blue","underlined":true}},{json.dumps(MONEY[lang_id])},{{"text":"\\n"}}]
+tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X', 'Switch')}","color":"blue"}},{{"text":"]","color":"#1b1796"}},{{"text":" - ","color":"blue"}},{{"score":{{"name":"@s","objective":"{ns}.money"}},"color":"blue","underlined":true}},{json.dumps(get_money()[lang_id])},{{"text":"\\n"}}]
 """)
 		# For each shop, write the access text
 		for i, shop_name in enumerate(SHOPS.keys()):
 			mini: int = get_shop_range(i)[0]
 			titled: str = shop_name.replace("_", " ").title()
-			write_function(path, f"""tellraw {selector} [{{"text":"➤ ","color":"#1b1796","click_event":{{"action":"run_command","command":"/trigger switch.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[","color":"#1b1796"}},{{"text":"{titled}","color":"blue"}},{{"text":"]","color":"#1b1796"}}]""")
+			write_function(path, f"""tellraw {selector} [{{"text":"➤ ","color":"#1b1796","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[","color":"#1b1796"}},{{"text":"{titled}","color":"blue"}},{{"text":"]","color":"#1b1796"}}]""")
 
 	# Write the empty line
 	write_function(path, 'tellraw @s ""')
@@ -347,22 +353,23 @@ tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X
 
 def write_raw_functions() -> None:
 	""" Migrate the 3 hand-authored shop functions and the macro description translation. """
-	write_function("switch:shop/global", """
+	ns: str = Mem.ctx.project_id
+	write_function(f"{ns}:shop/global", f"""
 playsound block.note_block.bell ambient @s
-function switch:shop/translations/global
+function {ns}:shop/translations/global
 """)
-	write_function("switch:shop/description", """
-$function switch:shop/translations/description {id:"$(id)"}
+	write_function(f"{ns}:shop/description", f"""
+$function {ns}:shop/translations/description {{id:"$(id)"}}
 playsound block.note_block.bell ambient @s
 """)
-	write_function("switch:shop/pitchout", """
+	write_function(f"{ns}:shop/pitchout", f"""
 # Tutorial stuff
-execute if score @s switch.tutorial matches 3 run scoreboard players set @s switch.tutorial 4
+execute if score @s {ns}.tutorial matches 3 run scoreboard players set @s {ns}.tutorial 4
 """)
-	write_function("switch:shop/translations/description", r"""
+	write_function(f"{ns}:shop/translations/description", rf"""
 # French
-$tellraw @s[scores={switch.lang=0}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_fr","storage":"switch:main","interpret":true},"\n"]
+$tellraw @s[scores={{{ns}.lang=0}}] ["\n",{{"nbt":"minigames[{{id:\"$(id)\"}}].lore_fr","storage":"{ns}:main","interpret":true}},"\n"]
 
 # English
-$tellraw @s[scores={switch.lang=1}] ["\n",{"nbt":"minigames[{id:\"$(id)\"}].lore_en","storage":"switch:main","interpret":true},"\n"]
+$tellraw @s[scores={{{ns}.lang=1}}] ["\n",{{"nbt":"minigames[{{id:\"$(id)\"}}].lore_en","storage":"{ns}:main","interpret":true}},"\n"]
 """)

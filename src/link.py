@@ -1,7 +1,7 @@
 
 # Imports
 import stouputils as stp
-from stewbeet.core import Context, official_lib_used, write_load_file, write_tick_file
+from stewbeet.core import Context, Mem, official_lib_used, write_load_file, write_tick_file
 
 from .datapack.advancements.main import main as automatic_advancements
 from .datapack.cinematic.main import main as cinematic
@@ -31,8 +31,9 @@ from .resource_pack.special_fonts.main import main as special_fonts
 def beet_default(ctx: Context) -> None:
 
 	# Load the real load function and tick the real tick function
-	write_load_file("function switch:load")
-	write_tick_file("function switch:tick")
+	ns: str = Mem.ctx.project_id
+	write_load_file(f"function {ns}:load")
+	write_tick_file(f"function {ns}:tick")
 	ctx.data.mcmeta.data["filter"] = {"block": [
 		{"namespace": "minecraft", "path": "advancement"},
 		{"namespace": "grappling_hook", "path": "advancement/.*first_guide.*"}

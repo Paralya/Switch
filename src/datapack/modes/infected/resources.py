@@ -6,15 +6,16 @@ from stewbeet.core import Mem, set_json_encoder
 
 def write_resources() -> None:
 	""" Datapack resources owned by the infected mode. """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 
 	switch.advancements["infected/antidote"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:consume_item",
-			"conditions": {"item": {"predicates": {"minecraft:custom_data": "{\"switch\":{\"antidote\":true}}"}}},
+			"conditions": {"item": {"predicates": {"minecraft:custom_data": f"{{\"{ns}\":{{\"antidote\":true}}}}"}}},
 		}},
 		"requirements": [["requirement"]],
-		"rewards": {"function": "switch:modes/infected/advancements/antidote"},
+		"rewards": {"function": f"{ns}:modes/infected/advancements/antidote"},
 	}))
 
 	switch.advancements["infected/entity_hurt_player"] = set_json_encoder(Advancement({
@@ -23,13 +24,13 @@ def write_resources() -> None:
 			"conditions": {"damage": {"source_entity": {"entity_type": "minecraft:player"}}},
 		}},
 		"requirements": [["requirement"]],
-		"rewards": {"function": "switch:modes/infected/advancements/entity_hurt_player/main"},
+		"rewards": {"function": f"{ns}:modes/infected/advancements/entity_hurt_player/main"},
 	}))
 
 	switch.advancements["infected/inventory_changed"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {"trigger": "minecraft:inventory_changed"}},
 		"requirements": [["requirement"]],
-		"rewards": {"function": "switch:modes/infected/advancements/inventory_changed"},
+		"rewards": {"function": f"{ns}:modes/infected/advancements/inventory_changed"},
 	}))
 
 	switch.loot_tables["infected/airdrop"] = set_json_encoder(LootTable({
@@ -44,7 +45,7 @@ def write_resources() -> None:
 			},
 			{
 				"rolls": 1,
-				"entries": [{"type": "minecraft:loot_table", "value": "switch:i/element_115"}],
+				"entries": [{"type": "minecraft:loot_table", "value": f"{ns}:i/element_115"}],
 			},
 		],
 	}))

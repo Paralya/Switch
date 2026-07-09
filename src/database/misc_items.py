@@ -1,11 +1,12 @@
 
 # Imports
-from stewbeet.core import VANILLA_BLOCK_FOR_ORES, Block, Item, VanillaBlock
+from stewbeet.core import VANILLA_BLOCK_FOR_ORES, Block, Item, Mem, VanillaBlock
 
 
 # Setup misc items
 def setup_misc_items() -> None:
 	""" Setup misc items """
+	ns: str = Mem.ctx.project_id
 	Item(id="letter")
 	Item(id="awakened_stardust_bow", base_item="minecraft:bow")
 	Item(id="awakened_stardust_sniper", override_model={"parent": "minecraft:item/handheld"})
@@ -60,7 +61,7 @@ def setup_misc_items() -> None:
 	# Stone with the switch:invulnerable enchantment (damage immunity in any slot, so holding it works too)
 	Item(id="invulnerable", components={
 		"item_model": "minecraft:air",
-		"enchantments": {"switch:invulnerable": 1},
+		"enchantments": {f"{ns}:invulnerable": 1},
 		"equippable": {"slot": "head", "equip_on_interact": True},
 	}, skip_gives=True)
 	Item(id="souls_bag")

@@ -20,7 +20,8 @@ JUMPS: list[str] = [f"{color}_concrete" for color in JUMP_COLORS] + ["dripstone_
 
 def write_tags() -> None:
 	""" Build the shared/generic block & item tags explicitly under the switch namespace. """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 
 	switch.item_tags["tools"] = set_json_encoder(ItemTag({"values": TOOLS}))
 	switch.item_tags["jumps"] = set_json_encoder(ItemTag({"values": JUMPS}))

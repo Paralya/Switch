@@ -19,27 +19,27 @@ def write_mode():
 
 
 	# /death
-	write_function(f"{path}/death", """
+	write_function(f"{path}/death", f"""
 gamemode spectator @s
-execute unless score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 effect clear @s
 clear @s
 """)
 
 	# /give_items
-	write_function(f"{path}/give_items", """
+	write_function(f"{path}/give_items", f"""
 clear @s
 loot replace entity @s hotbar.0 loot grappling_hook:v1.4.0/items/normal_grappling_hook
 loot replace entity @s weapon.offhand loot grappling_hook:v1.4.0/items/normal_grappling_hook
-item modify entity @s hotbar.0 switch:unbreakable
-item modify entity @s weapon.offhand switch:unbreakable
-item replace entity @s hotbar.8 with warped_fungus_on_a_stick[unbreakable={},item_name={"text":"Débloqueur","color":"aqua","italic":false},item_model="switch:travel_staff"]
-item replace entity @s armor.chest with elytra[unbreakable={}]
+item modify entity @s hotbar.0 {ns}:unbreakable
+item modify entity @s weapon.offhand {ns}:unbreakable
+item replace entity @s hotbar.8 with warped_fungus_on_a_stick[unbreakable={{}},item_name={{"text":"Débloqueur","color":"aqua","italic":false}},item_model="{ns}:travel_staff"]
+item replace entity @s armor.chest with elytra[unbreakable={{}}]
 """)
 
 	# /joined
 	write_function(f"{path}/joined", f"""
-execute if score #reconnect switch.data matches 0 run function {path}/respawn
+execute if score #reconnect {ns}.data matches 0 run function {path}/respawn
 """)
 
 	# /no_drop
@@ -47,101 +47,101 @@ execute if score #reconnect switch.data matches 0 run function {path}/respawn
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
-scoreboard players add #process_end switch.data 1
+scoreboard players add #process_end {ns}.data 1
 
-function switch:modes/_common/process_end/winner_by_points
-execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
-execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function {path}/death
-execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
+function {ns}:modes/_common/process_end/winner_by_points
+execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {path}/death
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
-execute if score #process_end switch.data matches 200 run function switch:engine/restart
+execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
 	# /respawn
 	write_function(f"{path}/respawn", f"""
-execute if score #reconnect switch.data matches 0 run function {path}/give_items
-execute if score #reconnect switch.data matches 0 run function switch:maps/spread_one_player
+execute if score #reconnect {ns}.data matches 0 run function {path}/give_items
+execute if score #reconnect {ns}.data matches 0 run function {ns}:maps/spread_one_player
 """)
 
 	# /second
 	write_function(f"{path}/second", f"""
-scoreboard players add #coin_chaser_seconds switch.data 1
+scoreboard players add #coin_chaser_seconds {ns}.data 1
 
 # XP bar update
-scoreboard players remove #remaining_time switch.data 1
+scoreboard players remove #remaining_time {ns}.data 1
 function {path}/xp_bar
 
 # Summon gold ingots if low amount (~10 gold per player)
-execute store result score #gold_count switch.data if entity @e[type=item,tag=switch.coin]
-execute store result score #player_count switch.data if entity @a[tag=!detached,gamemode=!spectator]
-scoreboard players operation #gold_count switch.data *= #100 switch.data
-scoreboard players operation #gold_count switch.data /= #player_count switch.data
-execute if score #coin_chaser_seconds switch.data matches 0.. if score #gold_count switch.data matches ..1000 run function {path}/summon_gold
+execute store result score #gold_count {ns}.data if entity @e[type=item,tag={ns}.coin]
+execute store result score #player_count {ns}.data if entity @a[tag=!detached,gamemode=!spectator]
+scoreboard players operation #gold_count {ns}.data *= #100 {ns}.data
+scoreboard players operation #gold_count {ns}.data /= #player_count {ns}.data
+execute if score #coin_chaser_seconds {ns}.data matches 0.. if score #gold_count {ns}.data matches ..1000 run function {path}/summon_gold
 
 # Particles
-execute at @e[type=item,tag=switch.coin] positioned ~ ~25 ~ run particle angry_villager ~ ~ ~ 0.1 25 0.1 0 100 force @a[tag=!detached,distance=0..]
+execute at @e[type=item,tag={ns}.coin] positioned ~ ~25 ~ run particle angry_villager ~ ~ ~ 0.1 25 0.1 0 100 force @a[tag=!detached,distance=0..]
 """)
 
 	# /start
 	write_function(f"{path}/start", f"""
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
-function switch:utils/set_dynamic_time
+function {ns}:utils/set_dynamic_time
 
-execute in switch:game run gamerule minecraft:fall_damage false
+execute in {ns}:game run gamerule minecraft:fall_damage false
 
 ## Téléportation des joueurs
-scoreboard players set #dont_regenerate switch.data 1
-scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {{id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}}
+scoreboard players set #dont_regenerate {ns}.data 1
+scoreboard players set #do_spreadplayers {ns}.data 1
+function {ns}:utils/choose_map_for {{id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}}
 
 function {translations}/start
 
-scoreboard players set #coin_chaser_seconds switch.data -10
-scoreboard players set #coin_chaser_ticks switch.data 0
-scoreboard players set #remaining_time switch.data 70
-scoreboard players set #process_end switch.data 0
-scoreboard objectives add switch.temp.points dummy {{"text":"Points","color":"red"}}
-scoreboard objectives setdisplay sidebar switch.temp.points
+scoreboard players set #coin_chaser_seconds {ns}.data -10
+scoreboard players set #coin_chaser_ticks {ns}.data 0
+scoreboard players set #remaining_time {ns}.data 70
+scoreboard players set #process_end {ns}.data 0
+scoreboard objectives add {ns}.temp.points dummy {{"text":"Points","color":"red"}}
+scoreboard objectives setdisplay sidebar {ns}.temp.points
 
 execute as @a[tag=!detached] run function {path}/give_items
 """)
 
 	# /stop
-	write_function(f"{path}/stop", """
-scoreboard objectives remove switch.temp.points
+	write_function(f"{path}/stop", f"""
+scoreboard objectives remove {ns}.temp.points
 """)
 
 	# /summon_gold
 	gold_coins: str = "\n".join(
-		r'summon item 0 0 0 {Tags:["switch.coin","switch.new_coin"],Glowing:true,Item:{id:"minecraft:gold_ingot",count:1}}'
+		rf'summon item 0 0 0 {{Tags:["{ns}.coin","{ns}.new_coin"],Glowing:true,Item:{{id:"minecraft:gold_ingot",count:1}}}}'
 		for _ in range(10)
 	)
 	write_function(f"{path}/summon_gold", f"""
 ## Summon 10 gold coins at origin (will be spread by spread_one_player)
 {gold_coins}
 
-execute as @e[type=item,tag=switch.new_coin] run function switch:maps/spread_one_player
-tag @e[type=item,tag=switch.new_coin] remove switch.new_coin
+execute as @e[type=item,tag={ns}.new_coin] run function {ns}:maps/spread_one_player
+tag @e[type=item,tag={ns}.new_coin] remove {ns}.new_coin
 """)
 
 	# /tick
 	write_function(f"{path}/tick", f"""
-scoreboard players add #coin_chaser_ticks switch.data 1
+scoreboard players add #coin_chaser_ticks {ns}.data 1
 
 ## Global tick
 # Dead players
-function switch:utils/on_death_run_function {{function:"{path}/respawn"}}
+function {ns}:utils/on_death_run_function {{function:"{path}/respawn"}}
 
 # Teleport stucked players
-execute as @a[tag=!detached,scores={{switch.right_click=1..}}] at @s run spreadplayers ~ ~ 0 1 false @s
-execute as @a[tag=!detached,scores={{switch.right_click=1..}}] at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-3 ~
+execute as @a[tag=!detached,scores={{{ns}.right_click=1..}}] at @s run spreadplayers ~ ~ 0 1 false @s
+execute as @a[tag=!detached,scores={{{ns}.right_click=1..}}] at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-3 ~
 
 # Prevent drops
-execute as @e[type=item,tag=!switch.checked] run function {path}/no_drop
+execute as @e[type=item,tag=!{ns}.checked] run function {path}/no_drop
 
 # Check number of gold
-execute as @a[tag=!detached,gamemode=!spectator] at @s store result score @s switch.temp.points run clear @s gold_ingot 0
+execute as @a[tag=!detached,gamemode=!spectator] at @s store result score @s {ns}.temp.points run clear @s gold_ingot 0
 
 # Keep reloading the grappling hooks
 execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.mainhand {{"function":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
@@ -149,7 +149,7 @@ execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{{g
 
 
 ## End game
-execute if score #remaining_time switch.data matches ..0 run function {path}/process_end
+execute if score #remaining_time {ns}.data matches ..0 run function {path}/process_end
 """)
 
 	# /xp_bar

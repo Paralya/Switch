@@ -8,7 +8,8 @@ from ..common import register_break_obsidian_advancement
 
 def write_resources() -> None:
 	""" Datapack resources owned by the rush_the_point mode. """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 
 	register_break_obsidian_advancement("rush_the_point")
 
@@ -17,15 +18,15 @@ def write_resources() -> None:
 			"trigger": "minecraft:player_killed_entity",
 			"conditions": {"entity": {"entity_type": "minecraft:player"}},
 		}},
-		"rewards": {"function": "switch:modes/rush_the_point/advancements/killed_player"},
+		"rewards": {"function": f"{ns}:modes/rush_the_point/advancements/killed_player"},
 	}))
 
 	switch.advancements["rush_the_point/right_click"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:using_item",
-			"conditions": {"item": {"predicates": {"minecraft:custom_data": "{switch:{rtp_class:true}}"}}},
+			"conditions": {"item": {"predicates": {"minecraft:custom_data": f"{{{ns}:{{rtp_class:true}}}}"}}},
 		}},
-		"rewards": {"function": "switch:modes/rush_the_point/right_click"},
+		"rewards": {"function": f"{ns}:modes/rush_the_point/right_click"},
 	}))
 
 	switch.block_tags["rush_the_point/can_break"] = set_json_encoder(BlockTag({"values": [

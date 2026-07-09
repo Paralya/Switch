@@ -12,7 +12,8 @@ COLORS: tuple[str, ...] = (
 
 def write_resources() -> None:
 	""" Datapack resources owned by the snowball_painter mode. """
+	ns: str = Mem.ctx.project_id
 	values: list[str] = ["quartz_bricks"]
 	for suffix in ("wool", "concrete_powder", "terracotta"):
 		values += [f"{c}_{suffix}" for c in COLORS]
-	Mem.ctx.data["switch"].block_tags["snowball_painter"] = set_json_encoder(BlockTag({"values": values}))
+	Mem.ctx.data[ns].block_tags["snowball_painter"] = set_json_encoder(BlockTag({"values": values}))

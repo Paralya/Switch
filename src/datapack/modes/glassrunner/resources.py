@@ -42,7 +42,8 @@ def bridge_count_loot(value: str, count: int) -> dict[str, Any]:
 
 def write_resources() -> None:
 	""" Datapack resources owned by the glassrunner mode. """
-	switch = Mem.ctx.data["switch"]
+	ns: str = Mem.ctx.project_id
+	switch = Mem.ctx.data[ns]
 
 	# Predicates
 	switch.predicates["glassrunner/in_elytra"] = set_json_encoder(Predicate({
@@ -70,9 +71,9 @@ def write_resources() -> None:
 		"minecraft:red_stained_glass", "minecraft:pink_stained_glass",
 		"minecraft:light_blue_stained_glass", "minecraft:blue_stained_glass",
 	]}))
-	switch.block_tags["glassrunner/glass_air"] = set_json_encoder(BlockTag({"values": ["#switch:glassrunner/glass", "#switch:glassrunner/air"]}))
+	switch.block_tags["glassrunner/glass_air"] = set_json_encoder(BlockTag({"values": [f"#{ns}:glassrunner/glass", f"#{ns}:glassrunner/air"]}))
 	switch.block_tags["glassrunner/tier_1"] = set_json_encoder(BlockTag({"values": ["pink_stained_glass", "light_blue_stained_glass"]}))
-	switch.block_tags["glassrunner/tier_1_air"] = set_json_encoder(BlockTag({"values": ["#switch:glassrunner/tier_1", "#switch:glassrunner/air"]}))
+	switch.block_tags["glassrunner/tier_1_air"] = set_json_encoder(BlockTag({"values": [f"#{ns}:glassrunner/tier_1", f"#{ns}:glassrunner/air"]}))
 
 	# Custom item loot tables
 	switch.loot_tables["glassrunner/bow"] = set_json_encoder(LootTable({"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
@@ -103,7 +104,7 @@ def write_resources() -> None:
 		"name": "minecraft:warped_fungus_on_a_stick",
 		"functions": [{"function": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"ctc": {"id": "glassrunner:fireball_wand"}, "glassrunner": {"fireball_wand": True}},
-			"minecraft:item_model": "switch:fireball_wand",
+			"minecraft:item_model": f"{ns}:fireball_wand",
 			"minecraft:item_name": "{\"text\":\"Fireball Wand\",\"color\":\"dark_red\",\"italic\":false}",
 			"minecraft:lore": [
 				"{\"text\":\"Fait spawn une fireball devant vous qui détruit tout sur son passage\",\"color\":\"dark_gray\",\"italic\":false}",
@@ -115,14 +116,14 @@ def write_resources() -> None:
 	# Glass bridge snowballs (base items + count multipliers)
 	switch.loot_tables["glassrunner/snowball_bridge_blue"] = set_json_encoder(LootTable(bridge_loot("glass_bridge_blue", "Snowball Bridge Blue", "blue")))
 	switch.loot_tables["glassrunner/snowball_bridge_red"] = set_json_encoder(LootTable(bridge_loot("glass_bridge_red", "Snowball Bridge Red", "red")))
-	switch.loot_tables["glassrunner/snowball_bridge_blue_x8"] = set_json_encoder(LootTable(bridge_count_loot("switch:glassrunner/snowball_bridge_blue", 8)))
-	switch.loot_tables["glassrunner/snowball_bridge_red_x8"] = set_json_encoder(LootTable(bridge_count_loot("switch:glassrunner/snowball_bridge_red", 8)))
+	switch.loot_tables["glassrunner/snowball_bridge_blue_x8"] = set_json_encoder(LootTable(bridge_count_loot(f"{ns}:glassrunner/snowball_bridge_blue", 8)))
+	switch.loot_tables["glassrunner/snowball_bridge_red_x8"] = set_json_encoder(LootTable(bridge_count_loot(f"{ns}:glassrunner/snowball_bridge_red", 8)))
 	switch.loot_tables["glassrunner/renforced_snowball_bridge_blue"] = set_json_encoder(LootTable(bridge_loot("renforced_glass_bridge_blue", "Renforced Snowball Bridge", "blue")))
 	switch.loot_tables["glassrunner/renforced_snowball_bridge_red"] = set_json_encoder(LootTable(bridge_loot("renforced_glass_bridge_red", "Renforced Snowball Bridge", "red")))
-	switch.loot_tables["glassrunner/renforced_snowball_bridge_blue_x2"] = set_json_encoder(LootTable(bridge_count_loot("switch:glassrunner/renforced_snowball_bridge_blue", 2)))
-	switch.loot_tables["glassrunner/renforced_snowball_bridge_blue_x5"] = set_json_encoder(LootTable(bridge_count_loot("switch:glassrunner/renforced_snowball_bridge_blue", 5)))
-	switch.loot_tables["glassrunner/renforced_snowball_bridge_red_x2"] = set_json_encoder(LootTable(bridge_count_loot("switch:glassrunner/renforced_snowball_bridge_red", 2)))
-	switch.loot_tables["glassrunner/renforced_snowball_bridge_red_x5"] = set_json_encoder(LootTable(bridge_count_loot("switch:glassrunner/renforced_snowball_bridge_red", 5)))
+	switch.loot_tables["glassrunner/renforced_snowball_bridge_blue_x2"] = set_json_encoder(LootTable(bridge_count_loot(f"{ns}:glassrunner/renforced_snowball_bridge_blue", 2)))
+	switch.loot_tables["glassrunner/renforced_snowball_bridge_blue_x5"] = set_json_encoder(LootTable(bridge_count_loot(f"{ns}:glassrunner/renforced_snowball_bridge_blue", 5)))
+	switch.loot_tables["glassrunner/renforced_snowball_bridge_red_x2"] = set_json_encoder(LootTable(bridge_count_loot(f"{ns}:glassrunner/renforced_snowball_bridge_red", 2)))
+	switch.loot_tables["glassrunner/renforced_snowball_bridge_red_x5"] = set_json_encoder(LootTable(bridge_count_loot(f"{ns}:glassrunner/renforced_snowball_bridge_red", 5)))
 
 	# Binary structures (center / side platforms placed during the game)
 	register_structures("glassrunner")
