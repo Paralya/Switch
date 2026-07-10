@@ -2,6 +2,7 @@
 #> switch:engine/voting_time/tick
 #
 # @within	switch:engine/voting_time/main 1t [ scheduled ]
+#			switch:engine/voting_time/group_vote 1t [ scheduled ]
 #			switch:engine/voting_time/tick 1t [ scheduled ]
 #
 
@@ -31,8 +32,7 @@ scoreboard players operation #remaining switch.data /= #20 switch.data
 scoreboard players add #remaining switch.data 1
 function switch:engine/translations/voting_time_tick
 
-# End of voting sequence (kill players to remove arrows for example)
-execute if score #voting_timer switch.data matches 12 as @a[tag=!detached] run function switch:utils/black_transition
+# End of voting sequence
 # execute if score #voting_timer switch.data matches 1 run scoreboard players remove @a[tag=!detached] switch.stats.deaths 1
 # execute if score #voting_timer switch.data matches 1 run kill @a[tag=!detached]
 execute if score #voting_timer switch.data matches 0 run function switch:engine/launch_game/main

@@ -55,10 +55,12 @@
 # Stop everything
 function switch:engine/disable
 
-# Set the current game
+# Set the current game (and its group, used for voting weights and as slot 1 of the next vote)
 $data modify storage switch:main current_game set value "$(id)"
 $data modify storage switch:main current_game_name set from storage switch:main minigames[{id:"$(id)"}].name_fr
-$execute store result score #game_1 switch.data run data get storage switch:main minigames[{id:"$(id)"}].index
+$data modify storage switch:main current_group set from storage switch:main minigames[{id:"$(id)"}].group
+$execute store result score #current_game_index switch.data run data get storage switch:main minigames[{id:"$(id)"}].index
+function switch:engine/group_index with storage switch:main
 tag @s remove detached
 
 # Tellraw message (unless removed)

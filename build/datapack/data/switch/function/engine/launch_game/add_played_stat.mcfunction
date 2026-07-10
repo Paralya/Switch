@@ -1,9 +1,10 @@
 
 #> switch:engine/launch_game/add_played_stat
 #
-# @within	switch:engine/launch_game/main with storage switch:main
+# @within	switch:engine/launch_game/launch with storage switch:main
 #
 # @args		current_game (unknown)
+#			current_group (unknown)
 #
 
 # If test mode is enabled, stop right now
@@ -18,10 +19,10 @@ scoreboard players add @a[tag=!detached] switch.stats.played 1
 # Grant the advancement if the player has played 100 times
 advancement grant @a[tag=!detached,scores={switch.stats.played=100..}] only switch:visible/2
 
-# Reset the current game time_since_last_play
-$data modify storage switch:main history.time_since_last_play.$(current_game) set value 0
+# Reset the current group time_since_last_play (voting weights are per group)
+$data modify storage switch:main history.time_since_last_play.$(current_group) set value 0
 
-# Increment every minigame their time_since_last_play value
-data modify storage switch:temp copy set from storage switch:main minigames
+# Increment every group their time_since_last_play value
+data modify storage switch:temp copy set from storage switch:main groups
 execute if data storage switch:temp copy[0] run function switch:engine/launch_game/increment_time_since_last_play with storage switch:temp copy[0]
 

@@ -15,4 +15,5 @@ time set 6000
 
 scoreboard players set #engine_state switch.data -1
 schedule clear switch:engine/voting_time/tick
+schedule clear switch:engine/launch_game/launch
 

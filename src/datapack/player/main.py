@@ -766,7 +766,7 @@ function {ns}:player/translations/trigger_rating_print with storage {ns}:temp in
 
 	# /trigger/rating/print_current_game
 	write_function(f"{path}/trigger/rating/print_current_game", f"""
-scoreboard players operation @s {ns}.trigger.rating = #game_1 {ns}.data
+scoreboard players operation @s {ns}.trigger.rating = #current_game_index {ns}.data
 scoreboard players operation @s {ns}.trigger.rating *= #100 {ns}.data
 function {ns}:player/trigger/main
 """)

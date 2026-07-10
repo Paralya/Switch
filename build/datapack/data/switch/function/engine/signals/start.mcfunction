@@ -4,7 +4,7 @@
 # @executed	as @n[tag=switch.coupdetat] & in switch:game
 #
 # @within	switch:engine/start_state
-#			switch:engine/launch_game/main [ in switch:game ]
+#			switch:engine/launch_game/launch [ in switch:game ]
 #
 
 # Log message

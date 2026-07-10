@@ -6,7 +6,7 @@
 #
 
 scoreboard players set #list_index switch.data 1
-data modify storage switch:main copy set from storage switch:main minigames
+data modify storage switch:main copy set from storage switch:main groups
 function switch:engine/voting_time/get/index_information
 
 scoreboard players add #index switch.data 1

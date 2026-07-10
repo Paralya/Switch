@@ -14,6 +14,10 @@ scoreboard players set #vote_game_6 switch.data 0
 scoreboard players set #vote_game_7 switch.data 0
 scoreboard players set #vote_game_8 switch.data 0
 
+# Ignore clicks on vote options that do not exist in the current round (e.g. old messages in the chat)
+execute unless score #vote_slots switch.data matches 1.. run scoreboard players set #vote_slots switch.data 8
+execute as @a[tag=!detached,scores={switch.trigger.game_vote=1..}] unless score @s switch.trigger.game_vote <= #vote_slots switch.data run scoreboard players set @s switch.trigger.game_vote 0
+
 tag @a[tag=!detached,scores={switch.trigger.game_vote=1..}] add switch.temp
 execute as @a[tag=switch.temp] at @s run playsound ui.button.click ambient @s
 scoreboard players operation @a[tag=switch.temp] switch.trigger.game_vote *= #-1 switch.data

@@ -62,6 +62,16 @@ data remove storage {ns}:main minigames[0]
 execute if data storage {ns}:main minigames[0] run function {ns}:auto_index
 """)
 
+	# switch:build_groups_games (recursive: map each voting group id to the list of its minigames)
+	write_function(f"{ns}:build_groups_games", f"""
+# Append the first minigame of the copy to its group list
+$data modify storage {ns}:main groups_games.$(group) append from storage {ns}:temp copy[0]
+
+# Remove it from the copy and continue
+data remove storage {ns}:temp copy[0]
+execute if data storage {ns}:temp copy[0] run function {ns}:build_groups_games with storage {ns}:temp copy[0]
+""")
+
 	# switch:test_mode (toggle the global test mode)
 	write_function(f"{ns}:test_mode", f"""
 # Get test mode state
@@ -529,6 +539,11 @@ scoreboard players set #index {ns}.data 1
 function {ns}:auto_index
 data modify storage {ns}:main minigames set from storage {ns}:main indexed_minigames
 data remove storage {ns}:main temp
+
+# Map each voting group id to the list of its minigames (used to resolve a group once voted)
+data modify storage {ns}:main groups_games set value {{}}
+data modify storage {ns}:temp copy set from storage {ns}:main minigames
+execute if data storage {ns}:temp copy[0] run function {ns}:build_groups_games with storage {ns}:temp copy[0]
 
 ## States
 execute if score #engine_state {ns}.data matches -1 run tell none désactivé

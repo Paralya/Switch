@@ -7,18 +7,23 @@
 gamerule minecraft:send_command_feedback false
 scoreboard players set #engine_state switch.data 2
 scoreboard players set #voting_timer switch.data 399
+schedule clear switch:engine/launch_game/launch
 
-execute store result score #modulo_rand switch.data run data get storage switch:main minigames
+# Round 1: vote between groups of games (8 slots: 7 groups + random)
+scoreboard players set #vote_round switch.data 1
+scoreboard players set #vote_slots switch.data 8
+
+execute store result score #modulo_rand switch.data run data get storage switch:main groups
 
 # Setup the random choice options
 scoreboard players set #fill_index switch.data 1
 data modify storage bs:in random.weighted_choice.options set value []
-data modify storage switch:temp copy set from storage switch:main minigames
+data modify storage switch:temp copy set from storage switch:main groups
 execute if data storage switch:temp copy[0] run function switch:engine/voting_time/add_option
 
 # Setup the weights list
 data modify storage bs:in random.weighted_choice.weights set value []
-data modify storage switch:temp copy set from storage switch:main minigames
+data modify storage switch:temp copy set from storage switch:main groups
 execute if data storage switch:temp copy[0] run function switch:engine/voting_time/add_weights with storage switch:temp copy[0]
 
 # Set the vote counts to 0

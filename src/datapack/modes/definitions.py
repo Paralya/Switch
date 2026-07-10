@@ -88,7 +88,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":8, "max_players":-1, "id":"rush_the_point", "name_fr":"Rush The Point",
+		"min_players":8, "max_players":-1, "id":"rush_the_point", "group":"rush", "name_fr":"Rush The Point",
 		"estimated_time": "7-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Capturez les points centraux dans le vide\n"},{"text":"avec vos classes spéciales.\n"}],
@@ -96,7 +96,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":8, "max_players":-1, "id":"rush_the_flag", "name_fr":"Rush The Flag",
+		"min_players":8, "max_players":-1, "id":"rush_the_flag", "group":"rush", "name_fr":"Rush The Flag",
 		"estimated_time": "5-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Volez le drapeau ennemi\n"},{"text":"avec vos classes spéciales.\n"}],
@@ -112,7 +112,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"de_a_coudre", "name_fr":"Dé à Coudre",
+		"min_players":1, "max_players":-1, "id":"de_a_coudre", "group":"a_coudre", "name_fr":"Dé à Coudre",
 		"estimated_time": "3-6 mins", "inspiration": "OneCube point system", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Affrontez les autres joueurs dans un saut,\n"},{"text":"dans une piscine, iconique de Minecraft !\n"}],
@@ -128,7 +128,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":8, "id":"mlg_a_coudre", "name_fr":"MLG à Coudre",
+		"min_players":1, "max_players":8, "id":"mlg_a_coudre", "group":"a_coudre", "name_fr":"MLG à Coudre",
 		"estimated_time": "1-6 mins", "inspiration": "Dé à Coudre", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Sautez et utilisez votre seau d'eau\n"},{"text":"pour survivre à la chute !\n"}],
@@ -152,7 +152,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":2, "max_players":-1, "id":"layers_2_teams", "name_fr":"Layers 2 Teams",
+		"min_players":2, "max_players":-1, "id":"layers_2_teams", "group":"layers", "name_fr":"Layers 2 Teams",
 		"estimated_time": "4-10 mins", "inspiration": "PenguinGames", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Équipez-vous rapidement et détruisez\n"},{"text":"l'équipe adverse située de l'autre côté du mur !\n"}],
@@ -160,7 +160,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":4, "max_players":-1, "id":"layers_4_teams", "name_fr":"Layers 4 Teams",
+		"min_players":4, "max_players":-1, "id":"layers_4_teams", "group":"layers", "name_fr":"Layers 4 Teams",
 		"estimated_time": "4-10 mins", "inspiration": "PenguinGames", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Course d'équipement entre\n"},{"text":"4 équipes, éliminez vos ennemis !\n"}],
@@ -264,7 +264,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"simultaneous_jump", "name_fr":"Simultaneous Jump",
+		"min_players":1, "max_players":-1, "id":"simultaneous_jump", "group":"a_coudre", "name_fr":"Simultaneous Jump",
 		"estimated_time": "60s", "inspiration": "Dé à Coudre/MLG à Coudre", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Dé à coudre ou MLG à coudre,\n"},{"text":"mais tout le monde saute en même temps !\n"}],
@@ -377,10 +377,46 @@ MODES: list[JsonDict] = [
 	# }
 ]
 
+# Voting groups: games sharing the same "group" key show up as a single vote entry
+# (a game without a "group" key gets its own group, defaulting to its id).
+# When a group wins the vote, a second vote is launched between its games (or the game is launched directly if only one fits the player count).
+GROUPS_INFO: dict[str, JsonDict] = {
+	"a_coudre": {
+		"name_fr": "À Coudre & Co",
+		"estimated_time": "1-6 mins",
+		"description": {
+			"fr": [{"text":"Sautez dans la piscine, avec ou sans seau d'eau,\n"},{"text":"tous en même temps ou chacun son tour !\n"}],
+			"en": [{"text":"Jump into the pool, with or without a water bucket,\n"},{"text":"all at once or one at a time!\n"}]
+		},
+	},
+	"layers": {
+		"name_fr": "Layers",
+		"estimated_time": "4-10 mins",
+		"description": {
+			"fr": [{"text":"Équipez-vous rapidement et détruisez\n"},{"text":"les équipes adverses !\n"}],
+			"en": [{"text":"Gear up quickly and destroy\n"},{"text":"the enemy teams!\n"}]
+		},
+	},
+	"rush": {
+		"name_fr": "Rush",
+		"estimated_time": "5-10 mins",
+		"description": {
+			"fr": [{"text":"Capturez les points centraux ou volez le drapeau\n"},{"text":"ennemi avec vos classes spéciales.\n"}],
+			"en": [{"text":"Capture the central points or steal the enemy\n"},{"text":"flag with your special classes.\n"}]
+		},
+	},
+}
+
 # Language pretext constant
 LANG_PRETEXT: dict[str, dict[str, str]] = {
 	"fr": {"estimated_time": "Estimation :",	"inspiration": "Inspiration :",	"suggested": "Proposé par",		"developed": "Développé par"},
 	"en": {"estimated_time": "Estimated:",		"inspiration": "Inspiration:",	"suggested": "Suggested by",	"developed": "Developed by"},
+}
+
+# Language pretext constant for group lores
+LANG_GROUP_PRETEXT: dict[str, dict[str, str]] = {
+	"fr": {"includes": "Contient :",	"second_vote": "Un second vote départagera la variante"},
+	"en": {"includes": "Includes:",		"second_vote": "A second vote will decide the variant"},
 }
 
 # Add the lores to the modes
@@ -404,12 +440,61 @@ def add_lore():
 		mode["index"] = i + 1
 		mode["index_hundred"] = (i + 1) * 100
 
+		# Default the voting group to the game id (games sharing a group are voted as one entry)
+		mode.setdefault("group", mode["id"])
+
 		del mode["description"]
+
+def get_groups() -> list[JsonDict]:
+	""" Build the voting groups list from MODES (must be called after add_lore()). """
+	members: dict[str, list[JsonDict]] = {}
+	for mode in MODES:
+		members.setdefault(mode["group"], []).append(mode)
+
+	groups: list[JsonDict] = []
+	for i, (group_id, modes) in enumerate(members.items()):
+		if len(modes) == 1:
+			# Single game: the group entry is the game itself
+			mode = modes[0]
+			entry: JsonDict = {
+				"min_players": mode["min_players"], "max_players": mode["max_players"], "id": group_id,
+				"name_fr": mode["name_fr"], "name_en": mode.get("name_en", mode["name_fr"]),
+				"lore_fr": mode["lore_fr"], "lore_en": mode["lore_en"],
+			}
+		else:
+			# Multiple games: aggregate player bounds and build a dedicated lore from GROUPS_INFO
+			info: JsonDict = GROUPS_INFO[group_id]
+			entry = {
+				"min_players": min(mode["min_players"] for mode in modes),
+				"max_players": -1 if any(mode["max_players"] == -1 for mode in modes) else max(mode["max_players"] for mode in modes),
+				"id": group_id, "name_fr": info["name_fr"], "name_en": info.get("name_en", info["name_fr"]),
+			}
+			included: str = ", ".join(mode["name_fr"] for mode in modes)
+			for lang in ("fr", "en"):
+				pretext: dict[str, str] = LANG_PRETEXT[lang]
+				group_pretext: dict[str, str] = LANG_GROUP_PRETEXT[lang]
+				entry[f"lore_{lang}"] = [
+					"",
+					{"text":f"[{entry['name_fr']}]\n","color":"yellow"},
+					*info["description"][lang],
+					{"text":f"\n[{pretext['estimated_time']} {info['estimated_time']}]","color":"gold"},
+					{"text":f"\n[{group_pretext['includes']} {included}]","color":"green"},
+					{"text":f"\n[{group_pretext['second_vote']}]","color":"aqua"},
+				]
+		entry["index"] = i + 1
+		groups.append(entry)
+	return groups
 
 @stp.measure_time(message="Generated modes load file")
 def write_modes_load_file():
 	ns: str = Mem.ctx.project_id
 	add_lore()
 	append_lines: list[str] = [f"data modify storage {ns}:main minigames append value " + json.dumps(mode, ensure_ascii=False) for mode in MODES]
+
+	# Voting groups list (what the first vote is made of)
+	append_lines.append("\n# Voting groups (the first vote shows groups, a second vote decides between the games of the winning group)")
+	append_lines.append(f"data modify storage {ns}:main groups set value []")
+	append_lines += [f"data modify storage {ns}:main groups append value " + json.dumps(group, ensure_ascii=False) for group in get_groups()]
+
 	write_function(f"{ns}:modes/load", "\n".join(append_lines))
 

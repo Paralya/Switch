@@ -3,7 +3,7 @@
 #
 # @executed	as @a[tag=!detached]
 #
-# @within	switch:engine/voting_time/tick [ as @a[tag=!detached] ]
+# @within	switch:engine/launch_game/transition [ as @a[tag=!detached] ]
 #
 
 # Seconds for (fade in, hold, fade out) = (1.5, 1.5, 1.5)
