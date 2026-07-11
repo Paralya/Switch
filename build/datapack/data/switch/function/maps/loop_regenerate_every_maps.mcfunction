@@ -13,7 +13,8 @@ execute unless data storage switch:maps to_regenerate.laser_game if data storage
 execute unless data storage switch:maps to_regenerate.pitchout_1 if data storage switch:maps to_regenerate{traitor_original:1b} run function switch:maps/survival/traitor_original/regenerate
 execute unless data storage switch:maps to_regenerate.traitor_original if data storage switch:maps to_regenerate{area_51:1b} run function switch:maps/survival/area_51/regenerate
 execute unless data storage switch:maps to_regenerate.area_51 if data storage switch:maps to_regenerate{spectre_original:1b} run function switch:maps/survival/spectre_original/regenerate
-execute unless data storage switch:maps to_regenerate.spectre_original if data storage switch:maps to_regenerate{pitch_creep_1:1b} run function switch:maps/survival/pitch_creep_1/regenerate
+execute unless data storage switch:maps to_regenerate.spectre_original if data storage switch:maps to_regenerate{glassrunner:1b} run function switch:maps/survival/glassrunner/regenerate
+execute unless data storage switch:maps to_regenerate.glassrunner if data storage switch:maps to_regenerate{pitch_creep_1:1b} run function switch:maps/survival/pitch_creep_1/regenerate
 execute unless data storage switch:maps to_regenerate.pitch_creep_1 if data storage switch:maps to_regenerate{mushroom_plains:1b} run function switch:maps/survival/mushroom_plains/regenerate
 execute unless data storage switch:maps to_regenerate.mushroom_plains if data storage switch:maps to_regenerate{boat_race_1:1b} run function switch:maps/survival/boat_race_1/regenerate
 execute unless data storage switch:maps to_regenerate.boat_race_1 if data storage switch:maps to_regenerate{elytra_box:1b} run function switch:maps/survival/elytra_box/regenerate

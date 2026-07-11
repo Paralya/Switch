@@ -11,6 +11,7 @@ data modify storage switch:maps to_regenerate.pitchout_1 set value 1b
 data modify storage switch:maps to_regenerate.traitor_original set value 1b
 data modify storage switch:maps to_regenerate.area_51 set value 1b
 data modify storage switch:maps to_regenerate.spectre_original set value 1b
+data modify storage switch:maps to_regenerate.glassrunner set value 1b
 data modify storage switch:maps to_regenerate.pitch_creep_1 set value 1b
 data modify storage switch:maps to_regenerate.mushroom_plains set value 1b
 data modify storage switch:maps to_regenerate.boat_race_1 set value 1b

@@ -9,6 +9,7 @@
 #			switch:maps/survival/traitor_original/scan_doors_on_marker {name:"traitor_original",additional_height:0} [ at @s ]
 #			switch:maps/survival/area_51/scan_doors_on_marker {name:"area_51",additional_height:0} [ at @s ]
 #			switch:maps/survival/spectre_original/scan_doors_on_marker {name:"spectre_original",additional_height:0} [ at @s ]
+#			switch:maps/survival/glassrunner/scan_doors_on_marker {name:"glassrunner",additional_height:0} [ at @s ]
 #			switch:maps/survival/pitch_creep_1/scan_doors_on_marker {name:"pitch_creep_1",additional_height:0} [ at @s ]
 #			switch:maps/survival/mushroom_plains/scan_doors_on_marker {name:"mushroom_plains",additional_height:0} [ at @s ]
 #			switch:maps/survival/boat_race_1/scan_doors_on_marker {name:"boat_race_1",additional_height:0} [ at @s ]

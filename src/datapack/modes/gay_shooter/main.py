@@ -186,8 +186,8 @@ function {ns}:utils/on_death_run_function {{function:"{path}/death"}}
 execute in {ns}:game as @a[tag=!detached,gamemode=adventure,x=114011,y=142,z=114041,distance=..1] run function {path}/gay_finished
 
 # Kill players in the void
-execute unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,team={ns}.temp.gays,gamemode=adventure] at @s if entity @s[y=0,dy=-1000] if data entity @s Inventory[{{id:"minecraft:warped_fungus_on_a_stick"}}] run advancement grant @s only {ns}:visible/76
-execute as @a[tag=!detached,gamemode=adventure] at @s if entity @s[y=0,dy=-1000] run kill @s
+execute unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,team={ns}.temp.gays,gamemode=adventure] at @s if entity @s[y=105,dy=-1000] if data entity @s Inventory[{{id:"minecraft:bow"}}] run advancement grant @s only {ns}:visible/76
+execute as @a[tag=!detached,gamemode=adventure] at @s if entity @s[y=105,dy=-1000] run kill @s
 
 # Détection de fin de partie
 execute if score #gay_shooter_seconds {ns}.data matches 1..300 run function {path}/detect_end

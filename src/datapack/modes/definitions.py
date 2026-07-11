@@ -16,7 +16,7 @@ from stouputils.typing import JsonDict
 # Modes list
 MODES: list[JsonDict] = [
 	{
-		"min_players":1, "max_players":-1, "id":"pitch_creep", "name_fr":"Pitch Creep",
+		"min_players":1, "max_players":-1, "id":"pitch_creep", "group":"creepers", "name_fr":"Pitch Creep",
 		"estimated_time": "1m30s", "inspiration": "Pitchout/Épicube", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Survivez en repoussant les creepers\n"},{"text":"dans une arène fermée.\n"}],
@@ -48,7 +48,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":1, "max_players":-1, "id":"creeper_apocalypse", "name_fr":"Creeper Apocalypse",
+		"min_players":1, "max_players":-1, "id":"creeper_apocalypse", "group":"creepers", "name_fr":"Creeper Apocalypse",
 		"estimated_time": "1m30s", "inspiration": "Expiration", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Survivez aux creepers qui se\n"},{"text":"multiplient et explosent.\n"}],
@@ -388,6 +388,14 @@ GROUPS_INFO: dict[str, JsonDict] = {
 		"description": {
 			"fr": [{"text":"Sautez dans la piscine, avec ou sans seau d'eau,\n"},{"text":"tous en même temps ou chacun son tour !\n"}],
 			"en": [{"text":"Jump into the pool, with or without a water bucket,\n"},{"text":"all at once or one at a time!\n"}]
+		},
+	},
+	"creepers": {
+		"name_fr": "Creepers",
+		"estimated_time": "1m30s",
+		"description": {
+			"fr": [{"text":"Survivez aux creepers, en les repoussant\n"},{"text":"ou en fuyant leurs explosions !\n"}],
+			"en": [{"text":"Survive the creepers, by pushing them away\n"},{"text":"or fleeing their explosions!\n"}]
 		},
 	},
 	"layers": {
