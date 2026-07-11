@@ -13,8 +13,11 @@ clear @s ghast_tear[custom_data~{to_clear:true}]
 # lore : Prix : 5 levels
 function switch:modes/glassrunner/shop/reset_item
 
-execute if score @s switch.glassrunner.money matches 25.. if entity @s[team=switch.glassrunner.red] as @a[team=switch.glassrunner.blue] run scoreboard players add @s switch.glassrunner.apocalypse 10
-execute if score @s switch.glassrunner.money matches 25.. if entity @s[team=switch.glassrunner.blue] as @a[team=switch.glassrunner.red] run scoreboard players add @s switch.glassrunner.apocalypse 10
+execute if score @s switch.glassrunner.money matches 25.. if entity @s[team=switch.glassrunner.red] as @a[tag=!detached,team=switch.glassrunner.blue] run scoreboard players add @s switch.glassrunner.apocalypse 10
+execute if score @s switch.glassrunner.money matches 25.. if entity @s[team=switch.glassrunner.blue] as @a[tag=!detached,team=switch.glassrunner.red] run scoreboard players add @s switch.glassrunner.apocalypse 10
+
+# Lancement de la séquence globale (nuit + éclairs), lue par le tick via #glassrunner.apocalypse
+execute if score @s switch.glassrunner.money matches 25.. run scoreboard players set #glassrunner.apocalypse switch.data 1
 
 function switch:modes/glassrunner/translations/shop_apocalypse
 

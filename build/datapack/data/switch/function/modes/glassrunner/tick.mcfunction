@@ -19,7 +19,8 @@ execute if score #glassrunner.apocalypse switch.data matches 20 run function swi
 execute if score #glassrunner.apocalypse switch.data matches 25 run function switch:modes/glassrunner/apocalypse/tick
 execute if score #glassrunner.apocalypse switch.data matches 30 run function switch:modes/glassrunner/apocalypse/tick
 
-execute if score #glassrunner.apocalypse switch.data matches 30.. run function switch:modes/glassrunner/apocalypse/end
+# La nuit dure 10 secondes (les éclairs et explosions s'arrêtent après 30 ticks)
+execute if score #glassrunner.apocalypse switch.data matches 200.. run function switch:modes/glassrunner/apocalypse/end
 
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/tick_player
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
@@ -39,8 +40,8 @@ execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/g
 execute as @e[tag=switch.glassrunner.money_maker] at @s run function switch:modes/glassrunner/money_maker/tick
 execute as @a[scores={switch.glassrunner.money_maker=60..}] run function switch:modes/glassrunner/money_maker/add_money
 
-# Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute if score #glassrunner_seconds switch.data matches 3600.. if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/null
+# Fin de la partie si le temps est écoulé (l'équipe avec le plus de points gagne), ou qu'une équipe atteint l'objectif
+execute if score #remaining_time switch.data matches ..0 if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/timeout
 execute if score #glassrunner.points.red switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/red
 execute if score #glassrunner.points.blue switch.data >= #glassrunner_point_to_win switch.data if score #process_end switch.data matches 0 run function switch:modes/glassrunner/end/blue
 

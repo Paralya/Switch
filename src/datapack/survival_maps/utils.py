@@ -555,7 +555,8 @@ def fill_survival(
 	identity: tuple[str, ...],
 	block_that_replace: str,
 	block_tag_to_replace: str,
-	view: tuple[float, float, float, float, float]
+	view: tuple[float, float, float, float, float],
+	copy_structures: list[tuple[tuple[int, int, int], tuple[int, int, int]]] | None = None
 ) -> None:
 	""" Generate a folder for a gamemode with regeneration using the fill command
 
@@ -566,6 +567,9 @@ def fill_survival(
 		block_that_replace		(str)	: The block that replace the blocks with the tag
 		block_tag_to_replace	(str)	: The block tag to replace
 		view					(tuple)	: The coordinates and orientation to teleport the players
+		copy_structures			(list)	: Boxes (start, end) of permanent structures cloned from the
+			overworld source map into the game dimension at the end of the regeneration (the fill
+			regeneration only replaces the tagged blocks, it never restores the map structures)
 	"""
 	ns: str = Mem.ctx.project_id
 	# Validate view + extract identity (namespace, name, credits)
@@ -617,6 +621,19 @@ kill @s
 
 	# Write the last lines
 	i = (end_pos[1] - minY) + 1
+
+	# Clone the permanent structures from the overworld source map once the fill pass is done
+	# (both dimensions are still forceloaded at this tick, and these lines run before the
+	# forceload removals written by write_last_lines_of_regenerate)
+	if copy_structures:
+		regenerate_path: str = f"{ns}:maps/survival/{namespace}/regenerate"
+		for (sx, sy, sz), (ex, ey, ez) in copy_structures:
+			# Split the box in y slices to stay under the 32768 blocks limit of the clone command
+			step: int = max(1, 32768 // ((ex - sx + 1) * (ez - sz + 1)))
+			for cy in range(sy, ey + 1, step):
+				top: int = min(cy + step - 1, ey)
+				write_function(regenerate_path, f"{base_condition} {i + 1} in {ns}:game run clone from minecraft:overworld {sx} {cy} {sz} {ex} {top} {ez} to {ns}:game {sx} {cy} {sz} strict replace force")
+
 	write_last_lines_of_regenerate(name, namespace, base_condition, splitted_coordinates, (x, y, z), i, divider, "[/fill]")
 
 	# Write the spread_players file

@@ -4,6 +4,7 @@
 # @within	switch:modes/beat_the_kings/second
 #			switch:modes/capture_the_flag/second
 #			switch:modes/castagne/second
+#			switch:modes/glassrunner/second
 #			switch:modes/layers_2_teams/second
 #			switch:modes/layers_4_teams/second
 #			switch:modes/one_shot/second

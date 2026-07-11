@@ -4,6 +4,7 @@
 # @executed	positioned 3000 128 3000
 #
 # @within	switch:modes/glassrunner/tick
+#			switch:modes/glassrunner/end/timeout
 #
 
 function switch:modes/glassrunner/translations/end_red

@@ -6,7 +6,8 @@
 # @within	switch:modes/glassrunner/tick
 #
 
-execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..}] at @s run function switch:engine/add_win
+execute if score #process_end switch.data matches 1 if score #glassrunner.points.red switch.data > #glassrunner.points.blue switch.data as @a[tag=!detached,team=switch.glassrunner.red] at @s run function switch:engine/add_win
+execute if score #process_end switch.data matches 1 if score #glassrunner.points.blue switch.data > #glassrunner.points.red switch.data as @a[tag=!detached,team=switch.glassrunner.blue] at @s run function switch:engine/add_win
 
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/glassrunner/death/death
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]

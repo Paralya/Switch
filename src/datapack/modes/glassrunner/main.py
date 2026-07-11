@@ -40,9 +40,10 @@ effect give @s regeneration 1 255 true
 	# /second
 	write_function(f"{path}/second", f"""
 scoreboard players add #glassrunner_seconds {ns}.data 1
+execute if score #remaining_time {ns}.data matches 1.. run scoreboard players remove #remaining_time {ns}.data 1
 
-execute positioned 2997 128 2997 as @a[tag=!detached,dx=5,dy=3,dz=5] run function {ns}:modes/glassrunner/ctp/center/adding_timer
-execute positioned 2997 128 2997 unless entity @a[tag=!detached,dx=5,dy=3,dz=5] run function {ns}:modes/glassrunner/ctp/center/reset
+execute positioned 2997 128 2997 as @a[tag=!detached,dx=6,dy=3,dz=6] run function {ns}:modes/glassrunner/ctp/center/adding_timer
+execute positioned 2997 128 2997 unless entity @a[tag=!detached,dx=6,dy=3,dz=6] run function {ns}:modes/glassrunner/ctp/center/reset
 
 execute if score #glassrunner.ctp.center.red.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/center/red
 execute if score #glassrunner.ctp.center.blue.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/center/blue
@@ -59,10 +60,14 @@ execute positioned 3074 128 2924 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] 
 execute if score #glassrunner.ctp.side2.red.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/side2/red
 execute if score #glassrunner.ctp.side2.blue.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/side2/blue
 
-# Update scoreboard
-data modify storage {ns}:main input set value {{red:0,blue:0}}
+# Update scoreboard (points + remaining time)
+data modify storage {ns}:main input set value {{red:0,blue:0,mins:0,secs:0,zero:""}}
 execute store result storage {ns}:main input.red int 1 run scoreboard players get #glassrunner.points.red {ns}.data
 execute store result storage {ns}:main input.blue int 1 run scoreboard players get #glassrunner.points.blue {ns}.data
+function {ns}:modes/_common/compute_mins_secs
+execute store result storage {ns}:main input.mins int 1 run scoreboard players get #mins {ns}.data
+execute store result storage {ns}:main input.secs int 1 run scoreboard players get #secs {ns}.data
+execute if score #secs {ns}.data matches 0..9 run data modify storage {ns}:main input.zero set value "0"
 function {ns}:modes/glassrunner/ctp/update_sb with storage {ns}:main input
 """)
 
@@ -98,6 +103,8 @@ function {ns}:modes/glassrunner/translations/start
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #glassrunner_ticks {ns}.data 0
 scoreboard players set #glassrunner_seconds {ns}.data -10
+scoreboard players set #remaining_time {ns}.data 610
+scoreboard players set #glassrunner.apocalypse {ns}.data 0
 
 scoreboard players set #glassrunner_point_to_win {ns}.data 32
 
@@ -114,16 +121,21 @@ scoreboard players add @a[tag=!detached] {ns}.glassrunner.money 0
 
 scoreboard objectives add {ns}.glassrunner.display dummy [{{"text":"Glass","color":"red"}},{{"text":"Runner","color":"blue"}}]
 scoreboard objectives setdisplay sidebar {ns}.glassrunner.display
+scoreboard players set §T§r {ns}.glassrunner.display 3
 scoreboard players set §O§r {ns}.glassrunner.display 2
 scoreboard players set §P§R§r {ns}.glassrunner.display 1
 scoreboard players set §P§B§r {ns}.glassrunner.display 0
 
-team add {ns}.glassrunner.objective {{"text":"Objective: 32 points","color":"gray"}}
+team add {ns}.glassrunner.timer {{"text":"[Timer]","color":"gray"}}
+team add {ns}.glassrunner.objective {{"text":"[Objective]","color":"gray"}}
 team add {ns}.glassrunner.p_red {{"text":"[P Red]","color":"red"}}
 team add {ns}.glassrunner.p_blue {{"text":"[P Blue]","color":"blue"}}
+team join {ns}.glassrunner.timer §T§r
 team join {ns}.glassrunner.objective §O§r
 team join {ns}.glassrunner.p_red §P§R§r
 team join {ns}.glassrunner.p_blue §P§B§r
+team modify {ns}.glassrunner.timer suffix [{{"text": "Time: ","color":"gray"}},{{"text":"10","color":"gold"}},{{"text":"m","color":"gray"}},{{"text":"00","color":"gold"}},{{"text":"s","color":"gray"}}]
+team modify {ns}.glassrunner.objective suffix [{{"text": "Objective: ","color":"gray"}},{{"text":"32 points","color":"gold"}}]
 
 scoreboard players set #glassrunner.points.red {ns}.data 0
 scoreboard players set #glassrunner.points.blue {ns}.data 0
@@ -139,10 +151,16 @@ scoreboard objectives remove {ns}.glassrunner.money
 scoreboard objectives remove {ns}.glassrunner.deathCount
 scoreboard objectives remove {ns}.glassrunner.use_snowball
 scoreboard objectives remove {ns}.glassrunner.display
+scoreboard objectives remove {ns}.glassrunner.money_maker
+scoreboard objectives remove {ns}.glassrunner.apocalypse
+scoreboard objectives remove {ns}.glassrunner.turtle_helmet
+scoreboard objectives remove {ns}.glassrunner.elytra
 team remove {ns}.glassrunner.blue
 team remove {ns}.glassrunner.red
 team remove {ns}.glassrunner.p_red
 team remove {ns}.glassrunner.p_blue
+team remove {ns}.glassrunner.objective
+team remove {ns}.glassrunner.timer
 scoreboard players set #glassrunner.points.red {ns}.data 0
 scoreboard players set #glassrunner.points.blue {ns}.data 0
 
@@ -164,7 +182,8 @@ execute if score #glassrunner.apocalypse {ns}.data matches 20 run function {ns}:
 execute if score #glassrunner.apocalypse {ns}.data matches 25 run function {ns}:modes/glassrunner/apocalypse/tick
 execute if score #glassrunner.apocalypse {ns}.data matches 30 run function {ns}:modes/glassrunner/apocalypse/tick
 
-execute if score #glassrunner.apocalypse {ns}.data matches 30.. run function {ns}:modes/glassrunner/apocalypse/end
+# La nuit dure 10 secondes (les éclairs et explosions s'arrêtent après 30 ticks)
+execute if score #glassrunner.apocalypse {ns}.data matches 200.. run function {ns}:modes/glassrunner/apocalypse/end
 
 execute as @a[tag=!detached] at @s run function {ns}:modes/glassrunner/tick_player
 execute as @e[tag={ns}.glassrunner.glass_bridge,distance=..150] at @s run function {ns}:modes/glassrunner/tick_glass_bridge
@@ -184,8 +203,8 @@ execute as @e[tag={ns}.glassrunner.fireball] at @s run function {ns}:modes/glass
 execute as @e[tag={ns}.glassrunner.money_maker] at @s run function {ns}:modes/glassrunner/money_maker/tick
 execute as @a[scores={{{ns}.glassrunner.money_maker=60..}}] run function {ns}:modes/glassrunner/money_maker/add_money
 
-# Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
-execute if score #glassrunner_seconds {ns}.data matches 3600.. if score #process_end {ns}.data matches 0 run function {ns}:modes/glassrunner/end/null
+# Fin de la partie si le temps est écoulé (l'équipe avec le plus de points gagne), ou qu'une équipe atteint l'objectif
+execute if score #remaining_time {ns}.data matches ..0 if score #process_end {ns}.data matches 0 run function {ns}:modes/glassrunner/end/timeout
 execute if score #glassrunner.points.red {ns}.data >= #glassrunner_point_to_win {ns}.data if score #process_end {ns}.data matches 0 run function {ns}:modes/glassrunner/end/red
 execute if score #glassrunner.points.blue {ns}.data >= #glassrunner_point_to_win {ns}.data if score #process_end {ns}.data matches 0 run function {ns}:modes/glassrunner/end/blue
 
@@ -407,6 +426,7 @@ function {ns}:modes/glassrunner/translations/fireball_use
 
 	# /ctp/update_sb
 	write_function(f"{path}/ctp/update_sb", f"""
+$team modify {ns}.glassrunner.timer suffix [{{"text": "Time: ","color":"gray"}},{{"text":"$(mins)","color":"gold"}},{{"text":"m","color":"gray"}},{{"text":"$(zero)$(secs)","color":"gold"}},{{"text":"s","color":"gray"}}]
 $team modify {ns}.glassrunner.p_red suffix [{{"text": "Red: ","color":"red"}},{{"text":"$(red)","color":"dark_red"}},{{"text":" points"}}]
 $team modify {ns}.glassrunner.p_blue suffix [{{"text": "Blue: ","color":"blue"}},{{"text":"$(blue)","color":"dark_blue"}},{{"text":" points"}}]
 """)
@@ -427,7 +447,9 @@ execute as @a[tag=!detached,team={ns}.glassrunner.{color}] at @s run playsound m
 	# /ctp/<loc>/{adding_timer,blue,red,reset} — data-driven capture-point logic per location:
 	# (detect-box, fill-area, staged template thresholds, and per-team template prefix + place coords)
 	CTP: dict[str, tuple[str, str, list[tuple[int, int]], tuple[str, str], tuple[str, str]]] = {
-		"center": ("dx=5,dy=3,dz=5", "2997 127 2997 3003 127 3003",
+		# dx/dz=6: the selector box spans [x, x+dx+1], so 6 is needed to cover the full 7x7 point
+		# (with 5, the x/z=3003 edge row was undetected => blue players coming from 3075 didn't count)
+		"center": ("dx=6,dy=3,dz=6", "2997 127 2997 3003 127 3003",
 			[(1, 2), (3, 4), (5, 6), (7, 8), (9, 10), (11, 12), (13, 14)],
 			("center_blue", "2997 127 2997"), ("center_red", "2997 127 2997")),
 		"side1": ("dx=2,dy=3,dz=2", "2926 127 3074 2924 127 3076",
@@ -540,9 +562,17 @@ function {ns}:modes/glassrunner/translations/end_null
 scoreboard players set #process_end {ns}.data 1
 """)
 
+	# /end/timeout (time ran out: the team with the most points wins, tie => nobody)
+	write_function(f"{path}/end/timeout", f"""
+execute if score #glassrunner.points.red {ns}.data > #glassrunner.points.blue {ns}.data run function {ns}:modes/glassrunner/end/red
+execute if score #glassrunner.points.blue {ns}.data > #glassrunner.points.red {ns}.data run function {ns}:modes/glassrunner/end/blue
+execute if score #glassrunner.points.red {ns}.data = #glassrunner.points.blue {ns}.data run function {ns}:modes/glassrunner/end/null
+""")
+
 	# /end/process_end
 	write_function(f"{path}/end/process_end", f"""
-execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.alive=1..}}] at @s run function {ns}:engine/add_win
+execute if score #process_end {ns}.data matches 1 if score #glassrunner.points.red {ns}.data > #glassrunner.points.blue {ns}.data as @a[tag=!detached,team={ns}.glassrunner.red] at @s run function {ns}:engine/add_win
+execute if score #process_end {ns}.data matches 1 if score #glassrunner.points.blue {ns}.data > #glassrunner.points.red {ns}.data as @a[tag=!detached,team={ns}.glassrunner.blue] at @s run function {ns}:engine/add_win
 
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/glassrunner/death/death
 execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
@@ -568,8 +598,11 @@ clear @s ghast_tear[custom_data~{{to_clear:true}}]
 # lore : Prix : 5 levels
 function {ns}:modes/glassrunner/shop/reset_item
 
-execute if score @s {ns}.glassrunner.money matches 25.. if entity @s[team={ns}.glassrunner.red] as @a[team={ns}.glassrunner.blue] run scoreboard players add @s {ns}.glassrunner.apocalypse 10
-execute if score @s {ns}.glassrunner.money matches 25.. if entity @s[team={ns}.glassrunner.blue] as @a[team={ns}.glassrunner.red] run scoreboard players add @s {ns}.glassrunner.apocalypse 10
+execute if score @s {ns}.glassrunner.money matches 25.. if entity @s[team={ns}.glassrunner.red] as @a[tag=!detached,team={ns}.glassrunner.blue] run scoreboard players add @s {ns}.glassrunner.apocalypse 10
+execute if score @s {ns}.glassrunner.money matches 25.. if entity @s[team={ns}.glassrunner.blue] as @a[tag=!detached,team={ns}.glassrunner.red] run scoreboard players add @s {ns}.glassrunner.apocalypse 10
+
+# Lancement de la séquence globale (nuit + éclairs), lue par le tick via #glassrunner.apocalypse
+execute if score @s {ns}.glassrunner.money matches 25.. run scoreboard players set #glassrunner.apocalypse {ns}.data 1
 
 function {ns}:modes/glassrunner/translations/shop_apocalypse
 
@@ -622,52 +655,33 @@ execute if score @s {ns}.glassrunner.money matches 20.. run scoreboard players r
 """)
 
 	# /shop/igloo (translation ref rewritten)
+	# Radius 4 (roof at +5): with 3, an igloo built while standing on the center point was
+	# entirely inside the anti-camp glass clear zone (2997..3003, y 128..132) and never appeared
+	R: int = 4
+	igloo_shell: list[str] = [
+		f"~-{R} ~-1 ~-{R} ~-{R} ~{R} ~{R}",
+		f"~-{R} ~-1 ~-{R} ~{R} ~{R} ~-{R}",
+		f"~{R} ~-1 ~{R} ~-{R} ~{R} ~{R}",
+		f"~{R} ~-1 ~{R} ~{R} ~{R} ~-{R}",
+		f"~-{R} ~-1 ~-{R} ~{R} ~-1 ~{R}",
+		f"~-{R} ~{R + 1} ~-{R} ~{R} ~{R + 1} ~{R}",
+	]
+	igloo_fills: str = ""
+	for color, tier_2, tier_1 in (("red", "red_stained_glass", "pink_stained_glass"), ("blue", "blue_stained_glass", "light_blue_stained_glass")):
+		igloo_fills += f"\n# {color.capitalize()} (upgrade existing tier 1 glass to tier 2, then fill the air with tier 1)\n"
+		igloo_fills += "\n".join(
+			f"execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.{color}] run fill {coords} {tier_2} replace #{ns}:glassrunner/tier_1"
+			for coords in igloo_shell
+		) + "\n"
+		igloo_fills += "\n".join(
+			f"execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.{color}] run fill {coords} {tier_1} replace #{ns}:glassrunner/tier_1_air"
+			for coords in igloo_shell
+		) + "\n"
 	write_function(f"{path}/shop/igloo", f"""
 clear @s blue_ice[custom_data~{{to_clear:true}}]
 
 function {ns}:modes/glassrunner/shop/reset_item
-
-# Red
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~-1 ~-3 ~-3 ~3 ~3 red_stained_glass replace #{ns}:glassrunner/tier_1
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~-1 ~-3 ~3 ~3 ~-3 red_stained_glass replace #{ns}:glassrunner/tier_1
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~3 ~-1 ~3 ~-3 ~3 ~3 red_stained_glass replace #{ns}:glassrunner/tier_1
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~3 ~-1 ~3 ~3 ~3 ~-3 red_stained_glass replace #{ns}:glassrunner/tier_1
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 red_stained_glass replace #{ns}:glassrunner/tier_1
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~4 ~-3 ~3 ~4 ~3 red_stained_glass replace #{ns}:glassrunner/tier_1
-
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~-1 ~-3 ~-3 ~3 ~3 pink_stained_glass replace #{ns}:glassrunner/tier_1_air
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~-1 ~-3 ~3 ~3 ~-3 pink_stained_glass replace #{ns}:glassrunner/tier_1_air
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~3 ~-1 ~3 ~-3 ~3 ~3 pink_stained_glass replace #{ns}:glassrunner/tier_1_air
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~3 ~-1 ~3 ~3 ~3 ~-3 pink_stained_glass replace #{ns}:glassrunner/tier_1_air
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 pink_stained_glass replace #{ns}:glassrunner/tier_1_air
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.red] run fill ~-3 ~4 ~-3 ~3 ~4 ~3 pink_stained_glass replace #{ns}:glassrunner/tier_1_air
-
-# Blue
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~-3 ~3 ~3 blue_stained_glass replace #{ns}:glassrunner/tier_1
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~3 ~3 ~-3 blue_stained_glass replace #{ns}:glassrunner/tier_1
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~3 ~-1 ~3 ~-3 ~3 ~3 blue_stained_glass replace #{ns}:glassrunner/tier_1
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~3 ~-1 ~3 ~3 ~3 ~-3 blue_stained_glass replace #{ns}:glassrunner/tier_1
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 blue_stained_glass replace #{ns}:glassrunner/tier_1
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~4 ~-3 ~3 ~4 ~3 blue_stained_glass replace #{ns}:glassrunner/tier_1
-
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~-3 ~3 ~3 light_blue_stained_glass replace #{ns}:glassrunner/tier_1_air
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~3 ~3 ~-3 light_blue_stained_glass replace #{ns}:glassrunner/tier_1_air
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~3 ~-1 ~3 ~-3 ~3 ~3 light_blue_stained_glass replace #{ns}:glassrunner/tier_1_air
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~3 ~-1 ~3 ~3 ~3 ~-3 light_blue_stained_glass replace #{ns}:glassrunner/tier_1_air
-
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 light_blue_stained_glass replace #{ns}:glassrunner/tier_1_air
-execute if score @s {ns}.glassrunner.money matches 20.. if entity @s[team={ns}.glassrunner.blue] run fill ~-3 ~4 ~-3 ~3 ~4 ~3 light_blue_stained_glass replace #{ns}:glassrunner/tier_1_air
-
-
+{igloo_fills}
 function {ns}:modes/glassrunner/translations/shop_igloo
 execute if score @s {ns}.glassrunner.money matches 20.. run xp add @s -20 levels
 execute if score @s {ns}.glassrunner.money matches 20.. run scoreboard players remove @s {ns}.glassrunner.money 20

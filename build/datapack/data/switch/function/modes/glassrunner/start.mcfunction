@@ -36,6 +36,8 @@ function switch:modes/glassrunner/translations/start
 scoreboard players set #process_end switch.data 0
 scoreboard players set #glassrunner_ticks switch.data 0
 scoreboard players set #glassrunner_seconds switch.data -10
+scoreboard players set #remaining_time switch.data 610
+scoreboard players set #glassrunner.apocalypse switch.data 0
 
 scoreboard players set #glassrunner_point_to_win switch.data 32
 
@@ -52,16 +54,21 @@ scoreboard players add @a[tag=!detached] switch.glassrunner.money 0
 
 scoreboard objectives add switch.glassrunner.display dummy [{"text":"Glass","color":"red"},{"text":"Runner","color":"blue"}]
 scoreboard objectives setdisplay sidebar switch.glassrunner.display
+scoreboard players set §T§r switch.glassrunner.display 3
 scoreboard players set §O§r switch.glassrunner.display 2
 scoreboard players set §P§R§r switch.glassrunner.display 1
 scoreboard players set §P§B§r switch.glassrunner.display 0
 
-team add switch.glassrunner.objective {"text":"Objective: 32 points","color":"gray"}
+team add switch.glassrunner.timer {"text":"[Timer]","color":"gray"}
+team add switch.glassrunner.objective {"text":"[Objective]","color":"gray"}
 team add switch.glassrunner.p_red {"text":"[P Red]","color":"red"}
 team add switch.glassrunner.p_blue {"text":"[P Blue]","color":"blue"}
+team join switch.glassrunner.timer §T§r
 team join switch.glassrunner.objective §O§r
 team join switch.glassrunner.p_red §P§R§r
 team join switch.glassrunner.p_blue §P§B§r
+team modify switch.glassrunner.timer suffix [{"text": "Time: ","color":"gray"},{"text":"10","color":"gold"},{"text":"m","color":"gray"},{"text":"00","color":"gold"},{"text":"s","color":"gray"}]
+team modify switch.glassrunner.objective suffix [{"text": "Objective: ","color":"gray"},{"text":"32 points","color":"gold"}]
 
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0

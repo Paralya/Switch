@@ -11,7 +11,6 @@ data modify storage switch:maps to_scan.pitchout_1 set value 1b
 data modify storage switch:maps to_scan.traitor_original set value 1b
 data modify storage switch:maps to_scan.area_51 set value 1b
 data modify storage switch:maps to_scan.spectre_original set value 1b
-data modify storage switch:maps to_scan.glassrunner set value 1b
 data modify storage switch:maps to_scan.pitch_creep_1 set value 1b
 data modify storage switch:maps to_scan.mushroom_plains set value 1b
 data modify storage switch:maps to_scan.boat_race_1 set value 1b
