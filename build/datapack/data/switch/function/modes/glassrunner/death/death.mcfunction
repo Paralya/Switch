@@ -19,9 +19,11 @@ execute if entity @s[team=switch.glassrunner.red] run function switch:modes/glas
 execute if entity @s[team=switch.glassrunner.blue] run function switch:modes/glassrunner/death/blue
 
 function switch:modes/glassrunner/death/both
-spreadplayers 2925 2925 0 2 true @s[team=switch.glassrunner.red]
-spreadplayers 3075 3075 0 2 true @s[team=switch.glassrunner.blue]
-execute at @s facing 3000 128 3000 run tp ~ 129 ~
+
+# Teleport to the team corner (explicit dimension + coords: the player respawns at world spawn,
+# and spreadplayers silently failed there, leaving everyone in a death loop at 0 129 0)
+execute if entity @s[team=switch.glassrunner.red] in switch:game run tp @s 2925.5 129 2925.5 facing 3000 129 3000
+execute if entity @s[team=switch.glassrunner.blue] in switch:game run tp @s 3075.5 129 3075.5 facing 3000 129 3000
 scoreboard players set @s switch.glassrunner.deathCount 0
 
 effect give @s resistance infinite 255 true

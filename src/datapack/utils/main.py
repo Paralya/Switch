@@ -13,12 +13,9 @@ def main() -> None:
 	# /choose_map_for
 	write_function(f"{path}/choose_map_for", f"""
 ## Vérification de la liste des maps
-# Détection du nombre restant de maps à charger
-scoreboard players set #mc {ns}.data 0
-$execute store result score #mc {ns}.data run data get storage {ns}:maps choose_from.$(id)
-
-# Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
-$execute if score #mc {ns}.data matches 0 run data modify storage {ns}:maps choose_from.$(id) set value $(maps)
+# Si la liste des maps à charger est vide, absente ou corrompue, la ré-initialiser
+# (le "[0]" garantit une liste avec au moins un élément, sinon maps/load garderait la map du jeu précédent)
+$execute unless data storage {ns}:maps choose_from.$(id)[0] run data modify storage {ns}:maps choose_from.$(id) set value $(maps)
 
 ## Chargement de la map
 # Passage en paramètre de la liste des maps à charger

@@ -97,7 +97,7 @@ bossbar set {ns}:coupdetat style notched_12
 # 60 seconds for the coup d'état
 scoreboard players set #remaining_time {ns}.data 60
 scoreboard players operation #remaining_time {ns}.data *= #20 {ns}.data
-
+scoreboard objectives setdisplay list {ns}.health
 scoreboard players set #coupdetat_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #detect_end {ns}.data 0

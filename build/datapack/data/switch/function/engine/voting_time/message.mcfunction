@@ -24,8 +24,10 @@ execute if score #vote_game_8 switch.data matches 2.. run data modify storage sw
 # Edit the last vote to make it hidden (round 1 only, round 2 has no random slot)
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].lore_fr set value ["",{"text":"[Aléatoire]\n","color":"yellow"},{"text":"Jeu totalement aléatoire qui n'est pas\n"},{"text":"présent parmi les 7 au dessus"}]
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].name_fr set value "Aléatoire"
+execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].display_name_fr set value {"text":"Aléatoire","color":"yellow"}
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].lore_en set value ["",{"text":"[Random]\n","color":"yellow"},{"text":"Game completely random that is not\n"},{"text":"present among the 7 above"}]
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].name_en set value "Random"
+execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].display_name_en set value {"text":"Random","color":"yellow"}
 
 # Tellraw
 function switch:engine/translations/voting_time_message

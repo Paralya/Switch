@@ -12,7 +12,9 @@ scoreboard players set #modulo_rand switch.data 0
 execute store result score #modulo_rand switch.data run data get storage switch:temp maps_to_choose
 function switch:maps/find_map
 
-# Copy map
+# Copy map (safety: if find_map could not produce a candidate, fall back to the raw list
+# instead of silently keeping the previous game's map)
+execute unless data storage switch:main copy[0] run data modify storage switch:main copy set from storage switch:temp maps_to_choose
 data modify storage switch:main map set from storage switch:main copy[0]
 data modify storage switch:main previous_map set from storage switch:main map
 

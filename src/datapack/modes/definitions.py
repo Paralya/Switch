@@ -312,7 +312,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":2, "max_players":-1, "id":"glassrunner", "name_fr":"GlassRunner",
+		"min_players":2, "max_players":-1, "id":"glassrunner", "group":"rush", "name_fr":"GlassRunner",
 		"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
 		"description": {
 			"fr": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
@@ -320,7 +320,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":10, "max_players":-1, "id":"capture_the_flag", "name_fr":"Capture The Flag",
+		"min_players":10, "max_players":-1, "id":"capture_the_flag", "group":"rush", "name_fr":"Capture The Flag",
 		"estimated_time": "10-15 mins", "inspiration": "Aspiration", "suggested_by": "Oraclette", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Deux équipes doivent s'affronter pour capturer\n"},{"text":"le drapeau ennemi grâce à des\n"},{"text":"classes spécifiques différentes\n"}],
@@ -380,7 +380,7 @@ MODES: list[JsonDict] = [
 # Voting groups: games sharing the same "group" key show up as a single vote entry
 # (a game without a "group" key gets its own group, defaulting to its id).
 # When a group wins the vote, a second vote is launched between its games (or the game is launched directly if only one fits the player count).
-GROUP_NAME_COLOR: str = "#FFD42A"  # Between yellow and gold, distinguishes multi-game groups in the vote message
+GROUP_NAME_COLOR: str = "#FFCC00"  # Between yellow and gold, distinguishes multi-game groups in the vote message
 GROUPS_INFO: dict[str, JsonDict] = {
 	"a_coudre": {
 		"name_fr": "Dé À Coudre & Co",
@@ -400,10 +400,10 @@ GROUPS_INFO: dict[str, JsonDict] = {
 	},
 	"rush": {
 		"name_fr": "Rush The Point/Flag",
-		"estimated_time": "5-10 mins",
+		"estimated_time": "5-15 mins",
 		"description": {
-			"fr": [{"text":"Capturez les points centraux ou volez le drapeau\n"},{"text":"ennemi avec vos classes spéciales.\n"}],
-			"en": [{"text":"Capture the central points or steal the enemy\n"},{"text":"flag with your special classes.\n"}]
+			"fr": [{"text":"Capturez les points centraux ou volez le drapeau\n"},{"text":"ennemi dans un affrontement entre deux équipes !\n"}],
+			"en": [{"text":"Capture the central points or steal the enemy\n"},{"text":"flag in a battle between two teams!\n"}]
 		},
 	},
 }
@@ -441,6 +441,11 @@ def add_lore():
 		mode["index"] = i + 1
 		mode["index_hundred"] = (i + 1) * 100
 
+		# Colored name shown in the vote message: the color must be baked in the stored component because
+		# the outer style of an interpreted nbt component overrides the parsed one (ComponentUtils.resolve)
+		mode["display_name_fr"] = {"text": mode["name_fr"], "color": "yellow"}
+		mode["display_name_en"] = {"text": mode.get("name_en", mode["name_fr"]), "color": "yellow"}
+
 		# Default the voting group to the game id (games sharing a group are voted as one entry)
 		mode.setdefault("group", mode["id"])
 
@@ -460,18 +465,20 @@ def get_groups() -> list[JsonDict]:
 			entry: JsonDict = {
 				"min_players": mode["min_players"], "max_players": mode["max_players"], "id": group_id,
 				"name_fr": mode["name_fr"], "name_en": mode.get("name_en", mode["name_fr"]),
+				"display_name_fr": mode["display_name_fr"], "display_name_en": mode["display_name_en"],
 				"lore_fr": mode["lore_fr"], "lore_en": mode["lore_en"],
 			}
 		else:
 			# Multiple games: aggregate player bounds and build a dedicated lore from GROUPS_INFO
-			# (names are colored components so the vote message distinguishes multi-game groups, every display uses "interpret":true)
+			# (the display_name carries GROUP_NAME_COLOR so the vote message distinguishes multi-game groups)
 			info: JsonDict = GROUPS_INFO[group_id]
 			entry = {
 				"min_players": min(mode["min_players"] for mode in modes),
 				"max_players": -1 if any(mode["max_players"] == -1 for mode in modes) else max(mode["max_players"] for mode in modes),
 				"id": group_id,
-				"name_fr": {"text": info["name_fr"], "color": GROUP_NAME_COLOR},
-				"name_en": {"text": info.get("name_en", info["name_fr"]), "color": GROUP_NAME_COLOR},
+				"name_fr": info["name_fr"], "name_en": info.get("name_en", info["name_fr"]),
+				"display_name_fr": {"text": info["name_fr"], "color": GROUP_NAME_COLOR},
+				"display_name_en": {"text": info.get("name_en", info["name_fr"]), "color": GROUP_NAME_COLOR},
 			}
 			included: str = ", ".join(mode["name_fr"] for mode in modes)
 			for lang in ("fr", "en"):

@@ -92,7 +92,9 @@ scoreboard players set #modulo_rand {ns}.data 0
 execute store result score #modulo_rand {ns}.data run data get storage {ns}:temp maps_to_choose
 function {ns}:maps/find_map
 
-# Copy map
+# Copy map (safety: if find_map could not produce a candidate, fall back to the raw list
+# instead of silently keeping the previous game's map)
+execute unless data storage {ns}:main copy[0] run data modify storage {ns}:main copy set from storage {ns}:temp maps_to_choose
 data modify storage {ns}:main map set from storage {ns}:main copy[0]
 data modify storage {ns}:main previous_map set from storage {ns}:main map
 

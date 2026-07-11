@@ -5,4 +5,5 @@
 #
 
 scoreboard objectives remove switch.temp.respawn
+tag @a remove switch.in_hole
 

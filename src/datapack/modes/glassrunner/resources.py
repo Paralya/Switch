@@ -26,7 +26,7 @@ def bridge_loot(flag: str, name: str, color: str) -> dict[str, Any]:
 		"name": "minecraft:snowball",
 		"functions": [{"function": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"glassrunner": {"glass_bridge": True, flag: True}},
-			"minecraft:item_name": f"{{\"text\":\"{name}\",\"color\":\"{color}\",\"italic\":false}}",
+			"minecraft:item_name": {"text": name, "color": color, "italic": False},
 		}}],
 	}]}]}
 
@@ -95,7 +95,7 @@ def write_resources() -> None:
 		"name": "minecraft:jigsaw",
 		"functions": [{"function": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"glassrunner": {"destroying_crossbow": True}},
-			"minecraft:item_name": "{\"text\":\"Destroying Crossbow\",\"color\":\"dark_red\",\"italic\":false}",
+			"minecraft:item_name": {"text": "Destroying Crossbow", "color": "dark_red", "italic": False},
 		}}],
 	}]}]}))
 
@@ -105,10 +105,10 @@ def write_resources() -> None:
 		"functions": [{"function": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"ctc": {"id": "glassrunner:fireball_wand"}, "glassrunner": {"fireball_wand": True}},
 			"minecraft:item_model": f"{ns}:fireball_wand",
-			"minecraft:item_name": "{\"text\":\"Fireball Wand\",\"color\":\"dark_red\",\"italic\":false}",
+			"minecraft:item_name": {"text": "Fireball Wand", "color": "dark_red", "italic": False},
 			"minecraft:lore": [
-				"{\"text\":\"Fait spawn une fireball devant vous qui détruit tout sur son passage\",\"color\":\"dark_gray\",\"italic\":false}",
-				"[{\"text\":\"Prix : \",\"color\":\"dark_gray\",\"italic\":false},{\"text\":\"15 pièces\",\"color\":\"gold\",\"italic\":false}]",
+				{"text": "Fait spawn une fireball devant vous qui détruit tout sur son passage", "color": "dark_gray", "italic": False},
+				[{"text": "Prix : ", "color": "dark_gray", "italic": False}, {"text": "15 pièces", "color": "gold", "italic": False}],
 			],
 		}}],
 	}]}]}))

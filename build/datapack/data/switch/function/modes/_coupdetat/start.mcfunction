@@ -32,7 +32,7 @@ bossbar set switch:coupdetat style notched_12
 # 60 seconds for the coup d'état
 scoreboard players set #remaining_time switch.data 60
 scoreboard players operation #remaining_time switch.data *= #20 switch.data
-
+scoreboard objectives setdisplay list switch.health
 scoreboard players set #coupdetat_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0

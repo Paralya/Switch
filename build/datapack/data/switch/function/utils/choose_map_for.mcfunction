@@ -41,7 +41,7 @@
 #			switch:modes/snowball_painter/start {id:"snowball_painter", maps:["snowball_painter"]}
 #			switch:modes/spectres_game/start {id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake","old_japan","cluedo_camping","la_juste_recette","torg_arena"]}
 #			switch:modes/spleef/start {id:"spleef", maps:["spleef_1"]}
-#			switch:modes/thunder_spear/start {id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft","smithed_summit_2024"]}
+#			switch:modes/thunder_spear/start {id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft"]}
 #			switch:modes/tnt_run/start {id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}
 #			switch:modes/traitors_game/start {id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}
 #			switch:modes/warden_escape/start {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
@@ -51,12 +51,9 @@
 #
 
 ## Vérification de la liste des maps
-# Détection du nombre restant de maps à charger
-scoreboard players set #mc switch.data 0
-$execute store result score #mc switch.data run data get storage switch:maps choose_from.$(id)
-
-# Si il n'y a plus de maps à charger, ajouter les maps à la liste des maps à charger
-$execute if score #mc switch.data matches 0 run data modify storage switch:maps choose_from.$(id) set value $(maps)
+# Si la liste des maps à charger est vide, absente ou corrompue, la ré-initialiser
+# (le "[0]" garantit une liste avec au moins un élément, sinon maps/load garderait la map du jeu précédent)
+$execute unless data storage switch:maps choose_from.$(id)[0] run data modify storage switch:maps choose_from.$(id) set value $(maps)
 
 ## Chargement de la map
 # Passage en paramètre de la liste des maps à charger

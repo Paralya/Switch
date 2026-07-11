@@ -87,7 +87,7 @@ execute unless score #nb_attached {ns}.data >= #min_required {ns}.data run tellr
 		count_color: str = "dark_aqua" if voted else "aqua"
 		return ",".join((
 			f'{{"text":"[","color":"yellow",{events}}}',
-			f'{{"nbt":"selections[{i - 1}].name_{lang}","storage":"{ns}:main","interpret":true,"color":"yellow",{events}}}',
+			f'{{"nbt":"selections[{i - 1}].display_name_{lang}","storage":"{ns}:main","interpret":true,{events}}}',
 			f'{{"text":"] ","color":"yellow",{events}}}',
 			f'{{"score":{{"name":"#vote_game_{i}","objective":"{ns}.data"}},"color":"{count_color}",{events}}}',
 			f'{{"nbt":"msg_votes[{i - 1}]","storage":"{ns}:main","interpret":true,"color":"{count_color}",{events}}}',

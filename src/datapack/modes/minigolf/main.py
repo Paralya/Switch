@@ -25,13 +25,15 @@ scoreboard players set #success {ns}.data 0
 execute on vehicle run scoreboard players set #success {ns}.data 1
 execute if score #success {ns}.data matches 1 run return 1
 
-# Finished
+# Finished (the in_hole tag is tracked while riding, as the ball kill may dismount the player beside the hole)
 scoreboard players set #finished {ns}.data 0
+execute if entity @s[tag={ns}.in_hole] run scoreboard players set #finished {ns}.data 1
 execute positioned over world_surface if block ~ ~-1 ~ barrier if entity @s[distance=..5] run scoreboard players set #finished {ns}.data 1
 execute if block ~ ~-1 ~ barrier run scoreboard players set #finished {ns}.data 1
 execute if block ~ ~-2 ~ barrier run scoreboard players set #finished {ns}.data 1
 execute if block ~ ~-3 ~ barrier run scoreboard players set #finished {ns}.data 1
 execute if block ~ ~-4 ~ barrier run scoreboard players set #finished {ns}.data 1
+tag @s remove {ns}.in_hole
 execute if score #finished {ns}.data matches 1 run scoreboard players operation @s {ns}.alive = #minigolf_seconds {ns}.data
 execute unless score #test_mode {ns}.data matches 1 if score #finished {ns}.data matches 1 if score @s golf_ball.shots matches ..5 run advancement grant @s only {ns}:visible/48
 
@@ -169,6 +171,7 @@ function {translations}/start
 	# /stop
 	write_function(f"{path}/stop", f"""
 scoreboard objectives remove {ns}.temp.respawn
+tag @a remove {ns}.in_hole
 """)
 
 	# /teleport_all
@@ -201,6 +204,14 @@ scoreboard players set #summon_balls {ns}.data 0
 scoreboard players add #minigolf_ticks {ns}.data 1
 scoreboard players remove @a[scores={{{ns}.temp.respawn=1..}}] {ns}.temp.respawn 1
 execute as @a[scores={{{ns}.alive=1}},predicate=golf_ball:has_vehicle] at @s run function {path}/check_respawn
+
+# Track riding players whose ball is resting in a hole shaft (barrier floor), so that the
+# dismount on exit can eject the player beside the hole without losing the finish detection
+tag @a[scores={{{ns}.alive=1}},predicate=golf_ball:has_vehicle] remove {ns}.in_hole
+execute as @a[scores={{{ns}.alive=1}},predicate=golf_ball:has_vehicle] at @s if block ~ ~-1 ~ barrier run tag @s add {ns}.in_hole
+execute as @a[scores={{{ns}.alive=1}},predicate=golf_ball:has_vehicle] at @s if block ~ ~-2 ~ barrier run tag @s add {ns}.in_hole
+execute as @a[scores={{{ns}.alive=1}},predicate=golf_ball:has_vehicle] at @s if block ~ ~-3 ~ barrier run tag @s add {ns}.in_hole
+execute as @a[scores={{{ns}.alive=1}},predicate=golf_ball:has_vehicle] at @s if block ~ ~-4 ~ barrier run tag @s add {ns}.in_hole
 
 # Check if some players lost their ball (finished or give up)
 execute as @a[scores={{{ns}.alive=1}},predicate=!golf_ball:has_vehicle] at @s run function {path}/check_lost_ball

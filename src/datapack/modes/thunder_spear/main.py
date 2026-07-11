@@ -106,7 +106,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft","smithed_summit_2024"]}}
+function {ns}:utils/choose_map_for {{id:"thunder_spear", maps:["adraik_big_ball","vilarles_castillo","zonweeb_highschool","stardust_pvp_zone","sudoku_craft"]}}
 execute as @a[tag=!detached] run function {path}/give_and_teleport
 
 execute in {ns}:game run gamerule minecraft:keep_inventory true
