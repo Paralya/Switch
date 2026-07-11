@@ -143,13 +143,17 @@ vec4 computeBlackHole() {
     return finalColor;
 }
 
-// Effect dispatch: reads effect ID from texture alpha channel
-#define IF_EFFECT(effectId) if (checkEffectAlpha(effectId))
+// Effect dispatch: effect textures are solid-color markers whose RGB is a fixed
+// signature ("SWI" in ASCII) and whose alpha encodes the effect ID. Requiring all
+// 4 channels prevents random pixels of regular textures from triggering an effect.
+const vec3 EFFECT_SIGNATURE_RGB = vec3(83., 87., 73.);
 
-bool checkEffectAlpha(float effectId) {
-    float tolerance  = .5;
-    float alphaValue = texture(Sampler0, texCoord0).a * 255.;
-    return abs(alphaValue - effectId) < tolerance;
+#define IF_EFFECT(effectId) if (checkEffectTexel(effectId))
+
+bool checkEffectTexel(float effectId) {
+    float tolerance = .5;
+    vec4 texel = texture(Sampler0, texCoord0) * 255.;
+    return all(lessThan(abs(texel - vec4(EFFECT_SIGNATURE_RGB, effectId)), vec4(tolerance)));
 }
 
 void main() {

@@ -88,7 +88,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":8, "max_players":-1, "id":"rush_the_point", "group":"rush", "name_fr":"Rush The Point",
+		"min_players":8, "max_players":-1, "id":"rush_the_point", "group":"ctpf", "name_fr":"Rush The Point",
 		"estimated_time": "7-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Capturez les points centraux dans le vide\n"},{"text":"avec vos classes spéciales.\n"}],
@@ -96,7 +96,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":8, "max_players":-1, "id":"rush_the_flag", "group":"rush", "name_fr":"Rush The Flag",
+		"min_players":8, "max_players":-1, "id":"rush_the_flag", "group":"ctpf", "name_fr":"Rush The Flag",
 		"estimated_time": "5-10 mins", "inspiration": "PluginLess", "suggested_by": "Stoupy", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Volez le drapeau ennemi\n"},{"text":"avec vos classes spéciales.\n"}],
@@ -312,7 +312,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":2, "max_players":-1, "id":"glassrunner", "group":"rush", "name_fr":"GlassRunner",
+		"min_players":2, "max_players":-1, "id":"glassrunner", "group":"ctpf", "name_fr":"GlassRunner",
 		"estimated_time": "8-10 mins", "inspiration": "Épicube", "suggested_by": "AirDox", "developed_by": "AirDox",
 		"description": {
 			"fr": [{"text":"Affrontez l'équipe adverse dans le ciel dans un\n"},{"text":"CaptureThePoint assaisonné de multiples particularités\n"}],
@@ -320,7 +320,7 @@ MODES: list[JsonDict] = [
 		},
 	},
 	{
-		"min_players":10, "max_players":-1, "id":"capture_the_flag", "group":"rush", "name_fr":"Capture The Flag",
+		"min_players":10, "max_players":-1, "id":"capture_the_flag", "group":"ctpf", "name_fr":"Capture The Flag",
 		"estimated_time": "10-15 mins", "inspiration": "Aspiration", "suggested_by": "Oraclette", "developed_by": "Stoupy",
 		"description": {
 			"fr": [{"text":"Deux équipes doivent s'affronter pour capturer\n"},{"text":"le drapeau ennemi grâce à des\n"},{"text":"classes spécifiques différentes\n"}],
@@ -398,12 +398,12 @@ GROUPS_INFO: dict[str, JsonDict] = {
 			"en": [{"text":"Gear up quickly and destroy\n"},{"text":"the enemy teams!\n"}]
 		},
 	},
-	"rush": {
-		"name_fr": "Rush The Point/Flag",
+	"ctpf": {
+		"name_fr": "Capture the Point/Flag",
 		"estimated_time": "5-15 mins",
 		"description": {
-			"fr": [{"text":"Capturez les points centraux ou volez le drapeau\n"},{"text":"ennemi dans un affrontement entre deux équipes !\n"}],
-			"en": [{"text":"Capture the central points or steal the enemy\n"},{"text":"flag in a battle between two teams!\n"}]
+			"fr": [{"text":"Affrontez l'équipe adverse : capturez des points,\n"},{"text":"volez des drapeaux ou courez sur le verre !\n"}],
+			"en": [{"text":"Face off against the enemy team: capture points,\n"},{"text":"steal flags or run across the glass!\n"}]
 		},
 	},
 }
