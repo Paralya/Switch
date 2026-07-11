@@ -11,13 +11,13 @@ def write_translations():
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
-# French
-execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.temp.kills=18..}}] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Fin du mini-jeu ! Le vainqueur de la partie est "}},{{"selector":"@s"}}]
-execute if score #process_end {ns}.data matches 1 unless entity @a[tag=!detached,scores={{{ns}.temp.kills=18..}}] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Il n'y a eu aucun gagnant ;("}}]
+# French (#max_kills is computed by process_end before this function runs)
+execute if score #process_end {ns}.data matches 1 if score #max_kills {ns}.data matches 1.. as @a[tag=!detached] if score @s {ns}.temp.kills = #max_kills {ns}.data run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Fin du mini-jeu ! Le vainqueur de la partie est "}},{{"selector":"@s"}},{{"text":" avec "}},{{"score":{{"name":"@s","objective":"{ns}.temp.kills"}},"color":"yellow"}},{{"text":" kills !"}}]
+execute if score #process_end {ns}.data matches 1 unless score #max_kills {ns}.data matches 1.. run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Il n'y a eu aucun gagnant ;("}}]
 
 # English
-execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.temp.kills=18..}}] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The winner of the game is "}},{{"selector":"@s"}}]
-execute if score #process_end {ns}.data matches 1 unless entity @a[tag=!detached,scores={{{ns}.temp.kills=18..}}] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" There were no winners ;("}}]
+execute if score #process_end {ns}.data matches 1 if score #max_kills {ns}.data matches 1.. as @a[tag=!detached] if score @s {ns}.temp.kills = #max_kills {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The winner of the game is "}},{{"selector":"@s"}},{{"text":" with "}},{{"score":{{"name":"@s","objective":"{ns}.temp.kills"}},"color":"yellow"}},{{"text":" kills!"}}]
+execute if score #process_end {ns}.data matches 1 unless score #max_kills {ns}.data matches 1.. run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" There were no winners ;("}}]
 """)
 
 	# /second

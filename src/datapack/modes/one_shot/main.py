@@ -48,7 +48,10 @@ function {path}/give_items
 	write_function(f"{path}/process_end", f"""
 scoreboard players add #process_end {ns}.data 1
 
-execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.temp.kills=18..}}] at @s run function {ns}:engine/add_win
+# Reward the player(s) with the most kills (reaching 18 kills ends the game early, on timeout the current leader(s) win)
+scoreboard players set #max_kills {ns}.data 0
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run scoreboard players operation #max_kills {ns}.data > @s {ns}.temp.kills
+execute if score #process_end {ns}.data matches 1 if score #max_kills {ns}.data matches 1.. as @a[tag=!detached] if score @s {ns}.temp.kills = #max_kills {ns}.data at @s run function {ns}:engine/add_win
 function {translations}/process_end
 execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
