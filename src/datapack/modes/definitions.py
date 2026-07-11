@@ -382,7 +382,7 @@ MODES: list[JsonDict] = [
 # When a group wins the vote, a second vote is launched between its games (or the game is launched directly if only one fits the player count).
 GROUPS_INFO: dict[str, JsonDict] = {
 	"a_coudre": {
-		"name_fr": "À Coudre & Co",
+		"name_fr": "Dé À Coudre & Co",
 		"estimated_time": "1-6 mins",
 		"description": {
 			"fr": [{"text":"Sautez dans la piscine, avec ou sans seau d'eau,\n"},{"text":"tous en même temps ou chacun son tour !\n"}],
