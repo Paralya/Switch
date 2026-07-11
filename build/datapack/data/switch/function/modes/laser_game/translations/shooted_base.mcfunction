@@ -1,7 +1,7 @@
 
 #> switch:modes/laser_game/translations/shooted_base
 #
-# @executed	anchored eyes & positioned ^ ^ ^
+# @executed	as @a[tag=!...,limit=1]
 #
 # @within	switch:modes/laser_game/shooted_base
 #

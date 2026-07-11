@@ -1,9 +1,9 @@
 
 #> switch:modes/laser_game/shooted_base
 #
-# @executed	anchored eyes & positioned ^ ^ ^
+# @executed	as @a[tag=!...,limit=1]
 #
-# @within	switch:modes/laser_game/shoot_hit_point
+# @within	switch:modes/laser_game/shoot_hit_point [ as @a[tag=!...,limit=1] ]
 #
 
 scoreboard players set #color switch.data 0

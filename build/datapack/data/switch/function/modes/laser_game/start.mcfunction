@@ -14,6 +14,7 @@ team modify switch.laser_game.red seeFriendlyInvisibles true
 team modify switch.laser_game.red nametagVisibility never
 
 gamerule minecraft:fall_damage false
+gamerule minecraft:locator_bar false
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness infinite 255 true

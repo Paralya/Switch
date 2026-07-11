@@ -129,7 +129,8 @@ execute if score #color {ns}.data matches 1 if entity @s[scores={{{ns}.alive=10}
 	# /shoot_hit_point
 	write_function(f"{path}/shoot_hit_point", f"""
 summon marker ~ ~ ~ {{Tags:["{ns}.shoot_ray"]}}
-execute if entity @e[tag={ns}.laser_game.base,distance=..1.69,nbt={{Glowing:true}}] run function {ns}:modes/laser_game/shooted_base
+# Run as the shooter (@s is the raycast marker here, not the player)
+execute if entity @e[tag={ns}.laser_game.base,distance=..1.69,nbt={{Glowing:true}}] as @a[tag=!detached,tag={ns}.temp,limit=1] run function {ns}:modes/laser_game/shooted_base
 """)
 
 	# /shoot_particles
@@ -217,6 +218,7 @@ team modify {ns}.laser_game.red seeFriendlyInvisibles true
 team modify {ns}.laser_game.red nametagVisibility never
 
 gamerule minecraft:fall_damage false
+gamerule minecraft:locator_bar false
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness infinite 255 true

@@ -7,5 +7,6 @@
 #
 
 summon marker ~ ~ ~ {Tags:["switch.shoot_ray"]}
-execute if entity @e[tag=switch.laser_game.base,distance=..1.69,nbt={Glowing:true}] run function switch:modes/laser_game/shooted_base
+# Run as the shooter (@s is the raycast marker here, not the player)
+execute if entity @e[tag=switch.laser_game.base,distance=..1.69,nbt={Glowing:true}] as @a[tag=!detached,tag=switch.temp,limit=1] run function switch:modes/laser_game/shooted_base
 
