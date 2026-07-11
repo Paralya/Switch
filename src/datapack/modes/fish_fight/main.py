@@ -118,7 +118,7 @@ execute if score #random {ns}.data matches 9 run effect give @s speed 10 0 true
 
 # si le score est 10, on donne un plastron anti kb
 execute if score #random {ns}.data matches 10 run scoreboard players set @s {ns}.temp.cooldown 100
-execute if score #random {ns}.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate[enchantments={{binding_curse:1}},attribute_modifiers=[{{type:"knockback_resistance",slot:"chest",id:"{ns}.invulnerable",amount:100,operation:"add_value"}}]]
+execute if score #random {ns}.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate[enchantments={{binding_curse:1,"{ns}:invulnerable":1}},attribute_modifiers=[{{type:"knockback_resistance",slot:"chest",id:"{ns}.invulnerable",amount:100,operation:"add_value"}}]]
 execute if score #random {ns}.data matches 10 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 execute if score #random {ns}.data matches 10 run effect give @s regeneration 8 1 true
 execute if score #random {ns}.data matches 10 run effect give @s speed 10 0 true
@@ -627,7 +627,7 @@ execute if data storage {ns}:main {{map:"airdox_fish_fight"}} run function {ns}:
 function {ns}:modes/_common/xp_bar/three_lives
 
 scoreboard players set @s {ns}.temp.cooldown 100
-item replace entity @s armor.chest with golden_chestplate[enchantments={{binding_curse:1}},attribute_modifiers=[{{type:"knockback_resistance",slot:"chest",id:"{ns}.invulnerable",amount:100,operation:"add_value"}}]]
+item replace entity @s armor.chest with golden_chestplate[enchantments={{binding_curse:1,"{ns}:invulnerable":1}},attribute_modifiers=[{{type:"knockback_resistance",slot:"chest",id:"{ns}.invulnerable",amount:100,operation:"add_value"}}]]
 attribute @s jump_strength base set 0
 effect give @s weakness 4 255 true
 effect give @s slowness 3 255 true

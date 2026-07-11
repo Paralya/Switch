@@ -380,6 +380,7 @@ MODES: list[JsonDict] = [
 # Voting groups: games sharing the same "group" key show up as a single vote entry
 # (a game without a "group" key gets its own group, defaulting to its id).
 # When a group wins the vote, a second vote is launched between its games (or the game is launched directly if only one fits the player count).
+GROUP_NAME_COLOR: str = "#FFD42A"  # Between yellow and gold, distinguishes multi-game groups in the vote message
 GROUPS_INFO: dict[str, JsonDict] = {
 	"a_coudre": {
 		"name_fr": "Dé À Coudre & Co",
@@ -398,7 +399,7 @@ GROUPS_INFO: dict[str, JsonDict] = {
 		},
 	},
 	"rush": {
-		"name_fr": "Rush",
+		"name_fr": "Rush The Point/Flag",
 		"estimated_time": "5-10 mins",
 		"description": {
 			"fr": [{"text":"Capturez les points centraux ou volez le drapeau\n"},{"text":"ennemi avec vos classes spéciales.\n"}],
@@ -463,11 +464,14 @@ def get_groups() -> list[JsonDict]:
 			}
 		else:
 			# Multiple games: aggregate player bounds and build a dedicated lore from GROUPS_INFO
+			# (names are colored components so the vote message distinguishes multi-game groups, every display uses "interpret":true)
 			info: JsonDict = GROUPS_INFO[group_id]
 			entry = {
 				"min_players": min(mode["min_players"] for mode in modes),
 				"max_players": -1 if any(mode["max_players"] == -1 for mode in modes) else max(mode["max_players"] for mode in modes),
-				"id": group_id, "name_fr": info["name_fr"], "name_en": info.get("name_en", info["name_fr"]),
+				"id": group_id,
+				"name_fr": {"text": info["name_fr"], "color": GROUP_NAME_COLOR},
+				"name_en": {"text": info.get("name_en", info["name_fr"]), "color": GROUP_NAME_COLOR},
 			}
 			included: str = ", ".join(mode["name_fr"] for mode in modes)
 			for lang in ("fr", "en"):
@@ -475,7 +479,7 @@ def get_groups() -> list[JsonDict]:
 				group_pretext: dict[str, str] = LANG_GROUP_PRETEXT[lang]
 				entry[f"lore_{lang}"] = [
 					"",
-					{"text":f"[{entry['name_fr']}]\n","color":"yellow"},
+					{"text":f"[{info['name_fr']}]\n","color":GROUP_NAME_COLOR},
 					*info["description"][lang],
 					{"text":f"\n[{pretext['estimated_time']} {info['estimated_time']}]","color":"gold"},
 					{"text":f"\n[{group_pretext['includes']} {included}]","color":"green"},

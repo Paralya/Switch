@@ -3,12 +3,14 @@
 #
 # @executed	as @a[scores={switch.alive=1..},gamemode=survival]
 #
-# @within	switch:modes/replicate_the_build/utils/finish_building_player
+# @within	switch:modes/replicate_the_build/utils/finish_building_player with storage switch:rtb
+#
+# @args		temp (unknown)
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Parfait ! En ","color":"green"},{"nbt":"temp","storage":"switch:rtb","plain":true,"color":"green"},{"text":" secondes","color":"green"}]
+$tellraw @s[scores={switch.lang=0}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Parfait ! En $(temp) secondes","color":"green"}]
 
 # English
-tellraw @s[scores={switch.lang=1}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Perfect! In ","color":"green"},{"nbt":"temp","storage":"switch:rtb","plain":true,"color":"green"},{"text":" seconds","color":"green"}]
+$tellraw @s[scores={switch.lang=1}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Perfect! In $(temp) seconds","color":"green"}]
 

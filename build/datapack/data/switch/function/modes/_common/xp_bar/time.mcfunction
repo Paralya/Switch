@@ -8,7 +8,7 @@
 #			switch:modes/cigogne/xp_bar {points_score:"#cigogne_seconds",levels_score:"#remaining_time"}
 #			switch:modes/coin_chaser/xp_bar {points_score:"#remaining_time",levels_score:"#remaining_time"}
 #			switch:modes/creeper_apocalypse/xp_bar {points_score:"#creeper_apocalypse_seconds",levels_score:"#remaining_time"}
-#			switch:modes/de_a_coudre/xp_bar {points_score:"#remaining_time",levels_score:"#remaining_time"}
+#			switch:modes/de_a_coudre/xp_bar {points_score:"#remaining_time",levels_score:"#remaining_seconds"}
 #			switch:modes/feed_fast/xp_bar {points_score:"#remaining_time",levels_score:"#remaining_time"}
 #			switch:modes/gay_shooter/xp_bar {points_score:"#remaining_time",levels_score:"#remaining_time"}
 #			switch:modes/infected/xp_bar {points_score:"#remaining_time",levels_score:"#remaining_time"}

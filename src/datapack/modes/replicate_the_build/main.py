@@ -473,7 +473,7 @@ tag @s remove {ns}.rtb.temp
 	write_function(f"{path}/utils/finish_building_player", f"""
 gamemode spectator @s
 execute store result storage {ns}:rtb temp float 0.05 run scoreboard players get @s {ns}.rtb.time
-function {ns}:modes/replicate_the_build/translations/utils_finish_building_player
+function {ns}:modes/replicate_the_build/translations/utils_finish_building_player with storage {ns}:rtb
 
 execute at @s run playsound minecraft:block.note_block.harp ambient @s ~ ~ ~ 1 2
 """)

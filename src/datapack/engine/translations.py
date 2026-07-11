@@ -90,7 +90,7 @@ execute unless score #nb_attached {ns}.data >= #min_required {ns}.data run tellr
 			f'{{"nbt":"selections[{i - 1}].name_{lang}","storage":"{ns}:main","interpret":true,"color":"yellow",{events}}}',
 			f'{{"text":"] ","color":"yellow",{events}}}',
 			f'{{"score":{{"name":"#vote_game_{i}","objective":"{ns}.data"}},"color":"{count_color}",{events}}}',
-			f'{{"nbt":"msg_votes[{i - 1}]","storage":"{ns}:main","plain":true,"color":"{count_color}",{events}}}',
+			f'{{"nbt":"msg_votes[{i - 1}]","storage":"{ns}:main","interpret":true,"color":"{count_color}",{events}}}',
 		))
 
 	def vote_line(i: int, lang: str, lang_id: int, voted: bool) -> str:

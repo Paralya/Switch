@@ -5,5 +5,5 @@
 #
 
 scoreboard players set #divide switch.data 300000
-function switch:modes/_common/xp_bar/time {points_score:"#remaining_time",levels_score:"#remaining_time"}
+function switch:modes/_common/xp_bar/time {points_score:"#remaining_time",levels_score:"#remaining_seconds"}
 

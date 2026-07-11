@@ -85,8 +85,8 @@ title @s[scores={{{ns}.lang=1}}] subtitle [{{"score":{{"name":"@p[tag={ns}.temp]
 	# /utils_finish_building_player
 	write_function(f"{path}/utils_finish_building_player", rf"""
 # French
-tellraw @s[scores={{{ns}.lang=0}}] [{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Parfait ! En ","color":"green"}},{{"nbt":"temp","storage":"{ns}:rtb","plain":true,"color":"green"}},{{"text":" secondes","color":"green"}}]
+$tellraw @s[scores={{{ns}.lang=0}}] [{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Parfait ! En $(temp) secondes","color":"green"}}]
 
 # English
-tellraw @s[scores={{{ns}.lang=1}}] [{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Perfect! In ","color":"green"}},{{"nbt":"temp","storage":"{ns}:rtb","plain":true,"color":"green"}},{{"text":" seconds","color":"green"}}]
+$tellraw @s[scores={{{ns}.lang=1}}] [{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Perfect! In $(temp) seconds","color":"green"}}]
 """)

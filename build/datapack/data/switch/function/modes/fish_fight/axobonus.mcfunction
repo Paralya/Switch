@@ -102,7 +102,7 @@ execute if score #random switch.data matches 9 run effect give @s speed 10 0 tru
 
 # si le score est 10, on donne un plastron anti kb
 execute if score #random switch.data matches 10 run scoreboard players set @s switch.temp.cooldown 100
-execute if score #random switch.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate[enchantments={binding_curse:1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
+execute if score #random switch.data matches 10 run item replace entity @s armor.chest with chainmail_chestplate[enchantments={binding_curse:1,"switch:invulnerable":1},attribute_modifiers=[{type:"knockback_resistance",slot:"chest",id:"switch.invulnerable",amount:100,operation:"add_value"}]]
 execute if score #random switch.data matches 10 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 execute if score #random switch.data matches 10 run effect give @s regeneration 8 1 true
 execute if score #random switch.data matches 10 run effect give @s speed 10 0 true

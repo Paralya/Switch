@@ -182,7 +182,10 @@ execute as @e[type=player,tag=!detached,gamemode=adventure,predicate={ns}:in_wat
 function {ns}:utils/on_death_run_function {{function:"{path}/death"}}
 execute if score #de_a_coudre_seconds {ns}.data matches 1.. unless score #rounds {ns}.data matches 0 if score #detect_end {ns}.data matches 0 unless entity @a[tag=!detached,gamemode=adventure] if entity @a[tag=!detached] run function {path}/next_player
 
-# XP bar
+# XP bar (#remaining_time is in ticks, the displayed levels are in seconds)
+scoreboard players operation #remaining_seconds {ns}.data = #remaining_time {ns}.data
+scoreboard players operation #remaining_seconds {ns}.data /= #20 {ns}.data
+execute if score #remaining_seconds {ns}.data matches ..0 run scoreboard players set #remaining_seconds {ns}.data 0
 function {path}/xp_bar
 execute if score #remaining_time {ns}.data matches -120.. run scoreboard players remove #remaining_time {ns}.data 1
 execute if score #remaining_time {ns}.data matches 0 as @a[tag=!detached,gamemode=adventure] at @s if entity @s[y=190,dy=100] run kill @s
@@ -196,4 +199,4 @@ execute if score #detect_end {ns}.data matches 1 run function {path}/process_end
 """)
 
 	# /xp_bar
-	write_time_xp_bar(f"{path}/xp_bar", 300)
+	write_time_xp_bar(f"{path}/xp_bar", 300, levels_score="#remaining_seconds")
