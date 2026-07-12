@@ -3,16 +3,23 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ..misc_links.note_block_studio import get_song_score
+
+# Song played on loop while the practice mode is enabled (name of a song of the note_block_studio folder)
+PRACTICE_SONG: str = "stay_inside_me"
+
 
 def write_practice_functions() -> None:
 	""" Write the practice mode functions at switch:player/practice/* (Geometry Dash-like checkpoints for the lobby jumps).
 
 	The toggle item (stardust fragment) sits in a corner of the lobby inventory: dropping it out toggles the practice mode.
-	When enabled, 3 action items are given in the hotbar (place checkpoint / respawn / remove checkpoint).
+	When enabled, 3 action items are given in the hotbar (place checkpoint / respawn / remove checkpoint),
+	and the PRACTICE_SONG is played on loop (until the practice mode is disabled, or a game starts).
 	Checkpoints are stored in the "{ns}:practice" storage (never entities, so they can't be killed), 5 max per player.
 	"""
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:player/practice"
+	song_score: int = get_song_score(PRACTICE_SONG)
 	write_practice_translations()
 
 	# Storage setup (appended to switch:load)
@@ -70,16 +77,32 @@ function {ns}:player/practice/clear_checkpoints_macro with storage {ns}:temp pra
 # OFF -> ON
 execute if score #was_active {ns}.data matches 0 run tag @s add {ns}.practice
 execute if score #was_active {ns}.data matches 0 run playsound block.beacon.activate ambient @s
+execute if score #was_active {ns}.data matches 0 run function {ns}:player/practice/music_start
 execute if score #was_active {ns}.data matches 0 run function {ns}:player/translations/practice_enabled
 
 # ON -> OFF (teleport back to the start of the jump, so the player can't complete it from where they practiced)
 execute if score #was_active {ns}.data matches 1 run tag @s remove {ns}.practice
 execute if score #was_active {ns}.data matches 1 run tag @s add {ns}.lobby_respawn
 execute if score #was_active {ns}.data matches 1 run playsound block.beacon.deactivate ambient @s
+execute if score #was_active {ns}.data matches 1 run function {ns}:player/practice/music_stop
 execute if score #was_active {ns}.data matches 1 run function {ns}:player/translations/practice_disabled
 
 # Re-give the practice items
 function {ns}:player/practice/give_items
+""")
+
+	# /music_start (play the practice song on loop, the score is resolved at build time from the song name)
+	write_function(f"{path}/music_start", f"""
+scoreboard players set @s {ns}.music.current {song_score}
+scoreboard players set @s {ns}.music.progress 1
+scoreboard players set @s {ns}.music.loop_state 1
+""")
+
+	# /music_stop (also called when a game starts, see engine/start_state)
+	write_function(f"{path}/music_stop", f"""
+# Stop the loop, and the music itself only if it's still the practice song (a song chosen in the browser keeps playing)
+scoreboard players set @s {ns}.music.loop_state 0
+execute if score @s {ns}.music.current matches {song_score} run function {ns}:music/stop
 """)
 
 	# /clear_checkpoints_macro

@@ -63,8 +63,18 @@ execute if score @s {ns}.music.progress matches ..-1 run scoreboard players set 
 
 	# /music_over
 	write_function(f"{path}/music_over", f"""
-execute unless score @s {ns}.music.loop_state matches 1.. run scoreboard players set @s {ns}.music.current -1
-execute unless score @s {ns}.music.loop_state matches 1.. run scoreboard players set @s {ns}.music.progress 0
+# If the loop is enabled (ex: practice mode), restart the same song from the beginning
+execute if score @s {ns}.music.loop_state matches 1.. run scoreboard players set @s {ns}.music.progress 1
+
+# Else, stop the music
+execute unless score @s {ns}.music.loop_state matches 1.. run function {ns}:music/stop
+""")
+
+	# /stop (stop the music currently playing, ex: when leaving the practice mode)
+	write_function(f"{path}/stop", f"""
+scoreboard players set @s {ns}.music.loop_state 0
+scoreboard players set @s {ns}.music.current -1
+scoreboard players set @s {ns}.music.progress 0
 """)
 
 	# /next_music

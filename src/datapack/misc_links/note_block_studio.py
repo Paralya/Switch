@@ -13,6 +13,35 @@ INPUTS_FOLDER: str = "note_block_studio/datapacks"
 REQUIRED_PATH_PARTS: list[str] = ["notes/", ".mcfunction"]
 LIB_TO_WRITE: str = "datapack/switch_music.zip"
 
+
+# Songs listing (the order of the files is what gives each song its music index, so never sort it)
+def get_songs() -> list[tuple[str, str, str]]:
+	""" Get every song of the inputs folder.
+
+	Returns:
+		list[tuple[str, str, str]]: (file name, author, song name) of each song, in the music index order.
+	"""
+	songs: list[tuple[str, str, str]] = []
+	for file in os.listdir(INPUTS_FOLDER):
+		if file.endswith(".zip"):
+			author, song = file.replace(".zip", "").replace(" ", "_").split("_sss_")
+			songs.append((file, author, song))
+	return songs
+
+def get_song_score(name: str) -> int:
+	""" Get the "{ns}.music.current" score that plays a song, so the index is never hardcoded in the datapack.
+
+	Args:
+		name (str): Name of the song, as written after "_sss_" in the file name (ex: "stay_inside_me").
+	Returns:
+		int: The score to play the song (the first song of the folder is the score 100).
+	"""
+	songs: list[str] = [song for _, _, song in get_songs()]
+	if name not in songs:
+		raise ValueError(f"Song '{name}' not found in '{INPUTS_FOLDER}', available songs: {songs}")
+	return 100 + songs.index(name)
+
+
 # Main function
 def main() -> None:
 	ns: str = Mem.ctx.project_id
@@ -29,46 +58,44 @@ def main() -> None:
 	with zipfile.ZipFile(lib_file, "w") as lib:
 
 		# For each .zip file in the input folder
-		for file in os.listdir(INPUTS_FOLDER):
-			if file.endswith(".zip"):
-				length: int = 0
-				bpm: int = ALL_BPM
+		for file, author, song_name in get_songs():
+			length: int = 0
+			bpm: int = ALL_BPM
 
-				# For each file in the zip file that matches the required path parts
-				with zipfile.ZipFile(f"{INPUTS_FOLDER}/{file}", "r") as zf:
-					files: list[str] = sorted(zf.namelist())
-					load_file: str = next(x for x in files if "load.mcfunction" in x)
-					bpm = int(zf.read(load_file).decode("utf-8").split(" ")[-1])
+			# For each file in the zip file that matches the required path parts
+			with zipfile.ZipFile(f"{INPUTS_FOLDER}/{file}", "r") as zf:
+				files: list[str] = sorted(zf.namelist())
+				load_file: str = next(x for x in files if "load.mcfunction" in x)
+				bpm = int(zf.read(load_file).decode("utf-8").split(" ")[-1])
 
-					for file_to_copy in files:
-						if all(x in file_to_copy for x in REQUIRED_PATH_PARTS):
+				for file_to_copy in files:
+					if all(x in file_to_copy for x in REQUIRED_PATH_PARTS):
 
-							# Only keep the playsound lines
-							playsounds: list[str] = zf.read(file_to_copy).decode("utf-8").split("\n")
-							playsounds = [line for line in playsounds if line.startswith("playsound")]
+						# Only keep the playsound lines
+						playsounds: list[str] = zf.read(file_to_copy).decode("utf-8").split("\n")
+						playsounds = [line for line in playsounds if line.startswith("playsound")]
 
-							# Get a higher volume
-							for i, line in enumerate(playsounds):
-								splitted: list[str] = line.split(" ")
-								splitted[7] = "1"
-								playsounds[i] = " ".join(splitted)
-							file_content: str = "\n".join(playsounds)
+						# Get a higher volume
+						for i, line in enumerate(playsounds):
+							splitted: list[str] = line.split(" ")
+							splitted[7] = "1"
+							playsounds[i] = " ".join(splitted)
+						file_content: str = "\n".join(playsounds)
 
-							# Write the file
-							splitted_destination: list[str] = file_to_copy.replace("notes/", "").split("/")[-2:]
-							music_namespace: str = splitted_destination[0]
-							note: str = splitted_destination[1].split(".")[0]
-							note = str(int(note) * ALL_BPM // bpm)
-							destination_file: str = f"data/{ns}/function/music/{music_namespace}/{note}.mcfunction"
-							lib.writestr(destination_file, file_content.encode("utf-8"))
+						# Write the file
+						splitted_destination: list[str] = file_to_copy.replace("notes/", "").split("/")[-2:]
+						music_namespace: str = splitted_destination[0]
+						note: str = splitted_destination[1].split(".")[0]
+						note = str(int(note) * ALL_BPM // bpm)
+						destination_file: str = f"data/{ns}/function/music/{music_namespace}/{note}.mcfunction"
+						lib.writestr(destination_file, file_content.encode("utf-8"))
 
-							# Remember the highest length
-							length = max(length, int(note))
+						# Remember the highest length
+						length = max(length, int(note))
 
-				# Add the objective
-				song_parts: list[str] = file.replace(".zip", "").replace(" ", "_").split("_sss_")
-				authors.append(song_parts[0])
-				objectives.append((song_parts[1], length, bpm))
+			# Add the objective
+			authors.append(author)
+			objectives.append((song_name, length, bpm))
 
 		# Add a pack.mcmeta file
 		lib.writestr("pack.mcmeta", stp.json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))

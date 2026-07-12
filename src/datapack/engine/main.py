@@ -134,6 +134,9 @@ function {ns}:utils/reset_players
 function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
 function {ns}:engine/signals/start
 
+# Stop the practice mode music of the players joining the game (it would loop during the whole game)
+execute as @a[tag=!detached,tag={ns}.practice] run function {ns}:player/practice/music_stop
+
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 """)
 

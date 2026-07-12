@@ -18,12 +18,14 @@ function switch:player/practice/clear_checkpoints_macro with storage switch:temp
 # OFF -> ON
 execute if score #was_active switch.data matches 0 run tag @s add switch.practice
 execute if score #was_active switch.data matches 0 run playsound block.beacon.activate ambient @s
+execute if score #was_active switch.data matches 0 run function switch:player/practice/music_start
 execute if score #was_active switch.data matches 0 run function switch:player/translations/practice_enabled
 
 # ON -> OFF (teleport back to the start of the jump, so the player can't complete it from where they practiced)
 execute if score #was_active switch.data matches 1 run tag @s remove switch.practice
 execute if score #was_active switch.data matches 1 run tag @s add switch.lobby_respawn
 execute if score #was_active switch.data matches 1 run playsound block.beacon.deactivate ambient @s
+execute if score #was_active switch.data matches 1 run function switch:player/practice/music_stop
 execute if score #was_active switch.data matches 1 run function switch:player/translations/practice_disabled
 
 # Re-give the practice items
