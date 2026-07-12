@@ -70,8 +70,39 @@ scoreboard players set #border_laps {ns}.data 0
 
 	# /death
 	write_function(f"{path}/death", f"""
+# Attribute the kill: nearest recent digger marker under the victim (excluding themselves)
+scoreboard players operation #victim_id {ns}.id = @s {ns}.id
+scoreboard players set #killer_id {ns}.id 0
+execute at @s as @n[tag={ns}.spleef_dig,distance=..4] run scoreboard players operation #killer_id {ns}.id = @s {ns}.id
+execute if score #killer_id {ns}.id = #victim_id {ns}.id run scoreboard players set #killer_id {ns}.id 0
+
+# Tag that digger as the killer so the death message can name them
+scoreboard players operation #player_id {ns}.id = #killer_id {ns}.id
+execute if score #killer_id {ns}.id matches 1.. as @a[tag=!detached,predicate={ns}:has_same_id] run tag @s add {ns}.spleef_killer
+
 function {translations}/death
+tag @a remove {ns}.spleef_killer
 function {ns}:modes/_common/death_spectator
+""")
+
+	# /dig_mark (as a player who just mined snow, at their feet: drop a short-lived owner marker)
+	write_function(f"{path}/dig_mark", f"""
+scoreboard players operation #owner_id {ns}.id = @s {ns}.id
+execute summon marker run function {path}/dig_marker
+""")
+
+	# /dig_marker (as the freshly summoned digger marker)
+	write_function(f"{path}/dig_marker", f"""
+tag @s add {ns}.spleef_dig
+scoreboard players operation @s {ns}.id = #owner_id {ns}.id
+scoreboard players set @s {ns}.temp.marker_age 0
+""")
+
+	# /trap_detect (as a player standing in powder snow: mark them trapped and warn them)
+	write_function(f"{path}/trap_detect", f"""
+scoreboard players set @s {ns}.temp.trapped_timer 40
+title @s[scores={{{ns}.lang=0}}] actionbar {{"text":"⚠ Piégé dans de la neige poudreuse !","color":"aqua"}}
+title @s[scores={{{ns}.lang=1}}] actionbar {{"text":"⚠ Stuck in powder snow!","color":"aqua"}}
 """)
 
 	# /give_items
@@ -161,6 +192,13 @@ function {translations}/start
 
 scoreboard objectives add {ns}.temp.placed_shulker minecraft.used:minecraft.white_shulker_box
 
+# Kill attribution / powder snow trap objectives
+scoreboard objectives add {ns}.temp.mined minecraft.mined:minecraft.snow_block
+scoreboard objectives add {ns}.temp.marker_age dummy
+scoreboard objectives add {ns}.temp.trapped_timer dummy
+scoreboard players set @a[tag=!detached] {ns}.temp.mined 0
+scoreboard players set @a[tag=!detached] {ns}.temp.trapped_timer 0
+
 scoreboard players set #spleef_seconds {ns}.data -10
 scoreboard players set #spleef_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
@@ -169,11 +207,24 @@ scoreboard players set #process_end {ns}.data 0
 	# /stop
 	write_function(f"{path}/stop", f"""
 scoreboard objectives remove {ns}.temp.placed_shulker
+scoreboard objectives remove {ns}.temp.mined
+scoreboard objectives remove {ns}.temp.marker_age
+scoreboard objectives remove {ns}.temp.trapped_timer
 """)
 
 	# /tick
 	write_function(f"{path}/tick", f"""
 scoreboard players add #spleef_ticks {ns}.data 1
+
+## Kill attribution : drop owner markers where players dig, age and expire old ones (after 2s)
+execute as @a[tag=!detached,gamemode=survival,scores={{{ns}.temp.mined=1..}}] at @s run function {path}/dig_mark
+scoreboard players set @a {ns}.temp.mined 0
+scoreboard players add @e[tag={ns}.spleef_dig] {ns}.temp.marker_age 1
+kill @e[tag={ns}.spleef_dig,scores={{{ns}.temp.marker_age=40..}}]
+
+## Powder snow trap detection (trapped_timer stays > 0 for 2s after leaving the powder snow)
+scoreboard players remove @a[scores={{{ns}.temp.trapped_timer=1..}}] {ns}.temp.trapped_timer 1
+execute as @a[tag=!detached,gamemode=survival] at @s if block ~ ~ ~ powder_snow run function {path}/trap_detect
 
 ## No drop system / Death system / Border reduction system
 execute as @e[type=item,tag=!{ns}.checked] run function {path}/no_drop

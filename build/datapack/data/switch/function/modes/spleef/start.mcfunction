@@ -19,6 +19,13 @@ function switch:modes/spleef/translations/start
 
 scoreboard objectives add switch.temp.placed_shulker minecraft.used:minecraft.white_shulker_box
 
+# Kill attribution / powder snow trap objectives
+scoreboard objectives add switch.temp.mined minecraft.mined:minecraft.snow_block
+scoreboard objectives add switch.temp.marker_age dummy
+scoreboard objectives add switch.temp.trapped_timer dummy
+scoreboard players set @a[tag=!detached] switch.temp.mined 0
+scoreboard players set @a[tag=!detached] switch.temp.trapped_timer 0
+
 scoreboard players set #spleef_seconds switch.data -10
 scoreboard players set #spleef_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
