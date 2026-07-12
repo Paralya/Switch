@@ -48,6 +48,33 @@ def write_jump_timer_functions() -> None:
 scoreboard objectives add {ns}.jump_timer dummy
 scoreboard objectives add {ns}.jump_timer_id dummy
 {storage_init}
+
+# One-time migration: the first version stored best times in ticks (20/s), we now use centiseconds
+# (100/s). Convert every existing entry once (ticks * 5 = centiseconds). The guard score persists.
+execute unless score #jump_timer_cs_migrated {ns}.data matches 1 run function {ns}:player/jump_timer/migrate
+scoreboard players set #jump_timer_cs_migrated {ns}.data 1
+""")
+
+	# /migrate (one-time ticks -> centiseconds conversion of every leaderboard entry)
+	migrate_lines: str = "\n".join(
+		f"data modify storage {ns}:temp jt_mig_src set from storage {ns}:jumps {key}\n"
+		f"data modify storage {ns}:temp jt_mig_dst set value []\n"
+		f"execute if data storage {ns}:temp jt_mig_src[0] run function {ns}:player/jump_timer/migrate_loop\n"
+		f"data modify storage {ns}:jumps {key} set from storage {ns}:temp jt_mig_dst"
+		for _, key, _, _, _, _ in JUMPS
+	)
+	write_function(f"{path}/migrate", f"""
+{migrate_lines}
+""")
+
+	# /migrate_loop (multiply the first entry's time by 5, then move it to the destination list)
+	write_function(f"{path}/migrate_loop", f"""
+execute store result score #mig_time {ns}.data run data get storage {ns}:temp jt_mig_src[0].time
+scoreboard players operation #mig_time {ns}.data *= #5 {ns}.data
+execute store result storage {ns}:temp jt_mig_src[0].time int 1 run scoreboard players get #mig_time {ns}.data
+data modify storage {ns}:temp jt_mig_dst append from storage {ns}:temp jt_mig_src[0]
+data remove storage {ns}:temp jt_mig_src[0]
+execute if data storage {ns}:temp jt_mig_src[0] run function {ns}:player/jump_timer/migrate_loop
 """)
 
 	# /tick (called by {ns}:player/tick_detach, before the jumps completion checks)

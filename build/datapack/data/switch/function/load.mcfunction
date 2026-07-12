@@ -152,3 +152,8 @@ execute unless data storage switch:jumps obsidian run data modify storage switch
 execute unless data storage switch:jumps duality run data modify storage switch:jumps duality set value []
 execute unless data storage switch:jumps graviglitch run data modify storage switch:jumps graviglitch set value []
 
+# One-time migration: the first version stored best times in ticks (20/s), we now use centiseconds
+# (100/s). Convert every existing entry once (ticks * 5 = centiseconds). The guard score persists.
+execute unless score #jump_timer_cs_migrated switch.data matches 1 run function switch:player/jump_timer/migrate
+scoreboard players set #jump_timer_cs_migrated switch.data 1
+
