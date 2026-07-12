@@ -58,6 +58,10 @@ team modify {ns}.temp.civil color gray
 team modify {ns}.temp.king color dark_purple
 scoreboard players set #next_role {ns}.data 0
 execute as @a[tag=!detached,sort=random] at @s run function {path}/roles/main
+
+# Equilibrage : on adapte le nombre de gaps du roi au ratio civils/roi (4 civils/roi = optimal = 8 gaps)
+function {path}/balance_king_gaps
+
 execute as @a[tag=!detached] at @s run function {path}/give_items
 
 give @r[team={ns}.temp.king] splash_potion[item_name={{"text":"Potion dévastatrice du tyran"}},lore=[{{"text":"À lancer sur les civils","color":"white","italic":false}}],potion_contents={{potion:"minecraft:water",custom_color:7039516,custom_effects:[{{id:"slowness",amplifier:0b,duration:400,show_particles:0b}},{{id:"mining_fatigue",amplifier:0b,duration:400,show_particles:0b}},{{id:"blindness",amplifier:0b,duration:110,show_particles:0b}}]}}]
@@ -166,7 +170,7 @@ item replace entity @s[team={ns}.temp.king] armor.head with golden_helmet[enchan
 item replace entity @s[team={ns}.temp.king] hotbar.0 with water_bucket
 item replace entity @s[team={ns}.temp.king] hotbar.1 with golden_sword[enchantments={{unbreaking:3,sharpness:3}}]
 item replace entity @s[team={ns}.temp.king] hotbar.3 with bow[enchantments={{flame:1,punch:1}}]
-item replace entity @s[team={ns}.temp.king] hotbar.7 with golden_apple 8
+execute if entity @s[team={ns}.temp.king] run function {path}/give_king_gaps with storage {ns}:temp king_gaps
 item replace entity @s[team={ns}.temp.king] hotbar.8 with oak_planks 64
 item replace entity @s[team={ns}.temp.king] inventory.0 with arrow 45
 effect give @s[team={ns}.temp.king] resistance infinite 3 true
@@ -174,6 +178,32 @@ effect give @s[team={ns}.temp.king] speed infinite 0 true
 effect give @s[team={ns}.temp.king] health_boost infinite 1 true
 
 attribute @s attack_speed base set 1024
+""")
+
+	# /balance_king_gaps
+	# Le roi est trop fort quand il y a moins de civils que prévu par tête. On calcule le ratio
+	# civils/roi (optimal = 4, ce qui donne 8 gaps) et on descend le nombre de gaps du roi jusqu'à
+	# un minimum de 3, pour rééquilibrer les parties avec un nombre de joueurs non optimal.
+	write_function(f"{path}/balance_king_gaps", f"""
+scoreboard players set #n_civils {ns}.data 0
+scoreboard players set #n_kings {ns}.data 1
+execute store result score #n_civils {ns}.data if entity @a[tag=!detached,team={ns}.temp.civil]
+execute store result score #n_kings {ns}.data if entity @a[tag=!detached,team={ns}.temp.king]
+execute if score #n_kings {ns}.data matches ..0 run scoreboard players set #n_kings {ns}.data 1
+
+# Gaps = 2 * (civils / roi), borné entre 3 et 8
+scoreboard players operation #king_gaps {ns}.data = #n_civils {ns}.data
+scoreboard players operation #king_gaps {ns}.data /= #n_kings {ns}.data
+scoreboard players operation #king_gaps {ns}.data *= #2 {ns}.data
+execute if score #king_gaps {ns}.data matches 8.. run scoreboard players set #king_gaps {ns}.data 8
+execute if score #king_gaps {ns}.data matches ..3 run scoreboard players set #king_gaps {ns}.data 3
+
+execute store result storage {ns}:temp king_gaps.count int 1 run scoreboard players get #king_gaps {ns}.data
+""")
+
+	# /give_king_gaps (macro: count)
+	write_function(f"{path}/give_king_gaps", """
+$item replace entity @s hotbar.7 with golden_apple $(count)
 """)
 
 	# /xp_bar
