@@ -33,6 +33,8 @@ execute unless data storage switch:advancements all[{id:"jump_duality"}] run dat
 
 execute unless data storage switch:advancements all[{id:"jump_graviglitch"}] run data modify storage switch:advancements all append value {id:"jump_graviglitch", percent:{int:0, digits:0}, players:[], total:0}
 
+execute unless data storage switch:advancements all[{id:"jump_practice"}] run data modify storage switch:advancements all append value {id:"jump_practice", percent:{int:0, digits:0}, players:[], total:0}
+
 execute unless data storage switch:advancements all[{id:1}] run data modify storage switch:advancements all append value {id:1, percent:{int:0, digits:0}, players:[], total:0}
 
 execute unless data storage switch:advancements all[{id:2}] run data modify storage switch:advancements all append value {id:2, percent:{int:0, digits:0}, players:[], total:0}
@@ -214,6 +216,7 @@ data modify storage switch:advancements all[{id:"jump_pink"}] merge value {color
 data modify storage switch:advancements all[{id:"jump_obsidian"}] merge value {color:"blue", auteur:"Stoupy", name:"The Obsidian Jump", description:"Finir le jump obsidienne pour la première fois", desc_en:"Finish the obsidian jump for the first time"}
 data modify storage switch:advancements all[{id:"jump_duality"}] merge value {color:"blue", auteur:"Stoupy", name:"The Duality Jump", description:"Finir le jump duo pour la première fois", desc_en:"Finish the duo jump for the first time"}
 data modify storage switch:advancements all[{id:"jump_graviglitch"}] merge value {color:"blue", auteur:"Stoupy", name:"The GraviGlitch Jump", description:"Finir le jump graviglitch pour la première fois", desc_en:"Finish the graviglitch jump for the first time"}
+data modify storage switch:advancements all[{id:"jump_practice"}] merge value {color:"blue", auteur:"Stoupy", name:"Practice Mode", description:"Terminer un practice run d'un jump du lobby", desc_en:"Complete one practice run of a lobby jump"}
 data modify storage switch:advancements all[{id:1}] merge value {color:"green", auteur:"Stoupy", name:"Bénévolat", description:"Aider à la construction d'une map ou la création d'un mini-jeu", desc_en:"Help to build a map or create a mini-game"}
 data modify storage switch:advancements all[{id:2}] merge value {color:"green", auteur:"Stoupy", name:"Fidèle", description:"Jouez un total de 100 parties sur le Switch", desc_en:"Play a total of 100 games on the Switch"}
 data modify storage switch:advancements all[{id:3}] merge value {color:"green", auteur:"Stoupy", name:"La moula", description:"Ayez au moins 400 Saphirs dans votre banque", desc_en:"Have at least 400 Sapphires in your bank"}

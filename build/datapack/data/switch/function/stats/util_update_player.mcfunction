@@ -22,6 +22,7 @@
 #			switch:advancements/jumps/bricks
 #			switch:advancements/jumps/duality
 #			switch:advancements/jumps/graviglitch
+#			switch:advancements/jumps/practice
 #			switch:shop/trigger
 #
 

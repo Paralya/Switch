@@ -16,7 +16,7 @@ CATEGORIES_COLOR: dict[str, str] = {
 
 # Format: [parent, id, author, category, title, desc_fr, desc_en]
 GOOGLE_SHEET: str = """
-{"id": "minecraft:lime_concrete"}	categories/jumps	jump_green	Stoupy	jump	The Green Jump	Finir le jump vert pour la première fois	Finish the green jump for the first time
+{"id": "minecraft:lime_concrete"}	jump_practice	jump_green	Stoupy	jump	The Green Jump	Finir le jump vert pour la première fois	Finish the green jump for the first time
 {"id": "minecraft:white_concrete"}	jump_green	jump_white	Stoupy	jump	The White Jump	Finir le jump blanc pour la première fois	Finish the white jump for the first time
 {"id": "minecraft:blue_concrete"}	jump_white	jump_blue	Stoupy	jump	The Blue Jump	Finir le jump bleu pour la première fois	Finish the blue jump for the first time
 {"id": "minecraft:yellow_concrete"}	jump_dripstone	jump_yellow	ArtiGrrr	jump	The Yellow Jump	Finir le jump jaune pour la première fois	Finish the yellow jump for the first time
@@ -29,6 +29,7 @@ GOOGLE_SHEET: str = """
 {"id": "minecraft:crying_obsidian"}	jump_graviglitch	jump_obsidian	Stoupy	jump	The Obsidian Jump	Finir le jump obsidienne pour la première fois	Finish the obsidian jump for the first time
 {"id": "minecraft:waxed_copper_block"}	jump_red	jump_duality	Stoupy	jump	The Duality Jump	Finir le jump duo pour la première fois	Finish the duo jump for the first time
 {"id": "minecraft:suspicious_gravel"}	jump_bricks	jump_graviglitch	Stoupy	jump	The GraviGlitch Jump	Finir le jump graviglitch pour la première fois	Finish the graviglitch jump for the first time
+{"id": "minecraft:stone", "components": {"minecraft:item_model": "{ns}:stardust_fragment"}}	categories/jumps	jump_practice	Stoupy	jump	Practice Mode	Terminer un practice run d'un jump du lobby	Complete one practice run of a lobby jump
 {"id": "minecraft:stone", "components": {"minecraft:item_model": "{ns}:life_crystal"}}	categories/easy	1	Stoupy	easy	Bénévolat	Aider à la construction d'une map ou la création d'un mini-jeu	Help to build a map or create a mini-game
 {"id": "minecraft:apple"}	1	2	Stoupy	easy	Fidèle	Jouez un total de 100 parties sur le Switch	Play a total of 100 games on the Switch
 {"id": "minecraft:gold_nugget"}	2	3	Stoupy	easy	La moula	Ayez au moins 400 Saphirs dans votre banque	Have at least 400 Sapphires in your bank

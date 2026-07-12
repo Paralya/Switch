@@ -20,6 +20,7 @@
 #			switch:advancements/jumps/bricks
 #			switch:advancements/jumps/duality
 #			switch:advancements/jumps/graviglitch
+#			switch:advancements/jumps/practice
 #
 
 # Update percentage
@@ -45,6 +46,7 @@ execute if entity @s[advancements={switch:visible/jump_pink=true}] run function 
 execute if entity @s[advancements={switch:visible/jump_obsidian=true}] run function switch:advancements/_pre_macro {id:"jump_obsidian"}
 execute if entity @s[advancements={switch:visible/jump_duality=true}] run function switch:advancements/_pre_macro {id:"jump_duality"}
 execute if entity @s[advancements={switch:visible/jump_graviglitch=true}] run function switch:advancements/_pre_macro {id:"jump_graviglitch"}
+execute if entity @s[advancements={switch:visible/jump_practice=true}] run function switch:advancements/_pre_macro {id:"jump_practice"}
 execute if entity @s[advancements={switch:visible/1=true}] run function switch:advancements/_pre_macro {id:"1"}
 execute if entity @s[advancements={switch:visible/2=true}] run function switch:advancements/_pre_macro {id:"2"}
 execute if entity @s[advancements={switch:visible/3=true}] run function switch:advancements/_pre_macro {id:"3"}

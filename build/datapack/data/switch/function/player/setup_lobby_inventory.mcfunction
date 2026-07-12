@@ -45,3 +45,6 @@ item replace entity @s[advancements={switch:visible/jump_graviglitch=true}] inve
 item replace entity @s[advancements={switch:visible/jump_obsidian=false}] inventory.23 with crying_obsidian[item_name={"text":"Obsidian Jump","color":"dark_gray"},lore=[{"text":"by Stoupy","color":"gray","italic":false}],custom_data={"switch":{"jump":true,"jump_obsidian":true}},tooltip_style="failure"]
 item replace entity @s[advancements={switch:visible/jump_obsidian=true}] inventory.23 with crying_obsidian[item_name={"text":"Obsidian Jump","color":"dark_gray"},lore=[{"text":"by Stoupy","color":"gray","italic":false}],custom_data={"switch":{"jump":true,"jump_obsidian":true}},tooltip_style="success"]
 
+# Practice mode items (toggle + action items if enabled)
+function switch:player/practice/give_items
+

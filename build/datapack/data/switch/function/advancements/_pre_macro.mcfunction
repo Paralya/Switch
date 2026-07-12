@@ -16,6 +16,7 @@
 #			switch:advancements/update_percentages {id:"jump_obsidian"}
 #			switch:advancements/update_percentages {id:"jump_duality"}
 #			switch:advancements/update_percentages {id:"jump_graviglitch"}
+#			switch:advancements/update_percentages {id:"jump_practice"}
 #			switch:advancements/update_percentages {id:"1"}
 #			switch:advancements/update_percentages {id:"2"}
 #			switch:advancements/update_percentages {id:"3"}

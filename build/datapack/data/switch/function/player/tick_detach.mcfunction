@@ -42,6 +42,9 @@ execute if score #inventory switch.data matches -1 unless data storage switch:te
 execute if score #inventory switch.data matches -1 run tag @s add switch.lobby_respawn
 execute if score #inventory switch.data matches -1 run clear @s
 
+## Practice mode (checkpoints on lobby jumps, must run before the respawn detection below)
+function switch:player/practice/tick
+
 # Teleport to respawn point
 scoreboard players add @s switch.lobby_respawn 0
 execute if entity @s[tag=!switch.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add switch.lobby_respawn
@@ -64,20 +67,33 @@ tag @s remove switch.lobby_respawn
 # If lost at least one item, setup inventory
 execute unless score #inventory switch.data matches 13 run function switch:player/setup_lobby_inventory
 
-## Jumps advancements
-advancement grant @s[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_green
-advancement grant @s[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_white
-advancement grant @s[x=0,y=82,z=-39,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_blue
-advancement grant @s[x=34,y=82,z=47,distance=..1,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_dripstone
-advancement grant @s[x=63,y=88,z=10,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_yellow
-advancement grant @s[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_red
-advancement grant @s[x=-20,y=75,z=-78,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_brown
-advancement grant @s[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_purple
-advancement grant @s[x=-44,y=93,z=27,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_pink
-advancement grant @s[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_bricks
-advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_obsidian
-execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2] only switch:visible/jump_duality
-advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!spectator] only switch:visible/jump_graviglitch
+## Jumps advancements (practice mode players get the practice run advancement instead)
+advancement grant @s[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_green
+advancement grant @s[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_white
+advancement grant @s[x=0,y=82,z=-39,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_blue
+advancement grant @s[x=34,y=82,z=47,distance=..1,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_dripstone
+advancement grant @s[x=63,y=88,z=10,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_yellow
+advancement grant @s[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_red
+advancement grant @s[x=-20,y=75,z=-78,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_brown
+advancement grant @s[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_purple
+advancement grant @s[x=-44,y=93,z=27,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_pink
+advancement grant @s[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_bricks
+advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_obsidian
+advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] only switch:visible/jump_graviglitch
+execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag=!switch.practice] only switch:visible/jump_duality
+advancement grant @s[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=0,y=82,z=-39,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=34,y=82,z=47,distance=..1,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=63,y=88,z=10,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=-20,y=75,z=-78,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=-44,y=93,z=27,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!spectator,tag=switch.practice] only switch:visible/jump_practice
+execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag=switch.practice] only switch:visible/jump_practice
 
 # GraviGlitch jump gives
 execute store success score #graviglitch_give switch.data if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,predicate=!switch:nbt/enough_gravel]

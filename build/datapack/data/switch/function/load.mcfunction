@@ -132,3 +132,6 @@ execute if score #engine_state switch.data matches 3 run tell none game en cours
 # Games and maps picks history
 execute unless data storage switch:main history run data modify storage switch:main history set value {games:[],maps:[],time_since_last_play:{}}
 
+# Practice mode storage (lobby jumps checkpoints)
+execute unless data storage switch:practice players run data modify storage switch:practice players set value []
+

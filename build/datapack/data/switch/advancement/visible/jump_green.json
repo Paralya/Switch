@@ -17,5 +17,5 @@
 	"rewards": {
 		"function": "switch:advancements/jumps/green"
 	},
-	"parent": "switch:visible/categories/jumps"
+	"parent": "switch:visible/jump_practice"
 }

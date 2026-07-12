@@ -4,6 +4,7 @@
 import stouputils as stp
 from stewbeet import Mem, write_function
 
+from .practice import write_practice_functions
 from .translations import write_translations
 
 
@@ -12,6 +13,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:player"
 	write_translations()
+	write_practice_functions()
 
 	# /detached_action_bar
 	write_function(f"{path}/detached_action_bar", f"""
@@ -200,6 +202,9 @@ item replace entity @s[advancements={{{ns}:visible/jump_graviglitch=true}}] inve
 
 item replace entity @s[advancements={{{ns}:visible/jump_obsidian=false}}] inventory.23 with crying_obsidian[item_name={{"text":"Obsidian Jump","color":"dark_gray"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_obsidian":true}}}},tooltip_style="failure"]
 item replace entity @s[advancements={{{ns}:visible/jump_obsidian=true}}] inventory.23 with crying_obsidian[item_name={{"text":"Obsidian Jump","color":"dark_gray"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_obsidian":true}}}},tooltip_style="success"]
+
+# Practice mode items (toggle + action items if enabled)
+function {ns}:player/practice/give_items
 """)
 
 	# /tick
@@ -234,6 +239,30 @@ execute at @s if score @s {ns}.music.progress matches 1.. run function {ns}:musi
 """)
 
 	# /tick_detach
+	# Jump ends: (x, y, z, max_distance, jump_id) — completing one grants the jump advancement,
+	# or the practice run advancement instead when the practice mode is enabled (tag {ns}.practice)
+	jump_ends: list[tuple[int, int, int, int, str]] = [
+		(-8, 81, -22, 2, "jump_green"),
+		(22, 88, 0, 2, "jump_white"),
+		(0, 82, -39, 2, "jump_blue"),
+		(34, 82, 47, 1, "jump_dripstone"),
+		(63, 88, 10, 2, "jump_yellow"),
+		(-26, 91, 15, 2, "jump_red"),
+		(-20, 75, -78, 2, "jump_brown"),
+		(-42, 94, 32, 2, "jump_purple"),
+		(-44, 93, 27, 2, "jump_pink"),
+		(-123, 79, -11, 2, "jump_bricks"),
+		(36, 84, -73, 2, "jump_obsidian"),
+		(-83, 100, 71, 2, "jump_graviglitch"),
+	]
+	jump_grants: str = "\n".join(
+		f"advancement grant @s[x={x},y={y},z={z},distance=..{d},gamemode=!creative,gamemode=!spectator,tag=!{ns}.practice] only {ns}:visible/{jump_id}"
+		for x, y, z, d, jump_id in jump_ends
+	)
+	practice_grants: str = "\n".join(
+		f"advancement grant @s[x={x},y={y},z={z},distance=..{d},gamemode=!creative,gamemode=!spectator,tag={ns}.practice] only {ns}:visible/jump_practice"
+		for x, y, z, d, _ in jump_ends
+	)
 	write_function(f"{path}/tick_detach", f"""
 # Global variable indicating number of players in the lobby
 scoreboard players add #players_in_lobby {ns}.data 1
@@ -271,6 +300,9 @@ execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp I
 execute if score #inventory {ns}.data matches -1 run tag @s add {ns}.lobby_respawn
 execute if score #inventory {ns}.data matches -1 run clear @s
 
+## Practice mode (checkpoints on lobby jumps, must run before the respawn detection below)
+function {ns}:player/practice/tick
+
 # Teleport to respawn point
 scoreboard players add @s {ns}.lobby_respawn 0
 execute if entity @s[tag=!{ns}.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add {ns}.lobby_respawn
@@ -294,20 +326,11 @@ tag @s remove {ns}.lobby_respawn
 execute unless score #inventory {ns}.data matches 13 run function {ns}:player/setup_lobby_inventory
 
 
-## Jumps advancements
-advancement grant @s[x=-8,y=81,z=-22,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_green
-advancement grant @s[x=22,y=88,z=0,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_white
-advancement grant @s[x=0,y=82,z=-39,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_blue
-advancement grant @s[x=34,y=82,z=47,distance=..1,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_dripstone
-advancement grant @s[x=63,y=88,z=10,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_yellow
-advancement grant @s[x=-26,y=91,z=15,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_red
-advancement grant @s[x=-20,y=75,z=-78,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_brown
-advancement grant @s[x=-42,y=94,z=32,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_purple
-advancement grant @s[x=-44,y=93,z=27,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_pink
-advancement grant @s[x=-123,y=79,z=-11,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_bricks
-advancement grant @s[x=36,y=84,z=-73,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_obsidian
-execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2] only {ns}:visible/jump_duality
-advancement grant @s[x=-83,y=100,z=71,distance=..2,gamemode=!creative,gamemode=!spectator] only {ns}:visible/jump_graviglitch
+## Jumps advancements (practice mode players get the practice run advancement instead)
+{jump_grants}
+execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag=!{ns}.practice] only {ns}:visible/jump_duality
+{practice_grants}
+execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag={ns}.practice] only {ns}:visible/jump_practice
 
 # GraviGlitch jump gives
 execute store success score #graviglitch_give {ns}.data if entity @s[x=-87,y=67,z=66,dx=77,dy=38,dz=37,predicate=!{ns}:nbt/enough_gravel]

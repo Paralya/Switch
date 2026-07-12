@@ -165,6 +165,7 @@ JUMP_REWARDS: dict[str, int] = {
 	"blue": 151, "white": 123, "red": 350, "yellow": 151, "green": 51,
 	"brown": 450, "pink": 400, "purple": 500, "dripstone": 169,
 	"obsidian": 1234, "bricks": 500, "duality": 400, "graviglitch": 500,
+	"practice": 42,
 }
 
 

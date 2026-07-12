@@ -1,0 +1,22 @@
+
+#> switch:player/translations/practice_give_items
+#
+# @executed	as @a[sort=random] & at @s
+#
+# @within	switch:player/practice/give_items
+#
+
+# French
+item replace entity @s[scores={switch.lang=0},tag=!switch.practice] inventory.8 with stone[item_model="switch:stardust_fragment",item_name={"text":"Practice Mode","color":"aqua"},lore=[{"text":"Clic pour activer le Practice Mode","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_toggle":true}},tooltip_style="failure"]
+item replace entity @s[scores={switch.lang=0},tag=switch.practice] inventory.8 with stone[item_model="switch:stardust_fragment",enchantment_glint_override=true,item_name={"text":"Practice Mode","color":"aqua"},lore=[{"text":"Clic pour désactiver le Practice Mode","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_toggle":true}},tooltip_style="success"]
+item replace entity @s[scores={switch.lang=0},tag=switch.practice] hotbar.3 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_model="switch:stardust_fragment",item_name={"text":"Place Checkpoint","color":"aqua"},lore=[{"text":"Clic droit pour poser un checkpoint (5 max)","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_action":true,"practice_place":true,"practice_viewer":true}}]
+item replace entity @s[scores={switch.lang=0},tag=switch.practice] hotbar.4 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_model="switch:wormhole_potion",item_name={"text":"Respawn","color":"light_purple"},lore=[{"text":"Clic droit (ou tombe) pour revenir au dernier checkpoint","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_action":true,"practice_respawn":true}}]
+item replace entity @s[scores={switch.lang=0},tag=switch.practice] hotbar.5 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_model="switch:awakened_stardust",item_name={"text":"Remove Checkpoint","color":"red"},lore=[{"text":"Clic droit pour retirer le dernier checkpoint","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_action":true,"practice_remove":true,"practice_viewer":true}}]
+
+# English
+item replace entity @s[scores={switch.lang=1},tag=!switch.practice] inventory.8 with stone[item_model="switch:stardust_fragment",item_name={"text":"Practice Mode","color":"aqua"},lore=[{"text":"Click enable the Practice Mode","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_toggle":true}},tooltip_style="failure"]
+item replace entity @s[scores={switch.lang=1},tag=switch.practice] inventory.8 with stone[item_model="switch:stardust_fragment",enchantment_glint_override=true,item_name={"text":"Practice Mode","color":"aqua"},lore=[{"text":"Click disable the Practice Mode","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_toggle":true}},tooltip_style="success"]
+item replace entity @s[scores={switch.lang=1},tag=switch.practice] hotbar.3 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_model="switch:stardust_fragment",item_name={"text":"Place Checkpoint","color":"aqua"},lore=[{"text":"Right click to place a checkpoint (5 max)","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_action":true,"practice_place":true,"practice_viewer":true}}]
+item replace entity @s[scores={switch.lang=1},tag=switch.practice] hotbar.4 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_model="switch:wormhole_potion",item_name={"text":"Respawn","color":"light_purple"},lore=[{"text":"Right click (or fall) to return to the last checkpoint","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_action":true,"practice_respawn":true}}]
+item replace entity @s[scores={switch.lang=1},tag=switch.practice] hotbar.5 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_model="switch:awakened_stardust",item_name={"text":"Remove Checkpoint","color":"red"},lore=[{"text":"Right click to remove the last checkpoint","color":"gray","italic":false}],custom_data={"switch":{"practice_item":true,"practice_action":true,"practice_remove":true,"practice_viewer":true}}]
+
