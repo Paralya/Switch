@@ -6,10 +6,8 @@
 # @within	switch:modes/moutron/summon_marker
 #
 
-# Add tag & set color
+# Add tag, set color, and remember its owner id for the kill detection
 tag @s add switch.moutron_marker
 scoreboard players operation @s switch.temp.color = #color switch.data
-
-# Remember owner for kill detection
-data modify entity @s data.Owner set from storage switch:temp Owner
+scoreboard players operation @s switch.id = #owner_id switch.id
 

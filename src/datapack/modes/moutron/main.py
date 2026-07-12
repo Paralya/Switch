@@ -43,10 +43,18 @@ gamemode spectator @s
 function {path}/death
 """)
 
-	# /kill_kart
+	# /kill_kart (as the crashed kart, at its position)
 	write_function(f"{path}/kill_kart", f"""
-# Add a temporary tag to the owner of the block that killed the kart
-execute as @n[type=marker,tag={ns}.moutron_marker,distance=1..3] run function {path}/tag_owner/as_nearest_marker
+# Identify the victim (the rider) so they can't be credited for killing themselves
+scoreboard players set #victim_id {ns}.id -1
+execute on passengers if entity @s[type=player] run scoreboard players operation #victim_id {ns}.id = @s {ns}.id
+
+# Read the owner of the nearest trail marker the kart crashed into (owner id stored on the marker)
+scoreboard players set #player_id {ns}.id -2
+execute at @s as @n[type=marker,tag={ns}.moutron_marker,distance=..3] run scoreboard players operation #player_id {ns}.id = @s {ns}.id
+
+# If that trail belongs to another player, tag them as the killer (read by /death)
+execute if score #player_id {ns}.id matches 0.. unless score #player_id {ns}.id = #victim_id {ns}.id as @a[tag=!detached,predicate={ns}:has_same_id] run tag @s add {ns}.moutron_killer
 
 # Dismount passengers and kill them
 execute on passengers run function {path}/death
@@ -186,27 +194,26 @@ execute as @e[tag=shopping_kart.new_kart] at @s run function shopping_kart:kart/
 tag @s remove shopping_kart.owner
 """)
 
-	# /summon_marker
+	# /summon_marker (as the kart, positioned at its trail spot)
 	write_function(f"{path}/summon_marker", f"""
 # Remove jump strength
 attribute @s jump_strength base set 0
 
-# Get owner of the sheep
-execute on passengers if entity @s[type=player] run data modify storage {ns}:temp Owner set from entity @s UUID
+# Read the kart color and the id of its rider (owner_id = -1 when the kart is empty)
+execute store result score #color {ns}.data run data get entity @s Color
+scoreboard players set #owner_id {ns}.id -1
+execute on passengers if entity @s[type=player] run scoreboard players operation #owner_id {ns}.id = @s {ns}.id
 
 # Summon marker with sheep color
-execute store result score #color {ns}.data run data get entity @s Color
 execute unless entity @e[type=marker,tag={ns}.moutron_marker,distance=..0.5] summon marker run function {path}/summoned_marker
 """)
 
-	# /summoned_marker
+	# /summoned_marker (as the freshly summoned trail marker)
 	write_function(f"{path}/summoned_marker", f"""
-# Add tag & set color
+# Add tag, set color, and remember its owner id for the kill detection
 tag @s add {ns}.moutron_marker
 scoreboard players operation @s {ns}.temp.color = #color {ns}.data
-
-# Remember owner for kill detection
-data modify entity @s data.Owner set from storage {ns}:temp Owner
+scoreboard players operation @s {ns}.id = #owner_id {ns}.id
 """)
 
 	# /tick
@@ -260,26 +267,4 @@ execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers 91
 	write_function(f"{path}/spread_players/whity_lab",
 		"\nspreadplayers 91051 91051 2 25 under 106 false @a[tag=!detached]\n\n## Assurance commands\n"
 		+ f"function {path}/spread_players/_ensure_spread_whity_lab\n" * 12)
-
-	# /tag_owner/as_nearest_marker
-	write_function(f"{path}/tag_owner/as_nearest_marker", f"""
-# Retrieve owner UUID
-data modify storage {ns}:temp Owner set from entity @s data.Owner
-
-# For each player, we compare if they are the owner
-execute as @a run function {path}/tag_owner/as_player
-""")
-
-	# /tag_owner/as_player
-	write_function(f"{path}/tag_owner/as_player", f"""
-# Copy owner UUID
-data modify storage {ns}:temp copy set from storage {ns}:temp Owner
-
-# If copy replaced, it's not the player
-scoreboard players set #success {ns}.data 1
-execute store success score #success {ns}.data run data modify storage {ns}:temp copy set from entity @s UUID
-
-# Add temporary tag if it's player (copy not replaced = same data)
-execute if score #success {ns}.data matches 0 run tag @s add {ns}.moutron_killer
-""")
 
