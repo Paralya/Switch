@@ -332,7 +332,7 @@ scoreboard players reset #set_spec {ns}.data
 scoreboard players reset #do_spreadplayers {ns}.data
 scoreboard players reset #dont_regenerate {ns}.data
 function {ns}:utils/reset_players
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player]"}}
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
 execute in {ns}:game run function {ns}:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
@@ -546,7 +546,7 @@ execute in minecraft:overworld run function {ns}:utils/reset_gamerules
 execute in {ns}:game run function {ns}:utils/reset_gamerules
 
 function {ns}:engine/signals/stop
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player]"}}
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
 
 # Update the stats of the minigame
 execute if score #test_mode {ns}.data matches 1.. run return 1
