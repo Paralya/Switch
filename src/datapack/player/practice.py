@@ -70,9 +70,7 @@ scoreboard players set #was_active {ns}.data 0
 execute if entity @s[tag={ns}.practice] run scoreboard players set #was_active {ns}.data 1
 
 # Clear the player's checkpoints in both cases
-data modify storage {ns}:temp practice_input set value {{id:0}}
-execute store result storage {ns}:temp practice_input.id int 1 run scoreboard players get @s {ns}.id
-function {ns}:player/practice/clear_checkpoints_macro with storage {ns}:temp practice_input
+function {ns}:player/practice/clear_checkpoints
 
 # OFF -> ON
 execute if score #was_active {ns}.data matches 0 run tag @s add {ns}.practice
@@ -91,6 +89,14 @@ execute if score #was_active {ns}.data matches 1 run function {ns}:player/transl
 function {ns}:player/practice/give_items
 """)
 
+	# /disable (silently leave the practice mode, called when the player attaches to or detaches from a game)
+	write_function(f"{path}/disable", f"""
+execute unless entity @s[tag={ns}.practice] run return fail
+tag @s remove {ns}.practice
+function {ns}:player/practice/music_stop
+function {ns}:player/practice/clear_checkpoints
+""")
+
 	# /music_start (play the practice song on loop, the score is resolved at build time from the song name)
 	write_function(f"{path}/music_start", f"""
 scoreboard players set @s {ns}.music.current {song_score}
@@ -103,6 +109,13 @@ scoreboard players set @s {ns}.music.loop_state 1
 # Stop the loop, and the music itself only if it's still the practice song (a song chosen in the browser keeps playing)
 scoreboard players set @s {ns}.music.loop_state 0
 execute if score @s {ns}.music.current matches {song_score} run function {ns}:music/stop
+""")
+
+	# /clear_checkpoints (remove every checkpoint of the player)
+	write_function(f"{path}/clear_checkpoints", f"""
+data modify storage {ns}:temp practice_input set value {{id:0}}
+execute store result storage {ns}:temp practice_input.id int 1 run scoreboard players get @s {ns}.id
+function {ns}:player/practice/clear_checkpoints_macro with storage {ns}:temp practice_input
 """)
 
 	# /clear_checkpoints_macro

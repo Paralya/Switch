@@ -134,8 +134,8 @@ function {ns}:utils/reset_players
 function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
 function {ns}:engine/signals/start
 
-# Stop the practice mode music of the players joining the game (it would loop during the whole game)
-execute as @a[tag=!detached,tag={ns}.practice] run function {ns}:player/practice/music_stop
+# Disable the practice mode of the players joining the game (force start / coup d'état attach without the attach trigger)
+execute as @a[tag=!detached,tag={ns}.practice] run function {ns}:player/practice/disable
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 """)

@@ -342,6 +342,7 @@ execute if score @s {ns}.lang matches 0.. run function {ns}:player/translations/
 	write_function(f"{path}/trigger/attach/real_attach", f"""
 execute unless entity @s[team={ns}.tutorial] run tag @s remove detached
 execute unless entity @s[team={ns}.tutorial] run team leave @s
+execute unless entity @s[team={ns}.tutorial] run function {ns}:player/practice/disable
 
 # Selon l'état du jeu, on exécute les fonctions correspondantes
 scoreboard players add @s {ns}.alive 0
@@ -471,6 +472,7 @@ scoreboard players set @s {ns}.trigger.coupdetat_vote -1
 execute in minecraft:overworld run spawnpoint @s 0 70 0
 scoreboard players set @s {ns}.lobby_respawn 0
 function {ns}:player/jump_timer/cancel
+function {ns}:player/practice/disable
 effect clear @s
 function {ns}:utils/reset_attributes
 effect give @s saturation infinite 0 true

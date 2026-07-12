@@ -11,9 +11,7 @@ scoreboard players set #was_active switch.data 0
 execute if entity @s[tag=switch.practice] run scoreboard players set #was_active switch.data 1
 
 # Clear the player's checkpoints in both cases
-data modify storage switch:temp practice_input set value {id:0}
-execute store result storage switch:temp practice_input.id int 1 run scoreboard players get @s switch.id
-function switch:player/practice/clear_checkpoints_macro with storage switch:temp practice_input
+function switch:player/practice/clear_checkpoints
 
 # OFF -> ON
 execute if score #was_active switch.data matches 0 run tag @s add switch.practice

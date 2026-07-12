@@ -16,8 +16,8 @@ function switch:utils/reset_players
 function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached]"}
 function switch:engine/signals/start
 
-# Stop the practice mode music of the players joining the game (it would loop during the whole game)
-execute as @a[tag=!detached,tag=switch.practice] run function switch:player/practice/music_stop
+# Disable the practice mode of the players joining the game (force start / coup d'état attach without the attach trigger)
+execute as @a[tag=!detached,tag=switch.practice] run function switch:player/practice/disable
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 
