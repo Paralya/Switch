@@ -40,11 +40,11 @@ kill @s
 	# /give_items (dash item, given per language in /start)
 	write_function(f"{path}/give_items", f"""
 # French
-item replace entity @s[scores={{{ns}.lang=0}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Clic droit pour foncer (100 blocs détruits = +1 dash)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
+item replace entity @s[scores={{{ns}.lang=0}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Clic droit pour dash (100 blocs détruits = +1 dash)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
 
 # English
 item replace entity @s[scores={{{ns}.lang=1}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Right click to dash (100 blocks destroyed = +1 dash)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
-""")
+""")  # noqa: E501
 
 	# /is_on_ground
 	write_function(f"{path}/is_on_ground", f"""
@@ -88,12 +88,10 @@ scoreboard players operation @s {ns}.temp.dashes_earned = #earned {ns}.data
 execute at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 1 2
 """)
 
-	# /dash/use (as a player with a charge, at @s: consume it and launch in the looking direction.
-	# player_motion:api/launch_looking is auto-detected by StewBeet and added as a dependency)
+	# /dash/use (as a player with a charge, at @s: consume it and give a short levitation boost)
 	write_function(f"{path}/dash/use", f"""
 scoreboard players remove @s {ns}.temp.dashes 1
-scoreboard players set $strength player_motion.api.launch 10000
-function player_motion:api/launch_looking
+effect give @s levitation 1 10 true
 execute at @s run playsound entity.firework_rocket.launch ambient @s
 execute at @s run particle cloud ~ ~ ~ 0.3 0.3 0.3 0.05 20
 """)
@@ -105,7 +103,7 @@ execute if entity @s[scores={{{ns}.lang=0}}] run title @s actionbar [{{"text":"�
 
 # English
 execute if entity @s[scores={{{ns}.lang=1}}] run title @s actionbar [{{"text":"⚡ Dash: ","color":"aqua"}},{{"score":{{"name":"@s","objective":"{ns}.temp.dashes"}},"color":"yellow"}},{{"text":"   ⛏ Blocks: ","color":"gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.blocks"}},"color":"yellow"}}]
-""")
+""")  # noqa: E501
 
 	# /joined
 	write_function(f"{path}/joined", f"""
@@ -194,7 +192,8 @@ scoreboard players set #remaining_players {ns}.data 0
 execute store result score #remaining_players {ns}.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #tnt_run_seconds {ns}.data matches 1.. if score #remaining_players {ns}.data matches ..1 run function {path}/process_end
 execute if score #tnt_run_seconds {ns}.data matches 300.. run function {path}/process_end
-""")
+""")  # noqa: E501
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 300, "#tnt_run_seconds", "#tnt_run_seconds")
+
