@@ -287,3 +287,4 @@ tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selec
 tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
 tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
 """)
+

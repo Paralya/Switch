@@ -36,3 +36,4 @@ def write_tags() -> None:
 		"minecraft:structure_void",
 		"#minecraft:air",
 	]}))
+

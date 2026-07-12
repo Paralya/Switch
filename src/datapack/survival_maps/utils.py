@@ -287,7 +287,7 @@ def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: st
 
 	# Write the door regeneration command, the reset command and the schedule command
 	write_function(path, f"""
-{base_condition} {last_tick}.. in {ns}:game run function {ns}:maps/regenerate_doors_macro {{name:\"{namespace}\"}}
+{base_condition} {last_tick}.. in {ns}:game run function {ns}:maps/regenerate_doors_macro {{name:"{namespace}"}}
 {base_condition} {last_tick}.. run scoreboard players reset #rg_{namespace} {ns}.data
 {base_condition} 1.. run schedule function {ns}:maps/survival/{namespace}/regenerate 1t
 """)

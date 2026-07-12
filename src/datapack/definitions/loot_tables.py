@@ -34,3 +34,4 @@ def write_loot_tables() -> None:
 		"minecraft:stone",
 		[{"function": "minecraft:set_components", "components": {"minecraft:custom_data": {ns: {"temp_item": True}}}}],
 	)))
+
