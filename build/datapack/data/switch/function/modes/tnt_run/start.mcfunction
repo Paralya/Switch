@@ -18,6 +18,14 @@ execute in switch:game run gamerule minecraft:block_drops false
 
 function switch:modes/tnt_run/translations/start
 
+# Dash system objectives and per-player reset
+scoreboard objectives add switch.temp.blocks dummy
+scoreboard objectives add switch.temp.dashes dummy
+scoreboard objectives add switch.temp.dashes_earned dummy
+scoreboard players set @a[tag=!detached] switch.temp.blocks 0
+scoreboard players set @a[tag=!detached] switch.temp.dashes 0
+scoreboard players set @a[tag=!detached] switch.temp.dashes_earned 0
+
 scoreboard players set #tnt_run_seconds switch.data -15
 scoreboard players set #tnt_run_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
