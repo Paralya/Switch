@@ -4,8 +4,9 @@
 # @within	switch:tick
 #
 
-# Timer
+# Timer (#clock_secs tracks the last wall-clock second we fired, see switch:tick)
 scoreboard players set #tick switch.data 0
+scoreboard players add #clock_secs switch.data 1
 scoreboard players add #global_second switch.data 1
 scoreboard players add #score switch.reconnect 1
 scoreboard players operation @a switch.reconnect = #score switch.reconnect

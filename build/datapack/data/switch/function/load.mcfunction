@@ -50,6 +50,12 @@ scoreboard objectives add switch.stats.winrate dummy
 scoreboard objectives add switch.win_streak dummy
 scoreboard objectives add switch.lobby_easter_egg_counter dummy
 
+# Wall-clock game timer (lag resistant): the per-second signal is driven by real elapsed time
+# instead of counting 20 ticks, so games/timers keep real-time pace even when the server lags.
+stopwatch create switch:game_clock
+stopwatch restart switch:game_clock
+scoreboard players set #clock_secs switch.data 0
+
 team add switch.no_pvp {"text":"[No PvP]"}
 team add switch.detached {"text":"[Detached]","color":"dark_gray"}
 team add switch.tutorial {"text":"[Tutorial]","color":"yellow"}

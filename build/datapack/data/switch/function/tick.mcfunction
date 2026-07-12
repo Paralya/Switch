@@ -12,6 +12,12 @@ scoreboard players set @a[scores={switch.death=1..}] switch.death 0
 scoreboard players add #tick switch.data 1
 scoreboard players set #players_in_lobby switch.data 0
 execute as @a[sort=random] at @s run function switch:player/tick
+
+# Fire the per-second logic from the wall clock (lag resistant): fire once whenever another whole
+# second of real time has elapsed (at most one catch-up second per tick). The 20-tick rule is only
+# a safety fallback so nothing ever freezes if the /stopwatch command is unavailable.
+execute store result score #now_secs switch.data run stopwatch query switch:game_clock 1
+execute if score #now_secs switch.data > #clock_secs switch.data run function switch:second
 execute if score #tick switch.data matches 20.. run function switch:second
 
 # Engine : games ticks, start, stop

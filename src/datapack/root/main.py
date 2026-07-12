@@ -394,8 +394,9 @@ execute if score #players_in_lobby {ns}.data matches 1.. positioned -22 69.8 3 r
 
 	# switch:second
 	write_function(f"{ns}:second", f"""
-# Timer
+# Timer (#clock_secs tracks the last wall-clock second we fired, see switch:tick)
 scoreboard players set #tick {ns}.data 0
+scoreboard players add #clock_secs {ns}.data 1
 scoreboard players add #global_second {ns}.data 1
 scoreboard players add #score {ns}.reconnect 1
 scoreboard players operation @a {ns}.reconnect = #score {ns}.reconnect
@@ -477,6 +478,12 @@ scoreboard objectives add {ns}.stats.winrate dummy
 
 scoreboard objectives add {ns}.win_streak dummy
 scoreboard objectives add {ns}.lobby_easter_egg_counter dummy
+
+# Wall-clock game timer (lag resistant): the per-second signal is driven by real elapsed time
+# instead of counting 20 ticks, so games/timers keep real-time pace even when the server lags.
+stopwatch create {ns}:game_clock
+stopwatch restart {ns}:game_clock
+scoreboard players set #clock_secs {ns}.data 0
 
 team add {ns}.no_pvp {{"text":"[No PvP]"}}
 team add {ns}.detached {{"text":"[Detached]","color":"dark_gray"}}
@@ -574,6 +581,12 @@ scoreboard players set @a[scores={{{ns}.death=1..}}] {ns}.death 0
 scoreboard players add #tick {ns}.data 1
 scoreboard players set #players_in_lobby {ns}.data 0
 execute as @a[sort=random] at @s run function {ns}:player/tick
+
+# Fire the per-second logic from the wall clock (lag resistant): fire once whenever another whole
+# second of real time has elapsed (at most one catch-up second per tick). The 20-tick rule is only
+# a safety fallback so nothing ever freezes if the /stopwatch command is unavailable.
+execute store result score #now_secs {ns}.data run stopwatch query {ns}:game_clock 1
+execute if score #now_secs {ns}.data > #clock_secs {ns}.data run function {ns}:second
 execute if score #tick {ns}.data matches 20.. run function {ns}:second
 
 # Engine : games ticks, start, stop
