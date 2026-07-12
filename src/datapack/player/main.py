@@ -542,9 +542,7 @@ scoreboard players set @s {ns}.trigger.help 0
 """)
 
 	# /trigger/lang/main
-	write_function(f"{path}/trigger/lang/main", rf"""
-## File attribut: Ignore translations
-
+	write_function(f"{path}/trigger/lang/main", f"""
 # If player write /lang, show the language selection
 execute if score @s {ns}.trigger.lang matches 1 run function {ns}:player/trigger/lang/tellraw
 
@@ -553,27 +551,23 @@ execute if score @s {ns}.trigger.lang matches 10 run scoreboard players set @s {
 execute if score @s {ns}.trigger.lang matches 11 run scoreboard players set @s {ns}.lang 1
 
 # Messages
-execute if score @s {ns}.trigger.lang matches 10 run tellraw @s [{{"text":"Vous avez choisi la langue française !\nFaites '/lang' pour re-changer la langue","color":"aqua"}}]
-execute if score @s {ns}.trigger.lang matches 11 run tellraw @s [{{"text":"You have chosen the English language!\nType '/lang' to change the language","color":"aqua"}}]
+execute if score @s {ns}.trigger.lang matches 10 run tellraw @s [{{"text":"Vous avez choisi la langue française !\\nFaites '/lang' pour re-changer la langue","color":"aqua"}}]
+execute if score @s {ns}.trigger.lang matches 11 run tellraw @s [{{"text":"You have chosen the English language!\\nType '/lang' to change the language","color":"aqua"}}]
 
 # Clear the effects and reset the trigger score
 scoreboard players set @s {ns}.trigger.lang 0
 """)
 
 	# /trigger/lang/tellraw
-	write_function(f"{path}/trigger/lang/tellraw", rf"""
-## File attribut: Ignore translations
-
-tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+	write_function(f"{path}/trigger/lang/tellraw", f"""
+tellraw @s "\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n"
 tellraw @s [{{"text":"Please choose a language by clicking it:","color":"aqua"}}]
-tellraw @s [{{"text":"\n[Français]","color":"yellow","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.lang set 10"}},"hover_event":{{"action":"show_text","value":{{"text":"[Cliquez pour choisir Français]","color":"yellow"}}}}}}]
-tellraw @s [{{"text":"\n[English]","color":"yellow","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.lang set 11"}},"hover_event":{{"action":"show_text","value":{{"text":"[Click to choose English]","color":"yellow"}}}}}}]
+tellraw @s [{{"text":"\\n[Français]","color":"yellow","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.lang set 10"}},"hover_event":{{"action":"show_text","value":{{"text":"[Cliquez pour choisir Français]","color":"yellow"}}}}}}]
+tellraw @s [{{"text":"\\n[English]","color":"yellow","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.lang set 11"}},"hover_event":{{"action":"show_text","value":{{"text":"[Click to choose English]","color":"yellow"}}}}}}]
 """)
 
 	# /trigger/lang/tick_undefined
 	write_function(f"{path}/trigger/lang/tick_undefined", f"""
-## File attribut: Ignore translations
-
 execute if entity @s[tag=!detached] run function {ns}:player/trigger/detach/main
 
 effect give @s blindness 5 255 true
@@ -986,8 +980,6 @@ function {ns}:player/trigger/succes/main with storage {ns}:main input
 			for c in SUCCES_COLORS
 		)
 	write_function(f"{path}/trigger/succes/main", f"""
-## File attribut: Ignore translations
-
 ## For each of the advancements, print it in order : [done:{{green,yellow,red}},not done:{{green,yellow,red}}]
 function {ns}:player/translations/trigger_succes_main with storage {ns}:main input
 
@@ -1345,6 +1337,9 @@ execute if data storage {ns}:temp copy[0] run function {ns}:player/username_chan
 
 # Shops
 $function {ns}:player/username_change/update_shops {{username:"$(username)", old_username:"$(old_username)"}}
+
+# Jump best times
+$function {ns}:player/jump_timer/username_change {{username:"$(username)", old_username:"$(old_username)"}}
 """)
 
 	# /username_change/update_ratings_loop

@@ -23,4 +23,6 @@
 $scoreboard players set @s switch.jump_timer_id $(id)
 scoreboard players set @s switch.jump_timer 0
 tag @s add switch.jump_timing
+execute store result storage switch:temp jt_sw.pid int 1 run scoreboard players get @s switch.id
+function switch:player/jump_timer/stopwatch_start with storage switch:temp jt_sw
 

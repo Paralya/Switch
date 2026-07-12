@@ -6,8 +6,6 @@
 # @within	switch:shop/trigger
 #
 
-## File attribut: Ignore translations
-
 # Sword
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 0 if score @s switch.money matches 50.. store success score #success switch.data run scoreboard players remove @s switch.money 50
 execute if score @s switch.trigger.shop matches 201 if score @s switch.infected.sword matches 1 if score @s switch.money matches 100.. store success score #success switch.data run scoreboard players remove @s switch.money 100

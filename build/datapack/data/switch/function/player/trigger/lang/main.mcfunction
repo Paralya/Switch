@@ -6,8 +6,6 @@
 # @within	switch:player/trigger/main
 #
 
-## File attribut: Ignore translations
-
 # If player write /lang, show the language selection
 execute if score @s switch.trigger.lang matches 1 run function switch:player/trigger/lang/tellraw
 

@@ -24,7 +24,7 @@ execute if entity @s[x=51,y=75,z=-14,dx=0,dy=1,dz=0,gamemode=!creative,gamemode=
 execute if entity @s[x=12,y=75,z=112,dx=0,dy=1,dz=0,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] run function switch:player/jump_timer/start {id:12}
 execute if entity @s[x=-12,y=74,z=91,dx=0,dy=1,dz=0,gamemode=!creative,gamemode=!spectator,tag=!switch.practice] run function switch:player/jump_timer/start {id:13}
 
-# Tick the timer and show it in the actionbar
+# Update the timer from the stopwatch and show it in the actionbar
+execute if entity @s[tag=switch.jump_timing] run function switch:player/jump_timer/query
 execute if entity @s[tag=switch.jump_timing] run function switch:player/jump_timer/actionbar
-execute if entity @s[tag=switch.jump_timing] run scoreboard players add @s switch.jump_timer 1
 

@@ -49,7 +49,6 @@ scoreboard players set @s {ns}.music.progress 1
 
 	# /actions/repeat_all
 	write_function(f"{path}/actions/repeat_all", """
-## File attribut: Ignore translations
 tellraw @s {"text":"Work in progress","color":"red"}
 """)
 

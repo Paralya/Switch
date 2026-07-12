@@ -6,8 +6,6 @@
 # @within	switch:shop/trigger
 #
 
-## File attribut: Ignore translations
-
 # Kit Chosen
 scoreboard players add @s switch.sheepwars.chosen_kit 0
 

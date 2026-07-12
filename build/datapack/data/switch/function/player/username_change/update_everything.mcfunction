@@ -50,3 +50,6 @@ execute if data storage switch:temp copy[0] run function switch:player/username_
 # Shops
 $function switch:player/username_change/update_shops {username:"$(username)", old_username:"$(old_username)"}
 
+# Jump best times
+$function switch:player/jump_timer/username_change {username:"$(username)", old_username:"$(old_username)"}
+

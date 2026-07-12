@@ -19,7 +19,6 @@ def write_mode():
 
 	# /color/actionbar
 	write_function(f"{path}/color/actionbar", f"""
-## File attribut: Ignore translations
 title @s[scores={{{ns}.temp.color=0}}] actionbar {{"translate":"block.minecraft.orange_wool","color":"#ff8000"}}
 title @s[scores={{{ns}.temp.color=1}}] actionbar {{"translate":"block.minecraft.magenta_wool","color":"#ff8000"}}
 title @s[scores={{{ns}.temp.color=2}}] actionbar {{"translate":"block.minecraft.light_blue_wool","color":"#00ffff"}}

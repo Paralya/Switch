@@ -8,8 +8,6 @@
 # @args		player (string)
 #
 
-## File attribut: Ignore translations
-
 ## For each of the advancements, print it in order : [done:{green,yellow,red},not done:{green,yellow,red}]
 function switch:player/translations/trigger_succes_main with storage switch:main input
 

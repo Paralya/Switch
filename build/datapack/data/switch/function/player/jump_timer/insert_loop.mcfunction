@@ -3,7 +3,7 @@
 #
 # @executed	as @a[sort=random] & at @s
 #
-# @within	switch:player/jump_timer/record
+# @within	switch:player/jump_timer/insert
 #			switch:player/jump_timer/insert_loop
 #
 

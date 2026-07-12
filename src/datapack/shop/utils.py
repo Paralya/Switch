@@ -48,7 +48,6 @@ def write_technicals(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	ns: str = Mem.ctx.project_id
 	mini: int = get_shop_range(index)[0]
 	path: str = f"{ns}:shop/{shop_name}"
-	write_function(path, "## File attribut: Ignore translations")
 
 	# Special case for sheepwars
 	if shop_name == "sheepwars":

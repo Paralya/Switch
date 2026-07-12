@@ -23,7 +23,8 @@
 # Grant the jump completion advancement
 $advancement grant @s only switch:visible/jump_$(jump)
 
-# Stop the timer and compute the time display digits
+# Stop the timer (querying the exact final time) and compute the time display digits
+function switch:player/jump_timer/query
 scoreboard players operation #jump_time switch.data = @s switch.jump_timer
 function switch:player/jump_timer/actionbar
 function switch:player/jump_timer/cancel

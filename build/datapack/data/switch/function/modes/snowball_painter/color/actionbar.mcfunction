@@ -6,7 +6,6 @@
 # @within	switch:modes/snowball_painter/second [ as @a[tag=!detached,gamemode=adventure] ]
 #
 
-## File attribut: Ignore translations
 title @s[scores={switch.temp.color=0}] actionbar {"translate":"block.minecraft.orange_wool","color":"#ff8000"}
 title @s[scores={switch.temp.color=1}] actionbar {"translate":"block.minecraft.magenta_wool","color":"#ff8000"}
 title @s[scores={switch.temp.color=2}] actionbar {"translate":"block.minecraft.light_blue_wool","color":"#00ffff"}
