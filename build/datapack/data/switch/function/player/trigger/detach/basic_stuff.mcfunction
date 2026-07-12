@@ -9,6 +9,7 @@
 
 execute in minecraft:overworld run spawnpoint @s 0 70 0
 scoreboard players set @s switch.lobby_respawn 0
+function switch:player/jump_timer/cancel
 effect clear @s
 function switch:utils/reset_attributes
 effect give @s saturation infinite 0 true

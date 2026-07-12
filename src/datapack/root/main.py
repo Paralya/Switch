@@ -91,6 +91,26 @@ function {ns}:translations/test_mode
 """)
 
 	# switch:lobby_second
+	# Jump best times leaderboards: (x, y, z, jump key, display uuid)
+	jump_displays: list[tuple[int, float, int, str, str]] = [
+		(-8, 81.5, -22, "green", "20180612-2024-2025-2026-201000000001"),
+		(22, 88.5, 0, "white", "20180612-2024-2025-2026-201000000002"),
+		(0, 81.5, -39, "blue", "20180612-2024-2025-2026-201000000003"),
+		(33, 83.5, 47, "dripstone", "20180612-2024-2025-2026-201000000004"),
+		(63, 88.5, 10, "yellow", "20180612-2024-2025-2026-201000000005"),
+		(-26, 91.5, 15, "red", "20180612-2024-2025-2026-201000000006"),
+		(44, 86.5, 82, "duality", "20180612-2024-2025-2026-201000000007"),
+		(-44, 93.5, 27, "pink", "20180612-2024-2025-2026-201000000008"),
+		(-20, 75.5, -78, "brown", "20180612-2024-2025-2026-201000000009"),
+		(-42, 94.5, 32, "purple", "20180612-2024-2025-2026-201000000010"),
+		(-123, 79.5, -11, "bricks", "20180612-2024-2025-2026-201000000011"),
+		(-83, 100.5, 71, "graviglitch", "20180612-2024-2025-2026-201000000012"),
+		(36, 83.5, -73, "obsidian", "20180612-2024-2025-2026-201000000013"),
+	]
+	jump_display_lines: str = "\n".join(
+		f'execute positioned {x} {y} {z} run function {ns}:stats/display/tick_jump_times {{jump:"{key}",path:"jump_{key}",label:"Best Times",uuid:"{uuid}"}}'
+		for x, y, z, key, uuid in jump_displays
+	)
 	write_function(f"{ns}:lobby_second", rf"""
 # If players in the lobby, show title action bar with the current game and number of players
 function {ns}:player/detached_action_bar
@@ -98,20 +118,8 @@ function {ns}:player/detached_action_bar
 # Prevent end gateway's beam
 data modify block 34 82 47 Age set value 143L
 
-# Jumps
-execute positioned -8 81.5 -22 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_green\\\"}}].players",path:"jump_green",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000001"}}
-execute positioned 22 88.5 0 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_white\\\"}}].players",path:"jump_white",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000002"}}
-execute positioned 0 81.5 -39 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_blue\\\"}}].players",path:"jump_blue",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000003"}}
-execute positioned 33 83.5 47 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_dripstone\\\"}}].players",path:"jump_dripstone",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000004"}}
-execute positioned 63 88.5 10 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_yellow\\\"}}].players",path:"jump_yellow",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000005"}}
-execute positioned -26 91.5 15 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_red\\\"}}].players",path:"jump_red",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000006"}}
-execute positioned 44 86.5 82 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_duality\\\"}}].players",path:"jump_duality",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000007"}}
-execute positioned -44 93.5 27 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_pink\\\"}}].players",path:"jump_pink",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000008"}}
-execute positioned -20 75.5 -78 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_brown\\\"}}].players",path:"jump_brown",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000009"}}
-execute positioned -42 94.5 32 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_purple\\\"}}].players",path:"jump_purple",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000010"}}
-execute positioned -123 79.5 -11 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_bricks\\\"}}].players",path:"jump_bricks",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000011"}}
-execute positioned -83 100.5 71 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_graviglitch\\\"}}].players",path:"jump_graviglitch",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000012"}}
-execute positioned 36 83.5 -73 run function {ns}:stats/display/tick_adv {{adv_path:"all[{{id:\\\"jump_obsidian\\\"}}].players",path:"jump_obsidian",label:"Completion Order",uuid:"20180612-2024-2025-2026-201000000013"}}
+# Jumps best times leaderboards
+{jump_display_lines}
 
 # Black holes (lobby and tutorial area)
 execute positioned 0 69 0 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000001 run summon item_display ~ ~ ~ {{UUID:uuid("20180612-2024-2025-2026-000000000001"),item:{{id:"stone",count:1,components:{{"item_model":"{ns}:bg_black_hole"}}}},Tags:["{ns}.black_hole_lobby"],transformation:{{scale:[-300f,-200f,-300f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}}}

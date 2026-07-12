@@ -60,6 +60,9 @@ function {ns}:cinematic/common_launch
 # - score #cinematic_time {ns}.data (as int)
 # - storage {ns}:temp with (as compound)
 
+# Cancel any jump timer of the player (any teleportation cancels it)
+execute if entity @s[tag={ns}.jump_timing] run function {ns}:player/jump_timer/cancel
+
 # Tag the player and remember it's id
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
 tag @s add {ns}.temp

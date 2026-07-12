@@ -135,3 +135,20 @@ execute unless data storage switch:main history run data modify storage switch:m
 # Practice mode storage (lobby jumps checkpoints)
 execute unless data storage switch:practice players run data modify storage switch:practice players set value []
 
+# Jump timers (best times leaderboards)
+scoreboard objectives add switch.jump_timer dummy
+scoreboard objectives add switch.jump_timer_id dummy
+execute unless data storage switch:jumps green run data modify storage switch:jumps green set value []
+execute unless data storage switch:jumps white run data modify storage switch:jumps white set value []
+execute unless data storage switch:jumps blue run data modify storage switch:jumps blue set value []
+execute unless data storage switch:jumps yellow run data modify storage switch:jumps yellow set value []
+execute unless data storage switch:jumps red run data modify storage switch:jumps red set value []
+execute unless data storage switch:jumps brown run data modify storage switch:jumps brown set value []
+execute unless data storage switch:jumps purple run data modify storage switch:jumps purple set value []
+execute unless data storage switch:jumps dripstone run data modify storage switch:jumps dripstone set value []
+execute unless data storage switch:jumps pink run data modify storage switch:jumps pink set value []
+execute unless data storage switch:jumps bricks run data modify storage switch:jumps bricks set value []
+execute unless data storage switch:jumps obsidian run data modify storage switch:jumps obsidian set value []
+execute unless data storage switch:jumps duality run data modify storage switch:jumps duality set value []
+execute unless data storage switch:jumps graviglitch run data modify storage switch:jumps graviglitch set value []
+

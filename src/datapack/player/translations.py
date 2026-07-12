@@ -9,15 +9,15 @@ def write_translations() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:player/translations"
 
-	# /detached_action_bar
+	# /detached_action_bar (players with an active jump timer keep their timer actionbar instead)
 	write_function(f"{path}/detached_action_bar", f"""
 # French
-execute unless score #engine_state {ns}.data matches 3 run title @a[tag=detached,scores={{{ns}.lang=0}}] actionbar [{{"text":"Vote du ","color":"aqua"}},{{"text":"mini-jeu","color":"yellow"}},{{"text":" en cours"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}},"color":"yellow"}},{{"text":" joueurs en jeu"}}]
-execute if score #engine_state {ns}.data matches 3 run title @a[tag=detached,scores={{{ns}.lang=0}}] actionbar [{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true,"color":"yellow"}},{{"text":" en cours","color":"aqua"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}}}},{{"text":" joueurs en jeu","color":"aqua"}}]
+execute unless score #engine_state {ns}.data matches 3 run title @a[tag=detached,tag=!{ns}.jump_timing,scores={{{ns}.lang=0}}] actionbar [{{"text":"Vote du ","color":"aqua"}},{{"text":"mini-jeu","color":"yellow"}},{{"text":" en cours"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}},"color":"yellow"}},{{"text":" joueurs en jeu"}}]
+execute if score #engine_state {ns}.data matches 3 run title @a[tag=detached,tag=!{ns}.jump_timing,scores={{{ns}.lang=0}}] actionbar [{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true,"color":"yellow"}},{{"text":" en cours","color":"aqua"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}}}},{{"text":" joueurs en jeu","color":"aqua"}}]
 
 # English
-execute unless score #engine_state {ns}.data matches 3 run title @a[tag=detached,scores={{{ns}.lang=1}}] actionbar [{{"text":"Mini-game","color":"yellow"}},{{"text":" vote in progress","color":"aqua"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}},"color":"yellow"}},{{"text":" players in game","color":"aqua"}}]
-execute if score #engine_state {ns}.data matches 3 run title @a[tag=detached,scores={{{ns}.lang=1}}] actionbar [{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true,"color":"yellow"}},{{"text":" in progress","color":"aqua"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}}}},{{"text":" players in game","color":"aqua"}}]
+execute unless score #engine_state {ns}.data matches 3 run title @a[tag=detached,tag=!{ns}.jump_timing,scores={{{ns}.lang=1}}] actionbar [{{"text":"Mini-game","color":"yellow"}},{{"text":" vote in progress","color":"aqua"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}},"color":"yellow"}},{{"text":" players in game","color":"aqua"}}]
+execute if score #engine_state {ns}.data matches 3 run title @a[tag=detached,tag=!{ns}.jump_timing,scores={{{ns}.lang=1}}] actionbar [{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true,"color":"yellow"}},{{"text":" in progress","color":"aqua"}},{{"text":" | ","color":"gray"}},{{"score":{{"name":"#players_in_game","objective":"{ns}.data"}}}},{{"text":" players in game","color":"aqua"}}]
 """)
 
 	# /joined

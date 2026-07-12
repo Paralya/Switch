@@ -13,6 +13,9 @@
 # - score #cinematic_time switch.data (as int)
 # - storage switch:temp with (as compound)
 
+# Cancel any jump timer of the player (any teleportation cancels it)
+execute if entity @s[tag=switch.jump_timing] run function switch:player/jump_timer/cancel
+
 # Tag the player and remember it's id
 scoreboard players operation #player_id switch.id = @s switch.id
 tag @s add switch.temp

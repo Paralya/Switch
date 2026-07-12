@@ -4,6 +4,7 @@
 import stouputils as stp
 from stewbeet import Mem, write_function
 
+from .jump_timer import JUMPS, write_jump_timer_functions
 from .practice import write_practice_functions
 from .translations import write_translations
 
@@ -14,6 +15,7 @@ def main() -> None:
 	path: str = f"{ns}:player"
 	write_translations()
 	write_practice_functions()
+	write_jump_timer_functions()
 
 	# /detached_action_bar
 	write_function(f"{path}/detached_action_bar", f"""
@@ -239,30 +241,17 @@ execute at @s if score @s {ns}.music.progress matches 1.. run function {ns}:musi
 """)
 
 	# /tick_detach
-	# Jump ends: (x, y, z, max_distance, jump_id) — completing one grants the jump advancement,
-	# or the practice run advancement instead when the practice mode is enabled (tag {ns}.practice)
-	jump_ends: list[tuple[int, int, int, int, str]] = [
-		(-8, 81, -22, 2, "jump_green"),
-		(22, 88, 0, 2, "jump_white"),
-		(0, 82, -39, 2, "jump_blue"),
-		(34, 82, 47, 1, "jump_dripstone"),
-		(63, 88, 10, 2, "jump_yellow"),
-		(-26, 91, 15, 2, "jump_red"),
-		(-20, 75, -78, 2, "jump_brown"),
-		(-42, 94, 32, 2, "jump_purple"),
-		(-44, 93, 27, 2, "jump_pink"),
-		(-123, 79, -11, 2, "jump_bricks"),
-		(36, 84, -73, 2, "jump_obsidian"),
-		(-83, 100, 71, 2, "jump_graviglitch"),
-	]
-	jump_grants: str = "\n".join(
-		f"advancement grant @s[x={x},y={y},z={z},distance=..{d},gamemode=!creative,gamemode=!spectator,tag=!{ns}.practice] only {ns}:visible/{jump_id}"
-		for x, y, z, d, jump_id in jump_ends
+	# Jump completions from the JUMPS data (see jump_timer.py): finishing requires an active timer for
+	# that jump, and practice mode players (tag {ns}.practice) get the practice run advancement instead
+	finish_lines: str = "\n".join(
+		f'execute if entity @s[x={x},y={y},z={z},distance=..{d},gamemode=!creative,gamemode=!spectator,tag=!{ns}.practice] if score @s {ns}.jump_timer_id matches {jump_id} run function {ns}:player/jump_timer/finish {{jump:"{key}"}}'
+		for jump_id, key, _, _, _, (x, y, z, d) in JUMPS if key != "duality"
 	)
 	practice_grants: str = "\n".join(
 		f"advancement grant @s[x={x},y={y},z={z},distance=..{d},gamemode=!creative,gamemode=!spectator,tag={ns}.practice] only {ns}:visible/jump_practice"
-		for x, y, z, d, _ in jump_ends
+		for _, key, _, _, _, (x, y, z, d) in JUMPS if key != "duality"
 	)
+	duality_id: int = next(jump_id for jump_id, key, _, _, _, _ in JUMPS if key == "duality")
 	write_function(f"{path}/tick_detach", f"""
 # Global variable indicating number of players in the lobby
 scoreboard players add #players_in_lobby {ns}.data 1
@@ -326,9 +315,12 @@ tag @s remove {ns}.lobby_respawn
 execute unless score #inventory {ns}.data matches 13 run function {ns}:player/setup_lobby_inventory
 
 
-## Jumps advancements (practice mode players get the practice run advancement instead)
-{jump_grants}
-execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag=!{ns}.practice] only {ns}:visible/jump_duality
+## Jump timers (start lines detection, timer ticking + actionbar)
+function {ns}:player/jump_timer/tick
+
+## Jumps completion: requires an active timer for that jump (practice mode players get the practice run advancement instead)
+{finish_lines}
+execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] if entity @s[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag=!{ns}.practice] if score @s {ns}.jump_timer_id matches {duality_id} run function {ns}:player/jump_timer/finish {{jump:"duality"}}
 {practice_grants}
 execute if entity @a[gamemode=adventure,x=43,y=86,z=84,dx=0,dy=0,dz=0] if entity @a[gamemode=adventure,x=45,y=86,z=84,dx=0,dy=0,dz=0] run advancement grant @a[gamemode=adventure,x=44,y=86,z=84,distance=..2,tag={ns}.practice] only {ns}:visible/jump_practice
 
@@ -478,6 +470,7 @@ scoreboard players set @s {ns}.trigger.coupdetat_vote -1
 	write_function(f"{path}/trigger/detach/basic_stuff", f"""
 execute in minecraft:overworld run spawnpoint @s 0 70 0
 scoreboard players set @s {ns}.lobby_respawn 0
+function {ns}:player/jump_timer/cancel
 effect clear @s
 function {ns}:utils/reset_attributes
 effect give @s saturation infinite 0 true

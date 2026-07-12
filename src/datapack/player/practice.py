@@ -160,6 +160,7 @@ execute if data storage {ns}:temp practice_cp.x run function {ns}:player/practic
 
 	# /teleport (to the checkpoint in {ns}:temp practice_cp)
 	write_function(f"{path}/teleport", f"""
+execute if entity @s[tag={ns}.jump_timing] run function {ns}:player/jump_timer/cancel
 function {ns}:player/practice/teleport_macro with storage {ns}:temp practice_cp
 execute at @s run playsound {ns}:wormhole_potion ambient @s
 execute at @s run particle portal ~ ~1 ~ 0.4 0.8 0.4 0.5 200
