@@ -1,9 +1,9 @@
 
 #> switch:maps/intro_spread
 #
-# @executed	as @n[tag=switch.coupdetat] & in switch:game
+# @executed	in switch:game
 #
-# @within	switch:engine/signals/start
+# @within	switch:engine/signals/start [ in switch:game ]
 #
 
 # Launch the intro spread for the survival maps

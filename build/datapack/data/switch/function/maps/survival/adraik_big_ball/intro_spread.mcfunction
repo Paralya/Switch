@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/adraik_big_ball/intro_spread
 #
-# @executed	as @n[tag=switch.coupdetat] & in switch:game
+# @executed	in switch:game
 #
 # @within	switch:maps/intro_spread
 #

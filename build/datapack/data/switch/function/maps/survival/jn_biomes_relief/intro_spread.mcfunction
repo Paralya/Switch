@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/jn_biomes_relief/intro_spread
 #
-# @executed	as @n[tag=switch.coupdetat] & in switch:game
+# @executed	in switch:game
 #
 # @within	switch:maps/intro_spread
 #

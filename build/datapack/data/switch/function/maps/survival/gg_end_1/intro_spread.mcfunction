@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/gg_end_1/intro_spread
 #
-# @executed	as @n[tag=switch.coupdetat] & in switch:game
+# @executed	in switch:game
 #
 # @within	switch:maps/intro_spread
 #

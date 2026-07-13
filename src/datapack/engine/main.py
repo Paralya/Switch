@@ -482,8 +482,9 @@ data modify storage {ns}:main input set value {{id:""}}
 data modify storage {ns}:main input.id set from storage {ns}:main current_game
 function {ns}:engine/signals/macro_start with storage {ns}:main input
 
-# Start map intro
-function {ns}:maps/intro_spread
+# Start map intro (explicitly in the game dimension: start_state can be reached from a server
+# context — force start, coup d'état — and the cinematic drops players in the execution dimension)
+execute in {ns}:game run function {ns}:maps/intro_spread
 
 # Increment total games played
 execute if score #test_mode {ns}.data matches 1.. run return 1
@@ -532,7 +533,7 @@ execute unless score #nb_attached {ns}.data >= #min_required {ns}.data in minecr
 
 	# /stop
 	write_function(f"{path}/stop", f"""
-execute unless score #engine_state {ns}.data matches 3 unless score #disable {ns}.data matches 1 run tp @a[tag=!detached] 0 69 0
+execute unless score #engine_state {ns}.data matches 3 unless score #disable {ns}.data matches 1 in minecraft:overworld run tp @a[tag=!detached] 0 69 0
 scoreboard players set #engine_state {ns}.data 0
 scoreboard players set #cut_clean {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

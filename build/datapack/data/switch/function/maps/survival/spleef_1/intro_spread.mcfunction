@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/spleef_1/intro_spread
 #
-# @executed	as @n[tag=switch.coupdetat] & in switch:game
+# @executed	in switch:game
 #
 # @within	switch:maps/intro_spread
 #
