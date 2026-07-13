@@ -1,7 +1,7 @@
 
 #> switch:maps/resume_regeneration
 #
-# @within	???
+# @within	switch:load
 #
 
 # Resume the regeneration of the survival maps

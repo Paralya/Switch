@@ -139,6 +139,11 @@ execute if score #engine_state switch.data matches 3 run tell none game en cours
 # Games and maps picks history
 execute unless data storage switch:main history run data modify storage switch:main history set value {games:[],maps:[],time_since_last_play:{}}
 
+# Resume any map regeneration that a /reload or a server restart interrupted: a /reload clears every
+# scheduled function, which leaves the #rg_<map> counter stuck and makes the map's NEXT end-of-game
+# regeneration resume from the stale layer instead of doing a full pass (bridges below it survive).
+function switch:maps/resume_regeneration
+
 # Practice mode storage (lobby jumps checkpoints)
 execute unless data storage switch:practice players run data modify storage switch:practice players set value []
 
