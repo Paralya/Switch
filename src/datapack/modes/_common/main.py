@@ -99,13 +99,15 @@ tag @a remove {ns}.temp
 """)
 
 	# /detect_chosen_class
+	# The five class items sit on the EVEN hotbar slots (0/2/4/6/8, with gaps between them), both in
+	# capture_the_flag and rush_the_point: an empty even slot means the player consumed that item.
 	write_function(f"{path}/detect_chosen_class", f"""
 # Get which class got chosen
 execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.0 * run scoreboard players set @s {ns}.temp.chosen_class 1
-execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.1 * run scoreboard players set @s {ns}.temp.chosen_class 2
-execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.2 * run scoreboard players set @s {ns}.temp.chosen_class 3
-execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.3 * run scoreboard players set @s {ns}.temp.chosen_class 4
-execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.4 * run scoreboard players set @s {ns}.temp.chosen_class 5
+execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.2 * run scoreboard players set @s {ns}.temp.chosen_class 2
+execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.4 * run scoreboard players set @s {ns}.temp.chosen_class 3
+execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.6 * run scoreboard players set @s {ns}.temp.chosen_class 4
+execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.8 * run scoreboard players set @s {ns}.temp.chosen_class 5
 """)
 
 	# /compute_mins_secs (split #remaining_time into #mins and #secs for actionbar/timer displays)
