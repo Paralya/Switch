@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, KitItem, write_kit
+from ...kits import Kit, KitItem
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -65,10 +65,10 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 	# (the first free slots); they now say so, which also makes them remappable.
 	# The king (neither red nor blue) swaps the steel sword out for an obsidian one in the same slot.
 	king: str = f"team=!{ns}.temp.red,team=!{ns}.temp.blue"
-	write_kit(f"{path}/give_items", Kit("protect_the_king", pre="# Starter kit", items=(
+	Kit("protect_the_king", pre="# Starter kit", items=(
 		KitItem(slot="armor.chest", loot=f"{ns}:i/steel_chestplate"),
-		KitItem(slot="armor.legs", item="chainmail_leggings[enchantments={protection:2}]"),
-		KitItem(slot="armor.feet", item="chainmail_boots[enchantments={projectile_protection:5}]"),
+		KitItem(slot="armor.legs", item=r"chainmail_leggings[enchantments={protection:2}]"),
+		KitItem(slot="armor.feet", item=r"chainmail_boots[enchantments={projectile_protection:5}]"),
 		KitItem(role="melee", slot="hotbar.0", loot=f"{ns}:i/steel_sword",
 			modify='{function:"minecraft:set_enchantments",enchantments:{"minecraft:knockback":1}}'),
 		KitItem(role="ranged", item="bow", slot="hotbar.1"),
@@ -83,7 +83,7 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 	), post=f"""
 effect give @s[{king}] glowing infinite 255 true
 attribute @s[{king}] max_health base set 40.0
-"""))
+""").write(f"{path}/give_items")
 
 	# /give_items (leather cap colors, appended: armour is never remapped)
 	write_function(f"{path}/give_items", f"""

@@ -1,6 +1,5 @@
 
 # Imports
-from .generator import write_kit
 from .model import Kit, KitItem, ScoreCount, Variants
 from .roles import MARKER_ITEM, ROLES, SLOT_ID, TARGETS
 
@@ -13,5 +12,4 @@ __all__ = [
 	"KitItem",
 	"ScoreCount",
 	"Variants",
-	"write_kit",
 ]

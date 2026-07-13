@@ -3,9 +3,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import write_kit
 from ..common import write_modes_calls, write_time_xp_bar
-from .kits import SPECTRE_KIT, VISIBLE_KIT
+from .kits import spectre_kit, visible_kit
 from .translations import write_translations
 
 
@@ -137,8 +136,8 @@ execute if score #spectres_game_seconds {ns}.data matches 900.. as @a[tag=!detac
 
 	# /give_items/spectre and /give_items/visible (declared in kits.py); both keep their team
 	# selector, so give_items can call them unconditionally.
-	write_kit(f"{path}/give_items/spectre", SPECTRE_KIT)
-	write_kit(f"{path}/give_items/visible", VISIBLE_KIT)
+	spectre_kit().write(f"{path}/give_items/spectre")
+	visible_kit().write(f"{path}/give_items/visible")
 
 	# /give_items
 	write_function(f"{path}/give_items", f"""

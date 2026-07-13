@@ -3,9 +3,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import write_kit
 from ..common import write_modes_calls
-from .kits import CLASSES
+from .kits import classes
 from .translations import write_translations
 
 
@@ -412,8 +411,8 @@ attribute @s jump_strength base reset
 """)
 
 	# /classes/<name> (the five class loadouts, declared in kits.py)
-	for class_name, kit in CLASSES.items():
-		write_kit(f"{path}/classes/{class_name}", kit)
+	for class_name, kit in classes().items():
+		kit.write(f"{path}/classes/{class_name}")
 
 	# /death/for_global
 	write_function(f"{path}/death/for_global", f"""

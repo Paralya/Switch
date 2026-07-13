@@ -2,8 +2,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, KitItem, Variants, write_kit
-from ..common import write_modes_calls, write_time_xp_bar
+from ...kits import Kit, KitItem, Variants
+from ..common import skinned_weapons, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -100,17 +100,13 @@ scoreboard players set @s {ns}.alive 0
 function {ns}:utils/classic_death
 """)
 
-	# /give_items
-	# The sword and the bow still roll for a skin, but every branch currently hands out the same
-	# item (the per-skin loot tables next to them are commented out upstream), so the four/three
-	# variants below are deliberately identical.
-	sword: str = 'diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]'
-	bow: str = 'bow[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]'
-	write_kit(f"{path}/give_items", Kit("pitch_creep", items=(
-		KitItem(role="melee", slot="hotbar.0", variants=Variants(score="#random {ns}.data", roll=4, items=(sword,) * 4)),
-		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score="#random {ns}.data", roll=3, items=(bow,) * 3)),
+	# /give_items (the same skinned sword and bow variants as pitchout)
+	swords, bows = skinned_weapons()
+	Kit("pitch_creep", items=(
+		KitItem(role="melee", slot="hotbar.0", variants=Variants(score=f"#random {ns}.data", roll=4, items=swords)),
+		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score=f"#random {ns}.data", roll=3, items=bows)),
 		KitItem(role="ammo", item="arrow", count=64, slot="hotbar.2"),
-	)))
+	)).write(f"{path}/give_items")
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 90, "#pitch_creep_seconds")

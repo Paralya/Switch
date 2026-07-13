@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, KitItem, ScoreCount, write_kit
+from ...kits import Kit, KitItem, ScoreCount
 from ..common import write_modes_calls
 from .translations import write_translations
 
@@ -122,13 +122,13 @@ execute if score @s {ns}.spleef.powder_snow matches 4.. run data modify block 0 
 """)
 
 	# The four items themselves (the shulker box above is only a staging container to build them in)
-	write_kit(f"{path}/give_items", Kit("spleef", items=(
+	Kit("spleef", items=(
 		KitItem(role="tool", slot="hotbar.0", from_block="0 10 0 container.0"),
 		KitItem(role="mobility", item="ender_pearl", slot="hotbar.1"),
 		KitItem(role="blocks", item="snow_block", slot="hotbar.8",
-			count=ScoreCount(objective="{ns}.spleef.snow_block", base=4, step=1, levels=7)),
+			count=ScoreCount(objective=f"{ns}.spleef.snow_block", base=4, step=1, levels=7)),
 		KitItem(role="special", slot="hotbar.7", from_block="0 10 0 container.1"),
-	), post="\nsetblock 0 10 0 air"))
+	), post="\nsetblock 0 10 0 air").write(f"{path}/give_items")
 
 	# /joined
 	write_function(f"{path}/joined", f"""

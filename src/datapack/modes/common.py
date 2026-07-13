@@ -31,6 +31,20 @@ def register_sounds(mode: str, ns: str) -> None:
 
 
 # Functions
+def skinned_weapons() -> tuple[tuple[str, ...], tuple[str, ...]]:
+	""" The skinned pvp weapons shared by pitchout and pitch_creep: (4 diamond swords, 3 bows),
+	one item string per skin, so a kit can roll a random one into a single Variants slot. """
+	ns: str = Mem.ctx.project_id
+	unbreakable: str = 'unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]}'
+	swords: tuple[str, ...] = tuple(
+		f'diamond_sword[item_model="{ns}:{model}",{unbreakable},enchantments={{"knockback":3}}]'
+		for model in ("stardust_sword", "legendarium_sword", "solarium_sword", "darkium_sword"))
+	bows: tuple[str, ...] = tuple(
+		f'bow[item_model="{ns}:{model}",{unbreakable},enchantments={{"punch":3, "infinity":1}}]'
+		for model in ("stardust_bow", "awakened_stardust_bow", "ultimate_bow"))
+	return swords, bows
+
+
 def write_modes_calls(
 	mode: str,
 	calls: tuple[str, ...] = ("joined", "second", "start", "stop", "tick"),

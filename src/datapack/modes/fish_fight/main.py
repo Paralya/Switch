@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, KitItem, write_kit
+from ...kits import Kit, KitItem
 from ..common import write_modes_calls, write_no_drop
 from .translations import write_translations
 
@@ -190,7 +190,7 @@ execute if score #pearls_count {ns}.data matches 0 store result score #pearls_co
 	# /give_items runs again on respawn, so the pearls are only *placed* when the player has none
 	# left; otherwise they are topped up with `give`, which leaves the stack where they moved it.
 	# That first placement is the one the layout gets to choose (players like pearls in the offhand).
-	write_kit(f"{path}/give_items", Kit("fish_fight", items=(
+	Kit("fish_fight", items=(
 		KitItem(role="mobility", item="ender_pearl", count=6, slot="hotbar.8",
 			cond=f"if score #pearls_count {ns}.data matches 0"),
 	), post=f"""
@@ -199,7 +199,7 @@ execute if score #pearls_count {ns}.data matches 2 run give @s ender_pearl 4
 execute if score #pearls_count {ns}.data matches 3 run give @s ender_pearl 3
 execute if score #pearls_count {ns}.data matches 4 run give @s ender_pearl 2
 execute if score #pearls_count {ns}.data matches 5 run give @s ender_pearl 1
-"""))
+""").write(f"{path}/give_items")
 
 	# /give_tnt
 	write_function(f"{path}/give_tnt", """

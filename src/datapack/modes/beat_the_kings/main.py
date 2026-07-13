@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, KitItem, write_kit
+from ...kits import Kit, KitItem
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -157,21 +157,21 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 	# keep their team selector, so give_items can call them unconditionally.
 	civil: str = f"team={ns}.temp.civil"
 	king: str = f"team={ns}.temp.king"
-	write_kit(f"{path}/give_items/civil", Kit("civil", pre="# Starter kit", items=(
+	Kit("civil", pre="# Starter kit", items=(
 		KitItem(slot="armor.head", item="iron_helmet", selector=civil),
 		KitItem(slot="armor.chest", item="diamond_chestplate", selector=civil),
 		KitItem(slot="armor.legs", item="chainmail_leggings", selector=civil),
-		KitItem(slot="armor.feet", item="iron_boots[enchantments={feather_falling:2}]", selector=civil),
+		KitItem(slot="armor.feet", item=r"iron_boots[enchantments={feather_falling:2}]", selector=civil),
 		KitItem(role="blocks", item="oak_planks", count=64, slot="weapon.offhand", selector=civil),
-		KitItem(role="melee", item="iron_sword[enchantments={sharpness:5}]", slot="hotbar.0", selector=civil),
+		KitItem(role="melee", item=r"iron_sword[enchantments={sharpness:5}]", slot="hotbar.0", selector=civil),
 		KitItem(role="ranged", item="bow", slot="hotbar.1", selector=civil),
 		KitItem(role="mobility", item="water_bucket", slot="hotbar.7", selector=civil),
 		KitItem(role="heal", item="golden_apple", count=5, slot="hotbar.8", selector=civil),
 		KitItem(item="arrow", count=16, slot="inventory.0", selector=civil),
-	)))
+	)).write(f"{path}/give_items/civil")
 	# reserved: give_king_gaps (in post) writes the golden apples at literal hotbar.7 — the resolver
 	# must never hand that slot out, or the gaps would overwrite a remapped item.
-	write_kit(f"{path}/give_items/king", Kit("king", reserved=("hotbar.7",), items=(
+	Kit("king", reserved=("hotbar.7",), items=(
 		KitItem(slot="armor.head", item="golden_helmet[enchantments={protection:3,unbreaking:10}]", selector=king),
 		KitItem(role="mobility", item="water_bucket", slot="hotbar.0", selector=king),
 		KitItem(role="melee", item="golden_sword[enchantments={unbreaking:3,sharpness:3}]", slot="hotbar.1", selector=king),
@@ -183,7 +183,7 @@ execute if entity @s[{king}] run function {path}/give_king_gaps with storage {ns
 effect give @s[{king}] resistance infinite 3 true
 effect give @s[{king}] speed infinite 0 true
 effect give @s[{king}] health_boost infinite 1 true
-"""))
+""").write(f"{path}/give_items/king")
 
 	# /give_items
 	write_function(f"{path}/give_items", f"""

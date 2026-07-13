@@ -3,9 +3,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import write_kit
-from ..common import write_modes_calls, write_no_drop
-from .kits import PITCHOUT_KIT
+from ...kits import Kit, KitItem, ScoreCount, Variants
+from ..common import skinned_weapons, write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -63,7 +62,19 @@ function {ns}:modes/_common/death_spectator_lives
 """)
 
 	# /give_items
-	write_kit(f"{path}/give_items", PITCHOUT_KIT)
+	# The sword and the bow are one item each, not four and three: `Variants` picks the skin, so
+	# each still occupies a single slot that the player's layout can move. Same idea for the boots
+	# (the shop level picks the item) and the ender pearls (the shop level picks the count).
+	swords, bows = skinned_weapons()
+	boots: tuple[str, ...] = tuple(f"leather_boots[max_damage={max_damage}]" for max_damage in (5, 20, 30, 40, 50, 65))
+	Kit("pitchout", items=(
+		KitItem(role="melee", slot="hotbar.0", variants=Variants(score=f"#random {ns}.data", roll=4, items=swords)),
+		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score=f"#random {ns}.data", roll=3, items=bows)),
+		KitItem(role="ammo", item="arrow", count=64, slot="hotbar.2"),
+		KitItem(slot="armor.feet", variants=Variants(score=f"@s {ns}.pitchout.boots", last_open=True, items=boots)),
+		KitItem(role="mobility", item=f'ender_pearl[item_model="{ns}:dragon_pearl"]', slot="hotbar.8",
+			count=ScoreCount(objective=f"{ns}.pitchout.ender_pearl", counts=(3, 4, 5))),
+	)).write(f"{path}/give_items")
 
 	# /in_water_with_cooldown (translation ref rewritten)
 	write_function(f"{path}/in_water_with_cooldown", f"""

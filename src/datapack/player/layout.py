@@ -222,11 +222,13 @@ def write_layout_editor() -> None:
 	kill_dropped: str = f"kill @e[type=item,distance=..16,nbt={{Item:{{components:{{\"minecraft:custom_data\":{{{ns}:{{layout_item:true}}}}}}}}}}]"
 
 	# /entry (from the trigger; triggering again while editing = save and exit)
+	# Detached players ONLY: attached players ride the vote -> game cycle (engine_state 2 -> 3) with
+	# no real downtime, and the drop-to-save tick lives in tick_detach anyway. Attaching or
+	# detaching force-closes an open editor, so a detached editor can never leak into a game.
 	write_function(f"{path}/entry", f"""
 scoreboard players set @s {ns}.trigger.layout 0
-execute if entity @s[tag=detached] run return 0
 execute if entity @s[team={ns}.tutorial] run return 0
-execute if score #engine_state {ns}.data matches 2..3 run return run function {tr}/layout_editor_unavailable
+execute if entity @s[tag=!detached] run return run function {tr}/layout_editor_unavailable
 execute if entity @s[tag={ns}.layout_editor] run return run function {path}/save_and_close
 function {path}/open
 """)
@@ -344,8 +346,8 @@ tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","
 """)
 	write_function(f"{tr}/layout_editor_unavailable", f"""
 # French
-tellraw @s[scores={{{ns}.lang=0}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" L'éditeur de layout n'est pas disponible pendant une partie.","color":"red"}}]
+tellraw @s[scores={{{ns}.lang=0}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" L'éditeur de layout n'est disponible que dans le lobby, en étant détaché.","color":"red"}}]
 
 # English
-tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" The layout editor is not available during a game.","color":"red"}}]
+tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" The layout editor is only available in the lobby, while detached.","color":"red"}}]
 """)

@@ -3,25 +3,28 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, KitItem, write_kit
+from ...kits import Kit, KitItem
 
-# The melee loadout shared by castagne and pvpswap (castagne adds a fishing rod of its own).
-PVP_ARENA_KIT: Kit = Kit("pvp_arena", items=(
-	KitItem(item="leather_helmet[enchantments={projectile_protection:2}]", slot="armor.head"),
-	KitItem(item="leather_chestplate[enchantments={projectile_protection:2}]", slot="armor.chest"),
-	KitItem(item="leather_leggings[enchantments={projectile_protection:2}]", slot="armor.legs"),
-	KitItem(item="leather_boots[enchantments={projectile_protection:2}]", slot="armor.feet"),
-	KitItem(role="melee", item="wooden_sword[enchantments={sharpness:1,knockback:1}]", slot="hotbar.0"),
-	KitItem(role="ranged", item="bow", slot="hotbar.1"),
-	KitItem(role="mobility", item="water_bucket", slot="hotbar.2"),
-	KitItem(role="tool", item="iron_pickaxe[enchantments={efficiency:1}]", slot="hotbar.3"),
-	KitItem(role="axe", item='iron_axe[enchantments={efficiency:1},attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:2,operation:"add_value"}]]', slot="hotbar.4"),
-	KitItem(role="ammo", item="arrow", count=8, slot="hotbar.6"),
-	KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.7"),
-	KitItem(role="heal", item="golden_apple", count=12, slot="hotbar.8"),
-	KitItem(item="tnt", count=4, slot="inventory.25"),
-	KitItem(item="flint_and_steel", slot="inventory.26"),
-))
+def pvp_arena_kit() -> Kit:
+	""" The melee loadout shared by castagne and pvpswap (castagne adds a fishing rod of its own).
+	Built lazily: the axe's modifier id embeds the project namespace, unknown at import time. """
+	ns: str = Mem.ctx.project_id
+	return Kit("pvp_arena", items=(
+		KitItem(item="leather_helmet[enchantments={projectile_protection:2}]", slot="armor.head"),
+		KitItem(item="leather_chestplate[enchantments={projectile_protection:2}]", slot="armor.chest"),
+		KitItem(item="leather_leggings[enchantments={projectile_protection:2}]", slot="armor.legs"),
+		KitItem(item="leather_boots[enchantments={projectile_protection:2}]", slot="armor.feet"),
+		KitItem(role="melee", item="wooden_sword[enchantments={sharpness:1,knockback:1}]", slot="hotbar.0"),
+		KitItem(role="ranged", item="bow", slot="hotbar.1"),
+		KitItem(role="mobility", item="water_bucket", slot="hotbar.2"),
+		KitItem(role="tool", item="iron_pickaxe[enchantments={efficiency:1}]", slot="hotbar.3"),
+		KitItem(role="axe", item=f'iron_axe[enchantments={{efficiency:1}},attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:2,operation:"add_value"}}]]', slot="hotbar.4"),
+		KitItem(role="ammo", item="arrow", count=8, slot="hotbar.6"),
+		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.7"),
+		KitItem(role="heal", item="golden_apple", count=12, slot="hotbar.8"),
+		KitItem(item="tnt", count=4, slot="inventory.25"),
+		KitItem(item="flint_and_steel", slot="inventory.26"),
+	))
 
 # The stone-tools loadout shared by layers_2_teams and layers_4_teams.
 LAYERS_STARTER_KIT: Kit = Kit("layers_starter", pre="attribute @s attack_speed base set 2048", items=(
@@ -114,7 +117,7 @@ scoreboard players operation #secs {ns}.data %= #60 {ns}.data
 """)
 
 	# /layers_starter_kit (shared stone-tools loadout for the layers_2_teams / layers_4_teams modes)
-	write_kit(f"{path}/layers_starter_kit", LAYERS_STARTER_KIT)
+	LAYERS_STARTER_KIT.write(f"{path}/layers_starter_kit")
 
 	# /racing_start_setup (ranking teams generated from RANKING_TEAMS)
 	team_add: str = "\n".join(
@@ -445,8 +448,8 @@ execute on vehicle run data modify storage {ns}:main Rotation set from entity @s
 data modify entity @s Rotation[0] set from storage {ns}:main Rotation
 """)
 
-	# /pvp_arena/kit is no longer a function: castagne and pvpswap build their loadout from the
-	# PVP_ARENA_KIT constant above, so the player's layout resolves the whole kit (fishing rod
+	# /pvp_arena/kit is no longer a function: castagne and pvpswap build their loadout from
+	# pvp_arena_kit() above, so the player's layout resolves the whole kit (fishing rod
 	# included) in one pass instead of two functions fighting over the same slots.
 
 	# /pvp_arena/combat_tick (shared castagne / pvpswap tick body: classic-death detection, glow when

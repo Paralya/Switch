@@ -3,9 +3,9 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ...kits import Kit, write_kit
+from ...kits import Kit
 from ..common import write_modes_calls, write_time_xp_bar
-from .kits import ARCHER, BUILDER, DESTROYER, SWORDSMAN
+from .kits import build_kits
 from .translations import write_translations
 
 
@@ -128,12 +128,13 @@ item replace entity @s[team={ns}.rush_the_point.red] armor.feet with leather_boo
 """)
 
 	# /classes/archer, /classes/builder, /classes/destroyer (declared in kits.py)
-	write_kit(f"{path}/classes/archer", ARCHER)
-	write_kit(f"{path}/classes/builder", BUILDER)
-	write_kit(f"{path}/classes/destroyer", DESTROYER)
+	archer, builder, destroyer, swordsman = build_kits()
+	archer.write(f"{path}/classes/archer")
+	builder.write(f"{path}/classes/builder")
+	destroyer.write(f"{path}/classes/destroyer")
 
 	# /classes/aviateur (elytra + its own protection-4 armor, then the swordsman loadout)
-	write_kit(f"{path}/classes/aviateur", Kit("aviateur", items=SWORDSMAN, pre=f"""
+	Kit("aviateur", items=swordsman, pre=f"""
 function {ns}:modes/rush_the_point/classes/_common
 
 item replace entity @s armor.chest with elytra[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}}]
@@ -147,10 +148,10 @@ item replace entity @s[team={ns}.rush_the_point.red] armor.legs with leather_leg
 item replace entity @s[team={ns}.rush_the_point.red] armor.feet with leather_boots[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=13369344,enchantments={{"protection":4}}]
 
 scoreboard players set @s {ns}.temp.elytra_cooldown 120
-"""))
+""").write(f"{path}/classes/aviateur")
 
 	# /classes/guerrier (its own protection-4 armor, then the swordsman loadout)
-	write_kit(f"{path}/classes/guerrier", Kit("guerrier", items=SWORDSMAN, pre=f"""
+	Kit("guerrier", items=swordsman, pre=f"""
 function {ns}:modes/rush_the_point/classes/_common
 
 item replace entity @s[team={ns}.rush_the_point.blue] armor.head with leather_helmet[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=3827848,enchantments={{"protection":4}}]
@@ -162,7 +163,7 @@ item replace entity @s[team={ns}.rush_the_point.red] armor.head with leather_hel
 item replace entity @s[team={ns}.rush_the_point.red] armor.chest with leather_chestplate[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=13369344,enchantments={{"protection":4}}]
 item replace entity @s[team={ns}.rush_the_point.red] armor.legs with leather_leggings[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=16731469,enchantments={{"protection":4}}]
 item replace entity @s[team={ns}.rush_the_point.red] armor.feet with leather_boots[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=13369344,enchantments={{"protection":4}}]
-"""))
+""").write(f"{path}/classes/guerrier")
 
 	# /classes/main (translation ref rewritten)
 	write_function(f"{path}/classes/main", f"""

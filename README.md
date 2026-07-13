@@ -14,6 +14,9 @@ Document (Google Sheet) :
 <br>
 
 # Comment contribuer ?
+
+Build le projet: `stewbeet`
+
 # TODO: Pas à jour
 
 ## ⭐ Star History
