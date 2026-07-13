@@ -5,6 +5,7 @@ import stouputils as stp
 from stewbeet import Mem, write_function
 
 from .jump_timer import JUMPS, write_jump_timer_functions
+from .layout import write_layout_functions
 from .practice import write_practice_functions
 from .translations import write_translations
 
@@ -16,6 +17,7 @@ def main() -> None:
 	write_translations()
 	write_practice_functions()
 	write_jump_timer_functions()
+	write_layout_functions()
 
 	# /detached_action_bar
 	write_function(f"{path}/detached_action_bar", f"""

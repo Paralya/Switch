@@ -8,10 +8,7 @@
 #
 
 attribute @s attack_speed base set 2048
-item replace entity @s hotbar.0 with stone_pickaxe
-item replace entity @s hotbar.1 with stone_axe
-item replace entity @s hotbar.2 with netherite_upgrade_smithing_template 5
-item replace entity @s hotbar.3 with apple 12
-item replace entity @s hotbar.4 with tnt 4
-item replace entity @s hotbar.5 with flint_and_steel
+data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"tool",claim:1,canon:1,sibling:0},{i:1,role:"axe",claim:1,canon:2,sibling:0},{i:2,role:"special",claim:1,canon:3,sibling:0},{i:3,role:"food",claim:1,canon:4,sibling:0},{i:4,role:"explosive",claim:1,canon:5,sibling:0},{i:5,role:"explosive",claim:0,canon:6,sibling:1}]}
+function switch:player/layout/resolve
+function switch:modes/_common/layers_starter_kit/items with storage switch:layout out
 

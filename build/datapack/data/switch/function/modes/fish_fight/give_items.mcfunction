@@ -29,7 +29,9 @@ scoreboard players set #pearls_count switch.data 0
 execute if score #pearls_count switch.data matches 0 store result score #pearls_count switch.data if items entity @s container.* ender_pearl
 execute if score #pearls_count switch.data matches 0 store result score #pearls_count switch.data if items entity @s weapon.* ender_pearl
 
-execute if score #pearls_count switch.data matches 0 run item replace entity @s hotbar.8 with ender_pearl 6
+data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"mobility",claim:1,canon:9,sibling:0}]}
+function switch:player/layout/resolve
+function switch:modes/fish_fight/give_items/items with storage switch:layout out
 execute if score #pearls_count switch.data matches 1 run give @s ender_pearl 5
 execute if score #pearls_count switch.data matches 2 run give @s ender_pearl 4
 execute if score #pearls_count switch.data matches 3 run give @s ender_pearl 3

@@ -7,9 +7,9 @@
 
 # Give items to the player
 clear @s
-item replace entity @s hotbar.0 with bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display={"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]
-item replace entity @s hotbar.1 with netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]
-item replace entity @s hotbar.2 with arrow
+data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"ranged",claim:1,canon:1,sibling:0},{i:1,role:"melee",claim:1,canon:2,sibling:0},{i:2,role:"ammo",claim:1,canon:3,sibling:0}]}
+function switch:player/layout/resolve
+function switch:modes/one_shot/give_items/items with storage switch:layout out
 attribute @s attack_speed base set 1024
 attribute @s max_health base set 1
 

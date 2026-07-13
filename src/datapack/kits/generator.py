@@ -16,8 +16,8 @@ from stewbeet import Mem, write_function
 from .model import Kit, KitItem, ScoreCount
 from .roles import ROLES, SLOT_ID, TARGETS
 
-# Flipped on once the resolver exists; see module docstring.
-LAYOUT_ENABLED: bool = False
+# Flipped on now that {ns}:player/layout/resolve exists; see module docstring.
+LAYOUT_ENABLED: bool = True
 
 
 # Utility
@@ -128,15 +128,41 @@ def _emit(item: KitItem, slot: str) -> list[str]:
 	return lines
 
 
+def _kit_table(kit: Kit) -> str:
+	""" The one-command item table the resolver reads: reserved slots + one entry per movable item.
+
+	`claim` defaults to "the first item of its role in declaration order"; `canon` is the declared
+	slot, 1-indexed into TARGETS (the resolver's 0 means "unset").
+	"""
+	claimed_roles: set[str] = set()
+	entries: list[str] = []
+	index: int = 0
+	for item in kit.items:
+		if item.pinned or item.override:
+			continue
+		claim: bool = item.claim if item.claim is not None else (item.role not in claimed_roles)
+		if claim:
+			claimed_roles.add(item.role or "")
+		entries.append(f'{{i:{index},role:"{item.role}",claim:{int(claim)},canon:{SLOT_ID[item.slot]},sibling:{int(item.sibling)}}}')
+		index += 1
+	reserved: str = ",".join(f"{{s:{SLOT_ID[slot]}}}" for slot in kit.reserved)
+	return f"data modify storage {{ns}}:layout kit set value {{reserved:[{reserved}],items:[{','.join(entries)}]}}"
+
+
 def write_kit(path: str, kit: Kit) -> None:
 	""" Write a kit's give function at `path`.
+
+	When the layout system is on, the movable items go to a `<path>/items` macro body whose slots
+	come from the player's resolved layout; pinned items and the raw pre/post lines stay in `path`.
 
 	Args:
 		path (str):  Full function path, e.g. f"{ns}:modes/castagne/give_items".
 		kit  (Kit):  The loadout to hand out.
 	"""
 	_validate(kit)
+	ns: str = Mem.ctx.project_id
 	body: list[str] = []
+	items_body: list[str] = []
 
 	if kit.pre:
 		body.append(kit.pre.strip("\n"))
@@ -145,17 +171,24 @@ def write_kit(path: str, kit: Kit) -> None:
 	role_slot: dict[str, str] = {}
 	for item in kit.items:
 		if item.pinned:
-			slot: str = item.slot
-		elif item.override:
+			body.extend(_emit(item, item.slot))
+			continue
+		if item.override:
 			# Lands wherever the item of the same role landed, so it never claims a slot of its own
 			if item.role not in role_slot:
 				raise ValueError(f"Kit '{kit.name}': '{item.role}' override has nothing to override")
-			slot = role_slot[item.role]
+			slot: str = role_slot[item.role]
 		else:
 			slot = f"$(s{index})" if LAYOUT_ENABLED else item.slot
 			role_slot.setdefault(item.role or "", slot)
 			index += 1
-		body.extend(_emit(item, slot))
+		(items_body if LAYOUT_ENABLED else body).extend(_emit(item, slot))
+
+	if LAYOUT_ENABLED and index > 0:
+		body.append(_kit_table(kit))
+		body.append(f"function {ns}:player/layout/resolve")
+		body.append(f"function {path}/items with storage {ns}:layout out")
+		write_function(f"{path}/items", _ns("\n".join(items_body) + "\n"))
 
 	if kit.post:
 		body.append(kit.post.strip("\n"))

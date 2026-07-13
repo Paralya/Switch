@@ -169,7 +169,9 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 		KitItem(role="heal", item="golden_apple", count=5, slot="hotbar.8", selector=civil),
 		KitItem(item="arrow", count=16, slot="inventory.0", selector=civil),
 	)))
-	write_kit(f"{path}/give_items/king", Kit("king", items=(
+	# reserved: give_king_gaps (in post) writes the golden apples at literal hotbar.7 — the resolver
+	# must never hand that slot out, or the gaps would overwrite a remapped item.
+	write_kit(f"{path}/give_items/king", Kit("king", reserved=("hotbar.7",), items=(
 		KitItem(slot="armor.head", item="golden_helmet[enchantments={protection:3,unbreaking:10}]", selector=king),
 		KitItem(role="mobility", item="water_bucket", slot="hotbar.0", selector=king),
 		KitItem(role="melee", item="golden_sword[enchantments={unbreaking:3,sharpness:3}]", slot="hotbar.1", selector=king),

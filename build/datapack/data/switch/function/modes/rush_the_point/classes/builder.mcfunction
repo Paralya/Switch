@@ -9,13 +9,7 @@
 function switch:modes/rush_the_point/classes/_common
 
 function switch:modes/rush_the_point/classes/_armor
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.0 with iron_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.1 with smooth_sandstone_stairs[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.3 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.5 with ravager_spawn_egg[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}]
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
+data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"blocks",claim:0,canon:10,sibling:0},{i:1,role:"melee",claim:1,canon:1,sibling:0},{i:2,role:"blocks",claim:1,canon:2,sibling:1},{i:3,role:"tool",claim:1,canon:3,sibling:0},{i:4,role:"blocks",claim:1,canon:4,sibling:0},{i:5,role:"special",claim:1,canon:6,sibling:0},{i:6,role:"heal",claim:1,canon:7,sibling:0},{i:7,role:"heal",claim:0,canon:8,sibling:1},{i:8,role:"food",claim:1,canon:9,sibling:0}]}
+function switch:player/layout/resolve
+function switch:modes/rush_the_point/classes/builder/items with storage switch:layout out
 

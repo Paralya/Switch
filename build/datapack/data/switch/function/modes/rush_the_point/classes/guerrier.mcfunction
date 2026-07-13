@@ -17,11 +17,7 @@ item replace entity @s[team=switch.rush_the_point.red] armor.head with leather_h
 item replace entity @s[team=switch.rush_the_point.red] armor.chest with leather_chestplate[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=13369344,enchantments={"protection":4}]
 item replace entity @s[team=switch.rush_the_point.red] armor.legs with leather_leggings[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=16731469,enchantments={"protection":4}]
 item replace entity @s[team=switch.rush_the_point.red] armor.feet with leather_boots[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=13369344,enchantments={"protection":4}]
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.1 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
-item replace entity @s hotbar.2 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
+data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"blocks",claim:0,canon:10,sibling:0},{i:1,role:"melee",claim:1,canon:1,sibling:0},{i:2,role:"tool",claim:1,canon:2,sibling:0},{i:3,role:"blocks",claim:1,canon:3,sibling:0},{i:4,role:"heal",claim:1,canon:7,sibling:0},{i:5,role:"heal",claim:0,canon:8,sibling:1},{i:6,role:"food",claim:1,canon:9,sibling:0}]}
+function switch:player/layout/resolve
+function switch:modes/rush_the_point/classes/guerrier/items with storage switch:layout out
 

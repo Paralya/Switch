@@ -83,3 +83,5 @@ class Kit:
 	items: tuple[KitItem, ...] = ()
 	pre: str = ""						# raw lines emitted before the items (clear @s, effect clear, ...)
 	post: str = ""						# raw lines emitted after the items (attribute, effect give, loot give, ...)
+	reserved: tuple[str, ...] = ()		# remappable-range slots that raw pre/post lines write to
+										# (e.g. beat_the_kings' king gaps): never handed out by the resolver

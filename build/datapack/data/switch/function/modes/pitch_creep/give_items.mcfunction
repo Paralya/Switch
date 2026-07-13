@@ -6,14 +6,7 @@
 # @within	switch:modes/pitch_creep/second [ as @a[tag=!detached] & at @s ]
 #
 
-execute store result score #random switch.data run random value 0..3
-execute if score #random switch.data matches 0 run item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
-execute if score #random switch.data matches 1 run item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
-execute if score #random switch.data matches 2 run item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
-execute if score #random switch.data matches 3 run item replace entity @s hotbar.0 with diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
-execute store result score #random switch.data run random value 0..2
-execute if score #random switch.data matches 0 run item replace entity @s hotbar.1 with bow[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]
-execute if score #random switch.data matches 1 run item replace entity @s hotbar.1 with bow[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]
-execute if score #random switch.data matches 2 run item replace entity @s hotbar.1 with bow[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]
-item replace entity @s hotbar.2 with arrow 64
+data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"melee",claim:1,canon:1,sibling:0},{i:1,role:"ranged",claim:1,canon:2,sibling:0},{i:2,role:"ammo",claim:1,canon:3,sibling:0}]}
+function switch:player/layout/resolve
+function switch:modes/pitch_creep/give_items/items with storage switch:layout out
 

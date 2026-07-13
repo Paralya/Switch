@@ -163,3 +163,18 @@ execute unless data storage switch:jumps graviglitch run data modify storage swi
 execute unless score #jump_timer_cs_migrated switch.data matches 1 run function switch:player/jump_timer/migrate
 scoreboard players set #jump_timer_cs_migrated switch.data 1
 
+# Per-player inventory layout (one score per kit role, 0 = default slot)
+scoreboard objectives add switch.layout.melee dummy
+scoreboard objectives add switch.layout.axe dummy
+scoreboard objectives add switch.layout.ranged dummy
+scoreboard objectives add switch.layout.ammo dummy
+scoreboard objectives add switch.layout.tool dummy
+scoreboard objectives add switch.layout.blocks dummy
+scoreboard objectives add switch.layout.mobility dummy
+scoreboard objectives add switch.layout.heal dummy
+scoreboard objectives add switch.layout.food dummy
+scoreboard objectives add switch.layout.explosive dummy
+scoreboard objectives add switch.layout.throwable dummy
+scoreboard objectives add switch.layout.special dummy
+data modify storage switch:layout slots set value ["","hotbar.0","hotbar.1","hotbar.2","hotbar.3","hotbar.4","hotbar.5","hotbar.6","hotbar.7","hotbar.8","weapon.offhand"]
+
