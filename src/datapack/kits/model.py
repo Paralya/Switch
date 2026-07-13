@@ -16,16 +16,24 @@ class ScoreCount:
 
 	Expands to one `execute if score @s <objective> matches <k> run ...` line per level, which is
 	exactly how spectres_game's arrows, pitchout's ender pearls and spleef's snowballs are spelled
-	out by hand today. The last level matches open-ended (`matches <levels-1>..`).
+	out by hand today.
 	"""
-	objective: str						# "{ns}.spectres_game.sp_arrows"
-	base: int = 0						# count at the first level
-	step: int = 0						# added per level
-	levels: int = 1						# number of branches
-	counts: tuple[int, ...] | None = None	# explicit per-level counts, instead of base/step
-	start: int = 0						# score value of the first branch (upgrades that only kick in at 1)
-	last_open: bool = True				# the last branch matches open-ended ("matches 3..")
-	first_unless: bool = False			# the first branch is "unless matches <start+1>.." (sheepwars style)
+	objective: str
+	""" Objective holding the upgrade level, e.g. "{ns}.spectres_game.sp_arrows". """
+	base: int = 0
+	""" Item count at the first level. """
+	step: int = 0
+	""" Item count added per level. """
+	levels: int = 1
+	""" Number of branches to generate. """
+	counts: tuple[int, ...] | None = None
+	""" Explicit per-level counts; overrides base/step when set. """
+	start: int = 0
+	""" Score value of the first branch (for upgrades that only kick in at 1). """
+	last_open: bool = True
+	""" Whether the last branch matches open-ended ("matches 3.."). """
+	first_unless: bool = False
+	""" Whether the first branch is "unless matches <start+1>.." (sheepwars style). """
 
 	def per_level(self) -> tuple[int, ...]:
 		""" The item count for each level, in order. """
@@ -41,10 +49,14 @@ class Variants:
 	One logical item, so it still occupies exactly ONE slot: this is why a random sword skin is a
 	single KitItem with 4 variants, and not 4 KitItems fighting over the same slot.
 	"""
-	score: str							# "#random {ns}.data" or "@s {ns}.sheepwars.chosen_kit"
-	items: tuple[str, ...]				# one item string per score value, index == value
-	roll: int | None = None				# if set, roll `random value 0..roll-1` into `score` first
-	last_open: bool = False				# last branch matches open-ended (`matches <k>..`)
+	score: str
+	""" Score holder and objective, e.g. "#random {ns}.data" or "@s {ns}.sheepwars.chosen_kit". """
+	items: tuple[str, ...]
+	""" One item string per score value, index == value. """
+	roll: int | None = None
+	""" If set, roll `random value 0..roll-1` into `score` before branching. """
+	last_open: bool = False
+	""" Whether the last branch matches open-ended ("matches <k>.."). """
 
 
 @dataclass(frozen=True)
@@ -54,21 +66,35 @@ class KitItem:
 	`role` is the semantic slot ("melee", "blocks", ...) that the player's layout can remap.
 	`role=None` pins the item: armour and inventory.* overflow are never remapped.
 	"""
-	item: str = ""						# "diamond_sword[enchantments={sharpness:1}]"
-	slot: str = ""						# canonical slot: "hotbar.0" | "weapon.offhand" | "armor.chest" | "inventory.25"
-	role: str | None = None				# None => pinned, never remapped
-	count: "int | ScoreCount" = 1
-	variants: Variants | None = None	# random skins / score-selected items
-	team_items: dict[str, str] = field(default_factory=dict[str, str])	# team -> item string ({"{ns}.temp.red": "red_wool"})
-	selector: str = ""					# extra @s condition, written WITHOUT brackets: "team={ns}.temp.spectre"
-	cond: str = ""						# execute clauses inserted before "run", e.g. "if score #x {ns}.data matches 1"
-	loot: str = ""						# loot table id => `loot replace entity` instead of `item replace ... with`
-	from_block: str = ""				# "0 10 0 container.0" => `item replace entity @s <slot> from block ...`
-	modify: str = ""					# item modifier applied to the slot right after placing it
-	claim: bool | None = None			# which item of a duplicated role owns the player's slot (default: the first)
-	sibling: bool = False				# a 2nd item of a role: prefer <role slot>+1 before falling back to canonical
-	override: bool = False				# swap out the previous item in the SAME slot (a king's sword replacing a soldier's),
-										# rather than asking for a slot of its own
+	item: str = ""
+	""" The item string, e.g. "diamond_sword[enchantments={sharpness:1}]". """
+	slot: str = ""
+	""" Canonical slot: "hotbar.0" | "weapon.offhand" | "armor.chest" | "inventory.25". """
+	role: str | None = None
+	""" Semantic role the player's layout can remap; None pins the item to its slot. """
+	count: int | ScoreCount = 1
+	""" Item count, fixed or driven by a shop-upgrade score. """
+	variants: Variants | None = None
+	""" Random skins / score-selected item strings, still occupying this single slot. """
+	team_items: dict[str, str] = field(default_factory=dict[str, str])
+	""" Team name -> item string, e.g. {"{ns}.temp.red": "red_wool"}. """
+	selector: str = ""
+	""" Extra @s condition, written WITHOUT brackets: "team={ns}.temp.spectre". """
+	cond: str = ""
+	""" Execute clauses inserted before "run", e.g. "if score #x {ns}.data matches 1". """
+	loot: str = ""
+	""" Loot table id: place with `loot replace entity` instead of `item replace ... with`. """
+	from_block: str = ""
+	""" Container source, e.g. "0 10 0 container.0": place with `item replace ... from block`. """
+	modify: str = ""
+	""" Item modifier applied to the slot right after placing the item. """
+	claim: bool | None = None
+	""" Which item of a duplicated role owns the player's slot (default: the first declared). """
+	sibling: bool = False
+	""" A 2nd item of a role: prefer <role slot>+1 before falling back to its canonical slot. """
+	override: bool = False
+	""" Swap out the item of the same role in the SAME slot (a king's sword replacing a soldier's),
+	rather than asking for a slot of its own. """
 
 	@property
 	def pinned(self) -> bool:
@@ -79,9 +105,15 @@ class KitItem:
 @dataclass(frozen=True)
 class Kit:
 	""" A full loadout: raw command lines around an ordered list of items. """
-	name: str							# "archer", used only for build-time error messages
+	name: str
+	""" Kit name, e.g. "archer"; used only for build-time error messages. """
 	items: tuple[KitItem, ...] = ()
-	pre: str = ""						# raw lines emitted before the items (clear @s, effect clear, ...)
-	post: str = ""						# raw lines emitted after the items (attribute, effect give, loot give, ...)
-	reserved: tuple[str, ...] = ()		# remappable-range slots that raw pre/post lines write to
-										# (e.g. beat_the_kings' king gaps): never handed out by the resolver
+	""" The items, in declaration order (which is also the resolver's processing order). """
+	pre: str = ""
+	""" Raw lines emitted before the items (clear @s, effect clear, ...). """
+	post: str = ""
+	""" Raw lines emitted after the items (attribute, effect give, loot give, ...). """
+	reserved: tuple[str, ...] = ()
+	""" Remappable-range slots that raw pre/post lines write to (e.g. beat_the_kings' king gaps):
+	never handed out by the resolver. """
+

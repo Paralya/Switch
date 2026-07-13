@@ -469,6 +469,7 @@ scoreboard objectives add {ns}.trigger.rating trigger
 scoreboard objectives add {ns}.trigger.night_vision trigger
 scoreboard objectives add {ns}.trigger.music trigger
 scoreboard objectives add {ns}.trigger.coupdetat trigger
+scoreboard objectives add {ns}.trigger.layout trigger
 
 scoreboard objectives add {ns}.stats.kills playerKillCount
 scoreboard objectives add {ns}.stats.deaths deathCount

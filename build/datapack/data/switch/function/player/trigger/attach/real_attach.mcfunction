@@ -9,6 +9,7 @@
 execute unless entity @s[team=switch.tutorial] run tag @s remove detached
 execute unless entity @s[team=switch.tutorial] run team leave @s
 execute unless entity @s[team=switch.tutorial] run function switch:player/practice/disable
+execute unless entity @s[team=switch.tutorial] run function switch:player/layout/editor/force_close
 
 # Selon l'état du jeu, on exécute les fonctions correspondantes
 scoreboard players add @s switch.alive 0

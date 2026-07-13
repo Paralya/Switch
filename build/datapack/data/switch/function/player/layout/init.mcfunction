@@ -1,7 +1,9 @@
 
 #> switch:player/layout/init
 #
-# @within	???
+# @executed	as @a[sort=random] & at @s
+#
+# @within	switch:player/joined
 #
 
 scoreboard players add @s switch.layout.melee 0

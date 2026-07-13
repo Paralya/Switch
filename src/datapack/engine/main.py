@@ -137,6 +137,9 @@ function {ns}:engine/signals/start
 # Disable the practice mode of the players joining the game (force start / coup d'état attach without the attach trigger)
 execute as @a[tag=!detached,tag={ns}.practice] run function {ns}:player/practice/disable
 
+# Close the layout editor of any player still editing (no save: the save item is the only way to save)
+execute as @a[tag=!detached,tag={ns}.layout_editor] run function {ns}:player/layout/editor/force_close
+
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 """)
 

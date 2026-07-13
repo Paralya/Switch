@@ -18,6 +18,7 @@ tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ",
 tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/night_vision : ","color":"yellow"},{"text":"Permet de toggle l'effet Night Vision"}]
 tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/music : ","color":"yellow"},{"text":"Affiche l'interface du Music Player"}]
 tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/coupdetat : ","color":"yellow"},{"text":"Permet de forcer le mini-jeu de votre choix"}]
+tellraw @s[scores={switch.lang=0,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/layout : ","color":"yellow","click_event":{"action":"run_command","command":"/trigger switch.trigger.layout"}},{"text":"Personnalise l'emplacement des items de kit dans votre barre d'action"}]
 tellraw @s[scores={switch.lang=0}] ""
 
 # English
@@ -32,5 +33,6 @@ tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ",
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/night_vision: ","color":"yellow"},{"text":"Toggle Night Vision effect"}]
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/music: ","color":"yellow"},{"text":"Displays the Music Player interface"}]
 tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/coupdetat: ","color":"yellow"},{"text":"Force a mini-game of your choice"}]
+tellraw @s[scores={switch.lang=1,switch.trigger.help=-11..}] ["",{"text":"➤ ","color":"gold"},{"text":"/layout: ","color":"yellow","click_event":{"action":"run_command","command":"/trigger switch.trigger.layout"}},{"text":"Customize where kit items land in your hotbar"}]
 tellraw @s[scores={switch.lang=1}] ""
 

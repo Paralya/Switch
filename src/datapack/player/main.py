@@ -111,6 +111,9 @@ give @s oak_sign[item_name={{"text":"Friends Cube - far away"}},block_entity_dat
 # Add 0 to every shop score
 function {ns}:shop/initialize_shop_scores
 
+# Add 0 to every inventory layout score
+function {ns}:player/layout/init
+
 # Check if new username
 function {ns}:player/username_change/check
 
@@ -294,6 +297,9 @@ execute if score #inventory {ns}.data matches -1 run clear @s
 ## Practice mode (checkpoints on lobby jumps, must run before the respawn detection below)
 function {ns}:player/practice/tick
 
+## Inventory layout editor (drop-to-save detection, uses the Inventory copy above)
+function {ns}:player/layout/editor/tick
+
 # Teleport to respawn point
 scoreboard players add @s {ns}.lobby_respawn 0
 execute if entity @s[tag=!{ns}.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add {ns}.lobby_respawn
@@ -313,8 +319,8 @@ execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=12}}] ru
 execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=13}}] run function {ns}:cinematic/launch {{x:-11.5,y:74.1,z:91.5,time:20,with:{{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}}}
 tag @s remove {ns}.lobby_respawn
 
-# If lost at least one item, setup inventory
-execute unless score #inventory {ns}.data matches 13 run function {ns}:player/setup_lobby_inventory
+# If lost at least one item, setup inventory (never while the layout editor owns the inventory)
+execute if entity @s[tag=!{ns}.layout_editor] unless score #inventory {ns}.data matches 13 run function {ns}:player/setup_lobby_inventory
 
 
 ## Jump timers (start lines detection, timer ticking + actionbar)
@@ -345,6 +351,7 @@ execute if score @s {ns}.lang matches 0.. run function {ns}:player/translations/
 execute unless entity @s[team={ns}.tutorial] run tag @s remove detached
 execute unless entity @s[team={ns}.tutorial] run team leave @s
 execute unless entity @s[team={ns}.tutorial] run function {ns}:player/practice/disable
+execute unless entity @s[team={ns}.tutorial] run function {ns}:player/layout/editor/force_close
 
 # Selon l'état du jeu, on exécute les fonctions correspondantes
 scoreboard players add @s {ns}.alive 0
@@ -475,6 +482,7 @@ execute in minecraft:overworld run spawnpoint @s 0 70 0
 scoreboard players set @s {ns}.lobby_respawn 0
 function {ns}:player/jump_timer/cancel
 function {ns}:player/practice/disable
+function {ns}:player/layout/editor/force_close
 effect clear @s
 function {ns}:utils/reset_attributes
 effect give @s saturation infinite 0 true
@@ -533,6 +541,7 @@ scoreboard players enable @s {ns}.trigger.night_vision
 scoreboard players enable @s {ns}.trigger.music
 scoreboard players enable @s {ns}.trigger.coupdetat
 scoreboard players enable @s {ns}.trigger.coupdetat_vote
+scoreboard players enable @s {ns}.trigger.layout
 """)
 
 	# /trigger/help/main
@@ -601,6 +610,7 @@ execute unless score @s {ns}.trigger.night_vision matches 0 run function {ns}:pl
 execute unless score @s {ns}.trigger.music matches 0 run function {ns}:player/trigger/music/main
 execute unless score @s {ns}.trigger.coupdetat matches 0 run function {ns}:player/trigger/coupdetat/main
 execute if score @s {ns}.trigger.coupdetat_vote matches 1 run function {ns}:player/trigger/coupdetat/player_vote
+execute unless score @s {ns}.trigger.layout matches 0 run function {ns}:player/layout/editor/entry
 
 function {ns}:player/trigger/enable
 """)
@@ -1344,6 +1354,9 @@ $function {ns}:player/username_change/update_shops {{username:"$(username)", old
 
 # Jump best times
 $function {ns}:player/jump_timer/username_change {{username:"$(username)", old_username:"$(old_username)"}}
+
+# Inventory layout
+$function {ns}:player/layout/username_change {{username:"$(username)", old_username:"$(old_username)"}}
 """)
 
 	# /username_change/update_ratings_loop

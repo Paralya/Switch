@@ -53,3 +53,6 @@ $function switch:player/username_change/update_shops {username:"$(username)", ol
 # Jump best times
 $function switch:player/jump_timer/username_change {username:"$(username)", old_username:"$(old_username)"}
 
+# Inventory layout
+$function switch:player/layout/username_change {username:"$(username)", old_username:"$(old_username)"}
+

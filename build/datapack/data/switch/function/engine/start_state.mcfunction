@@ -19,5 +19,8 @@ function switch:engine/signals/start
 # Disable the practice mode of the players joining the game (force start / coup d'état attach without the attach trigger)
 execute as @a[tag=!detached,tag=switch.practice] run function switch:player/practice/disable
 
+# Close the layout editor of any player still editing (no save: the save item is the only way to save)
+execute as @a[tag=!detached,tag=switch.layout_editor] run function switch:player/layout/editor/force_close
+
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
 

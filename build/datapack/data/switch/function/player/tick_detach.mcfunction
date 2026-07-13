@@ -45,6 +45,9 @@ execute if score #inventory switch.data matches -1 run clear @s
 ## Practice mode (checkpoints on lobby jumps, must run before the respawn detection below)
 function switch:player/practice/tick
 
+## Inventory layout editor (drop-to-save detection, uses the Inventory copy above)
+function switch:player/layout/editor/tick
+
 # Teleport to respawn point
 scoreboard players add @s switch.lobby_respawn 0
 execute if entity @s[tag=!switch.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add switch.lobby_respawn
@@ -64,8 +67,8 @@ execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=12}] 
 execute if entity @s[tag=switch.lobby_respawn,scores={switch.lobby_respawn=13}] run function switch:cinematic/launch {x:-11.5,y:74.1,z:91.5,time:20,with:{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}
 tag @s remove switch.lobby_respawn
 
-# If lost at least one item, setup inventory
-execute unless score #inventory switch.data matches 13 run function switch:player/setup_lobby_inventory
+# If lost at least one item, setup inventory (never while the layout editor owns the inventory)
+execute if entity @s[tag=!switch.layout_editor] unless score #inventory switch.data matches 13 run function switch:player/setup_lobby_inventory
 
 ## Jump timers (start lines detection, timer ticking + actionbar)
 function switch:player/jump_timer/tick

@@ -24,6 +24,7 @@ execute unless score @s switch.trigger.night_vision matches 0 run function switc
 execute unless score @s switch.trigger.music matches 0 run function switch:player/trigger/music/main
 execute unless score @s switch.trigger.coupdetat matches 0 run function switch:player/trigger/coupdetat/main
 execute if score @s switch.trigger.coupdetat_vote matches 1 run function switch:player/trigger/coupdetat/player_vote
+execute unless score @s switch.trigger.layout matches 0 run function switch:player/layout/editor/entry
 
 function switch:player/trigger/enable
 

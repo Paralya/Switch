@@ -4,6 +4,7 @@
 # @executed	as @a[tag=!...]
 #
 # @within	switch:engine/start_state [ as @a[tag=!...] ]
+#			switch:player/layout/editor/open
 #			switch:player/trigger/attach/real_attach
 #			switch:player/trigger/detach/basic_stuff
 #

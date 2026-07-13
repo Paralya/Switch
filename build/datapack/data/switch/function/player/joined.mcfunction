@@ -9,6 +9,9 @@
 # Add 0 to every shop score
 function switch:shop/initialize_shop_scores
 
+# Add 0 to every inventory layout score
+function switch:player/layout/init
+
 # Check if new username
 function switch:player/username_change/check
 
