@@ -7,7 +7,6 @@
 #
 
 function switch:modes/capture_the_flag/classes/_common
-
 item replace entity @s armor.chest with chainmail_chestplate
 item replace entity @s armor.legs with iron_leggings
 item replace entity @s armor.feet with chainmail_boots
@@ -20,7 +19,6 @@ item replace entity @s hotbar.6 with potion[item_name={"text":"Suicide Potion","
 item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 24
 item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 24
 item replace entity @s hotbar.8 with bread 21
-
 attribute @s movement_speed base set 0.11
 attribute @s attack_speed base set 2048
 attribute @s max_health base reset

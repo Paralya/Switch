@@ -2,6 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, Variants, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -100,32 +101,16 @@ function {ns}:utils/classic_death
 """)
 
 	# /give_items
+	# The sword and the bow still roll for a skin, but every branch currently hands out the same
+	# item (the per-skin loot tables next to them are commented out upstream), so the four/three
+	# variants below are deliberately identical.
 	sword: str = 'diamond_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]'
 	bow: str = 'bow[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]'
-	write_function(f"{path}/give_items", f"""
-# Give sword
-execute store result score #random {ns}.data run random value 0..3
-# execute if score #random {ns}.data matches 0 run loot insert 0 0 0 loot stardust:i/original_stardust_sword
-# execute if score #random {ns}.data matches 1 run loot insert 0 0 0 loot stardust:i/legendarium_sword
-# execute if score #random {ns}.data matches 2 run loot insert 0 0 0 loot stardust:i/solarium_sword
-# execute if score #random {ns}.data matches 3 run loot insert 0 0 0 loot stardust:i/darkium_sword
-execute if score #random {ns}.data matches 0 run item replace entity @s hotbar.0 with {sword}
-execute if score #random {ns}.data matches 1 run item replace entity @s hotbar.0 with {sword}
-execute if score #random {ns}.data matches 2 run item replace entity @s hotbar.0 with {sword}
-execute if score #random {ns}.data matches 3 run item replace entity @s hotbar.0 with {sword}
-
-# Give bow
-execute store result score #random {ns}.data run random value 0..2
-# execute if score #random {ns}.data matches 0 run loot insert 0 0 0 loot stardust:i/stardust_bow
-# execute if score #random {ns}.data matches 1 run loot insert 0 0 0 loot stardust:i/awakened_stardust_bow
-# execute if score #random {ns}.data matches 2 run loot insert 0 0 0 loot stardust:i/ultimate_bow
-execute if score #random {ns}.data matches 0 run item replace entity @s hotbar.1 with {bow}
-execute if score #random {ns}.data matches 1 run item replace entity @s hotbar.1 with {bow}
-execute if score #random {ns}.data matches 2 run item replace entity @s hotbar.1 with {bow}
-
-# Give arrows
-item replace entity @s hotbar.2 with arrow 64
-""")
+	write_kit(f"{path}/give_items", Kit("pitch_creep", items=(
+		KitItem(role="melee", slot="hotbar.0", variants=Variants(score="#random {ns}.data", roll=4, items=(sword,) * 4)),
+		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score="#random {ns}.data", roll=3, items=(bow,) * 3)),
+		KitItem(role="ammo", item="arrow", count=64, slot="hotbar.2"),
+	)))
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 90, "#pitch_creep_seconds")

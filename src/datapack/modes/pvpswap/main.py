@@ -2,6 +2,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, write_kit
+from .._common.main import PVP_ARENA_KIT
 from ..common import write_modes_calls
 
 
@@ -31,16 +33,14 @@ execute store result storage {ns}:temp input.my_id int 1 run scoreboard players 
 function {ns}:modes/pvpswap/hurt_macro with storage {ns}:temp input
 """)
 
-	# /give_items
-	write_function(f"{path}/give_items", f"""
-function {ns}:modes/_common/pvp_arena/kit
-
+	# /give_items (the shared pvp arena loadout)
+	write_kit(f"{path}/give_items", Kit("pvpswap", items=PVP_ARENA_KIT.items, post=f"""
 scoreboard players add #initial_count {ns}.data 1
 data modify storage {ns}:temp temp set value {{id:0,hurt:[]}}
 execute store result storage {ns}:temp temp.id int 1 run scoreboard players get @s {ns}.id
 data modify storage {ns}:temp pvpswap append from storage {ns}:temp temp
 data remove storage {ns}:temp temp
-""")
+"""))
 
 	# /hurt_macro (macro function with $ lines)
 	write_function(f"{path}/hurt_macro", f"""

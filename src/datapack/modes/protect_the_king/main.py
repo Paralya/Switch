@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -60,26 +61,32 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 """)
 
 	# /give_items
+	# The trailing `give @s oak_planks 100` / `give @s anvil` used to land in hotbar.2 and hotbar.4
+	# (the first free slots); they now say so, which also makes them remappable.
+	# The king (neither red nor blue) swaps the steel sword out for an obsidian one in the same slot.
+	king: str = f"team=!{ns}.temp.red,team=!{ns}.temp.blue"
+	write_kit(f"{path}/give_items", Kit("protect_the_king", pre="# Starter kit", items=(
+		KitItem(slot="armor.chest", loot=f"{ns}:i/steel_chestplate"),
+		KitItem(slot="armor.legs", item="chainmail_leggings[enchantments={protection:2}]"),
+		KitItem(slot="armor.feet", item="chainmail_boots[enchantments={projectile_protection:5}]"),
+		KitItem(role="melee", slot="hotbar.0", loot=f"{ns}:i/steel_sword",
+			modify='{function:"minecraft:set_enchantments",enchantments:{"minecraft:knockback":1}}'),
+		KitItem(role="ranged", item="bow", slot="hotbar.1"),
+		KitItem(role="axe", item="stone_axe", slot="hotbar.3"),
+		KitItem(role="ammo", item="arrow", count=28, slot="hotbar.6"),
+		KitItem(role="mobility", item="water_bucket", slot="hotbar.7"),
+		KitItem(role="heal", item="golden_apple", count=6, slot="hotbar.8"),
+		KitItem(role="blocks", item="oak_planks", count=100, slot="hotbar.2"),
+		KitItem(role="special", item="anvil", slot="hotbar.4"),
+		KitItem(role="melee", override=True, selector=king, loot=f"{ns}:i/obsidian_sword",
+			modify='{function:"minecraft:set_enchantments",enchantments:{"minecraft:sharpness":1}}'),
+	), post=f"""
+effect give @s[{king}] glowing infinite 255 true
+attribute @s[{king}] max_health base set 40.0
+"""))
+
+	# /give_items (leather cap colors, appended: armour is never remapped)
 	write_function(f"{path}/give_items", f"""
-# Starter kit
-loot replace entity @s armor.chest loot {ns}:i/steel_chestplate
-item replace entity @s armor.legs with chainmail_leggings[enchantments={{protection:2}}]
-item replace entity @s armor.feet with chainmail_boots[enchantments={{projectile_protection:5}}]
-loot replace entity @s hotbar.0 loot {ns}:i/steel_sword
-item modify entity @s hotbar.0 {{function:"minecraft:set_enchantments",enchantments:{{"minecraft:knockback":1}}}}
-item replace entity @s hotbar.1 with bow
-item replace entity @s hotbar.3 with stone_axe
-item replace entity @s hotbar.6 with arrow 28
-item replace entity @s hotbar.7 with water_bucket
-item replace entity @s hotbar.8 with golden_apple 6
-give @s oak_planks 100
-give @s anvil
-
-effect give @s[team=!{ns}.temp.red,team=!{ns}.temp.blue] glowing infinite 255 true
-loot replace entity @s[team=!{ns}.temp.red,team=!{ns}.temp.blue] hotbar.0 loot {ns}:i/obsidian_sword
-item modify entity @s[team=!{ns}.temp.red,team=!{ns}.temp.blue] hotbar.0 {{function:"minecraft:set_enchantments",enchantments:{{"minecraft:sharpness":1}}}}
-attribute @s[team=!{ns}.temp.red,team=!{ns}.temp.blue] max_health base set 40.0
-
 # Leather cap color
 item replace entity @s[team={ns}.temp.red] armor.head with leather_helmet[unbreakable={{}},enchantments={{protection:2}},dyed_color=16711680,attribute_modifiers=[{{type:"armor",slot:"head",id:"{ns}.helmet.armor",amount:3,operation:"add_value"}},{{type:"armor_toughness",slot:"head",id:"{ns}.helmet.armor_toughness",amount:2,operation:"add_value"}}]]
 item replace entity @s[team={ns}.temp.red_king] armor.head with diamond_helmet[unbreakable={{}},enchantments={{protection:2}},item_model="{ns}:ruby_helmet",equippable={{"slot":"head","asset_id":"{ns}:ruby"}},attribute_modifiers=[{{type:"armor",slot:"head",id:"{ns}.helmet.armor",amount:3,operation:"add_value"}},{{type:"armor_toughness",slot:"head",id:"{ns}.helmet.armor_toughness",amount:2,operation:"add_value"}}]]

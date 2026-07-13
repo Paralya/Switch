@@ -27,6 +27,5 @@ execute if score @s switch.spleef.snow_block matches 4 run item replace entity @
 execute if score @s switch.spleef.snow_block matches 5 run item replace entity @s hotbar.8 with snow_block 9
 execute if score @s switch.spleef.snow_block matches 6.. run item replace entity @s hotbar.8 with snow_block 10
 item replace entity @s hotbar.7 from block 0 10 0 container.1
-
 setblock 0 10 0 air
 

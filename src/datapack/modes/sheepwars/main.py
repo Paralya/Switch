@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, ScoreCount, write_kit
 from ..common import write_modes_calls
 from .translations import write_translations
 
@@ -287,6 +288,12 @@ execute if data storage {ns}:main {{map:"sheepwars_ilots"}} if entity @s[team={n
 execute if data storage {ns}:main {{map:"sheepwars_colored_sheeps"}} if entity @s[team={ns}.temp.blue] run function {ns}:maps/survival/sheepwars_colored_sheeps/tp_blue_player
 execute if data storage {ns}:main {{map:"sheepwars_colored_sheeps"}} if entity @s[team={ns}.temp.red] run function {ns}:maps/survival/sheepwars_colored_sheeps/tp_red_player
 
+""")
+
+	# /team_and_give: the starter kit. The base sword and bow live in the kit so the player's
+	# layout can move them; the chosen_kit upgrades replace them in the SAME slot (override) or
+	# add the Builder's bricks and tnt. All the armour and attribute lines stay raw: never remapped.
+	write_kit(f"{path}/team_and_give", Kit("sheepwars", pre=f"""
 # Starter kit
 clear @s
 execute if entity @s[team={ns}.temp.red] run item replace entity @s armor.chest with leather_chestplate[unbreakable={{}},dyed_color=16711680]
@@ -295,9 +302,32 @@ execute if entity @s[team={ns}.temp.red] run item replace entity @s armor.feet w
 execute if entity @s[team={ns}.temp.blue] run item replace entity @s armor.chest with leather_chestplate[unbreakable={{}},dyed_color=255]
 execute if entity @s[team={ns}.temp.blue] run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=255]
 execute if entity @s[team={ns}.temp.blue] run item replace entity @s armor.feet with leather_boots[unbreakable={{}},dyed_color=255]
-item replace entity @s hotbar.0 with stone_sword[unbreakable={{}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}}]
-item replace entity @s hotbar.1 with bow[unbreakable={{}},enchantments={{infinity:1}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}}]
-item replace entity @s inventory.0 with arrow
+""", items=(
+		KitItem(role="melee", slot="hotbar.0", item='stone_sword[unbreakable={},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]}]'),
+		KitItem(role="ranged", slot="hotbar.1", item='bow[unbreakable={},enchantments={infinity:1},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]}]'),
+		KitItem(slot="inventory.0", item="arrow"),
+		# Kit Better Bow (chosen_kit = 2)
+		KitItem(role="ranged", override=True, cond=f"if score @s {ns}.sheepwars.chosen_kit matches 2",
+			item='bow[unbreakable={},enchantments={infinity:1},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]},item_model="{ns}:stardust_bow"]'),
+		# Kit Better Sword (chosen_kit = 3): the sword gains attack damage with each upgrade level
+		KitItem(role="melee", override=True, cond=f"if score @s {ns}.sheepwars.chosen_kit matches 3 unless score @s {ns}.sheepwars.kit_sword matches 1..",
+			item='stone_sword[unbreakable={},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.42,operation:"add_value"}]]'),
+		KitItem(role="melee", override=True, cond=f"if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 1",
+			item='stone_sword[unbreakable={},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.44,operation:"add_value"}]]'),
+		KitItem(role="melee", override=True, cond=f"if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 2",
+			item='stone_sword[unbreakable={},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.46,operation:"add_value"}]]'),
+		KitItem(role="melee", override=True, cond=f"if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 3",
+			item='stone_sword[unbreakable={},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.48,operation:"add_value"}]]'),
+		KitItem(role="melee", override=True, cond=f"if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 4",
+			item='stone_sword[unbreakable={},can_break={blocks:"#realistic_explosion:all"},tooltip_display={"hidden_components":["minecraft:can_break"]},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.50,operation:"add_value"}]]'),
+		# Kit Builder (chosen_kit = 5)
+		KitItem(role="blocks", slot="hotbar.2", item='bricks[can_break={blocks:"#realistic_explosion:all"}]',
+			cond=f"if score @s {ns}.sheepwars.chosen_kit matches 5",
+			count=ScoreCount(objective="{ns}.sheepwars.kit_builder", counts=(5, 6, 7, 9, 10), first_unless=True, last_open=False)),
+		KitItem(role="explosive", slot="hotbar.3", item='tnt[can_break={blocks:"#realistic_explosion:all"}]',
+			cond=f"if score @s {ns}.sheepwars.chosen_kit matches 5",
+			count=ScoreCount(objective="{ns}.sheepwars.kit_builder", counts=(2, 2, 3, 3, 4), first_unless=True, last_open=False)),
+	), post=f"""
 attribute @s armor base set 3.0
 
 ## Shop things
@@ -310,30 +340,10 @@ execute if score @s {ns}.sheepwars.chosen_kit matches 1 if score @s {ns}.sheepwa
 execute if score @s {ns}.sheepwars.chosen_kit matches 1 if score @s {ns}.sheepwars.kit_health matches 3 run attribute @s max_health base set 24
 execute if score @s {ns}.sheepwars.chosen_kit matches 1 if score @s {ns}.sheepwars.kit_health matches 4 run attribute @s max_health base set 25
 
-# Kit Better Bow
+# Kit leggings colors (Better Bow, Better Sword, Builder)
 execute if score @s {ns}.sheepwars.chosen_kit matches 2 run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=6225664]
-execute if score @s {ns}.sheepwars.chosen_kit matches 2 run item replace entity @s hotbar.1 with bow[unbreakable={{}},enchantments={{infinity:1}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}},item_model="{ns}:stardust_bow"]
-
-# Kit Better Sword
 execute if score @s {ns}.sheepwars.chosen_kit matches 3 run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=65480]
-execute if score @s {ns}.sheepwars.chosen_kit matches 3 unless score @s {ns}.sheepwars.kit_sword matches 1.. run item replace entity @s hotbar.0 with stone_sword[unbreakable={{}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}},attribute_modifiers=[{{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.42,operation:"add_value"}}]]
-execute if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 1 run item replace entity @s hotbar.0 with stone_sword[unbreakable={{}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}},attribute_modifiers=[{{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.44,operation:"add_value"}}]]
-execute if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 2 run item replace entity @s hotbar.0 with stone_sword[unbreakable={{}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}},attribute_modifiers=[{{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.46,operation:"add_value"}}]]
-execute if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 3 run item replace entity @s hotbar.0 with stone_sword[unbreakable={{}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}},attribute_modifiers=[{{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.48,operation:"add_value"}}]]
-execute if score @s {ns}.sheepwars.chosen_kit matches 3 if score @s {ns}.sheepwars.kit_sword matches 4 run item replace entity @s hotbar.0 with stone_sword[unbreakable={{}},can_break={{blocks:"#realistic_explosion:all"}},tooltip_display={{"hidden_components":["minecraft:can_break"]}},attribute_modifiers=[{{type:"attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:0.50,operation:"add_value"}}]]
-
-# Kit Builder
 execute if score @s {ns}.sheepwars.chosen_kit matches 5 run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=16187647]
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 unless score @s {ns}.sheepwars.kit_builder matches 1.. run item replace entity @s hotbar.2 with bricks[can_break={{blocks:"#realistic_explosion:all"}}] 5
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 unless score @s {ns}.sheepwars.kit_builder matches 1.. run item replace entity @s hotbar.3 with tnt[can_break={{blocks:"#realistic_explosion:all"}}] 2
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 1 run item replace entity @s hotbar.2 with bricks[can_break={{blocks:"#realistic_explosion:all"}}] 6
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 1 run item replace entity @s hotbar.3 with tnt[can_break={{blocks:"#realistic_explosion:all"}}] 2
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 2 run item replace entity @s hotbar.2 with bricks[can_break={{blocks:"#realistic_explosion:all"}}] 7
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 2 run item replace entity @s hotbar.3 with tnt[can_break={{blocks:"#realistic_explosion:all"}}] 3
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 3 run item replace entity @s hotbar.2 with bricks[can_break={{blocks:"#realistic_explosion:all"}}] 9
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 3 run item replace entity @s hotbar.3 with tnt[can_break={{blocks:"#realistic_explosion:all"}}] 3
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 4 run item replace entity @s hotbar.2 with bricks[can_break={{blocks:"#realistic_explosion:all"}}] 10
-execute if score @s {ns}.sheepwars.chosen_kit matches 5 if score @s {ns}.sheepwars.kit_builder matches 4 run item replace entity @s hotbar.3 with tnt[can_break={{blocks:"#realistic_explosion:all"}}] 4
 
 # Kit Mobility
 execute if score @s {ns}.sheepwars.chosen_kit matches 6 run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=16777215]
@@ -351,15 +361,13 @@ execute if score @s {ns}.sheepwars.chosen_kit matches 6 if score @s {ns}.sheepwa
 execute if score @s {ns}.sheepwars.chosen_kit matches 6 if score @s {ns}.sheepwars.kit_mobility matches 3.. run effect give @s jump_boost infinite 1 true
 
 ## Not an Item based kit
-# Kit Better Bow (chosen_kit = 2)
-# Kit More Sheep (chosen_kit = 4)
+# Kit More Sheep (chosen_kit = 4) / Kit Armored Sheep (chosen_kit = 7)
 execute if score @s {ns}.sheepwars.chosen_kit matches 4 run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=7274751]
-# Kit Armored Sheep (chosen_kit = 7)
 execute if score @s {ns}.sheepwars.chosen_kit matches 7 run item replace entity @s armor.legs with leather_leggings[unbreakable={{}},dyed_color=3552822]
 
 # Set attack speed
 attribute @s attack_speed base set 1024
-""")
+"""))
 
 	# /tick (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/tick", f"""

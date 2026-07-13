@@ -3,6 +3,36 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
+
+# The melee loadout shared by castagne and pvpswap (castagne adds a fishing rod of its own).
+PVP_ARENA_KIT: Kit = Kit("pvp_arena", items=(
+	KitItem(item="leather_helmet[enchantments={projectile_protection:2}]", slot="armor.head"),
+	KitItem(item="leather_chestplate[enchantments={projectile_protection:2}]", slot="armor.chest"),
+	KitItem(item="leather_leggings[enchantments={projectile_protection:2}]", slot="armor.legs"),
+	KitItem(item="leather_boots[enchantments={projectile_protection:2}]", slot="armor.feet"),
+	KitItem(role="melee", item="wooden_sword[enchantments={sharpness:1,knockback:1}]", slot="hotbar.0"),
+	KitItem(role="ranged", item="bow", slot="hotbar.1"),
+	KitItem(role="mobility", item="water_bucket", slot="hotbar.2"),
+	KitItem(role="tool", item="iron_pickaxe[enchantments={efficiency:1}]", slot="hotbar.3"),
+	KitItem(role="axe", item='iron_axe[enchantments={efficiency:1},attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:2,operation:"add_value"}]]', slot="hotbar.4"),
+	KitItem(role="ammo", item="arrow", count=8, slot="hotbar.6"),
+	KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.7"),
+	KitItem(role="heal", item="golden_apple", count=12, slot="hotbar.8"),
+	KitItem(item="tnt", count=4, slot="inventory.25"),
+	KitItem(item="flint_and_steel", slot="inventory.26"),
+))
+
+# The stone-tools loadout shared by layers_2_teams and layers_4_teams.
+LAYERS_STARTER_KIT: Kit = Kit("layers_starter", pre="attribute @s attack_speed base set 2048", items=(
+	KitItem(role="tool", item="stone_pickaxe", slot="hotbar.0"),
+	KitItem(role="axe", item="stone_axe", slot="hotbar.1"),
+	KitItem(role="special", item="netherite_upgrade_smithing_template", count=5, slot="hotbar.2"),
+	KitItem(role="food", item="apple", count=12, slot="hotbar.3"),
+	KitItem(role="explosive", item="tnt", count=4, slot="hotbar.4", claim=True),
+	KitItem(role="explosive", item="flint_and_steel", slot="hotbar.5", sibling=True),
+))
+
 # Vanilla dye colors, in scoreboard order (used by /set_wool_color)
 WOOL_COLORS: tuple[str, ...] = (
 	"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
@@ -84,15 +114,7 @@ scoreboard players operation #secs {ns}.data %= #60 {ns}.data
 """)
 
 	# /layers_starter_kit (shared stone-tools loadout for the layers_2_teams / layers_4_teams modes)
-	write_function(f"{path}/layers_starter_kit", """
-attribute @s attack_speed base set 2048
-give @s stone_pickaxe
-give @s stone_axe
-give @s netherite_upgrade_smithing_template 5
-give @s apple 12
-give @s tnt 4
-give @s flint_and_steel 1
-""")
+	write_kit(f"{path}/layers_starter_kit", LAYERS_STARTER_KIT)
 
 	# /racing_start_setup (ranking teams generated from RANKING_TEAMS)
 	team_add: str = "\n".join(
@@ -423,23 +445,9 @@ execute on vehicle run data modify storage {ns}:main Rotation set from entity @s
 data modify entity @s Rotation[0] set from storage {ns}:main Rotation
 """)
 
-	# /pvp_arena/kit (shared melee loadout for castagne / pvpswap; castagne adds a fishing_rod on its own)
-	write_function(f"{path}/pvp_arena/kit", f"""
-item replace entity @s armor.head with leather_helmet[enchantments={{projectile_protection:2}}]
-item replace entity @s armor.chest with leather_chestplate[enchantments={{projectile_protection:2}}]
-item replace entity @s armor.legs with leather_leggings[enchantments={{projectile_protection:2}}]
-item replace entity @s armor.feet with leather_boots[enchantments={{projectile_protection:2}}]
-item replace entity @s hotbar.0 with wooden_sword[enchantments={{sharpness:1,knockback:1}}]
-item replace entity @s hotbar.1 with bow
-item replace entity @s hotbar.2 with water_bucket
-item replace entity @s hotbar.3 with iron_pickaxe[enchantments={{efficiency:1}}]
-item replace entity @s hotbar.4 with iron_axe[enchantments={{efficiency:1}},attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:2,operation:"add_value"}}]]
-item replace entity @s hotbar.6 with arrow 8
-item replace entity @s hotbar.7 with oak_planks 64
-item replace entity @s hotbar.8 with golden_apple 12
-item replace entity @s inventory.25 with tnt 4
-item replace entity @s inventory.26 with flint_and_steel
-""")
+	# /pvp_arena/kit is no longer a function: castagne and pvpswap build their loadout from the
+	# PVP_ARENA_KIT constant above, so the player's layout resolves the whole kit (fishing rod
+	# included) in one pass instead of two functions fighting over the same slots.
 
 	# /pvp_arena/combat_tick (shared castagne / pvpswap tick body: classic-death detection, glow when
 	# isolated, and the kill-streak advancement with its cooldown bookkeeping)

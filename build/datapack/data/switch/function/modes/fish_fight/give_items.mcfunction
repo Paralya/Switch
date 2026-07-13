@@ -28,6 +28,7 @@ give @s shears 1
 scoreboard players set #pearls_count switch.data 0
 execute if score #pearls_count switch.data matches 0 store result score #pearls_count switch.data if items entity @s container.* ender_pearl
 execute if score #pearls_count switch.data matches 0 store result score #pearls_count switch.data if items entity @s weapon.* ender_pearl
+
 execute if score #pearls_count switch.data matches 0 run item replace entity @s hotbar.8 with ender_pearl 6
 execute if score #pearls_count switch.data matches 1 run give @s ender_pearl 5
 execute if score #pearls_count switch.data matches 2 run give @s ender_pearl 4

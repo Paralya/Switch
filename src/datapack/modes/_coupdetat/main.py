@@ -2,6 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -34,14 +35,14 @@ function {ns}:engine/start_state
 """)
 
 	# /give_items
-	write_function(f"{path}/give_items", f"""
-loot replace entity @s armor.head loot {ns}:i/sapphire_helmet
-loot replace entity @s armor.chest loot {ns}:i/sapphire_chestplate
-loot replace entity @s hotbar.0 loot {ns}:i/stardust_sword
-loot replace entity @s hotbar.1 loot {ns}:i/stardust_apple
-item replace entity @s hotbar.7 with tnt 2
-item replace entity @s hotbar.8 with flint_and_steel
-""")
+	write_kit(f"{path}/give_items", Kit("coupdetat", items=(
+		KitItem(slot="armor.head", loot="{ns}:i/sapphire_helmet"),
+		KitItem(slot="armor.chest", loot="{ns}:i/sapphire_chestplate"),
+		KitItem(role="melee", slot="hotbar.0", loot="{ns}:i/stardust_sword"),
+		KitItem(role="heal", slot="hotbar.1", loot="{ns}:i/stardust_apple"),
+		KitItem(role="explosive", item="tnt", count=2, slot="hotbar.7", claim=True),
+		KitItem(role="explosive", item="flint_and_steel", slot="hotbar.8", sibling=True),
+	)))
 
 	# /process_end (translation ref rewritten)
 	write_function(f"{path}/process_end", f"""

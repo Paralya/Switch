@@ -8,10 +8,10 @@
 #
 
 attribute @s attack_speed base set 2048
-give @s stone_pickaxe
-give @s stone_axe
-give @s netherite_upgrade_smithing_template 5
-give @s apple 12
-give @s tnt 4
-give @s flint_and_steel 1
+item replace entity @s hotbar.0 with stone_pickaxe
+item replace entity @s hotbar.1 with stone_axe
+item replace entity @s hotbar.2 with netherite_upgrade_smithing_template 5
+item replace entity @s hotbar.3 with apple 12
+item replace entity @s hotbar.4 with tnt 4
+item replace entity @s hotbar.5 with flint_and_steel
 

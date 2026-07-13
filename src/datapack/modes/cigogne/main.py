@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -25,13 +26,12 @@ effect give @s absorption 120 0 true
 """)
 
 	# /give_items
-	write_function(f"{path}/give_items", """
-attribute @s attack_speed base set 1024
-item replace entity @s hotbar.0 with golden_apple 4
-item replace entity @s hotbar.2 with iron_sword[enchantments={fire_aspect:1}]
-item replace entity @s hotbar.4 with bow[enchantments={flame:1}]
-item replace entity @s hotbar.8 with arrow 32
-""")
+	write_kit(f"{path}/give_items", Kit("cigogne", pre="attribute @s attack_speed base set 1024", items=(
+		KitItem(role="heal", item="golden_apple", count=4, slot="hotbar.0"),
+		KitItem(role="melee", item="iron_sword[enchantments={fire_aspect:1}]", slot="hotbar.2"),
+		KitItem(role="ranged", item="bow[enchantments={flame:1}]", slot="hotbar.4"),
+		KitItem(role="ammo", item="arrow", count=32, slot="hotbar.8"),
+	)))
 
 	# /killed_player
 	write_function(f"{path}/killed_player", f"""

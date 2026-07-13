@@ -3,7 +3,9 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import write_kit
 from ..common import write_modes_calls, write_no_drop
+from .kits import PITCHOUT_KIT
 from .translations import write_translations
 
 
@@ -61,34 +63,7 @@ function {ns}:modes/_common/death_spectator_lives
 """)
 
 	# /give_items
-	write_function(f"{path}/give_items", f"""
-# Give sword
-execute store result score #random {ns}.data run random value 0..3
-execute if score #random {ns}.data matches 0 run item replace entity @s hotbar.0 with diamond_sword[item_model="{ns}:stardust_sword",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":3}}]
-execute if score #random {ns}.data matches 1 run item replace entity @s hotbar.0 with diamond_sword[item_model="{ns}:legendarium_sword",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":3}}]
-execute if score #random {ns}.data matches 2 run item replace entity @s hotbar.0 with diamond_sword[item_model="{ns}:solarium_sword",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":3}}]
-execute if score #random {ns}.data matches 3 run item replace entity @s hotbar.0 with diamond_sword[item_model="{ns}:darkium_sword",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":3}}]
-
-# Give bow
-execute store result score #random {ns}.data run random value 0..2
-execute if score #random {ns}.data matches 0 run item replace entity @s hotbar.1 with bow[item_model="{ns}:stardust_bow",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"punch":3, "infinity":1}}]
-execute if score #random {ns}.data matches 1 run item replace entity @s hotbar.1 with bow[item_model="{ns}:awakened_stardust_bow",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"punch":3, "infinity":1}}]
-execute if score #random {ns}.data matches 2 run item replace entity @s hotbar.1 with bow[item_model="{ns}:ultimate_bow",unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"punch":3, "infinity":1}}]
-
-# Give arrows
-item replace entity @s hotbar.2 with arrow 64
-
-# Give depending on the upgrades
-execute if score @s {ns}.pitchout.boots matches 0 run item replace entity @s armor.feet with leather_boots[max_damage=5]
-execute if score @s {ns}.pitchout.boots matches 1 run item replace entity @s armor.feet with leather_boots[max_damage=20]
-execute if score @s {ns}.pitchout.boots matches 2 run item replace entity @s armor.feet with leather_boots[max_damage=30]
-execute if score @s {ns}.pitchout.boots matches 3 run item replace entity @s armor.feet with leather_boots[max_damage=40]
-execute if score @s {ns}.pitchout.boots matches 4 run item replace entity @s armor.feet with leather_boots[max_damage=50]
-execute if score @s {ns}.pitchout.boots matches 5.. run item replace entity @s armor.feet with leather_boots[max_damage=65]
-execute if score @s {ns}.pitchout.ender_pearl matches 0 run item replace entity @s hotbar.8 with ender_pearl[item_model="{ns}:dragon_pearl"] 3
-execute if score @s {ns}.pitchout.ender_pearl matches 1 run item replace entity @s hotbar.8 with ender_pearl[item_model="{ns}:dragon_pearl"] 4
-execute if score @s {ns}.pitchout.ender_pearl matches 2.. run item replace entity @s hotbar.8 with ender_pearl[item_model="{ns}:dragon_pearl"] 5
-""")
+	write_kit(f"{path}/give_items", PITCHOUT_KIT)
 
 	# /in_water_with_cooldown (translation ref rewritten)
 	write_function(f"{path}/in_water_with_cooldown", f"""

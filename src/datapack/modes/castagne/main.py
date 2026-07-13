@@ -2,6 +2,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
+from .._common.main import PVP_ARENA_KIT
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -31,17 +33,17 @@ execute store result storage {ns}:temp input.my_id int 1 run scoreboard players 
 function {path}/hurt_macro with storage {ns}:temp input
 """)
 
-	# /give_items
-	write_function(f"{path}/give_items", f"""
-function {ns}:modes/_common/pvp_arena/kit
-item replace entity @s hotbar.5 with fishing_rod
-
+	# /give_items (the shared pvp arena loadout, plus castagne's own fishing rod)
+	write_kit(f"{path}/give_items", Kit("castagne",
+		items=(*PVP_ARENA_KIT.items, KitItem(role="special", item="fishing_rod", slot="hotbar.5")),
+		post=f"""
 scoreboard players add #initial_count {ns}.data 1
 data modify storage {ns}:temp temp set value {{id:0,hurt:[]}}
 execute store result storage {ns}:temp temp.id int 1 run scoreboard players get @s {ns}.id
 data modify storage {ns}:temp castagne append from storage {ns}:temp temp
 data remove storage {ns}:temp temp
-""")
+""",
+	))
 
 	# /hurt_macro
 	write_function(f"{path}/hurt_macro", f"""

@@ -3,7 +3,9 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
+from .kits import ARCHER, BUILDER, DESTROYER, SWORDSMAN
 from .translations import write_translations
 
 
@@ -125,45 +127,13 @@ item replace entity @s[team={ns}.rush_the_point.red] armor.legs with leather_leg
 item replace entity @s[team={ns}.rush_the_point.red] armor.feet with leather_boots[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=16731469,enchantments={{"protection":2}}]
 """)
 
-	# /classes/_healing_food (shared hotbar.6/7/8 healing potions + bread, used by every class kit)
-	write_function(f"{path}/classes/_healing_food", """
-item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
-item replace entity @s hotbar.8 with bread 42
-""")
+	# /classes/archer, /classes/builder, /classes/destroyer (declared in kits.py)
+	write_kit(f"{path}/classes/archer", ARCHER)
+	write_kit(f"{path}/classes/builder", BUILDER)
+	write_kit(f"{path}/classes/destroyer", DESTROYER)
 
-	# /classes/_kit_base (shared preamble for archer/builder/destroyer: _common reset, _armor, offhand wool)
-	write_function(f"{path}/classes/_kit_base", f"""
-function {ns}:modes/rush_the_point/classes/_common
-
-function {ns}:modes/rush_the_point/classes/_armor
-
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-""")
-
-	# /classes/_kit_swordsman (shared diamond sword + pickaxe + offhand/hotbar wool + healing, aviateur/guerrier)
-	write_function(f"{path}/classes/_kit_swordsman", f"""
-item replace entity @s weapon.offhand with cut_sandstone[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-item replace entity @s hotbar.0 with diamond_sword[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":1}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.1 with diamond_pickaxe[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.2 with cut_sandstone[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-function {ns}:modes/rush_the_point/classes/_healing_food
-""")
-
-	# /classes/archer
-	write_function(f"{path}/classes/archer", f"""
-function {ns}:modes/rush_the_point/classes/_kit_base
-item replace entity @s hotbar.0 with bow[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"power":1}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.1 with iron_sword[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":1}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.3 with cut_sandstone[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-item replace entity @s hotbar.4 with ender_pearl
-function {ns}:modes/rush_the_point/classes/_healing_food
-item replace entity @s inventory.0 with arrow 64
-""")
-
-	# /classes/aviateur
-	write_function(f"{path}/classes/aviateur", f"""
+	# /classes/aviateur (elytra + its own protection-4 armor, then the swordsman loadout)
+	write_kit(f"{path}/classes/aviateur", Kit("aviateur", items=SWORDSMAN, pre=f"""
 function {ns}:modes/rush_the_point/classes/_common
 
 item replace entity @s armor.chest with elytra[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}}]
@@ -177,32 +147,10 @@ item replace entity @s[team={ns}.rush_the_point.red] armor.legs with leather_leg
 item replace entity @s[team={ns}.rush_the_point.red] armor.feet with leather_boots[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=13369344,enchantments={{"protection":4}}]
 
 scoreboard players set @s {ns}.temp.elytra_cooldown 120
-function {ns}:modes/rush_the_point/classes/_kit_swordsman
-""")
+"""))
 
-	# /classes/builder
-	write_function(f"{path}/classes/builder", f"""
-function {ns}:modes/rush_the_point/classes/_kit_base
-item replace entity @s hotbar.0 with iron_sword[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":1}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.1 with smooth_sandstone_stairs[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.3 with cut_sandstone[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-item replace entity @s hotbar.5 with ravager_spawn_egg[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}]
-function {ns}:modes/rush_the_point/classes/_healing_food
-""")
-
-	# /classes/destroyer
-	write_function(f"{path}/classes/destroyer", f"""
-function {ns}:modes/rush_the_point/classes/_kit_base
-item replace entity @s hotbar.0 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_name={{"text":"Fireball Wand","color":"gold","italic":false}},item_model="{ns}:fireball_wand",custom_data={{{ns}:{{fireball_wand:true}}}}]
-item replace entity @s hotbar.1 with iron_sword[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},enchantments={{"knockback":1}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},can_break={{blocks:"#{ns}:rush_the_point/can_break"}}]
-item replace entity @s hotbar.3 with cut_sandstone[can_place_on={{blocks:"#{ns}:rush_the_point/can_place_on"}}] 64
-function {ns}:modes/rush_the_point/classes/_healing_food
-""")
-
-	# /classes/guerrier
-	write_function(f"{path}/classes/guerrier", f"""
+	# /classes/guerrier (its own protection-4 armor, then the swordsman loadout)
+	write_kit(f"{path}/classes/guerrier", Kit("guerrier", items=SWORDSMAN, pre=f"""
 function {ns}:modes/rush_the_point/classes/_common
 
 item replace entity @s[team={ns}.rush_the_point.blue] armor.head with leather_helmet[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=3827848,enchantments={{"protection":4}}]
@@ -214,9 +162,7 @@ item replace entity @s[team={ns}.rush_the_point.red] armor.head with leather_hel
 item replace entity @s[team={ns}.rush_the_point.red] armor.chest with leather_chestplate[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=13369344,enchantments={{"protection":4}}]
 item replace entity @s[team={ns}.rush_the_point.red] armor.legs with leather_leggings[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=16731469,enchantments={{"protection":4}}]
 item replace entity @s[team={ns}.rush_the_point.red] armor.feet with leather_boots[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},dyed_color=13369344,enchantments={{"protection":4}}]
-
-function {ns}:modes/rush_the_point/classes/_kit_swordsman
-""")
+"""))
 
 	# /classes/main (translation ref rewritten)
 	write_function(f"{path}/classes/main", f"""

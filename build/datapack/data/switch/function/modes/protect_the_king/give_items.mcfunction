@@ -17,12 +17,11 @@ item replace entity @s hotbar.3 with stone_axe
 item replace entity @s hotbar.6 with arrow 28
 item replace entity @s hotbar.7 with water_bucket
 item replace entity @s hotbar.8 with golden_apple 6
-give @s oak_planks 100
-give @s anvil
-
-effect give @s[team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
+item replace entity @s hotbar.2 with oak_planks 100
+item replace entity @s hotbar.4 with anvil
 loot replace entity @s[team=!switch.temp.red,team=!switch.temp.blue] hotbar.0 loot switch:i/obsidian_sword
 item modify entity @s[team=!switch.temp.red,team=!switch.temp.blue] hotbar.0 {function:"minecraft:set_enchantments",enchantments:{"minecraft:sharpness":1}}
+effect give @s[team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
 attribute @s[team=!switch.temp.red,team=!switch.temp.blue] max_health base set 40.0
 
 # Leather cap color

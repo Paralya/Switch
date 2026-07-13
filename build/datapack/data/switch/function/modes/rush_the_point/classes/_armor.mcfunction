@@ -3,7 +3,9 @@
 #
 # @executed	as the player & at current position
 #
-# @within	switch:modes/rush_the_point/classes/_kit_base
+# @within	switch:modes/rush_the_point/classes/archer
+#			switch:modes/rush_the_point/classes/builder
+#			switch:modes/rush_the_point/classes/destroyer
 #
 
 item replace entity @s[team=switch.rush_the_point.blue] armor.head with leather_helmet[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},dyed_color=3827848,enchantments={"protection":2}]

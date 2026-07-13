@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -152,30 +153,40 @@ execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run funct
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
+	# /give_items/civil and /give_items/king (two loadouts, so each resolves its own slots); both
+	# keep their team selector, so give_items can call them unconditionally.
+	civil: str = f"team={ns}.temp.civil"
+	king: str = f"team={ns}.temp.king"
+	write_kit(f"{path}/give_items/civil", Kit("civil", pre="# Starter kit", items=(
+		KitItem(slot="armor.head", item="iron_helmet", selector=civil),
+		KitItem(slot="armor.chest", item="diamond_chestplate", selector=civil),
+		KitItem(slot="armor.legs", item="chainmail_leggings", selector=civil),
+		KitItem(slot="armor.feet", item="iron_boots[enchantments={feather_falling:2}]", selector=civil),
+		KitItem(role="blocks", item="oak_planks", count=64, slot="weapon.offhand", selector=civil),
+		KitItem(role="melee", item="iron_sword[enchantments={sharpness:5}]", slot="hotbar.0", selector=civil),
+		KitItem(role="ranged", item="bow", slot="hotbar.1", selector=civil),
+		KitItem(role="mobility", item="water_bucket", slot="hotbar.7", selector=civil),
+		KitItem(role="heal", item="golden_apple", count=5, slot="hotbar.8", selector=civil),
+		KitItem(item="arrow", count=16, slot="inventory.0", selector=civil),
+	)))
+	write_kit(f"{path}/give_items/king", Kit("king", items=(
+		KitItem(slot="armor.head", item="golden_helmet[enchantments={protection:3,unbreaking:10}]", selector=king),
+		KitItem(role="mobility", item="water_bucket", slot="hotbar.0", selector=king),
+		KitItem(role="melee", item="golden_sword[enchantments={unbreaking:3,sharpness:3}]", slot="hotbar.1", selector=king),
+		KitItem(role="ranged", item="bow[enchantments={flame:1,punch:1}]", slot="hotbar.3", selector=king),
+		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.8", selector=king),
+		KitItem(item="arrow", count=45, slot="inventory.0", selector=king),
+	), post=f"""
+execute if entity @s[{king}] run function {path}/give_king_gaps with storage {ns}:temp king_gaps
+effect give @s[{king}] resistance infinite 3 true
+effect give @s[{king}] speed infinite 0 true
+effect give @s[{king}] health_boost infinite 1 true
+"""))
+
 	# /give_items
 	write_function(f"{path}/give_items", f"""
-# Starter kit
-item replace entity @s[team={ns}.temp.civil] armor.head with iron_helmet
-item replace entity @s[team={ns}.temp.civil] armor.chest with diamond_chestplate
-item replace entity @s[team={ns}.temp.civil] armor.legs with chainmail_leggings
-item replace entity @s[team={ns}.temp.civil] armor.feet with iron_boots[enchantments={{feather_falling:2}}]
-item replace entity @s[team={ns}.temp.civil] weapon.offhand with oak_planks 64
-item replace entity @s[team={ns}.temp.civil] hotbar.0 with iron_sword[enchantments={{sharpness:5}}]
-item replace entity @s[team={ns}.temp.civil] hotbar.1 with bow
-item replace entity @s[team={ns}.temp.civil] hotbar.7 with water_bucket
-item replace entity @s[team={ns}.temp.civil] hotbar.8 with golden_apple 5
-item replace entity @s[team={ns}.temp.civil] inventory.0 with arrow 16
-
-item replace entity @s[team={ns}.temp.king] armor.head with golden_helmet[enchantments={{protection:3,unbreaking:10}}]
-item replace entity @s[team={ns}.temp.king] hotbar.0 with water_bucket
-item replace entity @s[team={ns}.temp.king] hotbar.1 with golden_sword[enchantments={{unbreaking:3,sharpness:3}}]
-item replace entity @s[team={ns}.temp.king] hotbar.3 with bow[enchantments={{flame:1,punch:1}}]
-execute if entity @s[team={ns}.temp.king] run function {path}/give_king_gaps with storage {ns}:temp king_gaps
-item replace entity @s[team={ns}.temp.king] hotbar.8 with oak_planks 64
-item replace entity @s[team={ns}.temp.king] inventory.0 with arrow 45
-effect give @s[team={ns}.temp.king] resistance infinite 3 true
-effect give @s[team={ns}.temp.king] speed infinite 0 true
-effect give @s[team={ns}.temp.king] health_boost infinite 1 true
+function {ns}:modes/beat_the_kings/give_items/civil
+function {ns}:modes/beat_the_kings/give_items/king
 
 attribute @s attack_speed base set 1024
 """)

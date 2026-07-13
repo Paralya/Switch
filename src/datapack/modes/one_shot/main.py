@@ -2,6 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, write_kit
 from ..common import write_modes_calls, write_no_drop, write_time_xp_bar
 from .translations import write_translations
 
@@ -25,15 +26,16 @@ function {path}/respawn/main
 """)
 
 	# /give_items
-	write_function(f"{path}/give_items", """
-# Give items to the player
-clear @s
-give @s bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display={"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]
-give @s netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]
-give @s arrow 1
+	# The three `give`s used to land in hotbar.0/1/2 because /give_items clears the inventory first;
+	# now they say so, which is what lets the player's layout move them.
+	write_kit(f"{path}/give_items", Kit("one_shot", pre="# Give items to the player\nclear @s", items=(
+		KitItem(role="ranged", slot="hotbar.0", item='bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display={"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]'),
+		KitItem(role="melee", slot="hotbar.1", item='netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]'),
+		KitItem(role="ammo", item="arrow", count=1, slot="hotbar.2"),
+	), post="""
 attribute @s attack_speed base set 1024
 attribute @s max_health base set 1
-""")
+"""))
 
 	# /joined
 	write_function(f"{path}/joined", f"""

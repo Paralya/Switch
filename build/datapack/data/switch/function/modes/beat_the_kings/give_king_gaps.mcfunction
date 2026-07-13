@@ -3,7 +3,7 @@
 #
 # @executed	as @a[tag=!detached] & at @s
 #
-# @within	switch:modes/beat_the_kings/give_items with storage switch:temp king_gaps
+# @within	switch:modes/beat_the_kings/give_items/king with storage switch:temp king_gaps
 #
 # @args		count (unknown)
 #

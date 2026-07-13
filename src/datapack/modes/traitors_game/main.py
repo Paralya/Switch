@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...kits import Kit, KitItem, Variants, write_kit
 from ..common import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -159,7 +160,10 @@ execute if score #traitors_game_seconds {ns}.data matches 1200.. as @a[tag=!deta
 """)
 
 	# /give_items
-	write_function(f"{path}/give_items", f"""
+	# The armour and the sword each come in two flavours, drawn by a coin flip.
+	# The three slotless gives at the end used to fill the last free slots in order (the pickaxe in
+	# hotbar.2, the planks in hotbar.5, and the anvil overflowing into inventory.0); they now say so.
+	write_kit(f"{path}/give_items", Kit("traitors_game", pre=f"""
 function {ns}:utils/reset_attributes
 attribute @s attack_speed base set 1024
 
@@ -167,30 +171,31 @@ scoreboard players set #armor {ns}.data 0
 scoreboard players set #sword {ns}.data 0
 execute if predicate {ns}:chance/0.5 run scoreboard players set #armor {ns}.data 1
 execute if predicate {ns}:chance/0.5 run scoreboard players set #sword {ns}.data 1
-execute if score #armor {ns}.data matches 0 run item replace entity @s armor.head with iron_helmet[enchantments={{protection:2}}]
-execute if score #armor {ns}.data matches 0 run item replace entity @s armor.chest with diamond_chestplate
-execute if score #armor {ns}.data matches 0 run item replace entity @s armor.legs with iron_leggings[enchantments={{protection:2}}]
-execute if score #armor {ns}.data matches 0 run item replace entity @s armor.feet with diamond_boots
-execute if score #armor {ns}.data matches 1 run item replace entity @s armor.head with diamond_helmet
-execute if score #armor {ns}.data matches 1 run item replace entity @s armor.chest with iron_chestplate[enchantments={{protection:1}}]
-execute if score #armor {ns}.data matches 1 run item replace entity @s armor.legs with diamond_leggings
-execute if score #armor {ns}.data matches 1 run item replace entity @s armor.feet with iron_boots[enchantments={{protection:2}}]
-execute if score #sword {ns}.data matches 1 run item replace entity @s hotbar.0 with diamond_sword[enchantments={{sharpness:1}}]
-execute if score #sword {ns}.data matches 0 run item replace entity @s hotbar.0 with iron_sword[enchantments={{sharpness:2}}]
-item replace entity @s hotbar.1 with bow[enchantments={{power:1}}]
-item replace entity @s hotbar.3 with stone_axe[attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:4,operation:"add_value"}}]]
-item replace entity @s hotbar.4 with apple 16
-item replace entity @s hotbar.8 with golden_apple 6
-item replace entity @s hotbar.6 with arrow 28
-item replace entity @s hotbar.7 with water_bucket
-loot give @s loot {ns}:traitors_game/all_starter
-give @s oak_planks 100
-give @s anvil
-
+""", items=(
+		KitItem(slot="armor.head", variants=Variants(score="#armor {ns}.data", items=(
+			"iron_helmet[enchantments={protection:2}]", "diamond_helmet"))),
+		KitItem(slot="armor.chest", variants=Variants(score="#armor {ns}.data", items=(
+			"diamond_chestplate", "iron_chestplate[enchantments={protection:1}]"))),
+		KitItem(slot="armor.legs", variants=Variants(score="#armor {ns}.data", items=(
+			"iron_leggings[enchantments={protection:2}]", "diamond_leggings"))),
+		KitItem(slot="armor.feet", variants=Variants(score="#armor {ns}.data", items=(
+			"diamond_boots", "iron_boots[enchantments={protection:2}]"))),
+		KitItem(role="melee", slot="hotbar.0", variants=Variants(score="#sword {ns}.data", items=(
+			"iron_sword[enchantments={sharpness:2}]", "diamond_sword[enchantments={sharpness:1}]"))),
+		KitItem(role="ranged", item="bow[enchantments={power:1}]", slot="hotbar.1"),
+		KitItem(role="axe", slot="hotbar.3", item='stone_axe[attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:4,operation:"add_value"}]]'),
+		KitItem(role="food", item="apple", count=16, slot="hotbar.4"),
+		KitItem(role="heal", item="golden_apple", count=6, slot="hotbar.8"),
+		KitItem(role="ammo", item="arrow", count=28, slot="hotbar.6"),
+		KitItem(role="mobility", item="water_bucket", slot="hotbar.7"),
+		KitItem(role="tool", slot="hotbar.2", loot="{ns}:traitors_game/all_starter"),
+		KitItem(role="blocks", item="oak_planks", count=100, slot="hotbar.5"),
+		KitItem(item="anvil", slot="inventory.0"),
+	), post=f"""
 # Random items (0 or 1 or 2)
 execute if predicate {ns}:chance/0.5 run function {ns}:modes/traitors_game/random_items
 execute if predicate {ns}:chance/0.5 run function {ns}:modes/traitors_game/random_items
-""")
+"""))
 
 	# /joined
 	write_function(f"{path}/joined", f"""
