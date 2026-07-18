@@ -243,6 +243,13 @@ class Kit:
 		for item in self.items:
 			if item.role is not None and item.role not in ROLES:
 				raise ValueError(f"Kit '{self.name}': unknown role '{item.role}'")
+			counts: tuple[int, ...] = item.count.per_level() if isinstance(item.count, ScoreCount) else (item.count,)
+			if any(count > 64 for count in counts):
+				raise ValueError(
+					f"Kit '{self.name}': count {max(counts)} exceeds a stack; `item replace` caps its count at 99 and"
+					" one over 64 fails the whole macro instantiation (no kit item given at all) —"
+					" split the surplus into a second, pinned inventory.* item"
+				)
 			if not item.pinned and not item.override and item.slot not in SLOT_ID:
 				raise ValueError(f"Kit '{self.name}': role '{item.role}' sits on '{item.slot}', which players cannot remap")
 			if item.override and item.pinned:

@@ -25,5 +25,5 @@ $item replace entity @s $(s4) with golden_apple 6
 $item replace entity @s $(s5) with arrow 28
 $item replace entity @s $(s6) with water_bucket
 $loot replace entity @s $(s7) loot switch:traitors_game/all_starter
-$item replace entity @s $(s8) with oak_planks 100
+$item replace entity @s $(s8) with oak_planks 64
 

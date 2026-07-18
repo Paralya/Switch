@@ -62,7 +62,9 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 
 	# /give_items
 	# The trailing `give @s oak_planks 100` / `give @s anvil` used to land in hotbar.2 and hotbar.4
-	# (the first free slots); they now say so, which also makes them remappable.
+	# (the first free slots); they now say so, which also makes them remappable. The 100 planks are
+	# split 64 + 36: `item replace` cannot place more than a stack (its count argument caps at 99,
+	# and one over 64 fails the whole macro instantiation, i.e. NO kit item at all).
 	# The king (neither red nor blue) swaps the steel sword out for an obsidian one in the same slot.
 	king: str = f"team=!{ns}.temp.red,team=!{ns}.temp.blue"
 	Kit("protect_the_king", pre="# Starter kit", items=(
@@ -76,7 +78,8 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 		KitItem(role="ammo", item="arrow", count=28, slot="hotbar.6"),
 		KitItem(role="mobility", item="water_bucket", slot="hotbar.7"),
 		KitItem(role="heal", item="golden_apple", count=6, slot="hotbar.8"),
-		KitItem(role="blocks", item="oak_planks", count=100, slot="hotbar.2"),
+		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.2"),
+		KitItem(item="oak_planks", count=36, slot="inventory.0"),
 		KitItem(role="special", item="anvil", slot="hotbar.4"),
 		KitItem(role="melee", override=True, selector=king, loot=f"{ns}:i/obsidian_sword",
 			modify='{function:"minecraft:set_enchantments",enchantments:{"minecraft:sharpness":1}}'),

@@ -189,7 +189,8 @@ execute if predicate {ns}:chance/0.5 run scoreboard players set #sword {ns}.data
 		KitItem(role="ammo", item="arrow", count=28, slot="hotbar.6"),
 		KitItem(role="mobility", item="water_bucket", slot="hotbar.7"),
 		KitItem(role="tool", slot="hotbar.2", loot=f"{ns}:traitors_game/all_starter"),
-		KitItem(role="blocks", item="oak_planks", count=100, slot="hotbar.5"),
+		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.5"),
+		KitItem(item="oak_planks", count=36, slot="inventory.1"),
 		KitItem(item="anvil", slot="inventory.0"),
 	), post=f"""
 # Random items (0 or 1 or 2)
