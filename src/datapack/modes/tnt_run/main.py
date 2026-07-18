@@ -151,7 +151,7 @@ scoreboard players set @a[tag=!detached] {ns}.temp.blocks 0
 scoreboard players set @a[tag=!detached] {ns}.temp.dashes 0
 scoreboard players set @a[tag=!detached] {ns}.temp.dashes_earned 0
 
-scoreboard players set #tnt_run_seconds {ns}.data -15
+scoreboard players set #tnt_run_seconds {ns}.data -6
 scoreboard players set #tnt_run_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 """)

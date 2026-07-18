@@ -163,7 +163,7 @@ function {ns}:modes/protect_the_king/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time {ns}.data 901
-scoreboard players set #protect_the_king_seconds {ns}.data -10
+scoreboard players set #protect_the_king_seconds {ns}.data -1
 scoreboard players set #protect_the_king_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #cut_clean {ns}.data 1

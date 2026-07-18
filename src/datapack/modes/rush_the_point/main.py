@@ -381,7 +381,7 @@ summon marker 13975 99 14050 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_p
 summon marker 13975 99 13950 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
 
 scoreboard players set #remaining_time {ns}.data 610
-scoreboard players set #rush_the_point_seconds {ns}.data -20
+scoreboard players set #rush_the_point_seconds {ns}.data -11
 scoreboard players set #rush_the_point_ticks {ns}.data 0
 scoreboard objectives add {ns}.temp.zone_capture dummy
 """)

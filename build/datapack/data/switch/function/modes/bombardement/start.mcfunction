@@ -14,7 +14,7 @@ function switch:utils/choose_map_for {id:"bombardement", maps:["bombardement"]}
 function switch:modes/bombardement/translations/start
 tp @a[tag=!detached] 121057 109 121064 180 -30
 
-scoreboard players set #bombardement_seconds switch.data -12
+scoreboard players set #bombardement_seconds switch.data -3
 scoreboard players set #bombardement_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

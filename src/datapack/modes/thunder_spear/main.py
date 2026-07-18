@@ -114,7 +114,7 @@ execute in {ns}:game run gamerule minecraft:fall_damage false
 
 function {translations}/start
 
-scoreboard players set #thunder_spear_seconds {ns}.data -10
+scoreboard players set #thunder_spear_seconds {ns}.data -1
 scoreboard players set #thunder_spear_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 160
 scoreboard players set #process_end {ns}.data 0

@@ -21,7 +21,7 @@ execute in switch:game run gamerule minecraft:fall_damage false
 
 function switch:modes/thunder_spear/translations/start
 
-scoreboard players set #thunder_spear_seconds switch.data -10
+scoreboard players set #thunder_spear_seconds switch.data -1
 scoreboard players set #thunder_spear_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 160
 scoreboard players set #process_end switch.data 0

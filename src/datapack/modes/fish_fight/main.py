@@ -375,7 +375,7 @@ scoreboard players set @a[team=!detached] {ns}.temp.axolotl_killed 0
 
 scoreboard players set @a[tag=!detached] {ns}.temp.cooldown 120
 
-scoreboard players set #fish_fight_seconds {ns}.data -10
+scoreboard players set #fish_fight_seconds {ns}.data -1
 scoreboard players set #fish_fight_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

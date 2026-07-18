@@ -102,7 +102,7 @@ function {ns}:modes/glassrunner/translations/start
 
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #glassrunner_ticks {ns}.data 0
-scoreboard players set #glassrunner_seconds {ns}.data -10
+scoreboard players set #glassrunner_seconds {ns}.data -1
 scoreboard players set #remaining_time {ns}.data 610
 scoreboard players set #glassrunner.apocalypse {ns}.data 0
 

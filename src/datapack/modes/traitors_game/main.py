@@ -434,7 +434,7 @@ function {ns}:modes/traitors_game/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time {ns}.data 1210
-scoreboard players set #traitors_game_seconds {ns}.data -15
+scoreboard players set #traitors_game_seconds {ns}.data -6
 scoreboard players set #traitors_game_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #cut_clean {ns}.data 1

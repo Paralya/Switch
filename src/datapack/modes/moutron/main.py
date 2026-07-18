@@ -149,7 +149,7 @@ scoreboard objectives add {ns}.temp.moutron dummy
 scoreboard objectives add {ns}.temp.color dummy
 scoreboard objectives add {ns}.temp.kill dummy
 
-scoreboard players set #moutron_seconds {ns}.data -16
+scoreboard players set #moutron_seconds {ns}.data -8
 scoreboard players set #moutron_ticks {ns}.data -100
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #life_time {ns}.data 20

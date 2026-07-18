@@ -23,7 +23,7 @@ scoreboard objectives add switch.temp.moutron dummy
 scoreboard objectives add switch.temp.color dummy
 scoreboard objectives add switch.temp.kill dummy
 
-scoreboard players set #moutron_seconds switch.data -16
+scoreboard players set #moutron_seconds switch.data -8
 scoreboard players set #moutron_ticks switch.data -100
 scoreboard players set #process_end switch.data 0
 scoreboard players set #life_time switch.data 20

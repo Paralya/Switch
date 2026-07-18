@@ -35,7 +35,7 @@ function {ns}:utils/choose_map_for {{id:"{mode}", maps:["{mode}"]}}
 function {translations}/start
 execute if data storage {ns}:records block_party run function {path}/record_tellraw with storage {ns}:records block_party
 
-scoreboard players set #block_party_seconds {ns}.data -10
+scoreboard players set #block_party_seconds {ns}.data -1
 scoreboard players set #block_party_ticks {ns}.data -200
 scoreboard players set #block_party_round {ns}.data 1
 scoreboard players set #process_end {ns}.data 0

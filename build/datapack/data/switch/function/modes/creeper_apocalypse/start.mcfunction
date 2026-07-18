@@ -20,7 +20,7 @@ function switch:modes/_common/standard_combat_rules
 function switch:modes/creeper_apocalypse/translations/start
 
 scoreboard players set #remaining_time switch.data 105
-scoreboard players set #creeper_apocalypse_seconds switch.data -10
+scoreboard players set #creeper_apocalypse_seconds switch.data -1
 scoreboard players set #creeper_apocalypse_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

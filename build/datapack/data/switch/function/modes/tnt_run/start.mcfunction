@@ -26,7 +26,7 @@ scoreboard players set @a[tag=!detached] switch.temp.blocks 0
 scoreboard players set @a[tag=!detached] switch.temp.dashes 0
 scoreboard players set @a[tag=!detached] switch.temp.dashes_earned 0
 
-scoreboard players set #tnt_run_seconds switch.data -15
+scoreboard players set #tnt_run_seconds switch.data -6
 scoreboard players set #tnt_run_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

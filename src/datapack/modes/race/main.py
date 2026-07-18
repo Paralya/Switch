@@ -929,7 +929,7 @@ scoreboard players set #is_race {ns}.data 1
 # Setup starting variables
 scoreboard players set #can_vote {ns}.data 1
 scoreboard players set #remaining_time {ns}.data 615
-scoreboard players set #race_seconds {ns}.data -15
+scoreboard players set #race_seconds {ns}.data -8
 scoreboard players set #race_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #detect_end {ns}.data 0

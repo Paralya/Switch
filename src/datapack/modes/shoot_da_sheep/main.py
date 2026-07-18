@@ -117,7 +117,7 @@ execute as @a[tag=!detached] run function {ns}:maps/survival/shoot_da_sheep/tp_s
 
 function {ns}:modes/shoot_da_sheep/translations/start
 
-scoreboard players set #shoot_da_sheep_seconds {ns}.data -10
+scoreboard players set #shoot_da_sheep_seconds {ns}.data -1
 scoreboard players set #shoot_da_sheep_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 65
 scoreboard players set #process_end {ns}.data 0

@@ -26,7 +26,7 @@ scoreboard objectives add switch.temp.trapped_timer dummy
 scoreboard players set @a[tag=!detached] switch.temp.mined 0
 scoreboard players set @a[tag=!detached] switch.temp.trapped_timer 0
 
-scoreboard players set #spleef_seconds switch.data -10
+scoreboard players set #spleef_seconds switch.data -1
 scoreboard players set #spleef_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

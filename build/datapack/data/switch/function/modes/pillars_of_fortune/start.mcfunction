@@ -19,7 +19,7 @@ function switch:modes/pillars_of_fortune/translations/start
 execute in switch:game run gamerule minecraft:mob_griefing true
 
 scoreboard players set #remaining_time switch.data 605
-scoreboard players set #pillars_of_fortune_seconds switch.data -10
+scoreboard players set #pillars_of_fortune_seconds switch.data -1
 scoreboard players set #pillars_of_fortune_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health

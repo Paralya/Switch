@@ -197,7 +197,7 @@ function {ns}:modes/murder_mystery/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time {ns}.data 245
-scoreboard players set #murder_mystery_seconds {ns}.data -15
+scoreboard players set #murder_mystery_seconds {ns}.data -6
 scoreboard players set #murder_mystery_ticks {ns}.data 0
 scoreboard players set #detective_reload {ns}.data 0
 scoreboard players set #murderer_reload {ns}.data 0

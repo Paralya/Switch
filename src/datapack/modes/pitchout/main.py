@@ -150,7 +150,7 @@ scoreboard objectives add {ns}.temp.old_z dummy
 scoreboard objectives add {ns}.temp.blocks_run dummy
 scoreboard players set @a[tag=!detached] {ns}.temp.cooldown 120
 
-scoreboard players set #pitchout_seconds {ns}.data -10
+scoreboard players set #pitchout_seconds {ns}.data -4
 scoreboard players set #pitchout_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

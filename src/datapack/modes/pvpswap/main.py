@@ -84,7 +84,8 @@ execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 function {ns}:translations/modes_pvpswap_start
 
 scoreboard players set #remaining_time {ns}.data 910
-scoreboard players set #pvpswap_seconds {ns}.data -10
+scoreboard players set #pvpswap_seconds {ns}.data -3
+execute if data storage {ns}:main {{map:"kart_racer_relai"}} run scoreboard players set #pvpswap_seconds {ns}.data -10
 scoreboard players set #pvpswap_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives setdisplay list {ns}.health

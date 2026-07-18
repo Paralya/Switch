@@ -235,7 +235,7 @@ execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @
 # Default: 20 seconds delay between the give of sheeps (decrease every minute)
 scoreboard players set #sheep_give_delay {ns}.data 20
 scoreboard players set #remaining_time {ns}.data 910
-scoreboard players set #sheepwars_seconds {ns}.data -12
+scoreboard players set #sheepwars_seconds {ns}.data -3
 scoreboard players set #sheepwars_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #blue_fire_arrows {ns}.data 0

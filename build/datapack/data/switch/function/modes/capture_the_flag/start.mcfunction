@@ -46,7 +46,7 @@ scoreboard players set #next_role switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/capture_the_flag/roles/main
 
 scoreboard players set #remaining_time switch.data 910
-scoreboard players set #capture_the_flag_seconds switch.data -10
+scoreboard players set #capture_the_flag_seconds switch.data -1
 scoreboard players set #capture_the_flag_ticks switch.data 0
 tag @a remove switch.has_blue_flag
 tag @a remove switch.has_red_flag

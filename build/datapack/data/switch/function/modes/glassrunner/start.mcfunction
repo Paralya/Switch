@@ -35,7 +35,7 @@ function switch:modes/glassrunner/translations/start
 
 scoreboard players set #process_end switch.data 0
 scoreboard players set #glassrunner_ticks switch.data 0
-scoreboard players set #glassrunner_seconds switch.data -10
+scoreboard players set #glassrunner_seconds switch.data -1
 scoreboard players set #remaining_time switch.data 610
 scoreboard players set #glassrunner.apocalypse switch.data 0
 

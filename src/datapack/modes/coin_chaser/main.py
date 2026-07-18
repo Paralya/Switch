@@ -97,7 +97,7 @@ function {ns}:utils/choose_map_for {{id:"coin_chaser", maps:["paralya_lobby","sm
 
 function {translations}/start
 
-scoreboard players set #coin_chaser_seconds {ns}.data -10
+scoreboard players set #coin_chaser_seconds {ns}.data -1
 scoreboard players set #coin_chaser_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 70
 scoreboard players set #process_end {ns}.data 0

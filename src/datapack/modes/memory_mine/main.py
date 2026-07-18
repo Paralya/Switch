@@ -118,7 +118,7 @@ function {ns}:utils/choose_map_for {{id:"memory_mine", maps:["memory_mine"]}}
 function {translations}/start
 
 scoreboard objectives add {ns}.temp.cooldown dummy
-scoreboard players set #memory_mine_seconds {ns}.data -10
+scoreboard players set #memory_mine_seconds {ns}.data -1
 scoreboard players set #memory_mine_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

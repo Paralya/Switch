@@ -25,7 +25,7 @@ function switch:modes/beat_the_kings/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #remaining_time switch.data 901
-scoreboard players set #beat_the_kings_seconds switch.data -10
+scoreboard players set #beat_the_kings_seconds switch.data -1
 scoreboard players set #beat_the_kings_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

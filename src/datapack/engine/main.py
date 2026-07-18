@@ -459,11 +459,13 @@ $execute in {ns}:game run function {ns}:modes/$(id)/calls/tick
 
 	# /signals/second
 	write_function(f"{path}/signals/second", f"""
-# Hold the countdown until the intro window has really elapsed in GAME ticks: the wall clock that
-# drives this signal keeps counting under lag while the intro cinematic (delay 130t + travel 50t)
-# only advances per tick, so without this gate a mode's negative "seconds" countdown could arm its
-# end-detection while every player is still riding the cinematic in spectator (game ends on start)
-execute if score #game_ticks {ns}.data matches ..199 run return 1
+# Hold the countdown while the intro cinematic still holds the players: the wall clock that drives
+# this signal keeps counting under lag while the cinematic (delay 130t + travel 50t) only advances
+# per tick, so without this gate a mode's negative "seconds" countdown could arm its end-detection
+# while every player is still riding the cinematic in spectator (game ends on start). Gating on the
+# live entities (capped to the intro window in GAME ticks) releases the very second players land,
+# and never delays the maps that have no intro cinematic (kart_racer_relai, build_battle)
+execute if score #game_ticks {ns}.data matches ..199 if score #cinematic_entities {ns}.data matches 1.. run return 1
 
 # Launch second signal
 data modify storage {ns}:main input set value {{id:""}}

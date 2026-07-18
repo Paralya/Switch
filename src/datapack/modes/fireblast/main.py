@@ -124,7 +124,7 @@ function {ns}:utils/choose_map_for {{id:"fireblast", maps:["fireblast_bubulle","
 function {translations}/start
 
 scoreboard players set #remaining_time {ns}.data 605
-scoreboard players set #fireblast_seconds {ns}.data -12
+scoreboard players set #fireblast_seconds {ns}.data -3
 scoreboard players set #fireblast_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.cooldown dummy

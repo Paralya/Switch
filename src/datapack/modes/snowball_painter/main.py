@@ -178,7 +178,7 @@ function {ns}:utils/choose_map_for {{id:"snowball_painter", maps:["snowball_pain
 
 function {ns}:modes/snowball_painter/translations/start
 
-scoreboard players set #snowball_painter_seconds {ns}.data -10
+scoreboard players set #snowball_painter_seconds {ns}.data -1
 scoreboard players set #snowball_painter_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 1000
 scoreboard players set #process_end {ns}.data 0

@@ -16,7 +16,7 @@ function switch:utils/choose_map_for {id:"memory_mine", maps:["memory_mine"]}
 function switch:modes/memory_mine/translations/start
 
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard players set #memory_mine_seconds switch.data -10
+scoreboard players set #memory_mine_seconds switch.data -1
 scoreboard players set #memory_mine_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

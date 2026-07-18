@@ -56,7 +56,7 @@ scoreboard players set @a[team=!detached] switch.temp.axolotl_killed 0
 
 scoreboard players set @a[tag=!detached] switch.temp.cooldown 120
 
-scoreboard players set #fish_fight_seconds switch.data -10
+scoreboard players set #fish_fight_seconds switch.data -1
 scoreboard players set #fish_fight_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

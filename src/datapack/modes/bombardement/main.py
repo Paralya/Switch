@@ -29,7 +29,7 @@ function {ns}:utils/choose_map_for {{id:"bombardement", maps:["bombardement"]}}
 function {translations}/start
 tp @a[tag=!detached] 121057 109 121064 180 -30
 
-scoreboard players set #bombardement_seconds {ns}.data -12
+scoreboard players set #bombardement_seconds {ns}.data -3
 scoreboard players set #bombardement_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

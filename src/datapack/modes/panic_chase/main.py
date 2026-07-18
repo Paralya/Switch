@@ -149,11 +149,11 @@ execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @
 
 function {translations}/start
 execute if data storage {ns}:main {{map:"arti_box"}} run scoreboard players set #remaining_time {ns}.data 150
-execute if data storage {ns}:main {{map:"arti_box"}} run scoreboard players set #panic_chase_seconds {ns}.data -30
+execute if data storage {ns}:main {{map:"arti_box"}} run scoreboard players set #panic_chase_seconds {ns}.data -21
 execute if data storage {ns}:main {{map:"nether_storm"}} run scoreboard players set #remaining_time {ns}.data 240
-execute if data storage {ns}:main {{map:"nether_storm"}} run scoreboard players set #panic_chase_seconds {ns}.data -30
+execute if data storage {ns}:main {{map:"nether_storm"}} run scoreboard players set #panic_chase_seconds {ns}.data -21
 execute if data storage {ns}:main {{map:"yeti_in_panic"}} run scoreboard players set #remaining_time {ns}.data 240
-execute if data storage {ns}:main {{map:"yeti_in_panic"}} run scoreboard players set #panic_chase_seconds {ns}.data -30
+execute if data storage {ns}:main {{map:"yeti_in_panic"}} run scoreboard players set #panic_chase_seconds {ns}.data -21
 scoreboard players set #panic_chase_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

@@ -37,7 +37,7 @@ scoreboard objectives add switch.temp.dead_cooldown dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-scoreboard players set #laser_game_seconds switch.data -10
+scoreboard players set #laser_game_seconds switch.data -1
 scoreboard players set #laser_game_ticks switch.data 0
 scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0

@@ -130,7 +130,7 @@ function {ns}:modes/_common/standard_combat_rules
 function {translations}/start
 
 scoreboard players set #remaining_time {ns}.data 105
-scoreboard players set #creeper_apocalypse_seconds {ns}.data -10
+scoreboard players set #creeper_apocalypse_seconds {ns}.data -1
 scoreboard players set #creeper_apocalypse_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

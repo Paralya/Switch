@@ -135,7 +135,7 @@ function {ns}:modes/warden_escape/translations/start
 
 team add {ns}.temp.mobs
 scoreboard players set #remaining_time {ns}.data 100
-scoreboard players set #warden_escape_seconds {ns}.data -15
+scoreboard players set #warden_escape_seconds {ns}.data -6
 scoreboard players set #warden_escape_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.snowballs_shot minecraft.used:minecraft.snowball

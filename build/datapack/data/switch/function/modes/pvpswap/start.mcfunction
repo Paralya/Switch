@@ -15,7 +15,8 @@ execute in switch:game run gamerule minecraft:natural_health_regeneration false
 function switch:translations/modes_pvpswap_start
 
 scoreboard players set #remaining_time switch.data 910
-scoreboard players set #pvpswap_seconds switch.data -10
+scoreboard players set #pvpswap_seconds switch.data -3
+execute if data storage switch:main {map:"kart_racer_relai"} run scoreboard players set #pvpswap_seconds switch.data -10
 scoreboard players set #pvpswap_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health

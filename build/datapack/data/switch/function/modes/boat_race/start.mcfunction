@@ -18,7 +18,7 @@ function switch:utils/set_dynamic_time
 function switch:modes/boat_race/translations/start
 
 scoreboard players set #remaining_time switch.data 488
-scoreboard players set #boat_race_seconds switch.data -8
+scoreboard players set #boat_race_seconds switch.data -6
 scoreboard players set #boat_race_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0

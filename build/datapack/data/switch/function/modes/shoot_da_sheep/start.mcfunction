@@ -14,7 +14,7 @@ execute as @a[tag=!detached] run function switch:maps/survival/shoot_da_sheep/tp
 
 function switch:modes/shoot_da_sheep/translations/start
 
-scoreboard players set #shoot_da_sheep_seconds switch.data -10
+scoreboard players set #shoot_da_sheep_seconds switch.data -1
 scoreboard players set #shoot_da_sheep_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 65
 scoreboard players set #process_end switch.data 0

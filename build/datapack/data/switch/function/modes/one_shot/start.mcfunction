@@ -23,7 +23,7 @@ scoreboard objectives add switch.temp.kills playerKillCount {"text":"[Goal: 18 K
 scoreboard objectives setdisplay sidebar switch.temp.kills
 
 scoreboard players set #remaining_time switch.data 600
-scoreboard players set #one_shot_seconds switch.data -10
+scoreboard players set #one_shot_seconds switch.data -1
 scoreboard players set #one_shot_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #winner switch.data 0

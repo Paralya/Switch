@@ -15,7 +15,7 @@ execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:modes/simultaneous_jump/translations/start
 
-scoreboard players set #simultaneous_jump_seconds switch.data -8
+scoreboard players set #simultaneous_jump_seconds switch.data -1
 scoreboard players set #simultaneous_jump_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 65
 scoreboard players set #process_end switch.data 0

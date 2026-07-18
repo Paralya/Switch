@@ -133,7 +133,7 @@ execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 
-scoreboard players set #de_a_coudre_seconds {ns}.data -9
+scoreboard players set #de_a_coudre_seconds {ns}.data -1
 scoreboard players set #de_a_coudre_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #detect_end {ns}.data 0

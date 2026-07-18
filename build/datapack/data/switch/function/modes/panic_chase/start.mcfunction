@@ -19,11 +19,11 @@ execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @
 
 function switch:modes/panic_chase/translations/start
 execute if data storage switch:main {map:"arti_box"} run scoreboard players set #remaining_time switch.data 150
-execute if data storage switch:main {map:"arti_box"} run scoreboard players set #panic_chase_seconds switch.data -30
+execute if data storage switch:main {map:"arti_box"} run scoreboard players set #panic_chase_seconds switch.data -21
 execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #remaining_time switch.data 240
-execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #panic_chase_seconds switch.data -30
+execute if data storage switch:main {map:"nether_storm"} run scoreboard players set #panic_chase_seconds switch.data -21
 execute if data storage switch:main {map:"yeti_in_panic"} run scoreboard players set #remaining_time switch.data 240
-execute if data storage switch:main {map:"yeti_in_panic"} run scoreboard players set #panic_chase_seconds switch.data -30
+execute if data storage switch:main {map:"yeti_in_panic"} run scoreboard players set #panic_chase_seconds switch.data -21
 scoreboard players set #panic_chase_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

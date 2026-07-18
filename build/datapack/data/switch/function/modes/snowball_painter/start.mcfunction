@@ -13,7 +13,7 @@ function switch:utils/choose_map_for {id:"snowball_painter", maps:["snowball_pai
 
 function switch:modes/snowball_painter/translations/start
 
-scoreboard players set #snowball_painter_seconds switch.data -10
+scoreboard players set #snowball_painter_seconds switch.data -1
 scoreboard players set #snowball_painter_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 1000
 scoreboard players set #process_end switch.data 0

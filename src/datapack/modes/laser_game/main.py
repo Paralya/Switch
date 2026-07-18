@@ -241,7 +241,7 @@ scoreboard objectives add {ns}.temp.dead_cooldown dummy
 scoreboard objectives add {ns}.temp.sidebar dummy {{"text":"Points","color":"yellow"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 
-scoreboard players set #laser_game_seconds {ns}.data -10
+scoreboard players set #laser_game_seconds {ns}.data -1
 scoreboard players set #laser_game_ticks {ns}.data 0
 scoreboard players set #blue_points {ns}.data 0
 scoreboard players set #red_points {ns}.data 0

@@ -20,7 +20,7 @@ function switch:utils/choose_map_for {id:"block_party", maps:["block_party"]}
 function switch:modes/block_party/translations/start
 execute if data storage switch:records block_party run function switch:modes/block_party/record_tellraw with storage switch:records block_party
 
-scoreboard players set #block_party_seconds switch.data -10
+scoreboard players set #block_party_seconds switch.data -1
 scoreboard players set #block_party_ticks switch.data -200
 scoreboard players set #block_party_round switch.data 1
 scoreboard players set #process_end switch.data 0

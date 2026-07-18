@@ -88,7 +88,7 @@ function {ns}:modes/pillars_of_fortune/translations/start
 execute in {ns}:game run gamerule minecraft:mob_griefing true
 
 scoreboard players set #remaining_time {ns}.data 605
-scoreboard players set #pillars_of_fortune_seconds {ns}.data -10
+scoreboard players set #pillars_of_fortune_seconds {ns}.data -1
 scoreboard players set #pillars_of_fortune_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives setdisplay list {ns}.health

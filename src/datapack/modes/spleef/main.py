@@ -199,7 +199,7 @@ scoreboard objectives add {ns}.temp.trapped_timer dummy
 scoreboard players set @a[tag=!detached] {ns}.temp.mined 0
 scoreboard players set @a[tag=!detached] {ns}.temp.trapped_timer 0
 
-scoreboard players set #spleef_seconds {ns}.data -10
+scoreboard players set #spleef_seconds {ns}.data -1
 scoreboard players set #spleef_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 """)
