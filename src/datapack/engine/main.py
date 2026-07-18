@@ -459,6 +459,12 @@ $execute in {ns}:game run function {ns}:modes/$(id)/calls/tick
 
 	# /signals/second
 	write_function(f"{path}/signals/second", f"""
+# Hold the countdown until the intro window has really elapsed in GAME ticks: the wall clock that
+# drives this signal keeps counting under lag while the intro cinematic (delay 130t + travel 50t)
+# only advances per tick, so without this gate a mode's negative "seconds" countdown could arm its
+# end-detection while every player is still riding the cinematic in spectator (game ends on start)
+execute if score #game_ticks {ns}.data matches ..199 run return 1
+
 # Launch second signal
 data modify storage {ns}:main input set value {{id:""}}
 data modify storage {ns}:main input.id set from storage {ns}:main current_game
@@ -467,6 +473,9 @@ function {ns}:engine/signals/macro_second with storage {ns}:main input
 
 	# /signals/start
 	write_function(f"{path}/signals/start", f"""
+# Reset the game tick counter (drives the intro grace of the per-second signal, see signals/second)
+scoreboard players set #game_ticks {ns}.data 0
+
 # Log message
 data modify storage {ns}:main MessageToLog set value [{{"text": "Lancement d'une partie de `"}},{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true}},{{"text":"` !"}}]
 function {ns}:engine/log_message/apply
@@ -507,6 +516,9 @@ function {ns}:engine/signals/macro_stop with storage {ns}:main input
 
 	# /signals/tick
 	write_function(f"{path}/signals/tick", f"""
+# Count real game ticks since the game started (gates the per-second signal, see signals/second)
+scoreboard players add #game_ticks {ns}.data 1
+
 # Launch tick signal
 data modify storage {ns}:main input set value {{id:""}}
 data modify storage {ns}:main input.id set from storage {ns}:main current_game

@@ -307,8 +307,9 @@ scoreboard players set @a[team={ns}.temp.spectre] {ns}.games_not_being_spectre 0
 
 	# /place_obsidian_from_chicken
 	write_function(f"{path}/place_obsidian_from_chicken", """
-# Kill self, and place crying obsidian block
+# Place the crying obsidian block, then kill both the chicken and its block display
 execute on vehicle at @s run setblock ~ ~ ~ crying_obsidian
+execute on vehicle run kill @s
 kill @s
 """)
 
@@ -498,7 +499,7 @@ scoreboard objectives remove {ns}.temp.break_obsidian
 execute store result score #count {ns}.data if entity @a[tag=!detached,gamemode=!spectator]
 
 # Summon lootboxes depending on the player count
-summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
+summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
 execute if score #count {ns}.data matches 5.. run summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
 execute if score #count {ns}.data matches 15.. run summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
 
@@ -534,8 +535,8 @@ execute as @a[tag=!detached,scores={{{ns}.temp.break_obsidian=1..}}] run functio
 # Clear les crying obsidiennes des inventaires
 clear @a[tag=!detached] crying_obsidian
 
-# Obsidienne poulet
-execute as @e[tag={ns}.task_obsidian] at @s unless block ~ ~-2 ~ #minecraft:air run function {ns}:modes/spectres_game/place_obsidian_from_chicken
+# Obsidienne poulet (posée dès que le poulet touche le sol)
+execute as @e[tag={ns}.task_obsidian] at @s unless block ~ ~-1 ~ #minecraft:air run function {ns}:modes/spectres_game/place_obsidian_from_chicken
 
 
 # Particules sur tous les spectres qui ne sneake pas pour tous les joueurs

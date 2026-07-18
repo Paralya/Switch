@@ -1,9 +1,10 @@
 
 #> switch:cinematic/kill
 #
-# @executed	at @a[tag=switch.temp,limit=1]
+# @executed	at @s
 #
-# @within	switch:cinematic/finish
+# @within	switch:cinematic/entity_tick_at_self
+#			switch:cinematic/finish
 #			switch:player/trigger/detach/basic_stuff [ as @e[tag=switch.cinematic,predicate=switch:has_same_id] ]
 #
 

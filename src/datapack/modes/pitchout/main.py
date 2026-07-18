@@ -88,6 +88,7 @@ function {ns}:modes/pitchout/translations/in_water_with_cooldown
 
 	# /joined
 	write_function(f"{path}/joined", f"""
+gamemode spectator @s
 scoreboard players reset @s {ns}.alive
 function {path}/death
 """)
@@ -319,3 +320,4 @@ execute if score #spawn_count {ns}.data matches 12 run scoreboard players set #s
 function {path}/map_halloween/teleport_players
 function {path}/_tp_give_common
 """)
+

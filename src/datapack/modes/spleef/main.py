@@ -71,10 +71,12 @@ scoreboard players set #border_laps {ns}.data 0
 
 	# /death
 	write_function(f"{path}/death", f"""
-# Attribute the kill: nearest recent digger marker under the victim (excluding themselves)
+# Attribute the kill: nearest recent digger marker in the column above the victim (excluding
+# themselves) — the markers sit up at the snow layer while the victim dies down in the lava,
+# so the search box covers ±3 blocks horizontally and up to 24 blocks above the death position
 scoreboard players operation #victim_id {ns}.id = @s {ns}.id
 scoreboard players set #killer_id {ns}.id 0
-execute at @s as @n[tag={ns}.spleef_dig,distance=..4] run scoreboard players operation #killer_id {ns}.id = @s {ns}.id
+execute at @s positioned ~-3 ~-2 ~-3 as @n[tag={ns}.spleef_dig,dx=6,dy=26,dz=6] run scoreboard players operation #killer_id {ns}.id = @s {ns}.id
 execute if score #killer_id {ns}.id = #victim_id {ns}.id run scoreboard players set #killer_id {ns}.id 0
 
 # Tag that digger as the killer so the death message can name them

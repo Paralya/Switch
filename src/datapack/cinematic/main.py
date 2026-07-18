@@ -130,7 +130,10 @@ data modify entity @s item.components."minecraft:custom_data" set from storage {
 	write_function(f"{path}/entity_tick_at_self", f"""
 # Find the player and execute at him (for easy distance=0)
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
-tag @a[predicate={ns}:has_same_id,limit=1] add {ns}.temp
+
+# Tag the linked player, storing success so the same selector also tells us if they are online
+execute store success score #temp {ns}.data run tag @a[predicate={ns}:has_same_id,limit=1] add {ns}.temp
+execute if score #temp {ns}.data matches 0 run return run function {ns}:cinematic/kill
 execute at @a[tag={ns}.temp,limit=1] run function {ns}:cinematic/entity_tick_at_player
 tag @a[tag={ns}.temp,limit=1] remove {ns}.temp
 """)
