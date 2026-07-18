@@ -102,7 +102,7 @@ function {ns}:utils/classic_death
 
 	# /give_items (the same skinned sword and bow variants as pitchout)
 	swords, bows = skinned_weapons()
-	Kit("pitch_creep", items=(
+	Kit("pitch_creep", layout=False, items=(
 		KitItem(role="melee", slot="hotbar.0", variants=Variants(score=f"#random {ns}.data", roll=4, items=swords)),
 		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score=f"#random {ns}.data", roll=3, items=bows)),
 		KitItem(role="ammo", item="arrow", count=64, slot="hotbar.2"),

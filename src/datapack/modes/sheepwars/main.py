@@ -290,10 +290,10 @@ execute if data storage {ns}:main {{map:"sheepwars_colored_sheeps"}} if entity @
 
 """)
 
-	# /team_and_give: the starter kit. The base sword and bow live in the kit so the player's
-	# layout can move them; the chosen_kit upgrades replace them in the SAME slot (override) or
+	# /team_and_give: the starter kit, deliberately layout-free (sword first, bow second for
+	# everyone); the chosen_kit upgrades replace the base weapons in the SAME slot (override) or
 	# add the Builder's bricks and tnt. All the armour and attribute lines stay raw: never remapped.
-	Kit("sheepwars", pre=f"""
+	Kit("sheepwars", layout=False, pre=f"""
 # Starter kit
 clear @s
 execute if entity @s[team={ns}.temp.red] run item replace entity @s armor.chest with leather_chestplate[unbreakable={{}},dyed_color=16711680]

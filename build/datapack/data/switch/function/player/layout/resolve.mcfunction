@@ -16,8 +16,6 @@
 #			switch:modes/cigogne/give_items
 #			switch:modes/fish_fight/give_items
 #			switch:modes/one_shot/give_items
-#			switch:modes/pitch_creep/give_items
-#			switch:modes/pitchout/give_items
 #			switch:modes/protect_the_king/give_items
 #			switch:modes/pvpswap/give_items
 #			switch:modes/rush_the_point/classes/archer
@@ -25,7 +23,6 @@
 #			switch:modes/rush_the_point/classes/destroyer
 #			switch:modes/rush_the_point/classes/aviateur
 #			switch:modes/rush_the_point/classes/guerrier
-#			switch:modes/sheepwars/team_and_give
 #			switch:modes/spectres_game/give_items/spectre
 #			switch:modes/spectres_game/give_items/visible
 #			switch:modes/spleef/give_items

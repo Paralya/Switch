@@ -219,6 +219,9 @@ class Kit:
 	reserved: tuple[str, ...] = ()
 	""" Remappable-range slots that raw pre/post lines write to (e.g. beat_the_kings' king gaps):
 	never handed out by the resolver. """
+	layout: bool = True
+	""" Whether the player's layout may remap this kit's items; False pins everything to its
+	canonical slot (fast-paced modes where sword-first/bow-second must hold for everyone). """
 
 	@property
 	def movable(self) -> tuple[KitItem, ...]:
@@ -274,6 +277,7 @@ class Kit:
 		"""
 		self.validate()
 		ns: str = Mem.ctx.project_id
+		use_layout: bool = LAYOUT_ENABLED and self.layout
 		body: list[str] = []
 		items_body: list[str] = []
 
@@ -292,12 +296,12 @@ class Kit:
 					raise ValueError(f"Kit '{self.name}': '{item.role}' override has nothing to override")
 				slot: str = role_slot[item.role]
 			else:
-				slot = f"$(s{index})" if LAYOUT_ENABLED else item.slot
+				slot = f"$(s{index})" if use_layout else item.slot
 				role_slot.setdefault(item.role or "", slot)
 				index += 1
-			(items_body if LAYOUT_ENABLED else body).extend(item.emit(slot))
+			(items_body if use_layout else body).extend(item.emit(slot))
 
-		if LAYOUT_ENABLED and index > 0:
+		if use_layout and index > 0:
 			body.append(self._table(ns))
 			body.append(f"function {ns}:player/layout/resolve")
 			body.append(f"function {path}/items with storage {ns}:layout out")

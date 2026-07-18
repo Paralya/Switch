@@ -67,7 +67,7 @@ function {ns}:modes/_common/death_spectator_lives
 	# (the shop level picks the item) and the ender pearls (the shop level picks the count).
 	swords, bows = skinned_weapons()
 	boots: tuple[str, ...] = tuple(f"leather_boots[max_damage={max_damage}]" for max_damage in (5, 20, 30, 40, 50, 65))
-	Kit("pitchout", items=(
+	Kit("pitchout", layout=False, items=(
 		KitItem(role="melee", slot="hotbar.0", variants=Variants(score=f"#random {ns}.data", roll=4, items=swords)),
 		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score=f"#random {ns}.data", roll=3, items=bows)),
 		KitItem(role="ammo", item="arrow", count=64, slot="hotbar.2"),
