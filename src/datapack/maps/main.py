@@ -1,7 +1,6 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 from .translations import write_translations
@@ -70,7 +69,6 @@ def write_tp_cycle(key: str, var: str, coords: list[str]) -> None:
 	write_function(f"{ns}:maps/survival/{key}", "\n".join(lines) + "\n")
 
 
-@stp.measure_time(message="Generated maps files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:maps"
@@ -328,3 +326,4 @@ execute if score #count {ns}.data matches 3 in {ns}:game run tp @s 123020 114 12
 scoreboard players add #count {ns}.data 1
 scoreboard players operation #count {ns}.data %= #4 {ns}.data
 """)
+

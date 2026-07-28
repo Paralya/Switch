@@ -38,7 +38,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.basic_datapack_structure.silent"
     - "stewbeet.plugins.finalyze.dependencies"
     # - "stewbeet.plugins.finalyze.unload"
-    - "stewbeet.plugins.finalyze.check_unused_textures.silent"
+    # - "stewbeet.plugins.finalyze.check_unused_textures.silent"
     - "stewbeet.plugins.finalyze.last_final.silent"
     - "stewbeet.plugins.auto.scoreboard_constants.silent"
     # - "stewbeet.plugins.auto.lang_file"

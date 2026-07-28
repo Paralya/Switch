@@ -1,13 +1,11 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 from .translations import write_translations
 
 
-@stp.measure_time(message="Generated engine files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:engine"

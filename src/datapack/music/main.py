@@ -1,10 +1,8 @@
 
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 
-@stp.measure_time(message="Generated music files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:music"

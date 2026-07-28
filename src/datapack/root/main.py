@@ -109,7 +109,7 @@ function {ns}:translations/test_mode
 		f'execute positioned {x} {y} {z} run function {ns}:stats/display/tick_jump_times {{jump:"{key}",path:"jump_{key}",label:"Best Times",uuid:"{uuid}"}}'
 		for x, y, z, key, uuid in jump_displays
 	)
-	write_function(f"{ns}:lobby_second", rf"""
+	write_function(f"{ns}:lobby_second", f"""
 # If players in the lobby, show title action bar with the current game and number of players
 function {ns}:player/detached_action_bar
 
@@ -255,7 +255,7 @@ execute positioned -6 70.5 104 run function {ns}:stats/display/tick_macro {{path
 execute positioned -6 70.5 101 run function {ns}:stats/display/tick_macro {{path:"all.modes.cigogne.wins",label:"Victories",mode:1,uuid:"20180612-2024-2025-2026-124000000003"}}
 
 # Shoot da'sheep
-execute positioned -2 70.5 91.5 run function {ns}:stats/display/tick_macro {{path:"all.modes.shoot_da_sheep.total_games",label:"Shoot Da\'Sheep",mode:2,uuid:"20180612-2024-2025-2026-125000000001"}}
+execute positioned -2 70.5 91.5 run function {ns}:stats/display/tick_macro {{path:"all.modes.shoot_da_sheep.total_games",label:"Shoot Da\\'Sheep",mode:2,uuid:"20180612-2024-2025-2026-125000000001"}}
 execute positioned -6 70.5 93 run function {ns}:stats/display/tick_macro {{path:"all.modes.shoot_da_sheep.played",label:"Games played",mode:1,uuid:"20180612-2024-2025-2026-125000000002"}}
 execute positioned -6 70.5 90 run function {ns}:stats/display/tick_macro {{path:"all.modes.shoot_da_sheep.wins",label:"Victories",mode:1,uuid:"20180612-2024-2025-2026-125000000003"}}
 

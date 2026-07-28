@@ -9,7 +9,6 @@
 # Imports
 import json
 
-import stouputils as stp
 from stewbeet import Mem, TextComponent, write_function
 from stouputils.typing import JsonDict
 
@@ -504,7 +503,6 @@ def get_groups() -> list[JsonDict]:
 		groups.append(entry)
 	return groups
 
-@stp.measure_time(message="Generated modes load file")
 def write_modes_load_file():
 	ns: str = Mem.ctx.project_id
 	add_lore()

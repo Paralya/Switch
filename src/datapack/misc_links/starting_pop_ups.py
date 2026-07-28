@@ -1,6 +1,5 @@
 
 # Imports
-import stouputils as stp
 from beet import Advancement
 from stewbeet import Mem, set_json_encoder, write_function
 from stouputils.typing import JsonDict
@@ -9,7 +8,6 @@ from ..modes.definitions import LANG_PRETEXT, MODES
 
 
 # Main function
-@stp.measure_time(message="Generated starting pop-ups for every game mode")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 

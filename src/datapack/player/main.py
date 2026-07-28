@@ -1,7 +1,6 @@
 
 # ruff: noqa: E501, W291
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 from .jump_timer import JUMPS, write_jump_timer_functions
@@ -10,7 +9,6 @@ from .practice import write_practice_functions
 from .translations import write_translations
 
 
-@stp.measure_time(message="Generated player files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:player"

@@ -1,11 +1,9 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 
-@stp.measure_time(message="Generated npc files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:npc"

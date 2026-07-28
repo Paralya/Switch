@@ -1,8 +1,5 @@
 
 # Imports
-import os
-
-import requests
 import stouputils as stp
 from stewbeet import Item, JsonDict, LootTable, Mem
 
@@ -21,21 +18,11 @@ def get_entry(item: str) -> JsonDict:
 # Main function
 def main() -> None:
 	ns: str = Mem.ctx.project_id
-	loot_tables_path: str = f"{Mem.ctx.output_directory}/data/{ns}/loot_table"
-	vanilla_path: str = stp.clean_path(f"{loot_tables_path}/random/vanilla.json")
-	all_path: str = stp.clean_path(f"{loot_tables_path}/random/all.json")
 
-	# If the loot tables already exists, prevent them from being deleted (cache system)
-	if all(os.path.exists(x) for x in [vanilla_path, all_path]):
-		Mem.ctx.data[ns].loot_tables["random/vanilla"] = LootTable(source_path=vanilla_path)
-		Mem.ctx.data[ns].loot_tables["random/all"] = LootTable(source_path=all_path)
-		return stp.progress("The random loot tables 'vanilla.json' and 'all.json' already exists, skipping the generation")
-
-	# Get all items from the vanilla registries (mcmeta summary branch of the project's minecraft version)
-	response = requests.get(ITEMS_LINK.replace("VERSION", Mem.ctx.minecraft_version))
-	response.raise_for_status()
-	items: list[str] = [f"minecraft:{item}" for item in response.json()["item"]]
-	items = [item for item in items if item != "minecraft:air"]
+	# Get all items from the vanilla registries, downloaded once per minecraft version thanks to the beet cache
+	registries_path: str = str(Mem.ctx.cache["switch"].download(ITEMS_LINK.replace("VERSION", Mem.ctx.minecraft_version)))
+	registries: JsonDict = stp.json_load(registries_path)
+	items: list[str] = [f"minecraft:{item}" for item in registries["item"] if item != "air"]
 
 	# Insert all items into the loot table
 	loot_table: JsonDict = {"pools": [{"rolls": 1, "entries": []}]}
@@ -53,5 +40,4 @@ def main() -> None:
 			continue
 		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"{ns}:i/{item}"})
 	Mem.ctx.data[ns].loot_tables["random/all"] = LootTable(stp.json_dump(loot_table, max_level=-1))
-	stp.progress("The random loot tables 'vanilla.json' and 'all.json' have been generated")
 

@@ -2,9 +2,11 @@
 # ruff: noqa: E501
 # Imports
 import os
+import shutil
 import zipfile
 
 import stouputils as stp
+from beet import Cache
 from stewbeet.core import Mem
 
 # Constants
@@ -46,114 +48,121 @@ def get_song_score(name: str) -> int:
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	libs_folder: str = str(Mem.ctx.meta.get("stewbeet", {}).get("libs_folder", "libs"))
-	lib_file = f"{libs_folder}/{LIB_TO_WRITE}"
+	lib_file: str = f"{libs_folder}/{LIB_TO_WRITE}"
 
-	# Cache the zip file
-	if os.path.exists(lib_file):
-		stp.progress(f"The NoteBlock Studio songs zip file already exists at '{stp.relative_path(lib_file)}', skipping the generation")
+	# Regenerate the zip only when a source song was modified, added or removed (has_changed alone never sees a removal)
+	cache: Cache = Mem.ctx.cache["switch"]
+	cached_file: str = stp.clean_path(f"{cache.directory}/{os.path.basename(LIB_TO_WRITE)}")
+	sources: list[str] = [f"{INPUTS_FOLDER}/{file}" for file, _, _ in get_songs()]
+	changed: bool = cache.has_changed(*sources)
+	if cache.json.get("note_block_studio_sources") != sources:
+		cache.json["note_block_studio_sources"] = sources
+		changed = True
+	if not changed and os.path.exists(cached_file):
+		shutil.copy(cached_file, lib_file)
 		return
 
-	objectives: list[tuple[str, int, int]] = []
-	authors: list[str] = []
-	with zipfile.ZipFile(lib_file, "w") as lib:
+	with stp.MeasureTime(message="Generated the NoteBlock Studio songs zip file") as measure_time:
+		objectives: list[tuple[str, int, int]] = []
+		authors: list[str] = []
+		with zipfile.ZipFile(cached_file, "w") as lib:
 
-		# For each .zip file in the input folder
-		for file, author, song_name in get_songs():
-			length: int = 0
-			bpm: int = ALL_BPM
+			# For each .zip file in the input folder
+			for file, author, song_name in get_songs():
+				length: int = 0
+				bpm: int = ALL_BPM
 
-			# For each file in the zip file that matches the required path parts
-			with zipfile.ZipFile(f"{INPUTS_FOLDER}/{file}", "r") as zf:
-				files: list[str] = sorted(zf.namelist())
-				load_file: str = next(x for x in files if "load.mcfunction" in x)
-				bpm = int(zf.read(load_file).decode("utf-8").split(" ")[-1])
+				# For each file in the zip file that matches the required path parts
+				with zipfile.ZipFile(f"{INPUTS_FOLDER}/{file}", "r") as zf:
+					files: list[str] = sorted(zf.namelist())
+					load_file: str = next(x for x in files if "load.mcfunction" in x)
+					bpm = int(zf.read(load_file).decode("utf-8").split(" ")[-1])
 
-				for file_to_copy in files:
-					if all(x in file_to_copy for x in REQUIRED_PATH_PARTS):
+					for file_to_copy in files:
+						if all(x in file_to_copy for x in REQUIRED_PATH_PARTS):
 
-						# Only keep the playsound lines
-						playsounds: list[str] = zf.read(file_to_copy).decode("utf-8").split("\n")
-						playsounds = [line for line in playsounds if line.startswith("playsound")]
+							# Only keep the playsound lines
+							playsounds: list[str] = zf.read(file_to_copy).decode("utf-8").split("\n")
+							playsounds = [line for line in playsounds if line.startswith("playsound")]
 
-						# Get a higher volume
-						for i, line in enumerate(playsounds):
-							splitted: list[str] = line.split(" ")
-							splitted[7] = "1"
-							playsounds[i] = " ".join(splitted)
-						file_content: str = "\n".join(playsounds)
+							# Get a higher volume
+							for i, line in enumerate(playsounds):
+								splitted: list[str] = line.split(" ")
+								splitted[7] = "1"
+								playsounds[i] = " ".join(splitted)
+							file_content: str = "\n".join(playsounds)
 
-						# Write the file
-						splitted_destination: list[str] = file_to_copy.replace("notes/", "").split("/")[-2:]
-						music_namespace: str = splitted_destination[0]
-						note: str = splitted_destination[1].split(".")[0]
-						note = str(int(note) * ALL_BPM // bpm)
-						destination_file: str = f"data/{ns}/function/music/{music_namespace}/{note}.mcfunction"
-						lib.writestr(destination_file, file_content.encode("utf-8"))
+							# Write the file
+							splitted_destination: list[str] = file_to_copy.replace("notes/", "").split("/")[-2:]
+							music_namespace: str = splitted_destination[0]
+							note: str = splitted_destination[1].split(".")[0]
+							note = str(int(note) * ALL_BPM // bpm)
+							destination_file: str = f"data/{ns}/function/music/{music_namespace}/{note}.mcfunction"
+							lib.writestr(destination_file, file_content.encode("utf-8"))
 
-						# Remember the highest length
-						length = max(length, int(note))
+							# Remember the highest length
+							length = max(length, int(note))
 
-			# Add the objective
-			authors.append(author)
-			objectives.append((song_name, length, bpm))
+				# Add the objective
+				authors.append(author)
+				objectives.append((song_name, length, bpm))
 
-		# Add a pack.mcmeta file
-		lib.writestr("pack.mcmeta", stp.json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
-		pass
+			# Add a pack.mcmeta file
+			lib.writestr("pack.mcmeta", stp.json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
 
-		# Write the objectives
-		# Write all objectives to a single string first
-		load_content = f"""
-scoreboard objectives add {ns}.music.current dummy
-scoreboard objectives add {ns}.music.progress dummy
-scoreboard objectives add {ns}.music.loop_state dummy
-scoreboard players set #last_index {ns}.music.current {len(objectives)+99}
-"""
-		for song, length, _ in objectives:
-			load_content += f"scoreboard players set #{song} {ns}.music.progress {length}\n"
+			# Write the objectives
+			# Write all objectives to a single string first
+			load_content = f"""
+	scoreboard objectives add {ns}.music.current dummy
+	scoreboard objectives add {ns}.music.progress dummy
+	scoreboard objectives add {ns}.music.loop_state dummy
+	scoreboard players set #last_index {ns}.music.current {len(objectives)+99}
+	"""
+			for song, length, _ in objectives:
+				load_content += f"scoreboard players set #{song} {ns}.music.progress {length}\n"
 
-		# Write the full content at once
-		lib.writestr(f"data/{ns}/function/music/load.mcfunction", load_content)
+			# Write the full content at once
+			lib.writestr(f"data/{ns}/function/music/load.mcfunction", load_content)
 
-		# Write the tick functions
-		player_tick_content = ""
-		for i, (song, _, _) in enumerate(objectives):
-			player_tick_content += f"execute if score @s {ns}.music.current matches {i+100} run function {ns}:music/ticks/{song}\n"
+			# Write the tick functions
+			player_tick_content = ""
+			for i, (song, _, _) in enumerate(objectives):
+				player_tick_content += f"execute if score @s {ns}.music.current matches {i+100} run function {ns}:music/ticks/{song}\n"
 
-			tick_song_content = f"""
-scoreboard players add @s {ns}.music.progress 1
-data modify storage {ns}:temp input set value {{tick:0,name:"{song}"}}
-scoreboard players operation #temp {ns}.data = @s {ns}.music.progress
-scoreboard players remove #temp {ns}.data 20
-execute store result storage {ns}:temp input.tick int 1 run scoreboard players get #temp {ns}.data
-function {ns}:music/tick_macro with storage {ns}:temp input
+				tick_song_content = f"""
+	scoreboard players add @s {ns}.music.progress 1
+	data modify storage {ns}:temp input set value {{tick:0,name:"{song}"}}
+	scoreboard players operation #temp {ns}.data = @s {ns}.music.progress
+	scoreboard players remove #temp {ns}.data 20
+	execute store result storage {ns}:temp input.tick int 1 run scoreboard players get #temp {ns}.data
+	function {ns}:music/tick_macro with storage {ns}:temp input
 
-# Stop if the music is over
-execute if score #temp {ns}.data >= #{song} {ns}.music.progress run function {ns}:music/music_over
-"""
-			lib.writestr(f"data/{ns}/function/music/ticks/{song}.mcfunction", tick_song_content)
+	# Stop if the music is over
+	execute if score #temp {ns}.data >= #{song} {ns}.music.progress run function {ns}:music/music_over
+	"""
+				lib.writestr(f"data/{ns}/function/music/ticks/{song}.mcfunction", tick_song_content)
 
-		player_tick_content += f"execute if score @s {ns}.music.current matches -1 run function {ns}:music/next_music"
-		lib.writestr(f"data/{ns}/function/music/player_tick.mcfunction", player_tick_content)
+			player_tick_content += f"execute if score @s {ns}.music.current matches -1 run function {ns}:music/next_music"
+			lib.writestr(f"data/{ns}/function/music/player_tick.mcfunction", player_tick_content)
 
-		# Write the browser file (tellraws)
-		browser_content = f"""
-# Top
-tellraw @s ["\\n",{{"nbt":"ParalyaMusic","storage":"{ns}:main","interpret":true}},{{"text":" [🔀]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 2"}},"hover_event":{{"action":"show_text","value":{{"text":"Randomize","color":"gray"}}}}}},{{"text":" [⏮]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 3"}},"hover_event":{{"action":"show_text","value":{{"text":"Previous","color":"gray"}}}}}},{{"text":" [⏯]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 4"}},"hover_event":{{"action":"show_text","value":{{"text":"Play/Pause","color":"gray"}}}}}},{{"text":" [⏭]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 5"}},"hover_event":{{"action":"show_text","value":{{"text":"Next","color":"gray"}}}}}},{{"text":" [🔁]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 6"}},"hover_event":{{"action":"show_text","value":{{"text":"Repeat","color":"gray"}}}}}},"\\n"]
+			# Write the browser file (tellraws)
+			browser_content = f"""
+	# Top
+	tellraw @s ["\\n",{{"nbt":"ParalyaMusic","storage":"{ns}:main","interpret":true}},{{"text":" [🔀]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 2"}},"hover_event":{{"action":"show_text","value":{{"text":"Randomize","color":"gray"}}}}}},{{"text":" [⏮]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 3"}},"hover_event":{{"action":"show_text","value":{{"text":"Previous","color":"gray"}}}}}},{{"text":" [⏯]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 4"}},"hover_event":{{"action":"show_text","value":{{"text":"Play/Pause","color":"gray"}}}}}},{{"text":" [⏭]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 5"}},"hover_event":{{"action":"show_text","value":{{"text":"Next","color":"gray"}}}}}},{{"text":" [🔁]","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set 6"}},"hover_event":{{"action":"show_text","value":{{"text":"Repeat","color":"gray"}}}}}},"\\n"]
 
-# For each music, write a line"""
+	# For each music, write a line"""
 
-		for i, (song, length, bpm) in enumerate(objectives):
-			duration_seconds: int = int(length // 20 // (bpm / ALL_BPM))
-			duration: str = f"{duration_seconds // 60}m{duration_seconds % 60:02}" if duration_seconds > 60 else str(duration_seconds)
-			display: str = authors[i].replace("_"," ") + " - " + song.replace("_"," ").title()
-			browser_content += f"""
-execute if score @s {ns}.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
-execute unless score @s {ns}.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display}","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
-"""
+			for i, (song, length, bpm) in enumerate(objectives):
+				duration_seconds: int = int(length // 20 // (bpm / ALL_BPM))
+				duration: str = f"{duration_seconds // 60}m{duration_seconds % 60:02}" if duration_seconds > 60 else str(duration_seconds)
+				display: str = authors[i].replace("_"," ") + " - " + song.replace("_"," ").title()
+				browser_content += f"""
+	execute if score @s {ns}.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display} (Currently playing)","color":"#FFC0CB","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
+	execute unless score @s {ns}.music.current matches {i+100} run tellraw @s [{{"text":"➤ {display}","color":"light_purple","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.music set {i+100}"}},"hover_event":{{"action":"show_text","value":{{"text":"Play the music (Duration: {duration}s)","color":"gray"}}}}}}]
+	"""
 
-		lib.writestr(f"data/{ns}/function/music/browser.mcfunction", browser_content)
-		pass
+			lib.writestr(f"data/{ns}/function/music/browser.mcfunction", browser_content)
 
-	stp.progress(f"The NoteBlock Studio songs zip file has been generated at '{stp.relative_path(lib_file)}' with {len(objectives)} songs")
+		shutil.copy(cached_file, lib_file)
+		measure_time.message = f"The NoteBlock Studio songs zip file has been generated at '{stp.relative_path(lib_file)}' with {len(objectives)} songs"
 

@@ -778,7 +778,6 @@ def generate_intro_spread_file() -> None:
 		write_function(path, f'execute if data storage {ns}:main {{map:"{name}"}} run function {ns}:maps/survival/{name}/intro_spread')
 
 
-@stp.measure_time(message="Generated the map usage file")
 def generate_map_usage_file() -> None:
 	""" Generate the map_usage file for the survival maps, it shows for each map which modes use it
 	Args:

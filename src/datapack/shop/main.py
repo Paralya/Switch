@@ -1,7 +1,5 @@
 
 # Imports
-import stouputils as stp
-
 from .shared_memory import SHOPS
 from .utils import (
 	general_translations,
@@ -12,7 +10,6 @@ from .utils import (
 
 
 # Main function
-@stp.measure_time(message="Generated the shops")
 def main() -> None:
 
 	# Write the hand-authored shop functions first (global / description / pitchout).

@@ -1,7 +1,5 @@
 
 # Imports
-import stouputils as stp
-
 from .shared_memory import generate_adv_dictionnary
 from .utils import (
 	category_advancements,
@@ -16,7 +14,6 @@ from .utils import (
 
 
 # Main function
-@stp.measure_time(message="Generated the advancements")
 def main() -> None:
 	generate_adv_dictionnary()
 	make_load_file()

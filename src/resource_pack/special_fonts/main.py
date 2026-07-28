@@ -1,12 +1,9 @@
 
 # Imports
-import stouputils as stp
-
 from .utils import generate_few_textures, write_black_transition, write_final_file
 
 
 # Main function
-@stp.measure_time(message="Generated all the special fonts")
 def main() -> None:
 
 	# Generate all the fonts

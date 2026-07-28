@@ -1,11 +1,9 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 
-@stp.measure_time(message="Generated cinematic files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:cinematic"
@@ -511,3 +509,4 @@ execute if entity @p[tag={ns}.temp,gamemode=creative] run tag @s add {ns}.was_cr
 gamemode spectator @p[tag={ns}.temp]
 spectate @s @p[tag={ns}.temp]
 """)
+

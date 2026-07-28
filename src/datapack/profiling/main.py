@@ -1,10 +1,8 @@
 
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 
-@stp.measure_time(message="Generated profiling files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:profiling"
@@ -52,3 +50,4 @@ def main() -> None:
 	# Profiling stress test: call the (comment-only) content function 1000 times in a row to measure
 	# per-call overhead (kept as literal repeated calls on purpose; timing must not include loop overhead).
 	write_function(f"{path}/start", "\n" + f"function {ns}:profiling/content\n" * 1000)
+
