@@ -2,7 +2,6 @@
 # ruff: noqa: E501
 # Imports
 import os
-import shutil
 import zipfile
 
 import stouputils as stp
@@ -50,22 +49,16 @@ def main() -> None:
 	libs_folder: str = str(Mem.ctx.meta.get("stewbeet", {}).get("libs_folder", "libs"))
 	lib_file: str = f"{libs_folder}/{LIB_TO_WRITE}"
 
-	# Regenerate the zip only when a source song was modified, added or removed (has_changed alone never sees a removal)
+	# Skip the generation when the zip is there and no source song was modified, added or removed
 	cache: Cache = Mem.ctx.cache["switch"]
-	cached_file: str = stp.clean_path(f"{cache.directory}/{os.path.basename(LIB_TO_WRITE)}")
 	sources: list[str] = [f"{INPUTS_FOLDER}/{file}" for file, _, _ in get_songs()]
-	changed: bool = cache.has_changed(*sources)
-	if cache.json.get("note_block_studio_sources") != sources:
-		cache.json["note_block_studio_sources"] = sources
-		changed = True
-	if not changed and os.path.exists(cached_file):
-		shutil.copy(cached_file, lib_file)
+	if os.path.exists(lib_file) and not cache.has_changed(*sources) and cache.json.get("note_block_studio_sources") == sources:
 		return
 
 	with stp.MeasureTime(message="Generated the NoteBlock Studio songs zip file") as measure_time:
 		objectives: list[tuple[str, int, int]] = []
 		authors: list[str] = []
-		with zipfile.ZipFile(cached_file, "w") as lib:
+		with zipfile.ZipFile(lib_file, "w") as lib:
 
 			# For each .zip file in the input folder
 			for file, author, song_name in get_songs():
@@ -163,6 +156,8 @@ def main() -> None:
 
 			lib.writestr(f"data/{ns}/function/music/browser.mcfunction", browser_content)
 
-		shutil.copy(cached_file, lib_file)
+		# Remember the sources only once the zip is fully written, so a failed generation is never considered up-to-date
+		cache.has_changed(*sources)
+		cache.json["note_block_studio_sources"] = sources
 		measure_time.message = f"The NoteBlock Studio songs zip file has been generated at '{stp.relative_path(lib_file)}' with {len(objectives)} songs"
 
