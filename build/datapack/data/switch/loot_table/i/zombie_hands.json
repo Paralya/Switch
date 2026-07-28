@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:recovery_compass",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -20,8 +20,8 @@
 								"minecraft:lore": [
 									[
 										"",
-										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
-										{"text": " Switch","italic": true,"color": "blue"}
+										{"text": "ꀁ","color": "white","italic": false,"font": "switch:tooltip"},
+										{"text": "뀁Switch","italic": false,"color": "white","font": "switch:tooltip"}
 									]
 								],
 								"minecraft:custom_data": {

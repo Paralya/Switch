@@ -69,7 +69,7 @@ vec4 computeAccretionDisk(vec3 localPos, float animTime) {
     vec4 accumulatedColor = vec4(0.);
 	vec3 normalizedPos = normalize(localPos);
     float rayDist = animTime;  // NOTE: used as loop accumulator, do not rename
-    for (float stepDist = 0., stepSize = 0., iterCount = 0.; iterCount < BH_MARCH_STEPS; iterCount++) {
+    for (float stepDist = 1e-4, stepSize = 0., iterCount = 0.; iterCount < BH_MARCH_STEPS; iterCount++) {
         vec3 samplePos = stepDist * normalizedPos;
         // Cylindrical coordinates to spiral around the axis
         samplePos = vec3(

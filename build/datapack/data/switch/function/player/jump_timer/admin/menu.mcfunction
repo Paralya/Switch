@@ -1,7 +1,7 @@
 
 #> switch:player/jump_timer/admin/menu
 #
-# @within	switch:player/jump_timer/admin/list {jump:\"$(jump)\",name:\"Steve\",time:1000}"},"hover_event":{"action":"show_text","value":{"text":"Add/edit a player time (in centiseconds: 1000 = 10s)","color":"gray"}}},{"text":"   "},{"text":"[⬅ Back]","color":"gold","click_event":{"action":"run_command","command":"/function switch:player/jump_timer/admin/menu"}}]
+# @within	string in switch:player/jump_timer/admin/list
 #
 
 tellraw @s [{"text":"--- Jump leaderboards (admin) ---","color":"gold","bold":true}]

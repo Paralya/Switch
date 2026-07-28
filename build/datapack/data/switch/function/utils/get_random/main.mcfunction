@@ -8,7 +8,7 @@
 #			switch:maps/find_map
 #			switch:music/actions/random
 #			switch:engine/launch_game/get_random_max
-#			switch:profiling/content
+#			string in switch:profiling/content
 #
 
 data modify storage switch:main temp set value {max:0}

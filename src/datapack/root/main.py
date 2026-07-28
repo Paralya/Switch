@@ -1,13 +1,11 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 
 # Top-level "switch:*" functions that don't belong to a deeper subsystem.
 # (load / tick are handled by write_load_file / write_tick_file in src/link.py)
-@stp.measure_time(message="Generated root files")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 

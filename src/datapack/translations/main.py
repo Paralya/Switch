@@ -1,13 +1,11 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
 from stewbeet import Mem, write_function
 
 
 # Shared / root-level translations that stay at the flat "switch:translations/*" namespace.
 # Subsystem-owned translations live in each subsystem's own translations.py instead.
-@stp.measure_time(message="Generated shared translations")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:translations"

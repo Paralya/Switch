@@ -1,0 +1,51 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": "minecraft:recovery_compass",
+	"result": {
+		"id": "minecraft:recovery_compass",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"ingot": {
+							"uranium": true
+						}
+					},
+					"id": "switch:uranium_ingot",
+					"origin": "switch",
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"switch": {
+					"uranium_ingot": true
+				}
+			},
+			"minecraft:item_model": "switch:uranium_ingot",
+			"minecraft:item_name": {
+				"text": "Uranium Ingot"
+			},
+			"minecraft:lore": [
+				[
+					"",
+					{
+						"text": "ꀁ",
+						"color": "white",
+						"italic": false,
+						"font": "switch:tooltip"
+					},
+					{
+						"text": "뀁Switch",
+						"italic": false,
+						"color": "white",
+						"font": "switch:tooltip"
+					}
+				]
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}

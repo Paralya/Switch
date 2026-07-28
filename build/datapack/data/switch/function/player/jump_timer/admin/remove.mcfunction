@@ -1,7 +1,7 @@
 
 #> switch:player/jump_timer/admin/remove
 #
-# @within	switch:player/jump_timer/admin/list_line {jump:\"$(jump)\",name:\"$(name)\",time:$(time)}"},"hover_event":{"action":"show_text","value":{"text":"Edit this time (in centiseconds: 1000 = 10s)","color":"gray"}}},{"text":" [❌]","color":"red","click_event":{"action":"run_command","command":"/function switch:player/jump_timer/admin/remove {jump:\"$(jump)\",name:\"$(name)\"}"},"hover_event":{"action":"show_text","value":{"text":"Remove this time","color":"gray"}}}]
+# @within	string in switch:player/jump_timer/admin/list_line
 #
 # @args		jump (unknown)
 #			name (unknown)

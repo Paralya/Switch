@@ -3,7 +3,7 @@
 # Imports
 from typing import Any
 
-from stewbeet.core import Equipment, Item, Mem, Texture, set_json_encoder
+from stewbeet.core import CUSTOM_ITEM_VANILLA, Equipment, Item, Mem, Texture, set_json_encoder
 
 
 # Setup infected items
@@ -54,7 +54,7 @@ def setup_infected_items() -> None:
 		}]
 		Item(
 			id=f"infected_armor_{i}",
-			base_item="minecraft:leather_chestplate" if i == 0 else Item.base_item,
+			base_item="minecraft:leather_chestplate" if i == 0 else CUSTOM_ITEM_VANILLA,
 			components={
 				"max_stack_size": 1,
 				"rarity": "epic",

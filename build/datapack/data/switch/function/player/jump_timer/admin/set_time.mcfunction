@@ -1,10 +1,10 @@
 
 #> switch:player/jump_timer/admin/set_time
 #
-# @within	switch:player/jump_timer/admin/list {jump:\"$(jump)\",name:\"Steve\",time:1000}"},"hover_event":{"action":"show_text","value":{"text":"Add/edit a player time (in centiseconds: 1000 = 10s)","color":"gray"}}},{"text":"   "},{"text":"[⬅ Back]","color":"gold","click_event":{"action":"run_command","command":"/function switch:player/jump_timer/admin/menu"}}]
-#			switch:player/jump_timer/admin/list_line {jump:\"$(jump)\",name:\"$(name)\",time:$(time)}"},"hover_event":{"action":"show_text","value":{"text":"Edit this time (in centiseconds: 1000 = 10s)","color":"gray"}}},{"text":" [❌]","color":"red","click_event":{"action":"run_command","command":"/function switch:player/jump_timer/admin/remove {jump:\"$(jump)\",name:\"$(name)\"}"},"hover_event":{"action":"show_text","value":{"text":"Remove this time","color":"gray"}}}]
+# @within	string in switch:player/jump_timer/admin/list
+#			string in switch:player/jump_timer/admin/list_line
 #
-# @args		time (int)
+# @args		time (unknown)
 #			jump (unknown)
 #			name (unknown)
 #

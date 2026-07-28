@@ -38,8 +38,8 @@
 								"minecraft:lore": [
 									[
 										"",
-										{"text": "I","color": "white","italic": false,"font": "switch:icons"},
-										{"text": " Switch","italic": true,"color": "blue"}
+										{"text": "ꀁ","color": "white","italic": false,"font": "switch:tooltip"},
+										{"text": "뀁Switch","italic": false,"color": "white","font": "switch:tooltip"}
 									]
 								]
 							}
