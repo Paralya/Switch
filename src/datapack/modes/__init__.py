@@ -3,13 +3,10 @@
 import importlib
 from pathlib import Path
 
-import stouputils as stp
-
 from .definitions import write_modes_load_file
 
 
 # Main function
-@stp.measure_time(message="Generated modes files")
 def generate_all_modes():
 	write_modes_load_file()
 
