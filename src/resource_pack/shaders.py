@@ -48,8 +48,8 @@ in float cylindricalVertexDistance;
 in vec4 vertexColor;
 in vec4 lightMapColor;
 in vec2 texCoord0;
-in vec3 a_;  // vertex position (must match vertex shader name)
-in vec3 c_;  // interpolated vertex position (used as ray direction)
+in vec3 vPos;      // fragment world-space position (camera-relative space)
+in vec4 vNearPos;  // fragment position on the camera near plane, before perspective divide
 
 out vec4 fragColor;
 
@@ -90,8 +90,12 @@ vec4 computeAccretionDisk(vec3 localPos, float animTime) {
 
 // Full black hole render (raycasting + visual effects)
 vec4 computeBlackHole() {
-    vec3 viewDir       = normalize(c_);
+    // The eye is not at the origin as soon as view bobbing is applied, so the ray direction must be
+    // rebuilt from the near plane instead of assuming normalize(Position).
+    vec3 nearPos       = vNearPos.xyz / vNearPos.w;
+    vec3 viewDir       = normalize(vPos - nearPos);
 	viewDir = vec3(-viewDir.x, viewDir.y, -viewDir.z);  // 180° yaw rotation
+    // The scene is a skybox anchored on the eye, so the ray origin stays at the animated offset only.
     vec3 diskCenter    = blackHoleAxis * (fract(GameTime) * timeScale);
     vec3 axisRef       = diskCenter;
 
@@ -245,8 +249,8 @@ out float cylindricalVertexDistance;
 out vec4 vertexColor;
 out vec4 lightMapColor;
 out vec2 texCoord0;
-out vec3 a_;
-out vec3 c_;
+out vec3 vPos;
+out vec4 vNearPos;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
@@ -255,8 +259,9 @@ void main() {
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
     lightMapColor = texture(Sampler2, (vec2(UV2) + 8.0) / 256.0);
     texCoord0 = UV0;
-    a_ = Position;
-    c_ = Position;
+    vPos = Position;
+    // Kept as a vec4: the perspective divide must happen after interpolation to stay linear.
+    vNearPos = inverse(ProjMat * ModelViewMat) * gl_Position.xyww;
 }
 """
 

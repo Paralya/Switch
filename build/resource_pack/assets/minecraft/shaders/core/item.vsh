@@ -59,8 +59,8 @@ out float cylindricalVertexDistance;
 out vec4 vertexColor;
 out vec4 lightMapColor;
 out vec2 texCoord0;
-out vec3 a_;
-out vec3 c_;
+out vec3 vPos;
+out vec4 vNearPos;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
@@ -69,6 +69,7 @@ void main() {
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
     lightMapColor = texture(Sampler2, (vec2(UV2) + 8.0) / 256.0);
     texCoord0 = UV0;
-    a_ = Position;
-    c_ = Position;
+    vPos = Position;
+    // Kept as a vec4: the perspective divide must happen after interpolation to stay linear.
+    vNearPos = inverse(ProjMat * ModelViewMat) * gl_Position.xyww;
 }

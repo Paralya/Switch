@@ -1,10 +1,10 @@
 
 #> switch:player/jump_timer/admin/set_time
 #
-# @within	string in switch:player/jump_timer/admin/list
-#			string in switch:player/jump_timer/admin/list_line
+# @within	string in switch:player/jump_timer/admin/list {jump:\"$(jump)\",name:\"Steve\",time:1000}
+#			string in switch:player/jump_timer/admin/list_line {jump:\"$(jump)\",name:\"$(name)\",time:$(time)}
 #
-# @args		time (unknown)
+# @args		time (int)
 #			jump (unknown)
 #			name (unknown)
 #

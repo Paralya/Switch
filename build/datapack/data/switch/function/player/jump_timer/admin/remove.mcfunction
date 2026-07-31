@@ -1,7 +1,7 @@
 
 #> switch:player/jump_timer/admin/remove
 #
-# @within	string in switch:player/jump_timer/admin/list_line
+# @within	string in switch:player/jump_timer/admin/list_line {jump:\"$(jump)\",name:\"$(name)\"}
 #
 # @args		jump (unknown)
 #			name (unknown)

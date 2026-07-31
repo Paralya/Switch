@@ -38,8 +38,8 @@ in float cylindricalVertexDistance;
 in vec4 vertexColor;
 in vec4 lightMapColor;
 in vec2 texCoord0;
-in vec3 a_;  // vertex position (must match vertex shader name)
-in vec3 c_;  // interpolated vertex position (used as ray direction)
+in vec3 vPos;      // fragment world-space position (camera-relative space)
+in vec4 vNearPos;  // fragment position on the camera near plane, before perspective divide
 
 out vec4 fragColor;
 
@@ -80,8 +80,12 @@ vec4 computeAccretionDisk(vec3 localPos, float animTime) {
 
 // Full black hole render (raycasting + visual effects)
 vec4 computeBlackHole() {
-    vec3 viewDir       = normalize(c_);
+    // The eye is not at the origin as soon as view bobbing is applied, so the ray direction must be
+    // rebuilt from the near plane instead of assuming normalize(Position).
+    vec3 nearPos       = vNearPos.xyz / vNearPos.w;
+    vec3 viewDir       = normalize(vPos - nearPos);
 	viewDir = vec3(-viewDir.x, viewDir.y, -viewDir.z);  // 180° yaw rotation
+    // The scene is a skybox anchored on the eye, so the ray origin stays at the animated offset only.
     vec3 diskCenter    = blackHoleAxis * (fract(GameTime) * timeScale);
     vec3 axisRef       = diskCenter;
 

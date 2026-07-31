@@ -1,7 +1,14 @@
 
 #> switch:player/easter_egg
 #
-# @within	string in switch:player/easter_egg_give
+# @within	string in switch:player/easter_egg_give {tag:\"switch.easter_egg.cc_001001\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.pi\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.ping\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.pong\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.42\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.ayjaraQ\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.luxium\"}
+#			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.friends_cube\"}
 #
 # @args		tag (unknown)
 #
