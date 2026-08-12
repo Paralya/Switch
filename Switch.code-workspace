@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../StoupGun/minecraft_source_code"
+		},
+		{
+			"path": "../beet"
 		}
 	],
 	"settings": {

@@ -17,7 +17,7 @@
 #			switch:player/jump_timer/admin/set_time {jump:"$(jump)"}
 #			switch:player/jump_timer/admin/remove {jump:"$(jump)"}
 #
-# @args		jump (unknown)
+# @args		jump (string)
 #
 
 $tellraw @s ["",{"text":"--- Best times: ","color":"gold"},{"text":"$(jump)","color":"yellow"},{"text":" ---","color":"gold"}]

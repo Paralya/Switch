@@ -10,7 +10,7 @@
 #			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.luxium\"}
 #			string in switch:player/easter_egg_give {tag:\"switch.easter_egg.friends_cube\"}
 #
-# @args		tag (unknown)
+# @args		tag (string)
 #
 
 # Tak

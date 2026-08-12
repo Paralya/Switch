@@ -5,8 +5,8 @@
 #			string in switch:player/jump_timer/admin/list_line {jump:\"$(jump)\",name:\"$(name)\",time:$(time)}
 #
 # @args		time (int)
-#			jump (unknown)
-#			name (unknown)
+#			jump (string)
+#			name (string)
 #
 
 # Compute the display digits from the centiseconds, then insert at the correct position

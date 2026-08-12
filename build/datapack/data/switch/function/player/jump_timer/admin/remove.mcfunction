@@ -3,8 +3,8 @@
 #
 # @within	string in switch:player/jump_timer/admin/list_line {jump:\"$(jump)\",name:\"$(name)\"}
 #
-# @args		jump (unknown)
-#			name (unknown)
+# @args		jump (string)
+#			name (string)
 #
 
 $execute unless data storage switch:jumps $(jump)[{name:"$(name)"}] run return run tellraw @s [{"text":"No time found for $(name) on this jump.","color":"red"}]
