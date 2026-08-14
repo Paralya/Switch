@@ -3,7 +3,7 @@
 # Imports
 from typing import Any
 
-from stewbeet.core import CUSTOM_ITEM_VANILLA, Equipment, Item, Mem, Texture, set_json_encoder
+from stewbeet import CUSTOM_ITEM_VANILLA, Equipment, Item, Mem, Texture, set_json_encoder
 
 
 # Setup infected items

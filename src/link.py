@@ -1,7 +1,7 @@
 
 # Imports
 import stouputils as stp
-from stewbeet.core import Context, Mem, official_lib_used, write_load_file, write_tick_file
+from stewbeet import Context, Mem, official_lib_used, write_load_file, write_tick_file
 
 from .datapack.advancements.main import main as automatic_advancements
 from .datapack.cinematic.main import main as cinematic
