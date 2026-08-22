@@ -1,1 +1,4 @@
-* -diff -merge
+build/** -diff -merge
+*.zip -diff -merge
+*.nbt -diff -merge
+*.ogg -diff -merge
