@@ -587,7 +587,7 @@ execute unless score #test_mode {ns}.data matches 1 run advancement grant @s[adv
 
 	# /secrets/drop_element_115
 	write_function(f"{path}/secrets/drop_element_115", f"""
-clear @s *[minecraft:custom_data={{{ns}:{{"element_115":true}}}}] 1
+clear @s *[custom_data~{{{ns}:{{"element_115":true}}}}] 1
 loot spawn ~ ~ ~ loot {ns}:i/element_115
 execute as @e[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{{ns}:{{"element_115":true}}}}}}}}}}] run data modify entity @s Owner set from entity @p[tag=!detached,team={ns}.temp.human] UUID
 """)
