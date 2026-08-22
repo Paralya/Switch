@@ -16,8 +16,8 @@ def main() -> None:
 
 		# For each minigame,
 		for mode in MODES:
-			mode_id: str = mode["id"]
-			mode_name: str = mode["name_fr"] if lang == "fr" else mode.get(f"name_{lang}", mode["name_fr"])
+			mode_id: str = mode.id
+			mode_name: str = mode.display_name(lang)
 
 			# Prepare the title of the advancement
 			title: list[JsonDict] = [{"text":"'","color":"aqua"},{"text":mode_name,"color":"yellow"}]

@@ -791,7 +791,7 @@ def generate_map_usage_file() -> None:
 	# Get for each modes the maps they use
 	modes_usage: dict[str, list[str]] = {}
 	for mode in MODES:
-		mode_id: str = mode["id"]
+		mode_id: str = mode.id
 		start_file: str = f"{ns}:modes/{mode_id}/"
 		modes_usage[mode_id] = []
 
