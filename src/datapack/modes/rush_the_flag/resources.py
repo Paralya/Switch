@@ -1,6 +1,6 @@
 
 # Imports
-from ..common import register_break_obsidian_advancement
+from ..emit import register_break_obsidian_advancement
 
 
 def write_resources() -> None:

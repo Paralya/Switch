@@ -3,7 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem, Variants
-from ..common import skinned_weapons, write_modes_calls, write_time_xp_bar
+from ..emit import skinned_weapons, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 

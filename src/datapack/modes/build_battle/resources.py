@@ -4,7 +4,7 @@ from beet import BlockTag
 from beet.contrib.worldgen import Dimension
 from stewbeet.core import Mem, set_json_encoder
 
-from ..common import register_structures
+from ..emit import register_structures
 
 
 def write_resources() -> None:

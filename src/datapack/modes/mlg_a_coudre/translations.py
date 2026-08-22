@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_server_announce
+from ..emit import write_server_announce
 
 
 def write_translations():

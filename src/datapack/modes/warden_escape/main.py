@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_modes_calls, write_time_xp_bar
+from ..emit import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 

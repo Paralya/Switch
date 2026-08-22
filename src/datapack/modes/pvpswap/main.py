@@ -4,7 +4,7 @@ from stewbeet import Mem, write_function
 
 from ...kits import Kit
 from .._common.main import pvp_arena_kit
-from ..common import write_modes_calls
+from ..emit import write_modes_calls
 
 
 def write_mode():
