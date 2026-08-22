@@ -23,6 +23,7 @@ from .datapack.survival_maps.main import main as generate_survival_maps
 from .datapack.translations.main import main as shared_translations
 from .datapack.utils.main import main as utils
 from .resource_pack.special_fonts.main import main as special_fonts
+from .validation import Validation
 
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
@@ -62,6 +63,9 @@ def beet_default(ctx: Context) -> None:
 	automatic_advancements()
 	shop()
 	special_fonts()
+
+	# Fail the build on a mode, group or map declaration that would only break in game
+	Validation.run()
 
 	# Force enable dump module from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
 	official_lib_used("bs.dump")
