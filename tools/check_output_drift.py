@@ -42,8 +42,8 @@ class OutputDrift:
 		Returns:
 			list[str]: Porcelain paths, ex: ["build/datapack/data/switch/function/tick.mcfunction"]
 		"""
-		status: subprocess.CompletedProcess[str] = OutputDrift.run("git", "status", "--porcelain", "--", OUTPUT_FOLDER)
-		return [line[3:].strip().strip('"') for line in status.stdout.splitlines() if line.strip()]
+		status: str = OutputDrift.run("git", "status", "--porcelain", "--", OUTPUT_FOLDER).stdout
+		return [line[3:].strip().strip('"') for line in status.splitlines() if line.strip()]
 
 	@staticmethod
 	def build() -> bool:

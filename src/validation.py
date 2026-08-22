@@ -156,17 +156,15 @@ class Validation:
 		problems: list[Problem] = []
 		for name, paths in sorted(Validation.referenced_maps().items()):
 			if name not in known:
-				culprit: str = sorted(paths)[0]
 				problems.append(Problem(
-					f"unknown map '{name}' referenced by {culprit}",
+					f"unknown map '{name}' referenced by {sorted(paths)[0]}",
 					Validation.suggest(name, sorted(generated_maps))))
 		return problems
 
 	@staticmethod
 	def report_unvoted() -> None:
 		""" Log the modes that generate but never reach the vote, and the groups nobody uses. """
-		voted: set[str] = {mode.id for mode in MODES}
-		unvoted: list[str] = sorted(Validation.declared_folders() - voted)
+		unvoted: list[str] = sorted(Validation.declared_folders() - {mode.id for mode in MODES})
 		if unvoted:
 			stp.info(f"{len(unvoted)} mode(s) generated but absent from the vote: {', '.join(unvoted)}")
 
