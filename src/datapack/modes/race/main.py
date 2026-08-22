@@ -6,6 +6,16 @@ from stewbeet import Mem, write_function
 from ..emit import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
+# Constants
+CHECKPOINT_SCAN_RADIUS: int = 20
+""" Radius around a checkpoint marker outside which no player can be inside its box.
+
+check_player_pos reads three coordinates out of the player NBT, the most expensive thing a hot path
+can do, so it must only run for players who could plausibly pass. The widest box in the map tables
+is 14x5x8 and comparing truncated coordinates adds a block per axis, which puts every winning
+position within sqrt(15^2 + 6^2 + 9^2) = 18.5 blocks. check_conventions.py enforces the bound.
+"""
+
 
 def write_mode():
 	ns: str = Mem.ctx.project_id
@@ -235,6 +245,9 @@ scoreboard players add #next_id {ns}.temp.id 1
 scoreboard players operation @s {ns}.temp.id = #next_id {ns}.temp.id
 
 execute store result score @s {ns}.checkpoint run data get entity @s data.cp
+execute store result score @s {ns}.temp.x run data get entity @s Pos[0]
+execute store result score @s {ns}.temp.y run data get entity @s Pos[1]
+execute store result score @s {ns}.temp.z run data get entity @s Pos[2]
 execute store result score @s {ns}.temp.dx run data get entity @s data.dx
 execute store result score @s {ns}.temp.dy run data get entity @s data.dy
 execute store result score @s {ns}.temp.dz run data get entity @s data.dz
@@ -242,9 +255,9 @@ execute store result score @s {ns}.temp.dz run data get entity @s data.dz
 
 	# /checkpoints/tick
 	write_function(f"{path}/checkpoints/tick", f"""
-execute store result score #x {ns}.data run data get entity @s Pos[0]
-execute store result score #y {ns}.data run data get entity @s Pos[1]
-execute store result score #z {ns}.data run data get entity @s Pos[2]
+scoreboard players operation #x {ns}.data = @s {ns}.temp.x
+scoreboard players operation #y {ns}.data = @s {ns}.temp.y
+scoreboard players operation #z {ns}.data = @s {ns}.temp.z
 scoreboard players operation #dx {ns}.data = @s {ns}.temp.dx
 scoreboard players operation #dy {ns}.data = @s {ns}.temp.dy
 scoreboard players operation #dz {ns}.data = @s {ns}.temp.dz
@@ -255,7 +268,7 @@ execute if score #checkpoint {ns}.data matches -1 run scoreboard players operati
 
 scoreboard players set #can_hard_reset {ns}.data 0
 execute if entity @s[tag={ns}.can_hard_reset] run scoreboard players set #can_hard_reset {ns}.data 1
-execute as @a[tag=!detached,gamemode=!spectator,predicate={ns}:has_same_checkpoint] run function {ns}:modes/race/checkpoints/check_player_pos
+execute as @a[tag=!detached,gamemode=!spectator,distance=..{CHECKPOINT_SCAN_RADIUS},predicate={ns}:has_same_checkpoint] run function {ns}:modes/race/checkpoints/check_player_pos
 
 particle wax_on ~ ~2 ~ 2 2 2 0 2
 particle wax_off ~ ~2 ~ 2 2 2 0 2
@@ -968,6 +981,9 @@ function {ns}:modes/race/stop_cleanup
 scoreboard objectives remove {ns}.temp
 scoreboard objectives remove {ns}.temp.old_speed
 scoreboard objectives remove {ns}.temp.compteur
+scoreboard objectives remove {ns}.temp.x
+scoreboard objectives remove {ns}.temp.y
+scoreboard objectives remove {ns}.temp.z
 scoreboard objectives remove {ns}.temp.dx
 scoreboard objectives remove {ns}.temp.dy
 scoreboard objectives remove {ns}.temp.dz

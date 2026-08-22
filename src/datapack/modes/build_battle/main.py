@@ -6,6 +6,15 @@ from stewbeet import Mem, write_function
 from ..emit import write_modes_calls
 from .translations import write_translations
 
+# Constants
+PLOT_REPAIR_PERIOD: int = 4
+""" Ticks between two plot frame repairs.
+
+Placing the 48x38x48 frame template costs the same 35k block writes whether anything was broken or
+not, so it cannot stay on the per-tick path. One plot every four ticks still undoes any vandalism
+within two seconds, and players are kept inside their plot by prevent_leaving_area anyway.
+"""
+
 
 def write_mode():
 	ns: str = Mem.ctx.project_id
@@ -36,6 +45,7 @@ scoreboard objectives add {ns}.temp.to_rate dummy
 scoreboard players set #build_battle_state {ns}.data 0
 scoreboard players set #build_battle_seconds {ns}.data -20
 scoreboard players set #build_battle_ticks {ns}.data 0
+scoreboard players set #build_battle_repair {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #vote_theme_1 {ns}.data 0
 scoreboard players set #vote_theme_2 {ns}.data 0
@@ -55,6 +65,7 @@ function {translations}/start
 	# /stop
 	write_function(f"{path}/stop", f"""
 execute as @e[tag={ns}.build_battle_marker] at @s run function {path}/kill_marker
+forceload remove all
 
 scoreboard objectives remove {ns}.temp.id
 scoreboard objectives remove {ns}.temp.theme_vote
@@ -70,7 +81,12 @@ schedule clear {ns}:modes/build_battle/rating_time/find_player
 scoreboard players add #build_battle_ticks {ns}.data 1
 
 ## Global tick
-# For each marker, place the correct template
+# One plot gets its frame put back every PLOT_REPAIR_PERIOD ticks
+scoreboard players add #build_battle_repair {ns}.data 1
+execute if score #build_battle_repair {ns}.data matches {PLOT_REPAIR_PERIOD}.. run scoreboard players set #build_battle_repair {ns}.data 0
+execute if score #build_battle_repair {ns}.data matches 0 as @e[type=marker,tag={ns}.build_battle_marker,sort=random,limit=1] at @s run function {path}/repair_plot
+
+# For each marker, watch the ground and the mob cap
 execute as @e[type=marker,tag={ns}.build_battle_marker,sort=random,limit=5] at @s run function {path}/tick_marker
 
 # While people are voting, display the themes in inventory and check their votes
@@ -185,11 +201,14 @@ forceload remove ~ ~ ~48 ~48
 kill @s
 """)
 
-	# /tick_marker
-	write_function(f"{path}/tick_marker", f"""
+	# /repair_plot
+	write_function(f"{path}/repair_plot", f"""
 # Prevent players from breaking zone
 execute if data storage {ns}:main {{map:"build_battle"}} run place template {ns}:build_battle
+""")
 
+	# /tick_marker
+	write_function(f"{path}/tick_marker", f"""
 # Check if player changed ground (Only during building time)
 execute if score #build_battle_state {ns}.data matches ..1 unless block ~3 ~7 ~3 #{ns}:build_battle_antiground unless blocks ~3 ~7 ~3 ~3 ~7 ~3 ~3 ~-2 ~3 masked run function {path}/building_time/change_ground
 

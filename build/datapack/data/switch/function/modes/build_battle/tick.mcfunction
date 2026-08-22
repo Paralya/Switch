@@ -9,7 +9,12 @@
 scoreboard players add #build_battle_ticks switch.data 1
 
 ## Global tick
-# For each marker, place the correct template
+# One plot gets its frame put back every PLOT_REPAIR_PERIOD ticks
+scoreboard players add #build_battle_repair switch.data 1
+execute if score #build_battle_repair switch.data matches 4.. run scoreboard players set #build_battle_repair switch.data 0
+execute if score #build_battle_repair switch.data matches 0 as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=1] at @s run function switch:modes/build_battle/repair_plot
+
+# For each marker, watch the ground and the mob cap
 execute as @e[type=marker,tag=switch.build_battle_marker,sort=random,limit=5] at @s run function switch:modes/build_battle/tick_marker
 
 # While people are voting, display the themes in inventory and check their votes

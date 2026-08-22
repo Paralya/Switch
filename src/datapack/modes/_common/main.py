@@ -139,6 +139,9 @@ scoreboard players operation #secs {ns}.data %= #60 {ns}.data
 scoreboard objectives add {ns}.temp dummy
 scoreboard objectives add {ns}.temp.old_speed dummy
 scoreboard objectives add {ns}.temp.compteur dummy
+scoreboard objectives add {ns}.temp.x dummy
+scoreboard objectives add {ns}.temp.y dummy
+scoreboard objectives add {ns}.temp.z dummy
 scoreboard objectives add {ns}.temp.dx dummy
 scoreboard objectives add {ns}.temp.dy dummy
 scoreboard objectives add {ns}.temp.dz dummy

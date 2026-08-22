@@ -1,7 +1,7 @@
 
 #> switch:modes/race/translations/checkpoints_check_player_pos
 #
-# @executed	as @a[tag=!detached,gamemode=!spectator,predicate=switch:has_same_checkpoint]
+# @executed	as @a[tag=!detached,gamemode=!spectator,distance=..20,predicate=switch:has_same_checkpoint]
 #
 # @within	switch:modes/race/checkpoints/check_player_pos
 #

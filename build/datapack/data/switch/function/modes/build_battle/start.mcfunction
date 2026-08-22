@@ -22,6 +22,7 @@ scoreboard objectives add switch.temp.to_rate dummy
 scoreboard players set #build_battle_state switch.data 0
 scoreboard players set #build_battle_seconds switch.data -20
 scoreboard players set #build_battle_ticks switch.data 0
+scoreboard players set #build_battle_repair switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #vote_theme_1 switch.data 0
 scoreboard players set #vote_theme_2 switch.data 0

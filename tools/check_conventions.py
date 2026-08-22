@@ -59,6 +59,12 @@ UNTYPED_NAMES: frozenset[str] = frozenset({"Any", "JsonDict", "JsonList"})
 DOWNWARD_IMPORT: re.Pattern[str] = re.compile(r"^\s*from\s+\.+modes\.([a-z0-9_]+)\.", re.MULTILINE)
 """ Import of a specific mode from outside the modes package, ex: `from ..modes.spleef.shop import`. """
 
+CHECKPOINT_BOX: re.Pattern[str] = re.compile(r"dx:\s*(\d+),\s*dy:\s*(\d+),\s*dz:\s*(\d+)")
+""" Half extents of one race checkpoint, as written in the map tables. """
+
+CHECKPOINT_SCAN_RADIUS: int = 20
+""" Must stay in sync with the constant of the same name in datapack/modes/race/main.py. """
+
 
 # Classes
 class Conventions:
@@ -135,6 +141,26 @@ class Conventions:
 		return problems
 
 	@staticmethod
+	def check_checkpoint_boxes() -> list[str]:
+		""" Every race checkpoint box fits inside the radius the tick scan pre-filters on.
+
+		The scan skips players further than CHECKPOINT_SCAN_RADIUS from the marker, so a box reaching
+		past it would silently stop registering. Truncated coordinates cost one extra block per axis.
+
+		Returns:
+			list[str]: One message per checkpoint whose box reaches outside the scan radius
+		"""
+		problems: list[str] = []
+		for path in sorted((SRC / "datapack" / "maps").rglob("*.py")):
+			for dx, dy, dz in CHECKPOINT_BOX.findall(path.read_text(encoding="utf-8")):
+				reach: float = ((int(dx) + 1) ** 2 + (int(dy) + 1) ** 2 + (int(dz) + 1) ** 2) ** 0.5
+				if reach > CHECKPOINT_SCAN_RADIUS:
+					problems.append(
+						f"{Conventions.relative(path)} has a {dx}x{dy}x{dz} checkpoint reaching {reach:.1f} blocks, "
+						f"raise CHECKPOINT_SCAN_RADIUS (currently {CHECKPOINT_SCAN_RADIUS}) in race/main.py and here")
+		return problems
+
+	@staticmethod
 	def main() -> int:
 		""" Run every convention check.
 
@@ -142,7 +168,8 @@ class Conventions:
 			int: Process exit code, 0 when the sources follow the rules
 		"""
 		problems: list[str] = (
-			Conventions.check_length() + Conventions.check_model_purity() + Conventions.check_no_downward_import())
+			Conventions.check_length() + Conventions.check_model_purity() + Conventions.check_no_downward_import()
+			+ Conventions.check_checkpoint_boxes())
 		if not problems:
 			stp.info(f"{len(Conventions.python_files())} source file(s) follow the conventions")
 			return 0

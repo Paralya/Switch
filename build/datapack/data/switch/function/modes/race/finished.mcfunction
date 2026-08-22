@@ -1,7 +1,7 @@
 
 #> switch:modes/race/finished
 #
-# @executed	as @a[tag=!detached,gamemode=!spectator,predicate=switch:has_same_checkpoint]
+# @executed	as @a[tag=!detached,gamemode=!spectator,distance=..20,predicate=switch:has_same_checkpoint]
 #
 # @within	switch:modes/race/complete
 #

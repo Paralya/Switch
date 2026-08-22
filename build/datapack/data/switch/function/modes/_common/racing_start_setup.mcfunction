@@ -7,6 +7,9 @@
 scoreboard objectives add switch.temp dummy
 scoreboard objectives add switch.temp.old_speed dummy
 scoreboard objectives add switch.temp.compteur dummy
+scoreboard objectives add switch.temp.x dummy
+scoreboard objectives add switch.temp.y dummy
+scoreboard objectives add switch.temp.z dummy
 scoreboard objectives add switch.temp.dx dummy
 scoreboard objectives add switch.temp.dy dummy
 scoreboard objectives add switch.temp.dz dummy
