@@ -2,7 +2,7 @@
 # Infected shop
 from stouputils import JsonDict
 
-INFECTED: JsonDict = {
+SHOP: JsonDict = {
 	"sword": {
 		"ok_messages": {
 			"fr": "Votre achat pour améliorer votre épée a été effectué !",
@@ -129,3 +129,4 @@ INFECTED: JsonDict = {
 	},
 }
 
+""" Upgrades sold by this mode's shop, collected by the modes registry. """

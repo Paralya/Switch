@@ -1,6 +1,6 @@
 
 # Imports
-from .shared_memory import SHOPS
+from .shared_memory import ordered_shops
 from .utils import (
 	general_translations,
 	generate_shop,
@@ -18,7 +18,7 @@ def main() -> None:
 	write_raw_functions()
 
 	# Generate all the shops
-	for i, (shop_name, shop_dict) in enumerate(SHOPS.items()):
+	for i, (shop_name, shop_dict) in enumerate(ordered_shops().items()):
 		generate_shop(i, shop_name, shop_dict)
 
 	# Write the trigger function

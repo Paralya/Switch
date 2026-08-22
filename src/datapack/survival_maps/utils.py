@@ -8,6 +8,7 @@ import stouputils as stp
 from beet import Function
 from stewbeet.core import Mem, write_function
 
+from ..modes.definitions import MODES
 from .shared_memory import SharedMemory, generated_maps, survival_maps
 
 
@@ -784,7 +785,6 @@ def generate_map_usage_file() -> None:
 		config (dict): The configuration of the project
 	"""
 	ns: str = Mem.ctx.project_id
-	from ..modes.definitions import MODES
 	path: str = f"{Mem.ctx.directory}/map_usage.json"
 	CHOOSE_MAP_FOR: str = f"function {ns}:utils/choose_map_for"
 

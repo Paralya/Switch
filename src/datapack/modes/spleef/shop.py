@@ -2,7 +2,7 @@
 # Spleef shop
 from stouputils import JsonDict
 
-SPLEEF: JsonDict = {
+SHOP: JsonDict = {
 	"snow_block": {
 		"ok_messages": {
 			"fr": "Votre achat pour augmenter votre nombre de blocs de neige a été effectué !",
@@ -49,3 +49,4 @@ SPLEEF: JsonDict = {
 	},
 }
 
+""" Upgrades sold by this mode's shop, collected by the modes registry. """

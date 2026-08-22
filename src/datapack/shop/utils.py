@@ -13,12 +13,12 @@ from .shared_memory import (
 	REFUND_PERCENTAGE,
 	SHEEPWARS_CHOOSE_KIT,
 	SHEEPWARS_KIT_OFFSET,
-	SHOPS,
 	STAR,
 	TRIGGER_PATH,
 	USERNAME_CHANGE_PATH,
 	get_money,
 	get_shop_range,
+	ordered_shops,
 )
 
 
@@ -309,7 +309,7 @@ execute if score @s {ns}.trigger.shop matches 1..99 run function {ns}:shop/globa
 
 # Minigames shops
 """)
-	for i, (shop_name, _) in enumerate(SHOPS.items()):
+	for i, (shop_name, _) in enumerate(ordered_shops().items()):
 		mini, maxi = get_shop_range(i)
 		write_function(f"{ns}:{TRIGGER_PATH}", f"execute if score @s {ns}.trigger.shop matches {mini}..{maxi} run function {ns}:shop/{shop_name}")
 
@@ -340,7 +340,7 @@ def general_translations() -> None:
 tellraw {selector} [{{"text":"[","color":"#1b1796"}},{{"text":"{label.replace('X', 'Switch')}","color":"blue"}},{{"text":"]","color":"#1b1796"}},{{"text":" - ","color":"blue"}},{{"score":{{"name":"@s","objective":"{ns}.money"}},"color":"blue","underlined":true}},{json.dumps(get_money()[lang_id])},{{"text":"\\n"}}]
 """)
 		# For each shop, write the access text
-		for i, shop_name in enumerate(SHOPS.keys()):
+		for i, shop_name in enumerate(ordered_shops()):
 			mini: int = get_shop_range(i)[0]
 			titled: str = shop_name.replace("_", " ").title()
 			write_function(path, f"""tellraw {selector} [{{"text":"➤ ","color":"#1b1796","click_event":{{"action":"run_command","command":"/trigger {ns}.trigger.shop set {mini}"}}, "hover_event":{{"action":"show_text","value":{{"text":"{access_text.replace('X', titled)}","color":"gray"}}}}}},{{"text":"[","color":"#1b1796"}},{{"text":"{titled}","color":"blue"}},{{"text":"]","color":"#1b1796"}}]""")

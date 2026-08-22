@@ -3,7 +3,13 @@
 import importlib
 from pathlib import Path
 
+from stouputils.typing import JsonDict
+
 from .definitions import write_modes_load_file
+
+# Constants
+MODE_SHOPS: dict[str, dict[str, JsonDict]] = {}
+""" Shop of every mode declaring one, keyed by mode id and filled by generate_all_modes(). """
 
 
 # Main function
@@ -29,3 +35,8 @@ def generate_all_modes():
 			resources = importlib.import_module(f".{entry.name}.resources", package=__package__)
 			if hasattr(resources, "write_resources"):
 				resources.write_resources()
+
+		# A mode may sell upgrades, declared as SHOP in a sibling shop.py
+		if (entry / "shop.py").is_file():
+			shop = importlib.import_module(f".{entry.name}.shop", package=__package__)
+			MODE_SHOPS[entry.name] = shop.SHOP

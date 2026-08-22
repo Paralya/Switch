@@ -2,11 +2,7 @@
 # Imports
 from stewbeet import JsonDict, Mem
 
-from ..modes.infected.shop import INFECTED
-from ..modes.pitchout.shop import PITCHOUT
-from ..modes.sheepwars.shop import SHEEPWARS
-from ..modes.spectres_game.shop import SPECTRES_GAME
-from ..modes.spleef.shop import SPLEEF
+from ..modes import MODE_SHOPS
 
 # Constants
 STAR: str = "✮"
@@ -27,13 +23,22 @@ SHEEPWARS_CHOOSE_KIT: dict[str, str] = {
 	"en": "Select a kit by clicking on the name!"
 }
 SHEEPWARS_KIT_OFFSET: int = 50
-SHOPS: dict[str, dict[str, JsonDict]] = {
-	"pitchout": PITCHOUT,
-	"infected": INFECTED,
-	"spleef": SPLEEF,
-	"sheepwars": SHEEPWARS,
-	"spectres_game": SPECTRES_GAME,
-}
+SHOP_ORDER: tuple[str, ...] = ("pitchout", "infected", "spleef", "sheepwars", "spectres_game")
+""" Frozen display order of the minigame shops.
+
+A shop's rank drives its trigger score range (see get_shop_range), which is what a player's click
+sends, so reordering this changes the generated commands. A shop missing here is appended last.
+"""
+
+def ordered_shops() -> dict[str, dict[str, JsonDict]]:
+	""" Every mode shop, in display order.
+
+	Returns:
+		dict[str, dict[str, JsonDict]]: Mode id -> its upgrades
+	"""
+	listed: list[str] = [name for name in SHOP_ORDER if name in MODE_SHOPS]
+	return {name: MODE_SHOPS[name] for name in listed + [name for name in MODE_SHOPS if name not in SHOP_ORDER]}
+
 # Function paths, relative to the project namespace (e.g. f"{ns}:{LOAD_PATH}")
 LOAD_PATH: str = "shop/_load"
 TRIGGER_PATH: str = "shop/trigger"
