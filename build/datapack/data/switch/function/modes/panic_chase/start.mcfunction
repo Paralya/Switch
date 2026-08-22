@@ -10,7 +10,7 @@ effect give @a[tag=!detached] resistance 15 255 true
 function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
-function switch:utils/choose_map_for {id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}
+function switch:maps/choose_map_for {id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}
 
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 execute in switch:game run gamerule minecraft:fall_damage false

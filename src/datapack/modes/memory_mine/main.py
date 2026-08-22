@@ -114,7 +114,7 @@ function {ns}:utils/set_dynamic_time
 execute as @a[tag=!detached] run attribute @s safe_fall_distance base set 1024
 execute as @a[tag=!detached] run attribute @s jump_strength base set 0
 
-function {ns}:utils/choose_map_for {{id:"memory_mine", maps:["memory_mine"]}}
+function {ns}:maps/choose_map_for {{id:"memory_mine", maps:["memory_mine"]}}
 function {translations}/start
 
 scoreboard objectives add {ns}.temp.cooldown dummy

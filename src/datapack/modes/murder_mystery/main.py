@@ -191,7 +191,7 @@ execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 ## Chargement de la map
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino","cluedo_camping"]}}
+function {ns}:maps/choose_map_for {{id:"murder_mystery", maps:["ghost_town","remelta_cluedo","jn_murder_mystery","charly_murder_2018","cluedo_casino","cluedo_camping"]}}
 
 function {ns}:modes/murder_mystery/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

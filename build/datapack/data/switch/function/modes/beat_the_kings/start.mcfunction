@@ -15,7 +15,7 @@ function switch:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
+function switch:maps/choose_map_for {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
 
 execute in switch:game run gamerule minecraft:mob_griefing true
 execute in switch:game run gamerule minecraft:natural_health_regeneration false

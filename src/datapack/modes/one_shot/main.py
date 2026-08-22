@@ -97,7 +97,7 @@ effect give @a[tag=!detached] slowness 6 255 true
 effect give @a[tag=!detached] blindness 4 255 true
 
 ## Téléportation des joueurs
-function {ns}:utils/choose_map_for {{id:"one_shot", maps:["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"]}}
+function {ns}:maps/choose_map_for {{id:"one_shot", maps:["friends_pvpbox_hills","jn_one_in_the_chamber_1","jn_one_in_the_chamber_2"]}}
 function {translations}/start
 
 scoreboard objectives add {ns}.temp.damages dummy

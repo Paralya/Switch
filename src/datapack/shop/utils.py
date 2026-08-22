@@ -31,10 +31,12 @@ def load_username_change(shop_name: str, shop_dict: JsonDict) -> None:
 		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
 	ns: str = Mem.ctx.project_id
-	for upgrade_id in shop_dict.keys():
-		write_function(f"{ns}:{LOAD_PATH}", f"scoreboard objectives add {ns}.{shop_name}.{upgrade_id} dummy")
-		write_function(f"{ns}:{USERNAME_CHANGE_PATH}", f"$scoreboard players operation $(username) {ns}.{shop_name}.{upgrade_id} = $(old_username) {ns}.{shop_name}.{upgrade_id}")
-		write_function(f"{ns}:{INITIALIZE_SHOP_SCORES_PATH}", f"scoreboard players add @s {ns}.{shop_name}.{upgrade_id} 0")
+	objectives: list[str] = [f"{ns}.{shop_name}.{upgrade_id}" for upgrade_id in shop_dict]
+	write_function(f"{ns}:{LOAD_PATH}", "\n".join(f"scoreboard objectives add {objective} dummy" for objective in objectives))
+	write_function(f"{ns}:{USERNAME_CHANGE_PATH}", "\n".join(
+		f"$scoreboard players operation $(username) {objective} = $(old_username) {objective}" for objective in objectives))
+	write_function(f"{ns}:{INITIALIZE_SHOP_SCORES_PATH}", "\n".join(
+		f"scoreboard players add @s {objective} 0" for objective in objectives))
 
 
 def write_technicals(index: int, shop_name: str, shop_dict: JsonDict) -> None:

@@ -75,7 +75,7 @@ function {ns}:translations/common/actionbar_time_pvp19
 	write_function(f"{path}/start", f"""
 gamemode survival @a[tag=!detached]
 function {ns}:modes/_common/pvp_arena/start_common
-function {ns}:utils/choose_map_for {{id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box","adraik_big_ball"]}}
+function {ns}:maps/choose_map_for {{id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box","adraik_big_ball"]}}
 
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 

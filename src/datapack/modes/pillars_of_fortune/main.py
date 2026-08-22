@@ -82,7 +82,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 0
-function {ns}:utils/choose_map_for {{id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste", "void_desert"]}}
+function {ns}:maps/choose_map_for {{id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste", "void_desert"]}}
 function {ns}:modes/pillars_of_fortune/translations/start
 
 execute in {ns}:game run gamerule minecraft:mob_griefing true

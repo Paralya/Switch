@@ -123,7 +123,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs + give d'items
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"creeper_apocalypse", maps:["enchanting_island","friends_cube_lobby","zonweeb_main","jn_countries_castle","even_old_japan"]}}
+function {ns}:maps/choose_map_for {{id:"creeper_apocalypse", maps:["enchanting_island","friends_cube_lobby","zonweeb_main","jn_countries_castle","even_old_japan"]}}
 
 function {ns}:modes/_common/standard_combat_rules
 

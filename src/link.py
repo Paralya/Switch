@@ -5,21 +5,18 @@ from stewbeet import Context, Mem, official_lib_used, write_load_file, write_tic
 
 from .datapack.advancements.main import main as automatic_advancements
 from .datapack.cinematic.main import main as cinematic
+from .datapack.devtools.main import main as devtools
 from .datapack.engine.main import main as engine
+from .datapack.lobby.main import main as lobby
+from .datapack.maps.generation.main import main as generate_survival_maps
 from .datapack.maps.main import main as maps
-from .datapack.misc_links.note_block_studio import main as note_block_studio
-from .datapack.misc_links.random_loot_table import main as random_loot_table
-from .datapack.misc_links.starting_pop_ups import main as starting_pop_ups
 from .datapack.modes import generate_all_modes
 from .datapack.modes.memory_mine.zone_particles import write_zone_particles as memory_mine
 from .datapack.music.main import main as music
-from .datapack.npc.main import main as npc
 from .datapack.player.main import main as player
-from .datapack.profiling.main import main as profiling
 from .datapack.root.main import main as root
 from .datapack.shop.main import main as shop
 from .datapack.stats.main import main as stats
-from .datapack.survival_maps.main import main as generate_survival_maps
 from .datapack.translations.main import main as shared_translations
 from .datapack.utils.main import main as utils
 from .resource_pack.special_fonts.main import main as special_fonts
@@ -49,15 +46,12 @@ def beet_default(ctx: Context) -> None:
 	utils()
 	maps()
 	music()
-	npc()
+	lobby()
 	cinematic()
 	stats()
 	engine()
 	player()
-	profiling()
-	starting_pop_ups()
-	random_loot_table()
-	note_block_studio()
+	devtools()
 	memory_mine()
 	generate_survival_maps()
 	automatic_advancements()

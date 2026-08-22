@@ -42,8 +42,8 @@ scoreboard players reset @a switch.right_click
 execute as @e[type=spectral_arrow,x=26,y=80,z=93,distance=..10,nbt=!{pickup:0b}] run data modify entity @s pickup set value 0b
 
 # Lobby tick
-execute in minecraft:overworld positioned 0 69 0 run function switch:lobby_tick
+execute in minecraft:overworld positioned 0 69 0 run function switch:lobby/tick
 
 ## Profiling
-#execute as Stoupy51 run function switch:profiling/start
+#execute as Stoupy51 run function switch:devtools/profiling/start
 

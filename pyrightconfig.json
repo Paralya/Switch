@@ -1,1 +1,5 @@
-{ "typeCheckingMode": "strict", "include": ["src", "tools"], "exclude": ["**/__pycache__"] }
+{
+	"typeCheckingMode": "strict",
+	"include": ["src", "tools"],
+	"exclude": ["**/__pycache__", "tools/assets"]
+}

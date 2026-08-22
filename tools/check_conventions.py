@@ -41,7 +41,7 @@ LONG_FILE_DEBT: frozenset[str] = frozenset({
 	"datapack/root/main.py",
 	"datapack/shop/utils.py",
 	"datapack/stats/main.py",
-	"datapack/survival_maps/utils.py",
+	"datapack/maps/generation/utils.py",
 	"resource_pack/shaders.py",
 })
 """ Files already past MAX_LINES, to be split into packages.

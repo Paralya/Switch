@@ -427,7 +427,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}}
+function {ns}:maps/choose_map_for {{id:"traitors_game", maps:["traitor_original","mushroom_plains","trials_run","hider_mansion","bancalvivor_s3","stardust_pvp_zone","la_fromagerie"]}}
 
 function {ns}:modes/_common/standard_combat_rules
 

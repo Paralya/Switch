@@ -185,7 +185,7 @@ function {ns}:utils/set_dynamic_time
 execute in {ns}:game run gamerule minecraft:block_drops false
 
 ## Téléportation des joueurs
-function {ns}:utils/choose_map_for {{id:"spleef", maps:["spleef_1"]}}
+function {ns}:maps/choose_map_for {{id:"spleef", maps:["spleef_1"]}}
 execute if data storage {ns}:main {{map:"spleef_1"}} run tp @a[tag=!detached] 28000 101 28000
 
 function {translations}/start

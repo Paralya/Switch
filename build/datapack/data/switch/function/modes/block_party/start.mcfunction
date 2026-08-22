@@ -16,7 +16,7 @@ time set 18000
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"block_party", maps:["block_party"]}
+function switch:maps/choose_map_for {id:"block_party", maps:["block_party"]}
 function switch:modes/block_party/translations/start
 execute if data storage switch:records block_party run function switch:modes/block_party/record_tellraw with storage switch:records block_party
 

@@ -395,7 +395,7 @@ effect give @a[tag=!detached] weakness 10 255 true
 function {ns}:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
-function {ns}:utils/choose_map_for {{id:"rush_the_point", maps:["rush_the_point_1"]}}
+function {ns}:maps/choose_map_for {{id:"rush_the_point", maps:["rush_the_point_1"]}}
 
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 execute in {ns}:game run gamerule minecraft:keep_inventory true

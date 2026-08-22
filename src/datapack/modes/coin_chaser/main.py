@@ -93,7 +93,7 @@ execute in {ns}:game run gamerule minecraft:fall_damage false
 ## Téléportation des joueurs
 scoreboard players set #dont_regenerate {ns}.data 1
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}}
+function {ns}:maps/choose_map_for {{id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}}
 
 function {translations}/start
 

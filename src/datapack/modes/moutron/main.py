@@ -138,7 +138,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"moutron", maps:["whity_lab","the_four_elements","arti_ancient_city"]}}
+function {ns}:maps/choose_map_for {{id:"moutron", maps:["whity_lab","the_four_elements","arti_ancient_city"]}}
 execute if data storage {ns}:main {{map:"whity_lab"}} run function {path}/spread_players/whity_lab
 
 execute in {ns}:game run gamerule minecraft:fall_damage false

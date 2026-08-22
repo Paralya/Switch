@@ -226,7 +226,7 @@ time set 18000
 
 # Choose map and start cinematic
 scoreboard players set #do_spreadplayers {ns}.data 0
-function {ns}:utils/choose_map_for {{id:"laser_game", maps:["laser_game"]}}
+function {ns}:maps/choose_map_for {{id:"laser_game", maps:["laser_game"]}}
 
 # Teleport players to their team spawn
 scoreboard players set #team_boolean {ns}.data 0

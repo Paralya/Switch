@@ -23,7 +23,6 @@ from stewbeet.utils import get_project_config
 DECLARED_MERGES: tuple[str, ...] = (
 	"switch:shop/*",
 	"switch:player/username_change/update_shops",
-	"switch:engine/pop_ups/schedule",
 	"switch:modes/*/give_items",
 	"switch:modes/sheepwars/team_and_give",
 	"switch:modes/build_battle/preparation/themes_list",
@@ -32,9 +31,9 @@ DECLARED_MERGES: tuple[str, ...] = (
 )
 """ Function paths intentionally built by several successive appends, as fnmatch patterns.
 
-The shop family accumulates one block per upgrade, pop_ups/schedule one revoke per mode and
-language, and the give_items family is a hand-written body completed by the Kit renderer.
-The switch:load and switch:v*/* entries belong to StewBeet's versioned loading scheme.
+The shop family accumulates one block per upgrade, and the give_items family is a hand-written
+body completed by the Kit renderer. The switch:load and switch:v*/* entries belong to StewBeet's
+versioned loading scheme. This list may only shrink.
 """
 
 SKIPPED_PLUGINS: tuple[str, ...] = ("archive", "copy_to_destination", "compute_sha1", "merge_smithed_weld")
@@ -117,6 +116,11 @@ class MergedFunctions:
 
 		stp.info(f"{sum(MergedFunctions.WRITES.values())} writes over {len(MergedFunctions.WRITES)} distinct paths")
 		stp.info(f"{len(merged)} merged path(s), {len(merged) - len(undeclared)} declared")
+
+		stale: list[str] = [pattern for pattern in DECLARED_MERGES
+			if not any(fnmatch(path, pattern) for path in merged)]
+		if stale:
+			stp.warning(f"{len(stale)} declared merge(s) no longer happen, remove them: {', '.join(stale)}")
 
 		if not undeclared:
 			return 0

@@ -20,7 +20,7 @@ def write_mode():
 	write_function(f"{path}/start", f"""
 # Choose map
 scoreboard players set #dont_regenerate {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"boat_race", maps:["boat_race_1","boat_race_2"]}}
+function {ns}:maps/choose_map_for {{id:"boat_race", maps:["boat_race_1","boat_race_2"]}}
 
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true

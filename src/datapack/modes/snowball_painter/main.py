@@ -174,7 +174,7 @@ effect give @a[tag=!detached] resistance infinite 255 true
 function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function {ns}:utils/choose_map_for {{id:"snowball_painter", maps:["snowball_painter"]}}
+function {ns}:maps/choose_map_for {{id:"snowball_painter", maps:["snowball_painter"]}}
 
 function {ns}:modes/snowball_painter/translations/start
 

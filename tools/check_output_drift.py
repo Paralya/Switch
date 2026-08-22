@@ -1,11 +1,18 @@
 """ Golden-file guard: rebuild the project and fail if the tracked build/ output moved.
 
-Any purely structural refactoring must leave the generated output byte for byte identical.
-Run this after moving code around: a non-empty diff means the refactor changed behaviour.
+Any purely structural refactoring must leave the generated output identical. Run this after moving
+code around: a real diff means the refactor changed behaviour.
+
+Archives are compared entry by entry rather than byte by byte, because the order in which files
+land in the zip follows the order the build creates them. A pure reordering carries no meaning for
+the game, so it is reported and tolerated, while a single changed entry still fails.
 """
 # Imports
+import hashlib
 import subprocess
 import sys
+import zipfile
+from io import BytesIO
 from pathlib import Path
 
 import stouputils as stp
@@ -19,6 +26,9 @@ OUTPUT_FOLDER: str = "build"
 
 MAX_LISTED_FILES: int = 25
 """ How many drifted paths to print before summarizing the rest. """
+
+DERIVED_FILES: frozenset[str] = frozenset({"build/sha1_hashes.json"})
+""" Files computed from the archives, which legitimately move when an archive is reordered. """
 
 
 # Classes
@@ -58,6 +68,55 @@ class OutputDrift:
 		return build.returncode == 0
 
 	@staticmethod
+	def archive_entries(data: bytes) -> dict[str, str]:
+		""" Digest of every entry of a zip, keyed by entry name.
+
+		Args:
+			data (bytes): The archive
+		Returns:
+			dict[str, str]: Entry name -> sha1 of its content
+		"""
+		with zipfile.ZipFile(BytesIO(data)) as archive:
+			return {name: hashlib.sha1(archive.read(name)).hexdigest() for name in archive.namelist()}
+
+	@staticmethod
+	def reordered_only(path: str) -> bool:
+		""" Whether an archive holds the same entries as in HEAD, in a different order.
+
+		Args:
+			path (str): Repository relative path of the archive
+		Returns:
+			bool: True when nothing but the entry order changed
+		"""
+		committed: subprocess.CompletedProcess[bytes] = subprocess.run(
+			("git", "show", f"HEAD:{path}"), cwd=ROOT, capture_output=True, check=False)
+		if committed.returncode != 0:
+			return False
+		return OutputDrift.archive_entries(committed.stdout) == OutputDrift.archive_entries((ROOT / path).read_bytes())
+
+	@staticmethod
+	def real_drift(drifted: list[str]) -> tuple[list[str], list[str]]:
+		""" Split drifted paths into meaningful changes and tolerated archive reorderings.
+
+		Args:
+			drifted (list[str]): Every path reported by git
+		Returns:
+			tuple[list[str], list[str]]: The meaningful changes, then the reordered archives
+		"""
+		meaningful: list[str] = []
+		reordered: list[str] = []
+		for path in drifted:
+			if path.endswith(".zip") and OutputDrift.reordered_only(path):
+				reordered.append(path)
+			else:
+				meaningful.append(path)
+
+		# A hash file only follows its archives: it stands on its own only when nothing was reordered
+		if reordered:
+			meaningful = [path for path in meaningful if path not in DERIVED_FILES]
+		return meaningful, reordered
+
+	@staticmethod
 	def main() -> int:
 		""" Rebuild, then compare the output folder against HEAD.
 
@@ -77,11 +136,19 @@ class OutputDrift:
 			stp.info(f"No drift: '{OUTPUT_FOLDER}/' is identical to HEAD")
 			return 0
 
-		stp.error(f"{len(drifted)} file(s) drifted in '{OUTPUT_FOLDER}/':")
-		for path in drifted[:MAX_LISTED_FILES]:
+		meaningful, reordered = OutputDrift.real_drift(drifted)
+		for path in reordered:
+			stp.warning(f"{path} holds the same entries as HEAD in a different order, content unchanged")
+
+		if not meaningful:
+			stp.info(f"No drift: '{OUTPUT_FOLDER}/' carries the same content as HEAD")
+			return 0
+
+		stp.error(f"{len(meaningful)} file(s) drifted in '{OUTPUT_FOLDER}/':")
+		for path in meaningful[:MAX_LISTED_FILES]:
 			stp.error(f"  {path}")
-		if len(drifted) > MAX_LISTED_FILES:
-			stp.error(f"  ... and {len(drifted) - MAX_LISTED_FILES} more")
+		if len(meaningful) > MAX_LISTED_FILES:
+			stp.error(f"  ... and {len(meaningful) - MAX_LISTED_FILES} more")
 		return 1
 
 

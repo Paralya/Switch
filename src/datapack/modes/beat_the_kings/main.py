@@ -34,7 +34,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"{mode}", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}}
+function {ns}:maps/choose_map_for {{id:"{mode}", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}}
 
 execute in {ns}:game run gamerule minecraft:mob_griefing true
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false

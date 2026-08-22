@@ -182,7 +182,7 @@ function {ns}:modes/infected/translations/second_start
 	write_function(f"{path}/start", f"""
 ## Placement de la map et des joueurs
 time set 18000
-function {ns}:utils/choose_map_for {{id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}}
+function {ns}:maps/choose_map_for {{id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}}
 execute as @a[tag=!detached] run function {ns}:modes/infected/death/early_respawn
 
 function {ns}:modes/infected/translations/start
@@ -587,7 +587,7 @@ execute unless score #test_mode {ns}.data matches 1 run advancement grant @s[adv
 
 	# /secrets/drop_element_115
 	write_function(f"{path}/secrets/drop_element_115", f"""
-clear @s *[minecraft:custom_data={{{ns}:{{"element_115":true}}}}] 1
+clear @s *[custom_data~{{{ns}:{{"element_115":true}}}}] 1
 loot spawn ~ ~ ~ loot {ns}:i/element_115
 execute as @e[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{{ns}:{{"element_115":true}}}}}}}}}}] run data modify entity @s Owner set from entity @p[tag=!detached,team={ns}.temp.human] UUID
 """)

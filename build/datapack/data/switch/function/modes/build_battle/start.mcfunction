@@ -11,7 +11,7 @@ function switch:utils/set_dynamic_time
 gamerule minecraft:max_block_modifications 262144
 
 ## Téléportation des joueurs
-function switch:utils/choose_map_for {id:"build_battle", maps:["build_battle"]}
+function switch:maps/choose_map_for {id:"build_battle", maps:["build_battle"]}
 
 scoreboard objectives add switch.temp.id dummy
 scoreboard objectives add switch.temp.theme_vote trigger

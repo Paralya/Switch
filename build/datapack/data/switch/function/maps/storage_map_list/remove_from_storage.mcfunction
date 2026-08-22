@@ -1,7 +1,7 @@
 
 #> switch:maps/storage_map_list/remove_from_storage
 #
-# @within	switch:utils/choose_map_for
+# @within	switch:maps/choose_map_for
 #
 
 data modify storage switch:main new set value []

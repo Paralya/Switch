@@ -80,7 +80,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"cigogne", maps:["cigogne"]}}
+function {ns}:maps/choose_map_for {{id:"cigogne", maps:["cigogne"]}}
 
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 execute in {ns}:game run gamerule minecraft:keep_inventory true

@@ -90,7 +90,7 @@ effect give @a[tag=!detached] jump_boost infinite 3 true
 time set 6000
 
 ## Téléportation des joueurs dans quatres coins + give d'items
-function {ns}:utils/choose_map_for {{id:"glassrunner", maps:["glassrunner"]}}
+function {ns}:maps/choose_map_for {{id:"glassrunner", maps:["glassrunner"]}}
 scoreboard players set #count {ns}.data 0
 execute as @a[tag=!detached,sort=random] at @s run function {ns}:modes/glassrunner/start/team
 execute as @a[tag=!detached] at @s run function {ns}:modes/glassrunner/death/death

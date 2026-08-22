@@ -31,7 +31,7 @@ execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #dont_regenerate {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"{mode}", maps:["pitch_creep_1","octogone_nether_ice"]}}
+function {ns}:maps/choose_map_for {{id:"{mode}", maps:["pitch_creep_1","octogone_nether_ice"]}}
 
 function {translations}/start
 

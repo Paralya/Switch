@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from .pop_ups import write_pop_ups
 from .translations import write_translations
 
 
@@ -10,6 +11,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:engine"
 	write_translations()
+	write_pop_ups()
 
 	# /add_money
 	write_function(f"{path}/add_money", f"""
@@ -883,5 +885,28 @@ scoreboard players set #success {ns}.data 1
 # Update the message for the player who just voted
 execute as @a[tag={ns}.temp] run function {ns}:engine/voting_time/message
 tag @a[tag={ns}.temp] remove {ns}.temp
+""")
+
+	# /who_voted (admin command: list which players voted for each game)
+	write_function(f"{ns}:engine/who_voted", f"""
+# French
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 1 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-1}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 2 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-2}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 3 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-3}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 4 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-4}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 5 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-5}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-6}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
+tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
+
+# English
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 1 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-1}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 2 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-2}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 3 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-3}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 4 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-4}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 5 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-5}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-6}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
+tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
 """)
 
