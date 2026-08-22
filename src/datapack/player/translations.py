@@ -244,10 +244,10 @@ tellraw @s[scores={{{ns}.lang=1}}] ["\n",{{"nbt":"Paralya","storage":"{ns}:main"
 	# /trigger_succes_mode
 	write_function(f"{path}/trigger_succes_mode", rf"""
 # French
-tellraw @s[scores={{{ns}.lang=0}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Succès obtenables en "}},{{"nbt":"current_game_name","storage":"{ns}:main","color":"aqua"}},{{"text":" :"}}]
+tellraw @s[scores={{{ns}.lang=0}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Succès obtenables en "}},{{"nbt":"current_game_name","storage":"{ns}:main","color":"aqua","interpret":true}},{{"text":" :"}}]
 
 # English
-tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Advancements available in "}},{{"nbt":"current_game_name","storage":"{ns}:main","color":"aqua"}},{{"text":":"}}]
+tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Advancements available in "}},{{"nbt":"current_game_name","storage":"{ns}:main","color":"aqua","interpret":true}},{{"text":":"}}]
 """)
 
 	# /tutorial_second
