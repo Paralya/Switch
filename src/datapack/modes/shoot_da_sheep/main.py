@@ -112,7 +112,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function {ns}:utils/choose_map_for {{id:"shoot_da_sheep", maps:["shoot_da_sheep"]}}
+function {ns}:maps/choose_map_for {{id:"shoot_da_sheep", maps:["shoot_da_sheep"]}}
 execute as @a[tag=!detached] run function {ns}:maps/survival/shoot_da_sheep/tp_shoot_da_sheep
 
 function {ns}:modes/shoot_da_sheep/translations/start

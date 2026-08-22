@@ -136,7 +136,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}}
+function {ns}:maps/choose_map_for {{id:"tnt_run", maps:["tnt_run_futuristic","arti_tnt_run_tower","elza_dual_biomes"]}}
 
 execute in {ns}:game run gamerule minecraft:fall_damage false
 execute in {ns}:game run gamerule minecraft:block_drops false

@@ -135,7 +135,7 @@ function {ns}:utils/set_dynamic_time
 execute in {ns}:game run gamerule minecraft:fall_damage false
 
 ## Téléportation des joueurs
-function {ns}:utils/choose_map_for {{id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}}
+function {ns}:maps/choose_map_for {{id:"pitchout", maps:["pitchout_1","pitchout_halloween"]}}
 scoreboard players set #spawn_count {ns}.data 0
 execute if data storage {ns}:main {{map:"pitchout_1"}} as @a[tag=!detached,sort=random] run function {ns}:modes/pitchout/map_1/tp_give
 execute if data storage {ns}:main {{map:"pitchout_halloween"}} as @a[tag=!detached,sort=random] run function {ns}:modes/pitchout/map_halloween/tp_give

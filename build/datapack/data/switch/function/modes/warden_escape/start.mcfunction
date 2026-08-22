@@ -9,7 +9,7 @@ function switch:modes/_common/no_pvp_start
 ## Téléportation des joueurs
 scoreboard players set #dont_regenerate switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
+function switch:maps/choose_map_for {id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}
 execute if data storage switch:main {map:"cathedrale_liege"} run tp @a[tag=!detached] 26075 120 26056
 execute if data storage switch:main {map:"new_grounds"} run tp @a[tag=!detached] 48047 113 48047
 execute if data storage switch:main {map:"warden_escape_statue"} run tp @a[tag=!detached] 69056.0 136 69050.0

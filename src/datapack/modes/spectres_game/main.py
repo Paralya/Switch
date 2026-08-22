@@ -425,7 +425,7 @@ execute unless score #new_players {ns}.data matches 2.. if predicate {ns}:chance
 
 ## Placement de la map et des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake","old_japan","cluedo_camping","la_juste_recette","torg_arena"]}}
+function {ns}:maps/choose_map_for {{id:"spectres_game", maps:["spectre_original","mushroom_plains","sky_island_tower","floating_island","jn_sakura_pvpbox","luxium_spectres_remake","old_japan","cluedo_camping","la_juste_recette","torg_arena"]}}
 
 function {ns}:modes/_common/standard_combat_rules
 

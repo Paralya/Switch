@@ -1,5 +1,5 @@
 
-#> switch:utils/choose_map_for
+#> switch:maps/choose_map_for
 #
 # @within	switch:modes/beat_the_kings/start {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
 #			switch:modes/block_party/start {id:"block_party", maps:["block_party"]}

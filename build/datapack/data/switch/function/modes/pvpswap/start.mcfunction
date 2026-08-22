@@ -8,7 +8,7 @@ gamemode survival @a[tag=!detached]
 effect give @a[tag=!detached] blindness 10 255 true
 effect give @a[tag=!detached] weakness 10 255 true
 function switch:modes/_common/pvp_arena/start_common
-function switch:utils/choose_map_for {id:"pvpswap", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box"]}
+function switch:maps/choose_map_for {id:"pvpswap", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box"]}
 
 execute in switch:game run gamerule minecraft:natural_health_regeneration false
 

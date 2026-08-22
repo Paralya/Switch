@@ -1,5 +1,5 @@
 
-#> switch:utils/create_stats_stuff
+#> switch:stats/create_stats_stuff
 #
 # @within	switch:auto_index with storage switch:main temp
 #

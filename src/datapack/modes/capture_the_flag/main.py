@@ -27,7 +27,7 @@ tag @s add {ns}.temp.inventory_changed
 	# /choose_map_for
 	write_function(f"{path}/choose_map_for", f"""
 execute store result score #count {ns}.data if entity @a[tag=!detached]
-function {ns}:utils/choose_map_for {{id:"capture_the_flag", maps:["operation_pigclaw","ctf_plains_castles","ctf_mountains_castles","ctf_flowers","ctf_nether","ctf_forest_castles"]}}
+function {ns}:maps/choose_map_for {{id:"capture_the_flag", maps:["operation_pigclaw","ctf_plains_castles","ctf_mountains_castles","ctf_flowers","ctf_nether","ctf_forest_castles"]}}
 
 ## If not enough players for certain maps, restart it
 execute if score #count {ns}.data matches ..30 if data storage {ns}:main {{map:"ctf_nether"}} run function {path}/choose_map_for

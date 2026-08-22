@@ -938,7 +938,7 @@ function {ns}:modes/_common/racing_start_setup
 
 ## Téléportation des joueurs + give d'items
 scoreboard players set #dont_regenerate {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"race", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit","boat_race_1","boat_race_2"]}}
+function {ns}:maps/choose_map_for {{id:"race", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit","boat_race_1","boat_race_2"]}}
 schedule function {ns}:modes/race/give_items 1s
 schedule function {ns}:modes/race/post_load 9s
 

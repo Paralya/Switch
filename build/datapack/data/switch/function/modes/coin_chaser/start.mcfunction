@@ -13,7 +13,7 @@ execute in switch:game run gamerule minecraft:fall_damage false
 ## Téléportation des joueurs
 scoreboard players set #dont_regenerate switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}
+function switch:maps/choose_map_for {id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}
 
 function switch:modes/coin_chaser/translations/start
 

@@ -786,7 +786,7 @@ def generate_map_usage_file() -> None:
 	"""
 	ns: str = Mem.ctx.project_id
 	path: str = f"{Mem.ctx.directory}/map_usage.json"
-	CHOOSE_MAP_FOR: str = f"function {ns}:utils/choose_map_for"
+	CHOOSE_MAP_FOR: str = f"function {ns}:maps/choose_map_for"
 
 	# Get for each modes the maps they use
 	modes_usage: dict[str, list[str]] = {}
@@ -794,7 +794,7 @@ def generate_map_usage_file() -> None:
 		start_file: str = f"{ns}:modes/{mode.id}/"
 		modes_usage[mode.id] = []
 
-		# Get the start function of the mode and search for "function switch:utils/choose_map_for {id:"block_party", maps:["pitch_creep_1","octogone_nether_ice"]}"
+		# Get the start function of the mode and search for "function switch:maps/choose_map_for {id:"block_party", maps:["pitch_creep_1","octogone_nether_ice"]}"
 		function_content: str = Mem.ctx.data.functions.get(start_file + "start_common", Function()).text.strip()
 		if not function_content:
 			function_content = Mem.ctx.data.functions.get(start_file + "choose_map_for", Function()).text.strip()

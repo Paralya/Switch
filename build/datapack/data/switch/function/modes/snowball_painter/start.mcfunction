@@ -9,7 +9,7 @@ effect give @a[tag=!detached] resistance infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function switch:utils/choose_map_for {id:"snowball_painter", maps:["snowball_painter"]}
+function switch:maps/choose_map_for {id:"snowball_painter", maps:["snowball_painter"]}
 
 function switch:modes/snowball_painter/translations/start
 

@@ -70,7 +70,7 @@ effect give @a[tag=!detached] resistance 30 255 true
 function {ns}:utils/set_dynamic_time
 
 ## Chargement de la map
-function {ns}:utils/choose_map_for {{id:"layers_2_teams", maps:["layers_2_teams"]}}
+function {ns}:maps/choose_map_for {{id:"layers_2_teams", maps:["layers_2_teams"]}}
 
 function {ns}:translations/common/layers_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s

@@ -18,7 +18,7 @@ execute in switch:game run gamerule minecraft:mob_griefing true
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"fireblast", maps:["fireblast_bubulle","fireblast_cookie","fireblast_pork"]}
+function switch:maps/choose_map_for {id:"fireblast", maps:["fireblast_bubulle","fireblast_cookie","fireblast_pork"]}
 function switch:modes/fireblast/translations/start
 
 scoreboard players set #remaining_time switch.data 605

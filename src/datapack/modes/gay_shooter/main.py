@@ -142,7 +142,7 @@ function {ns}:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
 scoreboard players set #dont_regenerate {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"gay_shooter", maps:["gay_shooter"]}}
+function {ns}:maps/choose_map_for {{id:"gay_shooter", maps:["gay_shooter"]}}
 
 function {translations}/start
 

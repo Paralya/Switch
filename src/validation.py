@@ -32,7 +32,7 @@ They are the two maps without an intro cinematic, see the note in switch:engine/
 """
 
 CHOOSE_MAP_PATTERN: re.Pattern[str] = re.compile(r"choose_map_for\s*\{[^}]*maps:(\[[^\]]*\])")
-""" Captures the maps list of a `function switch:utils/choose_map_for {id:"x", maps:[...]}` call. """
+""" Captures the maps list of a `function switch:maps/choose_map_for {id:"x", maps:[...]}` call. """
 
 MAP_CONDITION_PATTERN: re.Pattern[str] = re.compile(r'\{map:"([a-z0-9_]+)"\}')
 """ Captures the map id of a `if data storage switch:main {map:"x"}` condition. """

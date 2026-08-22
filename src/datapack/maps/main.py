@@ -327,3 +327,28 @@ scoreboard players add #count {ns}.data 1
 scoreboard players operation #count {ns}.data %= #4 {ns}.data
 """)
 
+	# /choose_map_for
+	write_function(f"{ns}:maps/choose_map_for", f"""
+## Vérification de la liste des maps
+# Si la liste des maps à charger est vide, absente ou corrompue, la ré-initialiser
+# (le "[0]" garantit une liste avec au moins un élément, sinon maps/load garderait la map du jeu précédent)
+$execute unless data storage {ns}:maps choose_from.$(id)[0] run data modify storage {ns}:maps choose_from.$(id) set value $(maps)
+
+## Chargement de la map
+# Passage en paramètre de la liste des maps à charger
+$data modify storage {ns}:temp maps_to_choose set from storage {ns}:maps choose_from.$(id)
+
+# Fonction de chargement de la map
+function {ns}:maps/load
+
+## Suppression de la map chargée de la liste des maps à charger
+# Passage en paramètre de la liste des maps à charger
+$data modify storage {ns}:main copy set from storage {ns}:maps choose_from.$(id)
+
+# Suppression de la map chargée de la liste des maps à charger
+function {ns}:maps/storage_map_list/remove_from_storage
+
+# Application de la nouvelle liste des maps à charger
+$data modify storage {ns}:maps choose_from.$(id) set from storage {ns}:main new
+""")
+

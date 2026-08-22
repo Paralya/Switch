@@ -17,7 +17,7 @@ time set 6000
 weather clear
 
 ## Téléportation des joueurs
-function switch:utils/choose_map_for {id:"mlg_a_coudre", maps:["mlg_a_coudre_1"]}
+function switch:maps/choose_map_for {id:"mlg_a_coudre", maps:["mlg_a_coudre_1"]}
 
 execute in switch:game run gamerule minecraft:show_death_messages false
 execute in switch:game run gamerule minecraft:natural_health_regeneration false

@@ -53,7 +53,7 @@ execute unless data storage {ns}:main temp.name_jp run data modify storage {ns}:
 data modify storage {ns}:main indexed_minigames append from storage {ns}:main temp
 
 # Create the stats objectives for the minigame
-function {ns}:utils/create_stats_stuff with storage {ns}:main temp
+function {ns}:stats/create_stats_stuff with storage {ns}:main temp
 
 # Remove the first minigame from the list and continue
 data remove storage {ns}:main minigames[0]

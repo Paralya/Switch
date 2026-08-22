@@ -1,7 +1,7 @@
 
 #> switch:maps/load
 #
-# @within	switch:utils/choose_map_for
+# @within	switch:maps/choose_map_for
 #
 
 ## Choix d'une map random de la liste maps_to_choose

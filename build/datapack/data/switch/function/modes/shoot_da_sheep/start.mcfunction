@@ -9,7 +9,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
-function switch:utils/choose_map_for {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}
+function switch:maps/choose_map_for {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}
 execute as @a[tag=!detached] run function switch:maps/survival/shoot_da_sheep/tp_shoot_da_sheep
 
 function switch:modes/shoot_da_sheep/translations/start

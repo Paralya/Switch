@@ -13,7 +13,7 @@ function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 0
-function switch:utils/choose_map_for {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste", "void_desert"]}
+function switch:maps/choose_map_for {id:"pillars_of_fortune", maps:["pillars_of_fortune", "slimy_ground", "eternal_void", "floor_is_lava", "leather_boots", "ocean_waste", "void_desert"]}
 function switch:modes/pillars_of_fortune/translations/start
 
 execute in switch:game run gamerule minecraft:mob_griefing true

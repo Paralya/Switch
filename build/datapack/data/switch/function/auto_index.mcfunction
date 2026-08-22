@@ -18,7 +18,7 @@ execute unless data storage switch:main temp.name_jp run data modify storage swi
 data modify storage switch:main indexed_minigames append from storage switch:main temp
 
 # Create the stats objectives for the minigame
-function switch:utils/create_stats_stuff with storage switch:main temp
+function switch:stats/create_stats_stuff with storage switch:main temp
 
 # Remove the first minigame from the list and continue
 data remove storage switch:main minigames[0]

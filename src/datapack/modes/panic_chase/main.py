@@ -140,7 +140,7 @@ effect give @a[tag=!detached] resistance 15 255 true
 function {ns}:utils/set_dynamic_time
 
 ## Placement de la map et des joueurs
-function {ns}:utils/choose_map_for {{id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}}
+function {ns}:maps/choose_map_for {{id:"panic_chase", maps:["arti_box","nether_storm","yeti_in_panic"]}}
 
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 execute in {ns}:game run gamerule minecraft:fall_damage false

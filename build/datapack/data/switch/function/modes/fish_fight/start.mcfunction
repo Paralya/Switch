@@ -20,7 +20,7 @@ execute if score #TEAM_FISH switch.data matches 1 as @a[tag=!detached,sort=rando
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers switch.data 1
-function switch:utils/choose_map_for {id:"fish_fight", maps:["luxio_fish_fight"]}
+function switch:maps/choose_map_for {id:"fish_fight", maps:["luxio_fish_fight"]}
 
 #si map luxio
 execute if data storage switch:main {map:"luxio_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.blue] 151026 125 151007

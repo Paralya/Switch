@@ -7,31 +7,6 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:utils"
 
-	# /choose_map_for
-	write_function(f"{path}/choose_map_for", f"""
-## Vérification de la liste des maps
-# Si la liste des maps à charger est vide, absente ou corrompue, la ré-initialiser
-# (le "[0]" garantit une liste avec au moins un élément, sinon maps/load garderait la map du jeu précédent)
-$execute unless data storage {ns}:maps choose_from.$(id)[0] run data modify storage {ns}:maps choose_from.$(id) set value $(maps)
-
-## Chargement de la map
-# Passage en paramètre de la liste des maps à charger
-$data modify storage {ns}:temp maps_to_choose set from storage {ns}:maps choose_from.$(id)
-
-# Fonction de chargement de la map
-function {ns}:maps/load
-
-## Suppression de la map chargée de la liste des maps à charger
-# Passage en paramètre de la liste des maps à charger
-$data modify storage {ns}:main copy set from storage {ns}:maps choose_from.$(id)
-
-# Suppression de la map chargée de la liste des maps à charger
-function {ns}:maps/storage_map_list/remove_from_storage
-
-# Application de la nouvelle liste des maps à charger
-$data modify storage {ns}:maps choose_from.$(id) set from storage {ns}:main new
-""")
-
 	# /classic_death
 	write_function(f"{path}/classic_death", f"""
 # If just died, teleport to the death pos, else teleport back to the map
@@ -45,21 +20,6 @@ attribute @s waypoint_transmit_range base set 0
 gamemode spectator @s
 effect clear @s
 clear @s
-""")
-
-	# /create_stats_stuff
-	write_function(f"{path}/create_stats_stuff", f"""
-# Create scoreboard objectives
-$scoreboard objectives add {ns}.stats.played.$(id) dummy
-$scoreboard objectives add {ns}.stats.wins.$(id) dummy
-
-# Create storages if not defined
-$execute unless data storage {ns}:stats all.modes.$(id) run data modify storage {ns}:stats all.modes.$(id) set value {{total_games:0,played:[],wins:[],played_win_ratio:[]}}
-$execute unless data storage {ns}:ratings all[{{id:"$(id)"}}] run data modify storage {ns}:ratings all append value {{id:"$(id)",name_fr:"",points:0,int:0,digits:0,players:[]}}
-$data modify storage {ns}:ratings all[{{id:"$(id)"}}].name_fr set value "$(name_fr)"
-$data modify storage {ns}:ratings all[{{id:"$(id)"}}].name_en set value "$(name_en)"
-$data modify storage {ns}:ratings all[{{id:"$(id)"}}].index set value $(index)
-$data modify storage {ns}:ratings all[{{id:"$(id)"}}].index_hundred set value $(index)00
 """)
 
 	# /death_tp
@@ -242,28 +202,5 @@ execute if score #test {ns}.data <= #input {ns}.data run scoreboard players oper
 # Execute recursive function
 scoreboard players operation #increment {ns}.data /= #2 {ns}.data
 execute if score #increment {ns}.data matches 1.. run function {ns}:utils/sqrt_loop
-""")
-
-	# /who_voted (admin command: list which players voted for each game)
-	write_function(f"{path}/who_voted", f"""
-# French
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 1 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-1}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 2 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-2}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 3 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-3}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 4 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-4}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 5 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-5}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-6}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
-tellraw @s[scores={{{ns}.lang=0}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
-
-# English
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 1 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-1}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 2 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-2}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 3 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-3}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 4 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-4}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 5 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-5}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 6 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-6}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 7 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-7}}]"}}]
-tellraw @s[scores={{{ns}.lang=1}}] [{{"text":"Vote 8 ","color":"aqua"}},{{"selector":"@a[scores={{{ns}.trigger.game_vote=-8}}]"}}]
 """)
 

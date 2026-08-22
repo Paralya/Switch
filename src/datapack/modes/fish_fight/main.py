@@ -339,7 +339,7 @@ execute if score #TEAM_FISH {ns}.data matches 1 as @a[tag=!detached,sort=random]
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
-function {ns}:utils/choose_map_for {{id:"fish_fight", maps:["luxio_fish_fight"]}}
+function {ns}:maps/choose_map_for {{id:"fish_fight", maps:["luxio_fish_fight"]}}
 
 #si map luxio
 execute if data storage {ns}:main {{map:"luxio_fish_fight"}} if score #TEAM_FISH {ns}.data matches 1 run tp @a[tag=!detached,team={ns}.temp.blue] 151026 125 151007

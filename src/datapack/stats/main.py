@@ -486,3 +486,18 @@ function {ns}:player/update_stats_storage/main
 function {ns}:stats/async/sort_player_stats
 """)
 
+	# /create_stats_stuff
+	write_function(f"{ns}:stats/create_stats_stuff", f"""
+# Create scoreboard objectives
+$scoreboard objectives add {ns}.stats.played.$(id) dummy
+$scoreboard objectives add {ns}.stats.wins.$(id) dummy
+
+# Create storages if not defined
+$execute unless data storage {ns}:stats all.modes.$(id) run data modify storage {ns}:stats all.modes.$(id) set value {{total_games:0,played:[],wins:[],played_win_ratio:[]}}
+$execute unless data storage {ns}:ratings all[{{id:"$(id)"}}] run data modify storage {ns}:ratings all append value {{id:"$(id)",name_fr:"",points:0,int:0,digits:0,players:[]}}
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].name_fr set value "$(name_fr)"
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].name_en set value "$(name_en)"
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].index set value $(index)
+$data modify storage {ns}:ratings all[{{id:"$(id)"}}].index_hundred set value $(index)00
+""")
+

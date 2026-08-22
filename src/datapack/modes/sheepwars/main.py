@@ -226,7 +226,7 @@ effect give @a[tag=!detached] slowness 5 255 true
 function {ns}:utils/set_dynamic_time
 
 ## Chargement de la map
-function {ns}:utils/choose_map_for {{id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}}
+function {ns}:maps/choose_map_for {{id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}}
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 execute in {ns}:game run gamerule minecraft:block_drops false
 
