@@ -131,7 +131,12 @@ scoreboard players reset #set_spec {ns}.data
 scoreboard players reset #do_spreadplayers {ns}.data
 scoreboard players reset #dont_regenerate {ns}.data
 function {ns}:utils/reset_players
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
+
+# End the cinematics of the players entering the game, then wipe the entities they leave behind.
+# The mass kill spares global.ignore.kill so it never strips a lobby player of the entity they are
+# spectating: that would leave them stuck in spectator with the counter still claiming it is alive.
+execute as @a[tag=!detached] run function {ns}:cinematic/kill_for_player
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
 function {ns}:engine/signals/start
 
 # Disable the practice mode of the players joining the game (force start / coup d'état attach without the attach trigger)
@@ -338,7 +343,8 @@ scoreboard players reset #set_spec {ns}.data
 scoreboard players reset #do_spreadplayers {ns}.data
 scoreboard players reset #dont_regenerate {ns}.data
 function {ns}:utils/reset_players
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
+execute as @a[tag=!detached] run function {ns}:cinematic/kill_for_player
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
 execute in {ns}:game run function {ns}:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s
@@ -567,7 +573,8 @@ execute in minecraft:overworld run function {ns}:utils/reset_gamerules
 execute in {ns}:game run function {ns}:utils/reset_gamerules
 
 function {ns}:engine/signals/stop
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached]"}}
+execute as @a[tag=!detached] run function {ns}:cinematic/kill_for_player
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
 
 # Update the stats of the minigame
 execute if score #test_mode {ns}.data matches 1.. run return 1

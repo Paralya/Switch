@@ -492,8 +492,7 @@ xp set @s 0 levels
 xp set @s 0 points
 
 # Kill any cinematic entity that was linked to the player
-scoreboard players operation #player_id {ns}.id = @s {ns}.id
-execute as @e[tag={ns}.cinematic,predicate={ns}:has_same_id] run function {ns}:cinematic/kill
+function {ns}:cinematic/kill_for_player
 
 # Teleport to the lobby (cinematic if close, otherwise tp)
 scoreboard players set #is_close {ns}.data 0

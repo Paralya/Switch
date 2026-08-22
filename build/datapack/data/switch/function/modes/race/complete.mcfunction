@@ -1,7 +1,7 @@
 
 #> switch:modes/race/complete
 #
-# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+# @executed	as @a[tag=!detached,gamemode=!spectator,predicate=switch:has_same_checkpoint]
 #
 # @within	switch:modes/race/checkpoints/player_in
 #			switch:modes/race/joined

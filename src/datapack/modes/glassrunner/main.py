@@ -110,6 +110,7 @@ scoreboard players set #glassrunner_point_to_win {ns}.data 32
 
 scoreboard objectives add {ns}.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add {ns}.glassrunner.deathCount deathCount
+function {ns}:modes/_common/recap/start {{points:0}}
 scoreboard objectives add {ns}.glassrunner.money_maker dummy
 scoreboard objectives add {ns}.glassrunner.apocalypse dummy
 scoreboard objectives add {ns}.glassrunner.turtle_helmet dummy
@@ -148,6 +149,7 @@ execute in {ns}:game run summon text_display 2916 131 2916 {{Tags:["{ns}.glassru
 	# /stop
 	write_function(f"{path}/stop", f"""
 scoreboard objectives remove {ns}.glassrunner.money
+function {ns}:modes/_common/recap/stop
 scoreboard objectives remove {ns}.glassrunner.deathCount
 scoreboard objectives remove {ns}.glassrunner.use_snowball
 scoreboard objectives remove {ns}.glassrunner.display
@@ -576,6 +578,7 @@ execute if score #process_end {ns}.data matches 1 if score #glassrunner.points.b
 
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/glassrunner/death/death
 execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire

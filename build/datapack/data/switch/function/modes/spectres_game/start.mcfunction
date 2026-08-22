@@ -45,7 +45,7 @@ scoreboard players set #nb_dead_spectres switch.data 0
 scoreboard players set #nb_dead_visibles switch.data 0
 
 scoreboard objectives add switch.temp.cooldown dummy
-scoreboard objectives add switch.temp.kills playerKillCount {"text":"Killed players","color":"red"}
+function switch:modes/_common/recap/start {points:0}
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items

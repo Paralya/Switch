@@ -255,7 +255,7 @@ execute if score #checkpoint {ns}.data matches -1 run scoreboard players operati
 
 scoreboard players set #can_hard_reset {ns}.data 0
 execute if entity @s[tag={ns}.can_hard_reset] run scoreboard players set #can_hard_reset {ns}.data 1
-execute as @a[tag=!detached,predicate={ns}:has_same_checkpoint] run function {ns}:modes/race/checkpoints/check_player_pos
+execute as @a[tag=!detached,gamemode=!spectator,predicate={ns}:has_same_checkpoint] run function {ns}:modes/race/checkpoints/check_player_pos
 
 particle wax_on ~ ~2 ~ 2 2 2 0 2
 particle wax_off ~ ~2 ~ 2 2 2 0 2

@@ -10,9 +10,9 @@
 #			switch:modes/race/process_end {selector:"@e[tag=switch.checkpoint]"}
 #			switch:modes/race/stop {selector:"@e[tag=switch.vehicle]"}
 #			switch:modes/race/stop {selector:"@e[tag=switch.checkpoint]"}
-#			switch:engine/start_state {selector:"@e[type=!player,tag=!detached]"}
-#			switch:engine/launch_game/launch {selector:"@e[type=!player,tag=!detached]"}
-#			switch:engine/stop {selector:"@e[type=!player,tag=!detached]"}
+#			switch:engine/start_state {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
+#			switch:engine/launch_game/launch {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
+#			switch:engine/stop {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
 #
 # @args		selector (string)
 #

@@ -174,6 +174,7 @@ execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.to_tp
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
@@ -243,6 +244,7 @@ execute in {ns}:game run gamerule minecraft:block_drops false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 scoreboard objectives add {ns}.temp.chosen_class dummy
+function {ns}:modes/_common/recap/start {{points:1}}
 scoreboard objectives add {ns}.temp.sidebar dummy {{"text":"Points","color":"yellow"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 scoreboard objectives setdisplay list {ns}.health
@@ -292,6 +294,7 @@ effect give @a[tag=!detached] weakness 10 255 true
 	# /stop
 	write_function(f"{path}/stop", f"""
 scoreboard objectives remove {ns}.temp.chosen_class
+function {ns}:modes/_common/recap/stop
 scoreboard objectives remove {ns}.temp.sidebar
 team remove {ns}.temp.sidebar.5
 team remove {ns}.temp.sidebar.4

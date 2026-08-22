@@ -1,9 +1,9 @@
 
 #> switch:modes/race/checkpoints/check_player_pos
 #
-# @executed	as @a[tag=!detached,predicate=switch:has_same_checkpoint]
+# @executed	as @a[tag=!detached,gamemode=!spectator,predicate=switch:has_same_checkpoint]
 #
-# @within	switch:modes/race/checkpoints/tick [ as @a[tag=!detached,predicate=switch:has_same_checkpoint] ]
+# @within	switch:modes/race/checkpoints/tick [ as @a[tag=!detached,gamemode=!spectator,predicate=switch:has_same_checkpoint] ]
 #
 
 execute store result score #px switch.data run data get entity @s Pos[0]

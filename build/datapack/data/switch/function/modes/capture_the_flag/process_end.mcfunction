@@ -15,6 +15,7 @@ execute if score #process_end switch.data matches 1 if score #red_points switch.
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 execute if score #process_end switch.data matches 1 run tag @a remove switch.to_tp
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
+execute if score #process_end switch.data matches 1 run function switch:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end switch.data matches 200 run function switch:engine/restart

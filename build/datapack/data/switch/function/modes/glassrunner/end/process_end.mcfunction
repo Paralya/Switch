@@ -11,6 +11,7 @@ execute if score #process_end switch.data matches 1 if score #glassrunner.points
 
 execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/glassrunner/death/death
 execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end switch.data matches 1 run function switch:modes/_common/recap/show
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 # Obligatoire

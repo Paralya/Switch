@@ -4,6 +4,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
+from .recap import write_recap
 
 
 def pvp_arena_kit() -> Kit:
@@ -55,6 +56,8 @@ def write_mode():
 	""" Write the shared _common helper functions at switch:modes/_common/* (no calls, no translations) """
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:modes/_common"
+
+	write_recap()
 
 	# /death_spectator
 	write_function(f"{path}/death_spectator", f"""
@@ -437,9 +440,11 @@ execute as @a[tag=!detached] at @s run playsound entity.firework_rocket.blast am
 execute if entity @s[tag={ns}.blue_flag] run summon firework_rocket ~ ~ ~ {{LifeTime:0,FireworksItem:{{id:"minecraft:firework_rocket",count:1,components:{{"minecraft:firework_explosion":{{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[16711680],"fade_colors":[16711680]}}}}}}}}
 execute if entity @s[tag={ns}.red_flag] run summon firework_rocket ~ ~ ~ {{LifeTime:0,FireworksItem:{{id:"minecraft:firework_rocket",count:1,components:{{"minecraft:firework_explosion":{{"shape":"burst","has_trail":true,"has_flicker":true,"colors":[255],"fade_colors":[255]}}}}}}}}
 
-# Add point
+# Add point, to the team and to the carrier who brought the flag home
 execute if entity @s[tag={ns}.blue_flag] run scoreboard players add #red_points {ns}.data 1
 execute if entity @s[tag={ns}.red_flag] run scoreboard players add #blue_points {ns}.data 1
+execute if entity @s[tag={ns}.blue_flag] run scoreboard players add @p[tag={ns}.has_blue_flag] {ns}.temp.points 1
+execute if entity @s[tag={ns}.red_flag] run scoreboard players add @p[tag={ns}.has_red_flag] {ns}.temp.points 1
 """)
 
 	# /flag/sync_motion (shared capture_the_flag / rush_the_flag flag_tick block: while carried, copy the

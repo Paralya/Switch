@@ -24,6 +24,7 @@ scoreboard objectives add switch.temp.chosen_class dummy
 scoreboard objectives add switch.temp.elytra_cooldown dummy
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add switch.temp.total_obsidian dummy
+function switch:modes/_common/recap/start {points:1}
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 

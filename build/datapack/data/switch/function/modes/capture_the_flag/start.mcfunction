@@ -13,6 +13,7 @@ execute in switch:game run gamerule minecraft:block_drops false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
 scoreboard objectives add switch.temp.chosen_class dummy
+function switch:modes/_common/recap/start {points:1}
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 scoreboard objectives setdisplay list switch.health

@@ -5,6 +5,7 @@
 #
 
 scoreboard objectives remove switch.temp.chosen_class
+function switch:modes/_common/recap/stop
 scoreboard objectives remove switch.temp.sidebar
 team remove switch.temp.sidebar.5
 team remove switch.temp.sidebar.4

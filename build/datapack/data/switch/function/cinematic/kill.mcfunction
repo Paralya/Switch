@@ -5,7 +5,7 @@
 #
 # @within	switch:cinematic/entity_tick_at_self
 #			switch:cinematic/finish
-#			switch:player/trigger/detach/basic_stuff [ as @e[tag=switch.cinematic,predicate=switch:has_same_id] ]
+#			switch:cinematic/kill_for_player [ as @e[tag=switch.cinematic,predicate=switch:has_same_id] ]
 #
 
 # Decrease the number of cinematic entities

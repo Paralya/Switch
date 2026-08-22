@@ -387,6 +387,19 @@ scoreboard players remove #cinematic_entities {ns}.data 1
 kill @s
 """)
 
+	# /kill_for_player
+	write_function(f"{path}/kill_for_player", f"""
+#> kill_for_player
+#
+# @executed			as the player
+#
+# @description		End the cinematic the player is riding, if any, keeping the entity counter in sync.
+#
+
+scoreboard players operation #player_id {ns}.id = @s {ns}.id
+execute as @e[tag={ns}.cinematic,predicate={ns}:has_same_id] run function {ns}:cinematic/kill
+""")
+
 	# /launch
 	write_function(f"{path}/launch", f"""
 #> launch

@@ -39,6 +39,7 @@ scoreboard players remove @s {ns}.temp.break_obsidian 1
 
 execute if score #color {ns}.data matches 0 run scoreboard players add #red_points {ns}.data 250
 execute if score #color {ns}.data matches 1 run scoreboard players add #blue_points {ns}.data 250
+scoreboard players add @s {ns}.temp.points 250
 
 # Random
 execute store result score #random {ns}.data run random value 0..9
@@ -88,6 +89,7 @@ execute store success score #color {ns}.data if entity @s[team={ns}.rush_the_poi
 
 execute if score #color {ns}.data matches 0 run scoreboard players add #red_points {ns}.data 15
 execute if score #color {ns}.data matches 1 run scoreboard players add #blue_points {ns}.data 15
+scoreboard players add @s {ns}.temp.points 15
 """)
 
 	# /bonus_reload (translation ref rewritten)
@@ -287,6 +289,7 @@ execute if score #process_end {ns}.data matches 1 unless score #test_mode {ns}.d
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.to_tp
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
@@ -407,6 +410,7 @@ scoreboard objectives add {ns}.temp.chosen_class dummy
 scoreboard objectives add {ns}.temp.elytra_cooldown dummy
 scoreboard objectives add {ns}.temp.break_obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add {ns}.temp.total_obsidian dummy
+function {ns}:modes/_common/recap/start {{points:1}}
 scoreboard objectives add {ns}.temp.sidebar dummy {{"text":"Points","color":"yellow"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 
@@ -452,6 +456,7 @@ scoreboard objectives remove {ns}.temp.elytra_cooldown
 scoreboard objectives remove {ns}.temp.break_obsidian
 scoreboard objectives remove {ns}.temp.sidebar
 scoreboard objectives remove {ns}.temp.total_obsidian
+function {ns}:modes/_common/recap/stop
 scoreboard objectives remove {ns}.temp.zone_capture
 team remove {ns}.temp.sidebar.5
 team remove {ns}.temp.sidebar.4

@@ -194,6 +194,7 @@ execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.to_tp
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart

@@ -15,6 +15,7 @@ scoreboard objectives remove switch.temp.elytra_cooldown
 scoreboard objectives remove switch.temp.break_obsidian
 scoreboard objectives remove switch.temp.sidebar
 scoreboard objectives remove switch.temp.total_obsidian
+function switch:modes/_common/recap/stop
 scoreboard objectives remove switch.temp.zone_capture
 team remove switch.temp.sidebar.5
 team remove switch.temp.sidebar.4

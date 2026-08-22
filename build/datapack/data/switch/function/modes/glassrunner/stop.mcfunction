@@ -7,6 +7,7 @@
 #
 
 scoreboard objectives remove switch.glassrunner.money
+function switch:modes/_common/recap/stop
 scoreboard objectives remove switch.glassrunner.deathCount
 scoreboard objectives remove switch.glassrunner.use_snowball
 scoreboard objectives remove switch.glassrunner.display

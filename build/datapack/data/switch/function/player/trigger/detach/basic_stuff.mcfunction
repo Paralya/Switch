@@ -23,8 +23,7 @@ xp set @s 0 levels
 xp set @s 0 points
 
 # Kill any cinematic entity that was linked to the player
-scoreboard players operation #player_id switch.id = @s switch.id
-execute as @e[tag=switch.cinematic,predicate=switch:has_same_id] run function switch:cinematic/kill
+function switch:cinematic/kill_for_player
 
 # Teleport to the lobby (cinematic if close, otherwise tp)
 scoreboard players set #is_close switch.data 0

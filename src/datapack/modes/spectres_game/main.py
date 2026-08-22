@@ -320,6 +320,7 @@ scoreboard players add #process_end {ns}.data 1
 # Kill tout le monde
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/spectres_game/death/player
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
@@ -442,7 +443,7 @@ scoreboard players set #nb_dead_spectres {ns}.data 0
 scoreboard players set #nb_dead_visibles {ns}.data 0
 
 scoreboard objectives add {ns}.temp.cooldown dummy
-scoreboard objectives add {ns}.temp.kills playerKillCount {{"text":"Killed players","color":"red"}}
+function {ns}:modes/_common/recap/start {{points:0}}
 scoreboard objectives setdisplay list {ns}.health
 
 # Choix des rôles + give d'items
@@ -486,7 +487,7 @@ effect give @a[tag=!detached] slowness 8 255 true
 team remove {ns}.temp.visible
 team remove {ns}.temp.spectre
 scoreboard objectives remove {ns}.temp.cooldown
-scoreboard objectives remove {ns}.temp.kills
+function {ns}:modes/_common/recap/stop
 scoreboard objectives remove {ns}.temp.spectror
 scoreboard objectives remove {ns}.temp.break_obsidian
 """)

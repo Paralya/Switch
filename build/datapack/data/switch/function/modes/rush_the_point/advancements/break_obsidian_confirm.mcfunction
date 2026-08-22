@@ -13,6 +13,7 @@ scoreboard players remove @s switch.temp.break_obsidian 1
 
 execute if score #color switch.data matches 0 run scoreboard players add #red_points switch.data 250
 execute if score #color switch.data matches 1 run scoreboard players add #blue_points switch.data 250
+scoreboard players add @s switch.temp.points 250
 
 # Random
 execute store result score #random switch.data run random value 0..9

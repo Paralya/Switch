@@ -26,7 +26,8 @@ execute in minecraft:overworld run function switch:utils/reset_gamerules
 execute in switch:game run function switch:utils/reset_gamerules
 
 function switch:engine/signals/stop
-function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached]"}
+execute as @a[tag=!detached] run function switch:cinematic/kill_for_player
+function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
 
 # Update the stats of the minigame
 execute if score #test_mode switch.data matches 1.. run return 1

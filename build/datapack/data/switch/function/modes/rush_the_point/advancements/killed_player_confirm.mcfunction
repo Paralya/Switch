@@ -11,4 +11,5 @@ execute store success score #color switch.data if entity @s[team=switch.rush_the
 
 execute if score #color switch.data matches 0 run scoreboard players add #red_points switch.data 15
 execute if score #color switch.data matches 1 run scoreboard players add #blue_points switch.data 15
+scoreboard players add @s switch.temp.points 15
 
