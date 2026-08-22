@@ -3,7 +3,7 @@
 from beet import Advancement, BlockTag
 from stewbeet.core import Mem, set_json_encoder
 
-from ..common import register_break_obsidian_advancement
+from ..emit import register_break_obsidian_advancement
 
 
 def write_resources() -> None:

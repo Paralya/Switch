@@ -2,7 +2,7 @@
 # Sheepwars shop
 from stouputils import JsonDict
 
-SHEEPWARS: JsonDict = {
+SHOP: JsonDict = {
 	"chosen_kit": {},
 	"kit_health": {
 		"ok_messages": {
@@ -153,3 +153,4 @@ SHEEPWARS: JsonDict = {
 	},
 }
 
+""" Upgrades sold by this mode's shop, collected by the modes registry. """

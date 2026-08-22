@@ -9,6 +9,7 @@ The kits embed the project namespace (axe modifier id, wool teams, pre/post func
 they are built lazily by classes() instead of living at module level: the stewbeet CLI imports
 this module before Mem.ctx exists.
 """
+# ruff: noqa: E501
 
 # Imports
 from stewbeet import Mem

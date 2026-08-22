@@ -5,6 +5,7 @@ from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
 
+
 def pvp_arena_kit() -> Kit:
 	""" The melee loadout shared by castagne and pvpswap (castagne adds a fishing rod of its own).
 	Built lazily: the axe's modifier id embeds the project namespace, unknown at import time. """

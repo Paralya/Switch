@@ -2,7 +2,7 @@
 # Pitchout shop
 from stouputils import JsonDict
 
-PITCHOUT: JsonDict = {
+SHOP: JsonDict = {
 	"boots": {
 		"ok_messages": {
 			"fr": "Votre achat pour les bottes en cuir a été effectué !",
@@ -46,3 +46,4 @@ PITCHOUT: JsonDict = {
 	},
 }
 
+""" Upgrades sold by this mode's shop, collected by the modes registry. """

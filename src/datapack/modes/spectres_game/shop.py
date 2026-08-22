@@ -9,7 +9,7 @@ TNT_UPGRADES: list[JsonDict] = [
 	{"price": 150, "hover_text": {"fr": "5 -> 6 TNT", "en": "5 -> 6 TNT"}},
 ]
 
-SPECTRES_GAME: JsonDict = {
+SHOP: JsonDict = {
 	"sp_arrows": {
 		"ok_messages": {
 			"fr": "Votre achat pour augmenter le nombre de fleches pour votre classe Spectre a été effectué !",
@@ -95,3 +95,4 @@ SPECTRES_GAME: JsonDict = {
 	},
 }
 
+""" Upgrades sold by this mode's shop, collected by the modes registry. """

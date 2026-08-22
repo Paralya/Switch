@@ -4,7 +4,8 @@ from beet import Advancement
 from stewbeet import Mem, set_json_encoder, write_function
 from stouputils.typing import JsonDict
 
-from ..modes.definitions import LANG_PRETEXT, MODES
+from ..modes.catalogue import MODES
+from ..modes.definitions import LANG_PRETEXT
 
 
 # Main function
@@ -16,18 +17,15 @@ def main() -> None:
 
 		# For each minigame,
 		for mode in MODES:
-			mode_id: str = mode["id"]
-			mode_name: str = mode["name_fr"] if lang == "fr" else mode.get(f"name_{lang}", mode["name_fr"])
-
 			# Prepare the title of the advancement
-			title: list[JsonDict] = [{"text":"'","color":"aqua"},{"text":mode_name,"color":"yellow"}]
+			title: list[JsonDict] = [{"text":"'","color":"aqua"},{"text":mode.display_name(lang),"color":"yellow"}]
 			if lang == "fr":
 				title.append({"text":"' sélectionné !"})
 			elif lang == "en":
 				title.append({"text":"' selected!"})
 
 			# Write the advancement (called in data/switch/function/engine/signals/macro_start.mcfunction)
-			Mem.ctx.data[ns].advancements[f"pop_ups/{mode_id}_{lang}"] = set_json_encoder(Advancement({
+			Mem.ctx.data[ns].advancements[f"pop_ups/{mode.id}_{lang}"] = set_json_encoder(Advancement({
 				"display": {
 					"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": f"{ns}:letter"}},
 					"title": title,
@@ -46,7 +44,7 @@ def main() -> None:
 			}))
 
 			# Write the reward function that revoke the advancement
-			write_function(f"{ns}:engine/pop_ups/schedule", f"advancement revoke @a only {ns}:pop_ups/{mode_id}_{lang}")
+			write_function(f"{ns}:engine/pop_ups/schedule", f"advancement revoke @a only {ns}:pop_ups/{mode.id}_{lang}")
 
 	# Write the function that revokes the advancement
 	write_function(f"{ns}:engine/pop_ups/revoke", f"schedule function {ns}:engine/pop_ups/schedule 1s")

@@ -26,14 +26,15 @@ Documents (Google Sheet) :
 	- [Le pipeline de build](#le-pipeline-de-build)
 	- [Où se trouve quoi ?](#où-se-trouve-quoi-)
 	- [Ajouter un mode de jeu](#ajouter-un-mode-de-jeu)
-		- [1. Créer le dossier](#1-créer-le-dossier)
-		- [2. Écrire `main.py`](#2-écrire-mainpy)
+		- [1. Générer le squelette](#1-générer-le-squelette)
+		- [2. Remplir `main.py`](#2-remplir-mainpy)
 		- [3. Déclarer le mode dans la liste de vote](#3-déclarer-le-mode-dans-la-liste-de-vote)
 		- [4. Tester en jeu](#4-tester-en-jeu)
 		- [5. Ressources supplémentaires (optionnel)](#5-ressources-supplémentaires-optionnel)
 	- [Anatomie d'un mode](#anatomie-dun-mode)
 	- [Ajouter autre chose](#ajouter-autre-chose)
 	- [Conventions de code](#conventions-de-code)
+	- [Garde-fous](#garde-fous)
 	- [Workflow Git](#workflow-git)
 
 <br>
@@ -80,15 +81,17 @@ Pour retrouver le code d'une commande in-game, grep son texte dans `src/` : le c
 Switch/
 ├── ⚙️ beet.yml                 # Config du projet et du pipeline de build
 ├── 🚀 upload.py                # Publication d'une release GitHub
+├── 🧰 tools/                   # Scaffolding et garde-fous (voir plus bas)
 ├── 🐍 src/                     # TOUT le code source
 │   ├── setup_definitions.py    # Étape 1 : items, blocs, matériaux, disques
 │   ├── link.py                 # Étape 2 : appelle tous les générateurs
+│   ├── validation.py           # Contrôles de cohérence, échoue le build
 │   ├── 📦 database/            # Items et comportements de blocs
 │   ├── 🎨 resource_pack/       # Langues, sounds.json, shaders, textures GUI, fonts
 │   └── 📂 datapack/
 │       ├── main.py             # Définitions brutes du datapack
 │       ├── definitions/        # Advancements, dimensions, loot tables, prédicats, tags...
-│       ├── 🎮 modes/           # Un dossier par mini-jeu
+│       ├── 🎮 modes/           # Un dossier par mini-jeu, + spec/catalogue/emit
 │       ├── 🧠 engine/          # Vote, démarrage, arrêt, signaux vers les modes
 │       ├── 🧍 player/          # Layout d'inventaire, practice, jump timer
 │       ├── 🗺️ maps/            # Chargement des maps, checkpoints, cycles de spawn
@@ -131,12 +134,12 @@ Le reste vient de plugins StewBeet : headers, constantes de scoreboard, dépenda
 
 | Je veux modifier...                                                     | Fichier                                                                               |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| 🗳️ La liste des mini-jeux votables, descriptions, temps estimé, auteurs | `src/datapack/modes/definitions.py` (`MODES`)                                         |
-| 🧩 Les groupes de vote (variantes sous une même entrée)                 | `src/datapack/modes/definitions.py` (`GROUPS_INFO`)                                   |
+| 🗳️ La liste des mini-jeux votables, descriptions, temps estimé, auteurs | `src/datapack/modes/catalogue.py` (`MODES`)                                           |
+| 🧩 Les groupes de vote (variantes sous une même entrée)                 | `src/datapack/modes/catalogue.py` (`GROUPS`)                                          |
 | 🎮 La logique d'un mini-jeu                                             | `src/datapack/modes/<mode>/main.py`                                                   |
 | 🌐 Les messages FR/EN d'un mini-jeu                                     | `src/datapack/modes/<mode>/translations.py`                                           |
 | 📜 Les advancements, prédicats, loot tables, structures d'un mini-jeu   | `src/datapack/modes/<mode>/resources.py`                                              |
-| 🔁 Un helper partagé entre plusieurs modes                              | `src/datapack/modes/common.py` ou `src/datapack/modes/_common/main.py`                |
+| 🔁 Un helper partagé entre plusieurs modes                              | `src/datapack/modes/emit.py` ou `src/datapack/modes/_common/main.py`                  |
 | 🧠 Le vote, le lancement, l'arrêt d'une partie, les signaux             | `src/datapack/engine/main.py`                                                         |
 | 🌍 Les maps de jeu (dimensions, régénération, zones)                    | `src/datapack/survival_maps/definitions.py`                                           |
 | 🏁 Les checkpoints de course et les cycles de spawn                     | `src/datapack/maps/main.py`                                                           |
@@ -153,24 +156,30 @@ Le reste vient de plugins StewBeet : headers, constantes de scoreboard, dépenda
 
 ## Ajouter un mode de jeu
 
-### 1. Créer le dossier
+### 1. Générer le squelette
 
-La découverte est automatique, aucun import à ajouter ailleurs.
+```bash
+python tools/new_mode.py mon_mode
+```
+
+Le mode obtenu build et se lance en jeu immédiatement. La découverte est automatique : aucun import à ajouter ailleurs.
 
 ```bash
 src/datapack/modes/mon_mode/
 ├── __init__.py         # vide
 ├── main.py             # write_mode()
-└── translations.py     # write_translations(), optionnel mais recommandé
+└── translations.py     # write_translations()
 ```
 
-### 2. Écrire `main.py`
+### 2. Remplir `main.py`
+
+Le fichier généré ressemble déjà à ceci, avec les six hooks branchés. Il ne reste qu'à écrire les mécaniques du jeu.
 
 ```python
 # Imports
 from stewbeet import Mem, write_function
 
-from ..common import write_modes_calls, write_time_xp_bar
+from ..emit import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -243,10 +252,11 @@ Dans `src/datapack/modes/definitions.py`, ajoutez une entrée à `MODES` :
 | Clé / comportement    | Détail                                                                                       |
 |-----------------------|----------------------------------------------------------------------------------------------|
 | `id`                  | **Exactement** le nom du dossier                                                             |
-| `max_players`         | `-1` signifie qu'il n'y a pas de limite                                                      |
-| `group`               | Clé optionnelle : les jeux d'un même groupe forment une entrée de vote, puis un second vote départage (voir `GROUPS_INFO`) |
+| `max_players`         | `UNLIMITED` quand le mode n'a pas de plafond                                                 |
+| `group`               | Optionnel : les jeux d'un même groupe forment une entrée de vote, puis un second vote départage (voir `GROUPS`) |
 | Lore, index, pop-ups  | Générés automatiquement à partir de cette entrée                                             |
 | Entrée commentée      | Le mode est **quand même généré** : testable via `_force_start` sans polluer le vote         |
+| Erreur de saisie      | Le build échoue avec un message qui nomme le problème et suggère la valeur la plus proche    |
 
 ### 4. Tester en jeu
 
@@ -269,13 +279,13 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 | `translations.py` | `write_translations()` : messages FR/EN dans `<mode>/translations/*`         | `write_mode()`                       |
 | `resources.py`    | `write_resources()` : advancements, prédicats, loot tables, tags, structures | automatique                          |
 | `kits.py`         | Kits et classes du mode, construits avec `Kit` et `KitItem`                  | `write_mode()`                       |
-| `shop.py`         | Dictionnaire d'upgrades de la boutique du mode                               | `src/datapack/shop/shared_memory.py` |
+| `shop.py`         | Constante `SHOP` : les upgrades vendues par le mode                          | automatique                          |
 | `structures/`     | Fichiers `.nbt`, enregistrés via `register_structures()`                     | `resources.py`                       |
 | `sounds/`         | Fichiers `.ogg` propres au mode, via `register_sounds()`                     | `resources.py`                       |
 
 - **`_common/`** : fonctions partagées écrites dans `switch:modes/_common/*` (mort en spectateur, fin de partie, barre d'XP, kits communs).
 - **`_coupdetat/`** : pseudo-mode utilisé par le moteur, pas un mini-jeu votable.
-- Les helpers Python partagés vivent dans `src/datapack/modes/common.py` : `write_modes_calls`, `write_server_announce`, `write_time_xp_bar`, `write_no_drop`, `register_structures`, `register_sounds`.
+- Les helpers Python partagés vivent dans `src/datapack/modes/emit.py` : `write_modes_calls`, `write_server_announce`, `write_time_xp_bar`, `write_no_drop`, `register_structures`, `register_sounds`.
 - Le namespace n'est jamais écrit en dur : utilisez toujours `ns: str = Mem.ctx.project_id`.
 
 <br>
@@ -285,7 +295,7 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 - **Une map** : un `clone_survival(...)` ou `fill_survival(...)` dans `src/datapack/survival_maps/definitions.py` (coordonnées, id, nom, auteurs, `view` de la cinématique). Elle devient utilisable dans le `maps:[...]` d'un `choose_map_for`.
 - **Un item ou un bloc** : `Item(...)` ou `Block(...)` dans `src/database/misc_items.py`. Texture trouvée automatiquement si un `.png` du même nom existe sous `assets/textures/` ; modèle, loot table et recettes sont générés.
 - **Un son** : le `.ogg` dans `assets/sounds/`, ou dans le `sounds/` du mode s'il lui est propre. Voir `assets/compress_ogg.py`, `force_mono.py` et `mp3_to_ogg.py`.
-- **Une boutique** : un `shop.py` sur le modèle de `spleef/shop.py`, référencé dans `SHOPS` (`src/datapack/shop/shared_memory.py`).
+- **Une boutique** : un `shop.py` exposant une constante `SHOP`, sur le modèle de `spleef/shop.py`. Le registre la récupère tout seul ; son rang dans la boutique vient de `SHOP_ORDER` (`src/datapack/shop/shared_memory.py`).
 
 <br>
 
@@ -296,8 +306,28 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 - Code auto-explicatif : peu de commentaires, les vraies explications vont dans les docstrings.
 - Préférez le déclaratif et le paramétré à la duplication. Le CI lance [jscpd](https://github.com/kucherenko/jscpd) sur `src/` pour traquer le copier-coller.
 - Un fichier qui dépasse environ 300 lignes devient un sous-module. **Exception assumée : le `main.py` d'un mode de jeu.** Toute la logique du mode reste au même endroit, ce qui rend le Ctrl+F immédiat et évite d'avoir à deviner dans quel fichier se trouve une mécanique. `build_battle/main.py` fait 935 lignes, et c'est très bien ainsi.
-- Lint : `ruff check src --fix`.
+- Lint : `ruff check src tools --fix` (la config vit dans `ruff.toml`).
 - Perfs : le serveur tourne à 20 tps avec beaucoup de joueurs. Évitez les `@e` non filtrés dans les `tick`, préférez tags et scores.
+
+<br>
+
+## Garde-fous
+
+Quatre outils, tous lançables à la main. Les trois premiers tournent aussi en CI.
+
+| Commande | Ce qu'elle garantit |
+|---|---|
+| `ruff check src tools` | Style et imports |
+| `pyright` | Typage strict, sans `Any` |
+| `python tools/check_conventions.py` | Taille des fichiers, pureté du modèle, aucun import descendant vers un mode nommé |
+| `python tools/check_output_drift.py` | **Le refactoring n'a rien changé** : rebuild puis `build/` identique à HEAD |
+| `python tools/report_merged_functions.py` | Aucune fonction n'est écrite par deux émetteurs sans que ce soit déclaré |
+
+Le plus important est `check_output_drift.py`. `write_function` **ajoute** à la suite par défaut, donc deux émetteurs visant le même chemin fusionnent silencieusement dans l'ordre d'appel. Après tout déplacement de code, un `build/` inchangé est la preuve que rien n'a bougé en jeu.
+
+Deux règles s'appuient sur des listes explicites qui ne doivent que diminuer :
+- `LONG_FILE_DEBT` dans `tools/check_conventions.py` : les fichiers qui dépassent encore 300 lignes.
+- `DECLARED_MERGES` dans `tools/report_merged_functions.py` : les fonctions volontairement construites par ajouts successifs.
 
 <br>
 

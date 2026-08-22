@@ -5,7 +5,7 @@ from typing import Any
 from beet import BlockTag, ItemModifier, LootTable, Predicate
 from stewbeet.core import Mem, set_json_encoder
 
-from ..common import register_structures
+from ..emit import register_structures
 
 
 def holding_predicate(flag: str) -> dict[str, Any]:

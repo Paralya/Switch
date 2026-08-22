@@ -4,7 +4,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem, ScoreCount, Variants
-from ..common import skinned_weapons, write_modes_calls, write_no_drop
+from ..emit import skinned_weapons, write_modes_calls, write_no_drop
 from .translations import write_translations
 
 

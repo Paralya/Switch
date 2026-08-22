@@ -4,7 +4,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem, ScoreCount
-from ..common import write_modes_calls
+from ..emit import write_modes_calls
 from .translations import write_translations
 
 

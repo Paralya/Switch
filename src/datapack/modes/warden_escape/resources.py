@@ -3,7 +3,7 @@
 from beet import Advancement
 from stewbeet.core import Mem, set_json_encoder
 
-from ..common import register_sounds
+from ..emit import register_sounds
 
 
 def write_resources() -> None:

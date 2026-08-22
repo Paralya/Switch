@@ -1,0 +1,30 @@
+name: Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: pip install --upgrade stewbeet ruff pyright
+
+      - name: Lint
+        run: ruff check src tools
+
+      - name: Type check
+        run: pyright
+
+      - name: Architectural conventions
+        run: python tools/check_conventions.py

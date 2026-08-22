@@ -1,6 +1,6 @@
 
 # Imports
-from ..common import register_structures
+from ..emit import register_structures
 
 
 def write_resources() -> None:

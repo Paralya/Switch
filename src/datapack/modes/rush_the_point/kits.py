@@ -8,6 +8,7 @@ The item strings embed the project namespace (can_break/can_place block tags, th
 so the kits are built lazily by build_kits() instead of living at module level: the stewbeet CLI
 imports this module before Mem.ctx exists.
 """
+# ruff: noqa: E501
 
 # Imports
 from stewbeet import Mem

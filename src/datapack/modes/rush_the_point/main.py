@@ -4,7 +4,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit
-from ..common import write_modes_calls, write_time_xp_bar
+from ..emit import write_modes_calls, write_time_xp_bar
 from .kits import build_kits
 from .translations import write_translations
 

@@ -8,6 +8,7 @@ import stouputils as stp
 from beet import Function
 from stewbeet.core import Mem, write_function
 
+from ..modes.catalogue import MODES
 from .shared_memory import SharedMemory, generated_maps, survival_maps
 
 
@@ -784,16 +785,14 @@ def generate_map_usage_file() -> None:
 		config (dict): The configuration of the project
 	"""
 	ns: str = Mem.ctx.project_id
-	from ..modes.definitions import MODES
 	path: str = f"{Mem.ctx.directory}/map_usage.json"
 	CHOOSE_MAP_FOR: str = f"function {ns}:utils/choose_map_for"
 
 	# Get for each modes the maps they use
 	modes_usage: dict[str, list[str]] = {}
 	for mode in MODES:
-		mode_id: str = mode["id"]
-		start_file: str = f"{ns}:modes/{mode_id}/"
-		modes_usage[mode_id] = []
+		start_file: str = f"{ns}:modes/{mode.id}/"
+		modes_usage[mode.id] = []
 
 		# Get the start function of the mode and search for "function switch:utils/choose_map_for {id:"block_party", maps:["pitch_creep_1","octogone_nether_ice"]}"
 		function_content: str = Mem.ctx.data.functions.get(start_file + "start_common", Function()).text.strip()
@@ -805,7 +804,7 @@ def generate_map_usage_file() -> None:
 		splitted: list[str] = function_content.split(CHOOSE_MAP_FOR)
 		if len(splitted) > 1:
 			maps_str: str = splitted[1].split("\n")[0].split("maps:")[1].split("}")[0]
-			modes_usage[mode_id] = json.loads(maps_str)
+			modes_usage[mode.id] = json.loads(maps_str)
 
 	# Now, generate the maps_usage dictionary
 	maps_usage: dict[str, list[str]] = {}
