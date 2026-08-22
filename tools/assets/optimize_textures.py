@@ -4,7 +4,7 @@ import os
 import time
 
 from PIL import Image
-from stouputils.print import *
+from stouputils.print import info
 
 START_TIME = time.perf_counter()
 os.system("color")
