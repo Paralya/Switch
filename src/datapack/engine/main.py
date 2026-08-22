@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from .pop_ups import write_pop_ups
 from .translations import write_translations
 
 
@@ -10,6 +11,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:engine"
 	write_translations()
+	write_pop_ups()
 
 	# /add_money
 	write_function(f"{path}/add_money", f"""

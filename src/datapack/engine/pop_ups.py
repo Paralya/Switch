@@ -9,7 +9,7 @@ from ..modes.definitions import LANG_PRETEXT
 
 
 # Main function
-def main() -> None:
+def write_pop_ups() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# For each lang prefix (fr, en, ...),

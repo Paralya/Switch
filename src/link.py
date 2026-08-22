@@ -7,9 +7,6 @@ from .datapack.advancements.main import main as automatic_advancements
 from .datapack.cinematic.main import main as cinematic
 from .datapack.engine.main import main as engine
 from .datapack.maps.main import main as maps
-from .datapack.misc_links.note_block_studio import main as note_block_studio
-from .datapack.misc_links.random_loot_table import main as random_loot_table
-from .datapack.misc_links.starting_pop_ups import main as starting_pop_ups
 from .datapack.modes import generate_all_modes
 from .datapack.modes.memory_mine.zone_particles import write_zone_particles as memory_mine
 from .datapack.music.main import main as music
@@ -55,9 +52,6 @@ def beet_default(ctx: Context) -> None:
 	engine()
 	player()
 	profiling()
-	starting_pop_ups()
-	random_loot_table()
-	note_block_studio()
 	memory_mine()
 	generate_survival_maps()
 	automatic_advancements()

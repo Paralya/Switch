@@ -16,7 +16,7 @@ def get_entry(item: str) -> JsonDict:
 	return entry
 
 # Main function
-def main() -> None:
+def write_resources() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Get all items from the vanilla registries, downloaded once per minecraft version thanks to the beet cache

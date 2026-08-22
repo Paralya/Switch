@@ -2,10 +2,13 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from .note_block_studio import write_note_block_studio
+
 
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:music"
+	write_note_block_studio()
 
 	# /actions/next
 	write_function(f"{path}/actions/next", f"""

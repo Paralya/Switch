@@ -44,7 +44,7 @@ def get_song_score(name: str) -> int:
 
 
 # Main function
-def main() -> None:
+def write_note_block_studio() -> None:
 	ns: str = Mem.ctx.project_id
 	libs_folder: str = str(Mem.ctx.meta.get("stewbeet", {}).get("libs_folder", "libs"))
 	lib_file: str = f"{libs_folder}/{LIB_TO_WRITE}"

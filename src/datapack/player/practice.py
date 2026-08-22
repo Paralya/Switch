@@ -3,7 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..misc_links.note_block_studio import get_song_score
+from ..music.note_block_studio import get_song_score
 
 # Song played on loop while the practice mode is enabled (name of a song of the note_block_studio folder)
 PRACTICE_SONG: str = "stay_inside_me"
