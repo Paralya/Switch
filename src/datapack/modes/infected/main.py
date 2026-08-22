@@ -32,6 +32,7 @@ execute if score #game_state {ns}.data matches 1.. run scoreboard players set #r
 	# /joined
 	write_function(f"{path}/joined", f"""
 gamemode adventure @s
+attribute @s waypoint_receive_range base set 0
 execute if score #reconnect {ns}.data matches 0 if score #infected_seconds {ns}.data matches ..-1 run function {ns}:modes/infected/death/early_respawn
 execute if score #reconnect {ns}.data matches 0 if score #infected_seconds {ns}.data matches 0.. run scoreboard players set @s {ns}.temp.original_zombie 1
 execute if score #infected_seconds {ns}.data matches 0.. run function {ns}:modes/infected/death/zombie_spawn
@@ -220,6 +221,9 @@ team modify {ns}.temp.human friendlyFire false
 team modify {ns}.temp.zombie friendlyFire false
 team modify {ns}.temp.human nametagVisibility never
 team modify {ns}.temp.zombie nametagVisibility never
+
+# Empty everyone's locator bar: the whole mode is about not knowing where the others are
+execute as @a[tag=!detached] run attribute @s waypoint_receive_range base set 0
 """)
 
 	# /stop

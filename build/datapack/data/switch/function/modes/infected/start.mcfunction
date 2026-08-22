@@ -45,3 +45,6 @@ team modify switch.temp.zombie friendlyFire false
 team modify switch.temp.human nametagVisibility never
 team modify switch.temp.zombie nametagVisibility never
 
+# Empty everyone's locator bar: the whole mode is about not knowing where the others are
+execute as @a[tag=!detached] run attribute @s waypoint_receive_range base set 0
+
