@@ -4,9 +4,9 @@
 from stewbeet import Mem, write_function
 
 
-def main() -> None:
+def write_npc() -> None:
 	ns: str = Mem.ctx.project_id
-	path: str = f"{ns}:npc"
+	path: str = f"{ns}:lobby/npc"
 
 	# /tick (generic body-locked NPC look-at logic, macro)
 	write_function(f"{path}/tick", f"""
@@ -41,16 +41,16 @@ execute if entity @s[predicate=!{ns}:has_vehicle] run ride @s mount @n[type=inte
 summon interaction ~ ~2.5 ~ {{UUID:uuid("20180612-2024-2025-2026-300000000001"),Tags:["{ns}.npc","{ns}.npc.ofchara","detached"],height:-2.5f,response:0b,Passengers:[{{id:"minecraft:armor_stand",UUID:uuid("20180612-2024-2025-2026-300000000002"),Tags:["{ns}.npc","{ns}.npc.ofchara","{ns}.npc.body_locked","detached"],Rotation:[90.0f, 0.0f],Invulnerable:true,PersistenceRequired:true,NoBasePlate:true,NoGravity:true,ShowArms:true,DisabledSlots:4144959,Pose:{{Head:[0f,0f,1f],LeftLeg:[314f,8f,0f],RightLeg:[311f,4f,0f],LeftArm:[269f,60f,0f],RightArm:[344f,27f,25f]}},equipment:{{feet:{{id:"leather_boots",count:1,components:{{dyed_color:3145472}}}},legs:{{id:"leather_leggings",count:1,components:{{dyed_color:3145472}}}},chest:{{id:"leather_chestplate",count:1,components:{{dyed_color:3145472}}}},head:{{id:"player_head",count:1,components:{{profile:{{name:"OfChara"}}}}}},mainhand:{{id:"amethyst_block",count:1}}}}}}]}}
 
 # Register the interaction entity right click event
-execute as @n[type=interaction,tag={ns}.npc] run function #bs.interaction:on_right_click {{ run: "function {ns}:npc/ofchara/on_right_click", executor: "source" }}
+execute as @n[type=interaction,tag={ns}.npc] run function #bs.interaction:on_right_click {{ run: "function {ns}:lobby/npc/ofchara/on_right_click", executor: "source" }}
 """)
 
 	# /ofchara/tick
 	write_function(f"{path}/ofchara/tick", f"""
 # If OfChara is not present in a radius of 1 block, spawn it.
-execute unless entity 20180612-2024-2025-2026-300000000002 run function {ns}:npc/ofchara/summon
+execute unless entity 20180612-2024-2025-2026-300000000002 run function {ns}:lobby/npc/ofchara/summon
 
 # Tick function
-execute as 20180612-2024-2025-2026-300000000002 at @s run function {ns}:npc/tick {{facing:"@p[gamemode=!spectator,distance=..5]"}}
+execute as 20180612-2024-2025-2026-300000000002 at @s run function {ns}:lobby/npc/tick {{facing:"@p[gamemode=!spectator,distance=..5]"}}
 """)
 
 	# /ofchara/on_right_click

@@ -7,11 +7,11 @@ from .datapack.advancements.main import main as automatic_advancements
 from .datapack.cinematic.main import main as cinematic
 from .datapack.devtools.main import main as devtools
 from .datapack.engine.main import main as engine
+from .datapack.lobby.main import main as lobby
 from .datapack.maps.main import main as maps
 from .datapack.modes import generate_all_modes
 from .datapack.modes.memory_mine.zone_particles import write_zone_particles as memory_mine
 from .datapack.music.main import main as music
-from .datapack.npc.main import main as npc
 from .datapack.player.main import main as player
 from .datapack.root.main import main as root
 from .datapack.shop.main import main as shop
@@ -46,7 +46,7 @@ def beet_default(ctx: Context) -> None:
 	utils()
 	maps()
 	music()
-	npc()
+	lobby()
 	cinematic()
 	stats()
 	engine()

@@ -1,5 +1,5 @@
 
-#> switch:lobby_tick
+#> switch:lobby/tick
 #
 # @executed	in minecraft:overworld & positioned 0 69 0
 #
@@ -26,5 +26,5 @@ execute if score #players_in_lobby switch.data matches 1.. if block 27 80 102 li
 execute if score #players_in_lobby switch.data matches 1.. if block 27 80 102 light_weighted_pressure_plate[power=1] run particle minecraft:dust{color:[1,0,0],scale:1} 32 78.5 102 1.8 .01 .01 1 5
 
 # NPCs
-execute if score #players_in_lobby switch.data matches 1.. positioned -22 69.8 3 run function switch:npc/ofchara/tick
+execute if score #players_in_lobby switch.data matches 1.. positioned -22 69.8 3 run function switch:lobby/npc/ofchara/tick
 

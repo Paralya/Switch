@@ -3,7 +3,7 @@
 #
 # @executed	in minecraft:overworld & positioned 0 69 0
 #
-# @within	switch:lobby_second
+# @within	switch:lobby/second
 #
 
 # Get the number of players in-game and stop if no players are found

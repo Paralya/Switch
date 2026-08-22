@@ -1,9 +1,9 @@
 
-#> switch:npc/tick
+#> switch:lobby/npc/tick
 #
 # @executed	as 20180612-2024-2025-2026-300000000002 & at @s
 #
-# @within	switch:npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"} [ as 20180612-2024-2025-2026-300000000002 & at @s ]
+# @within	switch:lobby/npc/ofchara/tick {facing:"@p[gamemode=!spectator,distance=..5]"} [ as 20180612-2024-2025-2026-300000000002 & at @s ]
 #
 # @args		facing (string)
 #

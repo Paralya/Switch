@@ -1,5 +1,5 @@
 
-#> switch:lobby_second
+#> switch:lobby/second
 #
 # @executed	in minecraft:overworld & positioned 0 69 0
 #
