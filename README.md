@@ -295,7 +295,7 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 - **Indentation par tabulations**, alignement des colonnes par espaces.
 - Code auto-explicatif : peu de commentaires, les vraies explications vont dans les docstrings.
 - Préférez le déclaratif et le paramétré à la duplication. Le CI lance [jscpd](https://github.com/kucherenko/jscpd) sur `src/` pour traquer le copier-coller.
-- Un fichier qui dépasse environ 300 lignes devient un sous-module.
+- Un fichier qui dépasse environ 300 lignes devient un sous-module. **Exception assumée : le `main.py` d'un mode de jeu.** Toute la logique du mode reste au même endroit, ce qui rend le Ctrl+F immédiat et évite d'avoir à deviner dans quel fichier se trouve une mécanique. `build_battle/main.py` fait 935 lignes, et c'est très bien ainsi.
 - Lint : `ruff check src --fix`.
 - Perfs : le serveur tourne à 20 tps avec beaucoup de joueurs. Évitez les `@e` non filtrés dans les `tick`, préférez tags et scores.
 
