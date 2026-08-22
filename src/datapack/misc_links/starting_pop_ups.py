@@ -4,7 +4,8 @@ from beet import Advancement
 from stewbeet import Mem, set_json_encoder, write_function
 from stouputils.typing import JsonDict
 
-from ..modes.definitions import LANG_PRETEXT, MODES
+from ..modes.catalogue import MODES
+from ..modes.definitions import LANG_PRETEXT
 
 
 # Main function

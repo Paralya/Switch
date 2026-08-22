@@ -8,7 +8,7 @@ import stouputils as stp
 from beet import Function
 from stewbeet.core import Mem, write_function
 
-from ..modes.definitions import MODES
+from ..modes.catalogue import MODES
 from .shared_memory import SharedMemory, generated_maps, survival_maps
 
 
