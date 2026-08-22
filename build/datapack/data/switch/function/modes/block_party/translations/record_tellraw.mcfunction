@@ -1,17 +1,17 @@
 
 #> switch:modes/block_party/translations/record_tellraw
 #
-# @within	switch:modes/block_party/record_tellraw with storage switch:records block_party
+# @within	switch:modes/block_party/start with storage switch:records block_party
 #
 # @args		round (unknown)
 #			player (unknown)
 #
 
 # French
-$execute if score #block_party_round switch.data > #record switch.data run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Nouveau record de $(round) manches par $(player) !","color":"yellow"}]
-$execute unless score #block_party_round switch.data > #record switch.data run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Record actuel de $(round) manches détenu par $(player)","color":"yellow"}]
+$execute unless data storage switch:records block_party.runners_up[0] run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Record actuel de $(round) manches détenu par $(player)","color":"yellow"}]
+$execute if data storage switch:records block_party.runners_up[0] run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Record actuel de $(round) manches détenu par $(player)","color":"yellow"},{"text":", grâce à ","color":"gray"},{"nbt":"block_party.runners_up","storage":"switch:records","separator":{"text":", "},"color":"gray"}]
 
 # English
-$execute if score #block_party_round switch.data > #record switch.data run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" New $(round) round record by $(player)!","color":"yellow"}]
-$execute unless score #block_party_round switch.data > #record switch.data run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Current record of $(round) rounds held by $(player)","color":"yellow"}]
+$execute unless data storage switch:records block_party.runners_up[0] run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Current record of $(round) rounds held by $(player)","color":"yellow"}]
+$execute if data storage switch:records block_party.runners_up[0] run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Current record of $(round) rounds held by $(player)","color":"yellow"},{"text":", thanks to ","color":"gray"},{"nbt":"block_party.runners_up","storage":"switch:records","separator":{"text":", "},"color":"gray"}]
 

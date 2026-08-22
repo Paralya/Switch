@@ -33,7 +33,8 @@ time set 18000
 scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"{mode}", maps:["{mode}"]}}
 function {translations}/start
-execute if data storage {ns}:records block_party run function {path}/record_tellraw with storage {ns}:records block_party
+execute if data storage {ns}:records block_party run function {translations}/record_tellraw with storage {ns}:records block_party
+data modify storage {ns}:temp block_party_wave set value []
 
 scoreboard players set #block_party_seconds {ns}.data -1
 scoreboard players set #block_party_ticks {ns}.data -200
@@ -121,11 +122,16 @@ execute if entity @s[gamemode=!spectator] run tag @s add {ns}.temp
 execute unless score #test_mode {ns}.data matches 1 if entity @s[gamemode=!spectator] on attacker if entity @s[type=ravager] run advancement grant @p[tag={ns}.temp] only {ns}:visible/31
 execute if entity @s[gamemode=!spectator] run tag @s remove {ns}.temp
 execute unless score #test_mode {ns}.data matches 1 if entity @s[gamemode=!spectator] if score #block_party_round {ns}.data matches ..2 run advancement grant @s only {ns}:visible/35
+execute if entity @s[gamemode=!spectator] run tag @s add {ns}.temp.eliminated
 
 gamemode spectator @s
 execute unless score #process_end {ns}.data matches 1 run tp @s @r[tag=!detached,gamemode=!spectator]
 effect clear @s
 clear @s
+
+# The wave that leaves a single player standing holds the runners up of the record
+execute if entity @s[tag={ns}.temp.eliminated] run function {path}/record_runner_up
+tag @s remove {ns}.temp.eliminated
 """)
 
 	# /process_end
@@ -171,22 +177,24 @@ function {ns}:maps/survival/block_party/regenerate
 execute if score #rg_block_party {ns}.data matches 1.. run function {path}/verify_regeneration
 """)
 
+	# /record_runner_up (executed as a player who just went out, right after their inventory was cleared)
+	write_function(f"{path}/record_runner_up", f"""
+loot replace entity @s hotbar.0 loot {ns}:get_username
+data modify storage {ns}:temp block_party_wave append from entity @s Inventory[0].components."minecraft:profile".name
+clear @s
+""")
+
 	# /record_save
 	write_function(f"{path}/record_save", f"""
 clear @s
-loot replace entity @s armor.head loot {ns}:get_username
+loot replace entity @s hotbar.0 loot {ns}:get_username
 scoreboard players set #record {ns}.data 0
 execute store result score #record {ns}.data run data get storage {ns}:records block_party.round
 execute if score #block_party_round {ns}.data > #record {ns}.data store result storage {ns}:records block_party.round int 1 run scoreboard players get #block_party_round {ns}.data
 execute if score #block_party_round {ns}.data > #record {ns}.data run data modify storage {ns}:records block_party.player set from entity @s Inventory[0].components."minecraft:profile".name
+execute if score #block_party_round {ns}.data > #record {ns}.data run data modify storage {ns}:records block_party.runners_up set from storage {ns}:temp block_party_wave
 execute if score #block_party_round {ns}.data > #record {ns}.data as @a[tag=!detached] at @s run playsound ui.toast.challenge_complete ambient @s ~ ~ ~ 0.5
-execute if score #block_party_round {ns}.data > #record {ns}.data run function {path}/record_tellraw with storage {ns}:records block_party
-""")
-
-	# /record_tellraw
-	write_function(f"{path}/record_tellraw", f"""
-function {translations}/record_tellraw with storage {ns}:records block_party
-scoreboard players reset #record {ns}.data
+execute if score #block_party_round {ns}.data > #record {ns}.data run function {translations}/record_new with storage {ns}:records block_party
 """)
 
 
@@ -384,6 +392,7 @@ kill @s
 # Schedule a new round
 scoreboard players set #block_party_ticks {ns}.data -160
 scoreboard players add #block_party_round {ns}.data 1
+data modify storage {ns}:temp block_party_wave set value []
 
 # Switch case to remove blocks (110008 263 110008 => 110072 263 110072)
 execute if score #bp_block {ns}.data matches -1 run fill 110008 263 110008 110072 263 110072 air replace #{ns}:block_party/not_white_terracotta

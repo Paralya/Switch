@@ -18,7 +18,8 @@ time set 18000
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:maps/choose_map_for {id:"block_party", maps:["block_party"]}
 function switch:modes/block_party/translations/start
-execute if data storage switch:records block_party run function switch:modes/block_party/record_tellraw with storage switch:records block_party
+execute if data storage switch:records block_party run function switch:modes/block_party/translations/record_tellraw with storage switch:records block_party
+data modify storage switch:temp block_party_wave set value []
 
 scoreboard players set #block_party_seconds switch.data -1
 scoreboard players set #block_party_ticks switch.data -200

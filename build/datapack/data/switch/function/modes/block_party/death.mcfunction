@@ -14,9 +14,14 @@ execute if entity @s[gamemode=!spectator] run tag @s add switch.temp
 execute unless score #test_mode switch.data matches 1 if entity @s[gamemode=!spectator] on attacker if entity @s[type=ravager] run advancement grant @p[tag=switch.temp] only switch:visible/31
 execute if entity @s[gamemode=!spectator] run tag @s remove switch.temp
 execute unless score #test_mode switch.data matches 1 if entity @s[gamemode=!spectator] if score #block_party_round switch.data matches ..2 run advancement grant @s only switch:visible/35
+execute if entity @s[gamemode=!spectator] run tag @s add switch.temp.eliminated
 
 gamemode spectator @s
 execute unless score #process_end switch.data matches 1 run tp @s @r[tag=!detached,gamemode=!spectator]
 effect clear @s
 clear @s
+
+# The wave that leaves a single player standing holds the runners up of the record
+execute if entity @s[tag=switch.temp.eliminated] run function switch:modes/block_party/record_runner_up
+tag @s remove switch.temp.eliminated
 

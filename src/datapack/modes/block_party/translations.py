@@ -23,15 +23,26 @@ execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=0}},
 execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" died, survived "}},{{"score":{{"name":"#block_party_seconds","objective":"{ns}.data"}}}},{{"text":" seconds!"}}]
 """)
 
-	# /record_tellraw  (macro function, called with `with storage switch:records block_party`)
+	# /record_tellraw  (macro: the record standing when the game starts)
 	write_function(f"{path}/record_tellraw", f"""
 # French
-$execute if score #block_party_round {ns}.data > #record {ns}.data run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Nouveau record de $(round) manches par $(player) !","color":"yellow"}}]
-$execute unless score #block_party_round {ns}.data > #record {ns}.data run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Record actuel de $(round) manches détenu par $(player)","color":"yellow"}}]
+$execute unless data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Record actuel de $(round) manches détenu par $(player)","color":"yellow"}}]
+$execute if data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Record actuel de $(round) manches détenu par $(player)","color":"yellow"}},{{"text":", grâce à ","color":"gray"}},{{"nbt":"block_party.runners_up","storage":"{ns}:records","separator":{{"text":", "}},"color":"gray"}}]
 
 # English
-$execute if score #block_party_round {ns}.data > #record {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" New $(round) round record by $(player)!","color":"yellow"}}]
-$execute unless score #block_party_round {ns}.data > #record {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Current record of $(round) rounds held by $(player)","color":"yellow"}}]
+$execute unless data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Current record of $(round) rounds held by $(player)","color":"yellow"}}]
+$execute if data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Current record of $(round) rounds held by $(player)","color":"yellow"}},{{"text":", thanks to ","color":"gray"}},{{"nbt":"block_party.runners_up","storage":"{ns}:records","separator":{{"text":", "}},"color":"gray"}}]
+""")
+
+	# /record_new  (macro: the record that was just beaten)
+	write_function(f"{path}/record_new", f"""
+# French
+$execute unless data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Nouveau record de $(round) manches par $(player)","color":"yellow"}},{{"text":" !","color":"yellow"}}]
+$execute if data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Nouveau record de $(round) manches par $(player)","color":"yellow"}},{{"text":", grâce à ","color":"gray"}},{{"nbt":"block_party.runners_up","storage":"{ns}:records","separator":{{"text":", "}},"color":"gray"}},{{"text":" !","color":"yellow"}}]
+
+# English
+$execute unless data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" New $(round) round record by $(player)","color":"yellow"}},{{"text":"!","color":"yellow"}}]
+$execute if data storage {ns}:records block_party.runners_up[0] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" New $(round) round record by $(player)","color":"yellow"}},{{"text":", thanks to ","color":"gray"}},{{"nbt":"block_party.runners_up","storage":"{ns}:records","separator":{{"text":", "}},"color":"gray"}},{{"text":"!","color":"yellow"}}]
 """)
 
 	# /core_give_block

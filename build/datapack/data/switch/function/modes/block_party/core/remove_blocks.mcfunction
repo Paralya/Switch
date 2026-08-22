@@ -7,6 +7,7 @@
 # Schedule a new round
 scoreboard players set #block_party_ticks switch.data -160
 scoreboard players add #block_party_round switch.data 1
+data modify storage switch:temp block_party_wave set value []
 
 # Switch case to remove blocks (110008 263 110008 => 110072 263 110072)
 execute if score #bp_block switch.data matches -1 run fill 110008 263 110008 110072 263 110072 air replace #switch:block_party/not_white_terracotta
