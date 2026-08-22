@@ -3,6 +3,7 @@
 #
 # @within	switch:player/trigger/succes/display_loop with storage switch:temp copy[0]
 #			switch:player/trigger/succes/main with storage switch:temp copy[0]
+#			switch:player/trigger/succes/mode_section with storage switch:temp copy[0]
 #
 
 # Tellraw

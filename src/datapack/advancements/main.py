@@ -1,5 +1,6 @@
 
 # Imports
+from .by_mode import write_by_mode_index
 from .shared_memory import generate_adv_dictionnary
 from .utils import (
 	category_advancements,
@@ -24,4 +25,5 @@ def main() -> None:
 	hidden_advancements()
 	visible_advancements()
 	category_advancements()
+	write_by_mode_index()
 

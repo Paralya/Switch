@@ -48,3 +48,8 @@ data modify storage switch:temp copy append from storage switch:advancements all
 $execute if data storage switch:temp copy[0] run data modify storage switch:temp copy[0].player set value "$(player)"
 execute if data storage switch:temp copy[0] run function switch:player/trigger/succes/display_loop_2 with storage switch:temp copy[0]
 
+# Last, so it stays in sight: what the running minigame has to offer
+scoreboard players set #succes_mode switch.data 0
+execute if score #engine_state switch.data matches 3 unless data storage switch:main {current_game:""} run scoreboard players set #succes_mode switch.data 1
+execute if score #succes_mode switch.data matches 1 run function switch:player/trigger/succes/mode_section with storage switch:main input
+
