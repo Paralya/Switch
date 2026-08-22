@@ -28,6 +28,7 @@ scoreboard players set #cut_clean switch.data 1
 
 scoreboard objectives add switch.temp.role dummy
 scoreboard objectives add switch.temp.cooldown dummy
+scoreboard objectives add switch.temp.announced dummy
 scoreboard objectives add switch.temp.sidebar dummy {"text":"Remaining Roles","color":"gold"}
 scoreboard objectives add switch.temp.killed_ninja dummy
 scoreboard objectives add switch.temp.kills playerKillCount

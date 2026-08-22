@@ -13,6 +13,7 @@ team remove switch.temp.sidebar.1
 
 scoreboard objectives remove switch.temp.role
 scoreboard objectives remove switch.temp.cooldown
+scoreboard objectives remove switch.temp.announced
 scoreboard objectives remove switch.temp.sidebar
 scoreboard objectives remove switch.temp.killed_ninja
 scoreboard objectives remove switch.temp.kills

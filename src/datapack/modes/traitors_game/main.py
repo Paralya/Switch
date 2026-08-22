@@ -98,10 +98,14 @@ tag @s[scores={{{ns}.alive=1..,{ns}.temp.role=4}}] add {ns}.ninja_death
 """)
 
 	# /death/process
+	# The inspector is told about a player once and only once: a relog can hand the same player a
+	# second death marker, and announcing it again would leak a free confirmation of their role.
 	write_function(f"{path}/death/process", f"""
 scoreboard players add @s {ns}.temp.cooldown 1
+scoreboard players operation #player_id {ns}.id = @s {ns}.id
 
-execute if score @s {ns}.temp.cooldown matches 1 run function {ns}:modes/traitors_game/death/for_detective
+execute if score @s {ns}.temp.cooldown matches 1 unless entity @e[type=marker,scores={{{ns}.temp.announced=1}},predicate={ns}:has_same_id] run function {ns}:modes/traitors_game/death/for_detective
+execute if score @s {ns}.temp.cooldown matches 1 run scoreboard players set @s {ns}.temp.announced 1
 execute if score @s {ns}.temp.cooldown matches 160 run function {ns}:modes/traitors_game/death/for_global
 """)
 
@@ -442,6 +446,7 @@ scoreboard players set #cut_clean {ns}.data 1
 
 scoreboard objectives add {ns}.temp.role dummy
 scoreboard objectives add {ns}.temp.cooldown dummy
+scoreboard objectives add {ns}.temp.announced dummy
 scoreboard objectives add {ns}.temp.sidebar dummy {{"text":"Remaining Roles","color":"gold"}}
 scoreboard objectives add {ns}.temp.killed_ninja dummy
 scoreboard objectives add {ns}.temp.kills playerKillCount
@@ -524,6 +529,7 @@ team remove {ns}.temp.sidebar.1
 
 scoreboard objectives remove {ns}.temp.role
 scoreboard objectives remove {ns}.temp.cooldown
+scoreboard objectives remove {ns}.temp.announced
 scoreboard objectives remove {ns}.temp.sidebar
 scoreboard objectives remove {ns}.temp.killed_ninja
 scoreboard objectives remove {ns}.temp.kills

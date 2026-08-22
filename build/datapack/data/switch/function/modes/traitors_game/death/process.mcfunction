@@ -7,7 +7,9 @@
 #
 
 scoreboard players add @s switch.temp.cooldown 1
+scoreboard players operation #player_id switch.id = @s switch.id
 
-execute if score @s switch.temp.cooldown matches 1 run function switch:modes/traitors_game/death/for_detective
+execute if score @s switch.temp.cooldown matches 1 unless entity @e[type=marker,scores={switch.temp.announced=1},predicate=switch:has_same_id] run function switch:modes/traitors_game/death/for_detective
+execute if score @s switch.temp.cooldown matches 1 run scoreboard players set @s switch.temp.announced 1
 execute if score @s switch.temp.cooldown matches 160 run function switch:modes/traitors_game/death/for_global
 
