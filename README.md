@@ -92,22 +92,20 @@ Switch/
 │       ├── main.py             # Définitions brutes du datapack
 │       ├── definitions/        # Advancements, dimensions, loot tables, prédicats, tags...
 │       ├── 🎮 modes/           # Un dossier par mini-jeu, + spec/catalogue/emit
-│       ├── 🧠 engine/          # Vote, démarrage, arrêt, signaux vers les modes
+│       ├── 🧠 engine/          # Vote, démarrage, arrêt, signaux, pop-ups
 │       ├── 🧍 player/          # Layout d'inventaire, practice, jump timer
-│       ├── 🗺️ maps/            # Chargement des maps, checkpoints, cycles de spawn
-│       ├── 🌍 survival_maps/   # Génération et régénération des maps
+│       ├── 🏛️ lobby/           # Boards, leaderboards, PNJ, tick hors partie
+│       ├── 🗺️ maps/            # Chargement, géométrie, et generation/ (régénération)
 │       ├── 🎒 kits/            # Modèle déclaratif des kits (Kit, KitItem, rôles)
-│       ├── 🛒 shop/            # Boutiques (agrège les shop.py des modes)
+│       ├── 🛒 shop/            # Boutiques (consomme le registre des modes)
 │       ├── 📊 stats/           # Classements et statistiques
 │       ├── 🏆 advancements/    # Succès et pourcentages
-│       ├── 💬 npc/             # PNJ du lobby
 │       ├── 🎬 cinematic/       # Cinématiques d'intro
-│       ├── 🎵 music/           # Lecteur de musique
+│       ├── 🎵 music/           # Lecteur de musique et Note Block Studio
 │       ├── 🌐 translations/    # Textes partagés FR/EN
-│       ├── 🔧 utils/           # Fonctions utilitaires partagées
-│       ├── ⏱️ profiling/       # Mesure de performance
-│       ├── 🌱 root/            # Fonctions à la racine (switch:...)
-│       └── 🔗 misc_links/      # Pop-ups, loot tables aléatoires, Note Block Studio
+│       ├── 🔧 utils/           # Primitives appelées par une vingtaine de modes
+│       ├── 🛠️ devtools/        # test_mode, lag artificiel, profiling
+│       └── 🌱 root/            # load, tick, second et fonctions racine
 ├── 🖼️ assets/                  # Textures, sons, disques, pack.png
 ├── 📚 libs/                    # Packs externes fusionnés au build
 ├── 🎼 note_block_studio/       # Musiques (midi, datapacks générés)
@@ -149,6 +147,7 @@ Le reste vient de plugins StewBeet : headers, constantes de scoreboard, dépenda
 | ⛏️ Les matériaux générés (armures, outils)                              | `src/setup_definitions.py` (`ORES_CONFIGS`)                                           |
 | 🖼️ Une texture d'item                                                   | `assets/textures/**/<item_id>.png`, détection automatique                             |
 | 🔊 Un son                                                               | `assets/sounds/`, ou `src/datapack/modes/<mode>/sounds/` pour un son propre à un mode |
+| 🛠️ Un outil de dev (test mode, lag, profiling)                          | `src/datapack/devtools/`                                                              |
 | ✨ Les shaders                                                          | `src/resource_pack/shaders.py`                                                        |
 | 🪟 Les textures de GUI et de tooltips                                   | `src/resource_pack/textures.py`                                                       |
 
@@ -313,7 +312,7 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 
 ## Garde-fous
 
-Cinq outils, tous lançables à la main. Les trois premiers tournent aussi en CI.
+Six outils, tous lançables à la main. Les trois premiers tournent aussi en CI.
 
 | Commande                                  | Ce qu'elle garantit                                                               |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
@@ -322,8 +321,9 @@ Cinq outils, tous lançables à la main. Les trois premiers tournent aussi en CI
 | `python tools/check_conventions.py`       | Taille des fichiers, pureté du modèle, aucun import descendant vers un mode nommé |
 | `python tools/check_output_drift.py`      | **Le refactoring n'a rien changé** : rebuild puis `build/` identique à HEAD       |
 | `python tools/report_merged_functions.py` | Aucune fonction n'est écrite par deux émetteurs sans que ce soit déclaré          |
+| `python tools/check_rename_only.py "a=b"`  | Un diff de `build/` est **exactement** les renommages annoncés, et rien d'autre   |
 
-Le plus important est `check_output_drift.py`. `write_function` **ajoute** à la suite par défaut, donc deux émetteurs visant le même chemin fusionnent silencieusement dans l'ordre d'appel. Après tout déplacement de code, un `build/` inchangé est la preuve que rien n'a bougé en jeu.
+Ces deux derniers vont par paire : `check_output_drift.py` prouve qu'un refactoring n'a rien changé, `check_rename_only.py` prouve qu'un déplacement de chemins n'a fait que déplacer. Le plus important reste `check_output_drift.py`. `write_function` **ajoute** à la suite par défaut, donc deux émetteurs visant le même chemin fusionnent silencieusement dans l'ordre d'appel. Après tout déplacement de code, un `build/` inchangé est la preuve que rien n'a bougé en jeu.
 
 Deux règles s'appuient sur des listes explicites qui ne doivent que diminuer :
 - `LONG_FILE_DEBT` dans `tools/check_conventions.py` : les fichiers qui dépassent encore 300 lignes.
