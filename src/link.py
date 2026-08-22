@@ -8,6 +8,7 @@ from .datapack.cinematic.main import main as cinematic
 from .datapack.devtools.main import main as devtools
 from .datapack.engine.main import main as engine
 from .datapack.lobby.main import main as lobby
+from .datapack.maps.generation.main import main as generate_survival_maps
 from .datapack.maps.main import main as maps
 from .datapack.modes import generate_all_modes
 from .datapack.modes.memory_mine.zone_particles import write_zone_particles as memory_mine
@@ -16,7 +17,6 @@ from .datapack.player.main import main as player
 from .datapack.root.main import main as root
 from .datapack.shop.main import main as shop
 from .datapack.stats.main import main as stats
-from .datapack.survival_maps.main import main as generate_survival_maps
 from .datapack.translations.main import main as shared_translations
 from .datapack.utils.main import main as utils
 from .resource_pack.special_fonts.main import main as special_fonts

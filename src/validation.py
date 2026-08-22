@@ -14,9 +14,9 @@ from pathlib import Path
 import stouputils as stp
 from stewbeet import Mem
 
+from .datapack.maps.generation.shared_memory import generated_maps
 from .datapack.modes.catalogue import GROUPS, GROUPS_BY_ID, MODES
 from .datapack.modes.definitions import grouped_modes
-from .datapack.survival_maps.shared_memory import generated_maps
 
 # Constants
 MODES_FOLDER: Path = Path(__file__).parent / "datapack" / "modes"
