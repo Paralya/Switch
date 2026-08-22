@@ -43,8 +43,11 @@ def main() -> None:
 				}
 			}))
 
-			# Write the reward function that revoke the advancement
-			write_function(f"{ns}:engine/pop_ups/schedule", f"advancement revoke @a only {ns}:pop_ups/{mode.id}_{lang}")
+	# Write the function revoking every pop-up at once
+	write_function(f"{ns}:engine/pop_ups/schedule", "\n".join(
+		f"advancement revoke @a only {ns}:pop_ups/{mode.id}_{lang}"
+		for lang in LANG_PRETEXT for mode in MODES
+	))
 
 	# Write the function that revokes the advancement
 	write_function(f"{ns}:engine/pop_ups/revoke", f"schedule function {ns}:engine/pop_ups/schedule 1s")
