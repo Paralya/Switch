@@ -1,7 +1,7 @@
 
 #> switch:translations/test_mode
 #
-# @within	switch:test_mode
+# @within	switch:devtools/test_mode
 #
 
 # French

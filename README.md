@@ -261,7 +261,7 @@ Dans `src/datapack/modes/definitions.py`, ajoutez une entrée à `MODES` :
 ### 4. Tester en jeu
 
 ```
-/function switch:test_mode
+/function switch:devtools/test_mode
 /function switch:modes/mon_mode/_force_start
 ```
 

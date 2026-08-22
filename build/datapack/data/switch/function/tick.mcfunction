@@ -45,5 +45,5 @@ execute as @e[type=spectral_arrow,x=26,y=80,z=93,distance=..10,nbt=!{pickup:0b}]
 execute in minecraft:overworld positioned 0 69 0 run function switch:lobby_tick
 
 ## Profiling
-#execute as Stoupy51 run function switch:profiling/start
+#execute as Stoupy51 run function switch:devtools/profiling/start
 

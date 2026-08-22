@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 
@@ -90,24 +89,6 @@ scoreboard players remove #temp {ns}.data 1
 execute if score #temp {ns}.data matches ..-1 run return fail
 execute store result storage {ns}:main temp.max int 1 run scoreboard players get #temp {ns}.data
 function {ns}:utils/get_random/macro with storage {ns}:main temp
-""")
-
-	# /lag/disable
-	write_function(f"{path}/lag/disable", f"""
-kill @e[tag={ns}.lag_maker]
-schedule clear {ns}:utils/lag/enable
-""")
-
-	# /lag/enable
-	write_function(f"{path}/lag/enable", f"""
-# Kill previous
-kill @e[tag={ns}.lag_maker]
-
-# Summon new
-execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=3] run summon zombie 0 10 0 {{Tags:["{ns}.lag_maker"],DeathLootTable:"none"}}
-
-# Recall
-schedule function {ns}:utils/lag/enable 1t
 """)
 
 	# /on_death_run_function

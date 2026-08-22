@@ -5,6 +5,7 @@ from stewbeet import Context, Mem, official_lib_used, write_load_file, write_tic
 
 from .datapack.advancements.main import main as automatic_advancements
 from .datapack.cinematic.main import main as cinematic
+from .datapack.devtools.main import main as devtools
 from .datapack.engine.main import main as engine
 from .datapack.maps.main import main as maps
 from .datapack.modes import generate_all_modes
@@ -12,7 +13,6 @@ from .datapack.modes.memory_mine.zone_particles import write_zone_particles as m
 from .datapack.music.main import main as music
 from .datapack.npc.main import main as npc
 from .datapack.player.main import main as player
-from .datapack.profiling.main import main as profiling
 from .datapack.root.main import main as root
 from .datapack.shop.main import main as shop
 from .datapack.stats.main import main as stats
@@ -51,7 +51,7 @@ def beet_default(ctx: Context) -> None:
 	stats()
 	engine()
 	player()
-	profiling()
+	devtools()
 	memory_mine()
 	generate_survival_maps()
 	automatic_advancements()

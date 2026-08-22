@@ -1,5 +1,5 @@
 
-#> switch:test_mode
+#> switch:devtools/test_mode
 #
 # @within	???
 #

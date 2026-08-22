@@ -70,24 +70,6 @@ data remove storage {ns}:temp copy[0]
 execute if data storage {ns}:temp copy[0] run function {ns}:build_groups_games with storage {ns}:temp copy[0]
 """)
 
-	# switch:test_mode (toggle the global test mode)
-	write_function(f"{ns}:test_mode", f"""
-# Get test mode state
-scoreboard players set #is_enabled {ns}.data 0
-execute if score #test_mode {ns}.data matches 1 run scoreboard players set #is_enabled {ns}.data 1
-
-# Test Mode OFF -> ON
-execute if score #is_enabled {ns}.data matches 0 run scoreboard players set #test_mode {ns}.data 1
-execute if score #is_enabled {ns}.data matches 0 run scoreboard players set #can_attach {ns}.data 0
-
-# Test Mode ON -> OFF
-execute if score #is_enabled {ns}.data matches 1 run scoreboard players set #test_mode {ns}.data 0
-execute if score #is_enabled {ns}.data matches 1 run scoreboard players set #can_attach {ns}.data 1
-
-# Message the player
-function {ns}:translations/test_mode
-""")
-
 	# switch:lobby_second
 	# Jump best times leaderboards: (x, y, z, jump key, display uuid)
 	jump_displays: list[tuple[int, float, int, str, str]] = [
@@ -618,5 +600,5 @@ execute as @e[type=spectral_arrow,x=26,y=80,z=93,distance=..10,nbt=!{{pickup:0b}
 execute in minecraft:overworld positioned 0 69 0 run function {ns}:lobby_tick
 
 ## Profiling
-#execute as Stoupy51 run function {ns}:profiling/start
+#execute as Stoupy51 run function {ns}:devtools/profiling/start
 """)

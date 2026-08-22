@@ -1,9 +1,14 @@
 
-#> switch:profiling/content
-#
-# @within	switch:profiling/start
-#
+# Imports
+from stewbeet import Mem, write_function
 
+
+def write_profiling() -> None:
+	ns: str = Mem.ctx.project_id
+	path: str = f"{ns}:devtools/profiling"
+
+	# /content
+	write_function(f"{path}/content", f"""
 ## Personal function for '/perf start' command for profiling
 ## To determine which syntax is the most efficient
 ## Useful link: https://misode.github.io/report/
@@ -25,9 +30,10 @@
 
 
 
+
 ## Tests de la commande 'execute store result score' avec if items et clear, meilleur méthode avec if items
-# execute store result score #count switch.data if items entity @s container.* oak_planks		1.931 ms (best)
-# execute store result score #count switch.data run clear @s oak_planks 0						5.639 ms
+# execute store result score #count {ns}.data if items entity @s container.* oak_planks		1.931 ms (best)
+# execute store result score #count {ns}.data run clear @s oak_planks 0						5.639 ms
 
 ## Tests du scoreboard reset, meilleur méthode avec le selecteur et non *
 # scoreboard players set @e energy.update_queue 1			~350 ms
@@ -36,6 +42,12 @@
 # scoreboard players reset @e energy.update_queue			319.100 ms (best)
 
 ## Tests des fonctions random
-# scoreboard players set #modulo_rand switch.data 9
-# function switch:utils/get_random/main
+# scoreboard players set #modulo_rand {ns}.data 9
+# function {ns}:utils/get_random/main
+""")
+
+	# /start
+	# Profiling stress test: call the (comment-only) content function 1000 times in a row to measure
+	# per-call overhead (kept as literal repeated calls on purpose; timing must not include loop overhead).
+	write_function(f"{path}/start", "\n" + f"function {path}/content\n" * 1000)
 
