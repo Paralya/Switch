@@ -313,15 +313,15 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 
 ## Garde-fous
 
-Quatre outils, tous lançables à la main. Les trois premiers tournent aussi en CI.
+Cinq outils, tous lançables à la main. Les trois premiers tournent aussi en CI.
 
-| Commande | Ce qu'elle garantit |
-|---|---|
-| `ruff check src tools` | Style et imports |
-| `pyright` | Typage strict, sans `Any` |
-| `python tools/check_conventions.py` | Taille des fichiers, pureté du modèle, aucun import descendant vers un mode nommé |
-| `python tools/check_output_drift.py` | **Le refactoring n'a rien changé** : rebuild puis `build/` identique à HEAD |
-| `python tools/report_merged_functions.py` | Aucune fonction n'est écrite par deux émetteurs sans que ce soit déclaré |
+| Commande                                  | Ce qu'elle garantit                                                               |
+|-------------------------------------------|-----------------------------------------------------------------------------------|
+| `ruff check src tools`                    | Style et imports                                                                  |
+| `pyright`                                 | Typage strict, sans `Any`                                                         |
+| `python tools/check_conventions.py`       | Taille des fichiers, pureté du modèle, aucun import descendant vers un mode nommé |
+| `python tools/check_output_drift.py`      | **Le refactoring n'a rien changé** : rebuild puis `build/` identique à HEAD       |
+| `python tools/report_merged_functions.py` | Aucune fonction n'est écrite par deux émetteurs sans que ce soit déclaré          |
 
 Le plus important est `check_output_drift.py`. `write_function` **ajoute** à la suite par défaut, donc deux émetteurs visant le même chemin fusionnent silencieusement dans l'ordre d'appel. Après tout déplacement de code, un `build/` inchangé est la preuve que rien n'a bougé en jeu.
 
