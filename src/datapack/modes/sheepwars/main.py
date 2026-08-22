@@ -219,7 +219,7 @@ function {ns}:translations/common/basic_actionbar
 
 	# /start (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/start", f"""
-effect give @a[tag=!detached] hunger 5 255 true
+effect give @a[tag=!detached] hunger 3 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] slowness 5 255 true
@@ -383,7 +383,7 @@ effect give @a[tag=!detached,predicate={ns}:in_water,nbt=!{{active_effects:[{{id
 
 # Kill items without custom data and give saturation
 kill @e[type=item,nbt=!{{Item:{{components:{{"minecraft:custom_data":{{}}}}}}}}]
-execute as @a[tag=!detached,nbt=!{{foodLevel:20}}] run effect give @s saturation 1 0 true
+execute if score #sheepwars_seconds {ns}.data matches 1.. as @a[tag=!detached,nbt=!{{foodLevel:20}}] run effect give @s saturation 1 0 true
 
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate={ns}:between/100_and_110] run function sheepwars:sheeps/final/disappear

@@ -4,7 +4,7 @@
 # @within	switch:modes/sheepwars/calls/start
 #
 
-effect give @a[tag=!detached] hunger 5 255 true
+effect give @a[tag=!detached] hunger 3 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] slowness 5 255 true

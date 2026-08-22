@@ -16,7 +16,7 @@ effect give @a[tag=!detached,predicate=switch:in_water,nbt=!{active_effects:[{id
 
 # Kill items without custom data and give saturation
 kill @e[type=item,nbt=!{Item:{components:{"minecraft:custom_data":{}}}}]
-execute as @a[tag=!detached,nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
+execute if score #sheepwars_seconds switch.data matches 1.. as @a[tag=!detached,nbt=!{foodLevel:20}] run effect give @s saturation 1 0 true
 
 # Kill too low entities
 execute as @e[type=!player,type=!lightning_bolt,predicate=switch:between/100_and_110] run function sheepwars:sheeps/final/disappear
