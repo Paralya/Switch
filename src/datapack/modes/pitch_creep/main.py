@@ -100,8 +100,8 @@ scoreboard players set @s {ns}.alive 0
 function {ns}:utils/classic_death
 """)
 
-	# /give_items (the same skinned sword and bow variants as pitchout)
-	swords, bows = skinned_weapons()
+	# /give_items (the same skinned sword and bow variants as pitchout, but the arrows run out here)
+	swords, bows = skinned_weapons(bow_infinity=False)
 	Kit("pitch_creep", layout=False, items=(
 		KitItem(role="melee", slot="hotbar.0", variants=Variants(score=f"#random {ns}.data", roll=4, items=swords)),
 		KitItem(role="ranged", slot="hotbar.1", variants=Variants(score=f"#random {ns}.data", roll=3, items=bows)),
