@@ -103,8 +103,8 @@ execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] 
 execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69033 126 69072
 execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69033 126 69027
 
-# Summon one small spider per new warden also
-execute at @e[type=warden,tag=!{ns}.glowed] run summon spider ~ ~ ~ {{attributes:[{{id:"minecraft:scale",base:0.35}},{{id:"minecraft:max_health",base:2}}],Health:2f}}
+# One new warden out of four also brings a small spider, rolled per warden
+execute at @e[type=warden,tag=!{ns}.glowed] if predicate {ns}:chance/0.25 run summon spider ~ ~ ~ {{attributes:[{{id:"minecraft:scale",base:0.35}},{{id:"minecraft:max_health",base:2}}],Health:2f}}
 
 # Make the new wardens glow 2 seconds
 effect give @e[type=warden,tag=!{ns}.glowed] glowing 2 255 true
