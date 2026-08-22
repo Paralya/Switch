@@ -410,7 +410,7 @@ scoreboard objectives add {ns}.temp.chosen_class dummy
 scoreboard objectives add {ns}.temp.elytra_cooldown dummy
 scoreboard objectives add {ns}.temp.break_obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add {ns}.temp.total_obsidian dummy
-function {ns}:modes/_common/recap/start {{points:1}}
+function {ns}:modes/_common/recap/start/points
 scoreboard objectives add {ns}.temp.sidebar dummy {{"text":"Points","color":"yellow"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 

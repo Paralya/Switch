@@ -1,5 +1,5 @@
 
-#> switch:translations/common/recap_line
+#> switch:modes/_common/recap/translations/kills
 #
 # @executed	as @a[tag=switch.temp.recap_tied,limit=1]
 #

@@ -7,6 +7,7 @@
 #
 
 tag @s add switch.temp.recap_done
-execute if score #recap_points switch.data matches 1 run function switch:translations/common/recap_line_points
-execute unless score #recap_points switch.data matches 1 run function switch:translations/common/recap_line
+execute if score #recap_layout switch.data matches 0 run function switch:modes/_common/recap/translations/kills
+execute if score #recap_layout switch.data matches 1 run function switch:modes/_common/recap/translations/points
+execute if score #recap_layout switch.data matches 2 run function switch:modes/_common/recap/translations/damage
 

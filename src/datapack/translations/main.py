@@ -114,33 +114,6 @@ execute if score #process_end {ns}.data matches 1 run tellraw @a[scores={{{ns}.l
 execute if score #process_end {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The winner of the game is "}},{{"selector":"@a[tag=!detached,tag={ns}.winner]"}},{{"text":" with "}},{{"score":{{"name":"#max","objective":"{ns}.data"}},"color":"gold"}},{{"text":" points!"}}]
 """)
 
-	# /common/recap_header
-	write_function(f"{path}/common/recap_header", rf"""
-# French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"text":"Récapitulatif de la partie","color":"gold","bold":true}}]
-
-# English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"text":"Game recap","color":"gold","bold":true}}]
-""")
-
-	# /common/recap_line (executed as the player being listed)
-	write_function(f"{path}/common/recap_line", rf"""
-# French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"text":"- ","color":"dark_gray"}},{{"selector":"@s"}},{{"text":" : ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.kills"}},"color":"red"}},{{"text":" kills","color":"gray"}},{{"text":", ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.deaths"}},"color":"aqua"}},{{"text":" morts","color":"gray"}}]
-
-# English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"- ","color":"dark_gray"}},{{"selector":"@s"}},{{"text":" : ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.kills"}},"color":"red"}},{{"text":" kills","color":"gray"}},{{"text":", ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.deaths"}},"color":"aqua"}},{{"text":" deaths","color":"gray"}}]
-""")
-
-	# /common/recap_line_points (same, for the modes scoring their players individually)
-	write_function(f"{path}/common/recap_line_points", rf"""
-# French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"text":"- ","color":"dark_gray"}},{{"selector":"@s"}},{{"text":" : ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.points"}},"color":"gold"}},{{"text":" points","color":"gray"}},{{"text":", ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.kills"}},"color":"red"}},{{"text":" kills","color":"gray"}},{{"text":", ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.deaths"}},"color":"aqua"}},{{"text":" morts","color":"gray"}}]
-
-# English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"- ","color":"dark_gray"}},{{"selector":"@s"}},{{"text":" : ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.points"}},"color":"gold"}},{{"text":" points","color":"gray"}},{{"text":", ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.kills"}},"color":"red"}},{{"text":" kills","color":"gray"}},{{"text":", ","color":"dark_gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.deaths"}},"color":"aqua"}},{{"text":" deaths","color":"gray"}}]
-""")
-
 	# /test_mode (root-level toggle message)
 	write_function(f"{path}/test_mode", rf"""
 # French

@@ -1,5 +1,5 @@
 
-#> switch:translations/common/recap_header
+#> switch:modes/_common/recap/translations/header
 #
 # @within	switch:modes/_common/recap/show
 #

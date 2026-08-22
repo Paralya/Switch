@@ -1,5 +1,5 @@
 
-#> switch:translations/common/recap_line_points
+#> switch:modes/_common/recap/translations/points
 #
 # @executed	as @a[tag=switch.temp.recap_tied,limit=1]
 #

@@ -443,7 +443,7 @@ scoreboard players set #nb_dead_spectres {ns}.data 0
 scoreboard players set #nb_dead_visibles {ns}.data 0
 
 scoreboard objectives add {ns}.temp.cooldown dummy
-function {ns}:modes/_common/recap/start {{points:0}}
+function {ns}:modes/_common/recap/start/damage
 scoreboard objectives setdisplay list {ns}.health
 
 # Choix des rôles + give d'items

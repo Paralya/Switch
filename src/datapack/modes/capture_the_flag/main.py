@@ -244,7 +244,7 @@ execute in {ns}:game run gamerule minecraft:block_drops false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 scoreboard objectives add {ns}.temp.chosen_class dummy
-function {ns}:modes/_common/recap/start {{points:1}}
+function {ns}:modes/_common/recap/start/points
 scoreboard objectives add {ns}.temp.sidebar dummy {{"text":"Points","color":"yellow"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 scoreboard objectives setdisplay list {ns}.health

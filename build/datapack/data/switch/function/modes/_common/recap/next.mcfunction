@@ -8,8 +8,8 @@
 # Print the best player still unlisted, ties broken by taking whichever the selector returns first
 execute store result score #recap_left switch.data if entity @a[tag=!detached,tag=!switch.temp.recap_done]
 scoreboard players set #recap_best switch.data -2147483648
-scoreboard players operation #recap_best switch.data > @a[tag=!detached,tag=!switch.temp.recap_done] switch.temp.points
-execute as @a[tag=!detached,tag=!switch.temp.recap_done] if score @s switch.temp.points = #recap_best switch.data run tag @s add switch.temp.recap_tied
+scoreboard players operation #recap_best switch.data > @a[tag=!detached,tag=!switch.temp.recap_done] switch.temp.recap_rank
+execute as @a[tag=!detached,tag=!switch.temp.recap_done] if score @s switch.temp.recap_rank = #recap_best switch.data run tag @s add switch.temp.recap_tied
 execute as @a[tag=switch.temp.recap_tied,limit=1] run function switch:modes/_common/recap/line
 tag @a remove switch.temp.recap_tied
 
