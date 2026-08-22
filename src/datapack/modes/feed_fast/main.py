@@ -32,12 +32,37 @@ clear @s
 scoreboard players add #process_end {ns}.data 1
 
 function {ns}:modes/_common/process_end/winner_by_points
+execute if score #process_end {ns}.data matches 1 run function {path}/record_save
 execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {path}/death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
+""")
+
+	# /record_holder (executed as the player whose score set the record, right after it was saved)
+	write_function(f"{path}/record_holder", f"""
+clear @s
+loot replace entity @s hotbar.0 loot {ns}:get_username
+data modify storage {ns}:records feed_fast.player set from entity @s Inventory[0].components."minecraft:profile".name
+clear @s
+""")
+
+	# /record_save (#max is the best score of the game, left by winner_by_points)
+	write_function(f"{path}/record_save", f"""
+scoreboard players set #record {ns}.data 0
+execute store result score #record {ns}.data run data get storage {ns}:records feed_fast.points
+execute unless score #max {ns}.data matches 1.. run return 0
+execute unless score #max {ns}.data > #record {ns}.data run return 0
+
+execute store result storage {ns}:records feed_fast.points int 1 run scoreboard players get #max {ns}.data
+execute as @a[tag=!detached] if score @s {ns}.temp.points = #max {ns}.data run tag @s add {ns}.temp.record
+execute as @a[tag={ns}.temp.record,limit=1] run function {path}/record_holder
+tag @a remove {ns}.temp.record
+
+execute as @a[tag=!detached] at @s run playsound ui.toast.challenge_complete ambient @s ~ ~ ~ 0.5
+function {translations}/record_new with storage {ns}:records feed_fast
 """)
 
 	# /second
@@ -74,6 +99,7 @@ execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 function {translations}/start
+execute if data storage {ns}:records feed_fast run function {translations}/record_tellraw with storage {ns}:records feed_fast
 
 scoreboard players set #remaining_time {ns}.data 50
 scoreboard players set #feed_fast_seconds {ns}.data -3
