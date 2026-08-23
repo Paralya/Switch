@@ -128,6 +128,11 @@ function {ns}:player/jump_timer/stopwatch_remove with storage {ns}:temp jt_sw
 $stopwatch remove {ns}:jump_timer/$(pid)
 """)
 
+	# Cinemalya fires this as the player right before the camera takes them, which is a teleport like any other
+	write_function(f"{path}/on_cinematic", f"""
+execute if entity @s[tag={ns}.jump_timing] run function {ns}:player/jump_timer/cancel
+""", tags=["cinemalya:v1/signals/on_launch"])
+
 	# /compute_display (#jump_time centiseconds -> #secs seconds and #d1 #d2 centiseconds digits)
 	write_function(f"{path}/compute_display", f"""
 scoreboard players operation #secs {ns}.data = #jump_time {ns}.data

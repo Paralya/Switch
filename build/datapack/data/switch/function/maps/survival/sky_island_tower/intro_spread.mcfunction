@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 77026.88 171.22 77099.86 rotated -155.14 14.42 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Sky Island Tower",credits:"Unknown",with:{particle:1}}
+execute in switch:game positioned 77026.88 171.22 77099.86 rotated -155.14 14.42 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Sky Island Tower",subtitle:"Unknown",particle:"minecraft:glow"}}
 

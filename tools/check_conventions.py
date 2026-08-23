@@ -29,7 +29,6 @@ catalogue holds every mode declaration. Splitting either would only add folders 
 """
 
 LONG_FILE_DEBT: frozenset[str] = frozenset({
-	"datapack/cinematic/main.py",
 	"datapack/engine/main.py",
 	"datapack/kits/model.py",
 	"datapack/maps/main.py",
@@ -38,7 +37,6 @@ LONG_FILE_DEBT: frozenset[str] = frozenset({
 	"datapack/player/main.py",
 	"datapack/player/practice.py",
 	"datapack/player/translations.py",
-	"datapack/root/main.py",
 	"datapack/shop/utils.py",
 	"datapack/stats/main.py",
 	"datapack/maps/generation/utils.py",

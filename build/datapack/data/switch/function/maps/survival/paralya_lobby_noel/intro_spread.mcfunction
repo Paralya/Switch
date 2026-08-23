@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 40153.12 204.86 40096.92 rotated 76.71 9.64 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Paralya Lobby Noel",credits:"Jugou2",with:{particle:1}}
+execute in switch:game positioned 40153.12 204.86 40096.92 rotated 76.71 9.64 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Paralya Lobby Noel",subtitle:"Jugou2",particle:"minecraft:glow"}}
 

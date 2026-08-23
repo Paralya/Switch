@@ -23,11 +23,11 @@ xp set @s 0 levels
 xp set @s 0 points
 
 # Kill any cinematic entity that was linked to the player
-function switch:cinematic/kill_for_player
+function #cinemalya:v1/stop {with:{restore:false}}
 
 # Teleport to the lobby (cinematic if close, otherwise tp)
 scoreboard players set #is_close switch.data 0
 execute at @s if dimension minecraft:overworld positioned 0 69.69 0 store success score #is_close switch.data if entity @s[distance=..200]
-execute if score #is_close switch.data matches 1 run function switch:cinematic/launch {x:0.5,y:69.69,z:0.5,time:20,with:{pitch:0,yaw:0,particle:1,interpolation:2}}
+execute if score #is_close switch.data matches 1 run function #cinemalya:v1/launch {with:{x:0.5,y:69.69,z:0.5,duration:20,pitch:0,yaw:0,particle:"minecraft:glow",smoothing:2}}
 execute if score #is_close switch.data matches 0 in minecraft:overworld run tp @s 0 69.69 0 0 0
 

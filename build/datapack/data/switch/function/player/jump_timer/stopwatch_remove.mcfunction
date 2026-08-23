@@ -1,6 +1,8 @@
 
 #> switch:player/jump_timer/stopwatch_remove
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:player/jump_timer/cancel with storage switch:temp jt_sw
 #
 # @args		pid (unknown)

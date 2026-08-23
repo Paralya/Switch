@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 37392.24 175.88 37147.97 rotated 74.93 35.09 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Trackmania Stadium 2",credits:"Stoupy",with:{particle:1}}
+execute in switch:game positioned 37392.24 175.88 37147.97 rotated 74.93 35.09 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Trackmania Stadium 2",subtitle:"Stoupy",particle:"minecraft:glow"}}
 

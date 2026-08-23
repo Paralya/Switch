@@ -450,7 +450,7 @@ def write_map_intro_spread(namespace: str, view: tuple[float, float, float, floa
 	# this from a server context (schedule/tick) would drop every player in the overworld copy.
 	ns: str = Mem.ctx.project_id
 	write_function(f"{ns}:maps/survival/{namespace}/intro_spread", f"""
-execute in {ns}:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function {ns}:cinematic/intro_spread/start {{selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"{name}",credits:"{credits}",with:{{particle:1}}}}
+execute in {ns}:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function #cinemalya:v1/intro {{with:{{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"{name}",subtitle:"{credits}",particle:"minecraft:glow"}}}}
 """)
 
 

@@ -17,7 +17,7 @@ function switch:utils/reset_players
 # End the cinematics of the players entering the game, then wipe the entities they leave behind.
 # The mass kill spares global.ignore.kill so it never strips a lobby player of the entity they are
 # spectating: that would leave them stuck in spectator with the counter still claiming it is alive.
-execute as @a[tag=!detached] run function switch:cinematic/kill_for_player
+execute as @a[tag=!detached] run function #cinemalya:v1/stop {with:{restore:false}}
 function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
 function switch:engine/signals/start
 

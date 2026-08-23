@@ -1,9 +1,11 @@
 
 #> switch:player/jump_timer/cancel
 #
-# @within	switch:cinematic/common_launch
-#			switch:player/practice/teleport
+# @executed	as @a[sort=random] & at @s
+#
+# @within	switch:player/practice/teleport
 #			switch:player/jump_timer/tick
+#			switch:player/jump_timer/on_cinematic
 #			switch:player/jump_timer/finish
 #			switch:player/trigger/detach/basic_stuff
 #

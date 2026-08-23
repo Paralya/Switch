@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 124126.4 122.2 124041.21 rotated -129.68 8.56 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Volcany-chan",credits:"Remelta, Fhara, Oraclette",with:{particle:1}}
+execute in switch:game positioned 124126.4 122.2 124041.21 rotated -129.68 8.56 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Volcany-chan",subtitle:"Remelta, Fhara, Oraclette",particle:"minecraft:glow"}}
 

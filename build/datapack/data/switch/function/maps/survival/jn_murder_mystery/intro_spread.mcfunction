@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 134120.91 127.91 134089.47 rotated 110.58 21.76 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Murder Mystery",credits:"JustNoob",with:{particle:1}}
+execute in switch:game positioned 134120.91 127.91 134089.47 rotated 110.58 21.76 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Murder Mystery",subtitle:"JustNoob",particle:"minecraft:glow"}}
 

@@ -26,7 +26,7 @@ execute in minecraft:overworld run function switch:utils/reset_gamerules
 execute in switch:game run function switch:utils/reset_gamerules
 
 function switch:engine/signals/stop
-execute as @a[tag=!detached] run function switch:cinematic/kill_for_player
+execute as @a[tag=!detached] run function #cinemalya:v1/stop {with:{restore:false}}
 function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
 
 # Update the stats of the minigame

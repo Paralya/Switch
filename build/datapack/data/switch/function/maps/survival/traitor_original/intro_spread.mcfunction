@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 1566.0 122.2 1533.79 rotated -56.61 8.9 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Traitor Original",credits:"Stoupy, Luxio, Jugou2, etc. (Paralya)",with:{particle:1}}
+execute in switch:game positioned 1566.0 122.2 1533.79 rotated -56.61 8.9 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Traitor Original",subtitle:"Stoupy, Luxio, Jugou2, etc. (Paralya)",particle:"minecraft:glow"}}
 

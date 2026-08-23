@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 14039.28 140.79 13962.74 rotated -1754.77 55.3 run function switch:cinematic/intro_spread/start {selector:"@a[tag=!detached]",display_time:130,cinematic_time:50,map_name:"Rush the Point 1",credits:"Jugou2",with:{particle:1}}
+execute in switch:game positioned 14039.28 140.79 13962.74 rotated -1754.77 55.3 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Rush the Point 1",subtitle:"Jugou2",particle:"minecraft:glow"}}
 

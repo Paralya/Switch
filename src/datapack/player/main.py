@@ -301,20 +301,20 @@ function {ns}:player/layout/editor/tick
 # Teleport to respawn point
 scoreboard players add @s {ns}.lobby_respawn 0
 execute if entity @s[tag=!{ns}.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add {ns}.lobby_respawn
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=0}}] run function {ns}:cinematic/launch {{x:0.5,y:69.69,z:0.5,time:20,with:{{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=1}}] run function {ns}:cinematic/launch {{x:0.5,y:70.1,z:-9.5,time:20,with:{{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=2}}] run function {ns}:cinematic/launch {{x:0.5,y:70.1,z:-9.5,time:20,with:{{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=3}}] run function {ns}:cinematic/launch {{x:0.5,y:75.51,z:-23.5,time:20,with:{{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=4}}] run function {ns}:cinematic/launch {{x:9.5,y:74.51,z:23.5,time:20,with:{{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=5}}] run function {ns}:cinematic/launch {{x:-14.5,y:73.51,z:9.5,time:20,with:{{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=6}}] run function {ns}:cinematic/launch {{x:-34.5,y:73.1,z:-8.5,time:20,with:{{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=7}}] run function {ns}:cinematic/launch {{x:-8.5,y:73.1,z:35.5,time:20,with:{{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=8}}] run function {ns}:cinematic/launch {{x:9.5,y:73.1,z:47.5,time:20,with:{{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=9}}] run function {ns}:cinematic/launch {{x:-46.5,y:76.1,z:10.5,time:20,with:{{pitch:0,yaw:0,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=10}}] run function {ns}:cinematic/launch {{x:-84.5,y:70.1,z:0.5,time:20,with:{{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=11}}] run function {ns}:cinematic/launch {{x:51.5,y:74.6,z:-8.5,time:20,with:{{pitch:0,yaw:180,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=12}}] run function {ns}:cinematic/launch {{x:9.5,y:74.6,z:111.5,time:20,with:{{pitch:0,yaw:-90,go_side:1,particle:1,interpolation:2}}}}
-execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=13}}] run function {ns}:cinematic/launch {{x:-11.5,y:74.1,z:91.5,time:20,with:{{pitch:0,yaw:90,go_side:1,particle:1,interpolation:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=0}}] run function #cinemalya:v1/launch {{with:{{x:0.5,y:69.69,z:0.5,duration:20,pitch:0,yaw:0,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=1}}] run function #cinemalya:v1/launch {{with:{{x:0.5,y:70.1,z:-9.5,duration:20,pitch:0,yaw:90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=2}}] run function #cinemalya:v1/launch {{with:{{x:0.5,y:70.1,z:-9.5,duration:20,pitch:0,yaw:-90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=3}}] run function #cinemalya:v1/launch {{with:{{x:0.5,y:75.51,z:-23.5,duration:20,pitch:0,yaw:180,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=4}}] run function #cinemalya:v1/launch {{with:{{x:9.5,y:74.51,z:23.5,duration:20,pitch:0,yaw:-90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=5}}] run function #cinemalya:v1/launch {{with:{{x:-14.5,y:73.51,z:9.5,duration:20,pitch:0,yaw:0,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=6}}] run function #cinemalya:v1/launch {{with:{{x:-34.5,y:73.1,z:-8.5,duration:20,pitch:0,yaw:180,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=7}}] run function #cinemalya:v1/launch {{with:{{x:-8.5,y:73.1,z:35.5,duration:20,pitch:0,yaw:90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=8}}] run function #cinemalya:v1/launch {{with:{{x:9.5,y:73.1,z:47.5,duration:20,pitch:0,yaw:-90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=9}}] run function #cinemalya:v1/launch {{with:{{x:-46.5,y:76.1,z:10.5,duration:20,pitch:0,yaw:0,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=10}}] run function #cinemalya:v1/launch {{with:{{x:-84.5,y:70.1,z:0.5,duration:20,pitch:0,yaw:90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=11}}] run function #cinemalya:v1/launch {{with:{{x:51.5,y:74.6,z:-8.5,duration:20,pitch:0,yaw:180,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=12}}] run function #cinemalya:v1/launch {{with:{{x:9.5,y:74.6,z:111.5,duration:20,pitch:0,yaw:-90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
+execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=13}}] run function #cinemalya:v1/launch {{with:{{x:-11.5,y:74.1,z:91.5,duration:20,pitch:0,yaw:90,arc_side:1,particle:"minecraft:glow",smoothing:2}}}}
 tag @s remove {ns}.lobby_respawn
 
 # If lost at least one item, setup inventory (never while the layout editor owns the inventory)
@@ -492,12 +492,12 @@ xp set @s 0 levels
 xp set @s 0 points
 
 # Kill any cinematic entity that was linked to the player
-function {ns}:cinematic/kill_for_player
+function #cinemalya:v1/stop {{with:{{restore:false}}}}
 
 # Teleport to the lobby (cinematic if close, otherwise tp)
 scoreboard players set #is_close {ns}.data 0
 execute at @s if dimension minecraft:overworld positioned 0 69.69 0 store success score #is_close {ns}.data if entity @s[distance=..200]
-execute if score #is_close {ns}.data matches 1 run function {ns}:cinematic/launch {{x:0.5,y:69.69,z:0.5,time:20,with:{{pitch:0,yaw:0,particle:1,interpolation:2}}}}
+execute if score #is_close {ns}.data matches 1 run function #cinemalya:v1/launch {{with:{{x:0.5,y:69.69,z:0.5,duration:20,pitch:0,yaw:0,particle:"minecraft:glow",smoothing:2}}}}
 execute if score #is_close {ns}.data matches 0 in minecraft:overworld run tp @s 0 69.69 0 0 0
 """)
 

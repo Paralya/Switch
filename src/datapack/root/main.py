@@ -178,7 +178,6 @@ team modify {ns}.tutorial color gold
 gamerule minecraft:max_command_sequence_length 2147483647
 forceload add 0 0
 execute in {ns}:game run forceload add 0 0
-execute store result score #cinematic_entities {ns}.data if entity @e[tag={ns}.cinematic]
 
 
 ## Storage
@@ -280,9 +279,6 @@ execute unless score #engine_state {ns}.data matches 0 unless entity @a[tag=!det
 
 # Cut Clean support
 execute if score #cut_clean {ns}.data matches 1 as @e[type=item,tag=!{ns}.cut_clean,nbt={{Age:2s}}] run function {ns}:cut_clean
-
-# Cinematic entities
-execute if score #cinematic_entities {ns}.data matches 1.. as @e[type=item_display,tag={ns}.cinematic] at @s run function {ns}:cinematic/entity_tick_at_self
 
 # Kill players out of the map
 execute if score #engine_state {ns}.data matches 3 as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ #{ns}:out_of_map run function {ns}:player/kill_out_of_map

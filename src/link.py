@@ -4,7 +4,6 @@ import stouputils as stp
 from stewbeet import Context, Mem, official_lib_used, write_load_file, write_tick_file
 
 from .datapack.advancements.main import main as automatic_advancements
-from .datapack.cinematic.main import main as cinematic
 from .datapack.devtools.main import main as devtools
 from .datapack.engine.main import main as engine
 from .datapack.lobby.main import main as lobby
@@ -47,7 +46,6 @@ def beet_default(ctx: Context) -> None:
 	maps()
 	music()
 	lobby()
-	cinematic()
 	stats()
 	engine()
 	player()
@@ -63,4 +61,8 @@ def beet_default(ctx: Context) -> None:
 
 	# Force enable dump module from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
 	official_lib_used("bs.dump")
+
+	# The spline module is used by the embedded Cinemalya library, so nothing in this project's own
+	# functions mentions it and the automatic detection cannot see it
+	official_lib_used("bs.spline")
 

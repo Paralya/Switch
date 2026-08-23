@@ -135,7 +135,7 @@ function {ns}:utils/reset_players
 # End the cinematics of the players entering the game, then wipe the entities they leave behind.
 # The mass kill spares global.ignore.kill so it never strips a lobby player of the entity they are
 # spectating: that would leave them stuck in spectator with the counter still claiming it is alive.
-execute as @a[tag=!detached] run function {ns}:cinematic/kill_for_player
+execute as @a[tag=!detached] run function #cinemalya:v1/stop {{with:{{restore:false}}}}
 function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
 function {ns}:engine/signals/start
 
@@ -343,7 +343,7 @@ scoreboard players reset #set_spec {ns}.data
 scoreboard players reset #do_spreadplayers {ns}.data
 scoreboard players reset #dont_regenerate {ns}.data
 function {ns}:utils/reset_players
-execute as @a[tag=!detached] run function {ns}:cinematic/kill_for_player
+execute as @a[tag=!detached] run function #cinemalya:v1/stop {{with:{{restore:false}}}}
 function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
 execute in {ns}:game run function {ns}:engine/signals/start
 
@@ -471,7 +471,7 @@ $execute in {ns}:game run function {ns}:modes/$(id)/calls/tick
 # while every player is still riding the cinematic in spectator (game ends on start). Gating on the
 # live entities (capped to the intro window in GAME ticks) releases the very second players land,
 # and never delays the maps that have no intro cinematic (kart_racer_relai, build_battle)
-execute if score #game_ticks {ns}.data matches ..199 if score #cinematic_entities {ns}.data matches 1.. run return 1
+execute if score #game_ticks {ns}.data matches ..199 if score #entities cinemalya.data matches 1.. run return 1
 
 # Launch second signal
 data modify storage {ns}:main input set value {{id:""}}
@@ -573,7 +573,7 @@ execute in minecraft:overworld run function {ns}:utils/reset_gamerules
 execute in {ns}:game run function {ns}:utils/reset_gamerules
 
 function {ns}:engine/signals/stop
-execute as @a[tag=!detached] run function {ns}:cinematic/kill_for_player
+execute as @a[tag=!detached] run function #cinemalya:v1/stop {{with:{{restore:false}}}}
 function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
 
 # Update the stats of the minigame
