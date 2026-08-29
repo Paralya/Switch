@@ -5,6 +5,7 @@
 		{"id": "#realistic_explosion:load","required": false},
 		{"id": "#common_signals:load","required": false},
 		{"id": "#furnace_nbt_recipes:load","required": false},
+		{"id": "#cinemalya:load","required": false},
 		{"id": "#bs.load:load","required": false},
 		{"id": "#sheepwars:load","required": false},
 		{"id": "#golf_ball:load","required": false},
