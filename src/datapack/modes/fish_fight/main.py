@@ -583,6 +583,8 @@ team modify {ns}.temp.red color red
 team modify {ns}.temp.blue color blue
 team modify {ns}.temp.red friendlyFire false
 team modify {ns}.temp.blue friendlyFire false
+team modify {ns}.temp.red collisionRule never
+team modify {ns}.temp.blue collisionRule never
 
 scoreboard players set #next_role {ns}.data 0
 """)
@@ -603,6 +605,10 @@ team modify {ns}.temp.red friendlyFire false
 team modify {ns}.temp.blue friendlyFire false
 team modify {ns}.temp.yellow friendlyFire false
 team modify {ns}.temp.green friendlyFire false
+team modify {ns}.temp.red collisionRule never
+team modify {ns}.temp.blue collisionRule never
+team modify {ns}.temp.yellow collisionRule never
+team modify {ns}.temp.green collisionRule never
 
 scoreboard players set #next_role {ns}.data 0
 """)

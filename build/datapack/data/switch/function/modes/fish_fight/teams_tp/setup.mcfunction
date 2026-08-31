@@ -12,6 +12,8 @@ team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.red friendlyFire false
 team modify switch.temp.blue friendlyFire false
+team modify switch.temp.red collisionRule never
+team modify switch.temp.blue collisionRule never
 
 scoreboard players set #next_role switch.data 0
 
