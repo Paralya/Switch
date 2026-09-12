@@ -47,6 +47,7 @@ function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/cla
 execute if score #process_end {ns}.data matches 1 run scoreboard players set #max {ns}.data 0
 execute if score #process_end {ns}.data matches 1 run scoreboard players operation #max {ns}.data > @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] {ns}.temp.kill
 execute if score #process_end {ns}.data matches 1 unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] if score #max {ns}.data = @s {ns}.temp.kill run advancement grant @s only {ns}:visible/23
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
@@ -91,6 +92,7 @@ scoreboard players set #remaining_time {ns}.data 910
 scoreboard players set #cigogne_seconds {ns}.data -1
 scoreboard players set #cigogne_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
+function {ns}:modes/_common/recap/start/kills
 scoreboard objectives add {ns}.temp.kill playerKillCount
 scoreboard objectives add {ns}.temp.playerKill playerKillCount
 scoreboard objectives add {ns}.temp.sneak dummy
@@ -101,6 +103,7 @@ execute as @a[tag=!detached] run function {path}/give_items
 
 	# /stop
 	write_function(f"{path}/stop", f"""
+function {ns}:modes/_common/recap/stop
 scoreboard objectives remove {ns}.temp.kill
 scoreboard objectives remove {ns}.temp.playerKill
 scoreboard objectives remove {ns}.temp.sneak

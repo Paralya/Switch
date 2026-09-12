@@ -4,6 +4,7 @@
 # @within	switch:modes/cigogne/calls/stop
 #
 
+function switch:modes/_common/recap/stop
 scoreboard objectives remove switch.temp.kill
 scoreboard objectives remove switch.temp.playerKill
 scoreboard objectives remove switch.temp.sneak

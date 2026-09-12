@@ -1,9 +1,8 @@
 
 #> switch:modes/_common/recap/start/kills
 #
-# @executed	positioned 3000 128 3000
-#
-# @within	switch:modes/glassrunner/start
+# @within	switch:modes/cigogne/start
+#			switch:modes/glassrunner/start
 #
 
 scoreboard objectives add switch.temp.points dummy

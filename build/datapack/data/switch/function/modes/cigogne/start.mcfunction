@@ -27,6 +27,7 @@ scoreboard players set #remaining_time switch.data 910
 scoreboard players set #cigogne_seconds switch.data -1
 scoreboard players set #cigogne_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+function switch:modes/_common/recap/start/kills
 scoreboard objectives add switch.temp.kill playerKillCount
 scoreboard objectives add switch.temp.playerKill playerKillCount
 scoreboard objectives add switch.temp.sneak dummy

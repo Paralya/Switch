@@ -2,6 +2,7 @@
 #> switch:modes/_common/recap/show
 #
 # @within	switch:modes/capture_the_flag/process_end
+#			switch:modes/cigogne/process_end
 #			switch:modes/glassrunner/end/process_end
 #			switch:modes/rush_the_flag/process_end
 #			switch:modes/rush_the_point/process_end
