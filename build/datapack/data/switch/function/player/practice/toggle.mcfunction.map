@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "toggle.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAkEkC;;;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

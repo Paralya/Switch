@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "hurt_player.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AAmPoD;;;;;;;;AACpD;AACA;AACA"
+}

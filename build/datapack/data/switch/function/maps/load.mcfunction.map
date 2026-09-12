@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "load.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": "AAgDgC;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

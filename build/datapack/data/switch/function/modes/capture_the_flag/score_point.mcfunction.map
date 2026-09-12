@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "score_point.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AA+LuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

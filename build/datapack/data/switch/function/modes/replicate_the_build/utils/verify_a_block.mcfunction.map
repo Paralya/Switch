@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "verify_a_block.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AAufgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

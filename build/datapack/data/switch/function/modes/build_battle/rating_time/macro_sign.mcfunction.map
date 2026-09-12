@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_sign.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/main.py"
+	],
+	"names": [],
+	"mappings": "AAsxBkD;;;;;;;;;;;AAClD;AACA"
+}

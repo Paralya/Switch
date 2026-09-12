@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_double_damage.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAwV+E;;;;;;;;AAC/E;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "reset.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AAoe4C;;;;;;;;AAC5C;AACA;AACA;AACA"
+}

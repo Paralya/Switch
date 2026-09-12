@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "main.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AA0iB6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/gay_shooter/main.py"
+	],
+	"names": [],
+	"mappings": "AA2KgC;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA"
+}

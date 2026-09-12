@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "append_remaining.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AAyUiE;;;;;;AACjE;AACA;AACA;AACA;AACA"
+}

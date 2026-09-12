@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teams4.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AAinB2C;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

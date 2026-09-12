@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/castagne/main.py"
+	],
+	"names": [],
+	"mappings": "AA8DkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

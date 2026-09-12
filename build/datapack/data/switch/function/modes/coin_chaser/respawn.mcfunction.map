@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "respawn.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/coin_chaser/main.py"
+	],
+	"names": [],
+	"mappings": "AA4DmC;;;;;;AACnC;AACA;AACA"
+}

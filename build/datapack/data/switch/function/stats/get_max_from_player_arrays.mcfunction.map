@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_max_from_player_arrays.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AAsPsD;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

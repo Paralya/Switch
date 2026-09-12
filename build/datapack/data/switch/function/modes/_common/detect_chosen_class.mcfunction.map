@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "detect_chosen_class.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AA2G+C;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

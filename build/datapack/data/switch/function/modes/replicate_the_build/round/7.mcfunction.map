@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "7.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AAiOmC;;;;;;AACnC;AACA;AACA;AACA;AACA"
+}

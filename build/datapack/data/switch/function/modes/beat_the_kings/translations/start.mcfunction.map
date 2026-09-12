@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "start.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/beat_the_kings/translations.py"
+	],
+	"names": [],
+	"mappings": "AAYiC;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

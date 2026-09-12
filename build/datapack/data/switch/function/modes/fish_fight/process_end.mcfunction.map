@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AA2NuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

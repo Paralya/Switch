@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shop_snowball.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuGyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

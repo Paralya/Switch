@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AA2K0C;;;;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

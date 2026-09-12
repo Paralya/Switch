@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "items_check.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AAiJuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

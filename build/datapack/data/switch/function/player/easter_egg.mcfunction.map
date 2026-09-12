@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "easter_egg.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AA8BsC;;;;;;;;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

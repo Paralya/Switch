@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "roles_choose_solitaire.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AA+KkD;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+}

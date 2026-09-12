@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "both.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AAofsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "hurt_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pvpswap/main.py"
+	],
+	"names": [],
+	"mappings": "AA6CsC;;;;;;;;;AACtC;AACA;AACA;AACA"
+}

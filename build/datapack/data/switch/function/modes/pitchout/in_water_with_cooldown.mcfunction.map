@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "in_water_with_cooldown.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AA+EkD;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

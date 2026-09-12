@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/one_shot/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuBkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

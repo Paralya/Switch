@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_coupdetat/translations.py"
+	],
+	"names": [],
+	"mappings": "AAYuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

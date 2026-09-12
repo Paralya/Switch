@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "damage_cow.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/main.py"
+	],
+	"names": [],
+	"mappings": "AAyM2C;;;;;;AAC3C;AACA"
+}

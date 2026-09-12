@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death_cure.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/translations.py"
+	],
+	"names": [],
+	"mappings": "AAYsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA"
+}

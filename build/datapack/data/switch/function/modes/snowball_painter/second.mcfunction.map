@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/snowball_painter/main.py"
+	],
+	"names": [],
+	"mappings": "AAmKkC;;;;;;AAClC;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shop_turtle.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/translations.py"
+	],
+	"names": [],
+	"mappings": "AAkHuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

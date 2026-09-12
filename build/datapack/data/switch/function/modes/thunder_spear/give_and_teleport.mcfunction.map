@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_and_teleport.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/thunder_spear/main.py"
+	],
+	"names": [],
+	"mappings": "AAqC6C;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "out_of_map.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAqzBsC;;;;;;;;AACtC;AACA;AACA"
+}

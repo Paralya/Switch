@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_tellraw_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/minigolf/main.py"
+	],
+	"names": [],
+	"mappings": "AAkHgD;;;;;;;;;;;;;AAChD;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "detect_color.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AAufwD;;;;;;;;;;;;AACxD;AACA;AACA;AACA"
+}

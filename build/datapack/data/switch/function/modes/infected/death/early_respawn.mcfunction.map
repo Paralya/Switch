@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "early_respawn.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAwa+C;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

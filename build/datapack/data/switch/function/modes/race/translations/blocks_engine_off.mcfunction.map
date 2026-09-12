@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "blocks_engine_off.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuB6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

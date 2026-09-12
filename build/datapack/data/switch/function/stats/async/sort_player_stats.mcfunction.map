@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "sort_player_stats.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AAwImD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA"
+}

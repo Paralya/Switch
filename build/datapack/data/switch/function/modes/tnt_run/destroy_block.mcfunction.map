@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "destroy_block.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/tnt_run/main.py"
+	],
+	"names": [],
+	"mappings": "AA0ByC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

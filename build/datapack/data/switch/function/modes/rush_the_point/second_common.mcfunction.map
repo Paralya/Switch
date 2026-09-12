@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second_common.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/main.py"
+	],
+	"names": [],
+	"mappings": "AAwVyC;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

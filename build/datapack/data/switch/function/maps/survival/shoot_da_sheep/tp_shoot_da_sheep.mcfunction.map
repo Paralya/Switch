@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tp_shoot_da_sheep.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": "AA4RqE;;;;;;;;AACrE;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

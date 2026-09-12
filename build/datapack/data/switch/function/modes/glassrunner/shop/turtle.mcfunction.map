@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "turtle.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AAitBuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

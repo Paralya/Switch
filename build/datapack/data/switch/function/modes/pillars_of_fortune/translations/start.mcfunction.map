@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "start.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pillars_of_fortune/translations.py"
+	],
+	"names": [],
+	"mappings": "AAqCiC;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

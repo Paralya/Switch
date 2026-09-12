@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "flag_pickup.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_flag/translations.py"
+	],
+	"names": [],
+	"mappings": "AAkDuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

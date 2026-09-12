@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "release_holders.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AA4agD;;;;;;;;;AAChD;AACA;AACA;AACA;AACA"
+}

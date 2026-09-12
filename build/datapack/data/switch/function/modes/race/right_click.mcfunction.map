@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "right_click.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AA82BuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

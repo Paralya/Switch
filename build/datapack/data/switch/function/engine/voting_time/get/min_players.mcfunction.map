@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "min_players.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAypBuD;;;;;;AACvD;AACA;AACA;AACA;AACA"
+}

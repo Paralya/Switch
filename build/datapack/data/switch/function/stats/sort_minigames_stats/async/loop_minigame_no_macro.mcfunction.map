@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "loop_minigame_no_macro.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AAkW6E;;;;;;;AAC7E;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "player_1.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pillars_of_fortune/main.py"
+	],
+	"names": [],
+	"mappings": "AAuKyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

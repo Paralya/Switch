@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "regenerate_doors_loop.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": "AAiHiD;;;;;;;;;;;;AACjD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

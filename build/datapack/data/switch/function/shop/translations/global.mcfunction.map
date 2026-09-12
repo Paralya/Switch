@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "global.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/shop/utils.py"
+	],
+	"names": [],
+	"mappings": "AAmVuB;;;;;;;;AACvB;AACA;AACA;AAKwB;AAAA;AAAA;AAAA;AAAA;AARD;AACvB;AACA;AACA;AAKwB;AAAA;AAAA;AAAA;AAAA;AAGF"
+}

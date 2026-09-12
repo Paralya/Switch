@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kill_out_of_map.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AA8I2C;;;;;;;;AAC3C;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "from_kart.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAyKyD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

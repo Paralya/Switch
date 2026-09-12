@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teams_tp_only_one_winner.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/translations.py"
+	],
+	"names": [],
+	"mappings": "AAmHoD;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA"
+}

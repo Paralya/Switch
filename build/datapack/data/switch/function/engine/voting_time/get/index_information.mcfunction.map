@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "index_information.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAwmB6D;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

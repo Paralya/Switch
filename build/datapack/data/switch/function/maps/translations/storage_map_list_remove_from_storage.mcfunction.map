@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "storage_map_list_remove_from_storage.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/maps/translations.py"
+	],
+	"names": [],
+	"mappings": "AAYgE;;;;;;AAChE;AACA;AACA;AACA;AACA;AACA"
+}

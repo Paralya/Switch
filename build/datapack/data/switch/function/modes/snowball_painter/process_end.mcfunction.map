@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/snowball_painter/main.py"
+	],
+	"names": [],
+	"mappings": "AAoIuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

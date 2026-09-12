@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "border_reduction_setup.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spleef/translations.py"
+	],
+	"names": [],
+	"mappings": "AAckD;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+}

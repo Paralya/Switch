@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "last_survivor.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAwYqD;;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

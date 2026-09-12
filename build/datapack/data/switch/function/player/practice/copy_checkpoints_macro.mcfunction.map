@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "copy_checkpoints_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAkPkD;;;;;;;;;;AAClD;AACA"
+}

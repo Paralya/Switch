@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAobgD;;;;;;;;;;AAChD;AACA"
+}

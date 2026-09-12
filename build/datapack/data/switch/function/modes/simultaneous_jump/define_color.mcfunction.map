@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "define_color.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/simultaneous_jump/main.py"
+	],
+	"names": [],
+	"mappings": "AA0BwC;;;;;;;;AACxC;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "replace_shulker.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spleef/main.py"
+	],
+	"names": [],
+	"mappings": "AAkK2C;;;;;;;;AAC3C;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "update_sb.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AA6ayC;;;;;;;;;;;;;;AACzC;AACA;AACA;AACA"
+}

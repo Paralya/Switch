@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "launch_game_.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/translations.py"
+	],
+	"names": [],
+	"mappings": "AA8DwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA"
+}

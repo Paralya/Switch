@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "reset_gamerules.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AAyG2C;;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

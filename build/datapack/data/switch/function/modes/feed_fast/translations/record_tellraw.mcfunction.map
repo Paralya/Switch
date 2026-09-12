@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_tellraw.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/feed_fast/translations.py"
+	],
+	"names": [],
+	"mappings": "AAiB0C;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA"
+}

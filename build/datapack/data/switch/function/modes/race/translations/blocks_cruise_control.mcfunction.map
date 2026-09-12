@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "blocks_cruise_control.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAYiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

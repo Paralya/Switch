@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shop_arrow.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/translations.py"
+	],
+	"names": [],
+	"mappings": "AAsEsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

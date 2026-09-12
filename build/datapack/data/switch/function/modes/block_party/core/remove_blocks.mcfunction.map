@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_blocks.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/main.py"
+	],
+	"names": [],
+	"mappings": "AAsY8C;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

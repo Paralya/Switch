@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/cigogne/main.py"
+	],
+	"names": [],
+	"mappings": "AAsDkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

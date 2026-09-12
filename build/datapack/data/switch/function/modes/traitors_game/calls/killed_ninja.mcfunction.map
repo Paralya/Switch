@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "killed_ninja.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAyB8C;;;;;;;;AAC9C;AACA;AACA;AACA"
+}

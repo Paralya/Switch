@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "basic_actionbar.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAwBkD;;;;;;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

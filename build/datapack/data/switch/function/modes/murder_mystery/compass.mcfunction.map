@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "compass.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/main.py"
+	],
+	"names": [],
+	"mappings": "AAuCmC;;;;;;;;AACnC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

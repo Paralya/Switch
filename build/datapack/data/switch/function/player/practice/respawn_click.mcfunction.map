@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "respawn_click.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAuLyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA"
+}

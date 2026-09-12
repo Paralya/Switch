@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "no_cooldown.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/main.py"
+	],
+	"names": [],
+	"mappings": "AAyMgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

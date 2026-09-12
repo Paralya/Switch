@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_items.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/beat_the_kings/main.py"
+	],
+	"names": [],
+	"mappings": "AA4LsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA"
+}

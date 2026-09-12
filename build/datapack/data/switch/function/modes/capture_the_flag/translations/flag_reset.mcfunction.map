@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "flag_reset.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6CsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

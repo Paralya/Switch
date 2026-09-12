@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "zombie_transform.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAyiBkD;;;;;;;;AAClD;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_max.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AAq5BoD;;;;;;;;;;AACpD;AACA"
+}

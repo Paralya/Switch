@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "trigger_succes_main.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/translations.py"
+	],
+	"names": [],
+	"mappings": "AA2O+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA"
+}

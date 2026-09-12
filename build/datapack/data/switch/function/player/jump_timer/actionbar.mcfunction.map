@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "actionbar.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/jump_timer.py"
+	],
+	"names": [],
+	"mappings": "AAwJqC;;;;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_free_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAgJ4C;;;;;;;;;;AAC5C;AACA"
+}

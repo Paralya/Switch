@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "keep_combat_items.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAiXmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA"
+}

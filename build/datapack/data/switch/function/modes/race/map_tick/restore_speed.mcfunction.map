@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "restore_speed.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAgekD;;;;;;;;;;;;;AAClD;AACA;AACA;AACA"
+}

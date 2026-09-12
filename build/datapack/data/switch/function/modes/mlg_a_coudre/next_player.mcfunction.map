@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "next_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/mlg_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AAiFuC;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

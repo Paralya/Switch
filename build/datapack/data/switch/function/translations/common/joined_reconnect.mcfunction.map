@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined_reconnect.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AA4CmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA"
+}

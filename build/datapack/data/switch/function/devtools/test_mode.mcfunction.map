@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "test_mode.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/devtools/main.py"
+	],
+	"names": [],
+	"mappings": "AAiBqC;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "classic.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AA2JuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

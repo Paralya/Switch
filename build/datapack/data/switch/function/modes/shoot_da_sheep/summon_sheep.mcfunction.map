@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_sheep.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/shoot_da_sheep/main.py"
+	],
+	"names": [],
+	"mappings": "AA0IwC;;;;;;;;AACxC;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "adding_timer.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AAgdmD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

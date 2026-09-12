@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "done.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/de_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AAqCgC;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/simultaneous_jump/main.py"
+	],
+	"names": [],
+	"mappings": "AA+DuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

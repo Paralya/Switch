@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/protect_the_king/main.py"
+	],
+	"names": [],
+	"mappings": "AAyGuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA"
+}

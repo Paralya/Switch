@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "choose_pair.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/main.py"
+	],
+	"names": [],
+	"mappings": "AAiVkD;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

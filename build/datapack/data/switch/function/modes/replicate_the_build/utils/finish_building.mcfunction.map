@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "finish_building.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AAgdiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA"
+}

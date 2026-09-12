@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "got_power_up.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/translations.py"
+	],
+	"names": [],
+	"mappings": "AAgCwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

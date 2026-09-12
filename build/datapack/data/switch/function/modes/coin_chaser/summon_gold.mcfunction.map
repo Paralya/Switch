@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_gold.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/coin_chaser/main.py"
+	],
+	"names": [],
+	"mappings": "AAuHuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

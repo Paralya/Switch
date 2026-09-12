@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "information.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAsoBuD;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "select_teams.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AA6V8C;;;;;;;;AAC9C;AACA;AACA;AACA"
+}

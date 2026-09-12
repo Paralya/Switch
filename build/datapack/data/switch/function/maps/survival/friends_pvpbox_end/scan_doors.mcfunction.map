@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "scan_doors.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/generation/utils.py"
+	],
+	"names": [],
+	"mappings": "AA2WsB;;;;;;;AAAA;AAIC;AACvB;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AAQsB;AACtB;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAKA;AACA;AACA;AAKA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AAEsB;AACtB;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_kart.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/moutron/main.py"
+	],
+	"names": [],
+	"mappings": "AAqKuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

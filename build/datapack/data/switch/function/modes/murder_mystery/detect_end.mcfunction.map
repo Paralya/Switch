@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "detect_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/main.py"
+	],
+	"names": [],
+	"mappings": "AAwDsC;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

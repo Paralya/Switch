@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/cigogne/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuBgC;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

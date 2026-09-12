@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ninja_revenge.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAgC+C;;;;;;;;AAC/C;AACA;AACA"
+}

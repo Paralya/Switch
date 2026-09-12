@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "aim_and_launch.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAuUmD;;;;;;;;;AACnD;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "call_player_killed.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/sheepwars/main.py"
+	],
+	"names": [],
+	"mappings": "AAsB2D;AAC3D;AACA;AACA;;;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

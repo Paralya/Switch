@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "has_same_classement.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAkS0D;;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

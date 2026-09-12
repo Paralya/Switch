@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teleport_all.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/minigolf/main.py"
+	],
+	"names": [],
+	"mappings": "AAiLwC;;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

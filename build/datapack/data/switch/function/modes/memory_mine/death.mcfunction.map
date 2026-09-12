@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/memory_mine/main.py"
+	],
+	"names": [],
+	"mappings": "AAoBiC;;;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

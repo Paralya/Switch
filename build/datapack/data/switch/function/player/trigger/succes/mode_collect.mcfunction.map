@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "mode_collect.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AA4/BuD;;;;;;;;;AACvD;AACA;AACA;AACA"
+}

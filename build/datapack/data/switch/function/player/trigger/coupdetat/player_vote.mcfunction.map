@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "player_vote.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AAmdyD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

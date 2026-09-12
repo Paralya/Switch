@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AA2SkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

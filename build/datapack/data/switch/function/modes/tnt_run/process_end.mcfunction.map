@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/tnt_run/main.py"
+	],
+	"names": [],
+	"mappings": "AAkHuC;;;;;;AACvC;AACA"
+}

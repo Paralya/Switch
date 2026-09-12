@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "update_shops.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/shop/utils.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;AAmCC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

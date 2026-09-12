@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "red.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AA+d+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

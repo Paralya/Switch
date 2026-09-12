@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "is_on_ground.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/tnt_run/main.py"
+	],
+	"names": [],
+	"mappings": "AAiDwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

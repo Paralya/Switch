@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shop_elytra.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/translations.py"
+	],
+	"names": [],
+	"mappings": "AAiFuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

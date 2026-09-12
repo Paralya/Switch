@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "magic_wool_place.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/sheepwars/translations.py"
+	],
+	"names": [],
+	"mappings": "AA2B4C;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA"
+}

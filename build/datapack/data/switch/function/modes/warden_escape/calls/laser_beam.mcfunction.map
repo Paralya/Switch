@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "laser_beam.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/warden_escape/main.py"
+	],
+	"names": [],
+	"mappings": "AAmB4C;;;;;;;;AAC5C;AACA;AACA"
+}

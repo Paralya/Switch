@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "start.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/translations.py"
+	],
+	"names": [],
+	"mappings": "AAyOiC;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

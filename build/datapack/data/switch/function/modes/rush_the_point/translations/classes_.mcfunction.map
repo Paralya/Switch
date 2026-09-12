@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "classes_.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/translations.py"
+	],
+	"names": [],
+	"mappings": "AAgDoC;;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA"
+}

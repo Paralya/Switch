@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "pitch_creep_1.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitch_creep/main.py"
+	],
+	"names": [],
+	"mappings": "AAiI8C;;;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

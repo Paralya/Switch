@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/emit.py"
+	],
+	"names": [],
+	"mappings": "AA6EoD;;;;;;AACpD;AACA"
+}

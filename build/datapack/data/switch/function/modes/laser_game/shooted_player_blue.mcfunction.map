@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shooted_player_blue.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAqM+C;;;;;;;;AAC/C;AACA;AACA"
+}

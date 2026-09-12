@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "random.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/music/main.py"
+	],
+	"names": [],
+	"mappings": "AAuC0C;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

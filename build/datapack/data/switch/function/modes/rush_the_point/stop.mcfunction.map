@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/main.py"
+	],
+	"names": [],
+	"mappings": "AA+bgC;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

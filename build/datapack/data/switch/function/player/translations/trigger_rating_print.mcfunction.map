@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "trigger_rating_print.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/translations.py"
+	],
+	"names": [],
+	"mappings": "AA8KgD;;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

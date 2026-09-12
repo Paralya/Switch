@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "resolve.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAsEmC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AACnC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_spectre_id.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spectres_game/main.py"
+	],
+	"names": [],
+	"mappings": "AA6QqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

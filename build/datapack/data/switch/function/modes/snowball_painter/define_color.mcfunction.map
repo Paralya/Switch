@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "define_color.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/snowball_painter/main.py"
+	],
+	"names": [],
+	"mappings": "AAkHwC;;;;;;;;AACxC;AACA;AACA"
+}

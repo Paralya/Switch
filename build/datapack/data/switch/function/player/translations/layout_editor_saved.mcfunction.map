@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "layout_editor_saved.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AA4U6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA"
+}

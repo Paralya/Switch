@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "print_current_game.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AAoxB6D;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAC7D;AACA;AACA;AACA"
+}

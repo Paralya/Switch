@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "three_lives.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AA8Q8C;;;;;;;;;AAC9C;AACA;AACA;AACA;AACA"
+}

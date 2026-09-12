@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "explode_arrow.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/thunder_spear/main.py"
+	],
+	"names": [],
+	"mappings": "AAqByC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

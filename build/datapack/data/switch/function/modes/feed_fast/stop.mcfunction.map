@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/feed_fast/main.py"
+	],
+	"names": [],
+	"mappings": "AAqHgC;;;;;;AAChC;AACA;AACA"
+}

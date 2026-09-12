@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "practice_cant_place_here.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAqUoD;;;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "set_dynamic_time.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AAiL4C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAC5C;AACA;AACA;AACA;AACA"
+}

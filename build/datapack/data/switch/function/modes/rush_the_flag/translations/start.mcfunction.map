@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "start.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_flag/translations.py"
+	],
+	"names": [],
+	"mappings": "AAoGiC;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

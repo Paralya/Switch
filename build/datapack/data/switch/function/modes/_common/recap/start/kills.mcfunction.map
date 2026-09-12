@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kills.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/recap.py"
+	],
+	"names": [],
+	"mappings": "AA+GgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

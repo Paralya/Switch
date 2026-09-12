@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "auto_index.mcfunction",
+	"sourceRoot": "../../../../..",
+	"sources": [
+		"src/datapack/root/main.py"
+	],
+	"names": [],
+	"mappings": "AAyCoC;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

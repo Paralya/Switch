@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "force_close.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAwTuC;;;;;;;;;;AACvC;AACA;AACA;AACA"
+}

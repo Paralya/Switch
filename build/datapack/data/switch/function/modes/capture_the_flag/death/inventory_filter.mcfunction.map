@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "inventory_filter.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AA0akD;;;;;;AAClD;AACA;AACA;AACA"
+}

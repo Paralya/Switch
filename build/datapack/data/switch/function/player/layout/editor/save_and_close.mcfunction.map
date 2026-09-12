@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "save_and_close.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAsS0C;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "detect_end.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/gay_shooter/translations.py"
+	],
+	"names": [],
+	"mappings": "AAcsC;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

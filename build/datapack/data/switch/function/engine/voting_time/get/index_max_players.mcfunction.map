@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "index_max_players.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAknB6D;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA"
+}

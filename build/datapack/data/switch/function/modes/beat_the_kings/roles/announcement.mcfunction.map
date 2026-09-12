@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "announcement.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/beat_the_kings/main.py"
+	],
+	"names": [],
+	"mappings": "AAgR8C;;;;;;AAC9C;AACA;AACA"
+}

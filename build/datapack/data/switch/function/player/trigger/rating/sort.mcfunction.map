@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "sort.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AAgyB+C;;;;;;;;AAC/C;AACA;AACA;AACA"
+}

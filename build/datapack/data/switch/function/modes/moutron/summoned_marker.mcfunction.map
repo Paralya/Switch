@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summoned_marker.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/moutron/main.py"
+	],
+	"names": [],
+	"mappings": "AAmN2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA"
+}

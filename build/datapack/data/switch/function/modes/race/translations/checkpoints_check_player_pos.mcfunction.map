@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "checkpoints_check_player_pos.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AA8EwD;;;;;;;;AACxD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "start.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/castagne/translations.py"
+	],
+	"names": [],
+	"mappings": "AAYiC;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

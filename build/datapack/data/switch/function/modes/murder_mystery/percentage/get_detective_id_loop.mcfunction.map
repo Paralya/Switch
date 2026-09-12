@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_detective_id_loop.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/main.py"
+	],
+	"names": [],
+	"mappings": "AAiX4D;;;;;;;;;AAC5D;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/simultaneous_jump/main.py"
+	],
+	"names": [],
+	"mappings": "AA2EkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

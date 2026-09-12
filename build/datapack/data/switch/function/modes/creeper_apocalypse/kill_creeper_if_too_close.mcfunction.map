@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kill_creeper_if_too_close.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/creeper_apocalypse/main.py"
+	],
+	"names": [],
+	"mappings": "AAuDqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "checkpoints_forced_respawn.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAyFsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
+}

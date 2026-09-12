@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_start.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AA8b+C;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

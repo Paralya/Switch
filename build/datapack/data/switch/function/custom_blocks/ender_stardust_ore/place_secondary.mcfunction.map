@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "place_secondary.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/database/misc_items.py"
+	],
+	"names": [],
+	"mappings": "AA2BC;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

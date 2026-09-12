@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "revive_visible.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spectres_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAqFgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

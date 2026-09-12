@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "vote_for_collisions.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AA4L+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

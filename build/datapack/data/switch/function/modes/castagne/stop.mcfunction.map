@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/castagne/main.py"
+	],
+	"names": [],
+	"mappings": "AAmGgC;;;;;;AAChC;AACA;AACA;AACA"
+}

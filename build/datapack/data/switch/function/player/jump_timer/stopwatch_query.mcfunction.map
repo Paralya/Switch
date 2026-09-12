@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stopwatch_query.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/jump_timer.py"
+	],
+	"names": [],
+	"mappings": "AAkH2C;;;;;;;;;;AAC3C;AACA"
+}

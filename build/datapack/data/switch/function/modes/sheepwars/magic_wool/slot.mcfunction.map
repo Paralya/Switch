@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "slot.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/sheepwars/main.py"
+	],
+	"names": [],
+	"mappings": "AAyF2C;AAC3C;AACA;AACA;;;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

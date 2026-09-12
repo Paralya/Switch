@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "add_win_macro.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AA+DyC;;;;;;;;;;AACzC;AACA"
+}

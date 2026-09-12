@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_respawn.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/minigolf/main.py"
+	],
+	"names": [],
+	"mappings": "AAiDyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

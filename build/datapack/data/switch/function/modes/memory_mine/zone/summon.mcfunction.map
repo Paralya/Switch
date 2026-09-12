@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/memory_mine/main.py"
+	],
+	"names": [],
+	"mappings": "AAqKuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA"
+}

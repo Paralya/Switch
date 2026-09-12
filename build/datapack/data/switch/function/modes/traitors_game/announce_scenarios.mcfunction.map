@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "announce_scenarios.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAuC8C;;;;;;AAC9C;AACA;AACA"
+}

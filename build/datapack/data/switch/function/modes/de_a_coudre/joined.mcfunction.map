@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/de_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AAuDkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

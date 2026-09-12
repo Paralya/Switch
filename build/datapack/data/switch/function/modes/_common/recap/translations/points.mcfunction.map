@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "points.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/recap.py"
+	],
+	"names": [],
+	"mappings": "AAmLuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA"
+}

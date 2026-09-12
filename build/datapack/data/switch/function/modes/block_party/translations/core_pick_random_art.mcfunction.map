@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "core_pick_random_art.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/translations.py"
+	],
+	"names": [],
+	"mappings": "AA2HgD;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

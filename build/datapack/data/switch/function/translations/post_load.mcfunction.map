@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "post_load.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAyIqC;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA"
+}

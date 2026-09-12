@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "explosion.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AA2Z8C;;;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

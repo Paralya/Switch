@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/sheepwars/main.py"
+	],
+	"names": [],
+	"mappings": "AA8DkC;;;;;;AAClC;AACA"
+}

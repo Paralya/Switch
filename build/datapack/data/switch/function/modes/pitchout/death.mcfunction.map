@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AAkDiC;;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA"
+}

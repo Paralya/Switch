@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kill_kart.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/moutron/main.py"
+	],
+	"names": [],
+	"mappings": "AA8CqC;;;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

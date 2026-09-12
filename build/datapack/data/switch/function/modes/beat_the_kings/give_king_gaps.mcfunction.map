@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_king_gaps.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/beat_the_kings/main.py"
+	],
+	"names": [],
+	"mappings": "AAyN0C;;;;;;;;;;AAC1C;AACA"
+}

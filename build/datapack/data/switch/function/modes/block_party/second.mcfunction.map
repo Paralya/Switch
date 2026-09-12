@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/main.py"
+	],
+	"names": [],
+	"mappings": "AAmGkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

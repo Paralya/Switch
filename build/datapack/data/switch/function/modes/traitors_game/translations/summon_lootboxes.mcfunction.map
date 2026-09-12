@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_lootboxes.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AAsO4C;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

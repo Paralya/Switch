@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "entity_hurt_player.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/main.py"
+	],
+	"names": [],
+	"mappings": "AAoBoD;;;;;;;;AACpD;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "vote_for_change_map.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAmL+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA"
+}

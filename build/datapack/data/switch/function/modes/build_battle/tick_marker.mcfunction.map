@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick_marker.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/main.py"
+	],
+	"names": [],
+	"mappings": "AAkNuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

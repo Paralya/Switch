@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "inventory_drop.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AA8UgD;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

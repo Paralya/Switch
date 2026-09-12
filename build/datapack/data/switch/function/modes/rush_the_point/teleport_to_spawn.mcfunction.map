@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teleport_to_spawn.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/main.py"
+	],
+	"names": [],
+	"mappings": "AA2d6C;;;;;;;;;;;;AAC7C;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

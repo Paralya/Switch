@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/warden_escape/main.py"
+	],
+	"names": [],
+	"mappings": "AAsCkC;;;;;;AAClC;AACA;AACA"
+}

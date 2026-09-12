@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/panic_chase/translations.py"
+	],
+	"names": [],
+	"mappings": "AA2BkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

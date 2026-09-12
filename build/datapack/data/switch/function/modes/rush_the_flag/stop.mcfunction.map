@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AAmPgC;;;;;;AAChC;AACA;AACA;AACA"
+}

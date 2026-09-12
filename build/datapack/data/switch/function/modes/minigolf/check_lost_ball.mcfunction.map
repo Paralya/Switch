@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_lost_ball.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/minigolf/main.py"
+	],
+	"names": [],
+	"mappings": "AAoB2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

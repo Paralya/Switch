@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "gay_finished.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/gay_shooter/main.py"
+	],
+	"names": [],
+	"mappings": "AA0DwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

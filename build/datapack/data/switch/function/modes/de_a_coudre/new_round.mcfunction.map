@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "new_round.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/de_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AAmEqC;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

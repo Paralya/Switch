@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_power_up.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/main.py"
+	],
+	"names": [],
+	"mappings": "AA4I2C;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

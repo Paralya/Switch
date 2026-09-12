@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/layers_2_teams/main.py"
+	],
+	"names": [],
+	"mappings": "AA2FgC;;;;;;AAChC;AACA;AACA"
+}

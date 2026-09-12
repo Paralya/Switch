@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "main.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/beat_the_kings/main.py"
+	],
+	"names": [],
+	"mappings": "AA4PsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

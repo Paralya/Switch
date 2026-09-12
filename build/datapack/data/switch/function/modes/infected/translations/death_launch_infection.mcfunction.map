@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death_launch_infection.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/translations.py"
+	],
+	"names": [],
+	"mappings": "AAqBkD;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+}

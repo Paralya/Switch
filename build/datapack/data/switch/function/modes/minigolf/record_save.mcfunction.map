@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_save.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/minigolf/main.py"
+	],
+	"names": [],
+	"mappings": "AAsFuC;;;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

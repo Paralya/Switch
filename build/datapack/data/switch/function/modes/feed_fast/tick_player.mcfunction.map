@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/feed_fast/main.py"
+	],
+	"names": [],
+	"mappings": "AAoJuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

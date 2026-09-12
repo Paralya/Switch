@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "reset_attributes.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AA2D4C;;;;;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

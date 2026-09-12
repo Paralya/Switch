@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_new.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/translations.py"
+	],
+	"names": [],
+	"mappings": "AAqCsC;;;;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

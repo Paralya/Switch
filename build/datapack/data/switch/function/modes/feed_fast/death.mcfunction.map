@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/feed_fast/main.py"
+	],
+	"names": [],
+	"mappings": "AAqBiC;;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA"
+}

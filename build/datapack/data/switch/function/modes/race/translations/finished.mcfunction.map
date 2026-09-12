@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "finished.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6GoC;;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

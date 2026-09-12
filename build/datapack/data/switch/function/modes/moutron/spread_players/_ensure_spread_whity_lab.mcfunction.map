@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_ensure_spread_whity_lab.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/moutron/main.py"
+	],
+	"names": [],
+	"mappings": "AAoQmE;;;;;;AACnE;AACA;AACA"
+}

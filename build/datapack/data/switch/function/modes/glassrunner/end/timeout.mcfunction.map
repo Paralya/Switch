@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "timeout.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AAujBuC;;;;;;;;AACvC;AACA;AACA;AACA"
+}

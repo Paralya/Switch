@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "no_pvp_start.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAuhBwC;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shoot_hit_point.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAiI2C;;;;;;;;AAC3C;AACA;AACA;AACA"
+}

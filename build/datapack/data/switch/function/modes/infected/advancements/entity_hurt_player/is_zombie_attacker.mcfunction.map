@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "is_zombie_attacker.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAmX8E;;;;;;;;AAC9E;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

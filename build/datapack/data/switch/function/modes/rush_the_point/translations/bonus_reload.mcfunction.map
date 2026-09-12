@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "bonus_reload.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuCwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA"
+}

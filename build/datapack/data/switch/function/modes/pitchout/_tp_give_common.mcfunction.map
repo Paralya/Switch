@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_tp_give_common.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AAqB2C;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

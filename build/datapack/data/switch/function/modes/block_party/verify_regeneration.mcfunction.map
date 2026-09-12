@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "verify_regeneration.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/main.py"
+	],
+	"names": [],
+	"mappings": "AA2K+C;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA"
+}

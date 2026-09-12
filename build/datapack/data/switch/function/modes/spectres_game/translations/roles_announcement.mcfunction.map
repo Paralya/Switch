@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "roles_announcement.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spectres_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6F8C;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

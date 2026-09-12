@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick_jump_times.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AA8LmD;;;;;;;;;;;;;;;;;;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

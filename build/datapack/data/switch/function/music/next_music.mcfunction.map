@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "next_music.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/music/main.py"
+	],
+	"names": [],
+	"mappings": "AAiFsC;;;;;;AACtC;AACA"
+}

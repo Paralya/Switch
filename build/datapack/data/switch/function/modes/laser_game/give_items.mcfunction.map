@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_items.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAoBsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

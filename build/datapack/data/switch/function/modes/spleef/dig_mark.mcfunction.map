@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "dig_mark.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spleef/main.py"
+	],
+	"names": [],
+	"mappings": "AA2FoC;;;;;;;;AACpC;AACA;AACA"
+}

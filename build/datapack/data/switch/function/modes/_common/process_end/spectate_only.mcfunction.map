@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "spectate_only.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAsZqD;;;;;;;AACrD;AACA;AACA;AACA;AACA"
+}

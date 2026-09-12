@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "reward.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/shoot_da_sheep/translations.py"
+	],
+	"names": [],
+	"mappings": "AAckC;;;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

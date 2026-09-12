@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second_regen.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAqHwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

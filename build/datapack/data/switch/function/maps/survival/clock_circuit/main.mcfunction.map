@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "main.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/generation/utils.py"
+	],
+	"names": [],
+	"mappings": "AAoHsB;;;;;;AAAA;AAMC;AAAA;AACA;AACA;AAAA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end_winner_points.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AA4G4D;;;;;;AAC5D;AACA;AACA;AACA;AACA;AACA"
+}

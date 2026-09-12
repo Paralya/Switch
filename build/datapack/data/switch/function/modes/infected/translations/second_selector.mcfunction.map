@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second_selector.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/translations.py"
+	],
+	"names": [],
+	"mappings": "AA2C2C;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

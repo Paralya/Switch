@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end_winner_adventure.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAsF+D;;;;;;AAC/D;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

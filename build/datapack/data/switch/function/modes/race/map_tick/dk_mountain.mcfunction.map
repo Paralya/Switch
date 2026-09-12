@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "dk_mountain.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAsiBgD;;;;;;AAChD;AACA;AACA"
+}

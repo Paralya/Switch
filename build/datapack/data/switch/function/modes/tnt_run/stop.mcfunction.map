@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/tnt_run/main.py"
+	],
+	"names": [],
+	"mappings": "AA+JgC;;;;;;AAChC;AACA;AACA;AACA"
+}

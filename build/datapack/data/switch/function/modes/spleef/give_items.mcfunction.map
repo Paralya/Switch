@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "give_items.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spleef/main.py",
+		"src/datapack/kits/model.py"
+	],
+	"names": [],
+	"mappings": "AA+GsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;ACoME;AAAA;AAAA;AAAA;AAAA"
+}

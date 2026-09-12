@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "utils_finish_building_player.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/translations.py"
+	],
+	"names": [],
+	"mappings": "AAqFwD;;;;;;;;;;AACxD;AACA;AACA;AACA;AACA;AACA"
+}

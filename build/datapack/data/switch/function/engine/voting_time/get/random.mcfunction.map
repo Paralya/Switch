@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "random.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAiqBkD;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+}

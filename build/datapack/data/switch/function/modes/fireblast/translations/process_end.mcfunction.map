@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6CuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

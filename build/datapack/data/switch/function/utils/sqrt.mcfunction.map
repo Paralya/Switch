@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "sqrt.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AAyLgC;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA"
+}

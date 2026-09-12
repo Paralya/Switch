@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "percentages_recalculations.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/advancements/utils.py"
+	],
+	"names": [],
+	"mappings": "AAgMiE;;;;;;AACjE;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_markers.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAqPwC;;;;;;;;;AACxC;AACA;AACA;AACA;AACA"
+}

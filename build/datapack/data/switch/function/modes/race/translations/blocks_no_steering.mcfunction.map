@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "blocks_no_steering.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6C8C;;;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_new_sheeps.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/sheepwars/main.py"
+	],
+	"names": [],
+	"mappings": "AAmIyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "end_blue.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuBoC;;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "safe_kill.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AAoKqC;;;;;;;;AACrC;AACA;AACA"
+}

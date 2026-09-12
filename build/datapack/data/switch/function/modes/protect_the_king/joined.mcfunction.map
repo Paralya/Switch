@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/protect_the_king/main.py"
+	],
+	"names": [],
+	"mappings": "AAoGkC;;;;;;AAClC;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end_solo_winner.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAgE0D;;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

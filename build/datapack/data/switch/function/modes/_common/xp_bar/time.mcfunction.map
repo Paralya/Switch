@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "time.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAqOuC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA"
+}

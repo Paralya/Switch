@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "actionbar_time_pvp19.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAauD;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

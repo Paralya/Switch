@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "give_items.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/kits/model.py",
+		"src/datapack/modes/protect_the_king/main.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AA+TE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;ACpOoC;AACtC;AACA;AACA;AACA;AACA;AACA"
+}

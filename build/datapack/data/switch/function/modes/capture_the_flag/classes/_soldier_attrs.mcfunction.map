@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_soldier_attrs.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AAwZkD;;;;;;;;;AAClD;AACA;AACA;AACA;AACA"
+}

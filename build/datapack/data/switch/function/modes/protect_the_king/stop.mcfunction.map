@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/protect_the_king/main.py"
+	],
+	"names": [],
+	"mappings": "AA8MgC;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

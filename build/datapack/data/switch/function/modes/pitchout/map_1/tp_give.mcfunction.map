@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tp_give.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AAmSyC;;;;;;;AACzC;AACA;AACA"
+}

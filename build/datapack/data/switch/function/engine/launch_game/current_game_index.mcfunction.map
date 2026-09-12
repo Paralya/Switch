@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "current_game_index.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AA2T0D;;;;;;;;AAC1D;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "killed_player_confirm.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/main.py"
+	],
+	"names": [],
+	"mappings": "AAqF8D;;;;;;;;AAC9D;AACA;AACA;AACA;AACA;AACA;AACA"
+}

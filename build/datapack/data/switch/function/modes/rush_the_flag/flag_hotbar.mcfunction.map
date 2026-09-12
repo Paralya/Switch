@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "flag_hotbar.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AA6EuC;;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

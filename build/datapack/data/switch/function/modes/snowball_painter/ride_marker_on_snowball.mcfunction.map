@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ride_marker_on_snowball.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/snowball_painter/main.py"
+	],
+	"names": [],
+	"mappings": "AAmJmD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

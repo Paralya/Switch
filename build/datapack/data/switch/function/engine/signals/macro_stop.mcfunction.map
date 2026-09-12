@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAwc8C;;;;;;;;AAC9C;AACA"
+}

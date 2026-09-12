@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ball_tick.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/bombardement/main.py"
+	],
+	"names": [],
+	"mappings": "AAsHqC;;;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

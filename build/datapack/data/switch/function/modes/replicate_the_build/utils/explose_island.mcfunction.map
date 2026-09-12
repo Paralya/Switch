@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "explose_island.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AAqcgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

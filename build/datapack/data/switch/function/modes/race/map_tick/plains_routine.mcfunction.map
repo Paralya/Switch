@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "plains_routine.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAgpBmD;;;;;;AACnD;AACA;AACA;AACA"
+}

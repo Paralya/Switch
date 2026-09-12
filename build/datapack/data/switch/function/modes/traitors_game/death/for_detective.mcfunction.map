@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "for_detective.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AA6C+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "display_continue.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AA46B2D;;;;;;;;;AAC3D;AACA;AACA"
+}

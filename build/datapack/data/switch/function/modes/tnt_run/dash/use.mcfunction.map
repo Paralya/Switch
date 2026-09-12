@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "use.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/tnt_run/main.py"
+	],
+	"names": [],
+	"mappings": "AA2FoC;;;;;;;;AACpC;AACA;AACA;AACA;AACA"
+}

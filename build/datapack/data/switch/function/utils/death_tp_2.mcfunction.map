@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death_tp_2.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AAkCsC;;;;;;;;;;;AACtC;AACA"
+}

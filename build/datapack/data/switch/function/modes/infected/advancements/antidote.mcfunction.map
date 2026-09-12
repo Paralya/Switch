@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "antidote.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AA8QiD;;;;;;;;AACjD;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "start.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/translations.py"
+	],
+	"names": [],
+	"mappings": "AAkK6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA"
+}

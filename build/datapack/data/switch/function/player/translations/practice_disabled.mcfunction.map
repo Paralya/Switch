@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "practice_disabled.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAiS6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA"
+}

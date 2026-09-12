@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "black_transition.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/resource_pack/special_fonts/utils.py"
+	],
+	"names": [],
+	"mappings": "AA8BgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

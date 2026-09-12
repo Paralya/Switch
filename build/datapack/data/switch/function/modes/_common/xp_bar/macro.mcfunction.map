@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAgOwC;;;;;;;;;;;;;AACxC;AACA"
+}

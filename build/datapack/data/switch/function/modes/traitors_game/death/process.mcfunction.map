@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAsGyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

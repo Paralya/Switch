@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick_macro.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/music/main.py"
+	],
+	"names": [],
+	"mappings": "AAsFsC;;;;;;;;;AACtC;AACA"
+}

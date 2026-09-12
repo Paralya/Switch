@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "items.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/kits/model.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;AA0TG;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

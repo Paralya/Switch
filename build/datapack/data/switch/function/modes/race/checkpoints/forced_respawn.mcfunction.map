@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "forced_respawn.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AA0EsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA"
+}

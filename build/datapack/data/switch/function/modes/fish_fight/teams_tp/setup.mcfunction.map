@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "setup.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AAgkB0C;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

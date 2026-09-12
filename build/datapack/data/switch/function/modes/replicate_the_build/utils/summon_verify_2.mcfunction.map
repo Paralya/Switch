@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_verify_2.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AAueiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA"
+}

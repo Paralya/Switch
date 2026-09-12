@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/creeper_apocalypse/main.py"
+	],
+	"names": [],
+	"mappings": "AAgDkC;;;;;;AAClC;AACA;AACA;AACA"
+}

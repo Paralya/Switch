@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "claim_loop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAkGsC;;;;;;;;;AACtC;AACA;AACA;AACA"
+}

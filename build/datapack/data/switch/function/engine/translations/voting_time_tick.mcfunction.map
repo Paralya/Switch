@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "voting_time_tick.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuI4C;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "repeat_only_same.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/music/main.py"
+	],
+	"names": [],
+	"mappings": "AAwDoD;;;;;;;;AAAA"
+}

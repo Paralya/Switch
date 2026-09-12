@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/main.py"
+	],
+	"names": [],
+	"mappings": "AAwDkC;;;;;;AAClC;AACA;AACA"
+}

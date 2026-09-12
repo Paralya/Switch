@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "apply_properties_to_mannequin.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/main.py"
+	],
+	"names": [],
+	"mappings": "AA2ByD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

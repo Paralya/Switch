@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teleport.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAqMoC;;;;;;;;;AACpC;AACA;AACA;AACA;AACA"
+}

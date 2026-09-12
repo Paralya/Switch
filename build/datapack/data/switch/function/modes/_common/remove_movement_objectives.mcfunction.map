@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_movement_objectives.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAgiBsD;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_save.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/bombardement/main.py"
+	],
+	"names": [],
+	"mappings": "AAwKuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

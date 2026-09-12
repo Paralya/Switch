@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "airship_fortress.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AA6ZqD;;;;;;AACrD;AACA;AACA"
+}

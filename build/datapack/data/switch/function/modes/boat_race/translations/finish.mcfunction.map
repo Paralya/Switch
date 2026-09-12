@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "finish.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/boat_race/translations.py"
+	],
+	"names": [],
+	"mappings": "AA0BkC;;;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

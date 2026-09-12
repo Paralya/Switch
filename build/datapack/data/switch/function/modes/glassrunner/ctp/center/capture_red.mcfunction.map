@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "capture_red.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/main.py"
+	],
+	"names": [],
+	"mappings": "AAsbuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "menu.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/jump_timer.py"
+	],
+	"names": [],
+	"mappings": "AAyQgC;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

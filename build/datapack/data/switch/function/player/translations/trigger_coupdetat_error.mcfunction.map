@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "trigger_coupdetat_error.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/translations.py"
+	],
+	"names": [],
+	"mappings": "AAwEmD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

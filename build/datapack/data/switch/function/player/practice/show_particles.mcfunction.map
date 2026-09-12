@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "show_particles.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAyO0C;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA"
+}

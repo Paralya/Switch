@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "compute_mins_secs.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAqH6C;;;;;;;;;;;;;;;;;;AAC7C;AACA;AACA;AACA;AACA"
+}

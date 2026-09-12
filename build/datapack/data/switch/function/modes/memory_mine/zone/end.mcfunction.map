@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "end.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/memory_mine/main.py"
+	],
+	"names": [],
+	"mappings": "AA6JoC;;;;;;;;AACpC;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "increment_minigame_played.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AAuSqD;;;;;;;;;;AACrD;AACA;AACA;AACA;AACA"
+}

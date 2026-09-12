@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "inventory_changed.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AA8B0D;;;;;;;;AAC1D;AACA;AACA"
+}

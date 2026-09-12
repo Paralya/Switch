@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "practice_no_checkpoint.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AA4TkD;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+}

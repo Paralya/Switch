@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "add_time.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/translations.py"
+	],
+	"names": [],
+	"mappings": "AA+BoC;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

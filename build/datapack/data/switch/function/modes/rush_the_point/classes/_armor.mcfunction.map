@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_armor.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/main.py"
+	],
+	"names": [],
+	"mappings": "AAuH0C;;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

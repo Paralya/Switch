@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "have_one_slot_arrow.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAkjB0D;;;;;;;;;;;AAC1D;AACA"
+}

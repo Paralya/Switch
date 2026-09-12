@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitch_creep/main.py"
+	],
+	"names": [],
+	"mappings": "AA0FkC;;;;;;AAClC;AACA;AACA"
+}

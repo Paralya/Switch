@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "destroy.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AA+W6C;;;;;;;;;;;;;AAC7C;AACA;AACA;AACA"
+}

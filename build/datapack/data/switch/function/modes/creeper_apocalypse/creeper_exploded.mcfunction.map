@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "creeper_exploded.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/creeper_apocalypse/main.py"
+	],
+	"names": [],
+	"mappings": "AAqB4C;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA"
+}

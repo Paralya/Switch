@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_items.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/gay_shooter/main.py"
+	],
+	"names": [],
+	"mappings": "AAwEsC;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

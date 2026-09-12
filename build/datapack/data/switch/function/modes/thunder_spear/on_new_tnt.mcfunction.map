@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_new_tnt.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/thunder_spear/main.py"
+	],
+	"names": [],
+	"mappings": "AA2DsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "octogone_nether_ice.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitch_creep/main.py"
+	],
+	"names": [],
+	"mappings": "AA4IoD;;;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "random_island.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AAuV+C;;;;;;;;AAC/C;AACA;AACA"
+}

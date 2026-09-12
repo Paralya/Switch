@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "warden_sus.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/warden_escape/main.py"
+	],
+	"names": [],
+	"mappings": "AAoLsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

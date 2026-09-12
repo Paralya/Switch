@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_new.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/feed_fast/translations.py"
+	],
+	"names": [],
+	"mappings": "AA0BsC;;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA"
+}

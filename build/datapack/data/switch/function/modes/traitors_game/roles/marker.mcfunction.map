@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "marker.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAwWwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA"
+}

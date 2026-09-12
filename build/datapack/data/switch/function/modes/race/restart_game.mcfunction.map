@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "restart_game.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAo2BwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

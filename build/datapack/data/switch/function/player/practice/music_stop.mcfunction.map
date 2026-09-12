@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "music_stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AA2GsC;;;;;;;;;AACtC;AACA;AACA;AACA"
+}

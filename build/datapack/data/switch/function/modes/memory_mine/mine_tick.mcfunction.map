@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "mine_tick.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/memory_mine/main.py"
+	],
+	"names": [],
+	"mappings": "AAyDqC;;;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

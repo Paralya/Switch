@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shooted_base.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6CwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

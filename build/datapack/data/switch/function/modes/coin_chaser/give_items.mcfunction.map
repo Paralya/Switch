@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_items.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/coin_chaser/main.py"
+	],
+	"names": [],
+	"mappings": "AA6BsC;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

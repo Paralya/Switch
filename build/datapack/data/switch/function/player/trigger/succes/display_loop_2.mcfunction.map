@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "display_loop_2.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AA67ByD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

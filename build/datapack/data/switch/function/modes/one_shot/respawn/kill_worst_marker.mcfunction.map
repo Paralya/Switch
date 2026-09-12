@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kill_worst_marker.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/one_shot/main.py"
+	],
+	"names": [],
+	"mappings": "AA2NqD;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

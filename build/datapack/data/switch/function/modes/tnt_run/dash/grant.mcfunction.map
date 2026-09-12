@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "grant.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/tnt_run/main.py"
+	],
+	"names": [],
+	"mappings": "AAkFsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "cure.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AA4ZsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "launch_infection.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAofkD;;;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

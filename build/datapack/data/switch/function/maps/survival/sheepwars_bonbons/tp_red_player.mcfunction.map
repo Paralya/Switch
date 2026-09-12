@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tp_red_player.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AAiCC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/translations.py"
+	],
+	"names": [],
+	"mappings": "AAiBiC;;;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA"
+}

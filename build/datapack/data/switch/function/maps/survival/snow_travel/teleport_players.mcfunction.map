@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teleport_players.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/generation/utils.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AAwKwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGD;AAAA;AACA"
+}

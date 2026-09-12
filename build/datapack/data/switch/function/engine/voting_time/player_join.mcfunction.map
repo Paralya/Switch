@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "player_join.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAwwBmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

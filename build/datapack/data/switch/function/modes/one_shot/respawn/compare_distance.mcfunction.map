@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "compare_distance.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/one_shot/main.py"
+	],
+	"names": [],
+	"mappings": "AAmKoD;;;;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

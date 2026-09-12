@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "music_start.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAoGuC;;;;;;;;AACvC;AACA;AACA;AACA"
+}

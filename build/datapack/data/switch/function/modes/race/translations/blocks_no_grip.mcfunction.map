@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "blocks_no_grip.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAkC0C;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

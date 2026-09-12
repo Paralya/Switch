@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/creeper_apocalypse/main.py"
+	],
+	"names": [],
+	"mappings": "AAgJgC;;;;;;AAChC;AACA;AACA"
+}

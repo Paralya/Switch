@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "inventory_changed.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/beat_the_kings/main.py"
+	],
+	"names": [],
+	"mappings": "AAkBmD;;;;;;AACnD;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "line.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/recap.py"
+	],
+	"names": [],
+	"mappings": "AAmKgC;;;;;;;;AAChC;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "add_weights.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAwlBmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

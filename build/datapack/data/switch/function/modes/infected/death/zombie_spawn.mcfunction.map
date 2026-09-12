@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "zombie_spawn.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AA6hB8C;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

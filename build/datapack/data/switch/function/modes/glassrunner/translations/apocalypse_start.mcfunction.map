@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "apocalypse_start.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/glassrunner/translations.py"
+	],
+	"names": [],
+	"mappings": "AAc4C;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA"
+}

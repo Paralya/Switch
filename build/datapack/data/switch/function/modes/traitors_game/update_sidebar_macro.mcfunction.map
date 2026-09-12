@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "update_sidebar_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAmmBgD;;;;;;;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

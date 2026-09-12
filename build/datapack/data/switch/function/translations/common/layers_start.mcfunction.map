@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "layers_start.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAqD+C;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

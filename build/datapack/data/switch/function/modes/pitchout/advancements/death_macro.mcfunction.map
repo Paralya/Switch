@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death_macro.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AA2NoD;;;;;;;;;AACpD;AACA;AACA"
+}

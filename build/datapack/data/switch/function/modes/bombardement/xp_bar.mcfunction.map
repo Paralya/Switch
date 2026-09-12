@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "xp_bar.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/bombardement/main.py"
+	],
+	"names": [],
+	"mappings": "AAyLkC;;;;;;AAClC;AACA;AACA"
+}

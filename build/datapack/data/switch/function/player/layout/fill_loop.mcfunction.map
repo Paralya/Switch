@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "fill_loop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AA+GqC;;;;;;;;;AACrC;AACA;AACA;AACA"
+}

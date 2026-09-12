@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "blocks_reset.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAmEwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

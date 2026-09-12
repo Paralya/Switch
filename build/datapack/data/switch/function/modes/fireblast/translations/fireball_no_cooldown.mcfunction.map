@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "fireball_no_cooldown.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/translations.py"
+	],
+	"names": [],
+	"mappings": "AAuBgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

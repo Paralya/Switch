@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "hurt_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/castagne/main.py"
+	],
+	"names": [],
+	"mappings": "AAgDsC;;;;;;;;;;;AACtC;AACA;AACA;AACA"
+}

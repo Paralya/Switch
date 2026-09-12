@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "mlg_a_coudre.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/mlg_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AAqEwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

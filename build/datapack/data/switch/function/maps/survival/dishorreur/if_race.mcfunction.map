@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "if_race.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AAuBC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_new_marker.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AAshByD;;;;;;;;AACzD;AACA;AACA"
+}

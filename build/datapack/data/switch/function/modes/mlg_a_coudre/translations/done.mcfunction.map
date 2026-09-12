@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "done.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/mlg_a_coudre/translations.py"
+	],
+	"names": [],
+	"mappings": "AA2BgC;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA"
+}

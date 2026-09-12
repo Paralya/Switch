@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "throw_loop.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/translations.py"
+	],
+	"names": [],
+	"mappings": "AAmHsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA"
+}

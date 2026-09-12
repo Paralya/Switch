@@ -46,6 +46,7 @@ scoreboard players add #total_sapphire_block switch.data 0
 scoreboard players add #total_deepslate_adamantium_ore switch.data 0
 scoreboard players add #total_adamantium_ore switch.data 0
 scoreboard players add #total_adamantium_block switch.data 0
+
 tellraw @s [{"text":"- Total 'Adamantium Block': ","color":"gold"},{"score":{"name":"#total_adamantium_block","objective":"switch.data"},"color":"yellow"}]
 tellraw @s [{"text":"- Total 'Adamantium Ore': ","color":"gold"},{"score":{"name":"#total_adamantium_ore","objective":"switch.data"},"color":"yellow"}]
 tellraw @s [{"text":"- Total 'Deepslate Adamantium Ore': ","color":"gold"},{"score":{"name":"#total_deepslate_adamantium_ore","objective":"switch.data"},"color":"yellow"}]

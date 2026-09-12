@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "regenerate_doors_macro.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": "AA2HkD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+}

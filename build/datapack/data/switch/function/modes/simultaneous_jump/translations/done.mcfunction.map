@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "done.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/simultaneous_jump/translations.py"
+	],
+	"names": [],
+	"mappings": "AAcgC;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

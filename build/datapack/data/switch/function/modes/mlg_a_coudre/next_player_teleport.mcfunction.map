@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "next_player_teleport.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/mlg_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AA2FgD;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

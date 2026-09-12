@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "task_obsidian.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spectres_game/main.py"
+	],
+	"names": [],
+	"mappings": "AA+eyC;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA"
+}

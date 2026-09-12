@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "core_get_block_count_loop.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/block_party/translations.py"
+	],
+	"names": [],
+	"mappings": "AAsIqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA"
+}

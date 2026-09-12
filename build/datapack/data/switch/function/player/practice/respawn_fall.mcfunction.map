@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "respawn_fall.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AA+LwC;;;;;;;;AACxC;AACA;AACA"
+}

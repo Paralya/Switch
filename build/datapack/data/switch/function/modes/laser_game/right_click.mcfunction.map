@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "right_click.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAkEuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA"
+}

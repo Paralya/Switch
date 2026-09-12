@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "spawn_marker.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/one_shot/main.py"
+	],
+	"names": [],
+	"mappings": "AAyPgD;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_tick.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AA6c8C;;;;;;;;AAC9C;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "standard_combat_rules.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAgfiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA"
+}

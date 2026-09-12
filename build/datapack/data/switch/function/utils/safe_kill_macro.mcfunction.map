@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "safe_kill_macro.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/utils/main.py"
+	],
+	"names": [],
+	"mappings": "AA0K2C;;;;;;;;;;;;;;;;;;;AAC3C;AACA;AACA;AACA"
+}

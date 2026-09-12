@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "right_click.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/translations.py"
+	],
+	"names": [],
+	"mappings": "AAsImD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

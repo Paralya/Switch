@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "round_3.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6CmC;;;;;;AACnC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

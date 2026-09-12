@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "no_drop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AAyCmC;;;;;;;;AACnC;AACA;AACA;AACA;AACA;AACA;AACA"
+}

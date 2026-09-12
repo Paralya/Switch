@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "test_mode.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAqHqC;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

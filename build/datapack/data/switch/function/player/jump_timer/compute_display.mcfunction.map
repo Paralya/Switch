@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "compute_display.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/jump_timer.py"
+	],
+	"names": [],
+	"mappings": "AAwI2C;;;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

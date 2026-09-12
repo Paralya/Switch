@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "only_one_winner.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AA8iBoD;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

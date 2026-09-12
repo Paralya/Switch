@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "build_groups_games.mcfunction",
+	"sourceRoot": "../../../../..",
+	"sources": [
+		"src/datapack/root/main.py"
+	],
+	"names": [],
+	"mappings": "AA+D4C;;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

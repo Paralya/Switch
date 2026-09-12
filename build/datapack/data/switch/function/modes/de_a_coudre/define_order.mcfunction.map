@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "define_order.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/de_a_coudre/main.py"
+	],
+	"names": [],
+	"mappings": "AA+BwC;;;;;;;;;AACxC;AACA;AACA"
+}

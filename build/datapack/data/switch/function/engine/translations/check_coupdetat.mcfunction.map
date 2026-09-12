@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_coupdetat.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/translations.py"
+	],
+	"names": [],
+	"mappings": "AA4C2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "setup_player.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pitchout/main.py"
+	],
+	"names": [],
+	"mappings": "AAiQqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA"
+}

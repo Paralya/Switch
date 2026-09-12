@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "set_motion.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AA8T+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA"
+}

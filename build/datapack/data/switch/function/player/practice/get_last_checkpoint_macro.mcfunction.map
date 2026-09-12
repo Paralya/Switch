@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_last_checkpoint_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAkLqD;;;;;;;;;;AACrD;AACA"
+}

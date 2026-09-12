@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pvpswap/main.py"
+	],
+	"names": [],
+	"mappings": "AAiEkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

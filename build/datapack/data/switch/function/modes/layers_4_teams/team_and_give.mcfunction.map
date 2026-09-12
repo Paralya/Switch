@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "team_and_give.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/layers_4_teams/main.py"
+	],
+	"names": [],
+	"mappings": "AAwJyC;;;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

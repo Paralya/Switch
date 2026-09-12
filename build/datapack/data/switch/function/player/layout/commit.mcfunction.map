@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "commit.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AAgKkC;;;;;;;;;;;AAClC;AACA;AACA;AACA"
+}

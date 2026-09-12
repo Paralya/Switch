@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "force_start_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/translations.py"
+	],
+	"names": [],
+	"mappings": "AAqD6C;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA"
+}

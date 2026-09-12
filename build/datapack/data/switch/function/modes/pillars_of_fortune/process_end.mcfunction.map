@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pillars_of_fortune/main.py"
+	],
+	"names": [],
+	"mappings": "AAoCuC;;;;;;AACvC;AACA;AACA;AACA"
+}

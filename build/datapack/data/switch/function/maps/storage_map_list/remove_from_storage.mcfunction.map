@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_from_storage.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": "AAoIgE;;;;;;AAChE;AACA;AACA;AACA"
+}

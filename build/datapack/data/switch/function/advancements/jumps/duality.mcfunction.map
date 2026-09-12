@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "duality.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/advancements/utils.py"
+	],
+	"names": [],
+	"mappings": "AA6K6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA"
+}

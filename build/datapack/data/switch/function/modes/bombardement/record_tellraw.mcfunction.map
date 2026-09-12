@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "record_tellraw.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/bombardement/main.py"
+	],
+	"names": [],
+	"mappings": "AAmL0C;;;;;;;AAC1C;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick_bow.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/murder_mystery/translations.py"
+	],
+	"names": [],
+	"mappings": "AA4HoC;;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA"
+}

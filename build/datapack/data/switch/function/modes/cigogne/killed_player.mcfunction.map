@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "killed_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/cigogne/main.py"
+	],
+	"names": [],
+	"mappings": "AAoCyC;;;;;;;;AACzC;AACA;AACA"
+}

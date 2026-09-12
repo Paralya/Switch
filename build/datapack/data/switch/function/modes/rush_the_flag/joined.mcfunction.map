@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "joined.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AA+KkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "infection_second.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/infected/main.py"
+	],
+	"names": [],
+	"mappings": "AA0ekD;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

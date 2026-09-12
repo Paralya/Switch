@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "regenerate.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/generation/utils.py"
+	],
+	"names": [],
+	"mappings": "AAiOsB;;;;;;;;;AAAA;AACA;AAIC;AACA;AADA;AACA;AADA;AACA;AA6BD;AACtB;AACA;AACA;AACA;AAKA;AACA;AACA;AAIE;AAAA;AAAA;AAAA;AAAA;AAAA;AAOoB;AACtB;AACA;AACA;AAIsB;AACtB;AACA;AACA;AACA"
+}

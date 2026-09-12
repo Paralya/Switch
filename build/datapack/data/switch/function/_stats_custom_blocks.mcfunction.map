@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_stats_custom_blocks.mcfunction",
+	"sourceRoot": "../../../../..",
+	"sources": [
+		"src/database/misc_items.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;AAqDC;AAzBA;AADA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AACA;AAyBA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_macro.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/advancements/utils.py"
+	],
+	"names": [],
+	"mappings": "AAyO6C;;;;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

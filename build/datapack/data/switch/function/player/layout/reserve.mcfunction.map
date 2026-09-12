@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "reserve.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/layout.py"
+	],
+	"names": [],
+	"mappings": "AA6FmC;;;;;;;;;;AACnC;AACA"
+}

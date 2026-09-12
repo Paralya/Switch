@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "give_tnt.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/main.py"
+	],
+	"names": [],
+	"mappings": "AA4MoC;;;;;;;;AACpC;AACA;AACA"
+}

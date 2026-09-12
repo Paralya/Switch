@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "trap_detect.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spleef/main.py"
+	],
+	"names": [],
+	"mappings": "AAwGuC;;;;;;;;AACvC;AACA;AACA;AACA"
+}

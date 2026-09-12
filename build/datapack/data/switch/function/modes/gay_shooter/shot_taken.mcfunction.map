@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shot_taken.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/gay_shooter/main.py"
+	],
+	"names": [],
+	"mappings": "AAiIsC;;;;;;;;AACtC;AACA;AACA;AACA"
+}

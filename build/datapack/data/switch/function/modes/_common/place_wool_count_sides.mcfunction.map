@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "place_wool_count_sides.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAwLkD;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

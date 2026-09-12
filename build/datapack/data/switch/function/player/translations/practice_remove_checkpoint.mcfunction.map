@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "practice_remove_checkpoint.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAmTsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
+}

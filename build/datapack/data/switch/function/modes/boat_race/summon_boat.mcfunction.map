@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_boat.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/boat_race/main.py"
+	],
+	"names": [],
+	"mappings": "AA+HuC;;;;;;;;AACvC;AACA;AACA"
+}

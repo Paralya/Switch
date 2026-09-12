@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "adv_kill.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/moutron/main.py"
+	],
+	"names": [],
+	"mappings": "AAoBoC;;;;;;;;AACpC;AACA;AACA"
+}

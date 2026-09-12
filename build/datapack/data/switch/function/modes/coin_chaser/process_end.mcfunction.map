@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/coin_chaser/main.py"
+	],
+	"names": [],
+	"mappings": "AAgDuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

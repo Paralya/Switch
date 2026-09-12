@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/boat_race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAiBkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

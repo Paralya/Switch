@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "jump_timer_no_record.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/jump_timer.py"
+	],
+	"names": [],
+	"mappings": "AAuVgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ocelot_advancement.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/creeper_apocalypse/main.py"
+	],
+	"names": [],
+	"mappings": "AAgE8C;;;;;;;;AAC9C;AACA;AACA"
+}

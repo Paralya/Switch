@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "revoke.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/pop_ups.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAoD+C"
+}

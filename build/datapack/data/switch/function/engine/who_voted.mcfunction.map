@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "who_voted.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAi4B0C;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

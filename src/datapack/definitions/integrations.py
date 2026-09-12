@@ -1,13 +1,13 @@
 
 # Imports
 from beet import FunctionTag
-from stewbeet.core import Mem, write_function
+from stewbeet import McFunction, Mem, write_function
 
 # smart_ore_generation hooks: disable ore generation in the switch (void) dimensions.
 # The denied_dimensions body keeps its upstream doc-comment verbatim; the headers plugin merges in
 # the auto-detected @within from the function tag below.
-DENIED_DIMENSIONS: str = """
-#> smart_ore_generation:v1.1/signals/denied_dimensions
+DENIED_DIMENSIONS: McFunction = """
+#> smart_ore_generation:denied_dimensions
 #
 # @within\t\t\t#smart_ore_generation:v1/signals/denied_dimensions
 # @executed\t\t\tas & at the player who triggered the event
@@ -37,3 +37,4 @@ scoreboard players set #smart_ore_generation.major load.status 1000000
 	function_tags = Mem.ctx.data["smart_ore_generation"].function_tags
 	function_tags["enumerate"] = FunctionTag({"values": ["smart_ore_generation:fake_enumerate"]})
 	function_tags["v1/signals/denied_dimensions"] = FunctionTag({"values": ["smart_ore_generation:denied_dimensions"]})
+

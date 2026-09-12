@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "levels.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAgNyC;;;;;;;;;;;AACzC;AACA;AACA;AACA;AACA"
+}

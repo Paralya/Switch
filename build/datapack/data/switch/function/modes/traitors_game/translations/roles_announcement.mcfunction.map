@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "roles_announcement.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/traitors_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AAwJ8C;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "absorption.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/cigogne/main.py"
+	],
+	"names": [],
+	"mappings": "AAsBsC;;;;;;;;AACtC;AACA;AACA"
+}

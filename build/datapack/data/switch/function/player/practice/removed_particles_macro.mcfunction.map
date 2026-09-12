@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "removed_particles_macro.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AAoOmD;;;;;;;;;;;;AACnD;AACA"
+}

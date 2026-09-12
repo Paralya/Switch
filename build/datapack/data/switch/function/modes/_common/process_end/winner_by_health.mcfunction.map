@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "winner_by_health.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_common/main.py"
+	],
+	"names": [],
+	"mappings": "AAgawD;;;;;;;;;;AACxD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

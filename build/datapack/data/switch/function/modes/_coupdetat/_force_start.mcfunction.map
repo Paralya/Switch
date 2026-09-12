@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_force_start.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/_coupdetat/main.py"
+	],
+	"names": [],
+	"mappings": "AAuBwC;;;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

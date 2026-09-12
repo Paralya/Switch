@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "explode_tnt.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fireblast/main.py"
+	],
+	"names": [],
+	"mappings": "AA2BuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA"
+}

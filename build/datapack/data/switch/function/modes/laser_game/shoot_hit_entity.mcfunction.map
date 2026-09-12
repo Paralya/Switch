@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shoot_hit_entity.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/main.py"
+	],
+	"names": [],
+	"mappings": "AA2H4C;;;;;;;;AAC5C;AACA;AACA"
+}

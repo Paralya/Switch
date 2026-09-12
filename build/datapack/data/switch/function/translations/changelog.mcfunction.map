@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "changelog.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/translations/main.py"
+	],
+	"names": [],
+	"mappings": "AAgIqC;;;;;;;;AACrC;AACA;AACA;AACA;AACA;AACA"
+}

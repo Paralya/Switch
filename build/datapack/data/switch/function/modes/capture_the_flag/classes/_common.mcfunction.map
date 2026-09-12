@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_common.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AAgZ2C;;;;;;;;;;;;AAC3C;AACA;AACA;AACA;AACA"
+}

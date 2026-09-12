@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "scan_doors_on_marker.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/maps/generation/utils.py"
+	],
+	"names": [],
+	"mappings": "AA8ZsB;;;;;;;AACtB;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

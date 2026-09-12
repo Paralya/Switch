@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "themes_list.mcfunction",
+	"sourceRoot": "../../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/translations.py"
+	],
+	"names": [],
+	"mappings": "AA6FmD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA"
+}

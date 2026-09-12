@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_last_checkpoint.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/practice.py"
+	],
+	"names": [],
+	"mappings": "AA0K+C;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA"
+}

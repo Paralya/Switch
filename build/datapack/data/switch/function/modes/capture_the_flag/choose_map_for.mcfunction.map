@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "choose_map_for.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/capture_the_flag/main.py"
+	],
+	"names": [],
+	"mappings": "AA2B0C;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

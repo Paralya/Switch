@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "random_tp.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/protect_the_king/main.py"
+	],
+	"names": [],
+	"mappings": "AAkHqC;;;;;;AACrC;AACA;AACA;AACA;AACA"
+}

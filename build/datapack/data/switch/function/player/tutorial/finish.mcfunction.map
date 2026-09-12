@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "finish.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AAihC2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

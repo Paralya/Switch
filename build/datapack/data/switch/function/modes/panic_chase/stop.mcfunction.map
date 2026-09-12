@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/panic_chase/main.py"
+	],
+	"names": [],
+	"mappings": "AAgLgC;;;;;;AAChC;AACA;AACA"
+}

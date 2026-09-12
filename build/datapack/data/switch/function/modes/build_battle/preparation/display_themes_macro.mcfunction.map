@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "display_themes_macro.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/main.py"
+	],
+	"names": [],
+	"mappings": "AAwd4D;;;;;;;;;;;;AAC5D;AACA"
+}

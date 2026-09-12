@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "lightning_strike.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/sheepwars/main.py"
+	],
+	"names": [],
+	"mappings": "AAwCyD;;;;;;;;AACzD;AACA;AACA"
+}

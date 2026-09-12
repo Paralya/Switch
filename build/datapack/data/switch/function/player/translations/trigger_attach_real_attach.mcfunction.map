@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "trigger_attach_real_attach.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/translations.py"
+	],
+	"names": [],
+	"mappings": "AAsDsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
+}

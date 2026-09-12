@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "advancements_break_obsidian_confirm.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/translations.py"
+	],
+	"names": [],
+	"mappings": "AAY+D;;;;;;;;AAC/D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

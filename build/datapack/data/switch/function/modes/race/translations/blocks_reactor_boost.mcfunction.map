@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "blocks_reactor_boost.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AAwDgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

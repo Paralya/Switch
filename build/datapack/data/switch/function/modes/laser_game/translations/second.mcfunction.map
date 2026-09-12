@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/laser_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AAoCkC;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+}

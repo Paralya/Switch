@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_add_to_new_player_arrays.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/stats/main.py"
+	],
+	"names": [],
+	"mappings": "AAuT0D;;;;;;;;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

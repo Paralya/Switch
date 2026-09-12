@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "announcement.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spectres_game/main.py"
+	],
+	"names": [],
+	"mappings": "AAyU8C;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

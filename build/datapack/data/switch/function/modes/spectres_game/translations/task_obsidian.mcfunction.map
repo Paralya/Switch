@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "task_obsidian.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/spectres_game/translations.py"
+	],
+	"names": [],
+	"mappings": "AAyIyC;;;;;;AACzC;AACA;AACA;AACA;AACA;AACA"
+}

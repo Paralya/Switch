@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "macro_inventory_changed.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AA+a2D;;;;;;;;;;AAC3D;AACA"
+}

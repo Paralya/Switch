@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "archer.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/kits/model.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AA+TE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "break_obsidian.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/rush_the_point/main.py"
+	],
+	"names": [],
+	"mappings": "AA2BuD;;;;;;;;AACvD;AACA;AACA"
+}

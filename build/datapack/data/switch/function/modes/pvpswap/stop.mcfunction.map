@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/modes/pvpswap/main.py"
+	],
+	"names": [],
+	"mappings": "AAqGgC;;;;;;AAChC;AACA;AACA;AACA"
+}

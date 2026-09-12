@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "right_click.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/translations.py"
+	],
+	"names": [],
+	"mappings": "AA4IuC;;;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA"
+}

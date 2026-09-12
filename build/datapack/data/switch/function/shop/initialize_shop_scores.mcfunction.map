@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "initialize_shop_scores.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/shop/utils.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;AAqCC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

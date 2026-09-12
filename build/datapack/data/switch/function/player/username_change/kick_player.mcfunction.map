@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kick_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/main.py"
+	],
+	"names": [],
+	"mappings": "AAyyCuD;;;;;;;;;;AACvD;AACA"
+}

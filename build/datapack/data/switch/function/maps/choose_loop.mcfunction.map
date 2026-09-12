@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "choose_loop.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/datapack/maps/main.py"
+	],
+	"names": [],
+	"mappings": "AA0GuC;;;;;;;AACvC;AACA;AACA;AACA"
+}

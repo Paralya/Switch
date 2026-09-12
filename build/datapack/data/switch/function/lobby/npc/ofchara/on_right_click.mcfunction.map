@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_right_click.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/lobby/npc.py"
+	],
+	"names": [],
+	"mappings": "AAwDkD;;;;;;;;AAClD;AACA;AACA"
+}

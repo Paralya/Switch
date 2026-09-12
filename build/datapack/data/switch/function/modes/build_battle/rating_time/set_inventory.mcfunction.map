@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "set_inventory.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/build_battle/main.py"
+	],
+	"names": [],
+	"mappings": "AAm3BqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

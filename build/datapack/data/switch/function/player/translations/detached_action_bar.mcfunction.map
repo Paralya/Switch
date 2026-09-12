@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "detached_action_bar.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/player/translations.py"
+	],
+	"names": [],
+	"mappings": "AAY+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

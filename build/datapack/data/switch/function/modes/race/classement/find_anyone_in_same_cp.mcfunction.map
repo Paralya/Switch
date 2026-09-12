@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "find_anyone_in_same_cp.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAqR6D;;;;;;;;AAC7D;AACA"
+}

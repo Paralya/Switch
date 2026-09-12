@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "layers_starter_kit.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/kits/model.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;AA+TE;AAAA;AAAA;AAAA;AAAA"
+}

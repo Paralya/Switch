@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "increase.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/race/main.py"
+	],
+	"names": [],
+	"mappings": "AAkT+C;;;;;;;;AAC/C;AACA;AACA"
+}

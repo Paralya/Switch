@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "process_end.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/fish_fight/translations.py"
+	],
+	"names": [],
+	"mappings": "AAsEuC;;;;;;AACvC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

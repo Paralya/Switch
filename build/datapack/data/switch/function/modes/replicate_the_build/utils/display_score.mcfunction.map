@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "display_score.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/datapack/modes/replicate_the_build/main.py"
+	],
+	"names": [],
+	"mappings": "AA8b+C;;;;;;;;AAC/C;AACA;AACA;AACA"
+}
