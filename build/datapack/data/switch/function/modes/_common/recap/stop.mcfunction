@@ -5,6 +5,7 @@
 #			switch:modes/cigogne/stop
 #			switch:modes/glassrunner/stop
 #			switch:modes/pillars_of_fortune/stop
+#			switch:modes/protect_the_king/stop
 #			switch:modes/rush_the_point/stop
 #			switch:modes/spectres_game/stop
 #

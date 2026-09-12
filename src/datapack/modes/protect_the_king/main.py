@@ -106,6 +106,7 @@ execute if score #reconnect {ns}.data matches 0 run function {ns}:utils/classic_
 	write_function(f"{path}/process_end", f"""
 scoreboard players add #process_end {ns}.data 1
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
@@ -170,6 +171,7 @@ scoreboard players set #protect_the_king_seconds {ns}.data -1
 scoreboard players set #protect_the_king_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #cut_clean {ns}.data 1
+function {ns}:modes/_common/recap/start/kills
 scoreboard objectives setdisplay list {ns}.health
 
 # Mise en place des deux bossbars
@@ -205,6 +207,7 @@ execute as @a[tag=!detached] at @s run function {ns}:modes/protect_the_king/give
 
 	# /stop
 	write_function(f"{path}/stop", f"""
+function {ns}:modes/_common/recap/stop
 team remove {ns}.temp.red_king
 team remove {ns}.temp.blue_king
 team remove {ns}.temp.red

@@ -27,6 +27,7 @@ scoreboard players set #protect_the_king_seconds switch.data -1
 scoreboard players set #protect_the_king_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
+function switch:modes/_common/recap/start/kills
 scoreboard objectives setdisplay list switch.health
 
 # Mise en place des deux bossbars
