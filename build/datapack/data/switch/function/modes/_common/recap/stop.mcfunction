@@ -4,6 +4,7 @@
 # @within	switch:modes/capture_the_flag/stop
 #			switch:modes/cigogne/stop
 #			switch:modes/glassrunner/stop
+#			switch:modes/pillars_of_fortune/stop
 #			switch:modes/rush_the_point/stop
 #			switch:modes/spectres_game/stop
 #

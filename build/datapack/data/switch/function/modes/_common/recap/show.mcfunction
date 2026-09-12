@@ -4,6 +4,7 @@
 # @within	switch:modes/capture_the_flag/process_end
 #			switch:modes/cigogne/process_end
 #			switch:modes/glassrunner/end/process_end
+#			switch:modes/pillars_of_fortune/process_end
 #			switch:modes/rush_the_flag/process_end
 #			switch:modes/rush_the_point/process_end
 #			switch:modes/spectres_game/process_end

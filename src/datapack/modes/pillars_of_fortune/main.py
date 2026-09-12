@@ -36,6 +36,7 @@ $execute rotated ~$(angle_difference) 0 as @e[tag={ns}.place_pillar,sort=random,
 	# /process_end
 	write_function(f"{path}/process_end", f"""
 function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
@@ -91,6 +92,7 @@ scoreboard players set #remaining_time {ns}.data 605
 scoreboard players set #pillars_of_fortune_seconds {ns}.data -1
 scoreboard players set #pillars_of_fortune_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
+function {ns}:modes/_common/recap/start/kills
 scoreboard objectives setdisplay list {ns}.health
 
 ## Count the number of players to compute the angle difference between pillars (360 / number of players = angle difference)
@@ -126,7 +128,9 @@ execute if data storage {ns}:main {{map:"void_desert"}} in {ns}:game positioned 
 """)
 
 	# /stop (empty)
-	write_function(f"{path}/stop", "\n")
+	write_function(f"{path}/stop", f"""
+function {ns}:modes/_common/recap/stop
+""")
 
 	# /tick
 	write_function(f"{path}/tick", f"""
