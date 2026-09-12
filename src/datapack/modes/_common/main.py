@@ -79,13 +79,14 @@ execute unless score @s {ns}.alive matches 1.. run effect clear @s
 execute unless score @s {ns}.alive matches 1.. run clear @s
 """)
 
-	# /death/detect (shared "linked-player missing?" check for marker-based death systems: if the
-	# linked player is gone, mark @s dead; otherwise teleport to them and sync inventory on change)
-	write_function(f"{path}/death/detect", f"""
+	# /death/detect and /death/detect_attached (shared "linked-player missing?" check for marker-based death systems: if the linked player is gone, mark @s dead; otherwise teleport to them and sync inventory on change)
+	# detect counts a player as present while switch.alive >= 1, detect_attached while attached and not waiting for its respawn teleport (modes that never score switch.alive)
+	for name, players in (("detect", f"scores={{{ns}.alive=1..}}"), ("detect_attached", f"tag=!detached,tag=!{ns}.to_tp")):
+		write_function(f"{path}/death/{name}", f"""
 # Detect if linked player is missing
 scoreboard players set #success {ns}.data 0
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
-execute store success score #success {ns}.data run tag @a[scores={{{ns}.alive=1..}},predicate={ns}:has_same_id] add {ns}.temp
+execute store success score #success {ns}.data run tag @a[{players},predicate={ns}:has_same_id] add {ns}.temp
 
 execute if score #success {ns}.data matches 0 run tag @s add {ns}.player_dead
 execute if score #success {ns}.data matches 1 run tp @s @p[tag={ns}.temp]

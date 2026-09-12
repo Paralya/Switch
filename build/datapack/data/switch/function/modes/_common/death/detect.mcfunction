@@ -4,7 +4,6 @@
 # @executed	as @e[type=marker,tag=...]
 #
 # @within	switch:modes/beat_the_kings/tick [ as @e[type=marker,tag=...] ]
-#			switch:modes/capture_the_flag/tick [ as @e[type=marker,tag=...] ]
 #			switch:modes/traitors_game/tick [ as @e[type=marker,tag=...] ]
 #
 

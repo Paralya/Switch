@@ -365,7 +365,7 @@ execute as @a[scores={{{ns}.temp.chosen_class=0}}] run function {path}/classes/m
 # Death System
 execute as @e[type=player,tag={ns}.to_tp] run function {path}/teleport_to_death
 function {ns}:utils/on_death_run_function {{function:"{path}/death/player"}}
-execute if score #remaining_time {ns}.data matches 1.. as @e[type=marker,tag={ns}.temp.player,tag=!{ns}.player_dead] run function {ns}:modes/_common/death/detect
+execute if score #remaining_time {ns}.data matches 1.. as @e[type=marker,tag={ns}.temp.player,tag=!{ns}.player_dead] run function {ns}:modes/_common/death/detect_attached
 execute if score #remaining_time {ns}.data matches 1.. as @e[type=marker,tag={ns}.player_dead,tag=!{ns}.processed] run function {path}/death/for_global
 
 # Update sidebar & Flag tick
