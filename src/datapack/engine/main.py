@@ -361,35 +361,26 @@ function {ns}:engine/launch_game/add_played_stat with storage {ns}:main
 #
 # @executed			Don't care
 #
-# @input storage	{ns}:main MessageToLog
+# @input macro		message: plain text to write to the console
 #
-# @description		Interprets the message and logs it to the console
+# @description		Logs the message to the console through a test block, which logs it when powered
 #
 
-# Put the message into a sign, whose text only gets resolved with allow_op_features
-execute in minecraft:overworld run setblock 0 2 0 oak_sign{{allow_op_features:true}}
-execute in minecraft:overworld run data modify block 0 2 0 front_text.messages[0] set value {{"nbt":"MessageToLog","storage":"{ns}:main","interpret":true}}
-execute in minecraft:overworld run data modify storage {ns}:main MessageToLog set from block 0 2 0 front_text.messages[0]
+$execute in minecraft:overworld run setblock 0 2 0 test_block[mode=log]{{mode:"log",message:"$(message)"}}
+execute in minecraft:overworld run setblock 0 3 0 redstone_block
+execute in minecraft:overworld run setblock 0 3 0 air
 execute in minecraft:overworld run setblock 0 2 0 air
-
-# Summon wolf
-execute in minecraft:overworld positioned 0 2 0 summon wolf run function {ns}:engine/log_message/on_wolf
 """)
 
-	# /log_message/on_wolf
-	write_function(f"{path}/log_message/on_wolf", f"""
-#> {ns}:engine/log_message/on_wolf
-#
-# @within			{ns}:engine/log_message/apply
-# @executed			as temporary wolf
-#
-# @input storage	{ns}:main MessageToLog
-#
-# @description		Function executed on the wolf summoned to log the message into the console.
-#
-
-data modify entity @s CustomName set from storage {ns}:main MessageToLog
-kill @s
+	# /log_message/game_started, /log_message/game_stopped and /log_message/map_selected (read the storage given to them)
+	write_function(f"{path}/log_message/game_started", f"""
+$function {ns}:engine/log_message/apply {{message:"Lancement d'une partie de `$(current_game_name)` !"}}
+""")
+	write_function(f"{path}/log_message/game_stopped", f"""
+$function {ns}:engine/log_message/apply {{message:"Arret d'une partie de `$(current_game_name)` !"}}
+""")
+	write_function(f"{path}/log_message/map_selected", f"""
+$function {ns}:engine/log_message/apply {{message:"Selected map: `$(map)`!"}}
 """)
 
 	# /restart
@@ -485,8 +476,7 @@ function {ns}:engine/signals/macro_second with storage {ns}:main input
 scoreboard players set #game_ticks {ns}.data 0
 
 # Log message
-data modify storage {ns}:main MessageToLog set value [{{"text": "Lancement d'une partie de `"}},{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true}},{{"text":"` !"}}]
-function {ns}:engine/log_message/apply
+function {ns}:engine/log_message/game_started with storage {ns}:main
 
 # Clear voting message
 schedule clear {ns}:engine/voting_time/schedule_message
@@ -513,8 +503,7 @@ function {ns}:stats/increment_minigame_played with storage {ns}:main input
 	# /signals/stop
 	write_function(f"{path}/signals/stop", f"""
 # Log message
-data modify storage {ns}:main MessageToLog set value [{{"text": "Arret d'une partie de `"}},{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true}},{{"text":"` !"}}]
-function {ns}:engine/log_message/apply
+function {ns}:engine/log_message/game_stopped with storage {ns}:main
 
 # Launch stop signal
 data modify storage {ns}:main input set value {{id:""}}

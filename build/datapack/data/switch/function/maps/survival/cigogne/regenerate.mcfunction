@@ -39,8 +39,7 @@ execute if score #rg_cigogne switch.data matches 241.. in minecraft:overworld ru
 execute if score #rg_cigogne switch.data matches 241.. in switch:game run forceload remove 126086 126000 126108 126108
 
 execute if score #rg_cigogne switch.data matches 241.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cigogne","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_cigogne switch.data matches 241.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cigogne` just regenerated!"}'
-execute if score #rg_cigogne switch.data matches 241.. run function switch:engine/log_message/apply
+execute if score #rg_cigogne switch.data matches 241.. run function switch:engine/log_message/apply {message:"Map `Cigogne` just regenerated!"}
 
 execute if score #rg_cigogne switch.data matches 241.. in switch:game run function switch:maps/regenerate_doors_macro {name:"cigogne"}
 execute if score #rg_cigogne switch.data matches 241.. run scoreboard players reset #rg_cigogne switch.data

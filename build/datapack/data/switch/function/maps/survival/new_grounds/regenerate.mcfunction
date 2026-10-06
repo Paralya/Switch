@@ -35,8 +35,7 @@ execute if score #rg_new_grounds switch.data matches 169.. in minecraft:overworl
 execute if score #rg_new_grounds switch.data matches 169.. in switch:game run forceload remove 48070 48000 48093 48093
 
 execute if score #rg_new_grounds switch.data matches 169.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"New Grounds","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_new_grounds switch.data matches 169.. run data modify storage switch:main MessageToLog set value '{"text":"Map `New Grounds` just regenerated!"}'
-execute if score #rg_new_grounds switch.data matches 169.. run function switch:engine/log_message/apply
+execute if score #rg_new_grounds switch.data matches 169.. run function switch:engine/log_message/apply {message:"Map `New Grounds` just regenerated!"}
 
 execute if score #rg_new_grounds switch.data matches 169.. in switch:game run function switch:maps/regenerate_doors_macro {name:"new_grounds"}
 execute if score #rg_new_grounds switch.data matches 169.. run scoreboard players reset #rg_new_grounds switch.data

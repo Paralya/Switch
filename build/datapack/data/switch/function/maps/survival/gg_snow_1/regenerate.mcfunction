@@ -27,8 +27,7 @@ execute if score #rg_gg_snow_1 switch.data matches 107.. in minecraft:overworld 
 execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run forceload remove 124062 124001 124082 124046
 
 execute if score #rg_gg_snow_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Cloud","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_gg_snow_1 switch.data matches 107.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Snow Cloud` just regenerated!"}'
-execute if score #rg_gg_snow_1 switch.data matches 107.. run function switch:engine/log_message/apply
+execute if score #rg_gg_snow_1 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Snow Cloud` just regenerated!"}
 
 execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run function switch:maps/regenerate_doors_macro {name:"gg_snow_1"}
 execute if score #rg_gg_snow_1 switch.data matches 107.. run scoreboard players reset #rg_gg_snow_1 switch.data

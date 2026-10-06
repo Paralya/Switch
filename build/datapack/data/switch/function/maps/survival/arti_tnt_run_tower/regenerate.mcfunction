@@ -27,8 +27,7 @@ execute if score #rg_arti_tnt_run_tower switch.data matches 167.. in minecraft:o
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. in switch:game run forceload remove 152010 152000 152020 152020
 
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"TNT Run Tower","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run data modify storage switch:main MessageToLog set value '{"text":"Map `TNT Run Tower` just regenerated!"}'
-execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run function switch:engine/log_message/apply
+execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run function switch:engine/log_message/apply {message:"Map `TNT Run Tower` just regenerated!"}
 
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. in switch:game run function switch:maps/regenerate_doors_macro {name:"arti_tnt_run_tower"}
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run scoreboard players reset #rg_arti_tnt_run_tower switch.data

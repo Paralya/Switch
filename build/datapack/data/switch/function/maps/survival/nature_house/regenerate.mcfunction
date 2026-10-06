@@ -31,8 +31,7 @@ execute if score #rg_nature_house switch.data matches 115.. in minecraft:overwor
 execute if score #rg_nature_house switch.data matches 115.. in switch:game run forceload remove 88045 88000 88068 88068
 
 execute if score #rg_nature_house switch.data matches 115.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nature House","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_nature_house switch.data matches 115.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Nature House` just regenerated!"}'
-execute if score #rg_nature_house switch.data matches 115.. run function switch:engine/log_message/apply
+execute if score #rg_nature_house switch.data matches 115.. run function switch:engine/log_message/apply {message:"Map `Nature House` just regenerated!"}
 
 execute if score #rg_nature_house switch.data matches 115.. in switch:game run function switch:maps/regenerate_doors_macro {name:"nature_house"}
 execute if score #rg_nature_house switch.data matches 115.. run scoreboard players reset #rg_nature_house switch.data

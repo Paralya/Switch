@@ -47,8 +47,7 @@ execute if score #rg_rainbow_road switch.data matches 470.. in minecraft:overwor
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run forceload remove 24105 24000 24122 24137
 
 execute if score #rg_rainbow_road switch.data matches 470.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Rainbow Road","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_rainbow_road switch.data matches 470.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Rainbow Road` just regenerated!"}'
-execute if score #rg_rainbow_road switch.data matches 470.. run function switch:engine/log_message/apply
+execute if score #rg_rainbow_road switch.data matches 470.. run function switch:engine/log_message/apply {message:"Map `Rainbow Road` just regenerated!"}
 
 execute if score #rg_rainbow_road switch.data matches 470.. in switch:game run function switch:maps/regenerate_doors_macro {name:"rainbow_road"}
 execute if score #rg_rainbow_road switch.data matches 470.. run scoreboard players reset #rg_rainbow_road switch.data

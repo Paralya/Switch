@@ -39,8 +39,7 @@ execute if score #rg_la_fromagerie switch.data matches 336.. in minecraft:overwo
 execute if score #rg_la_fromagerie switch.data matches 336.. in switch:game run forceload remove 59079 59000 59099 59099
 
 execute if score #rg_la_fromagerie switch.data matches 336.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"La Fromagerie","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"16","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_la_fromagerie switch.data matches 336.. run data modify storage switch:main MessageToLog set value '{"text":"Map `La Fromagerie` just regenerated!"}'
-execute if score #rg_la_fromagerie switch.data matches 336.. run function switch:engine/log_message/apply
+execute if score #rg_la_fromagerie switch.data matches 336.. run function switch:engine/log_message/apply {message:"Map `La Fromagerie` just regenerated!"}
 
 execute if score #rg_la_fromagerie switch.data matches 336.. in switch:game run function switch:maps/regenerate_doors_macro {name:"la_fromagerie"}
 execute if score #rg_la_fromagerie switch.data matches 336.. run scoreboard players reset #rg_la_fromagerie switch.data

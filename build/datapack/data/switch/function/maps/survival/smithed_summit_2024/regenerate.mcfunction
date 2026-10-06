@@ -523,8 +523,7 @@ execute if score #rg_smithed_summit_2024 switch.data matches 27595.. in minecraf
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. in switch:game run forceload remove 66600 66000 66605 66662
 
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Smithed Summit 2024","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"m","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Smithed Summit 2024` just regenerated!"}'
-execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run function switch:engine/log_message/apply
+execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run function switch:engine/log_message/apply {message:"Map `Smithed Summit 2024` just regenerated!"}
 
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. in switch:game run function switch:maps/regenerate_doors_macro {name:"smithed_summit_2024"}
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run scoreboard players reset #rg_smithed_summit_2024 switch.data

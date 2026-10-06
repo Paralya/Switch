@@ -39,8 +39,7 @@ execute if score #rg_void_desert switch.data matches 456.. in minecraft:overworl
 execute if score #rg_void_desert switch.data matches 456.. in switch:game run forceload remove 68080 68000 68100 68100
 
 execute if score #rg_void_desert switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Void Desert","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_void_desert switch.data matches 456.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Void Desert` just regenerated!"}'
-execute if score #rg_void_desert switch.data matches 456.. run function switch:engine/log_message/apply
+execute if score #rg_void_desert switch.data matches 456.. run function switch:engine/log_message/apply {message:"Map `Void Desert` just regenerated!"}
 
 execute if score #rg_void_desert switch.data matches 456.. in switch:game run function switch:maps/regenerate_doors_macro {name:"void_desert"}
 execute if score #rg_void_desert switch.data matches 456.. run scoreboard players reset #rg_void_desert switch.data

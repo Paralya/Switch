@@ -31,8 +31,7 @@ execute if score #rg_fireblast_pork switch.data matches 172.. in minecraft:overw
 execute if score #rg_fireblast_pork switch.data matches 172.. in switch:game run forceload remove 165050 165000 165075 165075
 
 execute if score #rg_fireblast_pork switch.data matches 172.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Vegan Pork","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_fireblast_pork switch.data matches 172.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Vegan Pork` just regenerated!"}'
-execute if score #rg_fireblast_pork switch.data matches 172.. run function switch:engine/log_message/apply
+execute if score #rg_fireblast_pork switch.data matches 172.. run function switch:engine/log_message/apply {message:"Map `Vegan Pork` just regenerated!"}
 
 execute if score #rg_fireblast_pork switch.data matches 172.. in switch:game run function switch:maps/regenerate_doors_macro {name:"fireblast_pork"}
 execute if score #rg_fireblast_pork switch.data matches 172.. run scoreboard players reset #rg_fireblast_pork switch.data

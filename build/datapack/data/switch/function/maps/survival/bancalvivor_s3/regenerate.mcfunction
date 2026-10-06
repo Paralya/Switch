@@ -107,8 +107,7 @@ execute if score #rg_bancalvivor_s3 switch.data matches 1629.. in minecraft:over
 execute if score #rg_bancalvivor_s3 switch.data matches 1629.. in switch:game run forceload remove 38248 38000 38260 38258
 
 execute if score #rg_bancalvivor_s3 switch.data matches 1629.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Bancalvivor S3","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_bancalvivor_s3 switch.data matches 1629.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Bancalvivor S3` just regenerated!"}'
-execute if score #rg_bancalvivor_s3 switch.data matches 1629.. run function switch:engine/log_message/apply
+execute if score #rg_bancalvivor_s3 switch.data matches 1629.. run function switch:engine/log_message/apply {message:"Map `Bancalvivor S3` just regenerated!"}
 
 execute if score #rg_bancalvivor_s3 switch.data matches 1629.. in switch:game run function switch:maps/regenerate_doors_macro {name:"bancalvivor_s3"}
 execute if score #rg_bancalvivor_s3 switch.data matches 1629.. run scoreboard players reset #rg_bancalvivor_s3 switch.data

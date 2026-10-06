@@ -24,8 +24,7 @@ data modify storage switch:main previous_map set from storage switch:main map
 function switch:maps/load_gamemode
 
 # Log message of which map is loaded
-data modify storage switch:main MessageToLog set value [{"text":"Selected map: `"},{"nbt":"map","storage":"switch:main","interpret":true},{"text":"`!"}]
-function switch:engine/log_message/apply
+function switch:engine/log_message/map_selected with storage switch:main
 
 # Add map to history
 data modify storage switch:main history.maps prepend from storage switch:main map

@@ -63,8 +63,7 @@ execute if score #rg_scartmania switch.data matches 1013.. in minecraft:overworl
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run forceload remove 58145 58000 58160 58188
 
 execute if score #rg_scartmania switch.data matches 1013.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Scartmania","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"50","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_scartmania switch.data matches 1013.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Scartmania` just regenerated!"}'
-execute if score #rg_scartmania switch.data matches 1013.. run function switch:engine/log_message/apply
+execute if score #rg_scartmania switch.data matches 1013.. run function switch:engine/log_message/apply {message:"Map `Scartmania` just regenerated!"}
 
 execute if score #rg_scartmania switch.data matches 1013.. in switch:game run function switch:maps/regenerate_doors_macro {name:"scartmania"}
 execute if score #rg_scartmania switch.data matches 1013.. run scoreboard players reset #rg_scartmania switch.data

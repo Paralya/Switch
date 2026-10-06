@@ -79,8 +79,7 @@ execute if score #rg_adraik_big_ball switch.data matches 2371.. in minecraft:ove
 execute if score #rg_adraik_big_ball switch.data matches 2371.. in switch:game run forceload remove 33192 33000 33206 33205
 
 execute if score #rg_adraik_big_ball switch.data matches 2371.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Adraik's Big Ball","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"58","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_adraik_big_ball switch.data matches 2371.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Adraik\'s Big Ball` just regenerated!"}'
-execute if score #rg_adraik_big_ball switch.data matches 2371.. run function switch:engine/log_message/apply
+execute if score #rg_adraik_big_ball switch.data matches 2371.. run function switch:engine/log_message/apply {message:"Map `Adraik's Big Ball` just regenerated!"}
 
 execute if score #rg_adraik_big_ball switch.data matches 2371.. in switch:game run function switch:maps/regenerate_doors_macro {name:"adraik_big_ball"}
 execute if score #rg_adraik_big_ball switch.data matches 2371.. run scoreboard players reset #rg_adraik_big_ball switch.data

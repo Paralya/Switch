@@ -43,8 +43,7 @@ execute if score #rg_mushroom_plains switch.data matches 313.. in minecraft:over
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run forceload remove 4102 4000 4122 4122
 
 execute if score #rg_mushroom_plains switch.data matches 313.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Mushroom Plains","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_mushroom_plains switch.data matches 313.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Mushroom Plains` just regenerated!"}'
-execute if score #rg_mushroom_plains switch.data matches 313.. run function switch:engine/log_message/apply
+execute if score #rg_mushroom_plains switch.data matches 313.. run function switch:engine/log_message/apply {message:"Map `Mushroom Plains` just regenerated!"}
 
 execute if score #rg_mushroom_plains switch.data matches 313.. in switch:game run function switch:maps/regenerate_doors_macro {name:"mushroom_plains"}
 execute if score #rg_mushroom_plains switch.data matches 313.. run scoreboard players reset #rg_mushroom_plains switch.data

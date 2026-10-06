@@ -31,8 +31,7 @@ execute if score #rg_ghost_town switch.data matches 79.. in minecraft:overworld 
 execute if score #rg_ghost_town switch.data matches 79.. in switch:game run forceload remove 42047 42000 42070 42056
 
 execute if score #rg_ghost_town switch.data matches 79.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Ghost Town","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_ghost_town switch.data matches 79.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Ghost Town` just regenerated!"}'
-execute if score #rg_ghost_town switch.data matches 79.. run function switch:engine/log_message/apply
+execute if score #rg_ghost_town switch.data matches 79.. run function switch:engine/log_message/apply {message:"Map `Ghost Town` just regenerated!"}
 
 execute if score #rg_ghost_town switch.data matches 79.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ghost_town"}
 execute if score #rg_ghost_town switch.data matches 79.. run scoreboard players reset #rg_ghost_town switch.data

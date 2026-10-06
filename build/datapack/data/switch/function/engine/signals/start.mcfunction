@@ -11,8 +11,7 @@
 scoreboard players set #game_ticks switch.data 0
 
 # Log message
-data modify storage switch:main MessageToLog set value [{"text": "Lancement d'une partie de `"},{"nbt":"current_game_name","storage":"switch:main","interpret":true},{"text":"` !"}]
-function switch:engine/log_message/apply
+function switch:engine/log_message/game_started with storage switch:main
 
 # Clear voting message
 schedule clear switch:engine/voting_time/schedule_message

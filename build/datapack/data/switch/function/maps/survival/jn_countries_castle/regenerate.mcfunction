@@ -43,8 +43,7 @@ execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove 132100 132000 132120 132120
 
 execute if score #rg_jn_countries_castle switch.data matches 265.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Countries Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_jn_countries_castle switch.data matches 265.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Countries Castle` just regenerated!"}'
-execute if score #rg_jn_countries_castle switch.data matches 265.. run function switch:engine/log_message/apply
+execute if score #rg_jn_countries_castle switch.data matches 265.. run function switch:engine/log_message/apply {message:"Map `Countries Castle` just regenerated!"}
 
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jn_countries_castle"}
 execute if score #rg_jn_countries_castle switch.data matches 265.. run scoreboard players reset #rg_jn_countries_castle switch.data

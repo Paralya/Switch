@@ -39,8 +39,7 @@ execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:ove
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove 135080 135000 135100 135100
 
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sakura PVP Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Sakura PVP Box` just regenerated!"}'
-execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run function switch:engine/log_message/apply
+execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run function switch:engine/log_message/apply {message:"Map `Sakura PVP Box` just regenerated!"}
 
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jn_sakura_pvpbox"}
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run scoreboard players reset #rg_jn_sakura_pvpbox switch.data

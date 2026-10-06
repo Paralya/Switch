@@ -39,8 +39,7 @@ execute if score #rg_floor_is_lava switch.data matches 456.. in minecraft:overwo
 execute if score #rg_floor_is_lava switch.data matches 456.. in switch:game run forceload remove 62080 62000 62100 62100
 
 execute if score #rg_floor_is_lava switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"The floor is probably lava","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_floor_is_lava switch.data matches 456.. run data modify storage switch:main MessageToLog set value '{"text":"Map `The floor is probably lava` just regenerated!"}'
-execute if score #rg_floor_is_lava switch.data matches 456.. run function switch:engine/log_message/apply
+execute if score #rg_floor_is_lava switch.data matches 456.. run function switch:engine/log_message/apply {message:"Map `The floor is probably lava` just regenerated!"}
 
 execute if score #rg_floor_is_lava switch.data matches 456.. in switch:game run function switch:maps/regenerate_doors_macro {name:"floor_is_lava"}
 execute if score #rg_floor_is_lava switch.data matches 456.. run scoreboard players reset #rg_floor_is_lava switch.data

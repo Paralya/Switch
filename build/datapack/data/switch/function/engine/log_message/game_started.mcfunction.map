@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "game_started.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AAuXoD;;;;;;;;;;AACpD;AACA"
+}

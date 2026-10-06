@@ -27,8 +27,7 @@ execute if score #rg_gg_desert_1 switch.data matches 107.. in minecraft:overworl
 execute if score #rg_gg_desert_1 switch.data matches 107.. in switch:game run forceload remove 124144 124047 124164 124092
 
 execute if score #rg_gg_desert_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Y fait chaud ici!","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_gg_desert_1 switch.data matches 107.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Y fait chaud ici!` just regenerated!"}'
-execute if score #rg_gg_desert_1 switch.data matches 107.. run function switch:engine/log_message/apply
+execute if score #rg_gg_desert_1 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Y fait chaud ici!` just regenerated!"}
 
 execute if score #rg_gg_desert_1 switch.data matches 107.. in switch:game run function switch:maps/regenerate_doors_macro {name:"gg_desert_1"}
 execute if score #rg_gg_desert_1 switch.data matches 107.. run scoreboard players reset #rg_gg_desert_1 switch.data

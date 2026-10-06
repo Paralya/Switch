@@ -5,8 +5,7 @@
 #
 
 # Log message
-data modify storage switch:main MessageToLog set value [{"text": "Arret d'une partie de `"},{"nbt":"current_game_name","storage":"switch:main","interpret":true},{"text":"` !"}]
-function switch:engine/log_message/apply
+function switch:engine/log_message/game_stopped with storage switch:main
 
 # Launch stop signal
 data modify storage switch:main input set value {id:""}

@@ -38,8 +38,7 @@ execute if score #rg_block_party switch.data matches 725.. in minecraft:overworl
 execute if score #rg_block_party switch.data matches 725.. in switch:game run forceload remove 110064 109993 110087 110087
 
 execute if score #rg_block_party switch.data matches 725.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Block Party","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"36","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_block_party switch.data matches 725.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Block Party` just regenerated!"}'
-execute if score #rg_block_party switch.data matches 725.. run function switch:engine/log_message/apply
+execute if score #rg_block_party switch.data matches 725.. run function switch:engine/log_message/apply {message:"Map `Block Party` just regenerated!"}
 
 execute if score #rg_block_party switch.data matches 725.. in switch:game run function switch:maps/regenerate_doors_macro {name:"block_party"}
 execute if score #rg_block_party switch.data matches 725.. run scoreboard players reset #rg_block_party switch.data

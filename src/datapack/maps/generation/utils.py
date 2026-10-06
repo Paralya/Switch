@@ -279,11 +279,10 @@ def write_last_lines_of_regenerate(name: str, namespace: str, base_condition: st
 """.strip())
 
 	# Write the tellraw command
-	encoded_name: str = name.replace("'", r"\'")
+	encoded_name: str = name.replace('"', r'\"')
 	write_function(path, f"""
 {base_condition} {last_tick}.. run {tellraw}
-{base_condition} {last_tick}.. run data modify storage {ns}:main MessageToLog set value '{{\"text\":\"Map `{encoded_name}` just regenerated!\"}}'
-{base_condition} {last_tick}.. run function {ns}:engine/log_message/apply
+{base_condition} {last_tick}.. run function {ns}:engine/log_message/apply {{message:"Map `{encoded_name}` just regenerated!"}}
 """)
 
 	# Write the door regeneration command, the reset command and the schedule command

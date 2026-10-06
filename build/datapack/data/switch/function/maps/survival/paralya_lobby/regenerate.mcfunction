@@ -75,8 +75,7 @@ execute if score #rg_paralya_lobby switch.data matches 2269.. in minecraft:overw
 execute if score #rg_paralya_lobby switch.data matches 2269.. in switch:game run forceload remove 99186 99000 99200 99200
 
 execute if score #rg_paralya_lobby switch.data matches 2269.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Paralya Lobby","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"53","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_paralya_lobby switch.data matches 2269.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Paralya Lobby` just regenerated!"}'
-execute if score #rg_paralya_lobby switch.data matches 2269.. run function switch:engine/log_message/apply
+execute if score #rg_paralya_lobby switch.data matches 2269.. run function switch:engine/log_message/apply {message:"Map `Paralya Lobby` just regenerated!"}
 
 execute if score #rg_paralya_lobby switch.data matches 2269.. in switch:game run function switch:maps/regenerate_doors_macro {name:"paralya_lobby"}
 execute if score #rg_paralya_lobby switch.data matches 2269.. run scoreboard players reset #rg_paralya_lobby switch.data

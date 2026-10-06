@@ -39,8 +39,7 @@ execute if score #rg_cluedo_camping switch.data matches 121.. in minecraft:overw
 execute if score #rg_cluedo_camping switch.data matches 121.. in switch:game run forceload remove 54090 54000 54112 54094
 
 execute if score #rg_cluedo_camping switch.data matches 121.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo Camping","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_cluedo_camping switch.data matches 121.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Cluedo Camping` just regenerated!"}'
-execute if score #rg_cluedo_camping switch.data matches 121.. run function switch:engine/log_message/apply
+execute if score #rg_cluedo_camping switch.data matches 121.. run function switch:engine/log_message/apply {message:"Map `Cluedo Camping` just regenerated!"}
 
 execute if score #rg_cluedo_camping switch.data matches 121.. in switch:game run function switch:maps/regenerate_doors_macro {name:"cluedo_camping"}
 execute if score #rg_cluedo_camping switch.data matches 121.. run scoreboard players reset #rg_cluedo_camping switch.data

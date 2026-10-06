@@ -65,8 +65,7 @@ data modify storage {ns}:main previous_map set from storage {ns}:main map
 function {ns}:maps/load_gamemode
 
 # Log message of which map is loaded
-data modify storage {ns}:main MessageToLog set value [{{"text":"Selected map: `"}},{{"nbt":"map","storage":"{ns}:main","interpret":true}},{{"text":"`!"}}]
-function {ns}:engine/log_message/apply
+function {ns}:engine/log_message/map_selected with storage {ns}:main
 
 # Add map to history
 data modify storage {ns}:main history.maps prepend from storage {ns}:main map

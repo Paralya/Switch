@@ -51,8 +51,7 @@ execute if score #rg_ctf_flowers switch.data matches 801.. in minecraft:overworl
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run forceload remove 148177 148000 148202 148105
 
 execute if score #rg_ctf_flowers switch.data matches 801.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fairy Garden","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_ctf_flowers switch.data matches 801.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Fairy Garden` just regenerated!"}'
-execute if score #rg_ctf_flowers switch.data matches 801.. run function switch:engine/log_message/apply
+execute if score #rg_ctf_flowers switch.data matches 801.. run function switch:engine/log_message/apply {message:"Map `Fairy Garden` just regenerated!"}
 
 execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_flowers"}
 execute if score #rg_ctf_flowers switch.data matches 801.. run scoreboard players reset #rg_ctf_flowers switch.data

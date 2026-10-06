@@ -39,8 +39,7 @@ execute if score #rg_slimy_ground switch.data matches 456.. in minecraft:overwor
 execute if score #rg_slimy_ground switch.data matches 456.. in switch:game run forceload remove 60080 60000 60100 60100
 
 execute if score #rg_slimy_ground switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Slimy Ground","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_slimy_ground switch.data matches 456.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Slimy Ground` just regenerated!"}'
-execute if score #rg_slimy_ground switch.data matches 456.. run function switch:engine/log_message/apply
+execute if score #rg_slimy_ground switch.data matches 456.. run function switch:engine/log_message/apply {message:"Map `Slimy Ground` just regenerated!"}
 
 execute if score #rg_slimy_ground switch.data matches 456.. in switch:game run function switch:maps/regenerate_doors_macro {name:"slimy_ground"}
 execute if score #rg_slimy_ground switch.data matches 456.. run scoreboard players reset #rg_slimy_ground switch.data

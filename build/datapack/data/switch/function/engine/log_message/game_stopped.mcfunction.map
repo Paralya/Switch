@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "game_stopped.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/datapack/engine/main.py"
+	],
+	"names": [],
+	"mappings": "AA0XoD;;;;;;;;AACpD;AACA"
+}

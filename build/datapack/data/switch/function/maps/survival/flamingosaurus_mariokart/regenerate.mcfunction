@@ -2195,8 +2195,7 @@ execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. in mi
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. in switch:game run forceload remove 20779 19376 20781 20668
 
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Main Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"98","color":"gold"},{"text":"m","color":"yellow"},{"text":"49","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Main Island` just regenerated!"}'
-execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run function switch:engine/log_message/apply
+execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run function switch:engine/log_message/apply {message:"Map `Main Island` just regenerated!"}
 
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. in switch:game run function switch:maps/regenerate_doors_macro {name:"flamingosaurus_mariokart"}
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run scoreboard players reset #rg_flamingosaurus_mariokart switch.data

@@ -74,8 +74,7 @@ execute if score #rg_rush_the_point_1 switch.data matches 257.. in minecraft:ove
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run forceload remove 14085 13901 14099 14099
 
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Rush the Point 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
-execute if score #rg_rush_the_point_1 switch.data matches 257.. run data modify storage switch:main MessageToLog set value '{"text":"Map `Rush the Point 1` just regenerated!"}'
-execute if score #rg_rush_the_point_1 switch.data matches 257.. run function switch:engine/log_message/apply
+execute if score #rg_rush_the_point_1 switch.data matches 257.. run function switch:engine/log_message/apply {message:"Map `Rush the Point 1` just regenerated!"}
 
 execute if score #rg_rush_the_point_1 switch.data matches 257.. in switch:game run function switch:maps/regenerate_doors_macro {name:"rush_the_point_1"}
 execute if score #rg_rush_the_point_1 switch.data matches 257.. run scoreboard players reset #rg_rush_the_point_1 switch.data
