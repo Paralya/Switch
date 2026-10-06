@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/murder_mystery/start
 #
 

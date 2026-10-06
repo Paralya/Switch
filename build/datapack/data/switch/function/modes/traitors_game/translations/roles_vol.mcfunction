@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/translations/roles_vol
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/traitors_game/roles/vol
 #
 

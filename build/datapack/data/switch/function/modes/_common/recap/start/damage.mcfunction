@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/recap/start/damage
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/spectres_game/start
 #
 

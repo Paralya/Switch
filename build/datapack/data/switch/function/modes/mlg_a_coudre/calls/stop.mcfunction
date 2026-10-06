@@ -1,7 +1,7 @@
 
 #> switch:modes/mlg_a_coudre/calls/stop
 #
-# @within	???
+# @within	switch:engine/signals/macro_stop
 #
 
 execute if data storage switch:main {current_game:"mlg_a_coudre"} run function switch:modes/mlg_a_coudre/stop

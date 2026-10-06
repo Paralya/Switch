@@ -1,6 +1,8 @@
 
 #> switch:modes/pitch_creep/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/pitch_creep/calls/start
 #
 

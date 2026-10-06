@@ -2,6 +2,7 @@
 #> switch:music/actions/random
 #
 # @within	switch:music/actions/random
+#			switch:music/tick_macro
 #			switch:player/trigger/music/main
 #
 

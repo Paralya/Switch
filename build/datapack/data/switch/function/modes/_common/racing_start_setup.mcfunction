@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/racing_start_setup
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/race/start
 #
 

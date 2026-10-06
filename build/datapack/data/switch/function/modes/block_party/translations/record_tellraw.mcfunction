@@ -1,6 +1,8 @@
 
 #> switch:modes/block_party/translations/record_tellraw
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/block_party/start with storage switch:records block_party
 #
 # @args		round (unknown)

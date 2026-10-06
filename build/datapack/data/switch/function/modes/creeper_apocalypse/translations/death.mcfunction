@@ -1,6 +1,8 @@
 
 #> switch:modes/creeper_apocalypse/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/creeper_apocalypse/death
 #
 

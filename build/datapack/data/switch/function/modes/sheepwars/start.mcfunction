@@ -1,6 +1,8 @@
 
 #> switch:modes/sheepwars/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/sheepwars/calls/start
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/block_party/verify_regeneration
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/block_party/start
 #			switch:modes/block_party/verify_regeneration
 #

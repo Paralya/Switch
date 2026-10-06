@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/roles/vol
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/traitors_game/death/player
 #
 

@@ -1,7 +1,7 @@
 
 #> switch:stats/sort_minigames_stats/main
 #
-# @within	???
+# @within	(public)
 #
 
 # For each minigame

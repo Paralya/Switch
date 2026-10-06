@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/pitchout/start
 #
 

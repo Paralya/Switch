@@ -1,7 +1,7 @@
 
 #> switch:modes/pvpswap/calls/entity_hurt_player
 #
-# @within	???
+# @within	(public)
 #
 
 advancement revoke @s only switch:pvpswap/entity_hurt_player

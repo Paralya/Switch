@@ -1,6 +1,8 @@
 
 #> switch:modes/bombardement/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/bombardement/calls/start
 #
 

@@ -1,7 +1,10 @@
 
 #> switch:modes/infected/death/zombie_spawn
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/infected/joined
+#			string in switch:modes/infected/tick
 #
 
 execute if data storage switch:main {map:"area_51"} run tp @s 2060 145 2029 0 0

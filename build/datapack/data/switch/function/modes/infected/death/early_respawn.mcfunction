@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/death/early_respawn
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/infected/joined
 #			switch:modes/infected/start [ as @a[tag=!detached] ]
 #

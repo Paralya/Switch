@@ -1,7 +1,9 @@
 
 #> switch:modes/mlg_a_coudre/calls/start
 #
-# @within	???
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
+# @within	switch:engine/signals/macro_start
 #
 
 execute if data storage switch:main {current_game:"mlg_a_coudre"} run function switch:modes/mlg_a_coudre/start

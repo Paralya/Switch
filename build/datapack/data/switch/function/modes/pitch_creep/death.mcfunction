@@ -1,7 +1,10 @@
 
 #> switch:modes/pitch_creep/death
 #
-# @within	switch:modes/pitch_creep/joined
+# @executed	as @a[sort=random] & at @s
+#
+# @within	string in switch:modes/pitch_creep/tick
+#			switch:modes/pitch_creep/joined
 #			switch:modes/pitch_creep/process_end [ as @a[tag=!detached,sort=random] ]
 #
 

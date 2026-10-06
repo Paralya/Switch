@@ -4,6 +4,7 @@
 # @executed	as @a[tag=!detached,sort=random]
 #
 # @within	switch:modes/capture_the_flag/process_end [ as @a[tag=!detached,sort=random] ]
+#			string in switch:modes/capture_the_flag/tick
 #
 
 function switch:utils/classic_death

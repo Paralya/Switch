@@ -1,7 +1,7 @@
 
 #> switch:_stats_custom_blocks
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #total_custom_blocks switch.data 0

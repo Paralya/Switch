@@ -1,6 +1,8 @@
 
 #> switch:modes/protect_the_king/better_tp
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/protect_the_king/start
 #
 

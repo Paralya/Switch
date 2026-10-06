@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/sakura_land/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 19944 20103 0 124 under 122 false @a[tag=!detached]

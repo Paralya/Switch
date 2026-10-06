@@ -1,6 +1,8 @@
 
 #> switch:modes/moutron/spread_players/whity_lab
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/moutron/start
 #
 

@@ -1,7 +1,7 @@
 
 #> switch:modes/gay_shooter/roles
 #
-# @within	???
+# @within	(public)
 #
 
 # Role selection (1/4 shooters)

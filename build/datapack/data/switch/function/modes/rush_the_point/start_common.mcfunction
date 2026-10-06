@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_point/start_common
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/rush_the_flag/start
 #			switch:modes/rush_the_point/start
 #

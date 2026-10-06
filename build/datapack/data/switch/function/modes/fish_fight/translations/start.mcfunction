@@ -1,6 +1,8 @@
 
 #> switch:modes/fish_fight/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/fish_fight/start
 #
 

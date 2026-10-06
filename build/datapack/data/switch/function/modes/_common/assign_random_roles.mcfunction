@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/assign_random_roles
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/gay_shooter/start {mode:"switch:modes/gay_shooter"}
 #			switch:modes/panic_chase/start {mode:"switch:modes/panic_chase"}
 #

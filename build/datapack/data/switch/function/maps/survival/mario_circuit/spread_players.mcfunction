@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/mario_circuit/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 20451 19587 0 71 under 128 false @a[tag=!detached]

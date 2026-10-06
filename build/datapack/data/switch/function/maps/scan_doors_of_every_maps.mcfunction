@@ -1,7 +1,7 @@
 
 #> switch:maps/scan_doors_of_every_maps
 #
-# @within	???
+# @within	(public)
 #
 
 data modify storage switch:maps to_scan set value {}

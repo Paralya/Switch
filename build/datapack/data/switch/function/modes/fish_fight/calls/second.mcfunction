@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/calls/second
 #
-# @within	???
+# @within	switch:engine/signals/macro_second
 #
 
 execute if data storage switch:main {current_game:"fish_fight"} run function switch:modes/fish_fight/second

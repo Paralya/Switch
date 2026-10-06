@@ -1,6 +1,8 @@
 
 #> switch:modes/feed_fast/translations/record_tellraw
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/feed_fast/start with storage switch:records feed_fast
 #
 # @args		points (unknown)

@@ -1,6 +1,8 @@
 
 #> switch:modes/one_shot/respawn/spawn_marker
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/one_shot/start
 #			switch:modes/one_shot/start [ as @e[limit=2] & as @e[limit=2] & as @e[limit=2] & as @e[limit=2] & as @e[limit=2] & as @e[limit=2] ]
 #			switch:modes/one_shot/tick

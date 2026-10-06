@@ -1,6 +1,8 @@
 
 #> switch:modes/capture_the_flag/teleport_to_spawn
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/capture_the_flag/joined
 #			switch:modes/capture_the_flag/score_point [ as @p[tag=switch.has_blue_flag] ]
 #			switch:modes/capture_the_flag/score_point [ as @p[tag=switch.has_red_flag] ]

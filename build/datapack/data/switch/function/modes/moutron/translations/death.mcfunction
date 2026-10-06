@@ -1,6 +1,8 @@
 
 #> switch:modes/moutron/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/moutron/death
 #
 

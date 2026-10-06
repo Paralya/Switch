@@ -1,6 +1,8 @@
 
 #> switch:modes/fish_fight/teams_tp/setup
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/fish_fight/start
 #
 

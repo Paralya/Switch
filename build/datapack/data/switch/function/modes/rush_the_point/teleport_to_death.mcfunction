@@ -1,7 +1,7 @@
 
 #> switch:modes/rush_the_point/teleport_to_death
 #
-# @within	???
+# @within	string in switch:modes/rush_the_point/tick_common
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id

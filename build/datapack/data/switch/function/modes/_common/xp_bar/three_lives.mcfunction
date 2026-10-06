@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/xp_bar/three_lives
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/fish_fight/start
 #			switch:modes/fish_fight/teams_tp/tp_give
 #			switch:modes/pitchout/_tp_give_common

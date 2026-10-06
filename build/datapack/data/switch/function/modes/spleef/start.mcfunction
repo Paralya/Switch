@@ -1,6 +1,8 @@
 
 #> switch:modes/spleef/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/spleef/calls/start
 #
 

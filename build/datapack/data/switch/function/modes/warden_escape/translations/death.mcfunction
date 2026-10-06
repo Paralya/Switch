@@ -1,6 +1,8 @@
 
 #> switch:modes/warden_escape/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/warden_escape/death
 #
 

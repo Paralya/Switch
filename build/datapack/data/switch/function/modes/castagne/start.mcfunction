@@ -1,6 +1,8 @@
 
 #> switch:modes/castagne/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/castagne/calls/start
 #
 

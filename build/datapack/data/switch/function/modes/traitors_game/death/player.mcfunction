@@ -1,8 +1,11 @@
 
 #> switch:modes/traitors_game/death/player
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/traitors_game/joined
 #			switch:modes/traitors_game/process_end [ as @a[tag=!detached,sort=random] ]
+#			string in switch:modes/traitors_game/tick
 #
 
 # Voleur (Floupy role = 7)

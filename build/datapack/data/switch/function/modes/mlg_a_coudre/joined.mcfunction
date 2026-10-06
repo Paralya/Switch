@@ -1,6 +1,8 @@
 
 #> switch:modes/mlg_a_coudre/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/mlg_a_coudre/calls/joined
 #
 

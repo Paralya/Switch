@@ -1,6 +1,8 @@
 
 #> switch:modes/minigolf/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/minigolf/calls/start
 #
 

@@ -1,7 +1,7 @@
 
 #> switch:advancements/percentages_recalculations
 #
-# @within	???
+# @within	(public)
 #
 
 data modify storage switch:temp copy set from storage switch:advancements all

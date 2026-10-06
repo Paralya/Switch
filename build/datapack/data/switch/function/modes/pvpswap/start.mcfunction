@@ -1,6 +1,8 @@
 
 #> switch:modes/pvpswap/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/pvpswap/calls/start
 #
 

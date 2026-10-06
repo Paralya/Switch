@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/block_party/regenerate
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/block_party/verify_regeneration
 #			switch:maps/survival/block_party/regenerate 1t [ scheduled ]
 #			switch:maps/loop_regenerate_every_maps

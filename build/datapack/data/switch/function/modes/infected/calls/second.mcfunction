@@ -1,7 +1,7 @@
 
 #> switch:modes/infected/calls/second
 #
-# @within	???
+# @within	switch:engine/signals/macro_second
 #
 
 execute if data storage switch:main {current_game:"infected"} run function switch:modes/infected/second

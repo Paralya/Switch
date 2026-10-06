@@ -1,8 +1,11 @@
 
 #> switch:modes/laser_game/teleport_players
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/laser_game/joined
 #			switch:modes/laser_game/start [ as @a[tag=!detached,sort=random] ]
+#			string in switch:modes/laser_game/tick
 #
 
 tag @s remove global.ignore

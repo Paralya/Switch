@@ -1,6 +1,8 @@
 
 #> switch:modes/_coupdetat/give_items/items
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/_coupdetat/give_items with storage switch:layout out
 #
 # @args		s0 (unknown)

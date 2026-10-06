@@ -1,7 +1,7 @@
 
 #> switch:modes/simultaneous_jump/death
 #
-# @within	???
+# @within	string in switch:modes/simultaneous_jump/tick
 #
 
 function switch:translations/common/death_missed_jump

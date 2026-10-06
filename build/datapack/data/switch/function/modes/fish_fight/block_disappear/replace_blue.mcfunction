@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/block_disappear/replace_blue
 #
-# @within	???
+# @within	(public)
 #
 
 setblock ~ ~ ~ minecraft:blue_wool

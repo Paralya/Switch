@@ -1,9 +1,8 @@
 
 #> switch:music/actions/previous
 #
-# @executed	as @a[sort=random] & at @s
-#
-# @within	switch:player/trigger/music/main
+# @within	switch:music/tick_macro
+#			switch:player/trigger/music/main
 #
 
 # Go previous song if not playing or if playing and less than 5 seconds

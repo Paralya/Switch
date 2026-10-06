@@ -1,7 +1,7 @@
 
 #> switch:shop/description
 #
-# @within	???
+# @within	(public)
 #
 # @args		id (unknown)
 #

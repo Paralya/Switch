@@ -1,6 +1,8 @@
 
 #> switch:modes/tnt_run/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/tnt_run/death
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/pitch_creep/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitch_creep/death
 #
 

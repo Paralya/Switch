@@ -1,6 +1,8 @@
 
 #> switch:modes/fish_fight/teams_tp/tp_give
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/fish_fight/death
 #
 

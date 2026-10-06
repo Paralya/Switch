@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/snow_travel/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 23103 23102 0 103 under 176 false @a[tag=!detached]

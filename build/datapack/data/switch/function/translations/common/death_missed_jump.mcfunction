@@ -1,6 +1,8 @@
 
 #> switch:translations/common/death_missed_jump
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/de_a_coudre/death
 #			switch:modes/simultaneous_jump/death
 #

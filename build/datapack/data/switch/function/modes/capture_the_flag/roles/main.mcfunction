@@ -1,6 +1,8 @@
 
 #> switch:modes/capture_the_flag/roles/main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/capture_the_flag/joined
 #			switch:modes/capture_the_flag/start [ as @a[tag=!detached,sort=random] & at @s ]
 #

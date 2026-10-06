@@ -1,8 +1,11 @@
 
 #> switch:modes/mlg_a_coudre/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/mlg_a_coudre/joined
 #			switch:modes/mlg_a_coudre/process_end [ as @a[tag=!detached] ]
+#			string in switch:modes/mlg_a_coudre/tick
 #
 
 execute if score @s switch.temp.lives matches 1.. run scoreboard players remove @s switch.temp.lives 1

@@ -4,6 +4,7 @@
 # @executed	as @a[tag=!detached,gamemode=!spectator,sort=random] & at @s
 #
 # @within	switch:modes/block_party/tick [ as @a[tag=!detached,gamemode=!spectator,sort=random] & at @s ]
+#			string in switch:modes/block_party/tick
 #			switch:modes/block_party/joined
 #
 

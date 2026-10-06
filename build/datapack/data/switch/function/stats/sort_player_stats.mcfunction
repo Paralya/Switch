@@ -1,7 +1,7 @@
 
 #> switch:stats/sort_player_stats
 #
-# @within	???
+# @within	(public)
 #
 
 function switch:stats/_sort_player_stats_setup

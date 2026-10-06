@@ -1,7 +1,7 @@
 
 #> switch:engine/log_message/apply
 #
-# @executed	Don't care
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
 #
 # @within	switch:maps/load
 #			switch:engine/signals/start

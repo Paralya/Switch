@@ -1,7 +1,7 @@
 
 #> switch:stats/_update_every_single_stat
 #
-# @within	???
+# @within	(public)
 #
 
 function switch:player/update_stats_storage/every_player

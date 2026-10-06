@@ -1,6 +1,8 @@
 
 #> switch:modes/coin_chaser/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/coin_chaser/calls/start
 #
 

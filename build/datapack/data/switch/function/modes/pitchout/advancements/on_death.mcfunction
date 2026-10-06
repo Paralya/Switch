@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/advancements/on_death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/death
 #
 

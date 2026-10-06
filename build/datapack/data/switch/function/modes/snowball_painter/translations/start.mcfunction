@@ -1,6 +1,8 @@
 
 #> switch:modes/snowball_painter/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/snowball_painter/start
 #
 

@@ -1,8 +1,6 @@
 
 #> switch:music/reset_progress
 #
-# @executed	as @a[sort=random] & at @s
-#
 # @within	switch:music/actions/next
 #			switch:music/actions/previous
 #

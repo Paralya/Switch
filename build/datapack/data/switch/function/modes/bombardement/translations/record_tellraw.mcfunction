@@ -1,6 +1,8 @@
 
 #> switch:modes/bombardement/translations/record_tellraw
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/bombardement/record_tellraw with storage switch:records bombardement
 #
 # @args		seconds (unknown)

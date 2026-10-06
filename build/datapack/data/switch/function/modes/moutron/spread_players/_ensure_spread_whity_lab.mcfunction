@@ -1,6 +1,8 @@
 
 #> switch:modes/moutron/spread_players/_ensure_spread_whity_lab
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/moutron/spread_players/whity_lab
 #
 

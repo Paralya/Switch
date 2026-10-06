@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/traitors_game/start
 #
 

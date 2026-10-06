@@ -1,7 +1,7 @@
 
 #> switch:translations/post_load
 #
-# @within	???
+# @within	(public)
 #
 
 # French

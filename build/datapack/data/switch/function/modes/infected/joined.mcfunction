@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/infected/calls/joined
 #
 

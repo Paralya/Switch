@@ -1,9 +1,12 @@
 
 #> switch:modes/spleef/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/spleef/joined
 #			switch:modes/spleef/process_end [ as @a[tag=!detached] ]
 #			switch:modes/spleef/tick [ as @a[tag=!detached,gamemode=survival,predicate=switch:in_lava,sort=random] ]
+#			string in switch:modes/spleef/tick
 #
 
 # Attribute the kill: nearest recent digger marker in the column above the victim (excluding

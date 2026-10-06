@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/advancements/death_macro
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/advancements/on_death with storage switch:temp input
 #
 # @args		my_id (int)

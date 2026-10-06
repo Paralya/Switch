@@ -1,6 +1,8 @@
 
 #> switch:utils/death_tp
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:utils/classic_death
 #
 

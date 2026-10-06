@@ -1,7 +1,7 @@
 
 #> switch:modes/_coupdetat/calls/stop
 #
-# @within	???
+# @within	switch:engine/signals/macro_stop
 #
 
 # Do nothing

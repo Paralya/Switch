@@ -1,6 +1,8 @@
 
 #> switch:modes/feed_fast/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/feed_fast/calls/start
 #
 

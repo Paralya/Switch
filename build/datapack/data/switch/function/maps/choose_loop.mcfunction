@@ -1,6 +1,8 @@
 
 #> switch:maps/choose_loop
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/find_map
 #			switch:maps/choose_loop
 #

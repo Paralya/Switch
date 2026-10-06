@@ -1,7 +1,7 @@
 
 #> switch:music/music_over
 #
-# @within	???
+# @within	(public)
 #
 
 # If the loop is enabled (ex: practice mode), restart the same song from the beginning

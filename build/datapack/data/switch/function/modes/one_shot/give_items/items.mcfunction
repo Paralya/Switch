@@ -1,6 +1,8 @@
 
 #> switch:modes/one_shot/give_items/items
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/one_shot/give_items with storage switch:layout out
 #
 # @args		s0 (unknown)

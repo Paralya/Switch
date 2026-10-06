@@ -1,7 +1,7 @@
 
 #> switch:maps/regenerate_every_maps
 #
-# @within	???
+# @within	(public)
 #
 
 data modify storage switch:maps to_regenerate set value {}

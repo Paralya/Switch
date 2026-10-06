@@ -1,7 +1,7 @@
 
 #> switch:utils/get_all_recipes
 #
-# @within	???
+# @within	(public)
 #
 
 # Get all recipes

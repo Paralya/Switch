@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/city_race/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 19939 19600 0 123 under 194 false @a[tag=!detached]

@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/bowser_castle/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 22113 22122 0 113 under 171 false @a[tag=!detached]

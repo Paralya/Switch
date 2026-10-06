@@ -1,6 +1,8 @@
 
 #> switch:modes/mlg_a_coudre/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/mlg_a_coudre/death
 #
 

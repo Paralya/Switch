@@ -1,6 +1,8 @@
 
 #> switch:modes/coin_chaser/give_items
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/coin_chaser/respawn
 #			switch:modes/coin_chaser/start [ as @a[tag=!detached] ]
 #

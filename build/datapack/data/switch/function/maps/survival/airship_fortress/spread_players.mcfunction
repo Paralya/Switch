@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/airship_fortress/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 20693 20326 0 88 under 170 false @a[tag=!detached]

@@ -5,6 +5,7 @@
 #
 # @within	switch:modes/glassrunner/joined
 #			switch:modes/glassrunner/start [ as @a[tag=!detached] & at @s ]
+#			string in switch:modes/glassrunner/tick
 #			switch:modes/glassrunner/start/team
 #			switch:modes/glassrunner/end/process_end [ as @a[tag=!detached,sort=random] ]
 #

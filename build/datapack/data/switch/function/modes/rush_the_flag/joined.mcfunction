@@ -1,6 +1,8 @@
 
 #> switch:modes/rush_the_flag/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/rush_the_flag/calls/joined
 #
 

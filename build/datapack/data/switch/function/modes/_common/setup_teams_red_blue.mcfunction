@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/setup_teams_red_blue
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/layers_2_teams/start
 #			switch:modes/sheepwars/start
 #

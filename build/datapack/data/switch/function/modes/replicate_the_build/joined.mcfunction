@@ -1,6 +1,8 @@
 
 #> switch:modes/replicate_the_build/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/replicate_the_build/calls/joined
 #
 

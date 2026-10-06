@@ -1,6 +1,8 @@
 
 #> switch:modes/spectres_game/percentage/select_roles
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/spectres_game/start
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:engine/log_message/on_wolf
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:engine/log_message/apply
 #			switch:engine/log_message/apply [ in minecraft:overworld & positioned 0 2 0 ]
 #

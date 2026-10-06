@@ -1,7 +1,7 @@
 
 #> switch:modes/panic_chase/give_items
 #
-# @within	???
+# @within	(public)
 #
 
 # Item give depending on random

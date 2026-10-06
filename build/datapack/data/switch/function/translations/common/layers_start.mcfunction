@@ -1,6 +1,8 @@
 
 #> switch:translations/common/layers_start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/layers_2_teams/start
 #			switch:modes/layers_4_teams/start
 #

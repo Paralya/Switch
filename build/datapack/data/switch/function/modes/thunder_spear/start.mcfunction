@@ -1,6 +1,8 @@
 
 #> switch:modes/thunder_spear/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/thunder_spear/calls/start
 #
 

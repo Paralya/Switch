@@ -1,7 +1,7 @@
 
 #> switch:engine/add_time
 #
-# @within	???
+# @within	(public)
 #
 
 # Add time & playsound

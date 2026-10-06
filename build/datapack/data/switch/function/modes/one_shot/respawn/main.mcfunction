@@ -1,6 +1,8 @@
 
 #> switch:modes/one_shot/respawn/main
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/one_shot/death
 #			switch:modes/one_shot/start [ as @a[tag=!detached] ]
 #

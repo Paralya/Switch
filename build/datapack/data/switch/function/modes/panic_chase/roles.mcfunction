@@ -1,7 +1,7 @@
 
 #> switch:modes/panic_chase/roles
 #
-# @within	???
+# @within	(public)
 #
 
 ## Role selection (1/6 chasseurs)

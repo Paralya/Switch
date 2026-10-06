@@ -4,6 +4,7 @@
 # @executed	at @s
 #
 # @within	switch:modes/bombardement/tick [ at @s ]
+#			string in switch:modes/bombardement/tick
 #			switch:modes/bombardement/joined
 #			switch:modes/bombardement/explode [ as @a[tag=!detached,gamemode=!spectator,distance=..1.5] & at @s ]
 #			switch:modes/bombardement/ball_tick [ as @a[tag=!detached,gamemode=!spectator,distance=..1.5] & at @s ]

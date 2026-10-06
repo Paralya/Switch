@@ -1,6 +1,8 @@
 
 #> switch:translations/common/joined_reconnect
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/capture_the_flag/joined
 #			switch:modes/laser_game/joined
 #			switch:modes/rush_the_flag/joined

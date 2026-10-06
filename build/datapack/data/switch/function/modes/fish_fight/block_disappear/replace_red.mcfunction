@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/block_disappear/replace_red
 #
-# @within	???
+# @within	(public)
 #
 
 setblock ~ ~ ~ minecraft:red_wool

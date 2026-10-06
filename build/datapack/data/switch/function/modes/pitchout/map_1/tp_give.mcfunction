@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/map_1/tp_give
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/death
 #			switch:modes/pitchout/start [ as @a[tag=!detached,sort=random] ]
 #

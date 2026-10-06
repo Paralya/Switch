@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/advancements/harcele_verif
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/advancements/death_macro {my_id:$(my_id)}
 #
 # @args		my_id (int)

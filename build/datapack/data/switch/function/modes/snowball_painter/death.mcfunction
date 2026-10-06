@@ -1,8 +1,11 @@
 
 #> switch:modes/snowball_painter/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/snowball_painter/calls/joined
 #			switch:modes/snowball_painter/process_end [ as @a[tag=!detached] ]
+#			string in switch:modes/snowball_painter/tick
 #
 
 gamemode spectator @s

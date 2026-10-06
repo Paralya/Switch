@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/dishorreur/if_race
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players set #total_laps switch.data 3

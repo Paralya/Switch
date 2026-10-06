@@ -1,7 +1,7 @@
 
 #> switch:_give_all
 #
-# @within	???
+# @within	(public)
 #
 
 loot give @s loot smithed.crafter:blocks/table

@@ -1,6 +1,8 @@
 
 #> switch:modes/one_shot/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/one_shot/calls/joined
 #
 

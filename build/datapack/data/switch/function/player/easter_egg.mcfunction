@@ -17,14 +17,14 @@
 
 # Liste des easter eggs : 
 # - $(tag) ; Texte qui s'affiche ; Panneau
-# - switch.easter_egg.cc_001001 ; Coucou, tu veux voir ma 01001100 ; same
-# - switch.easter_egg.pi ; 3.141895 ; plus de décimales
-# - switch.easter_egg.ping ; Ping ; Pong
-# - switch.easter_egg.pong ; Pong ; Ping
-# - switch.easter_egg.42 ; 42 ; La réponse à la vie
-# - switch.easter_egg.ayjaraQ ; ayjaraQ ; A long time ago
-# - switch.easter_egg.luxium ; Luxium ; in a galaxy far, 
-# - switch.easter_egg.friends_cube ; Friends Cube ; far away
+# - switch.easter_egg.cc_001001 ; Coucou, tu veux voir ma 01001100 ; same (16 74 83)
+# - switch.easter_egg.pi ; 3.141895 ; plus de décimales (24 69 8)
+# - switch.easter_egg.ping ; Ping ; Pong (-82 70 8)
+# - switch.easter_egg.pong ; Pong ; Ping (47 70 8)
+# - switch.easter_egg.42 ; 42 ; La réponse à la vie (-51 73 10)
+# - switch.easter_egg.ayjaraQ ; ayjaraQ ; A long time ago (25 76 52)
+# - switch.easter_egg.luxium ; Luxium ; in a galaxy far (2 68 140)
+# - switch.easter_egg.friends_cube ; Friends Cube ; far away (-36 68 -7)
 
 $tag @s add $(tag).temp
 

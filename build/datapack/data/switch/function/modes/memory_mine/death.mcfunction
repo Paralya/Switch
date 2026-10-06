@@ -1,8 +1,11 @@
 
 #> switch:modes/memory_mine/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/memory_mine/joined
 #			switch:modes/memory_mine/mine_tick [ as @a[tag=!detached,gamemode=adventure,distance=..0.5] ]
+#			string in switch:modes/memory_mine/tick
 #			switch:modes/memory_mine/zone/end [ as @a[tag=!detached,gamemode=adventure,distance=3..50] & at @s ]
 #
 

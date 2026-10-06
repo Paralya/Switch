@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/plains_routine/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 20210 19819 0 84 under 125 false @a[tag=!detached]

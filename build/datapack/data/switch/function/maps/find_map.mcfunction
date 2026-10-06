@@ -1,6 +1,8 @@
 
 #> switch:maps/find_map
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/load
 #			switch:maps/find_map
 #

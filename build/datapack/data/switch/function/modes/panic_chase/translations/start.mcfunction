@@ -1,6 +1,8 @@
 
 #> switch:modes/panic_chase/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/panic_chase/start
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/standard_combat_rules
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/creeper_apocalypse/start
 #			switch:modes/spectres_game/start
 #			switch:modes/traitors_game/start

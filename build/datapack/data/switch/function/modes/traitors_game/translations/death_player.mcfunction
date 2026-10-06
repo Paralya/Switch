@@ -1,6 +1,8 @@
 
 #> switch:modes/traitors_game/translations/death_player
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/traitors_game/death/player
 #
 

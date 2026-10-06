@@ -1,6 +1,8 @@
 
 #> switch:modes/simultaneous_jump/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/simultaneous_jump/start
 #
 

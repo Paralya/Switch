@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/infected/calls/start
 #
 

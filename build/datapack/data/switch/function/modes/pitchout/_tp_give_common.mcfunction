@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/_tp_give_common
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/map_1/tp_give
 #			switch:modes/pitchout/map_halloween/tp_give
 #

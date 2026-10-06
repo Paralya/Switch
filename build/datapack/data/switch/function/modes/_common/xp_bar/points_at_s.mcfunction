@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/xp_bar/points_at_s
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/_common/xp_bar/three_lives
 #			switch:modes/fireblast/xp_bar
 #			switch:modes/laser_game/xp_bar

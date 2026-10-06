@@ -1,7 +1,7 @@
 
 #> switch:music/tick_macro
 #
-# @within	???
+# @within	(public)
 #
 # @args		name (unknown)
 #			tick (unknown)

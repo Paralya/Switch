@@ -1,9 +1,12 @@
 
 #> switch:modes/moutron/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/moutron/joined
 #			switch:modes/moutron/kill_kart
 #			switch:modes/moutron/process_end [ as @a[tag=!detached] ]
+#			string in switch:modes/moutron/tick
 #
 
 function switch:modes/moutron/translations/death

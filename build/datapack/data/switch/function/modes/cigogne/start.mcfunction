@@ -1,6 +1,8 @@
 
 #> switch:modes/cigogne/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/cigogne/calls/start
 #
 

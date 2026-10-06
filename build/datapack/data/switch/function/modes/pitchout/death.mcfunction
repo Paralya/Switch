@@ -1,8 +1,11 @@
 
 #> switch:modes/pitchout/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/joined
 #			switch:modes/pitchout/tick [ as @a[tag=!detached,scores={switch.alive=1..},predicate=switch:in_water,sort=random] ]
+#			string in switch:modes/pitchout/tick
 #
 
 function switch:modes/pitchout/translations/death

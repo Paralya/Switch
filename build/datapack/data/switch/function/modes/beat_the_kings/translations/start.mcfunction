@@ -1,6 +1,8 @@
 
 #> switch:modes/beat_the_kings/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/beat_the_kings/start
 #
 

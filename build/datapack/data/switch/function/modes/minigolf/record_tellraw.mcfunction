@@ -1,6 +1,8 @@
 
 #> switch:modes/minigolf/record_tellraw
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/minigolf/start with storage switch:records minigolf
 #
 # @args		current_map (unknown)

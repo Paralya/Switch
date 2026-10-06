@@ -1,7 +1,7 @@
 
 #> switch:modes/rush_the_point/death/inventory_filter
 #
-# @within	???
+# @within	(public)
 #
 
 data modify storage switch:main Inventory set value []

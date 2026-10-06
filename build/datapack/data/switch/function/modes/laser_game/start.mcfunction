@@ -1,6 +1,8 @@
 
 #> switch:modes/laser_game/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/laser_game/calls/start
 #
 

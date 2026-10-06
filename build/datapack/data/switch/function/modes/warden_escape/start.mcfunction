@@ -1,6 +1,8 @@
 
 #> switch:modes/warden_escape/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/warden_escape/calls/start
 #
 

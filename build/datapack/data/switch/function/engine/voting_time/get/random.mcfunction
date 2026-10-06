@@ -1,7 +1,7 @@
 
 #> switch:engine/voting_time/get/random
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players set #random switch.data 0

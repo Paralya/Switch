@@ -1,6 +1,8 @@
 
 #> switch:modes/memory_mine/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/memory_mine/calls/start
 #
 

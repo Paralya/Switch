@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/teams_tp/teams4
 #
-# @within	???
+# @within	(public)
 #
 
 # Répartition en équipes

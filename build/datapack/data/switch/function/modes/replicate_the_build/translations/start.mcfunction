@@ -1,6 +1,8 @@
 
 #> switch:modes/replicate_the_build/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/replicate_the_build/start
 #
 

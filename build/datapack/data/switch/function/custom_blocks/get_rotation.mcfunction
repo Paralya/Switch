@@ -1,7 +1,7 @@
 
 #> switch:custom_blocks/get_rotation
 #
-# @within	???
+# @within	(public)
 #
 
 # Set up score

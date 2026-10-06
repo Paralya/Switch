@@ -1,7 +1,7 @@
 
 #> switch:none
 #
-# @within	???
+# @within	(public)
 #
 
 # Function that does nothing

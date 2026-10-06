@@ -1,7 +1,7 @@
 
 #> switch:modes/infected/secrets/ancienne_egypte/button_red
 #
-# @within	???
+# @within	(public)
 #
 
 ## Red button: sacrificing yourself

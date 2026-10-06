@@ -1,6 +1,8 @@
 
 #> switch:modes/laser_game/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/laser_game/calls/joined
 #
 

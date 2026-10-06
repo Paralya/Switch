@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/baby_park/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 21135 21095 0 96 under 185 false @a[tag=!detached]

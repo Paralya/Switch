@@ -1,7 +1,7 @@
 
 #> switch:devtools/lag/disable
 #
-# @within	???
+# @within	(public)
 #
 
 kill @e[tag=switch.lag_maker]

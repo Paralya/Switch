@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/trackmania_stadium_1/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 25246 25174 0 174 under 207 false @a[tag=!detached]

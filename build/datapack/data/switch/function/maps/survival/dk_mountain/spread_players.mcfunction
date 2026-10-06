@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/dk_mountain/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 19842 20544 0 59 under 202 false @a[tag=!detached]

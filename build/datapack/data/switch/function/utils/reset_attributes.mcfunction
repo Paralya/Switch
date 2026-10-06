@@ -1,6 +1,8 @@
 
 #> switch:utils/reset_attributes
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/de_a_coudre/joined
 #			switch:modes/mlg_a_coudre/joined
 #			switch:modes/simultaneous_jump/joined

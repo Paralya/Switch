@@ -1,6 +1,8 @@
 
 #> switch:modes/pillars_of_fortune/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/pillars_of_fortune/start
 #
 

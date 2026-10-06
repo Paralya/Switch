@@ -1,6 +1,8 @@
 
 #> switch:utils/set_dynamic_time
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/_common/pvp_arena/start_common
 #			switch:modes/beat_the_kings/start
 #			switch:modes/boat_race/start

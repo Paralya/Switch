@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/block_disappear/replace_white
 #
-# @within	???
+# @within	(public)
 #
 
 setblock ~ ~ ~ minecraft:white_wool

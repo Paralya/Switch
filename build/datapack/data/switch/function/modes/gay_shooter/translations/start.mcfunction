@@ -1,6 +1,8 @@
 
 #> switch:modes/gay_shooter/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/gay_shooter/start
 #
 

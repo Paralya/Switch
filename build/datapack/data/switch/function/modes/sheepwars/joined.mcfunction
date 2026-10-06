@@ -1,6 +1,8 @@
 
 #> switch:modes/sheepwars/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/sheepwars/calls/joined
 #
 

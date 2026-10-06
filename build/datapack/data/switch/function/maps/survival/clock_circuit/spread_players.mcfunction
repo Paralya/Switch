@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/clock_circuit/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 19549 20367 0 78 under 162 false @a[tag=!detached]

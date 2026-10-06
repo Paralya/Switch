@@ -1,7 +1,7 @@
 
 #> switch:modes/infected/secrets/ancienne_egypte/button_black
 #
-# @within	???
+# @within	(public)
 #
 
 ## Black button: sacrificing the other room

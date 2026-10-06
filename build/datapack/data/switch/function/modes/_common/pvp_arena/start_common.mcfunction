@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/pvp_arena/start_common
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/castagne/start
 #			switch:modes/pvpswap/start
 #

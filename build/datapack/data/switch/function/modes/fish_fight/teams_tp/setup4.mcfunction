@@ -1,7 +1,7 @@
 
 #> switch:modes/fish_fight/teams_tp/setup4
 #
-# @within	???
+# @within	(public)
 #
 
 function switch:modes/fish_fight/translations/teams_tp_setup4

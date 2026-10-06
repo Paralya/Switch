@@ -1,6 +1,8 @@
 
 #> switch:modes/one_shot/give_items
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/one_shot/joined
 #			switch:modes/one_shot/second [ as @a[tag=!detached] & at @s ]
 #

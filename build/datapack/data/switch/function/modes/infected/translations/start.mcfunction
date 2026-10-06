@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/translations/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/infected/start
 #
 

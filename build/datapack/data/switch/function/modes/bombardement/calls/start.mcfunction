@@ -1,7 +1,9 @@
 
 #> switch:modes/bombardement/calls/start
 #
-# @within	???
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
+# @within	switch:engine/signals/macro_start
 #
 
 execute if data storage switch:main {current_game:"bombardement"} run function switch:modes/bombardement/start

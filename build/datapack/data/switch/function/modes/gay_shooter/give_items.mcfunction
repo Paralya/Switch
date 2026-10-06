@@ -1,7 +1,7 @@
 
 #> switch:modes/gay_shooter/give_items
 #
-# @within	???
+# @within	(public)
 #
 
 effect give @s[team=switch.temp.gays] saturation infinite 255 true

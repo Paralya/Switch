@@ -1,7 +1,7 @@
 
 #> switch:modes/replicate_the_build/structure/readme.md
 #
-# @within	???
+# @within	(public)
 #
 
 # Comment ajouter une structure ?

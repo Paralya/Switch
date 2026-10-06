@@ -1,6 +1,8 @@
 
 #> switch:modes/layers_2_teams/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/layers_2_teams/calls/joined
 #
 

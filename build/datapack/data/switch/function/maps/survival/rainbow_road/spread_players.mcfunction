@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/rainbow_road/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 24061 24068 0 61 under 156 false @a[tag=!detached]

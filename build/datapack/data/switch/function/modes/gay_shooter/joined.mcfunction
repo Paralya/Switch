@@ -1,6 +1,8 @@
 
 #> switch:modes/gay_shooter/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/gay_shooter/calls/joined
 #
 

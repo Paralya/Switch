@@ -1,7 +1,7 @@
 
 #> switch:devtools/test_mode
 #
-# @within	???
+# @within	(public)
 #
 
 # Get test mode state

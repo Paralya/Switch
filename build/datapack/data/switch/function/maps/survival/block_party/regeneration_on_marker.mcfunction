@@ -1,6 +1,8 @@
 
 #> switch:maps/survival/block_party/regeneration_on_marker
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/survival/block_party/regenerate
 #
 

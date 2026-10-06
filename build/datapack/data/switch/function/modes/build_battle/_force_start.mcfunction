@@ -1,7 +1,7 @@
 
 #> switch:modes/build_battle/_force_start
 #
-# @within	???
+# @within	(public)
 #
 
 function switch:engine/force_start_macro {id:"build_battle"}

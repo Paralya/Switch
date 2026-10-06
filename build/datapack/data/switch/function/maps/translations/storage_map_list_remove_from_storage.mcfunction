@@ -1,6 +1,8 @@
 
 #> switch:maps/translations/storage_map_list_remove_from_storage
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/storage_map_list/remove_from_storage
 #
 

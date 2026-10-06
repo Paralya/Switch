@@ -1,6 +1,8 @@
 
 #> switch:modes/moutron/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/moutron/calls/joined
 #
 

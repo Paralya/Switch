@@ -1,6 +1,8 @@
 
 #> switch:maps/choose_map_for
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/beat_the_kings/start {id:"beat_the_kings", maps:["traitor_original","mushroom_plains","dark_forest_hills","zonweeb_highschool","hider_mansion","nuketown_no_barrier"]}
 #			switch:modes/block_party/start {id:"block_party", maps:["block_party"]}
 #			switch:modes/boat_race/start {id:"boat_race", maps:["boat_race_1","boat_race_2"]}

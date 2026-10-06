@@ -1,7 +1,7 @@
 
 #> switch:modes/protect_the_king/random_tp
 #
-# @within	???
+# @within	(public)
 #
 
 execute if data storage switch:main {map:"traitor_original"} run spreadplayers 1500 1500 1 100 under 160 false @s

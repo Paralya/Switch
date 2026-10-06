@@ -1,6 +1,8 @@
 
 #> switch:modes/_common/death_spectator_lives
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/fish_fight/death
 #			switch:modes/pitchout/death
 #

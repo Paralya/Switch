@@ -1,6 +1,8 @@
 
 #> switch:modes/protect_the_king/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/protect_the_king/calls/start
 #
 

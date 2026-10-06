@@ -1,6 +1,8 @@
 
 #> switch:modes/coin_chaser/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/coin_chaser/calls/joined
 #
 

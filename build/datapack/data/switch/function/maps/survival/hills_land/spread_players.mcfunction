@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/hills_land/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 20448 20096 0 114 under 140 false @a[tag=!detached]

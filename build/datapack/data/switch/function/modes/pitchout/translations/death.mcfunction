@@ -1,6 +1,8 @@
 
 #> switch:modes/pitchout/translations/death
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/pitchout/death
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/percentage/select_roles
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/murder_mystery/start
 #
 

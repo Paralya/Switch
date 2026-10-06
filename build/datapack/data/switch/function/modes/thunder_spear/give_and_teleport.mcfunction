@@ -1,8 +1,11 @@
 
 #> switch:modes/thunder_spear/give_and_teleport
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/thunder_spear/calls/joined
 #			switch:modes/thunder_spear/start [ as @a[tag=!detached] ]
+#			string in switch:modes/thunder_spear/tick
 #
 
 ## Starter kit

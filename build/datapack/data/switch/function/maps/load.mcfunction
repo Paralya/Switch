@@ -1,6 +1,8 @@
 
 #> switch:maps/load
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:maps/choose_map_for
 #
 

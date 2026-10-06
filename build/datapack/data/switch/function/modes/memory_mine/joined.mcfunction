@@ -1,6 +1,8 @@
 
 #> switch:modes/memory_mine/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/memory_mine/calls/joined
 #
 

@@ -1,6 +1,8 @@
 
 #> switch:modes/infected/death/zombie_give
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/infected/death/zombie_spawn
 #			switch:modes/infected/death/zombie_transform
 #

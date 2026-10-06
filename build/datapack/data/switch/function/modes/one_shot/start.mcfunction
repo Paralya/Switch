@@ -1,6 +1,8 @@
 
 #> switch:modes/one_shot/start
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/one_shot/calls/start
 #
 

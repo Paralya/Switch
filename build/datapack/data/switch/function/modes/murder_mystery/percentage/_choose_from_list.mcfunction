@@ -1,6 +1,8 @@
 
 #> switch:modes/murder_mystery/percentage/_choose_from_list
 #
+# @executed	as @n[tag=switch.coupdetat] & in switch:game
+#
 # @within	switch:modes/murder_mystery/percentage/choose_pair
 #			switch:modes/spectres_game/percentage/choose_spectre
 #

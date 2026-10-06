@@ -1,7 +1,7 @@
 
 #> switch:player/easter_egg_give
 #
-# @within	???
+# @within	(public)
 #
 
 give @s oak_sign[item_name={"text":"Coucou tu veux voir ma"},block_entity_data={"id": "minecraft:sign",front_text:{messages:[{"text":""},{"text":"Coucou","click_event":{"action":"run_command","command":"function switch:player/easter_egg {tag:\"switch.easter_egg.cc_001001\"}"}},{"text":"tu veux voir ma"},{"text":"000101"}]}}]

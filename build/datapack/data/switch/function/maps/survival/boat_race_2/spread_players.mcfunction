@@ -1,7 +1,7 @@
 
 #> switch:maps/survival/boat_race_2/spread_players
 #
-# @within	???
+# @within	(public)
 #
 
 execute in switch:game run spreadplayers 51049 51061 0 50 under 170 false @a[tag=!detached]

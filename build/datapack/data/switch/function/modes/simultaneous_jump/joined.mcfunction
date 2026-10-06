@@ -1,6 +1,8 @@
 
 #> switch:modes/simultaneous_jump/joined
 #
+# @executed	as @a[sort=random] & at @s
+#
 # @within	switch:modes/simultaneous_jump/calls/joined
 #
 
