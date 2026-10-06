@@ -1,0 +1,16 @@
+[project]
+name = "switch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Stoupy51", email = "stoupy51@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "stewbeet>=3.10.0",
+]
+
+[tool.uv.sources]
+stewbeet = { path = "../StewBeet/python_package" }
+

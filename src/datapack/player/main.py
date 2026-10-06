@@ -33,14 +33,14 @@ function {ns}:player/translations/detached_action_bar
 
 # Liste des easter eggs : 
 # - $(tag) ; Texte qui s'affiche ; Panneau
-# - {ns}.easter_egg.cc_001001 ; Coucou, tu veux voir ma 01001100 ; same
-# - {ns}.easter_egg.pi ; 3.141895 ; plus de décimales
-# - {ns}.easter_egg.ping ; Ping ; Pong
-# - {ns}.easter_egg.pong ; Pong ; Ping
-# - {ns}.easter_egg.42 ; 42 ; La réponse à la vie
-# - {ns}.easter_egg.ayjaraQ ; ayjaraQ ; A long time ago
-# - {ns}.easter_egg.luxium ; Luxium ; in a galaxy far, 
-# - {ns}.easter_egg.friends_cube ; Friends Cube ; far away
+# - {ns}.easter_egg.cc_001001 ; Coucou, tu veux voir ma 01001100 ; same (16 74 83)
+# - {ns}.easter_egg.pi ; 3.141895 ; plus de décimales (24 69 8)
+# - {ns}.easter_egg.ping ; Ping ; Pong (-82 70 8)
+# - {ns}.easter_egg.pong ; Pong ; Ping (47 70 8)
+# - {ns}.easter_egg.42 ; 42 ; La réponse à la vie (-51 73 10)
+# - {ns}.easter_egg.ayjaraQ ; ayjaraQ ; A long time ago (25 76 52)
+# - {ns}.easter_egg.luxium ; Luxium ; in a galaxy far (2 68 140)
+# - {ns}.easter_egg.friends_cube ; Friends Cube ; far away (-36 68 -7)
 
 
 $tag @s add $(tag).temp
