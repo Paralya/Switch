@@ -11,11 +11,11 @@ def ninja_kill(objective: str, bounds: dict[str, Any]) -> dict[str, Any]:
 	return {
 		"criteria": {"requirement": {
 			"trigger": "minecraft:player_killed_entity",
-			"conditions": {"entity": [{
-				"condition": "minecraft:entity_scores",
+			"conditions": {"entity": {
+				"type": "minecraft:entity_scores",
 				"entity": "this",
 				"scores": {objective: bounds},
-			}]},
+			}},
 		}},
 	}
 
@@ -37,13 +37,13 @@ def write_resources() -> None:
 		"pools": [{"rolls": 1, "entries": [{
 			"type": "minecraft:loot_table",
 			"value": f"{ns}:i/sapphire_pickaxe",
-			"functions": [{"function": "minecraft:set_enchantments", "enchantments": {"minecraft:efficiency": 1}}],
+			"modifier": [{"type": "minecraft:set_enchantments", "enchantments": {"minecraft:efficiency": 1}}],
 		}]}],
 	}))
 
 	switch.loot_tables["traitors_game/bomber_man"] = set_json_encoder(LootTable({
 		"pools": [
-			{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "minecraft:tnt", "functions": [{"function": "minecraft:set_count", "count": 16}]}]},
+			{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "minecraft:tnt", "modifier": [{"type": "minecraft:set_count", "count": 16}]}]},
 			{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "minecraft:flint_and_steel"}]},
 		],
 	}))
@@ -54,16 +54,16 @@ def write_resources() -> None:
 			"entries": [
 				{
 					"type": "minecraft:item", "weight": 2, "name": "minecraft:golden_apple",
-					"functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 1, "max": 2}}],
+					"modifier": [{"type": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 1, "max": 2}}],
 				},
 				{"type": "minecraft:item", "weight": 4, "name": "minecraft:diamond"},
 				{
 					"type": "minecraft:item", "weight": 4, "name": "minecraft:gold_ingot",
-					"functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 1, "max": 4}}],
+					"modifier": [{"type": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 1, "max": 4}}],
 				},
 				{
 					"type": "minecraft:item", "name": "minecraft:book",
-					"functions": [{"function": "minecraft:enchant_with_levels", "levels": {"type": "minecraft:uniform", "min": 10, "max": 30}}],
+					"modifier": [{"type": "minecraft:enchant_with_levels", "levels": {"type": "minecraft:uniform", "min": 10, "max": 30}}],
 				},
 			],
 		}],

@@ -13,7 +13,7 @@ def single_block_drop(name: str, functions: list[dict[str, Any]]) -> dict[str, A
 		"pools": [{
 			"rolls": 1,
 			"bonus_rolls": 0,
-			"entries": [{"type": "minecraft:item", "name": name, "functions": functions}],
+			"entries": [{"type": "minecraft:item", "name": name, "modifier": functions}],
 		}],
 	}
 
@@ -26,12 +26,12 @@ def write_loot_tables() -> None:
 	# A player head filled with the looter's name (used to fetch usernames)
 	loot_tables["get_username"] = set_json_encoder(LootTable(single_block_drop(
 		"minecraft:player_head",
-		[{"function": "minecraft:fill_player_head", "entity": "this"}],
+		[{"type": "minecraft:fill_player_head", "entity": "this"}],
 	)))
 
 	# A throwaway tagged stone item
 	loot_tables["temp_item"] = set_json_encoder(LootTable(single_block_drop(
 		"minecraft:stone",
-		[{"function": "minecraft:set_components", "components": {"minecraft:custom_data": {ns: {"temp_item": True}}}}],
+		[{"type": "minecraft:set_components", "components": {"minecraft:custom_data": {ns: {"temp_item": True}}}}],
 	)))
 

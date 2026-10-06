@@ -1,74 +1,64 @@
 #version 330
+#extension GL_ARB_separate_shader_objects : require
 
-#define MINECRAFT_LIGHT_POWER   (0.6)
-#define MINECRAFT_AMBIENT_LIGHT (0.4)
+#include <minecraft:light.glsl>
+#include <minecraft:fog.glsl>
+#include <minecraft:dynamictransforms.glsl>
+#include <minecraft:projection.glsl>
+#include <minecraft:sample_lightmap.glsl>
 
-layout(std140) uniform Lighting {
-    vec3 Light0_Direction;
-    vec3 Light1_Direction;
-};
+layout(location = 0) in vec3 Position;
+layout(location = 1) in vec4 Color;
+layout(location = 2) in vec2 UV0;
+layout(location = 3) in ivec2 UV1;
+layout(location = 4) in ivec2 UV2;
+#ifdef GLINT_SPECIAL
+layout(location = 5) in vec2 UV3;
+#endif
+layout(location = 6) in vec3 Normal;
 
-vec2 minecraft_compute_light(vec3 lightDir0, vec3 lightDir1, vec3 normal) {
-    return vec2(dot(lightDir0, normal), dot(lightDir1, normal));
-}
-
-vec4 minecraft_mix_light_separate(vec2 light, vec4 color) {
-    vec2 lightValue = max(vec2(0.0), light);
-    float lightAccum = min(1.0, (lightValue.x + lightValue.y) * MINECRAFT_LIGHT_POWER + MINECRAFT_AMBIENT_LIGHT);
-    return vec4(color.rgb * lightAccum, color.a);
-}
-
-vec4 minecraft_mix_light(vec3 lightDir0, vec3 lightDir1, vec3 normal, vec4 color) {
-    vec2 light = minecraft_compute_light(lightDir0, lightDir1, normal);
-    return minecraft_mix_light_separate(light, color);
-}
-
-layout(std140) uniform Fog {
-    vec4 FogColor;
-    float FogEnvironmentalStart;
-    float FogEnvironmentalEnd;
-    float FogRenderDistanceStart;
-    float FogRenderDistanceEnd;
-    float FogSkyEnd;
-    float FogCloudsEnd;
-};
-
-float fog_spherical_distance(vec3 pos) {
-    return length(pos);
-}
-
-float fog_cylindrical_distance(vec3 pos) {
-    float distXZ = length(pos.xz);
-    float distY = abs(pos.y);
-    return max(distXZ, distY);
-}
-
-#moj_import <minecraft:dynamictransforms.glsl>
-#moj_import <minecraft:projection.glsl>
-
-in vec3 Position;
-in vec4 Color;
-in vec2 UV0;
-in ivec2 UV2;
-in vec3 Normal;
-
+#ifndef OIT_ALPHA_ONLY
+uniform sampler2D Sampler1;
 uniform sampler2D Sampler2;
 
-out float sphericalVertexDistance;
-out float cylindricalVertexDistance;
-out vec4 vertexColor;
-out vec4 lightMapColor;
-out vec2 texCoord0;
-out vec3 vPos;
-out vec4 vNearPos;
+layout(location = 0) out float sphericalVertexDistance;
+layout(location = 1) out float cylindricalVertexDistance;
+#endif
+layout(location = 2) out vec4 vertexColor;
+#ifndef OIT_ALPHA_ONLY
+layout(location = 3) out vec4 lightMapColor;
+layout(location = 4) out vec4 overlayColor;
+#endif
+
+layout(location = 5) out vec2 texCoord0;
+#ifdef GLINT
+layout(location = 6) out vec2 texCoordGlint;
+#endif
+layout(location = 7) out vec3 vPos;
+layout(location = 8) out vec4 vNearPos;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
+
+    #ifndef OIT_ALPHA_ONLY
     sphericalVertexDistance = fog_spherical_distance(Position);
     cylindricalVertexDistance = fog_cylindrical_distance(Position);
+    #endif
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
-    lightMapColor = texture(Sampler2, (vec2(UV2) + 8.0) / 256.0);
+    #ifndef OIT_ALPHA_ONLY
+    lightMapColor = sample_lightmap(Sampler2, UV2);
+    overlayColor = texelFetch(Sampler1, UV1, 0);
+    #endif
+
     texCoord0 = UV0;
+    #ifdef GLINT
+    #ifdef GLINT_SPECIAL
+    texCoordGlint = (TextureMat * vec4(UV3, 0.0, 1.0)).xy;
+    #else
+    texCoordGlint = (TextureMat * vec4(UV0, 0.0, 1.0)).xy;
+    #endif
+    #endif
+
     vPos = Position;
     // Kept as a vec4: the perspective divide must happen after interpolation to stay linear.
     vNearPos = inverse(ProjMat * ModelViewMat) * gl_Position.xyww;

@@ -1,10 +1,10 @@
 {
-	"function": "minecraft:set_enchantments",
+	"type": "minecraft:set_enchantments",
 	"enchantments": {
 		"minecraft:efficiency": 5
 	},
-	"conditions": [
-		{"condition": "minecraft:inverted","term": {"condition": "minecraft:entity_properties","entity": "this","predicate": {"equipment": {"mainhand": {"predicates": {"minecraft:enchantments": [{"enchantments": "minecraft:efficiency","levels": 5}]}}}}}},
-		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"equipment": {"mainhand": {"items": "#switch:tools"}}}}
-	]
+	"condition": {
+		"type": "minecraft:all_of",
+		"terms": [{"type": "minecraft:inverted","term": {"type": "minecraft:entity_properties","entity": "this","predicate": {"equipment": {"mainhand": {"predicates": {"minecraft:enchantments": [{"enchantments": "minecraft:efficiency","levels": 5}]}}}}}},{"type": "minecraft:entity_properties","entity": "this","predicate": {"equipment": {"mainhand": {"items": "#switch:tools"}}}}]
+	}
 }

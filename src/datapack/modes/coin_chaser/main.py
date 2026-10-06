@@ -144,8 +144,8 @@ execute as @e[type=item,tag=!{ns}.checked] run function {path}/no_drop
 execute as @a[tag=!detached,gamemode=!spectator] at @s store result score @s {ns}.temp.points run clear @s gold_ingot 0
 
 # Keep reloading the grappling hooks
-execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.mainhand {{"function":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
-execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.offhand {{"function":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
+execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.mainhand {{"type":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
+execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.offhand {{"type":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
 
 
 ## End game

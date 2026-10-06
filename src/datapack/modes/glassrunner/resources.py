@@ -11,7 +11,7 @@ from ..emit import register_structures
 def holding_predicate(flag: str) -> dict[str, Any]:
 	""" entity_properties predicate: holding a glassrunner item flagged in custom_data. """
 	return {
-		"condition": "minecraft:entity_properties",
+		"type": "minecraft:entity_properties",
 		"entity": "this",
 		"predicate": {"equipment": {"mainhand": {"predicates": {
 			"minecraft:custom_data": f"{{\"glassrunner\":{{\"{flag}\":true}}}}",
@@ -24,7 +24,7 @@ def bridge_loot(flag: str, name: str, color: str) -> dict[str, Any]:
 	return {"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:item",
 		"name": "minecraft:snowball",
-		"functions": [{"function": "minecraft:set_components", "components": {
+		"modifier": [{"type": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"glassrunner": {"glass_bridge": True, flag: True}},
 			"minecraft:item_name": {"text": name, "color": color, "italic": False},
 		}}],
@@ -36,7 +36,7 @@ def bridge_count_loot(value: str, count: int) -> dict[str, Any]:
 	return {"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:loot_table",
 		"value": value,
-		"functions": [{"function": "minecraft:set_count", "count": count}],
+		"modifier": [{"type": "minecraft:set_count", "count": count}],
 	}]}]}
 
 
@@ -47,7 +47,7 @@ def write_resources() -> None:
 
 	# Predicates
 	switch.predicates["glassrunner/in_elytra"] = set_json_encoder(Predicate({
-		"condition": "minecraft:entity_properties",
+		"type": "minecraft:entity_properties",
 		"entity": "this",
 		"predicate": {"equipment": {"chest": {"items": ["minecraft:elytra"]}}},
 	}))
@@ -57,11 +57,11 @@ def write_resources() -> None:
 	# Item modifiers: a crossbow charged with 3 destroying arrows, and a cleared one
 	arrow: dict[str, Any] = {"id": "minecraft:arrow", "components": {"minecraft:custom_data": {"glassrunner": {"destroying_arrow": 1}}}}
 	switch.item_modifiers["charged"] = set_json_encoder(ItemModifier({
-		"function": "minecraft:set_components",
+		"type": "minecraft:set_components",
 		"components": {"minecraft:charged_projectiles": [dict(arrow), dict(arrow), dict(arrow)]},
 	}))
 	switch.item_modifiers["not_charged"] = set_json_encoder(ItemModifier({
-		"function": "minecraft:set_components",
+		"type": "minecraft:set_components",
 		"components": {"minecraft:charged_projectiles": []},
 	}))
 
@@ -79,7 +79,7 @@ def write_resources() -> None:
 	switch.loot_tables["glassrunner/bow"] = set_json_encoder(LootTable({"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:item",
 		"name": "minecraft:bow",
-		"functions": [{"function": "minecraft:set_components", "components": {
+		"modifier": [{"type": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"ctc": {"id": "glassrunner:bow"}},
 			"minecraft:unbreakable": {},
 			"minecraft:enchantments": {"minecraft:knockback": 5, "minecraft:punch": 5},
@@ -93,7 +93,7 @@ def write_resources() -> None:
 	switch.loot_tables["glassrunner/destroying_crossbow"] = set_json_encoder(LootTable({"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:item",
 		"name": "minecraft:jigsaw",
-		"functions": [{"function": "minecraft:set_components", "components": {
+		"modifier": [{"type": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"glassrunner": {"destroying_crossbow": True}},
 			"minecraft:item_name": {"text": "Destroying Crossbow", "color": "dark_red", "italic": False},
 		}}],
@@ -102,7 +102,7 @@ def write_resources() -> None:
 	switch.loot_tables["glassrunner/fireball_wand"] = set_json_encoder(LootTable({"pools": [{"rolls": 1, "bonus_rolls": 0, "entries": [{
 		"type": "minecraft:item",
 		"name": "minecraft:warped_fungus_on_a_stick",
-		"functions": [{"function": "minecraft:set_components", "components": {
+		"modifier": [{"type": "minecraft:set_components", "components": {
 			"minecraft:custom_data": {"ctc": {"id": "glassrunner:fireball_wand"}, "glassrunner": {"fireball_wand": True}},
 			"minecraft:item_model": f"{ns}:fireball_wand",
 			"minecraft:item_name": {"text": "Fireball Wand", "color": "dark_red", "italic": False},

@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"requirement": {"trigger": "minecraft:player_hurt_entity","conditions": {"player": {"equipment": {"mainhand": {"items": ["bow"]}}}}}
+		"requirement": {"trigger": "minecraft:player_hurt_entity","conditions": {"player": {"type": "minecraft:entity_properties","entity": "this","predicate": {"equipment": {"mainhand": {"items": ["bow"]}}}}}}
 	},
 	"rewards": {
 		"function": "switch:modes/gay_shooter/shot_player"

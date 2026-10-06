@@ -5,6 +5,10 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:abandoned_camp_map"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:acacia_boat"
 				},
 				{
@@ -422,6 +426,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:black_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:black_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:black_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:black_dye"
 				},
 				{
@@ -451,6 +467,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:black_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:black_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:black_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -519,6 +543,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:blue_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:blue_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:blue_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:blue_dye"
 				},
 				{
@@ -560,6 +596,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:blue_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:blue_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:blue_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -685,6 +729,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:brown_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:brown_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:brown_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:brown_dye"
 				},
 				{
@@ -729,6 +785,14 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:brown_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:brown_wool_stairs"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:brush"
 				},
 				{
@@ -754,6 +818,22 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:bundle"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:buried_ancient_city_map"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:buried_mineshaft_map"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:buried_treasure_map"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:buried_trial_chambers_map"
 				},
 				{
 					"type": "minecraft:item",
@@ -1495,6 +1575,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:cyan_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cyan_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cyan_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:cyan_dye"
 				},
 				{
@@ -1524,6 +1616,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:cyan_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cyan_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cyan_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -1764,6 +1864,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:deepslate_tiles"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:desert_pyramid_map"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:desert_village_map"
 				},
 				{
 					"type": "minecraft:item",
@@ -2406,6 +2514,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:gray_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:gray_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:gray_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:gray_dye"
 				},
 				{
@@ -2438,6 +2558,14 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:gray_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:gray_wool_stairs"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:green_banner"
 				},
 				{
@@ -2463,6 +2591,18 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:green_concrete_powder"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:green_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:green_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:green_cushion"
 				},
 				{
 					"type": "minecraft:item",
@@ -2495,6 +2635,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:green_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:green_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:green_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -2791,6 +2939,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:jungle_pyramid_map"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:jungle_sapling"
 				},
 				{
@@ -2931,6 +3083,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:light_blue_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_blue_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_blue_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:light_blue_dye"
 				},
 				{
@@ -2963,6 +3127,14 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:light_blue_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_blue_wool_stairs"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:light_gray_banner"
 				},
 				{
@@ -2988,6 +3160,18 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:light_gray_concrete_powder"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_gray_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_gray_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_gray_cushion"
 				},
 				{
 					"type": "minecraft:item",
@@ -3020,6 +3204,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:light_gray_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_gray_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:light_gray_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -3071,6 +3263,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:lime_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lime_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lime_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:lime_dye"
 				},
 				{
@@ -3100,6 +3304,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lime_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lime_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lime_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -3152,6 +3364,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:magenta_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:magenta_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:magenta_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:magenta_dye"
 				},
 				{
@@ -3181,6 +3405,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:magenta_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:magenta_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:magenta_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -3704,6 +3936,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:ocean_monument_map"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:ocelot_spawn_egg",
 					"weight": 2
 				},
@@ -3753,6 +3989,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:orange_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:orange_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:orange_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:orange_dye"
 				},
 				{
@@ -3762,6 +4010,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:orange_harness"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:orange_poplar_leaves"
 				},
 				{
 					"type": "minecraft:item",
@@ -3786,6 +4038,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:orange_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:orange_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:orange_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -4045,6 +4305,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:pink_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pink_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pink_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:pink_dye"
 				},
 				{
@@ -4085,6 +4357,14 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:pink_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pink_wool_stairs"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:piston"
 				},
 				{
@@ -4094,6 +4374,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:pitcher_pod"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:plains_village_map"
 				},
 				{
 					"type": "minecraft:item",
@@ -4266,6 +4550,74 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:poplar_boat"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_button"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_chest_boat"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_door"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_fence"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_fence_gate"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_hanging_sign"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_log"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_planks"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_pressure_plate"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_sapling"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_shelf"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_sign"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_trapdoor"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poplar_wood"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:popped_chorus_fruit"
 				},
 				{
@@ -4391,6 +4743,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:purple_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:purple_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:purple_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:purple_dye"
 				},
 				{
@@ -4420,6 +4784,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:purple_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:purple_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:purple_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -4553,6 +4925,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:red_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:red_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:red_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:red_dye"
 				},
 				{
@@ -4589,6 +4973,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:red_poplar_leaves"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:red_sand"
 				},
 				{
@@ -4606,6 +4994,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:red_sandstone_wall"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:red_shrub"
 				},
 				{
 					"type": "minecraft:item",
@@ -4630,6 +5022,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:red_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:red_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:red_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -4750,6 +5150,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:savanna_village_map"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:scaffolding"
 				},
 				{
@@ -4808,6 +5212,10 @@
 					"type": "minecraft:item",
 					"name": "minecraft:sheep_spawn_egg",
 					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:shelf_mushroom"
 				},
 				{
 					"type": "minecraft:item",
@@ -4983,6 +5391,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:snowball"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:snowy_village_map"
 				},
 				{
 					"type": "minecraft:item",
@@ -5192,6 +5604,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:straw_bed"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:stray_spawn_egg",
 					"weight": 2
 				},
@@ -5279,6 +5695,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:stripped_pale_oak_wood"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:stripped_poplar_log"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:stripped_poplar_wood"
 				},
 				{
 					"type": "minecraft:item",
@@ -5375,6 +5799,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:swamp_hut_map"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:sweet_berries"
 				},
 				{
@@ -5385,6 +5813,10 @@
 					"type": "minecraft:item",
 					"name": "minecraft:tadpole_spawn_egg",
 					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:taiga_village_map"
 				},
 				{
 					"type": "minecraft:item",
@@ -5593,6 +6025,10 @@
 					"type": "minecraft:item",
 					"name": "minecraft:warden_spawn_egg",
 					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warm_ocean_ruins_map"
 				},
 				{
 					"type": "minecraft:item",
@@ -6024,6 +6460,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:white_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:white_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:white_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:white_dye"
 				},
 				{
@@ -6057,6 +6505,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:white_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:white_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:white_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -6126,6 +6582,10 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:woodland_mansion_map"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:writable_book"
 				},
 				{
@@ -6162,6 +6622,18 @@
 				},
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:yellow_concrete_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:yellow_concrete_stairs"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:yellow_cushion"
+				},
+				{
+					"type": "minecraft:item",
 					"name": "minecraft:yellow_dye"
 				},
 				{
@@ -6171,6 +6643,10 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:yellow_harness"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:yellow_poplar_leaves"
 				},
 				{
 					"type": "minecraft:item",
@@ -6191,6 +6667,14 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:yellow_wool"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:yellow_wool_slab"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:yellow_wool_stairs"
 				},
 				{
 					"type": "minecraft:item",
@@ -6229,9 +6713,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:awkward"
@@ -6243,9 +6727,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:fire_resistance"
@@ -6257,9 +6741,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:harming"
@@ -6271,9 +6755,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:healing"
@@ -6285,9 +6769,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:infested"
@@ -6299,9 +6783,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:invisibility"
@@ -6313,9 +6797,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:leaping"
@@ -6327,9 +6811,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_fire_resistance"
@@ -6341,9 +6825,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_invisibility"
@@ -6355,9 +6839,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_leaping"
@@ -6369,9 +6853,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_night_vision"
@@ -6383,9 +6867,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_poison"
@@ -6397,9 +6881,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_regeneration"
@@ -6411,9 +6895,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_slow_falling"
@@ -6425,9 +6909,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_slowness"
@@ -6439,9 +6923,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_strength"
@@ -6453,9 +6937,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_swiftness"
@@ -6467,9 +6951,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_turtle_master"
@@ -6481,9 +6965,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_water_breathing"
@@ -6495,9 +6979,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_weakness"
@@ -6509,9 +6993,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:luck"
@@ -6523,9 +7007,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:mundane"
@@ -6537,9 +7021,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:night_vision"
@@ -6551,9 +7035,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:oozing"
@@ -6565,9 +7049,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:poison"
@@ -6579,9 +7063,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:regeneration"
@@ -6593,9 +7077,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:slow_falling"
@@ -6607,9 +7091,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:slowness"
@@ -6621,9 +7105,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strength"
@@ -6635,9 +7119,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_harming"
@@ -6649,9 +7133,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_healing"
@@ -6663,9 +7147,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_leaping"
@@ -6677,9 +7161,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_poison"
@@ -6691,9 +7175,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_regeneration"
@@ -6705,9 +7189,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_slowness"
@@ -6719,9 +7203,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_strength"
@@ -6733,9 +7217,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_swiftness"
@@ -6747,9 +7231,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_turtle_master"
@@ -6761,9 +7245,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:swiftness"
@@ -6775,9 +7259,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:thick"
@@ -6789,9 +7273,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:turtle_master"
@@ -6803,9 +7287,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:water"
@@ -6817,9 +7301,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:water_breathing"
@@ -6831,9 +7315,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:weakness"
@@ -6845,9 +7329,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:weaving"
@@ -6859,9 +7343,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:splash_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:wind_charged"
@@ -6873,9 +7357,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:awkward"
@@ -6887,9 +7371,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:fire_resistance"
@@ -6901,9 +7385,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:harming"
@@ -6915,9 +7399,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:healing"
@@ -6929,9 +7413,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:infested"
@@ -6943,9 +7427,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:invisibility"
@@ -6957,9 +7441,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:leaping"
@@ -6971,9 +7455,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_fire_resistance"
@@ -6985,9 +7469,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_invisibility"
@@ -6999,9 +7483,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_leaping"
@@ -7013,9 +7497,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_night_vision"
@@ -7027,9 +7511,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_poison"
@@ -7041,9 +7525,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_regeneration"
@@ -7055,9 +7539,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_slow_falling"
@@ -7069,9 +7553,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_slowness"
@@ -7083,9 +7567,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_strength"
@@ -7097,9 +7581,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_swiftness"
@@ -7111,9 +7595,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_turtle_master"
@@ -7125,9 +7609,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_water_breathing"
@@ -7139,9 +7623,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:long_weakness"
@@ -7153,9 +7637,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:luck"
@@ -7167,9 +7651,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:mundane"
@@ -7181,9 +7665,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:night_vision"
@@ -7195,9 +7679,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:oozing"
@@ -7209,9 +7693,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:poison"
@@ -7223,9 +7707,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:regeneration"
@@ -7237,9 +7721,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:slow_falling"
@@ -7251,9 +7735,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:slowness"
@@ -7265,9 +7749,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strength"
@@ -7279,9 +7763,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_harming"
@@ -7293,9 +7777,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_healing"
@@ -7307,9 +7791,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_leaping"
@@ -7321,9 +7805,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_poison"
@@ -7335,9 +7819,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_regeneration"
@@ -7349,9 +7833,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_slowness"
@@ -7363,9 +7847,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_strength"
@@ -7377,9 +7861,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_swiftness"
@@ -7391,9 +7875,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:strong_turtle_master"
@@ -7405,9 +7889,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:swiftness"
@@ -7419,9 +7903,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:thick"
@@ -7433,9 +7917,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:turtle_master"
@@ -7447,9 +7931,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:water"
@@ -7461,9 +7945,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:water_breathing"
@@ -7475,9 +7959,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:weakness"
@@ -7489,9 +7973,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:weaving"
@@ -7503,9 +7987,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:lingering_potion",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:potion_contents": {
 									"potion": "minecraft:wind_charged"

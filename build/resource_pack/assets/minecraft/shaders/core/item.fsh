@@ -1,47 +1,36 @@
 #version 330
+#extension GL_ARB_separate_shader_objects : require
 
-layout(std140) uniform Fog {
-    vec4 FogColor;
-    float FogEnvironmentalStart;
-    float FogEnvironmentalEnd;
-    float FogRenderDistanceStart;
-    float FogRenderDistanceEnd;
-    float FogSkyEnd;
-    float FogCloudsEnd;
-};
-
-float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
-    if (vertexDistance <= fogStart) {
-        return 0.0;
-    } else if (vertexDistance >= fogEnd) {
-        return 1.0;
-    }
-    return (vertexDistance - fogStart) / (fogEnd - fogStart);
-}
-
-float total_fog_value(float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd) {
-    return max(linear_fog_value(sphericalVertexDistance, environmentalStart, environmantalEnd), linear_fog_value(cylindricalVertexDistance, renderDistanceStart, renderDistanceEnd));
-}
-
-vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd, vec4 fogColor) {
-    float fogValue = total_fog_value(sphericalVertexDistance, cylindricalVertexDistance, environmentalStart, environmantalEnd, renderDistanceStart, renderDistanceEnd);
-    return vec4(mix(inColor.rgb, fogColor.rgb, fogValue * fogColor.a), inColor.a);
-}
-
-#moj_import <minecraft:dynamictransforms.glsl>
-#moj_import <minecraft:globals.glsl>
+#include <minecraft:globals.glsl>
+#include <minecraft:fog.glsl>
+#include <minecraft:dynamictransforms.glsl>
+#include <minecraft:oit.glsl>
 
 uniform sampler2D Sampler0;
 
-in float sphericalVertexDistance;
-in float cylindricalVertexDistance;
-in vec4 vertexColor;
-in vec4 lightMapColor;
-in vec2 texCoord0;
-in vec3 vPos;      // fragment world-space position (camera-relative space)
-in vec4 vNearPos;  // fragment position on the camera near plane, before perspective divide
+#ifdef GLINT
+uniform sampler2D GlintSampler;
+#endif
 
-out vec4 fragColor;
+#ifndef OIT_ALPHA_ONLY
+layout(location = 0) in float sphericalVertexDistance;
+layout(location = 1) in float cylindricalVertexDistance;
+#endif
+layout(location = 2) in vec4 vertexColor;
+#ifndef OIT_ALPHA_ONLY
+layout(location = 3) in vec4 lightMapColor;
+layout(location = 4) in vec4 overlayColor;
+#endif
+layout(location = 5) in vec2 texCoord0;
+#ifdef GLINT
+layout(location = 6) in vec2 texCoordGlint;
+#endif
+layout(location = 7) in vec3 vPos;      // fragment world-space position (camera-relative space)
+layout(location = 8) in vec4 vNearPos;  // fragment position on the camera near plane, before perspective divide
+
+#ifndef OIT_ALPHA_ONLY
+layout(location = 0) out vec4 fragColor;
+#endif
 
 // --- Black hole constants ---
 const vec3  blackHoleAxis    = vec3(0., -.4, -.9); // black hole rotation axis
@@ -160,19 +149,58 @@ bool checkEffectTexel(float effectId) {
     return all(lessThan(abs(texel - vec4(EFFECT_SIGNATURE_RGB, effectId)), vec4(tolerance)));
 }
 
+#ifndef OIT_ALPHA_ONLY
+vec4 calculateFinalColor(vec4 color) {
+    color.rgb = mix(overlayColor.rgb, color.rgb, overlayColor.a);
+    color *= lightMapColor;
+
+    #ifdef GLINT
+    vec4 glintColor = GlintAlpha * texture(GlintSampler, texCoordGlint);// Glint color modulator?
+    // Matches BlendFuntion.GLINT
+    color.rgb += glintColor.rgb * glintColor.rgb;
+    #endif
+
+    #ifdef OIT_ACCUMULATE
+    color = sampleColorForAccumulation(color);
+    vec4 fogColor = vec4(FogColor.rgb * color.a, FogColor.a);
+    #else
+    vec4 fogColor = FogColor;
+    #endif
+
+    return apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, fogColor);
+}
+#endif
+
 void main() {
-    vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
+    // An effect texel is translucent, so with Improved Transparency it goes through every OIT pass as a fully opaque surface
+    IF_EFFECT(254) {
+        #if defined(OIT_ALPHA_ONLY)
+        executeAlphaOnlyPhase(gl_FragCoord.z, 1.0);
+        #elif defined(OIT_ACCUMULATE)
+        fragColor = sampleColorForAccumulation(computeBlackHole());
+        #else
+        fragColor = computeBlackHole();
+        #endif
+        return;
+    }
 
-    IF_EFFECT(254) { fragColor = computeBlackHole(); return; }
-    // IF_EFFECT(253) { fragColor = sd(); return; }
-
-#ifdef ALPHA_CUTOUT
+    vec4 color = texture(Sampler0, texCoord0);
+    #ifdef ALPHA_CUTOUT
     if (color.a < ALPHA_CUTOUT) {
         discard;
     }
-#endif
+    #endif
 
-    color    *= lightMapColor;
-    fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
+    color *= vertexColor * ColorModulator;
+
+    #ifdef GLINT
+    color.a = max(color.a, GlintAlpha);
+    #endif
+
+    #ifdef OIT_ALPHA_ONLY
+    executeAlphaOnlyPhase(gl_FragCoord.z, color.a);
+    #else
+    fragColor = calculateFinalColor(color);
+    #endif
 }
 

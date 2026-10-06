@@ -110,11 +110,11 @@ def register_break_obsidian_advancement(mode: str) -> None:
 	write_advancement(f"{ns}:{mode}/break_obsidian", {
 		"criteria": {"requirement": {
 			"trigger": "minecraft:tick",
-			"conditions": {"player": [{
-				"condition": "minecraft:entity_scores",
+			"conditions": {"player": {
+				"type": "minecraft:entity_scores",
 				"entity": "this",
 				"scores": {f"{ns}.temp.break_obsidian": {"min": 1}},
-			}]},
+			}},
 		}},
 		"rewards": {"function": f"{ns}:modes/{mode}/advancements/break_obsidian"},
 	})

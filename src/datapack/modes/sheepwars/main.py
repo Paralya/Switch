@@ -190,7 +190,7 @@ execute if score #red_fire_arrows {ns}.data matches 1.. run scoreboard players r
 execute if score #red_explosive_arrows {ns}.data matches 1.. run scoreboard players remove #red_explosive_arrows {ns}.data 1
 
 # Small fixes
-kill @e[type=falling_block,nbt={{BlockState:{{Name:"minecraft:fire"}},OnGround:true}}]
+kill @e[type=falling_block,nbt={{BlockState:{{id:"minecraft:fire"}},OnGround:true}}]
 
 # Every minute, decrease the delay between the give of sheeps (minimum 2 seconds between each sheep)
 scoreboard players operation #minute_clock {ns}.data = #sheepwars_seconds {ns}.data

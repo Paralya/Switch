@@ -3,6 +3,8 @@
 from beet import Advancement
 from stewbeet.core import Mem, set_json_encoder
 
+from ...definitions.predicates import entity_properties
+
 
 def write_resources() -> None:
 	""" Datapack resources owned by the pitchout mode. """
@@ -10,7 +12,7 @@ def write_resources() -> None:
 	Mem.ctx.data[ns].advancements["pitchout/hurt_entity"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:player_hurt_entity",
-			"conditions": {"entity": {"entity_type": "minecraft:player"}},
+			"conditions": {"entity": entity_properties({"entity_type": "minecraft:player"})},
 		}},
 		"rewards": {"function": f"{ns}:modes/pitchout/advancements/hurt_player"},
 	}))

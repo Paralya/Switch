@@ -500,9 +500,9 @@ scoreboard objectives remove {ns}.temp.break_obsidian
 execute store result score #count {ns}.data if entity @a[tag=!detached,gamemode=!spectator]
 
 # Summon lootboxes depending on the player count
-summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
-execute if score #count {ns}.data matches 5.. run summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
-execute if score #count {ns}.data matches 15.. run summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{Name:"minecraft:crying_obsidian"}}}}]}}
+summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{id:"minecraft:crying_obsidian"}}}}]}}
+execute if score #count {ns}.data matches 5.. run summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{id:"minecraft:crying_obsidian"}}}}]}}
+execute if score #count {ns}.data matches 15.. run summon chicken ~ ~ ~ {{Invulnerable:true,Tags:["{ns}.new"],Passengers:[{{id:"minecraft:block_display",Tags:["{ns}.task_obsidian"],transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]}},block_state:{{id:"minecraft:crying_obsidian"}}}}]}}
 
 # Spreadplayers
 execute as @e[type=chicken,tag={ns}.new] run function {ns}:maps/spread_one_player

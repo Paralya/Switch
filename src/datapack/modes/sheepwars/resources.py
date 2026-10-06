@@ -15,7 +15,7 @@ def write_resources() -> None:
 	}))
 
 	switch.predicates["between/100_and_110"] = set_json_encoder(Predicate({
-		"condition": "minecraft:location_check",
+		"type": "minecraft:location_check",
 		"predicate": {"position": {"y": {"min": 100, "max": 110}}},
 	}))
 

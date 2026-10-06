@@ -366,8 +366,8 @@ function {ns}:engine/launch_game/add_played_stat with storage {ns}:main
 # @description		Interprets the message and logs it to the console
 #
 
-# Put the message into a sign
-execute in minecraft:overworld run setblock 0 2 0 oak_sign
+# Put the message into a sign, whose text only gets resolved with allow_op_features
+execute in minecraft:overworld run setblock 0 2 0 oak_sign{{allow_op_features:true}}
 execute in minecraft:overworld run data modify block 0 2 0 front_text.messages[0] set value {{"nbt":"MessageToLog","storage":"{ns}:main","interpret":true}}
 execute in minecraft:overworld run data modify storage {ns}:main MessageToLog set from block 0 2 0 front_text.messages[0]
 execute in minecraft:overworld run setblock 0 2 0 air

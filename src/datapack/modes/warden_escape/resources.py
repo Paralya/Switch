@@ -3,6 +3,7 @@
 from beet import Advancement
 from stewbeet.core import Mem, set_json_encoder
 
+from ...definitions.predicates import entity_properties
 from ..emit import register_sounds
 
 
@@ -13,8 +14,8 @@ def write_resources() -> None:
 		"criteria": {"requirement": {
 			"trigger": "minecraft:entity_killed_player",
 			"conditions": {
-				"entity": {"entity_type": "minecraft:warden"},
-				"killing_blow": {"tags": [{"id": "minecraft:bypasses_armor", "expected": True}]},
+				"entity": entity_properties({"entity_type": "minecraft:warden"}),
+				"killing_blow": {"tags": [{"id": "#minecraft:bypasses_armor", "expected": True}]},
 			},
 		}},
 		"rewards": {"function": f"{ns}:modes/warden_escape/calls/laser_beam"},

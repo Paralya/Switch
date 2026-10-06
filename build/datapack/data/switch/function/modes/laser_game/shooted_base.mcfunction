@@ -36,7 +36,7 @@ execute if score #color switch.data matches 1 run scoreboard players add #red_po
 scoreboard players add @s switch.temp.individual_points 20
 
 scoreboard players set #base_reload switch.data 15
-execute as @e[tag=switch.laser_game.base] run data merge entity @s {Glowing:false,block_state:{Name:"minecraft:dark_oak_trapdoor"}}
+execute as @e[tag=switch.laser_game.base] run data merge entity @s {Glowing:false,block_state:{id:"minecraft:dark_oak_trapdoor"}}
 
 # Advancement
 execute unless score #test_mode switch.data matches 1 run advancement grant @s only switch:visible/77

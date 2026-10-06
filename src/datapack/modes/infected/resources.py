@@ -39,8 +39,8 @@ def write_resources() -> None:
 				"rolls": {"type": "minecraft:uniform", "min": 4, "max": 6},
 				"entries": [
 					{"type": "minecraft:item", "name": "minecraft:golden_apple", "weight": 1},
-					{"type": "minecraft:item", "name": "minecraft:potion", "weight": 3, "functions": [{"function": "minecraft:set_potion", "id": "minecraft:healing"}]},
-					{"type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [{"function": "minecraft:set_potion", "id": "minecraft:regeneration"}]},
+					{"type": "minecraft:item", "name": "minecraft:potion", "weight": 3, "modifier": [{"type": "minecraft:set_potion", "id": "minecraft:healing"}]},
+					{"type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "modifier": [{"type": "minecraft:set_potion", "id": "minecraft:regeneration"}]},
 				],
 			},
 			{

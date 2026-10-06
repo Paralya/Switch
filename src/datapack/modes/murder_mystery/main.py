@@ -31,7 +31,7 @@ data modify entity @s Rotation set from storage {ns}:main Rotation
 
 # Copy name to CustomName
 data modify entity @s profile set from block 0 7 0 Items[0].components."minecraft:profile"
-setblock 0 7 0 oak_sign
+setblock 0 7 0 oak_sign{{allow_op_features:true}}
 data modify block 0 7 0 front_text.messages[0] set value {{"nbt":"temp","storage":"{ns}:main","interpret":true}}
 data modify entity @s CustomName set from block 0 7 0 front_text.messages[0]
 """)

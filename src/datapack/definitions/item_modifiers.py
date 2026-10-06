@@ -10,7 +10,7 @@ def write_item_modifiers() -> None:
 	item_modifiers = Mem.ctx.data[ns].item_modifiers
 
 	item_modifiers["unbreakable"] = set_json_encoder(ItemModifier({
-		"function": "minecraft:set_components",
+		"type": "minecraft:set_components",
 		"components": {
 			"minecraft:unbreakable": {},
 			"minecraft:tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
@@ -18,18 +18,18 @@ def write_item_modifiers() -> None:
 	}))
 
 	item_modifiers["enchant_protection_2"] = set_json_encoder(ItemModifier({
-		"function": "minecraft:set_enchantments",
+		"type": "minecraft:set_enchantments",
 		"enchantments": {"minecraft:protection": 2},
 	}))
 
 	item_modifiers["handheld/enchant_efficiency_5"] = set_json_encoder(ItemModifier({
-		"function": "minecraft:set_enchantments",
+		"type": "minecraft:set_enchantments",
 		"enchantments": {"minecraft:efficiency": 5},
-		"conditions": [
+		"condition": {"type": "minecraft:all_of", "terms": [
 			{
-				"condition": "minecraft:inverted",
+				"type": "minecraft:inverted",
 				"term": {
-					"condition": "minecraft:entity_properties",
+					"type": "minecraft:entity_properties",
 					"entity": "this",
 					"predicate": {"equipment": {"mainhand": {"predicates": {
 						"minecraft:enchantments": [{"enchantments": "minecraft:efficiency", "levels": 5}],
@@ -37,9 +37,9 @@ def write_item_modifiers() -> None:
 				},
 			},
 			{
-				"condition": "minecraft:entity_properties",
+				"type": "minecraft:entity_properties",
 				"entity": "this",
 				"predicate": {"equipment": {"mainhand": {"items": f"#{ns}:tools"}}},
 			},
-		],
+		]},
 	}))

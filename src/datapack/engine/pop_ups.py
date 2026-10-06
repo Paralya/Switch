@@ -30,6 +30,8 @@ def write_pop_ups() -> None:
 					"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": f"{ns}:letter"}},
 					"title": title,
 					"description": "",
+					# Required on every visible root, even a hidden one only ever shown as a toast
+					"background": "minecraft:gui/advancements/backgrounds/stone",
 					"frame": "task",
 					"show_toast": True,
 					"announce_to_chat": False,

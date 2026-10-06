@@ -3,6 +3,7 @@
 from beet import Advancement, BlockTag
 from stewbeet.core import Mem, set_json_encoder
 
+from ...definitions.predicates import entity_properties
 from ..emit import register_break_obsidian_advancement
 
 
@@ -16,7 +17,7 @@ def write_resources() -> None:
 	switch.advancements["rush_the_point/killed_player"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:player_killed_entity",
-			"conditions": {"entity": {"entity_type": "minecraft:player"}},
+			"conditions": {"entity": entity_properties({"entity_type": "minecraft:player"})},
 		}},
 		"rewards": {"function": f"{ns}:modes/rush_the_point/advancements/killed_player"},
 	}))

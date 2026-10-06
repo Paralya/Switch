@@ -16,7 +16,7 @@ def same_score(objective: str, target: str) -> dict[str, Any]:
 	""" entity_scores predicate where 'objective' equals the fixed #target score on switch.data. """
 	ns: str = Mem.ctx.project_id
 	bound: dict[str, Any] = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": target}, "score": f"{ns}.data"}
-	return {"condition": "minecraft:entity_scores", "entity": "this", "scores": {objective: {"min": bound, "max": bound}}}
+	return {"type": "minecraft:entity_scores", "entity": "this", "scores": {objective: {"min": bound, "max": bound}}}
 
 
 def write_resources() -> None:

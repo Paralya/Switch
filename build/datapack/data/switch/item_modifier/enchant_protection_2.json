@@ -1,5 +1,5 @@
 {
-	"function": "minecraft:set_enchantments",
+	"type": "minecraft:set_enchantments",
 	"enchantments": {
 		"minecraft:protection": 2
 	}

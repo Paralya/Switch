@@ -79,15 +79,15 @@ scoreboard players remove #remaining_time {ns}.data 1
 
 # Start thing
 execute if score #laser_game_seconds {ns}.data matches 0 run kill @e[tag={ns}.laser_game.base]
-execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 517.0 113 524.0 {{Tags:["{ns}.laser_game.base"],block_state:{{Name:"minecraft:dark_oak_trapdoor",Properties:{{powered:"true",facing:"north",half:"bottom",open:"true"}}}}}}
-execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 539.0 105 530.0 {{Tags:["{ns}.laser_game.base"],block_state:{{Name:"minecraft:dark_oak_trapdoor",Properties:{{powered:"true",facing:"east",half:"bottom",open:"true"}}}}}}
-execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 542.0 114 547.0 {{Tags:["{ns}.laser_game.base"],block_state:{{Name:"minecraft:dark_oak_trapdoor",Properties:{{powered:"true",facing:"south",half:"bottom",open:"true"}}}}}}
+execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 517.0 113 524.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"north",half:"bottom",open:"true"}}}}}}
+execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 539.0 105 530.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"east",half:"bottom",open:"true"}}}}}}
+execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 542.0 114 547.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"south",half:"bottom",open:"true"}}}}}}
 
 # Base reload
 scoreboard players remove #base_reload {ns}.data 1
 function {ns}:modes/laser_game/translations/second
-execute if score #base_reload {ns}.data matches 0 as @e[tag={ns}.laser_game.base,sort=random,limit=1] run data merge entity @s {{Glowing:true,block_state:{{Name:"minecraft:iron_trapdoor"}}}}
-execute if score #base_reload {ns}.data matches 1.. as @e[tag={ns}.laser_game.base] run data merge entity @s {{Glowing:false,block_state:{{Name:"minecraft:dark_oak_trapdoor"}}}}
+execute if score #base_reload {ns}.data matches 0 as @e[tag={ns}.laser_game.base,sort=random,limit=1] run data merge entity @s {{Glowing:true,block_state:{{id:"minecraft:iron_trapdoor"}}}}
+execute if score #base_reload {ns}.data matches 1.. as @e[tag={ns}.laser_game.base] run data merge entity @s {{Glowing:false,block_state:{{id:"minecraft:dark_oak_trapdoor"}}}}
 
 
 # Bonus mitraillette + change color
@@ -175,7 +175,7 @@ execute if score #color {ns}.data matches 1 run scoreboard players add #red_poin
 scoreboard players add @s {ns}.temp.individual_points 20
 
 scoreboard players set #base_reload {ns}.data 15
-execute as @e[tag={ns}.laser_game.base] run data merge entity @s {{Glowing:false,block_state:{{Name:"minecraft:dark_oak_trapdoor"}}}}
+execute as @e[tag={ns}.laser_game.base] run data merge entity @s {{Glowing:false,block_state:{{id:"minecraft:dark_oak_trapdoor"}}}}
 
 # Advancement
 execute unless score #test_mode {ns}.data matches 1 run advancement grant @s only {ns}:visible/77

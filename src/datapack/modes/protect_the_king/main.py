@@ -72,7 +72,7 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 		KitItem(slot="armor.legs", item=r"chainmail_leggings[enchantments={protection:2}]"),
 		KitItem(slot="armor.feet", item=r"chainmail_boots[enchantments={projectile_protection:5}]"),
 		KitItem(role="melee", slot="hotbar.0", loot=f"{ns}:i/steel_sword",
-			modify='{function:"minecraft:set_enchantments",enchantments:{"minecraft:knockback":1}}'),
+			modify='{type:"minecraft:set_enchantments",enchantments:{"minecraft:knockback":1}}'),
 		KitItem(role="ranged", item="bow", slot="hotbar.1"),
 		KitItem(role="axe", item="stone_axe", slot="hotbar.3"),
 		KitItem(role="ammo", item="arrow", count=28, slot="hotbar.6"),
@@ -82,7 +82,7 @@ execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!de
 		KitItem(item="oak_planks", count=36, slot="inventory.0"),
 		KitItem(role="special", item="anvil", slot="hotbar.4"),
 		KitItem(role="melee", override=True, selector=king, loot=f"{ns}:i/obsidian_sword",
-			modify='{function:"minecraft:set_enchantments",enchantments:{"minecraft:sharpness":1}}'),
+			modify='{type:"minecraft:set_enchantments",enchantments:{"minecraft:sharpness":1}}'),
 	), post=f"""
 effect give @s[{king}] glowing infinite 255 true
 attribute @s[{king}] max_health base set 40.0

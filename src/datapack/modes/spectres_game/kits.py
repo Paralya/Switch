@@ -38,7 +38,7 @@ def spectre_kit() -> Kit:
 		KitItem(item=_axe(ns), slot="inventory.1", selector=spectre),
 		# Emerald pickaxe if task game
 		KitItem(role="tool", slot="hotbar.4", selector=spectre, cond=f"if score #TASKS_GAME {ns}.data matches 1",
-			loot=f"{ns}:i/emerald_pickaxe", modify='{"function":"minecraft:set_components","components":{"minecraft:max_damage":10}}'),
+			loot=f"{ns}:i/emerald_pickaxe", modify='{"type":"minecraft:set_components","components":{"minecraft:max_damage":10}}'),
 	), post=f"""
 effect give @s[{spectre}] invisibility infinite 255 true
 effect give @s[{spectre}] resistance infinite 0 true
@@ -66,5 +66,5 @@ def visible_kit() -> Kit:
 			count=ScoreCount(objective=f"{ns}.spectres_game.vi_arrows", base=16, step=2, levels=9)),
 		# Emerald pickaxe if task game
 		KitItem(role="tool", slot="hotbar.4", selector=visible, cond=f"if score #TASKS_GAME {ns}.data matches 1",
-			loot=f"{ns}:i/emerald_pickaxe", modify='{"function":"minecraft:set_components","components":{"minecraft:max_damage":10}}'),
+			loot=f"{ns}:i/emerald_pickaxe", modify='{"type":"minecraft:set_components","components":{"minecraft:max_damage":10}}'),
 	))

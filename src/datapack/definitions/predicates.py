@@ -14,12 +14,12 @@ CHANCES: dict[str, float] = {
 
 def entity_properties(predicate: dict[str, Any]) -> dict[str, Any]:
 	""" entity_properties predicate on 'this'. """
-	return {"condition": "minecraft:entity_properties", "entity": "this", "predicate": predicate}
+	return {"type": "minecraft:entity_properties", "entity": "this", "predicate": predicate}
 
 
 def block_at(block: str, offset_y: int | None = None) -> dict[str, Any]:
 	""" location_check predicate matching a block (optionally with a Y offset). """
-	out: dict[str, Any] = {"condition": "minecraft:location_check"}
+	out: dict[str, Any] = {"type": "minecraft:location_check"}
 	if offset_y is not None:
 		out["offsetY"] = offset_y
 	out["predicate"] = {"block": {"blocks": [block]}}
@@ -29,7 +29,7 @@ def block_at(block: str, offset_y: int | None = None) -> dict[str, Any]:
 def same_score(objective: str, target: str, score: str) -> dict[str, Any]:
 	""" entity_scores predicate where 'objective' equals the fixed score 'target'.'score'. """
 	bound: dict[str, Any] = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": target}, "score": score}
-	return {"condition": "minecraft:entity_scores", "entity": "this", "scores": {objective: {"min": bound, "max": bound}}}
+	return {"type": "minecraft:entity_scores", "entity": "this", "scores": {objective: {"min": bound, "max": bound}}}
 
 
 def write_predicates() -> None:
@@ -39,14 +39,14 @@ def write_predicates() -> None:
 
 	# Random chances
 	for name, chance in CHANCES.items():
-		predicates[f"chance/{name}"] = set_json_encoder(Predicate({"condition": "minecraft:random_chance", "chance": chance}))
+		predicates[f"chance/{name}"] = set_json_encoder(Predicate({"type": "minecraft:random_chance", "chance": chance}))
 
 	# Location checks
 	predicates["in_air"] = set_json_encoder(Predicate(block_at("minecraft:air", offset_y=-1)))
 	predicates["in_water"] = set_json_encoder(Predicate(block_at("minecraft:water")))
 	predicates["in_lava"] = set_json_encoder(Predicate(block_at("minecraft:lava")))
 	predicates["is_at_spawn"] = set_json_encoder(Predicate({
-		"condition": "minecraft:location_check",
+		"type": "minecraft:location_check",
 		"predicate": {"position": {
 			"x": {"min": -10, "max": 10},
 			"y": {"min": 60, "max": 80},

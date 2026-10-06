@@ -151,8 +151,8 @@ execute as @a[scores={{{ns}.temp.reload=40..}}] if items entity @s weapon.offhan
 scoreboard players reset @a[scores={{{ns}.temp.reload=40..}}] {ns}.temp.reload
 
 # Keep reloading the grappling hook
-execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.offhand {{"function":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
-execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.mainhand {{"function":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
+execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.offhand {{"type":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
+execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{{grappling_hook:1b}}] run item modify entity @s weapon.mainhand {{"type":"minecraft:set_components","components":{{"minecraft:charged_projectiles":[{{"id":"minecraft:arrow"}}]}}}}
 
 # Advancement
 execute unless score #test_mode {ns}.data matches 1 run advancement grant @a[scores={{{ns}.temp.kills=10..}}] only {ns}:visible/67

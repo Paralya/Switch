@@ -19,5 +19,5 @@ $item replace entity @s[team=switch.temp.spectre] $(s2) with bow[enchantments={p
 $item replace entity @s[team=switch.temp.spectre] $(s3) with golden_apple 8
 $item replace entity @s[team=switch.temp.spectre] $(s4) with oak_planks 64
 $execute if score #TASKS_GAME switch.data matches 1 run loot replace entity @s[team=switch.temp.spectre] $(s5) loot switch:i/emerald_pickaxe
-$execute if score #TASKS_GAME switch.data matches 1 run item modify entity @s[team=switch.temp.spectre] $(s5) {"function":"minecraft:set_components","components":{"minecraft:max_damage":10}}
+$execute if score #TASKS_GAME switch.data matches 1 run item modify entity @s[team=switch.temp.spectre] $(s5) {"type":"minecraft:set_components","components":{"minecraft:max_damage":10}}
 

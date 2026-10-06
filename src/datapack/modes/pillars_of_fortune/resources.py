@@ -31,11 +31,11 @@ def get_potion_entry(item: str, potion: str) -> JsonDict:
 		JsonDict: The entry, setting the potion_contents component on the container
 
 	Examples:
-		>>> get_potion_entry("minecraft:lingering_potion", "luck")["functions"][0]["components"]
+		>>> get_potion_entry("minecraft:lingering_potion", "luck")["modifier"][0]["components"]
 		{'minecraft:potion_contents': {'potion': 'minecraft:luck'}}
 	"""
-	return {"type": "minecraft:item", "name": item, "functions": [
-		{"function": "minecraft:set_components", "components": {"minecraft:potion_contents": {"potion": f"minecraft:{potion}"}}},
+	return {"type": "minecraft:item", "name": item, "modifier": [
+		{"type": "minecraft:set_components", "components": {"minecraft:potion_contents": {"potion": f"minecraft:{potion}"}}},
 	]}
 
 # Main function

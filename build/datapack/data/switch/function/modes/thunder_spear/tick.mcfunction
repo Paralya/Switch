@@ -22,8 +22,8 @@ execute as @a[scores={switch.temp.reload=40..}] if items entity @s weapon.offhan
 scoreboard players reset @a[scores={switch.temp.reload=40..}] switch.temp.reload
 
 # Keep reloading the grappling hook
-execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{grappling_hook:1b}] run item modify entity @s weapon.offhand {"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{"id":"minecraft:arrow"}]}}
-execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{grappling_hook:1b}] run item modify entity @s weapon.mainhand {"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{"id":"minecraft:arrow"}]}}
+execute as @a[tag=!detached] if items entity @s weapon.offhand *[custom_data~{grappling_hook:1b}] run item modify entity @s weapon.offhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{"id":"minecraft:arrow"}]}}
+execute as @a[tag=!detached] if items entity @s weapon.mainhand *[custom_data~{grappling_hook:1b}] run item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{"id":"minecraft:arrow"}]}}
 
 # Advancement
 execute unless score #test_mode switch.data matches 1 run advancement grant @a[scores={switch.temp.kills=10..}] only switch:visible/67

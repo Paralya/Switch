@@ -3,6 +3,8 @@
 from beet import Advancement
 from stewbeet.core import Mem, set_json_encoder
 
+from ...definitions.predicates import entity_properties
+
 
 def write_resources() -> None:
 	""" Datapack resources owned by the gay_shooter mode. """
@@ -12,7 +14,7 @@ def write_resources() -> None:
 	advancements["gay_shooter/shot_player"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {
 			"trigger": "minecraft:player_hurt_entity",
-			"conditions": {"player": {"equipment": {"mainhand": {"items": ["bow"]}}}},
+			"conditions": {"player": entity_properties({"equipment": {"mainhand": {"items": ["bow"]}}})},
 		}},
 		"rewards": {"function": f"{ns}:modes/gay_shooter/shot_player"},
 	}))
