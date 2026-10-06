@@ -101,7 +101,7 @@ def write_note_block_studio() -> None:
 				objectives.append((song_name, length, bpm))
 
 			# Add a pack.mcmeta file
-			lib.writestr("pack.mcmeta", stp.json_dump({"pack":{"pack_format":Mem.ctx.data.pack_format,"description":"Musics made with NoteBlock Studio"}}))
+			lib.writestr("pack.mcmeta", stp.json_dump({"pack":{**Mem.ctx.data.mcmeta.data["pack"],"description":"Musics made with NoteBlock Studio"}}))
 
 			# Write the objectives
 			# Write all objectives to a single string first
