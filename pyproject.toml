@@ -8,9 +8,68 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "pyright>=1.1.414",
+    "ruff>=0.16.10",
     "stewbeet>=3.10.0",
+    "uv>=0.12.23",
 ]
 
 [tool.uv.sources]
 stewbeet = { path = "../StewBeet/python_package" }
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.complexipy]
+paths = ["."]
+max-complexity-allowed = 15
+sort = "desc"
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "build",
+    "dist",
+    "*.pyi",
+]
+line-length = 135
+
+[tool.ruff.lint.isort]
+# Keeps the "name as name" re-exports of a package grouped in a single statement
+combine-as-imports = true
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "B",
+    "C4",
+    "T20",
+    "RUF",
+    "RET",
+    "SIM",
+    "PIE",
+    "PERF401",
+    "PGH003",
+    "FBT003",
+    "TRY203",
+    "S110",
+    "PLR5501",
+]
+ignore = [
+    "T201",
+    "W191",
+    "N803",
+    "N806",
+]
+
+[tool.stouputils.check]
+ignore = []
 
