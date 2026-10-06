@@ -1,57 +1,45 @@
 
 # ruff: noqa: E501
 # Imports
-from beet import FragmentShader, GlslShader, VertexShader
+from beet import FragmentShader, VertexShader
 from stewbeet.core import Mem
 
 # GLSL shaders inlined as Python strings (only .png/.ogg/.nbt binaries stay as files).
-# Stored with LF; written with CRLF to match the upstream (Windows-authored) files.
-# core/item adds the black-hole item effect (effect id 254).
+# core/item is the vanilla 26.3 shader plus the black-hole item effect (effect id 254): rebase it on the new vanilla file at each update.
 
 ITEM_FSH = """#version 330
+#extension GL_ARB_separate_shader_objects : require
 
-layout(std140) uniform Fog {
-    vec4 FogColor;
-    float FogEnvironmentalStart;
-    float FogEnvironmentalEnd;
-    float FogRenderDistanceStart;
-    float FogRenderDistanceEnd;
-    float FogSkyEnd;
-    float FogCloudsEnd;
-};
-
-float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
-    if (vertexDistance <= fogStart) {
-        return 0.0;
-    } else if (vertexDistance >= fogEnd) {
-        return 1.0;
-    }
-    return (vertexDistance - fogStart) / (fogEnd - fogStart);
-}
-
-float total_fog_value(float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd) {
-    return max(linear_fog_value(sphericalVertexDistance, environmentalStart, environmantalEnd), linear_fog_value(cylindricalVertexDistance, renderDistanceStart, renderDistanceEnd));
-}
-
-vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd, vec4 fogColor) {
-    float fogValue = total_fog_value(sphericalVertexDistance, cylindricalVertexDistance, environmentalStart, environmantalEnd, renderDistanceStart, renderDistanceEnd);
-    return vec4(mix(inColor.rgb, fogColor.rgb, fogValue * fogColor.a), inColor.a);
-}
-
-#moj_import <minecraft:dynamictransforms.glsl>
-#moj_import <minecraft:globals.glsl>
+#include <minecraft:globals.glsl>
+#include <minecraft:fog.glsl>
+#include <minecraft:dynamictransforms.glsl>
+#include <minecraft:oit.glsl>
 
 uniform sampler2D Sampler0;
 
-in float sphericalVertexDistance;
-in float cylindricalVertexDistance;
-in vec4 vertexColor;
-in vec4 lightMapColor;
-in vec2 texCoord0;
-in vec3 vPos;      // fragment world-space position (camera-relative space)
-in vec4 vNearPos;  // fragment position on the camera near plane, before perspective divide
+#ifdef GLINT
+uniform sampler2D GlintSampler;
+#endif
 
-out vec4 fragColor;
+#ifndef OIT_ALPHA_ONLY
+layout(location = 0) in float sphericalVertexDistance;
+layout(location = 1) in float cylindricalVertexDistance;
+#endif
+layout(location = 2) in vec4 vertexColor;
+#ifndef OIT_ALPHA_ONLY
+layout(location = 3) in vec4 lightMapColor;
+layout(location = 4) in vec4 overlayColor;
+#endif
+layout(location = 5) in vec2 texCoord0;
+#ifdef GLINT
+layout(location = 6) in vec2 texCoordGlint;
+#endif
+layout(location = 7) in vec3 vPos;      // fragment world-space position (camera-relative space)
+layout(location = 8) in vec4 vNearPos;  // fragment position on the camera near plane, before perspective divide
+
+#ifndef OIT_ALPHA_ONLY
+layout(location = 0) out vec4 fragColor;
+#endif
 
 // --- Black hole constants ---
 const vec3  blackHoleAxis    = vec3(0., -.4, -.9); // black hole rotation axis
@@ -170,148 +158,134 @@ bool checkEffectTexel(float effectId) {
     return all(lessThan(abs(texel - vec4(EFFECT_SIGNATURE_RGB, effectId)), vec4(tolerance)));
 }
 
+#ifndef OIT_ALPHA_ONLY
+vec4 calculateFinalColor(vec4 color) {
+    color.rgb = mix(overlayColor.rgb, color.rgb, overlayColor.a);
+    color *= lightMapColor;
+
+    #ifdef GLINT
+    vec4 glintColor = GlintAlpha * texture(GlintSampler, texCoordGlint);// Glint color modulator?
+    // Matches BlendFuntion.GLINT
+    color.rgb += glintColor.rgb * glintColor.rgb;
+    #endif
+
+    #ifdef OIT_ACCUMULATE
+    color = sampleColorForAccumulation(color);
+    vec4 fogColor = vec4(FogColor.rgb * color.a, FogColor.a);
+    #else
+    vec4 fogColor = FogColor;
+    #endif
+
+    return apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, fogColor);
+}
+#endif
+
 void main() {
-    vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
+    // An effect texel is translucent, so with Improved Transparency it goes through every OIT pass as a fully opaque surface
+    IF_EFFECT(254) {
+        #if defined(OIT_ALPHA_ONLY)
+        executeAlphaOnlyPhase(gl_FragCoord.z, 1.0);
+        #elif defined(OIT_ACCUMULATE)
+        fragColor = sampleColorForAccumulation(computeBlackHole());
+        #else
+        fragColor = computeBlackHole();
+        #endif
+        return;
+    }
 
-    IF_EFFECT(254) { fragColor = computeBlackHole(); return; }
-    // IF_EFFECT(253) { fragColor = sd(); return; }
-
-#ifdef ALPHA_CUTOUT
+    vec4 color = texture(Sampler0, texCoord0);
+    #ifdef ALPHA_CUTOUT
     if (color.a < ALPHA_CUTOUT) {
         discard;
     }
-#endif
+    #endif
 
-    color    *= lightMapColor;
-    fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
+    color *= vertexColor * ColorModulator;
+
+    #ifdef GLINT
+    color.a = max(color.a, GlintAlpha);
+    #endif
+
+    #ifdef OIT_ALPHA_ONLY
+    executeAlphaOnlyPhase(gl_FragCoord.z, color.a);
+    #else
+    fragColor = calculateFinalColor(color);
+    #endif
 }
 
 """
 
 ITEM_VSH = """#version 330
+#extension GL_ARB_separate_shader_objects : require
 
-#define MINECRAFT_LIGHT_POWER   (0.6)
-#define MINECRAFT_AMBIENT_LIGHT (0.4)
+#include <minecraft:light.glsl>
+#include <minecraft:fog.glsl>
+#include <minecraft:dynamictransforms.glsl>
+#include <minecraft:projection.glsl>
+#include <minecraft:sample_lightmap.glsl>
 
-layout(std140) uniform Lighting {
-    vec3 Light0_Direction;
-    vec3 Light1_Direction;
-};
+layout(location = 0) in vec3 Position;
+layout(location = 1) in vec4 Color;
+layout(location = 2) in vec2 UV0;
+layout(location = 3) in ivec2 UV1;
+layout(location = 4) in ivec2 UV2;
+#ifdef GLINT_SPECIAL
+layout(location = 5) in vec2 UV3;
+#endif
+layout(location = 6) in vec3 Normal;
 
-vec2 minecraft_compute_light(vec3 lightDir0, vec3 lightDir1, vec3 normal) {
-    return vec2(dot(lightDir0, normal), dot(lightDir1, normal));
-}
-
-vec4 minecraft_mix_light_separate(vec2 light, vec4 color) {
-    vec2 lightValue = max(vec2(0.0), light);
-    float lightAccum = min(1.0, (lightValue.x + lightValue.y) * MINECRAFT_LIGHT_POWER + MINECRAFT_AMBIENT_LIGHT);
-    return vec4(color.rgb * lightAccum, color.a);
-}
-
-vec4 minecraft_mix_light(vec3 lightDir0, vec3 lightDir1, vec3 normal, vec4 color) {
-    vec2 light = minecraft_compute_light(lightDir0, lightDir1, normal);
-    return minecraft_mix_light_separate(light, color);
-}
-
-layout(std140) uniform Fog {
-    vec4 FogColor;
-    float FogEnvironmentalStart;
-    float FogEnvironmentalEnd;
-    float FogRenderDistanceStart;
-    float FogRenderDistanceEnd;
-    float FogSkyEnd;
-    float FogCloudsEnd;
-};
-
-float fog_spherical_distance(vec3 pos) {
-    return length(pos);
-}
-
-float fog_cylindrical_distance(vec3 pos) {
-    float distXZ = length(pos.xz);
-    float distY = abs(pos.y);
-    return max(distXZ, distY);
-}
-
-#moj_import <minecraft:dynamictransforms.glsl>
-#moj_import <minecraft:projection.glsl>
-
-in vec3 Position;
-in vec4 Color;
-in vec2 UV0;
-in ivec2 UV2;
-in vec3 Normal;
-
+#ifndef OIT_ALPHA_ONLY
+uniform sampler2D Sampler1;
 uniform sampler2D Sampler2;
 
-out float sphericalVertexDistance;
-out float cylindricalVertexDistance;
-out vec4 vertexColor;
-out vec4 lightMapColor;
-out vec2 texCoord0;
-out vec3 vPos;
-out vec4 vNearPos;
+layout(location = 0) out float sphericalVertexDistance;
+layout(location = 1) out float cylindricalVertexDistance;
+#endif
+layout(location = 2) out vec4 vertexColor;
+#ifndef OIT_ALPHA_ONLY
+layout(location = 3) out vec4 lightMapColor;
+layout(location = 4) out vec4 overlayColor;
+#endif
+
+layout(location = 5) out vec2 texCoord0;
+#ifdef GLINT
+layout(location = 6) out vec2 texCoordGlint;
+#endif
+layout(location = 7) out vec3 vPos;
+layout(location = 8) out vec4 vNearPos;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
+
+    #ifndef OIT_ALPHA_ONLY
     sphericalVertexDistance = fog_spherical_distance(Position);
     cylindricalVertexDistance = fog_cylindrical_distance(Position);
+    #endif
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
-    lightMapColor = texture(Sampler2, (vec2(UV2) + 8.0) / 256.0);
+    #ifndef OIT_ALPHA_ONLY
+    lightMapColor = sample_lightmap(Sampler2, UV2);
+    overlayColor = texelFetch(Sampler1, UV1, 0);
+    #endif
+
     texCoord0 = UV0;
+    #ifdef GLINT
+    #ifdef GLINT_SPECIAL
+    texCoordGlint = (TextureMat * vec4(UV3, 0.0, 1.0)).xy;
+    #else
+    texCoordGlint = (TextureMat * vec4(UV0, 0.0, 1.0)).xy;
+    #endif
+    #endif
+
     vPos = Position;
     // Kept as a vec4: the perspective divide must happen after interpolation to stay linear.
     vNearPos = inverse(ProjMat * ModelViewMat) * gl_Position.xyww;
 }
 """
 
-DYNAMICTRANSFORMS = """#version 330
-
-layout(std140) uniform DynamicTransforms {
-    mat4 ModelViewMat;
-    vec4 ColorModulator;
-    vec3 ModelOffset;
-    mat4 TextureMat;
-};
-
-"""
-
-GLOBALS = """#version 330
-
-layout(std140) uniform Globals {
-    ivec3 CameraBlockPos;
-    vec3 CameraOffset;
-    vec2 ScreenSize;
-    float GlintAlpha;
-    float GameTime;
-    int MenuBlurRadius;
-    int UseRgss;
-};
-
-"""
-
-PROJECTION = """#version 330
-
-layout(std140) uniform Projection {
-    mat4 ProjMat;
-};
-
-vec4 projection_from_position(vec4 position) {
-    vec4 projection = position * 0.5;
-    projection.xy = vec2(projection.x + projection.w, projection.y + projection.w);
-    projection.zw = position.zw;
-    return projection;
-}
-
-"""
-
 
 def write_shaders() -> None:
-	""" Register the vanilla shader overrides (core/item + GLSL includes) under minecraft. """
+	""" Register the vanilla core/item shader override under minecraft. """
 	minecraft = Mem.ctx.assets["minecraft"]
 	minecraft.fragment_shaders["core/item"] = FragmentShader(ITEM_FSH)
 	minecraft.vertex_shaders["core/item"] = VertexShader(ITEM_VSH)
-	minecraft.glsl_shaders["include/dynamictransforms"] = GlslShader(DYNAMICTRANSFORMS)
-	minecraft.glsl_shaders["include/globals"] = GlslShader(GLOBALS)
-	minecraft.glsl_shaders["include/projection"] = GlslShader(PROJECTION)
 
