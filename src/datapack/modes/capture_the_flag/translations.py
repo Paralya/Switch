@@ -79,3 +79,4 @@ execute if entity @s[tag={ns}.red_flag] run tellraw @a[scores={{{ns}.lang=0}},ta
 execute if entity @s[tag={ns}.blue_flag] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"[CaptureTheFlag] ","color":"yellow"}},{{"selector":"@p[tag={ns}.has_blue_flag]"}},{{"text":" just secured the ","color":"aqua"}},{{"text":"blue","color":"blue"}},{{"text":" flag!","color":"aqua"}}]
 execute if entity @s[tag={ns}.red_flag] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"[CaptureTheFlag] ","color":"yellow"}},{{"selector":"@p[tag={ns}.has_red_flag]"}},{{"text":" just secured the ","color":"aqua"}},{{"text":"red","color":"red"}},{{"text":" flag!","color":"aqua"}}]
 """)
+

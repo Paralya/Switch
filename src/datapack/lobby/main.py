@@ -39,3 +39,4 @@ execute if score #players_in_lobby {ns}.data matches 1.. if block 27 80 102 ligh
 # NPCs
 execute if score #players_in_lobby {ns}.data matches 1.. positioned -22 69.8 3 run function {ns}:lobby/npc/ofchara/tick
 """)
+

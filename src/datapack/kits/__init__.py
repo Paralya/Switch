@@ -1,6 +1,7 @@
 
 # Imports
-from .model import Kit, KitItem, ScoreCount, Variants
+from .kit import Kit
+from .model import KitItem, ScoreCount, Variants
 from .roles import MARKER_ITEM, ROLES, SLOT_ID, TARGETS
 
 __all__ = [
@@ -13,3 +14,4 @@ __all__ = [
 	"ScoreCount",
 	"Variants",
 ]
+

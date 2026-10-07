@@ -10,10 +10,8 @@ from .translations import write_translations
 CHECKPOINT_SCAN_RADIUS: int = 20
 """ Radius around a checkpoint marker outside which no player can be inside its box.
 
-check_player_pos reads three coordinates out of the player NBT, the most expensive thing a hot path
-can do, so it must only run for players who could plausibly pass. The widest box in the map tables
-is 14x5x8 and comparing truncated coordinates adds a block per axis, which puts every winning
-position within sqrt(15^2 + 6^2 + 9^2) = 18.5 blocks. check_conventions.py enforces the bound.
+check_player_pos reads three coordinates out of the player NBT, the most expensive thing a hot path can do, so it must only run for players who could plausibly pass.
+The widest box in the map tables is 14x5x8 and comparing truncated coordinates adds a block per axis, which puts every winning position within sqrt(15^2 + 6^2 + 9^2) = 18.5 blocks. check_conventions.py enforces the bound.
 """
 
 
@@ -476,7 +474,7 @@ tp @s[scores={{{ns}.temp.compteur=41}}] 20732.0 138.0 20382.0
 function {ns}:modes/race/map_tick/restore_speed {{count:42}}
 """)
 
-	# /map_tick/restore_speed (macro: shared tail of the per-map _tp climbs — advance the compteur,
+	# /map_tick/restore_speed (macro: shared tail of the per-map _tp climbs: advance the compteur,
 	# and once it reaches $(count) restore the kart engine speed and clear the compteur)
 	write_function(f"{path}/map_tick/restore_speed", f"""
 scoreboard players add @s {ns}.temp.compteur 1
@@ -1267,3 +1265,4 @@ execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.t
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 300)
+

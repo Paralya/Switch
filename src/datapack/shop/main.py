@@ -12,9 +12,8 @@ from .utils import (
 # Main function
 def main() -> None:
 
-	# Write the hand-authored shop functions first (global / description / pitchout).
-	# pitchout's tutorial body shares the switch:shop/pitchout path with the generated upgrade
-	# logic below (write_function appends), so it must be written before generate_shop().
+	# Write the hand-authored shop functions first (global / description / pitchout): pitchout's tutorial body shares
+	# the switch:shop/pitchout path with the generated upgrade logic, and write_function appends, so it must come before generate_shop()
 	write_raw_functions()
 
 	# Generate all the shops

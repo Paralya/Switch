@@ -45,3 +45,4 @@ execute if score #process_end {ns}.data matches 1 unless score #remaining_player
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de Pitchout, votre objectif est d'expulser les autres joueurs grâce à vos équipements et d'être le dernier en vie à la fin !", "Starting the Pitchout game, your goal is to knockback the other players with your equipment and be the last one alive at the end!")
+

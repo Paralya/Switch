@@ -18,3 +18,4 @@ def write_resources() -> None:
 		"minecraft:diamond_leggings",
 		"minecraft:diamond_boots",
 	]}))
+

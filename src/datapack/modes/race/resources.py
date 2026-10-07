@@ -45,3 +45,4 @@ def write_resources() -> None:
 		"dirt", "coarse_dirt", "sand", "soul_sand", "mud",
 		"mud_brick_slab", "mud_brick_stairs", "mud_brick_wall", "snow_block", "snow",
 	]}))
+

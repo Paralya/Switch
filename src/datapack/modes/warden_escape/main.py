@@ -196,3 +196,4 @@ execute if score #success {ns}.data matches 1 if data storage {ns}:main suspects
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 90, "#warden_escape_seconds")
+

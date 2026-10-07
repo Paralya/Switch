@@ -70,14 +70,13 @@ def score(column: RecapColumn, lang: int) -> str:
 	""" The number and its label, as the two text components of one recap column.
 
 	Args:
-		column (RecapColumn): The column to render
-		lang   (int):         0 for French, 1 for English
+		column: The column to render
+		lang:   0 for French, 1 for English
 	Returns:
 		str: The two components, comma separated
 
-	Examples:
-		>>> score(DEATHS, 1).endswith('{"text":" deaths","color":"gray"}')
-		True
+	>>> score(DEATHS, 1).endswith('{"text":" deaths","color":"gray"}')
+	True
 	"""
 	ns: str = Mem.ctx.project_id
 	label: str = column.label_fr if lang == 0 else column.label_en
@@ -89,8 +88,8 @@ def line(layout: RecapLayout, lang: int) -> str:
 	""" The whole tellraw listing one player, executed as that player.
 
 	Args:
-		layout (RecapLayout): The layout whose columns are shown
-		lang   (int):         0 for French, 1 for English
+		layout: The layout whose columns are shown
+		lang:   0 for French, 1 for English
 	Returns:
 		str: The tellraw command
 	"""

@@ -17,3 +17,4 @@ def write_resources() -> None:
 	for suffix in ("wool", "concrete_powder", "terracotta"):
 		values += [f"{c}_{suffix}" for c in COLORS]
 	Mem.ctx.data[ns].block_tags["snowball_painter"] = set_json_encoder(BlockTag({"values": values}))
+

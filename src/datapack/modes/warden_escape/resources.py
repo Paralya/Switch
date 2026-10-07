@@ -23,3 +23,4 @@ def write_resources() -> None:
 
 	# Binary vanilla warden sound overrides (minecraft namespace)
 	register_sounds("warden_escape", ns="minecraft")
+

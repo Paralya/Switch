@@ -21,3 +21,4 @@ execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=1}},
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de Warden Escape dans 10 secondes, vous devez rester discrets afin de ne pas être pris pour cible par les Wardens !", "Warden Escape game starts in 10 seconds, you must be discreet to avoid being targeted by the Wardens!")
+

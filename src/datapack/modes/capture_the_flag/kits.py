@@ -1,13 +1,9 @@
-
 """ The five capture_the_flag class loadouts.
 
-Each class ends on the same three items (a suicide potion, a stack of team wool and bread), which
-used to be repeated verbatim in five functions; here they are the suicide / wool / BREAD pieces
-below. The armour and attribute lines that surround a kit stay raw, in `pre` / `post`.
+Each class ends on the same three items (a suicide potion, a stack of team wool and bread), which used to be repeated verbatim in five functions; here they are the suicide / wool / BREAD pieces below.
+The armour and attribute lines that surround a kit stay raw, in `pre` / `post`.
 
-The kits embed the project namespace (axe modifier id, wool teams, pre/post function calls), so
-they are built lazily by classes() instead of living at module level: the stewbeet CLI imports
-this module before Mem.ctx exists.
+The kits embed the project namespace (axe modifier id, wool teams, pre/post function calls), so they are built lazily by classes() instead of living at module level: the stewbeet CLI imports this module before Mem.ctx exists.
 """
 
 # Imports
@@ -91,8 +87,7 @@ attribute @s max_health base reset
 attribute @s jump_strength base reset
 """)
 
-	# The demolisher carries both halves of a bomb: the TNT is what a player means by "my explosive
-	# slot", so it claims the role and the flint and steel trails it.
+	# The demolisher carries both halves of a bomb: the TNT is what a player means by "my explosive slot", so it claims the role and the flint and steel trails it.
 	demolisher: Kit = Kit("demolisher", pre=common_pre, items=(
 		*soldier_base,
 		KitItem(role="special", item=suicide(1), slot="hotbar.4"),
@@ -134,3 +129,4 @@ attribute @s jump_strength base reset
 		"tank": tank,
 		"warrior": warrior,
 	}
+

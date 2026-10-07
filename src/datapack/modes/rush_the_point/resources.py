@@ -38,3 +38,4 @@ def write_resources() -> None:
 		"polished_andesite", "red_stained_glass", "cyan_terracotta", "cut_sandstone", "iron_bars",
 		"sea_lantern", "yellow_wool", "blue_wool", "red_wool", "fire", "tnt",
 	]}))
+

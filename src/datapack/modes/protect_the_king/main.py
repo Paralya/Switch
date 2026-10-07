@@ -59,12 +59,8 @@ execute unless score #test_mode {ns}.data matches 1 if score #game_state {ns}.da
 execute if score #protect_the_king_seconds {ns}.data matches 900.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 """)
 
-	# /give_items
-	# The trailing `give @s oak_planks 100` / `give @s anvil` used to land in hotbar.2 and hotbar.4
-	# (the first free slots); they now say so, which also makes them remappable. The 100 planks are
-	# split 64 + 36: `item replace` cannot place more than a stack (its count argument caps at 99,
-	# and one over 64 fails the whole macro instantiation, i.e. NO kit item at all).
-	# The king (neither red nor blue) swaps the steel sword out for an obsidian one in the same slot.
+	# /give_items: the 100 planks are split 64 + 36, since one `item replace` over 64 fails the whole macro instantiation (no kit item at all)
+	# The king (neither red nor blue) swaps the steel sword out for an obsidian one in the same slot
 	king: str = f"team=!{ns}.temp.red,team=!{ns}.temp.blue"
 	Kit("protect_the_king", pre="# Starter kit", items=(
 		KitItem(slot="armor.chest", loot=f"{ns}:i/steel_chestplate"),
@@ -249,3 +245,4 @@ execute if score #protect_the_king_seconds {ns}.data matches 901.. run function 
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 900)
+

@@ -187,8 +187,7 @@ execute if score #pearls_count {ns}.data matches 0 store result score #pearls_co
 execute if score #pearls_count {ns}.data matches 0 store result score #pearls_count {ns}.data if items entity @s weapon.* ender_pearl
 """)
 
-	# /give_items runs again on respawn, so the pearls are only *placed* when the player has none
-	# left; otherwise they are topped up with `give`, which leaves the stack where they moved it.
+	# /give_items runs again on respawn, so the pearls are only *placed* when the player has none left; otherwise they are topped up with `give`, which leaves the stack where they moved it.
 	# That first placement is the one the layout gets to choose (players like pearls in the offhand).
 	Kit("fish_fight", items=(
 		KitItem(role="mobility", item="ender_pearl", count=6, slot="hotbar.8",
@@ -650,3 +649,4 @@ effect give @s resistance infinite 0 true
 
 function {ns}:modes/fish_fight/give_items
 """)
+

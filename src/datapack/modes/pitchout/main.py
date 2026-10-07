@@ -60,10 +60,8 @@ function {ns}:modes/_common/death_spectator_lives
 
 """)
 
-	# /give_items
-	# The sword and the bow are one item each, not four and three: `Variants` picks the skin, so
-	# each still occupies a single slot that the player's layout can move. Same idea for the boots
-	# (the shop level picks the item) and the ender pearls (the shop level picks the count).
+	# /give_items The sword and the bow are one item each, not four and three: `Variants` picks the skin, so each still occupies a single slot that the player's layout can move.
+	# Same idea for the boots (the shop level picks the item) and the ender pearls (the shop level picks the count).
 	swords, bows = skinned_weapons()
 	boots: tuple[str, ...] = tuple(f"leather_boots[max_damage={max_damage}]" for max_damage in (5, 20, 30, 40, 50, 65))
 	Kit("pitchout", layout=False, items=(

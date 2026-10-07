@@ -71,7 +71,7 @@ scoreboard players set #border_laps {ns}.data 0
 	# /death
 	write_function(f"{path}/death", f"""
 # Attribute the kill: nearest recent digger marker in the column above the victim (excluding
-# themselves) — the markers sit up at the snow layer while the victim dies down in the lava,
+# themselves). The markers sit up at the snow layer while the victim dies down in the lava,
 # so the search box covers ±3 blocks horizontally and up to 24 blocks above the death position
 scoreboard players operation #victim_id {ns}.id = @s {ns}.id
 scoreboard players set #killer_id {ns}.id 0
@@ -240,3 +240,4 @@ execute store result score #remaining_players {ns}.data if entity @a[tag=!detach
 execute if score #spleef_seconds {ns}.data matches 1.. if score #remaining_players {ns}.data matches ..1 run function {path}/process_end
 execute if score #spleef_seconds {ns}.data matches 300.. run function {path}/process_end
 """)
+

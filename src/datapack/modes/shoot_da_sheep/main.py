@@ -156,3 +156,4 @@ execute if score #remaining_time {ns}.data matches ..0 run function {path}/proce
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 60)
+

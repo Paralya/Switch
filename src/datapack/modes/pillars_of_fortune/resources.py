@@ -25,14 +25,13 @@ def get_potion_entry(item: str, potion: str) -> JsonDict:
 	""" Build the loot table entry giving one potion container filled with one potion variant.
 
 	Args:
-		item   (str): Container item id, ex: "minecraft:splash_potion"
-		potion (str): Potion id from the vanilla registry, ex: "strength"
+		item:   Container item id, ex: "minecraft:splash_potion"
+		potion: Potion id from the vanilla registry, ex: "strength"
 	Returns:
 		JsonDict: The entry, setting the potion_contents component on the container
 
-	Examples:
-		>>> get_potion_entry("minecraft:lingering_potion", "luck")["modifier"][0]["components"]
-		{'minecraft:potion_contents': {'potion': 'minecraft:luck'}}
+	>>> get_potion_entry("minecraft:lingering_potion", "luck")["modifier"][0]["components"]
+	{'minecraft:potion_contents': {'potion': 'minecraft:luck'}}
 	"""
 	return {"type": "minecraft:item", "name": item, "modifier": [
 		{"type": "minecraft:set_components", "components": {"minecraft:potion_contents": {"potion": f"minecraft:{potion}"}}},

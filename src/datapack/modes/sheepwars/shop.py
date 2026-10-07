@@ -154,3 +154,4 @@ SHOP: JsonDict = {
 }
 
 """ Upgrades sold by this mode's shop, collected by the modes registry. """
+

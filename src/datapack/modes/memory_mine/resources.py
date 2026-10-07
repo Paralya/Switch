@@ -14,3 +14,4 @@ def write_resources() -> None:
 		}},
 		"rewards": {"function": f"{ns}:modes/memory_mine/place_mine"},
 	}))
+

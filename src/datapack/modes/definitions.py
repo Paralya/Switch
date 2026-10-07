@@ -1,7 +1,6 @@
 """ Storage entries built from the minigame catalogue.
 
-Turns the declarative MODES and GROUPS tables into the "minigames" and "groups" lists that the
-vote, the lore and the starting pop-ups read at runtime.
+Turns the declarative MODES and GROUPS tables into the "minigames" and "groups" lists that the vote, the lore and the starting pop-ups read at runtime.
 """
 # Imports
 import json
@@ -17,14 +16,14 @@ GROUP_NAME_COLOR: str = "#FFCC00"
 """ Between yellow and gold, distinguishes multi-game groups in the vote message. """
 
 LANG_PRETEXT: dict[str, dict[str, str]] = {
-	"fr": {"estimated_time": "Estimation :",	"inspiration": "Inspiration :",	"suggested": "Proposé par",		"developed": "Développé par"},
-	"en": {"estimated_time": "Estimated:",		"inspiration": "Inspiration:",	"suggested": "Suggested by",	"developed": "Developed by"},
+	"fr": {"estimated_time": "Estimation :",    "inspiration": "Inspiration :", "suggested": "Proposé par",     "developed": "Développé par"},
+	"en": {"estimated_time": "Estimated:",      "inspiration": "Inspiration:",  "suggested": "Suggested by",    "developed": "Developed by"},
 }
 """ Lore labels for a single mode, per language. """
 
 LANG_GROUP_PRETEXT: dict[str, dict[str, str]] = {
-	"fr": {"includes": "Contient :",	"second_vote": "Un second vote départagera la variante"},
-	"en": {"includes": "Includes:",		"second_vote": "A second vote will decide the variant"},
+	"fr": {"includes": "Contient :",    "second_vote": "Un second vote départagera la variante"},
+	"en": {"includes": "Includes:",     "second_vote": "A second vote will decide the variant"},
 }
 """ Extra lore labels for a multi-mode group, per language. """
 
@@ -35,8 +34,8 @@ def mode_lore(mode: ModeSpec, lang: str) -> list[TextComponent]:
 	""" Build the vote lore of one mode: title, description lines, then the four credit lines.
 
 	Args:
-		mode (ModeSpec): The mode to describe
-		lang (str):      Language key, ex: "fr" or "en"
+		mode: The mode to describe
+		lang: Language key, ex: "fr" or "en"
 	Returns:
 		list[TextComponent]: The lore, ready to be stored
 	"""
@@ -57,9 +56,9 @@ def group_lore(group: GroupSpec, modes: tuple[ModeSpec, ...], lang: str) -> list
 	""" Build the vote lore of a multi-mode group: title, description, duration, members, hint.
 
 	Args:
-		group (GroupSpec):          The group to describe
-		modes (tuple[ModeSpec...]): Its members, in vote order
-		lang  (str):                Language key, ex: "fr" or "en"
+		group: The group to describe
+		modes: Its members, in vote order
+		lang:  Language key, ex: "fr" or "en"
 	Returns:
 		list[TextComponent]: The lore, ready to be stored
 	"""
@@ -81,15 +80,12 @@ def storage_max_players(max_players: int | None) -> int:
 	""" Storage form of a player cap, where unlimited is -1.
 
 	Args:
-		max_players (int | None): The cap, or UNLIMITED
-	Returns:
-		int: The stored value
+		max_players: The cap, or UNLIMITED (None)
 
-	Examples:
-		>>> storage_max_players(UNLIMITED)
-		-1
-		>>> storage_max_players(8)
-		8
+	>>> storage_max_players(None)
+	-1
+	>>> storage_max_players(8)
+	8
 	"""
 	return -1 if max_players is None else max_players
 
@@ -97,12 +93,12 @@ def storage_max_players(max_players: int | None) -> int:
 def mode_entry(mode: ModeSpec, index: int) -> JsonDict:
 	""" Storage entry of one mode, appended to the "minigames" list.
 
-	Key insertion order is part of the generated output: an explicit group sits right after the
-	id, a defaulted one is added last. Reordering rewrites every function file for nothing.
+	Key insertion order is part of the generated output: an explicit group sits right after the id, a defaulted one is added last.
+	Reordering rewrites every function file for nothing.
 
 	Args:
-		mode  (ModeSpec): The mode to store
-		index (int):      Its 1-based rank, used by /rating and /coupdetat
+		mode:  The mode to store
+		index: Its 1-based rank, used by /rating and /coupdetat
 	Returns:
 		JsonDict: The entry
 	"""
@@ -135,9 +131,9 @@ def group_entry(group_id: str, modes: tuple[ModeSpec, ...], index: int) -> JsonD
 	A group holding a single mode is the mode itself, so the first vote shows it directly.
 
 	Args:
-		group_id (str):                The group id, ex: "layers"
-		modes    (tuple[ModeSpec...]): Its members, in vote order
-		index    (int):                Its 1-based rank
+		group_id: The group id, ex: "layers"
+		modes:    Its members, in vote order
+		index:    Its 1-based rank
 	Returns:
 		JsonDict: The entry
 	"""

@@ -137,3 +137,4 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"text":"Fish Fight","bold
 # English
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"Fish Fight","bold":true,"color":"#8DF0CE"}},{{"text":" \u2022 ","bold":true,"color":"gray"}},{{"text":"(1 of 2 games)","bold":true,"italic":true,"color":"gray"}},{{"text":" The game will be played by 4 teams!\n","bold":true}}]
 """)
+

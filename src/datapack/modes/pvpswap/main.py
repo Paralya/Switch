@@ -13,9 +13,7 @@ def write_mode():
 	path: str = f"{ns}:modes/{mode}"
 
 	# Write standard /calls/ functions
-	# Note: pvpswap has no translation files of its own; the
-	# `switch:translations/modes_pvpswap_*` references below are dangling in the
-	# original datapack and are preserved verbatim (no /translations/ relocation).
+	# pvpswap has no translation files, so the `switch:translations/modes_pvpswap_*` references below dangle
 	write_modes_calls(mode, targets={"joined": f"{ns}:utils/classic_death"})
 
 	# Non-standard call: entity_hurt_player
@@ -117,3 +115,4 @@ execute store result score #remaining_players {ns}.data if entity @a[tag=!detach
 execute if score #remaining_players {ns}.data matches ..1 run function {ns}:modes/pvpswap/process_end
 execute if score #remaining_time {ns}.data matches ..0 run function {ns}:modes/pvpswap/process_end
 """)
+

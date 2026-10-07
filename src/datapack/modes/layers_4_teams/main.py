@@ -187,3 +187,4 @@ execute as @a[tag=!detached] run item modify entity @s weapon.mainhand {ns}:hand
 execute if score #layers_4_teams_seconds {ns}.data matches 1.. if score #remaining_time {ns}.data matches 1.. run function {path}/detect_end
 execute if score #remaining_time {ns}.data matches ..0 run function {ns}:modes/_common/process_end/spectate_only
 """)
+

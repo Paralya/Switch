@@ -1,11 +1,10 @@
 """ Golden-file guard: rebuild the project and fail if the tracked build/ output moved.
 
-Any purely structural refactoring must leave the generated output identical. Run this after moving
-code around: a real diff means the refactor changed behaviour.
+Any purely structural refactoring must leave the generated output identical.
+Run this after moving code around: a real diff means the refactor changed behaviour.
 
-Archives are compared entry by entry rather than byte by byte, because the order in which files
-land in the zip follows the order the build creates them. A pure reordering carries no meaning for
-the game, so it is reported and tolerated, while a single changed entry still fails.
+Archives are compared entry by entry rather than byte by byte, because the order in which files land in the zip follows the order the build creates them.
+A pure reordering carries no meaning for the game, so it is reported and tolerated, while a single changed entry still fails.
 """
 # Imports
 import hashlib
@@ -39,7 +38,7 @@ class OutputDrift:
 		""" Run a command from the repository root and capture its output.
 
 		Args:
-			*args (str): Command and its arguments, ex: "git", "status"
+			*args: Command and its arguments, ex: "git", "status"
 		Returns:
 			subprocess.CompletedProcess[str]: The completed process, never raising on a non-zero code
 		"""
@@ -72,7 +71,7 @@ class OutputDrift:
 		""" Digest of every entry of a zip, keyed by entry name.
 
 		Args:
-			data (bytes): The archive
+			data: The archive
 		Returns:
 			dict[str, str]: Entry name -> sha1 of its content
 		"""
@@ -84,7 +83,7 @@ class OutputDrift:
 		""" Whether an archive holds the same entries as in HEAD, in a different order.
 
 		Args:
-			path (str): Repository relative path of the archive
+			path: Repository relative path of the archive
 		Returns:
 			bool: True when nothing but the entry order changed
 		"""
@@ -99,7 +98,7 @@ class OutputDrift:
 		""" Split drifted paths into meaningful changes and tolerated archive reorderings.
 
 		Args:
-			drifted (list[str]): Every path reported by git
+			drifted: Every path reported by git
 		Returns:
 			tuple[list[str], list[str]]: The meaningful changes, then the reordered archives
 		"""

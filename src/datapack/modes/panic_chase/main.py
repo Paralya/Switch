@@ -199,3 +199,4 @@ execute if data storage {ns}:main {{map:"arti_box"}} run scoreboard players set 
 execute if data storage {ns}:main {{map:"nether_storm"}} run scoreboard players set #divide {ns}.data 210000
 function {ns}:modes/_common/xp_bar/time {{points_score:"#remaining_time",levels_score:"#remaining_time"}}
 """)
+

@@ -38,3 +38,4 @@ title @a[scores={{{ns}.lang=0}},tag=!detached] actionbar [{{"text":"Temps restan
 # English
 title @a[scores={{{ns}.lang=1}},tag=!detached] actionbar [{{"text":"Remaining time: ","color":"aqua"}},{{"score":{{"name":"#remaining_seconds","objective":"{ns}.data"}},"color":"yellow"}},{{"text":"s"}}]
 """)
+

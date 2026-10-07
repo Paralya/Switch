@@ -43,3 +43,4 @@ def write_item_modifiers() -> None:
 			},
 		]},
 	}))
+

@@ -1,7 +1,7 @@
 """ Developer tooling shipped with the pack: test mode, artificial lag, command profiling.
 
-Nothing here runs during a normal game. It is grouped so that it stays easy to spot, and easy to
-strip if the pack ever needs to ship without it.
+Nothing here runs during a normal game.
+It is grouped so that it stays easy to spot, and easy to strip if the pack ever needs to ship without it.
 """
 # Imports
 from stewbeet import Mem, write_function

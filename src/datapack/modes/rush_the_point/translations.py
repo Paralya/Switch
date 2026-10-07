@@ -96,3 +96,4 @@ execute if score @s {ns}.temp.zone_capture matches 60 if score #state {ns}.data 
 execute if score @s {ns}.temp.zone_capture matches -60 if score #state {ns}.data matches 1 run tellraw @a[team={ns}.rush_the_point.red,distance=..5,scores={{{ns}.lang=1}}] {{"text":"Point captured, no need to stay there!","color":"green"}}
 execute if score @s {ns}.temp.zone_capture matches 60 if score #state {ns}.data matches 2 run tellraw @a[team={ns}.rush_the_point.blue,distance=..5,scores={{{ns}.lang=1}}] {{"text":"Point captured, no need to stay there!","color":"green"}}
 """)
+

@@ -200,3 +200,4 @@ function {ns}:modes/_common/xp_bar/time {{points_score:"#remaining_time",levels_
 
 function {translations}/xp_bar
 """)
+

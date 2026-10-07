@@ -30,3 +30,4 @@ title @a[scores={{{ns}.lang=0}},tag=!detached] actionbar [{{"text":"Creepers : "
 # English
 title @a[scores={{{ns}.lang=1}},tag=!detached] actionbar [{{"text":"Creepers: ","color":"dark_green"}},{{"score":{{"name":"#creeper_count","objective":"{ns}.data"}},"color":"green"}},{{"text":", Time remaining: "}},{{"score":{{"name":"#remaining_time","objective":"{ns}.data"}},"color":"green"}},{{"text":"s","color":"dark_green"}}]
 """)
+

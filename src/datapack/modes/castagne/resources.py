@@ -12,3 +12,4 @@ def write_resources() -> None:
 		"requirements": [["requirement"]],
 		"rewards": {"function": f"{ns}:modes/castagne/calls/entity_hurt_player"},
 	}))
+

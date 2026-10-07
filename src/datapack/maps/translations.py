@@ -16,3 +16,4 @@ def write_translations() -> None:
 # English
 # execute unless data storage {ns}:main new[0] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaWarning","storage":"{ns}:main","interpret":true}},{{"text":" Refresh map cycle for game mode "}},{{"nbt":"current_game_name","storage":"{ns}:main","interpret":true,"color":"red"}},{{"text":"!\n"}}]
 """)
+

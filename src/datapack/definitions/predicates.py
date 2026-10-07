@@ -69,3 +69,4 @@ def write_predicates() -> None:
 	predicates["has_same_temp_id"] = set_json_encoder(Predicate(same_score(f"{ns}.temp.id", "#player_id", f"{ns}.temp.id")))
 	predicates["has_same_checkpoint"] = set_json_encoder(Predicate(same_score(f"{ns}.checkpoint", "#checkpoint", f"{ns}.data")))
 	predicates["has_same_temp_checkpoint"] = set_json_encoder(Predicate(same_score(f"{ns}.temp.checkpoint", "#checkpoint", f"{ns}.data")))
+

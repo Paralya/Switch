@@ -13,7 +13,8 @@ def get_money() -> dict[str, JsonDict]:
 		"fr": {"nbt":"SapphireFR","storage":f"{ns}:main","interpret":True},
 		"en": {"nbt":"SapphireEN","storage":f"{ns}:main","interpret":True}
 	}
-REFUND_PERCENTAGE: float = 0.8	# Players get 80% of the upgrade cost back when selling
+REFUND_PERCENTAGE: float = 0.8
+""" Players get 80% of the upgrade cost back when selling. """
 LANGUAGE_SCORES: dict[str, tuple[int, str, str, str, str]] = {
 	"fr": (0, "French", "Boutique cosmétique X", "Acheter pour X", "Accéder à la boutique cosmétique X"),
 	"en": (1, "English", "X Cosmetic Shop", "Buy for X", "Access the X cosmetic shop")
@@ -26,8 +27,8 @@ SHEEPWARS_KIT_OFFSET: int = 50
 SHOP_ORDER: tuple[str, ...] = ("pitchout", "infected", "spleef", "sheepwars", "spectres_game")
 """ Frozen display order of the minigame shops.
 
-A shop's rank drives its trigger score range (see get_shop_range), which is what a player's click
-sends, so reordering this changes the generated commands. A shop missing here is appended last.
+A shop's rank drives its trigger score range (see get_shop_range), which is what a player's click sends, so reordering this changes the generated commands.
+A shop missing here is appended last.
 """
 
 def ordered_shops() -> dict[str, dict[str, JsonDict]]:

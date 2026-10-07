@@ -1,7 +1,7 @@
 """ Report every datapack function written by more than one emitter during the build.
 
-write_function() appends by default, so two emitters targeting the same path merge silently in
-call order. That is a legitimate builder pattern in a few places and a landmine everywhere else.
+write_function() appends by default, so two emitters targeting the same path merge silently in call order.
+That is a legitimate builder pattern in a few places and a landmine everywhere else.
 This runs the pipeline in a throwaway output folder and fails on any merge not declared below.
 """
 # Imports
@@ -31,9 +31,9 @@ DECLARED_MERGES: tuple[str, ...] = (
 )
 """ Function paths intentionally built by several successive appends, as fnmatch patterns.
 
-The shop family accumulates one block per upgrade, and the give_items family is a hand-written
-body completed by the Kit renderer. The switch:load and switch:v*/* entries belong to StewBeet's
-versioned loading scheme. This list may only shrink.
+The shop family accumulates one block per upgrade, and the give_items family is a hand-written body completed by the Kit renderer.
+The switch:load and switch:v*/* entries belong to StewBeet's versioned loading scheme.
+This list may only shrink.
 """
 
 SKIPPED_PLUGINS: tuple[str, ...] = ("archive", "copy_to_destination", "compute_sha1", "merge_smithed_weld")
@@ -54,8 +54,8 @@ class MergedFunctions:
 		""" Count the write, then delegate to the real implementation.
 
 		Args:
-			path    (str): The function path, ex: "switch:modes/tnt_run/tick"
-			content (str): The function body
+			path:    The function path, ex: "switch:modes/tnt_run/tick"
+			content: The function body
 		Returns:
 			Function | None: Whatever StewBeet returned
 		"""
@@ -67,7 +67,7 @@ class MergedFunctions:
 		""" Run the project pipeline, writing to a throwaway output folder.
 
 		Args:
-			output (Path): Folder receiving the generated packs, never the tracked build/
+			output: Folder receiving the generated packs, never the tracked build/
 		"""
 		config = get_project_config()
 		config.output = str(output)
@@ -83,15 +83,14 @@ class MergedFunctions:
 		""" Whether a merged path is a known, intentional builder.
 
 		Args:
-			path (str): The function path, ex: "switch:shop/sheepwars"
+			path: The function path, ex: "switch:shop/sheepwars"
 		Returns:
 			bool: True when the path matches one of DECLARED_MERGES
 
-		Examples:
-			>>> MergedFunctions.is_declared("switch:shop/sheepwars")
-			True
-			>>> MergedFunctions.is_declared("switch:modes/tnt_run/tick")
-			False
+		>>> MergedFunctions.is_declared("switch:shop/sheepwars")
+		True
+		>>> MergedFunctions.is_declared("switch:modes/tnt_run/tick")
+		False
 		"""
 		return any(fnmatch(path, pattern) for pattern in DECLARED_MERGES)
 

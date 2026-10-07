@@ -9,9 +9,8 @@ from .translations import write_translations
 PLOT_REPAIR_PERIOD: int = 4
 """ Ticks between two plot frame repairs.
 
-Placing the 48x38x48 frame template costs the same 35k block writes whether anything was broken or
-not, so it cannot stay on the per-tick path. One plot every four ticks still undoes any vandalism
-within two seconds, and players are kept inside their plot by prevent_leaving_area anyway.
+Placing the 48x38x48 frame template costs the same 35k block writes whether anything was broken or not, so it cannot stay on the per-tick path.
+One plot every four ticks still undoes any vandalism within two seconds, and players are kept inside their plot by prevent_leaving_area anyway.
 """
 
 
@@ -951,3 +950,4 @@ schedule function {path}/rating_time/save/remove 1s
 	write_function(f"{path}/rating_time/save/remove", f"""
 execute at @e[tag={ns}.marker_temp,tag={ns}.build_battle_marker] run fill ~ ~-2 ~ ~ ~-1 ~ air
 """)
+

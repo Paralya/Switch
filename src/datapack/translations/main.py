@@ -141,3 +141,4 @@ tellraw @a[scores={{{ns}.lang=0}},tag=convention.debug] {{"text":"[Loaded Switch
 # English
 tellraw @a[scores={{{ns}.lang=1}},tag=convention.debug] {{"text":"[Loaded Switch v1.0.0]","italic":false,"color":"green"}}
 """)
+

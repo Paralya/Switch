@@ -82,3 +82,4 @@ execute if score #sheepwars_night {ns}.data matches 1 run tellraw @a[scores={{{n
 # English
 execute if score #sheepwars_night {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"text":"[SheepWars] ","color":"yellow"}},{{"text":"An intergalactic night begins!","color":"blue"}}]
 """)
+

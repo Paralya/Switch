@@ -138,3 +138,4 @@ execute unless loaded ~ ~ ~ run tellraw @a[scores={{{ns}.lang=0}},tag=!detached]
 # English
 execute unless loaded ~ ~ ~ run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Please refer this message to Stoupy: Unloaded position #bp_selected_block = "}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", #modulo_rand = "}},{{"score":{{"name":"#modulo_rand","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", (#y_pos, z_pos) : ("}},{{"score":{{"name":"#y_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":","}},{{"score":{{"name":"#z_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":")"}}]
 """)
+

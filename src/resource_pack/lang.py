@@ -15,3 +15,4 @@ def write_lang() -> None:
 	languages = Mem.ctx.assets["minecraft"].languages
 	for key, table in LANGUAGES.items():
 		languages[key] = set_json_encoder(Language(dict(table)))
+

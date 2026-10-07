@@ -14,3 +14,4 @@ def write_resources() -> None:
 		}},
 		"rewards": {"function": f"{ns}:modes/capture_the_flag/right_click"},
 	}))
+

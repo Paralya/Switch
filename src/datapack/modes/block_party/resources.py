@@ -3,8 +3,7 @@
 from beet import BlockTag
 from stewbeet.core import Mem, set_json_encoder
 
-# The full block_party palette (order matters): white terracotta + white concrete, then the 15
-# remaining coloured concretes.
+# The full block_party palette (order matters): white terracotta + white concrete, then the 15 remaining coloured concretes.
 OTHER_COLORS: tuple[str, ...] = (
 	"orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
 	"light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",
@@ -26,3 +25,4 @@ def write_resources() -> None:
 	block_tags["block_party/all"] = set_json_encoder(BlockTag({"values": list(ALL)}))
 	for name, excluded in EXCLUDE.items():
 		block_tags[f"block_party/{name}"] = set_json_encoder(BlockTag({"values": [b for b in ALL if b != excluded]}))
+

@@ -1,8 +1,7 @@
 """ Build-time validation of the project's declarative data.
 
-Catches at build time what used to only show up in game: a mode without its folder, a group that
-nobody declares, a map id with a typo. Every message names the offending declaration and, when it
-can, the closest valid value.
+Catches at build time what used to only show up in game: a mode without its folder, a group that nobody declares, a map id with a typo.
+Every message names the offending declaration and, when it can, the closest valid value.
 """
 # Imports
 import json
@@ -55,11 +54,10 @@ class Problem:
 		Returns:
 			str: The line to print
 
-		Examples:
-			>>> Problem("mode 'x' has no folder").render()
-			"mode 'x' has no folder"
-			>>> Problem("unknown map 'tnt_runn'", "did you mean 'tnt_run'?").render()
-			"unknown map 'tnt_runn' (did you mean 'tnt_run'?)"
+		>>> Problem("mode 'x' has no folder").render()
+		"mode 'x' has no folder"
+		>>> Problem("unknown map 'tnt_runn'", "did you mean 'tnt_run'?").render()
+		"unknown map 'tnt_runn' (did you mean 'tnt_run'?)"
 		"""
 		return f"{self.message} ({self.hint})" if self.hint else self.message
 
@@ -71,16 +69,15 @@ class Validation:
 		""" A "did you mean" hint for a value that was not found.
 
 		Args:
-			value      (str):       The offending value, ex: "tnt_runn"
-			candidates (list[str]): Every valid value
+			value:      The offending value, ex: "tnt_runn"
+			candidates: Every valid value
 		Returns:
 			str: The hint, empty when nothing is close enough
 
-		Examples:
-			>>> Validation.suggest("tnt_runn", ["tnt_run", "spleef"])
-			"did you mean 'tnt_run'?"
-			>>> Validation.suggest("zzzzz", ["tnt_run"])
-			''
+		>>> Validation.suggest("tnt_runn", ["tnt_run", "spleef"])
+		"did you mean 'tnt_run'?"
+		>>> Validation.suggest("zzzzz", ["tnt_run"])
+		''
 		"""
 		close: list[str] = get_close_matches(value, candidates, n=1)
 		return f"did you mean '{close[0]}'?" if close else ""

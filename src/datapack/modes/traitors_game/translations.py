@@ -236,3 +236,4 @@ execute if score #count {ns}.data matches 6.. run tellraw @a[scores={{{ns}.lang=
 execute unless score #count {ns}.data matches 6.. run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"text":"A lootbox has appeared!","color":"green"}}]
 execute if score #count {ns}.data matches 6.. run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"text":"Several lootboxes have appeared!","color":"green"}}]
 """)
+

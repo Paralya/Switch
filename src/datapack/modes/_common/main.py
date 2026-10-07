@@ -102,9 +102,7 @@ execute if score #success {ns}.data matches 1 run tag @p[tag={ns}.temp,tag={ns}.
 tag @a remove {ns}.temp
 """)
 
-	# /detect_chosen_class
-	# The five class items sit on the EVEN hotbar slots (0/2/4/6/8, with gaps between them), both in
-	# capture_the_flag and rush_the_point: an empty even slot means the player consumed that item.
+	# /detect_chosen_class The five class items sit on the EVEN hotbar slots (0/2/4/6/8, with gaps between them), both in capture_the_flag and rush_the_point: an empty even slot means the player consumed that item.
 	write_function(f"{path}/detect_chosen_class", f"""
 # Get which class got chosen
 execute if score @s {ns}.temp.chosen_class matches 0 unless items entity @s hotbar.0 * run scoreboard players set @s {ns}.temp.chosen_class 1
@@ -323,8 +321,7 @@ execute store result entity @s Motion[2] double 0.001 run data get storage {ns}:
 tag @s remove {ns}.new
 """)
 
-	# /fireball/aim_and_launch (shared fireblast / rush_the_point launch core: sample the shooter's
-	# aim with a marker then apply it as the freshly summoned switch.new fireball's motion)
+	# /fireball/aim_and_launch (shared fireblast / rush_the_point launch core: sample the shooter's aim with a marker then apply it as the freshly summoned switch.new fireball's motion)
 	write_function(f"{path}/fireball/aim_and_launch", f"""
 data modify storage {ns}:main Rotation set from entity @s Rotation
 execute positioned 0 0 0 summon marker run function {ns}:modes/_common/fireball/get_motion
@@ -340,9 +337,8 @@ data remove entity @s data.Inventory[0]
 execute if data entity @s data.Inventory[0] run function {path}/death/inventory_drop
 """)
 
-	# /death/for_global (shared by capture_the_flag / rush_the_point: clear the dead player's linked
-	# copies, drop their mode-filtered inventory, then park the marker off-map. {filter} = that mode's
-	# death/inventory_filter function path.)
+	# /death/for_global (shared by capture_the_flag / rush_the_point): clear the dead player's linked copies, drop their mode-filtered inventory,
+	# then park the marker off-map. {filter} is that mode's death/inventory_filter function path
 	write_function(f"{path}/death/for_global", f"""
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
 clear @a[tag=!detached,predicate={ns}:has_same_id]
@@ -354,8 +350,7 @@ tag @s add {ns}.processed
 tp @s 0 69 0
 """)
 
-	# /death/global_effects (shared spectres_game / traitors_game death/for_global core: drop the
-	# filtered inventory, roll a 50/50 #success, then clap thunder for everyone)
+	# /death/global_effects (shared spectres_game / traitors_game death/for_global core: drop the filtered inventory, roll a 50/50 #success, then clap thunder for everyone)
 	write_function(f"{path}/death/global_effects", f"""
 execute at @s run function {ns}:modes/_common/death/inventory_drop
 
@@ -365,8 +360,7 @@ execute if predicate {ns}:chance/0.5 run scoreboard players set #success {ns}.da
 execute as @a[tag=!detached] at @s run playsound entity.lightning_bolt.impact ambient @s ~ ~ ~ 1 0.2
 """)
 
-	# /death/keep_combat_items (shared beat_the_kings / spectres_game inventory_filter head: rebuild
-	# the saved Inventory from only the golden apples, arrows and TNT the dead player was carrying)
+	# /death/keep_combat_items (shared beat_the_kings / spectres_game inventory_filter head: rebuild the saved Inventory from only the golden apples, arrows and TNT the dead player was carrying)
 	write_function(f"{path}/death/keep_combat_items", f"""
 data modify storage {ns}:main Inventory set value []
 data modify storage {ns}:main Inventory append from entity @s data.Inventory[{{id:"minecraft:golden_apple"}}]
@@ -374,9 +368,8 @@ data modify storage {ns}:main Inventory append from entity @s data.Inventory[{{i
 data modify storage {ns}:main Inventory append from entity @s data.Inventory[{{id:"minecraft:tnt"}}]
 """)
 
-	# /process_end/winner_by_points (shared end-of-game block for point-based modes: tag the
-	# highest-switch.temp.points player(s) as the winner, reward + announce. All lines self-guard on
-	# #process_end==1, so modes call this unconditionally inside their /process_end.)
+	# /process_end/winner_by_points (shared end-of-game block for point-based modes: tag the highest-switch.temp.points player(s) as the winner, reward + announce.
+	# All lines self-guard on #process_end==1, so modes call this unconditionally inside their /process_end.)
 	write_function(f"{path}/process_end/winner_by_points", f"""
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.winner
 execute if score #process_end {ns}.data matches 1 run scoreboard players set #max {ns}.data 0
@@ -387,9 +380,8 @@ function {ns}:translations/common/process_end_winner_points
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.winner
 """)
 
-	# /process_end/last_survivor (shared full process_end for last-man-standing adventure modes:
-	# reward the lone survivor, announce, spectate everyone, run the mode's own death, then loop to
-	# restart. The per-mode death function is passed as the {death:"..."} macro argument.)
+	# /process_end/last_survivor (shared full process_end for last-man-standing adventure modes: reward the lone survivor, announce, spectate everyone, run the mode's own death, then loop to restart.
+	# The per-mode death function is passed as the {death:"..."} macro argument.)
 	write_function(f"{path}/process_end/last_survivor", f"""
 scoreboard players add #process_end {ns}.data 1
 
@@ -411,9 +403,8 @@ execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run funct
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
-	# /process_end/winner_by_health (shared core for survival last-standing modes: reward the lone
-	# survivor + show their health, run the mode's own death, then rate. The caller adds its own
-	# restart tail (and any extra logic). The per-mode death function is the {death:"..."} macro arg.)
+	# /process_end/winner_by_health (shared core for survival last-standing modes): reward the lone survivor and show their health, run the mode's own death
+	# given as the {death:"..."} macro arg, then rate. The caller adds its own restart tail and any extra logic
 	write_function(f"{path}/process_end/winner_by_health", f"""
 scoreboard players add #process_end {ns}.data 1
 
@@ -424,8 +415,7 @@ $execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run func
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 """)
 
-	# /flag/release_holders (shared by capture_the_flag / rush_the_flag flag_drop: kill whoever holds
-	# the flag matching @s's color and strip their has_*_flag tag)
+	# /flag/release_holders (shared by capture_the_flag / rush_the_flag flag_drop: kill whoever holds the flag matching @s's color and strip their has_*_flag tag)
 	write_function(f"{path}/flag/release_holders", f"""
 execute if entity @s[tag={ns}.blue_flag] run kill @a[tag={ns}.has_blue_flag]
 execute if entity @s[tag={ns}.red_flag] run kill @a[tag={ns}.has_red_flag]
@@ -433,8 +423,7 @@ execute if entity @s[tag={ns}.blue_flag] run tag @a[tag={ns}.has_blue_flag] remo
 execute if entity @s[tag={ns}.red_flag] run tag @a[tag={ns}.has_red_flag] remove {ns}.has_red_flag
 """)
 
-	# /flag/score_fireworks (shared by capture_the_flag / rush_the_flag score_point: scoring
-	# advancement, blast sound, a colored firework, and the point increment for the scoring team)
+	# /flag/score_fireworks (shared by capture_the_flag / rush_the_flag score_point: scoring advancement, blast sound, a colored firework, and the point increment for the scoring team)
 	write_function(f"{path}/flag/score_fireworks", f"""
 execute unless score #test_mode {ns}.data matches 1 if entity @s[tag={ns}.blue_flag] run advancement grant @p[tag={ns}.has_blue_flag] only {ns}:visible/33
 execute unless score #test_mode {ns}.data matches 1 if entity @s[tag={ns}.red_flag] run advancement grant @p[tag={ns}.has_red_flag] only {ns}:visible/33
@@ -450,8 +439,7 @@ execute if entity @s[tag={ns}.blue_flag] run scoreboard players add @p[tag={ns}.
 execute if entity @s[tag={ns}.red_flag] run scoreboard players add @p[tag={ns}.has_red_flag] {ns}.temp.points 1
 """)
 
-	# /flag/sync_motion (shared capture_the_flag / rush_the_flag flag_tick block: while carried, copy the
-	# holder's Motion onto the flag and round-trip its Rotation[0] through switch:main)
+	# /flag/sync_motion (shared capture_the_flag / rush_the_flag flag_tick block: while carried, copy the holder's Motion onto the flag and round-trip its Rotation[0] through switch:main)
 	write_function(f"{path}/flag/sync_motion", f"""
 execute if entity @s[tag=!{ns}.free,tag={ns}.blue_flag] on vehicle run data modify entity @s Motion set from entity @p[tag={ns}.has_blue_flag] Motion
 execute if entity @s[tag=!{ns}.free,tag={ns}.red_flag] on vehicle run data modify entity @s Motion set from entity @p[tag={ns}.has_red_flag] Motion
@@ -459,12 +447,9 @@ execute on vehicle run data modify storage {ns}:main Rotation set from entity @s
 data modify entity @s Rotation[0] set from storage {ns}:main Rotation
 """)
 
-	# /pvp_arena/kit is no longer a function: castagne and pvpswap build their loadout from
-	# pvp_arena_kit() above, so the player's layout resolves the whole kit (fishing rod
-	# included) in one pass instead of two functions fighting over the same slots.
+	# /pvp_arena/kit is no longer a function: castagne and pvpswap build their loadout from pvp_arena_kit() above, so the player's layout resolves the whole kit (fishing rod included) in one pass instead of two functions fighting over the same slots.
 
-	# /pvp_arena/combat_tick (shared castagne / pvpswap tick body: classic-death detection, glow when
-	# isolated, and the kill-streak advancement with its cooldown bookkeeping)
+	# /pvp_arena/combat_tick (shared castagne / pvpswap tick body: classic-death detection, glow when isolated, and the kill-streak advancement with its cooldown bookkeeping)
 	write_function(f"{path}/pvp_arena/combat_tick", f"""
 ## Death system
 function {ns}:utils/on_death_run_function {{function:"{ns}:utils/classic_death"}}
@@ -480,8 +465,7 @@ scoreboard players remove @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] {ns}.t
 scoreboard players remove @a[tag=!detached,scores={{{ns}.temp.cooldown_kill=1..}}] {ns}.temp.cooldown_kill 1
 """)
 
-	# /pvp_arena/start_common (shared castagne / pvpswap /start middle: buff effects, dynamic time, then
-	# arm the spreadplayers flag; callers add their own gamemode/effects before and choose_map_for after)
+	# /pvp_arena/start_common (shared castagne / pvpswap /start middle: buff effects, dynamic time, then arm the spreadplayers flag; callers add their own gamemode/effects before and choose_map_for after)
 	write_function(f"{path}/pvp_arena/start_common", f"""
 effect give @a[tag=!detached] saturation 10 255 true
 effect give @a[tag=!detached] resistance 10 255 true
@@ -550,7 +534,7 @@ scoreboard objectives remove {ns}.temp.old_z
 scoreboard objectives remove {ns}.temp.blocks_run
 """)
 
-	# /assign_random_roles (macro: shared gay_shooter / panic_chase role kickoff — reset the counters then
+	# /assign_random_roles (macro: shared gay_shooter / panic_chase role kickoff: reset the counters then
 	# hand out roles + items in random order. $(mode) is the caller's modes/<mode> function path.)
 	write_function(f"{path}/assign_random_roles", f"""
 scoreboard players set #next_role {ns}.data 0

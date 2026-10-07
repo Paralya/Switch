@@ -30,3 +30,4 @@ def write_dimensions() -> None:
 	switch = Mem.ctx.data[ns]
 	switch[Dimension]["game"] = set_json_encoder(Dimension(void_generator()))
 	switch[Dimension]["void"] = set_json_encoder(Dimension(void_generator()))
+

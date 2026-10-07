@@ -445,7 +445,7 @@ xp add @a[tag=!detached,team={ns}.glassrunner.{color}] 2 levels
 execute as @a[tag=!detached,team={ns}.glassrunner.{color}] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 0.5 2
 """)
 
-	# /ctp/<loc>/{adding_timer,blue,red,reset} — data-driven capture-point logic per location:
+	# /ctp/<loc>/{adding_timer,blue,red,reset}: data-driven capture-point logic per location
 	# (detect-box, fill-area, staged template thresholds, and per-team template prefix + place coords)
 	CTP: dict[str, tuple[str, str, list[tuple[int, int]], tuple[str, str], tuple[str, str]]] = {
 		# dx/dz=6: the selector box spans [x, x+dx+1], so 6 is needed to cover the full 7x7 point
@@ -656,9 +656,8 @@ execute if score @s {ns}.glassrunner.money matches 20.. run scoreboard players r
 
 """)
 
-	# /shop/igloo (translation ref rewritten)
-	# Radius 4 (roof at +5): with 3, an igloo built while standing on the center point was
-	# entirely inside the anti-camp glass clear zone (2997..3003, y 128..132) and never appeared
+	# /shop/igloo, radius 4 (roof at +5): with 3, an igloo built while standing on the center point lies
+	# entirely inside the anti-camp glass clear zone (2997..3003, y 128..132) and never appears
 	R: int = 4
 	igloo_shell: list[str] = [
 		f"~-{R} ~-1 ~-{R} ~-{R} ~{R} ~{R}",

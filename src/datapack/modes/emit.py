@@ -36,7 +36,7 @@ def skinned_weapons(bow_infinity: bool = True) -> tuple[tuple[str, ...], tuple[s
 	one item string per skin, so a kit can roll a random one into a single Variants slot.
 
 	Args:
-		bow_infinity (bool): Whether the bows keep their arrows, False makes the 64 given ones run out
+		bow_infinity: Whether the bows keep their arrows, False makes the 64 given ones run out
 	Returns:
 		tuple[tuple[str, ...], tuple[str, ...]]: The sword skins, then the bow skins
 	"""
@@ -62,14 +62,14 @@ def write_modes_calls(
 	""" Write the /calls/* dispatch functions (and the standard /_force_start) for a mode.
 
 	Args:
-		mode        (str):              Mode id, e.g. "coin_chaser".
-		calls       (tuple[str, ...]):  Which call hooks to generate.
-		context     (str):              Optional execute sub-clause inserted before "run"
+		mode:        Mode id, e.g. "coin_chaser".
+		calls:       Which call hooks to generate.
+		context:     Optional execute sub-clause inserted before "run"
 			(e.g. "in switch:build_battle " or "positioned 3000 128 3000 ").
-		force_start (bool):             Whether to also write the standard /_force_start function.
-		targets     (dict[str, str]):   Optional per-call dispatch override, mapping call -> function
+		force_start: Whether to also write the standard /_force_start function.
+		targets:     Optional per-call dispatch override, mapping call -> function
 			path (e.g. {"joined": "switch:utils/classic_death"}) so /calls/<call> dispatches straight
-			to that function instead of switch:modes/<mode>/<call> — lets pure-redirect hooks be dropped.
+			to that function instead of switch:modes/<mode>/<call>, so pure-redirect hooks can be dropped.
 	"""
 	ns: str = Mem.ctx.project_id
 	overrides: dict[str, str] = targets or {}
@@ -89,9 +89,9 @@ def write_server_announce(path: str, fr: str, en: str) -> None:
 	""" Write a bilingual server-prefixed announcement (the "[Paralya] ..." tellraw pair).
 
 	Args:
-		path (str):  Full function path, e.g. f"{path}/start".
-		fr   (str):  French message text (inserted after the server-name prefix and a leading space).
-		en   (str):  English message text.
+		path: Full function path, e.g. f"{path}/start".
+		fr:   French message text (inserted after the server-name prefix and a leading space).
+		en:   English message text.
 	"""
 	ns: str = Mem.ctx.project_id
 	write_function(path, f"""
@@ -137,13 +137,14 @@ def write_time_xp_bar(path: str, seconds: int, points_score: str = "#remaining_t
 	mode's xp_bar is a one-liner. Only the divide value and the two source scores vary.
 
 	Args:
-		path         (str):  Full function path, e.g. f"{path}/xp_bar".
-		seconds      (int):  Full-bar value in seconds (the bar fills the #points score over seconds*1000).
-		points_score (str):  Score driving the progress bar (#points). Defaults to #remaining_time.
-		levels_score (str):  Score driving the XP level number. Defaults to #remaining_time.
+		path:         Full function path, e.g. f"{path}/xp_bar".
+		seconds:      Full-bar value in seconds (the bar fills the #points score over seconds*1000).
+		points_score: Score driving the progress bar (#points). Defaults to #remaining_time.
+		levels_score: Score driving the XP level number. Defaults to #remaining_time.
 	"""
 	ns: str = Mem.ctx.project_id
 	write_function(path, f"""
 scoreboard players set #divide {ns}.data {seconds * 1000}
 function {ns}:modes/_common/xp_bar/time {{points_score:"{points_score}",levels_score:"{levels_score}"}}
 """)
+

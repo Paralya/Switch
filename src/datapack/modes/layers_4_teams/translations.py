@@ -36,3 +36,4 @@ execute if score #layers_4_teams_seconds {ns}.data matches 30 run tellraw @a[sco
 function {ns}:translations/common/basic_actionbar
 execute if score #layers_4_teams_seconds {ns}.data matches 30 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] {{"text":"The obsidian walls are no longer indestructible!","color":"red"}}
 """)
+

@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem
 
-from .utils import clone_survival, fill_survival
+from .survival import clone_survival, fill_survival
 
 
 # Main function calling all the map generation functions
@@ -13,7 +13,7 @@ def generate_folders_for_survival_maps() -> None:
 	- generate_fill_survival_folder: Generate a fill survival folder
 
 	Args:
-		config (dict): The configuration of the project
+		config: The configuration of the project
 	"""
 	ns: str = Mem.ctx.project_id
 	clone_survival(-64, (-160, -64, -160), (160, 256, 160), ("switch_space", "Switch Space", "Stoupy and Switch community"), view=(44.38, 127.17, 99.81, 151.06, 28.47))
@@ -23,11 +23,11 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (2000, 100, 2000), (2108, 193, 2126), ("area_51", "Area 51", "Jugou2, Stoupy, TheFRcRaZy"), view=(2046.90, 105.29, 2056.55, 145.40, -2.02))
 	clone_survival(100, (2500, 100, 2500), (2586, 185, 2595), ("spectre_original", "Spectre Original", "DIocelot, Stoupy"), view=(2526.27, 150.48, 2573.21, -143.57, 25.80))
 	fill_survival((2750, -64, 2750), (3250, 320, 3250), ("glassrunner", "Glassrunner", "AirDox"), "air", f"#{ns}:glassrunner/glass", view=(3003.25, 138.64, 2987.65, 12.58, 56.33), copy_structures=[
-		((2910, 100, 2910), (2940, 140, 2940)),	# Red spawn platform + money maker (2916 131 2916)
-		((3060, 100, 3060), (3090, 140, 3090)),	# Blue spawn platform + money maker (3084 131 3084)
-		((2985, 100, 2985), (3015, 140, 3015)),	# Center capture point + money maker below (3000 110 3000)
-		((2915, 110, 3065), (2935, 140, 3085)),	# Side 1 capture point (2924..2926 x 3074..3076)
-		((3065, 110, 2915), (3085, 140, 2935)),	# Side 2 capture point (3074..3076 x 2924..2926)
+		((2910, 100, 2910), (2940, 140, 2940)), # Red spawn platform + money maker (2916 131 2916)
+		((3060, 100, 3060), (3090, 140, 3090)), # Blue spawn platform + money maker (3084 131 3084)
+		((2985, 100, 2985), (3015, 140, 3015)), # Center capture point + money maker below (3000 110 3000)
+		((2915, 110, 3065), (2935, 140, 3085)), # Side 1 capture point (2924..2926 x 3074..3076)
+		((3065, 110, 2915), (3085, 140, 2935)), # Side 2 capture point (3074..3076 x 2924..2926)
 	])
 	clone_survival(100, (3500, 100, 3500), (3540, 140, 3540), ("pitch_creep_1", "Pitch Creep Wood", "Stoupy"), view=(3523.79, 120.80, 3513.55, 22.25, -8.74))
 	clone_survival(100, (4000, 100, 4000), (4122, 151, 4122), ("mushroom_plains", "Mushroom Plains", "LTHCTheMaster"), view=(4043.11, 134.50, 4116.71, 195.90, 27.19))
@@ -113,14 +113,7 @@ def generate_folders_for_survival_maps() -> None:
 	clone_survival(100, (77000, 100, 77000), (77097, 244, 77094), ("sky_island_tower", "Sky Island Tower", "Unknown"), view=(77026.88, 171.22, 77099.86, -155.14, 14.42))
 	##	78000	(undefined)	: empty
 	clone_survival(100, (79000, 100, 79000), (79126, 199, 79102), ("survival_boat", "Survival Boat", "Unknown"), view=(79029.80, 115.97, 79042.34, -64.00, -11.00))
-	##	80000	(undefined)	: empty
-	##	81000	(undefined)	: empty
-	##	82000	(undefined)	: Maps Infinitri customs à fusionner	(not done yet) [Infinitri Pack]
-	##	83000	(undefined)	: empty
-	##	84000	(undefined)	: Création de maps (Guy Shooter, et ???)
-	##	85000	(undefined)	: empty
-	##	86000	(undefined)	: empty
-	##	87000	(undefined)	: empty
+	##	80000-87000	(undefined)	: empty, except 82000 for the Infinitri Pack custom maps to merge (not done yet) and 84000 for new maps (Guy Shooter, et ???)
 	clone_survival(100, (88000, 100, 88000), (88068, 137, 88068), ("nature_house", "Nature House", "Unknown"), view=(88024.65, 109.70, 88051.82, 211.71, 1.41))
 	##	89000	(undefined)	: empty
 	##	90000	(undefined)	: empty

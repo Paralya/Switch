@@ -81,3 +81,4 @@ execute unless score @s {ns}.temp.shield matches 1.. run tellraw @a[scores={{{ns
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de Laser Game, faites le plus de points possibles en tirant sur les bases bonus et les ennemis !", "Launching the Laser Game, score as many points as possible by shooting the bonus bases and enemies!")
+

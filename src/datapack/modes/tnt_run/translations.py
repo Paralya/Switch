@@ -40,3 +40,4 @@ execute if score #tnt_run_seconds {ns}.data matches 0 run title @a[scores={{{ns}
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de TNT Run dans 10 secondes, ne vous arrêtez pas de courir car les blocs sous vos pieds vont disparaitre en continu !", "TNT Run game starts in 10 seconds, don't stop running because the blocks under your feet will disappear continuously!")
+

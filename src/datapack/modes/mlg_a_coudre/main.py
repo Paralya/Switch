@@ -199,3 +199,4 @@ execute if score #detect_end {ns}.data matches 1 run function {path}/process_end
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 15)
+

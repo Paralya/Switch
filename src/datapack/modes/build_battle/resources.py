@@ -37,3 +37,4 @@ def write_resources() -> None:
 
 	# Binary structure placed for the build_battle plot
 	register_structures("build_battle")
+

@@ -96,9 +96,7 @@ attribute @s[scores={{{ns}.alive=1..,{ns}.temp.role=4}}] movement_speed base set
 tag @s[scores={{{ns}.alive=1..,{ns}.temp.role=4}}] add {ns}.ninja_death
 """)
 
-	# /death/process
-	# The inspector is told about a player once and only once: a relog can hand the same player a
-	# second death marker, and announcing it again would leak a free confirmation of their role.
+	# /death/process The inspector is told about a player once and only once: a relog can hand the same player a second death marker, and announcing it again would leak a free confirmation of their role.
 	write_function(f"{path}/death/process", f"""
 scoreboard players add @s {ns}.temp.cooldown 1
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
@@ -162,10 +160,8 @@ function {ns}:modes/traitors_game/translations/detect_end
 execute if score #traitors_game_seconds {ns}.data matches 1200.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 """)
 
-	# /give_items
-	# The armour and the sword each come in two flavours, drawn by a coin flip.
-	# The three slotless gives at the end used to fill the last free slots in order (the pickaxe in
-	# hotbar.2, the planks in hotbar.5, and the anvil overflowing into inventory.0); they now say so.
+	# /give_items The armour and the sword each come in two flavours, drawn by a coin flip.
+	# The three slotless gives at the end used to fill the last free slots in order (the pickaxe in hotbar.2, the planks in hotbar.5, and the anvil overflowing into inventory.0); they now say so.
 	Kit("traitors_game", pre=f"""
 function {ns}:utils/reset_attributes
 attribute @s attack_speed base set 1024
@@ -619,3 +615,4 @@ $team modify {ns}.temp.sidebar.0 suffix [{{"text":"Floupy: ","color":"gold"}},{{
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 900)
+

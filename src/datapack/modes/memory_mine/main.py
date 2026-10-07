@@ -170,3 +170,4 @@ spreadplayers 153013 153016 0 8 under 105 false @e[type=marker,tag={ns}.new]
 execute at @e[type=marker,tag={ns}.new] run playsound block.anvil.fall ambient @a[distance=..50]
 tag @e[type=marker,tag={ns}.new] remove {ns}.new
 """)
+

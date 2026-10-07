@@ -22,10 +22,11 @@ tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPOldEN
 	# /tick
 	write_function(f"{path}/tick", f"""
 # French
-execute as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.sneak=..99,{ns}.lang=0}}] run title @s actionbar [{{"text":"Accroupi → Brillance : ","color":"aqua"}},{{"score":{{"name":"@s","objective":"{ns}.temp.sneak"}},"color":"yellow"}},{{"text":"/100","color":"yellow"}}]
+execute as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.sneak=..99,{ns}.lang=0}}] run title @s actionbar [{{"text":"Accroupi pour briller : ","color":"aqua"}},{{"score":{{"name":"@s","objective":"{ns}.temp.sneak"}},"color":"yellow"}},{{"text":"/100","color":"yellow"}}]
 execute as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.sneak=100,{ns}.lang=0}}] run title @s actionbar [{{"text":"Relâche SHIFT maintenant !","color":"red"}}]
 
 # English
-execute as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.sneak=..99,{ns}.lang=1}}] run title @s actionbar [{{"text":"Sneak → Glow: ","color":"aqua"}},{{"score":{{"name":"@s","objective":"{ns}.temp.sneak"}},"color":"yellow"}},{{"text":"/100","color":"yellow"}}]
+execute as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.sneak=..99,{ns}.lang=1}}] run title @s actionbar [{{"text":"Sneak to glow: ","color":"aqua"}},{{"score":{{"name":"@s","objective":"{ns}.temp.sneak"}},"color":"yellow"}},{{"text":"/100","color":"yellow"}}]
 execute as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.temp.sneak=100,{ns}.lang=1}}] run title @s actionbar [{{"text":"Release SHIFT now!","color":"red"}}]
 """)
+

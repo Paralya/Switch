@@ -127,3 +127,4 @@ def write_resources() -> None:
 
 	# Binary structures (center / side platforms placed during the game)
 	register_structures("glassrunner")
+

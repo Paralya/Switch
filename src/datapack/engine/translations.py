@@ -143,3 +143,4 @@ execute unless entity @a[tag=!detached,scores={{{ns}.trigger.game_vote=..-1}}] r
 execute if entity @a[tag=!detached,scores={{{ns}.trigger.game_vote=..-1}}] if score #remaining {ns}.data matches 2.. run title @a[scores={{{ns}.lang=1}},tag=!detached] actionbar [{{"text":"End of voting period in ","color":"aqua"}},{{"score":{{"name":"#remaining","objective":"{ns}.data"}},"color":"yellow"}},{{"text":" seconds."}}]
 execute if entity @a[tag=!detached,scores={{{ns}.trigger.game_vote=..-1}}] if score #remaining {ns}.data matches 1 run title @a[scores={{{ns}.lang=1}},tag=!detached] actionbar [{{"text":"End of voting period in ","color":"aqua"}},{{"score":{{"name":"#remaining","objective":"{ns}.data"}},"color":"yellow"}},{{"text":" second."}}]
 """)
+

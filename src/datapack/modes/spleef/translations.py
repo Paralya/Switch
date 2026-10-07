@@ -47,3 +47,4 @@ execute if score #process_end {ns}.data matches 1 unless score #remaining_player
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de Spleef dans 5 secondes, creuser sous les pieds des joueurs et soyez le dernier survivant pour remporter la partie !", "Spleef game starts in 5 seconds, dig under the players' feet and be the last survivor to win the game!")
+

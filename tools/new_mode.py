@@ -1,7 +1,6 @@
 """ Scaffold a new minigame: creates its package and prints the MODES entry to paste.
 
-The generated mode builds and is playable right away through its _force_start, so a contributor
-can see something in game before reading anything about the pipeline.
+The generated mode builds and is playable right away through its _force_start, so a contributor can see something in game before reading anything about the pipeline.
 """
 # Imports
 import re
@@ -155,13 +154,12 @@ class NewMode:
 		""" Default human readable name built from a mode id.
 
 		Args:
-			mode (str): The mode id, ex: "tnt_run"
+			mode: The mode id, ex: "tnt_run"
 		Returns:
 			str: The name, ex: "Tnt Run"
 
-		Examples:
-			>>> NewMode.display_name("tnt_run")
-			'Tnt Run'
+		>>> NewMode.display_name("tnt_run")
+		'Tnt Run'
 		"""
 		return mode.replace("_", " ").title()
 
@@ -170,7 +168,7 @@ class NewMode:
 		""" Write the package of a new mode.
 
 		Args:
-			mode (str): The mode id, ex: "tnt_run"
+			mode: The mode id, ex: "tnt_run"
 		Returns:
 			Path: The created folder
 		"""

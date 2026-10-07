@@ -287,3 +287,4 @@ execute positioned -14.5 70.5 -2 run function {ns}:stats/display/tick_macro {{pa
 execute positioned -16 70.5 -6 run function {ns}:stats/display/tick_macro {{path:"all.modes.traitors_game.played",label:"Games played",mode:1,uuid:"20180612-2024-2025-2026-145000000002"}}
 execute positioned -13 70.5 -6 run function {ns}:stats/display/tick_macro {{path:"all.modes.traitors_game.wins",label:"Victories",mode:1,uuid:"20180612-2024-2025-2026-145000000003"}}
 """)
+

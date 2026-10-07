@@ -45,3 +45,4 @@ $execute unless score #new_record {ns}.data matches 1 run tellraw @a[scores={{{n
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de MiniGolf, vous avez 5 secondes de préparation !", "Starting the MiniGolf game, you have 5 seconds to prepare!")
+

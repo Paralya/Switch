@@ -15,8 +15,8 @@ def main(input_path: str, speed_factor: float) -> None:
 	""" Process a MIDI file to change its speed.
 
 	Args:
-		input_path (str): Path to the input MIDI file
-		speed_factor (float): Factor to slow down or speed up the MIDI file
+		input_path:   Path to the input MIDI file
+		speed_factor: Factor to slow down or speed up the MIDI file
 
 	Returns:
 		None

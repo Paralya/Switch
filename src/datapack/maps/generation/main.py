@@ -3,7 +3,7 @@
 import stouputils as stp
 
 from .definitions import generate_folders_for_survival_maps
-from .utils import (
+from .global_files import (
 	generate_door_files,
 	generate_intro_spread_file,
 	generate_load_file,

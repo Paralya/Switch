@@ -20,3 +20,4 @@ def write_sorters() -> None:
 			"scale": scale,
 			"limit": 15,
 		})))
+

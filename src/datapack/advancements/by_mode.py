@@ -1,7 +1,7 @@
 """ Which minigame each advancement belongs to, derived from where the datapack grants it.
 
-Nothing declares the link. An advancement belongs to every mode whose own functions grant it, so
-moving a grant from one mode to another moves the advancement with it, with nothing to update.
+Nothing declares the link.
+An advancement belongs to every mode whose own functions grant it, so moving a grant from one mode to another moves the advancement with it, with nothing to update.
 """
 # Imports
 import re

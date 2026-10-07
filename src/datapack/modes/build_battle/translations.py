@@ -166,3 +166,4 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","stora
 # English
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Time up, theme reminder: "}},{{"nbt":"current_theme.en","storage":"{ns}:main","interpret":true,"color":"yellow"}},{{"text":"!"}}]
 """)
+

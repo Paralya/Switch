@@ -87,3 +87,4 @@ scoreboard players set @s {ns}.music.progress 0
 	write_function(f"{path}/tick_macro", f"""
 $function {ns}:music/$(name)/$(tick)
 """)
+

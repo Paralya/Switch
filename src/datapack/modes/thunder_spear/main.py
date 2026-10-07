@@ -162,3 +162,4 @@ execute if score #remaining_time {ns}.data matches ..0 run function {ns}:modes/t
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 150, "#thunder_spear_seconds")
+

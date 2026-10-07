@@ -28,3 +28,4 @@ def write_resources() -> None:
 		"pools": [{"rolls": 1, "entries": entries}],
 		"modifier": [{"type": "minecraft:set_components", "components": {"minecraft:custom_data": f"{{\"{ns}\":{{}}}}"}}],
 	}))
+

@@ -475,3 +475,4 @@ function {path}/core/remake_list/move_index with storage {ns}:temp input
 # Continue loop
 execute if data storage {ns}:maps block_party[0] run function {path}/core/remake_list/shuffle
 """)
+

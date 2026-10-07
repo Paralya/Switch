@@ -1,7 +1,7 @@
 """ Per-map geometry read by the map loader: race checkpoints and arena spawn cycles.
 
-One row per map, so adding a racing map or moving a spawn is a single line. The emitters live in
-main.py: nothing here writes anything.
+One row per map, so adding a racing map or moving a spawn is a single line.
+The emitters live in main.py: nothing here writes anything.
 """
 # Constants
 RACE_CHECKPOINTS: dict[str, tuple[int, int, list[tuple[str, ...]], list[tuple[str, ...]]]] = {
@@ -38,3 +38,4 @@ TP_CYCLES: dict[str, tuple[str, list[str]]] = {
 	'survival_boat/tp_blue_player': ('s_survival_boat_blue', ['79067 125 79066 180 0', '79051 127 79068 180 0', '79082 127 79067 180 0', '79059 126 79064 180 0', '79071 126 79064 180 0', '79067 126 79070 180 0', '79076 126 79063 180 0', '79053 128 79063 180 0']),
 	'survival_boat/tp_red_player': ('s_survival_boat_red', ['79059 125 79036 0 0', '79075 127 79034 0 0', '79044 127 79035 0 0', '79067 126 79038 0 0', '79055 126 79038 0 0', '79059 127 79032 0 0', '79050 126 79039 0 0', '79073 128 79039 0 0']),
 }
+

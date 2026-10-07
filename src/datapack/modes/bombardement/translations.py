@@ -32,3 +32,4 @@ $execute unless score #bombardement_seconds {ns}.data > #record {ns}.data run te
 $execute if score #bombardment_seconds {ns}.data > #record {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" New record of $(seconds) seconds by $(player)!","color":"yellow"}}]
 $execute unless score #bombardment_seconds {ns}.data > #record {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Current record of $(seconds) seconds held by $(player)","color":"yellow"}}]
 """)
+

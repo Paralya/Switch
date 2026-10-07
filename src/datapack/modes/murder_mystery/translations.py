@@ -128,3 +128,4 @@ execute as @p[gamemode=!spectator,scores={{{ns}.temp.role=1..2}},distance=..1] r
 # English
 execute as @p[gamemode=!spectator,scores={{{ns}.temp.role=1..2}},distance=..1] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] {{"text":"The detective's bow has been picked up!","color":"green"}}
 """)
+

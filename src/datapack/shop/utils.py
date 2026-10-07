@@ -2,17 +2,15 @@
 # Imports
 import json
 
-import stouputils as stp
 from stewbeet import JsonDict, Mem, write_function
 
+from .display import write_translations
 from .shared_memory import (
 	INITIALIZE_SHOP_SCORES_PATH,
 	LANGUAGE_SCORES,
 	LOAD_PATH,
 	REFUND_PERCENTAGE,
-	SHEEPWARS_CHOOSE_KIT,
 	SHEEPWARS_KIT_OFFSET,
-	STAR,
 	TRIGGER_PATH,
 	USERNAME_CHANGE_PATH,
 	get_money,
@@ -26,8 +24,8 @@ def load_username_change(shop_name: str, shop_dict: JsonDict) -> None:
 	""" Add lines for the load function, the username change function
 
 	Args:
-		shop_name	(str):	The name of the shop, e.g. "pitchout"
-		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
+		shop_name: The name of the shop, e.g. "pitchout"
+		shop_dict: The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
 	ns: str = Mem.ctx.project_id
 	objectives: list[str] = [f"{ns}.{shop_name}.{upgrade_id}" for upgrade_id in shop_dict]
@@ -42,88 +40,27 @@ def write_technicals(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	""" Write the technical part of the shop
 
 	Args:
-		index		(int):	The index of the shop, e.g. 1 for pitchout
-		shop_name	(str):	The name of the shop, e.g. "pitchout"
-		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
+		index:     The index of the shop, e.g. 1 for pitchout
+		shop_name: The name of the shop, e.g. "pitchout"
+		shop_dict: The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
 	ns: str = Mem.ctx.project_id
 	mini: int = get_shop_range(index)[0]
 	path: str = f"{ns}:shop/{shop_name}"
 
-	# Special case for sheepwars
+	upgrades: list[tuple[str, JsonDict]] = [(upgrade_id, data) for upgrade_id, data in shop_dict.items() if data]
+
+	# Sheepwars upgrades are kits, and clicking a kit's name chooses it
 	if shop_name == "sheepwars":
 		write_function(path, f"""
 # Kit Chosen
 scoreboard players add @s {ns}.sheepwars.chosen_kit 0
 """)
-		counter: int = 0
-		for upgrade in shop_dict.values():
-			if not upgrade:
-				continue
-			counter += 1
-			write_function(path, f"execute if score @s {ns}.trigger.shop matches {mini + counter + SHEEPWARS_KIT_OFFSET} run scoreboard players set @s {ns}.sheepwars.chosen_kit {counter}")
+		for kit in range(1, len(upgrades) + 1):
+			write_function(path, f"execute if score @s {ns}.trigger.shop matches {mini + kit + SHEEPWARS_KIT_OFFSET} run scoreboard players set @s {ns}.sheepwars.chosen_kit {kit}")
 
-	# Write the upgrades
-	counter: int = mini
-	for upgrade_id, data in shop_dict.items():
-		if not data:
-			continue
-		upgrade_name: str = data["upgrade_name"]["en"]
-		write_function(path, f"\n# {upgrade_name}")
-		counter += 1
-
-		# Purchase logic - buying upgrades
-		# Write the upgrades checks
-		for i, upgrade in enumerate(data['upgrades']):
-			price: int = upgrade['price']
-			write_function(path, f"execute if score @s {ns}.trigger.shop matches {counter} if score @s {ns}.{shop_name}.{upgrade_id} matches {i} if score @s {ns}.money matches {price}.. store success score #success {ns}.data run scoreboard players remove @s {ns}.money {price}")
-
-		# Special case: Current game is infected and player is human, refresh their equipments
-		refresh_equipment: str = ""
-		if shop_name == "infected" and upgrade_id in ("sword", "armor"):
-			refresh_equipment = f"execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. if entity @s[team={ns}.temp.human] run function {ns}:modes/infected/death/human_give"
-
-		# If success, add the upgrade
-		write_function(path, f"""
-execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run scoreboard players add @s {ns}.{shop_name}.{upgrade_id} 1
-execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run playsound entity.player.levelup ambient @s
-execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
-{refresh_equipment}
-""")
-
-		# Selling logic - Add code for selling upgrades
-		write_function(path, f"\n# Selling {upgrade_name}")
-		sell_counter: int = counter + 10000		# Use counter+10000 as the trigger value for selling to avoid conflicts
-
-		# For each level (except level 0), add a sell option
-		for i in range(len(data['upgrades'])):
-			if i == 0:  # Skip level 0 (can't sell what you don't have)
-				continue
-
-			price: int = data['upgrades'][i-1]['price']  # Get price of the previous upgrade
-			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
-
-			# Check if player has this level and wants to sell
-			write_function(path, f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score @s {ns}.{shop_name}.{upgrade_id} matches {i} store success score #success {ns}.data run scoreboard players add @s {ns}.money {refund}")
-
-		# Add handling for max level (selling from max level to the previous level)
-		max_level = len(data['upgrades'])
-		if max_level > 0:  # Make sure there are upgrades to sell
-			price: int = data['upgrades'][-1]['price']  # Get price of the last upgrade
-			refund: int = int(price * REFUND_PERCENTAGE)  # Calculate refund amount
-			write_function(path, f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score @s {ns}.{shop_name}.{upgrade_id} matches {max_level}.. store success score #success {ns}.data run scoreboard players add @s {ns}.money {refund}")
-
-		# Special case: Current game is infected and player is human, refresh their equipments
-		refresh_equipment: str = ""
-		if shop_name == "infected" and upgrade_id in ("sword", "armor"):
-			refresh_equipment = f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. if entity @s[team={ns}.temp.human] run function {ns}:modes/infected/death/human_give"
-
-		# If success, remove the upgrade
-		write_function(path, f"""
-execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run scoreboard players remove @s {ns}.{shop_name}.{upgrade_id} 1
-execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run playsound entity.player.levelup ambient @s
-{refresh_equipment}
-""")
+	for counter, (upgrade_id, data) in enumerate(upgrades, start=mini + 1):
+		write_upgrade_trade(path, shop_name, upgrade_id, data, counter)
 
 	# Call messages
 	write_function(path, f"""
@@ -133,157 +70,44 @@ function {ns}:shop/translations/{shop_name}
 """)
 
 
-def append_sell_button(tellraw_json: list[JsonDict], downgrade_hover_text: str, sell_label: str, sell_refund: int, sell_counter: int, lang_id: str) -> None:
-	""" Append the shop's sell [-] button (red, with refund + optional downgrade hover) to a tellraw line. """
-	ns: str = Mem.ctx.project_id
-	hover_value: list[JsonDict] = []
-	if downgrade_hover_text:
-		hover_value.append({"text": f"{downgrade_hover_text}\n", "color": "red"})
-	hover_value.append({"text": f"{sell_label} {sell_refund}", "color": "yellow"})
-	hover_value.append(get_money()[lang_id])
+def write_upgrade_trade(path: str, shop_name: str, upgrade_id: str, data: JsonDict, counter: int) -> None:
+	""" Write the buying and selling of one upgrade.
 
-	tellraw_json.append({
-		"text": " [-]", "color": "red",
-		"click_event": {"action": "run_command", "command": f"/trigger {ns}.trigger.shop set {sell_counter}"},
-		"hover_event": {"action": "show_text", "value": hover_value}
-	})
-
-
-def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
-	""" Write the translations of the shop
 	Args:
-		index		(int):	The index of the shop, e.g. 1 for pitchout
-		shop_name	(str):	The name of the shop, e.g. "pitchout"
-		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
+		data:    The upgrade, e.g. {"upgrade_name": {...}, "upgrades": [{"price": 10, ...}, ...]}
+		counter: Trigger value that buys a level; counter + 10000 sells one back.
 	"""
 	ns: str = Mem.ctx.project_id
-	path: str = f"{ns}:shop/translations/{shop_name}"
-	titled: str = shop_name.replace("_", " ").title()
-	mini: int = get_shop_range(index)[0]
+	upgrade_name: str = data["upgrade_name"]["en"]
+	sell_counter: int = counter + 10000
+	prices: list[int] = [upgrade["price"] for upgrade in data["upgrades"]]
+	score: str = f"{ns}.{shop_name}.{upgrade_id}"
 
-	# Add sell text translations
-	sell_text: dict[str, str] = {
-		"fr": "Vendre pour",
-		"en": "Sell for"
-	}
+	# A human in a running infected game gets the new equipment right away
+	human_give: str = f"if score #success {ns}.data matches 1.. if entity @s[team={ns}.temp.human] run function {ns}:modes/infected/death/human_give"
+	refreshes: bool = shop_name == "infected" and upgrade_id in ("sword", "armor")
 
-	# For each language,
-	for lang_id, (lang_score, lang_name, label, buy_text, _) in LANGUAGE_SCORES.items():
-		selector: str = f"@s[scores={{{ns}.lang={lang_score}}}]"
+	# Buying a level costs its price
+	write_function(path, f"\n# {upgrade_name}")
+	for level, price in enumerate(prices):
+		write_function(path, f"execute if score @s {ns}.trigger.shop matches {counter} if score @s {score} matches {level} if score @s {ns}.money matches {price}.. store success score #success {ns}.data run scoreboard players remove @s {ns}.money {price}")
+	write_function(path, f"""
+execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run scoreboard players add @s {score} 1
+execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run playsound entity.player.levelup ambient @s
+execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 0 run playsound entity.zombie.attack_iron_door ambient @s
+{f"execute if score @s {ns}.trigger.shop matches {counter} {human_give}" if refreshes else ""}
+""")
 
-		# Write the first lines
-		write_function(path, f"""# {lang_name}\ntellraw {selector} [{{"text":"[{label.replace('X', titled)}]","color":"yellow"}}]""")
-		if shop_name == "sheepwars":
-			write_function(path, f"""tellraw {selector} [{{"text":"{SHEEPWARS_CHOOSE_KIT[lang_id]}","color":"red"}}]""")
-
-		# Write the upgrades
-		counter: int = mini
-		for upgrade_id, data in shop_dict.items():
-			if not data:
-				continue
-
-			# Extract important data
-			counter += 1
-			sell_counter = counter + 10000
-			upgrade_name: str = data["upgrade_name"].get(lang_id, data["upgrade_name"]["en"])
-			ok_message: str = data["ok_messages"].get(lang_id, data["ok_messages"]["en"])
-			error_message: str = data["error_messages"].get(lang_id, data["error_messages"]["en"])
-			upgrades: list[JsonDict] = data["upgrades"] + [{"price": -1}]	# Add a final fake upgrade
-
-			# Get the custom downgrade message if available
-			sell_ok_message: str = ""
-			if "downgrade_message" in data:
-				sell_ok_message = data["downgrade_message"].get(lang_id, data["downgrade_message"].get("en", ""))
-
-			# Fallback to a generic message if no custom downgrade message is provided
-			if not sell_ok_message:
-				sell_ok_message = {
-					"fr": f"Vous avez vendu un niveau de {upgrade_name} et récupéré un remboursement !",
-					"en": f"You sold one level of {upgrade_name} and received a refund!"
-				}.get(lang_id, f"You sold one level of {upgrade_name} and received a refund!")
-
-			# Write the ok and error messages for buying
-			write_function(path, f"""execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 1.. run tellraw {selector} [{{"text":"{ok_message}","color":"green"}}]""")
-			write_function(path, f"""execute if score @s {ns}.trigger.shop matches {counter} if score #success {ns}.data matches 0 run tellraw {selector} [{{"text":"{error_message}","color":"red"}}]""")
-
-			# Write only the ok message for selling (no error message since button is disabled if can't sell)
-			write_function(path, f"""execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run tellraw {selector} [{{"text":"{sell_ok_message}","color":"green"}}]""")
-
-			# For each upgrade
-			for j, upgrade in enumerate(upgrades):
-				price: int = upgrade["price"]
-				if price > 0:
-					hover_text: str = upgrade["hover_text"].get(lang_id, upgrade["hover_text"]["en"])
-					gray_stars: str = STAR * (len(upgrades) - j - 1)
-					yellow_stars: str = STAR * j
-
-					# Calculate refund for selling (if level > 0)
-					sell_refund: int = int(data['upgrades'][j-1]['price'] * REFUND_PERCENTAGE) if j > 0 else 0
-
-					# Get downgrade text directly from the upgrade dictionary
-					downgrade_hover_text: str = ""
-					if j > 0:
-						hover_text_dict: dict[str, str] = data['upgrades'][j-1]["hover_text"]
-						downgrade_hover_text = hover_text_dict.get(lang_id, hover_text_dict.get("en", "")).replace("->", "<-")
-
-					# Tellraw text with buy [+] and sell [-] buttons
-					tellraw_json: list[JsonDict] = [
-						{"text": upgrade_name, "color": "aqua"},
-						{"text": " | ", "bold": True, "color": "dark_gray"},
-						{"text": yellow_stars, "color": "yellow"},
-						{"text": gray_stars, "color": "gray"},
-					]
-
-					# Add sell button [-] if player has at least one level (j > 0)
-					if j > 0:
-						append_sell_button(tellraw_json, downgrade_hover_text, sell_text[lang_id], sell_refund, sell_counter, lang_id)
-
-					# Add buy button [+]
-					tellraw_json.append({
-						"text": " [+]", "color": "green",
-						"click_event": {"action": "run_command", "command": f"/trigger {ns}.trigger.shop set {counter}"},
-						"hover_event": {"action": "show_text", "value": [
-							{"text":f"{hover_text}\n","color":"green"},
-							{"text":buy_text.replace("X", str(price)), "color":"yellow"},
-							get_money()[lang_id]
-						]}
-					})
-				else:
-					# Max level case
-					yellow_stars: str = STAR * (len(upgrades) - 1)
-					tellraw_json: list[JsonDict] = [
-						{"text": upgrade_name, "color": "aqua"},
-						{"text": " | ", "bold": True, "color": "dark_gray"},
-						{"text": yellow_stars, "color": "yellow"},
-					]
-
-					# Always show sell button for max level
-					if j > 0:
-						sell_refund: int = int(data['upgrades'][j-1]['price'] * REFUND_PERCENTAGE)
-
-						# Get downgrade text directly from the upgrade dictionary
-						downgrade_hover_text: str = ""
-						hover_text_dict: dict[str, str] = data['upgrades'][j-1]["hover_text"]
-						downgrade_hover_text = hover_text_dict.get(lang_id, hover_text_dict.get("en", "")).replace("->", "<-")
-
-						append_sell_button(tellraw_json, downgrade_hover_text, sell_text[lang_id], sell_refund, sell_counter, lang_id)
-
-					tellraw_json.append({"text":" [+]","color":"gray"})
-
-				# Write the tellraw text
-				is_max: str = '..' if j == len(upgrades) - 1 else ''
-				if shop_name != "sheepwars":
-					dump: str = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute if score @s {ns}.{shop_name}.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
-				else:
-					tellraw_json[0]["click_event"] = {"action": "run_command", "command": f"/trigger {ns}.trigger.shop set {counter + SHEEPWARS_KIT_OFFSET}"}
-					dump: str = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute unless score @s {ns}.sheepwars.chosen_kit matches {counter - mini} if score @s {ns}.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
-					tellraw_json[0]["color"] = "green"
-					del tellraw_json[0]["click_event"]
-					dump = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
-					write_function(path, f"execute if score @s {ns}.sheepwars.chosen_kit matches {counter - mini} if score @s {ns}.sheepwars.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")
-
+	# Selling a level refunds part of the price paid for it, the last match staying open-ended
+	write_function(path, f"\n# Selling {upgrade_name}")
+	for level, price in enumerate(prices, start=1):
+		matches: str = f"{level}.." if level == len(prices) else str(level)
+		write_function(path, f"execute if score @s {ns}.trigger.shop matches {sell_counter} if score @s {score} matches {matches} store success score #success {ns}.data run scoreboard players add @s {ns}.money {int(price * REFUND_PERCENTAGE)}")
+	write_function(path, f"""
+execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run scoreboard players remove @s {score} 1
+execute if score @s {ns}.trigger.shop matches {sell_counter} if score #success {ns}.data matches 1.. run playsound entity.player.levelup ambient @s
+{f"execute if score @s {ns}.trigger.shop matches {sell_counter} {human_give}" if refreshes else ""}
+""")
 
 
 # All in one function
@@ -291,9 +115,9 @@ def generate_shop(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 	""" Generate all the shop files for a specific shop
 
 	Args:
-		index		(int):	The index of the shop, e.g. 1 for pitchout
-		shop_name	(str):	The name of the shop, e.g. "pitchout"
-		shop_dict	(dict):	The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
+		index:     The index of the shop, e.g. 1 for pitchout
+		shop_name: The name of the shop, e.g. "pitchout"
+		shop_dict: The dictionary of the shop, e.g. {"boots": {...}, "ender_pearl": {...}}
 	"""
 	load_username_change(shop_name, shop_dict)
 	write_technicals(index, shop_name, shop_dict)
@@ -373,3 +197,4 @@ $tellraw @s[scores={{{ns}.lang=0}}] ["\n",{{"nbt":"minigames[{{id:\"$(id)\"}}].l
 # English
 $tellraw @s[scores={{{ns}.lang=1}}] ["\n",{{"nbt":"minigames[{{id:\"$(id)\"}}].lore_en","storage":"{ns}:main","interpret":true}},"\n"]
 """)
+

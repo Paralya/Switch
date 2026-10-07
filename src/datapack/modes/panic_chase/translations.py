@@ -44,3 +44,4 @@ tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","stora
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"text":"Careful, the mouses can't hit the hunters!","color":"yellow"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPNewEN","storage":"{ns}:main","interpret":true}}]
 """)
+

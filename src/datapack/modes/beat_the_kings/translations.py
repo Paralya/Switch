@@ -54,3 +54,4 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached,team={ns}.temp.king] ["\\n",{{"n
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached,team={ns}.temp.civil] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" You are "}},{{"text":"civil","color":"green"}},{{"text":"! You must find all the kings and make them spit out their entrails to win the game!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached,team={ns}.temp.king] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" You're a "}},{{"text":"king","color":"yellow"}},{{"text":"! Your goal is to exterminate all civilians in order to control the server! To achieve this, you are permanently uncivil!"}}]
 """)
+

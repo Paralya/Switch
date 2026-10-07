@@ -8,7 +8,8 @@ from stewbeet.core import Mem, write_function
 RADIUS: int = 3
 N_POINTS: int = 100
 ROUND_PRECISION: int = 5
-FUNCTION_PATH: str = "modes/memory_mine/zone/particles"	# relative to the project namespace
+FUNCTION_PATH: str = "modes/memory_mine/zone/particles"
+""" Relative to the project namespace. """
 
 # Generate the rotating green particle ring shown around the memory_mine zone marker
 def write_zone_particles() -> None:

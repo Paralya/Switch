@@ -567,3 +567,4 @@ execute rotated ~ 0 run summon armor_stand ^ ^1.5 ^1.5 {{Tags:["{ns}.thrown"],Ma
 execute as @e[tag={ns}.thrown,sort=nearest,limit=2] run data modify entity @s Rotation set from storage {ns}:main Rotation
 execute as @e[type=item_display,tag={ns}.thrown,sort=nearest,limit=1] run data modify entity @s item.components."minecraft:custom_data".destination set from storage {ns}:temp destination
 """)
+

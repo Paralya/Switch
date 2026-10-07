@@ -23,3 +23,4 @@ def write_resources() -> None:
 		"criteria": {"requirement": {"trigger": "minecraft:entity_hurt_player"}},
 		"rewards": {"function": f"{ns}:modes/gay_shooter/shot_taken"},
 	}))
+

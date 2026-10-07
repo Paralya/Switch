@@ -22,3 +22,4 @@ def write_resources() -> None:
 		}},
 		"rewards": {"function": f"{ns}:modes/murder_mystery/throw/advancement"},
 	}))
+

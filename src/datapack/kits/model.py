@@ -1,38 +1,20 @@
+""" Declarative description of the items of a kit.
 
-""" Declarative description of a kit and its rendering to mcfunction lines.
-
-Item strings are final command fragments: the declaring module bakes the project namespace in
-(f-strings, with {{ / }} escaping around NBT braces where needed). Since the namespace is only
-known at build time, kits that reference it cannot be module-level constants; declare them inside
-a function that reads Mem.ctx.project_id.
-
-Every kit command in the datapack is rendered here, so a change to how items are placed (such as
-honouring the player's layout) is a change to this one file rather than to 15 mode files.
-
-While LAYOUT_ENABLED is False, Kit.write emits the canonical slot literally, which reproduces the
-hand-written commands byte for byte. Turning it on swaps the slot for a macro argument that the
-{ns}:player/layout/resolve function fills in per player; with every layout score left at 0 the
-resolver hands back the canonical slot, so the emitted command is unchanged.
+Item strings are final command fragments: the declaring module bakes the project namespace in (f-strings, with {{ / }} escaping around NBT braces where needed).
+Since the namespace is only known at build time, kits that reference it cannot be module-level constants; declare them inside a function that reads Mem.ctx.project_id.
 """
-
 # Imports
 from dataclasses import dataclass, field
 
-from stewbeet import Mem, write_function
-
-from .roles import ROLES, SLOT_ID, TARGETS
-
-# Flipped on now that {ns}:player/layout/resolve exists; see module docstring.
-LAYOUT_ENABLED: bool = True
+from .roles import ROLES, SLOT_ID
 
 
+# Classes
 @dataclass(frozen=True)
 class ScoreCount:
 	""" An item count driven by a per-player score (a shop upgrade).
 
-	Expands to one `execute if score @s <objective> matches <k> run ...` line per level, which is
-	exactly how spectres_game's arrows, pitchout's ender pearls and spleef's snowballs are spelled
-	out by hand today.
+	Expands to one `execute if score @s <objective> matches <k> run ...` line per level, as for spectres_game's arrows, pitchout's ender pearls and spleef's snowballs.
 	"""
 	objective: str
 	""" Objective holding the upgrade level, e.g. f"{ns}.spectres_game.sp_arrows". """
@@ -172,145 +154,52 @@ class KitItem:
 		if self.variants and self.variants.roll is not None:
 			lines.append(f"execute store result score {self.variants.score} run random value 0..{self.variants.roll - 1}")
 
-		# Which item string, under which condition and selector
-		choices: list[tuple[str, str, list[str]]] = []	# (condition, item string, selector parts)
 		base_selector: list[str] = [self.selector] if self.selector else []
-		if self.variants:
-			for condition, string in self.variants.branches():
-				choices.append((condition, string, base_selector))
-		elif self.team_items:
-			for team, string in self.team_items.items():
-				choices.append(("", string, [*base_selector, f"team={team}"]))
-		else:
-			choices.append(("", self.item, base_selector))
-
-		# Which count, under which condition
 		counts: list[tuple[str, int]] = list(self.count.branches()) if isinstance(self.count, ScoreCount) else [("", self.count)]
-
-		for choice_condition, item_string, selector_parts in choices:
+		for choice_condition, item_string, selector_parts in self._choices(base_selector):
 			for count_condition, count in counts:
-				clauses: list[str] = [c for c in (self.cond, choice_condition, count_condition) if c]
-				prefix: str = f"execute {' '.join(clauses)} run " if clauses else ""
+				prefix: str = self._execute_prefix(self.cond, choice_condition, count_condition)
 				lines.append(macro + prefix + self._place(slot, self._selector(selector_parts), item_string, count))
 
 		# An item modifier applies to whatever landed in the slot, under the same condition as the item
 		if self.modify:
-			prefix = f"execute {self.cond} run " if self.cond else ""
-			lines.append(macro + prefix + f"item modify entity {self._selector(base_selector)} {slot} {self.modify}")
+			lines.append(macro + self._execute_prefix(self.cond) + f"item modify entity {self._selector(base_selector)} {slot} {self.modify}")
 
 		return lines
 
+	def _choices(self, base_selector: list[str]) -> list[tuple[str, str, list[str]]]:
+		""" The (execute condition, item string, selector parts) of each item this slot may receive. """
+		if self.variants:
+			return [(condition, string, base_selector) for condition, string in self.variants.branches()]
+		if self.team_items:
+			return [("", string, [*base_selector, f"team={team}"]) for team, string in self.team_items.items()]
+		return [("", self.item, base_selector)]
 
-@dataclass(frozen=True)
-class Kit:
-	""" A full loadout: raw command lines around an ordered list of items. """
-	name: str
-	""" Kit name, e.g. "archer"; used only for build-time error messages. """
-	items: tuple[KitItem, ...] = ()
-	""" The items, in declaration order (which is also the resolver's processing order). """
-	pre: str = ""
-	""" Raw lines emitted before the items (clear @s, effect clear, ...). """
-	post: str = ""
-	""" Raw lines emitted after the items (attribute, effect give, loot give, ...). """
-	reserved: tuple[str, ...] = ()
-	""" Remappable-range slots that raw pre/post lines write to (e.g. beat_the_kings' king gaps):
-	never handed out by the resolver. """
-	layout: bool = True
-	""" Whether the player's layout may remap this kit's items; False pins everything to its
-	canonical slot (fast-paced modes where sword-first/bow-second must hold for everyone). """
+	@staticmethod
+	def _execute_prefix(*clauses: str) -> str:
+		""" The `execute ... run ` prefix holding the non-empty clauses, or nothing when all are empty. """
+		kept: list[str] = [clause for clause in clauses if clause]
+		return f"execute {' '.join(kept)} run " if kept else ""
 
-	@property
-	def movable(self) -> tuple[KitItem, ...]:
-		""" The items the resolver may remap: overrides ride along in another item's slot, so they
-		don't count against the slot budget. """
-		return tuple(item for item in self.items if not item.pinned and not item.override)
-
-	def validate(self) -> None:
-		""" Catch kit mistakes at build time rather than in-game. """
-		movable: tuple[KitItem, ...] = self.movable
-		if len(movable) > len(TARGETS):
-			raise ValueError(f"Kit '{self.name}': {len(movable)} remappable items, but only {len(TARGETS)} slots to put them in")
-
-		slots: list[str] = [item.slot for item in movable]
-		if len(set(slots)) != len(slots):
-			duplicates: set[str] = {slot for slot in slots if slots.count(slot) > 1}
-			raise ValueError(f"Kit '{self.name}': several items declare the same canonical slot {sorted(duplicates)}")
-
-		for item in self.items:
-			if item.role is not None and item.role not in ROLES:
-				raise ValueError(f"Kit '{self.name}': unknown role '{item.role}'")
-			counts: tuple[int, ...] = item.count.per_level() if isinstance(item.count, ScoreCount) else (item.count,)
-			if any(count > 64 for count in counts):
-				raise ValueError(
-					f"Kit '{self.name}': count {max(counts)} exceeds a stack; `item replace` caps its count at 99 and"
-					" one over 64 fails the whole macro instantiation (no kit item given at all) —"
-					" split the surplus into a second, pinned inventory.* item"
-				)
-			if not item.pinned and not item.override and item.slot not in SLOT_ID:
-				raise ValueError(f"Kit '{self.name}': role '{item.role}' sits on '{item.slot}', which players cannot remap")
-			if item.override and item.pinned:
-				raise ValueError(f"Kit '{self.name}': an override needs a role, so it knows which item it replaces")
-			if "$(" in item.item:
-				raise ValueError(f"Kit '{self.name}': item string contains a macro reference, which would be substituted away")
-
-	def _table(self, ns: str) -> str:
-		""" The one-command item table the resolver reads: reserved slots + one entry per movable item.
-
-		`claim` defaults to "the first item of its role in declaration order"; `canon` is the declared
-		slot, 1-indexed into TARGETS (the resolver's 0 means "unset").
-		"""
-		claimed_roles: set[str] = set()
-		entries: list[str] = []
-		for index, item in enumerate(self.movable):
-			claim: bool = item.claim if item.claim is not None else (item.role not in claimed_roles)
-			if claim:
-				claimed_roles.add(item.role or "")
-			entries.append(f'{{i:{index},role:"{item.role}",claim:{int(claim)},canon:{SLOT_ID[item.slot]},sibling:{int(item.sibling)}}}')
-		reserved: str = ",".join(f"{{s:{SLOT_ID[slot]}}}" for slot in self.reserved)
-		return f"data modify storage {ns}:layout kit set value {{reserved:[{reserved}],items:[{','.join(entries)}]}}"
-
-	def write(self, path: str) -> None:
-		""" Write this kit's give function at `path`.
-
-		When the layout system is on, the movable items go to a `<path>/items` macro body whose slots
-		come from the player's resolved layout; pinned items and the raw pre/post lines stay in `path`.
+	def validate(self, kit: str) -> None:
+		""" Catch this item's mistakes at build time rather than in-game.
 
 		Args:
-			path (str):  Full function path, e.g. f"{ns}:modes/castagne/give_items".
+			kit: Name of the kit holding this item, for the error messages.
 		"""
-		self.validate()
-		ns: str = Mem.ctx.project_id
-		use_layout: bool = LAYOUT_ENABLED and self.layout
-		body: list[str] = []
-		items_body: list[str] = []
+		if self.role is not None and self.role not in ROLES:
+			raise ValueError(f"Kit '{kit}': unknown role '{self.role}'")
+		counts: tuple[int, ...] = self.count.per_level() if isinstance(self.count, ScoreCount) else (self.count,)
+		if any(count > 64 for count in counts):
+			raise ValueError(
+				f"Kit '{kit}': count {max(counts)} exceeds a stack; `item replace` caps its count at 99 and"
+				" one over 64 fails the whole macro instantiation (no kit item given at all),"
+				" so split the surplus into a second, pinned inventory.* item"
+			)
+		if not self.pinned and not self.override and self.slot not in SLOT_ID:
+			raise ValueError(f"Kit '{kit}': role '{self.role}' sits on '{self.slot}', which players cannot remap")
+		if self.override and self.pinned:
+			raise ValueError(f"Kit '{kit}': an override needs a role, so it knows which item it replaces")
+		if "$(" in self.item:
+			raise ValueError(f"Kit '{kit}': item string contains a macro reference, which would be substituted away")
 
-		if self.pre:
-			body.append(self.pre.strip("\n"))
-
-		index: int = 0
-		role_slot: dict[str, str] = {}
-		for item in self.items:
-			if item.pinned:
-				body.extend(item.emit(item.slot))
-				continue
-			if item.override:
-				# Lands wherever the item of the same role landed, so it never claims a slot of its own
-				if item.role not in role_slot:
-					raise ValueError(f"Kit '{self.name}': '{item.role}' override has nothing to override")
-				slot: str = role_slot[item.role]
-			else:
-				slot = f"$(s{index})" if use_layout else item.slot
-				role_slot.setdefault(item.role or "", slot)
-				index += 1
-			(items_body if use_layout else body).extend(item.emit(slot))
-
-		if use_layout and index > 0:
-			body.append(self._table(ns))
-			body.append(f"function {ns}:player/layout/resolve")
-			body.append(f"function {path}/items with storage {ns}:layout out")
-			write_function(f"{path}/items", "\n".join(items_body) + "\n")
-
-		if self.post:
-			body.append(self.post.strip("\n"))
-
-		write_function(path, "\n".join(body) + "\n")

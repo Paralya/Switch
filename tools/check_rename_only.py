@@ -1,8 +1,7 @@
 """ Prove that a build/ diff is exactly a set of path renames, and nothing else.
 
-Renaming a generated function also rewrites every function calling it, so a plain content diff
-cannot tell a rename apart from a behaviour change. This applies the announced renames to the
-committed output, then requires the result to match the freshly built one file for file.
+Renaming a generated function also rewrites every function calling it, so a plain content diff cannot tell a rename apart from a behaviour change.
+This applies the announced renames to the committed output, then requires the result to match the freshly built one file for file.
 
 	python tools/check_rename_only.py switch:utils/lag=switch:devtools/lag
 
@@ -40,7 +39,7 @@ class RenameOnly:
 		""" Line endings of a text file, so a checkout convention never reads as a change.
 
 		Args:
-			content (bytes): Raw file content
+			content: Raw file content
 		Returns:
 			bytes: The content with LF line endings
 		"""
@@ -91,13 +90,12 @@ class RenameOnly:
 		""" Read the announced renames from the command line.
 
 		Args:
-			arguments (list[str]): Pairs shaped "old=new", ex: "switch:utils/lag=switch:devtools/lag"
+			arguments: Pairs shaped "old=new", ex: "switch:utils/lag=switch:devtools/lag"
 		Returns:
 			dict[str, str]: Old prefix -> new prefix
 
-		Examples:
-			>>> RenameOnly.parse(["switch:a=switch:b"])
-			{'switch:a': 'switch:b'}
+		>>> RenameOnly.parse(["switch:a=switch:b"])
+		{'switch:a': 'switch:b'}
 		"""
 		renames: dict[str, str] = {}
 		for argument in arguments:
@@ -110,13 +108,12 @@ class RenameOnly:
 		""" Datapack file path of a namespaced function path.
 
 		Args:
-			namespaced (str): The function path, ex: "switch:utils/lag"
+			namespaced: The function path, ex: "switch:utils/lag"
 		Returns:
 			str: The file path, ex: "build/datapack/data/switch/function/utils/lag"
 
-		Examples:
-			>>> RenameOnly.as_file_path("switch:utils/lag")
-			'build/datapack/data/switch/function/utils/lag'
+		>>> RenameOnly.as_file_path("switch:utils/lag")
+		'build/datapack/data/switch/function/utils/lag'
 		"""
 		namespace, _, rest = namespaced.partition(":")
 		return f"{DATAPACK}/data/{namespace}/function/{rest}"
@@ -126,8 +123,8 @@ class RenameOnly:
 		""" Apply the renames to both the paths and the contents of the committed output.
 
 		Args:
-			files   (dict[str, bytes]): The committed output
-			renames (dict[str, str]):   Old prefix -> new prefix
+			files:   The committed output
+			renames: Old prefix -> new prefix
 		Returns:
 			dict[str, bytes]: What the output should look like after the renames
 		"""
@@ -147,8 +144,8 @@ class RenameOnly:
 		""" Print a capped list of offending paths.
 
 		Args:
-			label (str):       What the paths have in common
-			paths (list[str]): The offending paths
+			label: What the paths have in common
+			paths: The offending paths
 		"""
 		stp.error(f"{len(paths)} {label}:")
 		for path in sorted(paths)[:MAX_LISTED_FILES]:

@@ -24,12 +24,12 @@ def setup_infected_items() -> None:
 
 	# Setup swords and chestplates
 	SWORDS: list[str] = [
-		"minecraft:wooden",	"minecraft:stone",		"minecraft:golden",
-		"minecraft:iron",	"minecraft:diamond",	f"{ns}:emerald",
-		f"{ns}:obsidian",	f"{ns}:topaz",			f"{ns}:ruby",
-		f"{ns}:sapphire",	f"{ns}:adamantium"
+		"minecraft:wooden", "minecraft:stone",      "minecraft:golden",
+		"minecraft:iron",   "minecraft:diamond",    f"{ns}:emerald",
+		f"{ns}:obsidian",   f"{ns}:topaz",          f"{ns}:ruby",
+		f"{ns}:sapphire",   f"{ns}:adamantium"
 	]
-	CHESTPLATES: list[str] = ["minecraft:leather", "minecraft:chainmail"] + SWORDS[2:]	# Same as swords but leather and chainmail instead of wooden and stone
+	CHESTPLATES: list[str] = ["minecraft:leather", "minecraft:chainmail"] + SWORDS[2:]  # Same as swords but leather and chainmail instead of wooden and stone
 
 	# Swords
 	for i, sword in enumerate(SWORDS):

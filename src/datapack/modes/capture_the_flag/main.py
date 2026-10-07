@@ -466,3 +466,4 @@ data modify entity @s data.name set from block 0 6 0 Items[0].components."minecr
 tag @s add {ns}.temp.player
 tag @s remove {ns}.new
 """)
+

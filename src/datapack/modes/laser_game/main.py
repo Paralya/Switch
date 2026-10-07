@@ -352,3 +352,4 @@ execute if score #is_alive {ns}.data matches 0 run scoreboard players operation 
 # Apply
 function {ns}:modes/_common/xp_bar/points_at_s
 """)
+

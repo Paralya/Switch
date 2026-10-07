@@ -16,3 +16,4 @@ def write_resources() -> None:
 		}},
 		"rewards": {"function": f"{ns}:modes/pitchout/advancements/hurt_player"},
 	}))
+

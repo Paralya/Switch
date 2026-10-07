@@ -194,3 +194,4 @@ execute if score #votes {ns}.data >= #votes_max {ns}.data run tellraw @a[scores=
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" voted to enable player collisions ["}},{{"score":{{"name":"#votes","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"/"}},{{"score":{{"name":"#votes_max","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"]"}}]
 execute if score #votes {ns}.data >= #votes_max {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaWarning","storage":"{ns}:main","interpret":true}},{{"text":" Player collisions enabled!\n"}}]
 """)
+

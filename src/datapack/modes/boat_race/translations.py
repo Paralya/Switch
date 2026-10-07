@@ -41,3 +41,4 @@ execute if score #process_end {ns}.data matches 1 unless entity @a[scores={{{ns}
 execute if score #process_end {ns}.data matches 1 if entity @a[scores={{{ns}.alive=-1}}] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The following players have won the game: "}},{{"selector":"@a[scores={{{ns}.alive=-1}},sort=random]"}}]
 execute if score #process_end {ns}.data matches 1 unless entity @a[scores={{{ns}.alive=-1}}] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! There were no winners ;("}}]
 """)
+

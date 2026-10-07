@@ -29,8 +29,7 @@ def generate_all_modes():
 		if hasattr(module, "write_mode"):
 			module.write_mode()
 
-		# A mode may own datapack resources (advancements, predicates, loot tables, tags, ...)
-		# declared in a sibling resources.py exposing write_resources().
+		# A mode may own datapack resources (advancements, predicates, loot tables, tags, ...) declared in a sibling resources.py exposing write_resources().
 		if (entry / "resources.py").is_file():
 			resources = importlib.import_module(f".{entry.name}.resources", package=__package__)
 			if hasattr(resources, "write_resources"):
@@ -40,3 +39,4 @@ def generate_all_modes():
 		if (entry / "shop.py").is_file():
 			shop = importlib.import_module(f".{entry.name}.shop", package=__package__)
 			MODE_SHOPS[entry.name] = shop.SHOP
+

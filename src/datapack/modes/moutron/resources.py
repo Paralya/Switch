@@ -16,3 +16,4 @@ def write_resources() -> None:
 	Mem.ctx.data[ns].block_tags["moutron/glass"] = set_json_encoder(BlockTag({
 		"values": [f"{c}_stained_glass" for c in COLORS],
 	}))
+

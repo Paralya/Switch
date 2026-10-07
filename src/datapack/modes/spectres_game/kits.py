@@ -1,4 +1,3 @@
-
 """ The two spectres_game loadouts.
 
 Spectres and visibles get different gear, so they are two kits rather than one: a single kit would
@@ -8,9 +7,7 @@ hand the spectre's sword and the visible's sword different slots for the same "m
 Both kits keep their team selector on every line, so they can be called unconditionally and still
 only reach the team they belong to.
 
-The kits embed the project namespace (team selectors, shop objectives, loot tables), so they are
-built lazily by spectre_kit() / visible_kit() instead of living at module level: the stewbeet CLI
-imports this module before Mem.ctx exists.
+The kits embed the project namespace (team selectors, shop objectives, loot tables), so they are built lazily by spectre_kit() / visible_kit() instead of living at module level: the stewbeet CLI imports this module before Mem.ctx exists.
 """
 
 # Imports
@@ -68,3 +65,4 @@ def visible_kit() -> Kit:
 		KitItem(role="tool", slot="hotbar.4", selector=visible, cond=f"if score #TASKS_GAME {ns}.data matches 1",
 			loot=f"{ns}:i/emerald_pickaxe", modify='{"type":"minecraft:set_components","components":{"minecraft:max_damage":10}}'),
 	))
+

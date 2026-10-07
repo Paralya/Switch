@@ -262,3 +262,4 @@ execute if score #remaining_time {ns}.data matches 1.. if score #red_points {ns}
 execute if score #remaining_time {ns}.data matches 1.. if score #blue_points {ns}.data matches 5.. run scoreboard players set #remaining_time {ns}.data 0
 execute if score #remaining_time {ns}.data matches ..0 run function {path}/process_end
 """)
+

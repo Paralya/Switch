@@ -24,27 +24,27 @@ from .resource_pack.main import load_resource_pack_json
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 
 	# Custom materials from ImagineYourCraft
-	"adamantium_fragment":	EquipmentsConfig(DefaultOre.NETHERITE,	1873,	{"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 2}),
-	"sapphire":				EquipmentsConfig(DefaultOre.DIAMOND,	1752,	{"mining_efficiency": 2}),
-	"ruby":					EquipmentsConfig(DefaultOre.DIAMOND,	1647,	{"attack_damage": 0.5, "armor": 0.5, "mining_efficiency": 1}),
-	"topaz":				EquipmentsConfig(DefaultOre.DIAMOND,	1281,	{"attack_damage": 1.0, "armor": 1.0}),
-	"obsidian_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	3902,	{"attack_damage": -0.2, "mining_efficiency": -2}),
-	"steel_ingot":			EquipmentsConfig(DefaultOre.IRON,		444,	{"mining_efficiency": 1}),
-	"minecraft:emerald":	EquipmentsConfig(DefaultOre.DIAMOND,	736,	{"luck": 0.25, "attack_damage": -0.5, "armor": -0.5, "mining_efficiency": -1}),
+	"adamantium_fragment":  EquipmentsConfig(DefaultOre.NETHERITE,  1873,   {"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 2}),
+	"sapphire":             EquipmentsConfig(DefaultOre.DIAMOND,    1752,   {"mining_efficiency": 2}),
+	"ruby":                 EquipmentsConfig(DefaultOre.DIAMOND,    1647,   {"attack_damage": 0.5, "armor": 0.5, "mining_efficiency": 1}),
+	"topaz":                EquipmentsConfig(DefaultOre.DIAMOND,    1281,   {"attack_damage": 1.0, "armor": 1.0}),
+	"obsidian_ingot":       EquipmentsConfig(DefaultOre.DIAMOND,    3902,   {"attack_damage": -0.2, "mining_efficiency": -2}),
+	"steel_ingot":          EquipmentsConfig(DefaultOre.IRON,       444,    {"mining_efficiency": 1}),
+	"minecraft:emerald":    EquipmentsConfig(DefaultOre.DIAMOND,    736,    {"luck": 0.25, "attack_damage": -0.5, "armor": -0.5, "mining_efficiency": -1}),
 
 	# Custom materials from Stardust Fragment
-	"ancient_stardust!":	EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
-	"stardust_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
-	"awakened_stardust!":	EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
-	"legendarium_ingot":	EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
-	"solarium_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
-	"darkium_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
-	"ultimate_ingot":		EquipmentsConfig(DefaultOre.DIAMOND,	1812,	{}),
+	"ancient_stardust!":    EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
+	"stardust_ingot":       EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
+	"awakened_stardust!":   EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
+	"legendarium_ingot":    EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
+	"solarium_ingot":       EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
+	"darkium_ingot":        EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
+	"ultimate_ingot":       EquipmentsConfig(DefaultOre.DIAMOND,    1812,   {}),
 
 	# Custom materials from CrazyAdventure
-	"anti_radiation_stuff":	EquipmentsConfig(DefaultOre.IRON,		250),
-	"californium_ingot":	EquipmentsConfig(DefaultOre.DIAMOND,	1953,	{"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 0.2}),
-	"uranium_ingot":		EquipmentsConfig(DefaultOre.NETHERITE,	1812,	{"luck": -0.25}),
+	"anti_radiation_stuff": EquipmentsConfig(DefaultOre.IRON,       250),
+	"californium_ingot":    EquipmentsConfig(DefaultOre.DIAMOND,    1953,   {"attack_damage": 0.2, "armor": 0.2, "mining_efficiency": 0.2}),
+	"uranium_ingot":        EquipmentsConfig(DefaultOre.NETHERITE,  1812,   {"luck": -0.25}),
 }
 
 # Main function should return a database
@@ -52,7 +52,7 @@ def beet_default(ctx: Context):
 
 	# Load the hand-authored datapack + resource pack JSON (must run before the relevant plugins)
 	load_datapack_json(ctx)
-	load_resource_pack_json(ctx)
+	load_resource_pack_json()
 
 	# Generate ores in database & custom disc records
 	generate_everything_about_these_materials(ORES_CONFIGS)
@@ -66,6 +66,6 @@ def beet_default(ctx: Context):
 	# Final adjustments, you definitively should keep them!
 	add_item_model_component(black_list = [])
 	add_item_name_and_lore_if_missing(black_list = ["element_115"])
-	add_private_custom_data_for_namespace()		# Add a custom namespace for easy item detection
-	add_smithed_ignore_vanilla_behaviours_convention()	# Smithed items convention
+	add_private_custom_data_for_namespace()     # Add a custom namespace for easy item detection
+	add_smithed_ignore_vanilla_behaviours_convention()  # Smithed items convention
 

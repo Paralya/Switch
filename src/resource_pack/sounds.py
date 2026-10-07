@@ -20,3 +20,4 @@ def write_sounds() -> None:
 			"subtitle": "subtitles.entity.generic.explode",
 		},
 	}))
+

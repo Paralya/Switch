@@ -79,7 +79,7 @@ class ModeSpec:
 		""" The mode name in the given language, falling back to French.
 
 		Args:
-			lang (str): Language key, ex: "fr" or "en"
+			lang: Language key, ex: "fr" or "en"
 		Returns:
 			str: The localized name
 		"""
@@ -109,7 +109,7 @@ class GroupSpec:
 		""" The group name in the given language, falling back to French.
 
 		Args:
-			lang (str): Language key, ex: "fr" or "en"
+			lang: Language key, ex: "fr" or "en"
 		Returns:
 			str: The localized name
 		"""

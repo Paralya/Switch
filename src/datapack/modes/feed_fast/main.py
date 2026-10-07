@@ -161,3 +161,4 @@ execute unless score #test_mode {ns}.data matches 1 if score @s {ns}.temp.points
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 45)
+

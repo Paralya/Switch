@@ -49,3 +49,4 @@ def write_resources() -> None:
 			},
 		],
 	}))
+

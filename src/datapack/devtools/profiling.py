@@ -46,8 +46,7 @@ def write_profiling() -> None:
 # function {ns}:utils/get_random/main
 """)
 
-	# /start
-	# Profiling stress test: call the (comment-only) content function 1000 times in a row to measure
-	# per-call overhead (kept as literal repeated calls on purpose; timing must not include loop overhead).
+	# /start: call the comment-only content function 1000 times in a row to measure the per-call overhead
+	# Literal repeated calls on purpose, so the timing does not include any loop overhead
 	write_function(f"{path}/start", "\n" + f"function {path}/content\n" * 1000)
 

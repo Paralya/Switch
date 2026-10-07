@@ -295,3 +295,4 @@ execute in minecraft:overworld positioned 0 69 0 run function {ns}:lobby/tick
 ## Profiling
 #execute as Stoupy51 run function {ns}:devtools/profiling/start
 """)
+

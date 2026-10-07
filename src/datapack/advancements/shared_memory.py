@@ -7,10 +7,10 @@ LOAD_FILE: str = "advancements/_load"
 UPDATE_PERCENTAGES_FILE: str = "advancements/update_percentages"
 CHALLENGES: list[str] = ["50", "51", "52", "53", "54", "jump_obsidian"]
 CATEGORIES_COLOR: dict[str, str] = {
-	"jump":		"blue",
-	"easy":		"green",
-	"medium":	"yellow",
-	"hard":		"red"
+	"jump":     "blue",
+	"easy":     "green",
+	"medium":   "yellow",
+	"hard":     "red"
 }
 
 # Format: [parent, id, author, category, title, desc_fr, desc_en]

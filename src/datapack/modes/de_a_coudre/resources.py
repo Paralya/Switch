@@ -10,3 +10,4 @@ def write_resources() -> None:
 	Mem.ctx.data[ns].block_tags["de_a_coudre"] = set_json_encoder(BlockTag({
 		"values": ["#wool", "emerald_block", "water"],
 	}))
+

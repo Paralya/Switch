@@ -152,3 +152,4 @@ execute if score #detect_end {ns}.data matches 1.. run function {ns}:modes/_coup
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 1200, "#coupdetat_ticks", "#remaining_seconds")
+

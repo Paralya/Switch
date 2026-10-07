@@ -8,10 +8,10 @@ survival_maps: list[str] = []
 
 # Constants
 class SharedMemory:
-	PRINT_PROGRESS: bool = False		# If True, details about the files generation will be printed
-	NB_SPREAD_PLAYERS: int = 24			# Number of times to try to spread the players
-	BLOCKS_PER_DIVISION: int = 3200		# Number of blocks per division (for the /clone in calculate_divider())
-	DOOR_BLOCKS_PER_SECOND: int = 5000	# Number of door blocks per second (for the /clone in calculate_divider())
+	PRINT_PROGRESS: bool = False        # If True, details about the files generation will be printed
+	NB_SPREAD_PLAYERS: int = 24         # Number of times to try to spread the players
+	BLOCKS_PER_DIVISION: int = 3200     # Number of blocks per division (for the /clone in calculate_divider())
+	DOOR_BLOCKS_PER_SECOND: int = 5000  # Number of door blocks per second (for the /clone in calculate_divider())
 	DOORS: ClassVar[dict[str, list[str]]] = {
 		"__types__": [
 			"oak_door", "spruce_door", "birch_door", "jungle_door", "acacia_door", "dark_oak_door",

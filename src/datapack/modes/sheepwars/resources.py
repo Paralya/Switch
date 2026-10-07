@@ -19,8 +19,8 @@ def write_resources() -> None:
 		"predicate": {"position": {"y": {"min": 100, "max": 110}}},
 	}))
 
-	# Integration hooks into the SheepWars dependency's signal function tags (beet's default 2-space
-	# encoder, matching the upstream files).
+	# Integration hooks into the SheepWars dependency's signal function tags (beet's default 2-space encoder, matching the upstream files).
 	hooks = Mem.ctx.data["sheepwars"].function_tags
 	hooks["signals/magic_wool_shot"] = FunctionTag({"values": [f"{ns}:modes/sheepwars/magic_wool/slot"]})
 	hooks["signals/player_killed"] = FunctionTag({"values": [f"{ns}:modes/sheepwars/advancements/call_player_killed"]})
+

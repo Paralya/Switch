@@ -4,8 +4,7 @@ from beet import FunctionTag
 from stewbeet import McFunction, Mem, write_function
 
 # smart_ore_generation hooks: disable ore generation in the switch (void) dimensions.
-# The denied_dimensions body keeps its upstream doc-comment verbatim; the headers plugin merges in
-# the auto-detected @within from the function tag below.
+# The denied_dimensions body keeps its upstream doc-comment verbatim, and the headers plugin merges in the @within of the function tag below.
 DENIED_DIMENSIONS: McFunction = """
 #> smart_ore_generation:denied_dimensions
 #

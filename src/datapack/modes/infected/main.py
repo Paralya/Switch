@@ -985,3 +985,4 @@ function {ns}:modes/infected/translations/secrets_old_japan_apocalypse_next_stat
 # Next state
 scoreboard players add #infected_secret {ns}.data 1
 """)
+

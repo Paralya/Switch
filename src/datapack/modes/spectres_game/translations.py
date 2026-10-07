@@ -141,3 +141,4 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"text":"---------------",
 # English
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"---------------","color":"#DEE2E5"}},{{"text":"\nTasks Game","bold":true,"color":"green"}},{{"text":" \u2022 ","bold":true,"color":"gray"}},{{"text":"Obsidians have appeared! Those visible will get bonuses by breaking them!\n","color":"white"}},{{"text":"---------------","color":"#DEE2E5"}}]
 """)
+

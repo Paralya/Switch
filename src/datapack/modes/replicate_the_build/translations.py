@@ -89,3 +89,4 @@ $tellraw @s[scores={{{ns}.lang=0}}] [{{"nbt":"Paralya","storage":"{ns}:main","in
 # English
 $tellraw @s[scores={{{ns}.lang=1}}] [{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Perfect! In $(temp) seconds","color":"green"}}]
 """)
+

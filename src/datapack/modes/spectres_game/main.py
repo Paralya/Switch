@@ -133,8 +133,7 @@ execute if score #game_state {ns}.data matches 2 unless score #test_mode {ns}.da
 execute if score #spectres_game_seconds {ns}.data matches 900.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 """)
 
-	# /give_items/spectre and /give_items/visible (declared in kits.py); both keep their team
-	# selector, so give_items can call them unconditionally.
+	# /give_items/spectre and /give_items/visible (declared in kits.py); both keep their team selector, so give_items can call them unconditionally.
 	spectre_kit().write(f"{path}/give_items/spectre")
 	visible_kit().write(f"{path}/give_items/visible")
 
@@ -558,3 +557,4 @@ execute if score #spectres_game_seconds {ns}.data matches 901.. run function {ns
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 900)
+

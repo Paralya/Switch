@@ -289,9 +289,8 @@ execute if data storage {ns}:main {{map:"sheepwars_colored_sheeps"}} if entity @
 
 """)
 
-	# /team_and_give: the starter kit, deliberately layout-free (sword first, bow second for
-	# everyone); the chosen_kit upgrades replace the base weapons in the SAME slot (override) or
-	# add the Builder's bricks and tnt. All the armour and attribute lines stay raw: never remapped.
+	# /team_and_give: the starter kit, deliberately layout-free (sword first, bow second for everyone); the chosen_kit upgrades replace the base weapons in the SAME slot (override) or add the Builder's bricks and tnt.
+	# All the armour and attribute lines stay raw: never remapped.
 	Kit("sheepwars", layout=False, pre=f"""
 # Starter kit
 clear @s
@@ -438,3 +437,4 @@ execute if score #red_explosive_arrows {ns}.data matches 1.. on origin if entity
 execute if score #success {ns}.data matches 1 if entity @s[nbt={{inBlockState:{{}}}}] at @s run function realistic_explosion:explode
 execute if score #success {ns}.data matches 1 if entity @s[nbt={{inBlockState:{{}}}}] run kill @s
 """)
+

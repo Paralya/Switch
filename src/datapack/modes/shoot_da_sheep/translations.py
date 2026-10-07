@@ -35,3 +35,4 @@ execute if score #color {ns}.data matches 15 run tellraw @s[scores={{{ns}.lang=1
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de Shoot Da'Sheep dans 5 secondes, votre objectif est de marquer le plus de point en tirant sur les moutons en rapportant le plus !", "Shoot Da'Sheep game starts in 5 seconds, your goal is to score the most points by shooting the sheep with the most points!")
+

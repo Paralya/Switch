@@ -49,3 +49,4 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"text":"Démarrage d'un nouv
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Launching game of Dé à Coudre, score as many points as possible by jumping into water dots surrounded by blocks!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"text":"Starting a new round! [","color":"yellow"}},{{"text":"1","color":"gold"}},{{"text":"/"}},{{"score":{{"name":"#max_rounds","objective":"{ns}.data"}},"color":"gold"}},{{"text":"]"}}]
 """)
+

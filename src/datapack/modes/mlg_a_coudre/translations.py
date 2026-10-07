@@ -56,3 +56,4 @@ execute if score #process_end {ns}.data matches 1 unless score #position {ns}.da
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de la partie de MLG à Coudre, sautez et posez votre seau d'eau pour amortir votre chute !", "Starting the MLG à Coudre game, jump and put down your bucket of water to cancel your fall damages!")
+

@@ -1,7 +1,7 @@
 """ The minigames and vote groups of the server, as one declarative table.
 
-A mode generates even when its entry is commented out here: only its presence in the vote depends
-on it. Kept as a single table on purpose, so one Ctrl+F finds any game.
+A mode generates even when its entry sits in DISABLED_MODES: only its presence in MODES puts it in the vote.
+Kept as a single table on purpose, so one Ctrl+F finds any game.
 """
 # Imports
 from .spec import UNLIMITED, GroupSpec, Localized, ModeSpec
@@ -72,15 +72,6 @@ MODES: tuple[ModeSpec, ...] = (
 			en=("Traitors are hinding among players.", "Innocents versus Traitors, which side will win?"),
 		),
 	),
-	# ModeSpec(
-	# 	id="boat_race", name_fr="Boat Race",
-	# 	min_players=1, max_players=UNLIMITED,
-	# 	estimated_time="3-8 mins", inspiration="Expiration", suggested_by="Stoupy", developed_by="LTHCTheMaster",
-	# 	description=Localized(
-	# 		fr=("Battez-vous pour atteindre la ligne d'arrivée", "en premier pour remporter la partie !"),
-	# 		en=("Race for reaching the finish line", "in first to claim the win!"),
-	# 	),
-	# ),
 	ModeSpec(
 		id="spectres_game", name_fr="Spectres Game",
 		min_players=2, max_players=UNLIMITED,
@@ -442,16 +433,29 @@ MODES: tuple[ModeSpec, ...] = (
 			en=("Knock out every players from the platform", "by using explosive fireballs!"),
 		),
 	),
-	# ModeSpec(
-	# 	id="pvpswap", name_fr="PvPSwap",
-	# 	min_players=2, max_players=32,
-	# 	estimated_time="1-2 mins", inspiration="Épicube", suggested_by="Arobaze", developed_by="Arobaze",
-	# 	description=Localized(
-	# 		fr=("Éliminez les autres joueurs au travers", "des changements inopinés de positions !"),
-	# 		en=("Eliminate other players through", "sudden changes in positions!"),
-	# 	),
-	# ),
 )
+
+DISABLED_MODES: tuple[ModeSpec, ...] = (
+	ModeSpec(
+		id="boat_race", name_fr="Boat Race",
+		min_players=1, max_players=UNLIMITED,
+		estimated_time="3-8 mins", inspiration="Expiration", suggested_by="Stoupy", developed_by="LTHCTheMaster",
+		description=Localized(
+			fr=("Battez-vous pour atteindre la ligne d'arrivée", "en premier pour remporter la partie !"),
+			en=("Race for reaching the finish line", "in first to claim the win!"),
+		),
+	),
+	ModeSpec(
+		id="pvpswap", name_fr="PvPSwap",
+		min_players=2, max_players=32,
+		estimated_time="1-2 mins", inspiration="Épicube", suggested_by="Arobaze", developed_by="Arobaze",
+		description=Localized(
+			fr=("Éliminez les autres joueurs au travers", "des changements inopinés de positions !"),
+			en=("Eliminate other players through", "sudden changes in positions!"),
+		),
+	),
+)
+""" Minigames kept out of the vote: move an entry into MODES to enable it. """
 
 # Vote groups: modes sharing a "group" show up as a single entry, and a second vote picks one
 GROUPS: tuple[GroupSpec, ...] = (

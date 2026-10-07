@@ -54,3 +54,4 @@ execute if score #process_end {ns}.data matches 1 unless score #remaining_player
 
 	# /start
 	write_server_announce(f"{path}/start", "Lancement de Fireblast dans 5 secondes, soyez le dernier en vie !", "Launch of Fireblast in 5 seconds, be the last man standing!")
+

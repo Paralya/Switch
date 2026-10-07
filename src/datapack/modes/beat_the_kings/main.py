@@ -152,8 +152,7 @@ execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run funct
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
-	# /give_items/civil and /give_items/king (two loadouts, so each resolves its own slots); both
-	# keep their team selector, so give_items can call them unconditionally.
+	# /give_items/civil and /give_items/king (two loadouts, so each resolves its own slots); both keep their team selector, so give_items can call them unconditionally.
 	civil: str = f"team={ns}.temp.civil"
 	king: str = f"team={ns}.temp.king"
 	Kit("civil", pre="# Starter kit", items=(
@@ -168,8 +167,7 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 		KitItem(role="heal", item="golden_apple", count=5, slot="hotbar.8", selector=civil),
 		KitItem(item="arrow", count=16, slot="inventory.0", selector=civil),
 	)).write(f"{path}/give_items/civil")
-	# reserved: give_king_gaps (in post) writes the golden apples at literal hotbar.7 — the resolver
-	# must never hand that slot out, or the gaps would overwrite a remapped item.
+	# reserved: give_king_gaps (in post) writes the golden apples at literal hotbar.7, so the resolver must never hand that slot out, or the gaps would overwrite a remapped item.
 	Kit("king", reserved=("hotbar.7",), items=(
 		KitItem(slot="armor.head", item="golden_helmet[enchantments={protection:3,unbreaking:10}]", selector=king),
 		KitItem(role="mobility", item="water_bucket", slot="hotbar.0", selector=king),
@@ -192,10 +190,8 @@ function {ns}:modes/beat_the_kings/give_items/king
 attribute @s attack_speed base set 1024
 """)
 
-	# /balance_king_gaps
-	# Le roi est trop fort quand il y a moins de civils que prévu par tête. On calcule le ratio
-	# civils/roi (optimal = 4, ce qui donne 8 gaps) et on descend le nombre de gaps du roi jusqu'à
-	# un minimum de 3, pour rééquilibrer les parties avec un nombre de joueurs non optimal.
+	# /balance_king_gaps: le roi est trop fort quand il y a moins de civils que prévu par tête,
+	# donc on descend ses gaps selon le ratio civils/roi (optimal = 4 pour 8 gaps) jusqu'à un minimum de 3
 	write_function(f"{path}/balance_king_gaps", f"""
 scoreboard players set #n_civils {ns}.data 0
 scoreboard players set #n_kings {ns}.data 1
@@ -282,3 +278,4 @@ execute if entity @p[tag={ns}.temp,team={ns}.temp.king] run scoreboard players s
 execute if entity @p[tag={ns}.temp,team={ns}.temp.civil] run scoreboard players set @s {ns}.alive 2
 tag @s add {ns}.temp.player
 """)
+

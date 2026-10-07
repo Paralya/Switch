@@ -25,9 +25,7 @@ gamemode adventure @s[gamemode=!adventure]
 function {path}/respawn/main
 """)
 
-	# /give_items
-	# The three `give`s used to land in hotbar.0/1/2 because /give_items clears the inventory first;
-	# now they say so, which is what lets the player's layout move them.
+	# /give_items: the inventory is cleared first, so the items name their hotbar.0/1/2 slots, which lets the player's layout move them
 	Kit("one_shot", pre="# Give items to the player\nclear @s", items=(
 		KitItem(role="ranged", slot="hotbar.0", item='bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display={"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]'),
 		KitItem(role="melee", slot="hotbar.1", item='netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]'),
@@ -263,3 +261,4 @@ tag @s add {ns}.respawn_check
 execute at @s if entity @e[tag=!{ns}.respawn_check,tag={ns}.respawn,distance=..5] run return run function {path}/respawn/kill_marker
 tag @s remove {ns}.respawn_check
 """)
+

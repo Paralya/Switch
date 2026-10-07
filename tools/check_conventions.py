@@ -1,7 +1,7 @@
 """ Enforce the architectural rules that ruff and pyright cannot express.
 
-Static only: reads the sources, never builds. The build based guards live in
-check_output_drift.py and report_merged_functions.py.
+Static only: reads the sources, never builds.
+The build based guards live in check_output_drift.py and report_merged_functions.py.
 """
 # Imports
 import ast
@@ -24,27 +24,8 @@ MAX_LINES: int = 300
 LONG_FILE_EXCEPTIONS: tuple[str, ...] = ("datapack/modes/*/main.py", "datapack/modes/catalogue.py")
 """ Files allowed to grow past MAX_LINES, as posix glob patterns relative to src/.
 
-Both are single tables read with Ctrl+F: a mode's main.py holds all of that game's logic, and the
-catalogue holds every mode declaration. Splitting either would only add folders to search through.
-"""
-
-LONG_FILE_DEBT: frozenset[str] = frozenset({
-	"datapack/engine/main.py",
-	"datapack/kits/model.py",
-	"datapack/maps/main.py",
-	"datapack/player/jump_timer.py",
-	"datapack/player/layout.py",
-	"datapack/player/main.py",
-	"datapack/player/practice.py",
-	"datapack/player/translations.py",
-	"datapack/shop/utils.py",
-	"datapack/stats/main.py",
-	"datapack/maps/generation/utils.py",
-})
-""" Files already past MAX_LINES, to be split into packages.
-
-This ledger may only shrink: a file leaving it must be removed from here, and no file may be
-added. It exists so the rule can be enforced today instead of after the whole split is done.
+Both are single tables read with Ctrl+F: a mode's main.py holds all of that game's logic, and the catalogue holds every mode declaration.
+Splitting either would only add folders to search through.
 """
 
 MODEL_FILES: tuple[str, ...] = ("datapack/modes/spec.py",)
@@ -80,7 +61,7 @@ class Conventions:
 		""" Path of a source file relative to src/, with forward slashes.
 
 		Args:
-			path (Path): The file
+			path: The file
 		Returns:
 			str: The relative path, ex: "datapack/modes/tnt_run/main.py"
 		"""
@@ -99,10 +80,8 @@ class Conventions:
 			if any(Path(relative).match(pattern) for pattern in LONG_FILE_EXCEPTIONS):
 				continue
 			length: int = len(path.read_text(encoding="utf-8").splitlines())
-			if length > MAX_LINES and relative not in LONG_FILE_DEBT:
+			if length > MAX_LINES:
 				problems.append(f"{relative} is {length} lines, split it into a package (limit {MAX_LINES})")
-			elif length <= MAX_LINES and relative in LONG_FILE_DEBT:
-				problems.append(f"{relative} is now {length} lines, remove it from LONG_FILE_DEBT")
 		return problems
 
 	@staticmethod

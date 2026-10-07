@@ -65,42 +65,26 @@ title @s[scores={{{ns}.temp.color=43}}] actionbar {{"translate":"block.minecraft
 title @s[scores={{{ns}.temp.color=44}}] actionbar {{"translate":"block.minecraft.black_terracotta","color":"#000000"}}
 """)
 
-	# /color/place (only refs remove_point_to_old_color, no braces)
-	colors = [
-		(0, "orange_wool"), (1, "magenta_wool"), (2, "light_blue_wool"), (3, "yellow_wool"),
-		(4, "lime_wool"), (5, "pink_wool"), (6, "gray_wool"), (7, "light_gray_wool"),
-		(8, "cyan_wool"), (9, "purple_wool"), (10, "blue_wool"), (11, "brown_wool"),
-		(12, "green_wool"), (13, "red_wool"), (14, "black_wool"),
-	]
-	place_lines = ["", "# Depending on the color, place the corresponding block"]
-	def emit_place(idx: int, block: str) -> None:
-		place_lines.append(f"execute if score #new_color {ns}.data matches {idx} unless block ~ ~ ~ {block} run scoreboard players add @p[tag={ns}.temp] {ns}.temp.points 1")
-		place_lines.append(f"execute if score #new_color {ns}.data matches {idx} unless block ~ ~ ~ {block} run function {path}/color/remove_point_to_old_color")
-		place_lines.append(f"execute if score #new_color {ns}.data matches {idx} unless block ~ ~ ~ {block} run setblock ~ ~ ~ {block}")
-	for idx, block in colors:
-		emit_place(idx, block)
-	place_lines.append("")
-	powders = ["orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
-	for i, name in enumerate(powders):
-		emit_place(15 + i, f"{name}_concrete_powder")
-	place_lines.append("")
-	for i, name in enumerate(powders):
-		emit_place(30 + i, f"{name}_terracotta")
+	# /color/place and /color/remove_point_to_old_color, where color id = group * 15 + index in colors
+	colors: list[str] = ["orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
+	place_lines: list[str] = ["", "# Depending on the color, place the corresponding block"]
+	remove_lines: list[str] = ["", "# Depending on the block, remove a point to the corresponding player"]
+	for group, suffix in enumerate(("wool", "concrete_powder", "terracotta")):
+		if group:
+			place_lines.append("")
+			remove_lines.append("")
+		for i, color in enumerate(colors):
+			color_id: int = group * len(colors) + i
+			block: str = f"{color}_{suffix}"
+			place: str = f"execute if score #new_color {ns}.data matches {color_id} unless block ~ ~ ~ {block} run"
+			place_lines += [
+				f"{place} scoreboard players add @p[tag={ns}.temp] {ns}.temp.points 1",
+				f"{place} function {path}/color/remove_point_to_old_color",
+				f"{place} setblock ~ ~ ~ {block}",
+			]
+			remove_lines.append(f"execute unless score #new_color {ns}.data matches {color_id} if block ~ ~ ~ {block} run scoreboard players remove @p[scores={{{ns}.temp.color={color_id}}}] {ns}.temp.points 1")
 	write_function(f"{path}/color/place", "\n".join(place_lines) + "\n")
-
-	# /color/remove_point_to_old_color (scores braces, no refs)
-	rm_lines = ["", "# Depending on the block, remove a point to the corresponding player"]
-	for idx, block in colors:
-		rm_lines.append(f"execute unless score #new_color {ns}.data matches {idx} if block ~ ~ ~ {block} run scoreboard players remove @p[scores={{{ns}.temp.color={idx}}}] {ns}.temp.points 1")
-	rm_lines.append("")
-	for i, name in enumerate(powders):
-		idx = 15 + i
-		rm_lines.append(f"execute unless score #new_color {ns}.data matches {idx} if block ~ ~ ~ {name}_concrete_powder run scoreboard players remove @p[scores={{{ns}.temp.color={idx}}}] {ns}.temp.points 1")
-	rm_lines.append("")
-	for i, name in enumerate(powders):
-		idx = 30 + i
-		rm_lines.append(f"execute unless score #new_color {ns}.data matches {idx} if block ~ ~ ~ {name}_terracotta run scoreboard players remove @p[scores={{{ns}.temp.color={idx}}}] {ns}.temp.points 1")
-	write_function(f"{path}/color/remove_point_to_old_color", "\n".join(rm_lines) + "\n")
+	write_function(f"{path}/color/remove_point_to_old_color", "\n".join(remove_lines) + "\n")
 
 	# /death
 	write_function(f"{path}/death", f"""
@@ -226,3 +210,4 @@ execute if score #remaining_time {ns}.data matches ..0 run function {path}/proce
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 900)
+
