@@ -3,8 +3,8 @@
 	"file": "remove_max.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_stats.py"
 	],
 	"names": [],
-	"mappings": "AAq5BoD;;;;;;;;;;AACpD;AACA"
+	"mappings": "AAoGoD;;;;;;;;;;AACpD;AACA"
 }

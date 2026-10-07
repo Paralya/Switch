@@ -3,8 +3,8 @@
 	"file": "map_selected.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/log_message.py"
 	],
 	"names": [],
-	"mappings": "AA4XoD;;;;;;;;;;AACpD;AACA"
+	"mappings": "AAiCoD;;;;;;;;;;AACpD;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "current_game_index.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/launch_game.py"
 	],
 	"names": [],
-	"mappings": "AA0T0D;;;;;;;;AAC1D;AACA"
+	"mappings": "AA8K0D;;;;;;;;AAC1D;AACA"
 }

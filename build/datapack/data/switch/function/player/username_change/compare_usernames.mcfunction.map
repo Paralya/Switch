@@ -3,8 +3,8 @@
 	"file": "compare_usernames.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/username_change.py"
 	],
 	"names": [],
-	"mappings": "AA6wC6D;;;;;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAyB6D;;;;;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

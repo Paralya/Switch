@@ -21,6 +21,7 @@
 #			switch:modes/murder_mystery/calls/joined
 #			string in switch:modes/murder_mystery/tick
 #			switch:modes/panic_chase/calls/joined
+#			switch:modes/panic_chase/process_end [ as @a[tag=!detached,sort=random] ]
 #			string in switch:modes/panic_chase/tick
 #			switch:modes/pillars_of_fortune/calls/joined
 #			string in switch:modes/pillars_of_fortune/tick

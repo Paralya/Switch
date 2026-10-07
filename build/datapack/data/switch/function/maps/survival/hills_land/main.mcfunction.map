@@ -3,8 +3,8 @@
 	"file": "main.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/maps/generation/utils.py"
+		"src/datapack/maps/generation/map_files.py"
 	],
 	"names": [],
-	"mappings": "AAmHsB;;;;;;AAAA;AAMC;AAAA;AACA;AACA;AAAA;AACA"
+	"mappings": "AAqBsB;;;;;;AAAA;AAMC;AAAA;AACA;AACA;AAAA;AACA"
 }

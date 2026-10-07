@@ -3,8 +3,8 @@
 	"file": "tick.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/layout.py"
+		"src/datapack/player/layout_editor.py"
 	],
 	"names": [],
-	"mappings": "AA2QgC;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAyHgC;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

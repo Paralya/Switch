@@ -3,8 +3,8 @@
 	"file": "save_and_close.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/layout.py"
+		"src/datapack/player/layout_editor.py"
 	],
 	"names": [],
-	"mappings": "AAqS0C;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAmJ0C;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA"
 }

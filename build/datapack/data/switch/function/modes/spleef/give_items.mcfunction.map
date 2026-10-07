@@ -4,8 +4,8 @@
 	"sourceRoot": "../../../../../../..",
 	"sources": [
 		"src/datapack/modes/spleef/main.py",
-		"src/datapack/kits/model.py"
+		"src/datapack/kits/kit.py"
 	],
 	"names": [],
-	"mappings": "AA8GsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;ACiME;AAAA;AAAA;AAAA;AAAA"
+	"mappings": "AA8GsC;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;ACSE;AAAA;AAAA;AAAA;AAAA"
 }

@@ -3,8 +3,8 @@
 	"file": "inventory_changed.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AAkZqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAUqD;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

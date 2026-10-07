@@ -3,8 +3,8 @@
 	"file": "display_loop.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_succes.py"
 	],
 	"names": [],
-	"mappings": "AAk7BuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAiBuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

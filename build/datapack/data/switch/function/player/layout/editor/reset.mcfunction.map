@@ -3,8 +3,8 @@
 	"file": "reset.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/layout.py"
+		"src/datapack/player/layout_editor.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;;;AA8SC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+	"mappings": ";;;;;;;;AA4JC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
 }

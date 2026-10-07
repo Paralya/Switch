@@ -3,8 +3,8 @@
 	"file": "list.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/jump_timer.py"
+		"src/datapack/player/jump_timer_admin.py"
 	],
 	"names": [],
-	"mappings": "AA8QgC;;;;;;;;;;;;;;;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA4BgC;;;;;;;;;;;;;;;;;;;;;;AAChC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

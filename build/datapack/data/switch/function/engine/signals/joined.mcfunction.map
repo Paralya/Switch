@@ -3,8 +3,8 @@
 	"file": "joined.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AA6Z0C;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA"
+	"mappings": "AAqB0C;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA"
 }

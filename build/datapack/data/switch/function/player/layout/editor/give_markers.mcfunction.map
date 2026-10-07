@@ -3,8 +3,8 @@
 	"file": "give_markers.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/layout.py"
+		"src/datapack/player/layout_editor.py"
 	],
 	"names": [],
-	"mappings": "AAoPwC;;;;;;;;;AACxC;AACA;AACA;AACA;AACA"
+	"mappings": "AAkGwC;;;;;;;;;AACxC;AACA;AACA;AACA;AACA"
 }

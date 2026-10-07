@@ -3,8 +3,8 @@
 	"file": "regeneration_on_marker.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/maps/generation/utils.py"
+		"src/datapack/maps/generation/survival.py"
 	],
 	"names": [],
-	"mappings": "AA2fsB;;;;;;AAAA;AAQC;AACvB;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AAIsB;AACtB;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAqFsB;;;;;;AAAA;AAQC;AACvB;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AAIsB;AACtB;AACA;AACA;AACA;AACA;AACA;AACA"
 }

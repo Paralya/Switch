@@ -3,8 +3,8 @@
 	"file": "max_players.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/vote_options.py"
 	],
 	"names": [],
-	"mappings": "AAooBuD;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAsDuD;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA"
 }

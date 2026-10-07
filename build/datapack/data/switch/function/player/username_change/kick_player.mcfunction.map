@@ -3,8 +3,8 @@
 	"file": "kick_player.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/username_change.py"
 	],
 	"names": [],
-	"mappings": "AAyyCuD;;;;;;;;;;AACvD;AACA"
+	"mappings": "AAqDuD;;;;;;;;;;AACvD;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "tp_to_coords.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/maps/generation/utils.py"
+		"src/datapack/maps/generation/map_files.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;AAgLsB"
+	"mappings": ";;;;;;AAgFsB"
 }

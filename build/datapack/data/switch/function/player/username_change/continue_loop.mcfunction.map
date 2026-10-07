@@ -3,8 +3,8 @@
 	"file": "continue_loop.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/username_change.py"
 	],
 	"names": [],
-	"mappings": "AA+yCyD;;;;;;;;AACzD;AACA;AACA"
+	"mappings": "AA2DyD;;;;;;;;AACzD;AACA;AACA"
 }

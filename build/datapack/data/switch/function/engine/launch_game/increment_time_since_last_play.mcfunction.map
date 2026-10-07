@@ -3,8 +3,8 @@
 	"file": "increment_time_since_last_play.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/launch_game.py"
 	],
 	"names": [],
-	"mappings": "AA+LsE;;;;;;;;;AACtE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAmDsE;;;;;;;;;AACtE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

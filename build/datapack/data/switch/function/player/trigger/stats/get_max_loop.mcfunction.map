@@ -3,8 +3,8 @@
 	"file": "get_max_loop.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_stats.py"
 	],
 	"names": [],
-	"mappings": "AA+2BsD;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA8DsD;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

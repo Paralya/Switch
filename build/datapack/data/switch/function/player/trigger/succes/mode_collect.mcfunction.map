@@ -3,8 +3,8 @@
 	"file": "mode_collect.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_succes.py"
 	],
 	"names": [],
-	"mappings": "AA4/BuD;;;;;;;;;AACvD;AACA;AACA;AACA"
+	"mappings": "AA2FuD;;;;;;;;;AACvD;AACA;AACA;AACA"
 }

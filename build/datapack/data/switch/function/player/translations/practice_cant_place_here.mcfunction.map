@@ -3,8 +3,8 @@
 	"file": "practice_cant_place_here.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/practice.py"
+		"src/datapack/player/practice_translations.py"
 	],
 	"names": [],
-	"mappings": "AAoUoD;;;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA0EoD;;;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA"
 }

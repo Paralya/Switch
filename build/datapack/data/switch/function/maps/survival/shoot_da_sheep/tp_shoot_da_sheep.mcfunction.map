@@ -3,8 +3,8 @@
 	"file": "tp_shoot_da_sheep.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/maps/main.py"
+		"src/datapack/maps/map_specifics.py"
 	],
 	"names": [],
-	"mappings": "AA2RqE;;;;;;;;AACrE;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAgJqE;;;;;;;;AACrE;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

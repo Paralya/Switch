@@ -3,8 +3,8 @@
 	"file": "intro_spread.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/maps/generation/utils.py"
+		"src/datapack/maps/generation/survival.py"
 	],
 	"names": [],
-	"mappings": "AAicgE;;;;;;;;AAChE;AACA"
+	"mappings": "AAgCgE;;;;;;;;AAChE;AACA"
 }

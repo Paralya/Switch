@@ -3,8 +3,8 @@
 	"file": "update_ratings_loop.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/username_change.py"
 	],
 	"names": [],
-	"mappings": "AAm3C+D;;;;;;;;;;;;;AAC/D;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA+H+D;;;;;;;;;;;;;AAC/D;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

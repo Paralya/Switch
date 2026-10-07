@@ -3,8 +3,8 @@
 	"file": "macro_second.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AA+agD;;;;;;;;AAChD;AACA"
+	"mappings": "AAuCgD;;;;;;;;AAChD;AACA"
 }

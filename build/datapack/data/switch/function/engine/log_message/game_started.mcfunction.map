@@ -3,8 +3,8 @@
 	"file": "game_started.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/log_message.py"
 	],
 	"names": [],
-	"mappings": "AAsXoD;;;;;;;;;;AACpD;AACA"
+	"mappings": "AA2BoD;;;;;;;;;;AACpD;AACA"
 }

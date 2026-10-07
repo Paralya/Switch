@@ -3,8 +3,8 @@
 	"file": "add_weights.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/voting_time.py"
 	],
 	"names": [],
-	"mappings": "AA4kBmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA0BmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "archer.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/kits/model.py"
+		"src/datapack/kits/kit.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;;;AA2TE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+	"mappings": ";;;;;;;;AAmIE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
 }

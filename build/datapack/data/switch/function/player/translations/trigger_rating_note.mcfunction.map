@@ -3,8 +3,8 @@
 	"file": "trigger_rating_note.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/translations.py"
+		"src/datapack/player/menu_translations.py"
 	],
 	"names": [],
-	"mappings": "AAkK+C;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA8B+C;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

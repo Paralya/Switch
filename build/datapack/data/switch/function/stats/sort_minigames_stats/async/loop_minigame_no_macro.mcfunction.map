@@ -3,8 +3,8 @@
 	"file": "loop_minigame_no_macro.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/stats/main.py"
+		"src/datapack/stats/sort_minigames_stats.py"
 	],
 	"names": [],
-	"mappings": "AAiW6E;;;;;;;AAC7E;AACA"
+	"mappings": "AAkC6E;;;;;;;AAC7E;AACA"
 }

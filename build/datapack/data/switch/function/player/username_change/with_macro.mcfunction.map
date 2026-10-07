@@ -3,8 +3,8 @@
 	"file": "with_macro.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/username_change.py"
 	],
 	"names": [],
-	"mappings": "AA64CsD;;;;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAyJsD;;;;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
 }

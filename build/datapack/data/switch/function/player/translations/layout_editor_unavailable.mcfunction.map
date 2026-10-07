@@ -3,8 +3,8 @@
 	"file": "layout_editor_unavailable.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/layout.py"
+		"src/datapack/player/layout_editor.py"
 	],
 	"names": [],
-	"mappings": "AAyVmD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAuMmD;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "entry.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/layout.py"
+		"src/datapack/player/layout_editor.py"
 	],
 	"names": [],
-	"mappings": "AAkOiC;;;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAgFiC;;;;;;;;AACjC;AACA;AACA;AACA;AACA;AACA"
 }

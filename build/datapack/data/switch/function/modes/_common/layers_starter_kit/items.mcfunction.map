@@ -3,8 +3,8 @@
 	"file": "items.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/kits/model.py"
+		"src/datapack/kits/kit.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;;;;;;;;;;AAsTG;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+	"mappings": ";;;;;;;;;;;;;;;AA8HG;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
 }

@@ -3,8 +3,8 @@
 	"file": "resolve_group_macro.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/launch_game.py"
 	],
 	"names": [],
-	"mappings": "AAoS2D;;;;;;;;AAC3D;AACA;AACA;AACA"
+	"mappings": "AAwJ2D;;;;;;;;AAC3D;AACA;AACA;AACA"
 }

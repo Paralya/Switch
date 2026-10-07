@@ -3,8 +3,8 @@
 	"file": "tick_undefined.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/triggers.py"
 	],
 	"names": [],
-	"mappings": "AAmkBuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAgHuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

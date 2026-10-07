@@ -3,8 +3,8 @@
 	"file": "player_vote.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_coupdetat.py"
 	],
 	"names": [],
-	"mappings": "AAmdyD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA0GyD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA"
 }

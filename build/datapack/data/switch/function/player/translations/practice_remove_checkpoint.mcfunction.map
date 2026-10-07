@@ -3,8 +3,8 @@
 	"file": "practice_remove_checkpoint.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/practice.py"
+		"src/datapack/player/practice_translations.py"
 	],
 	"names": [],
-	"mappings": "AAkTsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAwDsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA"
 }

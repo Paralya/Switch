@@ -3,8 +3,8 @@
 	"file": "macro_stop.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AA8b8C;;;;;;;;AAC9C;AACA"
+	"mappings": "AAsD8C;;;;;;;;AAC9C;AACA"
 }

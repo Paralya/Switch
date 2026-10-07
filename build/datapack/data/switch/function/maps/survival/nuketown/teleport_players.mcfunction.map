@@ -3,8 +3,8 @@
 	"file": "teleport_players.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/maps/generation/utils.py"
+		"src/datapack/maps/generation/map_files.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;;;AA2IuB;AACA;AACA;AACA;AACA"
+	"mappings": ";;;;;;;;AA2CuB;AACA;AACA;AACA;AACA"
 }

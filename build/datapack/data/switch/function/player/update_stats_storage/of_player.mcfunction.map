@@ -3,8 +3,8 @@
 	"file": "of_player.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/stats_storage.py"
 	],
 	"names": [],
-	"mappings": "AA2sC0D;;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAyG0D;;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

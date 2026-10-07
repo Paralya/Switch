@@ -4,8 +4,8 @@
 	"sourceRoot": "../../../../../../..",
 	"sources": [
 		"src/datapack/modes/fish_fight/main.py",
-		"src/datapack/kits/model.py"
+		"src/datapack/kits/kit.py"
 	],
 	"names": [],
-	"mappings": "AAoKsC;;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;ACgIE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+	"mappings": "AAoKsC;;;;;;;;;AACtC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;ACxDE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
 }

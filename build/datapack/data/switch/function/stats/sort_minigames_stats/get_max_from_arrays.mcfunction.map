@@ -3,8 +3,8 @@
 	"file": "get_max_from_arrays.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/stats/main.py"
+		"src/datapack/stats/sort_minigames_stats.py"
 	],
 	"names": [],
-	"mappings": "AA6WoE;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA8CoE;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

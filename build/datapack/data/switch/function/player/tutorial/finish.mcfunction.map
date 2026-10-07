@@ -3,8 +3,8 @@
 	"file": "finish.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/tutorial.py"
 	],
 	"names": [],
-	"mappings": "AAihC2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAU2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

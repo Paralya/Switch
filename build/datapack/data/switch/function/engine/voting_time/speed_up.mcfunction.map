@@ -3,8 +3,8 @@
 	"file": "speed_up.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/voting_time.py"
 	],
 	"names": [],
-	"mappings": "AAgzBgD;;;;;;AAChD;AACA;AACA;AACA"
+	"mappings": "AA0LgD;;;;;;AAChD;AACA;AACA;AACA"
 }

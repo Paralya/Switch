@@ -3,8 +3,8 @@
 	"file": "schedule_message.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/voting_time.py"
 	],
 	"names": [],
-	"mappings": "AAuwBwD;;;;;;AACxD;AACA"
+	"mappings": "AAiJwD;;;;;;AACxD;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "tick.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AAigBwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAyHwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

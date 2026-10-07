@@ -3,8 +3,8 @@
 	"file": "random.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/vote_options.py"
 	],
 	"names": [],
-	"mappings": "AAqpBkD;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAuEkD;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
 }

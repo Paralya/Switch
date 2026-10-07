@@ -3,8 +3,8 @@
 	"file": "jump_times_summon.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/stats/main.py"
+		"src/datapack/stats/display.py"
 	],
 	"names": [],
-	"mappings": "AA4JqD;;;;;;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAeqD;;;;;;;;;;;;;AACrD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

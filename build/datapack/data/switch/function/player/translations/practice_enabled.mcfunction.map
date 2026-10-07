@@ -3,8 +3,8 @@
 	"file": "practice_enabled.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/practice.py"
+		"src/datapack/player/practice_translations.py"
 	],
 	"names": [],
-	"mappings": "AAuR4C;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA6B4C;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "main.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/triggers.py"
 	],
 	"names": [],
-	"mappings": "AAgiB6C;;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA6E6C;;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA"
 }

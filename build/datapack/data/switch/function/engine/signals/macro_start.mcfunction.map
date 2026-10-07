@@ -3,8 +3,8 @@
 	"file": "macro_start.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AAob+C;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA4C+C;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA"
 }

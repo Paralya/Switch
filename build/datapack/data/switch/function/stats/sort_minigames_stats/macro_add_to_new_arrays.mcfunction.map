@@ -3,8 +3,8 @@
 	"file": "macro_add_to_new_arrays.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/stats/main.py"
+		"src/datapack/stats/sort_minigames_stats.py"
 	],
 	"names": [],
-	"mappings": "AA8awE;;;;;;;;;;AACxE;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA+GwE;;;;;;;;;;AACxE;AACA;AACA;AACA;AACA;AACA;AACA"
 }

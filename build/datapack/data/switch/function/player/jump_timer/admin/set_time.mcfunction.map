@@ -3,8 +3,8 @@
 	"file": "set_time.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/jump_timer.py"
+		"src/datapack/player/jump_timer_admin.py"
 	],
 	"names": [],
-	"mappings": "AA2SoC;;;;;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAyDoC;;;;;;;;;;;AACpC;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

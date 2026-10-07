@@ -3,8 +3,8 @@
 	"file": "error.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_coupdetat.py"
 	],
 	"names": [],
-	"mappings": "AA0amD;;;;;;;;AACnD;AACA;AACA;AACA"
+	"mappings": "AAiEmD;;;;;;;;AACnD;AACA;AACA;AACA"
 }

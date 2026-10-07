@@ -3,8 +3,8 @@
 	"file": "sort.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/trigger_rating.py"
 	],
 	"names": [],
-	"mappings": "AAgyB+C;;;;;;;;AAC/C;AACA;AACA;AACA"
+	"mappings": "AA4J+C;;;;;;;;AAC/C;AACA;AACA;AACA"
 }

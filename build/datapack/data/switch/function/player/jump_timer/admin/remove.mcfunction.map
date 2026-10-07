@@ -3,8 +3,8 @@
 	"file": "remove.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/jump_timer.py"
+		"src/datapack/player/jump_timer_admin.py"
 	],
 	"names": [],
-	"mappings": "AA8TkC;;;;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA4EkC;;;;;;;;;AAClC;AACA;AACA;AACA;AACA;AACA"
 }

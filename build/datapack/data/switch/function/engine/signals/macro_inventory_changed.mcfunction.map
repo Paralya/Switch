@@ -3,8 +3,8 @@
 	"file": "macro_inventory_changed.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AAqa2D;;;;;;;;;;AAC3D;AACA"
+	"mappings": "AA6B2D;;;;;;;;;;AAC3D;AACA"
 }

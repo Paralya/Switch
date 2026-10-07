@@ -3,8 +3,8 @@
 	"file": "player_join.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/voting_time.py"
 	],
 	"names": [],
-	"mappings": "AA4vBmD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAsImD;;;;;;;;;AACnD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

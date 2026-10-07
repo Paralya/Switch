@@ -3,8 +3,8 @@
 	"file": "practice_no_checkpoint.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/practice.py"
+		"src/datapack/player/practice_translations.py"
 	],
 	"names": [],
-	"mappings": "AA2TkD;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAiEkD;;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA"
 }

@@ -3,8 +3,8 @@
 	"file": "every_player_loop.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/stats_storage.py"
 	],
 	"names": [],
-	"mappings": "AAmnCkE;;;;;;;;;AAClE;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAiBkE;;;;;;;;;AAClE;AACA;AACA;AACA;AACA;AACA"
 }

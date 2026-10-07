@@ -3,8 +3,8 @@
 	"file": "stop.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/signals.py"
 	],
 	"names": [],
-	"mappings": "AAsfwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA8GwC;;;;;;AACxC;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

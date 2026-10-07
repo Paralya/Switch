@@ -3,8 +3,8 @@
 	"file": "tellraw.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/triggers.py"
 	],
 	"names": [],
-	"mappings": "AA2jBgD;;;;;;;;;AAChD;AACA;AACA;AACA;AACA"
+	"mappings": "AAwGgD;;;;;;;;;AAChD;AACA;AACA;AACA;AACA"
 }

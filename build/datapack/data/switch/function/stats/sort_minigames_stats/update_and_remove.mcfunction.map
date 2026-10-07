@@ -3,8 +3,8 @@
 	"file": "update_and_remove.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/stats/main.py"
+		"src/datapack/stats/sort_minigames_stats.py"
 	],
 	"names": [],
-	"mappings": "AAiVkE;;;;;;;;;AAClE;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAkBkE;;;;;;;;;AAClE;AACA;AACA;AACA;AACA;AACA;AACA"
 }

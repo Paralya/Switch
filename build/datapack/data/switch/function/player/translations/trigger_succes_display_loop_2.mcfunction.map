@@ -3,8 +3,8 @@
 	"file": "trigger_succes_display_loop_2.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/translations.py"
+		"src/datapack/player/menu_translations.py"
 	],
 	"names": [],
-	"mappings": "AAiOyD;;;;;;;;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AA6FyD;;;;;;;;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA"
 }

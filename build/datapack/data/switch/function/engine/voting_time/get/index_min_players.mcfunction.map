@@ -3,8 +3,8 @@
 	"file": "index_min_players.mcfunction",
 	"sourceRoot": "../../../../../../../..",
 	"sources": [
-		"src/datapack/engine/main.py"
+		"src/datapack/engine/vote_options.py"
 	],
 	"names": [],
-	"mappings": "AAgnB6D;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAkC6D;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA"
 }

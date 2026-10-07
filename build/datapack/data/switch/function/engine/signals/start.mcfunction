@@ -24,8 +24,8 @@ data modify storage switch:main input set value {id:""}
 data modify storage switch:main input.id set from storage switch:main current_game
 function switch:engine/signals/macro_start with storage switch:main input
 
-# Start map intro (explicitly in the game dimension: start_state can be reached from a server
-# context — force start, coup d'état — and the cinematic drops players in the execution dimension)
+# Start map intro explicitly in the game dimension: start_state can be reached from a server context (force start, coup d'état),
+# and the cinematic drops players in the execution dimension
 execute in switch:game run function switch:maps/intro_spread
 
 # Increment total games played

@@ -3,8 +3,8 @@
 	"file": "update_advancements_loop.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/username_change.py"
 	],
 	"names": [],
-	"mappings": "AAqzCoE;;;;;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+	"mappings": "AAiEoE;;;;;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
 }

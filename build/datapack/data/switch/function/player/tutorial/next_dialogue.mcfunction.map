@@ -3,8 +3,8 @@
 	"file": "next_dialogue.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/player/main.py"
+		"src/datapack/player/tutorial.py"
 	],
 	"names": [],
-	"mappings": "AA4hCkD;;;;;;;;AAClD;AACA;AACA;AACA;AACA"
+	"mappings": "AAqBkD;;;;;;;;AAClD;AACA;AACA;AACA;AACA"
 }

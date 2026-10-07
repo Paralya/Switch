@@ -3,9 +3,9 @@
 	"file": "give_items.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
-		"src/datapack/kits/model.py",
+		"src/datapack/kits/kit.py",
 		"src/datapack/modes/protect_the_king/main.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;;;AA2TE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;ACjOoC;AACtC;AACA;AACA;AACA;AACA;AACA"
+	"mappings": ";;;;;;;;AAmIE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AC7CoC;AACtC;AACA;AACA;AACA;AACA;AACA"
 }
