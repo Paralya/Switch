@@ -72,7 +72,7 @@ effect give @s[team={ns}.temp.mouse] weakness infinite 255 true
 scoreboard players add #process_end {ns}.data 1
 
 # Kill tout le monde
-execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/panic_chase/death/player
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:utils/classic_death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire

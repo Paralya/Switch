@@ -60,7 +60,7 @@ execute in {ns}:game as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.alive
 execute in {ns}:game as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.alive=1}},x=50997,y=92,z=50964,dx=6,dy=4,dz=5] at @s run function {path}/finish
 
 # Prevent leaving boat
-execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @n[type=#minecraft:boat,predicate=!shopping_kart:has_player_passenger,distance=..10,sort=nearest,limit=1]
+execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @n[type=#minecraft:boat,predicate=!shopping_kart:have_player_passenger,distance=..10,sort=nearest,limit=1]
 
 # Fin de la partie si le temps est écoulé, ou qu'ils ont tous finis
 execute if score #boat_race_seconds {ns}.data matches 480.. run scoreboard players set #detect_end {ns}.data 1

@@ -12,6 +12,6 @@ for root, _, files in os.walk(py_path):
 		if file.endswith(".mp3"):
 			src = f"{root}/{file}"
 			dst = src.replace(".mp3", ".ogg")
-			subprocess.run(["ffmpeg", "-i", src, dst])
+			subprocess.run(["ffmpeg", "-i", src, dst], check=True)
 print("Conversion finished!")
 

@@ -95,11 +95,8 @@ execute if score #try {ns}.data matches 1.. if score #success {ns}.data matches 
 # Kill map marker
 kill @e[type=marker,tag={ns}.selected_map]
 
-# Maps that regenerate (gamemode survival, may be adventure):
+# Load the selected map (gamemode survival, may be adventure)
 function {ns}:maps/load_survival
-
-# Maps that doesn't (always gamemode adventure):
-function {ns}:maps/load_adventure
 """)
 
 	# /choose_loop

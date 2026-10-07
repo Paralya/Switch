@@ -12,7 +12,7 @@ from compress_ogg import COMPRESSION
 def convert_file(args):
 	src, dst = args
 	previous_size = os.path.getsize(src)
-	subprocess.run(["ffmpeg", "-i", src, "-b:a", COMPRESSION, "-ac", "1", dst], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+	subprocess.run(["ffmpeg", "-i", src, "-b:a", COMPRESSION, "-ac", "1", dst], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
 
 	# Remove original & rename temp
 	file_size = os.path.getsize(dst)
@@ -20,6 +20,8 @@ def convert_file(args):
 		os.remove(src)
 		os.rename(dst, src)
 		print(f"Mono file '{src}' got from {previous_size} to {file_size} bytes")
+	else:
+		os.remove(dst)
 
 if __name__ == "__main__":
 	py_path = os.path.dirname(os.path.abspath(__file__))
