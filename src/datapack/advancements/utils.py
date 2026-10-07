@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 import json
 from typing import Any

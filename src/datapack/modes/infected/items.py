@@ -1,5 +1,5 @@
 
-# ruff: noqa: E501, RUF005
+# ruff: noqa: RUF005
 # Imports
 from typing import Any
 

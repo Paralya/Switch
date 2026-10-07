@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 import json
 
@@ -272,7 +271,7 @@ def write_translations(index: int, shop_name: str, shop_dict: JsonDict) -> None:
 					tellraw_json.append({"text":" [+]","color":"gray"})
 
 				# Write the tellraw text
-				is_max: str = '' if not (j == (len(upgrades) - 1)) else '..'
+				is_max: str = '..' if j == len(upgrades) - 1 else ''
 				if shop_name != "sheepwars":
 					dump: str = stp.json_dump(tellraw_json, max_level=0)[:-1]  # Remove the last \n
 					write_function(path, f"execute if score @s {ns}.{shop_name}.{upgrade_id} matches {j}{is_max} run tellraw {selector} {dump}")

@@ -63,7 +63,7 @@ def write_resources() -> None:
 	Mem.ctx.data[ns].loot_tables["random/vanilla"] = LootTable(stp.json_dump(loot_table, max_level=-1))
 
 	# For each item in the item definitions (except skipped ones), add it to the loot table and save it
-	for item in Mem.definitions.keys():
+	for item in Mem.definitions:
 		if Item.from_id(item).skip_gives:
 			continue
 		loot_table["pools"][0]["entries"].append({"type": "minecraft:loot_table", "value": f"{ns}:i/{item}"})

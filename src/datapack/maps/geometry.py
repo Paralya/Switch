@@ -3,7 +3,6 @@
 One row per map, so adding a racing map or moving a spawn is a single line. The emitters live in
 main.py: nothing here writes anything.
 """
-# ruff: noqa: E501
 # Constants
 RACE_CHECKPOINTS: dict[str, tuple[int, int, list[tuple[str, ...]], list[tuple[str, ...]]]] = {
 	'airship_fortress': (3, 3, [('20725', '121', '20319', '0', '1', '5', '5'), ('20631', '122', '20336', '1', '5', '5', '1'), ('20639', '108', '20375', '2', '2', '5', '1'), ('20750', '131', '20382', '3', '4', '5', '1')], [('20639', '108', '20336', 'tm_blocks.engine_off')]),

@@ -13,7 +13,7 @@ def write_pop_ups() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# For each lang prefix (fr, en, ...),
-	for lang in LANG_PRETEXT.keys():
+	for lang in LANG_PRETEXT:
 
 		# For each minigame,
 		for mode in MODES:

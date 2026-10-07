@@ -109,7 +109,7 @@ tag @s add {ns}.coupdetat
 function {ns}:modes/_coupdetat/give_items
 
 function {ns}:modes/_coupdetat/translations/start
-""")  # noqa: E501
+""")
 
 	# /tick (translation ref rewritten)
 	write_function(f"{path}/tick", f"""

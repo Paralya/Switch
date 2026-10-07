@@ -2,7 +2,6 @@
 
 One entry per physical display in the lobby map, so moving a board means editing a single row.
 """
-# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 

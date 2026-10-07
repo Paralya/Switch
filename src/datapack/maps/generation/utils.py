@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 import json
 from typing import Any
@@ -509,17 +508,15 @@ def clone_survival(
 	write_function(path, f"\nexecute store result entity @s Pos[1] double 1 run scoreboard players get #rg_{namespace}_y {ns}.data")
 
 	# Write the clone and particle commands
-	i = 0
 	particle_count = 250
 	dy = paste_start_height - start_pos[1]
-	for k in splitted_coordinates:
+	for i, k in enumerate(splitted_coordinates):
 		dx = (k[2] - k[0]) // 2
 		dz = (k[3] - k[1]) // 2
 		write_function(path, f"""
 execute if score #rg_{namespace}_mod {ns}.data matches {i} at @s in {ns}:game run particle cloud {k[0] + dx} ~{dy + 0.5} {k[1] + dz} {dx} 0 {dz // 2} 0 {particle_count} force
 execute if score #rg_{namespace}_mod {ns}.data matches {i} at @s run clone from minecraft:overworld {k[0]} ~ {k[1]} {k[2]} ~ {k[3]} to {ns}:game {k[0]} ~{dy} {k[1]} strict replace force
 """)
-		i += 1
 
 	# Write kill item entities command & the scoreboard commands
 	write_function(path, f"""

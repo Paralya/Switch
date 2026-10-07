@@ -48,5 +48,5 @@ execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=2] as @e[limit=
 
 # Recall
 schedule function {ns}:devtools/lag/enable 1t
-""")  # noqa: E501
+""")
 

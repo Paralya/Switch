@@ -112,13 +112,12 @@ class Conventions:
 		Returns:
 			list[str]: One message per offending name
 		"""
-		problems: list[str] = []
-		for relative in MODEL_FILES:
-			source: str = (SRC / relative).read_text(encoding="utf-8")
-			for node in ast.walk(ast.parse(source)):
-				if isinstance(node, ast.Name) and node.id in UNTYPED_NAMES:
-					problems.append(f"{relative}:{node.lineno} uses '{node.id}', the model must stay fully typed")
-		return problems
+		return [
+			f"{relative}:{node.lineno} uses '{node.id}', the model must stay fully typed"
+			for relative in MODEL_FILES
+			for node in ast.walk(ast.parse((SRC / relative).read_text(encoding="utf-8")))
+			if isinstance(node, ast.Name) and node.id in UNTYPED_NAMES
+		]
 
 	@staticmethod
 	def check_no_downward_import() -> list[str]:
@@ -127,15 +126,11 @@ class Conventions:
 		Returns:
 			list[str]: One message per offending import
 		"""
-		problems: list[str] = []
-		for path in Conventions.python_files():
-			if MODES in path.parents:
-				continue
-			for mode in DOWNWARD_IMPORT.findall(path.read_text(encoding="utf-8")):
-				problems.append(
-					f"{Conventions.relative(path)} imports mode '{mode}' directly, "
-					f"consume the registry so adding a mode stays a one folder change")
-		return problems
+		return [
+			f"{Conventions.relative(path)} imports mode '{mode}' directly, consume the registry so adding a mode stays a one folder change"
+			for path in Conventions.python_files() if MODES not in path.parents
+			for mode in DOWNWARD_IMPORT.findall(path.read_text(encoding="utf-8"))
+		]
 
 	@staticmethod
 	def check_checkpoint_boxes() -> list[str]:

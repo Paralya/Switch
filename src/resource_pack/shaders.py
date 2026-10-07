@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from beet import FragmentShader, VertexShader
 from stewbeet.core import Mem

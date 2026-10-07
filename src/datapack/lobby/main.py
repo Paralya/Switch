@@ -2,7 +2,6 @@
 
 Everything here runs while players wait between two minigames, never during one.
 """
-# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 

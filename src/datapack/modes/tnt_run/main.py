@@ -44,7 +44,7 @@ item replace entity @s[scores={{{ns}.lang=0}}] hotbar.4 with warped_fungus_on_a_
 
 # English
 item replace entity @s[scores={{{ns}.lang=1}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Right click to dash (100 blocks destroyed = +1 dash)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
-""")  # noqa: E501
+""")
 
 	# /is_on_ground
 	write_function(f"{path}/is_on_ground", f"""
@@ -103,7 +103,7 @@ execute if entity @s[scores={{{ns}.lang=0}}] run title @s actionbar [{{"text":"�
 
 # English
 execute if entity @s[scores={{{ns}.lang=1}}] run title @s actionbar [{{"text":"⚡ Dash: ","color":"aqua"}},{{"score":{{"name":"@s","objective":"{ns}.temp.dashes"}},"color":"yellow"}},{{"text":"   ⛏ Blocks: ","color":"gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.blocks"}},"color":"yellow"}}]
-""")  # noqa: E501
+""")
 
 	# /joined
 	write_function(f"{path}/joined", f"""
@@ -192,7 +192,7 @@ scoreboard players set #remaining_players {ns}.data 0
 execute store result score #remaining_players {ns}.data if entity @a[tag=!detached,gamemode=!spectator]
 execute if score #tnt_run_seconds {ns}.data matches 1.. if score #remaining_players {ns}.data matches ..1 run function {path}/process_end
 execute if score #tnt_run_seconds {ns}.data matches 300.. run function {path}/process_end
-""")  # noqa: E501
+""")
 
 	# /xp_bar
 	write_time_xp_bar(f"{path}/xp_bar", 300, "#tnt_run_seconds", "#tnt_run_seconds")

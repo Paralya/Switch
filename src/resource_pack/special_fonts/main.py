@@ -14,5 +14,4 @@ def main() -> None:
 
 	# Write the final file
 	write_final_file()
-	pass
 

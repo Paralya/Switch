@@ -185,11 +185,7 @@ class KitItem:
 			choices.append(("", self.item, base_selector))
 
 		# Which count, under which condition
-		counts: list[tuple[str, int]]
-		if isinstance(self.count, ScoreCount):
-			counts = list(self.count.branches())
-		else:
-			counts = [("", self.count)]
+		counts: list[tuple[str, int]] = list(self.count.branches()) if isinstance(self.count, ScoreCount) else [("", self.count)]
 
 		for choice_condition, item_string, selector_parts in choices:
 			for count_condition, count in counts:

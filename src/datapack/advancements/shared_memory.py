@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Constants
 from stewbeet import JsonDict, Mem
 

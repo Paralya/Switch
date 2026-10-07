@@ -1,5 +1,5 @@
 
-# ruff: noqa: E501, W291
+# ruff: noqa: W291
 # Imports
 from stewbeet import Mem, write_function
 

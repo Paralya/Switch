@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 
@@ -122,10 +121,11 @@ scoreboard players add #position {ns}.data 1
 		f"execute at @a[tag=!detached] if score @s {ns}.temp.color = @p {ns}.temp.color run tag @p add {ns}.temp",
 		"", "# Fill the area with the color (3x3x3)",
 		f"scoreboard players operation #new_color {ns}.data = @s {ns}.temp.color"]
-	for dx in (1, 0, -1):
-		for dy in (1, 0, -1):
-			for dz in (1, 0, -1):
-				explode.append(f"execute positioned ~{dx} ~{dy} ~{dz} if block ~ ~ ~ #{ns}:snowball_painter run function {path}/color/place")
+	offsets: tuple[int, ...] = (1, 0, -1)
+	explode += [
+		f"execute positioned ~{dx} ~{dy} ~{dz} if block ~ ~ ~ #{ns}:snowball_painter run function {path}/color/place"
+		for dx in offsets for dy in offsets for dz in offsets
+	]
 	explode += ["", "# Remove the temp tag", f"tag @a[tag=!detached,tag={ns}.temp] remove {ns}.temp", "", "# Kill marker", "kill @s"]
 	write_function(f"{path}/explode_marker", "\n".join(explode) + "\n")
 

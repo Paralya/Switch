@@ -1,5 +1,5 @@
 
-# ruff: noqa: E501, W291
+# ruff: noqa: W291
 # Imports
 from stewbeet import Mem, write_function
 
@@ -378,12 +378,10 @@ execute at @s run fill ~-3 ~ ~1 ~3 ~7 ~7 air destroy
 		f"give @a[scores={{{ns}.alive=1..}}] diamond_axe[unbreakable={{}},enchantments={{silk_touch:1}}]",
 		f"give @a[scores={{{ns}.alive=1..}}] diamond_shovel[unbreakable={{}},enchantments={{silk_touch:1}}]\n",
 	]
-	for dx in range(7):
-		for dy in range(7):
-			for dz in range(7):
-				give_lines.append(
-					f"execute as @a[scores={{{ns}.alive=1..}}] run loot give @s mine ~{dx} ~{dy} ~{dz} diamond_pickaxe[enchantments={{silk_touch:1}}]"
-				)
+	give_lines += [
+		f"execute as @a[scores={{{ns}.alive=1..}}] run loot give @s mine ~{dx} ~{dy} ~{dz} diamond_pickaxe[enchantments={{silk_touch:1}}]"
+		for dx in range(7) for dy in range(7) for dz in range(7)
+	]
 	write_function(f"{path}/structure/give_player", "\n".join(give_lines) + "\n")
 
 	# /structure/place

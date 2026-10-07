@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 """ Per-player inventory layout: where each kit ROLE lands in the hotbar/offhand.
 
 Each player owns one {ns}.layout.<role> score per role (0 = no preference, 1..9 = hotbar.0..8,

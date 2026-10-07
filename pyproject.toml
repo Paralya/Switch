@@ -19,6 +19,8 @@ stewbeet = { path = "../StewBeet/python_package" }
 
 [tool.pyright]
 typeCheckingMode = "strict"
+include = ["src", "tools"]
+exclude = ["**/__pycache__", "tools/assets"]
 
 [tool.complexipy]
 paths = ["."]
@@ -64,6 +66,7 @@ select = [
     "PLR5501",
 ]
 ignore = [
+    "E501",
     "T201",
     "W191",
     "N803",
