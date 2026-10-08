@@ -6,8 +6,6 @@ import stouputils as stp
 from beet import Texture, TextureMcmeta
 from stewbeet.core import Mem, set_json_encoder
 
-# FIXME: in stewbeet there is a write helper for textures ("texture_mcmeta"), may consider using it
-
 ROOT: str = stp.get_root_path(__file__)
 
 
