@@ -55,12 +55,12 @@ execute if score #fish_fight_seconds switch.data matches 86 if score #random swi
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 147 156001 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 146 156028 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 15586 153 156004 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
+execute if score #fish_fight_seconds switch.data matches 86 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 155986 153 156004 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
 
 # event pufferfish 2
-execute if score #fish_fight_seconds switch.data matches 115 run execute store result score #random switch.data run random value 0..2
+execute if score #fish_fight_seconds switch.data matches 115 store result score #random switch.data run random value 0..2
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151026 127 151026 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"luxio_fish_fight"} run summon pufferfish 151040 124 151032 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
@@ -69,7 +69,7 @@ execute if score #fish_fight_seconds switch.data matches 115 if score #random sw
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156003 154 155972 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 147 156001 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 156007 146 156028 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
-execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 15586 153 156004 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
+execute if score #fish_fight_seconds switch.data matches 115 if score #random switch.data matches 1 if data storage switch:main {map:"airdox_fish_fight"} run summon pufferfish 155986 153 156004 {Glowing:true,CustomNameVisible:true,CustomName:{"text":"Poisson mécontent","color":"green","bold":true}}
 
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
 

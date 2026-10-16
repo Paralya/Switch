@@ -6,17 +6,18 @@
 # @within	switch:modes/fish_fight/calls/start
 #
 
-# TODO : tp les joueurs au début pour teams / conditions de team / only one winner
-
 scoreboard players set @a[tag=!detached] switch.alive 3
 function switch:utils/set_dynamic_time
 
 execute in switch:game run gamerule minecraft:fall_damage false
 execute in switch:game run gamerule minecraft:keep_inventory true
 
-# partie en équipe aléatoire
+# Equipes une partie sur deux, seulement à partir de 4 joueurs et en nombre pair
 scoreboard players set #TEAM_FISH switch.data 0
-execute if predicate switch:chance/0.5 run scoreboard players set #TEAM_FISH switch.data 1
+execute store result score #fish_players switch.data if entity @a[tag=!detached]
+scoreboard players operation #fish_parity switch.data = #fish_players switch.data
+scoreboard players operation #fish_parity switch.data %= #2 switch.data
+execute if score #fish_players switch.data matches 4.. if score #fish_parity switch.data matches 0 if predicate switch:chance/0.5 run scoreboard players set #TEAM_FISH switch.data 1
 execute if score #TEAM_FISH switch.data matches 1 run function switch:modes/fish_fight/teams_tp/setup
 execute if score #TEAM_FISH switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/fish_fight/teams_tp/teams
 

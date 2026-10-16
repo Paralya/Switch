@@ -7,10 +7,10 @@
 			"path": "../StewBeet"
 		},
 		{
-			"path": "../StoupGun/minecraft_source_code"
+			"path": "../../clones/minecraft-decompiled"
 		},
 		{
-			"path": "../beet"
+			"path": "../../forks/beet"
 		}
 	],
 	"settings": {
