@@ -283,14 +283,14 @@ execute if score #fish_fight_seconds {ns}.data matches 86 if score #random {ns}.
 execute if score #fish_fight_seconds {ns}.data matches 86 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 156003 154 155972 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 execute if score #fish_fight_seconds {ns}.data matches 86 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 156007 147 156001 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 execute if score #fish_fight_seconds {ns}.data matches 86 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 156007 146 156028 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
-execute if score #fish_fight_seconds {ns}.data matches 86 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 15586 153 156004 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
+execute if score #fish_fight_seconds {ns}.data matches 86 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 155986 153 156004 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 
 
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
 
 
 # event pufferfish 2
-execute if score #fish_fight_seconds {ns}.data matches 115 run execute store result score #random {ns}.data run random value 0..2
+execute if score #fish_fight_seconds {ns}.data matches 115 store result score #random {ns}.data run random value 0..2
 execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"luxio_fish_fight"}} run summon pufferfish 151026 127 151026 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"luxio_fish_fight"}} run summon pufferfish 151026 127 151026 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"luxio_fish_fight"}} run summon pufferfish 151040 124 151032 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
@@ -299,7 +299,7 @@ execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}
 execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 156003 154 155972 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 156007 147 156001 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 156007 146 156028 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
-execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 15586 153 156004 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
+execute if score #fish_fight_seconds {ns}.data matches 115 if score #random {ns}.data matches 1 if data storage {ns}:main {{map:"airdox_fish_fight"}} run summon pufferfish 155986 153 156004 {{Glowing:true,CustomNameVisible:true,CustomName:{{"text":"Poisson mécontent","color":"green","bold":true}}}}
 
 # tellraw  pour annoncer qu'une pufferfish a été invoquée
 
@@ -322,17 +322,18 @@ function {ns}:modes/fish_fight/translations/second
 
 	# /start (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/start", f"""
-# TODO : tp les joueurs au début pour teams / conditions de team / only one winner
-
 scoreboard players set @a[tag=!detached] {ns}.alive 3
 function {ns}:utils/set_dynamic_time
 
 execute in {ns}:game run gamerule minecraft:fall_damage false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
-# partie en équipe aléatoire
+# Equipes une partie sur deux, seulement à partir de 4 joueurs et en nombre pair
 scoreboard players set #TEAM_FISH {ns}.data 0
-execute if predicate {ns}:chance/0.5 run scoreboard players set #TEAM_FISH {ns}.data 1
+execute store result score #fish_players {ns}.data if entity @a[tag=!detached]
+scoreboard players operation #fish_parity {ns}.data = #fish_players {ns}.data
+scoreboard players operation #fish_parity {ns}.data %= #2 {ns}.data
+execute if score #fish_players {ns}.data matches 4.. if score #fish_parity {ns}.data matches 0 if predicate {ns}:chance/0.5 run scoreboard players set #TEAM_FISH {ns}.data 1
 execute if score #TEAM_FISH {ns}.data matches 1 run function {ns}:modes/fish_fight/teams_tp/setup
 execute if score #TEAM_FISH {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/fish_fight/teams_tp/teams
 
@@ -397,8 +398,6 @@ scoreboard objectives remove {ns}.temp.placed_red
 
 team remove {ns}.temp.red
 team remove {ns}.temp.blue
-team remove {ns}.temp.green
-team remove {ns}.temp.yellow
 
 data remove storage {ns}:temp fish_fight
 """)
@@ -457,7 +456,7 @@ execute if score #fish_fight_seconds {ns}.data matches 600.. run function {ns}:m
 
 	# /tp_airdox
 	write_function(f"{path}/tp_airdox", f"""
-execute store result score #tp_random {ns}.data run random value 1..5
+execute store result score #tp_random {ns}.data run random value 1..19
 scoreboard players set @s {ns}.temp.deathCooldown 0
 
 execute if score #tp_random {ns}.data matches 1 run tp @s 156002 151 155970
@@ -480,23 +479,23 @@ execute if score #tp_random {ns}.data matches 9 run tp @s 156001 151 156006
 
 execute if score #tp_random {ns}.data matches 10 run tp @s 156012 142 156028
 
-execute if score #tp_random {ns}.data matches 10 run tp @s 156005 142 156025
+execute if score #tp_random {ns}.data matches 11 run tp @s 156005 142 156025
 
-execute if score #tp_random {ns}.data matches 11 run tp @s 156008 144 156020
+execute if score #tp_random {ns}.data matches 12 run tp @s 156008 144 156020
 
-execute if score #tp_random {ns}.data matches 12 run tp @s 156001 144 156015
+execute if score #tp_random {ns}.data matches 13 run tp @s 156001 144 156015
 
-execute if score #tp_random {ns}.data matches 13 run tp @s 156007 144 156007
+execute if score #tp_random {ns}.data matches 14 run tp @s 156007 144 156007
 
-execute if score #tp_random {ns}.data matches 14 run tp @s 156008 143 155997
+execute if score #tp_random {ns}.data matches 15 run tp @s 156008 143 155997
 
-execute if score #tp_random {ns}.data matches 15 run tp @s 156011 144 156003
+execute if score #tp_random {ns}.data matches 16 run tp @s 156011 144 156003
 
-execute if score #tp_random {ns}.data matches 16 run tp @s 155986 151 156005
+execute if score #tp_random {ns}.data matches 17 run tp @s 155986 151 156005
 
-execute if score #tp_random {ns}.data matches 17 run tp @s 155986 156 155995
+execute if score #tp_random {ns}.data matches 18 run tp @s 155986 156 155995
 
-execute if score #tp_random {ns}.data matches 18 run tp @s 155989 151 155987
+execute if score #tp_random {ns}.data matches 19 run tp @s 155989 151 155987
 """)
 
 	# /block_disappear/detect_color (macro)
@@ -588,30 +587,6 @@ team modify {ns}.temp.blue collisionRule never
 scoreboard players set #next_role {ns}.data 0
 """)
 
-	# /teams_tp/setup4 (brace-heavy: plain string, translation ref rewritten)
-	write_function(f"{path}/teams_tp/setup4", f"""
-function {ns}:modes/fish_fight/translations/teams_tp_setup4
-
-team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
-team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
-team add {ns}.temp.yellow {{"text":"[Yellow]","color":"yellow"}}
-team add {ns}.temp.green {{"text":"[Green]","color":"green"}}
-team modify {ns}.temp.red color red
-team modify {ns}.temp.blue color blue
-team modify {ns}.temp.yellow color yellow
-team modify {ns}.temp.green color green
-team modify {ns}.temp.red friendlyFire false
-team modify {ns}.temp.blue friendlyFire false
-team modify {ns}.temp.yellow friendlyFire false
-team modify {ns}.temp.green friendlyFire false
-team modify {ns}.temp.red collisionRule never
-team modify {ns}.temp.blue collisionRule never
-team modify {ns}.temp.yellow collisionRule never
-team modify {ns}.temp.green collisionRule never
-
-scoreboard players set #next_role {ns}.data 0
-""")
-
 	# /teams_tp/teams
 	write_function(f"{path}/teams_tp/teams", f"""
 # Répartition en équipes
@@ -619,17 +594,6 @@ scoreboard players add #next_role {ns}.data 1
 execute if score #next_role {ns}.data matches 1 run team join {ns}.temp.red @s
 execute if score #next_role {ns}.data matches 2 run team join {ns}.temp.blue @s
 execute if score #next_role {ns}.data matches 2 run scoreboard players set #next_role {ns}.data 0
-""")
-
-	# /teams_tp/teams4
-	write_function(f"{path}/teams_tp/teams4", f"""
-# Répartition en équipes
-scoreboard players add #next_role {ns}.data 1
-execute if score #next_role {ns}.data matches 1 run team join {ns}.temp.red @s
-execute if score #next_role {ns}.data matches 2 run team join {ns}.temp.blue @s
-execute if score #next_role {ns}.data matches 3 run team join {ns}.temp.green @s
-execute if score #next_role {ns}.data matches 4 run team join {ns}.temp.yellow @s
-execute if score #next_role {ns}.data matches 4 run scoreboard players set #next_role {ns}.data 0
 """)
 
 	# /teams_tp/tp_give (brace-heavy: plain string)

@@ -129,12 +129,3 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"text":"Fish Fight","bold
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"Fish Fight","bold":true,"color":"#8DF0CE"}},{{"text":" \u2022 ","bold":true,"color":"gray"}},{{"text":"(1 of 2 games)","bold":true,"italic":true,"color":"gray"}},{{"text":" The game will be played in 2 teams!\n","bold":true}}]
 """)
 
-	# /teams_tp_setup4
-	write_function(f"{path}/teams_tp_setup4", rf"""
-# French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"text":"Fish Fight","bold":true,"color":"#8DF0CE"}},{{"text":" \u2022 ","bold":true,"color":"gray"}},{{"text":"(1 partie sur 2)","bold":true,"italic":true,"color":"gray"}},{{"text":" Le jeu se déroulera en 4 équipes !\n","bold":true}}]
-
-# English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"text":"Fish Fight","bold":true,"color":"#8DF0CE"}},{{"text":" \u2022 ","bold":true,"color":"gray"}},{{"text":"(1 of 2 games)","bold":true,"italic":true,"color":"gray"}},{{"text":" The game will be played by 4 teams!\n","bold":true}}]
-""")
-
