@@ -10,7 +10,7 @@ requires-python = ">=3.14"
 dependencies = [
     "pyright>=1.1.414",
     "ruff>=0.16.10",
-    "stewbeet>=3.10.0",
+    "stewbeet>=3.10.1",
     "uv>=0.12.23",
 ]
 

@@ -1129,7 +1129,7 @@ dependencies = [
 
 [[package]]
 name = "stewbeet"
-version = "3.10.0"
+version = "3.10.1"
 source = { directory = "../StewBeet/python_package" }
 dependencies = [
     { name = "beet" },

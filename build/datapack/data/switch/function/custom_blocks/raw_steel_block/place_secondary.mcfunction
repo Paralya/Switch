@@ -20,6 +20,5 @@ data merge entity @s {"CustomName": {"text": "Raw Steel Block"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="switch:raw_steel_block"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function switch:custom_blocks/compute_brightness
 
