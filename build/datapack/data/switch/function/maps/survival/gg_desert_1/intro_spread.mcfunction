@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 124158.17 117.59 124053.87 rotated 44.14 5.92 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Y fait chaud ici!",subtitle:"Remelta, Fhara",particle:"minecraft:glow"}}
+execute in switch:game positioned 10158.17 117.59 8053.87 rotated 44.14 5.92 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Y fait chaud ici!",subtitle:"Remelta, Fhara",particle:"minecraft:glow"}}
 

@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 148070.85 139.94 148026.55 rotated 291.34 14.09 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Fairy Garden",subtitle:"JeSuisMister, Zougly, Maxmos",particle:"minecraft:glow"}}
+execute in switch:game positioned -11929.15 139.94 -7973.45 rotated 291.34 14.09 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Fairy Garden",subtitle:"JeSuisMister, Zougly, Maxmos",particle:"minecraft:glow"}}
 

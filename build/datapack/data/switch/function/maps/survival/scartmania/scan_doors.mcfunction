@@ -7,46 +7,46 @@
 
 scoreboard players add #scan_scartmania switch.data 1
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58000 58000 58015 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58000 58000 58015 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2000 -8000 2015 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2000 -8000 2015 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58015 58000 58029 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58015 58000 58029 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2015 -8000 2029 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2015 -8000 2029 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58029 58000 58044 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58029 58000 58044 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2029 -8000 2044 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2029 -8000 2044 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58044 58000 58058 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58044 58000 58058 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2044 -8000 2058 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2044 -8000 2058 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58058 58000 58073 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58058 58000 58073 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2058 -8000 2073 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2058 -8000 2073 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58073 58000 58087 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58073 58000 58087 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2073 -8000 2087 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2073 -8000 2087 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58087 58000 58102 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58087 58000 58102 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2087 -8000 2102 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2087 -8000 2102 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58102 58000 58116 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58102 58000 58116 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2102 -8000 2116 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2102 -8000 2116 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58116 58000 58131 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58116 58000 58131 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2116 -8000 2131 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2116 -8000 2131 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58131 58000 58145 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58131 58000 58145 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2131 -8000 2145 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2131 -8000 2145 -7812
 
-execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 58145 58000 58160 58188
-execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 58145 58000 58160 58188
+execute if score #scan_scartmania switch.data matches 1 in minecraft:overworld run forceload add 2145 -8000 2160 -7812
+execute if score #scan_scartmania switch.data matches 1 in switch:game run forceload add 2145 -8000 2160 -7812
 
 execute if score #scan_scartmania switch.data matches 1 run data modify storage switch:maps to_scan.scartmania set value 2b
-execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_x_scartmania switch.data 58001
+execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_x_scartmania switch.data 2001
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_y_scartmania switch.data 101
-execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_z_scartmania switch.data 58001
-execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_x_scartmania switch.data 58159
+execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #start_z_scartmania switch.data -7999
+execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_x_scartmania switch.data 2159
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_y_scartmania switch.data 190
-execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_z_scartmania switch.data 58187
+execute if score #scan_scartmania switch.data matches 1 run scoreboard players set #end_z_scartmania switch.data -7813
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players operation #curr_x_scartmania switch.data = #start_x_scartmania switch.data
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players operation #curr_y_scartmania switch.data = #start_y_scartmania switch.data
 execute if score #scan_scartmania switch.data matches 1 run scoreboard players operation #curr_z_scartmania switch.data = #start_z_scartmania switch.data
@@ -55,38 +55,38 @@ execute if score #scan_scartmania switch.data matches 1 run data modify storage 
 execute if score #scan_scartmania switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_scartmania switch.data matches 30.. summon marker run function switch:maps/survival/scartmania/scan_doors_on_marker
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58000 58000 58015 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58000 58000 58015 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2000 -8000 2015 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2000 -8000 2015 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58015 58000 58029 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58015 58000 58029 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2015 -8000 2029 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2015 -8000 2029 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58029 58000 58044 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58029 58000 58044 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2029 -8000 2044 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2029 -8000 2044 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58044 58000 58058 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58044 58000 58058 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2044 -8000 2058 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2044 -8000 2058 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58058 58000 58073 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58058 58000 58073 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2058 -8000 2073 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2058 -8000 2073 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58073 58000 58087 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58073 58000 58087 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2073 -8000 2087 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2073 -8000 2087 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58087 58000 58102 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58087 58000 58102 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2087 -8000 2102 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2087 -8000 2102 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58102 58000 58116 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58102 58000 58116 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2102 -8000 2116 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2102 -8000 2116 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58116 58000 58131 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58116 58000 58131 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2116 -8000 2131 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2116 -8000 2131 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58131 58000 58145 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58131 58000 58145 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2131 -8000 2145 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2131 -8000 2145 -7812
 
-execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 58145 58000 58160 58188
-execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 58145 58000 58160 58188
+execute if score #scan_scartmania switch.data matches 566 in minecraft:overworld run forceload remove 2145 -8000 2160 -7812
+execute if score #scan_scartmania switch.data matches 566 in switch:game run forceload remove 2145 -8000 2160 -7812
 
 execute if score #scan_scartmania switch.data matches 566 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"scartmania","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #scan_scartmania switch.data matches 566 run data remove storage switch:maps to_scan.scartmania

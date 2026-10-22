@@ -1,28 +1,28 @@
 
 #> switch:modes/glassrunner/second
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
-# @within	switch:modes/glassrunner/calls/second [ positioned 3000 128 3000 ]
+# @within	switch:modes/glassrunner/calls/second [ positioned -3750 128 -1750 ]
 #
 
 scoreboard players add #glassrunner_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
-execute positioned 2997 128 2997 as @a[tag=!detached,dx=6,dy=3,dz=6] run function switch:modes/glassrunner/ctp/center/adding_timer
-execute positioned 2997 128 2997 unless entity @a[tag=!detached,dx=6,dy=3,dz=6] run function switch:modes/glassrunner/ctp/center/reset
+execute positioned -3753 128 -1753 as @a[tag=!detached,dx=6,dy=3,dz=6] run function switch:modes/glassrunner/ctp/center/adding_timer
+execute positioned -3753 128 -1753 unless entity @a[tag=!detached,dx=6,dy=3,dz=6] run function switch:modes/glassrunner/ctp/center/reset
 
 execute if score #glassrunner.ctp.center.red.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/center/red
 execute if score #glassrunner.ctp.center.blue.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/center/blue
 
-execute positioned 2924 128 3074 as @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side1/adding_timer
-execute positioned 2924 128 3074 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side1/reset
+execute positioned -3826 128 -1676 as @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side1/adding_timer
+execute positioned -3826 128 -1676 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side1/reset
 
 execute if score #glassrunner.ctp.side1.red.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/side1/red
 execute if score #glassrunner.ctp.side1.blue.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/side1/blue
 
-execute positioned 3074 128 2924 as @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side2/adding_timer
-execute positioned 3074 128 2924 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side2/reset
+execute positioned -3676 128 -1826 as @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side2/adding_timer
+execute positioned -3676 128 -1826 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function switch:modes/glassrunner/ctp/side2/reset
 
 execute if score #glassrunner.ctp.side2.red.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/side2/red
 execute if score #glassrunner.ctp.side2.blue.timer switch.data matches 1.. run function switch:modes/glassrunner/ctp/side2/blue

@@ -7,28 +7,28 @@
 
 scoreboard players add #scan_bombardement switch.data 1
 
-execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 121000 121000 121023 121087
-execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 121000 121000 121023 121087
+execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 10000 2000 10023 2087
+execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 10000 2000 10023 2087
 
-execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 121023 121000 121046 121087
-execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 121023 121000 121046 121087
+execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 10023 2000 10046 2087
+execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 10023 2000 10046 2087
 
-execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 121046 121000 121069 121087
-execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 121046 121000 121069 121087
+execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 10046 2000 10069 2087
+execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 10046 2000 10069 2087
 
-execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 121069 121000 121092 121087
-execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 121069 121000 121092 121087
+execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 10069 2000 10092 2087
+execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 10069 2000 10092 2087
 
-execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 121092 121000 121115 121087
-execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 121092 121000 121115 121087
+execute if score #scan_bombardement switch.data matches 1 in minecraft:overworld run forceload add 10092 2000 10115 2087
+execute if score #scan_bombardement switch.data matches 1 in switch:game run forceload add 10092 2000 10115 2087
 
 execute if score #scan_bombardement switch.data matches 1 run data modify storage switch:maps to_scan.bombardement set value 2b
-execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_x_bombardement switch.data 121001
+execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_x_bombardement switch.data 10001
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_y_bombardement switch.data 101
-execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_z_bombardement switch.data 121001
-execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_x_bombardement switch.data 121114
+execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #start_z_bombardement switch.data 2001
+execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_x_bombardement switch.data 10114
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_y_bombardement switch.data 176
-execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_z_bombardement switch.data 121086
+execute if score #scan_bombardement switch.data matches 1 run scoreboard players set #end_z_bombardement switch.data 2086
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players operation #curr_x_bombardement switch.data = #start_x_bombardement switch.data
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players operation #curr_y_bombardement switch.data = #start_y_bombardement switch.data
 execute if score #scan_bombardement switch.data matches 1 run scoreboard players operation #curr_z_bombardement switch.data = #start_z_bombardement switch.data
@@ -37,20 +37,20 @@ execute if score #scan_bombardement switch.data matches 1 run data modify storag
 execute if score #scan_bombardement switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_bombardement switch.data matches 30.. summon marker run function switch:maps/survival/bombardement/scan_doors_on_marker
 
-execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 121000 121000 121023 121087
-execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 121000 121000 121023 121087
+execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 10000 2000 10023 2087
+execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 10000 2000 10023 2087
 
-execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 121023 121000 121046 121087
-execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 121023 121000 121046 121087
+execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 10023 2000 10046 2087
+execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 10023 2000 10046 2087
 
-execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 121046 121000 121069 121087
-execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 121046 121000 121069 121087
+execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 10046 2000 10069 2087
+execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 10046 2000 10069 2087
 
-execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 121069 121000 121092 121087
-execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 121069 121000 121092 121087
+execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 10069 2000 10092 2087
+execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 10069 2000 10092 2087
 
-execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 121092 121000 121115 121087
-execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 121092 121000 121115 121087
+execute if score #scan_bombardement switch.data matches 180 in minecraft:overworld run forceload remove 10092 2000 10115 2087
+execute if score #scan_bombardement switch.data matches 180 in switch:game run forceload remove 10092 2000 10115 2087
 
 execute if score #scan_bombardement switch.data matches 180 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"bombardement","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #scan_bombardement switch.data matches 180 run data remove storage switch:maps to_scan.bombardement

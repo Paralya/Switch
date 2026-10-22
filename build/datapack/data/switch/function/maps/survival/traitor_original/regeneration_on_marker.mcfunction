@@ -6,38 +6,38 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_traitor_original_y switch.data
 
-execute if score #rg_traitor_original_mod switch.data matches 0 at @s in switch:game run particle cloud 1509 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 0 at @s run clone from minecraft:overworld 1500 ~ 1500 1518 ~ 1655 to switch:game 1500 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 0 at @s in switch:game run particle cloud 2009 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 0 at @s run clone from minecraft:overworld 2000 ~ 2000 2018 ~ 2155 to switch:game 2000 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 1 at @s in switch:game run particle cloud 1527 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 1 at @s run clone from minecraft:overworld 1518 ~ 1500 1537 ~ 1655 to switch:game 1518 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 1 at @s in switch:game run particle cloud 2027 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 1 at @s run clone from minecraft:overworld 2018 ~ 2000 2037 ~ 2155 to switch:game 2018 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 2 at @s in switch:game run particle cloud 1546 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 2 at @s run clone from minecraft:overworld 1537 ~ 1500 1555 ~ 1655 to switch:game 1537 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 2 at @s in switch:game run particle cloud 2046 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 2 at @s run clone from minecraft:overworld 2037 ~ 2000 2055 ~ 2155 to switch:game 2037 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 3 at @s in switch:game run particle cloud 1564 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 3 at @s run clone from minecraft:overworld 1555 ~ 1500 1574 ~ 1655 to switch:game 1555 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 3 at @s in switch:game run particle cloud 2064 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 3 at @s run clone from minecraft:overworld 2055 ~ 2000 2074 ~ 2155 to switch:game 2055 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 4 at @s in switch:game run particle cloud 1583 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 4 at @s run clone from minecraft:overworld 1574 ~ 1500 1592 ~ 1655 to switch:game 1574 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 4 at @s in switch:game run particle cloud 2083 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 4 at @s run clone from minecraft:overworld 2074 ~ 2000 2092 ~ 2155 to switch:game 2074 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 5 at @s in switch:game run particle cloud 1601 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 5 at @s run clone from minecraft:overworld 1592 ~ 1500 1610 ~ 1655 to switch:game 1592 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 5 at @s in switch:game run particle cloud 2101 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 5 at @s run clone from minecraft:overworld 2092 ~ 2000 2110 ~ 2155 to switch:game 2092 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 6 at @s in switch:game run particle cloud 1619 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 6 at @s run clone from minecraft:overworld 1610 ~ 1500 1629 ~ 1655 to switch:game 1610 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 6 at @s in switch:game run particle cloud 2119 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 6 at @s run clone from minecraft:overworld 2110 ~ 2000 2129 ~ 2155 to switch:game 2110 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 7 at @s in switch:game run particle cloud 1638 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 7 at @s run clone from minecraft:overworld 1629 ~ 1500 1647 ~ 1655 to switch:game 1629 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 7 at @s in switch:game run particle cloud 2138 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 7 at @s run clone from minecraft:overworld 2129 ~ 2000 2147 ~ 2155 to switch:game 2129 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 8 at @s in switch:game run particle cloud 1656 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 8 at @s run clone from minecraft:overworld 1647 ~ 1500 1666 ~ 1655 to switch:game 1647 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 8 at @s in switch:game run particle cloud 2156 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 8 at @s run clone from minecraft:overworld 2147 ~ 2000 2166 ~ 2155 to switch:game 2147 ~0 2000 strict replace force
 
-execute if score #rg_traitor_original_mod switch.data matches 9 at @s in switch:game run particle cloud 1675 ~0.5 1577 9 0 38 0 250 force
-execute if score #rg_traitor_original_mod switch.data matches 9 at @s run clone from minecraft:overworld 1666 ~ 1500 1684 ~ 1655 to switch:game 1666 ~0 1500 strict replace force
+execute if score #rg_traitor_original_mod switch.data matches 9 at @s in switch:game run particle cloud 2175 ~0.5 2077 9 0 38 0 250 force
+execute if score #rg_traitor_original_mod switch.data matches 9 at @s run clone from minecraft:overworld 2166 ~ 2000 2184 ~ 2155 to switch:game 2166 ~0 2000 strict replace force
 
 scoreboard players add #rg_traitor_original_mod switch.data 1
-execute if score #rg_traitor_original_mod switch.data matches 10 in switch:game run kill @e[type=item,x=1592,y=100,z=1577,distance=..1000]
+execute if score #rg_traitor_original_mod switch.data matches 10 in switch:game run kill @e[type=item,x=2092,y=100,z=2077,distance=..1000]
 execute if score #rg_traitor_original_mod switch.data matches 10 run scoreboard players add #rg_traitor_original_y switch.data 1
 execute if score #rg_traitor_original_mod switch.data matches 10 run scoreboard players set #rg_traitor_original_mod switch.data 0
 

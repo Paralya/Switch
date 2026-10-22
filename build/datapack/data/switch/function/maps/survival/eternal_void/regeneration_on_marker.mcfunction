@@ -6,23 +6,23 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_eternal_void_y switch.data
 
-execute if score #rg_eternal_void_mod switch.data matches 0 at @s in switch:game run particle cloud 61010 ~0.5 61050 10 0 25 0 250 force
-execute if score #rg_eternal_void_mod switch.data matches 0 at @s run clone from minecraft:overworld 61000 ~ 61000 61020 ~ 61100 to switch:game 61000 ~0 61000 strict replace force
+execute if score #rg_eternal_void_mod switch.data matches 0 at @s in switch:game run particle cloud 8010 ~0.5 -7950 10 0 25 0 250 force
+execute if score #rg_eternal_void_mod switch.data matches 0 at @s run clone from minecraft:overworld 8000 ~ -8000 8020 ~ -7900 to switch:game 8000 ~0 -8000 strict replace force
 
-execute if score #rg_eternal_void_mod switch.data matches 1 at @s in switch:game run particle cloud 61030 ~0.5 61050 10 0 25 0 250 force
-execute if score #rg_eternal_void_mod switch.data matches 1 at @s run clone from minecraft:overworld 61020 ~ 61000 61040 ~ 61100 to switch:game 61020 ~0 61000 strict replace force
+execute if score #rg_eternal_void_mod switch.data matches 1 at @s in switch:game run particle cloud 8030 ~0.5 -7950 10 0 25 0 250 force
+execute if score #rg_eternal_void_mod switch.data matches 1 at @s run clone from minecraft:overworld 8020 ~ -8000 8040 ~ -7900 to switch:game 8020 ~0 -8000 strict replace force
 
-execute if score #rg_eternal_void_mod switch.data matches 2 at @s in switch:game run particle cloud 61050 ~0.5 61050 10 0 25 0 250 force
-execute if score #rg_eternal_void_mod switch.data matches 2 at @s run clone from minecraft:overworld 61040 ~ 61000 61060 ~ 61100 to switch:game 61040 ~0 61000 strict replace force
+execute if score #rg_eternal_void_mod switch.data matches 2 at @s in switch:game run particle cloud 8050 ~0.5 -7950 10 0 25 0 250 force
+execute if score #rg_eternal_void_mod switch.data matches 2 at @s run clone from minecraft:overworld 8040 ~ -8000 8060 ~ -7900 to switch:game 8040 ~0 -8000 strict replace force
 
-execute if score #rg_eternal_void_mod switch.data matches 3 at @s in switch:game run particle cloud 61070 ~0.5 61050 10 0 25 0 250 force
-execute if score #rg_eternal_void_mod switch.data matches 3 at @s run clone from minecraft:overworld 61060 ~ 61000 61080 ~ 61100 to switch:game 61060 ~0 61000 strict replace force
+execute if score #rg_eternal_void_mod switch.data matches 3 at @s in switch:game run particle cloud 8070 ~0.5 -7950 10 0 25 0 250 force
+execute if score #rg_eternal_void_mod switch.data matches 3 at @s run clone from minecraft:overworld 8060 ~ -8000 8080 ~ -7900 to switch:game 8060 ~0 -8000 strict replace force
 
-execute if score #rg_eternal_void_mod switch.data matches 4 at @s in switch:game run particle cloud 61090 ~0.5 61050 10 0 25 0 250 force
-execute if score #rg_eternal_void_mod switch.data matches 4 at @s run clone from minecraft:overworld 61080 ~ 61000 61100 ~ 61100 to switch:game 61080 ~0 61000 strict replace force
+execute if score #rg_eternal_void_mod switch.data matches 4 at @s in switch:game run particle cloud 8090 ~0.5 -7950 10 0 25 0 250 force
+execute if score #rg_eternal_void_mod switch.data matches 4 at @s run clone from minecraft:overworld 8080 ~ -8000 8100 ~ -7900 to switch:game 8080 ~0 -8000 strict replace force
 
 scoreboard players add #rg_eternal_void_mod switch.data 1
-execute if score #rg_eternal_void_mod switch.data matches 5 in switch:game run kill @e[type=item,x=61050,y=100,z=61050,distance=..1000]
+execute if score #rg_eternal_void_mod switch.data matches 5 in switch:game run kill @e[type=item,x=8050,y=100,z=-7950,distance=..1000]
 execute if score #rg_eternal_void_mod switch.data matches 5 run scoreboard players add #rg_eternal_void_y switch.data 1
 execute if score #rg_eternal_void_mod switch.data matches 5 run scoreboard players set #rg_eternal_void_mod switch.data 0
 

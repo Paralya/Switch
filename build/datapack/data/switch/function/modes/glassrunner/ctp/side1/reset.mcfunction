@@ -1,12 +1,12 @@
 
 #> switch:modes/glassrunner/ctp/side1/reset
 #
-# @executed	positioned 2924 128 3074
+# @executed	positioned -3826 128 -1676
 #
-# @within	switch:modes/glassrunner/second [ positioned 2924 128 3074 ]
+# @within	switch:modes/glassrunner/second [ positioned -3826 128 -1676 ]
 #
 
 scoreboard players set #glassrunner.ctp.side1.red.timer switch.data 0
 scoreboard players set #glassrunner.ctp.side1.blue.timer switch.data 0
-fill 2926 127 3074 2924 127 3076 minecraft:white_concrete
+fill -3824 127 -1676 -3826 127 -1674 minecraft:white_concrete
 

@@ -6,41 +6,41 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_scartmania_y switch.data
 
-execute if score #rg_scartmania_mod switch.data matches 0 at @s in switch:game run particle cloud 58007 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 0 at @s run clone from minecraft:overworld 58000 ~ 58000 58015 ~ 58188 to switch:game 58000 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 0 at @s in switch:game run particle cloud 2007 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 0 at @s run clone from minecraft:overworld 2000 ~ -8000 2015 ~ -7812 to switch:game 2000 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 1 at @s in switch:game run particle cloud 58022 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 1 at @s run clone from minecraft:overworld 58015 ~ 58000 58029 ~ 58188 to switch:game 58015 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 1 at @s in switch:game run particle cloud 2022 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 1 at @s run clone from minecraft:overworld 2015 ~ -8000 2029 ~ -7812 to switch:game 2015 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 2 at @s in switch:game run particle cloud 58036 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 2 at @s run clone from minecraft:overworld 58029 ~ 58000 58044 ~ 58188 to switch:game 58029 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 2 at @s in switch:game run particle cloud 2036 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 2 at @s run clone from minecraft:overworld 2029 ~ -8000 2044 ~ -7812 to switch:game 2029 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 3 at @s in switch:game run particle cloud 58051 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 3 at @s run clone from minecraft:overworld 58044 ~ 58000 58058 ~ 58188 to switch:game 58044 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 3 at @s in switch:game run particle cloud 2051 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 3 at @s run clone from minecraft:overworld 2044 ~ -8000 2058 ~ -7812 to switch:game 2044 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 4 at @s in switch:game run particle cloud 58065 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 4 at @s run clone from minecraft:overworld 58058 ~ 58000 58073 ~ 58188 to switch:game 58058 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 4 at @s in switch:game run particle cloud 2065 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 4 at @s run clone from minecraft:overworld 2058 ~ -8000 2073 ~ -7812 to switch:game 2058 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 5 at @s in switch:game run particle cloud 58080 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 5 at @s run clone from minecraft:overworld 58073 ~ 58000 58087 ~ 58188 to switch:game 58073 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 5 at @s in switch:game run particle cloud 2080 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 5 at @s run clone from minecraft:overworld 2073 ~ -8000 2087 ~ -7812 to switch:game 2073 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 6 at @s in switch:game run particle cloud 58094 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 6 at @s run clone from minecraft:overworld 58087 ~ 58000 58102 ~ 58188 to switch:game 58087 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 6 at @s in switch:game run particle cloud 2094 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 6 at @s run clone from minecraft:overworld 2087 ~ -8000 2102 ~ -7812 to switch:game 2087 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 7 at @s in switch:game run particle cloud 58109 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 7 at @s run clone from minecraft:overworld 58102 ~ 58000 58116 ~ 58188 to switch:game 58102 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 7 at @s in switch:game run particle cloud 2109 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 7 at @s run clone from minecraft:overworld 2102 ~ -8000 2116 ~ -7812 to switch:game 2102 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 8 at @s in switch:game run particle cloud 58123 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 8 at @s run clone from minecraft:overworld 58116 ~ 58000 58131 ~ 58188 to switch:game 58116 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 8 at @s in switch:game run particle cloud 2123 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 8 at @s run clone from minecraft:overworld 2116 ~ -8000 2131 ~ -7812 to switch:game 2116 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 9 at @s in switch:game run particle cloud 58138 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 9 at @s run clone from minecraft:overworld 58131 ~ 58000 58145 ~ 58188 to switch:game 58131 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 9 at @s in switch:game run particle cloud 2138 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 9 at @s run clone from minecraft:overworld 2131 ~ -8000 2145 ~ -7812 to switch:game 2131 ~0 -8000 strict replace force
 
-execute if score #rg_scartmania_mod switch.data matches 10 at @s in switch:game run particle cloud 58152 ~0.5 58094 7 0 47 0 250 force
-execute if score #rg_scartmania_mod switch.data matches 10 at @s run clone from minecraft:overworld 58145 ~ 58000 58160 ~ 58188 to switch:game 58145 ~0 58000 strict replace force
+execute if score #rg_scartmania_mod switch.data matches 10 at @s in switch:game run particle cloud 2152 ~0.5 -7906 7 0 47 0 250 force
+execute if score #rg_scartmania_mod switch.data matches 10 at @s run clone from minecraft:overworld 2145 ~ -8000 2160 ~ -7812 to switch:game 2145 ~0 -8000 strict replace force
 
 scoreboard players add #rg_scartmania_mod switch.data 1
-execute if score #rg_scartmania_mod switch.data matches 11 in switch:game run kill @e[type=item,x=58080,y=100,z=58094,distance=..1000]
+execute if score #rg_scartmania_mod switch.data matches 11 in switch:game run kill @e[type=item,x=2080,y=100,z=-7906,distance=..1000]
 execute if score #rg_scartmania_mod switch.data matches 11 run scoreboard players add #rg_scartmania_y switch.data 1
 execute if score #rg_scartmania_mod switch.data matches 11 run scoreboard players set #rg_scartmania_mod switch.data 0
 

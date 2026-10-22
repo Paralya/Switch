@@ -1,7 +1,7 @@
 
 #> switch:modes/glassrunner/ctp/update_sb
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
 # @within	switch:modes/glassrunner/second with storage switch:main input
 #

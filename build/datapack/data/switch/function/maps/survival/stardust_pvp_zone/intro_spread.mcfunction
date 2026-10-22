@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 105113.91 176.66 105201.8 rotated 208.95 28.43 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Stardust PVP Zone",subtitle:"Cala (Paralya)",particle:"minecraft:glow"}}
+execute in switch:game positioned -3886.09 176.66 -9798.2 rotated 208.95 28.43 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Stardust PVP Zone",subtitle:"Cala (Paralya)",particle:"minecraft:glow"}}
 

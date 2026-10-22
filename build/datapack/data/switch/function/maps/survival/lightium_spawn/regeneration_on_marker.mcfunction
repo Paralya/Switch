@@ -6,29 +6,29 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_lightium_spawn_y switch.data
 
-execute if score #rg_lightium_spawn_mod switch.data matches 0 at @s in switch:game run particle cloud 97009 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 0 at @s run clone from minecraft:overworld 97000 ~ 97000 97018 ~ 97129 to switch:game 97000 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 0 at @s in switch:game run particle cloud -9991 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 0 at @s run clone from minecraft:overworld -10000 ~ -2000 -9982 ~ -1871 to switch:game -10000 ~0 -2000 strict replace force
 
-execute if score #rg_lightium_spawn_mod switch.data matches 1 at @s in switch:game run particle cloud 97027 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 1 at @s run clone from minecraft:overworld 97018 ~ 97000 97037 ~ 97129 to switch:game 97018 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 1 at @s in switch:game run particle cloud -9973 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 1 at @s run clone from minecraft:overworld -9982 ~ -2000 -9963 ~ -1871 to switch:game -9982 ~0 -2000 strict replace force
 
-execute if score #rg_lightium_spawn_mod switch.data matches 2 at @s in switch:game run particle cloud 97046 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 2 at @s run clone from minecraft:overworld 97037 ~ 97000 97055 ~ 97129 to switch:game 97037 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 2 at @s in switch:game run particle cloud -9954 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 2 at @s run clone from minecraft:overworld -9963 ~ -2000 -9945 ~ -1871 to switch:game -9963 ~0 -2000 strict replace force
 
-execute if score #rg_lightium_spawn_mod switch.data matches 3 at @s in switch:game run particle cloud 97064 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 3 at @s run clone from minecraft:overworld 97055 ~ 97000 97074 ~ 97129 to switch:game 97055 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 3 at @s in switch:game run particle cloud -9936 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 3 at @s run clone from minecraft:overworld -9945 ~ -2000 -9926 ~ -1871 to switch:game -9945 ~0 -2000 strict replace force
 
-execute if score #rg_lightium_spawn_mod switch.data matches 4 at @s in switch:game run particle cloud 97083 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 4 at @s run clone from minecraft:overworld 97074 ~ 97000 97092 ~ 97129 to switch:game 97074 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 4 at @s in switch:game run particle cloud -9917 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 4 at @s run clone from minecraft:overworld -9926 ~ -2000 -9908 ~ -1871 to switch:game -9926 ~0 -2000 strict replace force
 
-execute if score #rg_lightium_spawn_mod switch.data matches 5 at @s in switch:game run particle cloud 97101 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 5 at @s run clone from minecraft:overworld 97092 ~ 97000 97111 ~ 97129 to switch:game 97092 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 5 at @s in switch:game run particle cloud -9899 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 5 at @s run clone from minecraft:overworld -9908 ~ -2000 -9889 ~ -1871 to switch:game -9908 ~0 -2000 strict replace force
 
-execute if score #rg_lightium_spawn_mod switch.data matches 6 at @s in switch:game run particle cloud 97120 ~0.5 97064 9 0 32 0 250 force
-execute if score #rg_lightium_spawn_mod switch.data matches 6 at @s run clone from minecraft:overworld 97111 ~ 97000 97129 ~ 97129 to switch:game 97111 ~0 97000 strict replace force
+execute if score #rg_lightium_spawn_mod switch.data matches 6 at @s in switch:game run particle cloud -9880 ~0.5 -1936 9 0 32 0 250 force
+execute if score #rg_lightium_spawn_mod switch.data matches 6 at @s run clone from minecraft:overworld -9889 ~ -2000 -9871 ~ -1871 to switch:game -9889 ~0 -2000 strict replace force
 
 scoreboard players add #rg_lightium_spawn_mod switch.data 1
-execute if score #rg_lightium_spawn_mod switch.data matches 7 in switch:game run kill @e[type=item,x=97064,y=100,z=97064,distance=..1000]
+execute if score #rg_lightium_spawn_mod switch.data matches 7 in switch:game run kill @e[type=item,x=-9935,y=100,z=-1935,distance=..1000]
 execute if score #rg_lightium_spawn_mod switch.data matches 7 run scoreboard players add #rg_lightium_spawn_y switch.data 1
 execute if score #rg_lightium_spawn_mod switch.data matches 7 run scoreboard players set #rg_lightium_spawn_mod switch.data 0
 

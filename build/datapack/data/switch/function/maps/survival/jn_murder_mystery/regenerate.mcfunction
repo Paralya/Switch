@@ -9,42 +9,42 @@
 
 scoreboard players add #rg_jn_murder_mystery switch.data 1
 execute if score #rg_jn_murder_mystery switch.data matches 1 run data modify storage switch:maps to_regenerate.jn_murder_mystery set value 2b
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134000 134000 134021 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134000 134000 134021 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134021 134000 134043 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134021 134000 134043 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134043 134000 134064 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134043 134000 134064 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134064 134000 134085 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134064 134000 134085 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134085 134000 134106 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134085 134000 134106 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134106 134000 134128 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134106 134000 134128 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add 134128 134000 134149 134123
-execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add 134128 134000 134149 134123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -4000 10000 -3979 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -4000 10000 -3979 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -3979 10000 -3957 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -3979 10000 -3957 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -3957 10000 -3936 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -3957 10000 -3936 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -3936 10000 -3915 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -3936 10000 -3915 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -3915 10000 -3894 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -3915 10000 -3894 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -3894 10000 -3872 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -3894 10000 -3872 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in minecraft:overworld run forceload add -3872 10000 -3851 10123
+execute if score #rg_jn_murder_mystery switch.data matches 1 in switch:game run forceload add -3872 10000 -3851 10123
 
 execute if score #rg_jn_murder_mystery switch.data matches 1 run scoreboard players set #rg_jn_murder_mystery_y switch.data 100
 execute if score #rg_jn_murder_mystery switch.data matches 1 run scoreboard players set #rg_jn_murder_mystery_mod switch.data 0
 execute if score #rg_jn_murder_mystery switch.data matches ..441 summon marker run function switch:maps/survival/jn_murder_mystery/regeneration_on_marker
 
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run kill @e[type=item,x=134074,y=100,z=134061,distance=..1000]
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run kill @e[type=item,x=-3925,y=100,z=10061,distance=..1000]
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run data remove storage switch:maps to_regenerate.jn_murder_mystery
 
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134000 134000 134021 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134000 134000 134021 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134021 134000 134043 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134021 134000 134043 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134043 134000 134064 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134043 134000 134064 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134064 134000 134085 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134064 134000 134085 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134085 134000 134106 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134085 134000 134106 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134106 134000 134128 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134106 134000 134128 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove 134128 134000 134149 134123
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove 134128 134000 134149 134123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -4000 10000 -3979 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -4000 10000 -3979 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3979 10000 -3957 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3979 10000 -3957 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3957 10000 -3936 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3957 10000 -3936 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3936 10000 -3915 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3936 10000 -3915 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3915 10000 -3894 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3915 10000 -3894 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3894 10000 -3872 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3894 10000 -3872 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3872 10000 -3851 10123
+execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3872 10000 -3851 10123
 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Murder Mystery","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run function switch:engine/log_message/apply {message:"Map `Murder Mystery` just regenerated!"}

@@ -9,22 +9,22 @@
 
 scoreboard players add #rg_gg_snow_1 switch.data 1
 execute if score #rg_gg_snow_1 switch.data matches 1 run data modify storage switch:maps to_regenerate.gg_snow_1 set value 2b
-execute if score #rg_gg_snow_1 switch.data matches 1 in minecraft:overworld run forceload add 124042 124001 124062 124046
-execute if score #rg_gg_snow_1 switch.data matches 1 in switch:game run forceload add 124042 124001 124062 124046
-execute if score #rg_gg_snow_1 switch.data matches 1 in minecraft:overworld run forceload add 124062 124001 124082 124046
-execute if score #rg_gg_snow_1 switch.data matches 1 in switch:game run forceload add 124062 124001 124082 124046
+execute if score #rg_gg_snow_1 switch.data matches 1 in minecraft:overworld run forceload add 10042 8001 10062 8046
+execute if score #rg_gg_snow_1 switch.data matches 1 in switch:game run forceload add 10042 8001 10062 8046
+execute if score #rg_gg_snow_1 switch.data matches 1 in minecraft:overworld run forceload add 10062 8001 10082 8046
+execute if score #rg_gg_snow_1 switch.data matches 1 in switch:game run forceload add 10062 8001 10082 8046
 
 execute if score #rg_gg_snow_1 switch.data matches 1 run scoreboard players set #rg_gg_snow_1_y switch.data 84
 execute if score #rg_gg_snow_1 switch.data matches 1 run scoreboard players set #rg_gg_snow_1_mod switch.data 0
 execute if score #rg_gg_snow_1 switch.data matches ..106 summon marker run function switch:maps/survival/gg_snow_1/regeneration_on_marker
 
-execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run kill @e[type=item,x=124062,y=84,z=124023,distance=..1000]
+execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run kill @e[type=item,x=10062,y=84,z=8023,distance=..1000]
 execute if score #rg_gg_snow_1 switch.data matches 107.. run data remove storage switch:maps to_regenerate.gg_snow_1
 
-execute if score #rg_gg_snow_1 switch.data matches 107.. in minecraft:overworld run forceload remove 124042 124001 124062 124046
-execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run forceload remove 124042 124001 124062 124046
-execute if score #rg_gg_snow_1 switch.data matches 107.. in minecraft:overworld run forceload remove 124062 124001 124082 124046
-execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run forceload remove 124062 124001 124082 124046
+execute if score #rg_gg_snow_1 switch.data matches 107.. in minecraft:overworld run forceload remove 10042 8001 10062 8046
+execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run forceload remove 10042 8001 10062 8046
+execute if score #rg_gg_snow_1 switch.data matches 107.. in minecraft:overworld run forceload remove 10062 8001 10082 8046
+execute if score #rg_gg_snow_1 switch.data matches 107.. in switch:game run forceload remove 10062 8001 10082 8046
 
 execute if score #rg_gg_snow_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Cloud","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_gg_snow_1 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Snow Cloud` just regenerated!"}

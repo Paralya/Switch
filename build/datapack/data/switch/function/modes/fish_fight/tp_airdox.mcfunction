@@ -13,41 +13,41 @@
 execute store result score #tp_random switch.data run random value 1..19
 scoreboard players set @s switch.temp.deathCooldown 0
 
-execute if score #tp_random switch.data matches 1 run tp @s 156002 151 155970
+execute if score #tp_random switch.data matches 1 run tp @s 2 151 -12030
 
-execute if score #tp_random switch.data matches 2 run tp @s 156001 150 155976
+execute if score #tp_random switch.data matches 2 run tp @s 1 150 -12024
 
-execute if score #tp_random switch.data matches 3 run tp @s 156010 152 155981
+execute if score #tp_random switch.data matches 3 run tp @s 10 152 -12019
 
-execute if score #tp_random switch.data matches 4 run tp @s 156016 154 155988
+execute if score #tp_random switch.data matches 4 run tp @s 16 154 -12012
 
-execute if score #tp_random switch.data matches 5 run tp @s 156007 153 155989
+execute if score #tp_random switch.data matches 5 run tp @s 7 153 -12011
 
-execute if score #tp_random switch.data matches 6 run tp @s 156010 152 155994
+execute if score #tp_random switch.data matches 6 run tp @s 10 152 -12006
 
-execute if score #tp_random switch.data matches 7 run tp @s 156004 152 155997
+execute if score #tp_random switch.data matches 7 run tp @s 4 152 -12003
 
-execute if score #tp_random switch.data matches 8 run tp @s 156008 151 156001
+execute if score #tp_random switch.data matches 8 run tp @s 8 151 -11999
 
-execute if score #tp_random switch.data matches 9 run tp @s 156001 151 156006
+execute if score #tp_random switch.data matches 9 run tp @s 1 151 -11994
 
-execute if score #tp_random switch.data matches 10 run tp @s 156012 142 156028
+execute if score #tp_random switch.data matches 10 run tp @s 12 142 -11972
 
-execute if score #tp_random switch.data matches 11 run tp @s 156005 142 156025
+execute if score #tp_random switch.data matches 11 run tp @s 5 142 -11975
 
-execute if score #tp_random switch.data matches 12 run tp @s 156008 144 156020
+execute if score #tp_random switch.data matches 12 run tp @s 8 144 -11980
 
-execute if score #tp_random switch.data matches 13 run tp @s 156001 144 156015
+execute if score #tp_random switch.data matches 13 run tp @s 1 144 -11985
 
-execute if score #tp_random switch.data matches 14 run tp @s 156007 144 156007
+execute if score #tp_random switch.data matches 14 run tp @s 7 144 -11993
 
-execute if score #tp_random switch.data matches 15 run tp @s 156008 143 155997
+execute if score #tp_random switch.data matches 15 run tp @s 8 143 -12003
 
-execute if score #tp_random switch.data matches 16 run tp @s 156011 144 156003
+execute if score #tp_random switch.data matches 16 run tp @s 11 144 -11997
 
-execute if score #tp_random switch.data matches 17 run tp @s 155986 151 156005
+execute if score #tp_random switch.data matches 17 run tp @s -14 151 -11995
 
-execute if score #tp_random switch.data matches 18 run tp @s 155986 156 155995
+execute if score #tp_random switch.data matches 18 run tp @s -14 156 -12005
 
-execute if score #tp_random switch.data matches 19 run tp @s 155989 151 155987
+execute if score #tp_random switch.data matches 19 run tp @s -11 151 -12013
 

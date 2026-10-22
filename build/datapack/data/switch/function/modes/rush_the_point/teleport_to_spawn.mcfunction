@@ -14,8 +14,8 @@
 
 ## Maps spawn
 # Map Rush The Point 1
-execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.red] in switch:game run tp @s 13930 100.69 14000 -90 0
-execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.blue] in switch:game run tp @s 14070 100.69 14000 90 0
+execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.red] in switch:game run tp @s -1970 100.69 4100 -90 0
+execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=switch.rush_the_point.blue] in switch:game run tp @s -1830 100.69 4100 90 0
 
 ## Items to choose a class
 tag @s remove switch.to_tp

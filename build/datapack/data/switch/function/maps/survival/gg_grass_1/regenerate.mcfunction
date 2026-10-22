@@ -9,22 +9,22 @@
 
 scoreboard players add #rg_gg_grass_1 switch.data 1
 execute if score #rg_gg_grass_1 switch.data matches 1 run data modify storage switch:maps to_regenerate.gg_grass_1 set value 2b
-execute if score #rg_gg_grass_1 switch.data matches 1 in minecraft:overworld run forceload add 124001 124047 124021 124092
-execute if score #rg_gg_grass_1 switch.data matches 1 in switch:game run forceload add 124001 124047 124021 124092
-execute if score #rg_gg_grass_1 switch.data matches 1 in minecraft:overworld run forceload add 124021 124047 124041 124092
-execute if score #rg_gg_grass_1 switch.data matches 1 in switch:game run forceload add 124021 124047 124041 124092
+execute if score #rg_gg_grass_1 switch.data matches 1 in minecraft:overworld run forceload add 10001 8047 10021 8092
+execute if score #rg_gg_grass_1 switch.data matches 1 in switch:game run forceload add 10001 8047 10021 8092
+execute if score #rg_gg_grass_1 switch.data matches 1 in minecraft:overworld run forceload add 10021 8047 10041 8092
+execute if score #rg_gg_grass_1 switch.data matches 1 in switch:game run forceload add 10021 8047 10041 8092
 
 execute if score #rg_gg_grass_1 switch.data matches 1 run scoreboard players set #rg_gg_grass_1_y switch.data 84
 execute if score #rg_gg_grass_1 switch.data matches 1 run scoreboard players set #rg_gg_grass_1_mod switch.data 0
 execute if score #rg_gg_grass_1 switch.data matches ..106 summon marker run function switch:maps/survival/gg_grass_1/regeneration_on_marker
 
-execute if score #rg_gg_grass_1 switch.data matches 107.. in switch:game run kill @e[type=item,x=124021,y=84,z=124069,distance=..1000]
+execute if score #rg_gg_grass_1 switch.data matches 107.. in switch:game run kill @e[type=item,x=10021,y=84,z=8069,distance=..1000]
 execute if score #rg_gg_grass_1 switch.data matches 107.. run data remove storage switch:maps to_regenerate.gg_grass_1
 
-execute if score #rg_gg_grass_1 switch.data matches 107.. in minecraft:overworld run forceload remove 124001 124047 124021 124092
-execute if score #rg_gg_grass_1 switch.data matches 107.. in switch:game run forceload remove 124001 124047 124021 124092
-execute if score #rg_gg_grass_1 switch.data matches 107.. in minecraft:overworld run forceload remove 124021 124047 124041 124092
-execute if score #rg_gg_grass_1 switch.data matches 107.. in switch:game run forceload remove 124021 124047 124041 124092
+execute if score #rg_gg_grass_1 switch.data matches 107.. in minecraft:overworld run forceload remove 10001 8047 10021 8092
+execute if score #rg_gg_grass_1 switch.data matches 107.. in switch:game run forceload remove 10001 8047 10021 8092
+execute if score #rg_gg_grass_1 switch.data matches 107.. in minecraft:overworld run forceload remove 10021 8047 10041 8092
+execute if score #rg_gg_grass_1 switch.data matches 107.. in switch:game run forceload remove 10021 8047 10041 8092
 
 execute if score #rg_gg_grass_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Gracy Grass","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_gg_grass_1 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Gracy Grass` just regenerated!"}

@@ -1,7 +1,7 @@
 
 #> switch:modes/infected/translations/secrets_lost_graveyard_next_state
 #
-# @executed	positioned 127123 113 127051 & as @a[tag=!detached,team=switch.temp.human,distance=..12,scores={switch.temp.secret_kills=1..}]
+# @executed	positioned 2123 113 10051 & as @a[tag=!detached,team=switch.temp.human,distance=..12,scores={switch.temp.secret_kills=1..}]
 #
 # @within	switch:modes/infected/secrets/lost_graveyard/next_state
 #

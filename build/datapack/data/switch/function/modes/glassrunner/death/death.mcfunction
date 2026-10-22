@@ -1,7 +1,7 @@
 
 #> switch:modes/glassrunner/death/death
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
 # @within	switch:modes/glassrunner/joined
 #			switch:modes/glassrunner/start [ as @a[tag=!detached] & at @s ]
@@ -23,8 +23,8 @@ function switch:modes/glassrunner/death/both
 
 # Teleport to the team corner (explicit dimension + coords: the player respawns at world spawn,
 # and spreadplayers silently failed there, leaving everyone in a death loop at 0 129 0)
-execute if entity @s[team=switch.glassrunner.red] in switch:game run tp @s 2925.5 129 2925.5 facing 3000 129 3000
-execute if entity @s[team=switch.glassrunner.blue] in switch:game run tp @s 3075.5 129 3075.5 facing 3000 129 3000
+execute if entity @s[team=switch.glassrunner.red] in switch:game run tp @s -3824.5 129 -1824.5 facing -3750 129 -1750
+execute if entity @s[team=switch.glassrunner.blue] in switch:game run tp @s -3674.5 129 -1674.5 facing -3750 129 -1750
 scoreboard players set @s switch.glassrunner.deathCount 0
 
 effect give @s resistance infinite 255 true

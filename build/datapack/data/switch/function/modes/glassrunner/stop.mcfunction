@@ -1,9 +1,9 @@
 
 #> switch:modes/glassrunner/stop
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
-# @within	switch:modes/glassrunner/calls/stop [ positioned 3000 128 3000 ]
+# @within	switch:modes/glassrunner/calls/stop [ positioned -3750 128 -1750 ]
 #
 
 scoreboard objectives remove switch.glassrunner.money

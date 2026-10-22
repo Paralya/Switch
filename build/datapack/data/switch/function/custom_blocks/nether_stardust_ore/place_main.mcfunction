@@ -2,7 +2,7 @@
 #> switch:custom_blocks/nether_stardust_ore/place_main
 #
 # @within	switch:custom_blocks/place
-#			switch:modes/infected/secrets/lost_graveyard/_load [ positioned 127131 122 127114 ]
+#			switch:modes/infected/secrets/lost_graveyard/_load [ positioned 2131 122 10114 ]
 #
 
 tag @s add switch.placer

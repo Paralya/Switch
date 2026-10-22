@@ -1,9 +1,9 @@
 
 #> switch:modes/glassrunner/tick
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
-# @within	switch:modes/glassrunner/calls/tick [ positioned 3000 128 3000 ]
+# @within	switch:modes/glassrunner/calls/tick [ positioned -3750 128 -1750 ]
 #
 
 scoreboard players add #glassrunner_ticks switch.data 1
@@ -26,13 +26,13 @@ execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/tick_pl
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
 execute as @e[type=arrow,nbt={inBlockState:{}},distance=..200] at @s run function switch:modes/glassrunner/arrow_explosion
 
-fill 3003 128 3003 2997 132 2997 air replace #switch:glassrunner/glass
+fill -3747 128 -1747 -3753 132 -1753 air replace #switch:glassrunner/glass
 
-fill 3073 128 3073 3077 131 3077 air replace #switch:glassrunner/glass
-fill 2927 128 2927 2923 131 2923 air replace #switch:glassrunner/glass
+fill -3677 128 -1677 -3673 131 -1673 air replace #switch:glassrunner/glass
+fill -3823 128 -1823 -3827 131 -1827 air replace #switch:glassrunner/glass
 
-fill 3074 128 2924 3076 131 2926 air replace #switch:glassrunner/glass
-fill 2924 131 3076 2926 128 3074 air replace #switch:glassrunner/glass
+fill -3676 128 -1826 -3674 131 -1824 air replace #switch:glassrunner/glass
+fill -3826 131 -1674 -3824 128 -1676 air replace #switch:glassrunner/glass
 
 execute as @a[predicate=switch:holding_fireball_wand,scores={switch.right_click=1..,switch.glassrunner.money=15..}] at @s run function switch:modes/glassrunner/fireball/use
 execute as @e[tag=switch.glassrunner.fireball] at @s run function switch:modes/glassrunner/fireball/explosion

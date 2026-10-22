@@ -10,9 +10,9 @@ scoreboard players remove #remaining_time switch.data 1
 
 # Start thing
 execute if score #laser_game_seconds switch.data matches 0 run kill @e[tag=switch.laser_game.base]
-execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 517.0 113 524.0 {Tags:["switch.laser_game.base"],block_state:{id:"minecraft:dark_oak_trapdoor",properties:{powered:"true",facing:"north",half:"bottom",open:"true"}}}
-execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 539.0 105 530.0 {Tags:["switch.laser_game.base"],block_state:{id:"minecraft:dark_oak_trapdoor",properties:{powered:"true",facing:"east",half:"bottom",open:"true"}}}
-execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 542.0 114 547.0 {Tags:["switch.laser_game.base"],block_state:{id:"minecraft:dark_oak_trapdoor",properties:{powered:"true",facing:"south",half:"bottom",open:"true"}}}
+execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 2017.0 113 -1976.0 {Tags:["switch.laser_game.base"],block_state:{id:"minecraft:dark_oak_trapdoor",properties:{powered:"true",facing:"north",half:"bottom",open:"true"}}}
+execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 2039.0 105 -1970.0 {Tags:["switch.laser_game.base"],block_state:{id:"minecraft:dark_oak_trapdoor",properties:{powered:"true",facing:"east",half:"bottom",open:"true"}}}
+execute if score #laser_game_seconds switch.data matches 0 if data storage switch:main {map:"laser_game"} in switch:game run summon block_display 2042.0 114 -1953.0 {Tags:["switch.laser_game.base"],block_state:{id:"minecraft:dark_oak_trapdoor",properties:{powered:"true",facing:"south",half:"bottom",open:"true"}}}
 
 # Base reload
 scoreboard players remove #base_reload switch.data 1

@@ -6,35 +6,35 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_stardust_prison_y switch.data
 
-execute if score #rg_stardust_prison_mod switch.data matches 0 at @s in switch:game run particle cloud 106007 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 0 at @s run clone from minecraft:overworld 106000 ~ 106000 106015 ~ 106178 to switch:game 106000 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 0 at @s in switch:game run particle cloud -1993 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 0 at @s run clone from minecraft:overworld -2000 ~ -10000 -1985 ~ -9822 to switch:game -2000 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 1 at @s in switch:game run particle cloud 106022 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 1 at @s run clone from minecraft:overworld 106015 ~ 106000 106029 ~ 106178 to switch:game 106015 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 1 at @s in switch:game run particle cloud -1978 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 1 at @s run clone from minecraft:overworld -1985 ~ -10000 -1971 ~ -9822 to switch:game -1985 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 2 at @s in switch:game run particle cloud 106036 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 2 at @s run clone from minecraft:overworld 106029 ~ 106000 106044 ~ 106178 to switch:game 106029 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 2 at @s in switch:game run particle cloud -1964 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 2 at @s run clone from minecraft:overworld -1971 ~ -10000 -1956 ~ -9822 to switch:game -1971 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 3 at @s in switch:game run particle cloud 106051 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 3 at @s run clone from minecraft:overworld 106044 ~ 106000 106059 ~ 106178 to switch:game 106044 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 3 at @s in switch:game run particle cloud -1949 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 3 at @s run clone from minecraft:overworld -1956 ~ -10000 -1941 ~ -9822 to switch:game -1956 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 4 at @s in switch:game run particle cloud 106066 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 4 at @s run clone from minecraft:overworld 106059 ~ 106000 106073 ~ 106178 to switch:game 106059 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 4 at @s in switch:game run particle cloud -1934 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 4 at @s run clone from minecraft:overworld -1941 ~ -10000 -1927 ~ -9822 to switch:game -1941 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 5 at @s in switch:game run particle cloud 106080 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 5 at @s run clone from minecraft:overworld 106073 ~ 106000 106088 ~ 106178 to switch:game 106073 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 5 at @s in switch:game run particle cloud -1920 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 5 at @s run clone from minecraft:overworld -1927 ~ -10000 -1912 ~ -9822 to switch:game -1927 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 6 at @s in switch:game run particle cloud 106095 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 6 at @s run clone from minecraft:overworld 106088 ~ 106000 106103 ~ 106178 to switch:game 106088 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 6 at @s in switch:game run particle cloud -1905 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 6 at @s run clone from minecraft:overworld -1912 ~ -10000 -1897 ~ -9822 to switch:game -1912 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 7 at @s in switch:game run particle cloud 106110 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 7 at @s run clone from minecraft:overworld 106103 ~ 106000 106117 ~ 106178 to switch:game 106103 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 7 at @s in switch:game run particle cloud -1890 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 7 at @s run clone from minecraft:overworld -1897 ~ -10000 -1883 ~ -9822 to switch:game -1897 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_prison_mod switch.data matches 8 at @s in switch:game run particle cloud 106124 ~0.5 106089 7 0 44 0 250 force
-execute if score #rg_stardust_prison_mod switch.data matches 8 at @s run clone from minecraft:overworld 106117 ~ 106000 106132 ~ 106178 to switch:game 106117 ~0 106000 strict replace force
+execute if score #rg_stardust_prison_mod switch.data matches 8 at @s in switch:game run particle cloud -1876 ~0.5 -9911 7 0 44 0 250 force
+execute if score #rg_stardust_prison_mod switch.data matches 8 at @s run clone from minecraft:overworld -1883 ~ -10000 -1868 ~ -9822 to switch:game -1883 ~0 -10000 strict replace force
 
 scoreboard players add #rg_stardust_prison_mod switch.data 1
-execute if score #rg_stardust_prison_mod switch.data matches 9 in switch:game run kill @e[type=item,x=106066,y=100,z=106089,distance=..1000]
+execute if score #rg_stardust_prison_mod switch.data matches 9 in switch:game run kill @e[type=item,x=-1934,y=100,z=-9911,distance=..1000]
 execute if score #rg_stardust_prison_mod switch.data matches 9 run scoreboard players add #rg_stardust_prison_y switch.data 1
 execute if score #rg_stardust_prison_mod switch.data matches 9 run scoreboard players set #rg_stardust_prison_mod switch.data 0
 

@@ -6,386 +6,386 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_smithed_summit_2024_y switch.data
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 0 at @s in switch:game run particle cloud 66003 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 0 at @s run clone from minecraft:overworld 66001 ~ 66000 66006 ~ 66662 to switch:game 66001 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 0 at @s in switch:game run particle cloud 6002 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 0 at @s run clone from minecraft:overworld 6000 ~ 8000 6005 ~ 8662 to switch:game 6000 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 1 at @s in switch:game run particle cloud 66008 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 1 at @s run clone from minecraft:overworld 66006 ~ 66000 66011 ~ 66662 to switch:game 66006 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 1 at @s in switch:game run particle cloud 6007 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 1 at @s run clone from minecraft:overworld 6005 ~ 8000 6010 ~ 8662 to switch:game 6005 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 2 at @s in switch:game run particle cloud 66013 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 2 at @s run clone from minecraft:overworld 66011 ~ 66000 66015 ~ 66662 to switch:game 66011 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 2 at @s in switch:game run particle cloud 6012 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 2 at @s run clone from minecraft:overworld 6010 ~ 8000 6014 ~ 8662 to switch:game 6010 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 3 at @s in switch:game run particle cloud 66017 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 3 at @s run clone from minecraft:overworld 66015 ~ 66000 66020 ~ 66662 to switch:game 66015 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 3 at @s in switch:game run particle cloud 6016 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 3 at @s run clone from minecraft:overworld 6014 ~ 8000 6019 ~ 8662 to switch:game 6014 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 4 at @s in switch:game run particle cloud 66022 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 4 at @s run clone from minecraft:overworld 66020 ~ 66000 66025 ~ 66662 to switch:game 66020 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 4 at @s in switch:game run particle cloud 6021 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 4 at @s run clone from minecraft:overworld 6019 ~ 8000 6024 ~ 8662 to switch:game 6019 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 5 at @s in switch:game run particle cloud 66027 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 5 at @s run clone from minecraft:overworld 66025 ~ 66000 66030 ~ 66662 to switch:game 66025 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 5 at @s in switch:game run particle cloud 6026 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 5 at @s run clone from minecraft:overworld 6024 ~ 8000 6029 ~ 8662 to switch:game 6024 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 6 at @s in switch:game run particle cloud 66032 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 6 at @s run clone from minecraft:overworld 66030 ~ 66000 66035 ~ 66662 to switch:game 66030 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 6 at @s in switch:game run particle cloud 6031 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 6 at @s run clone from minecraft:overworld 6029 ~ 8000 6034 ~ 8662 to switch:game 6029 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 7 at @s in switch:game run particle cloud 66037 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 7 at @s run clone from minecraft:overworld 66035 ~ 66000 66039 ~ 66662 to switch:game 66035 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 7 at @s in switch:game run particle cloud 6036 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 7 at @s run clone from minecraft:overworld 6034 ~ 8000 6038 ~ 8662 to switch:game 6034 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 8 at @s in switch:game run particle cloud 66041 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 8 at @s run clone from minecraft:overworld 66039 ~ 66000 66044 ~ 66662 to switch:game 66039 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 8 at @s in switch:game run particle cloud 6040 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 8 at @s run clone from minecraft:overworld 6038 ~ 8000 6043 ~ 8662 to switch:game 6038 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 9 at @s in switch:game run particle cloud 66046 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 9 at @s run clone from minecraft:overworld 66044 ~ 66000 66049 ~ 66662 to switch:game 66044 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 9 at @s in switch:game run particle cloud 6045 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 9 at @s run clone from minecraft:overworld 6043 ~ 8000 6048 ~ 8662 to switch:game 6043 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 10 at @s in switch:game run particle cloud 66051 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 10 at @s run clone from minecraft:overworld 66049 ~ 66000 66054 ~ 66662 to switch:game 66049 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 10 at @s in switch:game run particle cloud 6050 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 10 at @s run clone from minecraft:overworld 6048 ~ 8000 6053 ~ 8662 to switch:game 6048 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 11 at @s in switch:game run particle cloud 66056 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 11 at @s run clone from minecraft:overworld 66054 ~ 66000 66059 ~ 66662 to switch:game 66054 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 11 at @s in switch:game run particle cloud 6055 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 11 at @s run clone from minecraft:overworld 6053 ~ 8000 6058 ~ 8662 to switch:game 6053 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 12 at @s in switch:game run particle cloud 66061 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 12 at @s run clone from minecraft:overworld 66059 ~ 66000 66063 ~ 66662 to switch:game 66059 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 12 at @s in switch:game run particle cloud 6060 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 12 at @s run clone from minecraft:overworld 6058 ~ 8000 6062 ~ 8662 to switch:game 6058 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 13 at @s in switch:game run particle cloud 66065 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 13 at @s run clone from minecraft:overworld 66063 ~ 66000 66068 ~ 66662 to switch:game 66063 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 13 at @s in switch:game run particle cloud 6064 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 13 at @s run clone from minecraft:overworld 6062 ~ 8000 6067 ~ 8662 to switch:game 6062 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 14 at @s in switch:game run particle cloud 66070 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 14 at @s run clone from minecraft:overworld 66068 ~ 66000 66073 ~ 66662 to switch:game 66068 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 14 at @s in switch:game run particle cloud 6069 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 14 at @s run clone from minecraft:overworld 6067 ~ 8000 6072 ~ 8662 to switch:game 6067 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 15 at @s in switch:game run particle cloud 66075 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 15 at @s run clone from minecraft:overworld 66073 ~ 66000 66078 ~ 66662 to switch:game 66073 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 15 at @s in switch:game run particle cloud 6074 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 15 at @s run clone from minecraft:overworld 6072 ~ 8000 6077 ~ 8662 to switch:game 6072 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 16 at @s in switch:game run particle cloud 66080 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 16 at @s run clone from minecraft:overworld 66078 ~ 66000 66082 ~ 66662 to switch:game 66078 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 16 at @s in switch:game run particle cloud 6079 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 16 at @s run clone from minecraft:overworld 6077 ~ 8000 6081 ~ 8662 to switch:game 6077 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 17 at @s in switch:game run particle cloud 66084 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 17 at @s run clone from minecraft:overworld 66082 ~ 66000 66087 ~ 66662 to switch:game 66082 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 17 at @s in switch:game run particle cloud 6083 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 17 at @s run clone from minecraft:overworld 6081 ~ 8000 6086 ~ 8662 to switch:game 6081 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 18 at @s in switch:game run particle cloud 66089 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 18 at @s run clone from minecraft:overworld 66087 ~ 66000 66092 ~ 66662 to switch:game 66087 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 18 at @s in switch:game run particle cloud 6088 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 18 at @s run clone from minecraft:overworld 6086 ~ 8000 6091 ~ 8662 to switch:game 6086 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 19 at @s in switch:game run particle cloud 66094 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 19 at @s run clone from minecraft:overworld 66092 ~ 66000 66097 ~ 66662 to switch:game 66092 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 19 at @s in switch:game run particle cloud 6093 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 19 at @s run clone from minecraft:overworld 6091 ~ 8000 6096 ~ 8662 to switch:game 6091 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 20 at @s in switch:game run particle cloud 66099 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 20 at @s run clone from minecraft:overworld 66097 ~ 66000 66102 ~ 66662 to switch:game 66097 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 20 at @s in switch:game run particle cloud 6098 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 20 at @s run clone from minecraft:overworld 6096 ~ 8000 6101 ~ 8662 to switch:game 6096 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 21 at @s in switch:game run particle cloud 66104 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 21 at @s run clone from minecraft:overworld 66102 ~ 66000 66106 ~ 66662 to switch:game 66102 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 21 at @s in switch:game run particle cloud 6103 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 21 at @s run clone from minecraft:overworld 6101 ~ 8000 6105 ~ 8662 to switch:game 6101 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 22 at @s in switch:game run particle cloud 66108 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 22 at @s run clone from minecraft:overworld 66106 ~ 66000 66111 ~ 66662 to switch:game 66106 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 22 at @s in switch:game run particle cloud 6107 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 22 at @s run clone from minecraft:overworld 6105 ~ 8000 6110 ~ 8662 to switch:game 6105 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 23 at @s in switch:game run particle cloud 66113 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 23 at @s run clone from minecraft:overworld 66111 ~ 66000 66116 ~ 66662 to switch:game 66111 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 23 at @s in switch:game run particle cloud 6112 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 23 at @s run clone from minecraft:overworld 6110 ~ 8000 6115 ~ 8662 to switch:game 6110 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 24 at @s in switch:game run particle cloud 66118 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 24 at @s run clone from minecraft:overworld 66116 ~ 66000 66121 ~ 66662 to switch:game 66116 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 24 at @s in switch:game run particle cloud 6117 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 24 at @s run clone from minecraft:overworld 6115 ~ 8000 6120 ~ 8662 to switch:game 6115 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 25 at @s in switch:game run particle cloud 66123 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 25 at @s run clone from minecraft:overworld 66121 ~ 66000 66126 ~ 66662 to switch:game 66121 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 25 at @s in switch:game run particle cloud 6122 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 25 at @s run clone from minecraft:overworld 6120 ~ 8000 6125 ~ 8662 to switch:game 6120 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 26 at @s in switch:game run particle cloud 66128 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 26 at @s run clone from minecraft:overworld 66126 ~ 66000 66130 ~ 66662 to switch:game 66126 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 26 at @s in switch:game run particle cloud 6127 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 26 at @s run clone from minecraft:overworld 6125 ~ 8000 6129 ~ 8662 to switch:game 6125 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 27 at @s in switch:game run particle cloud 66132 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 27 at @s run clone from minecraft:overworld 66130 ~ 66000 66135 ~ 66662 to switch:game 66130 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 27 at @s in switch:game run particle cloud 6131 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 27 at @s run clone from minecraft:overworld 6129 ~ 8000 6134 ~ 8662 to switch:game 6129 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 28 at @s in switch:game run particle cloud 66137 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 28 at @s run clone from minecraft:overworld 66135 ~ 66000 66140 ~ 66662 to switch:game 66135 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 28 at @s in switch:game run particle cloud 6136 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 28 at @s run clone from minecraft:overworld 6134 ~ 8000 6139 ~ 8662 to switch:game 6134 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 29 at @s in switch:game run particle cloud 66142 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 29 at @s run clone from minecraft:overworld 66140 ~ 66000 66145 ~ 66662 to switch:game 66140 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 29 at @s in switch:game run particle cloud 6141 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 29 at @s run clone from minecraft:overworld 6139 ~ 8000 6144 ~ 8662 to switch:game 6139 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 30 at @s in switch:game run particle cloud 66147 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 30 at @s run clone from minecraft:overworld 66145 ~ 66000 66150 ~ 66662 to switch:game 66145 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 30 at @s in switch:game run particle cloud 6146 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 30 at @s run clone from minecraft:overworld 6144 ~ 8000 6149 ~ 8662 to switch:game 6144 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 31 at @s in switch:game run particle cloud 66152 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 31 at @s run clone from minecraft:overworld 66150 ~ 66000 66154 ~ 66662 to switch:game 66150 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 31 at @s in switch:game run particle cloud 6151 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 31 at @s run clone from minecraft:overworld 6149 ~ 8000 6153 ~ 8662 to switch:game 6149 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 32 at @s in switch:game run particle cloud 66156 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 32 at @s run clone from minecraft:overworld 66154 ~ 66000 66159 ~ 66662 to switch:game 66154 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 32 at @s in switch:game run particle cloud 6155 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 32 at @s run clone from minecraft:overworld 6153 ~ 8000 6158 ~ 8662 to switch:game 6153 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 33 at @s in switch:game run particle cloud 66161 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 33 at @s run clone from minecraft:overworld 66159 ~ 66000 66164 ~ 66662 to switch:game 66159 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 33 at @s in switch:game run particle cloud 6160 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 33 at @s run clone from minecraft:overworld 6158 ~ 8000 6163 ~ 8662 to switch:game 6158 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 34 at @s in switch:game run particle cloud 66166 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 34 at @s run clone from minecraft:overworld 66164 ~ 66000 66169 ~ 66662 to switch:game 66164 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 34 at @s in switch:game run particle cloud 6165 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 34 at @s run clone from minecraft:overworld 6163 ~ 8000 6168 ~ 8662 to switch:game 6163 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 35 at @s in switch:game run particle cloud 66171 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 35 at @s run clone from minecraft:overworld 66169 ~ 66000 66174 ~ 66662 to switch:game 66169 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 35 at @s in switch:game run particle cloud 6170 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 35 at @s run clone from minecraft:overworld 6168 ~ 8000 6173 ~ 8662 to switch:game 6168 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 36 at @s in switch:game run particle cloud 66176 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 36 at @s run clone from minecraft:overworld 66174 ~ 66000 66178 ~ 66662 to switch:game 66174 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 36 at @s in switch:game run particle cloud 6175 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 36 at @s run clone from minecraft:overworld 6173 ~ 8000 6177 ~ 8662 to switch:game 6173 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 37 at @s in switch:game run particle cloud 66180 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 37 at @s run clone from minecraft:overworld 66178 ~ 66000 66183 ~ 66662 to switch:game 66178 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 37 at @s in switch:game run particle cloud 6179 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 37 at @s run clone from minecraft:overworld 6177 ~ 8000 6182 ~ 8662 to switch:game 6177 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 38 at @s in switch:game run particle cloud 66185 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 38 at @s run clone from minecraft:overworld 66183 ~ 66000 66188 ~ 66662 to switch:game 66183 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 38 at @s in switch:game run particle cloud 6184 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 38 at @s run clone from minecraft:overworld 6182 ~ 8000 6187 ~ 8662 to switch:game 6182 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 39 at @s in switch:game run particle cloud 66190 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 39 at @s run clone from minecraft:overworld 66188 ~ 66000 66193 ~ 66662 to switch:game 66188 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 39 at @s in switch:game run particle cloud 6189 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 39 at @s run clone from minecraft:overworld 6187 ~ 8000 6192 ~ 8662 to switch:game 6187 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 40 at @s in switch:game run particle cloud 66195 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 40 at @s run clone from minecraft:overworld 66193 ~ 66000 66198 ~ 66662 to switch:game 66193 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 40 at @s in switch:game run particle cloud 6194 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 40 at @s run clone from minecraft:overworld 6192 ~ 8000 6197 ~ 8662 to switch:game 6192 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 41 at @s in switch:game run particle cloud 66200 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 41 at @s run clone from minecraft:overworld 66198 ~ 66000 66202 ~ 66662 to switch:game 66198 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 41 at @s in switch:game run particle cloud 6199 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 41 at @s run clone from minecraft:overworld 6197 ~ 8000 6201 ~ 8662 to switch:game 6197 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 42 at @s in switch:game run particle cloud 66204 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 42 at @s run clone from minecraft:overworld 66202 ~ 66000 66207 ~ 66662 to switch:game 66202 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 42 at @s in switch:game run particle cloud 6203 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 42 at @s run clone from minecraft:overworld 6201 ~ 8000 6206 ~ 8662 to switch:game 6201 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 43 at @s in switch:game run particle cloud 66209 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 43 at @s run clone from minecraft:overworld 66207 ~ 66000 66212 ~ 66662 to switch:game 66207 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 43 at @s in switch:game run particle cloud 6208 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 43 at @s run clone from minecraft:overworld 6206 ~ 8000 6211 ~ 8662 to switch:game 6206 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 44 at @s in switch:game run particle cloud 66214 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 44 at @s run clone from minecraft:overworld 66212 ~ 66000 66217 ~ 66662 to switch:game 66212 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 44 at @s in switch:game run particle cloud 6213 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 44 at @s run clone from minecraft:overworld 6211 ~ 8000 6216 ~ 8662 to switch:game 6211 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 45 at @s in switch:game run particle cloud 66219 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 45 at @s run clone from minecraft:overworld 66217 ~ 66000 66222 ~ 66662 to switch:game 66217 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 45 at @s in switch:game run particle cloud 6218 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 45 at @s run clone from minecraft:overworld 6216 ~ 8000 6221 ~ 8662 to switch:game 6216 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 46 at @s in switch:game run particle cloud 66224 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 46 at @s run clone from minecraft:overworld 66222 ~ 66000 66226 ~ 66662 to switch:game 66222 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 46 at @s in switch:game run particle cloud 6223 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 46 at @s run clone from minecraft:overworld 6221 ~ 8000 6225 ~ 8662 to switch:game 6221 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 47 at @s in switch:game run particle cloud 66228 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 47 at @s run clone from minecraft:overworld 66226 ~ 66000 66231 ~ 66662 to switch:game 66226 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 47 at @s in switch:game run particle cloud 6227 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 47 at @s run clone from minecraft:overworld 6225 ~ 8000 6230 ~ 8662 to switch:game 6225 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 48 at @s in switch:game run particle cloud 66233 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 48 at @s run clone from minecraft:overworld 66231 ~ 66000 66236 ~ 66662 to switch:game 66231 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 48 at @s in switch:game run particle cloud 6232 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 48 at @s run clone from minecraft:overworld 6230 ~ 8000 6235 ~ 8662 to switch:game 6230 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 49 at @s in switch:game run particle cloud 66238 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 49 at @s run clone from minecraft:overworld 66236 ~ 66000 66241 ~ 66662 to switch:game 66236 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 49 at @s in switch:game run particle cloud 6237 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 49 at @s run clone from minecraft:overworld 6235 ~ 8000 6240 ~ 8662 to switch:game 6235 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 50 at @s in switch:game run particle cloud 66243 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 50 at @s run clone from minecraft:overworld 66241 ~ 66000 66245 ~ 66662 to switch:game 66241 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 50 at @s in switch:game run particle cloud 6242 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 50 at @s run clone from minecraft:overworld 6240 ~ 8000 6244 ~ 8662 to switch:game 6240 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 51 at @s in switch:game run particle cloud 66247 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 51 at @s run clone from minecraft:overworld 66245 ~ 66000 66250 ~ 66662 to switch:game 66245 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 51 at @s in switch:game run particle cloud 6246 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 51 at @s run clone from minecraft:overworld 6244 ~ 8000 6249 ~ 8662 to switch:game 6244 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 52 at @s in switch:game run particle cloud 66252 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 52 at @s run clone from minecraft:overworld 66250 ~ 66000 66255 ~ 66662 to switch:game 66250 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 52 at @s in switch:game run particle cloud 6251 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 52 at @s run clone from minecraft:overworld 6249 ~ 8000 6254 ~ 8662 to switch:game 6249 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 53 at @s in switch:game run particle cloud 66257 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 53 at @s run clone from minecraft:overworld 66255 ~ 66000 66260 ~ 66662 to switch:game 66255 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 53 at @s in switch:game run particle cloud 6256 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 53 at @s run clone from minecraft:overworld 6254 ~ 8000 6259 ~ 8662 to switch:game 6254 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 54 at @s in switch:game run particle cloud 66262 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 54 at @s run clone from minecraft:overworld 66260 ~ 66000 66265 ~ 66662 to switch:game 66260 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 54 at @s in switch:game run particle cloud 6261 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 54 at @s run clone from minecraft:overworld 6259 ~ 8000 6264 ~ 8662 to switch:game 6259 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 55 at @s in switch:game run particle cloud 66267 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 55 at @s run clone from minecraft:overworld 66265 ~ 66000 66269 ~ 66662 to switch:game 66265 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 55 at @s in switch:game run particle cloud 6266 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 55 at @s run clone from minecraft:overworld 6264 ~ 8000 6268 ~ 8662 to switch:game 6264 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 56 at @s in switch:game run particle cloud 66271 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 56 at @s run clone from minecraft:overworld 66269 ~ 66000 66274 ~ 66662 to switch:game 66269 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 56 at @s in switch:game run particle cloud 6270 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 56 at @s run clone from minecraft:overworld 6268 ~ 8000 6273 ~ 8662 to switch:game 6268 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 57 at @s in switch:game run particle cloud 66276 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 57 at @s run clone from minecraft:overworld 66274 ~ 66000 66279 ~ 66662 to switch:game 66274 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 57 at @s in switch:game run particle cloud 6275 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 57 at @s run clone from minecraft:overworld 6273 ~ 8000 6278 ~ 8662 to switch:game 6273 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 58 at @s in switch:game run particle cloud 66281 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 58 at @s run clone from minecraft:overworld 66279 ~ 66000 66284 ~ 66662 to switch:game 66279 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 58 at @s in switch:game run particle cloud 6280 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 58 at @s run clone from minecraft:overworld 6278 ~ 8000 6283 ~ 8662 to switch:game 6278 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 59 at @s in switch:game run particle cloud 66286 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 59 at @s run clone from minecraft:overworld 66284 ~ 66000 66289 ~ 66662 to switch:game 66284 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 59 at @s in switch:game run particle cloud 6285 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 59 at @s run clone from minecraft:overworld 6283 ~ 8000 6288 ~ 8662 to switch:game 6283 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 60 at @s in switch:game run particle cloud 66291 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 60 at @s run clone from minecraft:overworld 66289 ~ 66000 66293 ~ 66662 to switch:game 66289 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 60 at @s in switch:game run particle cloud 6290 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 60 at @s run clone from minecraft:overworld 6288 ~ 8000 6292 ~ 8662 to switch:game 6288 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 61 at @s in switch:game run particle cloud 66295 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 61 at @s run clone from minecraft:overworld 66293 ~ 66000 66298 ~ 66662 to switch:game 66293 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 61 at @s in switch:game run particle cloud 6294 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 61 at @s run clone from minecraft:overworld 6292 ~ 8000 6297 ~ 8662 to switch:game 6292 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 62 at @s in switch:game run particle cloud 66300 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 62 at @s run clone from minecraft:overworld 66298 ~ 66000 66303 ~ 66662 to switch:game 66298 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 62 at @s in switch:game run particle cloud 6299 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 62 at @s run clone from minecraft:overworld 6297 ~ 8000 6302 ~ 8662 to switch:game 6297 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 63 at @s in switch:game run particle cloud 66305 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 63 at @s run clone from minecraft:overworld 66303 ~ 66000 66308 ~ 66662 to switch:game 66303 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 63 at @s in switch:game run particle cloud 6304 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 63 at @s run clone from minecraft:overworld 6302 ~ 8000 6307 ~ 8662 to switch:game 6302 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 64 at @s in switch:game run particle cloud 66310 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 64 at @s run clone from minecraft:overworld 66308 ~ 66000 66313 ~ 66662 to switch:game 66308 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 64 at @s in switch:game run particle cloud 6309 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 64 at @s run clone from minecraft:overworld 6307 ~ 8000 6312 ~ 8662 to switch:game 6307 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 65 at @s in switch:game run particle cloud 66315 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 65 at @s run clone from minecraft:overworld 66313 ~ 66000 66317 ~ 66662 to switch:game 66313 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 65 at @s in switch:game run particle cloud 6314 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 65 at @s run clone from minecraft:overworld 6312 ~ 8000 6316 ~ 8662 to switch:game 6312 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 66 at @s in switch:game run particle cloud 66319 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 66 at @s run clone from minecraft:overworld 66317 ~ 66000 66322 ~ 66662 to switch:game 66317 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 66 at @s in switch:game run particle cloud 6318 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 66 at @s run clone from minecraft:overworld 6316 ~ 8000 6321 ~ 8662 to switch:game 6316 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 67 at @s in switch:game run particle cloud 66324 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 67 at @s run clone from minecraft:overworld 66322 ~ 66000 66327 ~ 66662 to switch:game 66322 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 67 at @s in switch:game run particle cloud 6323 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 67 at @s run clone from minecraft:overworld 6321 ~ 8000 6326 ~ 8662 to switch:game 6321 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 68 at @s in switch:game run particle cloud 66329 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 68 at @s run clone from minecraft:overworld 66327 ~ 66000 66332 ~ 66662 to switch:game 66327 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 68 at @s in switch:game run particle cloud 6328 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 68 at @s run clone from minecraft:overworld 6326 ~ 8000 6331 ~ 8662 to switch:game 6326 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 69 at @s in switch:game run particle cloud 66334 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 69 at @s run clone from minecraft:overworld 66332 ~ 66000 66337 ~ 66662 to switch:game 66332 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 69 at @s in switch:game run particle cloud 6333 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 69 at @s run clone from minecraft:overworld 6331 ~ 8000 6336 ~ 8662 to switch:game 6331 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 70 at @s in switch:game run particle cloud 66339 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 70 at @s run clone from minecraft:overworld 66337 ~ 66000 66341 ~ 66662 to switch:game 66337 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 70 at @s in switch:game run particle cloud 6338 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 70 at @s run clone from minecraft:overworld 6336 ~ 8000 6340 ~ 8662 to switch:game 6336 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 71 at @s in switch:game run particle cloud 66343 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 71 at @s run clone from minecraft:overworld 66341 ~ 66000 66346 ~ 66662 to switch:game 66341 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 71 at @s in switch:game run particle cloud 6342 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 71 at @s run clone from minecraft:overworld 6340 ~ 8000 6345 ~ 8662 to switch:game 6340 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 72 at @s in switch:game run particle cloud 66348 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 72 at @s run clone from minecraft:overworld 66346 ~ 66000 66351 ~ 66662 to switch:game 66346 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 72 at @s in switch:game run particle cloud 6347 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 72 at @s run clone from minecraft:overworld 6345 ~ 8000 6350 ~ 8662 to switch:game 6345 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 73 at @s in switch:game run particle cloud 66353 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 73 at @s run clone from minecraft:overworld 66351 ~ 66000 66356 ~ 66662 to switch:game 66351 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 73 at @s in switch:game run particle cloud 6352 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 73 at @s run clone from minecraft:overworld 6350 ~ 8000 6355 ~ 8662 to switch:game 6350 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 74 at @s in switch:game run particle cloud 66358 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 74 at @s run clone from minecraft:overworld 66356 ~ 66000 66361 ~ 66662 to switch:game 66356 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 74 at @s in switch:game run particle cloud 6357 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 74 at @s run clone from minecraft:overworld 6355 ~ 8000 6360 ~ 8662 to switch:game 6355 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 75 at @s in switch:game run particle cloud 66363 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 75 at @s run clone from minecraft:overworld 66361 ~ 66000 66365 ~ 66662 to switch:game 66361 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 75 at @s in switch:game run particle cloud 6362 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 75 at @s run clone from minecraft:overworld 6360 ~ 8000 6364 ~ 8662 to switch:game 6360 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 76 at @s in switch:game run particle cloud 66367 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 76 at @s run clone from minecraft:overworld 66365 ~ 66000 66370 ~ 66662 to switch:game 66365 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 76 at @s in switch:game run particle cloud 6366 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 76 at @s run clone from minecraft:overworld 6364 ~ 8000 6369 ~ 8662 to switch:game 6364 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 77 at @s in switch:game run particle cloud 66372 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 77 at @s run clone from minecraft:overworld 66370 ~ 66000 66375 ~ 66662 to switch:game 66370 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 77 at @s in switch:game run particle cloud 6371 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 77 at @s run clone from minecraft:overworld 6369 ~ 8000 6374 ~ 8662 to switch:game 6369 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 78 at @s in switch:game run particle cloud 66377 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 78 at @s run clone from minecraft:overworld 66375 ~ 66000 66380 ~ 66662 to switch:game 66375 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 78 at @s in switch:game run particle cloud 6376 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 78 at @s run clone from minecraft:overworld 6374 ~ 8000 6379 ~ 8662 to switch:game 6374 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 79 at @s in switch:game run particle cloud 66382 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 79 at @s run clone from minecraft:overworld 66380 ~ 66000 66384 ~ 66662 to switch:game 66380 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 79 at @s in switch:game run particle cloud 6381 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 79 at @s run clone from minecraft:overworld 6379 ~ 8000 6383 ~ 8662 to switch:game 6379 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 80 at @s in switch:game run particle cloud 66386 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 80 at @s run clone from minecraft:overworld 66384 ~ 66000 66389 ~ 66662 to switch:game 66384 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 80 at @s in switch:game run particle cloud 6385 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 80 at @s run clone from minecraft:overworld 6383 ~ 8000 6388 ~ 8662 to switch:game 6383 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 81 at @s in switch:game run particle cloud 66391 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 81 at @s run clone from minecraft:overworld 66389 ~ 66000 66394 ~ 66662 to switch:game 66389 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 81 at @s in switch:game run particle cloud 6390 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 81 at @s run clone from minecraft:overworld 6388 ~ 8000 6393 ~ 8662 to switch:game 6388 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 82 at @s in switch:game run particle cloud 66396 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 82 at @s run clone from minecraft:overworld 66394 ~ 66000 66399 ~ 66662 to switch:game 66394 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 82 at @s in switch:game run particle cloud 6395 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 82 at @s run clone from minecraft:overworld 6393 ~ 8000 6398 ~ 8662 to switch:game 6393 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 83 at @s in switch:game run particle cloud 66401 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 83 at @s run clone from minecraft:overworld 66399 ~ 66000 66404 ~ 66662 to switch:game 66399 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 83 at @s in switch:game run particle cloud 6400 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 83 at @s run clone from minecraft:overworld 6398 ~ 8000 6403 ~ 8662 to switch:game 6398 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 84 at @s in switch:game run particle cloud 66406 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 84 at @s run clone from minecraft:overworld 66404 ~ 66000 66408 ~ 66662 to switch:game 66404 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 84 at @s in switch:game run particle cloud 6405 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 84 at @s run clone from minecraft:overworld 6403 ~ 8000 6407 ~ 8662 to switch:game 6403 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 85 at @s in switch:game run particle cloud 66410 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 85 at @s run clone from minecraft:overworld 66408 ~ 66000 66413 ~ 66662 to switch:game 66408 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 85 at @s in switch:game run particle cloud 6409 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 85 at @s run clone from minecraft:overworld 6407 ~ 8000 6412 ~ 8662 to switch:game 6407 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 86 at @s in switch:game run particle cloud 66415 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 86 at @s run clone from minecraft:overworld 66413 ~ 66000 66418 ~ 66662 to switch:game 66413 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 86 at @s in switch:game run particle cloud 6414 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 86 at @s run clone from minecraft:overworld 6412 ~ 8000 6417 ~ 8662 to switch:game 6412 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 87 at @s in switch:game run particle cloud 66420 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 87 at @s run clone from minecraft:overworld 66418 ~ 66000 66423 ~ 66662 to switch:game 66418 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 87 at @s in switch:game run particle cloud 6419 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 87 at @s run clone from minecraft:overworld 6417 ~ 8000 6422 ~ 8662 to switch:game 6417 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 88 at @s in switch:game run particle cloud 66425 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 88 at @s run clone from minecraft:overworld 66423 ~ 66000 66428 ~ 66662 to switch:game 66423 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 88 at @s in switch:game run particle cloud 6424 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 88 at @s run clone from minecraft:overworld 6422 ~ 8000 6427 ~ 8662 to switch:game 6422 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 89 at @s in switch:game run particle cloud 66430 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 89 at @s run clone from minecraft:overworld 66428 ~ 66000 66432 ~ 66662 to switch:game 66428 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 89 at @s in switch:game run particle cloud 6429 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 89 at @s run clone from minecraft:overworld 6427 ~ 8000 6431 ~ 8662 to switch:game 6427 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 90 at @s in switch:game run particle cloud 66434 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 90 at @s run clone from minecraft:overworld 66432 ~ 66000 66437 ~ 66662 to switch:game 66432 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 90 at @s in switch:game run particle cloud 6433 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 90 at @s run clone from minecraft:overworld 6431 ~ 8000 6436 ~ 8662 to switch:game 6431 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 91 at @s in switch:game run particle cloud 66439 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 91 at @s run clone from minecraft:overworld 66437 ~ 66000 66442 ~ 66662 to switch:game 66437 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 91 at @s in switch:game run particle cloud 6438 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 91 at @s run clone from minecraft:overworld 6436 ~ 8000 6441 ~ 8662 to switch:game 6436 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 92 at @s in switch:game run particle cloud 66444 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 92 at @s run clone from minecraft:overworld 66442 ~ 66000 66447 ~ 66662 to switch:game 66442 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 92 at @s in switch:game run particle cloud 6443 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 92 at @s run clone from minecraft:overworld 6441 ~ 8000 6446 ~ 8662 to switch:game 6441 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 93 at @s in switch:game run particle cloud 66449 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 93 at @s run clone from minecraft:overworld 66447 ~ 66000 66452 ~ 66662 to switch:game 66447 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 93 at @s in switch:game run particle cloud 6448 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 93 at @s run clone from minecraft:overworld 6446 ~ 8000 6451 ~ 8662 to switch:game 6446 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 94 at @s in switch:game run particle cloud 66454 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 94 at @s run clone from minecraft:overworld 66452 ~ 66000 66456 ~ 66662 to switch:game 66452 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 94 at @s in switch:game run particle cloud 6453 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 94 at @s run clone from minecraft:overworld 6451 ~ 8000 6455 ~ 8662 to switch:game 6451 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 95 at @s in switch:game run particle cloud 66458 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 95 at @s run clone from minecraft:overworld 66456 ~ 66000 66461 ~ 66662 to switch:game 66456 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 95 at @s in switch:game run particle cloud 6457 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 95 at @s run clone from minecraft:overworld 6455 ~ 8000 6460 ~ 8662 to switch:game 6455 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 96 at @s in switch:game run particle cloud 66463 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 96 at @s run clone from minecraft:overworld 66461 ~ 66000 66466 ~ 66662 to switch:game 66461 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 96 at @s in switch:game run particle cloud 6462 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 96 at @s run clone from minecraft:overworld 6460 ~ 8000 6465 ~ 8662 to switch:game 6460 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 97 at @s in switch:game run particle cloud 66468 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 97 at @s run clone from minecraft:overworld 66466 ~ 66000 66471 ~ 66662 to switch:game 66466 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 97 at @s in switch:game run particle cloud 6467 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 97 at @s run clone from minecraft:overworld 6465 ~ 8000 6470 ~ 8662 to switch:game 6465 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 98 at @s in switch:game run particle cloud 66473 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 98 at @s run clone from minecraft:overworld 66471 ~ 66000 66476 ~ 66662 to switch:game 66471 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 98 at @s in switch:game run particle cloud 6472 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 98 at @s run clone from minecraft:overworld 6470 ~ 8000 6475 ~ 8662 to switch:game 6470 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 99 at @s in switch:game run particle cloud 66478 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 99 at @s run clone from minecraft:overworld 66476 ~ 66000 66480 ~ 66662 to switch:game 66476 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 99 at @s in switch:game run particle cloud 6477 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 99 at @s run clone from minecraft:overworld 6475 ~ 8000 6479 ~ 8662 to switch:game 6475 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 100 at @s in switch:game run particle cloud 66482 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 100 at @s run clone from minecraft:overworld 66480 ~ 66000 66485 ~ 66662 to switch:game 66480 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 100 at @s in switch:game run particle cloud 6481 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 100 at @s run clone from minecraft:overworld 6479 ~ 8000 6484 ~ 8662 to switch:game 6479 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 101 at @s in switch:game run particle cloud 66487 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 101 at @s run clone from minecraft:overworld 66485 ~ 66000 66490 ~ 66662 to switch:game 66485 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 101 at @s in switch:game run particle cloud 6486 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 101 at @s run clone from minecraft:overworld 6484 ~ 8000 6489 ~ 8662 to switch:game 6484 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 102 at @s in switch:game run particle cloud 66492 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 102 at @s run clone from minecraft:overworld 66490 ~ 66000 66495 ~ 66662 to switch:game 66490 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 102 at @s in switch:game run particle cloud 6491 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 102 at @s run clone from minecraft:overworld 6489 ~ 8000 6494 ~ 8662 to switch:game 6489 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 103 at @s in switch:game run particle cloud 66497 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 103 at @s run clone from minecraft:overworld 66495 ~ 66000 66500 ~ 66662 to switch:game 66495 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 103 at @s in switch:game run particle cloud 6496 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 103 at @s run clone from minecraft:overworld 6494 ~ 8000 6499 ~ 8662 to switch:game 6494 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 104 at @s in switch:game run particle cloud 66502 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 104 at @s run clone from minecraft:overworld 66500 ~ 66000 66504 ~ 66662 to switch:game 66500 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 104 at @s in switch:game run particle cloud 6501 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 104 at @s run clone from minecraft:overworld 6499 ~ 8000 6503 ~ 8662 to switch:game 6499 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 105 at @s in switch:game run particle cloud 66506 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 105 at @s run clone from minecraft:overworld 66504 ~ 66000 66509 ~ 66662 to switch:game 66504 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 105 at @s in switch:game run particle cloud 6505 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 105 at @s run clone from minecraft:overworld 6503 ~ 8000 6508 ~ 8662 to switch:game 6503 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 106 at @s in switch:game run particle cloud 66511 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 106 at @s run clone from minecraft:overworld 66509 ~ 66000 66514 ~ 66662 to switch:game 66509 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 106 at @s in switch:game run particle cloud 6510 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 106 at @s run clone from minecraft:overworld 6508 ~ 8000 6513 ~ 8662 to switch:game 6508 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 107 at @s in switch:game run particle cloud 66516 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 107 at @s run clone from minecraft:overworld 66514 ~ 66000 66519 ~ 66662 to switch:game 66514 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 107 at @s in switch:game run particle cloud 6515 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 107 at @s run clone from minecraft:overworld 6513 ~ 8000 6518 ~ 8662 to switch:game 6513 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 108 at @s in switch:game run particle cloud 66521 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 108 at @s run clone from minecraft:overworld 66519 ~ 66000 66524 ~ 66662 to switch:game 66519 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 108 at @s in switch:game run particle cloud 6520 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 108 at @s run clone from minecraft:overworld 6518 ~ 8000 6523 ~ 8662 to switch:game 6518 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 109 at @s in switch:game run particle cloud 66526 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 109 at @s run clone from minecraft:overworld 66524 ~ 66000 66528 ~ 66662 to switch:game 66524 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 109 at @s in switch:game run particle cloud 6525 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 109 at @s run clone from minecraft:overworld 6523 ~ 8000 6527 ~ 8662 to switch:game 6523 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 110 at @s in switch:game run particle cloud 66530 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 110 at @s run clone from minecraft:overworld 66528 ~ 66000 66533 ~ 66662 to switch:game 66528 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 110 at @s in switch:game run particle cloud 6529 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 110 at @s run clone from minecraft:overworld 6527 ~ 8000 6532 ~ 8662 to switch:game 6527 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 111 at @s in switch:game run particle cloud 66535 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 111 at @s run clone from minecraft:overworld 66533 ~ 66000 66538 ~ 66662 to switch:game 66533 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 111 at @s in switch:game run particle cloud 6534 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 111 at @s run clone from minecraft:overworld 6532 ~ 8000 6537 ~ 8662 to switch:game 6532 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 112 at @s in switch:game run particle cloud 66540 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 112 at @s run clone from minecraft:overworld 66538 ~ 66000 66543 ~ 66662 to switch:game 66538 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 112 at @s in switch:game run particle cloud 6539 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 112 at @s run clone from minecraft:overworld 6537 ~ 8000 6542 ~ 8662 to switch:game 6537 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 113 at @s in switch:game run particle cloud 66545 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 113 at @s run clone from minecraft:overworld 66543 ~ 66000 66547 ~ 66662 to switch:game 66543 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 113 at @s in switch:game run particle cloud 6544 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 113 at @s run clone from minecraft:overworld 6542 ~ 8000 6546 ~ 8662 to switch:game 6542 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 114 at @s in switch:game run particle cloud 66549 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 114 at @s run clone from minecraft:overworld 66547 ~ 66000 66552 ~ 66662 to switch:game 66547 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 114 at @s in switch:game run particle cloud 6548 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 114 at @s run clone from minecraft:overworld 6546 ~ 8000 6551 ~ 8662 to switch:game 6546 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 115 at @s in switch:game run particle cloud 66554 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 115 at @s run clone from minecraft:overworld 66552 ~ 66000 66557 ~ 66662 to switch:game 66552 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 115 at @s in switch:game run particle cloud 6553 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 115 at @s run clone from minecraft:overworld 6551 ~ 8000 6556 ~ 8662 to switch:game 6551 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 116 at @s in switch:game run particle cloud 66559 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 116 at @s run clone from minecraft:overworld 66557 ~ 66000 66562 ~ 66662 to switch:game 66557 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 116 at @s in switch:game run particle cloud 6558 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 116 at @s run clone from minecraft:overworld 6556 ~ 8000 6561 ~ 8662 to switch:game 6556 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 117 at @s in switch:game run particle cloud 66564 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 117 at @s run clone from minecraft:overworld 66562 ~ 66000 66567 ~ 66662 to switch:game 66562 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 117 at @s in switch:game run particle cloud 6563 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 117 at @s run clone from minecraft:overworld 6561 ~ 8000 6566 ~ 8662 to switch:game 6561 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 118 at @s in switch:game run particle cloud 66569 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 118 at @s run clone from minecraft:overworld 66567 ~ 66000 66571 ~ 66662 to switch:game 66567 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 118 at @s in switch:game run particle cloud 6568 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 118 at @s run clone from minecraft:overworld 6566 ~ 8000 6570 ~ 8662 to switch:game 6566 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 119 at @s in switch:game run particle cloud 66573 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 119 at @s run clone from minecraft:overworld 66571 ~ 66000 66576 ~ 66662 to switch:game 66571 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 119 at @s in switch:game run particle cloud 6572 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 119 at @s run clone from minecraft:overworld 6570 ~ 8000 6575 ~ 8662 to switch:game 6570 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 120 at @s in switch:game run particle cloud 66578 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 120 at @s run clone from minecraft:overworld 66576 ~ 66000 66581 ~ 66662 to switch:game 66576 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 120 at @s in switch:game run particle cloud 6577 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 120 at @s run clone from minecraft:overworld 6575 ~ 8000 6580 ~ 8662 to switch:game 6575 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 121 at @s in switch:game run particle cloud 66583 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 121 at @s run clone from minecraft:overworld 66581 ~ 66000 66586 ~ 66662 to switch:game 66581 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 121 at @s in switch:game run particle cloud 6582 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 121 at @s run clone from minecraft:overworld 6580 ~ 8000 6585 ~ 8662 to switch:game 6580 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 122 at @s in switch:game run particle cloud 66588 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 122 at @s run clone from minecraft:overworld 66586 ~ 66000 66591 ~ 66662 to switch:game 66586 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 122 at @s in switch:game run particle cloud 6587 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 122 at @s run clone from minecraft:overworld 6585 ~ 8000 6590 ~ 8662 to switch:game 6585 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 123 at @s in switch:game run particle cloud 66593 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 123 at @s run clone from minecraft:overworld 66591 ~ 66000 66595 ~ 66662 to switch:game 66591 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 123 at @s in switch:game run particle cloud 6592 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 123 at @s run clone from minecraft:overworld 6590 ~ 8000 6594 ~ 8662 to switch:game 6590 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 124 at @s in switch:game run particle cloud 66597 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 124 at @s run clone from minecraft:overworld 66595 ~ 66000 66600 ~ 66662 to switch:game 66595 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 124 at @s in switch:game run particle cloud 6596 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 124 at @s run clone from minecraft:overworld 6594 ~ 8000 6599 ~ 8662 to switch:game 6594 ~0 8000 strict replace force
 
-execute if score #rg_smithed_summit_2024_mod switch.data matches 125 at @s in switch:game run particle cloud 66602 ~0.5 66331 2 0 165 0 250 force
-execute if score #rg_smithed_summit_2024_mod switch.data matches 125 at @s run clone from minecraft:overworld 66600 ~ 66000 66605 ~ 66662 to switch:game 66600 ~0 66000 strict replace force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 125 at @s in switch:game run particle cloud 6601 ~0.5 8331 2 0 165 0 250 force
+execute if score #rg_smithed_summit_2024_mod switch.data matches 125 at @s run clone from minecraft:overworld 6599 ~ 8000 6604 ~ 8662 to switch:game 6599 ~0 8000 strict replace force
 
 scoreboard players add #rg_smithed_summit_2024_mod switch.data 1
-execute if score #rg_smithed_summit_2024_mod switch.data matches 126 in switch:game run kill @e[type=item,x=66303,y=100,z=66331,distance=..1000]
+execute if score #rg_smithed_summit_2024_mod switch.data matches 126 in switch:game run kill @e[type=item,x=6302,y=100,z=8331,distance=..1000]
 execute if score #rg_smithed_summit_2024_mod switch.data matches 126 run scoreboard players add #rg_smithed_summit_2024_y switch.data 1
 execute if score #rg_smithed_summit_2024_mod switch.data matches 126 run scoreboard players set #rg_smithed_summit_2024_mod switch.data 0
 

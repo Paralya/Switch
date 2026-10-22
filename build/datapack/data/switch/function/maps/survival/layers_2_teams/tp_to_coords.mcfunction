@@ -4,5 +4,5 @@
 # @within	(public)
 #
 
-execute in minecraft:overworld run tp @s 26990.28 107.53 27079.3 215.0 -23.18
+execute in minecraft:overworld run tp @s -9.72 107.53 -5920.7 215.0 -23.18
 

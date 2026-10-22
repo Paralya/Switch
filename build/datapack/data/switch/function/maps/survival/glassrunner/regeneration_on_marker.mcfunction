@@ -6,247 +6,247 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_glassrunner_y switch.data
 
-execute at @s in switch:game run particle cloud 2753 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2750 ~ 2750 2756 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3997 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -4000 ~ -2000 -3994 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2759 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2756 ~ 2750 2762 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3991 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3994 ~ -2000 -3988 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2765 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2762 ~ 2750 2769 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3985 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3988 ~ -2000 -3981 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2772 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2769 ~ 2750 2775 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3978 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3981 ~ -2000 -3975 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2778 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2775 ~ 2750 2781 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3972 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3975 ~ -2000 -3969 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2784 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2781 ~ 2750 2788 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3966 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3969 ~ -2000 -3962 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2791 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2788 ~ 2750 2794 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3959 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3962 ~ -2000 -3956 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2797 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2794 ~ 2750 2800 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3953 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3956 ~ -2000 -3950 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2803 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2800 ~ 2750 2806 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3947 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3950 ~ -2000 -3944 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2809 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2806 ~ 2750 2812 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3941 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3944 ~ -2000 -3938 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2815 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2812 ~ 2750 2819 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3935 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3938 ~ -2000 -3931 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2822 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2819 ~ 2750 2825 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3928 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3931 ~ -2000 -3925 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2828 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2825 ~ 2750 2831 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3922 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3925 ~ -2000 -3919 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2834 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2831 ~ 2750 2838 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3916 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3919 ~ -2000 -3912 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2841 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2838 ~ 2750 2844 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3909 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3912 ~ -2000 -3906 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2847 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2844 ~ 2750 2850 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3903 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3906 ~ -2000 -3900 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2853 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2850 ~ 2750 2856 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3897 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3900 ~ -2000 -3894 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2859 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2856 ~ 2750 2862 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3891 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3894 ~ -2000 -3888 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2865 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2862 ~ 2750 2869 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3885 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3888 ~ -2000 -3881 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2872 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2869 ~ 2750 2875 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3878 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3881 ~ -2000 -3875 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2878 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2875 ~ 2750 2881 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3872 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3875 ~ -2000 -3869 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2884 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2881 ~ 2750 2888 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3866 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3869 ~ -2000 -3862 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2891 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2888 ~ 2750 2894 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3859 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3862 ~ -2000 -3856 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2897 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2894 ~ 2750 2900 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3853 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3856 ~ -2000 -3850 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2903 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2900 ~ 2750 2906 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3847 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3850 ~ -2000 -3844 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2909 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2906 ~ 2750 2912 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3841 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3844 ~ -2000 -3838 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2915 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2912 ~ 2750 2919 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3835 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3838 ~ -2000 -3831 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2922 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2919 ~ 2750 2925 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3828 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3831 ~ -2000 -3825 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2928 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2925 ~ 2750 2931 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3822 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3825 ~ -2000 -3819 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2934 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2931 ~ 2750 2938 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3816 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3819 ~ -2000 -3812 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2941 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2938 ~ 2750 2944 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3809 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3812 ~ -2000 -3806 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2947 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2944 ~ 2750 2950 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3803 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3806 ~ -2000 -3800 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2953 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2950 ~ 2750 2956 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3797 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3800 ~ -2000 -3794 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2959 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2956 ~ 2750 2962 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3791 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3794 ~ -2000 -3788 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2965 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2962 ~ 2750 2969 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3785 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3788 ~ -2000 -3781 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2972 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2969 ~ 2750 2975 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3778 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3781 ~ -2000 -3775 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2978 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2975 ~ 2750 2981 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3772 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3775 ~ -2000 -3769 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2984 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2981 ~ 2750 2988 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3766 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3769 ~ -2000 -3762 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2991 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2988 ~ 2750 2994 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3759 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3762 ~ -2000 -3756 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 2997 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 2994 ~ 2750 3000 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3753 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3756 ~ -2000 -3750 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3003 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3000 ~ 2750 3006 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3747 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3750 ~ -2000 -3744 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3009 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3006 ~ 2750 3012 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3741 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3744 ~ -2000 -3738 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3015 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3012 ~ 2750 3019 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3735 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3738 ~ -2000 -3731 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3022 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3019 ~ 2750 3025 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3728 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3731 ~ -2000 -3725 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3028 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3025 ~ 2750 3031 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3722 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3725 ~ -2000 -3719 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3034 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3031 ~ 2750 3038 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3716 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3719 ~ -2000 -3712 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3041 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3038 ~ 2750 3044 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3709 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3712 ~ -2000 -3706 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3047 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3044 ~ 2750 3050 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3703 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3706 ~ -2000 -3700 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3053 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3050 ~ 2750 3056 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3697 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3700 ~ -2000 -3694 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3059 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3056 ~ 2750 3062 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3691 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3694 ~ -2000 -3688 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3065 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3062 ~ 2750 3069 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3685 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3688 ~ -2000 -3681 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3072 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3069 ~ 2750 3075 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3678 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3681 ~ -2000 -3675 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3078 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3075 ~ 2750 3081 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3672 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3675 ~ -2000 -3669 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3084 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3081 ~ 2750 3088 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3666 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3669 ~ -2000 -3662 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3091 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3088 ~ 2750 3094 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3659 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3662 ~ -2000 -3656 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3097 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3094 ~ 2750 3100 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3653 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3656 ~ -2000 -3650 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3103 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3100 ~ 2750 3106 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3647 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3650 ~ -2000 -3644 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3109 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3106 ~ 2750 3112 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3641 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3644 ~ -2000 -3638 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3115 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3112 ~ 2750 3119 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3635 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3638 ~ -2000 -3631 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3122 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3119 ~ 2750 3125 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3628 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3631 ~ -2000 -3625 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3128 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3125 ~ 2750 3131 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3622 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3625 ~ -2000 -3619 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3134 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3131 ~ 2750 3138 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3616 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3619 ~ -2000 -3612 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3141 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3138 ~ 2750 3144 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3609 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3612 ~ -2000 -3606 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3147 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3144 ~ 2750 3150 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3603 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3606 ~ -2000 -3600 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3153 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3150 ~ 2750 3156 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3597 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3600 ~ -2000 -3594 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3159 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3156 ~ 2750 3162 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3591 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3594 ~ -2000 -3588 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3165 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3162 ~ 2750 3169 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3585 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3588 ~ -2000 -3581 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3172 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3169 ~ 2750 3175 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3578 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3581 ~ -2000 -3575 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3178 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3175 ~ 2750 3181 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3572 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3575 ~ -2000 -3569 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3184 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3181 ~ 2750 3188 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3566 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3569 ~ -2000 -3562 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3191 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3188 ~ 2750 3194 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3559 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3562 ~ -2000 -3556 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3197 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3194 ~ 2750 3200 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3553 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3556 ~ -2000 -3550 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3203 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3200 ~ 2750 3206 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3547 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3550 ~ -2000 -3544 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3209 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3206 ~ 2750 3212 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3541 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3544 ~ -2000 -3538 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3215 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3212 ~ 2750 3219 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3535 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3538 ~ -2000 -3531 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3222 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3219 ~ 2750 3225 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3528 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3531 ~ -2000 -3525 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3228 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3225 ~ 2750 3231 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3522 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3525 ~ -2000 -3519 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3234 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3231 ~ 2750 3238 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3516 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3519 ~ -2000 -3512 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3241 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3238 ~ 2750 3244 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3509 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3512 ~ -2000 -3506 ~ -1500 air replace #switch:glassrunner/glass
 
-execute at @s in switch:game run particle cloud 3247 ~1 3000 3 0 125 0 4 force
-execute at @s in switch:game run fill 3244 ~ 2750 3250 ~ 3250 air replace #switch:glassrunner/glass
+execute at @s in switch:game run particle cloud -3503 ~1 -1750 3 0 125 0 4 force
+execute at @s in switch:game run fill -3506 ~ -2000 -3500 ~ -1500 air replace #switch:glassrunner/glass
 
-execute in switch:game run kill @e[type=item,x=3000,y=-64,z=3000,distance=..1000]
+execute in switch:game run kill @e[type=item,x=-3750,y=-64,z=-1750,distance=..1000]
 scoreboard players add #rg_glassrunner_y switch.data 1
 
 kill @s

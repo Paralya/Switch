@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/rush_the_point_1/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [14039.5d, 141.5d, 13963.5d]
+data modify entity @s Pos set value [-1861.5d, 141.5d, 4063.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/rush_the_point_1/spread_players

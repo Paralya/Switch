@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/gg_grass_3/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [124153.5d, 134.5d, 124097.5d]
+data modify entity @s Pos set value [10153.5d, 134.5d, 8097.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/gg_grass_3/spread_players

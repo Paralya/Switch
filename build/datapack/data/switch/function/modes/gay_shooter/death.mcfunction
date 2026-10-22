@@ -8,7 +8,7 @@
 #			string in switch:modes/gay_shooter/tick
 #
 
-execute unless score #process_end switch.data matches 1 run tp @s 114057 119 114044
+execute unless score #process_end switch.data matches 1 run tp @s 10057 119 -9956
 gamemode spectator @s[team=!switch.temp.gays]
 effect clear @s
 clear @s

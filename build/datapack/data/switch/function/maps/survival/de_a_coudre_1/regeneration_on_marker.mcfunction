@@ -6,17 +6,17 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_de_a_coudre_1_y switch.data
 
-execute if score #rg_de_a_coudre_1_mod switch.data matches 0 at @s in switch:game run particle cloud 29014 ~0.5 29024 14 0 12 0 250 force
-execute if score #rg_de_a_coudre_1_mod switch.data matches 0 at @s run clone from minecraft:overworld 29000 ~ 29000 29028 ~ 29049 to switch:game 29000 ~0 29000 strict replace force
+execute if score #rg_de_a_coudre_1_mod switch.data matches 0 at @s in switch:game run particle cloud 4014 ~0.5 -5976 14 0 12 0 250 force
+execute if score #rg_de_a_coudre_1_mod switch.data matches 0 at @s run clone from minecraft:overworld 4000 ~ -6000 4028 ~ -5951 to switch:game 4000 ~0 -6000 strict replace force
 
-execute if score #rg_de_a_coudre_1_mod switch.data matches 1 at @s in switch:game run particle cloud 29041 ~0.5 29024 13 0 12 0 250 force
-execute if score #rg_de_a_coudre_1_mod switch.data matches 1 at @s run clone from minecraft:overworld 29028 ~ 29000 29055 ~ 29049 to switch:game 29028 ~0 29000 strict replace force
+execute if score #rg_de_a_coudre_1_mod switch.data matches 1 at @s in switch:game run particle cloud 4041 ~0.5 -5976 13 0 12 0 250 force
+execute if score #rg_de_a_coudre_1_mod switch.data matches 1 at @s run clone from minecraft:overworld 4028 ~ -6000 4055 ~ -5951 to switch:game 4028 ~0 -6000 strict replace force
 
-execute if score #rg_de_a_coudre_1_mod switch.data matches 2 at @s in switch:game run particle cloud 29069 ~0.5 29024 14 0 12 0 250 force
-execute if score #rg_de_a_coudre_1_mod switch.data matches 2 at @s run clone from minecraft:overworld 29055 ~ 29000 29083 ~ 29049 to switch:game 29055 ~0 29000 strict replace force
+execute if score #rg_de_a_coudre_1_mod switch.data matches 2 at @s in switch:game run particle cloud 4069 ~0.5 -5976 14 0 12 0 250 force
+execute if score #rg_de_a_coudre_1_mod switch.data matches 2 at @s run clone from minecraft:overworld 4055 ~ -6000 4083 ~ -5951 to switch:game 4055 ~0 -6000 strict replace force
 
 scoreboard players add #rg_de_a_coudre_1_mod switch.data 1
-execute if score #rg_de_a_coudre_1_mod switch.data matches 3 in switch:game run kill @e[type=item,x=29041,y=100,z=29024,distance=..1000]
+execute if score #rg_de_a_coudre_1_mod switch.data matches 3 in switch:game run kill @e[type=item,x=4041,y=100,z=-5975,distance=..1000]
 execute if score #rg_de_a_coudre_1_mod switch.data matches 3 run scoreboard players add #rg_de_a_coudre_1_y switch.data 1
 execute if score #rg_de_a_coudre_1_mod switch.data matches 3 run scoreboard players set #rg_de_a_coudre_1_mod switch.data 0
 

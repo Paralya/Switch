@@ -9,34 +9,34 @@
 
 scoreboard players add #rg_sheepwars_colored_sheeps switch.data 1
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 run data modify storage switch:maps to_regenerate.sheepwars_colored_sheeps set value 2b
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add 154000 154000 154021 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add 154000 154000 154021 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add 154021 154000 154043 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add 154021 154000 154043 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add 154043 154000 154064 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add 154043 154000 154064 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add 154064 154000 154086 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add 154064 154000 154086 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add 154086 154000 154107 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add 154086 154000 154107 154106
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add -4000 -12000 -3979 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add -4000 -12000 -3979 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add -3979 -12000 -3957 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add -3979 -12000 -3957 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add -3957 -12000 -3936 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add -3957 -12000 -3936 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add -3936 -12000 -3914 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add -3936 -12000 -3914 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in minecraft:overworld run forceload add -3914 -12000 -3893 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 in switch:game run forceload add -3914 -12000 -3893 -11894
 
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #rg_sheepwars_colored_sheeps_y switch.data 100
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1 run scoreboard players set #rg_sheepwars_colored_sheeps_mod switch.data 0
 execute if score #rg_sheepwars_colored_sheeps switch.data matches ..350 summon marker run function switch:maps/survival/sheepwars_colored_sheeps/regeneration_on_marker
 
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run kill @e[type=item,x=154053,y=100,z=154053,distance=..1000]
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run kill @e[type=item,x=-3946,y=100,z=-11947,distance=..1000]
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run data remove storage switch:maps to_regenerate.sheepwars_colored_sheeps
 
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove 154000 154000 154021 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove 154000 154000 154021 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove 154021 154000 154043 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove 154021 154000 154043 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove 154043 154000 154064 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove 154043 154000 154064 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove 154064 154000 154086 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove 154064 154000 154086 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove 154086 154000 154107 154106
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove 154086 154000 154107 154106
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove -4000 -12000 -3979 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove -4000 -12000 -3979 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove -3979 -12000 -3957 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove -3979 -12000 -3957 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove -3957 -12000 -3936 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove -3957 -12000 -3936 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove -3936 -12000 -3914 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove -3936 -12000 -3914 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove -3914 -12000 -3893 -11894
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove -3914 -12000 -3893 -11894
 
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Colored Sheeps","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run function switch:engine/log_message/apply {message:"Map `Colored Sheeps` just regenerated!"}

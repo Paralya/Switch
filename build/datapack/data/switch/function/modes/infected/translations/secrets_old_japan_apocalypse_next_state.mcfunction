@@ -1,7 +1,7 @@
 
 #> switch:modes/infected/translations/secrets_old_japan_apocalypse_next_state
 #
-# @executed	positioned 129035 110 129025
+# @executed	positioned 4035 110 10025
 #
 # @within	switch:modes/infected/secrets/old_japan_apocalypse/next_state
 #

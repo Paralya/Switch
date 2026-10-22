@@ -9,34 +9,34 @@
 
 scoreboard players add #rg_pitchout_1 switch.data 1
 execute if score #rg_pitchout_1 switch.data matches 1 run data modify storage switch:maps to_regenerate.pitchout_1 set value 2b
-execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 1000 1000 1020 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 1000 1000 1020 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 1020 1000 1040 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 1020 1000 1040 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 1040 1000 1060 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 1040 1000 1060 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 1060 1000 1080 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 1060 1000 1080 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 1080 1000 1100 1100
-execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 1080 1000 1100 1100
+execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 2000 0 2020 100
+execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 2000 0 2020 100
+execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 2020 0 2040 100
+execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 2020 0 2040 100
+execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 2040 0 2060 100
+execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 2040 0 2060 100
+execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 2060 0 2080 100
+execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 2060 0 2080 100
+execute if score #rg_pitchout_1 switch.data matches 1 in minecraft:overworld run forceload add 2080 0 2100 100
+execute if score #rg_pitchout_1 switch.data matches 1 in switch:game run forceload add 2080 0 2100 100
 
 execute if score #rg_pitchout_1 switch.data matches 1 run scoreboard players set #rg_pitchout_1_y switch.data 100
 execute if score #rg_pitchout_1 switch.data matches 1 run scoreboard players set #rg_pitchout_1_mod switch.data 0
 execute if score #rg_pitchout_1 switch.data matches ..225 summon marker run function switch:maps/survival/pitchout_1/regeneration_on_marker
 
-execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run kill @e[type=item,x=1050,y=100,z=1050,distance=..1000]
+execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run kill @e[type=item,x=2050,y=100,z=50,distance=..1000]
 execute if score #rg_pitchout_1 switch.data matches 226.. run data remove storage switch:maps to_regenerate.pitchout_1
 
-execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 1000 1000 1020 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 1000 1000 1020 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 1020 1000 1040 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 1020 1000 1040 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 1040 1000 1060 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 1040 1000 1060 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 1060 1000 1080 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 1060 1000 1080 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 1080 1000 1100 1100
-execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 1080 1000 1100 1100
+execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 2000 0 2020 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 2000 0 2020 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 2020 0 2040 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 2020 0 2040 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 2040 0 2060 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 2040 0 2060 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 2060 0 2080 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 2060 0 2080 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in minecraft:overworld run forceload remove 2080 0 2100 100
+execute if score #rg_pitchout_1 switch.data matches 226.. in switch:game run forceload remove 2080 0 2100 100
 
 execute if score #rg_pitchout_1 switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Wet Wood Dome","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_pitchout_1 switch.data matches 226.. run function switch:engine/log_message/apply {message:"Map `Wet Wood Dome` just regenerated!"}

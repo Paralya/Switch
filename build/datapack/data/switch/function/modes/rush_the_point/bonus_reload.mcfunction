@@ -6,10 +6,10 @@
 
 # Place random
 execute store result score #random switch.data run random value 0..3
-execute if score #random switch.data matches 0 run setblock 14000 100 13925 obsidian
-execute if score #random switch.data matches 1 run setblock 14000 100 14000 obsidian
-execute if score #random switch.data matches 2 run setblock 14000 100 14075 obsidian
-execute if score #random switch.data matches 3 run setblock 14000 86 14000 obsidian
+execute if score #random switch.data matches 0 run setblock -1900 100 4025 obsidian
+execute if score #random switch.data matches 1 run setblock -1900 100 4100 obsidian
+execute if score #random switch.data matches 2 run setblock -1900 100 4175 obsidian
+execute if score #random switch.data matches 3 run setblock -1900 86 4100 obsidian
 
 function switch:modes/rush_the_point/translations/bonus_reload
 execute as @a[tag=!detached] at @s run playsound entity.villager.hurt ambient @s

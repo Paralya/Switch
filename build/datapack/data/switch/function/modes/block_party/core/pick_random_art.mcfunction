@@ -15,7 +15,7 @@ execute store result score #bp_selected_art switch.data run data get storage swi
 data remove storage switch:maps block_party[0]
 
 # Teleport current marker to the selected pixel art
-tp @s 110008 248 110008
+tp @s 4093 248 -9985
 scoreboard players set #y_pos switch.data 248
 scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos switch.data
@@ -35,7 +35,7 @@ function switch:utils/get_random/main
 scoreboard players operation #bp_selected_block switch.data = #random switch.data
 
 # Teleport current marker to the selected block
-scoreboard players set #z_pos switch.data 110073
+scoreboard players set #z_pos switch.data -9920
 scoreboard players operation #z_pos switch.data += #bp_selected_block switch.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos switch.data
 

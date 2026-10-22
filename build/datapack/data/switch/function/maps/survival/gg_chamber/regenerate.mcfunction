@@ -9,22 +9,22 @@
 
 scoreboard players add #rg_gg_chamber switch.data 1
 execute if score #rg_gg_chamber switch.data matches 1 run data modify storage switch:maps to_regenerate.gg_chamber set value 2b
-execute if score #rg_gg_chamber switch.data matches 1 in minecraft:overworld run forceload add 124042 124094 124062 124138
-execute if score #rg_gg_chamber switch.data matches 1 in switch:game run forceload add 124042 124094 124062 124138
-execute if score #rg_gg_chamber switch.data matches 1 in minecraft:overworld run forceload add 124062 124094 124081 124138
-execute if score #rg_gg_chamber switch.data matches 1 in switch:game run forceload add 124062 124094 124081 124138
+execute if score #rg_gg_chamber switch.data matches 1 in minecraft:overworld run forceload add 10042 8094 10062 8138
+execute if score #rg_gg_chamber switch.data matches 1 in switch:game run forceload add 10042 8094 10062 8138
+execute if score #rg_gg_chamber switch.data matches 1 in minecraft:overworld run forceload add 10062 8094 10081 8138
+execute if score #rg_gg_chamber switch.data matches 1 in switch:game run forceload add 10062 8094 10081 8138
 
 execute if score #rg_gg_chamber switch.data matches 1 run scoreboard players set #rg_gg_chamber_y switch.data 84
 execute if score #rg_gg_chamber switch.data matches 1 run scoreboard players set #rg_gg_chamber_mod switch.data 0
 execute if score #rg_gg_chamber switch.data matches ..106 summon marker run function switch:maps/survival/gg_chamber/regeneration_on_marker
 
-execute if score #rg_gg_chamber switch.data matches 107.. in switch:game run kill @e[type=item,x=124061,y=84,z=124116,distance=..1000]
+execute if score #rg_gg_chamber switch.data matches 107.. in switch:game run kill @e[type=item,x=10061,y=84,z=8116,distance=..1000]
 execute if score #rg_gg_chamber switch.data matches 107.. run data remove storage switch:maps to_regenerate.gg_chamber
 
-execute if score #rg_gg_chamber switch.data matches 107.. in minecraft:overworld run forceload remove 124042 124094 124062 124138
-execute if score #rg_gg_chamber switch.data matches 107.. in switch:game run forceload remove 124042 124094 124062 124138
-execute if score #rg_gg_chamber switch.data matches 107.. in minecraft:overworld run forceload remove 124062 124094 124081 124138
-execute if score #rg_gg_chamber switch.data matches 107.. in switch:game run forceload remove 124062 124094 124081 124138
+execute if score #rg_gg_chamber switch.data matches 107.. in minecraft:overworld run forceload remove 10042 8094 10062 8138
+execute if score #rg_gg_chamber switch.data matches 107.. in switch:game run forceload remove 10042 8094 10062 8138
+execute if score #rg_gg_chamber switch.data matches 107.. in minecraft:overworld run forceload remove 10062 8094 10081 8138
+execute if score #rg_gg_chamber switch.data matches 107.. in switch:game run forceload remove 10062 8094 10081 8138
 
 execute if score #rg_gg_chamber switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Chambre de Stoupette","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_gg_chamber switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Chambre de Stoupette` just regenerated!"}

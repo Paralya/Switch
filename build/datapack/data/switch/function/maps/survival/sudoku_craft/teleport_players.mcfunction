@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/sudoku_craft/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [55018.5d, 154.5d, 55028.5d]
+data modify entity @s Pos set value [-1982.5d, 154.5d, -7972.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/sudoku_craft/spread_players

@@ -7,22 +7,22 @@
 
 scoreboard players add #scan_fireblast_pork switch.data 1
 
-execute if score #scan_fireblast_pork switch.data matches 1 in minecraft:overworld run forceload add 165000 165000 165025 165075
-execute if score #scan_fireblast_pork switch.data matches 1 in switch:game run forceload add 165000 165000 165025 165075
+execute if score #scan_fireblast_pork switch.data matches 1 in minecraft:overworld run forceload add 12000 -6000 12025 -5925
+execute if score #scan_fireblast_pork switch.data matches 1 in switch:game run forceload add 12000 -6000 12025 -5925
 
-execute if score #scan_fireblast_pork switch.data matches 1 in minecraft:overworld run forceload add 165025 165000 165050 165075
-execute if score #scan_fireblast_pork switch.data matches 1 in switch:game run forceload add 165025 165000 165050 165075
+execute if score #scan_fireblast_pork switch.data matches 1 in minecraft:overworld run forceload add 12025 -6000 12050 -5925
+execute if score #scan_fireblast_pork switch.data matches 1 in switch:game run forceload add 12025 -6000 12050 -5925
 
-execute if score #scan_fireblast_pork switch.data matches 1 in minecraft:overworld run forceload add 165050 165000 165075 165075
-execute if score #scan_fireblast_pork switch.data matches 1 in switch:game run forceload add 165050 165000 165075 165075
+execute if score #scan_fireblast_pork switch.data matches 1 in minecraft:overworld run forceload add 12050 -6000 12075 -5925
+execute if score #scan_fireblast_pork switch.data matches 1 in switch:game run forceload add 12050 -6000 12075 -5925
 
 execute if score #scan_fireblast_pork switch.data matches 1 run data modify storage switch:maps to_scan.fireblast_pork set value 2b
-execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #start_x_fireblast_pork switch.data 165001
+execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #start_x_fireblast_pork switch.data 12001
 execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #start_y_fireblast_pork switch.data 101
-execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #start_z_fireblast_pork switch.data 165001
-execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #end_x_fireblast_pork switch.data 165074
+execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #start_z_fireblast_pork switch.data -5999
+execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #end_x_fireblast_pork switch.data 12074
 execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #end_y_fireblast_pork switch.data 155
-execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #end_z_fireblast_pork switch.data 165074
+execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players set #end_z_fireblast_pork switch.data -5926
 execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players operation #curr_x_fireblast_pork switch.data = #start_x_fireblast_pork switch.data
 execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players operation #curr_y_fireblast_pork switch.data = #start_y_fireblast_pork switch.data
 execute if score #scan_fireblast_pork switch.data matches 1 run scoreboard players operation #curr_z_fireblast_pork switch.data = #start_z_fireblast_pork switch.data
@@ -31,14 +31,14 @@ execute if score #scan_fireblast_pork switch.data matches 1 run data modify stor
 execute if score #scan_fireblast_pork switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_fireblast_pork switch.data matches 30.. summon marker run function switch:maps/survival/fireblast_pork/scan_doors_on_marker
 
-execute if score #scan_fireblast_pork switch.data matches 91 in minecraft:overworld run forceload remove 165000 165000 165025 165075
-execute if score #scan_fireblast_pork switch.data matches 91 in switch:game run forceload remove 165000 165000 165025 165075
+execute if score #scan_fireblast_pork switch.data matches 91 in minecraft:overworld run forceload remove 12000 -6000 12025 -5925
+execute if score #scan_fireblast_pork switch.data matches 91 in switch:game run forceload remove 12000 -6000 12025 -5925
 
-execute if score #scan_fireblast_pork switch.data matches 91 in minecraft:overworld run forceload remove 165025 165000 165050 165075
-execute if score #scan_fireblast_pork switch.data matches 91 in switch:game run forceload remove 165025 165000 165050 165075
+execute if score #scan_fireblast_pork switch.data matches 91 in minecraft:overworld run forceload remove 12025 -6000 12050 -5925
+execute if score #scan_fireblast_pork switch.data matches 91 in switch:game run forceload remove 12025 -6000 12050 -5925
 
-execute if score #scan_fireblast_pork switch.data matches 91 in minecraft:overworld run forceload remove 165050 165000 165075 165075
-execute if score #scan_fireblast_pork switch.data matches 91 in switch:game run forceload remove 165050 165000 165075 165075
+execute if score #scan_fireblast_pork switch.data matches 91 in minecraft:overworld run forceload remove 12050 -6000 12075 -5925
+execute if score #scan_fireblast_pork switch.data matches 91 in switch:game run forceload remove 12050 -6000 12075 -5925
 
 execute if score #scan_fireblast_pork switch.data matches 91 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"fireblast_pork","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #scan_fireblast_pork switch.data matches 91 run data remove storage switch:maps to_scan.fireblast_pork

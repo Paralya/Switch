@@ -1,9 +1,9 @@
 
 #> switch:modes/glassrunner/start
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
-# @within	switch:modes/glassrunner/calls/start [ positioned 3000 128 3000 ]
+# @within	switch:modes/glassrunner/calls/start [ positioned -3750 128 -1750 ]
 #
 
 ## Item custom
@@ -74,7 +74,7 @@ team modify switch.glassrunner.objective suffix [{"text": "Objective: ","color":
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0
 
-execute in switch:game run summon text_display 3000 110 3000 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
-execute in switch:game run summon text_display 3084 131 3084 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
-execute in switch:game run summon text_display 2916 131 2916 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display -3750 110 -1750 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display -3666 131 -1666 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display -3834 131 -1834 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
 

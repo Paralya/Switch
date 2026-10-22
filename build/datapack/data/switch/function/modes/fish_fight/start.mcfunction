@@ -26,13 +26,13 @@ scoreboard players set #do_spreadplayers switch.data 1
 function switch:maps/choose_map_for {id:"fish_fight", maps:["luxio_fish_fight"]}
 
 #si map luxio
-execute if data storage switch:main {map:"luxio_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.blue] 151026 125 151007
-execute if data storage switch:main {map:"luxio_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.red] 151026 125 151045
+execute if data storage switch:main {map:"luxio_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.blue] -9974 125 -11993
+execute if data storage switch:main {map:"luxio_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.red] -9974 125 -11955
 
 #si map airdox
 execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FISH switch.data matches 0 as @a[tag=!detached,sort=random] run function switch:modes/fish_fight/tp_airdox
-execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.blue] 155986 158 155995
-execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.red] 156016 156 155988
+execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.blue] -14 158 -12005
+execute if data storage switch:main {map:"airdox_fish_fight"} if score #TEAM_FISH switch.data matches 1 run tp @a[tag=!detached,team=switch.temp.red] 16 156 -12012
 
 # lignes exemple
 # execute if data storage switch:main {map:"pitchout_halloween"} as @a[tag=!detached,sort=random] run function switch:modes/pitchout/map_halloween/tp_give

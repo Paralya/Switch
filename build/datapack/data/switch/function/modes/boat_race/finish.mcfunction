@@ -1,10 +1,10 @@
 
 #> switch:modes/boat_race/finish
 #
-# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=5033,y=105,z=5000,dx=3,dy=4,dz=4] & at @s
+# @executed	as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=33,y=105,z=-4000,dx=3,dy=4,dz=4] & at @s
 #
-# @within	switch:modes/boat_race/tick [ as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=5033,y=105,z=5000,dx=3,dy=4,dz=4] & at @s ]
-#			switch:modes/boat_race/tick [ as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=50997,y=92,z=50964,dx=6,dy=4,dz=5] & at @s ]
+# @within	switch:modes/boat_race/tick [ as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=33,y=105,z=-4000,dx=3,dy=4,dz=4] & at @s ]
+#			switch:modes/boat_race/tick [ as @a[tag=!detached,gamemode=!spectator,scores={switch.alive=1},x=-8003,y=92,z=-6036,dx=6,dy=4,dz=5] & at @s ]
 #
 
 scoreboard players set @s switch.alive -1

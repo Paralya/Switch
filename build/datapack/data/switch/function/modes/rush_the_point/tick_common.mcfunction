@@ -12,10 +12,10 @@ scoreboard players add #rush_the_point_ticks switch.data 1
 execute if score #rush_the_point_seconds switch.data matches ..-1 as @a[tag=!detached] run attribute @s jump_strength base set 0
 execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a[tag=!detached] slowness 100 250 true
 execute if score #rush_the_point_seconds switch.data matches ..-1 run effect give @a[tag=!detached] night_vision 100 250 true
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 13925 air
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14000 air
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 100 14075 air
-execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock 14000 86 14000 air
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock -1900 100 4025 air
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock -1900 100 4100 air
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock -1900 100 4175 air
+execute if score #rush_the_point_seconds switch.data matches ..-1 run setblock -1900 86 4100 air
 
 # Kill all entities under the map & Manage dropped items
 execute as @e[tag=!detached,type=!marker,type=!item_display,type=!armor_stand] at @s run kill @s[y=0,dy=20]

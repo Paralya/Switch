@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 9023.97 101.24 9004.81 rotated 43.17 -61.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"FriendsCube Jump",subtitle:"Stoupy",particle:"minecraft:glow"}}
+execute in switch:game positioned 4023.97 101.24 4.81 rotated 43.17 -61.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"FriendsCube Jump",subtitle:"Stoupy",particle:"minecraft:glow"}}
 

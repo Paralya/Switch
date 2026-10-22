@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 52053.77 175.12 52166.47 rotated -158.81 15.64 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Castillo",subtitle:"Vilarles",particle:"minecraft:glow"}}
+execute in switch:game positioned -7946.23 175.12 -7833.53 rotated -158.81 15.64 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Castillo",subtitle:"Vilarles",particle:"minecraft:glow"}}
 

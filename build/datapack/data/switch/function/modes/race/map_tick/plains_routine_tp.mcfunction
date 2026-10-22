@@ -9,7 +9,7 @@
 execute if score @s switch.temp.compteur matches 1 run scoreboard players operation @s switch.temp.old_speed = @s shopping_kart.engine
 
 data modify entity @s[scores={switch.temp.compteur=1}] NoAI set value 1b
-tp @s[scores={switch.temp.compteur=1}] 20151.0 ~.1 ~
+tp @s[scores={switch.temp.compteur=1}] 6714.0 ~.1 ~
 tp @s[scores={switch.temp.compteur=2}] ~1.5 ~-.05 ~
 tp @s[scores={switch.temp.compteur=3}] ~1.5 ~-.05 ~
 tp @s[scores={switch.temp.compteur=4}] ~1.5 ~.5 ~

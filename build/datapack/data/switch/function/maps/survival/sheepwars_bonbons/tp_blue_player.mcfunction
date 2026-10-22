@@ -8,17 +8,17 @@
 
 scoreboard players add #s_bonbons_blue switch.data 1
 
-execute if score #s_bonbons_blue switch.data matches 1 run tp @s 143037 130 143089 -90 0
-execute if score #s_bonbons_blue switch.data matches 2 run tp @s 143022 139 143088 -90 0
-execute if score #s_bonbons_blue switch.data matches 3 run tp @s 143032 131 143066 -90 0
-execute if score #s_bonbons_blue switch.data matches 4 run tp @s 143021 142 143070 -90 0
-execute if score #s_bonbons_blue switch.data matches 5 run tp @s 143022 142 143063 -90 0
-execute if score #s_bonbons_blue switch.data matches 6 run tp @s 143026 141 143048 -90 0
-execute if score #s_bonbons_blue switch.data matches 7 run tp @s 143034 136 143038 -90 0
-execute if score #s_bonbons_blue switch.data matches 8 run tp @s 143027 139 143040 -90 0
-execute if score #s_bonbons_blue switch.data matches 9 run tp @s 143026 141 143024 -90 0
-execute if score #s_bonbons_blue switch.data matches 10 run tp @s 143028 149 143022 -90 0
-execute if score #s_bonbons_blue switch.data matches 11 run tp @s 143037 135 143018 -90 0
+execute if score #s_bonbons_blue switch.data matches 1 run tp @s -9963 130 2089 -90 0
+execute if score #s_bonbons_blue switch.data matches 2 run tp @s -9978 139 2088 -90 0
+execute if score #s_bonbons_blue switch.data matches 3 run tp @s -9968 131 2066 -90 0
+execute if score #s_bonbons_blue switch.data matches 4 run tp @s -9979 142 2070 -90 0
+execute if score #s_bonbons_blue switch.data matches 5 run tp @s -9978 142 2063 -90 0
+execute if score #s_bonbons_blue switch.data matches 6 run tp @s -9974 141 2048 -90 0
+execute if score #s_bonbons_blue switch.data matches 7 run tp @s -9966 136 2038 -90 0
+execute if score #s_bonbons_blue switch.data matches 8 run tp @s -9973 139 2040 -90 0
+execute if score #s_bonbons_blue switch.data matches 9 run tp @s -9974 141 2024 -90 0
+execute if score #s_bonbons_blue switch.data matches 10 run tp @s -9972 149 2022 -90 0
+execute if score #s_bonbons_blue switch.data matches 11 run tp @s -9963 135 2018 -90 0
 
 execute if score #s_bonbons_blue switch.data matches 11.. run scoreboard players set #s_bonbons_blue switch.data 0
 

@@ -7,15 +7,15 @@
 scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 4
 
-summon marker 18010 101 18000 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:5}}
-summon marker 18011 101 18087 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:1, dy:5, dz:4}}
-summon marker 17912 101 17999 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:4, dy:5, dz:1}}
-summon marker 18036 92 17985 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:3, dx:4, dy:5, dz:1}}
-summon marker 17975 108 18042 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:4, dx:4, dy:5, dz:1}}
+summon marker -3990 101 2000 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:5}}
+summon marker -3989 101 2087 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:1, dy:5, dz:4}}
+summon marker -4088 101 1999 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:4, dy:5, dz:1}}
+summon marker -3964 92 1985 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:3, dx:4, dy:5, dz:1}}
+summon marker -4025 108 2042 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:4, dx:4, dy:5, dz:1}}
 
-forceload add 18010 18000
-forceload add 18011 18087
-forceload add 17912 17999
-forceload add 18036 17985
-forceload add 17975 18042
+forceload add -3990 2000
+forceload add -3989 2087
+forceload add -4088 1999
+forceload add -3964 1985
+forceload add -4025 2042
 

@@ -9,34 +9,34 @@
 
 scoreboard players add #rg_old_japan_apocalypse switch.data 1
 execute if score #rg_old_japan_apocalypse switch.data matches 1 run data modify storage switch:maps to_regenerate.old_japan_apocalypse set value 2b
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 129000 129000 129020 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 129000 129000 129020 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 129020 129000 129041 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 129020 129000 129041 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 129041 129000 129061 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 129041 129000 129061 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 129061 129000 129082 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 129061 129000 129082 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 129082 129000 129102 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 129082 129000 129102 129102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 4000 10000 4020 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 4000 10000 4020 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 4020 10000 4041 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 4020 10000 4041 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 4041 10000 4061 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 4041 10000 4061 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 4061 10000 4082 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 4061 10000 4082 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in minecraft:overworld run forceload add 4082 10000 4102 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 1 in switch:game run forceload add 4082 10000 4102 10102
 
 execute if score #rg_old_japan_apocalypse switch.data matches 1 run scoreboard players set #rg_old_japan_apocalypse_y switch.data 100
 execute if score #rg_old_japan_apocalypse switch.data matches 1 run scoreboard players set #rg_old_japan_apocalypse_mod switch.data 0
 execute if score #rg_old_japan_apocalypse switch.data matches ..265 summon marker run function switch:maps/survival/old_japan_apocalypse/regeneration_on_marker
 
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run kill @e[type=item,x=129051,y=100,z=129051,distance=..1000]
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run kill @e[type=item,x=4051,y=100,z=10051,distance=..1000]
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. run data remove storage switch:maps to_regenerate.old_japan_apocalypse
 
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 129000 129000 129020 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 129000 129000 129020 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 129020 129000 129041 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 129020 129000 129041 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 129041 129000 129061 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 129041 129000 129061 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 129061 129000 129082 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 129061 129000 129082 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 129082 129000 129102 129102
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 129082 129000 129102 129102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 4000 10000 4020 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 4000 10000 4020 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 4020 10000 4041 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 4020 10000 4041 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 4041 10000 4061 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 4041 10000 4061 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 4061 10000 4082 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 4061 10000 4082 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 4082 10000 4102 10102
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 4082 10000 4102 10102
 
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Old Japan Apocalypse","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. run function switch:engine/log_message/apply {message:"Map `Old Japan Apocalypse` just regenerated!"}

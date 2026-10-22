@@ -6,44 +6,44 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_airship_fortress_y switch.data
 
-execute if score #rg_airship_fortress_mod switch.data matches 0 at @s in switch:game run particle cloud 20613 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 0 at @s run clone from minecraft:overworld 20606 ~ 20227 20621 ~ 20426 to switch:game 20606 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 0 at @s in switch:game run particle cloud 7176 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 0 at @s run clone from minecraft:overworld 7169 ~ -5149 7184 ~ -4950 to switch:game 7169 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 1 at @s in switch:game run particle cloud 20628 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 1 at @s run clone from minecraft:overworld 20621 ~ 20227 20635 ~ 20426 to switch:game 20621 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 1 at @s in switch:game run particle cloud 7191 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 1 at @s run clone from minecraft:overworld 7184 ~ -5149 7198 ~ -4950 to switch:game 7184 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 2 at @s in switch:game run particle cloud 20642 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 2 at @s run clone from minecraft:overworld 20635 ~ 20227 20650 ~ 20426 to switch:game 20635 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 2 at @s in switch:game run particle cloud 7205 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 2 at @s run clone from minecraft:overworld 7198 ~ -5149 7213 ~ -4950 to switch:game 7198 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 3 at @s in switch:game run particle cloud 20657 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 3 at @s run clone from minecraft:overworld 20650 ~ 20227 20664 ~ 20426 to switch:game 20650 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 3 at @s in switch:game run particle cloud 7220 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 3 at @s run clone from minecraft:overworld 7213 ~ -5149 7227 ~ -4950 to switch:game 7213 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 4 at @s in switch:game run particle cloud 20671 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 4 at @s run clone from minecraft:overworld 20664 ~ 20227 20679 ~ 20426 to switch:game 20664 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 4 at @s in switch:game run particle cloud 7234 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 4 at @s run clone from minecraft:overworld 7227 ~ -5149 7242 ~ -4950 to switch:game 7227 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 5 at @s in switch:game run particle cloud 20686 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 5 at @s run clone from minecraft:overworld 20679 ~ 20227 20694 ~ 20426 to switch:game 20679 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 5 at @s in switch:game run particle cloud 7249 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 5 at @s run clone from minecraft:overworld 7242 ~ -5149 7256 ~ -4950 to switch:game 7242 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 6 at @s in switch:game run particle cloud 20701 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 6 at @s run clone from minecraft:overworld 20694 ~ 20227 20708 ~ 20426 to switch:game 20694 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 6 at @s in switch:game run particle cloud 7263 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 6 at @s run clone from minecraft:overworld 7256 ~ -5149 7271 ~ -4950 to switch:game 7256 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 7 at @s in switch:game run particle cloud 20715 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 7 at @s run clone from minecraft:overworld 20708 ~ 20227 20723 ~ 20426 to switch:game 20708 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 7 at @s in switch:game run particle cloud 7278 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 7 at @s run clone from minecraft:overworld 7271 ~ -5149 7286 ~ -4950 to switch:game 7271 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 8 at @s in switch:game run particle cloud 20730 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 8 at @s run clone from minecraft:overworld 20723 ~ 20227 20737 ~ 20426 to switch:game 20723 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 8 at @s in switch:game run particle cloud 7293 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 8 at @s run clone from minecraft:overworld 7286 ~ -5149 7300 ~ -4950 to switch:game 7286 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 9 at @s in switch:game run particle cloud 20744 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 9 at @s run clone from minecraft:overworld 20737 ~ 20227 20752 ~ 20426 to switch:game 20737 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 9 at @s in switch:game run particle cloud 7307 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 9 at @s run clone from minecraft:overworld 7300 ~ -5149 7315 ~ -4950 to switch:game 7300 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 10 at @s in switch:game run particle cloud 20759 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 10 at @s run clone from minecraft:overworld 20752 ~ 20227 20766 ~ 20426 to switch:game 20752 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 10 at @s in switch:game run particle cloud 7322 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 10 at @s run clone from minecraft:overworld 7315 ~ -5149 7329 ~ -4950 to switch:game 7315 ~0 -5149 strict replace force
 
-execute if score #rg_airship_fortress_mod switch.data matches 11 at @s in switch:game run particle cloud 20773 ~0.5 20326 7 0 49 0 250 force
-execute if score #rg_airship_fortress_mod switch.data matches 11 at @s run clone from minecraft:overworld 20766 ~ 20227 20781 ~ 20426 to switch:game 20766 ~0 20227 strict replace force
+execute if score #rg_airship_fortress_mod switch.data matches 11 at @s in switch:game run particle cloud 7336 ~0.5 -5050 7 0 49 0 250 force
+execute if score #rg_airship_fortress_mod switch.data matches 11 at @s run clone from minecraft:overworld 7329 ~ -5149 7344 ~ -4950 to switch:game 7329 ~0 -5149 strict replace force
 
 scoreboard players add #rg_airship_fortress_mod switch.data 1
-execute if score #rg_airship_fortress_mod switch.data matches 12 in switch:game run kill @e[type=item,x=20693,y=70,z=20326,distance=..1000]
+execute if score #rg_airship_fortress_mod switch.data matches 12 in switch:game run kill @e[type=item,x=7256,y=70,z=-5049,distance=..1000]
 execute if score #rg_airship_fortress_mod switch.data matches 12 run scoreboard players add #rg_airship_fortress_y switch.data 1
 execute if score #rg_airship_fortress_mod switch.data matches 12 run scoreboard players set #rg_airship_fortress_mod switch.data 0
 

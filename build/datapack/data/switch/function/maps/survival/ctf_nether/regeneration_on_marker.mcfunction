@@ -6,80 +6,80 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_ctf_nether_y switch.data
 
-execute if score #rg_ctf_nether_mod switch.data matches 0 at @s in switch:game run particle cloud 149004 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 0 at @s run clone from minecraft:overworld 149000 ~ 149000 149008 ~ 149350 to switch:game 149000 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 0 at @s in switch:game run particle cloud -11996 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 0 at @s run clone from minecraft:overworld -12000 ~ -10000 -11992 ~ -9650 to switch:game -12000 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 1 at @s in switch:game run particle cloud 149012 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 1 at @s run clone from minecraft:overworld 149008 ~ 149000 149017 ~ 149350 to switch:game 149008 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 1 at @s in switch:game run particle cloud -11988 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 1 at @s run clone from minecraft:overworld -11992 ~ -10000 -11983 ~ -9650 to switch:game -11992 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 2 at @s in switch:game run particle cloud 149021 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 2 at @s run clone from minecraft:overworld 149017 ~ 149000 149025 ~ 149350 to switch:game 149017 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 2 at @s in switch:game run particle cloud -11979 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 2 at @s run clone from minecraft:overworld -11983 ~ -10000 -11975 ~ -9650 to switch:game -11983 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 3 at @s in switch:game run particle cloud 149029 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 3 at @s run clone from minecraft:overworld 149025 ~ 149000 149034 ~ 149350 to switch:game 149025 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 3 at @s in switch:game run particle cloud -11971 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 3 at @s run clone from minecraft:overworld -11975 ~ -10000 -11966 ~ -9650 to switch:game -11975 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 4 at @s in switch:game run particle cloud 149038 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 4 at @s run clone from minecraft:overworld 149034 ~ 149000 149042 ~ 149350 to switch:game 149034 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 4 at @s in switch:game run particle cloud -11962 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 4 at @s run clone from minecraft:overworld -11966 ~ -10000 -11958 ~ -9650 to switch:game -11966 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 5 at @s in switch:game run particle cloud 149046 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 5 at @s run clone from minecraft:overworld 149042 ~ 149000 149050 ~ 149350 to switch:game 149042 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 5 at @s in switch:game run particle cloud -11954 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 5 at @s run clone from minecraft:overworld -11958 ~ -10000 -11950 ~ -9650 to switch:game -11958 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 6 at @s in switch:game run particle cloud 149054 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 6 at @s run clone from minecraft:overworld 149050 ~ 149000 149059 ~ 149350 to switch:game 149050 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 6 at @s in switch:game run particle cloud -11946 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 6 at @s run clone from minecraft:overworld -11950 ~ -10000 -11941 ~ -9650 to switch:game -11950 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 7 at @s in switch:game run particle cloud 149063 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 7 at @s run clone from minecraft:overworld 149059 ~ 149000 149067 ~ 149350 to switch:game 149059 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 7 at @s in switch:game run particle cloud -11937 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 7 at @s run clone from minecraft:overworld -11941 ~ -10000 -11933 ~ -9650 to switch:game -11941 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 8 at @s in switch:game run particle cloud 149071 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 8 at @s run clone from minecraft:overworld 149067 ~ 149000 149076 ~ 149350 to switch:game 149067 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 8 at @s in switch:game run particle cloud -11929 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 8 at @s run clone from minecraft:overworld -11933 ~ -10000 -11924 ~ -9650 to switch:game -11933 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 9 at @s in switch:game run particle cloud 149080 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 9 at @s run clone from minecraft:overworld 149076 ~ 149000 149084 ~ 149350 to switch:game 149076 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 9 at @s in switch:game run particle cloud -11920 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 9 at @s run clone from minecraft:overworld -11924 ~ -10000 -11916 ~ -9650 to switch:game -11924 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 10 at @s in switch:game run particle cloud 149088 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 10 at @s run clone from minecraft:overworld 149084 ~ 149000 149093 ~ 149350 to switch:game 149084 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 10 at @s in switch:game run particle cloud -11912 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 10 at @s run clone from minecraft:overworld -11916 ~ -10000 -11907 ~ -9650 to switch:game -11916 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 11 at @s in switch:game run particle cloud 149097 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 11 at @s run clone from minecraft:overworld 149093 ~ 149000 149101 ~ 149350 to switch:game 149093 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 11 at @s in switch:game run particle cloud -11903 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 11 at @s run clone from minecraft:overworld -11907 ~ -10000 -11899 ~ -9650 to switch:game -11907 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 12 at @s in switch:game run particle cloud 149105 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 12 at @s run clone from minecraft:overworld 149101 ~ 149000 149109 ~ 149350 to switch:game 149101 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 12 at @s in switch:game run particle cloud -11895 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 12 at @s run clone from minecraft:overworld -11899 ~ -10000 -11891 ~ -9650 to switch:game -11899 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 13 at @s in switch:game run particle cloud 149113 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 13 at @s run clone from minecraft:overworld 149109 ~ 149000 149118 ~ 149350 to switch:game 149109 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 13 at @s in switch:game run particle cloud -11887 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 13 at @s run clone from minecraft:overworld -11891 ~ -10000 -11882 ~ -9650 to switch:game -11891 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 14 at @s in switch:game run particle cloud 149122 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 14 at @s run clone from minecraft:overworld 149118 ~ 149000 149126 ~ 149350 to switch:game 149118 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 14 at @s in switch:game run particle cloud -11878 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 14 at @s run clone from minecraft:overworld -11882 ~ -10000 -11874 ~ -9650 to switch:game -11882 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 15 at @s in switch:game run particle cloud 149130 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 15 at @s run clone from minecraft:overworld 149126 ~ 149000 149135 ~ 149350 to switch:game 149126 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 15 at @s in switch:game run particle cloud -11870 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 15 at @s run clone from minecraft:overworld -11874 ~ -10000 -11865 ~ -9650 to switch:game -11874 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 16 at @s in switch:game run particle cloud 149139 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 16 at @s run clone from minecraft:overworld 149135 ~ 149000 149143 ~ 149350 to switch:game 149135 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 16 at @s in switch:game run particle cloud -11861 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 16 at @s run clone from minecraft:overworld -11865 ~ -10000 -11857 ~ -9650 to switch:game -11865 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 17 at @s in switch:game run particle cloud 149147 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 17 at @s run clone from minecraft:overworld 149143 ~ 149000 149152 ~ 149350 to switch:game 149143 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 17 at @s in switch:game run particle cloud -11853 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 17 at @s run clone from minecraft:overworld -11857 ~ -10000 -11848 ~ -9650 to switch:game -11857 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 18 at @s in switch:game run particle cloud 149156 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 18 at @s run clone from minecraft:overworld 149152 ~ 149000 149160 ~ 149350 to switch:game 149152 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 18 at @s in switch:game run particle cloud -11844 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 18 at @s run clone from minecraft:overworld -11848 ~ -10000 -11840 ~ -9650 to switch:game -11848 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 19 at @s in switch:game run particle cloud 149164 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 19 at @s run clone from minecraft:overworld 149160 ~ 149000 149168 ~ 149350 to switch:game 149160 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 19 at @s in switch:game run particle cloud -11836 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 19 at @s run clone from minecraft:overworld -11840 ~ -10000 -11832 ~ -9650 to switch:game -11840 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 20 at @s in switch:game run particle cloud 149172 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 20 at @s run clone from minecraft:overworld 149168 ~ 149000 149177 ~ 149350 to switch:game 149168 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 20 at @s in switch:game run particle cloud -11828 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 20 at @s run clone from minecraft:overworld -11832 ~ -10000 -11823 ~ -9650 to switch:game -11832 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 21 at @s in switch:game run particle cloud 149181 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 21 at @s run clone from minecraft:overworld 149177 ~ 149000 149185 ~ 149350 to switch:game 149177 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 21 at @s in switch:game run particle cloud -11819 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 21 at @s run clone from minecraft:overworld -11823 ~ -10000 -11815 ~ -9650 to switch:game -11823 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 22 at @s in switch:game run particle cloud 149189 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 22 at @s run clone from minecraft:overworld 149185 ~ 149000 149194 ~ 149350 to switch:game 149185 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 22 at @s in switch:game run particle cloud -11811 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 22 at @s run clone from minecraft:overworld -11815 ~ -10000 -11806 ~ -9650 to switch:game -11815 ~0 -10000 strict replace force
 
-execute if score #rg_ctf_nether_mod switch.data matches 23 at @s in switch:game run particle cloud 149198 ~0.5 149175 4 0 87 0 250 force
-execute if score #rg_ctf_nether_mod switch.data matches 23 at @s run clone from minecraft:overworld 149194 ~ 149000 149202 ~ 149350 to switch:game 149194 ~0 149000 strict replace force
+execute if score #rg_ctf_nether_mod switch.data matches 23 at @s in switch:game run particle cloud -11802 ~0.5 -9825 4 0 87 0 250 force
+execute if score #rg_ctf_nether_mod switch.data matches 23 at @s run clone from minecraft:overworld -11806 ~ -10000 -11798 ~ -9650 to switch:game -11806 ~0 -10000 strict replace force
 
 scoreboard players add #rg_ctf_nether_mod switch.data 1
-execute if score #rg_ctf_nether_mod switch.data matches 24 in switch:game run kill @e[type=item,x=149101,y=100,z=149175,distance=..1000]
+execute if score #rg_ctf_nether_mod switch.data matches 24 in switch:game run kill @e[type=item,x=-11899,y=100,z=-9825,distance=..1000]
 execute if score #rg_ctf_nether_mod switch.data matches 24 run scoreboard players add #rg_ctf_nether_y switch.data 1
 execute if score #rg_ctf_nether_mod switch.data matches 24 run scoreboard players set #rg_ctf_nether_mod switch.data 0
 

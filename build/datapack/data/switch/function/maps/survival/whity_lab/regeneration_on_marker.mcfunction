@@ -6,23 +6,23 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_whity_lab_y switch.data
 
-execute if score #rg_whity_lab_mod switch.data matches 0 at @s in switch:game run particle cloud 91010 ~0.5 91051 10 0 25 0 250 force
-execute if score #rg_whity_lab_mod switch.data matches 0 at @s run clone from minecraft:overworld 91000 ~ 91000 91020 ~ 91102 to switch:game 91000 ~0 91000 strict replace force
+execute if score #rg_whity_lab_mod switch.data matches 0 at @s in switch:game run particle cloud -7990 ~0.5 2051 10 0 25 0 250 force
+execute if score #rg_whity_lab_mod switch.data matches 0 at @s run clone from minecraft:overworld -8000 ~ 2000 -7980 ~ 2102 to switch:game -8000 ~0 2000 strict replace force
 
-execute if score #rg_whity_lab_mod switch.data matches 1 at @s in switch:game run particle cloud 91030 ~0.5 91051 10 0 25 0 250 force
-execute if score #rg_whity_lab_mod switch.data matches 1 at @s run clone from minecraft:overworld 91020 ~ 91000 91041 ~ 91102 to switch:game 91020 ~0 91000 strict replace force
+execute if score #rg_whity_lab_mod switch.data matches 1 at @s in switch:game run particle cloud -7970 ~0.5 2051 10 0 25 0 250 force
+execute if score #rg_whity_lab_mod switch.data matches 1 at @s run clone from minecraft:overworld -7980 ~ 2000 -7959 ~ 2102 to switch:game -7980 ~0 2000 strict replace force
 
-execute if score #rg_whity_lab_mod switch.data matches 2 at @s in switch:game run particle cloud 91051 ~0.5 91051 10 0 25 0 250 force
-execute if score #rg_whity_lab_mod switch.data matches 2 at @s run clone from minecraft:overworld 91041 ~ 91000 91061 ~ 91102 to switch:game 91041 ~0 91000 strict replace force
+execute if score #rg_whity_lab_mod switch.data matches 2 at @s in switch:game run particle cloud -7949 ~0.5 2051 10 0 25 0 250 force
+execute if score #rg_whity_lab_mod switch.data matches 2 at @s run clone from minecraft:overworld -7959 ~ 2000 -7939 ~ 2102 to switch:game -7959 ~0 2000 strict replace force
 
-execute if score #rg_whity_lab_mod switch.data matches 3 at @s in switch:game run particle cloud 91071 ~0.5 91051 10 0 25 0 250 force
-execute if score #rg_whity_lab_mod switch.data matches 3 at @s run clone from minecraft:overworld 91061 ~ 91000 91082 ~ 91102 to switch:game 91061 ~0 91000 strict replace force
+execute if score #rg_whity_lab_mod switch.data matches 3 at @s in switch:game run particle cloud -7929 ~0.5 2051 10 0 25 0 250 force
+execute if score #rg_whity_lab_mod switch.data matches 3 at @s run clone from minecraft:overworld -7939 ~ 2000 -7918 ~ 2102 to switch:game -7939 ~0 2000 strict replace force
 
-execute if score #rg_whity_lab_mod switch.data matches 4 at @s in switch:game run particle cloud 91092 ~0.5 91051 10 0 25 0 250 force
-execute if score #rg_whity_lab_mod switch.data matches 4 at @s run clone from minecraft:overworld 91082 ~ 91000 91102 ~ 91102 to switch:game 91082 ~0 91000 strict replace force
+execute if score #rg_whity_lab_mod switch.data matches 4 at @s in switch:game run particle cloud -7908 ~0.5 2051 10 0 25 0 250 force
+execute if score #rg_whity_lab_mod switch.data matches 4 at @s run clone from minecraft:overworld -7918 ~ 2000 -7898 ~ 2102 to switch:game -7918 ~0 2000 strict replace force
 
 scoreboard players add #rg_whity_lab_mod switch.data 1
-execute if score #rg_whity_lab_mod switch.data matches 5 in switch:game run kill @e[type=item,x=91051,y=100,z=91051,distance=..1000]
+execute if score #rg_whity_lab_mod switch.data matches 5 in switch:game run kill @e[type=item,x=-7949,y=100,z=2051,distance=..1000]
 execute if score #rg_whity_lab_mod switch.data matches 5 run scoreboard players add #rg_whity_lab_y switch.data 1
 execute if score #rg_whity_lab_mod switch.data matches 5 run scoreboard players set #rg_whity_lab_mod switch.data 0
 

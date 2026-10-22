@@ -1,7 +1,7 @@
 
 #> switch:modes/infected/secrets/check_if_all_secrets
 #
-# @executed	positioned 128069 120 128084
+# @executed	positioned 6069 120 10084
 #
 # @within	switch:modes/infected/secrets/ancienne_egypte/next_state
 #			switch:modes/infected/secrets/area_51/next_state [ as @a[team=switch.temp.human] ]

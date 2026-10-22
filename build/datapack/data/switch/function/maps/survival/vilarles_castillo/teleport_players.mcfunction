@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/vilarles_castillo/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [52054.5d, 175.5d, 52166.5d]
+data modify entity @s Pos set value [-7946.5d, 175.5d, -7834.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/vilarles_castillo/spread_players

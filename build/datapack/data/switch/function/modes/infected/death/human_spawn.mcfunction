@@ -7,10 +7,10 @@
 #
 
 team join switch.temp.human @s
-execute if data storage switch:main {map:"area_51"} run tp @s 2017 158 2098 -90 0
-execute if data storage switch:main {map:"ancienne_egypte_2013"} run tp @s 128089 133 128095 180 0
-execute if data storage switch:main {map:"old_japan_apocalypse"} run tp @s 129013 105 129018 180 0
-execute if data storage switch:main {map:"lost_graveyard_remastered"} run tp @s 127055 129 127046 -90 0
+execute if data storage switch:main {map:"area_51"} run tp @s 17 158 2098 -90 0
+execute if data storage switch:main {map:"ancienne_egypte_2013"} run tp @s 6089 133 10095 180 0
+execute if data storage switch:main {map:"old_japan_apocalypse"} run tp @s 4013 105 10018 180 0
+execute if data storage switch:main {map:"lost_graveyard_remastered"} run tp @s 2055 129 10046 -90 0
 scoreboard players enable @s switch.temp.dont_want_to_be_infected
 scoreboard players set @s switch.temp.hits_gotten 0
 attribute @s attack_speed base set 2048.0

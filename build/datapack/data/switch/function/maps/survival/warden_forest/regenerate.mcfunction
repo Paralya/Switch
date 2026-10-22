@@ -9,42 +9,42 @@
 
 scoreboard players add #rg_warden_forest switch.data 1
 execute if score #rg_warden_forest switch.data matches 1 run data modify storage switch:maps to_regenerate.warden_forest set value 2b
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10000 10000 10019 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10000 10000 10019 10132
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10019 10000 10038 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10019 10000 10038 10132
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10038 10000 10057 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10038 10000 10057 10132
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10057 10000 10075 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10057 10000 10075 10132
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10075 10000 10094 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10075 10000 10094 10132
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10094 10000 10113 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10094 10000 10113 10132
-execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 10113 10000 10132 10132
-execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 10113 10000 10132 10132
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4013 2013 4032 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4013 2013 4032 2145
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4032 2013 4051 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4032 2013 4051 2145
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4051 2013 4070 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4051 2013 4070 2145
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4070 2013 4088 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4070 2013 4088 2145
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4088 2013 4107 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4088 2013 4107 2145
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4107 2013 4126 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4107 2013 4126 2145
+execute if score #rg_warden_forest switch.data matches 1 in minecraft:overworld run forceload add 4126 2013 4145 2145
+execute if score #rg_warden_forest switch.data matches 1 in switch:game run forceload add 4126 2013 4145 2145
 
 execute if score #rg_warden_forest switch.data matches 1 run scoreboard players set #rg_warden_forest_y switch.data 100
 execute if score #rg_warden_forest switch.data matches 1 run scoreboard players set #rg_warden_forest_mod switch.data 0
 execute if score #rg_warden_forest switch.data matches ..140 summon marker run function switch:maps/survival/warden_forest/regeneration_on_marker
 
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run kill @e[type=item,x=10066,y=100,z=10066,distance=..1000]
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run kill @e[type=item,x=4079,y=100,z=2079,distance=..1000]
 execute if score #rg_warden_forest switch.data matches 141.. run data remove storage switch:maps to_regenerate.warden_forest
 
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10000 10000 10019 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10000 10000 10019 10132
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10019 10000 10038 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10019 10000 10038 10132
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10038 10000 10057 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10038 10000 10057 10132
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10057 10000 10075 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10057 10000 10075 10132
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10075 10000 10094 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10075 10000 10094 10132
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10094 10000 10113 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10094 10000 10113 10132
-execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 10113 10000 10132 10132
-execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 10113 10000 10132 10132
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4013 2013 4032 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4013 2013 4032 2145
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4032 2013 4051 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4032 2013 4051 2145
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4051 2013 4070 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4051 2013 4070 2145
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4070 2013 4088 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4070 2013 4088 2145
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4088 2013 4107 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4088 2013 4107 2145
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4107 2013 4126 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4107 2013 4126 2145
+execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4126 2013 4145 2145
+execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4126 2013 4145 2145
 
 execute if score #rg_warden_forest switch.data matches 141.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Warden Forest","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_warden_forest switch.data matches 141.. run function switch:engine/log_message/apply {message:"Map `Warden Forest` just regenerated!"}

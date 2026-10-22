@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/memory_mine/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [153026.5d, 105.5d, 153034.5d]
+data modify entity @s Pos set value [-5974.5d, 105.5d, -11966.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/memory_mine/spread_players

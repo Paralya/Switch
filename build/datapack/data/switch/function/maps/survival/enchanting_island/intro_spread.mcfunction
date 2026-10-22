@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 7061.03 139.35 7015.43 rotated 64.78 27.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Enchanting Island",subtitle:"Stoupy, ?",particle:"minecraft:glow"}}
+execute in switch:game positioned 4061.03 139.35 -3984.57 rotated 64.78 27.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Enchanting Island",subtitle:"Stoupy, ?",particle:"minecraft:glow"}}
 

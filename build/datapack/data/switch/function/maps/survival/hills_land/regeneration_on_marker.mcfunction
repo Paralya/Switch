@@ -6,62 +6,62 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_hills_land_y switch.data
 
-execute if score #rg_hills_land_mod switch.data matches 0 at @s in switch:game run particle cloud 20338 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 0 at @s run clone from minecraft:overworld 20332 ~ 19983 20345 ~ 20210 to switch:game 20332 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 0 at @s in switch:game run particle cloud 6901 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 0 at @s run clone from minecraft:overworld 6895 ~ -5393 6908 ~ -5166 to switch:game 6895 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 1 at @s in switch:game run particle cloud 20351 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 1 at @s run clone from minecraft:overworld 20345 ~ 19983 20358 ~ 20210 to switch:game 20345 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 1 at @s in switch:game run particle cloud 6914 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 1 at @s run clone from minecraft:overworld 6908 ~ -5393 6921 ~ -5166 to switch:game 6908 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 2 at @s in switch:game run particle cloud 20364 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 2 at @s run clone from minecraft:overworld 20358 ~ 19983 20371 ~ 20210 to switch:game 20358 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 2 at @s in switch:game run particle cloud 6927 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 2 at @s run clone from minecraft:overworld 6921 ~ -5393 6934 ~ -5166 to switch:game 6921 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 3 at @s in switch:game run particle cloud 20377 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 3 at @s run clone from minecraft:overworld 20371 ~ 19983 20384 ~ 20210 to switch:game 20371 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 3 at @s in switch:game run particle cloud 6940 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 3 at @s run clone from minecraft:overworld 6934 ~ -5393 6947 ~ -5166 to switch:game 6934 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 4 at @s in switch:game run particle cloud 20390 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 4 at @s run clone from minecraft:overworld 20384 ~ 19983 20396 ~ 20210 to switch:game 20384 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 4 at @s in switch:game run particle cloud 6953 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 4 at @s run clone from minecraft:overworld 6947 ~ -5393 6959 ~ -5166 to switch:game 6947 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 5 at @s in switch:game run particle cloud 20402 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 5 at @s run clone from minecraft:overworld 20396 ~ 19983 20409 ~ 20210 to switch:game 20396 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 5 at @s in switch:game run particle cloud 6965 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 5 at @s run clone from minecraft:overworld 6959 ~ -5393 6972 ~ -5166 to switch:game 6959 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 6 at @s in switch:game run particle cloud 20415 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 6 at @s run clone from minecraft:overworld 20409 ~ 19983 20422 ~ 20210 to switch:game 20409 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 6 at @s in switch:game run particle cloud 6978 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 6 at @s run clone from minecraft:overworld 6972 ~ -5393 6985 ~ -5166 to switch:game 6972 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 7 at @s in switch:game run particle cloud 20428 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 7 at @s run clone from minecraft:overworld 20422 ~ 19983 20435 ~ 20210 to switch:game 20422 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 7 at @s in switch:game run particle cloud 6991 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 7 at @s run clone from minecraft:overworld 6985 ~ -5393 6998 ~ -5166 to switch:game 6985 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 8 at @s in switch:game run particle cloud 20441 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 8 at @s run clone from minecraft:overworld 20435 ~ 19983 20448 ~ 20210 to switch:game 20435 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 8 at @s in switch:game run particle cloud 7004 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 8 at @s run clone from minecraft:overworld 6998 ~ -5393 7011 ~ -5166 to switch:game 6998 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 9 at @s in switch:game run particle cloud 20454 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 9 at @s run clone from minecraft:overworld 20448 ~ 19983 20461 ~ 20210 to switch:game 20448 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 9 at @s in switch:game run particle cloud 7017 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 9 at @s run clone from minecraft:overworld 7011 ~ -5393 7024 ~ -5166 to switch:game 7011 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 10 at @s in switch:game run particle cloud 20467 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 10 at @s run clone from minecraft:overworld 20461 ~ 19983 20474 ~ 20210 to switch:game 20461 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 10 at @s in switch:game run particle cloud 7030 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 10 at @s run clone from minecraft:overworld 7024 ~ -5393 7037 ~ -5166 to switch:game 7024 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 11 at @s in switch:game run particle cloud 20480 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 11 at @s run clone from minecraft:overworld 20474 ~ 19983 20487 ~ 20210 to switch:game 20474 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 11 at @s in switch:game run particle cloud 7043 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 11 at @s run clone from minecraft:overworld 7037 ~ -5393 7050 ~ -5166 to switch:game 7037 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 12 at @s in switch:game run particle cloud 20493 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 12 at @s run clone from minecraft:overworld 20487 ~ 19983 20500 ~ 20210 to switch:game 20487 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 12 at @s in switch:game run particle cloud 7056 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 12 at @s run clone from minecraft:overworld 7050 ~ -5393 7063 ~ -5166 to switch:game 7050 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 13 at @s in switch:game run particle cloud 20506 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 13 at @s run clone from minecraft:overworld 20500 ~ 19983 20512 ~ 20210 to switch:game 20500 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 13 at @s in switch:game run particle cloud 7069 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 13 at @s run clone from minecraft:overworld 7063 ~ -5393 7075 ~ -5166 to switch:game 7063 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 14 at @s in switch:game run particle cloud 20518 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 14 at @s run clone from minecraft:overworld 20512 ~ 19983 20525 ~ 20210 to switch:game 20512 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 14 at @s in switch:game run particle cloud 7081 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 14 at @s run clone from minecraft:overworld 7075 ~ -5393 7088 ~ -5166 to switch:game 7075 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 15 at @s in switch:game run particle cloud 20531 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 15 at @s run clone from minecraft:overworld 20525 ~ 19983 20538 ~ 20210 to switch:game 20525 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 15 at @s in switch:game run particle cloud 7094 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 15 at @s run clone from minecraft:overworld 7088 ~ -5393 7101 ~ -5166 to switch:game 7088 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 16 at @s in switch:game run particle cloud 20544 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 16 at @s run clone from minecraft:overworld 20538 ~ 19983 20551 ~ 20210 to switch:game 20538 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 16 at @s in switch:game run particle cloud 7107 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 16 at @s run clone from minecraft:overworld 7101 ~ -5393 7114 ~ -5166 to switch:game 7101 ~0 -5393 strict replace force
 
-execute if score #rg_hills_land_mod switch.data matches 17 at @s in switch:game run particle cloud 20557 ~0.5 20096 6 0 56 0 250 force
-execute if score #rg_hills_land_mod switch.data matches 17 at @s run clone from minecraft:overworld 20551 ~ 19983 20564 ~ 20210 to switch:game 20551 ~0 19983 strict replace force
+execute if score #rg_hills_land_mod switch.data matches 17 at @s in switch:game run particle cloud 7120 ~0.5 -5280 6 0 56 0 250 force
+execute if score #rg_hills_land_mod switch.data matches 17 at @s run clone from minecraft:overworld 7114 ~ -5393 7127 ~ -5166 to switch:game 7114 ~0 -5393 strict replace force
 
 scoreboard players add #rg_hills_land_mod switch.data 1
-execute if score #rg_hills_land_mod switch.data matches 18 in switch:game run kill @e[type=item,x=20448,y=85,z=20096,distance=..1000]
+execute if score #rg_hills_land_mod switch.data matches 18 in switch:game run kill @e[type=item,x=7011,y=85,z=-5279,distance=..1000]
 execute if score #rg_hills_land_mod switch.data matches 18 run scoreboard players add #rg_hills_land_y switch.data 1
 execute if score #rg_hills_land_mod switch.data matches 18 run scoreboard players set #rg_hills_land_mod switch.data 0
 

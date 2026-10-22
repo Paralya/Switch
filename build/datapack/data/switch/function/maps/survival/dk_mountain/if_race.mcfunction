@@ -9,17 +9,17 @@
 scoreboard players set #total_laps switch.data 3
 scoreboard players set #total_checkpoints switch.data 2
 
-summon marker 19947 107 20556 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:7}}
-summon marker 19716 156 20536 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:7, dy:5, dz:1}}
-summon marker 19815 124 20526 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:1, dy:5, dz:7}}
+summon marker 6510 107 -4820 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:0, dx:1, dy:5, dz:7}}
+summon marker 6279 156 -4840 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:1, dx:7, dy:5, dz:1}}
+summon marker 6378 124 -4850 {Tags:["switch.checkpoint","switch.can_hard_reset"],data:{cp:2, dx:1, dy:5, dz:7}}
 
-forceload add 19947 20556
-forceload add 19716 20536
-forceload add 19815 20526
+forceload add 6510 -4820
+forceload add 6279 -4840
+forceload add 6378 -4850
 
-summon marker 19881 111 20554 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
-summon marker 19880 111 20558 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 6444 111 -4822 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
+summon marker 6443 111 -4818 {Tags:["switch.effect_block","switch.tm_blocks.reactor_boost"]}
 
-forceload add 19881 20554
-forceload add 19880 20558
+forceload add 6444 -4822
+forceload add 6443 -4818
 

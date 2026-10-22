@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/luxio_fish_fight/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [151012.5d, 127.5d, 151019.5d]
+data modify entity @s Pos set value [-9988.5d, 127.5d, -11981.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/luxio_fish_fight/spread_players

@@ -6,98 +6,98 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_trials_run_y switch.data
 
-execute if score #rg_trials_run_mod switch.data matches 0 at @s in switch:game run particle cloud 67005 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 0 at @s run clone from minecraft:overworld 67000 ~ 67000 67010 ~ 67300 to switch:game 67000 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 0 at @s in switch:game run particle cloud 4005 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 0 at @s run clone from minecraft:overworld 4000 ~ 8000 4010 ~ 8300 to switch:game 4000 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 1 at @s in switch:game run particle cloud 67015 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 1 at @s run clone from minecraft:overworld 67010 ~ 67000 67020 ~ 67300 to switch:game 67010 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 1 at @s in switch:game run particle cloud 4015 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 1 at @s run clone from minecraft:overworld 4010 ~ 8000 4020 ~ 8300 to switch:game 4010 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 2 at @s in switch:game run particle cloud 67025 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 2 at @s run clone from minecraft:overworld 67020 ~ 67000 67030 ~ 67300 to switch:game 67020 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 2 at @s in switch:game run particle cloud 4025 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 2 at @s run clone from minecraft:overworld 4020 ~ 8000 4030 ~ 8300 to switch:game 4020 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 3 at @s in switch:game run particle cloud 67035 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 3 at @s run clone from minecraft:overworld 67030 ~ 67000 67040 ~ 67300 to switch:game 67030 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 3 at @s in switch:game run particle cloud 4035 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 3 at @s run clone from minecraft:overworld 4030 ~ 8000 4040 ~ 8300 to switch:game 4030 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 4 at @s in switch:game run particle cloud 67045 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 4 at @s run clone from minecraft:overworld 67040 ~ 67000 67050 ~ 67300 to switch:game 67040 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 4 at @s in switch:game run particle cloud 4045 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 4 at @s run clone from minecraft:overworld 4040 ~ 8000 4050 ~ 8300 to switch:game 4040 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 5 at @s in switch:game run particle cloud 67055 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 5 at @s run clone from minecraft:overworld 67050 ~ 67000 67060 ~ 67300 to switch:game 67050 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 5 at @s in switch:game run particle cloud 4055 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 5 at @s run clone from minecraft:overworld 4050 ~ 8000 4060 ~ 8300 to switch:game 4050 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 6 at @s in switch:game run particle cloud 67065 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 6 at @s run clone from minecraft:overworld 67060 ~ 67000 67070 ~ 67300 to switch:game 67060 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 6 at @s in switch:game run particle cloud 4065 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 6 at @s run clone from minecraft:overworld 4060 ~ 8000 4070 ~ 8300 to switch:game 4060 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 7 at @s in switch:game run particle cloud 67075 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 7 at @s run clone from minecraft:overworld 67070 ~ 67000 67080 ~ 67300 to switch:game 67070 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 7 at @s in switch:game run particle cloud 4075 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 7 at @s run clone from minecraft:overworld 4070 ~ 8000 4080 ~ 8300 to switch:game 4070 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 8 at @s in switch:game run particle cloud 67085 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 8 at @s run clone from minecraft:overworld 67080 ~ 67000 67090 ~ 67300 to switch:game 67080 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 8 at @s in switch:game run particle cloud 4085 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 8 at @s run clone from minecraft:overworld 4080 ~ 8000 4090 ~ 8300 to switch:game 4080 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 9 at @s in switch:game run particle cloud 67095 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 9 at @s run clone from minecraft:overworld 67090 ~ 67000 67100 ~ 67300 to switch:game 67090 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 9 at @s in switch:game run particle cloud 4095 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 9 at @s run clone from minecraft:overworld 4090 ~ 8000 4100 ~ 8300 to switch:game 4090 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 10 at @s in switch:game run particle cloud 67105 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 10 at @s run clone from minecraft:overworld 67100 ~ 67000 67110 ~ 67300 to switch:game 67100 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 10 at @s in switch:game run particle cloud 4105 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 10 at @s run clone from minecraft:overworld 4100 ~ 8000 4110 ~ 8300 to switch:game 4100 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 11 at @s in switch:game run particle cloud 67115 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 11 at @s run clone from minecraft:overworld 67110 ~ 67000 67120 ~ 67300 to switch:game 67110 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 11 at @s in switch:game run particle cloud 4115 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 11 at @s run clone from minecraft:overworld 4110 ~ 8000 4120 ~ 8300 to switch:game 4110 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 12 at @s in switch:game run particle cloud 67125 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 12 at @s run clone from minecraft:overworld 67120 ~ 67000 67130 ~ 67300 to switch:game 67120 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 12 at @s in switch:game run particle cloud 4125 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 12 at @s run clone from minecraft:overworld 4120 ~ 8000 4130 ~ 8300 to switch:game 4120 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 13 at @s in switch:game run particle cloud 67135 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 13 at @s run clone from minecraft:overworld 67130 ~ 67000 67140 ~ 67300 to switch:game 67130 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 13 at @s in switch:game run particle cloud 4135 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 13 at @s run clone from minecraft:overworld 4130 ~ 8000 4140 ~ 8300 to switch:game 4130 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 14 at @s in switch:game run particle cloud 67145 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 14 at @s run clone from minecraft:overworld 67140 ~ 67000 67150 ~ 67300 to switch:game 67140 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 14 at @s in switch:game run particle cloud 4145 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 14 at @s run clone from minecraft:overworld 4140 ~ 8000 4150 ~ 8300 to switch:game 4140 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 15 at @s in switch:game run particle cloud 67155 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 15 at @s run clone from minecraft:overworld 67150 ~ 67000 67160 ~ 67300 to switch:game 67150 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 15 at @s in switch:game run particle cloud 4155 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 15 at @s run clone from minecraft:overworld 4150 ~ 8000 4160 ~ 8300 to switch:game 4150 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 16 at @s in switch:game run particle cloud 67165 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 16 at @s run clone from minecraft:overworld 67160 ~ 67000 67170 ~ 67300 to switch:game 67160 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 16 at @s in switch:game run particle cloud 4165 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 16 at @s run clone from minecraft:overworld 4160 ~ 8000 4170 ~ 8300 to switch:game 4160 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 17 at @s in switch:game run particle cloud 67175 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 17 at @s run clone from minecraft:overworld 67170 ~ 67000 67180 ~ 67300 to switch:game 67170 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 17 at @s in switch:game run particle cloud 4175 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 17 at @s run clone from minecraft:overworld 4170 ~ 8000 4180 ~ 8300 to switch:game 4170 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 18 at @s in switch:game run particle cloud 67185 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 18 at @s run clone from minecraft:overworld 67180 ~ 67000 67190 ~ 67300 to switch:game 67180 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 18 at @s in switch:game run particle cloud 4185 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 18 at @s run clone from minecraft:overworld 4180 ~ 8000 4190 ~ 8300 to switch:game 4180 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 19 at @s in switch:game run particle cloud 67195 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 19 at @s run clone from minecraft:overworld 67190 ~ 67000 67200 ~ 67300 to switch:game 67190 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 19 at @s in switch:game run particle cloud 4195 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 19 at @s run clone from minecraft:overworld 4190 ~ 8000 4200 ~ 8300 to switch:game 4190 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 20 at @s in switch:game run particle cloud 67205 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 20 at @s run clone from minecraft:overworld 67200 ~ 67000 67210 ~ 67300 to switch:game 67200 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 20 at @s in switch:game run particle cloud 4205 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 20 at @s run clone from minecraft:overworld 4200 ~ 8000 4210 ~ 8300 to switch:game 4200 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 21 at @s in switch:game run particle cloud 67215 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 21 at @s run clone from minecraft:overworld 67210 ~ 67000 67220 ~ 67300 to switch:game 67210 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 21 at @s in switch:game run particle cloud 4215 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 21 at @s run clone from minecraft:overworld 4210 ~ 8000 4220 ~ 8300 to switch:game 4210 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 22 at @s in switch:game run particle cloud 67225 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 22 at @s run clone from minecraft:overworld 67220 ~ 67000 67230 ~ 67300 to switch:game 67220 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 22 at @s in switch:game run particle cloud 4225 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 22 at @s run clone from minecraft:overworld 4220 ~ 8000 4230 ~ 8300 to switch:game 4220 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 23 at @s in switch:game run particle cloud 67235 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 23 at @s run clone from minecraft:overworld 67230 ~ 67000 67240 ~ 67300 to switch:game 67230 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 23 at @s in switch:game run particle cloud 4235 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 23 at @s run clone from minecraft:overworld 4230 ~ 8000 4240 ~ 8300 to switch:game 4230 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 24 at @s in switch:game run particle cloud 67245 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 24 at @s run clone from minecraft:overworld 67240 ~ 67000 67250 ~ 67300 to switch:game 67240 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 24 at @s in switch:game run particle cloud 4245 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 24 at @s run clone from minecraft:overworld 4240 ~ 8000 4250 ~ 8300 to switch:game 4240 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 25 at @s in switch:game run particle cloud 67255 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 25 at @s run clone from minecraft:overworld 67250 ~ 67000 67260 ~ 67300 to switch:game 67250 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 25 at @s in switch:game run particle cloud 4255 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 25 at @s run clone from minecraft:overworld 4250 ~ 8000 4260 ~ 8300 to switch:game 4250 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 26 at @s in switch:game run particle cloud 67265 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 26 at @s run clone from minecraft:overworld 67260 ~ 67000 67270 ~ 67300 to switch:game 67260 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 26 at @s in switch:game run particle cloud 4265 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 26 at @s run clone from minecraft:overworld 4260 ~ 8000 4270 ~ 8300 to switch:game 4260 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 27 at @s in switch:game run particle cloud 67275 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 27 at @s run clone from minecraft:overworld 67270 ~ 67000 67280 ~ 67300 to switch:game 67270 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 27 at @s in switch:game run particle cloud 4275 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 27 at @s run clone from minecraft:overworld 4270 ~ 8000 4280 ~ 8300 to switch:game 4270 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 28 at @s in switch:game run particle cloud 67285 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 28 at @s run clone from minecraft:overworld 67280 ~ 67000 67290 ~ 67300 to switch:game 67280 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 28 at @s in switch:game run particle cloud 4285 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 28 at @s run clone from minecraft:overworld 4280 ~ 8000 4290 ~ 8300 to switch:game 4280 ~0 8000 strict replace force
 
-execute if score #rg_trials_run_mod switch.data matches 29 at @s in switch:game run particle cloud 67295 ~0.5 67150 5 0 75 0 250 force
-execute if score #rg_trials_run_mod switch.data matches 29 at @s run clone from minecraft:overworld 67290 ~ 67000 67300 ~ 67300 to switch:game 67290 ~0 67000 strict replace force
+execute if score #rg_trials_run_mod switch.data matches 29 at @s in switch:game run particle cloud 4295 ~0.5 8150 5 0 75 0 250 force
+execute if score #rg_trials_run_mod switch.data matches 29 at @s run clone from minecraft:overworld 4290 ~ 8000 4300 ~ 8300 to switch:game 4290 ~0 8000 strict replace force
 
 scoreboard players add #rg_trials_run_mod switch.data 1
-execute if score #rg_trials_run_mod switch.data matches 30 in switch:game run kill @e[type=item,x=67150,y=100,z=67150,distance=..1000]
+execute if score #rg_trials_run_mod switch.data matches 30 in switch:game run kill @e[type=item,x=4150,y=100,z=8150,distance=..1000]
 execute if score #rg_trials_run_mod switch.data matches 30 run scoreboard players add #rg_trials_run_y switch.data 1
 execute if score #rg_trials_run_mod switch.data matches 30 run scoreboard players set #rg_trials_run_mod switch.data 0
 

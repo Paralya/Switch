@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/jn_one_in_the_chamber_1/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [137070.5d, 109.5d, 137074.5d]
+data modify entity @s Pos set value [-9930.5d, 109.5d, 10074.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/jn_one_in_the_chamber_1/spread_players

@@ -12,12 +12,12 @@ execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.bl
 execute unless score #test_mode switch.data matches 1 if entity @s[tag=switch.red_flag] run advancement grant @p[team=switch.rush_the_point.red,distance=..1] only switch:visible/81
 
 # Flag Reset Blue
-execute if entity @s[tag=switch.blue_flag] on vehicle run tp @s 14077 99 14000 -90 0
+execute if entity @s[tag=switch.blue_flag] on vehicle run tp @s -1823 99 4100 -90 0
 execute if entity @s[tag=switch.blue_flag] run data modify entity @s Rotation[0] set value -90.0f
 execute if entity @s[tag=switch.blue_flag] run tag @a[tag=switch.has_blue_flag] remove switch.has_blue_flag
 
 # Flag Reset Red
-execute if entity @s[tag=switch.red_flag] on vehicle run tp @s 13923 99 14000 90 0
+execute if entity @s[tag=switch.red_flag] on vehicle run tp @s -1977 99 4100 90 0
 execute if entity @s[tag=switch.red_flag] run data modify entity @s Rotation[0] set value 90.0f
 execute if entity @s[tag=switch.red_flag] run tag @a[tag=switch.has_red_flag] remove switch.has_red_flag
 function switch:modes/rush_the_flag/translations/flag_reset

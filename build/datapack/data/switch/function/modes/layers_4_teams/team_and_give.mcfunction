@@ -19,10 +19,10 @@ execute if score #next_role switch.data matches 4 run scoreboard players add #to
 execute if score #next_role switch.data matches 4 run scoreboard players set #next_role switch.data 0
 
 # Teleport to team spawn
-execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.red] run tp @s 74027 158.69 74017 32.5 0
-execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.blue] run tp @s 74009 158.69 74015 -32.5 0
-execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.green] run tp @s 74027 158.69 74047 150.5 0
-execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.yellow] run tp @s 74009 158.69 74047 -150.5 0
+execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.red] run tp @s -5973 158.69 8017 32.5 0
+execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.blue] run tp @s -5991 158.69 8015 -32.5 0
+execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.green] run tp @s -5973 158.69 8047 150.5 0
+execute if data storage switch:main {map:"layers_4_teams"} if entity @s[team=switch.temp.yellow] run tp @s -5991 158.69 8047 -150.5 0
 
 # Starter kit
 function switch:modes/_common/layers_starter_kit

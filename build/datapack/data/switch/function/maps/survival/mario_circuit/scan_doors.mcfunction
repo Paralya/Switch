@@ -7,37 +7,37 @@
 
 scoreboard players add #scan_mario_circuit switch.data 1
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20378 19516 20396 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20378 19516 20396 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 6941 -5860 6959 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 6941 -5860 6959 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20396 19516 20415 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20396 19516 20415 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 6959 -5860 6978 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 6959 -5860 6978 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20415 19516 20433 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20415 19516 20433 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 6978 -5860 6996 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 6978 -5860 6996 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20433 19516 20452 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20433 19516 20452 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 6996 -5860 7014 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 6996 -5860 7014 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20452 19516 20470 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20452 19516 20470 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 7014 -5860 7033 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 7014 -5860 7033 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20470 19516 20488 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20470 19516 20488 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 7033 -5860 7051 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 7033 -5860 7051 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20488 19516 20507 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20488 19516 20507 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 7051 -5860 7070 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 7051 -5860 7070 -5718
 
-execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 20507 19516 20525 19658
-execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 20507 19516 20525 19658
+execute if score #scan_mario_circuit switch.data matches 1 in minecraft:overworld run forceload add 7070 -5860 7088 -5718
+execute if score #scan_mario_circuit switch.data matches 1 in switch:game run forceload add 7070 -5860 7088 -5718
 
 execute if score #scan_mario_circuit switch.data matches 1 run data modify storage switch:maps to_scan.mario_circuit set value 2b
-execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #start_x_mario_circuit switch.data 20379
+execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #start_x_mario_circuit switch.data 6942
 execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #start_y_mario_circuit switch.data 86
-execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #start_z_mario_circuit switch.data 19517
-execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #end_x_mario_circuit switch.data 20524
+execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #start_z_mario_circuit switch.data -5859
+execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #end_x_mario_circuit switch.data 7087
 execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #end_y_mario_circuit switch.data 137
-execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #end_z_mario_circuit switch.data 19657
+execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players set #end_z_mario_circuit switch.data -5719
 execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players operation #curr_x_mario_circuit switch.data = #start_x_mario_circuit switch.data
 execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players operation #curr_y_mario_circuit switch.data = #start_y_mario_circuit switch.data
 execute if score #scan_mario_circuit switch.data matches 1 run scoreboard players operation #curr_z_mario_circuit switch.data = #start_z_mario_circuit switch.data
@@ -46,29 +46,29 @@ execute if score #scan_mario_circuit switch.data matches 1 run data modify stora
 execute if score #scan_mario_circuit switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_mario_circuit switch.data matches 30.. summon marker run function switch:maps/survival/mario_circuit/scan_doors_on_marker
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20378 19516 20396 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20378 19516 20396 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 6941 -5860 6959 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 6941 -5860 6959 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20396 19516 20415 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20396 19516 20415 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 6959 -5860 6978 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 6959 -5860 6978 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20415 19516 20433 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20415 19516 20433 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 6978 -5860 6996 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 6978 -5860 6996 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20433 19516 20452 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20433 19516 20452 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 6996 -5860 7014 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 6996 -5860 7014 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20452 19516 20470 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20452 19516 20470 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 7014 -5860 7033 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 7014 -5860 7033 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20470 19516 20488 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20470 19516 20488 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 7033 -5860 7051 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 7033 -5860 7051 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20488 19516 20507 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20488 19516 20507 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 7051 -5860 7070 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 7051 -5860 7070 -5718
 
-execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 20507 19516 20525 19658
-execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 20507 19516 20525 19658
+execute if score #scan_mario_circuit switch.data matches 245 in minecraft:overworld run forceload remove 7070 -5860 7088 -5718
+execute if score #scan_mario_circuit switch.data matches 245 in switch:game run forceload remove 7070 -5860 7088 -5718
 
 execute if score #scan_mario_circuit switch.data matches 245 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"mario_circuit","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #scan_mario_circuit switch.data matches 245 run data remove storage switch:maps to_scan.mario_circuit

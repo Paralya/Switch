@@ -1,7 +1,7 @@
 
 #> switch:modes/glassrunner/end/process_end
 #
-# @executed	positioned 3000 128 3000
+# @executed	positioned -3750 128 -1750
 #
 # @within	switch:modes/glassrunner/tick
 #

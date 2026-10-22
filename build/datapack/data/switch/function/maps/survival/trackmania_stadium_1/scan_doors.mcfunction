@@ -7,178 +7,178 @@
 
 scoreboard players add #scan_trackmania_stadium_1 switch.data 1
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25000 25000 25009 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25000 25000 25009 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -4000 -6000 -3991 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -4000 -6000 -3991 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25009 25000 25018 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25009 25000 25018 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3991 -6000 -3982 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3991 -6000 -3982 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25018 25000 25027 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25018 25000 25027 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3982 -6000 -3973 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3982 -6000 -3973 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25027 25000 25036 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25027 25000 25036 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3973 -6000 -3964 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3973 -6000 -3964 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25036 25000 25045 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25036 25000 25045 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3964 -6000 -3955 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3964 -6000 -3955 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25045 25000 25054 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25045 25000 25054 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3955 -6000 -3946 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3955 -6000 -3946 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25054 25000 25063 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25054 25000 25063 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3946 -6000 -3937 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3946 -6000 -3937 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25063 25000 25072 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25063 25000 25072 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3937 -6000 -3928 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3937 -6000 -3928 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25072 25000 25081 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25072 25000 25081 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3928 -6000 -3919 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3928 -6000 -3919 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25081 25000 25090 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25081 25000 25090 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3919 -6000 -3910 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3919 -6000 -3910 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25090 25000 25099 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25090 25000 25099 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3910 -6000 -3901 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3910 -6000 -3901 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25099 25000 25108 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25099 25000 25108 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3901 -6000 -3892 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3901 -6000 -3892 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25108 25000 25117 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25108 25000 25117 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3892 -6000 -3883 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3892 -6000 -3883 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25117 25000 25125 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25117 25000 25125 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3883 -6000 -3875 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3883 -6000 -3875 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25125 25000 25134 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25125 25000 25134 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3875 -6000 -3866 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3875 -6000 -3866 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25134 25000 25143 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25134 25000 25143 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3866 -6000 -3857 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3866 -6000 -3857 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25143 25000 25152 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25143 25000 25152 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3857 -6000 -3848 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3857 -6000 -3848 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25152 25000 25161 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25152 25000 25161 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3848 -6000 -3839 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3848 -6000 -3839 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25161 25000 25170 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25161 25000 25170 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3839 -6000 -3830 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3839 -6000 -3830 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25170 25000 25179 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25170 25000 25179 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3830 -6000 -3821 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3830 -6000 -3821 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25179 25000 25188 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25179 25000 25188 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3821 -6000 -3812 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3821 -6000 -3812 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25188 25000 25197 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25188 25000 25197 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3812 -6000 -3803 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3812 -6000 -3803 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25197 25000 25206 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25197 25000 25206 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3803 -6000 -3794 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3803 -6000 -3794 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25206 25000 25215 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25206 25000 25215 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3794 -6000 -3785 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3794 -6000 -3785 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25215 25000 25224 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25215 25000 25224 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3785 -6000 -3776 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3785 -6000 -3776 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25224 25000 25233 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25224 25000 25233 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3776 -6000 -3767 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3776 -6000 -3767 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25233 25000 25242 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25233 25000 25242 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3767 -6000 -3758 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3767 -6000 -3758 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25242 25000 25251 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25242 25000 25251 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3758 -6000 -3749 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3758 -6000 -3749 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25251 25000 25260 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25251 25000 25260 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3749 -6000 -3740 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3749 -6000 -3740 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25260 25000 25269 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25260 25000 25269 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3740 -6000 -3731 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3740 -6000 -3731 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25269 25000 25278 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25269 25000 25278 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3731 -6000 -3722 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3731 -6000 -3722 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25278 25000 25287 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25278 25000 25287 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3722 -6000 -3713 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3722 -6000 -3713 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25287 25000 25296 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25287 25000 25296 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3713 -6000 -3704 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3713 -6000 -3704 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25296 25000 25305 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25296 25000 25305 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3704 -6000 -3695 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3704 -6000 -3695 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25305 25000 25314 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25305 25000 25314 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3695 -6000 -3686 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3695 -6000 -3686 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25314 25000 25323 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25314 25000 25323 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3686 -6000 -3677 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3686 -6000 -3677 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25323 25000 25332 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25323 25000 25332 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3677 -6000 -3668 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3677 -6000 -3668 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25332 25000 25341 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25332 25000 25341 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3668 -6000 -3659 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3668 -6000 -3659 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25341 25000 25350 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25341 25000 25350 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3659 -6000 -3650 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3659 -6000 -3650 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25350 25000 25359 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25350 25000 25359 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3650 -6000 -3641 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3650 -6000 -3641 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25359 25000 25368 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25359 25000 25368 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3641 -6000 -3632 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3641 -6000 -3632 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25368 25000 25376 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25368 25000 25376 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3632 -6000 -3624 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3632 -6000 -3624 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25376 25000 25385 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25376 25000 25385 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3624 -6000 -3615 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3624 -6000 -3615 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25385 25000 25394 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25385 25000 25394 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3615 -6000 -3606 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3615 -6000 -3606 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25394 25000 25403 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25394 25000 25403 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3606 -6000 -3597 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3606 -6000 -3597 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25403 25000 25412 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25403 25000 25412 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3597 -6000 -3588 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3597 -6000 -3588 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25412 25000 25421 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25412 25000 25421 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3588 -6000 -3579 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3588 -6000 -3579 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25421 25000 25430 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25421 25000 25430 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3579 -6000 -3570 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3579 -6000 -3570 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25430 25000 25439 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25430 25000 25439 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3570 -6000 -3561 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3570 -6000 -3561 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25439 25000 25448 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25439 25000 25448 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3561 -6000 -3552 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3561 -6000 -3552 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25448 25000 25457 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25448 25000 25457 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3552 -6000 -3543 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3552 -6000 -3543 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25457 25000 25466 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25457 25000 25466 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3543 -6000 -3534 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3543 -6000 -3534 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25466 25000 25475 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25466 25000 25475 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3534 -6000 -3525 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3534 -6000 -3525 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25475 25000 25484 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25475 25000 25484 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3525 -6000 -3516 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3525 -6000 -3516 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add 25484 25000 25493 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add 25484 25000 25493 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in minecraft:overworld run forceload add -3516 -6000 -3507 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 in switch:game run forceload add -3516 -6000 -3507 -5652
 
 execute if score #scan_trackmania_stadium_1 switch.data matches 1 run data modify storage switch:maps to_scan.trackmania_stadium_1 set value 2b
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #start_x_trackmania_stadium_1 switch.data 25001
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #start_x_trackmania_stadium_1 switch.data -3999
 execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #start_y_trackmania_stadium_1 switch.data 101
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #start_z_trackmania_stadium_1 switch.data 25001
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #end_x_trackmania_stadium_1 switch.data 25492
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #start_z_trackmania_stadium_1 switch.data -5999
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #end_x_trackmania_stadium_1 switch.data -3508
 execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #end_y_trackmania_stadium_1 switch.data 216
-execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #end_z_trackmania_stadium_1 switch.data 25347
+execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players set #end_z_trackmania_stadium_1 switch.data -5653
 execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players operation #curr_x_trackmania_stadium_1 switch.data = #start_x_trackmania_stadium_1 switch.data
 execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players operation #curr_y_trackmania_stadium_1 switch.data = #start_y_trackmania_stadium_1 switch.data
 execute if score #scan_trackmania_stadium_1 switch.data matches 1 run scoreboard players operation #curr_z_trackmania_stadium_1 switch.data = #start_z_trackmania_stadium_1 switch.data
@@ -187,170 +187,170 @@ execute if score #scan_trackmania_stadium_1 switch.data matches 1 run data modif
 execute if score #scan_trackmania_stadium_1 switch.data matches 30.. run scoreboard players set #blocks_in_loop switch.data 5000
 execute if score #scan_trackmania_stadium_1 switch.data matches 30.. summon marker run function switch:maps/survival/trackmania_stadium_1/scan_doors_on_marker
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25000 25000 25009 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25000 25000 25009 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -4000 -6000 -3991 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -4000 -6000 -3991 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25009 25000 25018 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25009 25000 25018 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3991 -6000 -3982 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3991 -6000 -3982 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25018 25000 25027 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25018 25000 25027 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3982 -6000 -3973 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3982 -6000 -3973 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25027 25000 25036 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25027 25000 25036 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3973 -6000 -3964 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3973 -6000 -3964 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25036 25000 25045 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25036 25000 25045 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3964 -6000 -3955 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3964 -6000 -3955 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25045 25000 25054 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25045 25000 25054 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3955 -6000 -3946 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3955 -6000 -3946 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25054 25000 25063 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25054 25000 25063 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3946 -6000 -3937 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3946 -6000 -3937 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25063 25000 25072 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25063 25000 25072 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3937 -6000 -3928 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3937 -6000 -3928 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25072 25000 25081 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25072 25000 25081 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3928 -6000 -3919 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3928 -6000 -3919 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25081 25000 25090 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25081 25000 25090 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3919 -6000 -3910 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3919 -6000 -3910 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25090 25000 25099 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25090 25000 25099 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3910 -6000 -3901 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3910 -6000 -3901 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25099 25000 25108 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25099 25000 25108 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3901 -6000 -3892 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3901 -6000 -3892 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25108 25000 25117 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25108 25000 25117 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3892 -6000 -3883 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3892 -6000 -3883 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25117 25000 25125 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25117 25000 25125 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3883 -6000 -3875 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3883 -6000 -3875 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25125 25000 25134 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25125 25000 25134 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3875 -6000 -3866 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3875 -6000 -3866 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25134 25000 25143 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25134 25000 25143 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3866 -6000 -3857 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3866 -6000 -3857 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25143 25000 25152 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25143 25000 25152 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3857 -6000 -3848 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3857 -6000 -3848 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25152 25000 25161 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25152 25000 25161 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3848 -6000 -3839 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3848 -6000 -3839 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25161 25000 25170 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25161 25000 25170 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3839 -6000 -3830 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3839 -6000 -3830 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25170 25000 25179 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25170 25000 25179 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3830 -6000 -3821 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3830 -6000 -3821 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25179 25000 25188 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25179 25000 25188 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3821 -6000 -3812 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3821 -6000 -3812 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25188 25000 25197 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25188 25000 25197 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3812 -6000 -3803 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3812 -6000 -3803 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25197 25000 25206 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25197 25000 25206 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3803 -6000 -3794 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3803 -6000 -3794 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25206 25000 25215 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25206 25000 25215 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3794 -6000 -3785 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3794 -6000 -3785 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25215 25000 25224 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25215 25000 25224 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3785 -6000 -3776 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3785 -6000 -3776 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25224 25000 25233 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25224 25000 25233 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3776 -6000 -3767 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3776 -6000 -3767 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25233 25000 25242 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25233 25000 25242 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3767 -6000 -3758 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3767 -6000 -3758 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25242 25000 25251 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25242 25000 25251 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3758 -6000 -3749 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3758 -6000 -3749 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25251 25000 25260 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25251 25000 25260 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3749 -6000 -3740 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3749 -6000 -3740 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25260 25000 25269 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25260 25000 25269 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3740 -6000 -3731 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3740 -6000 -3731 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25269 25000 25278 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25269 25000 25278 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3731 -6000 -3722 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3731 -6000 -3722 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25278 25000 25287 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25278 25000 25287 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3722 -6000 -3713 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3722 -6000 -3713 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25287 25000 25296 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25287 25000 25296 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3713 -6000 -3704 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3713 -6000 -3704 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25296 25000 25305 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25296 25000 25305 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3704 -6000 -3695 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3704 -6000 -3695 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25305 25000 25314 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25305 25000 25314 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3695 -6000 -3686 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3695 -6000 -3686 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25314 25000 25323 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25314 25000 25323 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3686 -6000 -3677 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3686 -6000 -3677 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25323 25000 25332 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25323 25000 25332 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3677 -6000 -3668 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3677 -6000 -3668 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25332 25000 25341 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25332 25000 25341 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3668 -6000 -3659 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3668 -6000 -3659 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25341 25000 25350 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25341 25000 25350 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3659 -6000 -3650 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3659 -6000 -3650 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25350 25000 25359 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25350 25000 25359 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3650 -6000 -3641 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3650 -6000 -3641 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25359 25000 25368 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25359 25000 25368 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3641 -6000 -3632 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3641 -6000 -3632 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25368 25000 25376 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25368 25000 25376 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3632 -6000 -3624 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3632 -6000 -3624 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25376 25000 25385 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25376 25000 25385 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3624 -6000 -3615 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3624 -6000 -3615 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25385 25000 25394 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25385 25000 25394 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3615 -6000 -3606 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3615 -6000 -3606 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25394 25000 25403 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25394 25000 25403 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3606 -6000 -3597 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3606 -6000 -3597 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25403 25000 25412 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25403 25000 25412 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3597 -6000 -3588 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3597 -6000 -3588 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25412 25000 25421 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25412 25000 25421 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3588 -6000 -3579 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3588 -6000 -3579 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25421 25000 25430 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25421 25000 25430 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3579 -6000 -3570 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3579 -6000 -3570 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25430 25000 25439 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25430 25000 25439 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3570 -6000 -3561 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3570 -6000 -3561 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25439 25000 25448 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25439 25000 25448 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3561 -6000 -3552 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3561 -6000 -3552 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25448 25000 25457 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25448 25000 25457 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3552 -6000 -3543 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3552 -6000 -3543 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25457 25000 25466 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25457 25000 25466 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3543 -6000 -3534 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3543 -6000 -3534 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25466 25000 25475 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25466 25000 25475 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3534 -6000 -3525 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3534 -6000 -3525 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25475 25000 25484 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25475 25000 25484 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3525 -6000 -3516 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3525 -6000 -3516 -5652
 
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove 25484 25000 25493 25348
-execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove 25484 25000 25493 25348
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in minecraft:overworld run forceload remove -3516 -6000 -3507 -5652
+execute if score #scan_trackmania_stadium_1 switch.data matches 3991 in switch:game run forceload remove -3516 -6000 -3507 -5652
 
 execute if score #scan_trackmania_stadium_1 switch.data matches 3991 run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Doors of map '","color":"yellow"},{"text":"trackmania_stadium_1","color":"gold"},{"text":"' just been scanned in ","color":"yellow"},{"text":"199","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #scan_trackmania_stadium_1 switch.data matches 3991 run data remove storage switch:maps to_scan.trackmania_stadium_1

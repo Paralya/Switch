@@ -6,7 +6,7 @@
 # @within	switch:maps/survival/hider_mansion/main [ as @e[type=marker,tag=switch.selected_map] & at @s ]
 #
 
-data modify entity @s Pos set value [71153.5d, 115.5d, 71047.5d]
+data modify entity @s Pos set value [-1847.5d, 115.5d, 8047.5d]
 execute at @s in switch:game run tp @s ~ ~ ~
 execute at @s run tp @a[tag=!detached] ~ ~ ~
 execute if score #do_spreadplayers switch.data matches 1 run function switch:maps/survival/hider_mansion/spread_players

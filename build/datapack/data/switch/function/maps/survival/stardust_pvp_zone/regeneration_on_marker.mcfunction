@@ -6,98 +6,98 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_stardust_pvp_zone_y switch.data
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 0 at @s in switch:game run particle cloud 105005 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 0 at @s run clone from minecraft:overworld 105000 ~ 105000 105010 ~ 105314 to switch:game 105000 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 0 at @s in switch:game run particle cloud -3995 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 0 at @s run clone from minecraft:overworld -4000 ~ -10000 -3990 ~ -9686 to switch:game -4000 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 1 at @s in switch:game run particle cloud 105014 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 1 at @s run clone from minecraft:overworld 105010 ~ 105000 105019 ~ 105314 to switch:game 105010 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 1 at @s in switch:game run particle cloud -3986 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 1 at @s run clone from minecraft:overworld -3990 ~ -10000 -3981 ~ -9686 to switch:game -3990 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 2 at @s in switch:game run particle cloud 105024 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 2 at @s run clone from minecraft:overworld 105019 ~ 105000 105029 ~ 105314 to switch:game 105019 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 2 at @s in switch:game run particle cloud -3976 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 2 at @s run clone from minecraft:overworld -3981 ~ -10000 -3971 ~ -9686 to switch:game -3981 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 3 at @s in switch:game run particle cloud 105034 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 3 at @s run clone from minecraft:overworld 105029 ~ 105000 105039 ~ 105314 to switch:game 105029 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 3 at @s in switch:game run particle cloud -3966 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 3 at @s run clone from minecraft:overworld -3971 ~ -10000 -3961 ~ -9686 to switch:game -3971 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 4 at @s in switch:game run particle cloud 105043 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 4 at @s run clone from minecraft:overworld 105039 ~ 105000 105048 ~ 105314 to switch:game 105039 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 4 at @s in switch:game run particle cloud -3957 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 4 at @s run clone from minecraft:overworld -3961 ~ -10000 -3952 ~ -9686 to switch:game -3961 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 5 at @s in switch:game run particle cloud 105053 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 5 at @s run clone from minecraft:overworld 105048 ~ 105000 105058 ~ 105314 to switch:game 105048 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 5 at @s in switch:game run particle cloud -3947 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 5 at @s run clone from minecraft:overworld -3952 ~ -10000 -3942 ~ -9686 to switch:game -3952 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 6 at @s in switch:game run particle cloud 105063 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 6 at @s run clone from minecraft:overworld 105058 ~ 105000 105068 ~ 105314 to switch:game 105058 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 6 at @s in switch:game run particle cloud -3937 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 6 at @s run clone from minecraft:overworld -3942 ~ -10000 -3932 ~ -9686 to switch:game -3942 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 7 at @s in switch:game run particle cloud 105073 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 7 at @s run clone from minecraft:overworld 105068 ~ 105000 105078 ~ 105314 to switch:game 105068 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 7 at @s in switch:game run particle cloud -3927 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 7 at @s run clone from minecraft:overworld -3932 ~ -10000 -3922 ~ -9686 to switch:game -3932 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 8 at @s in switch:game run particle cloud 105082 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 8 at @s run clone from minecraft:overworld 105078 ~ 105000 105087 ~ 105314 to switch:game 105078 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 8 at @s in switch:game run particle cloud -3918 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 8 at @s run clone from minecraft:overworld -3922 ~ -10000 -3913 ~ -9686 to switch:game -3922 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 9 at @s in switch:game run particle cloud 105092 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 9 at @s run clone from minecraft:overworld 105087 ~ 105000 105097 ~ 105314 to switch:game 105087 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 9 at @s in switch:game run particle cloud -3908 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 9 at @s run clone from minecraft:overworld -3913 ~ -10000 -3903 ~ -9686 to switch:game -3913 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 10 at @s in switch:game run particle cloud 105102 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 10 at @s run clone from minecraft:overworld 105097 ~ 105000 105107 ~ 105314 to switch:game 105097 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 10 at @s in switch:game run particle cloud -3898 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 10 at @s run clone from minecraft:overworld -3903 ~ -10000 -3893 ~ -9686 to switch:game -3903 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 11 at @s in switch:game run particle cloud 105111 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 11 at @s run clone from minecraft:overworld 105107 ~ 105000 105116 ~ 105314 to switch:game 105107 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 11 at @s in switch:game run particle cloud -3889 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 11 at @s run clone from minecraft:overworld -3893 ~ -10000 -3884 ~ -9686 to switch:game -3893 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 12 at @s in switch:game run particle cloud 105121 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 12 at @s run clone from minecraft:overworld 105116 ~ 105000 105126 ~ 105314 to switch:game 105116 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 12 at @s in switch:game run particle cloud -3879 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 12 at @s run clone from minecraft:overworld -3884 ~ -10000 -3874 ~ -9686 to switch:game -3884 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 13 at @s in switch:game run particle cloud 105131 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 13 at @s run clone from minecraft:overworld 105126 ~ 105000 105136 ~ 105314 to switch:game 105126 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 13 at @s in switch:game run particle cloud -3869 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 13 at @s run clone from minecraft:overworld -3874 ~ -10000 -3864 ~ -9686 to switch:game -3874 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 14 at @s in switch:game run particle cloud 105141 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 14 at @s run clone from minecraft:overworld 105136 ~ 105000 105146 ~ 105314 to switch:game 105136 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 14 at @s in switch:game run particle cloud -3859 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 14 at @s run clone from minecraft:overworld -3864 ~ -10000 -3854 ~ -9686 to switch:game -3864 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 15 at @s in switch:game run particle cloud 105150 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 15 at @s run clone from minecraft:overworld 105146 ~ 105000 105155 ~ 105314 to switch:game 105146 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 15 at @s in switch:game run particle cloud -3850 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 15 at @s run clone from minecraft:overworld -3854 ~ -10000 -3845 ~ -9686 to switch:game -3854 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 16 at @s in switch:game run particle cloud 105160 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 16 at @s run clone from minecraft:overworld 105155 ~ 105000 105165 ~ 105314 to switch:game 105155 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 16 at @s in switch:game run particle cloud -3840 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 16 at @s run clone from minecraft:overworld -3845 ~ -10000 -3835 ~ -9686 to switch:game -3845 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 17 at @s in switch:game run particle cloud 105170 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 17 at @s run clone from minecraft:overworld 105165 ~ 105000 105175 ~ 105314 to switch:game 105165 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 17 at @s in switch:game run particle cloud -3830 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 17 at @s run clone from minecraft:overworld -3835 ~ -10000 -3825 ~ -9686 to switch:game -3835 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 18 at @s in switch:game run particle cloud 105179 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 18 at @s run clone from minecraft:overworld 105175 ~ 105000 105184 ~ 105314 to switch:game 105175 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 18 at @s in switch:game run particle cloud -3821 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 18 at @s run clone from minecraft:overworld -3825 ~ -10000 -3816 ~ -9686 to switch:game -3825 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 19 at @s in switch:game run particle cloud 105189 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 19 at @s run clone from minecraft:overworld 105184 ~ 105000 105194 ~ 105314 to switch:game 105184 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 19 at @s in switch:game run particle cloud -3811 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 19 at @s run clone from minecraft:overworld -3816 ~ -10000 -3806 ~ -9686 to switch:game -3816 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 20 at @s in switch:game run particle cloud 105199 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 20 at @s run clone from minecraft:overworld 105194 ~ 105000 105204 ~ 105314 to switch:game 105194 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 20 at @s in switch:game run particle cloud -3801 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 20 at @s run clone from minecraft:overworld -3806 ~ -10000 -3796 ~ -9686 to switch:game -3806 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 21 at @s in switch:game run particle cloud 105208 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 21 at @s run clone from minecraft:overworld 105204 ~ 105000 105213 ~ 105314 to switch:game 105204 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 21 at @s in switch:game run particle cloud -3792 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 21 at @s run clone from minecraft:overworld -3796 ~ -10000 -3787 ~ -9686 to switch:game -3796 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 22 at @s in switch:game run particle cloud 105218 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 22 at @s run clone from minecraft:overworld 105213 ~ 105000 105223 ~ 105314 to switch:game 105213 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 22 at @s in switch:game run particle cloud -3782 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 22 at @s run clone from minecraft:overworld -3787 ~ -10000 -3777 ~ -9686 to switch:game -3787 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 23 at @s in switch:game run particle cloud 105228 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 23 at @s run clone from minecraft:overworld 105223 ~ 105000 105233 ~ 105314 to switch:game 105223 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 23 at @s in switch:game run particle cloud -3772 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 23 at @s run clone from minecraft:overworld -3777 ~ -10000 -3767 ~ -9686 to switch:game -3777 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 24 at @s in switch:game run particle cloud 105237 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 24 at @s run clone from minecraft:overworld 105233 ~ 105000 105242 ~ 105314 to switch:game 105233 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 24 at @s in switch:game run particle cloud -3763 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 24 at @s run clone from minecraft:overworld -3767 ~ -10000 -3758 ~ -9686 to switch:game -3767 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 25 at @s in switch:game run particle cloud 105247 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 25 at @s run clone from minecraft:overworld 105242 ~ 105000 105252 ~ 105314 to switch:game 105242 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 25 at @s in switch:game run particle cloud -3753 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 25 at @s run clone from minecraft:overworld -3758 ~ -10000 -3748 ~ -9686 to switch:game -3758 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 26 at @s in switch:game run particle cloud 105257 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 26 at @s run clone from minecraft:overworld 105252 ~ 105000 105262 ~ 105314 to switch:game 105252 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 26 at @s in switch:game run particle cloud -3743 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 26 at @s run clone from minecraft:overworld -3748 ~ -10000 -3738 ~ -9686 to switch:game -3748 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 27 at @s in switch:game run particle cloud 105267 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 27 at @s run clone from minecraft:overworld 105262 ~ 105000 105272 ~ 105314 to switch:game 105262 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 27 at @s in switch:game run particle cloud -3733 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 27 at @s run clone from minecraft:overworld -3738 ~ -10000 -3728 ~ -9686 to switch:game -3738 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 28 at @s in switch:game run particle cloud 105276 ~0.5 105157 4 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 28 at @s run clone from minecraft:overworld 105272 ~ 105000 105281 ~ 105314 to switch:game 105272 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 28 at @s in switch:game run particle cloud -3724 ~0.5 -9843 4 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 28 at @s run clone from minecraft:overworld -3728 ~ -10000 -3719 ~ -9686 to switch:game -3728 ~0 -10000 strict replace force
 
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 29 at @s in switch:game run particle cloud 105286 ~0.5 105157 5 0 78 0 250 force
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 29 at @s run clone from minecraft:overworld 105281 ~ 105000 105291 ~ 105314 to switch:game 105281 ~0 105000 strict replace force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 29 at @s in switch:game run particle cloud -3714 ~0.5 -9843 5 0 78 0 250 force
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 29 at @s run clone from minecraft:overworld -3719 ~ -10000 -3709 ~ -9686 to switch:game -3719 ~0 -10000 strict replace force
 
 scoreboard players add #rg_stardust_pvp_zone_mod switch.data 1
-execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 in switch:game run kill @e[type=item,x=105145,y=100,z=105157,distance=..1000]
+execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 in switch:game run kill @e[type=item,x=-3854,y=100,z=-9843,distance=..1000]
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 run scoreboard players add #rg_stardust_pvp_zone_y switch.data 1
 execute if score #rg_stardust_pvp_zone_mod switch.data matches 30 run scoreboard players set #rg_stardust_pvp_zone_mod switch.data 0
 

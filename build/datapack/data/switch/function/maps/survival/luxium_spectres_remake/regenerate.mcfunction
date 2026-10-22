@@ -9,34 +9,34 @@
 
 scoreboard players add #rg_luxium_spectres_remake switch.data 1
 execute if score #rg_luxium_spectres_remake switch.data matches 1 run data modify storage switch:maps to_regenerate.luxium_spectres_remake set value 2b
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add 142000 142000 142021 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add 142000 142000 142021 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add 142021 142000 142042 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add 142021 142000 142042 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add 142042 142000 142064 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add 142042 142000 142064 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add 142064 142000 142085 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add 142064 142000 142085 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add 142085 142000 142106 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add 142085 142000 142106 142106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add -10000 4000 -9979 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add -10000 4000 -9979 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add -9979 4000 -9958 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add -9979 4000 -9958 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add -9958 4000 -9936 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add -9958 4000 -9936 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add -9936 4000 -9915 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add -9936 4000 -9915 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in minecraft:overworld run forceload add -9915 4000 -9894 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 1 in switch:game run forceload add -9915 4000 -9894 4106
 
 execute if score #rg_luxium_spectres_remake switch.data matches 1 run scoreboard players set #rg_luxium_spectres_remake_y switch.data 100
 execute if score #rg_luxium_spectres_remake switch.data matches 1 run scoreboard players set #rg_luxium_spectres_remake_mod switch.data 0
 execute if score #rg_luxium_spectres_remake switch.data matches ..415 summon marker run function switch:maps/survival/luxium_spectres_remake/regeneration_on_marker
 
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run kill @e[type=item,x=142053,y=100,z=142053,distance=..1000]
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run kill @e[type=item,x=-9947,y=100,z=4053,distance=..1000]
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. run data remove storage switch:maps to_regenerate.luxium_spectres_remake
 
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove 142000 142000 142021 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove 142000 142000 142021 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove 142021 142000 142042 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove 142021 142000 142042 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove 142042 142000 142064 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove 142042 142000 142064 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove 142064 142000 142085 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove 142064 142000 142085 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove 142085 142000 142106 142106
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove 142085 142000 142106 142106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove -10000 4000 -9979 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove -10000 4000 -9979 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove -9979 4000 -9958 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove -9979 4000 -9958 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove -9958 4000 -9936 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove -9958 4000 -9936 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove -9936 4000 -9915 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove -9936 4000 -9915 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove -9915 4000 -9894 4106
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove -9915 4000 -9894 4106
 
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Luxium Spectres Remake","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. run function switch:engine/log_message/apply {message:"Map `Luxium Spectres Remake` just regenerated!"}
