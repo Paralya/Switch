@@ -95,10 +95,10 @@ scoreboard players add @s {ns}.temp.points 15
 	write_function(f"{path}/bonus_reload", f"""
 # Place random
 execute store result score #random {ns}.data run random value 0..3
-execute if score #random {ns}.data matches 0 run setblock 14000 100 13925 obsidian
-execute if score #random {ns}.data matches 1 run setblock 14000 100 14000 obsidian
-execute if score #random {ns}.data matches 2 run setblock 14000 100 14075 obsidian
-execute if score #random {ns}.data matches 3 run setblock 14000 86 14000 obsidian
+execute if score #random {ns}.data matches 0 run setblock -1900 100 4025 obsidian
+execute if score #random {ns}.data matches 1 run setblock -1900 100 4100 obsidian
+execute if score #random {ns}.data matches 2 run setblock -1900 100 4175 obsidian
+execute if score #random {ns}.data matches 3 run setblock -1900 86 4100 obsidian
 
 function {ns}:modes/rush_the_point/translations/bonus_reload
 execute as @a[tag=!detached] at @s run playsound entity.villager.hurt ambient @s
@@ -359,11 +359,11 @@ execute if score #bonus_reload {ns}.data matches 60.. run function {ns}:modes/ru
 
 # Spawn bridge snowballs at specific intervals
 # First pair at start of reload cycle
-execute if score #bonus_reload {ns}.data matches 0 run summon item 14063 103 14000 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
-execute if score #bonus_reload {ns}.data matches 0 run summon item 13937 103 14000 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
+execute if score #bonus_reload {ns}.data matches 0 run summon item -1837 103 4100 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
+execute if score #bonus_reload {ns}.data matches 0 run summon item -1963 103 4100 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
 # Second pair halfway through reload cycle
-execute if score #bonus_reload {ns}.data matches 31 run summon item 14063 103 14000 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
-execute if score #bonus_reload {ns}.data matches 31 run summon item 13937 103 14000 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
+execute if score #bonus_reload {ns}.data matches 31 run summon item -1837 103 4100 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
+execute if score #bonus_reload {ns}.data matches 31 run summon item -1963 103 4100 {{Item:{{id:"minecraft:snowball",count:1,components:{{"minecraft:item_name":{{"text":"Bridge Snowball","color":"yellow","italic":false}}}}}},NoGravity:true,Glowing:true,CustomName:{{"text":"Bridge Snowball","color":"yellow","italic":false}},CustomNameVisible:true}}
 
 # Run translations
 function {ns}:modes/_common/compute_mins_secs
@@ -376,11 +376,11 @@ function {ns}:modes/rush_the_point/start_common
 function {ns}:modes/rush_the_point/translations/start
 
 # Summon the points markers
-summon marker 14000 99 14000 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.center"]}}
-summon marker 14025 99 14050 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
-summon marker 14025 99 13950 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
-summon marker 13975 99 14050 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
-summon marker 13975 99 13950 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
+summon marker -1900 99 4100 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.center"]}}
+summon marker -1875 99 4150 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
+summon marker -1875 99 4050 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
+summon marker -1925 99 4150 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
+summon marker -1925 99 4050 {{Tags:["{ns}.rush_the_point.zone","{ns}.rush_the_point.side"]}}
 
 scoreboard players set #remaining_time {ns}.data 610
 scoreboard players set #rush_the_point_seconds {ns}.data -11
@@ -475,8 +475,8 @@ function {ns}:modes/rush_the_point/teleport_to_spawn
 	write_function(f"{path}/teleport_to_spawn", f"""
 ## Maps spawn
 # Map Rush The Point 1
-execute if data storage {ns}:main {{map:"rush_the_point_1"}} if entity @s[team={ns}.rush_the_point.red] in {ns}:game run tp @s 13930 100.69 14000 -90 0
-execute if data storage {ns}:main {{map:"rush_the_point_1"}} if entity @s[team={ns}.rush_the_point.blue] in {ns}:game run tp @s 14070 100.69 14000 90 0
+execute if data storage {ns}:main {{map:"rush_the_point_1"}} if entity @s[team={ns}.rush_the_point.red] in {ns}:game run tp @s -1970 100.69 4100 -90 0
+execute if data storage {ns}:main {{map:"rush_the_point_1"}} if entity @s[team={ns}.rush_the_point.blue] in {ns}:game run tp @s -1830 100.69 4100 90 0
 
 
 ## Items to choose a class
@@ -516,10 +516,10 @@ scoreboard players add #rush_the_point_ticks {ns}.data 1
 execute if score #rush_the_point_seconds {ns}.data matches ..-1 as @a[tag=!detached] run attribute @s jump_strength base set 0
 execute if score #rush_the_point_seconds {ns}.data matches ..-1 run effect give @a[tag=!detached] slowness 100 250 true
 execute if score #rush_the_point_seconds {ns}.data matches ..-1 run effect give @a[tag=!detached] night_vision 100 250 true
-execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock 14000 100 13925 air
-execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock 14000 100 14000 air
-execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock 14000 100 14075 air
-execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock 14000 86 14000 air
+execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock -1900 100 4025 air
+execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock -1900 100 4100 air
+execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock -1900 100 4175 air
+execute if score #rush_the_point_seconds {ns}.data matches ..-1 run setblock -1900 86 4100 air
 
 # Kill all entities under the map & Manage dropped items
 execute as @e[tag=!detached,type=!marker,type=!item_display,type=!armor_stand] at @s run kill @s[y=0,dy=20]

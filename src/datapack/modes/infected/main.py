@@ -423,10 +423,10 @@ function {ns}:modes/infected/translations/death_cure
 	# /death/early_respawn
 	write_function(f"{path}/death/early_respawn", f"""
 team join {ns}.temp.human @s
-execute if data storage {ns}:main {{map:"area_51"}} run tp @s 2057 171 2065 0 0
-execute if data storage {ns}:main {{map:"ancienne_egypte_2013"}} run tp @s 128048 121 128105 0 0
-execute if data storage {ns}:main {{map:"old_japan_apocalypse"}} run tp @s 129040 109 129043 -90 0
-execute if data storage {ns}:main {{map:"lost_graveyard_remastered"}} run tp @s 127030 119 127112 0 0
+execute if data storage {ns}:main {{map:"area_51"}} run tp @s 57 171 2065 0 0
+execute if data storage {ns}:main {{map:"ancienne_egypte_2013"}} run tp @s 6048 121 10105 0 0
+execute if data storage {ns}:main {{map:"old_japan_apocalypse"}} run tp @s 4040 109 10043 -90 0
+execute if data storage {ns}:main {{map:"lost_graveyard_remastered"}} run tp @s 2030 119 10112 0 0
 effect clear @s
 clear @s
 effect give @s hunger 20 255 true
@@ -467,10 +467,10 @@ execute if score @s {ns}.infected.armor matches 10 run loot replace entity @s ar
 	# /death/human_spawn
 	write_function(f"{path}/death/human_spawn", f"""
 team join {ns}.temp.human @s
-execute if data storage {ns}:main {{map:"area_51"}} run tp @s 2017 158 2098 -90 0
-execute if data storage {ns}:main {{map:"ancienne_egypte_2013"}} run tp @s 128089 133 128095 180 0
-execute if data storage {ns}:main {{map:"old_japan_apocalypse"}} run tp @s 129013 105 129018 180 0
-execute if data storage {ns}:main {{map:"lost_graveyard_remastered"}} run tp @s 127055 129 127046 -90 0
+execute if data storage {ns}:main {{map:"area_51"}} run tp @s 17 158 2098 -90 0
+execute if data storage {ns}:main {{map:"ancienne_egypte_2013"}} run tp @s 6089 133 10095 180 0
+execute if data storage {ns}:main {{map:"old_japan_apocalypse"}} run tp @s 4013 105 10018 180 0
+execute if data storage {ns}:main {{map:"lost_graveyard_remastered"}} run tp @s 2055 129 10046 -90 0
 scoreboard players enable @s {ns}.temp.dont_want_to_be_infected
 scoreboard players set @s {ns}.temp.hits_gotten 0
 attribute @s attack_speed base set 2048.0
@@ -539,10 +539,10 @@ execute if score @s {ns}.infected.zombie_jump matches 1 run effect give @s jump_
 
 	# /death/zombie_spawn
 	write_function(f"{path}/death/zombie_spawn", f"""
-execute if data storage {ns}:main {{map:"area_51"}} run tp @s 2060 145 2029 0 0
-execute if data storage {ns}:main {{map:"ancienne_egypte_2013"}} run tp @s 128007 133 128005 -90 0
-execute if data storage {ns}:main {{map:"old_japan_apocalypse"}} run tp @s 129086 110 129020 90 0
-execute if data storage {ns}:main {{map:"lost_graveyard_remastered"}} run tp @s 127009 116 127058 90 0
+execute if data storage {ns}:main {{map:"area_51"}} run tp @s 60 145 2029 0 0
+execute if data storage {ns}:main {{map:"ancienne_egypte_2013"}} run tp @s 6007 133 10005 -90 0
+execute if data storage {ns}:main {{map:"old_japan_apocalypse"}} run tp @s 4086 110 10020 90 0
+execute if data storage {ns}:main {{map:"lost_graveyard_remastered"}} run tp @s 2009 116 10058 90 0
 scoreboard players set @s[team={ns}.temp.human] {ns}.temp.kills 0
 function {ns}:modes/infected/death/zombie_give
 effect give @s blindness 10 0 true
@@ -623,19 +623,19 @@ scoreboard players set #infected_secret {ns}.data 0
 	# /secrets/ancienne_egypte/_tick
 	write_function(f"{path}/secrets/ancienne_egypte/_tick", f"""
 # Items to pickup
-execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.stick] run summon item 128028 120 128106 {{Tags:["{ns}.infected.stick","{ns}.infected.item"],Item:{{id:"minecraft:stick",count:1,components:{{"minecraft:item_name":{{"text":"Torch stick","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
-execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.redstone] run summon item 128010 138 128078 {{Tags:["{ns}.infected.redstone","{ns}.infected.item"],Item:{{id:"minecraft:redstone",count:1,components:{{"minecraft:item_name":{{"text":"Redstone","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.stick] run summon item 6028 120 10106 {{Tags:["{ns}.infected.stick","{ns}.infected.item"],Item:{{id:"minecraft:stick",count:1,components:{{"minecraft:item_name":{{"text":"Torch stick","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.redstone] run summon item 6010 138 10078 {{Tags:["{ns}.infected.redstone","{ns}.infected.item"],Item:{{id:"minecraft:redstone",count:1,components:{{"minecraft:item_name":{{"text":"Redstone","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
 execute as @e[tag={ns}.infected.item] at @s run function {ns}:modes/infected/secrets/ancienne_egypte/item_tick
 
 ## State checks
 # Check jukebox
-execute if score #infected_secret {ns}.data matches 0 positioned 128069 120 128084 if block ~ ~ ~ jukebox[has_record=true] run function {ns}:modes/infected/secrets/ancienne_egypte/next_state
+execute if score #infected_secret {ns}.data matches 0 positioned 6069 120 10084 if block ~ ~ ~ jukebox[has_record=true] run function {ns}:modes/infected/secrets/ancienne_egypte/next_state
 
 # Check redstone torch
-execute if score #infected_secret {ns}.data matches 1 positioned 128069 115 128087 if block ~ ~ ~ redstone_torch run function {ns}:modes/infected/secrets/ancienne_egypte/next_state
+execute if score #infected_secret {ns}.data matches 1 positioned 6069 115 10087 if block ~ ~ ~ redstone_torch run function {ns}:modes/infected/secrets/ancienne_egypte/next_state
 
 # Check for humans finishing the last parkour
-execute if score #infected_secret {ns}.data matches 3.. positioned 128077 110 128046 as @a[tag=!detached,team={ns}.temp.human,distance=..4] run function {ns}:modes/infected/secrets/ancienne_egypte/next_state
+execute if score #infected_secret {ns}.data matches 3.. positioned 6077 110 10046 as @a[tag=!detached,team={ns}.temp.human,distance=..4] run function {ns}:modes/infected/secrets/ancienne_egypte/next_state
 """)
 
 	# /secrets/ancienne_egypte/button_black (translation ref rewritten)
@@ -644,7 +644,7 @@ execute if score #infected_secret {ns}.data matches 3.. positioned 128077 110 12
 # Check if both sides are lit
 execute unless score #infected_secret {ns}.data matches 2 run return 0
 scoreboard players set #success {ns}.data 0
-execute if block 128070 112 128093 redstone_lamp[lit=true] if block 128068 112 128093 redstone_lamp[lit=true] run scoreboard players set #success {ns}.data 1
+execute if block 6070 112 10093 redstone_lamp[lit=true] if block 6068 112 10093 redstone_lamp[lit=true] run scoreboard players set #success {ns}.data 1
 
 # If there are not enough players on each side
 execute if score #success {ns}.data matches 0 run return 0
@@ -652,8 +652,8 @@ execute if score #success {ns}.data matches 0 run return 0
 # Else,
 execute store result score #random {ns}.data run random value 0..1
 function {ns}:modes/infected/translations/secrets_ancienne_egypte_button_black
-fill 128065 116 128092 128065 116 128090 air destroy
-setblock 128067 114 128089 air destroy
+fill 6065 116 10092 6065 116 10090 air destroy
+setblock 6067 114 10089 air destroy
 
 # Go next state
 function {ns}:modes/infected/secrets/ancienne_egypte/next_state
@@ -665,7 +665,7 @@ function {ns}:modes/infected/secrets/ancienne_egypte/next_state
 # Check if both sides are lit
 execute unless score #infected_secret {ns}.data matches 2 run return 0
 scoreboard players set #success {ns}.data 0
-execute if block 128070 112 128093 redstone_lamp[lit=true] if block 128068 112 128093 redstone_lamp[lit=false] run scoreboard players set #success {ns}.data 1
+execute if block 6070 112 10093 redstone_lamp[lit=true] if block 6068 112 10093 redstone_lamp[lit=false] run scoreboard players set #success {ns}.data 1
 
 # If there are not enough players on each side
 execute if score #success {ns}.data matches 0 run return 0
@@ -673,8 +673,8 @@ execute if score #success {ns}.data matches 0 run return 0
 # Else,
 execute store result score #random {ns}.data run random value 0..1
 function {ns}:modes/infected/translations/secrets_ancienne_egypte_button_red
-fill 128073 116 128090 128073 116 128092 air destroy
-setblock 128071 114 128089 air destroy
+fill 6073 116 10090 6073 116 10092 air destroy
+setblock 6071 114 10089 air destroy
 
 # Go next state
 function {ns}:modes/infected/secrets/ancienne_egypte/next_state
@@ -701,14 +701,14 @@ tag @s add {ns}.checked
 	write_function(f"{path}/secrets/ancienne_egypte/next_state", f"""
 # Jukebox
 execute if score #infected_secret {ns}.data matches 0 run playsound block.piston.contract ambient @a[tag=!detached,distance=..10]
-execute if score #infected_secret {ns}.data matches 0 run setblock 128069 119 128085 air
+execute if score #infected_secret {ns}.data matches 0 run setblock 6069 119 10085 air
 
 # Redstone torch
 
 # Sacrifice room
-execute if score #infected_secret {ns}.data matches 2 positioned 128054 113 128050 run playsound block.piston.contract ambient @a[tag=!detached] ~ ~ ~ 1 1 1
-execute if score #infected_secret {ns}.data matches 2 run setblock 128054 113 128050 redstone_torch
-execute if score #infected_secret {ns}.data matches 2 run setblock 128057 109 128054 redstone_wall_torch[facing=west]
+execute if score #infected_secret {ns}.data matches 2 positioned 6054 113 10050 run playsound block.piston.contract ambient @a[tag=!detached] ~ ~ ~ 1 1 1
+execute if score #infected_secret {ns}.data matches 2 run setblock 6054 113 10050 redstone_torch
+execute if score #infected_secret {ns}.data matches 2 run setblock 6057 109 10054 redstone_wall_torch[facing=west]
 
 # End (After secret room): function executed as a player
 execute if score #infected_secret {ns}.data matches 3.. unless score #test_mode {ns}.data matches 1 run advancement grant @s only {ns}:visible/51
@@ -731,23 +731,23 @@ scoreboard players set #infected_secret {ns}.data 0
 	# /secrets/area_51/_tick
 	write_function(f"{path}/secrets/area_51/_tick", f"""
 # Items to pickup
-execute if score #infected_secret {ns}.data matches 0 unless entity @e[type=item,tag={ns}.infected.stick] run summon item 2060 151 2074 {{Tags:["{ns}.infected.stick","{ns}.infected.item"],Item:{{id:"minecraft:stick",count:1,components:{{"minecraft:item_name":{{"text":"Torch stick","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
-execute if score #infected_secret {ns}.data matches 0 unless entity @e[type=item,tag={ns}.infected.redstone] run summon item 2044 146 2093 {{Tags:["{ns}.infected.redstone","{ns}.infected.item"],Item:{{id:"minecraft:redstone",count:1,components:{{"minecraft:item_name":{{"text":"Redstone","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
-execute if score #infected_secret {ns}.data matches 0..2 unless entity @e[type=item,tag={ns}.infected.bottle] run summon item 2059 152 2081 {{Tags:["{ns}.infected.bottle","{ns}.infected.item"],Item:{{id:"minecraft:glass_bottle",count:1,components:{{"minecraft:item_name":{{"text":"Test tube","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0 unless entity @e[type=item,tag={ns}.infected.stick] run summon item 60 151 2074 {{Tags:["{ns}.infected.stick","{ns}.infected.item"],Item:{{id:"minecraft:stick",count:1,components:{{"minecraft:item_name":{{"text":"Torch stick","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0 unless entity @e[type=item,tag={ns}.infected.redstone] run summon item 44 146 2093 {{Tags:["{ns}.infected.redstone","{ns}.infected.item"],Item:{{id:"minecraft:redstone",count:1,components:{{"minecraft:item_name":{{"text":"Redstone","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..2 unless entity @e[type=item,tag={ns}.infected.bottle] run summon item 59 152 2081 {{Tags:["{ns}.infected.bottle","{ns}.infected.item"],Item:{{id:"minecraft:glass_bottle",count:1,components:{{"minecraft:item_name":{{"text":"Test tube","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
 execute as @e[tag={ns}.infected.item] at @s run function {ns}:modes/infected/secrets/area_51/item_tick
 
 ## State checks
 # Check generator
-execute if score #infected_secret {ns}.data matches 0 positioned 2069 151 2051 unless block ~ ~ ~ air run function {ns}:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret {ns}.data matches 0 positioned 69 151 2051 unless block ~ ~ ~ air run function {ns}:modes/infected/secrets/area_51/next_state
 
 # Check blood extraction
-execute if score #infected_secret {ns}.data matches 1 positioned 2064 114 2104 if block ~ ~ ~ lever[powered=true] positioned 2064 113 2106 if block ~ ~ ~ polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret {ns}.data matches 1 positioned 64 114 2104 if block ~ ~ ~ lever[powered=true] positioned 64 113 2106 if block ~ ~ ~ polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/area_51/next_state
 execute if score #infected_secret {ns}.data matches 2 run scoreboard players remove #blood_extraction {ns}.data 1
 execute if score #infected_secret {ns}.data matches 2 if score #blood_extraction {ns}.data matches 0 run function {ns}:modes/infected/secrets/area_51/next_state
 
 # Check blood analysis
-execute if score #infected_secret {ns}.data matches 3 positioned 2033 123 2043 if data block ~ ~ ~ Items[].components."minecraft:custom_data".{ns}.element_115 if data block ~-2 ~ ~ Items[].components."minecraft:custom_data".{ns}.water_bottle if block 2028 123 2042 polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/area_51/next_state
-execute if score #infected_secret {ns}.data matches 3 positioned 2033 123 2043 if data block ~ ~ ~ Items[].components."minecraft:custom_data".{ns}.water_bottle if data block ~-2 ~ ~ Items[].components."minecraft:custom_data".{ns}.element_115 if block 2028 123 2042 polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret {ns}.data matches 3 positioned 33 123 2043 if data block ~ ~ ~ Items[].components."minecraft:custom_data".{ns}.element_115 if data block ~-2 ~ ~ Items[].components."minecraft:custom_data".{ns}.water_bottle if block 28 123 2042 polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret {ns}.data matches 3 positioned 33 123 2043 if data block ~ ~ ~ Items[].components."minecraft:custom_data".{ns}.water_bottle if data block ~-2 ~ ~ Items[].components."minecraft:custom_data".{ns}.element_115 if block 28 123 2042 polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/area_51/next_state
 execute if score #infected_secret {ns}.data matches 4..8 run scoreboard players remove #element_analysis {ns}.data 1
 execute if score #infected_secret {ns}.data matches 4 if score #element_analysis {ns}.data matches 440 run function {ns}:modes/infected/secrets/area_51/next_state
 execute if score #infected_secret {ns}.data matches 5 if score #element_analysis {ns}.data matches 240 run function {ns}:modes/infected/secrets/area_51/next_state
@@ -756,7 +756,7 @@ execute if score #infected_secret {ns}.data matches 7 if score #element_analysis
 execute if score #infected_secret {ns}.data matches 8 if score #element_analysis {ns}.data matches 0 run function {ns}:modes/infected/secrets/area_51/next_state
 
 # Check giant zombie killed
-execute if score #infected_secret {ns}.data matches 9 unless entity @e[x=2053,y=124,z=2087,tag={ns}.giant,distance=..75] run function {ns}:modes/infected/secrets/area_51/next_state
+execute if score #infected_secret {ns}.data matches 9 unless entity @e[x=53,y=124,z=2087,tag={ns}.giant,distance=..75] run function {ns}:modes/infected/secrets/area_51/next_state
 
 ## Tick
 execute if score #infected_secret {ns}.data matches 1..7 run effect give @a[tag=!detached] night_vision infinite 255 true
@@ -769,8 +769,8 @@ summon chicken ~ ~-5 ~4 {{DeathLootTable:"none",Passengers:[{{id:"chest_minecart
 
 	# /secrets/area_51/giant
 	write_function(f"{path}/secrets/area_51/giant", f"""
-execute positioned 2053 105 2104 run function {ns}:utils/safe_kill_macro {{selector:"@e[tag={ns}.giant,distance=..100]"}}
-summon zombie 2053 105 2104 {{NoAI:true,Rotation:[180.0f,0.0f],Tags:["{ns}.giant"],Invulnerable:true,Team:"{ns}.temp.zombie",attributes:[{{id:"minecraft:scale",base:6.4d}}]}}
+execute positioned 53 105 2104 run function {ns}:utils/safe_kill_macro {{selector:"@e[tag={ns}.giant,distance=..100]"}}
+summon zombie 53 105 2104 {{NoAI:true,Rotation:[180.0f,0.0f],Tags:["{ns}.giant"],Invulnerable:true,Team:"{ns}.temp.zombie",attributes:[{{id:"minecraft:scale",base:6.4d}}]}}
 """)
 
 	# /secrets/area_51/item_tick
@@ -786,28 +786,28 @@ tag @s add {ns}.checked
 	write_function(f"{path}/secrets/area_51/next_state", f"""
 # Generator
 execute if score #infected_secret {ns}.data matches 0 run summon lightning_bolt ~ ~-10 ~
-execute if score #infected_secret {ns}.data matches 0 run setblock 2069 155 2052 redstone_block
+execute if score #infected_secret {ns}.data matches 0 run setblock 69 155 2052 redstone_block
 
 # Blood extraction
 execute if score #infected_secret {ns}.data matches 1 run playsound block.beacon.power_select ambient @a[tag=!detached]
 execute if score #infected_secret {ns}.data matches 1 run scoreboard players set #blood_extraction {ns}.data 1200
 execute if score #infected_secret {ns}.data matches 2 run playsound block.brewing_stand.brew ambient @a[tag=!detached]
-execute if score #infected_secret {ns}.data matches 2 run setblock 2064 112 2108 water_cauldron[level=3]
+execute if score #infected_secret {ns}.data matches 2 run setblock 64 112 2108 water_cauldron[level=3]
 
 # Element analysis
 execute if score #infected_secret {ns}.data matches 3 run playsound block.conduit.activate ambient @a[tag=!detached]
-execute if score #infected_secret {ns}.data matches 3 run data modify block 2033 123 2043 Items set value []
-execute if score #infected_secret {ns}.data matches 3 run data modify block 2031 123 2043 Items set value []
+execute if score #infected_secret {ns}.data matches 3 run data modify block 33 123 2043 Items set value []
+execute if score #infected_secret {ns}.data matches 3 run data modify block 31 123 2043 Items set value []
 execute if score #infected_secret {ns}.data matches 3 run scoreboard players set #element_analysis {ns}.data 600
 execute if score #infected_secret {ns}.data matches 4 run playsound entity.zombie.attack_wooden_door ambient @a[tag=!detached]
 execute if score #infected_secret {ns}.data matches 5 run playsound entity.zombie.attack_wooden_door ambient @a[tag=!detached]
 execute if score #infected_secret {ns}.data matches 6 run playsound entity.zombie.attack_wooden_door ambient @a[tag=!detached]
 execute if score #infected_secret {ns}.data matches 7 run playsound entity.zombie.break_wooden_door ambient @a[tag=!detached]
-execute if score #infected_secret {ns}.data matches 7 run summon tnt 2020 128 2046
+execute if score #infected_secret {ns}.data matches 7 run summon tnt 20 128 2046
 execute if score #infected_secret {ns}.data matches 7 run playsound {ns}:explosion ambient @a[distance=..50]
 execute if score #infected_secret {ns}.data matches 7 run effect clear @a[tag=!detached] night_vision
 execute if score #infected_secret {ns}.data matches 7 run effect give @a[tag=!detached] darkness 3 0 true
-execute if score #infected_secret {ns}.data matches 7 run fill 2056 109 2100 2050 117 2107 air destroy
+execute if score #infected_secret {ns}.data matches 7 run fill 56 109 2100 50 117 2107 air destroy
 execute if score #infected_secret {ns}.data matches 7 as @a[tag=!detached] at @s run playsound block.beacon.deactivate ambient @s
 execute if score #infected_secret {ns}.data matches 8 as @e[tag={ns}.giant] run data merge entity @s {{NoAI:0b,Invulnerable:0b}}
 execute if score #infected_secret {ns}.data matches 8 at @e[limit=24] at @e[tag={ns}.giant] run summon zombie ~ ~ ~ {{Team:"{ns}.temp.zombie"}}
@@ -823,8 +823,8 @@ scoreboard players add #infected_secret {ns}.data 1
 
 	# /secrets/area_51/slime
 	write_function(f"{path}/secrets/area_51/slime", f"""
-execute positioned 2092 122 2087 run function {ns}:utils/safe_kill_macro {{selector:"@e[type=slime,distance=..500]"}}
-summon slime 2092 122 2087 {{Size:5,Silent:true,Tags:["{ns}.infected.slime"]}}
+execute positioned 92 122 2087 run function {ns}:utils/safe_kill_macro {{selector:"@e[type=slime,distance=..500]"}}
+summon slime 92 122 2087 {{Size:5,Silent:true,Tags:["{ns}.infected.slime"]}}
 """)
 
 	# /secrets/lost_graveyard/_load
@@ -834,34 +834,34 @@ scoreboard objectives add {ns}.temp.secret_kills playerKillCount
 execute in {ns}:game run gamerule minecraft:block_drops true
 
 # Place some stardust ore
-execute positioned 127121 113 127047 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
-execute positioned 127122 113 127055 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
-execute positioned 127115 114 127062 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
-execute positioned 127118 119 127068 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
-execute positioned 127109 117 127062 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
-execute positioned 127131 122 127114 run function {ns}:custom_blocks/nether_stardust_ore/place_main
+execute positioned 2121 113 10047 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
+execute positioned 2122 113 10055 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
+execute positioned 2115 114 10062 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
+execute positioned 2118 119 10068 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
+execute positioned 2109 117 10062 run function {ns}:custom_blocks/deepslate_stardust_ore/place_main
+execute positioned 2131 122 10114 run function {ns}:custom_blocks/nether_stardust_ore/place_main
 """)
 
 	# /secrets/lost_graveyard/_tick
 	write_function(f"{path}/secrets/lost_graveyard/_tick", f"""
 # Items to pickup
-execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.shovel] run summon item 127026 118 127071 {{Tags:["{ns}.infected.shovel","{ns}.infected.item"],Item:{{id:"minecraft:stone_shovel",count:1,components:{{"minecraft:can_break":{{blocks:["gravel","sand"]}},"minecraft:damage":23,"minecraft:item_name":{{"text":"Teuse","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
-execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.iron_ingot] run summon item 127084 112 127016 {{Tags:["{ns}.infected.iron_ingot","{ns}.infected.item"],Item:{{id:"minecraft:iron_ingot",count:1,components:{{"minecraft:item_name":{{"text":"Lingot de fer","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.shovel] run summon item 2026 118 10071 {{Tags:["{ns}.infected.shovel","{ns}.infected.item"],Item:{{id:"minecraft:stone_shovel",count:1,components:{{"minecraft:can_break":{{blocks:["gravel","sand"]}},"minecraft:damage":23,"minecraft:item_name":{{"text":"Teuse","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..1 unless entity @e[type=item,tag={ns}.infected.iron_ingot] run summon item 2084 112 10016 {{Tags:["{ns}.infected.iron_ingot","{ns}.infected.item"],Item:{{id:"minecraft:iron_ingot",count:1,components:{{"minecraft:item_name":{{"text":"Lingot de fer","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
 execute as @e[tag={ns}.infected.item] at @s run function {ns}:modes/infected/secrets/lost_graveyard/item_tick
 
 ## State checks
 # Check for zombie kills
-execute if score #infected_secret {ns}.data matches 0..2 positioned 127123 113 127051 as @a[tag=!detached,team={ns}.temp.human,distance=..12,scores={{{ns}.temp.secret_kills=1..}}] run function {ns}:modes/infected/secrets/lost_graveyard/next_state
+execute if score #infected_secret {ns}.data matches 0..2 positioned 2123 113 10051 as @a[tag=!detached,team={ns}.temp.human,distance=..12,scores={{{ns}.temp.secret_kills=1..}}] run function {ns}:modes/infected/secrets/lost_graveyard/next_state
 
 # Check for tnt
 execute if score #infected_secret {ns}.data matches 3 as @p[tag=!detached,team={ns}.temp.human,nbt={{Inventory:[{{id:"minecraft:tnt"}}]}}] run function {ns}:modes/infected/secrets/lost_graveyard/next_state
 
 # Check for explosion
-execute if score #infected_secret {ns}.data matches 4 positioned 127131 122 127114 if block ~ ~ ~ air run function {ns}:modes/infected/secrets/lost_graveyard/next_state
+execute if score #infected_secret {ns}.data matches 4 positioned 2131 122 10114 if block ~ ~ ~ air run function {ns}:modes/infected/secrets/lost_graveyard/next_state
 
 ## Tick
 # Creeper spawning
-execute if score #infected_secret {ns}.data matches 2.. positioned 127132 113 127051 unless entity @e[type=creeper,distance=..20] run summon creeper
+execute if score #infected_secret {ns}.data matches 2.. positioned 2132 113 10051 unless entity @e[type=creeper,distance=..20] run summon creeper
 
 # Reset secret kills
 scoreboard players reset @a[tag=!detached] {ns}.temp.secret_kills
@@ -885,9 +885,9 @@ execute if score #infected_secret {ns}.data matches 0 run playsound entity.exper
 execute if score #infected_secret {ns}.data matches 0 run particle soul ~ ~ ~ 0.35 0.5 0.35 0.02 25
 
 # Fifth zombie killed, open the door and summon creepers and zombies
-execute if score #infected_secret {ns}.data matches 2 run fill 127123 113 127050 127124 115 127052 air destroy
-execute if score #infected_secret {ns}.data matches 2 positioned 127132 113 127051 as @e[limit=2] as @e[limit=2] as @e[limit=2] run summon creeper
-execute if score #infected_secret {ns}.data matches 2 positioned 127132 113 127051 as @e[limit=2] as @e[limit=2] as @e[limit=2] run summon zombie
+execute if score #infected_secret {ns}.data matches 2 run fill 2123 113 10050 2124 115 10052 air destroy
+execute if score #infected_secret {ns}.data matches 2 positioned 2132 113 10051 as @e[limit=2] as @e[limit=2] as @e[limit=2] run summon creeper
+execute if score #infected_secret {ns}.data matches 2 positioned 2132 113 10051 as @e[limit=2] as @e[limit=2] as @e[limit=2] run summon zombie
 
 # Crafted TNT
 execute if score #infected_secret {ns}.data matches 3 run gamerule minecraft:block_drops false
@@ -915,17 +915,17 @@ scoreboard objectives add {ns}.temp.radio_trigger trigger
 	# /secrets/old_japan_apocalypse/_tick
 	write_function(f"{path}/secrets/old_japan_apocalypse/_tick", f"""
 # Items to pickup
-execute if score #infected_secret {ns}.data matches 0..16 unless entity @e[type=item,tag={ns}.infected.pickaxe] run summon item 129014 104 129014 {{Tags:["{ns}.infected.pickaxe","{ns}.infected.item"],Item:{{id:"minecraft:diamond_pickaxe",count:1,components:{{"minecraft:can_break":{{blocks:["obsidian"]}},"minecraft:damage":23,"minecraft:item_name":{{"text":"Pioche en diamant","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
-execute if score #infected_secret {ns}.data matches 0..16 unless entity @e[type=item,tag={ns}.infected.nether_star] run summon item 129018 138 129082 {{Tags:["{ns}.infected.nether_star","{ns}.infected.item"],Item:{{id:"minecraft:nether_star",count:1,components:{{"minecraft:item_name":{{"text":"Étoile du nether","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
-execute if score #infected_secret {ns}.data matches 0..16 unless entity @e[type=item,tag={ns}.infected.glass] run summon item 129035 113 129095 {{Tags:["{ns}.infected.glass","{ns}.infected.item"],Item:{{id:"minecraft:glass",count:5,components:{{"minecraft:item_name":{{"text":"Carreau carré","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..16 unless entity @e[type=item,tag={ns}.infected.pickaxe] run summon item 4014 104 10014 {{Tags:["{ns}.infected.pickaxe","{ns}.infected.item"],Item:{{id:"minecraft:diamond_pickaxe",count:1,components:{{"minecraft:can_break":{{blocks:["obsidian"]}},"minecraft:damage":23,"minecraft:item_name":{{"text":"Pioche en diamant","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..16 unless entity @e[type=item,tag={ns}.infected.nether_star] run summon item 4018 138 10082 {{Tags:["{ns}.infected.nether_star","{ns}.infected.item"],Item:{{id:"minecraft:nether_star",count:1,components:{{"minecraft:item_name":{{"text":"Étoile du nether","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
+execute if score #infected_secret {ns}.data matches 0..16 unless entity @e[type=item,tag={ns}.infected.glass] run summon item 4035 113 10095 {{Tags:["{ns}.infected.glass","{ns}.infected.item"],Item:{{id:"minecraft:glass",count:5,components:{{"minecraft:item_name":{{"text":"Carreau carré","italic":false,"color":"light_purple"}},"minecraft:lore":[{{"text":"Infected","italic":true,"color":"dark_green"}}]}}}}}}
 execute as @e[tag={ns}.infected.item] at @s run function {ns}:modes/infected/secrets/old_japan_apocalypse/item_tick
 
 ## State checks
 # Check for bunker opening
-execute if score #infected_secret {ns}.data matches 0 positioned 129035 110 129025 if block 129016 104 129021 redstone_block run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
+execute if score #infected_secret {ns}.data matches 0 positioned 4035 110 10025 if block 4016 104 10021 redstone_block run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
 
 # Check for radio
-execute if score #infected_secret {ns}.data matches 1 positioned 129027 104 129016 if block ~ ~ ~ polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
+execute if score #infected_secret {ns}.data matches 1 positioned 4027 104 10016 if block ~ ~ ~ polished_blackstone_button[powered=true] run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
 execute if score #infected_secret {ns}.data matches 2.. run scoreboard players remove #infected_radio {ns}.data 1
 execute if score #infected_secret {ns}.data matches 2 if score #infected_radio {ns}.data matches 1200 run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
 execute if score #infected_secret {ns}.data matches 3 if score #infected_radio {ns}.data matches 1100 run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
@@ -945,7 +945,7 @@ execute if score #infected_secret {ns}.data matches 14 if score #infected_radio 
 execute if score #infected_secret {ns}.data matches 15 as @p[tag=!detached,team={ns}.temp.human,nbt={{Inventory:[{{id:"minecraft:nether_star"}}]}}] run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
 
 # Check for placed beacon
-execute if score #infected_secret {ns}.data matches 16 positioned 129018 137 129082 if block ~ ~ ~ beacon run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
+execute if score #infected_secret {ns}.data matches 16 positioned 4018 137 10082 if block ~ ~ ~ beacon run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
 
 # Check for end game
 execute if score #infected_secret {ns}.data matches 17 if score #remaining_time {ns}.data matches 0 if entity @a[tag=!detached,team={ns}.temp.human] run function {ns}:modes/infected/secrets/old_japan_apocalypse/next_state
@@ -969,13 +969,13 @@ tag @s add {ns}.checked
 execute if score #infected_secret {ns}.data matches 0 run playsound block.iron_door.open ambient @a[tag=!detached] ~ ~ ~ 1 1 1
 
 # Radio dialogue
-execute if score #infected_secret {ns}.data matches 1 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
+execute if score #infected_secret {ns}.data matches 1 positioned 4027 104 10014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
 execute if score #infected_secret {ns}.data matches 1 run scoreboard players enable @a[tag=!detached,team={ns}.temp.human] {ns}.temp.radio_trigger
 execute if score #infected_secret {ns}.data matches 1 run scoreboard players set #infected_radio {ns}.data 1400
-execute if score #infected_secret {ns}.data matches 5 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
-execute if score #infected_secret {ns}.data matches 7 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
-execute if score #infected_secret {ns}.data matches 10 positioned 129027 104 129014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
-execute if score #infected_secret {ns}.data matches 14 positioned 129027 104 129014 run playsound block.note_block.imitate.zombie ambient @a[tag=!detached] ~ ~ ~ 1 0.75 1
+execute if score #infected_secret {ns}.data matches 5 positioned 4027 104 10014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
+execute if score #infected_secret {ns}.data matches 7 positioned 4027 104 10014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
+execute if score #infected_secret {ns}.data matches 10 positioned 4027 104 10014 run playsound block.fire.extinguish ambient @a[tag=!detached] ~ ~ ~ 1 1 1
+execute if score #infected_secret {ns}.data matches 14 positioned 4027 104 10014 run playsound block.note_block.imitate.zombie ambient @a[tag=!detached] ~ ~ ~ 1 0.75 1
 
 # Humans victory
 execute if score #infected_secret {ns}.data matches 17 unless score #test_mode {ns}.data matches 1 run advancement grant @a[team={ns}.temp.human] only {ns}:visible/50

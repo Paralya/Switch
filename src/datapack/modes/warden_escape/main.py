@@ -81,27 +81,27 @@ execute as @a[tag=!detached] run function {path}/suicidaire_advancement
 	# /spawn_wardens
 	write_function(f"{path}/spawn_wardens", f"""
 # Depending on the map, spawn two wardens for each spawn
-execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 10066 108 10066
-execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 10106 108 10106
-execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 10026 108 10106
-execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 10106 108 10026
-execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 10026 108 10026
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden 26039 122 26056
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden 26103 122 26056
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden 26121 120 26056
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden 26104 120 26037
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden 26103 120 26068
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden 26021 121 26056
-execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden 48047 113 48047
-execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden 48047 113 48081
-execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden 48081 113 48047
-execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden 48013 113 48047
-execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden 48047 113 48013
-execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69056.0 137 69050.0
-execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69078 127 69027
-execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69078 126 69072
-execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69033 126 69072
-execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 69033 126 69027
+execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 4079 108 2079
+execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 4119 108 2119
+execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 4039 108 2119
+execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 4119 108 2039
+execute if data storage {ns}:main {{map:"warden_forest"}} as @e[limit=2] run summon warden 4039 108 2039
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden -1961 122 -5944
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden -1897 122 -5944
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden -1879 120 -5944
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden -1896 120 -5963
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden -1897 120 -5932
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} as @e[limit=2] run summon warden -1979 121 -5944
+execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden -5953 113 47
+execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden -5953 113 81
+execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden -5919 113 47
+execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden -5987 113 47
+execute if data storage {ns}:main {{map:"new_grounds"}} as @e[limit=2] run summon warden -5953 113 13
+execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 56.0 137 8050.0
+execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 78 127 8027
+execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 78 126 8072
+execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 33 126 8072
+execute if data storage {ns}:main {{map:"warden_escape_statue"}} as @e[limit=2] run summon warden 33 126 8027
 
 # One new warden out of four also brings a small spider, rolled per warden
 execute at @e[type=warden,tag=!{ns}.glowed] if predicate {ns}:chance/0.25 run summon spider ~ ~ ~ {{attributes:[{{id:"minecraft:scale",base:0.35}},{{id:"minecraft:max_health",base:2}}],Health:2f}}
@@ -123,9 +123,9 @@ function {ns}:modes/_common/no_pvp_start
 scoreboard players set #dont_regenerate {ns}.data 1
 scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"warden_escape", maps:["warden_forest","cathedrale_liege","new_grounds","warden_escape_statue"]}}
-execute if data storage {ns}:main {{map:"cathedrale_liege"}} run tp @a[tag=!detached] 26075 120 26056
-execute if data storage {ns}:main {{map:"new_grounds"}} run tp @a[tag=!detached] 48047 113 48047
-execute if data storage {ns}:main {{map:"warden_escape_statue"}} run tp @a[tag=!detached] 69056.0 136 69050.0
+execute if data storage {ns}:main {{map:"cathedrale_liege"}} run tp @a[tag=!detached] -1925 120 -5944
+execute if data storage {ns}:main {{map:"new_grounds"}} run tp @a[tag=!detached] -5953 113 47
+execute if data storage {ns}:main {{map:"warden_escape_statue"}} run tp @a[tag=!detached] 56.0 136 8050.0
 
 execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false

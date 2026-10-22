@@ -94,7 +94,7 @@ scoreboard players set #success {ns}.data 1
 
 gamemode adventure @s
 scoreboard players set #remaining_time {ns}.data 300
-execute if data storage {ns}:main {{map:"de_a_coudre_1"}} run tp @s 29034 162 29023 90 0
+execute if data storage {ns}:main {{map:"de_a_coudre_1"}} run tp @s 4034 162 -5977 90 0
 """)
 
 	# /process_end

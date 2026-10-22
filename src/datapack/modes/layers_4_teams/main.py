@@ -60,8 +60,8 @@ scoreboard players add #layers_4_teams_seconds {ns}.data 1
 execute if score #remaining_time {ns}.data matches 1.. run scoreboard players remove #remaining_time {ns}.data 1
 
 # Keep obsidian walls until 30s
-execute if score #layers_4_teams_seconds {ns}.data matches ..29 run fill 74018 102 74001 74018 157 74061 minecraft:obsidian replace air
-execute if score #layers_4_teams_seconds {ns}.data matches ..29 run fill 74001 102 74031 74035 157 74031 minecraft:obsidian replace air
+execute if score #layers_4_teams_seconds {ns}.data matches ..29 run fill -5982 102 8001 -5982 157 8061 minecraft:obsidian replace air
+execute if score #layers_4_teams_seconds {ns}.data matches ..29 run fill -5999 102 8031 -5965 157 8031 minecraft:obsidian replace air
 execute if score #layers_4_teams_seconds {ns}.data matches 30 as @a[tag=!detached] at @s run playsound entity.wither.hurt ambient @s
 
 # Affichage du temps restants
@@ -72,7 +72,7 @@ execute if score #mins {ns}.data matches ..4 as @a[tag=!detached,gamemode=surviv
 
 # Destruction des blocs de haut en bas à partir de 5 minutes restantes
 execute if score #mins {ns}.data matches 5 if score #secs {ns}.data matches 0 run summon marker 0 160 0 {{Tags:["{ns}.layers_4_teams.marker"]}}
-execute if score #mins {ns}.data matches ..4 at @e[tag={ns}.layers_4_teams.marker] run fill 74001 ~ 74001 74035 ~10 74061 air replace #realistic_explosion:equal_and_below_1200
+execute if score #mins {ns}.data matches ..4 at @e[tag={ns}.layers_4_teams.marker] run fill -5999 ~ 8001 -5965 ~10 8061 air replace #realistic_explosion:equal_and_below_1200
 execute if score #mins {ns}.data matches ..4 as @e[tag={ns}.layers_4_teams.marker] store result score #pos_y {ns}.data run data get entity @s Pos[1]
 execute if score #mins {ns}.data matches ..4 if score #pos_y {ns}.data matches 109.. as @e[tag={ns}.layers_4_teams.marker] at @s run tp @s ~ ~-0.5 ~
 execute if score #mins {ns}.data matches ..4 if score #pos_y {ns}.data matches ..108 run kill @e[tag={ns}.layers_4_teams.marker]
@@ -163,10 +163,10 @@ execute if score #next_role {ns}.data matches 4 run scoreboard players add #tota
 execute if score #next_role {ns}.data matches 4 run scoreboard players set #next_role {ns}.data 0
 
 # Teleport to team spawn
-execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.red] run tp @s 74027 158.69 74017 32.5 0
-execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.blue] run tp @s 74009 158.69 74015 -32.5 0
-execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.green] run tp @s 74027 158.69 74047 150.5 0
-execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.yellow] run tp @s 74009 158.69 74047 -150.5 0
+execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.red] run tp @s -5973 158.69 8017 32.5 0
+execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.blue] run tp @s -5991 158.69 8015 -32.5 0
+execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.green] run tp @s -5973 158.69 8047 150.5 0
+execute if data storage {ns}:main {{map:"layers_4_teams"}} if entity @s[team={ns}.temp.yellow] run tp @s -5991 158.69 8047 -150.5 0
 
 # Starter kit
 function {ns}:modes/_common/layers_starter_kit

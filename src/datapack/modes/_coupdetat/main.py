@@ -75,13 +75,13 @@ execute if score #process_end {ns}.data matches 100 if score #detect_end {ns}.da
 
 effect give @s saturation 20 255 true
 effect give @s regeneration 1 255 true
-tp @a[tag=!detached] 18001.96 111.63 18021.03 -104.49 22.09
+tp @a[tag=!detached] -3998.04 111.63 2021.03 -104.49 22.09
 gamemode spectator @a[tag=!detached]
 gamemode survival @s
 
 # Summon the boss
-summon vindicator 18011 112 18008 {{Tags:["{ns}.coupdetat.boss"],Health:100.0f,attributes:[{{id:"minecraft:max_health",base:100}}],active_effects:[{{id:"minecraft:resistance",amplifier:1,duration:-1,show_particles:0b}}],equipment:{{head:{{id:"minecraft:player_head",count:1,components:{{"minecraft:profile":{{name:"Stoupy51"}}}}}}}},Glowing:1b}}
-summon wolf 18011 112 18008 {{Tags:["{ns}.coupdetat.stoupy"],active_effects:[{{id:"minecraft:resistance",amplifier:4,duration:-1,show_particles:0b}}],AngerTime:1000,variant:"chestnut",CollarColor:15b,CustomName:"Stoupy",CustomNameVisible:1b}}
+summon vindicator -3989 112 2008 {{Tags:["{ns}.coupdetat.boss"],Health:100.0f,attributes:[{{id:"minecraft:max_health",base:100}}],active_effects:[{{id:"minecraft:resistance",amplifier:1,duration:-1,show_particles:0b}}],equipment:{{head:{{id:"minecraft:player_head",count:1,components:{{"minecraft:profile":{{name:"Stoupy51"}}}}}}}},Glowing:1b}}
+summon wolf -3989 112 2008 {{Tags:["{ns}.coupdetat.stoupy"],active_effects:[{{id:"minecraft:resistance",amplifier:4,duration:-1,show_particles:0b}}],AngerTime:1000,variant:"chestnut",CollarColor:15b,CustomName:"Stoupy",CustomNameVisible:1b}}
 
 # Stop the coup d'état vote
 scoreboard players set #coupdetat {ns}.data 0

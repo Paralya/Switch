@@ -56,8 +56,8 @@ execute store result score #alives {ns}.data if entity @a[scores={{{ns}.alive=-1
 execute store result score #finished {ns}.data if entity @a[scores={{{ns}.alive=-1}}]
 execute if score #alives {ns}.data = #finished {ns}.data run scoreboard players set #detect_end {ns}.data 1
 
-execute in {ns}:game as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.alive=1}},x=5033,y=105,z=5000,dx=3,dy=4,dz=4] at @s run function {path}/finish
-execute in {ns}:game as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.alive=1}},x=50997,y=92,z=50964,dx=6,dy=4,dz=5] at @s run function {path}/finish
+execute in {ns}:game as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.alive=1}},x=33,y=105,z=-4000,dx=3,dy=4,dz=4] at @s run function {path}/finish
+execute in {ns}:game as @a[tag=!detached,gamemode=!spectator,scores={{{ns}.alive=1}},x=-8003,y=92,z=-6036,dx=6,dy=4,dz=5] at @s run function {path}/finish
 
 # Prevent leaving boat
 execute as @a[tag=!detached,gamemode=adventure] at @s run ride @s mount @n[type=#minecraft:boat,predicate=!shopping_kart:have_player_passenger,distance=..10,sort=nearest,limit=1]
@@ -75,10 +75,10 @@ execute if score #remaining_time {ns}.data matches 1.. run scoreboard players re
 function {path}/xp_bar
 function {translations}/second
 execute if score #boat_race_seconds {ns}.data matches -5 as @a[tag=!detached,gamemode=!spectator] at @s run function {path}/summon_boat
-execute if score #boat_race_seconds {ns}.data matches 0 in {ns}:game run fill 5026 100 5007 5026 100 4997 air
-execute if score #boat_race_seconds {ns}.data matches 0 in {ns}:game run fill 51029 139 51036 51042 139 51036 air
-execute if score #boat_race_seconds {ns}.data matches ..-1 in {ns}:game run fill 5026 100 5007 5026 100 4997 quartz_slab
-execute if score #boat_race_seconds {ns}.data matches ..-1 in {ns}:game run fill 51029 139 51036 51042 139 51036 quartz_slab
+execute if score #boat_race_seconds {ns}.data matches 0 in {ns}:game run fill 26 100 -3993 26 100 -4003 air
+execute if score #boat_race_seconds {ns}.data matches 0 in {ns}:game run fill -7971 139 -5964 -7958 139 -5964 air
+execute if score #boat_race_seconds {ns}.data matches ..-1 in {ns}:game run fill 26 100 -3993 26 100 -4003 quartz_slab
+execute if score #boat_race_seconds {ns}.data matches ..-1 in {ns}:game run fill -7971 139 -5964 -7958 139 -5964 quartz_slab
 
 # Clear des anciens mobs si il y en a
 execute if score #boat_race_seconds {ns}.data matches ..-7 run function {ns}:utils/safe_kill_macro {{selector:"@e[type=#minecraft:boat]"}}

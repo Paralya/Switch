@@ -43,7 +43,7 @@ scoreboard players add #layers_2_teams_seconds {ns}.data 1
 execute if score #remaining_time {ns}.data matches 1.. run scoreboard players remove #remaining_time {ns}.data 1
 
 # Keep obsidian walls until 30s
-execute if score #layers_2_teams_seconds {ns}.data matches ..29 run fill 27018 103 27061 27018 158 27001 minecraft:obsidian replace air
+execute if score #layers_2_teams_seconds {ns}.data matches ..29 run fill 18 103 -5939 18 158 -5999 minecraft:obsidian replace air
 execute if score #layers_2_teams_seconds {ns}.data matches 30 as @a[tag=!detached] at @s run playsound entity.wither.hurt ambient @s
 
 # Affichage du temps restants
@@ -54,7 +54,7 @@ execute if score #mins {ns}.data matches ..4 as @a[tag=!detached,gamemode=surviv
 
 # Destruction des blocs de haut en bas à partir de 5 minutes restantes
 execute if score #mins {ns}.data matches 5 if score #secs {ns}.data matches 0 run summon marker 0 160 0 {{Tags:["{ns}.layers_2_teams.marker"]}}
-execute if score #mins {ns}.data matches ..4 at @e[tag={ns}.layers_2_teams.marker] run fill 27000 ~ 27000 27036 ~10 27062 air replace #realistic_explosion:equal_and_below_1200
+execute if score #mins {ns}.data matches ..4 at @e[tag={ns}.layers_2_teams.marker] run fill 0 ~ -6000 36 ~10 -5938 air replace #realistic_explosion:equal_and_below_1200
 execute if score #mins {ns}.data matches ..4 as @e[tag={ns}.layers_2_teams.marker] store result score #pos_y {ns}.data run data get entity @s Pos[1]
 execute if score #mins {ns}.data matches ..4 if score #pos_y {ns}.data matches 109.. as @e[tag={ns}.layers_2_teams.marker] at @s run tp @s ~ ~-0.5 ~
 execute if score #mins {ns}.data matches ..4 if score #pos_y {ns}.data matches ..108 run kill @e[tag={ns}.layers_2_teams.marker]
@@ -103,8 +103,8 @@ execute if score #next_role {ns}.data matches 2 run team join {ns}.temp.blue @s
 execute if score #next_role {ns}.data matches 2 run scoreboard players set #next_role {ns}.data 0
 
 # Teleport to team spawn
-execute if data storage {ns}:main {{map:"layers_2_teams"}} if entity @s[team={ns}.temp.red] run tp @s 27026 159 27031 90 0
-execute if data storage {ns}:main {{map:"layers_2_teams"}} if entity @s[team={ns}.temp.blue] run tp @s 27009 159 27031 -90 0
+execute if data storage {ns}:main {{map:"layers_2_teams"}} if entity @s[team={ns}.temp.red] run tp @s 26 159 -5969 90 0
+execute if data storage {ns}:main {{map:"layers_2_teams"}} if entity @s[team={ns}.temp.blue] run tp @s 9 159 -5969 -90 0
 
 # Starter kit
 function {ns}:modes/_common/layers_starter_kit

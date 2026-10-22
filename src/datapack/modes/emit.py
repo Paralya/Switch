@@ -65,7 +65,7 @@ def write_modes_calls(
 		mode:        Mode id, e.g. "coin_chaser".
 		calls:       Which call hooks to generate.
 		context:     Optional execute sub-clause inserted before "run"
-			(e.g. "in switch:build_battle " or "positioned 3000 128 3000 ").
+			(e.g. "in switch:build_battle " or "positioned -3750 128 -1750 ").
 		force_start: Whether to also write the standard /_force_start function.
 		targets:     Optional per-call dispatch override, mapping call -> function
 			path (e.g. {"joined": "switch:utils/classic_death"}) so /calls/<call> dispatches straight

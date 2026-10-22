@@ -77,12 +77,12 @@ execute if score #pitch_creep_seconds {ns}.data matches 0.. run function {path}/
 execute if score #pitch_creep_seconds {ns}.data matches 0 as @a[tag=!detached] at @s run function {path}/give_items
 
 # Spawning creepers
-execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"pitch_creep_1"}} positioned 3520 126 3520 run summon creeper ~-0.2 ~ ~ {creeper_nbt}
-execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"pitch_creep_1"}} positioned 3520 126 3520 run summon creeper ~0.2 ~ ~ {creeper_nbt}
-execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 160040 135 160040 run summon creeper ~-0.2 ~ ~ {creeper_nbt}
-execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 160040 135 160040 run summon creeper ~0.2 ~ ~ {creeper_nbt}
-execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 160040 135 160040 run summon creeper ~ ~ ~-0.2 {creeper_nbt}
-execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 160040 135 160040 run summon creeper ~ ~ ~0.2 {creeper_nbt}
+execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"pitch_creep_1"}} positioned -3980 126 -3980 run summon creeper ~-0.2 ~ ~ {creeper_nbt}
+execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"pitch_creep_1"}} positioned -3980 126 -3980 run summon creeper ~0.2 ~ ~ {creeper_nbt}
+execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 8040 135 -11960 run summon creeper ~-0.2 ~ ~ {creeper_nbt}
+execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 8040 135 -11960 run summon creeper ~0.2 ~ ~ {creeper_nbt}
+execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 8040 135 -11960 run summon creeper ~ ~ ~-0.2 {creeper_nbt}
+execute if score #pitch_creep_seconds {ns}.data matches 0.. if data storage {ns}:main {{map:"octogone_nether_ice"}} positioned 8040 135 -11960 run summon creeper ~ ~ ~0.2 {creeper_nbt}
 execute if score #pitch_creep_seconds {ns}.data matches 0.. run tag @e[type=creeper,tag={ns}.new] remove {ns}.new
 execute if score #pitch_creep_seconds {ns}.data matches ..-1 at @n[type=marker,tag={ns}.selected_map] run function {ns}:utils/safe_kill_macro {{selector:"@e[type=creeper,distance=..100]"}}
 """)
@@ -128,10 +128,10 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 
 	# /maps/pitch_creep_1
 	write_function(f"{path}/maps/pitch_creep_1", f"""
-execute if score #count {ns}.data matches 0 in {ns}:game run tp @s 3520 121.69 3511 0 0
-execute if score #count {ns}.data matches 1 in {ns}:game run tp @s 3520 121.69 3529 180 0
-execute if score #count {ns}.data matches 2 in {ns}:game run tp @s 3529 121.69 3520 90 0
-execute if score #count {ns}.data matches 3 in {ns}:game run tp @s 3511 121.69 3520 -90 0
+execute if score #count {ns}.data matches 0 in {ns}:game run tp @s -3980 121.69 -3989 0 0
+execute if score #count {ns}.data matches 1 in {ns}:game run tp @s -3980 121.69 -3971 180 0
+execute if score #count {ns}.data matches 2 in {ns}:game run tp @s -3971 121.69 -3980 90 0
+execute if score #count {ns}.data matches 3 in {ns}:game run tp @s -3989 121.69 -3980 -90 0
 
 scoreboard players add #count {ns}.data 1
 scoreboard players operation #count {ns}.data %= #4 {ns}.data
@@ -139,14 +139,14 @@ scoreboard players operation #count {ns}.data %= #4 {ns}.data
 
 	# /maps/octogone_nether_ice
 	write_function(f"{path}/maps/octogone_nether_ice", f"""
-execute if score #count {ns}.data matches 0 in {ns}:game run tp @s 160026 134 160040 -90 0
-execute if score #count {ns}.data matches 1 in {ns}:game run tp @s 160054 134 160040 90 0
-execute if score #count {ns}.data matches 2 in {ns}:game run tp @s 160031 134 160031 -45 0
-execute if score #count {ns}.data matches 3 in {ns}:game run tp @s 160049 134 160049 135 0
-execute if score #count {ns}.data matches 4 in {ns}:game run tp @s 160040 134 160026 0 0
-execute if score #count {ns}.data matches 5 in {ns}:game run tp @s 160040 134 160054 180 0
-execute if score #count {ns}.data matches 6 in {ns}:game run tp @s 160049 134 160031 45 0
-execute if score #count {ns}.data matches 7 in {ns}:game run tp @s 160031 134 160049 225 0
+execute if score #count {ns}.data matches 0 in {ns}:game run tp @s 8026 134 -11960 -90 0
+execute if score #count {ns}.data matches 1 in {ns}:game run tp @s 8054 134 -11960 90 0
+execute if score #count {ns}.data matches 2 in {ns}:game run tp @s 8031 134 -11969 -45 0
+execute if score #count {ns}.data matches 3 in {ns}:game run tp @s 8049 134 -11951 135 0
+execute if score #count {ns}.data matches 4 in {ns}:game run tp @s 8040 134 -11974 0 0
+execute if score #count {ns}.data matches 5 in {ns}:game run tp @s 8040 134 -11946 180 0
+execute if score #count {ns}.data matches 6 in {ns}:game run tp @s 8049 134 -11969 45 0
+execute if score #count {ns}.data matches 7 in {ns}:game run tp @s 8031 134 -11951 225 0
 
 scoreboard players add #count {ns}.data 1
 scoreboard players operation #count {ns}.data %= #8 {ns}.data

@@ -37,7 +37,7 @@ execute if score #random {ns}.data matches 0 if score #color {ns}.data matches 0
 execute if score #random {ns}.data matches 1 if score #color {ns}.data matches 0 run effect give @a[tag=!detached,team={ns}.rush_the_point.red] speed 60 0 true
 execute if score #random {ns}.data matches 2 if score #color {ns}.data matches 0 run effect give @a[tag=!detached,team={ns}.rush_the_point.red] strength 60 0 true
 execute if score #random {ns}.data matches 3 if score #color {ns}.data matches 0 run effect give @a[tag=!detached,team={ns}.rush_the_point.red] resistance 60 0 true
-execute if score #random {ns}.data matches 4 if score #color {ns}.data matches 0 run summon wither 14000 110 14000 {{Team:"{ns}.rush_the_point.red",CustomName:{{"text":"Wither Rouge","color":"red"}}}}
+execute if score #random {ns}.data matches 4 if score #color {ns}.data matches 0 run summon wither -1900 110 4100 {{Team:"{ns}.rush_the_point.red",CustomName:{{"text":"Wither Rouge","color":"red"}}}}
 execute if score #random {ns}.data matches 5 if score #color {ns}.data matches 0 run effect give @a[tag=!detached,team={ns}.rush_the_point.blue] slowness 60 1 true
 execute if score #random {ns}.data matches 6 if score #color {ns}.data matches 0 run effect give @a[tag=!detached,team={ns}.rush_the_point.blue] glowing 60 0 true
 execute if score #random {ns}.data matches 7 if score #color {ns}.data matches 0 run effect give @a[tag=!detached,team={ns}.rush_the_point.blue] levitation 1 20 true
@@ -49,7 +49,7 @@ execute if score #random {ns}.data matches 0 if score #color {ns}.data matches 1
 execute if score #random {ns}.data matches 1 if score #color {ns}.data matches 1 run effect give @a[tag=!detached,team={ns}.rush_the_point.blue] speed 60 0 true
 execute if score #random {ns}.data matches 2 if score #color {ns}.data matches 1 run effect give @a[tag=!detached,team={ns}.rush_the_point.blue] strength 60 0 true
 execute if score #random {ns}.data matches 3 if score #color {ns}.data matches 1 run effect give @a[tag=!detached,team={ns}.rush_the_point.blue] resistance 60 0 true
-execute if score #random {ns}.data matches 4 if score #color {ns}.data matches 1 run summon wither 14000 110 14000 {{Team:"{ns}.rush_the_point.blue",CustomName:{{"text":"Wither Bleu","color":"blue"}}}}
+execute if score #random {ns}.data matches 4 if score #color {ns}.data matches 1 run summon wither -1900 110 4100 {{Team:"{ns}.rush_the_point.blue",CustomName:{{"text":"Wither Bleu","color":"blue"}}}}
 execute if score #random {ns}.data matches 5 if score #color {ns}.data matches 1 run effect give @a[tag=!detached,team={ns}.rush_the_point.red] slowness 60 1 true
 execute if score #random {ns}.data matches 6 if score #color {ns}.data matches 1 run effect give @a[tag=!detached,team={ns}.rush_the_point.red] glowing 60 0 true
 execute if score #random {ns}.data matches 7 if score #color {ns}.data matches 1 run effect give @a[tag=!detached,team={ns}.rush_the_point.red] levitation 1 20 true
@@ -124,12 +124,12 @@ execute unless score #test_mode {ns}.data matches 1 if entity @s[tag={ns}.blue_f
 execute unless score #test_mode {ns}.data matches 1 if entity @s[tag={ns}.red_flag] run advancement grant @p[team={ns}.rush_the_point.red,distance=..1] only {ns}:visible/81
 
 # Flag Reset Blue
-execute if entity @s[tag={ns}.blue_flag] on vehicle run tp @s 14077 99 14000 -90 0
+execute if entity @s[tag={ns}.blue_flag] on vehicle run tp @s -1823 99 4100 -90 0
 execute if entity @s[tag={ns}.blue_flag] run data modify entity @s Rotation[0] set value -90.0f
 execute if entity @s[tag={ns}.blue_flag] run tag @a[tag={ns}.has_blue_flag] remove {ns}.has_blue_flag
 
 # Flag Reset Red
-execute if entity @s[tag={ns}.red_flag] on vehicle run tp @s 13923 99 14000 90 0
+execute if entity @s[tag={ns}.red_flag] on vehicle run tp @s -1977 99 4100 90 0
 execute if entity @s[tag={ns}.red_flag] run data modify entity @s Rotation[0] set value 90.0f
 execute if entity @s[tag={ns}.red_flag] run tag @a[tag={ns}.has_red_flag] remove {ns}.has_red_flag
 function {ns}:modes/rush_the_flag/translations/flag_reset
@@ -218,11 +218,11 @@ function {ns}:modes/rush_the_flag/flag_reset
 function {ns}:modes/rush_the_point/second_common
 
 # White wool at center
-execute if score #rush_the_point_seconds {ns}.data matches ..-1 if data storage {ns}:main {{map:"rush_the_point_1"}} run fill 14010 98 13990 13990 98 14010 white_wool replace #minecraft:wool
+execute if score #rush_the_point_seconds {ns}.data matches ..-1 if data storage {ns}:main {{map:"rush_the_point_1"}} run fill -1890 98 4090 -1910 98 4110 white_wool replace #minecraft:wool
 
 # Summon the flags
-execute if score #rush_the_point_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"rush_the_point_1"}} run summon armor_stand 14077 99 14000 {{Invisible:true,Invulnerable:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[-90.0f,0.0f]}}],Rotation:[-90.0f,0.0f]}}
-execute if score #rush_the_point_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"rush_the_point_1"}} run summon armor_stand 13923 99 14000 {{Invisible:true,Invulnerable:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[90.0f,0.0f]}}],Rotation:[90.0f,0.0f]}}
+execute if score #rush_the_point_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"rush_the_point_1"}} run summon armor_stand -1823 99 4100 {{Invisible:true,Invulnerable:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[-90.0f,0.0f]}}],Rotation:[-90.0f,0.0f]}}
+execute if score #rush_the_point_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"rush_the_point_1"}} run summon armor_stand -1977 99 4100 {{Invisible:true,Invulnerable:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[90.0f,0.0f]}}],Rotation:[90.0f,0.0f]}}
 execute if score #rush_the_point_seconds {ns}.data matches 0 as @e[tag={ns}.flag] run data modify entity @s transformation.translation[1] set value -1.5f
 """)
 

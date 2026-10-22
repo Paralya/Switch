@@ -12,8 +12,8 @@ def write_mode():
 	path: str = f"{ns}:modes/{mode}"
 
 	# Write /calls/ and /translations/ functions
-	# glassrunner calls are positioned at 3000 128 3000
-	write_modes_calls(mode, context="positioned 3000 128 3000 ")
+	# glassrunner calls are positioned at -3750 128 -1750
+	write_modes_calls(mode, context="positioned -3750 128 -1750 ")
 	write_translations()
 
 
@@ -41,20 +41,20 @@ effect give @s regeneration 1 255 true
 scoreboard players add #glassrunner_seconds {ns}.data 1
 execute if score #remaining_time {ns}.data matches 1.. run scoreboard players remove #remaining_time {ns}.data 1
 
-execute positioned 2997 128 2997 as @a[tag=!detached,dx=6,dy=3,dz=6] run function {ns}:modes/glassrunner/ctp/center/adding_timer
-execute positioned 2997 128 2997 unless entity @a[tag=!detached,dx=6,dy=3,dz=6] run function {ns}:modes/glassrunner/ctp/center/reset
+execute positioned -3753 128 -1753 as @a[tag=!detached,dx=6,dy=3,dz=6] run function {ns}:modes/glassrunner/ctp/center/adding_timer
+execute positioned -3753 128 -1753 unless entity @a[tag=!detached,dx=6,dy=3,dz=6] run function {ns}:modes/glassrunner/ctp/center/reset
 
 execute if score #glassrunner.ctp.center.red.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/center/red
 execute if score #glassrunner.ctp.center.blue.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/center/blue
 
-execute positioned 2924 128 3074 as @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side1/adding_timer
-execute positioned 2924 128 3074 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side1/reset
+execute positioned -3826 128 -1676 as @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side1/adding_timer
+execute positioned -3826 128 -1676 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side1/reset
 
 execute if score #glassrunner.ctp.side1.red.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/side1/red
 execute if score #glassrunner.ctp.side1.blue.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/side1/blue
 
-execute positioned 3074 128 2924 as @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side2/adding_timer
-execute positioned 3074 128 2924 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side2/reset
+execute positioned -3676 128 -1826 as @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side2/adding_timer
+execute positioned -3676 128 -1826 unless entity @a[tag=!detached,dx=2,dy=3,dz=2] run function {ns}:modes/glassrunner/ctp/side2/reset
 
 execute if score #glassrunner.ctp.side2.red.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/side2/red
 execute if score #glassrunner.ctp.side2.blue.timer {ns}.data matches 1.. run function {ns}:modes/glassrunner/ctp/side2/blue
@@ -140,9 +140,9 @@ team modify {ns}.glassrunner.objective suffix [{{"text": "Objective: ","color":"
 scoreboard players set #glassrunner.points.red {ns}.data 0
 scoreboard players set #glassrunner.points.blue {ns}.data 0
 
-execute in {ns}:game run summon text_display 3000 110 3000 {{Tags:["{ns}.glassrunner.money_maker"], text:{{"text":"3 seconds => 2 money","color":"gold","italic":false}}, billboard:"vertical", alignment:"center"}}
-execute in {ns}:game run summon text_display 3084 131 3084 {{Tags:["{ns}.glassrunner.money_maker"], text:{{"text":"3 seconds => 2 money","color":"gold","italic":false}}, billboard:"vertical", alignment:"center"}}
-execute in {ns}:game run summon text_display 2916 131 2916 {{Tags:["{ns}.glassrunner.money_maker"], text:{{"text":"3 seconds => 2 money","color":"gold","italic":false}}, billboard:"vertical", alignment:"center"}}
+execute in {ns}:game run summon text_display -3750 110 -1750 {{Tags:["{ns}.glassrunner.money_maker"], text:{{"text":"3 seconds => 2 money","color":"gold","italic":false}}, billboard:"vertical", alignment:"center"}}
+execute in {ns}:game run summon text_display -3666 131 -1666 {{Tags:["{ns}.glassrunner.money_maker"], text:{{"text":"3 seconds => 2 money","color":"gold","italic":false}}, billboard:"vertical", alignment:"center"}}
+execute in {ns}:game run summon text_display -3834 131 -1834 {{Tags:["{ns}.glassrunner.money_maker"], text:{{"text":"3 seconds => 2 money","color":"gold","italic":false}}, billboard:"vertical", alignment:"center"}}
 """)
 
 	# /stop
@@ -190,13 +190,13 @@ execute as @a[tag=!detached] at @s run function {ns}:modes/glassrunner/tick_play
 execute as @e[tag={ns}.glassrunner.glass_bridge,distance=..150] at @s run function {ns}:modes/glassrunner/tick_glass_bridge
 execute as @e[type=arrow,nbt={{inBlockState:{{}}}},distance=..200] at @s run function {ns}:modes/glassrunner/arrow_explosion
 
-fill 3003 128 3003 2997 132 2997 air replace #{ns}:glassrunner/glass
+fill -3747 128 -1747 -3753 132 -1753 air replace #{ns}:glassrunner/glass
 
-fill 3073 128 3073 3077 131 3077 air replace #{ns}:glassrunner/glass
-fill 2927 128 2927 2923 131 2923 air replace #{ns}:glassrunner/glass
+fill -3677 128 -1677 -3673 131 -1673 air replace #{ns}:glassrunner/glass
+fill -3823 128 -1823 -3827 131 -1827 air replace #{ns}:glassrunner/glass
 
-fill 3074 128 2924 3076 131 2926 air replace #{ns}:glassrunner/glass
-fill 2924 131 3076 2926 128 3074 air replace #{ns}:glassrunner/glass
+fill -3676 128 -1826 -3674 131 -1824 air replace #{ns}:glassrunner/glass
+fill -3826 131 -1674 -3824 128 -1676 air replace #{ns}:glassrunner/glass
 
 execute as @a[predicate={ns}:holding_fireball_wand,scores={{{ns}.right_click=1..,{ns}.glassrunner.money=15..}}] at @s run function {ns}:modes/glassrunner/fireball/use
 execute as @e[tag={ns}.glassrunner.fireball] at @s run function {ns}:modes/glassrunner/fireball/explosion
@@ -403,8 +403,8 @@ tag @s remove {ns}.glassrunner.owner
 
 scoreboard players remove @s {ns}.glassrunner.use_snowball 1
 
-execute positioned 2925 129 2925 if entity @s[team={ns}.glassrunner.red,distance=..3] run loot give @s loot {ns}:glassrunner/snowball_bridge_red
-execute positioned 3075 129 3075 if entity @s[team={ns}.glassrunner.blue,distance=..3] run loot give @s loot {ns}:glassrunner/snowball_bridge_blue
+execute positioned -3825 129 -1825 if entity @s[team={ns}.glassrunner.red,distance=..3] run loot give @s loot {ns}:glassrunner/snowball_bridge_red
+execute positioned -3675 129 -1675 if entity @s[team={ns}.glassrunner.blue,distance=..3] run loot give @s loot {ns}:glassrunner/snowball_bridge_blue
 """)
 
 	# /fireball/explosion
@@ -449,16 +449,16 @@ execute as @a[tag=!detached,team={ns}.glassrunner.{color}] at @s run playsound m
 	# (detect-box, fill-area, staged template thresholds, and per-team template prefix + place coords)
 	CTP: dict[str, tuple[str, str, list[tuple[int, int]], tuple[str, str], tuple[str, str]]] = {
 		# dx/dz=6: the selector box spans [x, x+dx+1], so 6 is needed to cover the full 7x7 point
-		# (with 5, the x/z=3003 edge row was undetected => blue players coming from 3075 didn't count)
-		"center": ("dx=6,dy=3,dz=6", "2997 127 2997 3003 127 3003",
+		# (with 5, the far edge row was undetected => blue players coming from the far side didn't count)
+		"center": ("dx=6,dy=3,dz=6", "-3753 127 -1753 -3747 127 -1747",
 			[(1, 2), (3, 4), (5, 6), (7, 8), (9, 10), (11, 12), (13, 14)],
-			("center_blue", "2997 127 2997"), ("center_red", "2997 127 2997")),
-		"side1": ("dx=2,dy=3,dz=2", "2926 127 3074 2924 127 3076",
+			("center_blue", "-3753 127 -1753"), ("center_red", "-3753 127 -1753")),
+		"side1": ("dx=2,dy=3,dz=2", "-3824 127 -1676 -3826 127 -1674",
 			[(1, 3), (4, 6), (7, 9), (10, 12), (13, 15)],
-			("side1_blue", "2926 127 3076 180"), ("side1_red", "2924 127 3074")),
-		"side2": ("dx=2,dy=3,dz=2", "3074 127 2926 3076 127 2924",
+			("side1_blue", "-3824 127 -1674 180"), ("side1_red", "-3826 127 -1676")),
+		"side2": ("dx=2,dy=3,dz=2", "-3676 127 -1824 -3674 127 -1826",
 			[(1, 3), (4, 6), (7, 9), (10, 12), (13, 15)],
-			("side1_blue", "3074 127 2924"), ("side1_red", "3074 127 2924 180")),
+			("side1_blue", "-3676 127 -1826"), ("side1_red", "-3676 127 -1826 180")),
 	}
 	for loc, (detect, fill, stages, blue, red) in CTP.items():
 		write_function(f"{path}/ctp/{loc}/adding_timer", f"""
@@ -522,8 +522,8 @@ function {ns}:modes/glassrunner/death/both
 
 # Teleport to the team corner (explicit dimension + coords: the player respawns at world spawn,
 # and spreadplayers silently failed there, leaving everyone in a death loop at 0 129 0)
-execute if entity @s[team={ns}.glassrunner.red] in {ns}:game run tp @s 2925.5 129 2925.5 facing 3000 129 3000
-execute if entity @s[team={ns}.glassrunner.blue] in {ns}:game run tp @s 3075.5 129 3075.5 facing 3000 129 3000
+execute if entity @s[team={ns}.glassrunner.red] in {ns}:game run tp @s -3824.5 129 -1824.5 facing -3750 129 -1750
+execute if entity @s[team={ns}.glassrunner.blue] in {ns}:game run tp @s -3674.5 129 -1674.5 facing -3750 129 -1750
 scoreboard players set @s {ns}.glassrunner.deathCount 0
 
 effect give @s resistance infinite 255 true

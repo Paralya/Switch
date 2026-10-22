@@ -259,12 +259,12 @@ function {ns}:modes/_common/xp_bar/levels
 
 	# /spread_players/_ensure_spread_whity_lab
 	write_function(f"{path}/spread_players/_ensure_spread_whity_lab", """
-execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] run spreadplayers 91051 91051 2 25 under 106 false @s
-execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers 91051 91051 2 25 under 106 false @s
+execute as @a[tag=!detached] at @s if entity @s[y=0,dy=99] run spreadplayers -7949 2051 2 25 under 106 false @s
+execute as @a[tag=!detached] at @s if block ~ ~-1 ~ barrier run spreadplayers -7949 2051 2 25 under 106 false @s
 """)
 
 	# /spread_players/whity_lab
 	write_function(f"{path}/spread_players/whity_lab",
-		"\nspreadplayers 91051 91051 2 25 under 106 false @a[tag=!detached]\n\n## Assurance commands\n"
+		"\nspreadplayers -7949 2051 2 25 under 106 false @a[tag=!detached]\n\n## Assurance commands\n"
 		+ f"function {path}/spread_players/_ensure_spread_whity_lab\n" * 12)
 

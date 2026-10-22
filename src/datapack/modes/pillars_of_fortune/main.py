@@ -117,13 +117,13 @@ execute store result storage {ns}:temp input.distance_to_center float 0.001 run 
 
 # Place players on pillars
 tag @a[tag=!detached] add {ns}.place_pillar
-execute if data storage {ns}:main {{map:"pillars_of_fortune"}} in {ns}:game positioned 161050 142 161050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"slimy_ground"}} in {ns}:game positioned 60050 142 60050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"eternal_void"}} in {ns}:game positioned 61050 142 61050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"floor_is_lava"}} in {ns}:game positioned 62050 142 62050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"leather_boots"}} in {ns}:game positioned 63050 142 63050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"ocean_waste"}} in {ns}:game positioned 64050 142 64050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"void_desert"}} in {ns}:game positioned 68050 142 68050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"pillars_of_fortune"}} in {ns}:game positioned 10050 142 -11950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"slimy_ground"}} in {ns}:game positioned 6050 142 -7950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"eternal_void"}} in {ns}:game positioned 8050 142 -7950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"floor_is_lava"}} in {ns}:game positioned 8050 142 2050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"leather_boots"}} in {ns}:game positioned 8050 142 4050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"ocean_waste"}} in {ns}:game positioned 8050 142 6050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"void_desert"}} in {ns}:game positioned 2050 142 8050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
 """)
 
 	# /stop (empty)

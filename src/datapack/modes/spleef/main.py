@@ -59,7 +59,7 @@ function {ns}:modes/spleef/translations/border_reduction_setup
 execute as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 
 # Summon entity depending on map
-execute if data storage {ns}:main {{map:"spleef_1"}} run summon marker 28020 106 28020 {{Tags:["{ns}.spleef_border"],data:{{border_size:41}}}}
+execute if data storage {ns}:main {{map:"spleef_1"}} run summon marker 2060 106 -5940 {{Tags:["{ns}.spleef_border"],data:{{border_size:41}}}}
 
 # Variables
 execute store result score #border_remaining_side {ns}.data run data get entity @e[type=marker,tag={ns}.spleef_border,limit=1] data.border_size
@@ -185,7 +185,7 @@ execute in {ns}:game run gamerule minecraft:block_drops false
 
 ## Téléportation des joueurs
 function {ns}:maps/choose_map_for {{id:"spleef", maps:["spleef_1"]}}
-execute if data storage {ns}:main {{map:"spleef_1"}} run tp @a[tag=!detached] 28000 101 28000
+execute if data storage {ns}:main {{map:"spleef_1"}} run tp @a[tag=!detached] 2040 101 -5960
 
 function {translations}/start
 

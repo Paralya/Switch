@@ -122,7 +122,7 @@ scoreboard players set #memory_mine_seconds {ns}.data -1
 scoreboard players set #memory_mine_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 
-execute in {ns}:game run spreadplayers 153013 153016 0 15 under 105 false @a[tag=!detached]
+execute in {ns}:game run spreadplayers -5987 -11984 0 15 under 105 false @a[tag=!detached]
 """)
 
 	# /stop
@@ -166,7 +166,7 @@ kill @s
 	write_function(f"{path}/zone/summon", f"""
 # Summon marker in a random place
 summon marker 0 0 0 {{Tags:["{ns}.zone","{ns}.new"]}}
-spreadplayers 153013 153016 0 8 under 105 false @e[type=marker,tag={ns}.new]
+spreadplayers -5987 -11984 0 8 under 105 false @e[type=marker,tag={ns}.new]
 execute at @e[type=marker,tag={ns}.new] run playsound block.anvil.fall ambient @a[distance=..50]
 tag @e[type=marker,tag={ns}.new] remove {ns}.new
 """)

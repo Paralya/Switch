@@ -263,23 +263,23 @@ data remove storage {ns}:temp temp
 
 	# /map_1/teleport_players
 	write_function(f"{path}/map_1/teleport_players", f"""
-execute if score #spawn_count {ns}.data matches 0 in {ns}:game run tp @s 1060 111 1060 135 0
-execute if score #spawn_count {ns}.data matches 1 in {ns}:game run tp @s 1040 111 1040 -45 0
-execute if score #spawn_count {ns}.data matches 2 in {ns}:game run tp @s 1040 111 1060 -135 0
-execute if score #spawn_count {ns}.data matches 3 in {ns}:game run tp @s 1060 111 1040 45 0
-execute if score #spawn_count {ns}.data matches 4 in {ns}:game run tp @s 1050 111 1050 0 0
-execute if score #spawn_count {ns}.data matches 5 in {ns}:game run tp @s 1065 111 1050 90 0
-execute if score #spawn_count {ns}.data matches 6 in {ns}:game run tp @s 1035 111 1050 -90 0
-execute if score #spawn_count {ns}.data matches 7 in {ns}:game run tp @s 1050 111 1065 180 0
-execute if score #spawn_count {ns}.data matches 8 in {ns}:game run tp @s 1050 111 1035 0 0
-execute if score #spawn_count {ns}.data matches 9 in {ns}:game run tp @s 1050 111 1032 180 0
-execute if score #spawn_count {ns}.data matches 10 in {ns}:game run tp @s 1032 111 1050 90 0
-execute if score #spawn_count {ns}.data matches 11 in {ns}:game run tp @s 1050 111 1018 0 0
-execute if score #spawn_count {ns}.data matches 12 in {ns}:game run tp @s 1018 111 1050 -90 0
-execute if score #spawn_count {ns}.data matches 13 in {ns}:game run tp @s 1072 111 1072 135 0
-execute if score #spawn_count {ns}.data matches 14 in {ns}:game run tp @s 1072 111 1028 45 0
-execute if score #spawn_count {ns}.data matches 15 in {ns}:game run tp @s 1028 111 1028 -45 0
-execute if score #spawn_count {ns}.data matches 16 in {ns}:game run tp @s 1028 111 1072 -135 0
+execute if score #spawn_count {ns}.data matches 0 in {ns}:game run tp @s 2060 111 60 135 0
+execute if score #spawn_count {ns}.data matches 1 in {ns}:game run tp @s 2040 111 40 -45 0
+execute if score #spawn_count {ns}.data matches 2 in {ns}:game run tp @s 2040 111 60 -135 0
+execute if score #spawn_count {ns}.data matches 3 in {ns}:game run tp @s 2060 111 40 45 0
+execute if score #spawn_count {ns}.data matches 4 in {ns}:game run tp @s 2050 111 50 0 0
+execute if score #spawn_count {ns}.data matches 5 in {ns}:game run tp @s 2065 111 50 90 0
+execute if score #spawn_count {ns}.data matches 6 in {ns}:game run tp @s 2035 111 50 -90 0
+execute if score #spawn_count {ns}.data matches 7 in {ns}:game run tp @s 2050 111 65 180 0
+execute if score #spawn_count {ns}.data matches 8 in {ns}:game run tp @s 2050 111 35 0 0
+execute if score #spawn_count {ns}.data matches 9 in {ns}:game run tp @s 2050 111 32 180 0
+execute if score #spawn_count {ns}.data matches 10 in {ns}:game run tp @s 2032 111 50 90 0
+execute if score #spawn_count {ns}.data matches 11 in {ns}:game run tp @s 2050 111 18 0 0
+execute if score #spawn_count {ns}.data matches 12 in {ns}:game run tp @s 2018 111 50 -90 0
+execute if score #spawn_count {ns}.data matches 13 in {ns}:game run tp @s 2072 111 72 135 0
+execute if score #spawn_count {ns}.data matches 14 in {ns}:game run tp @s 2072 111 28 45 0
+execute if score #spawn_count {ns}.data matches 15 in {ns}:game run tp @s 2028 111 28 -45 0
+execute if score #spawn_count {ns}.data matches 16 in {ns}:game run tp @s 2028 111 72 -135 0
 
 scoreboard players add #spawn_count {ns}.data 1
 execute if score #spawn_count {ns}.data matches 17 run scoreboard players set #spawn_count {ns}.data 0
@@ -295,18 +295,18 @@ function {path}/_tp_give_common
 
 	# /map_halloween/teleport_players
 	write_function(f"{path}/map_halloween/teleport_players", f"""
-execute if score #spawn_count {ns}.data matches 0 in {ns}:game run tp @s 125061 109 125036 0 0
-execute if score #spawn_count {ns}.data matches 1 in {ns}:game run tp @s 125061 109 125086 180 0
-execute if score #spawn_count {ns}.data matches 2 in {ns}:game run tp @s 125036 109 125061 -90 0
-execute if score #spawn_count {ns}.data matches 3 in {ns}:game run tp @s 125086 109 125061 90 0
-execute if score #spawn_count {ns}.data matches 4 in {ns}:game run tp @s 125061 109 125017 0 0
-execute if score #spawn_count {ns}.data matches 5 in {ns}:game run tp @s 125061 109 125105 180 0
-execute if score #spawn_count {ns}.data matches 6 in {ns}:game run tp @s 125017 109 125061 -90 0
-execute if score #spawn_count {ns}.data matches 7 in {ns}:game run tp @s 125105 109 125061 90 0
-execute if score #spawn_count {ns}.data matches 8 in {ns}:game run tp @s 125031 109 125031 -45 0
-execute if score #spawn_count {ns}.data matches 9 in {ns}:game run tp @s 125091 109 125091 135 0
-execute if score #spawn_count {ns}.data matches 10 in {ns}:game run tp @s 125091 109 125031 45 0
-execute if score #spawn_count {ns}.data matches 11 in {ns}:game run tp @s 125031 109 125091 -135 0
+execute if score #spawn_count {ns}.data matches 0 in {ns}:game run tp @s 10061 109 10036 0 0
+execute if score #spawn_count {ns}.data matches 1 in {ns}:game run tp @s 10061 109 10086 180 0
+execute if score #spawn_count {ns}.data matches 2 in {ns}:game run tp @s 10036 109 10061 -90 0
+execute if score #spawn_count {ns}.data matches 3 in {ns}:game run tp @s 10086 109 10061 90 0
+execute if score #spawn_count {ns}.data matches 4 in {ns}:game run tp @s 10061 109 10017 0 0
+execute if score #spawn_count {ns}.data matches 5 in {ns}:game run tp @s 10061 109 10105 180 0
+execute if score #spawn_count {ns}.data matches 6 in {ns}:game run tp @s 10017 109 10061 -90 0
+execute if score #spawn_count {ns}.data matches 7 in {ns}:game run tp @s 10105 109 10061 90 0
+execute if score #spawn_count {ns}.data matches 8 in {ns}:game run tp @s 10031 109 10031 -45 0
+execute if score #spawn_count {ns}.data matches 9 in {ns}:game run tp @s 10091 109 10091 135 0
+execute if score #spawn_count {ns}.data matches 10 in {ns}:game run tp @s 10091 109 10031 45 0
+execute if score #spawn_count {ns}.data matches 11 in {ns}:game run tp @s 10031 109 10091 -135 0
 
 scoreboard players add #spawn_count {ns}.data 1
 execute if score #spawn_count {ns}.data matches 12 run scoreboard players set #spawn_count {ns}.data 0

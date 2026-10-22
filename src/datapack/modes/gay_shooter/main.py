@@ -19,7 +19,7 @@ def write_mode():
 
 	# /death
 	write_function(f"{path}/death", f"""
-execute unless score #process_end {ns}.data matches 1 run tp @s 114057 119 114044
+execute unless score #process_end {ns}.data matches 1 run tp @s 10057 119 -9956
 gamemode spectator @s[team=!{ns}.temp.gays]
 effect clear @s
 clear @s
@@ -56,7 +56,7 @@ execute if score #gay_shooter_seconds {ns}.data matches 300.. as @a[tag=!detache
 
 	# /gay_finished
 	write_function(f"{path}/gay_finished", f"""
-execute if data storage {ns}:main {{map:"gay_shooter"}} in {ns}:game run tp @s 114034 137 114017
+execute if data storage {ns}:main {{map:"gay_shooter"}} in {ns}:game run tp @s 10034 137 -9983
 
 clear @s
 # loot give @s loot stardust:i/ultimate_sniper
@@ -103,9 +103,9 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 # Role selection (1/4 shooters)
 scoreboard players add #next_player_id {ns}.data 1
 scoreboard players add #next_role {ns}.data 1
-execute if score #next_role {ns}.data matches 1 run tp @s 114034 124 114019 0 0
+execute if score #next_role {ns}.data matches 1 run tp @s 10034 124 -9981 0 0
 execute if score #next_role {ns}.data matches 1 run team join {ns}.temp.shooters @s
-execute if score #next_role {ns}.data matches 2.. run tp @s 114057 119 114044 0 0
+execute if score #next_role {ns}.data matches 2.. run tp @s 10057 119 -9956 0 0
 execute if score #next_role {ns}.data matches 2.. run team join {ns}.temp.gays @s
 execute if score #next_role {ns}.data matches 4.. run scoreboard players set #next_role {ns}.data 0
 """)
@@ -182,7 +182,7 @@ scoreboard players add #gay_shooter_ticks {ns}.data 1
 
 ## Player management
 function {ns}:utils/on_death_run_function {{function:"{path}/death"}}
-execute in {ns}:game as @a[tag=!detached,gamemode=adventure,x=114011,y=142,z=114041,distance=..1] run function {path}/gay_finished
+execute in {ns}:game as @a[tag=!detached,gamemode=adventure,x=10011,y=142,z=-9959,distance=..1] run function {path}/gay_finished
 
 # Kill players in the void
 execute unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,team={ns}.temp.gays,gamemode=adventure] at @s if entity @s[y=105,dy=-1000] if data entity @s Inventory[{{id:"minecraft:bow"}}] run advancement grant @s only {ns}:visible/76

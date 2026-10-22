@@ -138,7 +138,7 @@ scoreboard objectives remove {ns}.temp.black_shot
 	# /summon_sheep
 	write_function(f"{path}/summon_sheep", f"""
 # Summon at the marker location
-execute unless score #process_end {ns}.data matches 1 positioned 123020 2048 123020 summon sheep run function {path}/on_new_sheep
+execute unless score #process_end {ns}.data matches 1 positioned 10020 2048 6020 summon sheep run function {path}/on_new_sheep
 """)
 
 	# /tick

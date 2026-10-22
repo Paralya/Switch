@@ -122,18 +122,18 @@ execute if entity @s[tag={ns}.free] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace #w
 	# /flags_summon
 	write_function(f"{path}/flags_summon", f"""
 # Maps
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 36117 151 35926 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[45.0f,0.0f],Glowing:true}}],Rotation:[45.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 35934 135 36074 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[-135.0f,0.0f],Glowing:true}}],Rotation:[-135.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_plains_castles"}} run summon armor_stand 146039 127 146114 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[-90.0f,0.0f],Glowing:true}}],Rotation:[-90.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_plains_castles"}} run summon armor_stand 146285 127 146114 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[90.0f,0.0f],Glowing:true}}],Rotation:[90.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run summon armor_stand 147285 213 147106 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run summon armor_stand 147076 213 147107 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_flowers"}} run summon armor_stand 148178 131 148052 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[90.0f,0.0f],Glowing:true}}],Rotation:[90.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_flowers"}} run summon armor_stand 148024 131 148053 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[-90.0f,0.0f],Glowing:true}}],Rotation:[-90.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_nether"}} run summon armor_stand 149100 143 149029 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[0.0f,0.0f],Glowing:true}}],Rotation:[0.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_nether"}} run summon armor_stand 149102 143 149321 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run summon armor_stand 150050 114 150034 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[0.0f,0.0f],Glowing:true}}],Rotation:[0.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run summon armor_stand 150050 114 150180 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 6290 151 6258 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[45.0f,0.0f],Glowing:true}}],Rotation:[45.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 6107 135 6406 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[-135.0f,0.0f],Glowing:true}}],Rotation:[-135.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_plains_castles"}} run summon armor_stand -11961 127 -3886 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[-90.0f,0.0f],Glowing:true}}],Rotation:[-90.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_plains_castles"}} run summon armor_stand -11715 127 -3886 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[90.0f,0.0f],Glowing:true}}],Rotation:[90.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run summon armor_stand -11714 213 -5894 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run summon armor_stand -11923 213 -5893 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_flowers"}} run summon armor_stand -11822 131 -7948 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[90.0f,0.0f],Glowing:true}}],Rotation:[90.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_flowers"}} run summon armor_stand -11976 131 -7947 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[-90.0f,0.0f],Glowing:true}}],Rotation:[-90.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_nether"}} run summon armor_stand -11900 143 -9971 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[0.0f,0.0f],Glowing:true}}],Rotation:[0.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_nether"}} run summon armor_stand -11898 143 -9679 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run summon armor_stand -11950 114 -11966 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[0.0f,0.0f],Glowing:true}}],Rotation:[0.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run summon armor_stand -11950 114 -11820 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
 
 # Stuff
 execute as @e[tag={ns}.flag] at @s run data modify entity @s item.components."minecraft:custom_data".Pos set from entity @e[type=armor_stand,sort=nearest,limit=1] Pos
@@ -318,21 +318,21 @@ function {path}/teleport_to_spawn
 	write_function(f"{path}/teleport_to_spawn", f"""
 ## Maps spawn
 # Map Plains Castles
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.blue] 36125 145 35919 -135 0
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.red] 35926 129 36081 45 0
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.blue] 6298 145 6251 -135 0
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.red] 6099 129 6413 45 0
 execute if data storage {ns}:main {{map:"ctf_plains_castles"}} store result score #random {ns}.data run random value 0..1
-execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 0 run tp @s[team={ns}.temp.red] 146325 129 146138 90 0
-execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 1 run tp @s[team={ns}.temp.red] 146322 129 146090 90 0
-execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 0 run tp @s[team={ns}.temp.blue] 146003 129 146138 -90 0
-execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 1 run tp @s[team={ns}.temp.blue] 146003 129 146090 -90 0
-execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run tp @s[team={ns}.temp.blue] 147285 201 147135 180 0
-execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run tp @s[team={ns}.temp.red] 147077 201 147135 180 0
-execute if data storage {ns}:main {{map:"ctf_flowers"}} run tp @s[team={ns}.temp.blue] 148187 150 148031 90 0
-execute if data storage {ns}:main {{map:"ctf_flowers"}} run tp @s[team={ns}.temp.red] 148016 144 148072 -90 0
-execute if data storage {ns}:main {{map:"ctf_nether"}} run tp @s[team={ns}.temp.blue] 149100 149 149009 0 0
-execute if data storage {ns}:main {{map:"ctf_nether"}} run tp @s[team={ns}.temp.red] 149102 149 149341 180 0
-execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run tp @s[team={ns}.temp.blue] 150050 130 150031 0 0
-execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run tp @s[team={ns}.temp.red] 150050 130 150183 180 0
+execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 0 run tp @s[team={ns}.temp.red] -11675 129 -3862 90 0
+execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 1 run tp @s[team={ns}.temp.red] -11678 129 -3910 90 0
+execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 0 run tp @s[team={ns}.temp.blue] -11997 129 -3862 -90 0
+execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 1 run tp @s[team={ns}.temp.blue] -11997 129 -3910 -90 0
+execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run tp @s[team={ns}.temp.blue] -11714 201 -5865 180 0
+execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run tp @s[team={ns}.temp.red] -11922 201 -5865 180 0
+execute if data storage {ns}:main {{map:"ctf_flowers"}} run tp @s[team={ns}.temp.blue] -11813 150 -7969 90 0
+execute if data storage {ns}:main {{map:"ctf_flowers"}} run tp @s[team={ns}.temp.red] -11984 144 -7928 -90 0
+execute if data storage {ns}:main {{map:"ctf_nether"}} run tp @s[team={ns}.temp.blue] -11900 149 -9991 0 0
+execute if data storage {ns}:main {{map:"ctf_nether"}} run tp @s[team={ns}.temp.red] -11898 149 -9659 180 0
+execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run tp @s[team={ns}.temp.blue] -11950 130 -11969 0 0
+execute if data storage {ns}:main {{map:"ctf_forest_castles"}} run tp @s[team={ns}.temp.red] -11950 130 -11817 180 0
 
 ## Items to choose a class
 tag @s remove {ns}.to_tp

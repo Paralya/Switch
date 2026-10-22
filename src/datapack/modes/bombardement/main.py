@@ -26,7 +26,7 @@ effect give @a[tag=!detached] saturation infinite 255 true
 scoreboard players set #do_spreadplayers {ns}.data 0
 function {ns}:maps/choose_map_for {{id:"bombardement", maps:["bombardement"]}}
 function {translations}/start
-tp @a[tag=!detached] 121057 109 121064 180 -30
+tp @a[tag=!detached] 10057 109 2064 180 -30
 
 scoreboard players set #bombardement_seconds {ns}.data -3
 scoreboard players set #bombardement_ticks {ns}.data 0
@@ -41,7 +41,7 @@ execute if data storage {ns}:records bombardement run function {path}/record_tel
 	# /tick
 	write_function(f"{path}/tick", f"""
 # Death system
-execute if score #bombardement_seconds {ns}.data matches ..-1 in {ns}:game run tp @a[tag=!detached,gamemode=!spectator,predicate={ns}:in_water] 121057 110 121064 180 -30
+execute if score #bombardement_seconds {ns}.data matches ..-1 in {ns}:game run tp @a[tag=!detached,gamemode=!spectator,predicate={ns}:in_water] 10057 110 2064 180 -30
 execute if score #bombardement_seconds {ns}.data matches 42.. unless score #test_mode {ns}.data matches 1 run advancement grant @a[tag=!detached,gamemode=!spectator,predicate={ns}:in_water] only {ns}:visible/75
 execute if score #bombardement_seconds {ns}.data matches 0.. as @a[tag=!detached,gamemode=!spectator,predicate={ns}:in_water] at @s run function {path}/death
 function {ns}:utils/on_death_run_function {{function:"{path}/death"}}
@@ -128,16 +128,16 @@ execute unless block ~ ~ ~ air run function {path}/explode
 	write_function(f"{path}/summon", f"""
 # Summon the canon ball
 execute store result score #random {ns}.data run random value 1..3
-execute if score #random {ns}.data matches 1 run summon armor_stand 121054 132 121026 {{NoGravity:true,Silent:true,Invulnerable:true,Invisible:true,Tags:["{ns}.ball","{ns}.new"],Passengers:[{{id:"item_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1.5f,0f],scale:[1f,1f,1f]}},item:{{id:"magma_block",count:1}}}}]}}
-execute if score #random {ns}.data matches 2 run summon armor_stand 121057 132 121026 {{NoGravity:true,Silent:true,Invulnerable:true,Invisible:true,Tags:["{ns}.ball","{ns}.new"],Passengers:[{{id:"item_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1.5f,0f],scale:[1f,1f,1f]}},item:{{id:"magma_block",count:1}}}}]}}
-execute if score #random {ns}.data matches 3 run summon armor_stand 121060 132 121026 {{NoGravity:true,Silent:true,Invulnerable:true,Invisible:true,Tags:["{ns}.ball","{ns}.new"],Passengers:[{{id:"item_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1.5f,0f],scale:[1f,1f,1f]}},item:{{id:"magma_block",count:1}}}}]}}
-execute if score #random {ns}.data matches 1 positioned 121054 132 121026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
-execute if score #random {ns}.data matches 2 positioned 121057 132 121026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
-execute if score #random {ns}.data matches 3 positioned 121060 132 121026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
-execute positioned 121057 132 121026 run playsound {ns}:explosion ambient @a[tag=!detached] ~ ~ ~ 1 1
+execute if score #random {ns}.data matches 1 run summon armor_stand 10054 132 2026 {{NoGravity:true,Silent:true,Invulnerable:true,Invisible:true,Tags:["{ns}.ball","{ns}.new"],Passengers:[{{id:"item_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1.5f,0f],scale:[1f,1f,1f]}},item:{{id:"magma_block",count:1}}}}]}}
+execute if score #random {ns}.data matches 2 run summon armor_stand 10057 132 2026 {{NoGravity:true,Silent:true,Invulnerable:true,Invisible:true,Tags:["{ns}.ball","{ns}.new"],Passengers:[{{id:"item_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1.5f,0f],scale:[1f,1f,1f]}},item:{{id:"magma_block",count:1}}}}]}}
+execute if score #random {ns}.data matches 3 run summon armor_stand 10060 132 2026 {{NoGravity:true,Silent:true,Invulnerable:true,Invisible:true,Tags:["{ns}.ball","{ns}.new"],Passengers:[{{id:"item_display",transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1.5f,0f],scale:[1f,1f,1f]}},item:{{id:"magma_block",count:1}}}}]}}
+execute if score #random {ns}.data matches 1 positioned 10054 132 2026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
+execute if score #random {ns}.data matches 2 positioned 10057 132 2026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
+execute if score #random {ns}.data matches 3 positioned 10060 132 2026 run particle explosion_emitter ~ ~ ~ 0 0 0 1 1 force @a[tag=!detached,distance=..100]
+execute positioned 10057 132 2026 run playsound {ns}:explosion ambient @a[tag=!detached] ~ ~ ~ 1 1
 
 # Get a random position
-summon marker 121057 109 121064 {{Tags:["{ns}.temp"]}}
+summon marker 10057 109 2064 {{Tags:["{ns}.temp"]}}
 execute as @e[type=marker,tag={ns}.temp] at @s run spreadplayers ~ ~ 0 15 under 150 false @s
 execute as @e[type=marker,tag={ns}.temp] at @s run tp @s ~ ~ ~-0.5
 execute if predicate {ns}:chance/0.25 run tp @e[type=marker,tag={ns}.temp] @r[tag=!detached,gamemode=!spectator]

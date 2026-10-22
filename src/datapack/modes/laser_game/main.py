@@ -78,9 +78,9 @@ scoreboard players remove #remaining_time {ns}.data 1
 
 # Start thing
 execute if score #laser_game_seconds {ns}.data matches 0 run kill @e[tag={ns}.laser_game.base]
-execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 517.0 113 524.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"north",half:"bottom",open:"true"}}}}}}
-execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 539.0 105 530.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"east",half:"bottom",open:"true"}}}}}}
-execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 542.0 114 547.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"south",half:"bottom",open:"true"}}}}}}
+execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 2017.0 113 -1976.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"north",half:"bottom",open:"true"}}}}}}
+execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 2039.0 105 -1970.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"east",half:"bottom",open:"true"}}}}}}
+execute if score #laser_game_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run summon block_display 2042.0 114 -1953.0 {{Tags:["{ns}.laser_game.base"],block_state:{{id:"minecraft:dark_oak_trapdoor",properties:{{powered:"true",facing:"south",half:"bottom",open:"true"}}}}}}
 
 # Base reload
 scoreboard players remove #base_reload {ns}.data 1
@@ -295,10 +295,10 @@ effect give @s weakness infinite 255 true
 xp set @s 130 levels
 xp set @s 1000 points
 
-execute if score #team_boolean {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run tp @s 550 110 502 45 0
+execute if score #team_boolean {ns}.data matches 0 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run tp @s 2050 110 -1998 45 0
 execute if score #team_boolean {ns}.data matches 0 run team join {ns}.laser_game.blue @s
 execute if score #team_boolean {ns}.data matches 0 run scoreboard players set @s {ns}.alive 10
-execute if score #team_boolean {ns}.data matches 1 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run tp @s 502 110 550 -135 0
+execute if score #team_boolean {ns}.data matches 1 if data storage {ns}:main {{map:"laser_game"}} in {ns}:game run tp @s 2002 110 -1950 -135 0
 execute if score #team_boolean {ns}.data matches 1 run team join {ns}.laser_game.red @s
 execute if score #team_boolean {ns}.data matches 1 run scoreboard players set @s {ns}.alive 11
 

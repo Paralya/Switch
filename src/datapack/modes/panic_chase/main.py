@@ -88,18 +88,18 @@ execute if score #next_role {ns}.data matches 1 run team join {ns}.temp.hunter @
 execute if score #next_role {ns}.data matches 2.. run team join {ns}.temp.mouse @s
 
 # Hunter tp
-execute if score #next_role {ns}.data matches 1 if data storage {ns}:main {{map:"arti_box"}} run tp @s 119024.0 106 119023
-execute if score #next_role {ns}.data matches 1 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 122034 120 122037
-execute if score #next_role {ns}.data matches 1 if data storage {ns}:main {{map:"yeti_in_panic"}} run tp @s 158003 112 158004
+execute if score #next_role {ns}.data matches 1 if data storage {ns}:main {{map:"arti_box"}} run tp @s 10024.0 106 -3977
+execute if score #next_role {ns}.data matches 1 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 10034 120 4037
+execute if score #next_role {ns}.data matches 1 if data storage {ns}:main {{map:"yeti_in_panic"}} run tp @s 4003 112 -11996
 
 # Mouse tp
-execute if score #next_role {ns}.data matches 2..3 if data storage {ns}:main {{map:"arti_box"}} run tp @s 119024.0 106 119004.0 0 0
-execute if score #next_role {ns}.data matches 4..6 if data storage {ns}:main {{map:"arti_box"}} run tp @s 119024.0 106 119044.0 180 0
-execute if score #next_role {ns}.data matches 2 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 122023 120 122012 -45 0
-execute if score #next_role {ns}.data matches 3 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 122063 120 122035 90 0
-execute if score #next_role {ns}.data matches 4 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 122007 120 122032 -90 0
-execute if score #next_role {ns}.data matches 5.. if data storage {ns}:main {{map:"nether_storm"}} run tp @s 122039.0 123 122066.0 180 0
-execute if score #next_role {ns}.data matches 2.. if data storage {ns}:main {{map:"yeti_in_panic"}} run tp @s 158034 114 158027 0 65
+execute if score #next_role {ns}.data matches 2..3 if data storage {ns}:main {{map:"arti_box"}} run tp @s 10024.0 106 -3996.0 0 0
+execute if score #next_role {ns}.data matches 4..6 if data storage {ns}:main {{map:"arti_box"}} run tp @s 10024.0 106 -3956.0 180 0
+execute if score #next_role {ns}.data matches 2 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 10023 120 4012 -45 0
+execute if score #next_role {ns}.data matches 3 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 10063 120 4035 90 0
+execute if score #next_role {ns}.data matches 4 if data storage {ns}:main {{map:"nether_storm"}} run tp @s 10007 120 4032 -90 0
+execute if score #next_role {ns}.data matches 5.. if data storage {ns}:main {{map:"nether_storm"}} run tp @s 10039.0 123 4066.0 180 0
+execute if score #next_role {ns}.data matches 2.. if data storage {ns}:main {{map:"yeti_in_panic"}} run tp @s 4034 114 -11973 0 65
 
 # Reset
 execute if score #next_role {ns}.data matches 6.. run scoreboard players set #next_role {ns}.data 0
@@ -116,9 +116,9 @@ function {path}/xp_bar
 execute if score #panic_chase_seconds {ns}.data matches 0 as @a[tag=!detached] at @s run playsound entity.experience_orb.pickup ambient @s
 execute if score #panic_chase_seconds {ns}.data matches 0 run effect clear @a[team={ns}.temp.hunter] darkness
 execute if score #panic_chase_seconds {ns}.data matches 0 run effect clear @a[team={ns}.temp.hunter] blindness
-execute if score #panic_chase_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"arti_box"}} run fill 119021 106 119025 119026 104 119021 air replace tinted_glass
-execute if score #panic_chase_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"nether_storm"}} run fill 122033 119 122036 122035 120 122038 air replace #{ns}:moutron/glass
-execute if score #panic_chase_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"yeti_in_panic"}} run fill 158006 111 158006 158006 112 158006 air replace tinted_glass
+execute if score #panic_chase_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"arti_box"}} run fill 10021 106 -3975 10026 104 -3979 air replace tinted_glass
+execute if score #panic_chase_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"nether_storm"}} run fill 10033 119 4036 10035 120 4038 air replace #{ns}:moutron/glass
+execute if score #panic_chase_seconds {ns}.data matches 0 if data storage {ns}:main {{map:"yeti_in_panic"}} run fill 4006 111 -11994 4006 112 -11994 air replace tinted_glass
 
 # Title actionbar
 scoreboard players operation #second {ns}.data = #remaining_time {ns}.data
