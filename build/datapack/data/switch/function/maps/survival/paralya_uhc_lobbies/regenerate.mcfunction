@@ -37,7 +37,6 @@ execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in switch:gam
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Paralya UHC Lobbies","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"18","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run function switch:engine/log_message/apply {message:"Map `Paralya UHC Lobbies` just regenerated!"}
 
-execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. in switch:game run function switch:maps/regenerate_doors_macro {name:"paralya_uhc_lobbies"}
 execute if score #rg_paralya_uhc_lobbies switch.data matches 377.. run scoreboard players reset #rg_paralya_uhc_lobbies switch.data
 execute if score #rg_paralya_uhc_lobbies switch.data matches 1.. run schedule function switch:maps/survival/paralya_uhc_lobbies/regenerate 1t
 

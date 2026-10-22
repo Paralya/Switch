@@ -29,7 +29,6 @@ execute if score #rg_gg_volcano switch.data matches 107.. in switch:game run for
 execute if score #rg_gg_volcano switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Volcany-chan","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_gg_volcano switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Volcany-chan` just regenerated!"}
 
-execute if score #rg_gg_volcano switch.data matches 107.. in switch:game run function switch:maps/regenerate_doors_macro {name:"gg_volcano"}
 execute if score #rg_gg_volcano switch.data matches 107.. run scoreboard players reset #rg_gg_volcano switch.data
 execute if score #rg_gg_volcano switch.data matches 1.. run schedule function switch:maps/survival/gg_volcano/regenerate 1t
 

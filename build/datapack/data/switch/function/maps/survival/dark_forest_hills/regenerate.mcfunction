@@ -65,7 +65,6 @@ execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game 
 execute if score #rg_dark_forest_hills switch.data matches 782.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dark Forest Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"39","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_dark_forest_hills switch.data matches 782.. run function switch:engine/log_message/apply {message:"Map `Dark Forest Hills` just regenerated!"}
 
-execute if score #rg_dark_forest_hills switch.data matches 782.. in switch:game run function switch:maps/regenerate_doors_macro {name:"dark_forest_hills"}
 execute if score #rg_dark_forest_hills switch.data matches 782.. run scoreboard players reset #rg_dark_forest_hills switch.data
 execute if score #rg_dark_forest_hills switch.data matches 1.. run schedule function switch:maps/survival/dark_forest_hills/regenerate 1t
 

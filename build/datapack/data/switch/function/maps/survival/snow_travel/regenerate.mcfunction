@@ -81,7 +81,6 @@ execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run f
 execute if score #rg_snow_travel switch.data matches 1306.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Travel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_snow_travel switch.data matches 1306.. run function switch:engine/log_message/apply {message:"Map `Snow Travel` just regenerated!"}
 
-execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run function switch:maps/regenerate_doors_macro {name:"snow_travel"}
 execute if score #rg_snow_travel switch.data matches 1306.. run scoreboard players reset #rg_snow_travel switch.data
 execute if score #rg_snow_travel switch.data matches 1.. run schedule function switch:maps/survival/snow_travel/regenerate 1t
 

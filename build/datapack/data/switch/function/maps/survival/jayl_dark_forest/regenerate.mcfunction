@@ -57,7 +57,6 @@ execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game r
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Jayl Dark Forest","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run function switch:engine/log_message/apply {message:"Map `Jayl Dark Forest` just regenerated!"}
 
-execute if score #rg_jayl_dark_forest switch.data matches 820.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jayl_dark_forest"}
 execute if score #rg_jayl_dark_forest switch.data matches 820.. run scoreboard players reset #rg_jayl_dark_forest switch.data
 execute if score #rg_jayl_dark_forest switch.data matches 1.. run schedule function switch:maps/survival/jayl_dark_forest/regenerate 1t
 

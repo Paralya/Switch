@@ -57,7 +57,6 @@ execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game 
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dinosaur Volcano","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run function switch:engine/log_message/apply {message:"Map `Dinosaur Volcano` just regenerated!"}
 
-execute if score #rg_airdox_fish_fight switch.data matches 901.. in switch:game run function switch:maps/regenerate_doors_macro {name:"airdox_fish_fight"}
 execute if score #rg_airdox_fish_fight switch.data matches 901.. run scoreboard players reset #rg_airdox_fish_fight switch.data
 execute if score #rg_airdox_fish_fight switch.data matches 1.. run schedule function switch:maps/survival/airdox_fish_fight/regenerate 1t
 

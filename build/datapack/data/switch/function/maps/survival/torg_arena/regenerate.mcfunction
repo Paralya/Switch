@@ -41,7 +41,6 @@ execute if score #rg_torg_arena switch.data matches 136.. in switch:game run for
 execute if score #rg_torg_arena switch.data matches 136.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Torg Arena","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_torg_arena switch.data matches 136.. run function switch:engine/log_message/apply {message:"Map `Torg Arena` just regenerated!"}
 
-execute if score #rg_torg_arena switch.data matches 136.. in switch:game run function switch:maps/regenerate_doors_macro {name:"torg_arena"}
 execute if score #rg_torg_arena switch.data matches 136.. run scoreboard players reset #rg_torg_arena switch.data
 execute if score #rg_torg_arena switch.data matches 1.. run schedule function switch:maps/survival/torg_arena/regenerate 1t
 

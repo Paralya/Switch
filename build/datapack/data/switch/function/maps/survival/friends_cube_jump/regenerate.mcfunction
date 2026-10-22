@@ -29,7 +29,6 @@ execute if score #rg_friends_cube_jump switch.data matches 187.. in switch:game 
 execute if score #rg_friends_cube_jump switch.data matches 187.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube Jump","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_cube_jump switch.data matches 187.. run function switch:engine/log_message/apply {message:"Map `FriendsCube Jump` just regenerated!"}
 
-execute if score #rg_friends_cube_jump switch.data matches 187.. in switch:game run function switch:maps/regenerate_doors_macro {name:"friends_cube_jump"}
 execute if score #rg_friends_cube_jump switch.data matches 187.. run scoreboard players reset #rg_friends_cube_jump switch.data
 execute if score #rg_friends_cube_jump switch.data matches 1.. run schedule function switch:maps/survival/friends_cube_jump/regenerate 1t
 

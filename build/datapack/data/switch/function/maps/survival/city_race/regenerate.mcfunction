@@ -105,7 +105,6 @@ execute if score #rg_city_race switch.data matches 2521.. in switch:game run for
 execute if score #rg_city_race switch.data matches 2521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"City Race","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_city_race switch.data matches 2521.. run function switch:engine/log_message/apply {message:"Map `City Race` just regenerated!"}
 
-execute if score #rg_city_race switch.data matches 2521.. in switch:game run function switch:maps/regenerate_doors_macro {name:"city_race"}
 execute if score #rg_city_race switch.data matches 2521.. run scoreboard players reset #rg_city_race switch.data
 execute if score #rg_city_race switch.data matches 1.. run schedule function switch:maps/survival/city_race/regenerate 1t
 

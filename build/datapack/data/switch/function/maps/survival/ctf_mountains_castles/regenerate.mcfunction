@@ -97,7 +97,6 @@ execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Vale Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run function switch:engine/log_message/apply {message:"Map `Vale Castle` just regenerated!"}
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_mountains_castles"}
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run scoreboard players reset #rg_ctf_mountains_castles switch.data
 execute if score #rg_ctf_mountains_castles switch.data matches 1.. run schedule function switch:maps/survival/ctf_mountains_castles/regenerate 1t
 

@@ -37,7 +37,6 @@ execute if score #rg_spectre_original switch.data matches 345.. in switch:game r
 execute if score #rg_spectre_original switch.data matches 345.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Spectre Original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_spectre_original switch.data matches 345.. run function switch:engine/log_message/apply {message:"Map `Spectre Original` just regenerated!"}
 
-execute if score #rg_spectre_original switch.data matches 345.. in switch:game run function switch:maps/regenerate_doors_macro {name:"spectre_original"}
 execute if score #rg_spectre_original switch.data matches 345.. run scoreboard players reset #rg_spectre_original switch.data
 execute if score #rg_spectre_original switch.data matches 1.. run schedule function switch:maps/survival/spectre_original/regenerate 1t
 

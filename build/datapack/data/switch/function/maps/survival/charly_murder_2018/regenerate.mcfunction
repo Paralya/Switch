@@ -29,7 +29,6 @@ execute if score #rg_charly_murder_2018 switch.data matches 65.. in switch:game 
 execute if score #rg_charly_murder_2018 switch.data matches 65.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"MurderUHC House (2018)","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_charly_murder_2018 switch.data matches 65.. run function switch:engine/log_message/apply {message:"Map `MurderUHC House (2018)` just regenerated!"}
 
-execute if score #rg_charly_murder_2018 switch.data matches 65.. in switch:game run function switch:maps/regenerate_doors_macro {name:"charly_murder_2018"}
 execute if score #rg_charly_murder_2018 switch.data matches 65.. run scoreboard players reset #rg_charly_murder_2018 switch.data
 execute if score #rg_charly_murder_2018 switch.data matches 1.. run schedule function switch:maps/survival/charly_murder_2018/regenerate 1t
 

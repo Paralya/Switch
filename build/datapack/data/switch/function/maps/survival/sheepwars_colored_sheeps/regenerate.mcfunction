@@ -41,7 +41,6 @@ execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switc
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Colored Sheeps","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run function switch:engine/log_message/apply {message:"Map `Colored Sheeps` just regenerated!"}
 
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run function switch:maps/regenerate_doors_macro {name:"sheepwars_colored_sheeps"}
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run scoreboard players reset #rg_sheepwars_colored_sheeps switch.data
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 1.. run schedule function switch:maps/survival/sheepwars_colored_sheeps/regenerate 1t
 

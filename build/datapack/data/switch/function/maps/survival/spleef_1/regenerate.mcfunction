@@ -37,7 +37,6 @@ execute if score #rg_spleef_1 switch.data matches 113.. in switch:game run force
 execute if score #rg_spleef_1 switch.data matches 113.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Spleef 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_spleef_1 switch.data matches 113.. run function switch:engine/log_message/apply {message:"Map `Spleef 1` just regenerated!"}
 
-execute if score #rg_spleef_1 switch.data matches 113.. in switch:game run function switch:maps/regenerate_doors_macro {name:"spleef_1"}
 execute if score #rg_spleef_1 switch.data matches 113.. run scoreboard players reset #rg_spleef_1 switch.data
 execute if score #rg_spleef_1 switch.data matches 1.. run schedule function switch:maps/survival/spleef_1/regenerate 1t
 

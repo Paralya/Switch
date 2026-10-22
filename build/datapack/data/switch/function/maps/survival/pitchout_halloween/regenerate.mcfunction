@@ -45,7 +45,6 @@ execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game
 execute if score #rg_pitchout_halloween switch.data matches 175.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Pitchout Halloween","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_pitchout_halloween switch.data matches 175.. run function switch:engine/log_message/apply {message:"Map `Pitchout Halloween` just regenerated!"}
 
-execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run function switch:maps/regenerate_doors_macro {name:"pitchout_halloween"}
 execute if score #rg_pitchout_halloween switch.data matches 175.. run scoreboard players reset #rg_pitchout_halloween switch.data
 execute if score #rg_pitchout_halloween switch.data matches 1.. run schedule function switch:maps/survival/pitchout_halloween/regenerate 1t
 

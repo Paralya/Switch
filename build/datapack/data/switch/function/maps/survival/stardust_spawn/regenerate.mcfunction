@@ -45,7 +45,6 @@ execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run
 execute if score #rg_stardust_spawn switch.data matches 547.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"27","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_stardust_spawn switch.data matches 547.. run function switch:engine/log_message/apply {message:"Map `Stardust Spawn` just regenerated!"}
 
-execute if score #rg_stardust_spawn switch.data matches 547.. in switch:game run function switch:maps/regenerate_doors_macro {name:"stardust_spawn"}
 execute if score #rg_stardust_spawn switch.data matches 547.. run scoreboard players reset #rg_stardust_spawn switch.data
 execute if score #rg_stardust_spawn switch.data matches 1.. run schedule function switch:maps/survival/stardust_spawn/regenerate 1t
 

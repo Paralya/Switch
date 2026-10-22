@@ -61,7 +61,6 @@ execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run 
 execute if score #rg_hider_mansion switch.data matches 711.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Hider Mansion","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_hider_mansion switch.data matches 711.. run function switch:engine/log_message/apply {message:"Map `Hider Mansion` just regenerated!"}
 
-execute if score #rg_hider_mansion switch.data matches 711.. in switch:game run function switch:maps/regenerate_doors_macro {name:"hider_mansion"}
 execute if score #rg_hider_mansion switch.data matches 711.. run scoreboard players reset #rg_hider_mansion switch.data
 execute if score #rg_hider_mansion switch.data matches 1.. run schedule function switch:maps/survival/hider_mansion/regenerate 1t
 

@@ -49,7 +49,6 @@ execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run
 execute if score #rg_lightium_spawn switch.data matches 309.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Lightium Spawn","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_lightium_spawn switch.data matches 309.. run function switch:engine/log_message/apply {message:"Map `Lightium Spawn` just regenerated!"}
 
-execute if score #rg_lightium_spawn switch.data matches 309.. in switch:game run function switch:maps/regenerate_doors_macro {name:"lightium_spawn"}
 execute if score #rg_lightium_spawn switch.data matches 309.. run scoreboard players reset #rg_lightium_spawn switch.data
 execute if score #rg_lightium_spawn switch.data matches 1.. run schedule function switch:maps/survival/lightium_spawn/regenerate 1t
 

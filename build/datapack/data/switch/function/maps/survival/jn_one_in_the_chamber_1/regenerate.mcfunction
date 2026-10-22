@@ -37,7 +37,6 @@ execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. in switch:
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Multi-biomes Boxes 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. run function switch:engine/log_message/apply {message:"Map `Multi-biomes Boxes 1` just regenerated!"}
 
-execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jn_one_in_the_chamber_1"}
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 93.. run scoreboard players reset #rg_jn_one_in_the_chamber_1 switch.data
 execute if score #rg_jn_one_in_the_chamber_1 switch.data matches 1.. run schedule function switch:maps/survival/jn_one_in_the_chamber_1/regenerate 1t
 

@@ -33,7 +33,6 @@ execute if score #rg_gay_shooter switch.data matches 151.. in switch:game run fo
 execute if score #rg_gay_shooter switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Guy Shooter","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_gay_shooter switch.data matches 151.. run function switch:engine/log_message/apply {message:"Map `Guy Shooter` just regenerated!"}
 
-execute if score #rg_gay_shooter switch.data matches 151.. in switch:game run function switch:maps/regenerate_doors_macro {name:"gay_shooter"}
 execute if score #rg_gay_shooter switch.data matches 151.. run scoreboard players reset #rg_gay_shooter switch.data
 execute if score #rg_gay_shooter switch.data matches 1.. run schedule function switch:maps/survival/gay_shooter/regenerate 1t
 

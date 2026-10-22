@@ -29,7 +29,6 @@ execute if score #rg_arti_box switch.data matches 71.. in switch:game run forcel
 execute if score #rg_arti_box switch.data matches 71.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Arti Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_arti_box switch.data matches 71.. run function switch:engine/log_message/apply {message:"Map `Arti Box` just regenerated!"}
 
-execute if score #rg_arti_box switch.data matches 71.. in switch:game run function switch:maps/regenerate_doors_macro {name:"arti_box"}
 execute if score #rg_arti_box switch.data matches 71.. run scoreboard players reset #rg_arti_box switch.data
 execute if score #rg_arti_box switch.data matches 1.. run schedule function switch:maps/survival/arti_box/regenerate 1t
 

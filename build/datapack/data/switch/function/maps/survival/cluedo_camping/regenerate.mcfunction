@@ -41,7 +41,6 @@ execute if score #rg_cluedo_camping switch.data matches 121.. in switch:game run
 execute if score #rg_cluedo_camping switch.data matches 121.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo Camping","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_cluedo_camping switch.data matches 121.. run function switch:engine/log_message/apply {message:"Map `Cluedo Camping` just regenerated!"}
 
-execute if score #rg_cluedo_camping switch.data matches 121.. in switch:game run function switch:maps/regenerate_doors_macro {name:"cluedo_camping"}
 execute if score #rg_cluedo_camping switch.data matches 121.. run scoreboard players reset #rg_cluedo_camping switch.data
 execute if score #rg_cluedo_camping switch.data matches 1.. run schedule function switch:maps/survival/cluedo_camping/regenerate 1t
 

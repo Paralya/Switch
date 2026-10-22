@@ -37,7 +37,6 @@ execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in switch:ga
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube PvPbox Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run function switch:engine/log_message/apply {message:"Map `FriendsCube PvPbox Hills` just regenerated!"}
 
-execute if score #rg_friends_pvpbox_hills switch.data matches 273.. in switch:game run function switch:maps/regenerate_doors_macro {name:"friends_pvpbox_hills"}
 execute if score #rg_friends_pvpbox_hills switch.data matches 273.. run scoreboard players reset #rg_friends_pvpbox_hills switch.data
 execute if score #rg_friends_pvpbox_hills switch.data matches 1.. run schedule function switch:maps/survival/friends_pvpbox_hills/regenerate 1t
 

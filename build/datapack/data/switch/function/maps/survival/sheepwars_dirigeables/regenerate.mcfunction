@@ -41,7 +41,6 @@ execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:g
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Dirigeables","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run function switch:engine/log_message/apply {message:"Map `Sheepwars Dirigeables` just regenerated!"}
 
-execute if score #rg_sheepwars_dirigeables switch.data matches 446.. in switch:game run function switch:maps/regenerate_doors_macro {name:"sheepwars_dirigeables"}
 execute if score #rg_sheepwars_dirigeables switch.data matches 446.. run scoreboard players reset #rg_sheepwars_dirigeables switch.data
 execute if score #rg_sheepwars_dirigeables switch.data matches 1.. run schedule function switch:maps/survival/sheepwars_dirigeables/regenerate 1t
 

@@ -53,7 +53,6 @@ execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Forest Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run function switch:engine/log_message/apply {message:"Map `Forest Castle` just regenerated!"}
 
-execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_forest_castles"}
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run scoreboard players reset #rg_ctf_forest_castles switch.data
 execute if score #rg_ctf_forest_castles switch.data matches 1.. run schedule function switch:maps/survival/ctf_forest_castles/regenerate 1t
 

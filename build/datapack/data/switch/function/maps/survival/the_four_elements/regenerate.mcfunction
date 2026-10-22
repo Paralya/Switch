@@ -41,7 +41,6 @@ execute if score #rg_the_four_elements switch.data matches 171.. in switch:game 
 execute if score #rg_the_four_elements switch.data matches 171.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"The Four Elements","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_the_four_elements switch.data matches 171.. run function switch:engine/log_message/apply {message:"Map `The Four Elements` just regenerated!"}
 
-execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run function switch:maps/regenerate_doors_macro {name:"the_four_elements"}
 execute if score #rg_the_four_elements switch.data matches 171.. run scoreboard players reset #rg_the_four_elements switch.data
 execute if score #rg_the_four_elements switch.data matches 1.. run schedule function switch:maps/survival/the_four_elements/regenerate 1t
 

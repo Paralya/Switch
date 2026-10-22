@@ -41,7 +41,6 @@ execute if score #rg_whity_lab switch.data matches 441.. in switch:game run forc
 execute if score #rg_whity_lab switch.data matches 441.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Whity Lab","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_whity_lab switch.data matches 441.. run function switch:engine/log_message/apply {message:"Map `Whity Lab` just regenerated!"}
 
-execute if score #rg_whity_lab switch.data matches 441.. in switch:game run function switch:maps/regenerate_doors_macro {name:"whity_lab"}
 execute if score #rg_whity_lab switch.data matches 441.. run scoreboard players reset #rg_whity_lab switch.data
 execute if score #rg_whity_lab switch.data matches 1.. run schedule function switch:maps/survival/whity_lab/regenerate 1t
 

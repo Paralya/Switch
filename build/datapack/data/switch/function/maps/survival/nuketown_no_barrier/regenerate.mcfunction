@@ -85,7 +85,6 @@ execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:gam
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nuketown No Barrier","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run function switch:engine/log_message/apply {message:"Map `Nuketown No Barrier` just regenerated!"}
 
-execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run function switch:maps/regenerate_doors_macro {name:"nuketown_no_barrier"}
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run scoreboard players reset #rg_nuketown_no_barrier switch.data
 execute if score #rg_nuketown_no_barrier switch.data matches 1.. run schedule function switch:maps/survival/nuketown_no_barrier/regenerate 1t
 

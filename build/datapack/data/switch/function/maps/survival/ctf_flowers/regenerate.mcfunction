@@ -53,7 +53,6 @@ execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run fo
 execute if score #rg_ctf_flowers switch.data matches 801.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fairy Garden","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ctf_flowers switch.data matches 801.. run function switch:engine/log_message/apply {message:"Map `Fairy Garden` just regenerated!"}
 
-execute if score #rg_ctf_flowers switch.data matches 801.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_flowers"}
 execute if score #rg_ctf_flowers switch.data matches 801.. run scoreboard players reset #rg_ctf_flowers switch.data
 execute if score #rg_ctf_flowers switch.data matches 1.. run schedule function switch:maps/survival/ctf_flowers/regenerate 1t
 

@@ -93,7 +93,6 @@ execute if score #rg_baby_park switch.data matches 1729.. in switch:game run for
 execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Baby Park","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_baby_park switch.data matches 1729.. run function switch:engine/log_message/apply {message:"Map `Baby Park` just regenerated!"}
 
-execute if score #rg_baby_park switch.data matches 1729.. in switch:game run function switch:maps/regenerate_doors_macro {name:"baby_park"}
 execute if score #rg_baby_park switch.data matches 1729.. run scoreboard players reset #rg_baby_park switch.data
 execute if score #rg_baby_park switch.data matches 1.. run schedule function switch:maps/survival/baby_park/regenerate 1t
 

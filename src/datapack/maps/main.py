@@ -107,25 +107,6 @@ scoreboard players remove #random {ns}.data 1
 execute unless score #random {ns}.data matches 0 run function {ns}:maps/choose_loop
 """)
 
-	# /regenerate_doors_loop
-	write_function(f"{path}/regenerate_doors_loop", f"""
-# Setblock door
-$setblock $(x) $(y) $(z) $(door)
-
-# While there are doors,
-data remove storage {ns}:temp doors[0]
-execute if data storage {ns}:temp doors[0] run function {ns}:maps/regenerate_doors_loop with storage {ns}:temp doors[0]
-""")
-
-	# /regenerate_doors_macro
-	write_function(f"{path}/regenerate_doors_macro", f"""
-# Get doors
-$data modify storage {ns}:temp doors set from storage {ns}:doors $(name)
-
-# While there are doors,
-execute if data storage {ns}:temp doors[0] run function {ns}:maps/regenerate_doors_loop with storage {ns}:temp doors[0]
-""")
-
 	# /storage_map_list/remove_from_storage
 	write_function(f"{path}/storage_map_list/remove_from_storage", f"""
 data modify storage {ns}:main new set value []

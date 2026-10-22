@@ -53,7 +53,6 @@ execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in swit
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Lost Graveyard Remastered","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"25","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run function switch:engine/log_message/apply {message:"Map `Lost Graveyard Remastered` just regenerated!"}
 
-execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run function switch:maps/regenerate_doors_macro {name:"lost_graveyard_remastered"}
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run scoreboard players reset #rg_lost_graveyard_remastered switch.data
 execute if score #rg_lost_graveyard_remastered switch.data matches 1.. run schedule function switch:maps/survival/lost_graveyard_remastered/regenerate 1t
 

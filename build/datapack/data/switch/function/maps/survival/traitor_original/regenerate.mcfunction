@@ -61,7 +61,6 @@ execute if score #rg_traitor_original switch.data matches 901.. in switch:game r
 execute if score #rg_traitor_original switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Traitor Original","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_traitor_original switch.data matches 901.. run function switch:engine/log_message/apply {message:"Map `Traitor Original` just regenerated!"}
 
-execute if score #rg_traitor_original switch.data matches 901.. in switch:game run function switch:maps/regenerate_doors_macro {name:"traitor_original"}
 execute if score #rg_traitor_original switch.data matches 901.. run scoreboard players reset #rg_traitor_original switch.data
 execute if score #rg_traitor_original switch.data matches 1.. run schedule function switch:maps/survival/traitor_original/regenerate 1t
 

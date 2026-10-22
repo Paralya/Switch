@@ -37,7 +37,6 @@ execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. in sw
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Abandoned City Spawn Circle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run function switch:engine/log_message/apply {message:"Map `Abandoned City Spawn Circle` just regenerated!"}
 
-execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. in switch:game run function switch:maps/regenerate_doors_macro {name:"abandoned_city_spawn_circle"}
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run scoreboard players reset #rg_abandoned_city_spawn_circle switch.data
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 1.. run schedule function switch:maps/survival/abandoned_city_spawn_circle/regenerate 1t
 

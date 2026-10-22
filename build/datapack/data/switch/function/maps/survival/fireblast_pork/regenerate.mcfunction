@@ -33,7 +33,6 @@ execute if score #rg_fireblast_pork switch.data matches 172.. in switch:game run
 execute if score #rg_fireblast_pork switch.data matches 172.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Vegan Pork","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_fireblast_pork switch.data matches 172.. run function switch:engine/log_message/apply {message:"Map `Vegan Pork` just regenerated!"}
 
-execute if score #rg_fireblast_pork switch.data matches 172.. in switch:game run function switch:maps/regenerate_doors_macro {name:"fireblast_pork"}
 execute if score #rg_fireblast_pork switch.data matches 172.. run scoreboard players reset #rg_fireblast_pork switch.data
 execute if score #rg_fireblast_pork switch.data matches 1.. run schedule function switch:maps/survival/fireblast_pork/regenerate 1t
 

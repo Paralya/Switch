@@ -65,7 +65,6 @@ execute if score #rg_plains_routine switch.data matches 562.. in switch:game run
 execute if score #rg_plains_routine switch.data matches 562.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Plains Routine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_plains_routine switch.data matches 562.. run function switch:engine/log_message/apply {message:"Map `Plains Routine` just regenerated!"}
 
-execute if score #rg_plains_routine switch.data matches 562.. in switch:game run function switch:maps/regenerate_doors_macro {name:"plains_routine"}
 execute if score #rg_plains_routine switch.data matches 562.. run scoreboard players reset #rg_plains_routine switch.data
 execute if score #rg_plains_routine switch.data matches 1.. run schedule function switch:maps/survival/plains_routine/regenerate 1t
 

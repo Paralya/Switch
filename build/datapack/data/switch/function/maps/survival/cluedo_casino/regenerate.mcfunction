@@ -33,7 +33,6 @@ execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run 
 execute if score #rg_cluedo_casino switch.data matches 181.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo Casino","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_cluedo_casino switch.data matches 181.. run function switch:engine/log_message/apply {message:"Map `Cluedo Casino` just regenerated!"}
 
-execute if score #rg_cluedo_casino switch.data matches 181.. in switch:game run function switch:maps/regenerate_doors_macro {name:"cluedo_casino"}
 execute if score #rg_cluedo_casino switch.data matches 181.. run scoreboard players reset #rg_cluedo_casino switch.data
 execute if score #rg_cluedo_casino switch.data matches 1.. run schedule function switch:maps/survival/cluedo_casino/regenerate 1t
 

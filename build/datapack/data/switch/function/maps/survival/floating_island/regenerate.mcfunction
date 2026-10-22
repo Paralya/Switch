@@ -33,7 +33,6 @@ execute if score #rg_floating_island switch.data matches 301.. in switch:game ru
 execute if score #rg_floating_island switch.data matches 301.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Floating Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_floating_island switch.data matches 301.. run function switch:engine/log_message/apply {message:"Map `Floating Island` just regenerated!"}
 
-execute if score #rg_floating_island switch.data matches 301.. in switch:game run function switch:maps/regenerate_doors_macro {name:"floating_island"}
 execute if score #rg_floating_island switch.data matches 301.. run scoreboard players reset #rg_floating_island switch.data
 execute if score #rg_floating_island switch.data matches 1.. run schedule function switch:maps/survival/floating_island/regenerate 1t
 

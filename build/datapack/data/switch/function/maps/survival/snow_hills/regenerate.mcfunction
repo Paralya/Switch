@@ -81,7 +81,6 @@ execute if score #rg_snow_hills switch.data matches 916.. in switch:game run for
 execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_snow_hills switch.data matches 916.. run function switch:engine/log_message/apply {message:"Map `Snow Hills` just regenerated!"}
 
-execute if score #rg_snow_hills switch.data matches 916.. in switch:game run function switch:maps/regenerate_doors_macro {name:"snow_hills"}
 execute if score #rg_snow_hills switch.data matches 916.. run scoreboard players reset #rg_snow_hills switch.data
 execute if score #rg_snow_hills switch.data matches 1.. run schedule function switch:maps/survival/snow_hills/regenerate 1t
 

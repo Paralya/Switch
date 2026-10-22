@@ -141,7 +141,6 @@ execute if score #rg_trials_run switch.data matches 6451.. in switch:game run fo
 execute if score #rg_trials_run switch.data matches 6451.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Trials Run","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"m","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_trials_run switch.data matches 6451.. run function switch:engine/log_message/apply {message:"Map `Trials Run` just regenerated!"}
 
-execute if score #rg_trials_run switch.data matches 6451.. in switch:game run function switch:maps/regenerate_doors_macro {name:"trials_run"}
 execute if score #rg_trials_run switch.data matches 6451.. run scoreboard players reset #rg_trials_run switch.data
 execute if score #rg_trials_run switch.data matches 1.. run schedule function switch:maps/survival/trials_run/regenerate 1t
 

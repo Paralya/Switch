@@ -117,7 +117,6 @@ execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run fo
 execute if score #rg_ctf_nether switch.data matches 2641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fiery Wastes","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ctf_nether switch.data matches 2641.. run function switch:engine/log_message/apply {message:"Map `Fiery Wastes` just regenerated!"}
 
-execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ctf_nether"}
 execute if score #rg_ctf_nether switch.data matches 2641.. run scoreboard players reset #rg_ctf_nether switch.data
 execute if score #rg_ctf_nether switch.data matches 1.. run schedule function switch:maps/survival/ctf_nether/regenerate 1t
 

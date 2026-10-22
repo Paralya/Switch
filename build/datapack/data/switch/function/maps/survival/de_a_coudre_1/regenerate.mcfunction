@@ -33,7 +33,6 @@ execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run 
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dé à coudre 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"16","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run function switch:engine/log_message/apply {message:"Map `Dé à coudre 1` just regenerated!"}
 
-execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run function switch:maps/regenerate_doors_macro {name:"de_a_coudre_1"}
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run scoreboard players reset #rg_de_a_coudre_1 switch.data
 execute if score #rg_de_a_coudre_1 switch.data matches 1.. run schedule function switch:maps/survival/de_a_coudre_1/regenerate 1t
 

@@ -29,7 +29,6 @@ execute if score #rg_gg_temple switch.data matches 107.. in switch:game run forc
 execute if score #rg_gg_temple switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Temple des Dieux","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_gg_temple switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Temple des Dieux` just regenerated!"}
 
-execute if score #rg_gg_temple switch.data matches 107.. in switch:game run function switch:maps/regenerate_doors_macro {name:"gg_temple"}
 execute if score #rg_gg_temple switch.data matches 107.. run scoreboard players reset #rg_gg_temple switch.data
 execute if score #rg_gg_temple switch.data matches 1.. run schedule function switch:maps/survival/gg_temple/regenerate 1t
 

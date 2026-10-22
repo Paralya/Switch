@@ -33,7 +33,6 @@ execute if score #rg_friends_pvpbox_ice switch.data matches 130.. in switch:game
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube PvPbox Ice","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run function switch:engine/log_message/apply {message:"Map `FriendsCube PvPbox Ice` just regenerated!"}
 
-execute if score #rg_friends_pvpbox_ice switch.data matches 130.. in switch:game run function switch:maps/regenerate_doors_macro {name:"friends_pvpbox_ice"}
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run scoreboard players reset #rg_friends_pvpbox_ice switch.data
 execute if score #rg_friends_pvpbox_ice switch.data matches 1.. run schedule function switch:maps/survival/friends_pvpbox_ice/regenerate 1t
 

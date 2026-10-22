@@ -29,7 +29,6 @@ execute if score #rg_pitch_creep_1 switch.data matches 83.. in switch:game run f
 execute if score #rg_pitch_creep_1 switch.data matches 83.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Pitch Creep Wood","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"4","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_pitch_creep_1 switch.data matches 83.. run function switch:engine/log_message/apply {message:"Map `Pitch Creep Wood` just regenerated!"}
 
-execute if score #rg_pitch_creep_1 switch.data matches 83.. in switch:game run function switch:maps/regenerate_doors_macro {name:"pitch_creep_1"}
 execute if score #rg_pitch_creep_1 switch.data matches 83.. run scoreboard players reset #rg_pitch_creep_1 switch.data
 execute if score #rg_pitch_creep_1 switch.data matches 1.. run schedule function switch:maps/survival/pitch_creep_1/regenerate 1t
 

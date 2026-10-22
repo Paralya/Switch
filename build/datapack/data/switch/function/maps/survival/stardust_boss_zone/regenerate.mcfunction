@@ -53,7 +53,6 @@ execute if score #rg_stardust_boss_zone switch.data matches 913.. in switch:game
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Boss Zone","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run function switch:engine/log_message/apply {message:"Map `Stardust Boss Zone` just regenerated!"}
 
-execute if score #rg_stardust_boss_zone switch.data matches 913.. in switch:game run function switch:maps/regenerate_doors_macro {name:"stardust_boss_zone"}
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run scoreboard players reset #rg_stardust_boss_zone switch.data
 execute if score #rg_stardust_boss_zone switch.data matches 1.. run schedule function switch:maps/survival/stardust_boss_zone/regenerate 1t
 

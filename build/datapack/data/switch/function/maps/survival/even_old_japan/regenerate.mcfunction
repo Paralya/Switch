@@ -41,7 +41,6 @@ execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run
 execute if score #rg_even_old_japan switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Old Japan","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_even_old_japan switch.data matches 266.. run function switch:engine/log_message/apply {message:"Map `Old Japan` just regenerated!"}
 
-execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run function switch:maps/regenerate_doors_macro {name:"even_old_japan"}
 execute if score #rg_even_old_japan switch.data matches 266.. run scoreboard players reset #rg_even_old_japan switch.data
 execute if score #rg_even_old_japan switch.data matches 1.. run schedule function switch:maps/survival/even_old_japan/regenerate 1t
 

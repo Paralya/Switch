@@ -29,7 +29,6 @@ execute if score #rg_snowball_painter switch.data matches 69.. in switch:game ru
 execute if score #rg_snowball_painter switch.data matches 69.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snowball Painter","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_snowball_painter switch.data matches 69.. run function switch:engine/log_message/apply {message:"Map `Snowball Painter` just regenerated!"}
 
-execute if score #rg_snowball_painter switch.data matches 69.. in switch:game run function switch:maps/regenerate_doors_macro {name:"snowball_painter"}
 execute if score #rg_snowball_painter switch.data matches 69.. run scoreboard players reset #rg_snowball_painter switch.data
 execute if score #rg_snowball_painter switch.data matches 1.. run schedule function switch:maps/survival/snowball_painter/regenerate 1t
 

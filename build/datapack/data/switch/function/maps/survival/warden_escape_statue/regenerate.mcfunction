@@ -45,7 +45,6 @@ execute if score #rg_warden_escape_statue switch.data matches 745.. in switch:ga
 execute if score #rg_warden_escape_statue switch.data matches 745.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Warden Escape Statue","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"37","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_warden_escape_statue switch.data matches 745.. run function switch:engine/log_message/apply {message:"Map `Warden Escape Statue` just regenerated!"}
 
-execute if score #rg_warden_escape_statue switch.data matches 745.. in switch:game run function switch:maps/regenerate_doors_macro {name:"warden_escape_statue"}
 execute if score #rg_warden_escape_statue switch.data matches 745.. run scoreboard players reset #rg_warden_escape_statue switch.data
 execute if score #rg_warden_escape_statue switch.data matches 1.. run schedule function switch:maps/survival/warden_escape_statue/regenerate 1t
 

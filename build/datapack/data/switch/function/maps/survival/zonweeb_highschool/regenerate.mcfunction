@@ -61,7 +61,6 @@ execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game
 execute if score #rg_zonweeb_highschool switch.data matches 591.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"A Japanese High School","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"29","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_zonweeb_highschool switch.data matches 591.. run function switch:engine/log_message/apply {message:"Map `A Japanese High School` just regenerated!"}
 
-execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run function switch:maps/regenerate_doors_macro {name:"zonweeb_highschool"}
 execute if score #rg_zonweeb_highschool switch.data matches 591.. run scoreboard players reset #rg_zonweeb_highschool switch.data
 execute if score #rg_zonweeb_highschool switch.data matches 1.. run schedule function switch:maps/survival/zonweeb_highschool/regenerate 1t
 

@@ -33,7 +33,6 @@ execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:ga
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sheepwars Plateforme","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run function switch:engine/log_message/apply {message:"Map `Sheepwars Plateforme` just regenerated!"}
 
-execute if score #rg_sheepwars_plateforme switch.data matches 211.. in switch:game run function switch:maps/regenerate_doors_macro {name:"sheepwars_plateforme"}
 execute if score #rg_sheepwars_plateforme switch.data matches 211.. run scoreboard players reset #rg_sheepwars_plateforme switch.data
 execute if score #rg_sheepwars_plateforme switch.data matches 1.. run schedule function switch:maps/survival/sheepwars_plateforme/regenerate 1t
 

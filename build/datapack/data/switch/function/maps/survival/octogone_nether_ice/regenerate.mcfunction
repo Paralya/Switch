@@ -37,7 +37,6 @@ execute if score #rg_octogone_nether_ice switch.data matches 253.. in switch:gam
 execute if score #rg_octogone_nether_ice switch.data matches 253.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Octogone Nether Ice","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_octogone_nether_ice switch.data matches 253.. run function switch:engine/log_message/apply {message:"Map `Octogone Nether Ice` just regenerated!"}
 
-execute if score #rg_octogone_nether_ice switch.data matches 253.. in switch:game run function switch:maps/regenerate_doors_macro {name:"octogone_nether_ice"}
 execute if score #rg_octogone_nether_ice switch.data matches 253.. run scoreboard players reset #rg_octogone_nether_ice switch.data
 execute if score #rg_octogone_nether_ice switch.data matches 1.. run schedule function switch:maps/survival/octogone_nether_ice/regenerate 1t
 

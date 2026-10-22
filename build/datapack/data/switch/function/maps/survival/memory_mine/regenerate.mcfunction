@@ -29,7 +29,6 @@ execute if score #rg_memory_mine switch.data matches 35.. in switch:game run for
 execute if score #rg_memory_mine switch.data matches 35.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Memory Mine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_memory_mine switch.data matches 35.. run function switch:engine/log_message/apply {message:"Map `Memory Mine` just regenerated!"}
 
-execute if score #rg_memory_mine switch.data matches 35.. in switch:game run function switch:maps/regenerate_doors_macro {name:"memory_mine"}
 execute if score #rg_memory_mine switch.data matches 35.. run scoreboard players reset #rg_memory_mine switch.data
 execute if score #rg_memory_mine switch.data matches 1.. run schedule function switch:maps/survival/memory_mine/regenerate 1t
 

@@ -41,7 +41,6 @@ execute if score #rg_elytra_box switch.data matches 156.. in switch:game run for
 execute if score #rg_elytra_box switch.data matches 156.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Elytra Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_elytra_box switch.data matches 156.. run function switch:engine/log_message/apply {message:"Map `Elytra Box` just regenerated!"}
 
-execute if score #rg_elytra_box switch.data matches 156.. in switch:game run function switch:maps/regenerate_doors_macro {name:"elytra_box"}
 execute if score #rg_elytra_box switch.data matches 156.. run scoreboard players reset #rg_elytra_box switch.data
 execute if score #rg_elytra_box switch.data matches 1.. run schedule function switch:maps/survival/elytra_box/regenerate 1t
 

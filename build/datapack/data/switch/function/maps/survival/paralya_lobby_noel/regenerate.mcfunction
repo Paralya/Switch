@@ -77,7 +77,6 @@ execute if score #rg_paralya_lobby_noel switch.data matches 2311.. in switch:gam
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Paralya Lobby Noel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"55","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run function switch:engine/log_message/apply {message:"Map `Paralya Lobby Noel` just regenerated!"}
 
-execute if score #rg_paralya_lobby_noel switch.data matches 2311.. in switch:game run function switch:maps/regenerate_doors_macro {name:"paralya_lobby_noel"}
 execute if score #rg_paralya_lobby_noel switch.data matches 2311.. run scoreboard players reset #rg_paralya_lobby_noel switch.data
 execute if score #rg_paralya_lobby_noel switch.data matches 1.. run schedule function switch:maps/survival/paralya_lobby_noel/regenerate 1t
 

@@ -41,7 +41,6 @@ execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run fo
 execute if score #rg_boat_race_2 switch.data matches 406.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Boat Race 2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_boat_race_2 switch.data matches 406.. run function switch:engine/log_message/apply {message:"Map `Boat Race 2` just regenerated!"}
 
-execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run function switch:maps/regenerate_doors_macro {name:"boat_race_2"}
 execute if score #rg_boat_race_2 switch.data matches 406.. run scoreboard players reset #rg_boat_race_2 switch.data
 execute if score #rg_boat_race_2 switch.data matches 1.. run schedule function switch:maps/survival/boat_race_2/regenerate 1t
 

@@ -37,7 +37,6 @@ execute if score #rg_nether_storm switch.data matches 201.. in switch:game run f
 execute if score #rg_nether_storm switch.data matches 201.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nether Storm","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_nether_storm switch.data matches 201.. run function switch:engine/log_message/apply {message:"Map `Nether Storm` just regenerated!"}
 
-execute if score #rg_nether_storm switch.data matches 201.. in switch:game run function switch:maps/regenerate_doors_macro {name:"nether_storm"}
 execute if score #rg_nether_storm switch.data matches 201.. run scoreboard players reset #rg_nether_storm switch.data
 execute if score #rg_nether_storm switch.data matches 1.. run schedule function switch:maps/survival/nether_storm/regenerate 1t
 

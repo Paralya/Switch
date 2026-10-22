@@ -9,7 +9,7 @@ from .coordinates import (
 	create_tp_coords_string_from_view,
 	get_middle_from_start_and_end,
 )
-from .map_files import create_main_file, create_spread_players_file, create_teleport_players_file, scan_every_door_in_map
+from .map_files import create_main_file, create_spread_players_file, create_teleport_players_file
 from .regeneration import write_first_lines_of_regenerate, write_last_lines_of_regenerate
 from .shared_memory import generated_maps, survival_maps
 
@@ -112,9 +112,6 @@ kill @s
 
 	# Write the spread_players file
 	create_spread_players_file(namespace, start_pos, end_pos, paste_start_height)
-
-	# Write the scan_doors file
-	scan_every_door_in_map(namespace, start_pos, end_pos, paste_start_height, splitted_coordinates)
 
 	# Write the intro_spread file
 	write_map_intro_spread(namespace, view, name, credits)

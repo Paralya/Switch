@@ -33,7 +33,6 @@ execute if score #rg_ghost_town switch.data matches 79.. in switch:game run forc
 execute if score #rg_ghost_town switch.data matches 79.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Ghost Town","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ghost_town switch.data matches 79.. run function switch:engine/log_message/apply {message:"Map `Ghost Town` just regenerated!"}
 
-execute if score #rg_ghost_town switch.data matches 79.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ghost_town"}
 execute if score #rg_ghost_town switch.data matches 79.. run scoreboard players reset #rg_ghost_town switch.data
 execute if score #rg_ghost_town switch.data matches 1.. run schedule function switch:maps/survival/ghost_town/regenerate 1t
 

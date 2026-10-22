@@ -41,7 +41,6 @@ execute if score #rg_bombardement switch.data matches 391.. in switch:game run f
 execute if score #rg_bombardement switch.data matches 391.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Bombardement","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_bombardement switch.data matches 391.. run function switch:engine/log_message/apply {message:"Map `Bombardement` just regenerated!"}
 
-execute if score #rg_bombardement switch.data matches 391.. in switch:game run function switch:maps/regenerate_doors_macro {name:"bombardement"}
 execute if score #rg_bombardement switch.data matches 391.. run scoreboard players reset #rg_bombardement switch.data
 execute if score #rg_bombardement switch.data matches 1.. run schedule function switch:maps/survival/bombardement/regenerate 1t
 

@@ -348,7 +348,6 @@ execute if score #rg_glassrunner switch.data matches 386.. in switch:game run fo
 execute if score #rg_glassrunner switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Glassrunner","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_glassrunner switch.data matches 386.. run function switch:engine/log_message/apply {message:"Map `Glassrunner` just regenerated!"}
 
-execute if score #rg_glassrunner switch.data matches 386.. in switch:game run function switch:maps/regenerate_doors_macro {name:"glassrunner"}
 execute if score #rg_glassrunner switch.data matches 386.. run scoreboard players reset #rg_glassrunner switch.data
 execute if score #rg_glassrunner switch.data matches 1.. run schedule function switch:maps/survival/glassrunner/regenerate 1t
 

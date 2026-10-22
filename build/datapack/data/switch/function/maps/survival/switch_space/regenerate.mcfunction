@@ -157,7 +157,6 @@ execute if score #rg_switch_space switch.data matches 10915.. in switch:game run
 execute if score #rg_switch_space switch.data matches 10915.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Switch Space","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_switch_space switch.data matches 10915.. run function switch:engine/log_message/apply {message:"Map `Switch Space` just regenerated!"}
 
-execute if score #rg_switch_space switch.data matches 10915.. in switch:game run function switch:maps/regenerate_doors_macro {name:"switch_space"}
 execute if score #rg_switch_space switch.data matches 10915.. run scoreboard players reset #rg_switch_space switch.data
 execute if score #rg_switch_space switch.data matches 1.. run schedule function switch:maps/survival/switch_space/regenerate 1t
 

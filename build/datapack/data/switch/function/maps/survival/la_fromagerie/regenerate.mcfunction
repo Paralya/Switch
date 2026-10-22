@@ -41,7 +41,6 @@ execute if score #rg_la_fromagerie switch.data matches 336.. in switch:game run 
 execute if score #rg_la_fromagerie switch.data matches 336.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"La Fromagerie","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"16","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_la_fromagerie switch.data matches 336.. run function switch:engine/log_message/apply {message:"Map `La Fromagerie` just regenerated!"}
 
-execute if score #rg_la_fromagerie switch.data matches 336.. in switch:game run function switch:maps/regenerate_doors_macro {name:"la_fromagerie"}
 execute if score #rg_la_fromagerie switch.data matches 336.. run scoreboard players reset #rg_la_fromagerie switch.data
 execute if score #rg_la_fromagerie switch.data matches 1.. run schedule function switch:maps/survival/la_fromagerie/regenerate 1t
 

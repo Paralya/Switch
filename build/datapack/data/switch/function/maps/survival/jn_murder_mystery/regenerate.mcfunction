@@ -49,7 +49,6 @@ execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Murder Mystery","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run function switch:engine/log_message/apply {message:"Map `Murder Mystery` just regenerated!"}
 
-execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run function switch:maps/regenerate_doors_macro {name:"jn_murder_mystery"}
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run scoreboard players reset #rg_jn_murder_mystery switch.data
 execute if score #rg_jn_murder_mystery switch.data matches 1.. run schedule function switch:maps/survival/jn_murder_mystery/regenerate 1t
 

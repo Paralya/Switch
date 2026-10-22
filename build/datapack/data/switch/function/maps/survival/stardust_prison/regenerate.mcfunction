@@ -57,7 +57,6 @@ execute if score #rg_stardust_prison switch.data matches 523.. in switch:game ru
 execute if score #rg_stardust_prison switch.data matches 523.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Prison","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_stardust_prison switch.data matches 523.. run function switch:engine/log_message/apply {message:"Map `Stardust Prison` just regenerated!"}
 
-execute if score #rg_stardust_prison switch.data matches 523.. in switch:game run function switch:maps/regenerate_doors_macro {name:"stardust_prison"}
 execute if score #rg_stardust_prison switch.data matches 523.. run scoreboard players reset #rg_stardust_prison switch.data
 execute if score #rg_stardust_prison switch.data matches 1.. run schedule function switch:maps/survival/stardust_prison/regenerate 1t
 

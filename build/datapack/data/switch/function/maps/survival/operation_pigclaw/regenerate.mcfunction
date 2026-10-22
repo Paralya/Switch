@@ -357,7 +357,6 @@ execute if score #rg_operation_pigclaw switch.data matches 13777.. in switch:gam
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Operation Pigclaw","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"m","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run function switch:engine/log_message/apply {message:"Map `Operation Pigclaw` just regenerated!"}
 
-execute if score #rg_operation_pigclaw switch.data matches 13777.. in switch:game run function switch:maps/regenerate_doors_macro {name:"operation_pigclaw"}
 execute if score #rg_operation_pigclaw switch.data matches 13777.. run scoreboard players reset #rg_operation_pigclaw switch.data
 execute if score #rg_operation_pigclaw switch.data matches 1.. run schedule function switch:maps/survival/operation_pigclaw/regenerate 1t
 

@@ -33,7 +33,6 @@ execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run
 execute if score #rg_remelta_cluedo switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_remelta_cluedo switch.data matches 130.. run function switch:engine/log_message/apply {message:"Map `Cluedo` just regenerated!"}
 
-execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run function switch:maps/regenerate_doors_macro {name:"remelta_cluedo"}
 execute if score #rg_remelta_cluedo switch.data matches 130.. run scoreboard players reset #rg_remelta_cluedo switch.data
 execute if score #rg_remelta_cluedo switch.data matches 1.. run schedule function switch:maps/survival/remelta_cluedo/regenerate 1t
 

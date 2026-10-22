@@ -41,7 +41,6 @@ execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run f
 execute if score #rg_fast_circuit switch.data matches 176.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fast Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_fast_circuit switch.data matches 176.. run function switch:engine/log_message/apply {message:"Map `Fast Circuit` just regenerated!"}
 
-execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run function switch:maps/regenerate_doors_macro {name:"fast_circuit"}
 execute if score #rg_fast_circuit switch.data matches 176.. run scoreboard players reset #rg_fast_circuit switch.data
 execute if score #rg_fast_circuit switch.data matches 1.. run schedule function switch:maps/survival/fast_circuit/regenerate 1t
 

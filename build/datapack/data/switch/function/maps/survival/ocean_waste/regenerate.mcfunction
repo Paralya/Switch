@@ -41,7 +41,6 @@ execute if score #rg_ocean_waste switch.data matches 456.. in switch:game run fo
 execute if score #rg_ocean_waste switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Ocean Waste","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
 execute if score #rg_ocean_waste switch.data matches 456.. run function switch:engine/log_message/apply {message:"Map `Ocean Waste` just regenerated!"}
 
-execute if score #rg_ocean_waste switch.data matches 456.. in switch:game run function switch:maps/regenerate_doors_macro {name:"ocean_waste"}
 execute if score #rg_ocean_waste switch.data matches 456.. run scoreboard players reset #rg_ocean_waste switch.data
 execute if score #rg_ocean_waste switch.data matches 1.. run schedule function switch:maps/survival/ocean_waste/regenerate 1t
 
