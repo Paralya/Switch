@@ -18,7 +18,7 @@ resource_pack:
 
 require:
     - "stewbeet"
-    - "stewbeet.plugins.sniffer"
+    - "stewbeet.plugins.source_maps"
 
 # A list of strings or dicts representing "plugins".
 pipeline:
