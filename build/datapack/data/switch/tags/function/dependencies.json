@@ -9,6 +9,7 @@
 		{"id": "#bs.load:load","required": false},
 		{"id": "#sheepwars:load","required": false},
 		{"id": "#golf_ball:load","required": false},
-		{"id": "#shopping_kart:load","required": false}
+		{"id": "#shopping_kart:load","required": false},
+		{"id": "#mgs:load","required": false}
 	]
 }
