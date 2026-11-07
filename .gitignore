@@ -1,8 +1,6 @@
-env
-venv
-.env
+
 .venv
 __pycache__
-*_deepl_auth_key*
 _switch_dump
+*.mcfunction.map
 
