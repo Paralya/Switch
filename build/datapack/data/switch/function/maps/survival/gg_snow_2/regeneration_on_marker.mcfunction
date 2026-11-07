@@ -6,11 +6,11 @@
 
 execute store result entity @s Pos[1] double 1 run scoreboard players get #rg_gg_snow_2_y switch.data
 
-execute if score #rg_gg_snow_2_mod switch.data matches 0 at @s in switch:game run particle cloud 10052 ~16.5 8069 10 0 11 0 250 force
-execute if score #rg_gg_snow_2_mod switch.data matches 0 at @s run clone from minecraft:overworld 10042 ~ 8047 10062 ~ 8092 to switch:game 10042 ~16 8047 strict replace force
+execute if score #rg_gg_snow_2_mod switch.data matches 0 at @s in switch:game run particle cloud 10052 ~0.5 8069 10 0 11 0 250 force
+execute if score #rg_gg_snow_2_mod switch.data matches 0 at @s run clone from minecraft:overworld 10042 ~ 8047 10062 ~ 8092 to switch:game 10042 ~0 8047 strict replace force
 
-execute if score #rg_gg_snow_2_mod switch.data matches 1 at @s in switch:game run particle cloud 10072 ~16.5 8069 10 0 11 0 250 force
-execute if score #rg_gg_snow_2_mod switch.data matches 1 at @s run clone from minecraft:overworld 10062 ~ 8047 10082 ~ 8092 to switch:game 10062 ~16 8047 strict replace force
+execute if score #rg_gg_snow_2_mod switch.data matches 1 at @s in switch:game run particle cloud 10072 ~0.5 8069 10 0 11 0 250 force
+execute if score #rg_gg_snow_2_mod switch.data matches 1 at @s run clone from minecraft:overworld 10062 ~ 8047 10082 ~ 8092 to switch:game 10062 ~0 8047 strict replace force
 
 scoreboard players add #rg_gg_snow_2_mod switch.data 1
 execute if score #rg_gg_snow_2_mod switch.data matches 2 in switch:game run kill @e[type=item,x=10062,y=84,z=8069,distance=..1000]

@@ -15,13 +15,13 @@ execute store result score #bp_selected_art switch.data run data get storage swi
 data remove storage switch:maps block_party[0]
 
 # Teleport current marker to the selected pixel art
-tp @s 4093 248 -9985
-scoreboard players set #y_pos switch.data 248
+tp @s 4093 85 -9985
+scoreboard players set #y_pos switch.data 85
 scoreboard players operation #y_pos switch.data -= #bp_selected_art switch.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos switch.data
 
 # Clone the selected pixel art
-execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 263 ~ replace force
+execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
 
 
 ## Choose block

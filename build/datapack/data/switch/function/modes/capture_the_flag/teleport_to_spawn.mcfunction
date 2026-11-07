@@ -12,8 +12,8 @@
 
 ## Maps spawn
 # Map Plains Castles
-execute if data storage switch:main {map:"operation_pigclaw"} run tp @s[team=switch.temp.blue] 6298 145 6251 -135 0
-execute if data storage switch:main {map:"operation_pigclaw"} run tp @s[team=switch.temp.red] 6099 129 6413 45 0
+execute if data storage switch:main {map:"operation_pigclaw"} run tp @s[team=switch.temp.blue] 6298 -19 6251 -135 0
+execute if data storage switch:main {map:"operation_pigclaw"} run tp @s[team=switch.temp.red] 6099 -35 6413 45 0
 execute if data storage switch:main {map:"ctf_plains_castles"} store result score #random switch.data run random value 0..1
 execute if data storage switch:main {map:"ctf_plains_castles"} if score #random switch.data matches 0 run tp @s[team=switch.temp.red] -11675 129 -3862 90 0
 execute if data storage switch:main {map:"ctf_plains_castles"} if score #random switch.data matches 1 run tp @s[team=switch.temp.red] -11678 129 -3910 90 0

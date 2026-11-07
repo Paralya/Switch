@@ -104,7 +104,8 @@ function {ns}:modes/_common/flag/sync_motion
 
 # If the flag is out of bounds, it is returned
 execute store result score #y {ns}.data on vehicle run data get entity @s Pos[1]
-execute if score #y {ns}.data matches ..50 run function {path}/flag_reset
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} if score #y {ns}.data matches ..-114 run function {path}/flag_reset
+execute unless data storage {ns}:main {{map:"operation_pigclaw"}} if score #y {ns}.data matches ..50 run function {path}/flag_reset
 
 # If the flag is free, not at original pos, and a player of the same team is nearby, it is returned
 execute if entity @s[tag={ns}.free,tag=!{ns}.original_pos,tag={ns}.blue_flag] if entity @p[team={ns}.temp.blue,distance=..1] run function {path}/flag_reset
@@ -122,8 +123,8 @@ execute if entity @s[tag={ns}.free] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace #w
 	# /flags_summon
 	write_function(f"{path}/flags_summon", f"""
 # Maps
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 6290 151 6258 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[45.0f,0.0f],Glowing:true}}],Rotation:[45.0f,0.0f]}}
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 6107 135 6406 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[-135.0f,0.0f],Glowing:true}}],Rotation:[-135.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 6290 -13 6258 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[45.0f,0.0f],Glowing:true}}],Rotation:[45.0f,0.0f]}}
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run summon armor_stand 6107 -29 6406 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[-135.0f,0.0f],Glowing:true}}],Rotation:[-135.0f,0.0f]}}
 execute if data storage {ns}:main {{map:"ctf_plains_castles"}} run summon armor_stand -11961 127 -3886 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[-90.0f,0.0f],Glowing:true}}],Rotation:[-90.0f,0.0f]}}
 execute if data storage {ns}:main {{map:"ctf_plains_castles"}} run summon armor_stand -11715 127 -3886 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.red_flag"],item:{{id:"red_banner",count:1}},Rotation:[90.0f,0.0f],Glowing:true}}],Rotation:[90.0f,0.0f]}}
 execute if data storage {ns}:main {{map:"ctf_mountains_castles"}} run summon armor_stand -11714 213 -5894 {{Invisible:true,Invulnerable:true,Marker:true,Passengers:[{{id:"item_display",Tags:["{ns}.flag","{ns}.free","{ns}.original_pos","{ns}.blue_flag"],item:{{id:"blue_banner",count:1}},Rotation:[180.0f,0.0f],Glowing:true}}],Rotation:[180.0f,0.0f]}}
@@ -318,8 +319,8 @@ function {path}/teleport_to_spawn
 	write_function(f"{path}/teleport_to_spawn", f"""
 ## Maps spawn
 # Map Plains Castles
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.blue] 6298 145 6251 -135 0
-execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.red] 6099 129 6413 45 0
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.blue] 6298 -19 6251 -135 0
+execute if data storage {ns}:main {{map:"operation_pigclaw"}} run tp @s[team={ns}.temp.red] 6099 -35 6413 45 0
 execute if data storage {ns}:main {{map:"ctf_plains_castles"}} store result score #random {ns}.data run random value 0..1
 execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 0 run tp @s[team={ns}.temp.red] -11675 129 -3862 90 0
 execute if data storage {ns}:main {{map:"ctf_plains_castles"}} if score #random {ns}.data matches 1 run tp @s[team={ns}.temp.red] -11678 129 -3910 90 0

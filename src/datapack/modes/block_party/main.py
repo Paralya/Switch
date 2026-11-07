@@ -69,7 +69,7 @@ execute store result score #remaining_players {ns}.data if entity @a[tag=!detach
 
 # Basic timer & particles
 execute if score #remaining_players {ns}.data matches 2.. run scoreboard players add #block_party_ticks {ns}.data 1
-execute if score #block_party_ticks {ns}.data matches -100.. run particle note 4125 267 -9953 64 2 64 1 8
+execute if score #block_party_ticks {ns}.data matches -100.. run particle note 4125 104 -9953 64 2 64 1 8
 
 # Paint cow advancement
 execute unless score #test_mode {ns}.data matches 1 if score #block_party_ticks {ns}.data matches -130 if score #block_party_round {ns}.data matches 10.. at @e[type=marker,tag={ns}.paint_marker] positioned ~-2 ~-1 ~-2 run advancement grant @a[tag=!detached,gamemode=!spectator,dx=4,dy=5,dz=4] only {ns}:visible/71
@@ -312,13 +312,13 @@ execute store result score #bp_selected_art {ns}.data run data get storage {ns}:
 data remove storage {ns}:maps block_party[0]
 
 # Teleport current marker to the selected pixel art
-tp @s 4093 248 -9985
-scoreboard players set #y_pos {ns}.data 248
+tp @s 4093 85 -9985
+scoreboard players set #y_pos {ns}.data 85
 scoreboard players operation #y_pos {ns}.data -= #bp_selected_art {ns}.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos {ns}.data
 
 # Clone the selected pixel art
-execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 263 ~ replace force
+execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
 
 
 
@@ -393,24 +393,24 @@ scoreboard players set #block_party_ticks {ns}.data -160
 scoreboard players add #block_party_round {ns}.data 1
 data modify storage {ns}:temp block_party_wave set value []
 
-# Switch case to remove blocks (4093 263 -9985 => 4157 263 -9921)
-execute if score #bp_block {ns}.data matches -1 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_white_terracotta
-execute if score #bp_block {ns}.data matches 0 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_white_concrete
-execute if score #bp_block {ns}.data matches 1 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_orange
-execute if score #bp_block {ns}.data matches 2 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_magenta
-execute if score #bp_block {ns}.data matches 3 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_light_blue
-execute if score #bp_block {ns}.data matches 4 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_yellow
-execute if score #bp_block {ns}.data matches 5 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_lime
-execute if score #bp_block {ns}.data matches 6 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_pink
-execute if score #bp_block {ns}.data matches 7 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_gray
-execute if score #bp_block {ns}.data matches 8 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_light_gray
-execute if score #bp_block {ns}.data matches 9 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_cyan
-execute if score #bp_block {ns}.data matches 10 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_purple
-execute if score #bp_block {ns}.data matches 11 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_blue
-execute if score #bp_block {ns}.data matches 12 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_brown
-execute if score #bp_block {ns}.data matches 13 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_green
-execute if score #bp_block {ns}.data matches 14 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_red
-execute if score #bp_block {ns}.data matches 15 run fill 4093 263 -9985 4157 263 -9921 air replace #{ns}:block_party/not_black
+# Switch case to remove blocks (4093 100 -9985 => 4157 100 -9921)
+execute if score #bp_block {ns}.data matches -1 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_white_terracotta
+execute if score #bp_block {ns}.data matches 0 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_white_concrete
+execute if score #bp_block {ns}.data matches 1 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_orange
+execute if score #bp_block {ns}.data matches 2 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_magenta
+execute if score #bp_block {ns}.data matches 3 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_light_blue
+execute if score #bp_block {ns}.data matches 4 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_yellow
+execute if score #bp_block {ns}.data matches 5 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_lime
+execute if score #bp_block {ns}.data matches 6 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_pink
+execute if score #bp_block {ns}.data matches 7 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_gray
+execute if score #bp_block {ns}.data matches 8 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_light_gray
+execute if score #bp_block {ns}.data matches 9 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_cyan
+execute if score #bp_block {ns}.data matches 10 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_purple
+execute if score #bp_block {ns}.data matches 11 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_blue
+execute if score #bp_block {ns}.data matches 12 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_brown
+execute if score #bp_block {ns}.data matches 13 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_green
+execute if score #bp_block {ns}.data matches 14 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_red
+execute if score #bp_block {ns}.data matches 15 run fill 4093 100 -9985 4157 100 -9921 air replace #{ns}:block_party/not_black
 """)
 
 	# /core/timer_per_round
@@ -444,7 +444,7 @@ execute positioned ~ ~-2 ~ unless block ~ ~ ~ air run function {path}/core/remak
 	write_function(f"{path}/core/remake_list/main", f"""
 # Get the number of pixel arts for the game
 data modify storage {ns}:maps block_party set value []
-execute positioned 4093 248 -9985 run function {path}/core/remake_list/get_art_count_loop
+execute positioned 4093 85 -9985 run function {path}/core/remake_list/get_art_count_loop
 
 # Create a new list with randomized order
 data modify storage {ns}:temp new set value []
