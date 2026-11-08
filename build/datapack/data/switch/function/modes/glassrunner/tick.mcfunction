@@ -24,7 +24,7 @@ execute if score #glassrunner.apocalypse switch.data matches 200.. run function 
 
 execute as @a[tag=!detached] at @s run function switch:modes/glassrunner/tick_player
 execute as @e[tag=switch.glassrunner.glass_bridge,distance=..150] at @s run function switch:modes/glassrunner/tick_glass_bridge
-execute as @e[type=arrow,nbt={inBlockState:{}},distance=..200] at @s run function switch:modes/glassrunner/arrow_explosion
+execute as @e[type=arrow,nbt={inGround:1b},distance=..200] at @s run function switch:modes/glassrunner/arrow_explosion
 
 fill -3747 128 -1747 -3753 132 -1753 air replace #switch:glassrunner/glass
 
