@@ -25,7 +25,7 @@ execute in switch:game run gamerule minecraft:keep_inventory true
 
 function switch:modes/cigogne/translations/start
 
-scoreboard players set #remaining_time switch.data 910
+scoreboard players set #remaining_time switch.data 901
 scoreboard players set #cigogne_seconds switch.data -1
 scoreboard players set #cigogne_ticks switch.data 0
 scoreboard players set #process_end switch.data 0

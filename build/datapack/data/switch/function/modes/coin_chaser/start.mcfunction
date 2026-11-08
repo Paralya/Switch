@@ -21,7 +21,7 @@ function switch:modes/coin_chaser/translations/start
 
 scoreboard players set #coin_chaser_seconds switch.data -1
 scoreboard players set #coin_chaser_ticks switch.data 0
-scoreboard players set #remaining_time switch.data 70
+scoreboard players set #remaining_time switch.data 61
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.points dummy {"text":"Points","color":"red"}
 scoreboard objectives setdisplay sidebar switch.temp.points

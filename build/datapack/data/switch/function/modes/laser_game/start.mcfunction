@@ -43,7 +43,7 @@ scoreboard players set #laser_game_seconds switch.data -1
 scoreboard players set #laser_game_ticks switch.data 0
 scoreboard players set #blue_points switch.data 0
 scoreboard players set #red_points switch.data 0
-scoreboard players set #remaining_time switch.data 160
+scoreboard players set #remaining_time switch.data 151
 scoreboard players set #process_end switch.data 0
 scoreboard players set #base_reload switch.data 15
 

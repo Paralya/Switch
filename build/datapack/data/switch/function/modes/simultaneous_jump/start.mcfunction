@@ -19,7 +19,7 @@ function switch:modes/simultaneous_jump/translations/start
 
 scoreboard players set #simultaneous_jump_seconds switch.data -1
 scoreboard players set #simultaneous_jump_ticks switch.data 0
-scoreboard players set #remaining_time switch.data 65
+scoreboard players set #remaining_time switch.data 58
 scoreboard players set #process_end switch.data 0
 scoreboard players set #detect_end switch.data 0
 scoreboard objectives add switch.temp.color dummy

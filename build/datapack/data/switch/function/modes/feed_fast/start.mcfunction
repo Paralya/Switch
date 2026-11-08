@@ -22,9 +22,10 @@ execute in switch:game run gamerule minecraft:keep_inventory true
 function switch:modes/feed_fast/translations/start
 execute if data storage switch:records feed_fast run function switch:modes/feed_fast/translations/record_tellraw with storage switch:records feed_fast
 
-scoreboard players set #remaining_time switch.data 50
+scoreboard players set #remaining_time switch.data 43
 scoreboard players set #feed_fast_seconds switch.data -3
 execute if data storage switch:main {map:"kart_racer_relai"} run scoreboard players set #feed_fast_seconds switch.data -10
+execute if data storage switch:main {map:"kart_racer_relai"} run scoreboard players set #remaining_time switch.data 50
 scoreboard players set #feed_fast_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 

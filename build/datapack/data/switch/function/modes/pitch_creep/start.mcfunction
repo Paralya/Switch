@@ -21,7 +21,7 @@ function switch:maps/choose_map_for {id:"pitch_creep", maps:["pitch_creep_1","oc
 
 function switch:modes/pitch_creep/translations/start
 
-scoreboard players set #remaining_time switch.data 95
+scoreboard players set #remaining_time switch.data 86
 scoreboard players set #pitch_creep_seconds switch.data -1
 scoreboard players set #pitch_creep_ticks switch.data 0
 scoreboard players set #process_end switch.data 0

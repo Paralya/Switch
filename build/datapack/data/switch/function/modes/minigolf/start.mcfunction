@@ -23,7 +23,7 @@ function switch:maps/choose_map_for {id:"minigolf", maps:["gg_grass_1","gg_grass
 
 scoreboard players set #minigolf_seconds switch.data -1
 scoreboard players set #minigolf_ticks switch.data 0
-scoreboard players set #remaining_time switch.data 245
+scoreboard players set #remaining_time switch.data 236
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.respawn dummy
 
