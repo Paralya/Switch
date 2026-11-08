@@ -188,7 +188,7 @@ execute if score #glassrunner.apocalypse {ns}.data matches 200.. run function {n
 
 execute as @a[tag=!detached] at @s run function {ns}:modes/glassrunner/tick_player
 execute as @e[tag={ns}.glassrunner.glass_bridge,distance=..150] at @s run function {ns}:modes/glassrunner/tick_glass_bridge
-execute as @e[type=arrow,nbt={{inBlockState:{{}}}},distance=..200] at @s run function {ns}:modes/glassrunner/arrow_explosion
+execute as @e[type=arrow,nbt={{inGround:1b}},distance=..200] at @s run function {ns}:modes/glassrunner/arrow_explosion
 
 fill -3747 128 -1747 -3753 132 -1753 air replace #{ns}:glassrunner/glass
 

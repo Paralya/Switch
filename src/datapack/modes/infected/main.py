@@ -251,7 +251,7 @@ execute as @a[tag=!detached] run function {ns}:modes/infected/player_tick
 
 # Prevent drop + kill arrow
 execute as @e[type=item,tag=!{ns}.checked] run function {ns}:modes/infected/no_drop
-kill @e[type=arrow,nbt={{inBlockState:{{}}}}]
+kill @e[type=arrow,nbt={{inGround:1b}}]
 execute as @e[type=arrow] run data modify entity @s damage set value 0.5d
 
 # Maps tick

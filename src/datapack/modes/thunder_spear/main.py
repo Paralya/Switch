@@ -58,7 +58,7 @@ function {ns}:maps/spread_one_player
 	# /on_new_tnt
 	write_function(f"{path}/on_new_tnt", f"""
 # Modify Owner from storage
-data modify entity @s Owner set from storage {ns}:temp Owner
+data modify entity @s owner set from storage {ns}:temp Owner
 
 # Modify fuse à 0s
 data modify entity @s fuse set value 0s
@@ -137,7 +137,7 @@ scoreboard players add #thunder_spear_ticks {ns}.data 1
 function {ns}:utils/on_death_run_function {{function:"{ns}:modes/thunder_spear/give_and_teleport"}}
 
 # Summon tnt to arrows on ground and remove them & Modify arrow damage & Kill all items
-execute as @e[type=arrow,nbt={{inBlockState:{{}}}}] at @s run function {ns}:modes/thunder_spear/explode_arrow
+execute as @e[type=arrow,nbt={{inGround:1b}}] at @s run function {ns}:modes/thunder_spear/explode_arrow
 execute as @e[type=arrow,nbt=!{{weapon:{{components:{{}}}}}}] run data modify entity @s damage set value 100.0d
 execute as @e[type=arrow,nbt={{weapon:{{components:{{}}}}}}] run data modify entity @s damage set value 0.0d
 kill @e[type=item]

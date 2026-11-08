@@ -538,7 +538,7 @@ kill @e[type=wither,scores={{{ns}.temp.cooldown=1200..}}]
 
 # Kill all arrows in ground & Manage snowballs
 execute at @e[type=snowball] positioned ~ ~-2 ~ run fill ~-0.25 ~ ~-0.25 ~0.25 ~ ~0.25 cut_sandstone replace air
-kill @e[type=arrow,nbt={{inBlockState:{{}}}}]
+kill @e[type=arrow,nbt={{inGround:1b}}]
 
 # Class System
 execute as @a[tag=!detached,scores={{{ns}.temp.chosen_class=0}}] run function {ns}:modes/rush_the_point/classes/main

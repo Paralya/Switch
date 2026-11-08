@@ -271,7 +271,7 @@ execute as @a[tag=!detached,gamemode=!spectator,nbt={{Inventory:[{{id:"minecraft
 # Prevent drops
 execute as @e[type=item,tag=!{ns}.checked] run function {ns}:modes/murder_mystery/no_drop
 execute at @e[type=item,nbt={{Age:500s}}] run particle sculk_charge_pop ~ ~ ~ .2 .2 .2 0.01 10
-kill @e[type=arrow,nbt={{inBlockState:{{}}}}]
+kill @e[type=arrow,nbt={{inGround:1b}}]
 kill @e[type=item,nbt={{Age:500s}}]
 
 # Detective bow
