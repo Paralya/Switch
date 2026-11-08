@@ -145,7 +145,7 @@ function {ns}:maps/choose_map_for {{id:"gay_shooter", maps:["gay_shooter"]}}
 
 function {translations}/start
 
-scoreboard players set #remaining_time {ns}.data 310
+scoreboard players set #remaining_time {ns}.data 301
 scoreboard players set #gay_shooter_seconds {ns}.data -1
 scoreboard players set #gay_shooter_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

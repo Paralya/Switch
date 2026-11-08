@@ -103,7 +103,7 @@ execute if score #random {ns}.data matches 0 if entity @s[team={ns}.temp.blue] r
 execute if score #random {ns}.data matches 1 if entity @s[team={ns}.temp.blue] run effect give @a[tag=!detached,team={ns}.temp.blue] regeneration 20 0 true
 execute if score #random {ns}.data matches 2 if entity @s[team={ns}.temp.blue] run effect give @a[tag=!detached,team={ns}.temp.red] poison 5 3 true
 execute if score #random {ns}.data matches 3 if entity @s[team={ns}.temp.blue] run effect give @a[tag=!detached,gamemode=!spectator,team={ns}.temp.red] nausea 10 0 true
-execute if score #random {ns}.data matches 4 if entity @s[team={ns}.temp.blue] as @a[tag=!detached,gamemode=!spectator,team={ns}.temp.blue] run function sheepwars:utils/random_give
+execute if score #random {ns}.data matches 4 if entity @s[team={ns}.temp.blue] as @a[tag=!detached,gamemode=!spectator,team={ns}.temp.blue] at @s run function sheepwars:utils/random_give
 execute if score #random {ns}.data matches 5 if entity @s[team={ns}.temp.blue] run scoreboard players set #blue_fire_arrows {ns}.data 10
 execute if score #random {ns}.data matches 6 if entity @s[team={ns}.temp.blue] run scoreboard players set #blue_explosive_arrows {ns}.data 10
 execute if score #random {ns}.data matches 7 if entity @s[team={ns}.temp.blue] run effect give @a[tag=!detached,gamemode=!spectator,team={ns}.temp.blue] slow_falling 20 0 true
@@ -114,7 +114,7 @@ execute if score #random {ns}.data matches 0 if entity @s[team={ns}.temp.red] ru
 execute if score #random {ns}.data matches 1 if entity @s[team={ns}.temp.red] run effect give @a[tag=!detached,team={ns}.temp.red] regeneration 20 0 true
 execute if score #random {ns}.data matches 2 if entity @s[team={ns}.temp.red] run effect give @a[tag=!detached,team={ns}.temp.blue] poison 5 3 true
 execute if score #random {ns}.data matches 3 if entity @s[team={ns}.temp.red] run effect give @a[tag=!detached,gamemode=!spectator,team={ns}.temp.blue] nausea 10 0 true
-execute if score #random {ns}.data matches 4 if entity @s[team={ns}.temp.red] as @a[tag=!detached,gamemode=!spectator,team={ns}.temp.red] run function sheepwars:utils/random_give
+execute if score #random {ns}.data matches 4 if entity @s[team={ns}.temp.red] as @a[tag=!detached,gamemode=!spectator,team={ns}.temp.red] at @s run function sheepwars:utils/random_give
 execute if score #random {ns}.data matches 5 if entity @s[team={ns}.temp.red] run scoreboard players set #red_fire_arrows {ns}.data 10
 execute if score #random {ns}.data matches 6 if entity @s[team={ns}.temp.red] run scoreboard players set #red_explosive_arrows {ns}.data 10
 execute if score #random {ns}.data matches 7 if entity @s[team={ns}.temp.red] run effect give @a[tag=!detached,gamemode=!spectator,team={ns}.temp.red] slow_falling 20 0 true
@@ -174,7 +174,7 @@ execute if score @s {ns}.sheepwars.chosen_kit matches 4 if score @s {ns}.sheepwa
 execute if score @s {ns}.sheepwars.chosen_kit matches 4 if score @s {ns}.sheepwars.kit_more_sheep matches 5 run scoreboard players set #number_of_drops sheepwars.data 2
 
 # Give sheep + playsound
-function sheepwars:utils/random_give
+execute at @s run function sheepwars:utils/random_give
 execute at @s run playsound entity.sheep.ambient ambient @s
 """)
 
@@ -434,7 +434,7 @@ execute if score #success {ns}.data matches 1 run data modify entity @s Fire set
 scoreboard players set #success {ns}.data 0
 execute if score #blue_explosive_arrows {ns}.data matches 1.. on origin if entity @s[team={ns}.temp.blue] run scoreboard players set #success {ns}.data 1
 execute if score #red_explosive_arrows {ns}.data matches 1.. on origin if entity @s[team={ns}.temp.red] run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 1 if entity @s[nbt={{inBlockState:{{}}}}] at @s run function realistic_explosion:explode
-execute if score #success {ns}.data matches 1 if entity @s[nbt={{inBlockState:{{}}}}] run kill @s
+execute if score #success {ns}.data matches 1 if entity @s[nbt={{inGround:1b}}] at @s run function realistic_explosion:explode
+execute if score #success {ns}.data matches 1 if entity @s[nbt={{inGround:1b}}] run kill @s
 """)
 
