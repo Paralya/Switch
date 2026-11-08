@@ -17,6 +17,8 @@ execute unless entity @a[scores={switch.alive=1..}] run scoreboard players set #
 # Cas de fin de partie
 execute if score #game_state switch.data matches 1..4 run scoreboard players set #spectres_game_seconds switch.data 100000
 
+execute if score #game_state switch.data matches 1..4 run function switch:modes/_common/recap/show
+execute if score #spectres_game_seconds switch.data matches 900 if score #game_state switch.data matches 0 run function switch:modes/_common/recap/show
 # Cas des vainqueurs
 function switch:modes/spectres_game/translations/detect_end
 

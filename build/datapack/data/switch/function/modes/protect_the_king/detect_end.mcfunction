@@ -16,6 +16,8 @@ execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard playe
 # Cas de fin de partie
 execute if score #game_state switch.data matches 1..3 run scoreboard players set #protect_the_king_seconds switch.data 100000
 
+execute if score #game_state switch.data matches 1..3 run function switch:modes/_common/recap/show
+execute if score #protect_the_king_seconds switch.data matches 900 if score #game_state switch.data matches 0 run function switch:modes/_common/recap/show
 # Cas des vainqueurs
 function switch:modes/protect_the_king/translations/detect_end
 

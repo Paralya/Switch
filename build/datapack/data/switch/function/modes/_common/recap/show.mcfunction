@@ -3,12 +3,14 @@
 #
 # @within	switch:modes/capture_the_flag/process_end
 #			switch:modes/cigogne/process_end
-#			switch:modes/glassrunner/end/process_end
+#			switch:modes/glassrunner/end/blue
+#			switch:modes/glassrunner/end/null
+#			switch:modes/glassrunner/end/red
 #			switch:modes/pillars_of_fortune/process_end
-#			switch:modes/protect_the_king/process_end
+#			switch:modes/protect_the_king/detect_end
 #			switch:modes/rush_the_flag/process_end
 #			switch:modes/rush_the_point/process_end
-#			switch:modes/spectres_game/process_end
+#			switch:modes/spectres_game/detect_end
 #
 
 # A player who never scored has no value on the objective, which would leave them out of the ranking

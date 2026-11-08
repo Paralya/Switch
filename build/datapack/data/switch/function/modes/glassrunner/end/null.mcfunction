@@ -6,6 +6,7 @@
 # @within	switch:modes/glassrunner/end/timeout
 #
 
+function switch:modes/_common/recap/show
 function switch:modes/glassrunner/translations/end_null
 scoreboard players set #process_end switch.data 1
 
