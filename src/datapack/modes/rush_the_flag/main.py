@@ -232,7 +232,7 @@ function {ns}:modes/rush_the_point/start_common
 function {ns}:modes/rush_the_flag/translations/start
 
 team modify {ns}.temp.sidebar.5 suffix [{{"text":"Goal: "}},{{"text":"5","color":"yellow"}},{{"text":" flags"}}]
-scoreboard players set #remaining_time {ns}.data 610
+scoreboard players set #remaining_time {ns}.data 601
 scoreboard players set #rush_the_point_seconds {ns}.data -11
 scoreboard players set #rush_the_point_ticks {ns}.data 0
 tag @a remove {ns}.has_blue_flag

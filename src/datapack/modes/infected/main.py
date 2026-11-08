@@ -198,7 +198,7 @@ scoreboard objectives add {ns}.temp.infection dummy
 scoreboard objectives add {ns}.temp.original_zombie dummy
 scoreboard objectives add {ns}.temp.kills playerKillCount
 scoreboard objectives add {ns}.temp.hits_gotten dummy
-scoreboard players set #remaining_time {ns}.data 462
+scoreboard players set #remaining_time {ns}.data 453
 scoreboard players set #infected_secret {ns}.data 0
 scoreboard players set #infected_seconds {ns}.data -11
 scoreboard players set #infected_ticks {ns}.data 0

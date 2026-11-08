@@ -101,7 +101,7 @@ scoreboard objectives add {ns}.temp.damages dummy
 scoreboard objectives add {ns}.temp.kills playerKillCount {{"text":"[Goal: 18 Kills]","color":"gold"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.kills
 
-scoreboard players set #remaining_time {ns}.data 600
+scoreboard players set #remaining_time {ns}.data 591
 scoreboard players set #one_shot_seconds {ns}.data -1
 scoreboard players set #one_shot_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

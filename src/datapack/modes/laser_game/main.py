@@ -244,7 +244,7 @@ scoreboard players set #laser_game_seconds {ns}.data -1
 scoreboard players set #laser_game_ticks {ns}.data 0
 scoreboard players set #blue_points {ns}.data 0
 scoreboard players set #red_points {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 160
+scoreboard players set #remaining_time {ns}.data 151
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #base_reload {ns}.data 15
 

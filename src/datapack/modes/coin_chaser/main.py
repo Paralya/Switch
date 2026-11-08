@@ -98,7 +98,7 @@ function {translations}/start
 
 scoreboard players set #coin_chaser_seconds {ns}.data -1
 scoreboard players set #coin_chaser_ticks {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 70
+scoreboard players set #remaining_time {ns}.data 61
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.points dummy {{"text":"Points","color":"red"}}
 scoreboard objectives setdisplay sidebar {ns}.temp.points

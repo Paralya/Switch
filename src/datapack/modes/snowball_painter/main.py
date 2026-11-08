@@ -164,7 +164,7 @@ function {ns}:modes/snowball_painter/translations/start
 
 scoreboard players set #snowball_painter_seconds {ns}.data -1
 scoreboard players set #snowball_painter_ticks {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 1000
+scoreboard players set #remaining_time {ns}.data 991
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.color dummy
 scoreboard objectives add {ns}.temp.points dummy {{"text":"Points","color":"red"}}

@@ -119,7 +119,7 @@ function {ns}:modes/shoot_da_sheep/translations/start
 
 scoreboard players set #shoot_da_sheep_seconds {ns}.data -1
 scoreboard players set #shoot_da_sheep_ticks {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 65
+scoreboard players set #remaining_time {ns}.data 56
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.points dummy {{"text":"Points","color":"red"}}
 scoreboard objectives add {ns}.temp.black_shot dummy

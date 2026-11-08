@@ -195,7 +195,7 @@ function {ns}:maps/choose_map_for {{id:"murder_mystery", maps:["ghost_town","rem
 function {ns}:modes/murder_mystery/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #remaining_time {ns}.data 245
+scoreboard players set #remaining_time {ns}.data 236
 scoreboard players set #murder_mystery_seconds {ns}.data -6
 scoreboard players set #murder_mystery_ticks {ns}.data 0
 scoreboard players set #detective_reload {ns}.data 0
@@ -228,7 +228,7 @@ team modify {ns}.temp.murder_mystery nametagVisibility never
 team join {ns}.temp.murder_mystery @a[tag=!detached]
 
 # Teleport players override
-execute if data storage {ns}:main {{map:"jn_murder_mystery"}} run scoreboard players set #remaining_time {ns}.data 305
+execute if data storage {ns}:main {{map:"jn_murder_mystery"}} run scoreboard players set #remaining_time {ns}.data 296
 
 ## Waypoints
 # Remove everyone's waypoint receive range

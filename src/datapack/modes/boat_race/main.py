@@ -31,7 +31,7 @@ function {ns}:utils/set_dynamic_time
 
 function {translations}/start
 
-scoreboard players set #remaining_time {ns}.data 488
+scoreboard players set #remaining_time {ns}.data 486
 scoreboard players set #boat_race_seconds {ns}.data -6
 scoreboard players set #boat_race_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

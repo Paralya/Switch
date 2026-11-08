@@ -100,9 +100,10 @@ execute in {ns}:game run gamerule minecraft:keep_inventory true
 function {translations}/start
 execute if data storage {ns}:records feed_fast run function {translations}/record_tellraw with storage {ns}:records feed_fast
 
-scoreboard players set #remaining_time {ns}.data 50
+scoreboard players set #remaining_time {ns}.data 43
 scoreboard players set #feed_fast_seconds {ns}.data -3
 execute if data storage {ns}:main {{map:"kart_racer_relai"}} run scoreboard players set #feed_fast_seconds {ns}.data -10
+execute if data storage {ns}:main {{map:"kart_racer_relai"}} run scoreboard players set #remaining_time {ns}.data 50
 scoreboard players set #feed_fast_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 

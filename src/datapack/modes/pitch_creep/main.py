@@ -35,7 +35,7 @@ function {ns}:maps/choose_map_for {{id:"{mode}", maps:["pitch_creep_1","octogone
 
 function {translations}/start
 
-scoreboard players set #remaining_time {ns}.data 95
+scoreboard players set #remaining_time {ns}.data 86
 scoreboard players set #pitch_creep_seconds {ns}.data -1
 scoreboard players set #pitch_creep_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

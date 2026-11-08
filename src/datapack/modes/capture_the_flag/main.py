@@ -277,7 +277,7 @@ team modify {ns}.temp.blue friendlyFire false
 scoreboard players set #next_role {ns}.data 0
 execute as @a[tag=!detached,sort=random] at @s run function {path}/roles/main
 
-scoreboard players set #remaining_time {ns}.data 910
+scoreboard players set #remaining_time {ns}.data 901
 scoreboard players set #capture_the_flag_seconds {ns}.data -1
 scoreboard players set #capture_the_flag_ticks {ns}.data 0
 tag @a remove {ns}.has_blue_flag

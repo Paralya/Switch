@@ -151,7 +151,7 @@ function {ns}:maps/choose_map_for {{id:"minigolf", maps:["gg_grass_1","gg_grass_
 
 scoreboard players set #minigolf_seconds {ns}.data -1
 scoreboard players set #minigolf_ticks {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 245
+scoreboard players set #remaining_time {ns}.data 236
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.respawn dummy
 

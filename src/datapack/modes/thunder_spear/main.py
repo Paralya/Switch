@@ -115,7 +115,7 @@ function {translations}/start
 
 scoreboard players set #thunder_spear_seconds {ns}.data -1
 scoreboard players set #thunder_spear_ticks {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 160
+scoreboard players set #remaining_time {ns}.data 151
 scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.reload dummy
 scoreboard objectives add {ns}.temp.kills playerKillCount {{"text":"Killed players","color":"red"}}

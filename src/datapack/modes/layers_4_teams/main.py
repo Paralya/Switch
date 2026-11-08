@@ -98,7 +98,7 @@ function {ns}:maps/choose_map_for {{id:"layers_4_teams", maps:["layers_4_teams"]
 function {ns}:translations/common/layers_start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
-scoreboard players set #remaining_time {ns}.data 610
+scoreboard players set #remaining_time {ns}.data 601
 scoreboard players set #layers_4_teams_seconds {ns}.data -1
 scoreboard players set #layers_4_teams_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

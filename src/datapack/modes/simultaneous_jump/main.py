@@ -95,7 +95,7 @@ function {ns}:modes/simultaneous_jump/translations/start
 
 scoreboard players set #simultaneous_jump_seconds {ns}.data -1
 scoreboard players set #simultaneous_jump_ticks {ns}.data 0
-scoreboard players set #remaining_time {ns}.data 65
+scoreboard players set #remaining_time {ns}.data 58
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #detect_end {ns}.data 0
 scoreboard objectives add {ns}.temp.color dummy
