@@ -553,12 +553,14 @@ loot give @s loot {ns}:glassrunner/snowball_bridge_red_x8
 
 	# /end/blue (translation ref rewritten)
 	write_function(f"{path}/end/blue", f"""
+function {ns}:modes/_common/recap/show
 function {ns}:modes/glassrunner/translations/end_blue
 scoreboard players set #process_end {ns}.data 1
 """)
 
 	# /end/null (translation ref rewritten)
 	write_function(f"{path}/end/null", f"""
+function {ns}:modes/_common/recap/show
 function {ns}:modes/glassrunner/translations/end_null
 scoreboard players set #process_end {ns}.data 1
 """)
@@ -577,7 +579,6 @@ execute if score #process_end {ns}.data matches 1 if score #glassrunner.points.b
 
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/glassrunner/death/death
 execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
-execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire
@@ -587,6 +588,7 @@ scoreboard players add #process_end {ns}.data 1
 
 	# /end/red (translation ref rewritten)
 	write_function(f"{path}/end/red", f"""
+function {ns}:modes/_common/recap/show
 function {ns}:modes/glassrunner/translations/end_red
 scoreboard players set #process_end {ns}.data 1
 """)

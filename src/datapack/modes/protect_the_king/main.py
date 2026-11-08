@@ -41,6 +41,8 @@ execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard playe
 # Cas de fin de partie
 execute if score #game_state {ns}.data matches 1..3 run scoreboard players set #protect_the_king_seconds {ns}.data 100000
 
+execute if score #game_state {ns}.data matches 1..3 run function {ns}:modes/_common/recap/show
+execute if score #protect_the_king_seconds {ns}.data matches 900 if score #game_state {ns}.data matches 0 run function {ns}:modes/_common/recap/show
 # Cas des vainqueurs
 function {translations}/detect_end
 
@@ -101,7 +103,6 @@ execute if score #reconnect {ns}.data matches 0 run function {ns}:utils/classic_
 	write_function(f"{path}/process_end", f"""
 scoreboard players add #process_end {ns}.data 1
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
-execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart

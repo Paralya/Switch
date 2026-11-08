@@ -34,8 +34,8 @@ $execute rotated ~$(angle_difference) 0 as @e[tag={ns}.place_pillar,sort=random,
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
+execute if score #process_end {ns}.data matches 0 run function {ns}:modes/_common/recap/show
 function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
-execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)

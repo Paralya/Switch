@@ -40,13 +40,13 @@ execute if score #engine_state {ns}.data matches 3 if data storage {ns}:main {{c
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
+execute if score #process_end {ns}.data matches 0 run function {ns}:modes/_common/recap/show
 function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
 
 # Advancement
 execute if score #process_end {ns}.data matches 1 run scoreboard players set #max {ns}.data 0
 execute if score #process_end {ns}.data matches 1 run scoreboard players operation #max {ns}.data > @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] {ns}.temp.kill
 execute if score #process_end {ns}.data matches 1 unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.temp.kill=1..}}] if score #max {ns}.data = @s {ns}.temp.kill run advancement grant @s only {ns}:visible/23
-execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)

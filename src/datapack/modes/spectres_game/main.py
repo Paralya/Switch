@@ -119,6 +119,8 @@ execute unless entity @a[scores={{{ns}.alive=1..}}] run scoreboard players set #
 # Cas de fin de partie
 execute if score #game_state {ns}.data matches 1..4 run scoreboard players set #spectres_game_seconds {ns}.data 100000
 
+execute if score #game_state {ns}.data matches 1..4 run function {ns}:modes/_common/recap/show
+execute if score #spectres_game_seconds {ns}.data matches 900 if score #game_state {ns}.data matches 0 run function {ns}:modes/_common/recap/show
 # Cas des vainqueurs
 function {ns}:modes/spectres_game/translations/detect_end
 
@@ -318,7 +320,6 @@ scoreboard players add #process_end {ns}.data 1
 # Kill tout le monde
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/spectres_game/death/player
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
-execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart

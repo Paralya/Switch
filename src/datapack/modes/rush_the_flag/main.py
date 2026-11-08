@@ -185,6 +185,7 @@ tag @s remove {ns}.has_red_flag
 scoreboard players add #process_end {ns}.data 1
 
 execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached,sort=random]
+execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 function {ns}:modes/rush_the_flag/translations/process_end
 execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data > #blue_points {ns}.data as @a[tag=!detached,team={ns}.rush_the_point.red] at @s run function {ns}:engine/add_win
 execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data < #blue_points {ns}.data as @a[tag=!detached,team={ns}.rush_the_point.blue] at @s run function {ns}:engine/add_win
@@ -193,7 +194,6 @@ execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.to_tp
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
-execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 
 # Obligatoire
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
