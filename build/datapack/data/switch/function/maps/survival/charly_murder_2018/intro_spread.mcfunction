@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned -7981.9 116.2 10022.19 rotated -45.4 10.71 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"MurderUHC House (2018)",subtitle:"Charly",particle:"minecraft:glow"}}
+execute in switch:game positioned -7981.9 116.2 10022.19 rotated -45.4 10.71 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:160,duration:50,sound:"minecraft:intentionally_empty",title:"MurderUHC House (2018)",subtitle:"Charly",particle:"minecraft:glow"}}
 

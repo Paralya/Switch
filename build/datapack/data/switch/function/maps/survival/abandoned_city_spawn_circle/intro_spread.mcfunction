@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned -5930.21 128.06 4063.05 rotated 124.76 23.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Abandoned City Spawn Circle",subtitle:"Viator",particle:"minecraft:glow"}}
+execute in switch:game positioned -5930.21 128.06 4063.05 rotated 124.76 23.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:160,duration:50,sound:"minecraft:intentionally_empty",title:"Abandoned City Spawn Circle",subtitle:"Viator",particle:"minecraft:glow"}}
 

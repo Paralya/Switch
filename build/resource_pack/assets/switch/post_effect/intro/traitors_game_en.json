@@ -1,0 +1,116 @@
+{
+	"targets": {
+		"clock": {
+			"width": 1,
+			"height": 1,
+			"persistent": true,
+			"clear_color": 0
+		},
+		"clock_next": {
+			"width": 1,
+			"height": 1
+		},
+		"swap": {},
+		"blur": {
+			"width": 480,
+			"height": 270
+		},
+		"blur_swap": {
+			"width": 480,
+			"height": 270
+		}
+	},
+	"passes": [
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "minecraft:main","bilinear": true}
+			],
+			"output": "blur"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "minecraft:post/box_blur",
+			"inputs": [
+				{"sampler_name": "In","target": "blur","bilinear": true}
+			],
+			"output": "blur_swap",
+			"uniforms": {
+				"BlurConfig": [{"name": "BlurDir","type": "vec2","value": [1.0,0.0]},{"name": "Radius","type": "float","value": 6.0}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "minecraft:post/box_blur",
+			"inputs": [
+				{"sampler_name": "In","target": "blur_swap","bilinear": true}
+			],
+			"output": "blur",
+			"uniforms": {
+				"BlurConfig": [{"name": "BlurDir","type": "vec2","value": [0.0,1.0]},{"name": "Radius","type": "float","value": 6.0}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "minecraft:post/box_blur",
+			"inputs": [
+				{"sampler_name": "In","target": "blur","bilinear": true}
+			],
+			"output": "blur_swap",
+			"uniforms": {
+				"BlurConfig": [{"name": "BlurDir","type": "vec2","value": [1.0,0.0]},{"name": "Radius","type": "float","value": 6.0}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "minecraft:post/box_blur",
+			"inputs": [
+				{"sampler_name": "In","target": "blur_swap","bilinear": true}
+			],
+			"output": "blur",
+			"uniforms": {
+				"BlurConfig": [{"name": "BlurDir","type": "vec2","value": [0.0,1.0]},{"name": "Radius","type": "float","value": 6.0}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/clock",
+			"inputs": [
+				{"sampler_name": "Clock","target": "clock"}
+			],
+			"output": "clock_next"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "clock_next"}
+			],
+			"output": "clock"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/intro",
+			"inputs": [
+				{"sampler_name": "Clock","target": "clock_next"},
+				{"sampler_name": "In","target": "minecraft:main"},
+				{"sampler_name": "Blur","target": "blur","bilinear": true},
+				{"sampler_name": "Depth","target": "minecraft:main","use_depth_buffer": true},
+				{"sampler_name": "Text","location": "switch:intro/traitors_game_en","width": 256,"height": 48}
+			],
+			"output": "swap",
+			"uniforms": {
+				"IntroConfig": [{"name": "Accent","type": "vec3","value": [0.7019607843137254,0.14901960784313725,0.1803921568627451]}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "swap"}
+			],
+			"output": "minecraft:main"
+		}
+	]
+}

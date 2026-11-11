@@ -17,8 +17,6 @@ scoreboard players set #dont_regenerate switch.data 1
 scoreboard players set #do_spreadplayers switch.data 1
 function switch:maps/choose_map_for {id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}
 
-function switch:modes/coin_chaser/translations/start
-
 scoreboard players set #coin_chaser_seconds switch.data -1
 scoreboard players set #coin_chaser_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 61

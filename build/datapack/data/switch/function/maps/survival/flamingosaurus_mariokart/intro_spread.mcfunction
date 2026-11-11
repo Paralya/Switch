@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 6555.17 194.79 -5579.3 rotated 324.97 21.22 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Main Island",subtitle:"Flamingosaurus & co",particle:"minecraft:glow"}}
+execute in switch:game positioned 6555.17 194.79 -5579.3 rotated 324.97 21.22 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:160,duration:50,sound:"minecraft:intentionally_empty",title:"Main Island",subtitle:"Flamingosaurus & co",particle:"minecraft:glow"}}
 

@@ -18,8 +18,6 @@ function switch:maps/choose_map_for {id:"tnt_run", maps:["tnt_run_futuristic","a
 execute in switch:game run gamerule minecraft:fall_damage false
 execute in switch:game run gamerule minecraft:block_drops false
 
-function switch:modes/tnt_run/translations/start
-
 # Dash system objectives and per-player reset
 scoreboard objectives add switch.temp.blocks dummy
 scoreboard objectives add switch.temp.dashes dummy

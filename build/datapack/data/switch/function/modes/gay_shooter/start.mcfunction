@@ -15,8 +15,6 @@ function switch:utils/set_dynamic_time
 scoreboard players set #dont_regenerate switch.data 1
 function switch:maps/choose_map_for {id:"gay_shooter", maps:["gay_shooter"]}
 
-function switch:modes/gay_shooter/translations/start
-
 scoreboard players set #remaining_time switch.data 301
 scoreboard players set #gay_shooter_seconds switch.data -1
 scoreboard players set #gay_shooter_ticks switch.data 0

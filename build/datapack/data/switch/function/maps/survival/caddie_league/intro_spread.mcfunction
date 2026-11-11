@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned -3849.44 122.89 6061.38 rotated 308.06 13.02 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"Caddie League",subtitle:"Oraclette, math730 (Survisland)",particle:"minecraft:glow"}}
+execute in switch:game positioned -3849.44 122.89 6061.38 rotated 308.06 13.02 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:160,duration:50,sound:"minecraft:intentionally_empty",title:"Caddie League",subtitle:"Oraclette, math730 (Survisland)",particle:"minecraft:glow"}}
 

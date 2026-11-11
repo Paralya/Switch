@@ -14,8 +14,6 @@ function switch:utils/set_dynamic_time
 function switch:maps/choose_map_for {id:"shoot_da_sheep", maps:["shoot_da_sheep"]}
 execute as @a[tag=!detached] run function switch:maps/survival/shoot_da_sheep/tp_shoot_da_sheep
 
-function switch:modes/shoot_da_sheep/translations/start
-
 scoreboard players set #shoot_da_sheep_seconds switch.data -1
 scoreboard players set #shoot_da_sheep_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 56

@@ -67,7 +67,8 @@ tag @s remove detached
 execute unless score #no_force_start_msg switch.data matches 1 run function switch:engine/translations/force_start_macro
 scoreboard players reset #no_force_start_msg switch.data
 
-# Start the game with the right state
+# Start the game with the right state, under its intro card
+function switch:engine/launch_game/intro/start with storage switch:main
 function switch:engine/start_state
 scoreboard players remove @a[tag=!detached] switch.win_streak 5
 scoreboard players set @a[tag=!detached,scores={switch.win_streak=..-6}] switch.win_streak -5

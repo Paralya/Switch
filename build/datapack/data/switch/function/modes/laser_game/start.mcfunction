@@ -30,8 +30,6 @@ function switch:maps/choose_map_for {id:"laser_game", maps:["laser_game"]}
 scoreboard players set #team_boolean switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/laser_game/teleport_players
 
-function switch:modes/laser_game/translations/start
-
 scoreboard objectives add switch.temp.individual_points dummy {"text":"Individual Points","color":"yellow"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy

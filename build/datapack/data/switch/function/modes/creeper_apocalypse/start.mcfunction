@@ -19,8 +19,6 @@ function switch:maps/choose_map_for {id:"creeper_apocalypse", maps:["enchanting_
 
 function switch:modes/_common/standard_combat_rules
 
-function switch:modes/creeper_apocalypse/translations/start
-
 scoreboard players set #remaining_time switch.data 96
 scoreboard players set #creeper_apocalypse_seconds switch.data -1
 scoreboard players set #creeper_apocalypse_ticks switch.data 0

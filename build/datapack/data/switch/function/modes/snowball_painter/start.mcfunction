@@ -13,8 +13,6 @@ function switch:utils/set_dynamic_time
 ## Téléportation des joueurs
 function switch:maps/choose_map_for {id:"snowball_painter", maps:["snowball_painter"]}
 
-function switch:modes/snowball_painter/translations/start
-
 scoreboard players set #snowball_painter_seconds switch.data -1
 scoreboard players set #snowball_painter_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 991

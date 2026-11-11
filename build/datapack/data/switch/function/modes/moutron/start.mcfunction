@@ -19,8 +19,6 @@ execute if data storage switch:main {map:"whity_lab"} run function switch:modes/
 
 execute in switch:game run gamerule minecraft:fall_damage false
 
-function switch:modes/moutron/translations/start
-
 scoreboard objectives add switch.temp.moutron dummy
 scoreboard objectives add switch.temp.color dummy
 scoreboard objectives add switch.temp.kill dummy
