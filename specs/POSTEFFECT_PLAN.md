@@ -153,7 +153,7 @@ Timeline réelle, en ticks depuis `posteffect add` :
 - **Les modes désactivés ont aussi leur carte**, puisqu'ils se lancent en démarrage forcé.
 - **Annonces chat supprimées** pour les 45 modes. Les autres lignes de `translations/start` restent (avertissement PvP, vote de thème, partie apocalyptique). `write_server_announce` n'existe plus.
 - **Toast "mode sélectionné" supprimé** avec `engine/pop_ups.py` : la carte porte déjà le nom du mode.
-- **Aucune ligne de changement de gamemode dans le chat au lancement.** `intro/start` coupe `send_command_feedback`, `signals/tick` le rend au tick de jeu 230, quand Cinemalya a relâché les joueurs.
+- **Aucune ligne de changement de gamemode dans le chat.** Tout `gamemode` du Switch, de Cinemalya et de MGS s'exécute `as` le joueur visé (`execute as <joueurs> run gamemode <mode> @s`), ce que le jeu n'annonce pas. Aucun override de langue ne vide `gameMode.changed`. `send_command_feedback` est coupé pendant le vote pour une autre raison : cacher le retour des `/trigger` de vote.
 - **`_coupdetat` et `replicate_the_build`** ne sont pas dans le catalogue : pas de carte, annonce inchangée.
 
 Pas encore fait ou pas vérifié :

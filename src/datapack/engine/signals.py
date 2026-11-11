@@ -120,9 +120,6 @@ function {ns}:engine/signals/macro_stop with storage {ns}:main input
 # Count real game ticks since the game started (gates the per-second signal, see signals/second)
 scoreboard players add #game_ticks {ns}.data 1
 
-# Command feedback is off since the intro card, so the cinematic changes gamemodes without a chat line each
-execute if score #game_ticks {ns}.data matches {MAP_TITLE_TICKS + TRAVEL_TICKS + 20} run gamerule minecraft:send_command_feedback true
-
 # Launch tick signal
 data modify storage {ns}:main input set value {{id:""}}
 data modify storage {ns}:main input.id set from storage {ns}:main current_game

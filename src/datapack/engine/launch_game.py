@@ -137,9 +137,6 @@ schedule function {ns}:engine/launch_game/launch {LAUNCH_TICK}t
 {card_adds}
 execute as @a[tag=!detached] at @s run playsound minecraft:entity.ender_dragon.flap ambient @s ~ ~ ~ 1 0.6
 
-# Keep the gamemode changes of the launch out of the chat, signals/tick gives the feedback back
-gamerule minecraft:send_command_feedback false
-
 schedule function {ns}:engine/launch_game/intro/title {TITLE_TICK}t
 {rule_sounds}
 schedule function {ns}:engine/launch_game/intro/reveal {REVEAL_TICK}t
@@ -210,6 +207,8 @@ $execute store result score #current_game_index {ns}.data run data get storage {
 	write_function(f"{path}/launch_game/launch", f"""
 # Do nothing if the engine left the voting state during the transition (e.g. disabled or force started)
 execute unless score #engine_state {ns}.data matches 2 run return 1
+
+gamerule minecraft:send_command_feedback true
 
 scoreboard players set #engine_state {ns}.data 3
 scoreboard players add total_games {ns}.last_total_games 1
