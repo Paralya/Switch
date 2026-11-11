@@ -30,7 +30,7 @@ function #cinemalya:v1/stop {{with:{{restore:false}}}}
 # Teleport to the lobby (cinematic if close, otherwise tp)
 scoreboard players set #is_close {ns}.data 0
 execute at @s if dimension minecraft:overworld positioned 0 69.69 0 store success score #is_close {ns}.data if entity @s[distance=..200]
-execute if score #is_close {ns}.data matches 1 run function #cinemalya:v1/launch {{with:{{x:0.5,y:69.69,z:0.5,duration:20,pitch:0,yaw:0,particle:"minecraft:glow",smoothing:2}}}}
+execute if score #is_close {ns}.data matches 1 run function #cinemalya:v1/launch {{with:{{x:0.5,y:69.69,z:0.5,duration:20,pitch:0,yaw:0,particle:"minecraft:glow",smoothing:1}}}}
 execute if score #is_close {ns}.data matches 0 in minecraft:overworld run tp @s 0 69.69 0 0 0
 """)
 
