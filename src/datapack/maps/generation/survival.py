@@ -13,6 +13,13 @@ from .map_files import create_main_file, create_spread_players_file, create_tele
 from .regeneration import write_first_lines_of_regenerate, write_last_lines_of_regenerate
 from .shared_memory import generated_maps, survival_maps
 
+# Constants
+MAP_TITLE_TICKS: int = 160
+""" Ticks the players are held on the establishing shot: the mode's intro card hides the first 100, then the map title shows. """
+
+TRAVEL_TICKS: int = 50
+""" Ticks of the flight from the establishing shot down to each player's spot. """
+
 
 # Functions
 # Create the function that generates a folder for a gamemode with regeneration using /clone
@@ -31,7 +38,7 @@ def write_map_intro_spread(namespace: str, view: tuple[float, float, float, floa
 	# The dimension MUST be explicit: the cinematic spectate entity is summoned in the execution dimension and the players are released at its position when the cinematic ends, so running this from a server context (schedule/tick) would drop every player in the overworld copy.
 	ns: str = Mem.ctx.project_id
 	write_function(f"{ns}:maps/survival/{namespace}/intro_spread", f"""
-execute in {ns}:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function #cinemalya:v1/intro {{with:{{selector:"@a[tag=!detached]",display_time:130,duration:50,title:"{name}",subtitle:"{credits}",particle:"minecraft:glow"}}}}
+execute in {ns}:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function #cinemalya:v1/intro {{with:{{selector:"@a[tag=!detached]",display_time:{MAP_TITLE_TICKS},duration:{TRAVEL_TICKS},sound:"minecraft:intentionally_empty",title:"{name}",subtitle:"{credits}",particle:"minecraft:glow"}}}}
 """)
 
 

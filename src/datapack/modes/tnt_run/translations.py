@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the tnt_run translation functions at switch:modes/tnt_run/translations/* """
@@ -37,7 +35,4 @@ execute if score #tnt_run_seconds {ns}.data matches -2 run title @a[scores={{{ns
 execute if score #tnt_run_seconds {ns}.data matches -1 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"1","color":"red"}}
 execute if score #tnt_run_seconds {ns}.data matches 0 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"GO !","color":"red"}}
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de TNT Run dans 10 secondes, ne vous arrêtez pas de courir car les blocs sous vos pieds vont disparaitre en continu !", "TNT Run game starts in 10 seconds, don't stop running because the blocks under your feet will disappear continuously!")
 

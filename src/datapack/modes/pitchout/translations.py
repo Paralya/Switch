@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the pitchout translation functions at switch:modes/pitchout/translations/* """
@@ -42,7 +40,4 @@ execute if score #process_end {ns}.data matches 1 unless score #remaining_player
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The winner of the game is "}},{{"selector":"@a[scores={{{ns}.alive=1..}}]"}}]
 execute if score #process_end {ns}.data matches 1 unless score #remaining_players {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Time up! There were no winners ;("}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Pitchout, votre objectif est d'expulser les autres joueurs grâce à vos équipements et d'être le dernier en vie à la fin !", "Starting the Pitchout game, your goal is to knockback the other players with your equipment and be the last one alive at the end!")
 

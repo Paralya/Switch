@@ -151,8 +151,6 @@ execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
-function {translations}/start
-
 scoreboard players set #mlg_a_coudre_seconds {ns}.data -1
 scoreboard players set #mlg_a_coudre_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0

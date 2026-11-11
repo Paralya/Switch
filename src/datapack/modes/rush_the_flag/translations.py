@@ -99,11 +99,9 @@ execute if entity @s[tag={ns}.red_flag] run tellraw @a[scores={{{ns}.lang=1}},ta
 	# /start
 	write_function(f"{path}/start", f"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Rush The Flag dans 10 secondes, votre objectif est de capturer le drapeau ennemi et de le sécuriser jusqu'à votre base grâce aux différents kits !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPOldFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Rush The Flag game starts in 10 seconds, your objective is to capture the enemy flag and secure it to your base using the various kits!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPOldEN","storage":"{ns}:main","interpret":true}}]
 """)
 

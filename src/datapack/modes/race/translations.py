@@ -168,11 +168,9 @@ execute if score #race_seconds {ns}.data matches 0 run title @a[scores={{{ns}.la
 	write_function(f"{path}/start", rf"""
 # French
 title @a[scores={{{ns}.lang=0}},tag=!detached] times 5 20 5
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Race dans 10 secondes, finissez la course le plus rapidement possible !"}}]
 
 # English
 title @a[scores={{{ns}.lang=1}},tag=!detached] times 5 20 5
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Race game starts in 10 seconds, finish the race as soon as possible!"}}]
 """)
 
 	# /vote_for_change_map

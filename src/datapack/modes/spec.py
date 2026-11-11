@@ -66,6 +66,12 @@ class ModeSpec:
 	description: Localized
 	""" Two or three lines pitching the mode, shown in the vote lore. """
 
+	accent: str
+	""" Colour of the mode's intro card, ex: "#e33b2e" """
+
+	rules: Localized
+	""" Up to three short lines of the intro card telling how to play, ex: ("Ne vous arrêtez jamais de courir",) """
+
 	@property
 	def vote_group(self) -> str:
 		""" The group this mode is voted under, defaulting to its own id.

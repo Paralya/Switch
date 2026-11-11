@@ -120,7 +120,6 @@ execute in {ns}:game run gamerule minecraft:mob_griefing true
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"fireblast", maps:["fireblast_bubulle","fireblast_cookie","fireblast_pork"]}}
-function {translations}/start
 
 scoreboard players set #remaining_time {ns}.data 596
 scoreboard players set #fireblast_seconds {ns}.data -3

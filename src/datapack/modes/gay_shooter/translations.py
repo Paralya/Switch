@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the gay_shooter translation functions at switch:modes/gay_shooter/translations/* """
@@ -26,9 +24,6 @@ execute if score #game_state {ns}.data matches 2 run tellraw @a[scores={{{ns}.la
 execute if score #game_state {ns}.data matches 3 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Game over, neither side is the winner as there are no players left alive!"}}]
 execute if score #game_state {ns}.data matches 4 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Game over, time up! Shooters win ("}},{{"selector":"@a[tag=!detached,gamemode=adventure,team={ns}.temp.shooters]"}},{{"text":")!"}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Guy Shooter, les tireurs doivent empêcher les coureurs de grimper la tour !", "Starting the Guy Shooter game, the shooters must stop the runners from climbing the tower!")
 
 	# /xp_bar
 	write_function(f"{path}/xp_bar", f"""

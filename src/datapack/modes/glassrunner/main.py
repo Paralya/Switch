@@ -97,8 +97,6 @@ execute as @a[tag=!detached] at @s run function {ns}:modes/glassrunner/death/dea
 execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
-function {ns}:modes/glassrunner/translations/start
-
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #glassrunner_ticks {ns}.data 0
 scoreboard players set #glassrunner_seconds {ns}.data -1

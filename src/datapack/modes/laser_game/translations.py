@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the laser_game translation functions at switch:modes/laser_game/translations/* """
@@ -78,7 +76,4 @@ execute if score @s {ns}.temp.shield matches 1.. run tellraw @a[scores={{{ns}.la
 execute unless score @s {ns}.temp.shield matches 1.. run tellraw @s[scores={{{ns}.lang=1}}] [{{"selector":"@a[tag=!detached,tag={ns}.temp]"}},{{"text":" shot you! You are disabled for 5 seconds.","color":"gray"}}]
 execute unless score @s {ns}.temp.shield matches 1.. run tellraw @a[scores={{{ns}.lang=1}},tag=!detached,tag={ns}.temp] [{{"text":"You shot ","color":"gray"}},{{"selector":"@s"}},{{"text":"! [+10 points]"}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Laser Game, faites le plus de points possibles en tirant sur les bases bonus et les ennemis !", "Launching the Laser Game, score as many points as possible by shooting the bonus bases and enemies!")
 

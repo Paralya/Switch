@@ -97,7 +97,6 @@ function {ns}:maps/choose_map_for {{id:"feed_fast", maps:["mushroom_plains","fri
 execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
-function {translations}/start
 execute if data storage {ns}:records feed_fast run function {translations}/record_tellraw with storage {ns}:records feed_fast
 
 scoreboard players set #remaining_time {ns}.data 43

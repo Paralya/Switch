@@ -11,11 +11,9 @@ def write_translations():
 	# /start
 	write_function(f"{path}/start", f"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Beat The Kings dans 15 secondes !\\nLes rois sont moins nombreux mais plus puissants que les civils et les deux équipes doivent s'affronter pour exterminer l'équipe ennemie !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPOldFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Beat The Kings game starts in 15 seconds!\\nThe kings are fewer in number but more powerful than the civilians, and the two teams must compete to exterminate the enemy team!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPOldEN","storage":"{ns}:main","interpret":true}}]
 """)
 

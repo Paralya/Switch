@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the spleef translation functions at switch:modes/spleef/translations/* """
@@ -44,7 +42,4 @@ execute if score #process_end {ns}.data matches 1 unless score #remaining_player
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The winner of the game is "}},{{"selector":"@a[tag=!detached,gamemode=survival]"}}]
 execute if score #process_end {ns}.data matches 1 unless score #remaining_players {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Time up! There were no winners ;("}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Spleef dans 5 secondes, creuser sous les pieds des joueurs et soyez le dernier survivant pour remporter la partie !", "Spleef game starts in 5 seconds, dig under the players' feet and be the last survivor to win the game!")
 

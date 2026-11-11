@@ -111,8 +111,6 @@ execute as @a[tag=!detached] run function {path}/give_and_teleport
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 execute in {ns}:game run gamerule minecraft:fall_damage false
 
-function {translations}/start
-
 scoreboard players set #thunder_spear_seconds {ns}.data -1
 scoreboard players set #thunder_spear_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 151

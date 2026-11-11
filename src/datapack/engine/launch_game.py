@@ -1,6 +1,11 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...resource_pack.intro.card import intro_effect_path
+from ...resource_pack.intro.shader import INTRO_TICKS, LAUNCH_TICK, REVEAL_TICK, RULE_TICKS, TITLE_TICK
+from ..modes.catalogue import DISABLED_MODES, MODES
+from ..modes.definitions import LANG_PRETEXT
+
 
 def write_launch_game() -> None:
 	""" Write the functions that pick, announce and launch the voted game. """
@@ -116,14 +121,39 @@ execute if score #vote_round {ns}.data matches 2 run return run function {ns}:en
 function {ns}:engine/launch_game/resolve_group
 """)
 
-	# /launch_game/transition (the winning game is known: transition screen before launching, to be replaced by an animation explaining the mode)
+	# /launch_game/transition (the winning game is known: its intro card covers the screen, then the game launches behind it)
 	write_function(f"{path}/launch_game/transition", f"""
-# Fade the screen to black (fully black when the game launches)
-execute as @a[tag=!detached] run function {ns}:utils/black_transition
-
-# Launch the game once the screen is black
-schedule function {ns}:engine/launch_game/launch 12t
+function {ns}:engine/launch_game/intro/start with storage {ns}:main
+schedule function {ns}:engine/launch_game/launch {LAUNCH_TICK}t
 """)
+
+	# /launch_game/intro/start (the card times itself from the tick it is applied on, so only its sounds are scheduled)
+	card_adds: str = "\n".join(
+		f"$posteffect add @a[tag=!detached,scores={{{ns}.lang={score}}}] {ns}:{intro_effect_path('$(current_game)', lang)}"
+		for score, lang in enumerate(LANG_PRETEXT)
+	)
+	rule_sounds: str = "\n".join(f"schedule function {ns}:engine/launch_game/intro/rule {tick}t append" for tick in RULE_TICKS)
+	write_function(f"{path}/launch_game/intro/start", f"""
+{card_adds}
+execute as @a[tag=!detached] at @s run playsound minecraft:entity.ender_dragon.flap ambient @s ~ ~ ~ 1 0.6
+
+# Keep the gamemode changes of the launch out of the chat, signals/tick gives the feedback back
+gamerule minecraft:send_command_feedback false
+
+schedule function {ns}:engine/launch_game/intro/title {TITLE_TICK}t
+{rule_sounds}
+schedule function {ns}:engine/launch_game/intro/reveal {REVEAL_TICK}t
+schedule function {ns}:engine/launch_game/intro/stop {INTRO_TICKS + 20}t
+""")
+	write_function(f"{path}/launch_game/intro/title", "execute as @a[tag=!detached] at @s run playsound minecraft:item.mace.smash_ground_heavy ambient @s ~ ~ ~ 0.8 1")
+	write_function(f"{path}/launch_game/intro/rule", "execute as @a[tag=!detached] at @s run playsound minecraft:ui.button.click ambient @s ~ ~ ~ 0.5 1.4")
+	write_function(f"{path}/launch_game/intro/reveal", "execute as @a[tag=!detached] at @s run playsound minecraft:item.trident.riptide_1 ambient @s ~ ~ ~ 0.5 1.4")
+	write_function(f"{path}/launch_game/intro/stop", f"execute as @a run function {ns}:engine/launch_game/intro/remove")
+
+	# /launch_game/intro/remove (as a player: `posteffect clear` would also take off the effects of other packs)
+	write_function(f"{path}/launch_game/intro/remove", "\n".join(
+		f"posteffect remove @s {ns}:{intro_effect_path(mode.id, lang)}" for mode in (*MODES, *DISABLED_MODES) for lang in LANG_PRETEXT
+	))
 
 	# /launch_game/resolve_group
 	write_function(f"{path}/launch_game/resolve_group", f"""
@@ -180,8 +210,6 @@ $execute store result score #current_game_index {ns}.data run data get storage {
 	write_function(f"{path}/launch_game/launch", f"""
 # Do nothing if the engine left the voting state during the transition (e.g. disabled or force started)
 execute unless score #engine_state {ns}.data matches 2 run return 1
-
-gamerule minecraft:send_command_feedback true
 
 scoreboard players set #engine_state {ns}.data 3
 scoreboard players add total_games {ns}.last_total_games 1

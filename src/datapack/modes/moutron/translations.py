@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the moutron translation functions at switch:modes/moutron/translations/* """
@@ -39,9 +37,6 @@ execute if score #moutron_seconds {ns}.data matches -2 run title @a[scores={{{ns
 execute if score #moutron_seconds {ns}.data matches -1 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"1","color":"red"}}
 execute if score #moutron_seconds {ns}.data matches 0 run title @a[scores={{{ns}.lang=1}},tag=!detached] title {{"text":"GO !","color":"red"}}
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Moutron dans 10 secondes, chaque mouton va créer une trainée derrière lui et votre objectif est de survivre le plus longtemps en évitant tous les obstacles !", "Moutron game starts in 10 seconds, each sheep will create a trail behind it and your goal is to survive as long as possible by avoiding all obstacles!")
 
 	# /tick
 	write_function(f"{path}/tick", f"""

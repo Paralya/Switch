@@ -231,8 +231,6 @@ function {ns}:maps/choose_map_for {{id:"laser_game", maps:["laser_game"]}}
 scoreboard players set #team_boolean {ns}.data 0
 execute as @a[tag=!detached,sort=random] run function {ns}:modes/laser_game/teleport_players
 
-function {ns}:modes/laser_game/translations/start
-
 scoreboard objectives add {ns}.temp.individual_points dummy {{"text":"Individual Points","color":"yellow"}}
 scoreboard objectives add {ns}.temp.shield dummy
 scoreboard objectives add {ns}.temp.cooldown dummy

@@ -131,8 +131,6 @@ execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
-function {ns}:modes/warden_escape/translations/start
-
 team add {ns}.temp.mobs
 scoreboard players set #remaining_time {ns}.data 91
 scoreboard players set #warden_escape_seconds {ns}.data -6

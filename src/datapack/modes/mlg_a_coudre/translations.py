@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the mlg_a_coudre translation functions at switch:modes/mlg_a_coudre/translations/* """
@@ -53,7 +51,4 @@ execute if score #process_end {ns}.data matches 1 unless score #position {ns}.da
 execute if score #process_end {ns}.data matches 1 if score #position {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! The winner of the game is "}},{{"selector":"@a[scores={{{ns}.temp.lives=1..}}]"}}]
 execute if score #process_end {ns}.data matches 1 unless score #position {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Time up! There were no winners ;("}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de MLG à Coudre, sautez et posez votre seau d'eau pour amortir votre chute !", "Starting the MLG à Coudre game, jump and put down your bucket of water to cancel your fall damages!")
 

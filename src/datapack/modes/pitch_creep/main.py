@@ -33,8 +33,6 @@ execute in {ns}:game run gamerule minecraft:keep_inventory true
 scoreboard players set #dont_regenerate {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"{mode}", maps:["pitch_creep_1","octogone_nether_ice"]}}
 
-function {translations}/start
-
 scoreboard players set #remaining_time {ns}.data 86
 scoreboard players set #pitch_creep_seconds {ns}.data -1
 scoreboard players set #pitch_creep_ticks {ns}.data 0

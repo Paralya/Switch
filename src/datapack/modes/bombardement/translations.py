@@ -2,16 +2,11 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the bombardement translation functions at switch:modes/bombardement/translations/* """
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:modes/bombardement/translations"
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Bombardment dans 10 secondes, esquivez les boulets de canon et ne tombez pas dans l'eau !", "Bombing game starts in 10 seconds, dodge the cannonballs and don't fall in the water!")
 
 	# /death
 	write_function(f"{path}/death", f"""

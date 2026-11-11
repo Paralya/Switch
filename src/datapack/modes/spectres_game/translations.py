@@ -125,11 +125,9 @@ function {ns}:translations/common/basic_actionbar
 	# /start
 	write_function(f"{path}/start", rf"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Spectres Game dans 10 secondes, un tier des joueurs sont des spectres invisibles laissant des particules d'eau sur leur chemin lorsqu'ils ne sneak pas, ils doivent tuer les joueurs visibles tandis qu'eux doivent survivre et tuer les spectres !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Spectres Game starts in 10 seconds, a third of the players are invisible spectres leaving water particles in their path when they don't sneak, they must kill the visible players while they must survive and kill the spectres!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldEN","storage":"{ns}:main","interpret":true}}]
 """)
 

@@ -218,11 +218,9 @@ function {ns}:translations/common/basic_actionbar
 	# /start
 	write_function(f"{path}/start", rf"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Traitors Game, des traitres seront présents dans la partie avec quelques particularités, vous allez recevoir votre rôle dans quelques secondes !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Launching the Traitors Game, traitors will be present in the game with some peculiarities, you will receive your role in a few seconds!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldEN","storage":"{ns}:main","interpret":true}}]
 """)
 

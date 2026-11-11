@@ -26,11 +26,9 @@ execute if score #game_state {ns}.data matches 3 run tellraw @a[scores={{{ns}.la
 	# /start
 	write_function(f"{path}/start", f"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Protect The King, deux équipes s'affrontent et la partie se termine lorsqu'un des deux rois est tué !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPNewFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Start the Protect The King game, two teams compete and the game ends when one of the two kings is killed!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPNewEN","storage":"{ns}:main","interpret":true}}]
 """)
 

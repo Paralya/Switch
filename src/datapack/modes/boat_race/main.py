@@ -29,8 +29,6 @@ effect give @a[tag=!detached] resistance infinite 255 true
 
 function {ns}:utils/set_dynamic_time
 
-function {translations}/start
-
 scoreboard players set #remaining_time {ns}.data 486
 scoreboard players set #boat_race_seconds {ns}.data -6
 scoreboard players set #boat_race_ticks {ns}.data 0

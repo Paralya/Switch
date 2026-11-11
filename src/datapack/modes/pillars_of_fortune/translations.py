@@ -36,11 +36,9 @@ execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. if score #s
 	# /start
 	write_function(f"{path}/start", f"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de Pillars of Fortune dans 5 secondes, soyez le dernier en vie dans ce FFA sanglant !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPNewFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Launch of Pillars of Fortune in 5 seconds, be the last one alive in this bloody FFA!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaPvPNewEN","storage":"{ns}:main","interpret":true}}]
 """)
 

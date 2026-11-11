@@ -143,8 +143,6 @@ execute if data storage {ns}:main {{map:"whity_lab"}} run function {path}/spread
 
 execute in {ns}:game run gamerule minecraft:fall_damage false
 
-function {translations}/start
-
 scoreboard objectives add {ns}.temp.moutron dummy
 scoreboard objectives add {ns}.temp.color dummy
 scoreboard objectives add {ns}.temp.kill dummy

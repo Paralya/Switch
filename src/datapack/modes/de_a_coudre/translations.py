@@ -42,11 +42,9 @@ execute if score #process_end {ns}.data matches 1 if score #detect_end {ns}.data
 	# /start
 	write_function(f"{path}/start", f"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Dé à Coudre, marquez le maximum de points en sautant dans des points d'eau encerclé de blocs !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"text":"Démarrage d'un nouveau round ! [","color":"yellow"}},{{"text":"1","color":"gold"}},{{"text":"/"}},{{"score":{{"name":"#max_rounds","objective":"{ns}.data"}},"color":"gold"}},{{"text":"]"}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Launching game of Dé à Coudre, score as many points as possible by jumping into water dots surrounded by blocks!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"text":"Starting a new round! [","color":"yellow"}},{{"text":"1","color":"gold"}},{{"text":"/"}},{{"score":{{"name":"#max_rounds","objective":"{ns}.data"}},"color":"gold"}},{{"text":"]"}}]
 """)
 

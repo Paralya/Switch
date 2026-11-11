@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the glassrunner translation functions at switch:modes/glassrunner/translations/* """
@@ -120,7 +118,4 @@ execute if score @s {ns}.glassrunner.money matches 12.. run tellraw @s[scores={{
 execute unless score @s {ns}.glassrunner.money matches 12.. run tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" You don't have enough coins","color":"red"}}]
 execute if score @s {ns}.glassrunner.money matches 12.. run tellraw @s[scores={{{ns}.lang=1}}] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" You just bought a turtle helmet","color":"green"}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Glass Runner dans 5 secondes, votre objectif est de capturer les différents points de la map pour marquer des points ! Votre inventaire sert de boutique utilisant vos niveaux d'xp !", "Glass Runner game starts in 5 seconds, your objective is to capture the various points on the map to score points! Your inventory serves as a shop using your xp levels!")
 

@@ -284,7 +284,7 @@ Advancements, prédicats, loot tables, item modifiers, tags ou structures vont d
 
 - **`_common/`** : fonctions partagées écrites dans `switch:modes/_common/*` (mort en spectateur, fin de partie, barre d'XP, kits communs).
 - **`_coupdetat/`** : pseudo-mode utilisé par le moteur, pas un mini-jeu votable.
-- Les helpers Python partagés vivent dans `src/datapack/modes/emit.py` : `write_modes_calls`, `write_server_announce`, `write_time_xp_bar`, `write_no_drop`, `register_structures`, `register_sounds`.
+- Les helpers Python partagés vivent dans `src/datapack/modes/emit.py` : `write_modes_calls`, `write_time_xp_bar`, `write_no_drop`, `register_structures`, `register_sounds`.
 - Le namespace n'est jamais écrit en dur : utilisez toujours `ns: str = Mem.ctx.project_id`.
 
 <br>

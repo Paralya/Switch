@@ -165,7 +165,6 @@ scoreboard players reset #new_record {ns}.data
 execute unless data storage {ns}:records minigolf run data modify storage {ns}:records minigolf set value {{}}
 data modify storage {ns}:records minigolf.current_map set from storage {ns}:main map
 function {path}/record_tellraw with storage {ns}:records minigolf
-function {translations}/start
 """)
 
 	# /stop

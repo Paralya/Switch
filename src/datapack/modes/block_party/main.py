@@ -31,7 +31,6 @@ time set 18000
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"{mode}", maps:["{mode}"]}}
-function {translations}/start
 execute if data storage {ns}:records block_party run function {translations}/record_tellraw with storage {ns}:records block_party
 data modify storage {ns}:temp block_party_wave set value []
 

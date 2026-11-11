@@ -85,24 +85,6 @@ function {ns}:engine/force_start_macro {{id:"{mode}"}}
 """)
 
 
-def write_server_announce(path: str, fr: str, en: str) -> None:
-	""" Write a bilingual server-prefixed announcement (the "[Paralya] ..." tellraw pair).
-
-	Args:
-		path: Full function path, e.g. f"{path}/start".
-		fr:   French message text (inserted after the server-name prefix and a leading space).
-		en:   English message text.
-	"""
-	ns: str = Mem.ctx.project_id
-	write_function(path, f"""
-# French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" {fr}"}}]
-
-# English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" {en}"}}]
-""")
-
-
 def register_break_obsidian_advancement(mode: str) -> None:
 	""" Register the shared break_obsidian tick advancement for a mode (rush_the_flag / rush_the_point):
 		grant once switch.temp.break_obsidian reaches 1, rewarding the mode's break_obsidian function. """

@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the minigolf translation functions at switch:modes/minigolf/translations/* """
@@ -42,7 +40,4 @@ $execute unless score #new_record {ns}.data matches 1 run tellraw @a[scores={{{n
 $execute if score #new_record {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" New record $(shots) hits by $(player) in $(time)s!","color":"yellow"}}]
 $execute unless score #new_record {ns}.data matches 1 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Current record of $(shots) hits and $(time)s held by $(player)","color":"yellow"}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de MiniGolf, vous avez 5 secondes de préparation !", "Starting the MiniGolf game, you have 5 seconds to prepare!")
 

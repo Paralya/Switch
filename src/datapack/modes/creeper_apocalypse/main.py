@@ -126,8 +126,6 @@ function {ns}:maps/choose_map_for {{id:"creeper_apocalypse", maps:["enchanting_i
 
 function {ns}:modes/_common/standard_combat_rules
 
-function {translations}/start
-
 scoreboard players set #remaining_time {ns}.data 96
 scoreboard players set #creeper_apocalypse_seconds {ns}.data -1
 scoreboard players set #creeper_apocalypse_ticks {ns}.data 0

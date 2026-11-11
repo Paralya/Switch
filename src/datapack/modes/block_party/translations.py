@@ -2,16 +2,11 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the block_party translation functions at switch:modes/block_party/translations/* """
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:modes/block_party/translations"
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Block Party dans 10 secondes, dirigez-vous vers la couleur indiquée dans le temps imparti !", "Block Party game starts in 10 seconds, head to the indicated color in the allotted time!")
 
 	# /death
 	write_function(f"{path}/death", f"""

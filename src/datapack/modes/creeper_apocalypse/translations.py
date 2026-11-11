@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the creeper_apocalypse translation functions at switch:modes/creeper_apocalypse/translations/* """
@@ -18,9 +16,6 @@ execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=0}},
 # English
 execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" died, survived "}},{{"score":{{"name":"#creeper_apocalypse_seconds","objective":"{ns}.data"}}}},{{"text":" seconds!"}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Creeper Apocalypse dans 5 secondes, survivez faces aux creepers qui se dupliquent sans cesse !", "Creeper Apocalypse game starts in 5 seconds, survive the ever duplicating creepers!")
 
 	# /tick
 	write_function(f"{path}/tick", f"""

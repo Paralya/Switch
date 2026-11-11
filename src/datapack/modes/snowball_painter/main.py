@@ -3,7 +3,6 @@
 from stewbeet import Mem, write_function
 
 from ..emit import write_modes_calls, write_time_xp_bar
-from .translations import write_translations
 
 
 def write_mode():
@@ -11,9 +10,7 @@ def write_mode():
 	mode: str = "snowball_painter"
 	path: str = f"{ns}:modes/{mode}"
 
-	# Write /calls/ and /translations/ functions
 	write_modes_calls(mode, targets={"joined": f"{ns}:modes/snowball_painter/death"})
-	write_translations()
 
 
 	# /color/actionbar
@@ -159,8 +156,6 @@ function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs
 function {ns}:maps/choose_map_for {{id:"snowball_painter", maps:["snowball_painter"]}}
-
-function {ns}:modes/snowball_painter/translations/start
 
 scoreboard players set #snowball_painter_seconds {ns}.data -1
 scoreboard players set #snowball_painter_ticks {ns}.data 0

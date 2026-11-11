@@ -187,8 +187,6 @@ execute in {ns}:game run gamerule minecraft:block_drops false
 function {ns}:maps/choose_map_for {{id:"spleef", maps:["spleef_1"]}}
 execute if data storage {ns}:main {{map:"spleef_1"}} run tp @a[tag=!detached] 2040 77 -5960
 
-function {translations}/start
-
 scoreboard objectives add {ns}.temp.placed_shulker minecraft.used:minecraft.white_shulker_box
 
 # Kill attribution / powder snow trap objectives

@@ -61,8 +61,6 @@ effect give @a[tag=!detached] saturation infinite 255 true
 scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:utils/choose_map_for {{id:"{mode}", maps:["switch_space"]}}
 
-function {path}/translations/start
-
 scoreboard players set #__MODE___seconds {ns}.data -6
 scoreboard players set #process_end {ns}.data 0
 """)
@@ -102,8 +100,6 @@ TRANSLATIONS_TEMPLATE: str = '''
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the __MODE__ translation functions at switch:modes/__MODE__/translations/* """
@@ -128,9 +124,6 @@ execute if entity @s[gamemode=!spectator] run tellraw @a[scores={{{ns}.lang=1}},
 		for lang, go in ((0, "GO !"), (1, "GO!"))
 	))
 
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de __MODE__ !", "__MODE__ game is starting!")
-
 '''
 """ Body of a new mode's translations.py, with __MODE__ standing for its id. """
 
@@ -141,6 +134,11 @@ SPEC_TEMPLATE: str = '''	ModeSpec(
 		description=Localized(
 			fr=("Première ligne de description.", "Deuxième ligne."),
 			en=("First description line.", "Second line."),
+		),
+		accent="#e33b2e",
+		rules=Localized(
+			fr=("Première règle de la carte d'intro", "Deuxième règle"),
+			en=("First rule of the intro card", "Second rule"),
 		),
 	),'''
 """ MODES entry to paste in definitions.py, with __MODE__ and __NAME__ standing for the mode. """

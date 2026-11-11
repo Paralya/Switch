@@ -141,8 +141,6 @@ function {ns}:maps/choose_map_for {{id:"tnt_run", maps:["tnt_run_futuristic","ar
 execute in {ns}:game run gamerule minecraft:fall_damage false
 execute in {ns}:game run gamerule minecraft:block_drops false
 
-function {translations}/start
-
 # Dash system objectives and per-player reset
 scoreboard objectives add {ns}.temp.blocks dummy
 scoreboard objectives add {ns}.temp.dashes dummy

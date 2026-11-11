@@ -1,5 +1,6 @@
 
 # Imports
+from .intro.card import write_intro_effects
 from .lang import write_lang
 from .shaders import write_shaders
 from .sounds import write_sounds
@@ -13,5 +14,6 @@ def load_resource_pack_json() -> None:
 	write_lang()
 	write_sounds()
 	write_shaders()
+	write_intro_effects()
 	write_textures()
 

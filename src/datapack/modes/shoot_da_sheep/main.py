@@ -115,8 +115,6 @@ function {ns}:utils/set_dynamic_time
 function {ns}:maps/choose_map_for {{id:"shoot_da_sheep", maps:["shoot_da_sheep"]}}
 execute as @a[tag=!detached] run function {ns}:maps/survival/shoot_da_sheep/tp_shoot_da_sheep
 
-function {ns}:modes/shoot_da_sheep/translations/start
-
 scoreboard players set #shoot_da_sheep_seconds {ns}.data -1
 scoreboard players set #shoot_da_sheep_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 56

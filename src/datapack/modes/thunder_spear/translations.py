@@ -2,8 +2,6 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the thunder_spear translation functions at switch:modes/thunder_spear/translations/* """
@@ -29,7 +27,4 @@ execute if score #thunder_spear_seconds {ns}.data matches 0 run tellraw @a[score
 # English
 execute if score #thunder_spear_seconds {ns}.data matches 0 run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"ParalyaAstuceEN","storage":"{ns}:main","interpret":true}},{{"text":" Scroll through your hotbar to use the grappling hook in your offhand!"}}]
 """)
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Thunder Spear dans 10 secondes, vous devez tuer le plus de joueurs grâce à vos lances foudroyantes, vous pouvez esquiver les attaques des autres joueurs en utilisant votre équipement tridimensionnel dans votre deuxième main !", "Thunder Spear game starts in 10 seconds, you have to kill as many players as possible with your explosive armament, you can dodge other players' attacks using your three-dimensional maneuver gear in your second hand!")
 

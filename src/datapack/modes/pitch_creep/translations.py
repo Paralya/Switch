@@ -2,16 +2,11 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_server_announce
-
 
 def write_translations():
 	""" Write the pitch_creep translation functions at switch:modes/pitch_creep/translations/* """
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:modes/pitch_creep/translations"
-
-	# /start
-	write_server_announce(f"{path}/start", "Lancement de la partie de Pitch Creep dans 5 secondes, votre objectif est de repousser tous les creepers qui s'approchent de vous afin de survivre jusqu'à la fin du temps imparti !", "Starting the Pitch Creep game in 5 seconds, your goal is to knockback all creepers approaching you in order to survive until the time runs out!")
 
 	# /death
 	write_function(f"{path}/death", f"""

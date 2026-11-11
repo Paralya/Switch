@@ -1,6 +1,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ..maps.generation.survival import MAP_TITLE_TICKS, TRAVEL_TICKS
+
 
 def write_signals() -> None:
 	""" Write the signal functions that dispatch each engine event to the current mode. """
@@ -43,11 +45,6 @@ $execute in {ns}:game run function {ns}:modes/$(id)/calls/second
 
 	# /signals/macro_start
 	write_function(f"{path}/signals/macro_start", f"""
-# Grant the minigame starting pop-up to everyone
-$advancement grant @a[scores={{{ns}.lang=0}}] only {ns}:pop_ups/$(id)_fr
-$advancement grant @a[scores={{{ns}.lang=1}}] only {ns}:pop_ups/$(id)_en
-
-# Call the start function
 $execute in {ns}:game run function {ns}:modes/$(id)/calls/start
 """)
 
@@ -64,12 +61,12 @@ $execute in {ns}:game run function {ns}:modes/$(id)/calls/tick
 	# /signals/second
 	write_function(f"{path}/signals/second", f"""
 # Hold the countdown while the intro cinematic still holds the players: the wall clock that drives
-# this signal keeps counting under lag while the cinematic (delay 130t + travel 50t) only advances
+# this signal keeps counting under lag while the cinematic (map title, then travel) only advances
 # per tick, so without this gate a mode's negative "seconds" countdown could arm its end-detection
 # while every player is still riding the cinematic in spectator (game ends on start). Gating on the
 # live entities (capped to the intro window in GAME ticks) releases the very second players land,
 # and never delays the maps that have no intro cinematic (kart_racer_relai, build_battle)
-execute if score #game_ticks {ns}.data matches ..199 if score #entities cinemalya.data matches 1.. run return 1
+execute if score #game_ticks {ns}.data matches ..{MAP_TITLE_TICKS + TRAVEL_TICKS + 19} if score #entities cinemalya.data matches 1.. run return 1
 
 # Launch second signal
 data modify storage {ns}:main input set value {{id:""}}
@@ -122,6 +119,9 @@ function {ns}:engine/signals/macro_stop with storage {ns}:main input
 	write_function(f"{path}/signals/tick", f"""
 # Count real game ticks since the game started (gates the per-second signal, see signals/second)
 scoreboard players add #game_ticks {ns}.data 1
+
+# Command feedback is off since the intro card, so the cinematic changes gamemodes without a chat line each
+execute if score #game_ticks {ns}.data matches {MAP_TITLE_TICKS + TRAVEL_TICKS + 20} run gamerule minecraft:send_command_feedback true
 
 # Launch tick signal
 data modify storage {ns}:main input set value {{id:""}}

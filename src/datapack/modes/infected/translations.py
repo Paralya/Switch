@@ -232,11 +232,9 @@ execute if score #infected_secret {ns}.data matches 17 run tellraw @a[scores={{{
 	# /start
 	write_function(f"{path}/start", rf"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie d'Infecté dans 12 secondes, un joueur aléatoire va être choisi pour être le premier infecté de la partie ! Survivez jusqu'à la fin du temps imparti en tant qu'humain ou infectez tous les humains en tant que zombie !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Infected game starts in 12 seconds, a random player will be chosen to be the first infected of the game! Survive to the end of the time limit as a human or infect all humans as a zombie!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldEN","storage":"{ns}:main","interpret":true}}]
 """)
 

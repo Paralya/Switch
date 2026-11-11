@@ -78,11 +78,9 @@ execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data
 	# /start
 	write_function(f"{path}/start", rf"""
 # French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Lancement de la partie de Rush The Point dans 10 secondes, votre objectif est de capturer tous les points de la map pour faire le maximum de score pour votre équipe grâce aux différents kits !"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldFR","storage":"{ns}:main","interpret":true}}]
 
 # English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Rush The Point game starts in 10 seconds, your goal is to capture all the points on the map to make the maximum score for your team thanks to the different kits!"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaPvPOldEN","storage":"{ns}:main","interpret":true}}]
 """)
 

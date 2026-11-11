@@ -115,7 +115,6 @@ execute as @a[tag=!detached] run attribute @s safe_fall_distance base set 1024
 execute as @a[tag=!detached] run attribute @s jump_strength base set 0
 
 function {ns}:maps/choose_map_for {{id:"memory_mine", maps:["memory_mine"]}}
-function {translations}/start
 
 scoreboard objectives add {ns}.temp.cooldown dummy
 scoreboard players set #memory_mine_seconds {ns}.data -1

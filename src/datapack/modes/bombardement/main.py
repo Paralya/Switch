@@ -25,7 +25,6 @@ effect give @a[tag=!detached] saturation infinite 255 true
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 0
 function {ns}:maps/choose_map_for {{id:"bombardement", maps:["bombardement"]}}
-function {translations}/start
 tp @a[tag=!detached] 10057 109 2064 180 -30
 
 scoreboard players set #bombardement_seconds {ns}.data -3

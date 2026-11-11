@@ -4,7 +4,6 @@ from stewbeet import Mem, write_function
 
 from .launch_game import write_launch_game
 from .log_message import write_log_message
-from .pop_ups import write_pop_ups
 from .signals import write_signals
 from .translations import write_translations
 from .voting_time import write_voting_time
@@ -14,7 +13,6 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:engine"
 	write_translations()
-	write_pop_ups()
 
 	# /add_money
 	write_function(f"{path}/add_money", f"""
@@ -114,7 +112,8 @@ tag @s remove detached
 execute unless score #no_force_start_msg {ns}.data matches 1 run function {ns}:engine/translations/force_start_macro
 scoreboard players reset #no_force_start_msg {ns}.data
 
-# Start the game with the right state
+# Start the game with the right state, under its intro card
+function {ns}:engine/launch_game/intro/start with storage {ns}:main
 function {ns}:engine/start_state
 scoreboard players remove @a[tag=!detached] {ns}.win_streak 5
 scoreboard players set @a[tag=!detached,scores={{{ns}.win_streak=..-6}}] {ns}.win_streak -5

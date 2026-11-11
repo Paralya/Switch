@@ -138,8 +138,6 @@ execute if data storage {ns}:main {{map:"pitchout_1"}} as @a[tag=!detached,sort=
 execute if data storage {ns}:main {{map:"pitchout_halloween"}} as @a[tag=!detached,sort=random] run function {ns}:modes/pitchout/map_halloween/tp_give
 execute as @a[tag=!detached] run function {ns}:modes/_common/xp_bar/three_lives
 
-function {ns}:modes/pitchout/translations/start
-
 scoreboard objectives add {ns}.temp.damages dummy
 scoreboard objectives add {ns}.temp.cooldown dummy
 scoreboard objectives add {ns}.temp.old_x dummy

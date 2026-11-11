@@ -3,18 +3,14 @@
 from stewbeet import Mem, write_function
 
 from ..emit import write_modes_calls, write_no_drop, write_time_xp_bar
-from .translations import write_translations
 
 
 def write_mode():
 	ns: str = Mem.ctx.project_id
 	mode: str = "coin_chaser"
 	path: str = f"{ns}:modes/{mode}"
-	translations: str = f"{path}/translations"
 
-	# Write /calls/ and /translations/ functions
 	write_modes_calls(mode)
-	write_translations()
 
 
 	# /death
@@ -93,8 +89,6 @@ execute in {ns}:game run gamerule minecraft:fall_damage false
 scoreboard players set #dont_regenerate {ns}.data 1
 scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"coin_chaser", maps:["paralya_lobby","smithed_summit_2024"]}}
-
-function {translations}/start
 
 scoreboard players set #coin_chaser_seconds {ns}.data -1
 scoreboard players set #coin_chaser_ticks {ns}.data 0

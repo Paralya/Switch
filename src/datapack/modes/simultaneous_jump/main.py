@@ -91,8 +91,6 @@ function {ns}:maps/choose_map_for {{id:"simultaneous_jump", maps:["de_a_coudre_1
 execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 
-function {ns}:modes/simultaneous_jump/translations/start
-
 scoreboard players set #simultaneous_jump_seconds {ns}.data -1
 scoreboard players set #simultaneous_jump_ticks {ns}.data 0
 scoreboard players set #remaining_time {ns}.data 58
