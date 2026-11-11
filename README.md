@@ -149,7 +149,7 @@ Le reste vient de plugins StewBeet : headers, constantes de scoreboard, dépenda
 | 🔊 Un son                                                               | `assets/sounds/`, ou `src/datapack/modes/<mode>/sounds/` pour un son propre à un mode |
 | 🛠️ Un outil de dev (test mode, lag, profiling)                          | `src/datapack/devtools/`                                                              |
 | ✨ Les shaders                                                          | `src/resource_pack/shaders.py`                                                        |
-| 🪟 Les textures de GUI et de tooltips                                   | `src/resource_pack/textures.py`                                                       |
+| 💩 Les textures de GUI et de tooltips                                   | `src/resource_pack/textures.py`                                                       |
 
 <br>
 
@@ -248,14 +248,14 @@ Dans `src/datapack/modes/definitions.py`, ajoutez une entrée à `MODES` :
 },
 ```
 
-| Clé / comportement    | Détail                                                                                       |
-|-----------------------|----------------------------------------------------------------------------------------------|
-| `id`                  | **Exactement** le nom du dossier                                                             |
-| `max_players`         | `UNLIMITED` quand le mode n'a pas de plafond                                                 |
-| `group`               | Optionnel : les jeux d'un même groupe forment une entrée de vote, puis un second vote départage (voir `GROUPS`) |
-| Lore, index, pop-ups  | Générés automatiquement à partir de cette entrée                                             |
-| Entrée commentée      | Le mode est **quand même généré** : testable via `_force_start` sans polluer le vote         |
-| Erreur de saisie      | Le build échoue avec un message qui nomme le problème et suggère la valeur la plus proche    |
+| Clé / comportement   | Détail                                                                                                          |
+|----------------------|-----------------------------------------------------------------------------------------------------------------|
+| `id`                 | **Exactement** le nom du dossier                                                                                |
+| `max_players`        | `UNLIMITED` quand le mode n'a pas de plafond                                                                    |
+| `group`              | Optionnel : les jeux d'un même groupe forment une entrée de vote, puis un second vote départage (voir `GROUPS`) |
+| Lore, index, pop-ups | Générés automatiquement à partir de cette entrée                                                                |
+| Entrée commentée     | Le mode est **quand même généré** : testable via `_force_start` sans polluer le vote                            |
+| Erreur de saisie     | Le build échoue avec un message qui nomme le problème et suggère la valeur la plus proche                       |
 
 ### 4. Tester en jeu
 
@@ -321,7 +321,7 @@ Six outils, tous lançables à la main. Les trois premiers tournent aussi en CI.
 | `python tools/check_conventions.py`       | Taille des fichiers, pureté du modèle, aucun import descendant vers un mode nommé |
 | `python tools/check_output_drift.py`      | **Le refactoring n'a rien changé** : rebuild puis `build/` identique à HEAD       |
 | `python tools/report_merged_functions.py` | Aucune fonction n'est écrite par deux émetteurs sans que ce soit déclaré          |
-| `python tools/check_rename_only.py "a=b"`  | Un diff de `build/` est **exactement** les renommages annoncés, et rien d'autre   |
+| `python tools/check_rename_only.py "a=b"` | Un diff de `build/` est **exactement** les renommages annoncés, et rien d'autre   |
 
 Ces deux derniers vont par paire : `check_output_drift.py` prouve qu'un refactoring n'a rien changé, `check_rename_only.py` prouve qu'un déplacement de chemins n'a fait que déplacer. Le plus important reste `check_output_drift.py`. `write_function` **ajoute** à la suite par défaut, donc deux émetteurs visant le même chemin fusionnent silencieusement dans l'ordre d'appel. Après tout déplacement de code, un `build/` inchangé est la preuve que rien n'a bougé en jeu.
 
