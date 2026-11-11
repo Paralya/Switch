@@ -6,7 +6,7 @@
 # @within	switch:modes/protect_the_king/calls/start
 #
 
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance 15 255 true
 effect give @a[tag=!detached] regeneration 10 255 true

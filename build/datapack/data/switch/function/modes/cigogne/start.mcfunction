@@ -6,7 +6,7 @@
 # @within	switch:modes/cigogne/calls/start
 #
 
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] weakness 10 255 true
 effect give @a[tag=!detached] saturation 10 255 true
 effect give @a[tag=!detached] resistance 10 255 true

@@ -12,7 +12,7 @@
 effect give @s saturation 20 255 true
 effect give @s regeneration 1 255 true
 tp @a[tag=!detached] -3998.04 111.63 2021.03 -104.49 22.09
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 gamemode survival @s
 
 # Summon the boss

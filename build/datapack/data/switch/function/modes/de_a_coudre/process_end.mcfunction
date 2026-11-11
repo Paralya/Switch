@@ -13,7 +13,7 @@ execute if score #process_end switch.data matches 1 if score #detect_end switch.
 execute if score #process_end switch.data matches 1 if score #detect_end switch.data matches 1 as @a[tag=!detached,tag=switch.winner] at @s run function switch:engine/add_win
 function switch:modes/de_a_coudre/translations/process_end
 execute if score #process_end switch.data matches 1 run tag @a remove switch.winner
-execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/de_a_coudre/death
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 

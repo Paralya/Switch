@@ -6,7 +6,7 @@
 # @within	switch:modes/traitors_game/calls/start
 #
 
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] resistance 10 255 true
 effect give @a[tag=!detached] regeneration 10 255 true

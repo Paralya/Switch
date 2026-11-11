@@ -11,7 +11,7 @@ scoreboard players set #max_kills switch.data 0
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run scoreboard players operation #max_kills switch.data > @s switch.temp.kills
 execute if score #process_end switch.data matches 1 if score #max_kills switch.data matches 1.. as @a[tag=!detached] if score @s switch.temp.kills = #max_kills switch.data at @s run function switch:engine/add_win
 function switch:modes/one_shot/translations/process_end
-execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart

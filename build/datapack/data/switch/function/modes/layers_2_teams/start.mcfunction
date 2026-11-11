@@ -27,5 +27,5 @@ scoreboard objectives setdisplay list switch.health
 # Choix des teams + give d'items
 function switch:modes/_common/setup_teams_red_blue
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/layers_2_teams/team_and_give
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 

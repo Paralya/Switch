@@ -6,7 +6,7 @@
 
 scoreboard players add #process_end switch.data 1
 
-execute if score #process_end switch.data matches 1 run gamemode spectator @a[tag=!detached,sort=random]
+execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run gamemode spectator @s
 execute if score #process_end switch.data matches 1 run function switch:modes/_common/recap/show
 function switch:modes/rush_the_point/translations/process_end
 execute if score #process_end switch.data matches 1 if score #red_points switch.data > #blue_points switch.data as @a[tag=!detached,team=switch.rush_the_point.red] at @s run function switch:engine/add_win

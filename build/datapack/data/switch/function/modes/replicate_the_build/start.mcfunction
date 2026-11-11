@@ -6,7 +6,7 @@
 # @within	switch:modes/replicate_the_build/calls/start
 #
 
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 scoreboard players set @a[tag=!detached] switch.alive 1
 
 effect give @a[tag=!detached] saturation infinite 255 true

@@ -31,5 +31,5 @@ scoreboard players set #next switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/simultaneous_jump/define_color
 scoreboard players operation #max switch.data = #position switch.data
 execute as @a[tag=!detached] run function switch:modes/simultaneous_jump/teleport
-gamemode adventure @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode adventure @s
 

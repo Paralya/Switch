@@ -6,7 +6,7 @@
 # @within	switch:modes/minigolf/calls/start
 #
 
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 team join switch.no_pvp @a[tag=!detached]
 team modify switch.no_pvp seeFriendlyInvisibles false
 effect give @a[tag=!detached] resistance infinite 255 true

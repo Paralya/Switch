@@ -64,7 +64,7 @@ scoreboard players set #fish_fight_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
 # gamemode survival
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] slowness 5 2 true
 effect give @a[tag=!detached] resistance infinite 0 true
 

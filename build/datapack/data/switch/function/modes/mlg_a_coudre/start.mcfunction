@@ -42,5 +42,5 @@ scoreboard players operation #max switch.data = #position switch.data
 
 # Teleport all players to the jump place
 execute as @a[tag=!detached] run function switch:modes/mlg_a_coudre/next_player_teleport
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 

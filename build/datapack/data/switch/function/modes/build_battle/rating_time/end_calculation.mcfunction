@@ -8,7 +8,7 @@
 
 # Change game state & gamemode spectator
 scoreboard players set #build_battle_state switch.data 3
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 
 # Get rank for each player
 scoreboard objectives add switch.temp.rank dummy

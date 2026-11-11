@@ -6,7 +6,7 @@
 # @within	switch:modes/spectres_game/calls/start
 #
 
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 scoreboard players set @a[tag=!detached] switch.alive 1
 function switch:utils/set_dynamic_time
 

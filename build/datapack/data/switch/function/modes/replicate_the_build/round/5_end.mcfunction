@@ -5,7 +5,7 @@
 #
 
 scoreboard players add #rtb_round_state switch.data 1
-gamemode spectator @a[scores={switch.alive=1..},gamemode=!spectator]
+execute as @a[scores={switch.alive=1..},gamemode=!spectator] run gamemode spectator @s
 execute as @e[type=marker,tag=switch.rtb.center] at @s positioned ~-3 ~ ~1 run function switch:modes/replicate_the_build/structure/place
 
 # Calcul du pourcentage de répliquation

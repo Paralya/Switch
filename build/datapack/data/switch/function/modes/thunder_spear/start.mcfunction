@@ -6,7 +6,7 @@
 # @within	switch:modes/thunder_spear/calls/start
 #
 
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] blindness 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] saturation 5 255 true

@@ -6,7 +6,7 @@
 # @within	switch:modes/memory_mine/calls/start
 #
 
-gamemode adventure @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode adventure @s
 team join switch.no_pvp @a[tag=!detached]
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time

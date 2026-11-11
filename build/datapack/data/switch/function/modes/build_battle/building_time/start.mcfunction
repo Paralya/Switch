@@ -10,7 +10,7 @@
 scoreboard players set #build_battle_state switch.data 1
 scoreboard players set #remaining_time switch.data 300
 execute as @a[tag=!detached] run attribute @s minecraft:gravity base reset
-gamemode creative @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode creative @s
 clear @a[tag=!detached]
 
 # Get most voted word

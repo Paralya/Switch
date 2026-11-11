@@ -12,8 +12,8 @@
 execute as @a[tag=!detached] run function switch:utils/reset_attributes
 
 # Gamemode
-execute unless score #set_spec switch.data matches 1 run gamemode adventure @a[tag=!detached]
-execute if score #set_spec switch.data matches 1 run gamemode spectator @a[tag=!detached]
+execute unless score #set_spec switch.data matches 1 as @a[tag=!detached] run gamemode adventure @s
+execute if score #set_spec switch.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 scoreboard players reset #set_spec switch.data
 
 # Clear inventory (if /disable, clear only players that doesn't have convention.debug tag)

@@ -25,6 +25,6 @@ execute if score #summon_balls switch.data matches 1 run scoreboard players set 
 execute if score #summon_balls switch.data matches 1 run scoreboard players set @a[tag=!detached] golf_ball.shots 0
 execute if score #summon_balls switch.data matches 1 run scoreboard objectives setdisplay sidebar golf_ball.shots
 execute if score #summon_balls switch.data matches 1 run scoreboard players set @a[tag=!detached] switch.alive 1
-execute if score #summon_balls switch.data matches 1 run gamemode adventure @a[tag=!detached]
+execute if score #summon_balls switch.data matches 1 as @a[tag=!detached] run gamemode adventure @s
 scoreboard players set #summon_balls switch.data 0
 

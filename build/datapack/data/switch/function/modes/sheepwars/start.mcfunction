@@ -41,6 +41,6 @@ execute if score #APOCALYPSE_GAME switch.data matches 1 as @a[tag=!detached] at 
 
 # Choix des teams + give d'items
 function switch:modes/_common/setup_teams_red_blue
-gamemode adventure @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode adventure @s
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/sheepwars/team_and_give
 
