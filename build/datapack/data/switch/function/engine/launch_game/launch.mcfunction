@@ -7,6 +7,8 @@
 # Do nothing if the engine left the voting state during the transition (e.g. disabled or force started)
 execute unless score #engine_state switch.data matches 2 run return 1
 
+gamerule minecraft:send_command_feedback true
+
 scoreboard players set #engine_state switch.data 3
 scoreboard players add total_games switch.last_total_games 1
 

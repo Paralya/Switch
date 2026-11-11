@@ -8,13 +8,11 @@
 		},
 		{
 			"path": "../../clones/minecraft-decompiled"
-		},
-		{
-			"path": "../../forks/beet"
 		}
 	],
 	"settings": {
 		"editor.insertSpaces": false,
-		"editor.detectIndentation": false
+		"editor.detectIndentation": false,
+		"git.ignoreLimitWarning": true
 	}
 }
