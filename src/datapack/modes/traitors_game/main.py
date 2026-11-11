@@ -214,7 +214,7 @@ scoreboard players add #process_end {ns}.data 1
 
 # Kill tout le monde
 execute if score #process_end {ns}.data matches 1 run scoreboard objectives remove {ns}.temp.role
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached,sort=random]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/traitors_game/death/player
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
@@ -417,7 +417,7 @@ function {ns}:modes/traitors_game/translations/second
 
 	# /start (brace-heavy + § chars: plain string, translation ref rewritten)
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 effect give @a[tag=!detached] resistance 10 255 true
 effect give @a[tag=!detached] regeneration 10 255 true

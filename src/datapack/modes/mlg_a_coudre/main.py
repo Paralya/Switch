@@ -168,7 +168,7 @@ scoreboard players operation #max {ns}.data = #position {ns}.data
 
 # Teleport all players to the jump place
 execute as @a[tag=!detached] run function {path}/next_player_teleport
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 """)
 
 	# /stop

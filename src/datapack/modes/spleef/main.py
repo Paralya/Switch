@@ -151,7 +151,7 @@ scoreboard players add #process_end {ns}.data 1
 
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 as @a[tag=!detached,gamemode=survival] at @s run function {ns}:engine/add_win
 function {translations}/process_end
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {path}/death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
@@ -176,7 +176,7 @@ execute if score #spleef_seconds {ns}.data matches 30 run function {path}/border
 
 	# /start
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] mining_fatigue 5 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true

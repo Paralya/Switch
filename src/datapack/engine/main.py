@@ -187,7 +187,7 @@ execute if score #nb_attached {ns}.data >= #min_required {ns}.data run function 
 
 # Else,
 execute unless score #nb_attached {ns}.data >= #min_required {ns}.data run gamerule minecraft:send_command_feedback true
-execute unless score #nb_attached {ns}.data >= #min_required {ns}.data run gamemode spectator @a[tag=!detached]
+execute unless score #nb_attached {ns}.data >= #min_required {ns}.data as @a[tag=!detached] run gamemode spectator @s
 execute unless score #nb_attached {ns}.data >= #min_required {ns}.data in minecraft:overworld as @a[tag=!detached] unless entity @s[x=0,y=69,z=0,distance=..200] run tp @s 0 69 0
 """)
 

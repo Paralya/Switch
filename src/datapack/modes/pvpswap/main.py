@@ -71,7 +71,7 @@ function {ns}:translations/modes_pvpswap_second
 
 	# /start (dangling translation ref preserved verbatim)
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] blindness 10 255 true
 effect give @a[tag=!detached] weakness 10 255 true
 function {ns}:modes/_common/pvp_arena/start_common

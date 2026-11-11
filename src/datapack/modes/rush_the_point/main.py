@@ -279,7 +279,7 @@ execute if score #reconnect {ns}.data matches 1 run function {ns}:modes/rush_the
 	write_function(f"{path}/process_end", f"""
 scoreboard players add #process_end {ns}.data 1
 
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached,sort=random]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 run function {ns}:modes/_common/recap/show
 function {ns}:modes/rush_the_point/translations/process_end
 execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data > #blue_points {ns}.data as @a[tag=!detached,team={ns}.rush_the_point.red] at @s run function {ns}:engine/add_win

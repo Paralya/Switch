@@ -153,7 +153,7 @@ data modify entity @s Health set value 16.0f
 	write_function(f"{path}/process_end", f"""
 # Mise en spectateur
 scoreboard players add #process_end {ns}.data 1
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 run execute as @e[type=!player,type=!marker] run function sheepwars:sheeps/final/disappear
 execute if score #process_end {ns}.data matches 1 run function {ns}:maps/regenerate_map
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
@@ -253,7 +253,7 @@ execute if score #APOCALYPSE_GAME {ns}.data matches 1 as @a[tag=!detached] at @s
 
 # Choix des teams + give d'items
 function {ns}:modes/_common/setup_teams_red_blue
-gamemode adventure @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode adventure @s
 execute as @a[tag=!detached,sort=random] at @s run function {ns}:modes/sheepwars/team_and_give
 """)
 

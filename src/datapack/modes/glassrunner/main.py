@@ -576,7 +576,7 @@ execute if score #process_end {ns}.data matches 1 if score #glassrunner.points.r
 execute if score #process_end {ns}.data matches 1 if score #glassrunner.points.blue {ns}.data > #glassrunner.points.red {ns}.data as @a[tag=!detached,team={ns}.glassrunner.blue] at @s run function {ns}:engine/add_win
 
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {ns}:modes/glassrunner/death/death
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire

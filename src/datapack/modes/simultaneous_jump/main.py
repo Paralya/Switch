@@ -64,7 +64,7 @@ function {path}/teleport
 scoreboard players add #process_end {ns}.data 1
 
 function {ns}:modes/_common/process_end/winner_by_points
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 run clear @a[tag=!detached]
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
@@ -107,7 +107,7 @@ scoreboard players set #next {ns}.data 0
 execute as @a[tag=!detached,sort=random] run function {ns}:modes/simultaneous_jump/define_color
 scoreboard players operation #max {ns}.data = #position {ns}.data
 execute as @a[tag=!detached] run function {ns}:modes/simultaneous_jump/teleport
-gamemode adventure @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode adventure @s
 """)
 
 	# /stop

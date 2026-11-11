@@ -144,7 +144,7 @@ function {ns}:translations/common/actionbar_time_pvp19
 
 	# /start (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance 15 255 true
 effect give @a[tag=!detached] regeneration 10 255 true

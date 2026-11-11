@@ -73,7 +73,7 @@ function {translations}/second
 
 	# /start (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] saturation 5 255 true
 effect give @a[tag=!detached] resistance 5 255 true

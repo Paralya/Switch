@@ -54,7 +54,7 @@ scoreboard players add #process_end {ns}.data 1
 
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.alive=1..}}] at @s run function {ns}:engine/add_win
 function {ns}:translations/common/process_end_survivors
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {path}/death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 

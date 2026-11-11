@@ -399,7 +399,7 @@ function {ns}:modes/spectres_game/translations/second
 
 	# /start (brace-heavy: plain string, translation ref rewritten)
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 function {ns}:utils/set_dynamic_time
 

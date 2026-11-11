@@ -96,7 +96,7 @@ execute if score #thunder_spear_seconds {ns}.data matches 0 as @a[tag=!detached]
 
 	# /start
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] blindness 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] saturation 5 255 true

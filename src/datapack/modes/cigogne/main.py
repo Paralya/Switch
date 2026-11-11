@@ -68,7 +68,7 @@ execute if score #cigogne_seconds {ns}.data matches 180.. run effect give @a[tag
 
 	# /start
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 effect give @a[tag=!detached] weakness 10 255 true
 effect give @a[tag=!detached] saturation 10 255 true
 effect give @a[tag=!detached] resistance 10 255 true

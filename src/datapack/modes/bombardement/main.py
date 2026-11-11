@@ -156,7 +156,7 @@ scoreboard players add #process_end {ns}.data 1
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 as @a[tag=!detached,gamemode=!spectator] at @s run function {ns}:engine/add_win
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 as @a[tag=!detached,gamemode=!spectator] run function {path}/record_save
 function {ns}:translations/common/process_end_solo_winner
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {path}/death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 

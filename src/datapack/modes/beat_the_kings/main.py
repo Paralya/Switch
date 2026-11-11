@@ -22,7 +22,7 @@ tag @s add {ns}.temp.inventory_changed
 
 	# /start
 	write_function(f"{path}/start", f"""
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 
 effect give @a[tag=!detached] saturation infinite 255 true

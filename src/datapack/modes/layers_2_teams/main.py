@@ -85,7 +85,7 @@ scoreboard objectives setdisplay list {ns}.health
 # Choix des teams + give d'items
 function {ns}:modes/_common/setup_teams_red_blue
 execute as @a[tag=!detached,sort=random] at @s run function {path}/team_and_give
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 """)
 
 	# /stop

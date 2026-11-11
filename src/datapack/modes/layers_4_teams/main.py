@@ -132,7 +132,7 @@ scoreboard players set #total {ns}.temp.killed_blue 0
 scoreboard players set #total {ns}.temp.killed_green 0
 scoreboard players set #total {ns}.temp.killed_yellow 0
 execute as @a[tag=!detached,sort=random] at @s run function {path}/team_and_give
-gamemode survival @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode survival @s
 """)
 
 	# /stop

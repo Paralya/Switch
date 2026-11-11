@@ -144,8 +144,8 @@ gamerule minecraft:ender_pearls_vanish_on_death true
 execute as @a[tag=!detached] run function {ns}:utils/reset_attributes
 
 # Gamemode
-execute unless score #set_spec {ns}.data matches 1 run gamemode adventure @a[tag=!detached]
-execute if score #set_spec {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute unless score #set_spec {ns}.data matches 1 as @a[tag=!detached] run gamemode adventure @s
+execute if score #set_spec {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 scoreboard players reset #set_spec {ns}.data
 
 # Clear inventory (if /disable, clear only players that doesn't have convention.debug tag)

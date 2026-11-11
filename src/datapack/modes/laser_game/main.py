@@ -52,7 +52,7 @@ execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data
 function {ns}:modes/laser_game/translations/process_end
 execute if score #process_end {ns}.data matches 1 if score #red_points {ns}.data < #blue_points {ns}.data as @a[tag=!detached,scores={{{ns}.alive=10}}] at @s run function {ns}:engine/add_win
 execute if score #process_end {ns}.data matches 1 run kill @e[tag={ns}.laser_game.base]
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 run effect clear @a[tag=!detached]
 execute if score #process_end {ns}.data matches 1 run clear @a[tag=!detached]
 

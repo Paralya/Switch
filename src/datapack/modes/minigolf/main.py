@@ -78,7 +78,7 @@ execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.winner
 # Other stuff
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,predicate=golf_ball:has_vehicle] at @s run function golf_ball:ball/exit_player
 execute if score #process_end {ns}.data matches 1 run clear @a[tag=!detached]
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
@@ -133,7 +133,7 @@ function {path}/xp_bar
 
 	# /start
 	write_function(f"{path}/start", f"""
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 team join {ns}.no_pvp @a[tag=!detached]
 team modify {ns}.no_pvp seeFriendlyInvisibles false
 effect give @a[tag=!detached] resistance infinite 255 true
@@ -193,7 +193,7 @@ execute if score #summon_balls {ns}.data matches 1 run scoreboard players set @a
 execute if score #summon_balls {ns}.data matches 1 run scoreboard players set @a[tag=!detached] golf_ball.shots 0
 execute if score #summon_balls {ns}.data matches 1 run scoreboard objectives setdisplay sidebar golf_ball.shots
 execute if score #summon_balls {ns}.data matches 1 run scoreboard players set @a[tag=!detached] {ns}.alive 1
-execute if score #summon_balls {ns}.data matches 1 run gamemode adventure @a[tag=!detached]
+execute if score #summon_balls {ns}.data matches 1 as @a[tag=!detached] run gamemode adventure @s
 scoreboard players set #summon_balls {ns}.data 0
 """)
 

@@ -53,7 +53,7 @@ scoreboard players set #max_kills {ns}.data 0
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run scoreboard players operation #max_kills {ns}.data > @s {ns}.temp.kills
 execute if score #process_end {ns}.data matches 1 if score #max_kills {ns}.data matches 1.. as @a[tag=!detached] if score @s {ns}.temp.kills = #max_kills {ns}.data at @s run function {ns}:engine/add_win
 function {translations}/process_end
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart

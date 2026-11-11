@@ -106,7 +106,7 @@ execute if score #temp {ns}.data matches 14 as @e[type=marker,tag={ns}.zone] at 
 
 	# /start
 	write_function(f"{path}/start", f"""
-gamemode adventure @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode adventure @s
 team join {ns}.no_pvp @a[tag=!detached]
 effect give @a[tag=!detached] saturation infinite 255 true
 function {ns}:utils/set_dynamic_time

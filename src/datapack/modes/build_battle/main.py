@@ -328,7 +328,7 @@ execute if score #remaining_time {ns}.data matches ..0 run function {path}/ratin
 scoreboard players set #build_battle_state {ns}.data 1
 scoreboard players set #remaining_time {ns}.data 300
 execute as @a[tag=!detached] run attribute @s minecraft:gravity base reset
-gamemode creative @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode creative @s
 clear @a[tag=!detached]
 
 # Get most voted word
@@ -759,7 +759,7 @@ scoreboard players set @a[tag=!detached] {ns}.temp.rating_vote 6
 	write_function(f"{path}/rating_time/end_calculation", f"""
 # Change game state & gamemode spectator
 scoreboard players set #build_battle_state {ns}.data 3
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 
 # Get rank for each player
 scoreboard objectives add {ns}.temp.rank dummy

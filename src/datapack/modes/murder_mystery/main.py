@@ -132,7 +132,7 @@ execute unless score #test_mode {ns}.data matches 1 if score #murderer_killer {n
 # Mise en spectateur
 scoreboard players add #process_end {ns}.data 1
 execute if score #process_end {ns}.data matches 1 run team leave @a[tag=!detached]
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire

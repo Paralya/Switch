@@ -108,7 +108,7 @@ execute if score #process_end {ns}.data matches 1 if score #detect_end {ns}.data
 execute if score #process_end {ns}.data matches 1 if score #detect_end {ns}.data matches 1 as @a[tag=!detached,tag={ns}.winner] at @s run function {ns}:engine/add_win
 function {translations}/process_end
 execute if score #process_end {ns}.data matches 1 run tag @a remove {ns}.winner
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {path}/death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
@@ -161,7 +161,7 @@ function {translations}/start
 
 # Teleport all players to the jump place
 execute as @a[tag=!detached] run function {path}/next_player_teleport
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 """)
 
 	# /stop

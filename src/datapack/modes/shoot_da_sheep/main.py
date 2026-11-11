@@ -57,7 +57,7 @@ scoreboard players add #process_end {ns}.data 1
 
 function {ns}:modes/_common/process_end/winner_by_points
 execute if score #process_end {ns}.data matches 1 run clear @a[tag=!detached]
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)

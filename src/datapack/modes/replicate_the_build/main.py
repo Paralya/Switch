@@ -96,7 +96,7 @@ execute as @e[tag={ns}.rtb.island,type=marker,sort=random] run function {ns}:mod
 scoreboard players set #rtbteam {ns}.data 0
 execute as @a[scores={{{ns}.alive=1..}},sort=random] run function {ns}:modes/replicate_the_build/start/select_teams
 
-gamemode adventure @a[scores={{{ns}.alive=1..}}]
+execute as @a[scores={{{ns}.alive=1..}}] run gamemode adventure @s
 clear @a[tag=!detached]
 kill @e[type=item]
 
@@ -139,7 +139,7 @@ execute positioned -29999997 24 1603 run fill ~ ~ ~ ~6 ~6 ~6 air
 execute positioned -29999997 24 1603 run fill ~ ~-1 ~ ~6 ~-1 ~6 stone
 execute positioned -29999997 24 1603 run function {ns}:modes/replicate_the_build/structure/place
 
-gamemode survival @a[scores={{{ns}.alive=1..}}]
+execute as @a[scores={{{ns}.alive=1..}}] run gamemode survival @s
 clear @a[tag=!detached]
 kill @e[type=item]
 execute in {ns}:game run gamerule minecraft:block_drops true
@@ -162,7 +162,7 @@ execute if score #rtb_round_state {ns}.data matches 5 unless entity @a[tag=!deta
 	# /round/5_end
 	write_function(f"{path}/round/5_end", f"""
 scoreboard players add #rtb_round_state {ns}.data 1
-gamemode spectator @a[scores={{{ns}.alive=1..}},gamemode=!spectator]
+execute as @a[scores={{{ns}.alive=1..}},gamemode=!spectator] run gamemode spectator @s
 execute as @e[type=marker,tag={ns}.rtb.center] at @s positioned ~-3 ~ ~1 run function {ns}:modes/replicate_the_build/structure/place
 
 # Calcul du pourcentage de répliquation
@@ -308,7 +308,7 @@ execute if score #rtb_round_state {ns}.data matches 0 run function {ns}:modes/re
 
 	# /start (translation ref rewritten; NOTE: trailing space on "bossbar remove rtb.all ")
 	write_function(f"{path}/start", f"""
-gamemode spectator @a[tag=!detached]
+execute as @a[tag=!detached] run gamemode spectator @s
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 
 effect give @a[tag=!detached] saturation infinite 255 true

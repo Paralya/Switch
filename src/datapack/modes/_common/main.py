@@ -387,7 +387,7 @@ scoreboard players add #process_end {ns}.data 1
 
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 as @a[tag=!detached,gamemode=adventure] at @s run function {ns}:engine/add_win
 function {ns}:translations/common/process_end_winner_adventure
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 $execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function $(death)
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
@@ -398,7 +398,7 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 	# detect_end: just spectate everyone, rate the game, then loop to restart.)
 	write_function(f"{path}/process_end/spectate_only", f"""
 scoreboard players add #process_end {ns}.data 1
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)

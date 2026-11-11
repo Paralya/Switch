@@ -116,7 +116,7 @@ scoreboard players add #process_end {ns}.data 1
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.alive=1..}}] at @s run function {ns}:engine/add_win
 execute if score #process_end {ns}.data matches 1 unless score #test_mode {ns}.data matches 1 run advancement grant @a[tag=!detached,scores={{{ns}.alive=1..,{ns}.temp.shot=0}}] only {ns}:visible/59
 function {translations}/process_end
-execute if score #process_end {ns}.data matches 1 run gamemode spectator @a[tag=!detached,sort=random]
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run gamemode spectator @s
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {path}/death
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
