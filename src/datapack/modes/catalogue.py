@@ -4,7 +4,7 @@ A mode generates even when its entry sits in DISABLED_MODES: only its presence i
 Kept as a single table on purpose, so one Ctrl+F finds any game.
 """
 # Imports
-from .spec import UNLIMITED, GroupSpec, Localized, ModeSpec
+from .spec import UNLIMITED, GroupSpec, Localized, ModeSpec, RoleSpec
 
 # Constants
 # Minigames
@@ -100,6 +100,20 @@ MODES: tuple[ModeSpec, ...] = (
 		rules=Localized(
 			fr=("Des traîtres se cachent parmi vous", "Votre rôle arrive dans quelques secondes", "Innocents contre traîtres"),
 			en=("Traitors are hiding among you", "Your role comes in a few seconds", "Innocents versus traitors"),
+		),
+		roles=(
+			RoleSpec(id="inspector", name=Localized(fr=("Inspecteur",), en=("Inspector",)), color="#55ff55",
+				goal=Localized(fr=("Démasquez les traîtres",), en=("Unmask the traitors",))),
+			RoleSpec(id="innocent", name=Localized(fr=("Innocent",), en=("Innocent",)), color="#55ff55",
+				goal=Localized(fr=("Trouvez et tuez les traîtres",), en=("Find and kill the traitors",))),
+			RoleSpec(id="ninja", name=Localized(fr=("Ninja",), en=("Ninja",)), color="#55ff55",
+				goal=Localized(fr=("Plus rapide, avec une seconde vie",), en=("Faster, with a second life",))),
+			RoleSpec(id="traitor", name=Localized(fr=("Traître",), en=("Traitor",)), color="#ff5555",
+				goal=Localized(fr=("Éliminez tous les innocents",), en=("Kill every innocent",))),
+			RoleSpec(id="big_traitor", name=Localized(fr=("Gros Traître",), en=("Big Traitor",)), color="#e03030",
+				goal=Localized(fr=("Éliminez tout le monde, traîtres compris",), en=("Kill everyone, traitors included",))),
+			RoleSpec(id="floupy", name=Localized(fr=("Floupy",), en=("Floupy",)), color="#ffff55",
+				goal=Localized(fr=("Volez le rôle de votre première victime",), en=("Steal the role of your first kill",))),
 		),
 	),
 	ModeSpec(
@@ -229,6 +243,12 @@ MODES: tuple[ModeSpec, ...] = (
 		rules=Localized(
 			fr=("Deux équipes, un roi chacune", "Protégez le vôtre", "Tuez le roi ennemi pour gagner"),
 			en=("Two teams, one king each", "Protect yours", "Kill the enemy king to win"),
+		),
+		roles=(
+			RoleSpec(id="red_king", name=Localized(fr=("Roi rouge",), en=("Red King",)), color="#ff5555",
+				goal=Localized(fr=("Restez en vie, votre équipe vous protège",), en=("Stay alive, your team protects you",))),
+			RoleSpec(id="blue_king", name=Localized(fr=("Roi bleu",), en=("Blue King",)), color="#5f7fff",
+				goal=Localized(fr=("Restez en vie, votre équipe vous protège",), en=("Stay alive, your team protects you",))),
 		),
 	),
 	ModeSpec(
@@ -398,6 +418,12 @@ MODES: tuple[ModeSpec, ...] = (
 			fr=("Des rois peu nombreux mais puissants", "Contre des civils en surnombre", "Exterminez l'équipe ennemie"),
 			en=("A few powerful kings", "Against outnumbering civilians", "Wipe out the enemy team"),
 		),
+		roles=(
+			RoleSpec(id="civil", name=Localized(fr=("Civil",), en=("Civilian",)), color="#55ff55",
+				goal=Localized(fr=("Renversez les rois",), en=("Overthrow the kings",))),
+			RoleSpec(id="king", name=Localized(fr=("Roi",), en=("King",)), color="#ffcc33",
+				goal=Localized(fr=("Exterminez tous les civils",), en=("Wipe out every civilian",))),
+		),
 	),
 	ModeSpec(
 		id="coin_chaser", name_fr="Coin Chaser",
@@ -425,6 +451,14 @@ MODES: tuple[ModeSpec, ...] = (
 		rules=Localized(
 			fr=("Un meurtrier, un détective, des innocents", "Votre rôle va vous être donné"),
 			en=("A murderer, a detective, innocents", "Your role is about to be given"),
+		),
+		roles=(
+			RoleSpec(id="innocent", name=Localized(fr=("Innocent",), en=("Innocent",)), color="#55ff55",
+				goal=Localized(fr=("Survivez jusqu'à la fin",), en=("Survive until the end",))),
+			RoleSpec(id="detective", name=Localized(fr=("Détective",), en=("Detective",)), color="#55ffff",
+				goal=Localized(fr=("Abattez le meurtrier à l'arc",), en=("Shoot the murderer with your bow",))),
+			RoleSpec(id="murderer", name=Localized(fr=("Meurtrier",), en=("Murderer",)), color="#ff5555",
+				goal=Localized(fr=("Tuez tout le monde sans vous faire voir",), en=("Kill everyone without being seen",))),
 		),
 	),
 	ModeSpec(
@@ -535,6 +569,12 @@ MODES: tuple[ModeSpec, ...] = (
 		rules=Localized(
 			fr=("Un joueur au hasard devient infecté", "Humains : survivez jusqu'à la fin", "Zombies : infectez tout le monde"),
 			en=("A random player becomes infected", "Humans: survive until the end", "Zombies: infect everyone"),
+		),
+		roles=(
+			RoleSpec(id="human", name=Localized(fr=("Humain",), en=("Human",)), color="#ff55ff",
+				goal=Localized(fr=("Survivez jusqu'à la fin",), en=("Survive until the end",))),
+			RoleSpec(id="zombie", name=Localized(fr=("Zombie",), en=("Zombie",)), color="#4fcf4f",
+				goal=Localized(fr=("Infectez tous les humains",), en=("Infect every human",))),
 		),
 	),
 	ModeSpec(

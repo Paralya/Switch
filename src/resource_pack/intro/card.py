@@ -6,14 +6,12 @@ The whole sequence is timed by the shader, from the tick the effect is applied.
 """
 # Imports
 from beet import FragmentShader, Texture
-from beet.contrib.vanilla import Vanilla
 from stewbeet import SCREENQUAD_VERTEX_SHADER, JsonDict, Mem, post_uniform, timed_post_effect
 
 from ...datapack.modes.catalogue import DISABLED_MODES, MODES
 from ...datapack.modes.definitions import LANG_PRETEXT
-from ...datapack.modes.spec import ModeSpec
 from .shader import RULE_TICKS, intro_fragment_shader
-from .text import LINE_HEIGHT, TEXT_WIDTH, Glyph, text_texture, vanilla_glyphs
+from .text import LINE_HEIGHT, TEXT_WIDTH, Glyph, text_texture
 
 # Constants
 BLUR_SIZE: tuple[int, int] = (480, 270)
@@ -21,14 +19,10 @@ BLUR_SIZE: tuple[int, int] = (480, 270)
 
 
 # Functions
-def write_intro_effects() -> None:
+def write_intro_effects(glyphs: dict[str, Glyph]) -> None:
 	""" Register the intro shader and one chain per mode and per language. """
 	ns: str = Mem.ctx.project_id
 	Mem.ctx.assets[ns].fragment_shaders["post/intro"] = FragmentShader(intro_fragment_shader(ns))
-
-	vanilla = Vanilla(ctx=Mem.ctx)
-	vanilla.mount("assets/minecraft/font")
-	glyphs: dict[str, Glyph] = vanilla_glyphs(vanilla.mount("assets/minecraft/textures/font").assets)
 
 	for mode in (*MODES, *DISABLED_MODES):
 		for lang in LANG_PRETEXT:
@@ -40,7 +34,7 @@ def write_intro_effects() -> None:
 			lines: tuple[str, ...] = (mode.display_name(lang), *rules, *[""] * (len(RULE_TICKS) - len(rules)))
 			Mem.ctx.assets[ns].textures[f"effect/{effect_id}"] = Texture(text_texture(lines, glyphs))
 			timed_post_effect(
-				effect_id, f"{ns}:post/intro", {"IntroConfig": [post_uniform("Accent", "vec3", accent_of(mode))]},
+				effect_id, f"{ns}:post/intro", {"IntroConfig": [post_uniform("Accent", "vec3", hex_floats(mode.accent))]},
 				inputs=[
 					{"sampler_name": "Blur", "target": "blur", "bilinear": True},
 					{"sampler_name": "Depth", "target": "minecraft:main", "use_depth_buffer": True},
@@ -60,13 +54,13 @@ def intro_effect_path(mode_id: str, lang: str) -> str:
 	return f"intro/{mode_id}_{lang}"
 
 
-def accent_of(mode: ModeSpec) -> list[float]:
-	""" The accent colour of a mode as the three floats of its uniform.
+def hex_floats(color: str) -> list[float]:
+	""" A "#rrggbb" colour as the three floats of a vec3 uniform.
 
-	>>> accent_of(MODES[0]) == [int(MODES[0].accent[i:i + 2], 16) / 255 for i in (1, 3, 5)]
-	True
+	>>> hex_floats("#ff0033")
+	[1.0, 0.0, 0.2]
 	"""
-	return [int(mode.accent[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+	return [int(color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
 
 
 def blur_passes(ns: str) -> list[JsonDict]:

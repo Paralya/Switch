@@ -7,6 +7,8 @@
 #			switch:modes/infected/death/zombie_transform
 #
 
+# A dead zombie comes back through here too, and only a player turning into one gets the card
+execute unless entity @s[team=switch.temp.zombie] run function switch:engine/role_card/infected/zombie
 team join switch.temp.zombie @s
 scoreboard players reset @s switch.temp.infection
 attribute @s attack_damage base set 0.00001

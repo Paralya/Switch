@@ -1,0 +1,54 @@
+{
+	"targets": {
+		"clock": {
+			"width": 1,
+			"height": 1,
+			"persistent": true,
+			"clear_color": 0
+		},
+		"clock_next": {
+			"width": 1,
+			"height": 1
+		},
+		"swap": {}
+	},
+	"passes": [
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/clock",
+			"inputs": [
+				{"sampler_name": "Clock","target": "clock"}
+			],
+			"output": "clock_next"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "clock_next"}
+			],
+			"output": "clock"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/role",
+			"inputs": [
+				{"sampler_name": "Clock","target": "clock_next"},
+				{"sampler_name": "In","target": "minecraft:main"},
+				{"sampler_name": "Text","location": "switch:role/murder_mystery/murderer_fr","width": 256,"height": 36}
+			],
+			"output": "swap",
+			"uniforms": {
+				"RoleConfig": [{"name": "Color","type": "vec3","value": [1.0,0.3333333333333333,0.3333333333333333]}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "swap"}
+			],
+			"output": "minecraft:main"
+		}
+	]
+}

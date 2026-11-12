@@ -10,6 +10,9 @@ execute if score #remaining_time switch.data matches 1.. run scoreboard players 
 
 # Annonce des rôles
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
+execute if score #murder_mystery_seconds switch.data matches 0 as @a[tag=!detached,scores={switch.temp.role=1}] run function switch:engine/role_card/murder_mystery/innocent
+execute if score #murder_mystery_seconds switch.data matches 0 as @a[tag=!detached,scores={switch.temp.role=2}] run function switch:engine/role_card/murder_mystery/detective
+execute if score #murder_mystery_seconds switch.data matches 0 as @a[tag=!detached,scores={switch.temp.role=3}] run function switch:engine/role_card/murder_mystery/murderer
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=2}] run item replace entity @s hotbar.0 with bow[unbreakable={},item_name={"text":"Arc du Détective","color":"green"},lore=[{"text":"5 secondes pour recharger","color":"gray","italic":false}],custom_data={switch:{detective_bow:true}}]
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=2}] run item replace entity @s hotbar.8 with arrow
 execute if score #murder_mystery_seconds switch.data matches 0 as @a[scores={switch.temp.role=3}] if data entity @s {SelectedItemSlot:0} run item replace entity @s hotbar.1 with golden_sword[custom_data={switch:{murder_knife:true}},unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable","minecraft:attribute_modifiers"]},attribute_modifiers=[{type:"attack_damage",slot:"mainhand",id:"switch.weapon",amount:11111111,operation:"add_value"}],consumable={consume_seconds:1024}]

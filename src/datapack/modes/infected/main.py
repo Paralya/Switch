@@ -484,6 +484,7 @@ function {ns}:modes/infected/death/human_give
 execute at @s run playsound entity.ender_dragon.growl ambient @s
 effect give @s blindness 3 0 true
 effect give @s regeneration 10 255 true
+function {ns}:engine/role_card/infected/human
 """)
 
 	# /death/infection_second
@@ -511,6 +512,8 @@ execute unless score @s {ns}.temp.infection matches 2.. run scoreboard players a
 
 	# /death/zombie_give
 	write_function(f"{path}/death/zombie_give", f"""
+# A dead zombie comes back through here too, and only a player turning into one gets the card
+execute unless entity @s[team={ns}.temp.zombie] run function {ns}:engine/role_card/infected/zombie
 team join {ns}.temp.zombie @s
 scoreboard players reset @s {ns}.temp.infection
 attribute @s attack_damage base set 0.00001

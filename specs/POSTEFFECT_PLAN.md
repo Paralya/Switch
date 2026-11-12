@@ -16,8 +16,8 @@ Le même générateur sert ensuite aux cartes de rôle, aux ambiances en jeu et 
 - [x] Prérequis B : horloge partagée dans StewBeet, documentée (poussé, release 3.15.0 à publier par Stoupy)
 - [x] Prérequis B bis : MGS importe l'horloge de StewBeet (poussé)
 - [x] Prérequis C : serveur de test jetable (recette ci-dessous)
-- [x] Lot 1 : transition et carte du mode (codé, testé en jeu hors Switch, non commité, à valider par Stoupy)
-- [ ] Lot 2 : cartes de rôle personnelles
+- [x] Lot 1 : transition et carte du mode (validé par Stoupy, poussé)
+- [x] Lot 2 : cartes de rôle personnelles (codé, à valider par Stoupy)
 - [ ] Lot 3 : pictogrammes animés par archétype
 - [ ] Lot 4 : ambiances en jeu
 - [ ] Lot 5 : écran de fin
@@ -173,9 +173,34 @@ uv run stewbeet -s "meta.stewbeet.build_copy_destinations=null" build
 Tester l'effet en jeu : serveur vanilla 26.3 hors ligne avec `enable-rcon=true` et `whitelist off`, `build/Switch_resource_pack.zip` dans `ClaireChan/tools/minecraft/run/resourcepacks/` et dans `resourcePacks` de son `options.txt`, puis `posteffect add <joueur> switch:intro/<mode>_<lang>` par RCON et `/screenshot` sur le pont toutes les 250 ms.
 Attendre que `/state` réponde avant `/connect` : une connexion trop tôt a fait planter le client une fois.
 
+## Lot 2 : ce qui est en place
+
+Une carte par rôle et par langue (`switch:role/<mode>/<role>_<lang>`), montrée au seul joueur concerné, par-dessus le jeu et jamais par-dessus la carte du mode.
+Bandeau sombre dans le tiers haut ("Vous êtes", nom du rôle dans sa couleur), objectif en une ligne dessous, bords teintés. 76 ticks, puis le shader rend le jeu intact.
+
+| Quoi | Où |
+|---|---|
+| Rôles d'un mode (`roles`, `RoleSpec` : nom, objectif, couleur) | [spec.py](../src/datapack/modes/spec.py), [catalogue.py](../src/datapack/modes/catalogue.py) |
+| Shader et chaînes | [intro/role.py](../src/resource_pack/intro/role.py), lecture du texte partagée dans `TEXT_GLSL` de [intro/text.py](../src/resource_pack/intro/text.py) |
+| `engine/role_card/<mode>/<role>` (lancée en tant que le joueur), retrait planifié, retrait à la connexion | [role_card.py](../src/datapack/engine/role_card.py) |
+
+Moments d'affichage, tous quelques secondes après l'atterrissage :
+
+| Mode | Rôles | Quand |
+|---|---|---|
+| traitors_game | inspecteur, innocent, ninja, traître, gros traître, floupy | `roles/announcement` (seconde 0, 6 s après l'atterrissage), les messages du chat restent |
+| murder_mystery | innocent, détective, meurtrier | seconde 0, à la place du title "Vous êtes" |
+| infected | humain, zombie | humain à l'arrivée sur la map (seconde 0), zombie quand un joueur le devient |
+| protect_the_king | les deux rois seulement | seconde 5 |
+| beat_the_kings | civil, roi | seconde 5, avec l'annonce du chat |
+
+Chaque carte planifie `role_card/stop` 96 ticks plus tard en `replace` : le retrait suit la dernière carte montrée, donc toutes sont finies.
+Pas de carte pour spectres_game, ni pour les changements de rôle en cours de partie (vol de Floupy, solitaire, seconde vie du ninja).
+Les textes des cartes sont réduits d'environ 10 % (`TEXT_SCALE`), arrondis à un nombre entier de pixels d'écran par pixel de police.
+
 ## Lots suivants
 
-- **Lot 2, cartes de rôle.** Un second id empilé, ajouté au joueur quand son rôle est attribué : "Tu es Traître". Modes visés : traitors_game, murder_mystery, infected. Candidats à vérifier : spectres_game, protect_the_king, beat_the_kings. Variante : teinte d'équipe sur la carte du mode.
+- **Variante du lot 2.** Teinte d'équipe sur la carte du mode.
 - **Lot 3, pictogrammes animés.** Environ 8 archétypes : survivre, dernier debout, pousser, course, capture, équipe contre équipe, collecte, construction. Chaque mode choisit un archétype, une icône et une couleur. Les icônes sont des textures vanilla copiées dans `textures/effect/` au build.
 - **Lot 4, ambiances en jeu.** Un effet tenu pendant la partie : vignette sombre sur warden_escape, bloom néon sur laser_game. Une seule passe, il tourne à chaque frame.
 - **Lot 5, écran de fin.** Désaturation pour les perdants, confettis pour le gagnant.

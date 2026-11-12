@@ -11,6 +11,8 @@ execute if score #protect_the_king_seconds switch.data matches 0.. run function 
 execute if score #protect_the_king_seconds switch.data matches 0.. run effect give @a[tag=!detached,gamemode=!spectator,team=!switch.temp.red,team=!switch.temp.blue] glowing infinite 255 true
 execute if score #protect_the_king_seconds switch.data matches 0 run team modify switch.temp.red collisionRule always
 execute if score #protect_the_king_seconds switch.data matches 0 run team modify switch.temp.blue collisionRule always
+execute if score #protect_the_king_seconds switch.data matches 5 as @a[tag=!detached,team=switch.temp.red_king] run function switch:engine/role_card/protect_the_king/red_king
+execute if score #protect_the_king_seconds switch.data matches 5 as @a[tag=!detached,team=switch.temp.blue_king] run function switch:engine/role_card/protect_the_king/blue_king
 
 # Remaining time
 function switch:modes/_common/compute_mins_secs

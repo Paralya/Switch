@@ -111,7 +111,7 @@ execute if score #remaining_time {ns}.data matches 1.. run scoreboard players re
 
 execute if score #beat_the_kings_seconds {ns}.data matches 0.. run function {path}/xp_bar
 execute if score #beat_the_kings_seconds {ns}.data matches 0.. run effect give @a[tag=!detached,team={ns}.temp.king] resistance infinite 3 true
-execute if score #beat_the_kings_seconds {ns}.data matches 0 run function {path}/roles/announcement
+execute if score #beat_the_kings_seconds {ns}.data matches 5 run function {path}/roles/announcement
 
 execute if score #beat_the_kings_seconds {ns}.data matches 30 as @a[tag=!detached,team={ns}.temp.king] at @s run playsound entity.experience_orb.pickup ambient @s
 
@@ -268,6 +268,8 @@ setblock 0 3 0 air
 	write_function(f"{path}/roles/announcement", f"""
 execute as @a[tag=!detached] at @s run playsound entity.wither.spawn ambient @s ~ ~ ~ 0.25
 function {translations}/roles_announcement
+execute as @a[tag=!detached,team={ns}.temp.civil] run function {ns}:engine/role_card/beat_the_kings/civil
+execute as @a[tag=!detached,team={ns}.temp.king] run function {ns}:engine/role_card/beat_the_kings/king
 """)
 
 	# /roles/marker

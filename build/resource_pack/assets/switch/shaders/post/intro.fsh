@@ -8,31 +8,22 @@
 #define COVER_TICKS 10.0
 #define TITLE_TICK 16.0
 #define REVEAL_TICK 90.0
-#define TEXT_WIDTH 256.0
-#define LINE_HEIGHT 12.0
 #define RULES 3
 #define RULE_TICKS 30.0, 42.0, 54.0
 
-uniform sampler2D ClockSampler;
-uniform sampler2D InSampler;
-uniform sampler2D BlurSampler;
-uniform sampler2D DepthSampler;
+#define TEXT_WIDTH 256.0
+#define LINE_HEIGHT 12.0
+
 uniform sampler2D TextSampler;
-
-layout(std140) uniform IntroConfig {
-    vec3 Accent;
-};
-
-layout(location = 0) in vec2 texCoord;
-layout(location = 0) out vec4 fragColor;
-
-float hash(vec2 p) {
-    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
-}
 
 float ease_out(float x) {
     x = 1.0 - clamp(x, 0.0, 1.0);
     return 1.0 - x * x * x;
+}
+
+// Screen pixels per font pixel for a text `size` layout units tall, whole so the font pixels stay square.
+float text_scale(float size, float unit) {
+    return max(1.0, floor(size * unit * 0.9 + 0.5));
 }
 
 // Coverage of one text line, centred on `center` (screen pixels, y down), `scale` screen pixels per font pixel.
@@ -46,6 +37,23 @@ float text(int line, vec2 pixel, vec2 center, float scale) {
 vec3 draw_text(vec3 color, int line, vec2 pixel, vec2 center, float scale, float alpha) {
     color = mix(color, vec3(0.0), 0.75 * alpha * text(line, pixel - vec2(scale), center, scale));
     return mix(color, vec3(1.0), alpha * text(line, pixel, center, scale));
+}
+
+
+uniform sampler2D ClockSampler;
+uniform sampler2D InSampler;
+uniform sampler2D BlurSampler;
+uniform sampler2D DepthSampler;
+
+layout(std140) uniform IntroConfig {
+    vec3 Accent;
+};
+
+layout(location = 0) in vec2 texCoord;
+layout(location = 0) out vec4 fragColor;
+
+float hash(vec2 p) {
+    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
 }
 
 void main() {
@@ -95,7 +103,7 @@ void main() {
 
     // Mode name: lands from a larger size, its colours splitting apart on the way in.
     float slam = 1.0 - ease_out((ticks - TITLE_TICK) / 5.0);
-    float titleScale = unit * 4.0 * (1.0 + 0.75 * slam);
+    float titleScale = text_scale(4.0, unit) * (1.0 + 0.75 * slam);
     vec2 split = vec2(slam * unit * 10.0, 0.0);
     vec2 titleCenter = vec2(center.x, titleY);
     float named = step(TITLE_TICK, ticks) * leaving;
@@ -109,11 +117,12 @@ void main() {
 
     // Rules: each line unrolls from its middle while rising into place.
     float ruleTicks[RULES] = float[RULES](RULE_TICKS);
+    float ruleScale = text_scale(2.0, unit);
     for (int rule = 0; rule < RULES; rule++) {
         float entered = ease_out((ticks - ruleTicks[rule]) / 8.0) * step(ruleTicks[rule], ticks);
         vec2 ruleCenter = vec2(center.x, titleY + unit * (52.0 + 26.0 * float(rule) + 6.0 * (1.0 - entered)));
-        float unrolled = step(abs(pixel.x - center.x), entered * TEXT_WIDTH * unit);
-        card = draw_text(card, rule + 1, pixel, ruleCenter, unit * 2.0, unrolled * leaving);
+        float unrolled = step(abs(pixel.x - center.x), entered * TEXT_WIDTH * ruleScale * 0.5);
+        card = draw_text(card, rule + 1, pixel, ruleCenter, ruleScale, unrolled * leaving);
     }
 
     vec3 color = mix(scene, card, ticks < COVER_TICKS ? covered : 1.0 - revealed);

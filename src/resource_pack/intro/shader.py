@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import POST_SHADER_HEADER
 
-from .text import LINE_HEIGHT, TEXT_WIDTH
+from .text import TEXT_GLSL
 
 # Constants
 LAUNCH_TICK: int = 12
@@ -28,7 +28,6 @@ uniform sampler2D ClockSampler;
 uniform sampler2D InSampler;
 uniform sampler2D BlurSampler;
 uniform sampler2D DepthSampler;
-uniform sampler2D TextSampler;
 
 layout(std140) uniform IntroConfig {
     vec3 Accent;
@@ -39,24 +38,6 @@ layout(location = 0) out vec4 fragColor;
 
 float hash(vec2 p) {
     return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
-}
-
-float ease_out(float x) {
-    x = 1.0 - clamp(x, 0.0, 1.0);
-    return 1.0 - x * x * x;
-}
-
-// Coverage of one text line, centred on `center` (screen pixels, y down), `scale` screen pixels per font pixel.
-float text(int line, vec2 pixel, vec2 center, float scale) {
-    vec2 local = floor((pixel - center) / scale + vec2(TEXT_WIDTH, LINE_HEIGHT) * 0.5);
-    if (local.x < 0.0 || local.x >= TEXT_WIDTH || local.y < 0.0 || local.y >= LINE_HEIGHT) return 0.0;
-    return texelFetch(TextSampler, ivec2(local) + ivec2(0, line * int(LINE_HEIGHT)), 0).r;
-}
-
-// White text over its own drop shadow.
-vec3 draw_text(vec3 color, int line, vec2 pixel, vec2 center, float scale, float alpha) {
-    color = mix(color, vec3(0.0), 0.75 * alpha * text(line, pixel - vec2(scale), center, scale));
-    return mix(color, vec3(1.0), alpha * text(line, pixel, center, scale));
 }
 
 void main() {
@@ -106,7 +87,7 @@ void main() {
 
     // Mode name: lands from a larger size, its colours splitting apart on the way in.
     float slam = 1.0 - ease_out((ticks - TITLE_TICK) / 5.0);
-    float titleScale = unit * 4.0 * (1.0 + 0.75 * slam);
+    float titleScale = text_scale(4.0, unit) * (1.0 + 0.75 * slam);
     vec2 split = vec2(slam * unit * 10.0, 0.0);
     vec2 titleCenter = vec2(center.x, titleY);
     float named = step(TITLE_TICK, ticks) * leaving;
@@ -120,32 +101,30 @@ void main() {
 
     // Rules: each line unrolls from its middle while rising into place.
     float ruleTicks[RULES] = float[RULES](RULE_TICKS);
+    float ruleScale = text_scale(2.0, unit);
     for (int rule = 0; rule < RULES; rule++) {
         float entered = ease_out((ticks - ruleTicks[rule]) / 8.0) * step(ruleTicks[rule], ticks);
         vec2 ruleCenter = vec2(center.x, titleY + unit * (52.0 + 26.0 * float(rule) + 6.0 * (1.0 - entered)));
-        float unrolled = step(abs(pixel.x - center.x), entered * TEXT_WIDTH * unit);
-        card = draw_text(card, rule + 1, pixel, ruleCenter, unit * 2.0, unrolled * leaving);
+        float unrolled = step(abs(pixel.x - center.x), entered * TEXT_WIDTH * ruleScale * 0.5);
+        card = draw_text(card, rule + 1, pixel, ruleCenter, ruleScale, unrolled * leaving);
     }
 
     vec3 color = mix(scene, card, ticks < COVER_TICKS ? covered : 1.0 - revealed);
     fragColor = vec4(color + Accent * front, 1.0);
 }
 """
-""" The apply pass of every intro chain. Its timeline constants are #defined from the Python ones above. """
+""" The apply pass of every intro chain. Its timeline constants are #defined from the Python ones above, its text helpers come from TEXT_GLSL. """
 
 
 # Functions
 def intro_fragment_shader(ns: str) -> str:
 	""" The intro shader source, with the timeline and the text layout #defined from the constants of this module. """
-	floats: dict[str, int] = {
-		"INTRO_TICKS": INTRO_TICKS, "COVER_TICKS": COVER_TICKS, "TITLE_TICK": TITLE_TICK, "REVEAL_TICK": REVEAL_TICK,
-		"TEXT_WIDTH": TEXT_WIDTH, "LINE_HEIGHT": LINE_HEIGHT,
-	}
+	floats: dict[str, int] = {"INTRO_TICKS": INTRO_TICKS, "COVER_TICKS": COVER_TICKS, "TITLE_TICK": TITLE_TICK, "REVEAL_TICK": REVEAL_TICK}
 	defines: dict[str, str] = {
 		**{name: f"{value}.0" for name, value in floats.items()},
 		"RULES": str(len(RULE_TICKS)),
 		"RULE_TICKS": ", ".join(f"{tick}.0" for tick in RULE_TICKS),
 	}
 	prelude: str = "\n".join(f"#define {name} {value}" for name, value in defines.items())
-	return f"{POST_SHADER_HEADER}\n#include <minecraft:globals.glsl>\n#include <{ns}:clock.glsl>\n\n{prelude}\n{INTRO_FSH}"
+	return f"{POST_SHADER_HEADER}\n#include <minecraft:globals.glsl>\n#include <{ns}:clock.glsl>\n\n{prelude}\n{TEXT_GLSL}\n{INTRO_FSH}"
 

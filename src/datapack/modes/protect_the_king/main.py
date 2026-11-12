@@ -136,6 +136,8 @@ execute if score #protect_the_king_seconds {ns}.data matches 0.. run function {p
 execute if score #protect_the_king_seconds {ns}.data matches 0.. run effect give @a[tag=!detached,gamemode=!spectator,team=!{ns}.temp.red,team=!{ns}.temp.blue] glowing infinite 255 true
 execute if score #protect_the_king_seconds {ns}.data matches 0 run team modify {ns}.temp.red collisionRule always
 execute if score #protect_the_king_seconds {ns}.data matches 0 run team modify {ns}.temp.blue collisionRule always
+execute if score #protect_the_king_seconds {ns}.data matches 5 as @a[tag=!detached,team={ns}.temp.red_king] run function {ns}:engine/role_card/protect_the_king/red_king
+execute if score #protect_the_king_seconds {ns}.data matches 5 as @a[tag=!detached,team={ns}.temp.blue_king] run function {ns}:engine/role_card/protect_the_king/blue_king
 
 # Remaining time
 function {ns}:modes/_common/compute_mins_secs

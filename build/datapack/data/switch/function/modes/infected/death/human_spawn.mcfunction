@@ -24,4 +24,5 @@ function switch:modes/infected/death/human_give
 execute at @s run playsound entity.ender_dragon.growl ambient @s
 effect give @s blindness 3 0 true
 effect give @s regeneration 10 255 true
+function switch:engine/role_card/infected/human
 

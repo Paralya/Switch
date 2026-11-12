@@ -27,6 +27,23 @@ class Localized:
 
 
 @dataclass(frozen=True, kw_only=True)
+class RoleSpec:
+	""" A role of a mode, shown on the personal card of the players who receive it. """
+
+	id: str
+	""" Name of its card function under switch:engine/role_card/<mode id>/, ex: "traitor" """
+
+	name: Localized
+	""" Its name on one line, ex: ("Traître",) """
+
+	goal: Localized
+	""" One short line telling how this role wins, ex: ("Éliminez tous les innocents",) """
+
+	color: str
+	""" Colour of its card, light enough to read on a dark band, ex: "#ff5555" """
+
+
+@dataclass(frozen=True, kw_only=True)
 class ModeSpec:
 	""" Everything the engine needs to know about one minigame, outside of its logic.
 
@@ -71,6 +88,9 @@ class ModeSpec:
 
 	rules: Localized
 	""" Up to three short lines of the intro card telling how to play, ex: ("Ne vous arrêtez jamais de courir",) """
+
+	roles: tuple[RoleSpec, ...] = ()
+	""" Roles announced on a personal card, the mode calling each card function when it hands the role out. """
 
 	@property
 	def vote_group(self) -> str:

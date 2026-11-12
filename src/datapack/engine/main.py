@@ -4,6 +4,7 @@ from stewbeet import Mem, write_function
 
 from .launch_game import write_launch_game
 from .log_message import write_log_message
+from .role_card import write_role_cards
 from .signals import write_signals
 from .translations import write_translations
 from .voting_time import write_voting_time
@@ -151,6 +152,7 @@ execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s 
 """)
 
 	write_launch_game()
+	write_role_cards()
 
 	write_log_message()
 

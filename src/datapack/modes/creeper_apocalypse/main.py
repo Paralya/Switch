@@ -162,7 +162,7 @@ kill @e[type=item]
 # Creeper Count
 scoreboard players set #creeper_count {ns}.data 0
 execute store result score #creeper_count {ns}.data if entity @e[type=creeper]
-function {translations}/tick
+execute if score #creeper_count {ns}.data matches 1.. run function {translations}/tick
 
 # Fin de la partie si il n'y a plus de joueur en vie, ou que le temps est écoulé
 execute if score #creeper_apocalypse_seconds {ns}.data matches 1.. if score #remaining_time {ns}.data matches 1.. unless entity @a[scores={{{ns}.alive=1..}}] run function {path}/process_end
