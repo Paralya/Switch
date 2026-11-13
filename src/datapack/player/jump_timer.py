@@ -128,7 +128,7 @@ scoreboard players operation #d2 {ns}.data %= #10 {ns}.data
 
 	# /actionbar (shows the jump the timer is linked to, with the same name/color as its lobby item)
 	actionbar_lines: str = "\n".join(
-		f'execute if score @s {ns}.jump_timer_id matches {jump_id} run title @s actionbar [{{"text":"⌛ ","color":"gold"}},{{"text":"{name}","color":"{color}"}},{{"text":" : ","color":"gray"}},{{"score":{{"name":"#secs","objective":"{ns}.data"}},"color":"yellow"}},{{"text":".","color":"yellow"}},{{"score":{{"name":"#d1","objective":"{ns}.data"}},"color":"yellow"}},{{"score":{{"name":"#d2","objective":"{ns}.data"}},"color":"yellow"}},{{"text":"s","color":"yellow"}}]'
+		f'execute if score @s {ns}.jump_timer_id matches {jump_id} run title @s actionbar [{{"text":"⌛ ","color":"white"}},{{"text":"{name}","color":"{color}"}},{{"text":" : ","color":"gray"}},{{"score":{{"name":"#secs","objective":"{ns}.data"}},"color":"yellow"}},{{"text":".","color":"yellow"}},{{"score":{{"name":"#d1","objective":"{ns}.data"}},"color":"yellow"}},{{"score":{{"name":"#d2","objective":"{ns}.data"}},"color":"yellow"}},{{"text":"s","color":"yellow"}}]'
 		for jump_id, _, name, color, _, _ in JUMPS
 	)
 	write_function(f"{path}/actionbar", f"""
