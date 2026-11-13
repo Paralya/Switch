@@ -34,25 +34,24 @@ attribute @s[gamemode=!creative,gamemode=!spectator] safe_fall_distance base set
 
 ## Teleport inventory
 # Get number of blocks
-data modify storage {ns}:temp Inventory set from entity @s Inventory
 scoreboard players set #inventory {ns}.data 0
-execute store result score #inventory {ns}.data if data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump
+execute store result score #inventory {ns}.data if items entity @s inventory.* *[custom_data~{{{ns}:{{jump:true}}}}]
 
 # If lost (only) one item, check where
 execute unless score #inventory {ns}.data matches 13 unless score #inventory {ns}.data matches 0 run scoreboard players set #inventory {ns}.data -1
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_green run scoreboard players set @s {ns}.lobby_respawn 1
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_white run scoreboard players set @s {ns}.lobby_respawn 2
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_blue run scoreboard players set @s {ns}.lobby_respawn 3
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_yellow run scoreboard players set @s {ns}.lobby_respawn 4
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_red run scoreboard players set @s {ns}.lobby_respawn 5
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_brown run scoreboard players set @s {ns}.lobby_respawn 6
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_purple run scoreboard players set @s {ns}.lobby_respawn 7
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_dripstone run scoreboard players set @s {ns}.lobby_respawn 8
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_pink run scoreboard players set @s {ns}.lobby_respawn 9
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_bricks run scoreboard players set @s {ns}.lobby_respawn 10
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_obsidian run scoreboard players set @s {ns}.lobby_respawn 11
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_duality run scoreboard players set @s {ns}.lobby_respawn 12
-execute if score #inventory {ns}.data matches -1 unless data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.jump_graviglitch run scoreboard players set @s {ns}.lobby_respawn 13
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_green:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 1
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_white:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 2
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_blue:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 3
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_yellow:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 4
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_red:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 5
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_brown:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 6
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_purple:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 7
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_dripstone:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 8
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_pink:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 9
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_bricks:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 10
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_obsidian:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 11
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_duality:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 12
+execute if score #inventory {ns}.data matches -1 unless items entity @s inventory.* *[custom_data~{{{ns}:{{jump_graviglitch:true}}}}] run scoreboard players set @s {ns}.lobby_respawn 13
 execute if score #inventory {ns}.data matches -1 run tag @s add {ns}.lobby_respawn
 execute if score #inventory {ns}.data matches -1 run clear @s
 
