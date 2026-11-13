@@ -9,9 +9,6 @@
 # If players in the lobby, show title action bar with the current game and number of players
 function switch:player/detached_action_bar
 
-# Prevent end gateway's beam
-data modify block 34 82 47 Age set value 143L
-
 # Jumps best times leaderboards
 execute if score #display_jump_green switch.data matches 1 unless entity 20180612-2024-2025-2026-201000000001 run scoreboard players set #display_jump_green switch.data 0
 execute if score #display_jump_green switch.data matches 1 positioned -8 81.5 -22 unless entity @a[distance=..64] run kill 20180612-2024-2025-2026-201000000001
@@ -116,7 +113,7 @@ scoreboard players operation #boards_x-2 switch.data = #alley_nearby switch.data
 # Boards decorations: Fireblast fireball, Memory mine and Spectres game particles, GlassRunner snowballs
 execute unless entity 20180612-2024-2025-2026-119000000004 run summon small_fireball 6 70.42 124.5 {UUID:uuid("20180612-2024-2025-2026-119000000004")}
 execute if predicate switch:chance/0.25 run particle dust{color:[1.0,0.0,0.0],scale:1.0} -5 69.55 114 0 0 0 0 1 normal
-particle dolphin -15 69.55 4 0.2 0 0.2 0 2 normal
+particle dolphin -15 70.1 4 0.2 0 0.2 0 2 normal
 execute unless entity 20180612-2024-2025-2026-139000000004 run summon snowball -80.42 72.20 6.05 {NoGravity:1b,UUID:uuid("20180612-2024-2025-2026-139000000004")}
 execute unless entity 20180612-2024-2025-2026-139000000005 run summon snowball -80.48 73.40 7.30 {NoGravity:1b,UUID:uuid("20180612-2024-2025-2026-139000000005")}
 

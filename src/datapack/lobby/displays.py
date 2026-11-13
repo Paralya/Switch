@@ -318,7 +318,7 @@ execute unless score {state} matches 1 positioned {x} {y} {z} if entity @a[dista
 	for stat in STAT_BOARDS:
 		alleys.setdefault(stat.alley, []).append(stat)
 
-	alley_checks: list[str] = []
+	alley_checks: list[McFunction] = []
 	for alley, stats in alleys.items():
 		write_function(f"{path}/boards/{alley}", "\n".join(
 			board(s.x, s.y, s.z, s.path, s.uuid, f"0.1..{s.reach}", f'function {ns}:stats/display/summon {{path:"{s.path}",label:"{s.label}",uuid:"{s.uuid}",mode:{1 if s.mode == 3 else s.mode}}}')
@@ -338,9 +338,6 @@ scoreboard players operation {state} = #alley_nearby {ns}.data""".strip())
 # If players in the lobby, show title action bar with the current game and number of players
 function {ns}:player/detached_action_bar
 
-# Prevent end gateway's beam
-data modify block 34 82 47 Age set value 143L
-
 # Jumps best times leaderboards
 {jump_display_lines}
 
@@ -354,7 +351,7 @@ execute positioned -500 69 -500 if loaded ~ ~ ~ unless entity 20180612-2024-2025
 # Boards decorations: Fireblast fireball, Memory mine and Spectres game particles, GlassRunner snowballs
 execute unless entity 20180612-2024-2025-2026-119000000004 run summon small_fireball 6 70.42 124.5 {{UUID:uuid("20180612-2024-2025-2026-119000000004")}}
 execute if predicate {ns}:chance/0.25 run particle dust{{color:[1.0,0.0,0.0],scale:1.0}} -5 69.55 114 0 0 0 0 1 normal
-particle dolphin -15 69.55 4 0.2 0 0.2 0 2 normal
+particle dolphin -15 70.1 4 0.2 0 0.2 0 2 normal
 execute unless entity 20180612-2024-2025-2026-139000000004 run summon snowball -80.42 72.20 6.05 {{NoGravity:1b,UUID:uuid("20180612-2024-2025-2026-139000000004")}}
 execute unless entity 20180612-2024-2025-2026-139000000005 run summon snowball -80.48 73.40 7.30 {{NoGravity:1b,UUID:uuid("20180612-2024-2025-2026-139000000005")}}
 """)
