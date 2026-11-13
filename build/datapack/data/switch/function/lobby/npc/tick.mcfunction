@@ -15,7 +15,7 @@ execute store success score #body_locked switch.data if entity @s[tag=switch.npc
 execute if score #body_locked switch.data matches 1 store result score #previous_yaw switch.data run data get entity @s Rotation[0] 1000
 
 # Face the player
-$execute anchored eyes facing entity $(facing) eyes run tp @s ~ ~ ~ ~ ~
+$execute positioned ~ ~1.69 ~ facing entity $(facing) eyes run tp @s ~ ~ ~ ~ ~
 
 # Store head rotation (pitch)
 execute store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]
