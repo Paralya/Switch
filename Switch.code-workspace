@@ -5,14 +5,15 @@
 		},
 		{
 			"path": "../StewBeet"
-		},
-		{
-			"path": "../../clones/minecraft-decompiled"
 		}
 	],
 	"settings": {
 		"editor.insertSpaces": false,
 		"editor.detectIndentation": false,
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"files.watcherExclude": {
+			"**/.venv/**": true,
+			"**/.beet_cache/**": true
+		}
 	}
 }
