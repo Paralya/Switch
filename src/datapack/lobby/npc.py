@@ -12,20 +12,20 @@ def write_npc() -> None:
 # If body is locked, set a score
 execute store success score #body_locked {ns}.data if entity @s[tag={ns}.npc.body_locked]
 
-# Store previous yaw rotation (if body is locked)
-execute if score #body_locked {ns}.data matches 1 store result score #previous_yaw {ns}.data run data get entity @s Rotation[0] 1000
-
 # Face the player
-$execute positioned ~ ~1.69 ~ facing entity $(facing) eyes run tp @s ~ ~ ~ ~ ~
+scoreboard players set #facing {ns}.data 0
+$execute store result score #facing {ns}.data positioned ~ ~1.69 ~ facing entity $(facing) eyes run tp @s ~ ~ ~ ~ ~
+execute if score #facing {ns}.data matches 0 run return 0
 
 # Store head rotation (pitch)
 execute store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]
 
-# If body locked, store yaw rotation (current yaw - previous yaw), then reset the rotation
+# If body locked, store yaw rotation (current yaw - previous yaw), the previous yaw being read once the rotation is reset
 execute if score #body_locked {ns}.data matches 1 store result score #new_yaw {ns}.data run data get entity @s Rotation[0] 1000
+execute if entity @s[tag={ns}.npc.body_locked] run tp @s ~ ~ ~ ~ ~
+execute if score #body_locked {ns}.data matches 1 store result score #previous_yaw {ns}.data run data get entity @s Rotation[0] 1000
 execute if score #body_locked {ns}.data matches 1 run scoreboard players operation #new_yaw {ns}.data -= #previous_yaw {ns}.data
 execute if score #body_locked {ns}.data matches 1 store result entity @s Pose.Head[1] float 0.001 run scoreboard players get #new_yaw {ns}.data
-execute if entity @s[tag={ns}.npc.body_locked] run tp @s ~ ~ ~ ~ ~
 
 # If body isn't locked, reset head yaw
 execute if score #body_locked {ns}.data matches 0 run data modify entity @s Pose.Head[1] set value 0.0f
