@@ -10,6 +10,7 @@
 #
 
 scoreboard players operation #player_id switch.id = @s switch.id
+execute as @a[tag=!detached,predicate=switch:has_same_id] run function switch:player/layout/deactivate
 clear @a[tag=!detached,predicate=switch:has_same_id]
 
 $function $(filter)

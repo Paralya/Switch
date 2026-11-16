@@ -6,10 +6,21 @@
 # @within	switch:modes/rush_the_point/classes/main
 #
 
+function switch:player/layout/deactivate
 function switch:modes/rush_the_point/classes/_common
 
 function switch:modes/rush_the_point/classes/_armor
-data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"blocks",claim:0,canon:10,sibling:0},{i:1,role:"special",claim:1,canon:1,sibling:0},{i:2,role:"melee",claim:1,canon:2,sibling:0},{i:3,role:"tool",claim:1,canon:3,sibling:0},{i:4,role:"blocks",claim:1,canon:4,sibling:0},{i:5,role:"heal",claim:1,canon:7,sibling:0},{i:6,role:"heal",claim:0,canon:8,sibling:1},{i:7,role:"food",claim:1,canon:9,sibling:0}]}
-function switch:player/layout/resolve
-function switch:modes/rush_the_point/classes/destroyer/items with storage switch:layout out
+item replace entity @s weapon.offhand with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+item replace entity @s hotbar.0 with warped_fungus_on_a_stick[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},item_name={"text":"Fireball Wand","color":"gold","italic":false},item_model="switch:fireball_wand",custom_data={switch:{fireball_wand:true}}]
+item replace entity @s hotbar.1 with iron_sword[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":1},can_break={blocks:"#switch:rush_the_point/can_break"}]
+item replace entity @s hotbar.2 with diamond_pickaxe[unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},can_break={blocks:"#switch:rush_the_point/can_break"}]
+item replace entity @s hotbar.3 with cut_sandstone[can_place_on={blocks:"#switch:rush_the_point/can_place_on"}] 64
+item replace entity @s hotbar.6 with potion[potion_contents="minecraft:strong_healing"]
+item replace entity @s hotbar.7 with potion[potion_contents="minecraft:strong_healing"]
+item replace entity @s hotbar.8 with bread 42
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 20
+execute if score @s switch.layout.57cba5f6 matches 0.. run function switch:modes/rush_the_point/classes/destroyer/layout/apply
+tag @s add switch.layout.active
 

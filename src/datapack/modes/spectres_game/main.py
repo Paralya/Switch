@@ -3,7 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ..emit import write_modes_calls, write_time_xp_bar
-from .kits import spectre_kit, visible_kit
+from .kits import revive_visible_kit, spectre_kit, visible_kit
 from .translations import write_translations
 
 
@@ -49,6 +49,7 @@ tag @a remove {ns}.temp
 	write_function(f"{path}/death/for_global", f"""
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
 tag @a[tag=!detached,predicate={ns}:has_same_id] add {ns}.temp
+execute as @a[tag={ns}.temp] run function {ns}:player/layout/deactivate
 clear @a[tag={ns}.temp]
 
 function {ns}:modes/spectres_game/death/inventory_filter
@@ -79,29 +80,6 @@ data modify entity @s data.Inventory set from storage {ns}:main Inventory
 function {ns}:utils/classic_death
 scoreboard players set @s {ns}.alive 0
 tag @s add {ns}.to_tp
-""")
-
-	# /death/revive_visible
-	write_function(f"{path}/death/revive_visible", f"""
-scoreboard players set #next_role {ns}.data 1
-function {ns}:modes/spectres_game/roles/main
-
-item replace entity @s armor.head with diamond_helmet[enchantments={{protection:3}}]
-item replace entity @s armor.chest with chainmail_chestplate[enchantments={{fire_protection:2}}]
-item replace entity @s armor.legs with chainmail_leggings[enchantments={{protection:3}}]
-item replace entity @s armor.feet with chainmail_boots[enchantments={{fire_protection:2}}]
-item replace entity @s hotbar.0 with stone_sword[enchantments={{sharpness:1}}]
-item replace entity @s hotbar.1 with bow
-item replace entity @s hotbar.2 with stone_axe[attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:4,operation:"add_value"}}]]
-item replace entity @s hotbar.3 with oak_planks 64
-item replace entity @s hotbar.7 with water_bucket
-item replace entity @s hotbar.8 with golden_apple 3
-item replace entity @s inventory.0 with arrow 12
-give @s iron_pickaxe[enchantments={{efficiency:2}}]
-
-scoreboard players set @s {ns}.alive 1
-function {ns}:maps/spread_one_player
-gamemode survival @s
 """)
 
 	# /detect_end (translation ref rewritten)
@@ -135,14 +113,15 @@ execute if score #game_state {ns}.data matches 2 unless score #test_mode {ns}.da
 execute if score #spectres_game_seconds {ns}.data matches 900.. as @a[tag=!detached] at @s run playsound item.totem.use ambient @s
 """)
 
-	# /give_items/spectre and /give_items/visible (declared in kits.py); both keep their team selector, so give_items can call them unconditionally.
+	# /give_items/spectre, /give_items/visible and /death/revive_visible (declared in kits.py, the visible kit first since the revive learns into it)
 	spectre_kit().write(f"{path}/give_items/spectre")
 	visible_kit().write(f"{path}/give_items/visible")
+	revive_visible_kit().write(f"{path}/death/revive_visible")
 
 	# /give_items
 	write_function(f"{path}/give_items", f"""
-function {ns}:modes/spectres_game/give_items/spectre
-function {ns}:modes/spectres_game/give_items/visible
+execute if entity @s[team={ns}.temp.spectre] run function {ns}:modes/spectres_game/give_items/spectre
+execute if entity @s[team={ns}.temp.visible] run function {ns}:modes/spectres_game/give_items/visible
 
 # TNT in inventory
 item replace entity @s inventory.25 with flint_and_steel

@@ -152,40 +152,38 @@ execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run funct
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
-	# /give_items/civil and /give_items/king (two loadouts, so each resolves its own slots); both keep their team selector, so give_items can call them unconditionally.
-	civil: str = f"team={ns}.temp.civil"
-	king: str = f"team={ns}.temp.king"
+	# /give_items/civil and /give_items/king (two loadouts, each with its own learned layout)
 	Kit("civil", pre="# Starter kit", items=(
-		KitItem(slot="armor.head", item="iron_helmet", selector=civil),
-		KitItem(slot="armor.chest", item="diamond_chestplate", selector=civil),
-		KitItem(slot="armor.legs", item="chainmail_leggings", selector=civil),
-		KitItem(slot="armor.feet", item=r"iron_boots[enchantments={feather_falling:2}]", selector=civil),
-		KitItem(role="blocks", item="oak_planks", count=64, slot="weapon.offhand", selector=civil),
-		KitItem(role="melee", item=r"iron_sword[enchantments={sharpness:5}]", slot="hotbar.0", selector=civil),
-		KitItem(role="ranged", item="bow", slot="hotbar.1", selector=civil),
-		KitItem(role="mobility", item="water_bucket", slot="hotbar.7", selector=civil),
-		KitItem(role="heal", item="golden_apple", count=5, slot="hotbar.8", selector=civil),
-		KitItem(item="arrow", count=16, slot="inventory.0", selector=civil),
+		KitItem(slot="armor.head", item="iron_helmet"),
+		KitItem(slot="armor.chest", item="diamond_chestplate"),
+		KitItem(slot="armor.legs", item="chainmail_leggings"),
+		KitItem(slot="armor.feet", item=r"iron_boots[enchantments={feather_falling:2}]"),
+		KitItem(item="oak_planks", count=64, slot="weapon.offhand"),
+		KitItem(item=r"iron_sword[enchantments={sharpness:5}]", slot="hotbar.0"),
+		KitItem(item="bow", slot="hotbar.1"),
+		KitItem(item="water_bucket", slot="hotbar.7"),
+		KitItem(item="golden_apple", count=5, slot="hotbar.8"),
+		KitItem(item="arrow", count=16, slot="inventory.0"),
 	)).write(f"{path}/give_items/civil")
-	# reserved: give_king_gaps (in post) writes the golden apples at literal hotbar.7, so the resolver must never hand that slot out, or the gaps would overwrite a remapped item.
-	Kit("king", reserved=("hotbar.7",), items=(
-		KitItem(slot="armor.head", item="golden_helmet[enchantments={protection:3,unbreaking:10}]", selector=king),
-		KitItem(role="mobility", item="water_bucket", slot="hotbar.0", selector=king),
-		KitItem(role="melee", item="golden_sword[enchantments={unbreaking:3,sharpness:3}]", slot="hotbar.1", selector=king),
-		KitItem(role="ranged", item="bow[enchantments={flame:1,punch:1}]", slot="hotbar.3", selector=king),
-		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.8", selector=king),
-		KitItem(item="arrow", count=45, slot="inventory.0", selector=king),
-	), post=f"""
-execute if entity @s[{king}] run function {path}/give_king_gaps with storage {ns}:temp king_gaps
-effect give @s[{king}] resistance infinite 3 true
-effect give @s[{king}] speed infinite 0 true
-effect give @s[{king}] health_boost infinite 1 true
+	Kit("king", items=(
+		KitItem(slot="armor.head", item="golden_helmet[enchantments={protection:3,unbreaking:10}]"),
+		KitItem(item="water_bucket", slot="hotbar.0"),
+		KitItem(item="golden_sword[enchantments={unbreaking:3,sharpness:3}]", slot="hotbar.1"),
+		KitItem(item="bow[enchantments={flame:1,punch:1}]", slot="hotbar.3"),
+		KitItem(item="golden_apple", count=8, slot="hotbar.7",
+			modify=f'{{type:"minecraft:set_count",count:{{type:"minecraft:score",target:{{type:"minecraft:fixed",name:"#king_gaps"}},score:"{ns}.data"}}}}'),
+		KitItem(item="oak_planks", count=64, slot="hotbar.8"),
+		KitItem(item="arrow", count=45, slot="inventory.0"),
+	), post="""
+effect give @s resistance infinite 3 true
+effect give @s speed infinite 0 true
+effect give @s health_boost infinite 1 true
 """).write(f"{path}/give_items/king")
 
 	# /give_items
 	write_function(f"{path}/give_items", f"""
-function {ns}:modes/beat_the_kings/give_items/civil
-function {ns}:modes/beat_the_kings/give_items/king
+execute if entity @s[team={ns}.temp.civil] run function {ns}:modes/beat_the_kings/give_items/civil
+execute if entity @s[team={ns}.temp.king] run function {ns}:modes/beat_the_kings/give_items/king
 
 attribute @s attack_speed base set 1024
 """)
@@ -205,13 +203,6 @@ scoreboard players operation #king_gaps {ns}.data /= #n_kings {ns}.data
 scoreboard players operation #king_gaps {ns}.data *= #2 {ns}.data
 execute if score #king_gaps {ns}.data matches 8.. run scoreboard players set #king_gaps {ns}.data 8
 execute if score #king_gaps {ns}.data matches ..3 run scoreboard players set #king_gaps {ns}.data 3
-
-execute store result storage {ns}:temp king_gaps.count int 1 run scoreboard players get #king_gaps {ns}.data
-""")
-
-	# /give_king_gaps (macro: count)
-	write_function(f"{path}/give_king_gaps", """
-$item replace entity @s hotbar.7 with golden_apple $(count)
 """)
 
 	# /xp_bar
@@ -229,6 +220,7 @@ function {ns}:utils/classic_death
 	# /death/for_global
 	write_function(f"{path}/death/for_global", f"""
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
+execute as @a[tag=!detached,predicate={ns}:has_same_id] run function {ns}:player/layout/deactivate
 clear @a[tag=!detached,predicate={ns}:has_same_id]
 
 function {path}/death/inventory_filter

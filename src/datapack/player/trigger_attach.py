@@ -19,7 +19,6 @@ execute if score @s {ns}.lang matches 0.. run function {ns}:player/translations/
 execute unless entity @s[team={ns}.tutorial] run tag @s remove detached
 execute unless entity @s[team={ns}.tutorial] run team leave @s
 execute unless entity @s[team={ns}.tutorial] run function {ns}:player/practice/disable
-execute unless entity @s[team={ns}.tutorial] run function {ns}:player/layout/editor/force_close
 
 # Selon l'état du jeu, on exécute les fonctions correspondantes
 scoreboard players add @s {ns}.alive 0

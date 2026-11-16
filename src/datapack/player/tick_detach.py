@@ -58,9 +58,6 @@ execute if score #inventory {ns}.data matches -1 run clear @s
 ## Practice mode (checkpoints on lobby jumps, must run before the respawn detection below)
 function {ns}:player/practice/tick
 
-## Inventory layout editor (drop-to-save detection)
-function {ns}:player/layout/editor/tick
-
 # Teleport to respawn point
 scoreboard players add @s {ns}.lobby_respawn 0
 execute if entity @s[tag=!{ns}.lobby_respawn,gamemode=!creative,gamemode=!spectator,y=-64,dy=127] run tag @s add {ns}.lobby_respawn
@@ -80,8 +77,8 @@ execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=12}}] ru
 execute if entity @s[tag={ns}.lobby_respawn,scores={{{ns}.lobby_respawn=13}}] run function #cinemalya:v1/launch {{with:{{x:-11.5,y:74.1,z:91.5,duration:20,pitch:0,yaw:90,arc_side:1,particle:"minecraft:glow",smoothing:1}}}}
 tag @s remove {ns}.lobby_respawn
 
-# If lost at least one item, setup inventory (never while the layout editor owns the inventory)
-execute if entity @s[tag=!{ns}.layout_editor] unless score #inventory {ns}.data matches 13 run function {ns}:player/setup_lobby_inventory
+# If lost at least one item, setup inventory
+execute unless score #inventory {ns}.data matches 13 run function {ns}:player/setup_lobby_inventory
 
 
 ## Jump timers (start lines detection, timer ticking + actionbar)

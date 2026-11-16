@@ -19,6 +19,7 @@ execute if data storage switch:main {map:"rush_the_point_1"} if entity @s[team=s
 
 ## Items to choose a class
 tag @s remove switch.to_tp
+function switch:player/layout/deactivate
 clear @s
 attribute @s jump_strength base set 0
 effect give @s resistance infinite 250 true

@@ -13,7 +13,7 @@ execute in minecraft:overworld run spawnpoint @s 0 70 0
 scoreboard players set @s {ns}.lobby_respawn 0
 function {ns}:player/jump_timer/cancel
 function {ns}:player/practice/disable
-function {ns}:player/layout/editor/force_close
+function {ns}:player/layout/deactivate
 effect clear @s
 function {ns}:utils/reset_attributes
 effect give @s saturation infinite 0 true
@@ -71,7 +71,6 @@ scoreboard players enable @s {ns}.trigger.night_vision
 scoreboard players enable @s {ns}.trigger.music
 scoreboard players enable @s {ns}.trigger.coupdetat
 scoreboard players enable @s {ns}.trigger.coupdetat_vote
-scoreboard players enable @s {ns}.trigger.layout
 """)
 
 	# /trigger/help/main
@@ -140,7 +139,6 @@ execute unless score @s {ns}.trigger.night_vision matches 0 run function {ns}:pl
 execute unless score @s {ns}.trigger.music matches 0 run function {ns}:player/trigger/music/main
 execute unless score @s {ns}.trigger.coupdetat matches 0 run function {ns}:player/trigger/coupdetat/main
 execute if score @s {ns}.trigger.coupdetat_vote matches 1 run function {ns}:player/trigger/coupdetat/player_vote
-execute unless score @s {ns}.trigger.layout matches 0 run function {ns}:player/layout/editor/entry
 
 function {ns}:player/trigger/enable
 """)

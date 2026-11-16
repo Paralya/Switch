@@ -17,8 +17,21 @@ execute if score @s switch.spleef.powder_snow matches 2 run data modify block 0 
 execute if score @s switch.spleef.powder_snow matches 3 run data modify block 0 10 0 Items[1].count set value 7
 execute if score @s switch.spleef.powder_snow matches 4.. run data modify block 0 10 0 Items[1].count set value 8
 
-data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"tool",claim:1,canon:1,sibling:0},{i:1,role:"mobility",claim:1,canon:2,sibling:0},{i:2,role:"blocks",claim:1,canon:9,sibling:0},{i:3,role:"special",claim:1,canon:8,sibling:0}]}
-function switch:player/layout/resolve
-function switch:modes/spleef/give_items/items with storage switch:layout out
+function switch:player/layout/deactivate
+item replace entity @s hotbar.0 from block 0 10 0 container.0
+item replace entity @s hotbar.1 with ender_pearl
+execute if score @s switch.spleef.snow_block matches 0 run item replace entity @s hotbar.8 with snow_block 4
+execute if score @s switch.spleef.snow_block matches 1 run item replace entity @s hotbar.8 with snow_block 5
+execute if score @s switch.spleef.snow_block matches 2 run item replace entity @s hotbar.8 with snow_block 6
+execute if score @s switch.spleef.snow_block matches 3 run item replace entity @s hotbar.8 with snow_block 7
+execute if score @s switch.spleef.snow_block matches 4 run item replace entity @s hotbar.8 with snow_block 8
+execute if score @s switch.spleef.snow_block matches 5 run item replace entity @s hotbar.8 with snow_block 9
+execute if score @s switch.spleef.snow_block matches 6.. run item replace entity @s hotbar.8 with snow_block 10
+item replace entity @s hotbar.7 from block 0 10 0 container.1
 setblock 0 10 0 air
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 26
+execute if score @s switch.layout.ab8b96f5 matches 0.. run function switch:modes/spleef/give_items/layout/apply
+tag @s add switch.layout.active
 

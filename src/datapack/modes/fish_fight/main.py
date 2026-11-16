@@ -188,9 +188,9 @@ execute if score #pearls_count {ns}.data matches 0 store result score #pearls_co
 """)
 
 	# /give_items runs again on respawn, so the pearls are only *placed* when the player has none left; otherwise they are topped up with `give`, which leaves the stack where they moved it.
-	# That first placement is the one the layout gets to choose (players like pearls in the offhand).
+	# Only that first placement follows the layout learned for this kit (players like pearls in the offhand).
 	Kit("fish_fight", items=(
-		KitItem(role="mobility", item="ender_pearl", count=6, slot="hotbar.8",
+		KitItem(item="ender_pearl", count=6, slot="hotbar.8",
 			cond=f"if score #pearls_count {ns}.data matches 0"),
 	), post=f"""
 execute if score #pearls_count {ns}.data matches 1 run give @s ender_pearl 5

@@ -26,6 +26,7 @@ execute if data storage switch:main {map:"sheepwars_ilots"} if entity @s[team=sw
 execute if data storage switch:main {map:"sheepwars_colored_sheeps"} if entity @s[team=switch.temp.blue] run function switch:maps/survival/sheepwars_colored_sheeps/tp_blue_player
 execute if data storage switch:main {map:"sheepwars_colored_sheeps"} if entity @s[team=switch.temp.red] run function switch:maps/survival/sheepwars_colored_sheeps/tp_red_player
 
+function switch:player/layout/deactivate
 # Starter kit
 clear @s
 execute if entity @s[team=switch.temp.red] run item replace entity @s armor.chest with leather_chestplate[unbreakable={},dyed_color=16711680]
@@ -92,4 +93,9 @@ execute if score @s switch.sheepwars.chosen_kit matches 7 run item replace entit
 
 # Set attack speed
 attribute @s attack_speed base set 1024
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 23
+execute if score @s switch.layout.913bdfe1 matches 0.. run function switch:modes/sheepwars/team_and_give/layout/apply
+tag @s add switch.layout.active
 

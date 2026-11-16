@@ -26,10 +26,10 @@ effect give @s absorption 120 0 true
 
 	# /give_items
 	Kit("cigogne", pre="attribute @s attack_speed base set 1024", items=(
-		KitItem(role="heal", item="golden_apple", count=4, slot="hotbar.0"),
-		KitItem(role="melee", item="iron_sword[enchantments={fire_aspect:1}]", slot="hotbar.2"),
-		KitItem(role="ranged", item="bow[enchantments={flame:1}]", slot="hotbar.4"),
-		KitItem(role="ammo", item="arrow", count=32, slot="hotbar.8"),
+		KitItem(item="golden_apple", count=4, slot="hotbar.0"),
+		KitItem(item="iron_sword[enchantments={fire_aspect:1}]", slot="hotbar.2"),
+		KitItem(item="bow[enchantments={flame:1}]", slot="hotbar.4"),
+		KitItem(item="arrow", count=32, slot="hotbar.8"),
 	)).write(f"{path}/give_items")
 
 	# /killed_player

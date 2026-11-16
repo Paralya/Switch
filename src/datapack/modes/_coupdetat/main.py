@@ -38,10 +38,10 @@ function {ns}:engine/start_state
 	Kit("coupdetat", items=(
 		KitItem(slot="armor.head", loot=f"{ns}:i/sapphire_helmet"),
 		KitItem(slot="armor.chest", loot=f"{ns}:i/sapphire_chestplate"),
-		KitItem(role="melee", slot="hotbar.0", loot=f"{ns}:i/stardust_sword"),
-		KitItem(role="heal", slot="hotbar.1", loot=f"{ns}:i/stardust_apple"),
-		KitItem(role="explosive", item="tnt", count=2, slot="hotbar.7", claim=True),
-		KitItem(role="explosive", item="flint_and_steel", slot="hotbar.8", sibling=True),
+		KitItem(slot="hotbar.0", loot=f"{ns}:i/stardust_sword", match="diamond_sword"),
+		KitItem(slot="hotbar.1", loot=f"{ns}:i/stardust_apple", match="recovery_compass"),
+		KitItem(item="tnt", count=2, slot="hotbar.7"),
+		KitItem(item="flint_and_steel", slot="hotbar.8"),
 	)).write(f"{path}/give_items")
 
 	# /process_end (translation ref rewritten)

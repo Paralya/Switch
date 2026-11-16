@@ -24,11 +24,11 @@ def suicide(amplifier: int) -> str:
 def wool(count: int, slot: str = "hotbar.7") -> KitItem:
 	""" The team-coloured building wool every class carries. """
 	ns: str = Mem.ctx.project_id
-	return KitItem(role="blocks", count=count, slot=slot,
+	return KitItem(count=count, slot=slot,
 		team_items={f"{ns}.temp.red": "red_wool", f"{ns}.temp.blue": "blue_wool"})
 
 
-BREAD: KitItem = KitItem(role="food", item="bread", count=21, slot="hotbar.8")
+BREAD: KitItem = KitItem(item="bread", count=21, slot="hotbar.8")
 
 
 def classes() -> dict[str, Kit]:
@@ -43,21 +43,21 @@ def classes() -> dict[str, Kit]:
 		KitItem(item="iron_chestplate", slot="armor.chest"),
 		KitItem(item="chainmail_leggings", slot="armor.legs"),
 		KitItem(item="iron_boots", slot="armor.feet"),
-		KitItem(role="melee", item="iron_sword", slot="hotbar.0"),
-		KitItem(role="axe", item=axe, slot="hotbar.1"),
-		KitItem(role="heal", item=HEAL_POTION, slot="hotbar.2"),
+		KitItem(item="iron_sword", slot="hotbar.0"),
+		KitItem(item=axe, slot="hotbar.1"),
+		KitItem(item=HEAL_POTION, slot="hotbar.2"),
 	)
 
 	archer: Kit = Kit("archer", pre=common_pre, items=(
 		KitItem(item="chainmail_chestplate", slot="armor.chest"),
 		KitItem(item="iron_leggings", slot="armor.legs"),
 		KitItem(item="chainmail_boots", slot="armor.feet"),
-		KitItem(role="melee", item="stone_sword", slot="hotbar.0"),
-		KitItem(role="ranged", item='crossbow[charged_projectiles=[{id:"minecraft:arrow"}]]', slot="hotbar.1"),
-		KitItem(role="axe", item=axe, slot="hotbar.2"),
-		KitItem(role="heal", item=HEAL_POTION, slot="hotbar.3"),
-		KitItem(role="ammo", item="arrow", count=24, slot="hotbar.4"),
-		KitItem(role="special", item=suicide(3), slot="hotbar.6"),
+		KitItem(item="stone_sword", slot="hotbar.0"),
+		KitItem(item='crossbow[charged_projectiles=[{id:"minecraft:arrow"}]]', slot="hotbar.1"),
+		KitItem(item=axe, slot="hotbar.2"),
+		KitItem(item=HEAL_POTION, slot="hotbar.3"),
+		KitItem(item="arrow", count=24, slot="hotbar.4"),
+		KitItem(item=suicide(3), slot="hotbar.6"),
 		wool(24),
 		BREAD,
 	), post="""
@@ -71,13 +71,13 @@ attribute @s jump_strength base reset
 		KitItem(item="golden_chestplate", slot="armor.chest"),
 		KitItem(item="diamond_leggings", slot="armor.legs"),
 		KitItem(item="golden_boots", slot="armor.feet"),
-		KitItem(role="melee", item="iron_sword", slot="hotbar.0"),
-		KitItem(role="axe", item=axe, slot="hotbar.1"),
-		KitItem(role="heal", item='lingering_potion[potion_contents="minecraft:strong_healing"]', slot="hotbar.2"),
-		KitItem(role="mobility", item='lingering_potion[potion_contents="minecraft:long_swiftness"]', slot="hotbar.3"),
-		KitItem(role="throwable", item='lingering_potion[potion_contents="minecraft:strong_harming"]', slot="hotbar.4"),
-		KitItem(role="throwable", item='lingering_potion[potion_contents="minecraft:strong_poison"]', slot="hotbar.5", sibling=True),
-		KitItem(role="special", item=suicide(1), slot="hotbar.6"),
+		KitItem(item="iron_sword", slot="hotbar.0"),
+		KitItem(item=axe, slot="hotbar.1"),
+		KitItem(item='lingering_potion[potion_contents="minecraft:strong_healing"]', slot="hotbar.2"),
+		KitItem(item='lingering_potion[potion_contents="minecraft:long_swiftness"]', slot="hotbar.3"),
+		KitItem(item='lingering_potion[potion_contents="minecraft:strong_harming"]', slot="hotbar.4"),
+		KitItem(item='lingering_potion[potion_contents="minecraft:strong_poison"]', slot="hotbar.5"),
+		KitItem(item=suicide(1), slot="hotbar.6"),
 		wool(8),
 		BREAD,
 	), post="""
@@ -87,13 +87,12 @@ attribute @s max_health base reset
 attribute @s jump_strength base reset
 """)
 
-	# The demolisher carries both halves of a bomb: the TNT is what a player means by "my explosive slot", so it claims the role and the flint and steel trails it.
 	demolisher: Kit = Kit("demolisher", pre=common_pre, items=(
 		*soldier_base,
-		KitItem(role="special", item=suicide(1), slot="hotbar.4"),
+		KitItem(item=suicide(1), slot="hotbar.4"),
 		wool(8, slot="hotbar.5"),
-		KitItem(role="explosive", item="flint_and_steel", slot="hotbar.6", sibling=True),
-		KitItem(role="explosive", item="tnt", count=2, slot="hotbar.7", claim=True),
+		KitItem(item="flint_and_steel", slot="hotbar.6"),
+		KitItem(item="tnt", count=2, slot="hotbar.7"),
 		BREAD,
 	), post=soldier_attrs)
 
@@ -101,10 +100,10 @@ attribute @s jump_strength base reset
 		KitItem(item="diamond_chestplate", slot="armor.chest"),
 		KitItem(item="chainmail_leggings", slot="armor.legs"),
 		KitItem(item="iron_boots", slot="armor.feet"),
-		KitItem(role="melee", item="stone_sword", slot="hotbar.0"),
-		KitItem(role="axe", item=axe, slot="hotbar.1"),
-		KitItem(role="heal", item="golden_apple", count=2, slot="hotbar.2"),
-		KitItem(role="special", item=suicide(1), slot="hotbar.6"),
+		KitItem(item="stone_sword", slot="hotbar.0"),
+		KitItem(item=axe, slot="hotbar.1"),
+		KitItem(item="golden_apple", count=2, slot="hotbar.2"),
+		KitItem(item=suicide(1), slot="hotbar.6"),
 		wool(18),
 		BREAD,
 	), post="""
@@ -116,8 +115,8 @@ attribute @s jump_strength base reset
 
 	warrior: Kit = Kit("warrior", pre=common_pre, items=(
 		*soldier_base,
-		KitItem(role="heal", item=HEAL_POTION, slot="hotbar.3", sibling=True),
-		KitItem(role="special", item=suicide(1), slot="hotbar.6"),
+		KitItem(item=HEAL_POTION, slot="hotbar.3"),
+		KitItem(item=suicide(1), slot="hotbar.6"),
 		wool(12),
 		BREAD,
 	), post=soldier_attrs)

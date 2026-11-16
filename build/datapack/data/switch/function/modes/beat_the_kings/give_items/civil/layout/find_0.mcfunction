@@ -1,0 +1,21 @@
+
+#> switch:modes/beat_the_kings/give_items/civil/layout/find_0
+#
+# @executed	as @a[tag=!detached] & at @s
+#
+# @within	switch:modes/beat_the_kings/give_items/civil/layout/apply
+#			switch:modes/beat_the_kings/give_items/civil/layout/learn
+#
+
+execute if score #f9 switch.data matches 0 if items entity @s weapon.offhand oak_planks run return 10
+execute if score #f0 switch.data matches 0 if items entity @s hotbar.0 oak_planks run return 1
+execute if score #f1 switch.data matches 0 if items entity @s hotbar.1 oak_planks run return 2
+execute if score #f2 switch.data matches 0 if items entity @s hotbar.2 oak_planks run return 3
+execute if score #f3 switch.data matches 0 if items entity @s hotbar.3 oak_planks run return 4
+execute if score #f4 switch.data matches 0 if items entity @s hotbar.4 oak_planks run return 5
+execute if score #f5 switch.data matches 0 if items entity @s hotbar.5 oak_planks run return 6
+execute if score #f6 switch.data matches 0 if items entity @s hotbar.6 oak_planks run return 7
+execute if score #f7 switch.data matches 0 if items entity @s hotbar.7 oak_planks run return 8
+execute if score #f8 switch.data matches 0 if items entity @s hotbar.8 oak_planks run return 9
+return 0
+

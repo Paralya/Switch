@@ -9,16 +9,20 @@ def write_signals() -> None:
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:engine"
 
-	# /signals/inventory_changed
+	# /signals/inventory_changed runs on every slot change: no macro, which fails to build for each mode without a listener
+	listeners: str = "".join(
+		f'execute if data storage {ns}:main {{current_game:"{name.split("/")[1]}"}} in {ns}:game run function {name}\n'
+		for name in sorted(Mem.ctx.data.functions) if name.startswith(f"{ns}:modes/") and name.endswith("/calls/inventory_changed"))
 	write_function(f"{path}/signals/inventory_changed", f"""
 # Revoke inventory_changed advancement
 advancement revoke @s only {ns}:inventory_changed
 
-# Launch inventory_changed signal
-data modify storage {ns}:main input set value {{id:""}}
-data modify storage {ns}:main input.id set from storage {ns}:main current_game
-function {ns}:engine/signals/macro_inventory_changed with storage {ns}:main input
-""")
+# Learn the kit layout a second after the first change
+tag @s[tag={ns}.layout.active,tag=!detached] add {ns}.layout.dirty
+execute if entity @s[tag={ns}.layout.dirty] unless score @s {ns}.layout.cd matches 1.. run scoreboard players set @s {ns}.layout.cd 20
+
+# Launch inventory_changed signal to the modes listening to it
+{listeners}""")
 
 	# /signals/joined
 	write_function(f"{path}/signals/joined", f"""
@@ -26,11 +30,6 @@ function {ns}:engine/signals/macro_inventory_changed with storage {ns}:main inpu
 data modify storage {ns}:main input set value {{id:""}}
 data modify storage {ns}:main input.id set from storage {ns}:main current_game
 function {ns}:engine/signals/macro_joined with storage {ns}:main input
-""")
-
-	# /signals/macro_inventory_changed
-	write_function(f"{path}/signals/macro_inventory_changed", f"""
-$execute in {ns}:game run function {ns}:modes/$(id)/calls/inventory_changed
 """)
 
 	# /signals/macro_joined

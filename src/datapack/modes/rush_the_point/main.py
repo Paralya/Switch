@@ -481,6 +481,7 @@ execute if data storage {ns}:main {{map:"rush_the_point_1"}} if entity @s[team={
 
 ## Items to choose a class
 tag @s remove {ns}.to_tp
+function {ns}:player/layout/deactivate
 clear @s
 attribute @s jump_strength base set 0
 effect give @s resistance infinite 250 true

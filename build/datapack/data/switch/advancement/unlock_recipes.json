@@ -1,9 +1,177 @@
 {
 	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:inventory_changed"
+		"0": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:emerald",
+							"minecraft:stick"
+						]
+					}
+				]
+			}
+		},
+		"1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_helmet": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"2": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_chestplate": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"3": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_leggings": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"4": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_boots": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"5": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_sword": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"6": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_pickaxe": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"7": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_axe": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"8": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_shovel": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"9": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"switch": {
+									"emerald_hoe": true
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
+	"requirements": [
+		[
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9"
+		]
+	],
 	"rewards": {
 		"function": "switch:advancements/unlock_recipes"
 	}

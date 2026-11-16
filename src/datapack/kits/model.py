@@ -6,8 +6,6 @@ Since the namespace is only known at build time, kits that reference it cannot b
 # Imports
 from dataclasses import dataclass, field
 
-from .roles import ROLES, SLOT_ID
-
 
 # Classes
 @dataclass(frozen=True)
@@ -82,17 +80,14 @@ class Variants:
 
 @dataclass(frozen=True)
 class KitItem:
-	""" One item of a kit.
+	""" One item of a kit, given at its canonical slot.
 
-	`role` is the semantic slot ("melee", "blocks", ...) that the player's layout can remap.
-	`role=None` pins the item: armour and inventory.* overflow are never remapped.
+	Several items may share a slot: a later one replaces an earlier one under its own condition (a king's sword over a soldier's).
 	"""
 	item: str = ""
 	""" The item string, e.g. "diamond_sword[enchantments={sharpness:1}]". """
 	slot: str = ""
 	""" Canonical slot: "hotbar.0" | "weapon.offhand" | "armor.chest" | "inventory.25". """
-	role: str | None = None
-	""" Semantic role the player's layout can remap; None pins the item to its slot. """
 	count: int | ScoreCount = 1
 	""" Item count, fixed or driven by a shop-upgrade score. """
 	variants: Variants | None = None
@@ -109,18 +104,18 @@ class KitItem:
 	""" Container source, e.g. "0 10 0 container.0": place with `item replace ... from block`. """
 	modify: str = ""
 	""" Item modifier applied to the slot right after placing the item. """
-	claim: bool | None = None
-	""" Which item of a duplicated role owns the player's slot (default: the first declared). """
-	sibling: bool = False
-	""" A 2nd item of a role: prefer <role slot>+1 before falling back to its canonical slot. """
-	override: bool = False
-	""" Swap out the item of the same role in the SAME slot (a king's sword replacing a soldier's),
-	rather than asking for a slot of its own. """
+	match: str = ""
+	""" What `if items` recognises the given item by, e.g. "iron_sword" for a loot table that gives one. Required when a `loot` or `from_block` item sits on a learned slot. """
 
-	@property
-	def pinned(self) -> bool:
-		""" Whether this item keeps its declared slot no matter the player's layout. """
-		return self.role is None
+	def strings(self) -> tuple[str, ...]:
+		""" Every item string this item may be given as, `match` standing in for the others. """
+		if self.match:
+			return (self.match,)
+		if self.variants:
+			return self.variants.items
+		if self.team_items:
+			return tuple(self.team_items.values())
+		return (self.item,)
 
 	@staticmethod
 	def _selector(parts: list[str]) -> str:
@@ -132,22 +127,21 @@ class KitItem:
 		""" Vanilla omits the count when it is 1, and so must we (byte-identical output). """
 		return "" if count == 1 else f" {count}"
 
-	def _place(self, slot: str, selector: str, item_string: str, count: int) -> str:
+	def _place(self, selector: str, item_string: str, count: int) -> str:
 		""" The bare placement command, without any execute prefix. """
 		if self.loot:
-			return f"loot replace entity {selector} {slot}{self._count_suffix(count)} loot {self.loot}"
+			return f"loot replace entity {selector} {self.slot}{self._count_suffix(count)} loot {self.loot}"
 		if self.from_block:
-			return f"item replace entity {selector} {slot} from block {self.from_block}"
-		return f"item replace entity {selector} {slot} with {item_string}{self._count_suffix(count)}"
+			return f"item replace entity {selector} {self.slot} from block {self.from_block}"
+		return f"item replace entity {selector} {self.slot} with {item_string}{self._count_suffix(count)}"
 
-	def emit(self, slot: str) -> list[str]:
+	def emit(self) -> list[str]:
 		""" Render this item to its command lines.
 
 		The three ways a kit varies an item are independent and compose: `team_items` picks the item
 		by team (a selector), `variants` picks it by score (a condition), and a ScoreCount picks the
 		count by score (another condition).
 		"""
-		macro: str = "$" if "$(" in slot else ""
 		lines: list[str] = []
 
 		# An item chosen at random rolls once, then branches
@@ -159,11 +153,11 @@ class KitItem:
 		for choice_condition, item_string, selector_parts in self._choices(base_selector):
 			for count_condition, count in counts:
 				prefix: str = self._execute_prefix(self.cond, choice_condition, count_condition)
-				lines.append(macro + prefix + self._place(slot, self._selector(selector_parts), item_string, count))
+				lines.append(prefix + self._place(self._selector(selector_parts), item_string, count))
 
 		# An item modifier applies to whatever landed in the slot, under the same condition as the item
 		if self.modify:
-			lines.append(macro + self._execute_prefix(self.cond) + f"item modify entity {self._selector(base_selector)} {slot} {self.modify}")
+			lines.append(self._execute_prefix(self.cond) + f"item modify entity {self._selector(base_selector)} {self.slot} {self.modify}")
 
 		return lines
 
@@ -187,19 +181,7 @@ class KitItem:
 		Args:
 			kit: Name of the kit holding this item, for the error messages.
 		"""
-		if self.role is not None and self.role not in ROLES:
-			raise ValueError(f"Kit '{kit}': unknown role '{self.role}'")
 		counts: tuple[int, ...] = self.count.per_level() if isinstance(self.count, ScoreCount) else (self.count,)
 		if any(count > 64 for count in counts):
-			raise ValueError(
-				f"Kit '{kit}': count {max(counts)} exceeds a stack; `item replace` caps its count at 99 and"
-				" one over 64 fails the whole macro instantiation (no kit item given at all),"
-				" so split the surplus into a second, pinned inventory.* item"
-			)
-		if not self.pinned and not self.override and self.slot not in SLOT_ID:
-			raise ValueError(f"Kit '{kit}': role '{self.role}' sits on '{self.slot}', which players cannot remap")
-		if self.override and self.pinned:
-			raise ValueError(f"Kit '{kit}': an override needs a role, so it knows which item it replaces")
-		if "$(" in self.item:
-			raise ValueError(f"Kit '{kit}': item string contains a macro reference, which would be substituted away")
+			raise ValueError(f"Kit '{kit}': count {max(counts)} exceeds a stack, split the surplus into a second item on an inventory.* slot")
 

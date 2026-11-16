@@ -53,6 +53,7 @@ function {ns}:modes/traitors_game/translations/death_for_detective
 	# /death/for_global (translation ref rewritten)
 	write_function(f"{path}/death/for_global", f"""
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
+execute as @a[tag=!detached,predicate={ns}:has_same_id] run function {ns}:player/layout/deactivate
 clear @a[tag=!detached,predicate={ns}:has_same_id]
 function {ns}:modes/_common/death/global_effects
 
@@ -179,16 +180,16 @@ execute if predicate {ns}:chance/0.5 run scoreboard players set #sword {ns}.data
 			"iron_leggings[enchantments={protection:2}]", "diamond_leggings"))),
 		KitItem(slot="armor.feet", variants=Variants(score=f"#armor {ns}.data", items=(
 			"diamond_boots", "iron_boots[enchantments={protection:2}]"))),
-		KitItem(role="melee", slot="hotbar.0", variants=Variants(score=f"#sword {ns}.data", items=(
+		KitItem(slot="hotbar.0", variants=Variants(score=f"#sword {ns}.data", items=(
 			"iron_sword[enchantments={sharpness:2}]", "diamond_sword[enchantments={sharpness:1}]"))),
-		KitItem(role="ranged", item="bow[enchantments={power:1}]", slot="hotbar.1"),
-		KitItem(role="axe", slot="hotbar.3", item=f'stone_axe[attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:4,operation:"add_value"}}]]'),
-		KitItem(role="food", item="apple", count=16, slot="hotbar.4"),
-		KitItem(role="heal", item="golden_apple", count=6, slot="hotbar.8"),
-		KitItem(role="ammo", item="arrow", count=28, slot="hotbar.6"),
-		KitItem(role="mobility", item="water_bucket", slot="hotbar.7"),
-		KitItem(role="tool", slot="hotbar.2", loot=f"{ns}:traitors_game/all_starter"),
-		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.5"),
+		KitItem(item="bow[enchantments={power:1}]", slot="hotbar.1"),
+		KitItem(slot="hotbar.3", item=f'stone_axe[attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:4,operation:"add_value"}}]]'),
+		KitItem(item="apple", count=16, slot="hotbar.4"),
+		KitItem(item="golden_apple", count=6, slot="hotbar.8"),
+		KitItem(item="arrow", count=28, slot="hotbar.6"),
+		KitItem(item="water_bucket", slot="hotbar.7"),
+		KitItem(slot="hotbar.2", loot=f"{ns}:traitors_game/all_starter", match="diamond_pickaxe"),
+		KitItem(item="oak_planks", count=64, slot="hotbar.5"),
 		KitItem(item="oak_planks", count=36, slot="inventory.1"),
 		KitItem(item="anvil", slot="inventory.0"),
 	), post=f"""
@@ -315,7 +316,7 @@ scoreboard players add #next_role {ns}.data 1
 execute if score #next_role {ns}.data matches 1 run team join {ns}.temp.inspector @s
 execute if score #next_role {ns}.data matches 1 run scoreboard players set @s {ns}.temp.role 1
 execute if score #next_role {ns}.data matches 1 run attribute @s max_health base set 16
-execute if score #next_role {ns}.data matches 1 run item replace entity @s hotbar.1 with bow[enchantments={{power:2}},attribute_modifiers=[{{type:"movement_speed",slot:"mainhand",id:"{ns}.movement_speed",amount:0.16,operation:"add_multiplied_total"}},{{type:"movement_speed",slot:"offhand",id:"{ns}.movement_speed",amount:0.16,operation:"add_multiplied_total"}}]]
+execute if score #next_role {ns}.data matches 1 run item replace entity @s {{type:"minecraft:limit_slots",limit:1,slot_source:{{type:"minecraft:filtered",slot_source:[{{type:"minecraft:slot_range",slots:"hotbar.0"}},{{type:"minecraft:slot_range",slots:"hotbar.1"}},{{type:"minecraft:slot_range",slots:"hotbar.2"}},{{type:"minecraft:slot_range",slots:"hotbar.3"}},{{type:"minecraft:slot_range",slots:"hotbar.4"}},{{type:"minecraft:slot_range",slots:"hotbar.5"}},{{type:"minecraft:slot_range",slots:"hotbar.6"}},{{type:"minecraft:slot_range",slots:"hotbar.7"}},{{type:"minecraft:slot_range",slots:"hotbar.8"}},{{type:"minecraft:slot_range",slots:"weapon.offhand"}}],item_filter:{{items:"minecraft:bow"}}}}}} with bow[enchantments={{power:2}},attribute_modifiers=[{{type:"movement_speed",slot:"mainhand",id:"{ns}.movement_speed",amount:0.16,operation:"add_multiplied_total"}},{{type:"movement_speed",slot:"offhand",id:"{ns}.movement_speed",amount:0.16,operation:"add_multiplied_total"}}]]
 # Traitre
 execute if score #next_role {ns}.data matches 2 run scoreboard players set @s {ns}.temp.role 5
 # Ninja

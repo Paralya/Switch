@@ -1,9 +1,9 @@
 
 #> switch:modes/beat_the_kings/calls/inventory_changed
 #
-# @executed	as the player & at current position
+# @executed	in switch:game
 #
-# @within	switch:engine/signals/macro_inventory_changed
+# @within	switch:engine/signals/inventory_changed [ in switch:game ]
 #
 
 tag @s add switch.temp.inventory_changed

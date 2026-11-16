@@ -34,3 +34,6 @@ execute if dimension minecraft:overworld if entity @s[tag=detached,x=0,y=69,z=0,
 # Noteblock
 execute at @s if score @s switch.music.progress matches 1.. run function switch:music/player_tick
 
+# Learn where the player moved the items of their kit
+execute if entity @s[tag=switch.layout.dirty] run function switch:player/layout/tick
+

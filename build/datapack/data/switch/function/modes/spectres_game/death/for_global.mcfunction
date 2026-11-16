@@ -8,6 +8,7 @@
 
 scoreboard players operation #player_id switch.id = @s switch.id
 tag @a[tag=!detached,predicate=switch:has_same_id] add switch.temp
+execute as @a[tag=switch.temp] run function switch:player/layout/deactivate
 clear @a[tag=switch.temp]
 
 function switch:modes/spectres_game/death/inventory_filter

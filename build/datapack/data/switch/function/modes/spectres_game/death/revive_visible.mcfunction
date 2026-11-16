@@ -6,9 +6,9 @@
 # @within	switch:modes/spectres_game/obsidian_effect [ as @r[tag=!detached,team=switch.temp.visible,scores={switch.alive=0}] ]
 #
 
+function switch:player/layout/deactivate
 scoreboard players set #next_role switch.data 1
 function switch:modes/spectres_game/roles/main
-
 item replace entity @s armor.head with diamond_helmet[enchantments={protection:3}]
 item replace entity @s armor.chest with chainmail_chestplate[enchantments={fire_protection:2}]
 item replace entity @s armor.legs with chainmail_leggings[enchantments={protection:3}]
@@ -25,4 +25,9 @@ give @s iron_pickaxe[enchantments={efficiency:2}]
 scoreboard players set @s switch.alive 1
 function switch:maps/spread_one_player
 gamemode survival @s
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 25
+execute if score @s switch.layout.164667ad matches 0.. run function switch:modes/spectres_game/give_items/visible/layout/apply
+tag @s add switch.layout.active
 

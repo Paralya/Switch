@@ -15,26 +15,26 @@ def pvp_arena_kit() -> Kit:
 		KitItem(item="leather_chestplate[enchantments={projectile_protection:2}]", slot="armor.chest"),
 		KitItem(item="leather_leggings[enchantments={projectile_protection:2}]", slot="armor.legs"),
 		KitItem(item="leather_boots[enchantments={projectile_protection:2}]", slot="armor.feet"),
-		KitItem(role="melee", item="wooden_sword[enchantments={sharpness:1,knockback:1}]", slot="hotbar.0"),
-		KitItem(role="ranged", item="bow", slot="hotbar.1"),
-		KitItem(role="mobility", item="water_bucket", slot="hotbar.2"),
-		KitItem(role="tool", item="iron_pickaxe[enchantments={efficiency:1}]", slot="hotbar.3"),
-		KitItem(role="axe", item=f'iron_axe[enchantments={{efficiency:1}},attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:2,operation:"add_value"}}]]', slot="hotbar.4"),
-		KitItem(role="ammo", item="arrow", count=8, slot="hotbar.6"),
-		KitItem(role="blocks", item="oak_planks", count=64, slot="hotbar.7"),
-		KitItem(role="heal", item="golden_apple", count=12, slot="hotbar.8"),
+		KitItem(item="wooden_sword[enchantments={sharpness:1,knockback:1}]", slot="hotbar.0"),
+		KitItem(item="bow", slot="hotbar.1"),
+		KitItem(item="water_bucket", slot="hotbar.2"),
+		KitItem(item="iron_pickaxe[enchantments={efficiency:1}]", slot="hotbar.3"),
+		KitItem(item=f'iron_axe[enchantments={{efficiency:1}},attribute_modifiers=[{{type:"minecraft:attack_damage",slot:"mainhand",id:"{ns}.attack_damage",amount:2,operation:"add_value"}}]]', slot="hotbar.4"),
+		KitItem(item="arrow", count=8, slot="hotbar.6"),
+		KitItem(item="oak_planks", count=64, slot="hotbar.7"),
+		KitItem(item="golden_apple", count=12, slot="hotbar.8"),
 		KitItem(item="tnt", count=4, slot="inventory.25"),
 		KitItem(item="flint_and_steel", slot="inventory.26"),
 	))
 
 # The stone-tools loadout shared by layers_2_teams and layers_4_teams.
 LAYERS_STARTER_KIT: Kit = Kit("layers_starter", pre="attribute @s attack_speed base set 2048", items=(
-	KitItem(role="tool", item="stone_pickaxe", slot="hotbar.0"),
-	KitItem(role="axe", item="stone_axe", slot="hotbar.1"),
-	KitItem(role="special", item="netherite_upgrade_smithing_template", count=5, slot="hotbar.2"),
-	KitItem(role="food", item="apple", count=12, slot="hotbar.3"),
-	KitItem(role="explosive", item="tnt", count=4, slot="hotbar.4", claim=True),
-	KitItem(role="explosive", item="flint_and_steel", slot="hotbar.5", sibling=True),
+	KitItem(item="stone_pickaxe", slot="hotbar.0"),
+	KitItem(item="stone_axe", slot="hotbar.1"),
+	KitItem(item="netherite_upgrade_smithing_template", count=5, slot="hotbar.2"),
+	KitItem(item="apple", count=12, slot="hotbar.3"),
+	KitItem(item="tnt", count=4, slot="hotbar.4"),
+	KitItem(item="flint_and_steel", slot="hotbar.5"),
 ))
 
 # Vanilla dye colors, in scoreboard order (used by /set_wool_color)
@@ -65,6 +65,7 @@ execute if entity @s[gamemode=!spectator] run scoreboard players add @s {ns}.sta
 gamemode spectator @s
 execute unless score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 effect clear @s
+function {ns}:player/layout/deactivate
 clear @s
 """)
 
@@ -75,6 +76,7 @@ execute unless score @s {ns}.alive matches 1.. run scoreboard players add @s {ns
 execute unless score @s {ns}.alive matches 1.. run gamemode spectator @s
 execute unless score @s {ns}.alive matches 1.. at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 execute unless score @s {ns}.alive matches 1.. run effect clear @s
+execute unless score @s {ns}.alive matches 1.. run function {ns}:player/layout/deactivate
 execute unless score @s {ns}.alive matches 1.. run clear @s
 """)
 
@@ -341,6 +343,7 @@ execute if data entity @s data.Inventory[0] run function {path}/death/inventory_
 	# then park the marker off-map. {filter} is that mode's death/inventory_filter function path
 	write_function(f"{path}/death/for_global", f"""
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
+execute as @a[tag=!detached,predicate={ns}:has_same_id] run function {ns}:player/layout/deactivate
 clear @a[tag=!detached,predicate={ns}:has_same_id]
 
 $function $(filter)

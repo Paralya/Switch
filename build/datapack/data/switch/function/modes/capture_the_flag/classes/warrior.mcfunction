@@ -6,12 +6,23 @@
 # @within	switch:modes/capture_the_flag/classes/main
 #
 
+function switch:player/layout/deactivate
 function switch:modes/capture_the_flag/classes/_common
 item replace entity @s armor.chest with iron_chestplate
 item replace entity @s armor.legs with chainmail_leggings
 item replace entity @s armor.feet with iron_boots
-data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"melee",claim:1,canon:1,sibling:0},{i:1,role:"axe",claim:1,canon:2,sibling:0},{i:2,role:"heal",claim:1,canon:3,sibling:0},{i:3,role:"heal",claim:0,canon:4,sibling:1},{i:4,role:"special",claim:1,canon:7,sibling:0},{i:5,role:"blocks",claim:1,canon:8,sibling:0},{i:6,role:"food",claim:1,canon:9,sibling:0}]}
-function switch:player/layout/resolve
-function switch:modes/capture_the_flag/classes/warrior/items with storage switch:layout out
+item replace entity @s hotbar.0 with iron_sword
+item replace entity @s hotbar.1 with stone_axe[attribute_modifiers=[{type:"minecraft:attack_damage",slot:"mainhand",id:"switch.attack_damage",amount:4,operation:"add_value"}]]
+item replace entity @s hotbar.2 with potion[potion_contents="minecraft:strong_healing"]
+item replace entity @s hotbar.3 with potion[potion_contents="minecraft:strong_healing"]
+item replace entity @s hotbar.6 with potion[item_name={"text":"Suicide Potion","color":"dark_purple"},potion_contents={custom_color:4391004,custom_effects:[{id:"instant_damage",amplifier:1b,duration:20},{id:"wither",amplifier:10b,duration:-1},{id:"poison",amplifier:10b,duration:-1}]}]
+item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 12
+item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 12
+item replace entity @s hotbar.8 with bread 21
 function switch:modes/capture_the_flag/classes/_soldier_attrs
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 9
+execute if score @s switch.layout.7bf7c096 matches 0.. run function switch:modes/capture_the_flag/classes/warrior/layout/apply
+tag @s add switch.layout.active
 

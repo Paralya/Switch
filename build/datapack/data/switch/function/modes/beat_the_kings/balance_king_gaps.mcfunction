@@ -19,5 +19,3 @@ scoreboard players operation #king_gaps switch.data *= #2 switch.data
 execute if score #king_gaps switch.data matches 8.. run scoreboard players set #king_gaps switch.data 8
 execute if score #king_gaps switch.data matches ..3 run scoreboard players set #king_gaps switch.data 3
 
-execute store result storage switch:temp king_gaps.count int 1 run scoreboard players get #king_gaps switch.data
-

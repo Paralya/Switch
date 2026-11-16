@@ -27,9 +27,9 @@ function {path}/respawn/main
 
 	# /give_items: the inventory is cleared first, so the items name their hotbar.0/1/2 slots, which lets the player's layout move them
 	Kit("one_shot", pre="# Give items to the player\nclear @s", items=(
-		KitItem(role="ranged", slot="hotbar.0", item='bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display={"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]'),
-		KitItem(role="melee", slot="hotbar.1", item='netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]'),
-		KitItem(role="ammo", item="arrow", count=1, slot="hotbar.2"),
+		KitItem(slot="hotbar.0", item='bow[unbreakable={},enchantments={infinity:1,power:123},tooltip_display={"hidden_components":["minecraft:enchantments"]},item_name={"text":"Boowie","italic":true,"color":"light_purple"}]'),
+		KitItem(slot="hotbar.1", item='netherite_sword[enchantments={sharpness:123},item_name={"text":"Swordy Sword","italic":true,"color":"green"}]'),
+		KitItem(item="arrow", count=1, slot="hotbar.2"),
 	), post="""
 attribute @s attack_speed base set 1024
 attribute @s max_health base set 1

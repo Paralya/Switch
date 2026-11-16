@@ -6,8 +6,15 @@
 # @within	switch:modes/cigogne/start [ as @a[tag=!detached] ]
 #
 
+function switch:player/layout/deactivate
 attribute @s attack_speed base set 1024
-data modify storage switch:layout kit set value {reserved:[],items:[{i:0,role:"heal",claim:1,canon:1,sibling:0},{i:1,role:"melee",claim:1,canon:3,sibling:0},{i:2,role:"ranged",claim:1,canon:5,sibling:0},{i:3,role:"ammo",claim:1,canon:9,sibling:0}]}
-function switch:player/layout/resolve
-function switch:modes/cigogne/give_items/items with storage switch:layout out
+item replace entity @s hotbar.0 with golden_apple 4
+item replace entity @s hotbar.2 with iron_sword[enchantments={fire_aspect:1}]
+item replace entity @s hotbar.4 with bow[enchantments={flame:1}]
+item replace entity @s hotbar.8 with arrow 32
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 11
+execute if score @s switch.layout.ebe0aaeb matches 0.. run function switch:modes/cigogne/give_items/layout/apply
+tag @s add switch.layout.active
 

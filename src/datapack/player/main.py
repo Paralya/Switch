@@ -123,9 +123,6 @@ function {ns}:engine/role_card/remove
 # Add 0 to every shop score
 function {ns}:shop/initialize_shop_scores
 
-# Add 0 to every inventory layout score
-function {ns}:player/layout/init
-
 # Check if new username
 function {ns}:player/username_change/check
 
@@ -255,6 +252,9 @@ execute if dimension minecraft:overworld if entity @s[tag=detached,x=0,y=69,z=0,
 
 # Noteblock
 execute at @s if score @s {ns}.music.progress matches 1.. run function {ns}:music/player_tick
+
+# Learn where the player moved the items of their kit
+execute if entity @s[tag={ns}.layout.dirty] run function {ns}:player/layout/tick
 """)
 
 	write_tick_detach()

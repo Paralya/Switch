@@ -1,148 +1,86 @@
-""" Per-player inventory layout: where each kit ROLE lands in the hotbar/offhand.
+""" The functions every learned kit layout shares, under {ns}:player/layout/.
 
-Each player owns one {ns}.layout.<role> score per role (0 = no preference, 1..9 = hotbar.0..8,
-10 = weapon.offhand). Every kit's give function feeds its item table to /player/layout/resolve,
-which turns those preferences into an injective item-index -> slot-string map ({ns}:layout out);
-the kit's /items macro body then substitutes $(s<i>) with the chosen slot.
-
-With every score at 0 the resolver is the identity: each item lands on the canonical slot the kit declares.
-
-Resolution, per kit and per player:
-- reserve:  slots that raw kit lines write to (e.g. beat_the_kings' king gaps) are taken first.
-- claim:    each item flagged claim whose role is mapped takes the player's slot, first come first
-            served; a colliding claim is simply dropped to the fill phase, never lost.
-- fill:     every remaining item takes, in order: the slot right after its role's chosen one when
-            flagged sibling (keeps potion pairs adjacent), else its canonical slot, else the lowest free slot.
-            A kit never has more than 10 remappable items (build-time assert), so the last fallback always succeeds and no two items ever share a slot.
+Temporaries are fake players of {ns}.data: #f0..#f9 flag the slots a pass already took, #t and #k are slots (index + 1 into LEARNED_SLOTS) being moved or tested, #m0..#m8 the slot of each group in the memory, #n0..#n8 the slot found for it, #p a packed memory.
+The per-kit functions they serve are written by LearnedKit.write_functions().
 """
-
 # Imports
 from stewbeet import Mem, write_function
 
-from ..kits.roles import ROLES, TARGETS
-from .layout_editor import write_layout_editor
+from ..kits import LEARNED_SLOTS, LearnedKit
 
 
+# Functions
 def write_layout_functions() -> None:
-	""" Write the {ns}:player/layout/* resolver and register the layout scores/storage at load. """
+	""" Write {ns}:player/layout/*, after every kit was written so the learn dispatch knows them all. """
 	ns: str = Mem.ctx.project_id
 	path: str = f"{ns}:player/layout"
+	slots: range = range(len(LEARNED_SLOTS))
+	slot_range: list[str] = [f'{{type:"minecraft:slot_range",slots:"{slot}"}}' for slot in LEARNED_SLOTS]
 
-	# Score objectives + the slot-id -> slot-string lookup (appended to {ns}:load)
-	objectives: str = "\n".join(f"scoreboard objectives add {ns}.layout.{role} dummy" for role in ROLES)
-	slots: str = ",".join(f'"{slot}"' for slot in TARGETS)
+	kits: list[LearnedKit] = LearnedKit.registry()
+	objectives: str = "".join(f"scoreboard objectives add {kit.objective} dummy {{\"text\":\"{kit.key}\"}}\n" for kit in kits)
+	known: str = ",".join(f'{{n:"{kit.objective}"}}' for kit in kits)
+	current: str = "".join(f'data remove storage {ns}:layout stale[{{n:"{kit.objective}"}}]\n' for kit in kits)
 	write_function(f"{ns}:load", f"""
-# Per-player inventory layout (one score per kit role, 0 = default slot)
-{objectives}
-data modify storage {ns}:layout slots set value ["",{slots}]
+# Learned kit layouts: one memory objective per kit, the active kit index, ticks before learning
+{objectives}scoreboard objectives add {ns}.layout.kit dummy
+scoreboard objectives add {ns}.layout.cd dummy
+
+# Memories of kits that changed since the last load are dropped with their objective
+data modify storage {ns}:layout stale set from storage {ns}:layout objectives
+data modify storage {ns}:layout objectives set value [{known}]
+{current}execute if data storage {ns}:layout stale[0] run function {path}/prune with storage {ns}:layout stale[0]
+""")
+	write_function(f"{path}/prune", f"""
+$scoreboard objectives remove $(n)
+data remove storage {ns}:layout stale[0]
+execute if data storage {ns}:layout stale[0] run function {path}/prune with storage {ns}:layout stale[0]
 """)
 
-	# /init (as a new player: make sure every layout score exists, so the resolver's copies succeed)
-	write_function(f"{path}/init", "\n".join(f"scoreboard players add @s {ns}.layout.{role} 0" for role in ROLES) + "\n")
+	write_function(f"{path}/username_change", "".join(
+		f"$execute if score $(old_username) {kit.objective} matches 0.. run scoreboard players operation $(username) {kit.objective} = $(old_username) {kit.objective}\n"
+		for kit in kits))
 
-	# /resolve (as the player receiving a kit; reads {ns}:layout kit, writes {ns}:layout out)
-	free_all: str = ",".join(f"s{i}:1b" for i in range(1, len(TARGETS) + 1))
-	write_function(f"{path}/resolve", f"""
-data modify storage {ns}:layout free set value {{{free_all}}}
-data modify storage {ns}:layout out set value {{}}
+	unpack: str = "".join(f"""scoreboard players operation #m{j} {ns}.data = #p {ns}.data
+scoreboard players operation #m{j} {ns}.data %= #10 {ns}.data
+scoreboard players add #m{j} {ns}.data 1
+scoreboard players operation #p {ns}.data /= #10 {ns}.data
+""" for j in range(9))
+	write_function(f"{path}/unpack", unpack)
 
-# Slots written by raw kit lines are never handed out
-data modify storage {ns}:layout todo set from storage {ns}:layout kit.reserved
-execute if data storage {ns}:layout todo[0] run function {path}/reserve_loop
+	write_function(f"{path}/clear_flags", "".join(f"scoreboard players set #f{k} {ns}.data 0\n" for k in slots))
+	write_function(f"{path}/flag", "".join(f"execute if score #t {ns}.data matches {k + 1} run return run scoreboard players set #f{k} {ns}.data 1\n" for k in slots))
+	write_function(f"{path}/is_free", "".join(f"execute if score #t {ns}.data matches {k + 1} if score #f{k} {ns}.data matches 0 run return 1\n" for k in slots) + "return 0\n")
 
-# Claim phase: mapped roles take their slot
-data modify storage {ns}:layout todo set from storage {ns}:layout kit.items
-execute if data storage {ns}:layout todo[0] run function {path}/claim_loop
+	# Two slots swap in one command, since item replace reads every source before writing
+	write_function(f"{path}/swap", "".join(f"execute if score #t {ns}.data matches {t + 1} run return run function {path}/swap/{t}\n" for t in slots))
+	for t in slots:
+		write_function(f"{path}/swap/{t}", "".join(
+			f"execute if score #k {ns}.data matches {k + 1} run return run item replace entity @s [{slot_range[t]},{slot_range[k]}] from entity @s [{slot_range[k]},{slot_range[t]}]\n"
+			for k in slots if k != t))
 
-# Fill phase: everything else falls back (sibling, then canonical, then lowest free)
-data modify storage {ns}:layout todo set from storage {ns}:layout kit.items
-execute if data storage {ns}:layout todo[0] run function {path}/fill_loop
+	# /free/<c>: first slot no pass took, the declared slot c first
+	for c in slots:
+		write_function(f"{path}/free/{c}", "".join(f"execute if score #f{k} {ns}.data matches 0 run return {k + 1}\n" for k in [c, *(k for k in slots if k != c)]))
+
+	write_function(f"{path}/learn", "".join(
+		f"execute if score @s {ns}.layout.kit matches {index} run return run function {kit.path}/layout/learn\n"
+		for index, kit in enumerate(kits, start=1)))
+
+	# /tick (as a dirty player): learn a second after the first change, so a whole rearrangement is one pass
+	write_function(f"{path}/tick", f"""
+scoreboard players remove @s {ns}.layout.cd 1
+execute if score @s {ns}.layout.cd matches 1.. run return 0
+tag @s remove {ns}.layout.dirty
+function {path}/learn
 """)
 
-	# /reserve_loop + /reserve
-	write_function(f"{path}/reserve_loop", f"""
-function {path}/reserve with storage {ns}:layout todo[0]
-data remove storage {ns}:layout todo[0]
-execute if data storage {ns}:layout todo[0] run function {path}/reserve_loop
+	# /deactivate (as a player whose kit inventory is about to be replaced): save what the player moved, then stop learning
+	write_function(f"{path}/deactivate", f"""
+execute if entity @s[tag={ns}.layout.dirty] run function {path}/learn
+tag @s remove {ns}.layout.active
+tag @s remove {ns}.layout.dirty
+scoreboard players set @s {ns}.layout.kit 0
+scoreboard players set @s {ns}.layout.cd 0
 """)
-	write_function(f"{path}/reserve", f"""
-$data modify storage {ns}:layout free.s$(s) set value 0b
-""")
-
-	# /claim_loop + /claim
-	write_function(f"{path}/claim_loop", f"""
-function {path}/claim with storage {ns}:layout todo[0]
-data remove storage {ns}:layout todo[0]
-execute if data storage {ns}:layout todo[0] run function {path}/claim_loop
-""")
-	write_function(f"{path}/claim", f"""
-scoreboard players set #slot {ns}.data 0
-$scoreboard players set #claim {ns}.data $(claim)
-$execute if score #claim {ns}.data matches 1 run scoreboard players operation #slot {ns}.data = @s {ns}.layout.$(role)
-$execute if score #slot {ns}.data matches 1..10 run function {path}/try_commit {{i:$(i)}}
-""")
-
-	# /fill_loop + /place
-	write_function(f"{path}/fill_loop", f"""
-function {path}/place with storage {ns}:layout todo[0]
-data remove storage {ns}:layout todo[0]
-execute if data storage {ns}:layout todo[0] run function {path}/fill_loop
-""")
-	write_function(f"{path}/place", f"""
-$execute if data storage {ns}:layout out.s$(i) run return 0
-
-scoreboard players set #slot {ns}.data 0
-scoreboard players set #want {ns}.data 0
-
-# Sibling rule: the slot right after the role's chosen one (kept within the hotbar)
-$scoreboard players set #sibling {ns}.data $(sibling)
-$execute if score #sibling {ns}.data matches 1 run scoreboard players operation #want {ns}.data = @s {ns}.layout.$(role)
-execute unless score #want {ns}.data matches 1..8 run scoreboard players set #want {ns}.data -1
-scoreboard players add #want {ns}.data 1
-execute if score #want {ns}.data matches 2..9 run function {path}/check_free
-
-# Canonical slot
-$execute if score #slot {ns}.data matches 0 run scoreboard players set #want {ns}.data $(canon)
-execute if score #slot {ns}.data matches 0 run function {path}/check_free
-
-# Lowest free slot
-execute if score #slot {ns}.data matches 0 run function {path}/lowest_free
-
-$execute if score #slot {ns}.data matches 1..10 run function {path}/try_commit {{i:$(i)}}
-""")
-
-	# /check_free (sets #slot to #want when that slot is still free)
-	write_function(f"{path}/check_free", f"""
-execute store result storage {ns}:layout v.w int 1 run scoreboard players get #want {ns}.data
-function {path}/check_free_macro with storage {ns}:layout v
-""")
-	write_function(f"{path}/check_free_macro", f"""
-$execute if data storage {ns}:layout free{{s$(w):1b}} run scoreboard players set #slot {ns}.data $(w)
-""")
-
-	# /lowest_free
-	write_function(f"{path}/lowest_free", "\n".join(
-		f"execute if data storage {ns}:layout free{{s{i}:1b}} run return run scoreboard players set #slot {ns}.data {i}"
-		for i in range(1, len(TARGETS) + 1)
-	) + "\n")
-
-	# /try_commit (macro arg i: commit #slot to out.s<i> when the slot is still free)
-	write_function(f"{path}/try_commit", f"""
-execute store result storage {ns}:layout v.s int 1 run scoreboard players get #slot {ns}.data
-$data modify storage {ns}:layout v.i set value $(i)
-function {path}/commit with storage {ns}:layout v
-""")
-	write_function(f"{path}/commit", f"""
-$execute unless data storage {ns}:layout free{{s$(s):1b}} run return 0
-$data modify storage {ns}:layout free.s$(s) set value 0b
-$data modify storage {ns}:layout out.s$(i) set from storage {ns}:layout slots[$(s)]
-""")
-
-	# /username_change (macro: carry the layout over when a player renames, like the shop scores)
-	write_function(f"{path}/username_change", "\n".join(
-		f"$scoreboard players operation $(username) {ns}.layout.{role} = $(old_username) {ns}.layout.{role}"
-		for role in ROLES
-	) + "\n")
-
-	write_layout_editor()
 

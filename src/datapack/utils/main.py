@@ -19,6 +19,7 @@ execute unless score #success {ns}.data matches 1 at @n[type=marker,tag={ns}.sel
 attribute @s waypoint_transmit_range base set 0
 gamemode spectator @s
 effect clear @s
+function {ns}:player/layout/deactivate
 clear @s
 """)
 
@@ -149,6 +150,7 @@ execute if score #set_spec {ns}.data matches 1 as @a[tag=!detached] run gamemode
 scoreboard players reset #set_spec {ns}.data
 
 # Clear inventory (if /disable, clear only players that doesn't have convention.debug tag)
+execute as @a[tag=!detached] run function {ns}:player/layout/deactivate
 execute unless score #disable {ns}.data matches 1 run clear @a[tag=!detached]
 execute if score #disable {ns}.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
 

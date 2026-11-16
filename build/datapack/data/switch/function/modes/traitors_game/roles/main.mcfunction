@@ -17,7 +17,7 @@ scoreboard players add #next_role switch.data 1
 execute if score #next_role switch.data matches 1 run team join switch.temp.inspector @s
 execute if score #next_role switch.data matches 1 run scoreboard players set @s switch.temp.role 1
 execute if score #next_role switch.data matches 1 run attribute @s max_health base set 16
-execute if score #next_role switch.data matches 1 run item replace entity @s hotbar.1 with bow[enchantments={power:2},attribute_modifiers=[{type:"movement_speed",slot:"mainhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"},{type:"movement_speed",slot:"offhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"}]]
+execute if score #next_role switch.data matches 1 run item replace entity @s {type:"minecraft:limit_slots",limit:1,slot_source:{type:"minecraft:filtered",slot_source:[{type:"minecraft:slot_range",slots:"hotbar.0"},{type:"minecraft:slot_range",slots:"hotbar.1"},{type:"minecraft:slot_range",slots:"hotbar.2"},{type:"minecraft:slot_range",slots:"hotbar.3"},{type:"minecraft:slot_range",slots:"hotbar.4"},{type:"minecraft:slot_range",slots:"hotbar.5"},{type:"minecraft:slot_range",slots:"hotbar.6"},{type:"minecraft:slot_range",slots:"hotbar.7"},{type:"minecraft:slot_range",slots:"hotbar.8"},{type:"minecraft:slot_range",slots:"weapon.offhand"}],item_filter:{items:"minecraft:bow"}}} with bow[enchantments={power:2},attribute_modifiers=[{type:"movement_speed",slot:"mainhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"},{type:"movement_speed",slot:"offhand",id:"switch.movement_speed",amount:0.16,operation:"add_multiplied_total"}]]
 # Traitre
 execute if score #next_role switch.data matches 2 run scoreboard players set @s switch.temp.role 5
 # Ninja

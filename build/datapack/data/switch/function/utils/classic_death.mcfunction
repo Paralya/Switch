@@ -50,5 +50,6 @@ execute unless score #success switch.data matches 1 at @n[type=marker,tag=switch
 attribute @s waypoint_transmit_range base set 0
 gamemode spectator @s
 effect clear @s
+function switch:player/layout/deactivate
 clear @s
 

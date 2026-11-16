@@ -35,7 +35,7 @@ function {path}/hurt_macro with storage {ns}:temp input
 
 	# /give_items (the shared pvp arena loadout, plus castagne's own fishing rod)
 	Kit("castagne",
-		items=(*pvp_arena_kit().items, KitItem(role="special", item="fishing_rod", slot="hotbar.5")),
+		items=(*pvp_arena_kit().items, KitItem(item="fishing_rod", slot="hotbar.5")),
 		post=f"""
 scoreboard players add #initial_count {ns}.data 1
 data modify storage {ns}:temp temp set value {{id:0,hurt:[]}}

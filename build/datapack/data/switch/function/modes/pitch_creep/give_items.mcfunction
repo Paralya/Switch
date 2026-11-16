@@ -6,6 +6,7 @@
 # @within	switch:modes/pitch_creep/second [ as @a[tag=!detached] & at @s ]
 #
 
+function switch:player/layout/deactivate
 execute store result score #random switch.data run random value 0..3
 execute if score #random switch.data matches 0 run item replace entity @s hotbar.0 with diamond_sword[item_model="switch:stardust_sword",unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
 execute if score #random switch.data matches 1 run item replace entity @s hotbar.0 with diamond_sword[item_model="switch:legendarium_sword",unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
@@ -16,4 +17,9 @@ execute if score #random switch.data matches 0 run item replace entity @s hotbar
 execute if score #random switch.data matches 1 run item replace entity @s hotbar.1 with bow[item_model="switch:awakened_stardust_bow",unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]
 execute if score #random switch.data matches 2 run item replace entity @s hotbar.1 with bow[item_model="switch:ultimate_bow",unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"punch":3}]
 item replace entity @s hotbar.2 with arrow 64
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 14
+execute if score @s switch.layout.ab484bdb matches 0.. run function switch:modes/pitch_creep/give_items/layout/apply
+tag @s add switch.layout.active
 

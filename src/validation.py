@@ -36,6 +36,16 @@ CHOOSE_MAP_PATTERN: re.Pattern[str] = re.compile(r"choose_map_for\s*\{[^}]*maps:
 MAP_CONDITION_PATTERN: re.Pattern[str] = re.compile(r'\{map:"([a-z0-9_]+)"\}')
 """ Captures the map id of a `if data storage switch:main {map:"x"}` condition. """
 
+LEARNED_SLOT_WRITE: re.Pattern[str] = re.compile(r"item replace entity \S+ (hotbar\.\d|weapon\.offhand) with")
+""" A raw write on a slot whose item a learned layout may have moved there. """
+
+FIXED_LAYOUT_MODES: tuple[str, ...] = (
+	"race", "build_battle", "gay_shooter", "murder_mystery", "thunder_spear", "rush_the_flag", "simultaneous_jump",
+	"laser_game", "panic_chase", "mlg_a_coudre", "coin_chaser", "tnt_run", "warden_escape", "infected",
+	"capture_the_flag/teleport_to_spawn", "rush_the_point/teleport_to_spawn",
+)
+""" Mode paths allowed to write learned slots by hand: modes without a learned kit, whose items are all alike or read back by slot, and the class menus that detect_chosen_class reads by slot. """
+
 
 # Classes
 @dataclass(frozen=True)
@@ -160,6 +170,22 @@ class Validation:
 		return problems
 
 	@staticmethod
+	def check_learned_slots() -> list[Problem]:
+		""" No mode function but a kit give (the ones that load a learned layout) writes a learned slot by hand.
+
+		Returns:
+			list[Problem]: The failures found
+		"""
+		ns: str = Mem.ctx.project_id
+		allowed: tuple[str, ...] = tuple(f"{ns}:modes/{mode}" for mode in FIXED_LAYOUT_MODES)
+		return [
+			Problem(f"{path} writes a learned slot by hand, over an item the player may have moved there", "give it through a KitItem, or by content")
+			for path, function in Mem.ctx.data.functions.items()
+			if path.startswith(f"{ns}:modes/") and not path.startswith(allowed)
+			and f"{ns}.layout.kit" not in function.text and LEARNED_SLOT_WRITE.search(function.text)
+		]
+
+	@staticmethod
 	def report_unvoted() -> None:
 		""" Log the modes that generate but never reach the vote, and the groups nobody uses. """
 		unvoted: list[str] = sorted(Validation.declared_folders() - {mode.id for mode in MODES})
@@ -178,7 +204,7 @@ class Validation:
 		Raises:
 			ValueError: When at least one check failed
 		"""
-		problems: list[Problem] = Validation.check_modes() + Validation.check_maps()
+		problems: list[Problem] = Validation.check_modes() + Validation.check_maps() + Validation.check_learned_slots()
 		Validation.report_unvoted()
 		if problems:
 			listed: str = "\n".join(f"  {problem.render()}" for problem in problems)

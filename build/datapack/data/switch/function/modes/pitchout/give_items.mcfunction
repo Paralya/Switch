@@ -6,6 +6,7 @@
 # @within	switch:modes/pitchout/second [ as @a[tag=!detached] & at @s ]
 #
 
+function switch:player/layout/deactivate
 execute store result score #random switch.data run random value 0..3
 execute if score #random switch.data matches 0 run item replace entity @s hotbar.0 with diamond_sword[item_model="switch:stardust_sword",unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
 execute if score #random switch.data matches 1 run item replace entity @s hotbar.0 with diamond_sword[item_model="switch:legendarium_sword",unbreakable={},tooltip_display={"hidden_components":["minecraft:unbreakable"]},enchantments={"knockback":3}]
@@ -25,4 +26,9 @@ execute if score @s switch.pitchout.boots matches 5.. run item replace entity @s
 execute if score @s switch.pitchout.ender_pearl matches 0 run item replace entity @s hotbar.8 with ender_pearl[item_model="switch:dragon_pearl"] 3
 execute if score @s switch.pitchout.ender_pearl matches 1 run item replace entity @s hotbar.8 with ender_pearl[item_model="switch:dragon_pearl"] 4
 execute if score @s switch.pitchout.ender_pearl matches 2.. run item replace entity @s hotbar.8 with ender_pearl[item_model="switch:dragon_pearl"] 5
+
+# Layout learned for this kit
+scoreboard players set @s switch.layout.kit 15
+execute if score @s switch.layout.69a808fb matches 0.. run function switch:modes/pitchout/give_items/layout/apply
+tag @s add switch.layout.active
 

@@ -40,7 +40,21 @@ scoreboard objectives add switch.trigger.rating trigger
 scoreboard objectives add switch.trigger.night_vision trigger
 scoreboard objectives add switch.trigger.music trigger
 scoreboard objectives add switch.trigger.coupdetat trigger
-scoreboard objectives add switch.trigger.layout trigger
+
+# Objectives a world may still hold from the per-role layout
+scoreboard objectives remove switch.trigger.layout
+scoreboard objectives remove switch.layout.melee
+scoreboard objectives remove switch.layout.axe
+scoreboard objectives remove switch.layout.ranged
+scoreboard objectives remove switch.layout.ammo
+scoreboard objectives remove switch.layout.tool
+scoreboard objectives remove switch.layout.blocks
+scoreboard objectives remove switch.layout.mobility
+scoreboard objectives remove switch.layout.heal
+scoreboard objectives remove switch.layout.food
+scoreboard objectives remove switch.layout.explosive
+scoreboard objectives remove switch.layout.throwable
+scoreboard objectives remove switch.layout.special
 
 scoreboard objectives add switch.stats.kills playerKillCount
 scoreboard objectives add switch.stats.deaths deathCount
@@ -168,18 +182,66 @@ execute unless data storage switch:jumps graviglitch run data modify storage swi
 execute unless score #jump_timer_cs_migrated switch.data matches 1 run function switch:player/jump_timer/migrate
 scoreboard players set #jump_timer_cs_migrated switch.data 1
 
-# Per-player inventory layout (one score per kit role, 0 = default slot)
-scoreboard objectives add switch.layout.melee dummy
-scoreboard objectives add switch.layout.axe dummy
-scoreboard objectives add switch.layout.ranged dummy
-scoreboard objectives add switch.layout.ammo dummy
-scoreboard objectives add switch.layout.tool dummy
-scoreboard objectives add switch.layout.blocks dummy
-scoreboard objectives add switch.layout.mobility dummy
-scoreboard objectives add switch.layout.heal dummy
-scoreboard objectives add switch.layout.food dummy
-scoreboard objectives add switch.layout.explosive dummy
-scoreboard objectives add switch.layout.throwable dummy
-scoreboard objectives add switch.layout.special dummy
-data modify storage switch:layout slots set value ["","hotbar.0","hotbar.1","hotbar.2","hotbar.3","hotbar.4","hotbar.5","hotbar.6","hotbar.7","hotbar.8","weapon.offhand"]
+# Learned kit layouts: one memory objective per kit, the active kit index, ticks before learning
+scoreboard objectives add switch.layout.0569732a dummy {"text":"modes/_common/layers_starter_kit"}
+scoreboard objectives add switch.layout.61ec066f dummy {"text":"modes/_coupdetat/give_items"}
+scoreboard objectives add switch.layout.c93e7713 dummy {"text":"modes/beat_the_kings/give_items/civil"}
+scoreboard objectives add switch.layout.86c2d5b1 dummy {"text":"modes/beat_the_kings/give_items/king"}
+scoreboard objectives add switch.layout.fdcd47b1 dummy {"text":"modes/capture_the_flag/classes/archer"}
+scoreboard objectives add switch.layout.ac8b5d78 dummy {"text":"modes/capture_the_flag/classes/chemister"}
+scoreboard objectives add switch.layout.57e86795 dummy {"text":"modes/capture_the_flag/classes/demolisher"}
+scoreboard objectives add switch.layout.8cfdf8c7 dummy {"text":"modes/capture_the_flag/classes/tank"}
+scoreboard objectives add switch.layout.7bf7c096 dummy {"text":"modes/capture_the_flag/classes/warrior"}
+scoreboard objectives add switch.layout.e1d238f4 dummy {"text":"modes/castagne/give_items"}
+scoreboard objectives add switch.layout.ebe0aaeb dummy {"text":"modes/cigogne/give_items"}
+scoreboard objectives add switch.layout.46ad8ddf dummy {"text":"modes/fish_fight/give_items"}
+scoreboard objectives add switch.layout.9372de32 dummy {"text":"modes/one_shot/give_items"}
+scoreboard objectives add switch.layout.ab484bdb dummy {"text":"modes/pitch_creep/give_items"}
+scoreboard objectives add switch.layout.69a808fb dummy {"text":"modes/pitchout/give_items"}
+scoreboard objectives add switch.layout.853d1d63 dummy {"text":"modes/protect_the_king/give_items"}
+scoreboard objectives add switch.layout.84c9304b dummy {"text":"modes/pvpswap/give_items"}
+scoreboard objectives add switch.layout.4788417b dummy {"text":"modes/rush_the_point/classes/archer"}
+scoreboard objectives add switch.layout.fd05a136 dummy {"text":"modes/rush_the_point/classes/builder"}
+scoreboard objectives add switch.layout.57cba5f6 dummy {"text":"modes/rush_the_point/classes/destroyer"}
+scoreboard objectives add switch.layout.bde57b32 dummy {"text":"modes/rush_the_point/classes/aviateur"}
+scoreboard objectives add switch.layout.e66ee0af dummy {"text":"modes/rush_the_point/classes/guerrier"}
+scoreboard objectives add switch.layout.913bdfe1 dummy {"text":"modes/sheepwars/team_and_give"}
+scoreboard objectives add switch.layout.e6323cc4 dummy {"text":"modes/spectres_game/give_items/spectre"}
+scoreboard objectives add switch.layout.164667ad dummy {"text":"modes/spectres_game/give_items/visible"}
+scoreboard objectives add switch.layout.ab8b96f5 dummy {"text":"modes/spleef/give_items"}
+scoreboard objectives add switch.layout.06d28cdc dummy {"text":"modes/traitors_game/give_items"}
+scoreboard objectives add switch.layout.kit dummy
+scoreboard objectives add switch.layout.cd dummy
+
+# Memories of kits that changed since the last load are dropped with their objective
+data modify storage switch:layout stale set from storage switch:layout objectives
+data modify storage switch:layout objectives set value [{n:"switch.layout.0569732a"},{n:"switch.layout.61ec066f"},{n:"switch.layout.c93e7713"},{n:"switch.layout.86c2d5b1"},{n:"switch.layout.fdcd47b1"},{n:"switch.layout.ac8b5d78"},{n:"switch.layout.57e86795"},{n:"switch.layout.8cfdf8c7"},{n:"switch.layout.7bf7c096"},{n:"switch.layout.e1d238f4"},{n:"switch.layout.ebe0aaeb"},{n:"switch.layout.46ad8ddf"},{n:"switch.layout.9372de32"},{n:"switch.layout.ab484bdb"},{n:"switch.layout.69a808fb"},{n:"switch.layout.853d1d63"},{n:"switch.layout.84c9304b"},{n:"switch.layout.4788417b"},{n:"switch.layout.fd05a136"},{n:"switch.layout.57cba5f6"},{n:"switch.layout.bde57b32"},{n:"switch.layout.e66ee0af"},{n:"switch.layout.913bdfe1"},{n:"switch.layout.e6323cc4"},{n:"switch.layout.164667ad"},{n:"switch.layout.ab8b96f5"},{n:"switch.layout.06d28cdc"}]
+data remove storage switch:layout stale[{n:"switch.layout.0569732a"}]
+data remove storage switch:layout stale[{n:"switch.layout.61ec066f"}]
+data remove storage switch:layout stale[{n:"switch.layout.c93e7713"}]
+data remove storage switch:layout stale[{n:"switch.layout.86c2d5b1"}]
+data remove storage switch:layout stale[{n:"switch.layout.fdcd47b1"}]
+data remove storage switch:layout stale[{n:"switch.layout.ac8b5d78"}]
+data remove storage switch:layout stale[{n:"switch.layout.57e86795"}]
+data remove storage switch:layout stale[{n:"switch.layout.8cfdf8c7"}]
+data remove storage switch:layout stale[{n:"switch.layout.7bf7c096"}]
+data remove storage switch:layout stale[{n:"switch.layout.e1d238f4"}]
+data remove storage switch:layout stale[{n:"switch.layout.ebe0aaeb"}]
+data remove storage switch:layout stale[{n:"switch.layout.46ad8ddf"}]
+data remove storage switch:layout stale[{n:"switch.layout.9372de32"}]
+data remove storage switch:layout stale[{n:"switch.layout.ab484bdb"}]
+data remove storage switch:layout stale[{n:"switch.layout.69a808fb"}]
+data remove storage switch:layout stale[{n:"switch.layout.853d1d63"}]
+data remove storage switch:layout stale[{n:"switch.layout.84c9304b"}]
+data remove storage switch:layout stale[{n:"switch.layout.4788417b"}]
+data remove storage switch:layout stale[{n:"switch.layout.fd05a136"}]
+data remove storage switch:layout stale[{n:"switch.layout.57cba5f6"}]
+data remove storage switch:layout stale[{n:"switch.layout.bde57b32"}]
+data remove storage switch:layout stale[{n:"switch.layout.e66ee0af"}]
+data remove storage switch:layout stale[{n:"switch.layout.913bdfe1"}]
+data remove storage switch:layout stale[{n:"switch.layout.e6323cc4"}]
+data remove storage switch:layout stale[{n:"switch.layout.164667ad"}]
+data remove storage switch:layout stale[{n:"switch.layout.ab8b96f5"}]
+data remove storage switch:layout stale[{n:"switch.layout.06d28cdc"}]
+execute if data storage switch:layout stale[0] run function switch:player/layout/prune with storage switch:layout stale[0]
 

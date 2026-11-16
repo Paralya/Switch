@@ -17,6 +17,7 @@ execute if score #set_spec switch.data matches 1 as @a[tag=!detached] run gamemo
 scoreboard players reset #set_spec switch.data
 
 # Clear inventory (if /disable, clear only players that doesn't have convention.debug tag)
+execute as @a[tag=!detached] run function switch:player/layout/deactivate
 execute unless score #disable switch.data matches 1 run clear @a[tag=!detached]
 execute if score #disable switch.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
 

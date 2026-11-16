@@ -124,11 +124,11 @@ execute if score @s {ns}.spleef.powder_snow matches 4.. run data modify block 0 
 
 	# The four items themselves (the shulker box above is only a staging container to build them in)
 	Kit("spleef", items=(
-		KitItem(role="tool", slot="hotbar.0", from_block="0 10 0 container.0"),
-		KitItem(role="mobility", item="ender_pearl", slot="hotbar.1"),
-		KitItem(role="blocks", item="snow_block", slot="hotbar.8",
+		KitItem(slot="hotbar.0", from_block="0 10 0 container.0", match="diamond_shovel"),
+		KitItem(item="ender_pearl", slot="hotbar.1"),
+		KitItem(item="snow_block", slot="hotbar.8",
 			count=ScoreCount(objective=f"{ns}.spleef.snow_block", base=4, step=1, levels=7)),
-		KitItem(role="special", slot="hotbar.7", from_block="0 10 0 container.1"),
+		KitItem(slot="hotbar.7", from_block="0 10 0 container.1", match="white_shulker_box"),
 	), post="\nsetblock 0 10 0 air").write(f"{path}/give_items")
 
 	# /joined

@@ -146,7 +146,21 @@ scoreboard objectives add {ns}.trigger.rating trigger
 scoreboard objectives add {ns}.trigger.night_vision trigger
 scoreboard objectives add {ns}.trigger.music trigger
 scoreboard objectives add {ns}.trigger.coupdetat trigger
-scoreboard objectives add {ns}.trigger.layout trigger
+
+# Objectives a world may still hold from the per-role layout
+scoreboard objectives remove {ns}.trigger.layout
+scoreboard objectives remove {ns}.layout.melee
+scoreboard objectives remove {ns}.layout.axe
+scoreboard objectives remove {ns}.layout.ranged
+scoreboard objectives remove {ns}.layout.ammo
+scoreboard objectives remove {ns}.layout.tool
+scoreboard objectives remove {ns}.layout.blocks
+scoreboard objectives remove {ns}.layout.mobility
+scoreboard objectives remove {ns}.layout.heal
+scoreboard objectives remove {ns}.layout.food
+scoreboard objectives remove {ns}.layout.explosive
+scoreboard objectives remove {ns}.layout.throwable
+scoreboard objectives remove {ns}.layout.special
 
 scoreboard objectives add {ns}.stats.kills playerKillCount
 scoreboard objectives add {ns}.stats.deaths deathCount

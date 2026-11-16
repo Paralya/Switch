@@ -6,8 +6,8 @@
 # @within	switch:modes/spectres_game/start [ as @a[tag=!detached] & at @s ]
 #
 
-function switch:modes/spectres_game/give_items/spectre
-function switch:modes/spectres_game/give_items/visible
+execute if entity @s[team=switch.temp.spectre] run function switch:modes/spectres_game/give_items/spectre
+execute if entity @s[team=switch.temp.visible] run function switch:modes/spectres_game/give_items/visible
 
 # TNT in inventory
 item replace entity @s inventory.25 with flint_and_steel

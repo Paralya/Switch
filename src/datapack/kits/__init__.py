@@ -1,16 +1,14 @@
 
 # Imports
 from .kit import Kit
+from .layout import LEARNED_SLOTS, LearnedKit
 from .model import KitItem, ScoreCount, Variants
-from .roles import MARKER_ITEM, ROLES, SLOT_ID, TARGETS
 
 __all__ = [
-	"MARKER_ITEM",
-	"ROLES",
-	"SLOT_ID",
-	"TARGETS",
+	"LEARNED_SLOTS",
 	"Kit",
 	"KitItem",
+	"LearnedKit",
 	"ScoreCount",
 	"Variants",
 ]
