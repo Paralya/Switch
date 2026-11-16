@@ -58,7 +58,7 @@ execute if score #inventory {ns}.data matches -1 run clear @s
 ## Practice mode (checkpoints on lobby jumps, must run before the respawn detection below)
 function {ns}:player/practice/tick
 
-## Inventory layout editor (drop-to-save detection, uses the Inventory copy above)
+## Inventory layout editor (drop-to-save detection)
 function {ns}:player/layout/editor/tick
 
 # Teleport to respawn point

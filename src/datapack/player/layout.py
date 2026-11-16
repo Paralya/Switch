@@ -5,7 +5,7 @@ Each player owns one {ns}.layout.<role> score per role (0 = no preference, 1..9 
 which turns those preferences into an injective item-index -> slot-string map ({ns}:layout out);
 the kit's /items macro body then substitutes $(s<i>) with the chosen slot.
 
-With every score at 0 the resolver is the identity: each item falls back to the canonical slot the kit declares, which is byte-for-byte the slot it used before this system existed.
+With every score at 0 the resolver is the identity: each item lands on the canonical slot the kit declares.
 
 Resolution, per kit and per player:
 - reserve:  slots that raw kit lines write to (e.g. beat_the_kings' king gaps) are taken first.

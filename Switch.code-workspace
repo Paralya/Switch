@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../StewBeet"
+		},
+		{
+			"path": "../../forks/beet"
 		}
 	],
 	"settings": {

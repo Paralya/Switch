@@ -2,7 +2,7 @@
 
 A kit item is tagged with a role (what it is *for*), not a slot.
 Each player owns one global role -> slot map (the {ns}.layout.<role> scores), so "my sword is always on slot 4" holds in every mode.
-A role left at 0 means "no preference": the item falls back to the slot the kit declares, which is exactly the slot it used before this system existed.
+A role left at 0 means "no preference": the item falls back to the slot the kit declares.
 """
 
 ROLES: tuple[str, ...] = (

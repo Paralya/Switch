@@ -117,23 +117,18 @@ function {tr}/layout_editor_markers
 		marker_lines.append("")
 	write_function(f"{tr}/layout_editor_markers", "\n".join(marker_lines))
 
-	# /tick (called by the lobby player tick, right after the practice tick; uses the {ns}:temp
-	# Inventory copy made earlier in the same tick)
+	# /tick (called by tick_detach; an item held on the cursor while rearranging is not dropped yet)
+	held: tuple[str, ...] = ("container.*", "weapon.offhand", "player.cursor")
+	save_dropped: str = " ".join(f"unless items entity @s {slot} *[custom_data~{{{ns}:{{layout_save:true}}}}]" for slot in held)
+	reset_dropped: str = " ".join(f"unless items entity @s {slot} *[custom_data~{{{ns}:{{layout_reset:true}}}}]" for slot in held)
 	write_function(f"{path}/tick", f"""
 execute unless entity @s[tag={ns}.layout_editor] run return 0
 
 # Kill any editor item dropped on the ground (dropping IS the action, the ground entity is noise)
 {kill_dropped}
 
-# Dropped the save item -> save and exit
-scoreboard players set #has_item {ns}.data 0
-execute store success score #has_item {ns}.data if data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.layout_save
-execute if score #has_item {ns}.data matches 0 run return run function {path}/save_and_close
-
-# Dropped the reset item -> every role back to its default slot
-scoreboard players set #has_item {ns}.data 0
-execute store success score #has_item {ns}.data if data storage {ns}:temp Inventory[].components."minecraft:custom_data".{ns}.layout_reset
-execute if score #has_item {ns}.data matches 0 run return run function {path}/reset
+execute {save_dropped} run return run function {path}/save_and_close
+execute {reset_dropped} run return run function {path}/reset
 """)
 
 	# /read (scan hotbar + offhand for each role's marker; anywhere else = 0 = default slot)

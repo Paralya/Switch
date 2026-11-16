@@ -447,8 +447,6 @@ execute on vehicle run data modify storage {ns}:main Rotation set from entity @s
 data modify entity @s Rotation[0] set from storage {ns}:main Rotation
 """)
 
-	# /pvp_arena/kit is no longer a function: castagne and pvpswap build their loadout from pvp_arena_kit() above, so the player's layout resolves the whole kit (fishing rod included) in one pass instead of two functions fighting over the same slots.
-
 	# /pvp_arena/combat_tick (shared castagne / pvpswap tick body: classic-death detection, glow when isolated, and the kill-streak advancement with its cooldown bookkeeping)
 	write_function(f"{path}/pvp_arena/combat_tick", f"""
 ## Death system

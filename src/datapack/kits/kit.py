@@ -1,9 +1,7 @@
 """ A full kit and its rendering to the give functions.
 
-Every kit command in the datapack is rendered here, so a change to how items are placed (such as honouring the player's layout) is a change to this one file rather than to 15 mode files.
-
-While LAYOUT_ENABLED is False, Kit.write emits the canonical slot literally, which reproduces the hand-written commands byte for byte.
-Turning it on swaps the slot for a macro argument that the {ns}:player/layout/resolve function fills in per player; with every layout score left at 0 the resolver hands back the canonical slot, so the emitted command is unchanged.
+Every kit command in the datapack is rendered here, so a change to how items are placed is a change to this one file rather than to 15 mode files.
+Movable items get a macro slot that {ns}:player/layout/resolve fills in per player; with every layout score left at 0 the resolver hands back the canonical slot.
 """
 # Imports
 from dataclasses import dataclass
@@ -12,10 +10,6 @@ from stewbeet import Mem, write_function
 
 from .model import KitItem
 from .roles import SLOT_ID, TARGETS
-
-# Constants
-LAYOUT_ENABLED: bool = True
-""" Whether kits place their movable items where each player's layout puts them. """
 
 
 # Classes
@@ -110,15 +104,14 @@ class Kit:
 		"""
 		self.validate()
 		ns: str = Mem.ctx.project_id
-		use_layout: bool = LAYOUT_ENABLED and self.layout
 		body: list[str] = []
 		items_body: list[str] = []
 
 		if self.pre:
 			body.append(self.pre.strip("\n"))
 
-		for item, slot in self._placements(use_layout):
-			(items_body if use_layout and not item.pinned else body).extend(item.emit(slot))
+		for item, slot in self._placements(self.layout):
+			(items_body if self.layout and not item.pinned else body).extend(item.emit(slot))
 
 		if items_body:
 			body.append(self._table(ns))
