@@ -230,7 +230,7 @@ scoreboard players reset #do_spreadplayers {ns}.data
 scoreboard players reset #dont_regenerate {ns}.data
 function {ns}:utils/reset_players
 execute as @a[tag=!detached] run function #cinemalya:v1/stop {{with:{{restore:false}}}}
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill,tag=!smithed.strict]"}}
 execute in {ns}:game run function {ns}:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s

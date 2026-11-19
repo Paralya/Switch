@@ -138,8 +138,9 @@ function {ns}:utils/reset_players
 # End the cinematics of the players entering the game, then wipe the entities they leave behind.
 # The mass kill spares global.ignore.kill so it never strips a lobby player of the entity they are
 # spectating: that would leave them stuck in spectator with the counter still claiming it is alive.
+# It also spares smithed.strict, the libraries' own entities (the player_motion helper marker).
 execute as @a[tag=!detached] run function #cinemalya:v1/stop {{with:{{restore:false}}}}
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill,tag=!smithed.strict]"}}
 function {ns}:engine/signals/start
 
 # Disable the practice mode of the players joining the game (force start / coup d'état attach without the attach trigger)
@@ -213,7 +214,7 @@ execute in {ns}:game run function {ns}:utils/reset_gamerules
 
 function {ns}:engine/signals/stop
 execute as @a[tag=!detached] run function #cinemalya:v1/stop {{with:{{restore:false}}}}
-function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}}
+function {ns}:utils/safe_kill_macro {{selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill,tag=!smithed.strict]"}}
 
 # Update the stats of the minigame
 execute if score #test_mode {ns}.data matches 1.. run return 1

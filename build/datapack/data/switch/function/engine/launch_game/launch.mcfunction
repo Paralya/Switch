@@ -36,7 +36,7 @@ scoreboard players reset #do_spreadplayers switch.data
 scoreboard players reset #dont_regenerate switch.data
 function switch:utils/reset_players
 execute as @a[tag=!detached] run function #cinemalya:v1/stop {with:{restore:false}}
-function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
+function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill,tag=!smithed.strict]"}
 execute in switch:game run function switch:engine/signals/start
 
 execute as @e[limit=2] as @e[limit=2] as @e[limit=2] as @a[tag=!detached] at @s run playsound ui.toast.in ambient @s

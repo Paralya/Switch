@@ -27,7 +27,7 @@ execute in switch:game run function switch:utils/reset_gamerules
 
 function switch:engine/signals/stop
 execute as @a[tag=!detached] run function #cinemalya:v1/stop {with:{restore:false}}
-function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill]"}
+function switch:utils/safe_kill_macro {selector:"@e[type=!player,tag=!detached,tag=!global.ignore.kill,tag=!smithed.strict]"}
 
 # Update the stats of the minigame
 execute if score #test_mode switch.data matches 1.. run return 1
