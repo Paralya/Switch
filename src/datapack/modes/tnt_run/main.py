@@ -5,6 +5,10 @@ from stewbeet import Mem, write_function
 from ..emit import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
+DASH_HORIZONTAL_SPEED: int = 10000
+""" Horizontal speed of a dash looking straight ahead, in 1/10000 block per tick. """
+DASH_VERTICAL_SPEED: int = 12000
+""" Vertical speed of a dash whatever the pitch, in 1/10000 block per tick. """
 
 def write_mode():
 	ns: str = Mem.ctx.project_id
@@ -88,13 +92,30 @@ scoreboard players operation @s {ns}.temp.dashes_earned = #earned {ns}.data
 execute at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 1 2
 """)
 
-	# /dash/use (as a player with a charge, at @s: consume it and launch in the looking direction)
+	# /dash/use (as a player with a charge, at @s: consume it, zero the client velocity with a teleport in place, then launch at the fixed speed)
 	write_function(f"{path}/dash/use", f"""
 scoreboard players remove @s {ns}.temp.dashes 1
-scoreboard players set $strength player_motion.api.launch 10000
-function player_motion:api/launch_looking
+
+tp @s @s
+data modify storage {ns}:main Rotation set from entity @s Rotation
+execute positioned 0.0 0.0 0.0 summon marker run function {path}/dash/direction
+
+scoreboard players operation $x player_motion.api.launch = #dash_x {ns}.data
+scoreboard players set $y player_motion.api.launch {DASH_VERTICAL_SPEED}
+scoreboard players operation $z player_motion.api.launch = #dash_z {ns}.data
+function player_motion:api/launch_xyz
+
 execute at @s run playsound entity.firework_rocket.launch ambient @s
 execute at @s run particle cloud ~ ~ ~ 0.3 0.3 0.3 0.05 20
+""")
+
+	# /dash/direction (as a marker at 0 0 0: sample the horizontal dash velocity along the stored aim, shorter the more the player looks up or down)
+	write_function(f"{path}/dash/direction", f"""
+data modify entity @s Rotation set from storage {ns}:main Rotation
+execute at @s run tp @s ^ ^ ^1
+execute store result score #dash_x {ns}.data run data get entity @s Pos[0] {DASH_HORIZONTAL_SPEED}
+execute store result score #dash_z {ns}.data run data get entity @s Pos[2] {DASH_HORIZONTAL_SPEED}
+kill @s
 """)
 
 	# /dash/actionbar (as a player: show the available dashes and total blocks destroyed)
