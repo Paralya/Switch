@@ -61,9 +61,9 @@ def write_mode():
 	# /death_spectator
 	write_function(f"{path}/death_spectator", f"""
 execute if entity @s[gamemode=!spectator] run scoreboard players add @s {ns}.stats.deaths 1
+execute unless score #process_end {ns}.data matches 1 if entity @s[gamemode=spectator] at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 
 gamemode spectator @s
-execute unless score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 effect clear @s
 function {ns}:player/layout/deactivate
 clear @s
