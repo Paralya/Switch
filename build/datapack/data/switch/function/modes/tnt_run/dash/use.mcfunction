@@ -7,7 +7,8 @@
 #
 
 scoreboard players remove @s switch.temp.dashes 1
-effect give @s levitation 1 10 true
+scoreboard players set $strength player_motion.api.launch 10000
+function player_motion:api/launch_looking
 execute at @s run playsound entity.firework_rocket.launch ambient @s
 execute at @s run particle cloud ~ ~ ~ 0.3 0.3 0.3 0.05 20
 

@@ -88,10 +88,11 @@ scoreboard players operation @s {ns}.temp.dashes_earned = #earned {ns}.data
 execute at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 1 2
 """)
 
-	# /dash/use (as a player with a charge, at @s: consume it and give a short levitation boost)
+	# /dash/use (as a player with a charge, at @s: consume it and launch in the looking direction)
 	write_function(f"{path}/dash/use", f"""
 scoreboard players remove @s {ns}.temp.dashes 1
-effect give @s levitation 1 10 true
+scoreboard players set $strength player_motion.api.launch 10000
+function player_motion:api/launch_looking
 execute at @s run playsound entity.firework_rocket.launch ambient @s
 execute at @s run particle cloud ~ ~ ~ 0.3 0.3 0.3 0.05 20
 """)
