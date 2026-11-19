@@ -103,6 +103,7 @@ function {ns}:engine/disable
 
 # Set the current game (and its group, used for voting weights and as slot 1 of the next vote)
 $data modify storage {ns}:main current_game set value "$(id)"
+data remove storage {ns}:main current_variant
 $data modify storage {ns}:main current_game_name set from storage {ns}:main minigames[{{id:"$(id)"}}].name_fr
 $data modify storage {ns}:main current_group set from storage {ns}:main minigames[{{id:"$(id)"}}].group
 $execute store result score #current_game_index {ns}.data run data get storage {ns}:main minigames[{{id:"$(id)"}}].index

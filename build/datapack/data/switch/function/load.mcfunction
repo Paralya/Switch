@@ -141,6 +141,7 @@ data remove storage switch:main temp
 data modify storage switch:main groups_games set value {}
 data modify storage switch:temp copy set from storage switch:main minigames
 execute if data storage switch:temp copy[0] run function switch:build_groups_games with storage switch:temp copy[0]
+function switch:modes/load_variants
 
 ## States
 execute if score #engine_state switch.data matches -1 run tell none désactivé

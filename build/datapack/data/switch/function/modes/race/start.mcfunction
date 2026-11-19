@@ -33,7 +33,8 @@ function switch:modes/_common/racing_start_setup
 
 ## Téléportation des joueurs + give d'items
 scoreboard players set #dont_regenerate switch.data 1
-function switch:maps/choose_map_for {id:"race", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit","boat_race_1","boat_race_2"]}
+execute unless data storage switch:main {current_variant:"boat"} run function switch:maps/choose_map_for {id:"race_kart", maps:["bowser_castle","snow_travel","mario_circuit","plains_routine","sakura_land","hills_land","airship_fortress","dk_mountain","clock_circuit"]}
+execute if data storage switch:main {current_variant:"boat"} run function switch:maps/choose_map_for {id:"race_boat", maps:["boat_race_1","boat_race_2"]}
 schedule function switch:modes/race/give_items 1s
 schedule function switch:modes/race/post_load 9s
 

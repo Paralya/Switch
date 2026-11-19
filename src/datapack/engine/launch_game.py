@@ -38,6 +38,7 @@ execute if data storage {ns}:temp copy[0] run function {ns}:engine/launch_game/i
 	write_function(f"{path}/launch_game/get_id", f"""
 execute if score #index {ns}.data = #random {ns}.data run data modify storage {ns}:main current_game set from storage {ns}:main voted_games[0].id
 execute if score #index {ns}.data = #random {ns}.data run data modify storage {ns}:main current_game_name set from storage {ns}:main voted_games[0].name_fr
+execute if score #index {ns}.data = #random {ns}.data run data modify storage {ns}:main current_variant set from storage {ns}:main voted_games[0].variant
 execute if score #index {ns}.data = #random {ns}.data store result score #game_1 {ns}.data run data get storage {ns}:main voted_games[0].index
 
 scoreboard players add #index {ns}.data 1
@@ -105,11 +106,13 @@ execute if score #vote_game_8 {ns}.data > #max {ns}.data run scoreboard players 
 
 data modify storage {ns}:main voted_games set value []
 data modify storage {ns}:main current_game set value ""
+data remove storage {ns}:main current_variant
 {voted_append}
 
 execute store result score #modulo_rand {ns}.data run data get storage {ns}:main voted_games
 execute if score #modulo_rand {ns}.data matches 1 run data modify storage {ns}:main current_game set from storage {ns}:main voted_games[0].id
 execute if score #modulo_rand {ns}.data matches 1 run data modify storage {ns}:main current_game_name set from storage {ns}:main voted_games[0].name_fr
+execute if score #modulo_rand {ns}.data matches 1 run data modify storage {ns}:main current_variant set from storage {ns}:main voted_games[0].variant
 execute if score #modulo_rand {ns}.data matches 1 store result score #game_1 {ns}.data run data get storage {ns}:main voted_games[0].index
 execute if score #modulo_rand {ns}.data matches 2.. run function {ns}:engine/launch_game/get_random_max
 function {ns}:engine/translations/launch_game_
@@ -173,6 +176,7 @@ execute store result score #pool_size {ns}.data if data storage {ns}:main group_
 execute if score #pool_size {ns}.data matches 2.. run return run function {ns}:engine/voting_time/group_vote
 data modify storage {ns}:main current_game set from storage {ns}:main group_pool_filtered[0].id
 data modify storage {ns}:main current_game_name set from storage {ns}:main group_pool_filtered[0].name_fr
+data modify storage {ns}:main current_variant set from storage {ns}:main group_pool_filtered[0].variant
 function {ns}:engine/launch_game/transition
 """)
 

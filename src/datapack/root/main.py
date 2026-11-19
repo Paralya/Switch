@@ -250,6 +250,7 @@ data remove storage {ns}:main temp
 data modify storage {ns}:main groups_games set value {{}}
 data modify storage {ns}:temp copy set from storage {ns}:main minigames
 execute if data storage {ns}:temp copy[0] run function {ns}:build_groups_games with storage {ns}:temp copy[0]
+function {ns}:modes/load_variants
 
 ## States
 execute if score #engine_state {ns}.data matches -1 run tell none désactivé

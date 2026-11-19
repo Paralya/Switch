@@ -21,7 +21,7 @@ execute if score #vote_game_6 switch.data matches 2.. run data modify storage sw
 execute if score #vote_game_7 switch.data matches 2.. run data modify storage switch:main msg_votes[6] set value " votes"
 execute if score #vote_game_8 switch.data matches 2.. run data modify storage switch:main msg_votes[7] set value " votes"
 
-# Edit the last vote to make it hidden (round 1 only, round 2 has no random slot)
+# Edit the last vote to make it hidden (round 1 only, round 2 builds its own random slot)
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].lore_fr set value ["",{"text":"[Aléatoire]\n","color":"yellow"},{"text":"Jeu totalement aléatoire qui n'est pas\n"},{"text":"présent parmi les 7 au dessus"}]
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].name_fr set value "Aléatoire"
 execute if score #vote_round switch.data matches 1 run data modify storage switch:main selections[7].display_name_fr set value {"text":"Aléatoire","color":"yellow"}

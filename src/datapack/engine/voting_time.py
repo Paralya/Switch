@@ -96,6 +96,13 @@ scoreboard players set #vote_round {ns}.data 2
 scoreboard players operation #vote_slots {ns}.data = #pool_size {ns}.data
 scoreboard players set #voting_timer {ns}.data 200
 
+# Last slot: a pool entry drawn now, shown as "Random"
+scoreboard players operation #modulo_rand {ns}.data = #pool_size {ns}.data
+function {ns}:utils/get_random/main
+execute store result storage {ns}:temp random.index int 1 run scoreboard players get #random {ns}.data
+function {ns}:engine/voting_time/add_random_slot with storage {ns}:temp random
+scoreboard players add #vote_slots {ns}.data 1
+
 # Reset the votes and show the new vote to everyone
 schedule clear {ns}:engine/voting_time/schedule_message
 {vote_game_reset}
@@ -104,6 +111,16 @@ execute as @a[tag=!detached] at @s run playsound block.note_block.pling ambient 
 execute as @a[tag=!detached] run function {ns}:engine/voting_time/message
 
 schedule function {ns}:engine/voting_time/tick 1t
+""")
+
+	# /voting_time/add_random_slot (macro: index of the pool entry the "Random" slot stands for)
+	write_function(f"{path}/voting_time/add_random_slot", f"""
+$data modify storage {ns}:temp random_entry set from storage {ns}:main group_pool_filtered[$(index)]
+data modify storage {ns}:temp random_entry.display_name_fr set value {{"text":"Aléatoire","color":"yellow"}}
+data modify storage {ns}:temp random_entry.display_name_en set value {{"text":"Random","color":"yellow"}}
+data modify storage {ns}:temp random_entry.lore_fr set value ["",{{"text":"[Aléatoire]\\n","color":"yellow"}},{{"text":"Un choix tiré au hasard parmi les options"}}]
+data modify storage {ns}:temp random_entry.lore_en set value ["",{{"text":"[Random]\\n","color":"yellow"}},{{"text":"A choice drawn at random among the options"}}]
+data modify storage {ns}:main selections append from storage {ns}:temp random_entry
 """)
 
 	# /voting_time/message
@@ -118,7 +135,7 @@ execute if score #vote_game_6 {ns}.data matches 2.. run data modify storage {ns}
 execute if score #vote_game_7 {ns}.data matches 2.. run data modify storage {ns}:main msg_votes[6] set value " votes"
 execute if score #vote_game_8 {ns}.data matches 2.. run data modify storage {ns}:main msg_votes[7] set value " votes"
 
-# Edit the last vote to make it hidden (round 1 only, round 2 has no random slot)
+# Edit the last vote to make it hidden (round 1 only, round 2 builds its own random slot)
 execute if score #vote_round {ns}.data matches 1 run data modify storage {ns}:main selections[7].lore_fr set value ["",{{"text":"[Aléatoire]\n","color":"yellow"}},{{"text":"Jeu totalement aléatoire qui n'est pas\n"}},{{"text":"présent parmi les 7 au dessus"}}]
 execute if score #vote_round {ns}.data matches 1 run data modify storage {ns}:main selections[7].name_fr set value "Aléatoire"
 execute if score #vote_round {ns}.data matches 1 run data modify storage {ns}:main selections[7].display_name_fr set value {{"text":"Aléatoire","color":"yellow"}}

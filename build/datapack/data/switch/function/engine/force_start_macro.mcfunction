@@ -57,6 +57,7 @@ function switch:engine/disable
 
 # Set the current game (and its group, used for voting weights and as slot 1 of the next vote)
 $data modify storage switch:main current_game set value "$(id)"
+data remove storage switch:main current_variant
 $data modify storage switch:main current_game_name set from storage switch:main minigames[{id:"$(id)"}].name_fr
 $data modify storage switch:main current_group set from storage switch:main minigames[{id:"$(id)"}].group
 $execute store result score #current_game_index switch.data run data get storage switch:main minigames[{id:"$(id)"}].index

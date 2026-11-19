@@ -116,10 +116,9 @@ def generate_map_usage_file() -> None:
 			if not function_content:
 				function_content = Mem.ctx.data.functions[start_file + "start"].text.strip()
 
-		splitted: list[str] = function_content.split(CHOOSE_MAP_FOR)
-		if len(splitted) > 1:
-			maps_str: str = splitted[1].split("\n")[0].split("maps:")[1].split("}")[0]
-			modes_usage[mode.id] = json.loads(maps_str)
+		for call in function_content.split(CHOOSE_MAP_FOR)[1:]:
+			maps_str: str = call.split("\n")[0].split("maps:")[1].split("}")[0]
+			modes_usage[mode.id] += json.loads(maps_str)
 
 	# Now, generate the maps_usage dictionary
 	maps_usage: dict[str, list[str]] = {}

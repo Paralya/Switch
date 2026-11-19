@@ -8,6 +8,7 @@
 #			switch:maps/find_map
 #			switch:music/actions/random
 #			switch:engine/launch_game/get_random_max
+#			switch:engine/voting_time/group_vote
 #			string in switch:devtools/profiling/content
 #
 

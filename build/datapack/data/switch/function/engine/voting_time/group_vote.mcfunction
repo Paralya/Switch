@@ -10,6 +10,13 @@ scoreboard players set #vote_round switch.data 2
 scoreboard players operation #vote_slots switch.data = #pool_size switch.data
 scoreboard players set #voting_timer switch.data 200
 
+# Last slot: a pool entry drawn now, shown as "Random"
+scoreboard players operation #modulo_rand switch.data = #pool_size switch.data
+function switch:utils/get_random/main
+execute store result storage switch:temp random.index int 1 run scoreboard players get #random switch.data
+function switch:engine/voting_time/add_random_slot with storage switch:temp random
+scoreboard players add #vote_slots switch.data 1
+
 # Reset the votes and show the new vote to everyone
 schedule clear switch:engine/voting_time/schedule_message
 scoreboard players set #vote_game_1 switch.data 0

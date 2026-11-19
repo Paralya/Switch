@@ -9,7 +9,7 @@ from stewbeet import Mem, TextComponent, write_function
 from stouputils.typing import JsonDict
 
 from .catalogue import GROUPS_BY_ID, MODES
-from .spec import GroupSpec, ModeSpec
+from .spec import GroupSpec, ModeSpec, VariantSpec
 
 # Constants
 GROUP_NAME_COLOR: str = "#FFCC00"
@@ -73,6 +73,24 @@ def group_lore(group: GroupSpec, modes: tuple[ModeSpec, ...], lang: str) -> list
 		{"text": f"\n[{pretext['estimated_time']} {group.estimated_time}]", "color": "gold"},
 		{"text": f"\n[{group_pretext['includes']} {included}]", "color": "green"},
 		{"text": f"\n[{group_pretext['second_vote']}]", "color": "aqua"},
+	]
+
+
+def variant_lore(variant: VariantSpec, lang: str) -> list[TextComponent]:
+	""" Build the vote lore of one variant: title, description lines, duration.
+
+	Args:
+		variant: The variant to describe
+		lang:    Language key, ex: "fr" or "en"
+	Returns:
+		list[TextComponent]: The lore, ready to be stored
+	"""
+	description: tuple[str, ...] = variant.description.fr if lang == "fr" else variant.description.en
+	return [
+		"",
+		{"text": f"[{variant.display_name(lang)}]\n", "color": "yellow"},
+		*({"text": f"{line}\n"} for line in description),
+		{"text": f"\n[{LANG_PRETEXT[lang]['estimated_time']} {variant.estimated_time}]", "color": "gold"},
 	]
 
 
@@ -168,6 +186,30 @@ def group_entry(group_id: str, modes: tuple[ModeSpec, ...], index: int) -> JsonD
 	}
 
 
+def variant_entry(mode: ModeSpec, variant: VariantSpec, index: int) -> JsonDict:
+	""" Storage entry of one variant, shaped like a mode entry so the second vote and the launch read it the same way.
+
+	Args:
+		mode:    The mode the variant belongs to
+		variant: The variant to store
+		index:   The mode's 1-based rank
+	Returns:
+		JsonDict: The entry, whose "id" is the mode id and whose "variant" is handed to the mode
+	"""
+	return {
+		"min_players": mode.min_players,
+		"max_players": storage_max_players(mode.max_players),
+		"id": mode.id,
+		"variant": variant.id,
+		"name_fr": f"{mode.name_fr} ({variant.name_fr})",
+		"display_name_fr": {"text": variant.display_name("fr"), "color": "yellow"},
+		"display_name_en": {"text": variant.display_name("en"), "color": "yellow"},
+		"lore_fr": variant_lore(variant, "fr"),
+		"lore_en": variant_lore(variant, "en"),
+		"index": index,
+	}
+
+
 def grouped_modes() -> dict[str, tuple[ModeSpec, ...]]:
 	""" Modes bucketed by vote group, keeping the declaration order of MODES.
 
@@ -194,4 +236,14 @@ def write_modes_load_file() -> None:
 		for index, (group_id, modes) in enumerate(grouped_modes().items(), start=1)
 	]
 	write_function(f"{ns}:modes/load", "\n".join(lines))
+
+	variant_lines: list[str] = []
+	for index, mode in enumerate(MODES, start=1):
+		if len(mode.variants) < 2:
+			continue
+		if len(grouped_modes()[mode.vote_group]) > 1:
+			raise ValueError(f"Mode '{mode.id}' has variants, so it must be alone in its vote group")
+		pool: list[JsonDict] = [variant_entry(mode, variant, index) for variant in mode.variants]
+		variant_lines.append(f"data modify storage {ns}:main groups_games.{mode.vote_group} set value " + json.dumps(pool, ensure_ascii=False))
+	write_function(f"{ns}:modes/load_variants", "\n".join(variant_lines) + "\n")
 

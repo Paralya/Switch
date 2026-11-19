@@ -44,6 +44,36 @@ class RoleSpec:
 
 
 @dataclass(frozen=True, kw_only=True)
+class VariantSpec:
+	""" One way to play a mode, chosen by a second vote and handed to the mode as storage switch:main current_variant. """
+
+	id: str
+	""" Value of current_variant, ex: "boat" """
+
+	name_fr: str
+	""" Name shown in the second vote, ex: "Bateau" """
+
+	name_en: str | None = None
+	""" English name when it differs from the French one, otherwise name_fr is used. """
+
+	estimated_time: str
+	""" Human readable duration of this variant, ex: "3-8 mins" """
+
+	description: Localized
+	""" Two lines pitching the variant, shown in the vote lore. """
+
+	def display_name(self, lang: str) -> str:
+		""" The variant name in the given language, falling back to French.
+
+		Args:
+			lang: Language key, ex: "fr" or "en"
+		Returns:
+			str: The localized name
+		"""
+		return self.name_en if lang == "en" and self.name_en is not None else self.name_fr
+
+
+@dataclass(frozen=True, kw_only=True)
 class ModeSpec:
 	""" Everything the engine needs to know about one minigame, outside of its logic.
 
@@ -91,6 +121,9 @@ class ModeSpec:
 
 	roles: tuple[RoleSpec, ...] = ()
 	""" Roles announced on a personal card, the mode calling each card function when it hands the role out. """
+
+	variants: tuple[VariantSpec, ...] = ()
+	""" Ways to play this mode. With two or more, the mode is voted alone and a second vote picks the variant, whose bounds are the mode's. """
 
 	@property
 	def vote_group(self) -> str:

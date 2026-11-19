@@ -4,7 +4,7 @@ A mode generates even when its entry sits in DISABLED_MODES: only its presence i
 Kept as a single table on purpose, so one Ctrl+F finds any game.
 """
 # Imports
-from .spec import UNLIMITED, GroupSpec, Localized, ModeSpec, RoleSpec
+from .spec import UNLIMITED, GroupSpec, Localized, ModeSpec, RoleSpec, VariantSpec
 
 # Constants
 # Minigames
@@ -145,6 +145,22 @@ MODES: tuple[ModeSpec, ...] = (
 		rules=Localized(
 			fr=("Finissez la course le plus vite possible", "Le premier arrivé gagne"),
 			en=("Finish the race as fast as you can", "First to arrive wins"),
+		),
+		variants=(
+			VariantSpec(
+				id="kart", name_fr="Kart", estimated_time="3-6 mins",
+				description=Localized(
+					fr=("Pilotez votre kart sur des circuits", "pleins de pièges et de boosts !"),
+					en=("Drive your kart on circuits", "full of traps and boosts!"),
+				),
+			),
+			VariantSpec(
+				id="boat", name_fr="Bateau", name_en="Boat", estimated_time="3-8 mins",
+				description=Localized(
+					fr=("Naviguez en bateau sur un parcours", "pour franchir la ligne en premier !"),
+					en=("Sail your boat along a course", "to cross the line first!"),
+				),
+			),
 		),
 	),
 	ModeSpec(

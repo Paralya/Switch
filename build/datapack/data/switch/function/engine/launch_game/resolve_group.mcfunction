@@ -23,5 +23,6 @@ execute store result score #pool_size switch.data if data storage switch:main gr
 execute if score #pool_size switch.data matches 2.. run return run function switch:engine/voting_time/group_vote
 data modify storage switch:main current_game set from storage switch:main group_pool_filtered[0].id
 data modify storage switch:main current_game_name set from storage switch:main group_pool_filtered[0].name_fr
+data modify storage switch:main current_variant set from storage switch:main group_pool_filtered[0].variant
 function switch:engine/launch_game/transition
 
