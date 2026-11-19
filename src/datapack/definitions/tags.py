@@ -37,3 +37,5 @@ def write_tags() -> None:
 		"#minecraft:air",
 	]}))
 
+	Mem.ctx.data["minecraft"].block_tags["entities_can_teleport_to"] = set_json_encoder(BlockTag({"values": ["minecraft:light"]}))
+
