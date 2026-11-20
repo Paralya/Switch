@@ -4,8 +4,8 @@
 # @within	(public)
 #
 # @args		name (unknown)
-#			tick (unknown)
+#			group (unknown)
 #
 
-$function switch:music/$(name)/$(tick)
+$function switch:music/$(name)/$(group)
 

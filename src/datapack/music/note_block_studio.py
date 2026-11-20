@@ -12,6 +12,8 @@ ALL_BPM: int = 80
 INPUTS_FOLDER: str = "note_block_studio/datapacks"
 REQUIRED_PATH_PARTS: list[str] = ["notes/", ".mcfunction"]
 LIB_TO_WRITE: str = "datapack/switch_music.zip"
+TICKS_PER_FUNCTION: int = 16
+""" Ticks of a song stored in one function: the reload cost follows the file count, and each tick of a group is a few `execute if score` lines. """
 
 
 # Songs listing (the order of the files is what gives each song its music index, so never sort it)
@@ -67,7 +69,7 @@ def write_note_block_studio() -> None:
 
 
 def copy_song_notes(lib: zipfile.ZipFile, ns: str, file: str, song_name: str) -> tuple[str, int, int]:
-	""" Copy the louder playsound lines of one song into the lib, one function per tick rescaled to ALL_BPM.
+	""" Copy the louder playsound lines of one song into the lib, TICKS_PER_FUNCTION ticks (rescaled to ALL_BPM) per function.
 
 	Args:
 		file:      Song zip name inside INPUTS_FOLDER.
@@ -76,6 +78,7 @@ def copy_song_notes(lib: zipfile.ZipFile, ns: str, file: str, song_name: str) ->
 		tuple[str, int, int]: The song name, its last tick at ALL_BPM, and its original bpm
 	"""
 	length: int = 0
+	notes: dict[str, dict[int, list[str]]] = {}
 	with zipfile.ZipFile(f"{INPUTS_FOLDER}/{file}", "r") as zf:
 		files: list[str] = sorted(zf.namelist())
 		load_file: str = next(x for x in files if "load.mcfunction" in x)
@@ -87,12 +90,18 @@ def copy_song_notes(lib: zipfile.ZipFile, ns: str, file: str, song_name: str) ->
 
 			# Only keep the playsound lines, with their volume (8th argument) raised to 1
 			playsounds: list[list[str]] = [line.split(" ") for line in zf.read(file_to_copy).decode("utf-8").split("\n") if line.startswith("playsound")]
-			file_content: str = "\n".join(" ".join([*words[:7], "1", *words[8:]]) for words in playsounds)
 
 			music_namespace, note_file = file_to_copy.replace("notes/", "").split("/")[-2:]
 			note: int = int(note_file.split(".")[0]) * ALL_BPM // bpm
-			lib.writestr(f"data/{ns}/function/music/{music_namespace}/{note}.mcfunction", file_content.encode("utf-8"))
+			notes.setdefault(music_namespace, {})[note] = [f"execute if score #temp {ns}.data matches {note} run " + " ".join([*words[:7], "1", *words[8:]]) for words in playsounds]
 			length = max(length, note)
+
+	for music_namespace, ticks in notes.items():
+		groups: dict[int, list[str]] = {}
+		for note, lines in sorted(ticks.items()):
+			groups.setdefault(note // TICKS_PER_FUNCTION, []).extend(lines)
+		for group, lines in groups.items():
+			lib.writestr(f"data/{ns}/function/music/{music_namespace}/{group}.mcfunction", "\n".join(lines).encode("utf-8"))
 	return song_name, length, bpm
 
 
@@ -108,6 +117,7 @@ def write_player_functions(lib: zipfile.ZipFile, ns: str, objectives: list[tuple
 	scoreboard objectives add {ns}.music.progress dummy
 	scoreboard objectives add {ns}.music.loop_state dummy
 	scoreboard players set #last_index {ns}.music.current {len(objectives)+99}
+	scoreboard players set #{TICKS_PER_FUNCTION} {ns}.data {TICKS_PER_FUNCTION}
 	"""
 	for song, length, _ in objectives:
 		load_content += f"scoreboard players set #{song} {ns}.music.progress {length}\n"
@@ -122,10 +132,12 @@ def write_player_functions(lib: zipfile.ZipFile, ns: str, objectives: list[tuple
 
 		tick_song_content = f"""
 	scoreboard players add @s {ns}.music.progress 1
-	data modify storage {ns}:temp input set value {{tick:0,name:"{song}"}}
+	data modify storage {ns}:temp input set value {{group:0,name:"{song}"}}
 	scoreboard players operation #temp {ns}.data = @s {ns}.music.progress
 	scoreboard players remove #temp {ns}.data 20
-	execute store result storage {ns}:temp input.tick int 1 run scoreboard players get #temp {ns}.data
+	scoreboard players operation #group {ns}.data = #temp {ns}.data
+	scoreboard players operation #group {ns}.data /= #{TICKS_PER_FUNCTION} {ns}.data
+	execute store result storage {ns}:temp input.group int 1 run scoreboard players get #group {ns}.data
 	function {ns}:music/tick_macro with storage {ns}:temp input
 
 	# Stop if the music is over
