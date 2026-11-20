@@ -7,7 +7,7 @@
 ## Death system
 execute as @a[tag=!detached,gamemode=!spectator,sort=random] at @s if block ~ ~ ~ moving_piston run function switch:modes/block_party/death
 function switch:utils/on_death_run_function {function:"switch:modes/block_party/death"}
-execute as @e[type=!player] at @s if block ~ ~ ~ moving_piston run tp @s 0 -10000 0
+execute as @e[type=!player,type=!lightning_bolt] at @s if block ~ ~ ~ moving_piston run tp @s 0 -10000 0
 kill @e[type=item]
 
 ## Game on the line
