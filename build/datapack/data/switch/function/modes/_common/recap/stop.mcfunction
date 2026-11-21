@@ -16,6 +16,7 @@ scoreboard objectives remove switch.temp.points
 scoreboard objectives remove switch.temp.kills
 scoreboard objectives remove switch.temp.deaths
 scoreboard objectives remove switch.temp.damage
+scoreboard objectives remove switch.temp.mobs
 scoreboard objectives remove switch.temp.obsidian
 scoreboard objectives remove switch.temp.recap_rank
 

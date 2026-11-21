@@ -19,12 +19,12 @@ scoreboard players set #factor switch.data 2
 scoreboard players operation #weighted switch.data *= #factor switch.data
 scoreboard players operation #weighted switch.data += #squares switch.data
 
-# Gap between two rings (millis of blocks) that gives 8.8 blocks between neighbours of the middle ring
+# Gap between two rings (millis of blocks) that gives 10 blocks between neighbours of the middle ring
 scoreboard players operation #gap switch.data = #count switch.data
 scoreboard players set #factor switch.data 5
 scoreboard players operation #gap switch.data *= #factor switch.data
 scoreboard players operation #gap switch.data *= #rings switch.data
-scoreboard players set #factor switch.data 8800
+scoreboard players set #factor switch.data 10000
 scoreboard players operation #gap switch.data *= #factor switch.data
 scoreboard players operation #gap switch.data /= #weighted switch.data
 scoreboard players set #factor switch.data 1000

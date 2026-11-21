@@ -24,7 +24,7 @@ scoreboard players set #remaining_time switch.data 596
 scoreboard players set #pillars_of_fortune_seconds switch.data -1
 scoreboard players set #pillars_of_fortune_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
-function switch:modes/_common/recap/start/kills
+function switch:modes/_common/recap/start/kills_scorers
 scoreboard objectives setdisplay list switch.health
 
 ## Count the number of players to compute the angle difference between pillars (360 / number of players = angle difference)
@@ -36,8 +36,8 @@ scoreboard players set #angle_difference switch.data 360000
 scoreboard players operation #angle_difference switch.data /= #count switch.data
 
 ## Compute the radius
-# distance = 1.4 * count
-scoreboard players set #distance_to_center switch.data 1400
+# distance = 1.6 * count
+scoreboard players set #distance_to_center switch.data 1600
 scoreboard players operation #distance_to_center switch.data *= #count switch.data
 # Clamp between 5000 (5 blocks) and 45000 (45 blocks)
 execute if score #distance_to_center switch.data matches ..4999 run scoreboard players set #distance_to_center switch.data 5000

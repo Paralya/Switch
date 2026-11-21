@@ -8,8 +8,9 @@
 
 tag @s add switch.temp.recap_done
 execute if score #recap_layout switch.data matches 0 run function switch:modes/_common/recap/translations/kills
-execute if score #recap_layout switch.data matches 1 run function switch:modes/_common/recap/translations/kills_deaths
-execute if score #recap_layout switch.data matches 2 run function switch:modes/_common/recap/translations/points
-execute if score #recap_layout switch.data matches 3 run function switch:modes/_common/recap/translations/damage
-execute if score #recap_layout switch.data matches 4 run function switch:modes/_common/recap/translations/damage_obsidian
+execute if score #recap_layout switch.data matches 1 run function switch:modes/_common/recap/translations/kills_scorers
+execute if score #recap_layout switch.data matches 2 run function switch:modes/_common/recap/translations/kills_deaths
+execute if score #recap_layout switch.data matches 3 run function switch:modes/_common/recap/translations/points
+execute if score #recap_layout switch.data matches 4 run function switch:modes/_common/recap/translations/damage
+execute if score #recap_layout switch.data matches 5 run function switch:modes/_common/recap/translations/damage_obsidian
 

@@ -43,6 +43,9 @@ class RecapLayout:
 	columns: tuple[RecapColumn, ...]
 	""" Columns shown left to right. The first one also orders the ranking. """
 
+	only_scorers: bool = False
+	""" Leave out the players whose columns are all 0. """
+
 
 # Constants
 POINTS: RecapColumn = RecapColumn(objective="points", criterion="dummy",                                color="gold",         label_fr="points", label_en="points")
@@ -50,10 +53,12 @@ KILLS:  RecapColumn = RecapColumn(objective="kills",  criterion="playerKillCount
 DEATHS: RecapColumn = RecapColumn(objective="deaths", criterion="deathCount",                           color="aqua",         label_fr="morts",  label_en="deaths")
 DAMAGE: RecapColumn = RecapColumn(objective="damage", criterion="minecraft.custom:minecraft.damage_dealt", color="light_purple", label_fr="dégâts", label_en="damage", divide=10)
 """ Damage dealt is counted in tenths of a health point, so it is divided back before printing. """
+MOBS:   RecapColumn = RecapColumn(objective="mobs",   criterion="minecraft.custom:minecraft.mob_kills", color="green",        label_fr="mobs",   label_en="mobs")
 OBSIDIAN: RecapColumn = RecapColumn(objective="obsidian", criterion="minecraft.mined:minecraft.crying_obsidian", color="dark_purple", label_fr="obsidiennes", label_en="obsidian")
 
 LAYOUTS: tuple[RecapLayout, ...] = (
 	RecapLayout(name="kills",  columns=(KILLS,)),
+	RecapLayout(name="kills_scorers", columns=(KILLS, MOBS), only_scorers=True),
 	RecapLayout(name="kills_deaths", columns=(KILLS, DEATHS)),
 	RecapLayout(name="points", columns=(POINTS, KILLS, DEATHS)),
 	RecapLayout(name="damage", columns=(KILLS, DAMAGE)),
@@ -61,7 +66,7 @@ LAYOUTS: tuple[RecapLayout, ...] = (
 )
 """ One entry per family of modes, picked by calling switch:modes/_common/recap/start/<name>. """
 
-COLUMNS: tuple[RecapColumn, ...] = (POINTS, KILLS, DEATHS, DAMAGE, OBSIDIAN)
+COLUMNS: tuple[RecapColumn, ...] = (POINTS, KILLS, DEATHS, DAMAGE, MOBS, OBSIDIAN)
 """ Every column any layout can show. All of them are created and removed, whatever the layout. """
 
 RANK: str = "recap_rank"
@@ -129,6 +134,10 @@ scoreboard players set #recap_layout {ns}.data {index}
 		f"execute if score #recap_layout {ns}.data matches {index} as @a[tag=!detached] "
 		f"run scoreboard players operation @s {ns}.temp.{RANK} = @s {ns}.temp.{layout.columns[0].objective}"
 		for index, layout in enumerate(LAYOUTS))
+	hidden: str = "\n".join(
+		f"execute if score #recap_layout {ns}.data matches {index} run tag @a[scores={{{scored}}}] add {ns}.temp.recap_done"
+		for index, layout in enumerate(LAYOUTS) if layout.only_scorers
+		for scored in (",".join(f"{ns}.temp.{column.objective}=..0" for column in layout.columns),))
 	write_function(f"{path}/show", f"""
 # A player who never scored has no value on the objective, which would leave them out of the ranking
 {initialized}
@@ -140,6 +149,7 @@ scoreboard players set #recap_layout {ns}.data {index}
 {ranked}
 
 tag @a remove {ns}.temp.recap_done
+{hidden}
 function {path}/translations/header
 execute if entity @a[tag=!detached] run function {path}/next
 """)

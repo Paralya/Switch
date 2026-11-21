@@ -51,12 +51,12 @@ scoreboard players set #factor {ns}.data 2
 scoreboard players operation #weighted {ns}.data *= #factor {ns}.data
 scoreboard players operation #weighted {ns}.data += #squares {ns}.data
 
-# Gap between two rings (millis of blocks) that gives 8.8 blocks between neighbours of the middle ring
+# Gap between two rings (millis of blocks) that gives 10 blocks between neighbours of the middle ring
 scoreboard players operation #gap {ns}.data = #count {ns}.data
 scoreboard players set #factor {ns}.data 5
 scoreboard players operation #gap {ns}.data *= #factor {ns}.data
 scoreboard players operation #gap {ns}.data *= #rings {ns}.data
-scoreboard players set #factor {ns}.data 8800
+scoreboard players set #factor {ns}.data 10000
 scoreboard players operation #gap {ns}.data *= #factor {ns}.data
 scoreboard players operation #gap {ns}.data /= #weighted {ns}.data
 scoreboard players set #factor {ns}.data 1000
@@ -196,7 +196,7 @@ scoreboard players set #remaining_time {ns}.data 596
 scoreboard players set #pillars_of_fortune_seconds {ns}.data -1
 scoreboard players set #pillars_of_fortune_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
-function {ns}:modes/_common/recap/start/kills
+function {ns}:modes/_common/recap/start/kills_scorers
 scoreboard objectives setdisplay list {ns}.health
 
 ## Count the number of players to compute the angle difference between pillars (360 / number of players = angle difference)
@@ -208,8 +208,8 @@ scoreboard players set #angle_difference {ns}.data 360000
 scoreboard players operation #angle_difference {ns}.data /= #count {ns}.data
 
 ## Compute the radius
-# distance = 1.4 * count
-scoreboard players set #distance_to_center {ns}.data 1400
+# distance = 1.6 * count
+scoreboard players set #distance_to_center {ns}.data 1600
 scoreboard players operation #distance_to_center {ns}.data *= #count {ns}.data
 # Clamp between 5000 (5 blocks) and 45000 (45 blocks)
 execute if score #distance_to_center {ns}.data matches ..4999 run scoreboard players set #distance_to_center {ns}.data 5000
