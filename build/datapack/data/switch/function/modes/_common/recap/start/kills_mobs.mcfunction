@@ -1,5 +1,5 @@
 
-#> switch:modes/_common/recap/start/kills_scorers
+#> switch:modes/_common/recap/start/kills_mobs
 #
 # @executed	as @n[tag=switch.coupdetat] & in switch:game
 #

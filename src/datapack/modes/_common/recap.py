@@ -43,9 +43,6 @@ class RecapLayout:
 	columns: tuple[RecapColumn, ...]
 	""" Columns shown left to right. The first one also orders the ranking. """
 
-	only_scorers: bool = False
-	""" Leave out the players whose columns are all 0. """
-
 
 # Constants
 POINTS: RecapColumn = RecapColumn(objective="points", criterion="dummy",                                color="gold",         label_fr="points", label_en="points")
@@ -58,7 +55,7 @@ OBSIDIAN: RecapColumn = RecapColumn(objective="obsidian", criterion="minecraft.m
 
 LAYOUTS: tuple[RecapLayout, ...] = (
 	RecapLayout(name="kills",  columns=(KILLS,)),
-	RecapLayout(name="kills_scorers", columns=(KILLS, MOBS), only_scorers=True),
+	RecapLayout(name="kills_mobs", columns=(KILLS, MOBS)),
 	RecapLayout(name="kills_deaths", columns=(KILLS, DEATHS)),
 	RecapLayout(name="points", columns=(POINTS, KILLS, DEATHS)),
 	RecapLayout(name="damage", columns=(KILLS, DAMAGE)),
@@ -136,7 +133,7 @@ scoreboard players set #recap_layout {ns}.data {index}
 		for index, layout in enumerate(LAYOUTS))
 	hidden: str = "\n".join(
 		f"execute if score #recap_layout {ns}.data matches {index} run tag @a[scores={{{scored}}}] add {ns}.temp.recap_done"
-		for index, layout in enumerate(LAYOUTS) if layout.only_scorers
+		for index, layout in enumerate(LAYOUTS)
 		for scored in (",".join(f"{ns}.temp.{column.objective}=..0" for column in layout.columns),))
 	write_function(f"{path}/show", f"""
 # A player who never scored has no value on the objective, which would leave them out of the ranking
@@ -149,6 +146,7 @@ scoreboard players set #recap_layout {ns}.data {index}
 {ranked}
 
 tag @a remove {ns}.temp.recap_done
+# A player with nothing on any column of the layout tells nothing, so they are left out
 {hidden}
 function {path}/translations/header
 execute if entity @a[tag=!detached] run function {path}/next

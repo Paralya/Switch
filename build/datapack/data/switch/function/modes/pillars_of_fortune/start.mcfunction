@@ -24,7 +24,7 @@ scoreboard players set #remaining_time switch.data 596
 scoreboard players set #pillars_of_fortune_seconds switch.data -1
 scoreboard players set #pillars_of_fortune_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
-function switch:modes/_common/recap/start/kills_scorers
+function switch:modes/_common/recap/start/kills_mobs
 scoreboard objectives setdisplay list switch.health
 
 ## Count the number of players to compute the angle difference between pillars (360 / number of players = angle difference)

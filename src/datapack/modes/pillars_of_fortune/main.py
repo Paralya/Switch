@@ -196,7 +196,7 @@ scoreboard players set #remaining_time {ns}.data 596
 scoreboard players set #pillars_of_fortune_seconds {ns}.data -1
 scoreboard players set #pillars_of_fortune_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
-function {ns}:modes/_common/recap/start/kills_scorers
+function {ns}:modes/_common/recap/start/kills_mobs
 scoreboard objectives setdisplay list {ns}.health
 
 ## Count the number of players to compute the angle difference between pillars (360 / number of players = angle difference)

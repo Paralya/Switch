@@ -1,5 +1,5 @@
 
-#> switch:modes/_common/recap/translations/kills_scorers
+#> switch:modes/_common/recap/translations/kills_mobs
 #
 # @executed	as @a[tag=switch.temp.recap_tied,limit=1]
 #
