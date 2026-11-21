@@ -424,7 +424,8 @@ scoreboard players set #nb_dead_spectres {ns}.data 0
 scoreboard players set #nb_dead_visibles {ns}.data 0
 
 scoreboard objectives add {ns}.temp.cooldown dummy
-function {ns}:modes/_common/recap/start/damage
+execute if score #TASKS_GAME {ns}.data matches 0 run function {ns}:modes/_common/recap/start/damage
+execute if score #TASKS_GAME {ns}.data matches 1 run function {ns}:modes/_common/recap/start/damage_obsidian
 scoreboard objectives setdisplay list {ns}.health
 
 # Choix des rôles + give d'items

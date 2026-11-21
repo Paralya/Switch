@@ -50,15 +50,17 @@ KILLS:  RecapColumn = RecapColumn(objective="kills",  criterion="playerKillCount
 DEATHS: RecapColumn = RecapColumn(objective="deaths", criterion="deathCount",                           color="aqua",         label_fr="morts",  label_en="deaths")
 DAMAGE: RecapColumn = RecapColumn(objective="damage", criterion="minecraft.custom:minecraft.damage_dealt", color="light_purple", label_fr="dégâts", label_en="damage", divide=10)
 """ Damage dealt is counted in tenths of a health point, so it is divided back before printing. """
+OBSIDIAN: RecapColumn = RecapColumn(objective="obsidian", criterion="minecraft.mined:minecraft.crying_obsidian", color="dark_purple", label_fr="obsidiennes", label_en="obsidian")
 
 LAYOUTS: tuple[RecapLayout, ...] = (
 	RecapLayout(name="kills",  columns=(KILLS, DEATHS)),
 	RecapLayout(name="points", columns=(POINTS, KILLS, DEATHS)),
 	RecapLayout(name="damage", columns=(KILLS, DEATHS, DAMAGE)),
+	RecapLayout(name="damage_obsidian", columns=(KILLS, DEATHS, DAMAGE, OBSIDIAN)),
 )
 """ One entry per family of modes, picked by calling switch:modes/_common/recap/start/<name>. """
 
-COLUMNS: tuple[RecapColumn, ...] = (POINTS, KILLS, DEATHS, DAMAGE)
+COLUMNS: tuple[RecapColumn, ...] = (POINTS, KILLS, DEATHS, DAMAGE, OBSIDIAN)
 """ Every column any layout can show. All of them are created and removed, whatever the layout. """
 
 RANK: str = "recap_rank"

@@ -47,7 +47,8 @@ scoreboard players set #nb_dead_spectres switch.data 0
 scoreboard players set #nb_dead_visibles switch.data 0
 
 scoreboard objectives add switch.temp.cooldown dummy
-function switch:modes/_common/recap/start/damage
+execute if score #TASKS_GAME switch.data matches 0 run function switch:modes/_common/recap/start/damage
+execute if score #TASKS_GAME switch.data matches 1 run function switch:modes/_common/recap/start/damage_obsidian
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items
