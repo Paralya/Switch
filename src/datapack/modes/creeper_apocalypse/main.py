@@ -74,7 +74,8 @@ execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,scores={{{
 function {ns}:translations/common/process_end_survivors
 execute if score #process_end {ns}.data matches 1 unless score #test_mode {ns}.data matches 1 as @a[tag=!detached,scores={{{ns}.alive=1..,{ns}.temp.ocelot=1}}] run advancement grant @s only {ns}:visible/25
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run gamemode spectator @s
-execute if score #process_end {ns}.data matches 1 as @a[tag=!detached,sort=random] run function {path}/death
+execute if score #process_end {ns}.data matches 1 run function {ns}:utils/tp_far_to_map
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:utils/to_spectator
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Obligatoire

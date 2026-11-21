@@ -10,7 +10,8 @@ execute if score #process_end switch.data matches 1 as @a[tag=!detached,scores={
 function switch:translations/common/process_end_survivors
 execute if score #process_end switch.data matches 1 unless score #test_mode switch.data matches 1 as @a[tag=!detached,scores={switch.alive=1..,switch.temp.ocelot=1}] run advancement grant @s only switch:visible/25
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run gamemode spectator @s
-execute if score #process_end switch.data matches 1 as @a[tag=!detached,sort=random] run function switch:modes/creeper_apocalypse/death
+execute if score #process_end switch.data matches 1 run function switch:utils/tp_far_to_map
+execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:utils/to_spectator
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 # Obligatoire

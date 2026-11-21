@@ -18,6 +18,13 @@ execute unless score #success {ns}.data matches 1 at @n[type=marker,tag={ns}.sel
 function {ns}:utils/to_spectator
 """)
 
+	# /tp_far_to_map (the players within 100 blocks of the map, in its dimension, stay where they are)
+	write_function(f"{path}/tp_far_to_map", f"""
+execute at @n[type=marker,tag={ns}.selected_map] run tag @a[tag=!detached,distance=..100] add {ns}.temp.near_map
+execute at @n[type=marker,tag={ns}.selected_map] as @a[tag=!detached,tag=!{ns}.temp.near_map] run tp @s ~ ~ ~ ~ ~
+tag @a remove {ns}.temp.near_map
+""")
+
 	# /to_spectator
 	write_function(f"{path}/to_spectator", f"""
 attribute @s waypoint_transmit_range base set 0

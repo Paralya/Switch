@@ -4,7 +4,6 @@
 # @executed	as @a[sort=random] & at @s
 #
 # @within	switch:modes/creeper_apocalypse/joined
-#			switch:modes/creeper_apocalypse/process_end [ as @a[tag=!detached,sort=random] ]
 #			string in switch:modes/creeper_apocalypse/tick
 #
 
