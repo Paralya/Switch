@@ -91,6 +91,10 @@ function {ns}:modes/_common/process_end/last_survivor {{death:"{path}/death"}}
 """)
 
 	# /second
+	zone_timer: str = "\n".join(
+		f"execute if score #temp {ns}.data matches {14 - left} run xp set @a[tag=!detached] {left} levels\n"
+		f"execute if score #temp {ns}.data matches {14 - left} run xp set @a[tag=!detached] {(2 * left + 7) * left // 9} points"
+		for left in range(9, -1, -1))
 	write_function(f"{path}/second", f"""
 # Classic timer
 scoreboard players add #memory_mine_seconds {ns}.data 1
@@ -102,6 +106,9 @@ scoreboard players operation #temp {ns}.data %= #15 {ns}.data
 execute if score #temp {ns}.data matches 5 in {ns}:game run function {path}/zone/summon
 execute if score #temp {ns}.data matches 6..13 at @e[type=marker,tag={ns}.zone] run function {path}/zone/particles
 execute if score #temp {ns}.data matches 14 as @e[type=marker,tag={ns}.zone] at @s run function {path}/zone/end
+
+# XP bar counts down the seconds left to reach the zone
+{zone_timer}
 """)
 
 	# /start
