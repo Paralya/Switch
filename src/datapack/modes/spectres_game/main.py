@@ -232,7 +232,8 @@ scoreboard players remove @s {ns}.temp.break_obsidian 1
 	write_function(f"{path}/percentage/choose_spectre", f"""
 # Get a list of all players ID multiple times depending on their score
 data modify storage {ns}:temp list set value []
-execute as @a[team={ns}.temp.visible] run function {ns}:modes/spectres_game/percentage/get_spectre_id
+execute if entity @a[team={ns}.temp.visible,tag=!{ns}.temp.new_player] as @a[team={ns}.temp.visible,tag=!{ns}.temp.new_player] run function {ns}:modes/spectres_game/percentage/get_spectre_id
+execute unless entity @a[team={ns}.temp.visible,tag=!{ns}.temp.new_player] as @a[team={ns}.temp.visible] run function {ns}:modes/spectres_game/percentage/get_spectre_id
 
 ## Choose a random ID from the list
 # Get a random value from 0 to the length of the list
@@ -270,6 +271,7 @@ execute if score #count {ns}.data matches 0.. run function {ns}:modes/spectres_g
 	write_function(f"{path}/percentage/select_roles", f"""
 # Set everyone to visible
 team join {ns}.temp.visible @a[tag=!detached]
+tag @a[tag=!detached,scores={{{ns}.stats.played.spectres_game=0}}] add {ns}.temp.new_player
 
 # Get number of spectre to choose (1/3 of the players)
 execute store result score #spectre_to_choose {ns}.data if entity @a[team={ns}.temp.visible]
@@ -282,6 +284,7 @@ execute if score #spectre_to_choose {ns}.data matches 1.. run function {ns}:mode
 # Probabilities
 scoreboard players add @a[team={ns}.temp.visible] {ns}.games_not_being_spectre 1
 scoreboard players set @a[team={ns}.temp.spectre] {ns}.games_not_being_spectre 0
+tag @a remove {ns}.temp.new_player
 """)
 
 	# /place_obsidian_from_chicken

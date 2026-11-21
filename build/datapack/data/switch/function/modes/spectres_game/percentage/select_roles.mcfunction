@@ -8,6 +8,7 @@
 
 # Set everyone to visible
 team join switch.temp.visible @a[tag=!detached]
+tag @a[tag=!detached,scores={switch.stats.played.spectres_game=0}] add switch.temp.new_player
 
 # Get number of spectre to choose (1/3 of the players)
 execute store result score #spectre_to_choose switch.data if entity @a[team=switch.temp.visible]
@@ -20,4 +21,5 @@ execute if score #spectre_to_choose switch.data matches 1.. run function switch:
 # Probabilities
 scoreboard players add @a[team=switch.temp.visible] switch.games_not_being_spectre 1
 scoreboard players set @a[team=switch.temp.spectre] switch.games_not_being_spectre 0
+tag @a remove switch.temp.new_player
 

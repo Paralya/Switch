@@ -1,9 +1,10 @@
 
 #> switch:modes/spectres_game/percentage/get_spectre_id
 #
-# @executed	as @a[team=switch.temp.visible]
+# @executed	as @a[team=switch.temp.visible,tag=!switch.temp.new_player]
 #
-# @within	switch:modes/spectres_game/percentage/choose_spectre [ as @a[team=switch.temp.visible] ]
+# @within	switch:modes/spectres_game/percentage/choose_spectre [ as @a[team=switch.temp.visible,tag=!switch.temp.new_player] ]
+#			switch:modes/spectres_game/percentage/choose_spectre [ as @a[team=switch.temp.visible] ]
 #
 
 # Store ID in storage

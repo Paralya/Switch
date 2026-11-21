@@ -7,7 +7,8 @@
 
 # Get a list of all players ID multiple times depending on their score
 data modify storage switch:temp list set value []
-execute as @a[team=switch.temp.visible] run function switch:modes/spectres_game/percentage/get_spectre_id
+execute if entity @a[team=switch.temp.visible,tag=!switch.temp.new_player] as @a[team=switch.temp.visible,tag=!switch.temp.new_player] run function switch:modes/spectres_game/percentage/get_spectre_id
+execute unless entity @a[team=switch.temp.visible,tag=!switch.temp.new_player] as @a[team=switch.temp.visible] run function switch:modes/spectres_game/percentage/get_spectre_id
 
 ## Choose a random ID from the list
 # Get a random value from 0 to the length of the list
