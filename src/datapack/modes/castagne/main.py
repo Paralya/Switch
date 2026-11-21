@@ -65,6 +65,7 @@ execute if score #process_end {ns}.data matches 200 run function {ns}:engine/res
 scoreboard players add #castagne_seconds {ns}.data 1
 scoreboard players remove #remaining_time {ns}.data 1
 function {path}/xp_bar
+execute if score #castagne_seconds {ns}.data matches 15 in {ns}:game run gamerule minecraft:fall_damage true
 
 # Actionbar
 function {ns}:modes/_common/compute_mins_secs
@@ -78,6 +79,7 @@ function {ns}:modes/_common/pvp_arena/start_common
 function {ns}:maps/choose_map_for {{id:"castagne", maps:["kart_racer_relai","nuketown_no_barrier","sky_island_tower","floating_island","paralya_lobby","jn_nature_box","adraik_big_ball"]}}
 
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
+execute in {ns}:game run gamerule minecraft:fall_damage false
 
 function {translations}/start
 
