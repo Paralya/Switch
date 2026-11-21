@@ -9,7 +9,9 @@ scoreboard players add #process_end switch.data 1
 execute if score #process_end switch.data matches 1 as @a[team=switch.temp.1,tag=!detached,scores={switch.alive=2}] at @s run function switch:engine/add_win
 function switch:modes/race/translations/process_end
 execute if score #process_end switch.data matches 1 run scoreboard players reset @a[tag=!detached] switch.alive
+execute if score #process_end switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tag @a[tag=!detached,distance=..100] add switch.temp.near_map
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:modes/race/complete
+tag @a[tag=switch.temp.near_map] remove switch.temp.near_map
 execute if score #process_end switch.data matches 1 as @a[tag=!detached] run function switch:player/trigger/rating/print_current_game
 
 # Safe kill karts and checkpoints

@@ -353,7 +353,7 @@ execute if score @s {ns}.temp matches 1 at @s run function {ns}:modes/race/class
 	write_function(f"{path}/complete", f"""
 execute if entity @s[scores={{{ns}.alive=1}}] run function {ns}:modes/race/finished
 
-execute unless score @s {ns}.alive matches 1.. at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score @s {ns}.alive matches 1.. unless entity @s[tag={ns}.temp.near_map] at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 gamemode spectator @s
 effect clear @s
 clear @s
@@ -852,7 +852,9 @@ scoreboard players add #process_end {ns}.data 1
 execute if score #process_end {ns}.data matches 1 as @a[team={ns}.temp.1,tag=!detached,scores={{{ns}.alive=2}}] at @s run function {ns}:engine/add_win
 function {ns}:modes/race/translations/process_end
 execute if score #process_end {ns}.data matches 1 run scoreboard players reset @a[tag=!detached] {ns}.alive
+execute if score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tag @a[tag=!detached,distance=..100] add {ns}.temp.near_map
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:modes/race/complete
+tag @a[tag={ns}.temp.near_map] remove {ns}.temp.near_map
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 
 # Safe kill karts and checkpoints
