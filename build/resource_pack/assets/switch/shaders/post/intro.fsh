@@ -4,10 +4,10 @@
 #include <minecraft:globals.glsl>
 #include <switch:clock.glsl>
 
-#define INTRO_TICKS 125.0
+#define INTRO_TICKS 145.0
 #define COVER_TICKS 10.0
 #define TITLE_TICK 16.0
-#define REVEAL_TICK 105.0
+#define REVEAL_TICK 125.0
 #define LAUNCH_TICK 12.0
 #define RULES 3
 #define RULE_TICKS 30.0, 42.0, 54.0

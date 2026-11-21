@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 8036.42 110.64 -9997.13 rotated 29.0 8.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:175,duration:50,sound:"minecraft:intentionally_empty",title:"Snowball Painter",subtitle:"Stoupy, Fanto Vakkin",particle:"minecraft:glow"}}
+execute in switch:game positioned 8036.42 110.64 -9997.13 rotated 29.0 8.65 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:195,duration:50,sound:"minecraft:intentionally_empty",title:"Snowball Painter",subtitle:"Stoupy, Fanto Vakkin",particle:"minecraft:glow"}}
 

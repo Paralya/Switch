@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned 2066.0 122.2 2033.79 rotated -56.61 8.9 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:175,duration:50,sound:"minecraft:intentionally_empty",title:"Traitor Original",subtitle:"Stoupy, Luxio, Jugou2, etc. (Paralya)",particle:"minecraft:glow"}}
+execute in switch:game positioned 2066.0 122.2 2033.79 rotated -56.61 8.9 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:195,duration:50,sound:"minecraft:intentionally_empty",title:"Traitor Original",subtitle:"Stoupy, Luxio, Jugou2, etc. (Paralya)",particle:"minecraft:glow"}}
 

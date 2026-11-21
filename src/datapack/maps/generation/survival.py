@@ -14,8 +14,8 @@ from .regeneration import write_first_lines_of_regenerate, write_last_lines_of_r
 from .shared_memory import generated_maps, survival_maps
 
 # Constants
-MAP_TITLE_TICKS: int = 175
-""" Ticks the players are held on the establishing shot: the mode's intro card hides the first 100, then the map title shows. """
+MAP_TITLE_TICKS: int = 195
+""" Ticks the players are held on the establishing shot: the mode's intro card hides the first 120, then the map title shows. """
 
 TRAVEL_TICKS: int = 50
 """ Ticks of the flight from the establishing shot down to each player's spot. """

@@ -8,7 +8,7 @@ from .text import TEXT_GLSL
 LAUNCH_TICK: int = 12
 """ Tick of the sequence at which the game launches: the card fully covers the screen from COVER_TICKS on. """
 
-INTRO_TICKS: int = 125
+INTRO_TICKS: int = 145
 """ Ticks after which the shader shows the game untouched, so the effect can be taken off any time later. """
 
 COVER_TICKS: int = 10
@@ -20,7 +20,7 @@ TITLE_TICK: int = 16
 RULE_TICKS: tuple[int, ...] = (30, 42, 54)
 """ Each rule line is revealed in turn, which also caps a mode at three rules. """
 
-REVEAL_TICK: int = 105
+REVEAL_TICK: int = 125
 """ The card starts dissolving along the depth of the map. """
 
 INTRO_FSH: str = """

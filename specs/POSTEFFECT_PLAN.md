@@ -141,13 +141,13 @@ Timeline réelle, en ticks depuis `posteffect add` :
 | 16 | Le nom du mode claque dans son bandeau | `item.mace.smash_ground_heavy` |
 | 20 à 32 | La couleur du mode laisse place à la map floutée | |
 | 30, 42, 54 | Une règle se déroule | `ui.button.click` (pitch 1.4) |
-| 105 à 125 | Dissolution selon la profondeur. Le lointain (fondu progressif de 64 à 256 blocs) et le ciel, hors de portée de la sphère, fondent en parallèle (ticks 112 à 125) | `item.trident.riptide_1` (pitch 1.4) |
-| 145 | Le serveur retire l'effet | |
+| 125 à 145 | Dissolution selon la profondeur. Le lointain (fondu progressif de 64 à 256 blocs) et le ciel, hors de portée de la sphère, fondent en parallèle (ticks 132 à 145) | `item.trident.riptide_1` (pitch 1.4) |
+| 165 | Le serveur retire l'effet | |
 
 Écarts par rapport au plan de départ :
 
 - **Pas de capture du lobby.** Les 10 premiers ticks couvrent la vue en direct, ce qui évite une cible persistante plein écran.
-- **L'intro dure 1,5 s de plus.** Cinemalya tient le plan d'ensemble 175 ticks au lieu de 130 (`MAP_TITLE_TICKS` dans [survival.py](../src/datapack/maps/generation/survival.py)), pour que le titre de map reste visible 2 s après la carte. Le garde de `signals/second` suit.
+- **L'intro dure 2,5 s de plus.** Cinemalya tient le plan d'ensemble 195 ticks au lieu de 130 (`MAP_TITLE_TICKS` dans [survival.py](../src/datapack/maps/generation/survival.py)), pour que le titre de map reste visible 2 s après la carte. Le garde de `signals/second` suit.
 - **Le son d'impact de Cinemalya est coupé** (`sound:"minecraft:intentionally_empty"`), il tombait au milieu de la carte.
 - **Le texte est la police bitmap du jeu**, lue dans le jar vanilla par `beet.contrib.vanilla`. Une texture pèse environ 670 octets, le pack passe de 2,0 à 2,1 Mo.
 - **Les modes désactivés ont aussi leur carte**, puisqu'ils se lancent en démarrage forcé.
@@ -161,7 +161,7 @@ Pas encore fait ou pas vérifié :
 - Aucun test sur le vrai serveur Switch : la séquence complète (vote, `launch`, titre Cinemalya, travelling) n'a jamais tourné. L'effet a été vu en jeu via `posteffect add` sur un monde vanilla, et le datapack se charge sans erreur sur un serveur 26.3 où `intro/start`, `intro/stop` et `transition` s'exécutent.
 - Testé en 854x480 en jeu et en 1920x1080 sur le banc hors jeu. Pas en ultra-large, pas avec Iris.
 - Les sons sont choisis sans les entendre.
-- Si le moteur est désactivé en pleine intro, la carte reste jusqu'au tick 125 et les sons planifiés jouent.
+- Si le moteur est désactivé en pleine intro, la carte reste jusqu'au tick 145 et les sons planifiés jouent.
 - La saccade de première compilation n'a pas été mesurée.
 
 Builder sans rien copier (ni `_switch_dump`, ni le dossier du jeu, ni le SFTP) :
