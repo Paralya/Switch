@@ -44,7 +44,7 @@ tag @a[tag={ns}.owner] remove {ns}.owner
 # Spectator and other stuff
 gamemode spectator @s
 effect clear @s
-execute unless score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score #process_end {ns}.data matches 1 if predicate {ns}:is_at_spawn at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 clear @s
 """)
 

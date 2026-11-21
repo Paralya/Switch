@@ -46,11 +46,5 @@ execute if score @s switch.last_death matches ..2 if score @s switch.reconnect =
 execute if score #success switch.data matches 1 run function switch:utils/death_tp
 execute if score #success switch.data matches 1 if entity @s[y=-1000,dy=936] run scoreboard players set #success switch.data 0
 execute unless score #success switch.data matches 1 at @n[type=marker,tag=switch.selected_map] run tp @s ~ ~ ~ ~ ~
-
-# Clear & spectator
-attribute @s waypoint_transmit_range base set 0
-gamemode spectator @s
-effect clear @s
-function switch:player/layout/deactivate
-clear @s
+function switch:utils/to_spectator
 

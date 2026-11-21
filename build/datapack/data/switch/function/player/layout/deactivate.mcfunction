@@ -39,7 +39,7 @@
 #			switch:modes/spleef/give_items
 #			switch:modes/traitors_game/death/for_global [ as @a[tag=!detached,predicate=switch:has_same_id] ]
 #			switch:modes/traitors_game/give_items
-#			switch:utils/classic_death
+#			switch:utils/to_spectator
 #			switch:utils/reset_players [ as @a[tag=!detached] ]
 #			switch:player/trigger/detach/basic_stuff
 #

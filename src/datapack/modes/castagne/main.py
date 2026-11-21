@@ -54,7 +54,7 @@ execute unless score #test_mode {ns}.data matches 1 if score #count {ns}.data >=
 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
-function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
+function {ns}:modes/_common/process_end/winner_by_health
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)

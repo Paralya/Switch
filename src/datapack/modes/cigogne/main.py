@@ -41,7 +41,7 @@ execute if score #engine_state {ns}.data matches 3 if data storage {ns}:main {{c
 	# /process_end
 	write_function(f"{path}/process_end", f"""
 execute if score #process_end {ns}.data matches 0 run function {ns}:modes/_common/recap/show
-function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
+function {ns}:modes/_common/process_end/winner_by_health
 
 # Advancement
 execute if score #process_end {ns}.data matches 1 run scoreboard players set #max {ns}.data 0

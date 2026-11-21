@@ -140,7 +140,7 @@ $execute if score #ring_left {ns}.data matches 1.. rotated ~$(angle_difference) 
 	# /process_end
 	write_function(f"{path}/process_end", f"""
 execute if score #process_end {ns}.data matches 0 run function {ns}:modes/_common/recap/show
-function {ns}:modes/_common/process_end/winner_by_health {{death:"{ns}:utils/classic_death"}}
+function {ns}:modes/_common/process_end/winner_by_health
 
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)

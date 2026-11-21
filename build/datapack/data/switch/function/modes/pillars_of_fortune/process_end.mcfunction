@@ -5,7 +5,7 @@
 #
 
 execute if score #process_end switch.data matches 0 run function switch:modes/_common/recap/show
-function switch:modes/_common/process_end/winner_by_health {death:"switch:utils/classic_death"}
+function switch:modes/_common/process_end/winner_by_health
 
 execute if score #process_end switch.data matches 200 run function switch:engine/restart
 

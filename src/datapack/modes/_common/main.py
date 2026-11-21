@@ -70,11 +70,11 @@ clear @s
 """)
 
 	# /death_spectator_lives (like death_spectator but gated on @s having no lives left,
-	# i.e. switch.alive < 1: count the death, spectate, return to the map marker, clear effects/items)
+	# i.e. switch.alive < 1: count the death, spectate, return to the map marker (except once the game is over), clear effects/items)
 	write_function(f"{path}/death_spectator_lives", f"""
 execute unless score @s {ns}.alive matches 1.. run scoreboard players add @s {ns}.stats.deaths 1
 execute unless score @s {ns}.alive matches 1.. run gamemode spectator @s
-execute unless score @s {ns}.alive matches 1.. at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
+execute unless score @s {ns}.alive matches 1.. unless score #process_end {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 execute unless score @s {ns}.alive matches 1.. run effect clear @s
 execute unless score @s {ns}.alive matches 1.. run function {ns}:player/layout/deactivate
 execute unless score @s {ns}.alive matches 1.. run clear @s
@@ -407,15 +407,14 @@ execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run funct
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
-	# /process_end/winner_by_health (shared core for survival last-standing modes): reward the lone survivor and show their health, run the mode's own death
-	# given as the {death:"..."} macro arg, then rate. The caller adds its own restart tail and any extra logic
+	# /process_end/winner_by_health (shared core for survival last-standing modes): reward the lone survivor and show their health, set everyone to spectator in place, then rate. The caller adds its own restart tail and any extra logic
 	write_function(f"{path}/process_end/winner_by_health", f"""
 scoreboard players add #process_end {ns}.data 1
 
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 store result score #health {ns}.data run data get entity @r[gamemode=survival] Health
 execute if score #process_end {ns}.data matches 1 if score #remaining_players {ns}.data matches 1 as @a[tag=!detached,gamemode=survival] at @s run function {ns}:engine/add_win
 function {ns}:translations/common/process_end_winner_health
-$execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function $(death)
+execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:utils/to_spectator
 execute if score #process_end {ns}.data matches 1 as @a[tag=!detached] run function {ns}:player/trigger/rating/print_current_game
 """)
 

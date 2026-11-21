@@ -15,8 +15,11 @@ execute if score @s {ns}.last_death matches ..2 if score @s {ns}.reconnect = #sc
 execute if score #success {ns}.data matches 1 run function {ns}:utils/death_tp
 execute if score #success {ns}.data matches 1 if entity @s[y=-1000,dy=936] run scoreboard players set #success {ns}.data 0
 execute unless score #success {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
+function {ns}:utils/to_spectator
+""")
 
-# Clear & spectator
+	# /to_spectator
+	write_function(f"{path}/to_spectator", f"""
 attribute @s waypoint_transmit_range base set 0
 gamemode spectator @s
 effect clear @s
