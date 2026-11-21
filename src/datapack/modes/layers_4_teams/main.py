@@ -103,6 +103,7 @@ scoreboard players set #layers_4_teams_seconds {ns}.data -1
 scoreboard players set #layers_4_teams_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #cut_clean {ns}.data 1
+function {ns}:modes/_common/recap/start/damage
 scoreboard objectives add {ns}.temp.killed_red teamkill.red
 scoreboard objectives add {ns}.temp.killed_blue teamkill.blue
 scoreboard objectives add {ns}.temp.killed_green teamkill.green
@@ -137,6 +138,7 @@ execute as @a[tag=!detached] run gamemode survival @s
 
 	# /stop
 	write_function(f"{path}/stop", f"""
+function {ns}:modes/_common/recap/stop
 team remove {ns}.temp.red
 team remove {ns}.temp.blue
 team remove {ns}.temp.green
@@ -185,6 +187,7 @@ execute as @a[tag=!detached] run item modify entity @s weapon.mainhand {ns}:hand
 
 ## Détection de fin de partie
 execute if score #layers_4_teams_seconds {ns}.data matches 1.. if score #remaining_time {ns}.data matches 1.. run function {path}/detect_end
+execute if score #remaining_time {ns}.data matches ..0 if score #process_end {ns}.data matches 0 run function {ns}:modes/_common/recap/show
 execute if score #remaining_time {ns}.data matches ..0 run function {ns}:modes/_common/process_end/spectate_only
 """)
 

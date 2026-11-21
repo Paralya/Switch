@@ -41,7 +41,7 @@ scoreboard players set #glassrunner_point_to_win switch.data 32
 
 scoreboard objectives add switch.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add switch.glassrunner.deathCount deathCount
-function switch:modes/_common/recap/start/kills
+function switch:modes/_common/recap/start/kills_deaths
 scoreboard objectives add switch.glassrunner.money_maker dummy
 scoreboard objectives add switch.glassrunner.apocalypse dummy
 scoreboard objectives add switch.glassrunner.turtle_helmet dummy

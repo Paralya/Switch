@@ -6,6 +6,8 @@
 #			switch:modes/glassrunner/end/blue
 #			switch:modes/glassrunner/end/null
 #			switch:modes/glassrunner/end/red
+#			switch:modes/layers_2_teams/tick
+#			switch:modes/layers_4_teams/tick
 #			switch:modes/pillars_of_fortune/process_end
 #			switch:modes/protect_the_king/detect_end
 #			switch:modes/rush_the_flag/process_end
@@ -25,9 +27,10 @@ scoreboard players operation @a[tag=!detached] switch.temp.damage /= #10 switch.
 
 # The leftmost column of the layout is what the ranking sorts on
 execute if score #recap_layout switch.data matches 0 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.kills
-execute if score #recap_layout switch.data matches 1 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.points
-execute if score #recap_layout switch.data matches 2 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.kills
+execute if score #recap_layout switch.data matches 1 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.kills
+execute if score #recap_layout switch.data matches 2 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.points
 execute if score #recap_layout switch.data matches 3 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.kills
+execute if score #recap_layout switch.data matches 4 as @a[tag=!detached] run scoreboard players operation @s switch.temp.recap_rank = @s switch.temp.kills
 
 tag @a remove switch.temp.recap_done
 function switch:modes/_common/recap/translations/header

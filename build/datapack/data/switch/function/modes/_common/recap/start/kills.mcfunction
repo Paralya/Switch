@@ -4,7 +4,6 @@
 # @executed	as @n[tag=switch.coupdetat] & in switch:game
 #
 # @within	switch:modes/cigogne/start
-#			switch:modes/glassrunner/start
 #			switch:modes/pillars_of_fortune/start
 #			switch:modes/protect_the_king/start
 #

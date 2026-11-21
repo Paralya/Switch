@@ -7,8 +7,8 @@
 #
 
 # French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"- ","color":"#6B788F"},{"selector":"@s"},{"text":" : ","color":"#6B788F"},{"score":{"name":"@s","objective":"switch.temp.kills"},"color":"#FF3347"},{"text":" kills","color":"#AEBBD0"},{"text":", ","color":"#6B788F"},{"score":{"name":"@s","objective":"switch.temp.deaths"},"color":"#00E5FF"},{"text":" morts","color":"#AEBBD0"}]
+tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"- ","color":"#6B788F"},{"selector":"@s"},{"text":" : ","color":"#6B788F"},{"score":{"name":"@s","objective":"switch.temp.kills"},"color":"#FF3347"},{"text":" kills","color":"#AEBBD0"}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"- ","color":"#6B788F"},{"selector":"@s"},{"text":" : ","color":"#6B788F"},{"score":{"name":"@s","objective":"switch.temp.kills"},"color":"#FF3347"},{"text":" kills","color":"#AEBBD0"},{"text":", ","color":"#6B788F"},{"score":{"name":"@s","objective":"switch.temp.deaths"},"color":"#00E5FF"},{"text":" deaths","color":"#AEBBD0"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"- ","color":"#6B788F"},{"selector":"@s"},{"text":" : ","color":"#6B788F"},{"score":{"name":"@s","objective":"switch.temp.kills"},"color":"#FF3347"},{"text":" kills","color":"#AEBBD0"}]
 

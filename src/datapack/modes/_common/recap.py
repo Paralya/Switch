@@ -53,10 +53,11 @@ DAMAGE: RecapColumn = RecapColumn(objective="damage", criterion="minecraft.custo
 OBSIDIAN: RecapColumn = RecapColumn(objective="obsidian", criterion="minecraft.mined:minecraft.crying_obsidian", color="dark_purple", label_fr="obsidiennes", label_en="obsidian")
 
 LAYOUTS: tuple[RecapLayout, ...] = (
-	RecapLayout(name="kills",  columns=(KILLS, DEATHS)),
+	RecapLayout(name="kills",  columns=(KILLS,)),
+	RecapLayout(name="kills_deaths", columns=(KILLS, DEATHS)),
 	RecapLayout(name="points", columns=(POINTS, KILLS, DEATHS)),
-	RecapLayout(name="damage", columns=(KILLS, DEATHS, DAMAGE)),
-	RecapLayout(name="damage_obsidian", columns=(KILLS, DEATHS, DAMAGE, OBSIDIAN)),
+	RecapLayout(name="damage", columns=(KILLS, DAMAGE)),
+	RecapLayout(name="damage_obsidian", columns=(KILLS, DAMAGE, OBSIDIAN)),
 )
 """ One entry per family of modes, picked by calling switch:modes/_common/recap/start/<name>. """
 

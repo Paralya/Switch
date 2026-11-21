@@ -15,5 +15,6 @@ execute as @a[tag=!detached] run item modify entity @s weapon.mainhand switch:ha
 
 ## Détection de fin de partie
 execute if score #layers_2_teams_seconds switch.data matches 1.. if score #remaining_time switch.data matches 1.. run function switch:modes/layers_2_teams/detect_end
+execute if score #remaining_time switch.data matches ..0 if score #process_end switch.data matches 0 run function switch:modes/_common/recap/show
 execute if score #remaining_time switch.data matches ..0 run function switch:modes/_common/process_end/spectate_only
 

@@ -21,6 +21,7 @@ scoreboard players set #layers_4_teams_seconds switch.data -1
 scoreboard players set #layers_4_teams_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 scoreboard players set #cut_clean switch.data 1
+function switch:modes/_common/recap/start/damage
 scoreboard objectives add switch.temp.killed_red teamkill.red
 scoreboard objectives add switch.temp.killed_blue teamkill.blue
 scoreboard objectives add switch.temp.killed_green teamkill.green

@@ -107,7 +107,7 @@ scoreboard players set #glassrunner_point_to_win {ns}.data 32
 
 scoreboard objectives add {ns}.glassrunner.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add {ns}.glassrunner.deathCount deathCount
-function {ns}:modes/_common/recap/start/kills
+function {ns}:modes/_common/recap/start/kills_deaths
 scoreboard objectives add {ns}.glassrunner.money_maker dummy
 scoreboard objectives add {ns}.glassrunner.apocalypse dummy
 scoreboard objectives add {ns}.glassrunner.turtle_helmet dummy
