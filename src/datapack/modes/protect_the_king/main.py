@@ -136,6 +136,7 @@ execute if score #protect_the_king_seconds {ns}.data matches 0.. run function {p
 execute if score #protect_the_king_seconds {ns}.data matches 0.. run effect give @a[tag=!detached,gamemode=!spectator,team=!{ns}.temp.red,team=!{ns}.temp.blue] glowing infinite 255 true
 execute if score #protect_the_king_seconds {ns}.data matches 0 run team modify {ns}.temp.red collisionRule always
 execute if score #protect_the_king_seconds {ns}.data matches 0 run team modify {ns}.temp.blue collisionRule always
+execute if score #protect_the_king_seconds {ns}.data matches 15 in {ns}:game run gamerule minecraft:fall_damage true
 execute if score #protect_the_king_seconds {ns}.data matches 5 as @a[tag=!detached,team={ns}.temp.red_king] run function {ns}:engine/role_card/protect_the_king/red_king
 execute if score #protect_the_king_seconds {ns}.data matches 5 as @a[tag=!detached,team={ns}.temp.blue_king] run function {ns}:engine/role_card/protect_the_king/blue_king
 
@@ -160,6 +161,7 @@ scoreboard players set #do_spreadplayers {ns}.data 1
 function {ns}:maps/choose_map_for {{id:"protect_the_king", maps:["traitor_original","mushroom_plains","baby_park","snow_travel","cathedrale_liege","jayl_dark_forest","operation_pigclaw","dark_forest_hills","paralya_lobby_noel","zonweeb_highschool","hider_mansion","nuketown_no_barrier","lightium_spawn","paralya_lobby","stardust_spawn","stardust_boss_zone","stardust_boss_zone_nether","stardust_pvp_zone","jn_biomes_relief"]}}
 
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
+execute in {ns}:game run gamerule minecraft:fall_damage false
 
 function {ns}:modes/protect_the_king/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
