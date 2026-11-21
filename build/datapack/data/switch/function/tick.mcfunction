@@ -28,9 +28,11 @@ execute unless score #engine_state switch.data matches 0 unless entity @a[tag=!d
 # Cut Clean support
 execute if score #cut_clean switch.data matches 1 as @e[type=item,tag=!switch.cut_clean,nbt={Age:2s}] run function switch:cut_clean
 
-# Kill players out of the map
+# Kill players out of the map, including those riding a boat
 execute if score #engine_state switch.data matches 3 as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ #switch:out_of_map run function switch:player/kill_out_of_map
 execute if score #engine_state switch.data matches 3 as @a[tag=!detached,gamemode=!spectator,gamemode=!creative] at @s if block ~ ~-1 ~ barrier if block ~ ~ ~ #switch:out_of_map run function switch:player/kill_out_of_map
+execute if score #engine_state switch.data matches 3 as @e[type=#minecraft:boat] at @s if block ~ ~-1 ~ barrier if block ~ ~-2 ~ #switch:out_of_map on passengers if entity @s[type=player,tag=!detached,gamemode=!spectator,gamemode=!creative] run function switch:player/kill_out_of_map
+execute if score #engine_state switch.data matches 3 as @e[type=#minecraft:boat] at @s if block ~ ~-1 ~ barrier if block ~ ~ ~ #switch:out_of_map on passengers if entity @s[type=player,tag=!detached,gamemode=!spectator,gamemode=!creative] run function switch:player/kill_out_of_map
 
 # Right click reset
 scoreboard players reset @a switch.right_click
