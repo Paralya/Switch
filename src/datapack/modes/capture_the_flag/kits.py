@@ -58,7 +58,7 @@ def classes() -> dict[str, Kit]:
 		KitItem(item=HEAL_POTION, slot="hotbar.3"),
 		KitItem(item="arrow", count=24, slot="hotbar.4"),
 		KitItem(item=suicide(3), slot="hotbar.6"),
-		wool(24),
+		wool(28),
 		BREAD,
 	), post="""
 attribute @s movement_speed base set 0.11
@@ -78,7 +78,7 @@ attribute @s jump_strength base reset
 		KitItem(item='lingering_potion[potion_contents="minecraft:strong_harming"]', slot="hotbar.4"),
 		KitItem(item='lingering_potion[potion_contents="minecraft:strong_poison"]', slot="hotbar.5"),
 		KitItem(item=suicide(1), slot="hotbar.6"),
-		wool(8),
+		wool(12),
 		BREAD,
 	), post="""
 attribute @s movement_speed base set 0.10
@@ -90,9 +90,9 @@ attribute @s jump_strength base reset
 	demolisher: Kit = Kit("demolisher", pre=common_pre, items=(
 		*soldier_base,
 		KitItem(item=suicide(1), slot="hotbar.4"),
-		wool(8, slot="hotbar.5"),
+		wool(12, slot="hotbar.5"),
 		KitItem(item="flint_and_steel", slot="hotbar.6"),
-		KitItem(item="tnt", count=2, slot="hotbar.7"),
+		KitItem(item="tnt", count=5, slot="hotbar.7"),
 		BREAD,
 	), post=soldier_attrs)
 
@@ -104,7 +104,7 @@ attribute @s jump_strength base reset
 		KitItem(item=axe, slot="hotbar.1"),
 		KitItem(item="golden_apple", count=2, slot="hotbar.2"),
 		KitItem(item=suicide(1), slot="hotbar.6"),
-		wool(18),
+		wool(22),
 		BREAD,
 	), post="""
 attribute @s movement_speed base set 0.09
@@ -117,7 +117,7 @@ attribute @s jump_strength base reset
 		*soldier_base,
 		KitItem(item=HEAL_POTION, slot="hotbar.3"),
 		KitItem(item=suicide(1), slot="hotbar.6"),
-		wool(12),
+		wool(16),
 		BREAD,
 	), post=soldier_attrs)
 

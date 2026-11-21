@@ -18,8 +18,8 @@ item replace entity @s hotbar.3 with lingering_potion[potion_contents="minecraft
 item replace entity @s hotbar.4 with lingering_potion[potion_contents="minecraft:strong_harming"]
 item replace entity @s hotbar.5 with lingering_potion[potion_contents="minecraft:strong_poison"]
 item replace entity @s hotbar.6 with potion[item_name={"text":"Suicide Potion","color":"#A53DE0"},potion_contents={custom_color:4391004,custom_effects:[{id:"instant_damage",amplifier:1b,duration:20},{id:"wither",amplifier:10b,duration:-1},{id:"poison",amplifier:10b,duration:-1}]}]
-item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 8
-item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 8
+item replace entity @s[team=switch.temp.red] hotbar.7 with red_wool 12
+item replace entity @s[team=switch.temp.blue] hotbar.7 with blue_wool 12
 item replace entity @s hotbar.8 with bread 21
 attribute @s movement_speed base set 0.10
 attribute @s attack_speed base set 2048
