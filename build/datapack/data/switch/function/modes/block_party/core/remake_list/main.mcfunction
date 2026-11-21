@@ -1,7 +1,7 @@
 
 #> switch:modes/block_party/core/remake_list/main
 #
-# @within	switch:modes/block_party/core/pick_random_art
+# @within	switch:modes/block_party/core/pick_block
 #
 
 # Get the number of pixel arts for the game

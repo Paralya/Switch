@@ -6,6 +6,7 @@
 #			switch:modes/_coupdetat/process_end
 #			switch:modes/beat_the_kings/process_end
 #			switch:modes/block_party/process_end
+#			switch:modes/block_party/core/pick_abort
 #			switch:modes/boat_race/process_end
 #			switch:modes/bombardement/process_end
 #			switch:modes/build_battle/process_end

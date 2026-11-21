@@ -117,20 +117,9 @@ execute if score #bp_block {ns}.data matches 15 run tellraw @a[scores={{{ns}.lan
 	# /core_pick_random_art
 	write_function(f"{path}/core_pick_random_art", f"""
 # French
-execute unless data block 0 5 0 Items[0] run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Veuillez reporter ce message à Stoupy : #bp_selected_block = "}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", #modulo_rand = "}},{{"score":{{"name":"#modulo_rand","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", (#y_pos, z_pos) : ("}},{{"score":{{"name":"#y_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":","}},{{"score":{{"name":"#z_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":")"}}]
 tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Démarrage de la manche n°"}},{{"score":{{"name":"#block_party_round","objective":"{ns}.data"}},"color":"aqua"}},{{"text":" !"}}]
 
 # English
-execute unless data block 0 5 0 Items[0] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Please report this message to Stoupy: #bp_selected_block = "}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", #modulo_rand = "}},{{"score":{{"name":"#modulo_rand","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", (#y_pos, z_pos) : ("}},{{"score":{{"name":"#y_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":","}},{{"score":{{"name":"#z_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":")"}}]
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Start of round no."}},{{"score":{{"name":"#block_party_round","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"!"}}]
-""")
-
-	# /core_get_block_count_loop
-	write_function(f"{path}/core_get_block_count_loop", f"""
-# French
-execute unless loaded ~ ~ ~ run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Veuillez reporter ce message à Stoupy : Unloaded position #bp_selected_block = "}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", #modulo_rand = "}},{{"score":{{"name":"#modulo_rand","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", (#y_pos, z_pos) : ("}},{{"score":{{"name":"#y_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":","}},{{"score":{{"name":"#z_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":")"}}]
-
-# English
-execute unless loaded ~ ~ ~ run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Please refer this message to Stoupy: Unloaded position #bp_selected_block = "}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", #modulo_rand = "}},{{"score":{{"name":"#modulo_rand","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", (#y_pos, z_pos) : ("}},{{"score":{{"name":"#y_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":","}},{{"score":{{"name":"#z_pos","objective":"{ns}.data"}},"color":"aqua"}},{{"text":")"}}]
 """)
 

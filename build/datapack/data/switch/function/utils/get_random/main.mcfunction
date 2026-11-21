@@ -1,7 +1,7 @@
 
 #> switch:utils/get_random/main
 #
-# @within	switch:modes/block_party/core/pick_random_art
+# @within	switch:modes/block_party/core/pick_block
 #			switch:modes/block_party/core/remake_list/shuffle
 #			switch:modes/build_battle/preparation/get_random_theme
 #			switch:modes/murder_mystery/percentage/_choose_from_list

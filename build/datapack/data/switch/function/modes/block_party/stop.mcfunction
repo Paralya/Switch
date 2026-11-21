@@ -8,4 +8,5 @@ stopsound @a[tag=!detached]
 scoreboard objectives remove switch.temp.old_x
 scoreboard objectives remove switch.temp.old_z
 scoreboard objectives remove switch.temp.time_since_movement
+execute in switch:game run forceload remove 4093 -9985 4157 -9855
 

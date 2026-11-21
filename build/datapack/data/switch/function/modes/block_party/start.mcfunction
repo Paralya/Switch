@@ -29,6 +29,7 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.old_x dummy
 scoreboard objectives add switch.temp.old_z dummy
 scoreboard objectives add switch.temp.time_since_movement dummy
+execute in switch:game run forceload add 4093 -9985 4157 -9855
 
 # Data storage
 execute unless data storage switch:maps block_party run data modify storage switch:maps block_party set value []

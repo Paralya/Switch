@@ -3,6 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ..emit import write_modes_calls
+from .resources import ALL
 from .translations import write_translations
 
 
@@ -41,6 +42,7 @@ scoreboard players set #process_end {ns}.data 0
 scoreboard objectives add {ns}.temp.old_x dummy
 scoreboard objectives add {ns}.temp.old_z dummy
 scoreboard objectives add {ns}.temp.time_since_movement dummy
+execute in {ns}:game run forceload add 4093 -9985 4157 -9855
 
 # Data storage
 execute unless data storage {ns}:maps block_party run data modify storage {ns}:maps block_party set value []
@@ -52,6 +54,7 @@ stopsound @a[tag=!detached]
 scoreboard objectives remove {ns}.temp.old_x
 scoreboard objectives remove {ns}.temp.old_z
 scoreboard objectives remove {ns}.temp.time_since_movement
+execute in {ns}:game run forceload remove 4093 -9985 4157 -9855
 """)
 
 	# /tick
@@ -205,31 +208,13 @@ damage @e[tag={ns}.paint_cow,limit=1] 1 arrow by @p from @p
 	write_function(f"{path}/core/get_block_count_loop", f"""
 # Add block count and continue loop if not air
 scoreboard players add #block_count {ns}.data 1
-function {translations}/core_get_block_count_loop
 execute positioned ~ ~ ~1 unless block ~ ~ ~ air run function {path}/core/get_block_count_loop
 """)
 
 	# /core/give_block
 	write_function(f"{path}/core/give_block", f"""
-## Switch case
-data modify storage {ns}:main Item set from block 0 4 0 Items[0]
-scoreboard players set #bp_block {ns}.data -1
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:white_concrete"}} run scoreboard players set #bp_block {ns}.data 0
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:orange_concrete"}} run scoreboard players set #bp_block {ns}.data 1
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:magenta_concrete"}} run scoreboard players set #bp_block {ns}.data 2
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:light_blue_concrete"}} run scoreboard players set #bp_block {ns}.data 3
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:yellow_concrete"}} run scoreboard players set #bp_block {ns}.data 4
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:lime_concrete"}} run scoreboard players set #bp_block {ns}.data 5
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:pink_concrete"}} run scoreboard players set #bp_block {ns}.data 6
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:gray_concrete"}} run scoreboard players set #bp_block {ns}.data 7
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:light_gray_concrete"}} run scoreboard players set #bp_block {ns}.data 8
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:cyan_concrete"}} run scoreboard players set #bp_block {ns}.data 9
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:purple_concrete"}} run scoreboard players set #bp_block {ns}.data 10
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:blue_concrete"}} run scoreboard players set #bp_block {ns}.data 11
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:brown_concrete"}} run scoreboard players set #bp_block {ns}.data 12
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:green_concrete"}} run scoreboard players set #bp_block {ns}.data 13
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:red_concrete"}} run scoreboard players set #bp_block {ns}.data 14
-execute if score #bp_block {ns}.data matches -1 if data storage {ns}:main Item{{id:"minecraft:black_concrete"}} run scoreboard players set #bp_block {ns}.data 15
+# The item and its color were resolved and checked by pick_block
+execute unless data block 0 4 0 Items[0] run return run function {path}/core/pick_abort
 
 # Give item with name
 execute if score #bp_block {ns}.data matches -1 run data modify block 0 4 0 Items[0].components."minecraft:item_name" set value {{"text":"Beige","italic":false,"color":"aqua"}}
@@ -300,46 +285,9 @@ kill @s
 
 	# /core/pick_random_art
 	write_function(f"{path}/core/pick_random_art", f"""
-## Choose pixel art
-# If list is empty, remade it
-scoreboard players set #art_count {ns}.data 0
-execute store result score #art_count {ns}.data if data storage {ns}:maps block_party[]
-execute if score #art_count {ns}.data matches 0 run function {path}/core/remake_list/main
-
-# Choose a random pixel art for the game
-execute store result score #bp_selected_art {ns}.data run data get storage {ns}:maps block_party[0]
-data remove storage {ns}:maps block_party[0]
-
-# Teleport current marker to the selected pixel art
-tp @s 4093 85 -9985
-scoreboard players set #y_pos {ns}.data 85
-scoreboard players operation #y_pos {ns}.data -= #bp_selected_art {ns}.data
-execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos {ns}.data
-
-# Clone the selected pixel art
-execute at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
-
-
-
-## Choose block
-# Get the number of blocks in the pixel art
-scoreboard players set #block_count {ns}.data 0
-execute at @s positioned ~ ~ ~65 run function {path}/core/get_block_count_loop
-
-# Choose a random block for the pixel art
-scoreboard players operation #modulo_rand {ns}.data = #block_count {ns}.data
-function {ns}:utils/get_random/main
-scoreboard players operation #bp_selected_block {ns}.data = #random {ns}.data
-
-# Teleport current marker to the selected block
-scoreboard players set #z_pos {ns}.data -9920
-scoreboard players operation #z_pos {ns}.data += #bp_selected_block {ns}.data
-execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos {ns}.data
-
-# Get the block at the current marker
-setblock 0 4 0 air
-setblock 0 4 0 yellow_shulker_box
-execute at @s run loot insert 0 4 0 mine ~ ~ ~ diamond_pickaxe
+## Choose the pixel art and its color (an art that cannot be played is skipped)
+scoreboard players set #bp_attempts {ns}.data 0
+execute unless function {path}/core/pick_block run return run function {path}/core/pick_abort
 
 
 
@@ -383,6 +331,83 @@ schedule function {path}/core/damage_cow 1s
 
 # Kill marker
 kill @s
+""")
+
+	# /core/pick_block (as the marker: returns 1 once a playable art and its color are chosen, fails after 6 arts that cannot be played)
+	palette_colors: str = "\n".join(
+		f'execute if data storage {ns}:main Item{{id:"{block}"}} run scoreboard players set #bp_block {ns}.data {index - 1}'
+		for index, block in enumerate(ALL))
+	write_function(f"{path}/core/pick_block", f"""
+scoreboard players add #bp_attempts {ns}.data 1
+scoreboard players set #bp_block {ns}.data -2
+scoreboard players set #bp_selected_art {ns}.data -1
+scoreboard players set #bp_selected_block {ns}.data -1
+scoreboard players set #block_count {ns}.data 0
+data remove storage {ns}:main Item
+
+## Choose a pixel art (if the list is empty, remade it)
+scoreboard players set #art_count {ns}.data 0
+execute store result score #art_count {ns}.data if data storage {ns}:maps block_party[]
+execute if score #art_count {ns}.data matches 0 run function {path}/core/remake_list/main
+execute unless data storage {ns}:maps block_party[0] run return run function {path}/core/pick_failed {{reason:"no pixel art found in the art list"}}
+execute store result score #bp_selected_art {ns}.data run data get storage {ns}:maps block_party[0]
+data remove storage {ns}:maps block_party[0]
+
+# Teleport current marker to the selected pixel art
+tp @s 4093 85 -9985
+scoreboard players set #y_pos {ns}.data 85
+scoreboard players operation #y_pos {ns}.data -= #bp_selected_art {ns}.data
+execute store result entity @s Pos[1] double 1 run scoreboard players get #y_pos {ns}.data
+
+# Everything read or written below must be loaded, else the commands fail silently and no color is given
+execute at @s unless loaded ~ ~ ~ run return run function {path}/core/pick_failed {{reason:"the pixel art is not loaded"}}
+execute at @s positioned ~ ~ ~65 unless loaded ~ ~ ~ run return run function {path}/core/pick_failed {{reason:"the palette is not loaded"}}
+execute unless loaded 4093 100 -9985 run return run function {path}/core/pick_failed {{reason:"the arena is not loaded"}}
+execute unless loaded 0 4 0 run return run function {path}/core/pick_failed {{reason:"the shulker box position 0 4 0 is not loaded"}}
+
+# Clone the selected pixel art
+execute store success score #bp_cloned {ns}.data at @s run clone ~ ~ ~ ~63 ~ ~63 ~ 100 ~ replace force
+execute if score #bp_cloned {ns}.data matches 0 run return run function {path}/core/pick_failed {{reason:"the pixel art could not be cloned"}}
+
+## Choose a block among the palette, which is the row of blocks next to the art, ended by air
+execute at @s positioned ~ ~ ~65 unless block ~ ~ ~ air run function {path}/core/get_block_count_loop
+execute if score #block_count {ns}.data matches 0 run return run function {path}/core/pick_failed {{reason:"the palette is empty"}}
+scoreboard players operation #modulo_rand {ns}.data = #block_count {ns}.data
+function {ns}:utils/get_random/main
+scoreboard players operation #bp_selected_block {ns}.data = #random {ns}.data
+
+# Teleport current marker to the selected block
+scoreboard players set #z_pos {ns}.data -9920
+scoreboard players operation #z_pos {ns}.data += #bp_selected_block {ns}.data
+execute store result entity @s Pos[2] double 1 run scoreboard players get #z_pos {ns}.data
+
+# Get the block at the current marker
+setblock 0 4 0 air
+setblock 0 4 0 yellow_shulker_box
+execute at @s run loot insert 0 4 0 mine ~ ~ ~ diamond_pickaxe
+execute unless data block 0 4 0 Items[0] run return run function {path}/core/pick_failed {{reason:"the palette block dropped nothing"}}
+
+# Which color it is (white terracotta is -1, then the 16 concretes from 0)
+data modify storage {ns}:main Item set from block 0 4 0 Items[0]
+{palette_colors}
+execute if score #bp_block {ns}.data matches -2 run return run function {path}/core/pick_failed {{reason:"the palette block is not one of the 17 colors"}}
+return 1
+""")
+
+	# /core/pick_failed (macro: reason, tells the debuggers what broke then tries another art)
+	write_function(f"{path}/core/pick_failed", f"""
+$tellraw @a[tag=convention.debug] ["",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Block Party: $(reason) (attempt ","color":"red"}},{{"score":{{"name":"#bp_attempts","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", art ","color":"red"}},{{"score":{{"name":"#bp_selected_art","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", palette size ","color":"red"}},{{"score":{{"name":"#block_count","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", block ","color":"red"}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", dropped ","color":"red"}},{{"nbt":"Item.id","storage":"{ns}:main","color":"aqua"}},{{"text":")","color":"red"}}]
+execute if score #bp_attempts {ns}.data matches 6.. run return fail
+return run function {path}/core/pick_block
+""")
+
+	# /core/pick_abort (no color could be given: tell everyone, then end the game)
+	write_function(f"{path}/core/pick_abort", f"""
+tellraw @a[tag=convention.debug] ["",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Block Party: no playable pixel art, the game is cancelled","color":"red"}}]
+tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\\n",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Impossible de choisir une couleur, la partie est annulée. Veuillez prévenir Stoupy."}}]
+tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\\n",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" No color could be chosen, the game is cancelled. Please tell Stoupy."}}]
+kill @s[type=marker]
+function {ns}:engine/restart
 """)
 
 	# /core/remove_blocks

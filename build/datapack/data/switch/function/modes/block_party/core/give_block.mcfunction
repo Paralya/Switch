@@ -4,25 +4,8 @@
 # @within	switch:modes/block_party/tick
 #
 
-## Switch case
-data modify storage switch:main Item set from block 0 4 0 Items[0]
-scoreboard players set #bp_block switch.data -1
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:white_concrete"} run scoreboard players set #bp_block switch.data 0
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:orange_concrete"} run scoreboard players set #bp_block switch.data 1
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:magenta_concrete"} run scoreboard players set #bp_block switch.data 2
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:light_blue_concrete"} run scoreboard players set #bp_block switch.data 3
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:yellow_concrete"} run scoreboard players set #bp_block switch.data 4
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:lime_concrete"} run scoreboard players set #bp_block switch.data 5
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:pink_concrete"} run scoreboard players set #bp_block switch.data 6
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:gray_concrete"} run scoreboard players set #bp_block switch.data 7
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:light_gray_concrete"} run scoreboard players set #bp_block switch.data 8
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:cyan_concrete"} run scoreboard players set #bp_block switch.data 9
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:purple_concrete"} run scoreboard players set #bp_block switch.data 10
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:blue_concrete"} run scoreboard players set #bp_block switch.data 11
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:brown_concrete"} run scoreboard players set #bp_block switch.data 12
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:green_concrete"} run scoreboard players set #bp_block switch.data 13
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:red_concrete"} run scoreboard players set #bp_block switch.data 14
-execute if score #bp_block switch.data matches -1 if data storage switch:main Item{id:"minecraft:black_concrete"} run scoreboard players set #bp_block switch.data 15
+# The item and its color were resolved and checked by pick_block
+execute unless data block 0 4 0 Items[0] run return run function switch:modes/block_party/core/pick_abort
 
 # Give item with name
 execute if score #bp_block switch.data matches -1 run data modify block 0 4 0 Items[0].components."minecraft:item_name" set value {"text":"Beige","italic":false,"color":"#00E5FF"}
