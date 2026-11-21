@@ -405,6 +405,8 @@ execute if score #traitors_game_seconds {ns}.data matches 0.. run function {ns}:
 execute if score #traitors_game_seconds {ns}.data matches 0 run function {ns}:modes/traitors_game/roles/announcement
 execute if score #traitors_game_seconds {ns}.data matches 5 if score #has_scenarios {ns}.data matches 1 run function {ns}:modes/traitors_game/announce_scenarios
 
+execute if score #traitors_game_seconds {ns}.data matches 30 in {ns}:game run gamerule minecraft:fall_damage true
+
 # Lootboxes summon
 execute if score #traitors_game_seconds {ns}.data matches 30 run function {ns}:modes/traitors_game/summon_lootboxes
 execute if score #traitors_game_seconds {ns}.data matches 90 run function {ns}:modes/traitors_game/summon_lootboxes
@@ -438,6 +440,8 @@ function {ns}:maps/choose_map_for {{id:"traitors_game", maps:["traitor_original"
 
 function {ns}:modes/_common/standard_combat_rules
 
+execute in {ns}:game run gamerule minecraft:fall_damage false
+execute in {ns}:game run gamerule minecraft:locator_bar false
 function {ns}:modes/traitors_game/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 

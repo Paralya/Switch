@@ -11,6 +11,8 @@ execute if score #traitors_game_seconds switch.data matches 0.. run function swi
 execute if score #traitors_game_seconds switch.data matches 0 run function switch:modes/traitors_game/roles/announcement
 execute if score #traitors_game_seconds switch.data matches 5 if score #has_scenarios switch.data matches 1 run function switch:modes/traitors_game/announce_scenarios
 
+execute if score #traitors_game_seconds switch.data matches 30 in switch:game run gamerule minecraft:fall_damage true
+
 # Lootboxes summon
 execute if score #traitors_game_seconds switch.data matches 30 run function switch:modes/traitors_game/summon_lootboxes
 execute if score #traitors_game_seconds switch.data matches 90 run function switch:modes/traitors_game/summon_lootboxes

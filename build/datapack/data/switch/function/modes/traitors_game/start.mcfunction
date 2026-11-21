@@ -19,6 +19,8 @@ function switch:maps/choose_map_for {id:"traitors_game", maps:["traitor_original
 
 function switch:modes/_common/standard_combat_rules
 
+execute in switch:game run gamerule minecraft:fall_damage false
+execute in switch:game run gamerule minecraft:locator_bar false
 function switch:modes/traitors_game/translations/start
 execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @s
 
