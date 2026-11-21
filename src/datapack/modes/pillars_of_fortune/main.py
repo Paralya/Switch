@@ -36,55 +36,71 @@ function {path}/place_one with storage {ns}:temp input
 $execute rotated ~$(angle_difference) 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {path}/place_player with storage {ns}:temp input
 """)
 
-	# /place_rings (concentric circles: one player at the center, then rings of about the same spacing between neighbours, so everyone stays close to the center)
+	# /place_rings (concentric circles around the center, denser toward the edge so the outer players are not the loneliest)
 	write_function(f"{path}/place_rings", f"""
-data modify storage {ns}:temp input set value {{angle_difference:0.0f,distance_to_center:0.0f,start_angle:0.0f}}
-function {path}/place_one with storage {ns}:temp input
-
-# Fewest rings that hold the other players: ring k is 2 pi k long, and 7.85 instead of 6.283 leaves room to space the rings a bit less than the players
-scoreboard players operation #others {ns}.data = #count {ns}.data
-scoreboard players remove #others {ns}.data 1
+# Fewest rings that hold everyone: ring k is 2 pi k long, and 7.85 instead of 6.283 leaves room to space the rings a bit less than the players
 scoreboard players set #rings {ns}.data 0
 scoreboard players set #triangle {ns}.data 0
+scoreboard players set #squares {ns}.data 0
 function {path}/place_rings_count
 
-# Gap between two rings (millis of blocks) that gives 8.8 blocks between neighbours of the same ring
-scoreboard players set #gap {ns}.data 8800000
-scoreboard players operation #gap {ns}.data *= #others {ns}.data
-scoreboard players operation #divisor {ns}.data = #triangle {ns}.data
-scoreboard players set #factor {ns}.data 6283
-scoreboard players operation #divisor {ns}.data *= #factor {ns}.data
-scoreboard players operation #gap {ns}.data /= #divisor {ns}.data
+# Ring k weighs k x (2K + k): the density grows from 1 on the first ring to 1.5 on the last one, #weighted being the sum of the weights
+scoreboard players operation #weighted {ns}.data = #triangle {ns}.data
+scoreboard players operation #weighted {ns}.data *= #rings {ns}.data
+scoreboard players set #factor {ns}.data 2
+scoreboard players operation #weighted {ns}.data *= #factor {ns}.data
+scoreboard players operation #weighted {ns}.data += #squares {ns}.data
+
+# Gap between two rings (millis of blocks) that gives 8.8 blocks between neighbours of the middle ring
+scoreboard players operation #gap {ns}.data = #count {ns}.data
+scoreboard players set #factor {ns}.data 5
+scoreboard players operation #gap {ns}.data *= #factor {ns}.data
+scoreboard players operation #gap {ns}.data *= #rings {ns}.data
+scoreboard players set #factor {ns}.data 8800
+scoreboard players operation #gap {ns}.data *= #factor {ns}.data
+scoreboard players operation #gap {ns}.data /= #weighted {ns}.data
+scoreboard players set #factor {ns}.data 1000
+scoreboard players operation #gap {ns}.data *= #factor {ns}.data
+scoreboard players set #factor {ns}.data 12566
+scoreboard players operation #gap {ns}.data /= #factor {ns}.data
 
 scoreboard players set #ring {ns}.data 0
 scoreboard players set #inner {ns}.data 0
 function {path}/place_rings_loop
 """)
 
-	# /place_rings_count (#triangle ends as 1 + 2 + ... + #rings)
+	# /place_rings_count (#triangle ends as 1 + 2 + ... + #rings and #squares as 1 + 4 + ... + #rings squared)
 	write_function(f"{path}/place_rings_count", f"""
 scoreboard players add #rings {ns}.data 1
 scoreboard players operation #triangle {ns}.data += #rings {ns}.data
+scoreboard players operation #square {ns}.data = #rings {ns}.data
+scoreboard players operation #square {ns}.data *= #rings {ns}.data
+scoreboard players operation #squares {ns}.data += #square {ns}.data
 scoreboard players operation #capacity {ns}.data = #triangle {ns}.data
 scoreboard players set #factor {ns}.data 785
 scoreboard players operation #capacity {ns}.data *= #factor {ns}.data
-scoreboard players operation #needed {ns}.data = #others {ns}.data
+scoreboard players operation #needed {ns}.data = #count {ns}.data
 scoreboard players set #factor {ns}.data 100
 scoreboard players operation #needed {ns}.data *= #factor {ns}.data
 execute if score #capacity {ns}.data < #needed {ns}.data run function {path}/place_rings_count
 """)
 
-	# /place_rings_loop (ring k gets the players between the cumulative shares of rings k-1 and k, so the shares add up to everyone)
+	# /place_rings_loop (ring k gets the players between the cumulative weights of rings k-1 and k, so the shares add up to everyone)
 	write_function(f"{path}/place_rings_loop", f"""
 scoreboard players add #ring {ns}.data 1
+scoreboard players operation #weight {ns}.data = #rings {ns}.data
+scoreboard players set #factor {ns}.data 2
+scoreboard players operation #weight {ns}.data *= #factor {ns}.data
+scoreboard players operation #weight {ns}.data += #ring {ns}.data
+scoreboard players operation #weight {ns}.data *= #ring {ns}.data
 scoreboard players operation #outer {ns}.data = #inner {ns}.data
-scoreboard players operation #outer {ns}.data += #ring {ns}.data
-scoreboard players operation #ring_left {ns}.data = #others {ns}.data
+scoreboard players operation #outer {ns}.data += #weight {ns}.data
+scoreboard players operation #ring_left {ns}.data = #count {ns}.data
 scoreboard players operation #ring_left {ns}.data *= #outer {ns}.data
-scoreboard players operation #ring_left {ns}.data /= #triangle {ns}.data
-scoreboard players operation #temp {ns}.data = #others {ns}.data
+scoreboard players operation #ring_left {ns}.data /= #weighted {ns}.data
+scoreboard players operation #temp {ns}.data = #count {ns}.data
 scoreboard players operation #temp {ns}.data *= #inner {ns}.data
-scoreboard players operation #temp {ns}.data /= #triangle {ns}.data
+scoreboard players operation #temp {ns}.data /= #weighted {ns}.data
 scoreboard players operation #ring_left {ns}.data -= #temp {ns}.data
 scoreboard players operation #inner {ns}.data = #outer {ns}.data
 
@@ -94,13 +110,13 @@ scoreboard players operation #distance {ns}.data = #gap {ns}.data
 scoreboard players operation #distance {ns}.data *= #ring {ns}.data
 
 # Odd rings start on the axis, even rings half a step further so that neighbouring rings interleave
-scoreboard players set #factor {ns}.data 2
 scoreboard players operation #start {ns}.data = #step {ns}.data
 scoreboard players operation #start {ns}.data /= #factor {ns}.data
 scoreboard players operation #parity {ns}.data = #ring {ns}.data
 scoreboard players operation #parity {ns}.data %= #factor {ns}.data
 execute if score #parity {ns}.data matches 1 run scoreboard players set #start {ns}.data 0
 
+data modify storage {ns}:temp input set value {{angle_difference:0.0f,distance_to_center:0.0f,start_angle:0.0f}}
 execute store result storage {ns}:temp input.angle_difference float 0.001 run scoreboard players get #step {ns}.data
 execute store result storage {ns}:temp input.distance_to_center float 0.001 run scoreboard players get #distance {ns}.data
 execute store result storage {ns}:temp input.start_angle float 0.001 run scoreboard players get #start {ns}.data
