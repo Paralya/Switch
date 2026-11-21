@@ -78,7 +78,7 @@ execute if score #rg_snow_hills switch.data matches 916.. in switch:game run for
 execute if score #rg_snow_hills switch.data matches 916.. in minecraft:overworld run forceload remove -7777 -4000 -7761 -3815
 execute if score #rg_snow_hills switch.data matches 916.. in switch:game run forceload remove -7777 -4000 -7761 -3815
 
-execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Hills","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_hills switch.data matches 916.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Snow Hills","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"45","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_snow_hills switch.data matches 916.. run function switch:engine/log_message/apply {message:"Map `Snow Hills` just regenerated!"}
 
 execute if score #rg_snow_hills switch.data matches 916.. run scoreboard players reset #rg_snow_hills switch.data

@@ -24,7 +24,7 @@ scoreboard players set #coupdetat switch.data 0
 scoreboard objectives remove switch.trigger.coupdetat_vote
 
 # Create the bossbar
-bossbar add switch:coupdetat {"text":"Coup d'état","color":"green"}
+bossbar add switch:coupdetat {"text":"Coup d'état","color":"#2EFF8B"}
 bossbar set switch:coupdetat players @a[tag=!detached]
 bossbar set switch:coupdetat max 100
 bossbar set switch:coupdetat value 100

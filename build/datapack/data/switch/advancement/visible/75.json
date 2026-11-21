@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:blue_stained_glass"},
-		"title": {"text": "Tout ça pour ça...","color": "yellow"},
-		"description": {"text": "Survive 42 seconds and then die by falling into the water in Bombardment","color": "aqua"},
+		"title": {"text": "Tout ça pour ça...","color": "#FFE60A"},
+		"description": {"text": "Survive 42 seconds and then die by falling into the water in Bombardment","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -48,7 +48,7 @@ function switch:modes/murder_mystery/percentage/select_roles
 
 # Hide nametags
 team add switch.temp.murder_mystery {"text":"[Murder Mystery]"}
-#team modify switch.temp.murder_mystery prefix {"text":"[Murder Mystery] ","color":"aqua"}
+#team modify switch.temp.murder_mystery prefix {"text":"[Murder Mystery] ","color":"#00E5FF"}
 team modify switch.temp.murder_mystery nametagVisibility never
 team join switch.temp.murder_mystery @a[tag=!detached]
 

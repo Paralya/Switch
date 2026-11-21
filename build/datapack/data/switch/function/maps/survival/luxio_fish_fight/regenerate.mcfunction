@@ -26,7 +26,7 @@ execute if score #rg_luxio_fish_fight switch.data matches 75.. in switch:game ru
 execute if score #rg_luxio_fish_fight switch.data matches 75.. in minecraft:overworld run forceload remove -9972 -12000 -9944 -11945
 execute if score #rg_luxio_fish_fight switch.data matches 75.. in switch:game run forceload remove -9972 -12000 -9944 -11945
 
-execute if score #rg_luxio_fish_fight switch.data matches 75.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fish Fight Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_luxio_fish_fight switch.data matches 75.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Fish Fight Island","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"3","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_luxio_fish_fight switch.data matches 75.. run function switch:engine/log_message/apply {message:"Map `Fish Fight Island` just regenerated!"}
 
 execute if score #rg_luxio_fish_fight switch.data matches 75.. run scoreboard players reset #rg_luxio_fish_fight switch.data

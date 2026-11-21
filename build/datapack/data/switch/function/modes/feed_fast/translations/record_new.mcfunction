@@ -8,8 +8,8 @@
 #
 
 # French
-$tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Nouveau record de $(points) points par $(player) !","color":"yellow"}]
+$tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Nouveau record de $(points) points par $(player) !","color":"#FFE60A"}]
 
 # English
-$tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" New record of $(points) points by $(player)!","color":"yellow"}]
+$tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" New record of $(points) points by $(player)!","color":"#FFE60A"}]
 

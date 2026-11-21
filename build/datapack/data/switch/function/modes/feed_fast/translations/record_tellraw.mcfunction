@@ -10,8 +10,8 @@
 #
 
 # French
-$tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Record actuel de $(points) points détenu par $(player)","color":"yellow"}]
+$tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Record actuel de $(points) points détenu par $(player)","color":"#FFE60A"}]
 
 # English
-$tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Current record of $(points) points held by $(player)","color":"yellow"}]
+$tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Current record of $(points) points held by $(player)","color":"#FFE60A"}]
 

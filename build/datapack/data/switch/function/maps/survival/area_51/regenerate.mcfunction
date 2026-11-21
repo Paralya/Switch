@@ -42,7 +42,7 @@ execute if score #rg_area_51 switch.data matches 565.. in switch:game run forcel
 execute if score #rg_area_51 switch.data matches 565.. in minecraft:overworld run forceload remove 90 2000 108 2126
 execute if score #rg_area_51 switch.data matches 565.. in switch:game run forceload remove 90 2000 108 2126
 
-execute if score #rg_area_51 switch.data matches 565.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Area 51","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"28","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_area_51 switch.data matches 565.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Area 51","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"28","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_area_51 switch.data matches 565.. run function switch:engine/log_message/apply {message:"Map `Area 51` just regenerated!"}
 
 execute if score #rg_area_51 switch.data matches 565.. run scoreboard players reset #rg_area_51 switch.data

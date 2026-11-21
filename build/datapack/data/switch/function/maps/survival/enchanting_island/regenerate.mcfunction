@@ -30,7 +30,7 @@ execute if score #rg_enchanting_island switch.data matches 151.. in switch:game 
 execute if score #rg_enchanting_island switch.data matches 151.. in minecraft:overworld run forceload remove 4040 -4000 4060 -3940
 execute if score #rg_enchanting_island switch.data matches 151.. in switch:game run forceload remove 4040 -4000 4060 -3940
 
-execute if score #rg_enchanting_island switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Enchanting Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_enchanting_island switch.data matches 151.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Enchanting Island","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"7","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_enchanting_island switch.data matches 151.. run function switch:engine/log_message/apply {message:"Map `Enchanting Island` just regenerated!"}
 
 execute if score #rg_enchanting_island switch.data matches 151.. run scoreboard players reset #rg_enchanting_island switch.data

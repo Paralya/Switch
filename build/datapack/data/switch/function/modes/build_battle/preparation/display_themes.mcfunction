@@ -10,11 +10,11 @@
 ## Place the papers in a shulker box with their name
 setblock 0 5 0 air
 setblock 0 5 0 yellow_shulker_box
-item replace block 0 5 0 container.0 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
-item replace block 0 5 0 container.1 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
-item replace block 0 5 0 container.2 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
-item replace block 0 5 0 container.3 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
-item replace block 0 5 0 container.4 with paper[item_name={"text":"","color":"yellow","italic":false},lore=[""]]
+item replace block 0 5 0 container.0 with paper[item_name={"text":"","color":"#FFE60A","italic":false},lore=[""]]
+item replace block 0 5 0 container.1 with paper[item_name={"text":"","color":"#FFE60A","italic":false},lore=[""]]
+item replace block 0 5 0 container.2 with paper[item_name={"text":"","color":"#FFE60A","italic":false},lore=[""]]
+item replace block 0 5 0 container.3 with paper[item_name={"text":"","color":"#FFE60A","italic":false},lore=[""]]
+item replace block 0 5 0 container.4 with paper[item_name={"text":"","color":"#FFE60A","italic":false},lore=[""]]
 
 # French
 execute if score @s switch.lang matches 0 run data modify block 0 5 0 Items[0].components."minecraft:item_name".text set from storage switch:main themes.theme1.fr

@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:bricks"},
-		"title": {"text": "D&Cube","color": "yellow"},
-		"description": {"text": "Score at least 50 points in Build Battle","color": "aqua"},
+		"title": {"text": "D&Cube","color": "#FFE60A"},
+		"description": {"text": "Score at least 50 points in Build Battle","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -102,7 +102,7 @@ execute if score #rg_sakura_land switch.data matches 1009.. in switch:game run f
 execute if score #rg_sakura_land switch.data matches 1009.. in minecraft:overworld run forceload remove 6619 -5397 6631 -5148
 execute if score #rg_sakura_land switch.data matches 1009.. in switch:game run forceload remove 6619 -5397 6631 -5148
 
-execute if score #rg_sakura_land switch.data matches 1009.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sakura Land","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"50","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sakura_land switch.data matches 1009.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Sakura Land","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"50","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_sakura_land switch.data matches 1009.. run function switch:engine/log_message/apply {message:"Map `Sakura Land` just regenerated!"}
 
 execute if score #rg_sakura_land switch.data matches 1009.. run scoreboard players reset #rg_sakura_land switch.data

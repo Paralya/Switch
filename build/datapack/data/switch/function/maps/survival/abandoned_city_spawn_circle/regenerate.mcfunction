@@ -34,7 +34,7 @@ execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. in sw
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. in minecraft:overworld run forceload remove -5938 4000 -5918 4082
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. in switch:game run forceload remove -5938 4000 -5918 4082
 
-execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Abandoned City Spawn Circle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Abandoned City Spawn Circle","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"6","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run function switch:engine/log_message/apply {message:"Map `Abandoned City Spawn Circle` just regenerated!"}
 
 execute if score #rg_abandoned_city_spawn_circle switch.data matches 133.. run scoreboard players reset #rg_abandoned_city_spawn_circle switch.data

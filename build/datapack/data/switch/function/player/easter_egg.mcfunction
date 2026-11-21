@@ -29,25 +29,25 @@
 $tag @s add $(tag).temp
 
 # Si la personne a déjà cliqué sur un easter egg, on lui affiche un message
-execute if entity @s[tag=switch.easter_egg.cc_001001.temp,tag=switch.easter_egg.cc_001001] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.pi.temp,tag=switch.easter_egg.pi] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.ping.temp,tag=switch.easter_egg.ping] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.pong.temp,tag=switch.easter_egg.pong] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.42.temp,tag=switch.easter_egg.42] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.ayjaraQ.temp,tag=switch.easter_egg.ayjaraQ] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.luxium.temp,tag=switch.easter_egg.luxium] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
-execute if entity @s[tag=switch.easter_egg.friends_cube.temp,tag=switch.easter_egg.friends_cube] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"red"}]
+execute if entity @s[tag=switch.easter_egg.cc_001001.temp,tag=switch.easter_egg.cc_001001] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.pi.temp,tag=switch.easter_egg.pi] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.ping.temp,tag=switch.easter_egg.ping] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.pong.temp,tag=switch.easter_egg.pong] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.42.temp,tag=switch.easter_egg.42] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.ayjaraQ.temp,tag=switch.easter_egg.ayjaraQ] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.luxium.temp,tag=switch.easter_egg.luxium] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
+execute if entity @s[tag=switch.easter_egg.friends_cube.temp,tag=switch.easter_egg.friends_cube] run tellraw @s ["",{"text":"Tu as déjà trouvé cet easter egg !","color":"#FF3347"}]
 
 
 # Si la personne clique sur un easter egg, on lui affiche un message
-execute if entity @s[tag=switch.easter_egg.cc_001001.temp] run tellraw @s ["",{"text":"Coucou, tu veux voir ma 01001100 ?","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.pi.temp] run tellraw @s ["",{"text":"3.141592653589793238462643383279...","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.ping.temp] run tellraw @s ["",{"text":"Ping","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.pong.temp] run tellraw @s ["",{"text":"Pong","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.42.temp] run tellraw @s ["",{"text":"42","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.ayjaraQ.temp] run tellraw @s ["",{"text":"ayjaraQ","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.luxium.temp] run tellraw @s ["",{"text":"Luxium","color":"gold"}]
-execute if entity @s[tag=switch.easter_egg.friends_cube.temp] run tellraw @s ["",{"text":"Friends Cube","color":"gold"}]
+execute if entity @s[tag=switch.easter_egg.cc_001001.temp] run tellraw @s ["",{"text":"Coucou, tu veux voir ma 01001100 ?","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.pi.temp] run tellraw @s ["",{"text":"3.141592653589793238462643383279...","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.ping.temp] run tellraw @s ["",{"text":"Ping","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.pong.temp] run tellraw @s ["",{"text":"Pong","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.42.temp] run tellraw @s ["",{"text":"42","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.ayjaraQ.temp] run tellraw @s ["",{"text":"ayjaraQ","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.luxium.temp] run tellraw @s ["",{"text":"Luxium","color":"#FFA600"}]
+execute if entity @s[tag=switch.easter_egg.friends_cube.temp] run tellraw @s ["",{"text":"Friends Cube","color":"#FFA600"}]
 
 
 # Si la personne clique pour la première fois sur un easter egg, on lui ajoute un point
@@ -61,8 +61,8 @@ execute unless entity @s[tag=switch.easter_egg.luxium] if entity @s[tag=switch.e
 execute unless entity @s[tag=switch.easter_egg.friends_cube] if entity @s[tag=switch.easter_egg.friends_cube.temp] run scoreboard players add @s switch.lobby_easter_egg_counter 1
 
 
-tellraw @s[scores={switch.lobby_easter_egg_counter=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu as trouvé un easter egg sur 8 !","color":"green"}]
-tellraw @s[scores={switch.lobby_easter_egg_counter=2..}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu as trouvé ","color":"green"},{"score":{"name":"@s","objective":"switch.lobby_easter_egg_counter"},"color":"gold"},{"text":" easter eggs sur 8 !","color":"green"}]
+tellraw @s[scores={switch.lobby_easter_egg_counter=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu as trouvé un easter egg sur 8 !","color":"#2EFF8B"}]
+tellraw @s[scores={switch.lobby_easter_egg_counter=2..}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Tu as trouvé ","color":"#2EFF8B"},{"score":{"name":"@s","objective":"switch.lobby_easter_egg_counter"},"color":"#FFA600"},{"text":" easter eggs sur 8 !","color":"#2EFF8B"}]
 
 # Grant advancement if all easter eggs are found
 execute if score @s switch.lobby_easter_egg_counter matches 8 run advancement grant @s only switch:visible/83

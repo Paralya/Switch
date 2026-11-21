@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:coal_block"},
-		"title": {"text": "Oppenheimer","color": "yellow"},
-		"description": {"text": "Survive for more than one minute in Bombardment","color": "aqua"},
+		"title": {"text": "Oppenheimer","color": "#FFE60A"},
+		"description": {"text": "Survive for more than one minute in Bombardment","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

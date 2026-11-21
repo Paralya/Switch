@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:emerald"},
-		"title": {"text": "Héro","color": "yellow"},
-		"description": {"text": "Kill the murderer as an innocent in Murder Mystery","color": "aqua"},
+		"title": {"text": "Héro","color": "#FFE60A"},
+		"description": {"text": "Kill the murderer as an innocent in Murder Mystery","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

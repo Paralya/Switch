@@ -38,7 +38,7 @@ execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:ga
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. in minecraft:overworld run forceload remove 4082 10000 4102 10102
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. in switch:game run forceload remove 4082 10000 4102 10102
 
-execute if score #rg_old_japan_apocalypse switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Old Japan Apocalypse","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_old_japan_apocalypse switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Old Japan Apocalypse","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"13","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. run function switch:engine/log_message/apply {message:"Map `Old Japan Apocalypse` just regenerated!"}
 
 execute if score #rg_old_japan_apocalypse switch.data matches 266.. run scoreboard players reset #rg_old_japan_apocalypse switch.data

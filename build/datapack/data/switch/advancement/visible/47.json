@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:packed_ice"},
-		"title": {"text": "Il a rien compris lui","color": "yellow"},
-		"description": {"text": "Run 500 blocks in one game of Pitchout","color": "aqua"},
+		"title": {"text": "Il a rien compris lui","color": "#FFE60A"},
+		"description": {"text": "Run 500 blocks in one game of Pitchout","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

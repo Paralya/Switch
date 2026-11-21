@@ -26,7 +26,7 @@ execute if score #rg_elza_dual_biomes switch.data matches 153.. in switch:game r
 execute if score #rg_elza_dual_biomes switch.data matches 153.. in minecraft:overworld run forceload remove -1979 -12000 -1958 -11958
 execute if score #rg_elza_dual_biomes switch.data matches 153.. in switch:game run forceload remove -1979 -12000 -1958 -11958
 
-execute if score #rg_elza_dual_biomes switch.data matches 153.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dual Biomes","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_elza_dual_biomes switch.data matches 153.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Dual Biomes","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"7","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_elza_dual_biomes switch.data matches 153.. run function switch:engine/log_message/apply {message:"Map `Dual Biomes` just regenerated!"}
 
 execute if score #rg_elza_dual_biomes switch.data matches 153.. run scoreboard players reset #rg_elza_dual_biomes switch.data

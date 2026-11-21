@@ -345,7 +345,7 @@ execute if score #rg_glassrunner switch.data matches 386.. in switch:game run fo
 execute if score #rg_glassrunner switch.data matches 386.. in minecraft:overworld run forceload remove -3506 -2000 -3500 -1500
 execute if score #rg_glassrunner switch.data matches 386.. in switch:game run forceload remove -3506 -2000 -3500 -1500
 
-execute if score #rg_glassrunner switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Glassrunner","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_glassrunner switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Glassrunner","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"19","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_glassrunner switch.data matches 386.. run function switch:engine/log_message/apply {message:"Map `Glassrunner` just regenerated!"}
 
 execute if score #rg_glassrunner switch.data matches 386.. run scoreboard players reset #rg_glassrunner switch.data

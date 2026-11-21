@@ -26,7 +26,7 @@ scoreboard players set #thunder_spear_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 151
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.reload dummy
-scoreboard objectives add switch.temp.kills playerKillCount {"text":"Killed players","color":"red"}
+scoreboard objectives add switch.temp.kills playerKillCount {"text":"Killed players","color":"#FF3347"}
 scoreboard objectives setdisplay sidebar switch.temp.kills
 scoreboard objectives setdisplay list switch.health
 scoreboard players set @a[tag=!detached] switch.temp.kills 0

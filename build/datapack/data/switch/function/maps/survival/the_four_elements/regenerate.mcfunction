@@ -38,7 +38,7 @@ execute if score #rg_the_four_elements switch.data matches 171.. in switch:game 
 execute if score #rg_the_four_elements switch.data matches 171.. in minecraft:overworld run forceload remove 10081 -8000 10101 -7899
 execute if score #rg_the_four_elements switch.data matches 171.. in switch:game run forceload remove 10081 -8000 10101 -7899
 
-execute if score #rg_the_four_elements switch.data matches 171.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"The Four Elements","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_the_four_elements switch.data matches 171.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"The Four Elements","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"8","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_the_four_elements switch.data matches 171.. run function switch:engine/log_message/apply {message:"Map `The Four Elements` just regenerated!"}
 
 execute if score #rg_the_four_elements switch.data matches 171.. run scoreboard players reset #rg_the_four_elements switch.data

@@ -46,7 +46,7 @@ execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in minecraft:overworld run forceload remove -3872 10000 -3851 10123
 execute if score #rg_jn_murder_mystery switch.data matches 442.. in switch:game run forceload remove -3872 10000 -3851 10123
 
-execute if score #rg_jn_murder_mystery switch.data matches 442.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Murder Mystery","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_murder_mystery switch.data matches 442.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Murder Mystery","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"22","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run function switch:engine/log_message/apply {message:"Map `Murder Mystery` just regenerated!"}
 
 execute if score #rg_jn_murder_mystery switch.data matches 442.. run scoreboard players reset #rg_jn_murder_mystery switch.data

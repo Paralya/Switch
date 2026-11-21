@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:red_wool"},
-		"title": {"text": "Automutilation","color": "yellow"},
-		"description": {"text": "Kill yourself with a sheep in SheepWars","color": "aqua"},
+		"title": {"text": "Automutilation","color": "#FFE60A"},
+		"description": {"text": "Kill yourself with a sheep in SheepWars","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -522,7 +522,7 @@ execute if score #rg_smithed_summit_2024 switch.data matches 27595.. in switch:g
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. in minecraft:overworld run forceload remove 6599 8000 6604 8662
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. in switch:game run forceload remove 6599 8000 6604 8662
 
-execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Smithed Summit 2024","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"m","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Smithed Summit 2024","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"22","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"59","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run function switch:engine/log_message/apply {message:"Map `Smithed Summit 2024` just regenerated!"}
 
 execute if score #rg_smithed_summit_2024 switch.data matches 27595.. run scoreboard players reset #rg_smithed_summit_2024 switch.data

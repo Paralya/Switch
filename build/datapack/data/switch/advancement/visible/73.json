@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:shield"},
-		"title": {"text": "Parade Parfaite","color": "yellow"},
-		"description": {"text": "Parry an arrow by throwing your knife in Murder Mystery","color": "aqua"},
+		"title": {"text": "Parade Parfaite","color": "#FFE60A"},
+		"description": {"text": "Parry an arrow by throwing your knife in Murder Mystery","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

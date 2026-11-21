@@ -114,7 +114,7 @@ execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run fo
 execute if score #rg_ctf_nether switch.data matches 2641.. in minecraft:overworld run forceload remove -11806 -10000 -11798 -9650
 execute if score #rg_ctf_nether switch.data matches 2641.. in switch:game run forceload remove -11806 -10000 -11798 -9650
 
-execute if score #rg_ctf_nether switch.data matches 2641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fiery Wastes","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ctf_nether switch.data matches 2641.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Fiery Wastes","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"2","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"12","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_ctf_nether switch.data matches 2641.. run function switch:engine/log_message/apply {message:"Map `Fiery Wastes` just regenerated!"}
 
 execute if score #rg_ctf_nether switch.data matches 2641.. run scoreboard players reset #rg_ctf_nether switch.data

@@ -5,5 +5,5 @@
 #			switch:player/trigger/music/main
 #
 
-tellraw @s {"text":"Work in progress","color":"red"}
+tellraw @s {"text":"Work in progress","color":"#FF3347"}
 

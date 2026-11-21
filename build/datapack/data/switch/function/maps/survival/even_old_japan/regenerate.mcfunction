@@ -38,7 +38,7 @@ execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run
 execute if score #rg_even_old_japan switch.data matches 266.. in minecraft:overworld run forceload remove 12080 -12000 12100 -11900
 execute if score #rg_even_old_japan switch.data matches 266.. in switch:game run forceload remove 12080 -12000 12100 -11900
 
-execute if score #rg_even_old_japan switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Old Japan","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_even_old_japan switch.data matches 266.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Old Japan","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"13","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_even_old_japan switch.data matches 266.. run function switch:engine/log_message/apply {message:"Map `Old Japan` just regenerated!"}
 
 execute if score #rg_even_old_japan switch.data matches 266.. run scoreboard players reset #rg_even_old_japan switch.data

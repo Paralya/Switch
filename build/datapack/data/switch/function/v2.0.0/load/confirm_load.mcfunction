@@ -5,7 +5,7 @@
 #
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"text":"[Loaded Switch v2.0.0]","color":"green"}
+tellraw @a[tag=convention.debug] {"text":"[Loaded Switch v2.0.0]","color":"#2EFF8B"}
 scoreboard players set #switch.loaded load.status 1
 function switch:v2.0.0/load/set_items_storage
 

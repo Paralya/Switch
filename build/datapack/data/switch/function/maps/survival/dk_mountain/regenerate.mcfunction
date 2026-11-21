@@ -82,7 +82,7 @@ execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run f
 execute if score #rg_dk_mountain switch.data matches 2289.. in minecraft:overworld run forceload remove 6573 -4891 6597 -4773
 execute if score #rg_dk_mountain switch.data matches 2289.. in switch:game run forceload remove 6573 -4891 6597 -4773
 
-execute if score #rg_dk_mountain switch.data matches 2289.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"DK Mountain","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"54","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_dk_mountain switch.data matches 2289.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"DK Mountain","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"54","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_dk_mountain switch.data matches 2289.. run function switch:engine/log_message/apply {message:"Map `DK Mountain` just regenerated!"}
 
 execute if score #rg_dk_mountain switch.data matches 2289.. run scoreboard players reset #rg_dk_mountain switch.data

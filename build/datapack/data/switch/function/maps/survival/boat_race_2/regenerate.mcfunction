@@ -38,7 +38,7 @@ execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run fo
 execute if score #rg_boat_race_2 switch.data matches 406.. in minecraft:overworld run forceload remove -7921 -6000 -7901 -5877
 execute if score #rg_boat_race_2 switch.data matches 406.. in switch:game run forceload remove -7921 -6000 -7901 -5877
 
-execute if score #rg_boat_race_2 switch.data matches 406.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Boat Race 2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_boat_race_2 switch.data matches 406.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Boat Race 2","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"20","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_boat_race_2 switch.data matches 406.. run function switch:engine/log_message/apply {message:"Map `Boat Race 2` just regenerated!"}
 
 execute if score #rg_boat_race_2 switch.data matches 406.. run scoreboard players reset #rg_boat_race_2 switch.data

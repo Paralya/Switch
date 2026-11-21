@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:rotten_flesh"},
-		"title": {"text": "Vive la chair","color": "yellow"},
-		"description": {"text": "Infect 5 survivors in one game of Infected","color": "aqua"},
+		"title": {"text": "Vive la chair","color": "#FFE60A"},
+		"description": {"text": "Infect 5 survivors in one game of Infected","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

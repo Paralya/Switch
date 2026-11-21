@@ -38,8 +38,8 @@ scoreboard players operation #remaining_time switch.data += #count switch.data
 execute if score #remaining_time switch.data matches 600.. run scoreboard players set #remaining_time switch.data 600
 
 # Choix des rôles + give d'items
-team add switch.temp.human {"text":"[Human]","color":"light_purple"}
-team add switch.temp.zombie {"text":"[Zombie]","color":"dark_green"}
+team add switch.temp.human {"text":"[Human]","color":"#FF8FD8"}
+team add switch.temp.zombie {"text":"[Zombie]","color":"#1FA83C"}
 team modify switch.temp.human color light_purple
 team modify switch.temp.zombie color dark_green
 team modify switch.temp.human friendlyFire false

@@ -20,14 +20,14 @@ scoreboard players set #gay_shooter_seconds switch.data -1
 scoreboard players set #gay_shooter_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
 
-scoreboard objectives add switch.temp.shot_player dummy {"text":"Arrows hit","color":"yellow"}
+scoreboard objectives add switch.temp.shot_player dummy {"text":"Arrows hit","color":"#FFE60A"}
 scoreboard objectives add switch.temp.shots_taken dummy
 scoreboard objectives setdisplay sidebar switch.temp.shot_player
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items
-team add switch.temp.gays {"text":"[Guys]","color":"light_purple"}
-team add switch.temp.shooters {"text":"[Shooters]","color":"gray"}
+team add switch.temp.gays {"text":"[Guys]","color":"#FF8FD8"}
+team add switch.temp.shooters {"text":"[Shooters]","color":"#AEBBD0"}
 team modify switch.temp.gays color light_purple
 team modify switch.temp.shooters color gray
 team modify switch.temp.gays friendlyFire false

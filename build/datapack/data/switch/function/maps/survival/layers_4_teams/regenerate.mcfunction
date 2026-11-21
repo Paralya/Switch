@@ -26,7 +26,7 @@ execute if score #rg_layers_4_teams switch.data matches 125.. in switch:game run
 execute if score #rg_layers_4_teams switch.data matches 125.. in minecraft:overworld run forceload remove -5982 8000 -5964 8062
 execute if score #rg_layers_4_teams switch.data matches 125.. in switch:game run forceload remove -5982 8000 -5964 8062
 
-execute if score #rg_layers_4_teams switch.data matches 125.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Layers 4 Teams","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_layers_4_teams switch.data matches 125.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Layers 4 Teams","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"6","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_layers_4_teams switch.data matches 125.. run function switch:engine/log_message/apply {message:"Map `Layers 4 Teams` just regenerated!"}
 
 execute if score #rg_layers_4_teams switch.data matches 125.. run scoreboard players reset #rg_layers_4_teams switch.data

@@ -7,10 +7,10 @@
 #
 
 # French
-execute if entity @s[tag=switch.blue_flag] run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" Le drapeau "},{"text":"bleu","color":"blue"},{"text":" est à nouveau en place !"}]
-execute if entity @s[tag=switch.red_flag] run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" Le drapeau "},{"text":"rouge","color":"red"},{"text":" est à nouveau en place !"}]
+execute if entity @s[tag=switch.blue_flag] run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"#FFE60A"},{"text":" Le drapeau "},{"text":"bleu","color":"#2E9BFF"},{"text":" est à nouveau en place !"}]
+execute if entity @s[tag=switch.red_flag] run tellraw @a[scores={switch.lang=0},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"#FFE60A"},{"text":" Le drapeau "},{"text":"rouge","color":"#FF3347"},{"text":" est à nouveau en place !"}]
 
 # English
-execute if entity @s[tag=switch.blue_flag] run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" The "},{"text":"blue","color":"blue"},{"text":" flag is back in place!"}]
-execute if entity @s[tag=switch.red_flag] run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"yellow"},{"text":" The "},{"text":"red","color":"red"},{"text":" flag is back in place!"}]
+execute if entity @s[tag=switch.blue_flag] run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"#FFE60A"},{"text":" The "},{"text":"blue","color":"#2E9BFF"},{"text":" flag is back in place!"}]
+execute if entity @s[tag=switch.red_flag] run tellraw @a[scores={switch.lang=1},tag=!detached] ["",{"text":"[CaptureTheFlag]","color":"#FFE60A"},{"text":" The "},{"text":"red","color":"#FF3347"},{"text":" flag is back in place!"}]
 

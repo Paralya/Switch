@@ -26,7 +26,7 @@ execute if score #rg_gg_end_1 switch.data matches 107.. in switch:game run force
 execute if score #rg_gg_end_1 switch.data matches 107.. in minecraft:overworld run forceload remove 10103 8093 10123 8138
 execute if score #rg_gg_end_1 switch.data matches 107.. in switch:game run forceload remove 10103 8093 10123 8138
 
-execute if score #rg_gg_end_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Back to the overworld","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_gg_end_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Back to the overworld","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_gg_end_1 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Back to the overworld` just regenerated!"}
 
 execute if score #rg_gg_end_1 switch.data matches 107.. run scoreboard players reset #rg_gg_end_1 switch.data

@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:stardust_sniper"}},
-		"title": {"text": "Pour l'équipe !","color": "yellow"},
-		"description": {"text": "Shoot the bonus base in Laser Game","color": "aqua"},
+		"title": {"text": "Pour l'équipe !","color": "#FFE60A"},
+		"description": {"text": "Shoot the bonus base in Laser Game","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -78,7 +78,7 @@ execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run f
 execute if score #rg_snow_travel switch.data matches 1306.. in minecraft:overworld run forceload remove -5807 -4000 -5793 -3795
 execute if score #rg_snow_travel switch.data matches 1306.. in switch:game run forceload remove -5807 -4000 -5793 -3795
 
-execute if score #rg_snow_travel switch.data matches 1306.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snow Travel","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"05","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snow_travel switch.data matches 1306.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Snow Travel","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"05","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_snow_travel switch.data matches 1306.. run function switch:engine/log_message/apply {message:"Map `Snow Travel` just regenerated!"}
 
 execute if score #rg_snow_travel switch.data matches 1306.. run scoreboard players reset #rg_snow_travel switch.data

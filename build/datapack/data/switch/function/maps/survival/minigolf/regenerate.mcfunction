@@ -54,7 +54,7 @@ execute if score #rg_minigolf switch.data matches 478.. in switch:game run force
 execute if score #rg_minigolf switch.data matches 478.. in minecraft:overworld run forceload remove 10148 8000 10166 8140
 execute if score #rg_minigolf switch.data matches 478.. in switch:game run forceload remove 10148 8000 10166 8140
 
-execute if score #rg_minigolf switch.data matches 478.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Minigolf","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"23","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_minigolf switch.data matches 478.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Minigolf","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"23","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_minigolf switch.data matches 478.. run function switch:engine/log_message/apply {message:"Map `Minigolf` just regenerated!"}
 
 execute if score #rg_minigolf switch.data matches 478.. run scoreboard players reset #rg_minigolf switch.data

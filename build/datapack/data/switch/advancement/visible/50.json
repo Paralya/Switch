@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:cherry_sapling"},
-		"title": {"text": "Zom 100","color": "yellow"},
-		"description": {"text": "Complete the Old Japan Apocalypse map secret in Infected","color": "aqua"},
+		"title": {"text": "Zom 100","color": "#FFE60A"},
+		"description": {"text": "Complete the Old Japan Apocalypse map secret in Infected","color": "#00E5FF"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

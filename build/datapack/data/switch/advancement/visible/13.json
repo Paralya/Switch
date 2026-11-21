@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:white_tulip"},
-		"title": {"text": "Pacifiste","color": "yellow"},
-		"description": {"text": "Survive 100 seconds in Pitchout without taking a single hit","color": "aqua"},
+		"title": {"text": "Pacifiste","color": "#FFE60A"},
+		"description": {"text": "Survive 100 seconds in Pitchout without taking a single hit","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

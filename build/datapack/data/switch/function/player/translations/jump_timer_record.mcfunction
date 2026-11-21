@@ -7,8 +7,8 @@
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Jump terminé en ","color":"green"},{"nbt":"jt_input.display","storage":"switch:temp","interpret":true,"color":"yellow"},{"text":" ! Nouveau record personnel : ","color":"green"},{"text":"#","color":"gold"},{"score":{"name":"#rank","objective":"switch.data"},"color":"gold"},{"text":" du classement !","color":"green"}]
+tellraw @s[scores={switch.lang=0}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Jump terminé en ","color":"#2EFF8B"},{"nbt":"jt_input.display","storage":"switch:temp","interpret":true,"color":"#FFE60A"},{"text":" ! Nouveau record personnel : ","color":"#2EFF8B"},{"text":"#","color":"#FFA600"},{"score":{"name":"#rank","objective":"switch.data"},"color":"#FFA600"},{"text":" du classement !","color":"#2EFF8B"}]
 
 # English
-tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Jump completed in ","color":"green"},{"nbt":"jt_input.display","storage":"switch:temp","interpret":true,"color":"yellow"},{"text":"! New personal best: ","color":"green"},{"text":"#","color":"gold"},{"score":{"name":"#rank","objective":"switch.data"},"color":"gold"},{"text":" on the leaderboard!","color":"green"}]
+tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Jump completed in ","color":"#2EFF8B"},{"nbt":"jt_input.display","storage":"switch:temp","interpret":true,"color":"#FFE60A"},{"text":"! New personal best: ","color":"#2EFF8B"},{"text":"#","color":"#FFA600"},{"score":{"name":"#rank","objective":"switch.data"},"color":"#FFA600"},{"text":" on the leaderboard!","color":"#2EFF8B"}]
 

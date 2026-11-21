@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:yellow_wool"},
-		"title": {"text": "Wattouat","color": "yellow"},
-		"description": {"text": "Die from a lightning sheep in SheepWars","color": "aqua"},
+		"title": {"text": "Wattouat","color": "#FFE60A"},
+		"description": {"text": "Die from a lightning sheep in SheepWars","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

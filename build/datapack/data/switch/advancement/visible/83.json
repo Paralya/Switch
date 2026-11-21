@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:turtle_egg"},
-		"title": {"text": "Chercheur Acharné","color": "yellow"},
-		"description": {"text": "Find all the Easter Eggs in the lobby","color": "aqua"},
+		"title": {"text": "Chercheur Acharné","color": "#FFE60A"},
+		"description": {"text": "Find all the Easter Eggs in the lobby","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

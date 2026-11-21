@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:barrier"},
-		"title": {"text": "Berger","color": "yellow"},
-		"description": {"text": "Win a game of SheepWars without using any sheep","color": "aqua"},
+		"title": {"text": "Berger","color": "#FFE60A"},
+		"description": {"text": "Win a game of SheepWars without using any sheep","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

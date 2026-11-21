@@ -52,8 +52,8 @@
 								"minecraft:lore": [
 									[
 										"",
-										{"text": "ꀁ","color": "white","italic": false,"font": "switch:tooltip"},
-										{"text": "뀁Switch","italic": false,"color": "white","font": "switch:tooltip"}
+										{"text": "ꀁ","color": "#E4ECF7","italic": false,"font": "switch:tooltip"},
+										{"text": "뀁Switch","italic": false,"color": "#E4ECF7","font": "switch:tooltip"}
 									]
 								]
 							}

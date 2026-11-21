@@ -12,7 +12,7 @@
 #			blue (int)
 #
 
-$team modify switch.glassrunner.timer suffix [{"text": "Time: ","color":"gray"},{"text":"$(mins)","color":"gold"},{"text":"m","color":"gray"},{"text":"$(zero)$(secs)","color":"gold"},{"text":"s","color":"gray"}]
-$team modify switch.glassrunner.p_red suffix [{"text": "Red: ","color":"red"},{"text":"$(red)","color":"dark_red"},{"text":" points"}]
-$team modify switch.glassrunner.p_blue suffix [{"text": "Blue: ","color":"blue"},{"text":"$(blue)","color":"dark_blue"},{"text":" points"}]
+$team modify switch.glassrunner.timer suffix [{"text": "Time: ","color":"#AEBBD0"},{"text":"$(mins)","color":"#FFA600"},{"text":"m","color":"#AEBBD0"},{"text":"$(zero)$(secs)","color":"#FFA600"},{"text":"s","color":"#AEBBD0"}]
+$team modify switch.glassrunner.p_red suffix [{"text": "Red: ","color":"#FF3347"},{"text":"$(red)","color":"#C41E3A"},{"text":" points"}]
+$team modify switch.glassrunner.p_blue suffix [{"text": "Blue: ","color":"#2E9BFF"},{"text":"$(blue)","color":"#2A35C9"},{"text":" points"}]
 

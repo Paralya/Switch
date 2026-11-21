@@ -66,7 +66,7 @@ execute if score #rg_airship_fortress switch.data matches 1333.. in switch:game 
 execute if score #rg_airship_fortress switch.data matches 1333.. in minecraft:overworld run forceload remove 7329 -5149 7344 -4950
 execute if score #rg_airship_fortress switch.data matches 1333.. in switch:game run forceload remove 7329 -5149 7344 -4950
 
-execute if score #rg_airship_fortress switch.data matches 1333.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Airship Fortress","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_airship_fortress switch.data matches 1333.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Airship Fortress","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"06","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_airship_fortress switch.data matches 1333.. run function switch:engine/log_message/apply {message:"Map `Airship Fortress` just regenerated!"}
 
 execute if score #rg_airship_fortress switch.data matches 1333.. run scoreboard players reset #rg_airship_fortress switch.data

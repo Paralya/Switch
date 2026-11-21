@@ -40,9 +40,9 @@ effect give @s night_vision infinite 250 true
 effect give @s darkness infinite 250 true
 gamemode survival @s
 scoreboard players set @s switch.temp.chosen_class 0
-item replace entity @s hotbar.0 with diamond_chestplate[item_name={"text":"Tank","color":"red"},custom_data={switch:{class_item:1b,ctf_class:true}},consumable={consume_seconds:1024}]
-item replace entity @s hotbar.2 with iron_sword[item_name={"text":"Warrior","color":"red"},custom_data={switch:{class_item:2b,ctf_class:true}},consumable={consume_seconds:1024}]
-item replace entity @s hotbar.4 with arrow[item_name={"text":"Archer","color":"red"},custom_data={switch:{class_item:3b,ctf_class:true}},consumable={consume_seconds:1024}]
-item replace entity @s hotbar.6 with tnt[item_name={"text":"Demolisher","color":"red"},custom_data={switch:{class_item:4b,ctf_class:true}},consumable={consume_seconds:1024}]
-item replace entity @s hotbar.8 with blaze_powder[item_name={"text":"Chemister","color":"red"},custom_data={switch:{class_item:5b,ctf_class:true}},consumable={consume_seconds:1024}]
+item replace entity @s hotbar.0 with diamond_chestplate[item_name={"text":"Tank","color":"#FF3347"},custom_data={switch:{class_item:1b,ctf_class:true}},consumable={consume_seconds:1024}]
+item replace entity @s hotbar.2 with iron_sword[item_name={"text":"Warrior","color":"#FF3347"},custom_data={switch:{class_item:2b,ctf_class:true}},consumable={consume_seconds:1024}]
+item replace entity @s hotbar.4 with arrow[item_name={"text":"Archer","color":"#FF3347"},custom_data={switch:{class_item:3b,ctf_class:true}},consumable={consume_seconds:1024}]
+item replace entity @s hotbar.6 with tnt[item_name={"text":"Demolisher","color":"#FF3347"},custom_data={switch:{class_item:4b,ctf_class:true}},consumable={consume_seconds:1024}]
+item replace entity @s hotbar.8 with blaze_powder[item_name={"text":"Chemister","color":"#FF3347"},custom_data={switch:{class_item:5b,ctf_class:true}},consumable={consume_seconds:1024}]
 

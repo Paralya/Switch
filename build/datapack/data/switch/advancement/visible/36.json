@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:heavy_weighted_pressure_plate"},
-		"title": {"text": "Contre son camp","color": "yellow"},
-		"description": {"text": "Step on your own mine in Memory Mine","color": "aqua"},
+		"title": {"text": "Contre son camp","color": "#FFE60A"},
+		"description": {"text": "Step on your own mine in Memory Mine","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

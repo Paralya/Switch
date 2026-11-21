@@ -38,7 +38,7 @@ execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:ga
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in minecraft:overworld run forceload remove 6076 10000 6095 10113
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. in switch:game run forceload remove 6076 10000 6095 10113
 
-execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Ancienne Egypte 2013","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"19","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Ancienne Egypte 2013","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"19","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run function switch:engine/log_message/apply {message:"Map `Ancienne Egypte 2013` just regenerated!"}
 
 execute if score #rg_ancienne_egypte_2013 switch.data matches 386.. run scoreboard players reset #rg_ancienne_egypte_2013 switch.data

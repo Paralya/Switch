@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:snowball"},
-		"title": {"text": "C'est donc ça, de se vider...","color": "yellow"},
-		"description": {"text": "Throw 42 snowballs in one game of Warden Escape","color": "aqua"},
+		"title": {"text": "C'est donc ça, de se vider...","color": "#FFE60A"},
+		"description": {"text": "Throw 42 snowballs in one game of Warden Escape","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

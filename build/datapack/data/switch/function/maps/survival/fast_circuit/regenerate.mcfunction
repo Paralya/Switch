@@ -38,7 +38,7 @@ execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run f
 execute if score #rg_fast_circuit switch.data matches 176.. in minecraft:overworld run forceload remove 6778 -5854 6793 -5726
 execute if score #rg_fast_circuit switch.data matches 176.. in switch:game run forceload remove 6778 -5854 6793 -5726
 
-execute if score #rg_fast_circuit switch.data matches 176.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Fast Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_fast_circuit switch.data matches 176.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Fast Circuit","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"8","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_fast_circuit switch.data matches 176.. run function switch:engine/log_message/apply {message:"Map `Fast Circuit` just regenerated!"}
 
 execute if score #rg_fast_circuit switch.data matches 176.. run scoreboard players reset #rg_fast_circuit switch.data

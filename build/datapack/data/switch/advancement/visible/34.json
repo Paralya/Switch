@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:gold_ingot"},
-		"title": {"text": "Monopoly","color": "yellow"},
-		"description": {"text": "Collect 20 gold ingots in one game of Murder Mystery","color": "aqua"},
+		"title": {"text": "Monopoly","color": "#FFE60A"},
+		"description": {"text": "Collect 20 gold ingots in one game of Murder Mystery","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

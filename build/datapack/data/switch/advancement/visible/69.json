@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:arrow"},
-		"title": {"text": "Porc-épic","color": "yellow"},
-		"description": {"text": "Take 10 arrows in a game of Guy Shooter","color": "aqua"},
+		"title": {"text": "Porc-épic","color": "#FFE60A"},
+		"description": {"text": "Take 10 arrows in a game of Guy Shooter","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -42,7 +42,7 @@ execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game 
 execute if score #rg_arti_ancient_city switch.data matches 313.. in minecraft:overworld run forceload remove 2092 -12000 2111 -11883
 execute if score #rg_arti_ancient_city switch.data matches 313.. in switch:game run forceload remove 2092 -12000 2111 -11883
 
-execute if score #rg_arti_ancient_city switch.data matches 313.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Big Ancient City","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"15","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_arti_ancient_city switch.data matches 313.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Big Ancient City","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"15","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_arti_ancient_city switch.data matches 313.. run function switch:engine/log_message/apply {message:"Map `Big Ancient City` just regenerated!"}
 
 execute if score #rg_arti_ancient_city switch.data matches 313.. run scoreboard players reset #rg_arti_ancient_city switch.data

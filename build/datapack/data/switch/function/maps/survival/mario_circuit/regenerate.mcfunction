@@ -50,7 +50,7 @@ execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run 
 execute if score #rg_mario_circuit switch.data matches 433.. in minecraft:overworld run forceload remove 7070 -5860 7088 -5718
 execute if score #rg_mario_circuit switch.data matches 433.. in switch:game run forceload remove 7070 -5860 7088 -5718
 
-execute if score #rg_mario_circuit switch.data matches 433.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Mario Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"21","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_mario_circuit switch.data matches 433.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Mario Circuit","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"21","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_mario_circuit switch.data matches 433.. run function switch:engine/log_message/apply {message:"Map `Mario Circuit` just regenerated!"}
 
 execute if score #rg_mario_circuit switch.data matches 433.. run scoreboard players reset #rg_mario_circuit switch.data

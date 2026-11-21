@@ -26,7 +26,7 @@ execute if score #rg_gg_desert_1 switch.data matches 107.. in switch:game run fo
 execute if score #rg_gg_desert_1 switch.data matches 107.. in minecraft:overworld run forceload remove 10144 8047 10164 8092
 execute if score #rg_gg_desert_1 switch.data matches 107.. in switch:game run forceload remove 10144 8047 10164 8092
 
-execute if score #rg_gg_desert_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Y fait chaud ici!","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_gg_desert_1 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Y fait chaud ici!","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_gg_desert_1 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Y fait chaud ici!` just regenerated!"}
 
 execute if score #rg_gg_desert_1 switch.data matches 107.. run scoreboard players reset #rg_gg_desert_1 switch.data

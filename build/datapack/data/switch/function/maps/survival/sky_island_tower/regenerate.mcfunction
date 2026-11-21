@@ -34,7 +34,7 @@ execute if score #rg_sky_island_tower switch.data matches 581.. in switch:game r
 execute if score #rg_sky_island_tower switch.data matches 581.. in minecraft:overworld run forceload remove -7927 8000 -7903 8094
 execute if score #rg_sky_island_tower switch.data matches 581.. in switch:game run forceload remove -7927 8000 -7903 8094
 
-execute if score #rg_sky_island_tower switch.data matches 581.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sky Island Tower","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"29","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sky_island_tower switch.data matches 581.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Sky Island Tower","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"29","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_sky_island_tower switch.data matches 581.. run function switch:engine/log_message/apply {message:"Map `Sky Island Tower` just regenerated!"}
 
 execute if score #rg_sky_island_tower switch.data matches 581.. run scoreboard players reset #rg_sky_island_tower switch.data

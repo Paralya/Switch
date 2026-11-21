@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:lime_dye"},
-		"title": {"text": "Easy","color": "yellow"},
-		"description": {"text": "25 Saphirs par succès","color": "aqua"},
+		"title": {"text": "Easy","color": "#FFE60A"},
+		"description": {"text": "25 Saphirs par succès","color": "#00E5FF"},
 		"frame": "goal",
 		"show_toast": false,
 		"announce_to_chat": false,

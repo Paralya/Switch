@@ -5,8 +5,8 @@
 #
 
 # French
-tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"text":"Récapitulatif de la partie","color":"gold","bold":true}]
+tellraw @a[scores={switch.lang=0},tag=!detached] ["\n",{"text":"Récapitulatif de la partie","color":"#FFA600","bold":true}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"text":"Game recap","color":"gold","bold":true}]
+tellraw @a[scores={switch.lang=1},tag=!detached] ["\n",{"text":"Game recap","color":"#FFA600","bold":true}]
 

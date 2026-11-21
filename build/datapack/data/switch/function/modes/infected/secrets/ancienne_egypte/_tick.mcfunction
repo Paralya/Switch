@@ -5,8 +5,8 @@
 #
 
 # Items to pickup
-execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.stick] run summon item 6028 120 10106 {Tags:["switch.infected.stick","switch.infected.item"],Item:{id:"minecraft:stick",count:1,components:{"minecraft:item_name":{"text":"Torch stick","italic":false,"color":"light_purple"},"minecraft:lore":[{"text":"Infected","italic":true,"color":"dark_green"}]}}}
-execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.redstone] run summon item 6010 138 10078 {Tags:["switch.infected.redstone","switch.infected.item"],Item:{id:"minecraft:redstone",count:1,components:{"minecraft:item_name":{"text":"Redstone","italic":false,"color":"light_purple"},"minecraft:lore":[{"text":"Infected","italic":true,"color":"dark_green"}]}}}
+execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.stick] run summon item 6028 120 10106 {Tags:["switch.infected.stick","switch.infected.item"],Item:{id:"minecraft:stick",count:1,components:{"minecraft:item_name":{"text":"Torch stick","italic":false,"color":"#FF8FD8"},"minecraft:lore":[{"text":"Infected","italic":true,"color":"#1FA83C"}]}}}
+execute if score #infected_secret switch.data matches 0..1 unless entity @e[type=item,tag=switch.infected.redstone] run summon item 6010 138 10078 {Tags:["switch.infected.redstone","switch.infected.item"],Item:{id:"minecraft:redstone",count:1,components:{"minecraft:item_name":{"text":"Redstone","italic":false,"color":"#FF8FD8"},"minecraft:lore":[{"text":"Infected","italic":true,"color":"#1FA83C"}]}}}
 execute as @e[tag=switch.infected.item] at @s run function switch:modes/infected/secrets/ancienne_egypte/item_tick
 
 ## State checks

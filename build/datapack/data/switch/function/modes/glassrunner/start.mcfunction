@@ -10,10 +10,10 @@
 #define storage switch:glassrunner
 
 ## Teams
-team add switch.glassrunner.red {"text":"[Red]","color":"red"}
+team add switch.glassrunner.red {"text":"[Red]","color":"#FF3347"}
 team modify switch.glassrunner.red color red
 team modify switch.glassrunner.red friendlyFire false
-team add switch.glassrunner.blue {"text":"[Blue]","color":"blue"}
+team add switch.glassrunner.blue {"text":"[Blue]","color":"#2E9BFF"}
 team modify switch.glassrunner.blue color blue
 team modify switch.glassrunner.blue friendlyFire false
 
@@ -51,28 +51,28 @@ scoreboard objectives add switch.glassrunner.money dummy
 scoreboard objectives setdisplay list switch.glassrunner.money
 scoreboard players add @a[tag=!detached] switch.glassrunner.money 0
 
-scoreboard objectives add switch.glassrunner.display dummy [{"text":"Glass","color":"red"},{"text":"Runner","color":"blue"}]
+scoreboard objectives add switch.glassrunner.display dummy [{"text":"Glass","color":"#FF3347"},{"text":"Runner","color":"#2E9BFF"}]
 scoreboard objectives setdisplay sidebar switch.glassrunner.display
 scoreboard players set §T§r switch.glassrunner.display 3
 scoreboard players set §O§r switch.glassrunner.display 2
 scoreboard players set §P§R§r switch.glassrunner.display 1
 scoreboard players set §P§B§r switch.glassrunner.display 0
 
-team add switch.glassrunner.timer {"text":"[Timer]","color":"gray"}
-team add switch.glassrunner.objective {"text":"[Objective]","color":"gray"}
-team add switch.glassrunner.p_red {"text":"[P Red]","color":"red"}
-team add switch.glassrunner.p_blue {"text":"[P Blue]","color":"blue"}
+team add switch.glassrunner.timer {"text":"[Timer]","color":"#AEBBD0"}
+team add switch.glassrunner.objective {"text":"[Objective]","color":"#AEBBD0"}
+team add switch.glassrunner.p_red {"text":"[P Red]","color":"#FF3347"}
+team add switch.glassrunner.p_blue {"text":"[P Blue]","color":"#2E9BFF"}
 team join switch.glassrunner.timer §T§r
 team join switch.glassrunner.objective §O§r
 team join switch.glassrunner.p_red §P§R§r
 team join switch.glassrunner.p_blue §P§B§r
-team modify switch.glassrunner.timer suffix [{"text": "Time: ","color":"gray"},{"text":"10","color":"gold"},{"text":"m","color":"gray"},{"text":"00","color":"gold"},{"text":"s","color":"gray"}]
-team modify switch.glassrunner.objective suffix [{"text": "Objective: ","color":"gray"},{"text":"32 points","color":"gold"}]
+team modify switch.glassrunner.timer suffix [{"text": "Time: ","color":"#AEBBD0"},{"text":"10","color":"#FFA600"},{"text":"m","color":"#AEBBD0"},{"text":"00","color":"#FFA600"},{"text":"s","color":"#AEBBD0"}]
+team modify switch.glassrunner.objective suffix [{"text": "Objective: ","color":"#AEBBD0"},{"text":"32 points","color":"#FFA600"}]
 
 scoreboard players set #glassrunner.points.red switch.data 0
 scoreboard players set #glassrunner.points.blue switch.data 0
 
-execute in switch:game run summon text_display -3750 110 -1750 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
-execute in switch:game run summon text_display -3666 131 -1666 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
-execute in switch:game run summon text_display -3834 131 -1834 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"gold","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display -3750 110 -1750 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"#FFA600","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display -3666 131 -1666 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"#FFA600","italic":false}, billboard:"vertical", alignment:"center"}
+execute in switch:game run summon text_display -3834 131 -1834 {Tags:["switch.glassrunner.money_maker"], text:{"text":"3 seconds => 2 money","color":"#FFA600","italic":false}, billboard:"vertical", alignment:"center"}
 

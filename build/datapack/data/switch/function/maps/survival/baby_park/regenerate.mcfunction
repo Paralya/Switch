@@ -90,7 +90,7 @@ execute if score #rg_baby_park switch.data matches 1729.. in switch:game run for
 execute if score #rg_baby_park switch.data matches 1729.. in minecraft:overworld run forceload remove -3745 0 -3730 191
 execute if score #rg_baby_park switch.data matches 1729.. in switch:game run forceload remove -3745 0 -3730 191
 
-execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Baby Park","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_baby_park switch.data matches 1729.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Baby Park","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"26","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_baby_park switch.data matches 1729.. run function switch:engine/log_message/apply {message:"Map `Baby Park` just regenerated!"}
 
 execute if score #rg_baby_park switch.data matches 1729.. run scoreboard players reset #rg_baby_park switch.data

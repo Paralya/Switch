@@ -7,6 +7,6 @@
 #
 
 scoreboard players set @s switch.temp.trapped_timer 40
-title @s[scores={switch.lang=0}] actionbar {"text":"⚠ Piégé dans de la neige poudreuse !","color":"aqua"}
-title @s[scores={switch.lang=1}] actionbar {"text":"⚠ Stuck in powder snow!","color":"aqua"}
+title @s[scores={switch.lang=0}] actionbar {"text":"⚠ Piégé dans de la neige poudreuse !","color":"#00E5FF"}
+title @s[scores={switch.lang=1}] actionbar {"text":"⚠ Stuck in powder snow!","color":"#00E5FF"}
 

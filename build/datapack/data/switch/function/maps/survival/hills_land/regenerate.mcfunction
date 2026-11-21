@@ -90,7 +90,7 @@ execute if score #rg_hills_land switch.data matches 1189.. in switch:game run fo
 execute if score #rg_hills_land switch.data matches 1189.. in minecraft:overworld run forceload remove 7114 -5393 7127 -5166
 execute if score #rg_hills_land switch.data matches 1189.. in switch:game run forceload remove 7114 -5393 7127 -5166
 
-execute if score #rg_hills_land switch.data matches 1189.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Hills Land","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"59","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_hills_land switch.data matches 1189.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Hills Land","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"59","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_hills_land switch.data matches 1189.. run function switch:engine/log_message/apply {message:"Map `Hills Land` just regenerated!"}
 
 execute if score #rg_hills_land switch.data matches 1189.. run scoreboard players reset #rg_hills_land switch.data

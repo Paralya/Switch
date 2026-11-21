@@ -6,8 +6,8 @@
 # @within	switch:modes/laser_game/calls/start
 #
 
-team add switch.laser_game.blue {"text":"[Blue]","color":"blue"}
-team add switch.laser_game.red {"text":"[Red]","color":"red"}
+team add switch.laser_game.blue {"text":"[Blue]","color":"#2E9BFF"}
+team add switch.laser_game.red {"text":"[Red]","color":"#FF3347"}
 team modify switch.laser_game.blue color blue
 team modify switch.laser_game.blue seeFriendlyInvisibles true
 team modify switch.laser_game.blue nametagVisibility never
@@ -30,11 +30,11 @@ function switch:maps/choose_map_for {id:"laser_game", maps:["laser_game"]}
 scoreboard players set #team_boolean switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:modes/laser_game/teleport_players
 
-scoreboard objectives add switch.temp.individual_points dummy {"text":"Individual Points","color":"yellow"}
+scoreboard objectives add switch.temp.individual_points dummy {"text":"Individual Points","color":"#FFE60A"}
 scoreboard objectives add switch.temp.shield dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.dead_cooldown dummy
-scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
+scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"#FFE60A"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
 scoreboard players set #laser_game_seconds switch.data -1
@@ -48,9 +48,9 @@ scoreboard players set #base_reload switch.data 15
 team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
 team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
 team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
-team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"2","color":"yellow"},{"text":"m"},{"text":"30","color":"yellow"},{"text":"s"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"2","color":"#FFE60A"},{"text":"m"},{"text":"30","color":"#FFE60A"},{"text":"s"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"#2E9BFF"},{"text":"0","color":"#FFE60A"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"#FF3347"},{"text":"0","color":"#FFE60A"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
 team join switch.temp.sidebar.3 §3

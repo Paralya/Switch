@@ -7,8 +7,8 @@
 #
 
 # French
-title @s[scores={switch.lang=0}] title {"text":"Vous êtes mort","color":"red"}
+title @s[scores={switch.lang=0}] title {"text":"Vous êtes mort","color":"#FF3347"}
 
 # English
-title @s[scores={switch.lang=1}] title {"text":"You are dead","color":"red"}
+title @s[scores={switch.lang=1}] title {"text":"You are dead","color":"#FF3347"}
 

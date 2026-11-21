@@ -8,8 +8,8 @@
 #
 
 # French
-title @s[scores={switch.lang=0}] actionbar {"text":"Tu n'as aucun checkpoint !","color":"red"}
+title @s[scores={switch.lang=0}] actionbar {"text":"Tu n'as aucun checkpoint !","color":"#FF3347"}
 
 # English
-title @s[scores={switch.lang=1}] actionbar {"text":"You don't have any checkpoint!","color":"red"}
+title @s[scores={switch.lang=1}] actionbar {"text":"You don't have any checkpoint!","color":"#FF3347"}
 

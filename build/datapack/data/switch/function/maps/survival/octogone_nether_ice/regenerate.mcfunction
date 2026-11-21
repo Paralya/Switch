@@ -34,7 +34,7 @@ execute if score #rg_octogone_nether_ice switch.data matches 253.. in switch:gam
 execute if score #rg_octogone_nether_ice switch.data matches 253.. in minecraft:overworld run forceload remove 8060 -12000 8080 -11920
 execute if score #rg_octogone_nether_ice switch.data matches 253.. in switch:game run forceload remove 8060 -12000 8080 -11920
 
-execute if score #rg_octogone_nether_ice switch.data matches 253.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Octogone Nether Ice","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"12","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_octogone_nether_ice switch.data matches 253.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Octogone Nether Ice","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"12","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_octogone_nether_ice switch.data matches 253.. run function switch:engine/log_message/apply {message:"Map `Octogone Nether Ice` just regenerated!"}
 
 execute if score #rg_octogone_nether_ice switch.data matches 253.. run scoreboard players reset #rg_octogone_nether_ice switch.data

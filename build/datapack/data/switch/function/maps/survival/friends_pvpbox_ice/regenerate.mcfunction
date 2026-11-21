@@ -30,7 +30,7 @@ execute if score #rg_friends_pvpbox_ice switch.data matches 130.. in switch:game
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. in minecraft:overworld run forceload remove 4043 4000 4065 4065
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. in switch:game run forceload remove 4043 4000 4065 4065
 
-execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube PvPbox Ice","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"FriendsCube PvPbox Ice","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"6","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run function switch:engine/log_message/apply {message:"Map `FriendsCube PvPbox Ice` just regenerated!"}
 
 execute if score #rg_friends_pvpbox_ice switch.data matches 130.. run scoreboard players reset #rg_friends_pvpbox_ice switch.data

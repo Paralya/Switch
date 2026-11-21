@@ -37,7 +37,7 @@ execute if score #rg_block_party switch.data matches 725.. in switch:game run fo
 execute if score #rg_block_party switch.data matches 725.. in minecraft:overworld run forceload remove 4148 -10000 4172 -9906
 execute if score #rg_block_party switch.data matches 725.. in switch:game run forceload remove 4148 -10000 4172 -9906
 
-execute if score #rg_block_party switch.data matches 725.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Block Party","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"36","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_block_party switch.data matches 725.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Block Party","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"36","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_block_party switch.data matches 725.. run function switch:engine/log_message/apply {message:"Map `Block Party` just regenerated!"}
 
 execute if score #rg_block_party switch.data matches 725.. run scoreboard players reset #rg_block_party switch.data

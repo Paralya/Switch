@@ -7,8 +7,8 @@
 #
 
 # French
-tellraw @a[scores={switch.lang=0},tag=!detached] [{"text":"Démarrage d'un nouveau round ! [","color":"yellow"},{"text":"1","color":"gold"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"gold"},{"text":"]"}]
+tellraw @a[scores={switch.lang=0},tag=!detached] [{"text":"Démarrage d'un nouveau round ! [","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"#FFA600"},{"text":"]"}]
 
 # English
-tellraw @a[scores={switch.lang=1},tag=!detached] [{"text":"Starting a new round! [","color":"yellow"},{"text":"1","color":"gold"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"gold"},{"text":"]"}]
+tellraw @a[scores={switch.lang=1},tag=!detached] [{"text":"Starting a new round! [","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"/"},{"score":{"name":"#max_rounds","objective":"switch.data"},"color":"#FFA600"},{"text":"]"}]
 

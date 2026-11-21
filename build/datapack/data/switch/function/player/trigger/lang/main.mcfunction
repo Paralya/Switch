@@ -14,8 +14,8 @@ execute if score @s switch.trigger.lang matches 10 run scoreboard players set @s
 execute if score @s switch.trigger.lang matches 11 run scoreboard players set @s switch.lang 1
 
 # Messages
-execute if score @s switch.trigger.lang matches 10 run tellraw @s [{"text":"Vous avez choisi la langue française !\nFaites '/lang' pour re-changer la langue","color":"aqua"}]
-execute if score @s switch.trigger.lang matches 11 run tellraw @s [{"text":"You have chosen the English language!\nType '/lang' to change the language","color":"aqua"}]
+execute if score @s switch.trigger.lang matches 10 run tellraw @s [{"text":"Vous avez choisi la langue française !\nFaites '/lang' pour re-changer la langue","color":"#00E5FF"}]
+execute if score @s switch.trigger.lang matches 11 run tellraw @s [{"text":"You have chosen the English language!\nType '/lang' to change the language","color":"#00E5FF"}]
 
 # Clear the effects and reset the trigger score
 scoreboard players set @s switch.trigger.lang 0

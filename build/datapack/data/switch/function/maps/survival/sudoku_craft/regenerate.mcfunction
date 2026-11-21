@@ -46,7 +46,7 @@ execute if score #rg_sudoku_craft switch.data matches 827.. in switch:game run f
 execute if score #rg_sudoku_craft switch.data matches 827.. in minecraft:overworld run forceload remove -1895 -8000 -1878 -7862
 execute if score #rg_sudoku_craft switch.data matches 827.. in switch:game run forceload remove -1895 -8000 -1878 -7862
 
-execute if score #rg_sudoku_craft switch.data matches 827.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sudoku Craft","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sudoku_craft switch.data matches 827.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Sudoku Craft","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"41","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_sudoku_craft switch.data matches 827.. run function switch:engine/log_message/apply {message:"Map `Sudoku Craft` just regenerated!"}
 
 execute if score #rg_sudoku_craft switch.data matches 827.. run scoreboard players reset #rg_sudoku_craft switch.data

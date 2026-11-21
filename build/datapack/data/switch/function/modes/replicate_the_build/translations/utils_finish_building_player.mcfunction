@@ -9,8 +9,8 @@
 #
 
 # French
-$tellraw @s[scores={switch.lang=0}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Parfait ! En $(temp) secondes","color":"green"}]
+$tellraw @s[scores={switch.lang=0}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Parfait ! En $(temp) secondes","color":"#2EFF8B"}]
 
 # English
-$tellraw @s[scores={switch.lang=1}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Perfect! In $(temp) seconds","color":"green"}]
+$tellraw @s[scores={switch.lang=1}] [{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Perfect! In $(temp) seconds","color":"#2EFF8B"}]
 

@@ -8,9 +8,9 @@
 
 # French
 execute on passengers run title @s[scores={switch.lang=0}] title ""
-execute on passengers run title @s[scores={switch.lang=0}] subtitle [{"text":"Reset","color":"green"}]
+execute on passengers run title @s[scores={switch.lang=0}] subtitle [{"text":"Reset","color":"#2EFF8B"}]
 
 # English
 execute on passengers run title @s[scores={switch.lang=1}] title ""
-execute on passengers run title @s[scores={switch.lang=1}] subtitle [{"text":"Reset","color":"green"}]
+execute on passengers run title @s[scores={switch.lang=1}] subtitle [{"text":"Reset","color":"#2EFF8B"}]
 

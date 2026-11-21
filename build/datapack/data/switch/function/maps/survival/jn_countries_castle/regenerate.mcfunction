@@ -42,7 +42,7 @@ execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:gam
 execute if score #rg_jn_countries_castle switch.data matches 265.. in minecraft:overworld run forceload remove -1900 10000 -1880 10120
 execute if score #rg_jn_countries_castle switch.data matches 265.. in switch:game run forceload remove -1900 10000 -1880 10120
 
-execute if score #rg_jn_countries_castle switch.data matches 265.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Countries Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"13","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_countries_castle switch.data matches 265.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Countries Castle","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"13","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_jn_countries_castle switch.data matches 265.. run function switch:engine/log_message/apply {message:"Map `Countries Castle` just regenerated!"}
 
 execute if score #rg_jn_countries_castle switch.data matches 265.. run scoreboard players reset #rg_jn_countries_castle switch.data

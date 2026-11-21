@@ -238,7 +238,7 @@ execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. in switch:g
 execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. in minecraft:overworld run forceload remove -3516 -6000 -3507 -5652
 execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. in switch:game run forceload remove -3516 -6000 -3507 -5652
 
-execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Trackmania Stadium 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"m","color":"yellow"},{"text":"24","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Trackmania Stadium 1","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"24","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. run function switch:engine/log_message/apply {message:"Map `Trackmania Stadium 1` just regenerated!"}
 
 execute if score #rg_trackmania_stadium_1 switch.data matches 6491.. run scoreboard players reset #rg_trackmania_stadium_1 switch.data

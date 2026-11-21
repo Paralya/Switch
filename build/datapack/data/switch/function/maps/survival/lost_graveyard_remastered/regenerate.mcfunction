@@ -50,7 +50,7 @@ execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in swit
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in minecraft:overworld run forceload remove 2131 10000 2150 10134
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. in switch:game run forceload remove 2131 10000 2150 10134
 
-execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Lost Graveyard Remastered","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"25","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Lost Graveyard Remastered","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"25","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run function switch:engine/log_message/apply {message:"Map `Lost Graveyard Remastered` just regenerated!"}
 
 execute if score #rg_lost_graveyard_remastered switch.data matches 505.. run scoreboard players reset #rg_lost_graveyard_remastered switch.data

@@ -2530,7 +2530,7 @@ execute if score #rg_abandoned_city switch.data matches 163909.. in switch:game 
 execute if score #rg_abandoned_city switch.data matches 163909.. in minecraft:overworld run forceload remove 9000 -2000 9002 2
 execute if score #rg_abandoned_city switch.data matches 163909.. in switch:game run forceload remove 9000 -2000 9002 2
 
-execute if score #rg_abandoned_city switch.data matches 163909.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Abandoned City","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"136","color":"gold"},{"text":"m","color":"yellow"},{"text":"35","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_abandoned_city switch.data matches 163909.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Abandoned City","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"136","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"35","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_abandoned_city switch.data matches 163909.. run function switch:engine/log_message/apply {message:"Map `Abandoned City` just regenerated!"}
 
 execute if score #rg_abandoned_city switch.data matches 163909.. run scoreboard players reset #rg_abandoned_city switch.data

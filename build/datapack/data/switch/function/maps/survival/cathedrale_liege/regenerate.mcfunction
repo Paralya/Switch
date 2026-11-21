@@ -38,7 +38,7 @@ execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game r
 execute if score #rg_cathedrale_liege switch.data matches 831.. in minecraft:overworld run forceload remove -1890 -6000 -1862 -5916
 execute if score #rg_cathedrale_liege switch.data matches 831.. in switch:game run forceload remove -1890 -6000 -1862 -5916
 
-execute if score #rg_cathedrale_liege switch.data matches 831.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cathédrale Saint-Lambert de Liège","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_cathedrale_liege switch.data matches 831.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Cathédrale Saint-Lambert de Liège","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"41","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_cathedrale_liege switch.data matches 831.. run function switch:engine/log_message/apply {message:"Map `Cathédrale Saint-Lambert de Liège` just regenerated!"}
 
 execute if score #rg_cathedrale_liege switch.data matches 831.. run scoreboard players reset #rg_cathedrale_liege switch.data

@@ -38,7 +38,7 @@ execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game r
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in minecraft:overworld run forceload remove -5920 10000 -5900 10100
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. in switch:game run forceload remove -5920 10000 -5900 10100
 
-execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Sakura PVP Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Sakura PVP Box","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"9","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run function switch:engine/log_message/apply {message:"Map `Sakura PVP Box` just regenerated!"}
 
 execute if score #rg_jn_sakura_pvpbox switch.data matches 196.. run scoreboard players reset #rg_jn_sakura_pvpbox switch.data

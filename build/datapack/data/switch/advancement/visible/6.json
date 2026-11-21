@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:magenta_wool"},
-		"title": {"text": "Guy Jumper","color": "yellow"},
-		"description": {"text": "Complete the Guy Shooter parkour","color": "aqua"},
+		"title": {"text": "Guy Jumper","color": "#FFE60A"},
+		"description": {"text": "Complete the Guy Shooter parkour","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

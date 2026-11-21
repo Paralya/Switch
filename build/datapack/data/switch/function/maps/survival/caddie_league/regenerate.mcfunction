@@ -102,7 +102,7 @@ execute if score #rg_caddie_league switch.data matches 1093.. in switch:game run
 execute if score #rg_caddie_league switch.data matches 1093.. in minecraft:overworld run forceload remove -3685 6000 -3674 6256
 execute if score #rg_caddie_league switch.data matches 1093.. in switch:game run forceload remove -3685 6000 -3674 6256
 
-execute if score #rg_caddie_league switch.data matches 1093.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Caddie League","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"54","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_caddie_league switch.data matches 1093.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Caddie League","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"54","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_caddie_league switch.data matches 1093.. run function switch:engine/log_message/apply {message:"Map `Caddie League` just regenerated!"}
 
 execute if score #rg_caddie_league switch.data matches 1093.. run scoreboard players reset #rg_caddie_league switch.data

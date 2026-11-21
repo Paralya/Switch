@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:minecart"},
-		"title": {"text": "Fusée","color": "yellow"},
-		"description": {"text": "Overtake 5 players in the last lap of Kart Racer","color": "aqua"},
+		"title": {"text": "Fusée","color": "#FFE60A"},
+		"description": {"text": "Overtake 5 players in the last lap of Kart Racer","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

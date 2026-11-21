@@ -12,13 +12,13 @@
 							"components": {
 								"minecraft:item_name": {
 									"text": "Element 115",
-									"color": "light_purple",
+									"color": "#FF8FD8",
 									"italic": false
 								},
 								"minecraft:lore": [
 									{
 										"text": "Infected",
-										"color": "dark_green",
+										"color": "#1FA83C",
 										"italic": true
 									}
 								],

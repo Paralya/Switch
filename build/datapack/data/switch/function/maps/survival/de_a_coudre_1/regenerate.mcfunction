@@ -30,7 +30,7 @@ execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run 
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in minecraft:overworld run forceload remove 4055 -6000 4083 -5951
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. in switch:game run forceload remove 4055 -6000 4083 -5951
 
-execute if score #rg_de_a_coudre_1 switch.data matches 322.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Dé à coudre 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"16","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_de_a_coudre_1 switch.data matches 322.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Dé à coudre 1","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"16","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run function switch:engine/log_message/apply {message:"Map `Dé à coudre 1` just regenerated!"}
 
 execute if score #rg_de_a_coudre_1 switch.data matches 322.. run scoreboard players reset #rg_de_a_coudre_1 switch.data

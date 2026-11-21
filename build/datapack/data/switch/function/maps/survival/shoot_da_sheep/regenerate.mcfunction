@@ -26,7 +26,7 @@ execute if score #rg_shoot_da_sheep switch.data matches 117.. in switch:game run
 execute if score #rg_shoot_da_sheep switch.data matches 117.. in minecraft:overworld run forceload remove 10020 6000 10040 6040
 execute if score #rg_shoot_da_sheep switch.data matches 117.. in switch:game run forceload remove 10020 6000 10040 6040
 
-execute if score #rg_shoot_da_sheep switch.data matches 117.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Shoot Da Sheep","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_shoot_da_sheep switch.data matches 117.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Shoot Da Sheep","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_shoot_da_sheep switch.data matches 117.. run function switch:engine/log_message/apply {message:"Map `Shoot Da Sheep` just regenerated!"}
 
 execute if score #rg_shoot_da_sheep switch.data matches 117.. run scoreboard players reset #rg_shoot_da_sheep switch.data

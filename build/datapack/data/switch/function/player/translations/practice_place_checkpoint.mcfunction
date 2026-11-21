@@ -7,8 +7,8 @@
 #
 
 # French
-title @s[scores={switch.lang=0}] actionbar {"text":"Checkpoint posé !","color":"green"}
+title @s[scores={switch.lang=0}] actionbar {"text":"Checkpoint posé !","color":"#2EFF8B"}
 
 # English
-title @s[scores={switch.lang=1}] actionbar {"text":"Checkpoint placed!","color":"green"}
+title @s[scores={switch.lang=1}] actionbar {"text":"Checkpoint placed!","color":"#2EFF8B"}
 

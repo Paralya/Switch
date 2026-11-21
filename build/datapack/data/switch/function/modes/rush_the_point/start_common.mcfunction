@@ -27,7 +27,7 @@ scoreboard objectives add switch.temp.elytra_cooldown dummy
 scoreboard objectives add switch.temp.break_obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add switch.temp.total_obsidian dummy
 function switch:modes/_common/recap/start/points
-scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"yellow"}
+scoreboard objectives add switch.temp.sidebar dummy {"text":"Points","color":"#FFE60A"}
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
 scoreboard players set #bonus_reload switch.data 30
@@ -41,13 +41,13 @@ team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
 team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
 team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
 team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
-team modify switch.temp.sidebar.5 suffix [{"text":"Goal: "},{"text":"7500","color":"yellow"},{"text":" points"}]
-team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
+team modify switch.temp.sidebar.5 suffix [{"text":"Goal: "},{"text":"7500","color":"#FFE60A"},{"text":" points"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"10","color":"#FFE60A"},{"text":"m"},{"text":"00","color":"#FFE60A"},{"text":"s"}]
 function switch:modes/_common/sidebar_setup
 
 # Choix des rôles + give d'items
-team add switch.rush_the_point.red {"text":"[Red]","color":"red"}
-team add switch.rush_the_point.blue {"text":"[Blue]","color":"blue"}
+team add switch.rush_the_point.red {"text":"[Red]","color":"#FF3347"}
+team add switch.rush_the_point.blue {"text":"[Blue]","color":"#2E9BFF"}
 team modify switch.rush_the_point.red color red
 team modify switch.rush_the_point.blue color blue
 team modify switch.rush_the_point.red nametagVisibility hideForOtherTeams

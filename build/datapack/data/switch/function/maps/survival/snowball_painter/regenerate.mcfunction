@@ -26,7 +26,7 @@ execute if score #rg_snowball_painter switch.data matches 69.. in switch:game ru
 execute if score #rg_snowball_painter switch.data matches 69.. in minecraft:overworld run forceload remove 8022 -10000 8043 -9958
 execute if score #rg_snowball_painter switch.data matches 69.. in switch:game run forceload remove 8022 -10000 8043 -9958
 
-execute if score #rg_snowball_painter switch.data matches 69.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Snowball Painter","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_snowball_painter switch.data matches 69.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Snowball Painter","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"3","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_snowball_painter switch.data matches 69.. run function switch:engine/log_message/apply {message:"Map `Snowball Painter` just regenerated!"}
 
 execute if score #rg_snowball_painter switch.data matches 69.. run scoreboard players reset #rg_snowball_painter switch.data

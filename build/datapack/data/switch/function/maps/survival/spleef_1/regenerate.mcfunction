@@ -34,7 +34,7 @@ execute if score #rg_spleef_1 switch.data matches 113.. in switch:game run force
 execute if score #rg_spleef_1 switch.data matches 113.. in minecraft:overworld run forceload remove 2060 -6000 2080 -5920
 execute if score #rg_spleef_1 switch.data matches 113.. in switch:game run forceload remove 2060 -6000 2080 -5920
 
-execute if score #rg_spleef_1 switch.data matches 113.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Spleef 1","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_spleef_1 switch.data matches 113.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Spleef 1","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_spleef_1 switch.data matches 113.. run function switch:engine/log_message/apply {message:"Map `Spleef 1` just regenerated!"}
 
 execute if score #rg_spleef_1 switch.data matches 113.. run scoreboard players reset #rg_spleef_1 switch.data

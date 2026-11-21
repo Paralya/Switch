@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:snowball"},
-		"title": {"text": "Précision Artistique","color": "yellow"},
-		"description": {"text": "Finish a game of Snowball Painter with exactly 51 points","color": "aqua"},
+		"title": {"text": "Précision Artistique","color": "#FFE60A"},
+		"description": {"text": "Finish a game of Snowball Painter with exactly 51 points","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

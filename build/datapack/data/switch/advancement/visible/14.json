@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:player_head","components": {"minecraft:profile": {"name": "King"}}},
-		"title": {"text": "The Last King","color": "yellow"},
-		"description": {"text": "Be the last survivor in Protect The King","color": "aqua"},
+		"title": {"text": "The Last King","color": "#FFE60A"},
+		"description": {"text": "Be the last survivor in Protect The King","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

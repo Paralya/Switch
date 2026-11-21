@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:crying_obsidian"},
-		"title": {"text": "The Obsidian Jump","color": "yellow"},
-		"description": {"text": "Finish the obsidian jump for the first time","color": "aqua"},
+		"title": {"text": "The Obsidian Jump","color": "#FFE60A"},
+		"description": {"text": "Finish the obsidian jump for the first time","color": "#00E5FF"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

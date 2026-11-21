@@ -138,7 +138,7 @@ execute if score #rg_trials_run switch.data matches 6451.. in switch:game run fo
 execute if score #rg_trials_run switch.data matches 6451.. in minecraft:overworld run forceload remove 4290 8000 4300 8300
 execute if score #rg_trials_run switch.data matches 6451.. in switch:game run forceload remove 4290 8000 4300 8300
 
-execute if score #rg_trials_run switch.data matches 6451.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Trials Run","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"m","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_trials_run switch.data matches 6451.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Trials Run","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"22","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_trials_run switch.data matches 6451.. run function switch:engine/log_message/apply {message:"Map `Trials Run` just regenerated!"}
 
 execute if score #rg_trials_run switch.data matches 6451.. run scoreboard players reset #rg_trials_run switch.data

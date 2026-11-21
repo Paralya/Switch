@@ -38,7 +38,7 @@ execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. in minecraft:overworld run forceload remove -9915 4000 -9894 4106
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. in switch:game run forceload remove -9915 4000 -9894 4106
 
-execute if score #rg_luxium_spectres_remake switch.data matches 416.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Luxium Spectres Remake","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"20","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_luxium_spectres_remake switch.data matches 416.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Luxium Spectres Remake","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"20","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. run function switch:engine/log_message/apply {message:"Map `Luxium Spectres Remake` just regenerated!"}
 
 execute if score #rg_luxium_spectres_remake switch.data matches 416.. run scoreboard players reset #rg_luxium_spectres_remake switch.data

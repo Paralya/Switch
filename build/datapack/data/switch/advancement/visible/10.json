@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:paper"},
-		"title": {"text": "Contre Courant","color": "yellow"},
-		"description": {"text": "Get at least 8 people to vote for an unpopular game (Feed Fast, Snowball Painter, etc.)","color": "aqua"},
+		"title": {"text": "Contre Courant","color": "#FFE60A"},
+		"description": {"text": "Get at least 8 people to vote for an unpopular game (Feed Fast, Snowball Painter, etc.)","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

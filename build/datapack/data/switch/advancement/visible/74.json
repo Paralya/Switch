@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:enchanted_golden_apple"},
-		"title": {"text": "I am Legend","color": "yellow"},
-		"description": {"text": "Win a game of Infected by being the last human (if there are more than 10 players)","color": "aqua"},
+		"title": {"text": "I am Legend","color": "#FFE60A"},
+		"description": {"text": "Win a game of Infected by being the last human (if there are more than 10 players)","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

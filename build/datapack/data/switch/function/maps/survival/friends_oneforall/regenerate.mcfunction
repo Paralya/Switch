@@ -26,7 +26,7 @@ execute if score #rg_friends_oneforall switch.data matches 65.. in switch:game r
 execute if score #rg_friends_oneforall switch.data matches 65.. in minecraft:overworld run forceload remove 4024 -2000 4048 -1952
 execute if score #rg_friends_oneforall switch.data matches 65.. in switch:game run forceload remove 4024 -2000 4048 -1952
 
-execute if score #rg_friends_oneforall switch.data matches 65.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube OneForAll","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"3","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_oneforall switch.data matches 65.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"FriendsCube OneForAll","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"3","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_friends_oneforall switch.data matches 65.. run function switch:engine/log_message/apply {message:"Map `FriendsCube OneForAll` just regenerated!"}
 
 execute if score #rg_friends_oneforall switch.data matches 65.. run scoreboard players reset #rg_friends_oneforall switch.data

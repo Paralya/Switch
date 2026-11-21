@@ -30,7 +30,7 @@ execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run
 execute if score #rg_remelta_cluedo switch.data matches 130.. in minecraft:overworld run forceload remove 10059 -6000 10089 -5934
 execute if score #rg_remelta_cluedo switch.data matches 130.. in switch:game run forceload remove 10059 -6000 10089 -5934
 
-execute if score #rg_remelta_cluedo switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Cluedo","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"6","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_remelta_cluedo switch.data matches 130.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Cluedo","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"6","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_remelta_cluedo switch.data matches 130.. run function switch:engine/log_message/apply {message:"Map `Cluedo` just regenerated!"}
 
 execute if score #rg_remelta_cluedo switch.data matches 130.. run scoreboard players reset #rg_remelta_cluedo switch.data

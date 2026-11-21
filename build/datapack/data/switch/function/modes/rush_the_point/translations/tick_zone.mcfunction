@@ -7,10 +7,10 @@
 #
 
 # French
-execute if score @s switch.temp.zone_capture matches -60 if score #state switch.data matches 1 run tellraw @a[team=switch.rush_the_point.red,distance=..5,scores={switch.lang=0}] {"text":"Point capturée, plus besoin d'y rester !","color":"green"}
-execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run tellraw @a[team=switch.rush_the_point.blue,distance=..5,scores={switch.lang=0}] {"text":"Point capturée, plus besoin d'y rester !","color":"green"}
+execute if score @s switch.temp.zone_capture matches -60 if score #state switch.data matches 1 run tellraw @a[team=switch.rush_the_point.red,distance=..5,scores={switch.lang=0}] {"text":"Point capturée, plus besoin d'y rester !","color":"#2EFF8B"}
+execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run tellraw @a[team=switch.rush_the_point.blue,distance=..5,scores={switch.lang=0}] {"text":"Point capturée, plus besoin d'y rester !","color":"#2EFF8B"}
 
 # English
-execute if score @s switch.temp.zone_capture matches -60 if score #state switch.data matches 1 run tellraw @a[team=switch.rush_the_point.red,distance=..5,scores={switch.lang=1}] {"text":"Point captured, no need to stay there!","color":"green"}
-execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run tellraw @a[team=switch.rush_the_point.blue,distance=..5,scores={switch.lang=1}] {"text":"Point captured, no need to stay there!","color":"green"}
+execute if score @s switch.temp.zone_capture matches -60 if score #state switch.data matches 1 run tellraw @a[team=switch.rush_the_point.red,distance=..5,scores={switch.lang=1}] {"text":"Point captured, no need to stay there!","color":"#2EFF8B"}
+execute if score @s switch.temp.zone_capture matches 60 if score #state switch.data matches 2 run tellraw @a[team=switch.rush_the_point.blue,distance=..5,scores={switch.lang=1}] {"text":"Point captured, no need to stay there!","color":"#2EFF8B"}
 

@@ -72,14 +72,14 @@ stopwatch restart switch:game_clock
 scoreboard players set #clock_secs switch.data 0
 
 team add switch.no_pvp {"text":"[No PvP]"}
-team add switch.detached {"text":"[Detached]","color":"dark_gray"}
-team add switch.tutorial {"text":"[Tutorial]","color":"yellow"}
+team add switch.detached {"text":"[Detached]","color":"#6B788F"}
+team add switch.tutorial {"text":"[Tutorial]","color":"#FFE60A"}
 team modify switch.no_pvp friendlyFire false
 team modify switch.no_pvp color white
 team modify switch.detached friendlyFire false
 team modify switch.detached color gray
-team modify switch.detached prefix {"text":"[Lobby] ","color":"dark_gray"}
-team modify switch.tutorial prefix {"text":"[Tutorial] ","color":"yellow"}
+team modify switch.detached prefix {"text":"[Lobby] ","color":"#6B788F"}
+team modify switch.tutorial prefix {"text":"[Tutorial] ","color":"#FFE60A"}
 team modify switch.tutorial color gold
 
 gamerule minecraft:max_command_sequence_length 2147483647
@@ -87,28 +87,28 @@ forceload add 0 0
 execute in switch:game run forceload add 0 0
 
 ## Storage
-# tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
-data modify storage switch:main ParalyaMusic set value {"text":"[ParalyaMusic]","color":"dark_purple"}
-data modify storage switch:main ParalyaStats set value {"text":"[ParalyaStats]","color":"yellow"}
-data modify storage switch:main ParalyaError set value {"text":"[ParalyaError]","color":"red"}
-data modify storage switch:main ParalyaWarning set value {"text":"[Paralya]","color":"gold"}
-data modify storage switch:main ParalyaHelp set value [{"text":"[","color":"dark_aqua"},{"text":"ParalyaHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]
-data modify storage switch:main Paralya set value [{"text":"[","color":"dark_aqua"},{"text":"Paralya","color":"aqua"},{"text":"]","color":"dark_aqua"}]
+# tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"#00E5FF"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"#00E5FF"},{"text":"ème joueur a rejoindre !"}]
+data modify storage switch:main ParalyaMusic set value {"text":"[ParalyaMusic]","color":"#A53DE0"}
+data modify storage switch:main ParalyaStats set value {"text":"[ParalyaStats]","color":"#FFE60A"}
+data modify storage switch:main ParalyaError set value {"text":"[ParalyaError]","color":"#FF3347"}
+data modify storage switch:main ParalyaWarning set value {"text":"[Paralya]","color":"#FFA600"}
+data modify storage switch:main ParalyaHelp set value [{"text":"[","color":"#12A4B8"},{"text":"ParalyaHelp","color":"#00E5FF"},{"text":"]","color":"#12A4B8"}]
+data modify storage switch:main Paralya set value [{"text":"[","color":"#12A4B8"},{"text":"Paralya","color":"#00E5FF"},{"text":"]","color":"#12A4B8"}]
 
-data modify storage switch:main ParalyaSapphiresFR set value [{"text":"","color":"blue"},{"text":"[","color":"#1b1796"},{"text":"Saphirs","color":"blue"},{"text":"]","color":"#1b1796"}]
-data modify storage switch:main ParalyaAstuceFR set value [{"text":"[","color":"dark_green"},{"text":"ParalyaAstuceFR","color":"green"},{"text":"]","color":"dark_green"}]
-data modify storage switch:main ParalyaPvPOldFR set value {"text":"[PvP 1.8 : Vitesse d'attaque infinie]","color":"dark_aqua"}
-data modify storage switch:main ParalyaPvPNewFR set value {"text":"[PvP 1.9+ : Nouveau PvP]","color":"dark_green"}
+data modify storage switch:main ParalyaSapphiresFR set value [{"text":"","color":"#2E9BFF"},{"text":"[","color":"#1b1796"},{"text":"Saphirs","color":"#2E9BFF"},{"text":"]","color":"#1b1796"}]
+data modify storage switch:main ParalyaAstuceFR set value [{"text":"[","color":"#1FA83C"},{"text":"ParalyaAstuceFR","color":"#2EFF8B"},{"text":"]","color":"#1FA83C"}]
+data modify storage switch:main ParalyaPvPOldFR set value {"text":"[PvP 1.8 : Vitesse d'attaque infinie]","color":"#12A4B8"}
+data modify storage switch:main ParalyaPvPNewFR set value {"text":"[PvP 1.9+ : Nouveau PvP]","color":"#1FA83C"}
 
-data modify storage switch:main ParalyaSapphiresEN set value [{"text":"","color":"blue"},{"text":"[","color":"#1b1796"},{"text":"Sapphires","color":"blue"},{"text":"]","color":"#1b1796"}]
-data modify storage switch:main ParalyaAstuceEN set value [{"text":"[","color":"dark_green"},{"text":"ParalyaTip","color":"green"},{"text":"]","color":"dark_green"}]
-data modify storage switch:main ParalyaPvPOldEN set value {"text":"[PvP 1.8 : Infinite attack speed]","color":"dark_aqua"}
-data modify storage switch:main ParalyaPvPNewEN set value {"text":"[PvP 1.9+ : New PvP]","color":"dark_green"}
+data modify storage switch:main ParalyaSapphiresEN set value [{"text":"","color":"#2E9BFF"},{"text":"[","color":"#1b1796"},{"text":"Sapphires","color":"#2E9BFF"},{"text":"]","color":"#1b1796"}]
+data modify storage switch:main ParalyaAstuceEN set value [{"text":"[","color":"#1FA83C"},{"text":"ParalyaTip","color":"#2EFF8B"},{"text":"]","color":"#1FA83C"}]
+data modify storage switch:main ParalyaPvPOldEN set value {"text":"[PvP 1.8 : Infinite attack speed]","color":"#12A4B8"}
+data modify storage switch:main ParalyaPvPNewEN set value {"text":"[PvP 1.9+ : New PvP]","color":"#1FA83C"}
 
 # Sapphire icon
 # Example: tellraw @s {"nbt":"SapphireFR","storage":"switch:main","interpret":true}
-data modify storage switch:main SapphireFR set value {"text":"S","color":"white","font":"switch:main","hover_event":{"action":"show_text","value":{"text":"Saphirs","color":"blue"}}}
-data modify storage switch:main SapphireEN set value {"text":"S","color":"white","font":"switch:main","hover_event":{"action":"show_text","value":{"text":"Sapphires","color":"blue"}}}
+data modify storage switch:main SapphireFR set value {"text":"S","color":"#E4ECF7","font":"switch:main","hover_event":{"action":"show_text","value":{"text":"Saphirs","color":"#2E9BFF"}}}
+data modify storage switch:main SapphireEN set value {"text":"S","color":"#E4ECF7","font":"switch:main","hover_event":{"action":"show_text","value":{"text":"Sapphires","color":"#2E9BFF"}}}
 
 # Setup stats storage if needed
 execute unless data storage switch:stats all run data modify storage switch:stats all set value {player:{total_played:[],total_wins:[],total_kills:[],total_deaths:[],total_money:[],played_win_ratio:[],advancement_count:[]},modes:{}}

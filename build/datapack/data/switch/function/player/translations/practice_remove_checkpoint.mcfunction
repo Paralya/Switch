@@ -7,8 +7,8 @@
 #
 
 # French
-title @s[scores={switch.lang=0}] actionbar {"text":"Checkpoint retiré !","color":"yellow"}
+title @s[scores={switch.lang=0}] actionbar {"text":"Checkpoint retiré !","color":"#FFE60A"}
 
 # English
-title @s[scores={switch.lang=1}] actionbar {"text":"Checkpoint removed!","color":"yellow"}
+title @s[scores={switch.lang=1}] actionbar {"text":"Checkpoint removed!","color":"#FFE60A"}
 

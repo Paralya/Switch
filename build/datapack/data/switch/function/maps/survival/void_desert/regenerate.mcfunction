@@ -38,7 +38,7 @@ execute if score #rg_void_desert switch.data matches 456.. in switch:game run fo
 execute if score #rg_void_desert switch.data matches 456.. in minecraft:overworld run forceload remove 2080 8000 2100 8100
 execute if score #rg_void_desert switch.data matches 456.. in switch:game run forceload remove 2080 8000 2100 8100
 
-execute if score #rg_void_desert switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Void Desert","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_void_desert switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Void Desert","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"22","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_void_desert switch.data matches 456.. run function switch:engine/log_message/apply {message:"Map `Void Desert` just regenerated!"}
 
 execute if score #rg_void_desert switch.data matches 456.. run scoreboard players reset #rg_void_desert switch.data

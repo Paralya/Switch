@@ -38,7 +38,7 @@ execute if score #rg_elytra_box switch.data matches 156.. in switch:game run for
 execute if score #rg_elytra_box switch.data matches 156.. in minecraft:overworld run forceload remove 2050 -4000 2062 -3841
 execute if score #rg_elytra_box switch.data matches 156.. in switch:game run forceload remove 2050 -4000 2062 -3841
 
-execute if score #rg_elytra_box switch.data matches 156.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Elytra Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_elytra_box switch.data matches 156.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Elytra Box","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"7","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_elytra_box switch.data matches 156.. run function switch:engine/log_message/apply {message:"Map `Elytra Box` just regenerated!"}
 
 execute if score #rg_elytra_box switch.data matches 156.. run scoreboard players reset #rg_elytra_box switch.data

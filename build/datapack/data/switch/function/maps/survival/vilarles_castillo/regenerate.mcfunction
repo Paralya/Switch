@@ -62,7 +62,7 @@ execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in minecraft:overworld run forceload remove -7839 -8000 -7823 -7827
 execute if score #rg_vilarles_castillo switch.data matches 1728.. in switch:game run forceload remove -7839 -8000 -7823 -7827
 
-execute if score #rg_vilarles_castillo switch.data matches 1728.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Castillo","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"m","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_vilarles_castillo switch.data matches 1728.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Castillo","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"26","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_vilarles_castillo switch.data matches 1728.. run function switch:engine/log_message/apply {message:"Map `Castillo` just regenerated!"}
 
 execute if score #rg_vilarles_castillo switch.data matches 1728.. run scoreboard players reset #rg_vilarles_castillo switch.data

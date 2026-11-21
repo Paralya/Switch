@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:red_dye"},
-		"title": {"text": "Hard","color": "yellow"},
-		"description": {"text": "100 Saphirs par succès","color": "aqua"},
+		"title": {"text": "Hard","color": "#FFE60A"},
+		"description": {"text": "100 Saphirs par succès","color": "#00E5FF"},
 		"frame": "goal",
 		"show_toast": false,
 		"announce_to_chat": false,

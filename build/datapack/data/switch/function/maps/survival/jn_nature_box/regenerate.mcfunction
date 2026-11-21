@@ -58,7 +58,7 @@ execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run 
 execute if score #rg_jn_nature_box switch.data matches 811.. in minecraft:overworld run forceload remove 173 10000 192 10134
 execute if score #rg_jn_nature_box switch.data matches 811.. in switch:game run forceload remove 173 10000 192 10134
 
-execute if score #rg_jn_nature_box switch.data matches 811.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nature Box","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"40","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_nature_box switch.data matches 811.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Nature Box","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"40","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_jn_nature_box switch.data matches 811.. run function switch:engine/log_message/apply {message:"Map `Nature Box` just regenerated!"}
 
 execute if score #rg_jn_nature_box switch.data matches 811.. run scoreboard players reset #rg_jn_nature_box switch.data

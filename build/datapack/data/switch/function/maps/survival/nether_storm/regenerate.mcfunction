@@ -34,7 +34,7 @@ execute if score #rg_nether_storm switch.data matches 201.. in switch:game run f
 execute if score #rg_nether_storm switch.data matches 201.. in minecraft:overworld run forceload remove 10083 4000 10111 4074
 execute if score #rg_nether_storm switch.data matches 201.. in switch:game run forceload remove 10083 4000 10111 4074
 
-execute if score #rg_nether_storm switch.data matches 201.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nether Storm","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"10","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_nether_storm switch.data matches 201.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Nether Storm","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"10","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_nether_storm switch.data matches 201.. run function switch:engine/log_message/apply {message:"Map `Nether Storm` just regenerated!"}
 
 execute if score #rg_nether_storm switch.data matches 201.. run scoreboard players reset #rg_nether_storm switch.data

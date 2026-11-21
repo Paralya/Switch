@@ -34,7 +34,7 @@ execute if score #rg_friends_cube_lobby switch.data matches 185.. in switch:game
 execute if score #rg_friends_cube_lobby switch.data matches 185.. in minecraft:overworld run forceload remove -3940 4000 -3920 4080
 execute if score #rg_friends_cube_lobby switch.data matches 185.. in switch:game run forceload remove -3940 4000 -3920 4080
 
-execute if score #rg_friends_cube_lobby switch.data matches 185.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"FriendsCube Lobby","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"9","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_friends_cube_lobby switch.data matches 185.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"FriendsCube Lobby","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"9","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_friends_cube_lobby switch.data matches 185.. run function switch:engine/log_message/apply {message:"Map `FriendsCube Lobby` just regenerated!"}
 
 execute if score #rg_friends_cube_lobby switch.data matches 185.. run scoreboard players reset #rg_friends_cube_lobby switch.data

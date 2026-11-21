@@ -26,7 +26,7 @@ execute if score #rg_memory_mine switch.data matches 35.. in switch:game run for
 execute if score #rg_memory_mine switch.data matches 35.. in minecraft:overworld run forceload remove -5986 -12000 -5971 -11964
 execute if score #rg_memory_mine switch.data matches 35.. in switch:game run forceload remove -5986 -12000 -5971 -11964
 
-execute if score #rg_memory_mine switch.data matches 35.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Memory Mine","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"1","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_memory_mine switch.data matches 35.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Memory Mine","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"1","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_memory_mine switch.data matches 35.. run function switch:engine/log_message/apply {message:"Map `Memory Mine` just regenerated!"}
 
 execute if score #rg_memory_mine switch.data matches 35.. run scoreboard players reset #rg_memory_mine switch.data

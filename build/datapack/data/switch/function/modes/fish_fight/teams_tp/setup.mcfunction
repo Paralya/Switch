@@ -8,8 +8,8 @@
 
 function switch:modes/fish_fight/translations/teams_tp_setup
 
-team add switch.temp.red {"text":"[Red]","color":"red"}
-team add switch.temp.blue {"text":"[Blue]","color":"blue"}
+team add switch.temp.red {"text":"[Red]","color":"#FF3347"}
+team add switch.temp.blue {"text":"[Blue]","color":"#2E9BFF"}
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.red friendlyFire false

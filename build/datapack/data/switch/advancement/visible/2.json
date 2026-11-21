@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:apple"},
-		"title": {"text": "Fidèle","color": "yellow"},
-		"description": {"text": "Play a total of 100 games on the Switch","color": "aqua"},
+		"title": {"text": "Fidèle","color": "#FFE60A"},
+		"description": {"text": "Play a total of 100 games on the Switch","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

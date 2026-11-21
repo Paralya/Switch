@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:red_stained_glass"},
-		"title": {"text": "Sam Flynn","color": "yellow"},
-		"description": {"text": "Eliminate 3 players with your trail in Moutron","color": "aqua"},
+		"title": {"text": "Sam Flynn","color": "#FFE60A"},
+		"description": {"text": "Eliminate 3 players with your trail in Moutron","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

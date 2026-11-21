@@ -50,7 +50,7 @@ execute if score #rg_stardust_boss_zone switch.data matches 913.. in switch:game
 execute if score #rg_stardust_boss_zone switch.data matches 913.. in minecraft:overworld run forceload remove -7884 -10000 -7868 -9835
 execute if score #rg_stardust_boss_zone switch.data matches 913.. in switch:game run forceload remove -7884 -10000 -7868 -9835
 
-execute if score #rg_stardust_boss_zone switch.data matches 913.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Boss Zone","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_boss_zone switch.data matches 913.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Stardust Boss Zone","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"45","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run function switch:engine/log_message/apply {message:"Map `Stardust Boss Zone` just regenerated!"}
 
 execute if score #rg_stardust_boss_zone switch.data matches 913.. run scoreboard players reset #rg_stardust_boss_zone switch.data

@@ -54,7 +54,7 @@ $execute if score $(player) switch.stats.wins matches 25.. store result storage 
 $execute unless score $(player) switch.stats.wins matches 25.. run data modify storage switch:stats all.player.played_win_ratio[{name:"$(player)"}].value set value 0.0f
 
 # Store winrate in the player's stats anyway (no digits, e.g. 35.15% -> 35%)
-#$tellraw @a [{"text":"$(player)","color":"gold"},{"text":" has a winrate of ","color":"gray"},{"score":{"name":"#temp","objective":"switch.data"},"color":"gold"},{"text":"%","color":"gray"}]
+#$tellraw @a [{"text":"$(player)","color":"#FFA600"},{"text":" has a winrate of ","color":"#AEBBD0"},{"score":{"name":"#temp","objective":"switch.data"},"color":"#FFA600"},{"text":"%","color":"#AEBBD0"}]
 $scoreboard players operation $(player) switch.stats.winrate = #temp switch.data
 $scoreboard players operation $(player) switch.stats.winrate /= #1000 switch.data
 

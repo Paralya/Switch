@@ -50,7 +50,7 @@ execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in swi
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in minecraft:overworld run forceload remove -5884 -10000 -5868 -9835
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. in switch:game run forceload remove -5884 -10000 -5868 -9835
 
-execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Stardust Boss Zone Nether","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"51","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Stardust Boss Zone Nether","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"51","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run function switch:engine/log_message/apply {message:"Map `Stardust Boss Zone Nether` just regenerated!"}
 
 execute if score #rg_stardust_boss_zone_nether switch.data matches 1033.. run scoreboard players reset #rg_stardust_boss_zone_nether switch.data

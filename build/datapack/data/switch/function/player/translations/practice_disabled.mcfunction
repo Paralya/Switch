@@ -7,8 +7,8 @@
 #
 
 # French
-tellraw @s[scores={switch.lang=0}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Practice Mode désactivé, retour au début du jump !","color":"yellow"}]
+tellraw @s[scores={switch.lang=0}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Practice Mode désactivé, retour au début du jump !","color":"#FFE60A"}]
 
 # English
-tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Practice Mode disabled, back to the start of the jump!","color":"yellow"}]
+tellraw @s[scores={switch.lang=1}] ["",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Practice Mode disabled, back to the start of the jump!","color":"#FFE60A"}]
 

@@ -38,7 +38,7 @@ execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switc
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in minecraft:overworld run forceload remove -3914 -12000 -3893 -11894
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. in switch:game run forceload remove -3914 -12000 -3893 -11894
 
-execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Colored Sheeps","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Colored Sheeps","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"17","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run function switch:engine/log_message/apply {message:"Map `Colored Sheeps` just regenerated!"}
 
 execute if score #rg_sheepwars_colored_sheeps switch.data matches 351.. run scoreboard players reset #rg_sheepwars_colored_sheeps switch.data

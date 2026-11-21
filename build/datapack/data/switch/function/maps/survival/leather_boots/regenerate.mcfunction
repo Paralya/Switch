@@ -38,7 +38,7 @@ execute if score #rg_leather_boots switch.data matches 456.. in switch:game run 
 execute if score #rg_leather_boots switch.data matches 456.. in minecraft:overworld run forceload remove 8080 4000 8100 4100
 execute if score #rg_leather_boots switch.data matches 456.. in switch:game run forceload remove 8080 4000 8100 4100
 
-execute if score #rg_leather_boots switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Where're my leather boots?","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"22","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_leather_boots switch.data matches 456.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Where're my leather boots?","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"22","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_leather_boots switch.data matches 456.. run function switch:engine/log_message/apply {message:"Map `Where're my leather boots?` just regenerated!"}
 
 execute if score #rg_leather_boots switch.data matches 456.. run scoreboard players reset #rg_leather_boots switch.data

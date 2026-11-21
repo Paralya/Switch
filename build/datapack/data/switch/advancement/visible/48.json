@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:iron_hoe"},
-		"title": {"text": "Donald Trump","color": "yellow"},
-		"description": {"text": "Hit a maximum of 5 shots in a game of MiniGolf","color": "aqua"},
+		"title": {"text": "Donald Trump","color": "#FFE60A"},
+		"description": {"text": "Hit a maximum of 5 shots in a game of MiniGolf","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

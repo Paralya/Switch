@@ -12,13 +12,13 @@
 #
 
 # Prepare the TextComponent for this minigame
-$data modify storage switch:temp text_component set value [{"text":"X","color":"aqua","hover_event":{"action":"show_text","value":[]},"click_event":{"action":"run_command","command":"/trigger switch.trigger.coupdetat set $(index_hundred)"}},{"text":", ","color":"gray"}]
+$data modify storage switch:temp text_component set value [{"text":"X","color":"#00E5FF","hover_event":{"action":"show_text","value":[]},"click_event":{"action":"run_command","command":"/trigger switch.trigger.coupdetat set $(index_hundred)"}},{"text":", ","color":"#AEBBD0"}]
 
 # Fill the gaps
 $execute if score @s switch.lang matches 0 run data modify storage switch:temp text_component[0].text set value "$(name_fr)"
 $execute if score @s switch.lang matches 1 run data modify storage switch:temp text_component[0].text set value "$(name_en)"
-$execute if score @s switch.lang matches 0 run data modify storage switch:temp text_component[0].hover_event.value set value [{"text":"Dépensez 100","color":"gray"},{"nbt":"SapphireFR","storage":"switch:main","interpret":true},{"text":" pour lancer un coup d'état vers ","color":"gray"},{"text":"$(name_fr)","color":"yellow"}]
-$execute if score @s switch.lang matches 1 run data modify storage switch:temp text_component[0].hover_event.value set value [{"text":"Spend 100","color":"gray"},{"nbt":"SapphireEN","storage":"switch:main","interpret":true},{"text":" to start a coup d'état for ","color":"gray"},{"text":"$(name_en)","color":"yellow"}]
+$execute if score @s switch.lang matches 0 run data modify storage switch:temp text_component[0].hover_event.value set value [{"text":"Dépensez 100","color":"#AEBBD0"},{"nbt":"SapphireFR","storage":"switch:main","interpret":true},{"text":" pour lancer un coup d'état vers ","color":"#AEBBD0"},{"text":"$(name_fr)","color":"#FFE60A"}]
+$execute if score @s switch.lang matches 1 run data modify storage switch:temp text_component[0].hover_event.value set value [{"text":"Spend 100","color":"#AEBBD0"},{"nbt":"SapphireEN","storage":"switch:main","interpret":true},{"text":" to start a coup d'état for ","color":"#AEBBD0"},{"text":"$(name_en)","color":"#FFE60A"}]
 
 # Alternate colors for better readability
 scoreboard players add #alternate switch.data 1

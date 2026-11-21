@@ -2194,7 +2194,7 @@ execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. in sw
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. in minecraft:overworld run forceload remove 7342 -6000 7344 -4708
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. in switch:game run forceload remove 7342 -6000 7344 -4708
 
-execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Main Island","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"98","color":"gold"},{"text":"m","color":"yellow"},{"text":"49","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Main Island","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"98","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"49","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run function switch:engine/log_message/apply {message:"Map `Main Island` just regenerated!"}
 
 execute if score #rg_flamingosaurus_mariokart switch.data matches 118593.. run scoreboard players reset #rg_flamingosaurus_mariokart switch.data

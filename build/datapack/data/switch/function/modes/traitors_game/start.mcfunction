@@ -31,12 +31,12 @@ scoreboard players set #cut_clean switch.data 1
 scoreboard objectives add switch.temp.role dummy
 scoreboard objectives add switch.temp.cooldown dummy
 scoreboard objectives add switch.temp.announced dummy
-scoreboard objectives add switch.temp.sidebar dummy {"text":"Remaining Roles","color":"gold"}
+scoreboard objectives add switch.temp.sidebar dummy {"text":"Remaining Roles","color":"#FFA600"}
 scoreboard objectives add switch.temp.killed_ninja dummy
 scoreboard objectives add switch.temp.kills playerKillCount
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-team add switch.temp.inspector {"text":"[Inspector]","color":"green"}
+team add switch.temp.inspector {"text":"[Inspector]","color":"#2EFF8B"}
 team modify switch.temp.inspector color green
 
 team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
@@ -45,12 +45,12 @@ team add switch.temp.sidebar.3 {"text":"[Sidebar 3]"}
 team add switch.temp.sidebar.2 {"text":"[Sidebar 2]"}
 team add switch.temp.sidebar.1 {"text":"[Sidebar 1]"}
 team add switch.temp.sidebar.0 {"text":"[Sidebar 0]"}
-team modify switch.temp.sidebar.5 suffix [{"text":"Inspector: ","color":"green"},{"text":"1","color":"yellow"}]
-team modify switch.temp.sidebar.4 suffix [{"text":"Ninja: ","color":"green"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.3 suffix [{"text":"Innocent: ","color":"green"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.2 suffix [{"text":"Traitor: ","color":"red"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"Big Traitor: ","color":"dark_red"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.0 suffix [{"text":"Floupy: ","color":"gold"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.5 suffix [{"text":"Inspector: ","color":"#2EFF8B"},{"text":"1","color":"#FFE60A"}]
+team modify switch.temp.sidebar.4 suffix [{"text":"Ninja: ","color":"#2EFF8B"},{"text":"0","color":"#FFE60A"}]
+team modify switch.temp.sidebar.3 suffix [{"text":"Innocent: ","color":"#2EFF8B"},{"text":"0","color":"#FFE60A"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Traitor: ","color":"#FF3347"},{"text":"0","color":"#FFE60A"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Big Traitor: ","color":"#C41E3A"},{"text":"0","color":"#FFE60A"}]
+team modify switch.temp.sidebar.0 suffix [{"text":"Floupy: ","color":"#FFA600"},{"text":"0","color":"#FFE60A"}]
 team modify switch.temp.sidebar.5 color green
 team modify switch.temp.sidebar.4 color green
 team modify switch.temp.sidebar.3 color green

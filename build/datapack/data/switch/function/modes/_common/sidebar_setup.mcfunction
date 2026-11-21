@@ -7,8 +7,8 @@
 #			switch:modes/rush_the_point/start_common
 #
 
-team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"red"},{"text":"0","color":"yellow"}]
+team modify switch.temp.sidebar.2 suffix [{"text":"Blue Team: ","color":"#2E9BFF"},{"text":"0","color":"#FFE60A"}]
+team modify switch.temp.sidebar.1 suffix [{"text":"Red Team: ","color":"#FF3347"},{"text":"0","color":"#FFE60A"}]
 team modify switch.temp.sidebar.2 color blue
 team modify switch.temp.sidebar.1 color red
 team join switch.temp.sidebar.5 §3

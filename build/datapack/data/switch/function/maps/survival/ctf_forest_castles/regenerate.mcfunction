@@ -50,7 +50,7 @@ execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in minecraft:overworld run forceload remove -11912 -12000 -11899 -11784
 execute if score #rg_ctf_forest_castles switch.data matches 521.. in switch:game run forceload remove -11912 -12000 -11899 -11784
 
-execute if score #rg_ctf_forest_castles switch.data matches 521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Forest Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"26","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ctf_forest_castles switch.data matches 521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Forest Castle","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"26","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run function switch:engine/log_message/apply {message:"Map `Forest Castle` just regenerated!"}
 
 execute if score #rg_ctf_forest_castles switch.data matches 521.. run scoreboard players reset #rg_ctf_forest_castles switch.data

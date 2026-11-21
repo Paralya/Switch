@@ -26,7 +26,7 @@ execute if score #rg_gg_snow_2 switch.data matches 107.. in switch:game run forc
 execute if score #rg_gg_snow_2 switch.data matches 107.. in minecraft:overworld run forceload remove 10062 8047 10082 8092
 execute if score #rg_gg_snow_2 switch.data matches 107.. in switch:game run forceload remove 10062 8047 10082 8092
 
-execute if score #rg_gg_snow_2 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Château des bleds","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_gg_snow_2 switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Château des bleds","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_gg_snow_2 switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Château des bleds` just regenerated!"}
 
 execute if score #rg_gg_snow_2 switch.data matches 107.. run scoreboard players reset #rg_gg_snow_2 switch.data

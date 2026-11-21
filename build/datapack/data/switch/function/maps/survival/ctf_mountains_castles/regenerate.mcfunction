@@ -94,7 +94,7 @@ execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in minecraft:overworld run forceload remove -11655 -6000 -11636 -5842
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. in switch:game run forceload remove -11655 -6000 -11636 -5842
 
-execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Vale Castle","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"34","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Vale Castle","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"2","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"34","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run function switch:engine/log_message/apply {message:"Map `Vale Castle` just regenerated!"}
 
 execute if score #rg_ctf_mountains_castles switch.data matches 3098.. run scoreboard players reset #rg_ctf_mountains_castles switch.data

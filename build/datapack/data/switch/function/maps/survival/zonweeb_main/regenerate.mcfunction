@@ -38,7 +38,7 @@ execute if score #rg_zonweeb_main switch.data matches 226.. in switch:game run f
 execute if score #rg_zonweeb_main switch.data matches 226.. in minecraft:overworld run forceload remove 6080 0 6100 100
 execute if score #rg_zonweeb_main switch.data matches 226.. in switch:game run forceload remove 6080 0 6100 100
 
-execute if score #rg_zonweeb_main switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Zonweeb Main","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"11","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zonweeb_main switch.data matches 226.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Zonweeb Main","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"11","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_zonweeb_main switch.data matches 226.. run function switch:engine/log_message/apply {message:"Map `Zonweeb Main` just regenerated!"}
 
 execute if score #rg_zonweeb_main switch.data matches 226.. run scoreboard players reset #rg_zonweeb_main switch.data

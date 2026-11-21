@@ -58,7 +58,7 @@ execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game
 execute if score #rg_zonweeb_highschool switch.data matches 591.. in minecraft:overworld run forceload remove -5888 -8000 -5875 -7782
 execute if score #rg_zonweeb_highschool switch.data matches 591.. in switch:game run forceload remove -5888 -8000 -5875 -7782
 
-execute if score #rg_zonweeb_highschool switch.data matches 591.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"A Japanese High School","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"29","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_zonweeb_highschool switch.data matches 591.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"A Japanese High School","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"29","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_zonweeb_highschool switch.data matches 591.. run function switch:engine/log_message/apply {message:"Map `A Japanese High School` just regenerated!"}
 
 execute if score #rg_zonweeb_highschool switch.data matches 591.. run scoreboard players reset #rg_zonweeb_highschool switch.data

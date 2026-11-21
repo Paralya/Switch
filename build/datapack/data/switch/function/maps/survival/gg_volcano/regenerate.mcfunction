@@ -26,7 +26,7 @@ execute if score #rg_gg_volcano switch.data matches 107.. in switch:game run for
 execute if score #rg_gg_volcano switch.data matches 107.. in minecraft:overworld run forceload remove 10144 8001 10164 8046
 execute if score #rg_gg_volcano switch.data matches 107.. in switch:game run forceload remove 10144 8001 10164 8046
 
-execute if score #rg_gg_volcano switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Volcany-chan","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_gg_volcano switch.data matches 107.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Volcany-chan","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_gg_volcano switch.data matches 107.. run function switch:engine/log_message/apply {message:"Map `Volcany-chan` just regenerated!"}
 
 execute if score #rg_gg_volcano switch.data matches 107.. run scoreboard players reset #rg_gg_volcano switch.data

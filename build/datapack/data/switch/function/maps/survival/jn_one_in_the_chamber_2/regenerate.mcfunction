@@ -42,7 +42,7 @@ execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in minecraft:overworld run forceload remove -9883 8000 -9860 8100
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. in switch:game run forceload remove -9883 8000 -9860 8100
 
-execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Multi-biomes Boxes 2","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"17","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Multi-biomes Boxes 2","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"17","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run function switch:engine/log_message/apply {message:"Map `Multi-biomes Boxes 2` just regenerated!"}
 
 execute if score #rg_jn_one_in_the_chamber_2 switch.data matches 349.. run scoreboard players reset #rg_jn_one_in_the_chamber_2 switch.data

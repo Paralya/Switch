@@ -32,8 +32,8 @@ scoreboard players set #process_end switch.data 0
 scoreboard objectives setdisplay list switch.health
 
 # Choix des rôles + give d'items
-team add switch.temp.hunter {"text":"[Hunter]","color":"red"}
-team add switch.temp.mouse {"text":"[Mouse]","color":"blue"}
+team add switch.temp.hunter {"text":"[Hunter]","color":"#FF3347"}
+team add switch.temp.mouse {"text":"[Mouse]","color":"#2E9BFF"}
 team modify switch.temp.hunter color red
 team modify switch.temp.mouse color blue
 team modify switch.temp.hunter friendlyFire false

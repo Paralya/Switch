@@ -18,7 +18,7 @@ scoreboard players set #snowball_painter_ticks switch.data 0
 scoreboard players set #remaining_time switch.data 991
 scoreboard players set #process_end switch.data 0
 scoreboard objectives add switch.temp.color dummy
-scoreboard objectives add switch.temp.points dummy {"text":"Points","color":"red"}
+scoreboard objectives add switch.temp.points dummy {"text":"Points","color":"#FF3347"}
 scoreboard objectives setdisplay sidebar switch.temp.points
 
 ## Order selection

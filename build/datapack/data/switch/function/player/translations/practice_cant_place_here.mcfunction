@@ -7,8 +7,8 @@
 #
 
 # French
-title @s[scores={switch.lang=0}] actionbar {"text":"Impossible de poser un checkpoint ici !","color":"red"}
+title @s[scores={switch.lang=0}] actionbar {"text":"Impossible de poser un checkpoint ici !","color":"#FF3347"}
 
 # English
-title @s[scores={switch.lang=1}] actionbar {"text":"You can't place a checkpoint here!","color":"red"}
+title @s[scores={switch.lang=1}] actionbar {"text":"You can't place a checkpoint here!","color":"#FF3347"}
 

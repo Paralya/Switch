@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:turtle_egg"},
-		"title": {"text": "Bien placé","color": "yellow"},
-		"description": {"text": "Survive 25 seconds without moving in Block Party","color": "aqua"},
+		"title": {"text": "Bien placé","color": "#FFE60A"},
+		"description": {"text": "Survive 25 seconds without moving in Block Party","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

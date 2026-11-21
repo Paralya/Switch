@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:blue_ice"},
-		"title": {"text": "Pitch Slayer","color": "yellow"},
-		"description": {"text": "Win a Pitchout with 3 lives","color": "aqua"},
+		"title": {"text": "Pitch Slayer","color": "#FFE60A"},
+		"description": {"text": "Win a Pitchout with 3 lives","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

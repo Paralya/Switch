@@ -30,7 +30,7 @@ execute if score #rg_fireblast_cookie switch.data matches 172.. in switch:game r
 execute if score #rg_fireblast_cookie switch.data matches 172.. in minecraft:overworld run forceload remove 12050 -8000 12075 -7925
 execute if score #rg_fireblast_cookie switch.data matches 172.. in switch:game run forceload remove 12050 -8000 12075 -7925
 
-execute if score #rg_fireblast_cookie switch.data matches 172.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Smol Cookie","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_fireblast_cookie switch.data matches 172.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Smol Cookie","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"8","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_fireblast_cookie switch.data matches 172.. run function switch:engine/log_message/apply {message:"Map `Smol Cookie` just regenerated!"}
 
 execute if score #rg_fireblast_cookie switch.data matches 172.. run scoreboard players reset #rg_fireblast_cookie switch.data

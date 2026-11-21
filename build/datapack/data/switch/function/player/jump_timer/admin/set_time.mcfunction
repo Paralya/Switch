@@ -22,6 +22,6 @@ execute store result storage switch:temp jt_input.d2 int 1 run scoreboard player
 function switch:player/jump_timer/insert with storage switch:temp jt_input
 
 # Feedback, then show the updated list
-$tellraw @s ["",{"text":"Time of ","color":"green"},{"text":"$(name)","color":"yellow"},{"text":" set to ","color":"green"},{"score":{"name":"#secs","objective":"switch.data"},"color":"yellow"},{"text":".","color":"yellow"},{"score":{"name":"#d1","objective":"switch.data"},"color":"yellow"},{"score":{"name":"#d2","objective":"switch.data"},"color":"yellow"},{"text":"s","color":"yellow"},{"text":" (rank #","color":"green"},{"score":{"name":"#rank","objective":"switch.data"},"color":"gold"},{"text":")","color":"green"}]
+$tellraw @s ["",{"text":"Time of ","color":"#2EFF8B"},{"text":"$(name)","color":"#FFE60A"},{"text":" set to ","color":"#2EFF8B"},{"score":{"name":"#secs","objective":"switch.data"},"color":"#FFE60A"},{"text":".","color":"#FFE60A"},{"score":{"name":"#d1","objective":"switch.data"},"color":"#FFE60A"},{"score":{"name":"#d2","objective":"switch.data"},"color":"#FFE60A"},{"text":"s","color":"#FFE60A"},{"text":" (rank #","color":"#2EFF8B"},{"score":{"name":"#rank","objective":"switch.data"},"color":"#FFA600"},{"text":")","color":"#2EFF8B"}]
 $function switch:player/jump_timer/admin/list {jump:"$(jump)"}
 

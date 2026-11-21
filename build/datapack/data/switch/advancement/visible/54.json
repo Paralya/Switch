@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "switch:stardust_ingot"}},
-		"title": {"text": "Secret Slayer","color": "yellow"},
-		"description": {"text": "Complete all map secrets in Infected game mode","color": "aqua"},
+		"title": {"text": "Secret Slayer","color": "#FFE60A"},
+		"description": {"text": "Complete all map secrets in Infected game mode","color": "#00E5FF"},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

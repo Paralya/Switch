@@ -30,7 +30,7 @@ execute if score #rg_nature_house switch.data matches 115.. in switch:game run f
 execute if score #rg_nature_house switch.data matches 115.. in minecraft:overworld run forceload remove -7955 4000 -7932 4068
 execute if score #rg_nature_house switch.data matches 115.. in switch:game run forceload remove -7955 4000 -7932 4068
 
-execute if score #rg_nature_house switch.data matches 115.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nature House","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"5","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_nature_house switch.data matches 115.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Nature House","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"5","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_nature_house switch.data matches 115.. run function switch:engine/log_message/apply {message:"Map `Nature House` just regenerated!"}
 
 execute if score #rg_nature_house switch.data matches 115.. run scoreboard players reset #rg_nature_house switch.data

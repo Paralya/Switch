@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:coal"},
-		"title": {"text": "Le boulet","color": "yellow"},
-		"description": {"text": "Die from the first cannon shot in Bombardment","color": "aqua"},
+		"title": {"text": "Le boulet","color": "#FFE60A"},
+		"description": {"text": "Die from the first cannon shot in Bombardment","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -26,7 +26,7 @@ execute if score #rg_arti_tnt_run_tower switch.data matches 167.. in switch:game
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. in minecraft:overworld run forceload remove -7990 -12000 -7980 -11980
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. in switch:game run forceload remove -7990 -12000 -7980 -11980
 
-execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"TNT Run Tower","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"TNT Run Tower","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"8","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run function switch:engine/log_message/apply {message:"Map `TNT Run Tower` just regenerated!"}
 
 execute if score #rg_arti_tnt_run_tower switch.data matches 167.. run scoreboard players reset #rg_arti_tnt_run_tower switch.data

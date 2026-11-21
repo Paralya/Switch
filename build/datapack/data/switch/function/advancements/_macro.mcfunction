@@ -10,11 +10,11 @@
 #
 
 # [
-# 	{"text": "Aider à la construction d'une map ou la création d'un mini-jeu\n", "color": "aqua"},
-# 	{"nbt": "all.1.percent.int", "storage": "switch:advancements", "color":"green"},
-# 	{"text":".", "color":"green"},
-# 	{"nbt": "all.1.percent.digits", "storage": "switch:advancements", "color":"green"},
-# 	{"text":"% des joueurs", "color":"green"}
+# 	{"text": "Aider à la construction d'une map ou la création d'un mini-jeu\n", "color": "#00E5FF"},
+# 	{"nbt": "all.1.percent.int", "storage": "switch:advancements", "color":"#2EFF8B"},
+# 	{"text":".", "color":"#2EFF8B"},
+# 	{"nbt": "all.1.percent.digits", "storage": "switch:advancements", "color":"#2EFF8B"},
+# 	{"text":"% des joueurs", "color":"#2EFF8B"}
 # ]
 
 scoreboard players set #success switch.data 0

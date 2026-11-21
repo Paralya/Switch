@@ -102,7 +102,7 @@ execute if score #rg_city_race switch.data matches 2521.. in switch:game run for
 execute if score #rg_city_race switch.data matches 2521.. in minecraft:overworld run forceload remove 6613 -5906 6625 -5645
 execute if score #rg_city_race switch.data matches 2521.. in switch:game run forceload remove 6613 -5906 6625 -5645
 
-execute if score #rg_city_race switch.data matches 2521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"City Race","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"m","color":"yellow"},{"text":"06","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_city_race switch.data matches 2521.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"City Race","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"2","color":"#FFA600"},{"text":"m","color":"#FFE60A"},{"text":"06","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_city_race switch.data matches 2521.. run function switch:engine/log_message/apply {message:"Map `City Race` just regenerated!"}
 
 execute if score #rg_city_race switch.data matches 2521.. run scoreboard players reset #rg_city_race switch.data

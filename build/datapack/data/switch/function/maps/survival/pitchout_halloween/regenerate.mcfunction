@@ -42,7 +42,7 @@ execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game
 execute if score #rg_pitchout_halloween switch.data matches 175.. in minecraft:overworld run forceload remove 10102 10000 10122 10122
 execute if score #rg_pitchout_halloween switch.data matches 175.. in switch:game run forceload remove 10102 10000 10122 10122
 
-execute if score #rg_pitchout_halloween switch.data matches 175.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Pitchout Halloween","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"8","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_pitchout_halloween switch.data matches 175.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Pitchout Halloween","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"8","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_pitchout_halloween switch.data matches 175.. run function switch:engine/log_message/apply {message:"Map `Pitchout Halloween` just regenerated!"}
 
 execute if score #rg_pitchout_halloween switch.data matches 175.. run scoreboard players reset #rg_pitchout_halloween switch.data

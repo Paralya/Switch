@@ -82,7 +82,7 @@ execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:gam
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in minecraft:overworld run forceload remove 6194 -10000 6207 -9780
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. in switch:game run forceload remove 6194 -10000 6207 -9780
 
-execute if score #rg_nuketown_no_barrier switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Nuketown No Barrier","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"41","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_nuketown_no_barrier switch.data matches 833.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Nuketown No Barrier","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"41","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run function switch:engine/log_message/apply {message:"Map `Nuketown No Barrier` just regenerated!"}
 
 execute if score #rg_nuketown_no_barrier switch.data matches 833.. run scoreboard players reset #rg_nuketown_no_barrier switch.data

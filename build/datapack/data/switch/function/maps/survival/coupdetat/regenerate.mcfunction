@@ -27,7 +27,7 @@ execute if score #rg_coupdetat switch.data matches 49.. in switch:game run force
 execute if score #rg_coupdetat switch.data matches 49.. in minecraft:overworld run forceload remove -3988 2000 -3977 2022
 execute if score #rg_coupdetat switch.data matches 49.. in switch:game run forceload remove -3988 2000 -3977 2022
 
-execute if score #rg_coupdetat switch.data matches 49.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Coup d'état","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"2","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_coupdetat switch.data matches 49.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Coup d'état","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"2","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_coupdetat switch.data matches 49.. run function switch:engine/log_message/apply {message:"Map `Coup d'état` just regenerated!"}
 
 execute if score #rg_coupdetat switch.data matches 49.. run scoreboard players reset #rg_coupdetat switch.data

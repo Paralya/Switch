@@ -46,7 +46,7 @@ execute if score #rg_warden_forest switch.data matches 141.. in switch:game run 
 execute if score #rg_warden_forest switch.data matches 141.. in minecraft:overworld run forceload remove 4126 2013 4145 2145
 execute if score #rg_warden_forest switch.data matches 141.. in switch:game run forceload remove 4126 2013 4145 2145
 
-execute if score #rg_warden_forest switch.data matches 141.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Warden Forest","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"7","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_warden_forest switch.data matches 141.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Warden Forest","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"7","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_warden_forest switch.data matches 141.. run function switch:engine/log_message/apply {message:"Map `Warden Forest` just regenerated!"}
 
 execute if score #rg_warden_forest switch.data matches 141.. run scoreboard players reset #rg_warden_forest switch.data

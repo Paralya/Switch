@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:gold_nugget"},
-		"title": {"text": "La moula","color": "yellow"},
-		"description": {"text": "Have at least 400 Sapphires in your bank","color": "aqua"},
+		"title": {"text": "La moula","color": "#FFE60A"},
+		"description": {"text": "Have at least 400 Sapphires in your bank","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

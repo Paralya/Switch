@@ -9,7 +9,7 @@
 function switch:modes/rush_the_point/start_common
 function switch:modes/rush_the_flag/translations/start
 
-team modify switch.temp.sidebar.5 suffix [{"text":"Goal: "},{"text":"5","color":"yellow"},{"text":" flags"}]
+team modify switch.temp.sidebar.5 suffix [{"text":"Goal: "},{"text":"5","color":"#FFE60A"},{"text":" flags"}]
 scoreboard players set #remaining_time switch.data 601
 scoreboard players set #rush_the_point_seconds switch.data -11
 scoreboard players set #rush_the_point_ticks switch.data 0

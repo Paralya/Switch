@@ -58,7 +58,7 @@ execute if score #rg_jn_biomes_relief switch.data matches 901.. in switch:game r
 execute if score #rg_jn_biomes_relief switch.data matches 901.. in minecraft:overworld run forceload remove -9822 6000 -9802 6139
 execute if score #rg_jn_biomes_relief switch.data matches 901.. in switch:game run forceload remove -9822 6000 -9802 6139
 
-execute if score #rg_jn_biomes_relief switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Biomes Relief","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"45","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_jn_biomes_relief switch.data matches 901.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Biomes Relief","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"45","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_jn_biomes_relief switch.data matches 901.. run function switch:engine/log_message/apply {message:"Map `Biomes Relief` just regenerated!"}
 
 execute if score #rg_jn_biomes_relief switch.data matches 901.. run scoreboard players reset #rg_jn_biomes_relief switch.data

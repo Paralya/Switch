@@ -54,7 +54,7 @@ execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run 
 execute if score #rg_clock_circuit switch.data matches 928.. in minecraft:overworld run forceload remove 6174 -5087 6192 -4931
 execute if score #rg_clock_circuit switch.data matches 928.. in switch:game run forceload remove 6174 -5087 6192 -4931
 
-execute if score #rg_clock_circuit switch.data matches 928.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"yellow"},{"text":"Clock Circuit","color":"gold"},{"text":"' regenerated in ","color":"yellow"},{"text":"46","color":"gold"},{"text":"s","color":"yellow"}]
+execute if score #rg_clock_circuit switch.data matches 928.. run tellraw @a ["",{"nbt":"ParalyaWarning","storage":"switch:main","interpret":true},{"text":" Map '","color":"#FFE60A"},{"text":"Clock Circuit","color":"#FFA600"},{"text":"' regenerated in ","color":"#FFE60A"},{"text":"46","color":"#FFA600"},{"text":"s","color":"#FFE60A"}]
 execute if score #rg_clock_circuit switch.data matches 928.. run function switch:engine/log_message/apply {message:"Map `Clock Circuit` just regenerated!"}
 
 execute if score #rg_clock_circuit switch.data matches 928.. run scoreboard players reset #rg_clock_circuit switch.data

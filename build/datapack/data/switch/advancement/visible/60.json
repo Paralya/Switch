@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:end_crystal"},
-		"title": {"text": "Multigamer","color": "yellow"},
-		"description": {"text": "Win each mini-game at least once","color": "aqua"},
+		"title": {"text": "Multigamer","color": "#FFE60A"},
+		"description": {"text": "Win each mini-game at least once","color": "#00E5FF"},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

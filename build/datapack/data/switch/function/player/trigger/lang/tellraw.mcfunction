@@ -8,7 +8,7 @@
 #
 
 tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-tellraw @s [{"text":"Please choose a language by clicking it:","color":"aqua"}]
-tellraw @s [{"text":"\n[Français]","color":"yellow","click_event":{"action":"run_command","command":"/trigger switch.trigger.lang set 10"},"hover_event":{"action":"show_text","value":{"text":"[Cliquez pour choisir Français]","color":"yellow"}}}]
-tellraw @s [{"text":"\n[English]","color":"yellow","click_event":{"action":"run_command","command":"/trigger switch.trigger.lang set 11"},"hover_event":{"action":"show_text","value":{"text":"[Click to choose English]","color":"yellow"}}}]
+tellraw @s [{"text":"Please choose a language by clicking it:","color":"#00E5FF"}]
+tellraw @s [{"text":"\n[Français]","color":"#FFE60A","click_event":{"action":"run_command","command":"/trigger switch.trigger.lang set 10"},"hover_event":{"action":"show_text","value":{"text":"[Cliquez pour choisir Français]","color":"#FFE60A"}}}]
+tellraw @s [{"text":"\n[English]","color":"#FFE60A","click_event":{"action":"run_command","command":"/trigger switch.trigger.lang set 11"},"hover_event":{"action":"show_text","value":{"text":"[Click to choose English]","color":"#FFE60A"}}}]
 

@@ -69,14 +69,14 @@
 					"",
 					{
 						"text": "ꀁ",
-						"color": "white",
+						"color": "#E4ECF7",
 						"italic": false,
 						"font": "switch:tooltip"
 					},
 					{
 						"text": "뀁Switch",
 						"italic": false,
-						"color": "white",
+						"color": "#E4ECF7",
 						"font": "switch:tooltip"
 					}
 				]
