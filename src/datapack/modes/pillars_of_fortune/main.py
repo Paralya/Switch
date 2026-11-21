@@ -17,19 +17,108 @@ def write_mode():
 	write_translations()
 
 
-	# /place_player
-	write_function(f"{path}/place_player", f"""
-# Remove temporary tag
+	# /place_start (as a random player, positioned at the center of the map and rotated 0 0)
+	write_function(f"{path}/place_start", f"""
+execute if score #count {ns}.data matches ..12 run return run function {path}/place_player with storage {ns}:temp input
+function {path}/place_rings
+""")
+
+	# /place_one (macro: distance_to_center)
+	write_function(f"{path}/place_one", f"""
 tag @s remove {ns}.place_pillar
-
-# Teleport player to the pillar
 $execute positioned ^ ^ ^$(distance_to_center) align xyz run tp @s ~0.5 ~0.5 ~0.5 ~180 0
-
-# Prepare entity to ride
 execute at @s run summon item_display ~ ~ ~ {{Tags:["{ns}.pillars_of_fortune"]}}
+""")
 
-# Continue loop
+	# /place_player (a single circle, every player a step further around it)
+	write_function(f"{path}/place_player", f"""
+function {path}/place_one with storage {ns}:temp input
 $execute rotated ~$(angle_difference) 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {path}/place_player with storage {ns}:temp input
+""")
+
+	# /place_rings (concentric circles: one player at the center, then rings of about the same spacing between neighbours, so everyone stays close to the center)
+	write_function(f"{path}/place_rings", f"""
+data modify storage {ns}:temp input set value {{angle_difference:0.0f,distance_to_center:0.0f,start_angle:0.0f}}
+function {path}/place_one with storage {ns}:temp input
+
+# Fewest rings that hold the other players: ring k is 2 pi k long, and 7.85 instead of 6.283 leaves room to space the rings a bit less than the players
+scoreboard players operation #others {ns}.data = #count {ns}.data
+scoreboard players remove #others {ns}.data 1
+scoreboard players set #rings {ns}.data 0
+scoreboard players set #triangle {ns}.data 0
+function {path}/place_rings_count
+
+# Gap between two rings (millis of blocks) that gives 8.8 blocks between neighbours of the same ring
+scoreboard players set #gap {ns}.data 8800000
+scoreboard players operation #gap {ns}.data *= #others {ns}.data
+scoreboard players operation #divisor {ns}.data = #triangle {ns}.data
+scoreboard players set #factor {ns}.data 6283
+scoreboard players operation #divisor {ns}.data *= #factor {ns}.data
+scoreboard players operation #gap {ns}.data /= #divisor {ns}.data
+
+scoreboard players set #ring {ns}.data 0
+scoreboard players set #inner {ns}.data 0
+function {path}/place_rings_loop
+""")
+
+	# /place_rings_count (#triangle ends as 1 + 2 + ... + #rings)
+	write_function(f"{path}/place_rings_count", f"""
+scoreboard players add #rings {ns}.data 1
+scoreboard players operation #triangle {ns}.data += #rings {ns}.data
+scoreboard players operation #capacity {ns}.data = #triangle {ns}.data
+scoreboard players set #factor {ns}.data 785
+scoreboard players operation #capacity {ns}.data *= #factor {ns}.data
+scoreboard players operation #needed {ns}.data = #others {ns}.data
+scoreboard players set #factor {ns}.data 100
+scoreboard players operation #needed {ns}.data *= #factor {ns}.data
+execute if score #capacity {ns}.data < #needed {ns}.data run function {path}/place_rings_count
+""")
+
+	# /place_rings_loop (ring k gets the players between the cumulative shares of rings k-1 and k, so the shares add up to everyone)
+	write_function(f"{path}/place_rings_loop", f"""
+scoreboard players add #ring {ns}.data 1
+scoreboard players operation #outer {ns}.data = #inner {ns}.data
+scoreboard players operation #outer {ns}.data += #ring {ns}.data
+scoreboard players operation #ring_left {ns}.data = #others {ns}.data
+scoreboard players operation #ring_left {ns}.data *= #outer {ns}.data
+scoreboard players operation #ring_left {ns}.data /= #triangle {ns}.data
+scoreboard players operation #temp {ns}.data = #others {ns}.data
+scoreboard players operation #temp {ns}.data *= #inner {ns}.data
+scoreboard players operation #temp {ns}.data /= #triangle {ns}.data
+scoreboard players operation #ring_left {ns}.data -= #temp {ns}.data
+scoreboard players operation #inner {ns}.data = #outer {ns}.data
+
+scoreboard players set #step {ns}.data 360000
+scoreboard players operation #step {ns}.data /= #ring_left {ns}.data
+scoreboard players operation #distance {ns}.data = #gap {ns}.data
+scoreboard players operation #distance {ns}.data *= #ring {ns}.data
+
+# Odd rings start on the axis, even rings half a step further so that neighbouring rings interleave
+scoreboard players set #factor {ns}.data 2
+scoreboard players operation #start {ns}.data = #step {ns}.data
+scoreboard players operation #start {ns}.data /= #factor {ns}.data
+scoreboard players operation #parity {ns}.data = #ring {ns}.data
+scoreboard players operation #parity {ns}.data %= #factor {ns}.data
+execute if score #parity {ns}.data matches 1 run scoreboard players set #start {ns}.data 0
+
+execute store result storage {ns}:temp input.angle_difference float 0.001 run scoreboard players get #step {ns}.data
+execute store result storage {ns}:temp input.distance_to_center float 0.001 run scoreboard players get #distance {ns}.data
+execute store result storage {ns}:temp input.start_angle float 0.001 run scoreboard players get #start {ns}.data
+function {path}/place_ring with storage {ns}:temp input
+
+execute if score #ring {ns}.data < #rings {ns}.data run function {path}/place_rings_loop
+""")
+
+	# /place_ring (macro: start_angle)
+	write_function(f"{path}/place_ring", f"""
+$execute rotated $(start_angle) 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {path}/place_ring_player with storage {ns}:temp input
+""")
+
+	# /place_ring_player (macro: angle_difference)
+	write_function(f"{path}/place_ring_player", f"""
+function {path}/place_one with storage {ns}:temp input
+scoreboard players remove #ring_left {ns}.data 1
+$execute if score #ring_left {ns}.data matches 1.. rotated ~$(angle_difference) 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {path}/place_ring_player with storage {ns}:temp input
 """)
 
 	# /process_end
@@ -64,7 +153,7 @@ execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. run scorebo
 execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. run scoreboard players operation #swap {ns}.data %= #60 {ns}.data
 execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. if score #swap {ns}.data matches 55 as @a[tag=!detached,gamemode=survival] at @s unless block ~ ~-0.1 ~ air run tag @s add {ns}.to_swap
 execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. if score #swap {ns}.data matches 55 if entity @a[tag={ns}.to_swap] run function {path}/swap/main
-execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. if score #swap {ns}.data matches 55 run give @a[tag=!detached,gamemode=survival] mangrove_planks 16
+execute if score #pillars_of_fortune_seconds {ns}.data matches 180.. if score #swap {ns}.data matches 55 run give @a[tag=!detached,gamemode=survival] pale_oak_planks 16
 
 # Title action bar
 function {ns}:modes/_common/compute_mins_secs
@@ -117,13 +206,13 @@ execute store result storage {ns}:temp input.distance_to_center float 0.001 run 
 
 # Place players on pillars
 tag @a[tag=!detached] add {ns}.place_pillar
-execute if data storage {ns}:main {{map:"pillars_of_fortune"}} in {ns}:game positioned 10050 142 -11950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"slimy_ground"}} in {ns}:game positioned 6050 142 -7950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"eternal_void"}} in {ns}:game positioned 8050 142 -7950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"floor_is_lava"}} in {ns}:game positioned 8050 142 2050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"leather_boots"}} in {ns}:game positioned 8050 142 4050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"ocean_waste"}} in {ns}:game positioned 8050 142 6050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
-execute if data storage {ns}:main {{map:"void_desert"}} in {ns}:game positioned 2050 142 8050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_player with storage {ns}:temp input
+execute if data storage {ns}:main {{map:"pillars_of_fortune"}} in {ns}:game positioned 10050 142 -11950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
+execute if data storage {ns}:main {{map:"slimy_ground"}} in {ns}:game positioned 6050 142 -7950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
+execute if data storage {ns}:main {{map:"eternal_void"}} in {ns}:game positioned 8050 142 -7950 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
+execute if data storage {ns}:main {{map:"floor_is_lava"}} in {ns}:game positioned 8050 142 2050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
+execute if data storage {ns}:main {{map:"leather_boots"}} in {ns}:game positioned 8050 142 4050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
+execute if data storage {ns}:main {{map:"ocean_waste"}} in {ns}:game positioned 8050 142 6050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
+execute if data storage {ns}:main {{map:"void_desert"}} in {ns}:game positioned 2050 142 8050 rotated 0 0 as @e[tag={ns}.place_pillar,sort=random,limit=1] run function {ns}:modes/pillars_of_fortune/place_start
 """)
 
 	# /stop (empty)

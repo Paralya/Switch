@@ -50,11 +50,11 @@ execute store result storage switch:temp input.distance_to_center float 0.001 ru
 
 # Place players on pillars
 tag @a[tag=!detached] add switch.place_pillar
-execute if data storage switch:main {map:"pillars_of_fortune"} in switch:game positioned 10050 142 -11950 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
-execute if data storage switch:main {map:"slimy_ground"} in switch:game positioned 6050 142 -7950 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
-execute if data storage switch:main {map:"eternal_void"} in switch:game positioned 8050 142 -7950 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
-execute if data storage switch:main {map:"floor_is_lava"} in switch:game positioned 8050 142 2050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
-execute if data storage switch:main {map:"leather_boots"} in switch:game positioned 8050 142 4050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
-execute if data storage switch:main {map:"ocean_waste"} in switch:game positioned 8050 142 6050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
-execute if data storage switch:main {map:"void_desert"} in switch:game positioned 2050 142 8050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_player with storage switch:temp input
+execute if data storage switch:main {map:"pillars_of_fortune"} in switch:game positioned 10050 142 -11950 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
+execute if data storage switch:main {map:"slimy_ground"} in switch:game positioned 6050 142 -7950 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
+execute if data storage switch:main {map:"eternal_void"} in switch:game positioned 8050 142 -7950 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
+execute if data storage switch:main {map:"floor_is_lava"} in switch:game positioned 8050 142 2050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
+execute if data storage switch:main {map:"leather_boots"} in switch:game positioned 8050 142 4050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
+execute if data storage switch:main {map:"ocean_waste"} in switch:game positioned 8050 142 6050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
+execute if data storage switch:main {map:"void_desert"} in switch:game positioned 2050 142 8050 rotated 0 0 as @e[tag=switch.place_pillar,sort=random,limit=1] run function switch:modes/pillars_of_fortune/place_start
 

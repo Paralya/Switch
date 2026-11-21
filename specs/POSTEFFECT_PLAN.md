@@ -137,9 +137,9 @@ Timeline réelle, en ticks depuis `posteffect add` :
 | Tick | Événement | Son |
 |---|---|---|
 | 0 à 10 | Des cellules carrées couvrent le lobby | `entity.ender_dragon.flap` (pitch 0.6) |
-| 27 | `launch` | `ui.toast.in`, déjà présent |
+| 12 | `launch` | `ui.toast.in`, déjà présent |
 | 16 | Le nom du mode claque dans son bandeau | `item.mace.smash_ground_heavy` |
-| 35 à 47 | La couleur du mode laisse place à la map floutée | |
+| 20 à 32 | La couleur du mode laisse place à la map floutée | |
 | 30, 42, 54 | Une règle se déroule | `ui.button.click` (pitch 1.4) |
 | 105 à 125 | Dissolution selon la profondeur. Le lointain (fondu progressif de 64 à 256 blocs) et le ciel, hors de portée de la sphère, fondent en parallèle (ticks 112 à 125) | `item.trident.riptide_1` (pitch 1.4) |
 | 145 | Le serveur retire l'effet | |

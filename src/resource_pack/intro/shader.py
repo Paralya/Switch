@@ -5,7 +5,7 @@ from stewbeet import POST_SHADER_HEADER
 from .text import TEXT_GLSL
 
 # Constants
-LAUNCH_TICK: int = 27
+LAUNCH_TICK: int = 12
 """ Tick of the sequence at which the game launches: the card fully covers the screen from COVER_TICKS on. """
 
 INTRO_TICKS: int = 125

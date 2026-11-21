@@ -1,7 +1,7 @@
 
 #> switch:engine/launch_game/launch
 #
-# @within	switch:engine/launch_game/transition 27t [ scheduled ]
+# @within	switch:engine/launch_game/transition 12t [ scheduled ]
 #
 
 # Do nothing if the engine left the voting state during the transition (e.g. disabled or force started)

@@ -8,7 +8,7 @@
 #define COVER_TICKS 10.0
 #define TITLE_TICK 16.0
 #define REVEAL_TICK 105.0
-#define LAUNCH_TICK 27.0
+#define LAUNCH_TICK 12.0
 #define RULES 3
 #define RULE_TICKS 30.0, 42.0, 54.0
 
