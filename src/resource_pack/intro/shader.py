@@ -5,10 +5,10 @@ from stewbeet import POST_SHADER_HEADER
 from .text import TEXT_GLSL
 
 # Constants
-LAUNCH_TICK: int = 12
+LAUNCH_TICK: int = 27
 """ Tick of the sequence at which the game launches: the card fully covers the screen from COVER_TICKS on. """
 
-INTRO_TICKS: int = 110
+INTRO_TICKS: int = 125
 """ Ticks after which the shader shows the game untouched, so the effect can be taken off any time later. """
 
 COVER_TICKS: int = 10
@@ -20,7 +20,7 @@ TITLE_TICK: int = 16
 RULE_TICKS: tuple[int, ...] = (30, 42, 54)
 """ Each rule line is revealed in turn, which also caps a mode at three rules. """
 
-REVEAL_TICK: int = 90
+REVEAL_TICK: int = 105
 """ The card starts dissolving along the depth of the map. """
 
 INTRO_FSH: str = """
@@ -75,7 +75,7 @@ void main() {
     vec2 fromCenter = texCoord - 0.5;
     vec3 backdrop = mix(texture(BlurSampler, texCoord).rgb * 0.55, Accent * 0.3, 0.3) + Accent * 0.05 * stripes;
     backdrop *= 1.0 - 1.2 * dot(fromCenter, fromCenter);
-    vec3 card = mix(Accent * (0.85 + 0.15 * stripes), backdrop, smoothstep(20.0, 32.0, ticks));
+    vec3 card = mix(Accent * (0.85 + 0.15 * stripes), backdrop, smoothstep(LAUNCH_TICK + 8.0, LAUNCH_TICK + 20.0, ticks));
 
     // Title band: a dark strip opening behind the mode name, edged by two accent rails.
     float leaving = 1.0 - smoothstep(REVEAL_TICK - 8.0, REVEAL_TICK, ticks);
@@ -119,7 +119,7 @@ void main() {
 # Functions
 def intro_fragment_shader(ns: str) -> str:
 	""" The intro shader source, with the timeline and the text layout #defined from the constants of this module. """
-	floats: dict[str, int] = {"INTRO_TICKS": INTRO_TICKS, "COVER_TICKS": COVER_TICKS, "TITLE_TICK": TITLE_TICK, "REVEAL_TICK": REVEAL_TICK}
+	floats: dict[str, int] = {"INTRO_TICKS": INTRO_TICKS, "COVER_TICKS": COVER_TICKS, "TITLE_TICK": TITLE_TICK, "REVEAL_TICK": REVEAL_TICK, "LAUNCH_TICK": LAUNCH_TICK}
 	defines: dict[str, str] = {
 		**{name: f"{value}.0" for name, value in floats.items()},
 		"RULES": str(len(RULE_TICKS)),

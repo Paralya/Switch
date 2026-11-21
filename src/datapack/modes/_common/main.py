@@ -279,6 +279,7 @@ function {ns}:modes/_common/xp_bar/points_at_s
 	write_function(f"{path}/teleport_to_death", f"""
 scoreboard players operation #player_id {ns}.id = @s {ns}.id
 tp @s @e[type=!player,predicate={ns}:has_same_id,limit=1]
+execute if entity @s[y=-1000,dy=936] at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 tag @s remove {ns}.to_tp
 """)
 

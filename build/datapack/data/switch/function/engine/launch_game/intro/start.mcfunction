@@ -15,6 +15,6 @@ schedule function switch:engine/launch_game/intro/title 16t
 schedule function switch:engine/launch_game/intro/rule 30t append
 schedule function switch:engine/launch_game/intro/rule 42t append
 schedule function switch:engine/launch_game/intro/rule 54t append
-schedule function switch:engine/launch_game/intro/reveal 90t
-schedule function switch:engine/launch_game/intro/stop 130t
+schedule function switch:engine/launch_game/intro/reveal 105t
+schedule function switch:engine/launch_game/intro/stop 145t
 

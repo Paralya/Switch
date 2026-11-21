@@ -4,10 +4,11 @@
 #include <minecraft:globals.glsl>
 #include <switch:clock.glsl>
 
-#define INTRO_TICKS 110.0
+#define INTRO_TICKS 125.0
 #define COVER_TICKS 10.0
 #define TITLE_TICK 16.0
-#define REVEAL_TICK 90.0
+#define REVEAL_TICK 105.0
+#define LAUNCH_TICK 27.0
 #define RULES 3
 #define RULE_TICKS 30.0, 42.0, 54.0
 
@@ -91,7 +92,7 @@ void main() {
     vec2 fromCenter = texCoord - 0.5;
     vec3 backdrop = mix(texture(BlurSampler, texCoord).rgb * 0.55, Accent * 0.3, 0.3) + Accent * 0.05 * stripes;
     backdrop *= 1.0 - 1.2 * dot(fromCenter, fromCenter);
-    vec3 card = mix(Accent * (0.85 + 0.15 * stripes), backdrop, smoothstep(20.0, 32.0, ticks));
+    vec3 card = mix(Accent * (0.85 + 0.15 * stripes), backdrop, smoothstep(LAUNCH_TICK + 8.0, LAUNCH_TICK + 20.0, ticks));
 
     // Title band: a dark strip opening behind the mode name, edged by two accent rails.
     float leaving = 1.0 - smoothstep(REVEAL_TICK - 8.0, REVEAL_TICK, ticks);

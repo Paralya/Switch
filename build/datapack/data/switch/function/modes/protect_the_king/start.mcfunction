@@ -45,7 +45,7 @@ bossbar set switch.temp.red_king players @a[tag=!detached]
 bossbar set switch.temp.blue_king players @a[tag=!detached]
 
 # Choix des rôles + give d'items
-team add switch.temp.red_king {"text":"[Red King]","color":"#C41E3A"}
+team add switch.temp.red_king {"text":"[Red King]","color":"#8F172B"}
 team add switch.temp.blue_king {"text":"[Blue King]","color":"#2A35C9"}
 team add switch.temp.red {"text":"[Red]","color":"#FF3347"}
 team add switch.temp.blue {"text":"[Blue]","color":"#2E9BFF"}

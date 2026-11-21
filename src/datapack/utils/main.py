@@ -13,6 +13,7 @@ def main() -> None:
 scoreboard players set #success {ns}.data 0
 execute if score @s {ns}.last_death matches ..2 if score @s {ns}.reconnect = #score {ns}.reconnect run scoreboard players set #success {ns}.data 1
 execute if score #success {ns}.data matches 1 run function {ns}:utils/death_tp
+execute if score #success {ns}.data matches 1 if entity @s[y=-1000,dy=936] run scoreboard players set #success {ns}.data 0
 execute unless score #success {ns}.data matches 1 at @n[type=marker,tag={ns}.selected_map] run tp @s ~ ~ ~ ~ ~
 
 # Clear & spectator

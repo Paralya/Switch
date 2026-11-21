@@ -6,5 +6,5 @@
 #
 
 function switch:engine/launch_game/intro/start with storage switch:main
-schedule function switch:engine/launch_game/launch 12t
+schedule function switch:engine/launch_game/launch 27t
 

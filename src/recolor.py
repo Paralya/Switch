@@ -10,7 +10,7 @@ from stewbeet import Mem
 # Constants
 PALETTE: dict[str, str] = {
 	"red": "#FF3347",
-	"dark_red": "#C41E3A",
+	"dark_red": "#8F172B",
 	"gold": "#FFA600",
 	"yellow": "#FFE60A",
 	"green": "#2EFF8B",

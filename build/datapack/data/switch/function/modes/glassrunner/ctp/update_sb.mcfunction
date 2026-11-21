@@ -13,6 +13,6 @@
 #
 
 $team modify switch.glassrunner.timer suffix [{"text": "Time: ","color":"#AEBBD0"},{"text":"$(mins)","color":"#FFA600"},{"text":"m","color":"#AEBBD0"},{"text":"$(zero)$(secs)","color":"#FFA600"},{"text":"s","color":"#AEBBD0"}]
-$team modify switch.glassrunner.p_red suffix [{"text": "Red: ","color":"#FF3347"},{"text":"$(red)","color":"#C41E3A"},{"text":" points"}]
+$team modify switch.glassrunner.p_red suffix [{"text": "Red: ","color":"#FF3347"},{"text":"$(red)","color":"#8F172B"},{"text":" points"}]
 $team modify switch.glassrunner.p_blue suffix [{"text": "Blue: ","color":"#2E9BFF"},{"text":"$(blue)","color":"#2A35C9"},{"text":" points"}]
 
