@@ -8,6 +8,7 @@ scoreboard players add #spectres_game_seconds switch.data 1
 execute if score #remaining_time switch.data matches 1.. run scoreboard players remove #remaining_time switch.data 1
 
 execute if score #spectres_game_seconds switch.data matches 0.. run function switch:modes/spectres_game/xp_bar
+execute if score #spectres_game_seconds switch.data matches 15 in switch:game run gamerule minecraft:fall_damage true
 execute if score #spectres_game_seconds switch.data matches 0.. run effect give @a[tag=!detached,team=switch.temp.spectre] resistance infinite 0 true
 execute if score #spectres_game_seconds switch.data matches 0 run function switch:modes/spectres_game/roles/announcement
 

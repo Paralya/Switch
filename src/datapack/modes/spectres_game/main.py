@@ -350,6 +350,7 @@ scoreboard players add #spectres_game_seconds {ns}.data 1
 execute if score #remaining_time {ns}.data matches 1.. run scoreboard players remove #remaining_time {ns}.data 1
 
 execute if score #spectres_game_seconds {ns}.data matches 0.. run function {ns}:modes/spectres_game/xp_bar
+execute if score #spectres_game_seconds {ns}.data matches 15 in {ns}:game run gamerule minecraft:fall_damage true
 execute if score #spectres_game_seconds {ns}.data matches 0.. run effect give @a[tag=!detached,team={ns}.temp.spectre] resistance infinite 0 true
 execute if score #spectres_game_seconds {ns}.data matches 0 run function {ns}:modes/spectres_game/roles/announcement
 
@@ -417,6 +418,7 @@ execute as @a[tag=!detached] at @s run playsound entity.player.levelup ambient @
 
 scoreboard players set #remaining_time {ns}.data 901
 scoreboard players set #spectres_game_seconds {ns}.data -1
+execute in {ns}:game run gamerule minecraft:fall_damage false
 scoreboard players set #spectres_game_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
 scoreboard players set #cut_clean {ns}.data 1
