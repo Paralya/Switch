@@ -333,7 +333,7 @@ schedule function {path}/core/damage_cow 1s
 kill @s
 """)
 
-	# /core/pick_block (as the marker: returns 1 once a playable art and its color are chosen, fails after 6 arts that cannot be played)
+	# /core/pick_block (as the marker: returns 1 once a playable art and its color are chosen, fails after 10 arts in a row that cannot be played)
 	palette_colors: str = "\n".join(
 		f'execute if data storage {ns}:main Item{{id:"{block}"}} run scoreboard players set #bp_block {ns}.data {index - 1}'
 		for index, block in enumerate(ALL))
@@ -394,10 +394,12 @@ execute if score #bp_block {ns}.data matches -2 run return run function {path}/c
 return 1
 """)
 
-	# /core/pick_failed (macro: reason, tells the debuggers what broke then tries another art)
+	# /core/pick_failed (macro: reason, tells Stoupy51 what broke, and the debuggers once 10 arts failed in a row, then tries another art)
 	write_function(f"{path}/core/pick_failed", f"""
-$tellraw @a[tag=convention.debug] ["",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Block Party: $(reason) (attempt ","color":"red"}},{{"score":{{"name":"#bp_attempts","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", art ","color":"red"}},{{"score":{{"name":"#bp_selected_art","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", palette size ","color":"red"}},{{"score":{{"name":"#block_count","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", block ","color":"red"}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", dropped ","color":"red"}},{{"nbt":"Item.id","storage":"{ns}:main","color":"aqua"}},{{"text":")","color":"red"}}]
-execute if score #bp_attempts {ns}.data matches 6.. run return fail
+execute if score #bp_attempts {ns}.data matches 10.. run tag @a[tag=convention.debug] add {ns}.temp.bp_error
+$tellraw @a[tag={ns}.temp.bp_error] ["",{{"nbt":"ParalyaError","storage":"{ns}:main","interpret":true}},{{"text":" Block Party: $(reason) (attempt ","color":"red"}},{{"score":{{"name":"#bp_attempts","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", art ","color":"red"}},{{"score":{{"name":"#bp_selected_art","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", palette size ","color":"red"}},{{"score":{{"name":"#block_count","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", block ","color":"red"}},{{"score":{{"name":"#bp_selected_block","objective":"{ns}.data"}},"color":"aqua"}},{{"text":", dropped ","color":"red"}},{{"nbt":"Item.id","storage":"{ns}:main","color":"aqua"}},{{"text":")","color":"red"}}]
+tag @a remove {ns}.temp.bp_error
+execute if score #bp_attempts {ns}.data matches 10.. run return fail
 return run function {path}/core/pick_block
 """)
 

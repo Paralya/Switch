@@ -14,7 +14,9 @@
 # @args		reason (string)
 #
 
-$tellraw @a[tag=convention.debug] ["",{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Block Party: $(reason) (attempt ","color":"#FF3347"},{"score":{"name":"#bp_attempts","objective":"switch.data"},"color":"#00E5FF"},{"text":", art ","color":"#FF3347"},{"score":{"name":"#bp_selected_art","objective":"switch.data"},"color":"#00E5FF"},{"text":", palette size ","color":"#FF3347"},{"score":{"name":"#block_count","objective":"switch.data"},"color":"#00E5FF"},{"text":", block ","color":"#FF3347"},{"score":{"name":"#bp_selected_block","objective":"switch.data"},"color":"#00E5FF"},{"text":", dropped ","color":"#FF3347"},{"nbt":"Item.id","storage":"switch:main","color":"#00E5FF"},{"text":")","color":"#FF3347"}]
-execute if score #bp_attempts switch.data matches 6.. run return fail
+execute if score #bp_attempts switch.data matches 10.. run tag @a[tag=convention.debug] add switch.temp.bp_error
+$tellraw @a[tag=switch.temp.bp_error] ["",{"nbt":"ParalyaError","storage":"switch:main","interpret":true},{"text":" Block Party: $(reason) (attempt ","color":"#FF3347"},{"score":{"name":"#bp_attempts","objective":"switch.data"},"color":"#00E5FF"},{"text":", art ","color":"#FF3347"},{"score":{"name":"#bp_selected_art","objective":"switch.data"},"color":"#00E5FF"},{"text":", palette size ","color":"#FF3347"},{"score":{"name":"#block_count","objective":"switch.data"},"color":"#00E5FF"},{"text":", block ","color":"#FF3347"},{"score":{"name":"#bp_selected_block","objective":"switch.data"},"color":"#00E5FF"},{"text":", dropped ","color":"#FF3347"},{"nbt":"Item.id","storage":"switch:main","color":"#00E5FF"},{"text":")","color":"#FF3347"}]
+tag @a remove switch.temp.bp_error
+execute if score #bp_attempts switch.data matches 10.. run return fail
 return run function switch:modes/block_party/core/pick_block
 
