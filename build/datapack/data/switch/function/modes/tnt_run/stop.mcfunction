@@ -6,5 +6,6 @@
 
 scoreboard objectives remove switch.temp.blocks
 scoreboard objectives remove switch.temp.dashes
-scoreboard objectives remove switch.temp.dashes_earned
+scoreboard objectives remove switch.temp.dash_next
+scoreboard objectives remove switch.temp.dash_gap
 

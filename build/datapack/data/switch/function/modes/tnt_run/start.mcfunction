@@ -21,10 +21,12 @@ execute in switch:game run gamerule minecraft:block_drops false
 # Dash system objectives and per-player reset
 scoreboard objectives add switch.temp.blocks dummy
 scoreboard objectives add switch.temp.dashes dummy
-scoreboard objectives add switch.temp.dashes_earned dummy
+scoreboard objectives add switch.temp.dash_next dummy
+scoreboard objectives add switch.temp.dash_gap dummy
 scoreboard players set @a[tag=!detached] switch.temp.blocks 0
 scoreboard players set @a[tag=!detached] switch.temp.dashes 0
-scoreboard players set @a[tag=!detached] switch.temp.dashes_earned 0
+scoreboard players set @a[tag=!detached] switch.temp.dash_next 100
+scoreboard players set @a[tag=!detached] switch.temp.dash_gap 100
 
 scoreboard players set #tnt_run_seconds switch.data -6
 scoreboard players set #tnt_run_ticks switch.data 0

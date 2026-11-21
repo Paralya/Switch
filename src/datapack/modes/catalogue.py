@@ -333,8 +333,8 @@ MODES: tuple[ModeSpec, ...] = (
 		),
 		accent="#e33b2e",
 		rules=Localized(
-			fr=("Ne vous arrêtez jamais de courir", "Les blocs disparaissent sous vos pieds", "100 blocs détruits = 1 dash"),
-			en=("Never stop running", "Blocks vanish under your feet", "100 blocks destroyed = 1 dash"),
+			fr=("Ne vous arrêtez jamais de courir", "Les blocs disparaissent sous vos pieds", "Dash dès 100 blocs, de plus en plus rare"),
+			en=("Never stop running", "Blocks vanish under your feet", "Dash at 100 blocks, then rarer each time"),
 		),
 	),
 	ModeSpec(

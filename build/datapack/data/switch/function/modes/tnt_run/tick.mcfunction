@@ -21,7 +21,7 @@ execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,ga
 execute as @e[tag=switch.tnt_run,scores={switch.data=8..}] at @s run function switch:modes/tnt_run/destroy_block
 scoreboard players add @e[tag=switch.tnt_run] switch.data 1
 
-# Dash system : award charges (1 per 100 blocks), use them on right click, show the actionbar
+# Dash system : award charges (at 100 blocks, then ever further apart), use them on right click, show the actionbar
 execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,gamemode=adventure] run function switch:modes/tnt_run/dash/award
 execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,gamemode=adventure,scores={switch.right_click=1..,switch.temp.dashes=1..}] at @s if data entity @s SelectedItem.components."minecraft:custom_data".switch.tnt_run_dash run function switch:modes/tnt_run/dash/use
 execute if score #tnt_run_seconds switch.data matches 0.. as @a[tag=!detached,gamemode=adventure] run function switch:modes/tnt_run/dash/actionbar

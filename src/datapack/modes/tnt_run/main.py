@@ -44,10 +44,10 @@ kill @s
 	# /give_items (dash item, given per language in /start)
 	write_function(f"{path}/give_items", f"""
 # French
-item replace entity @s[scores={{{ns}.lang=0}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Clic droit pour dash (100 blocs détruits = +1 dash)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
+item replace entity @s[scores={{{ns}.lang=0}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Clic droit pour dash (dès 100 blocs détruits, de plus en plus rare)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
 
 # English
-item replace entity @s[scores={{{ns}.lang=1}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Right click to dash (100 blocks destroyed = +1 dash)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
+item replace entity @s[scores={{{ns}.lang=1}}] hotbar.4 with warped_fungus_on_a_stick[unbreakable={{}},tooltip_display={{"hidden_components":["minecraft:unbreakable"]}},item_model="minecraft:rabbit_foot",item_name={{"text":"Dash","color":"aqua"}},lore=[{{"text":"Right click to dash (from 100 blocks destroyed, then rarer each time)","color":"gray","italic":false}}],custom_data={{"{ns}":{{"tnt_run_dash":true}}}}]
 """)
 
 	# /is_on_ground
@@ -76,20 +76,20 @@ scoreboard players operation #player_id {ns}.id = @s {ns}.id
 execute as @a[tag=!detached,predicate={ns}:has_same_id] run scoreboard players operation @s {ns}.temp.blocks += #count {ns}.data
 """)
 
-	# /dash/award (as a player: grant 1 dash charge for every 100 blocks destroyed)
+	# /dash/award (as a player: grant a dash charge at 100 blocks destroyed, then every 25 blocks further than the previous gap: 225, 375, 550...)
 	write_function(f"{path}/dash/award", f"""
-scoreboard players operation #earned {ns}.data = @s {ns}.temp.blocks
-scoreboard players operation #earned {ns}.data /= #100 {ns}.data
-execute if score #earned {ns}.data > @s {ns}.temp.dashes_earned run function {path}/dash/grant
+execute if score @s {ns}.temp.blocks >= @s {ns}.temp.dash_next run function {path}/dash/grant
 """)
 
 	# /dash/grant (as a player: add the newly earned dash charges and play a feedback sound)
 	write_function(f"{path}/dash/grant", f"""
-scoreboard players operation #delta {ns}.data = #earned {ns}.data
-scoreboard players operation #delta {ns}.data -= @s {ns}.temp.dashes_earned
-scoreboard players operation @s {ns}.temp.dashes += #delta {ns}.data
-scoreboard players operation @s {ns}.temp.dashes_earned = #earned {ns}.data
+scoreboard players add @s {ns}.temp.dashes 1
+scoreboard players add @s {ns}.temp.dash_gap 25
+scoreboard players operation @s {ns}.temp.dash_next += @s {ns}.temp.dash_gap
 execute at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 1 2
+execute if entity @s[scores={{{ns}.lang=0}}] run tellraw @s ["",{{"text":"⚡ +1 dash ! ","color":"aqua"}},{{"text":"Le prochain à ","color":"gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.dash_next"}},"color":"yellow"}},{{"text":" blocs","color":"gray"}}]
+execute if entity @s[scores={{{ns}.lang=1}}] run tellraw @s ["",{{"text":"⚡ +1 dash! ","color":"aqua"}},{{"text":"Next one at ","color":"gray"}},{{"score":{{"name":"@s","objective":"{ns}.temp.dash_next"}},"color":"yellow"}},{{"text":" blocks","color":"gray"}}]
+execute if score @s {ns}.temp.blocks >= @s {ns}.temp.dash_next run function {path}/dash/grant
 """)
 
 	# /dash/use (as a player with a charge, at @s: consume it, zero the client velocity with a teleport in place, then launch at the fixed speed)
@@ -166,10 +166,12 @@ execute in {ns}:game run gamerule minecraft:block_drops false
 # Dash system objectives and per-player reset
 scoreboard objectives add {ns}.temp.blocks dummy
 scoreboard objectives add {ns}.temp.dashes dummy
-scoreboard objectives add {ns}.temp.dashes_earned dummy
+scoreboard objectives add {ns}.temp.dash_next dummy
+scoreboard objectives add {ns}.temp.dash_gap dummy
 scoreboard players set @a[tag=!detached] {ns}.temp.blocks 0
 scoreboard players set @a[tag=!detached] {ns}.temp.dashes 0
-scoreboard players set @a[tag=!detached] {ns}.temp.dashes_earned 0
+scoreboard players set @a[tag=!detached] {ns}.temp.dash_next 100
+scoreboard players set @a[tag=!detached] {ns}.temp.dash_gap 100
 
 scoreboard players set #tnt_run_seconds {ns}.data -6
 scoreboard players set #tnt_run_ticks {ns}.data 0
@@ -180,7 +182,8 @@ scoreboard players set #process_end {ns}.data 0
 	write_function(f"{path}/stop", f"""
 scoreboard objectives remove {ns}.temp.blocks
 scoreboard objectives remove {ns}.temp.dashes
-scoreboard objectives remove {ns}.temp.dashes_earned
+scoreboard objectives remove {ns}.temp.dash_next
+scoreboard objectives remove {ns}.temp.dash_gap
 """)
 
 	# /tick
@@ -202,7 +205,7 @@ execute if score #tnt_run_seconds {ns}.data matches 0.. as @a[tag=!detached,game
 execute as @e[tag={ns}.tnt_run,scores={{{ns}.data=8..}}] at @s run function {path}/destroy_block
 scoreboard players add @e[tag={ns}.tnt_run] {ns}.data 1
 
-# Dash system : award charges (1 per 100 blocks), use them on right click, show the actionbar
+# Dash system : award charges (at 100 blocks, then ever further apart), use them on right click, show the actionbar
 execute if score #tnt_run_seconds {ns}.data matches 0.. as @a[tag=!detached,gamemode=adventure] run function {path}/dash/award
 execute if score #tnt_run_seconds {ns}.data matches 0.. as @a[tag=!detached,gamemode=adventure,scores={{{ns}.right_click=1..,{ns}.temp.dashes=1..}}] at @s if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.tnt_run_dash run function {path}/dash/use
 execute if score #tnt_run_seconds {ns}.data matches 0.. as @a[tag=!detached,gamemode=adventure] run function {path}/dash/actionbar
