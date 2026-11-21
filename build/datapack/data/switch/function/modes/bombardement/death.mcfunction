@@ -13,5 +13,6 @@
 
 execute unless score #test_mode switch.data matches 1 if entity @s[gamemode=!spectator] unless block ~ ~ ~ water if score #bombardement_seconds switch.data matches 0..5 run advancement grant @s only switch:visible/79
 function switch:modes/bombardement/translations/death
+execute if entity @s[gamemode=!spectator] run function switch:modes/bombardement/record_runner_up
 function switch:modes/_common/death_spectator
 

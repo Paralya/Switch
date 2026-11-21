@@ -30,6 +30,8 @@ tp @a[tag=!detached] 10057 109 2064 180 -30
 scoreboard players set #bombardement_seconds {ns}.data -3
 scoreboard players set #bombardement_ticks {ns}.data 0
 scoreboard players set #process_end {ns}.data 0
+scoreboard players set #bombardement_last_death {ns}.data -1
+data modify storage {ns}:temp bombardement_wave set value []
 
 execute if data storage {ns}:records bombardement run function {path}/record_tellraw with storage {ns}:records bombardement
 """)
@@ -101,7 +103,16 @@ function {path}/death
 	write_function(f"{path}/death", f"""
 execute unless score #test_mode {ns}.data matches 1 if entity @s[gamemode=!spectator] unless block ~ ~ ~ water if score #bombardement_seconds {ns}.data matches 0..5 run advancement grant @s only {ns}:visible/79
 function {translations}/death
+execute if entity @s[gamemode=!spectator] run function {path}/record_runner_up
 function {ns}:modes/_common/death_spectator
+""")
+
+	# /record_runner_up (executed as a player who is dying, before their inventory is cleared; players dying on the same tick as the last one are kept)
+	write_function(f"{path}/record_runner_up", f"""
+execute unless score #bombardement_ticks {ns}.data = #bombardement_last_death {ns}.data run data modify storage {ns}:temp bombardement_wave set value []
+scoreboard players operation #bombardement_last_death {ns}.data = #bombardement_ticks {ns}.data
+loot replace entity @s hotbar.0 loot {ns}:get_username
+data modify storage {ns}:temp bombardement_wave append from entity @s Inventory[0].components."minecraft:profile".name
 """)
 
 	# /explode
@@ -170,6 +181,7 @@ scoreboard players set #record {ns}.data 0
 execute store result score #record {ns}.data run data get storage {ns}:records bombardement.seconds
 execute if score #bombardement_seconds {ns}.data > #record {ns}.data store result storage {ns}:records bombardement.seconds int 1 run scoreboard players get #bombardement_seconds {ns}.data
 execute if score #bombardement_seconds {ns}.data > #record {ns}.data run data modify storage {ns}:records bombardement.player set from entity @s Inventory[0].components."minecraft:profile".name
+execute if score #bombardement_seconds {ns}.data > #record {ns}.data run data modify storage {ns}:records bombardement.runners_up set from storage {ns}:temp bombardement_wave
 execute if score #bombardement_seconds {ns}.data > #record {ns}.data as @a[tag=!detached] at @s run playsound ui.toast.challenge_complete ambient @s ~ ~ ~ 0.5
 execute if score #bombardement_seconds {ns}.data > #record {ns}.data run function {path}/record_tellraw with storage {ns}:records bombardement
 """)

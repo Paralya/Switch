@@ -18,6 +18,8 @@ tp @a[tag=!detached] 10057 109 2064 180 -30
 scoreboard players set #bombardement_seconds switch.data -3
 scoreboard players set #bombardement_ticks switch.data 0
 scoreboard players set #process_end switch.data 0
+scoreboard players set #bombardement_last_death switch.data -1
+data modify storage switch:temp bombardement_wave set value []
 
 execute if data storage switch:records bombardement run function switch:modes/bombardement/record_tellraw with storage switch:records bombardement
 
