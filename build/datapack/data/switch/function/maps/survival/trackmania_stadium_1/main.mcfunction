@@ -7,6 +7,7 @@
 summon marker 0 0 0 {Tags:["switch.selected_map"]}
 execute as @e[type=marker,tag=switch.selected_map] run data modify entity @s Pos set value [-3650.5d, 159.5d, -5901.5d]
 
+execute as @e[type=marker,tag=switch.selected_map] at @s in switch:game run tp @s ~ ~ ~
 scoreboard players set #count switch.data 0
 execute as @a[tag=!detached,sort=random] run function switch:maps/survival/trackmania_stadium_1/teleport_players
 

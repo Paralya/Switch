@@ -26,6 +26,7 @@ def create_main_file(name: str, tp_coords: str = "", racing_pos: tuple[Any, ...]
 		write_function(path, f"execute as @e[type=marker,tag={ns}.selected_map] at @s run function {ns}:maps/survival/{name}/teleport_players")
 	else:
 		write_function(path, f"execute as @e[type=marker,tag={ns}.selected_map] run data modify entity @s Pos set value {tp_coords}\n")
+		write_function(path, f"execute as @e[type=marker,tag={ns}.selected_map] at @s in {ns}:game run tp @s ~ ~ ~")
 		write_function(path, f"scoreboard players set #count {ns}.data 0")
 		write_function(path, f"execute as @a[tag=!detached,sort=random] run function {ns}:maps/survival/{name}/teleport_players\n")
 		write_function(path, f"execute if score #is_race {ns}.data matches 1 in {ns}:game run function {ns}:maps/survival/{name}/if_race")
