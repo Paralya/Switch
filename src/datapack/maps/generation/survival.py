@@ -38,7 +38,7 @@ def write_map_intro_spread(namespace: str, view: tuple[float, float, float, floa
 	# The dimension MUST be explicit: the cinematic spectate entity is summoned in the execution dimension and the players are released at its position when the cinematic ends, so running this from a server context (schedule/tick) would drop every player in the overworld copy.
 	ns: str = Mem.ctx.project_id
 	write_function(f"{ns}:maps/survival/{namespace}/intro_spread", f"""
-execute in {ns}:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function #cinemalya:v1/intro {{with:{{selector:"@a[tag=!detached]",display_time:{MAP_TITLE_TICKS},duration:{TRAVEL_TICKS},sound:"minecraft:intentionally_empty",title:"{name}",subtitle:"{credits}",particle:"minecraft:glow"}}}}
+execute in {ns}:game positioned {view[0]} {view[1]} {view[2]} rotated {view[3]} {view[4]} run function #cinemalya:v1/intro {{with:{{selector:"@a[tag=!detached]",display_time:{MAP_TITLE_TICKS},duration:{TRAVEL_TICKS},arc_height:20.0,sound:"minecraft:intentionally_empty",title:"{name}",subtitle:"{credits}",particle:"minecraft:glow"}}}}
 """)
 
 
