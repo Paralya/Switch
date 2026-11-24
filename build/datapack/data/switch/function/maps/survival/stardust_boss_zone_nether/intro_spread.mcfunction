@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned -5971.56 158.24 -9869.22 rotated 211.01 1.11 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:195,duration:50,sound:"minecraft:intentionally_empty",title:"Stardust Boss Zone Nether",subtitle:"Jugou2",particle:"minecraft:glow"}}
+execute in switch:game positioned -5971.56 158.24 -9869.22 rotated 211.01 1.11 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:195,duration:50,arc_height:20.0,sound:"minecraft:intentionally_empty",title:"Stardust Boss Zone Nether",subtitle:"Jugou2",particle:"minecraft:glow"}}
 

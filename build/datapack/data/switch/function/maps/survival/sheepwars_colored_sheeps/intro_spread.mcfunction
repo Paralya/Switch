@@ -6,5 +6,5 @@
 # @within	switch:maps/intro_spread
 #
 
-execute in switch:game positioned -3937.99 148.53 -11981.69 rotated 15.33 13.04 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:195,duration:50,sound:"minecraft:intentionally_empty",title:"Colored Sheeps",subtitle:"AirDox",particle:"minecraft:glow"}}
+execute in switch:game positioned -3937.99 148.53 -11981.69 rotated 15.33 13.04 run function #cinemalya:v1/intro {with:{selector:"@a[tag=!detached]",display_time:195,duration:50,arc_height:20.0,sound:"minecraft:intentionally_empty",title:"Colored Sheeps",subtitle:"AirDox",particle:"minecraft:glow"}}
 
