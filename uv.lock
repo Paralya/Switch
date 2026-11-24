@@ -1248,7 +1248,7 @@ wheels = [
 
 [[package]]
 name = "stewbeet"
-version = "3.15.1"
+version = "3.16.1"
 source = { directory = "../StewBeet/python_package" }
 dependencies = [
     { name = "beet" },
