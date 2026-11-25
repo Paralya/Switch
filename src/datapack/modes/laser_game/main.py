@@ -208,9 +208,7 @@ execute unless score @s {ns}.temp.shield matches 1.. run scoreboard players add 
 	# /start (translation ref rewritten)
 	write_function(f"{path}/start", f"""
 function {ns}:modes/_common/setup_teams_red_blue {{team:"laser_game"}}
-team modify {ns}.laser_game.blue seeFriendlyInvisibles true
 team modify {ns}.laser_game.blue nametagVisibility never
-team modify {ns}.laser_game.red seeFriendlyInvisibles true
 team modify {ns}.laser_game.red nametagVisibility never
 
 gamerule minecraft:fall_damage false

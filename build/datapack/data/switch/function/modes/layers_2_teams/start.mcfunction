@@ -27,8 +27,6 @@ scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
 function switch:modes/_common/setup_teams_red_blue {team:"temp"}
-team modify switch.temp.red friendlyFire true
-team modify switch.temp.blue friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0

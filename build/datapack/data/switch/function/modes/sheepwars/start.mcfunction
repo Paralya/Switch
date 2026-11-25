@@ -41,8 +41,6 @@ execute if score #APOCALYPSE_GAME switch.data matches 1 as @a[tag=!detached] at 
 
 # Choix des teams + give d'items
 function switch:modes/_common/setup_teams_red_blue {team:"temp"}
-team modify switch.temp.red friendlyFire true
-team modify switch.temp.blue friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role switch.data 0

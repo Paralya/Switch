@@ -118,10 +118,6 @@ team modify {ns}.temp.green color green
 team modify {ns}.temp.yellow color yellow
 team modify {ns}.temp.green prefix ["",{badge("green")}," "]
 team modify {ns}.temp.yellow prefix ["",{badge("yellow")}," "]
-team modify {ns}.temp.red friendlyFire true
-team modify {ns}.temp.blue friendlyFire true
-team modify {ns}.temp.green friendlyFire true
-team modify {ns}.temp.yellow friendlyFire true
 team modify {ns}.temp.red nametagVisibility hideForOtherTeams
 team modify {ns}.temp.blue nametagVisibility hideForOtherTeams
 team modify {ns}.temp.green nametagVisibility hideForOtherTeams

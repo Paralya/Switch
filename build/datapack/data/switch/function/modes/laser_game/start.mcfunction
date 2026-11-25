@@ -7,9 +7,7 @@
 #
 
 function switch:modes/_common/setup_teams_red_blue {team:"laser_game"}
-team modify switch.laser_game.blue seeFriendlyInvisibles true
 team modify switch.laser_game.blue nametagVisibility never
-team modify switch.laser_game.red seeFriendlyInvisibles true
 team modify switch.laser_game.red nametagVisibility never
 
 gamerule minecraft:fall_damage false

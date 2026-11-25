@@ -36,10 +36,6 @@ team modify switch.temp.green color green
 team modify switch.temp.yellow color yellow
 team modify switch.temp.green prefix ["",{"text": "聅","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.yellow prefix ["",{"text": "聆","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
-team modify switch.temp.red friendlyFire true
-team modify switch.temp.blue friendlyFire true
-team modify switch.temp.green friendlyFire true
-team modify switch.temp.yellow friendlyFire true
 team modify switch.temp.red nametagVisibility hideForOtherTeams
 team modify switch.temp.blue nametagVisibility hideForOtherTeams
 team modify switch.temp.green nametagVisibility hideForOtherTeams
