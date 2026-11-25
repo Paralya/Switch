@@ -40,6 +40,8 @@ team add switch.temp.civil {"text":"[Civil]","color":"#AEBBD0"}
 team add switch.temp.king {"text":"[King]","color":"#A53DE0"}
 team modify switch.temp.civil color gray
 team modify switch.temp.king color dark_purple
+team modify switch.temp.civil prefix ["",{"text": "耿","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.king prefix ["",{"text": "聀","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 scoreboard players set #next_role switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/beat_the_kings/roles/main
 

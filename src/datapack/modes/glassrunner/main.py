@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_modes_calls
+from ..emit import badge, write_modes_calls
 from .translations import write_translations
 
 
@@ -78,9 +78,11 @@ function {ns}:modes/glassrunner/ctp/update_sb with storage {ns}:main input
 ## Teams
 team add {ns}.glassrunner.red {{"text":"[Red]","color":"red"}}
 team modify {ns}.glassrunner.red color red
+team modify {ns}.glassrunner.red prefix ["",{badge("red")}," "]
 team modify {ns}.glassrunner.red friendlyFire false
 team add {ns}.glassrunner.blue {{"text":"[Blue]","color":"blue"}}
 team modify {ns}.glassrunner.blue color blue
+team modify {ns}.glassrunner.blue prefix ["",{badge("blue")}," "]
 team modify {ns}.glassrunner.blue friendlyFire false
 
 effect give @a[tag=!detached] saturation infinite 255 true

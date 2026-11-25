@@ -42,6 +42,8 @@ team add switch.temp.human {"text":"[Human]","color":"#FF8FD8"}
 team add switch.temp.zombie {"text":"[Zombie]","color":"#1FA83C"}
 team modify switch.temp.human color light_purple
 team modify switch.temp.zombie color dark_green
+team modify switch.temp.human prefix ["",{"text": "聃","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.zombie prefix ["",{"text": "聄","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.human friendlyFire false
 team modify switch.temp.zombie friendlyFire false
 team modify switch.temp.human nametagVisibility never

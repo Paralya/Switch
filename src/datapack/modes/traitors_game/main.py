@@ -3,7 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem, Variants
-from ..emit import write_modes_calls, write_time_xp_bar
+from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -461,6 +461,7 @@ scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 
 team add {ns}.temp.inspector {{"text":"[Inspector]","color":"green"}}
 team modify {ns}.temp.inspector color green
+team modify {ns}.temp.inspector prefix ["",{badge("inspector")}," "]
 
 team add {ns}.temp.sidebar.5 {{"text":"[Sidebar 5]"}}
 team add {ns}.temp.sidebar.4 {{"text":"[Sidebar 4]"}}

@@ -54,6 +54,10 @@ team modify switch.temp.red_king color dark_red
 team modify switch.temp.blue_king color dark_blue
 team modify switch.temp.red color red
 team modify switch.temp.blue color blue
+team modify switch.temp.red_king prefix ["",{"text": "聉","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.blue_king prefix ["",{"text": "聊","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.red prefix ["",{"text": "耽","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.blue prefix ["",{"text": "耾","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.red collisionRule never
 team modify switch.temp.blue collisionRule never
 scoreboard players set #next_role switch.data 0

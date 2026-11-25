@@ -22,7 +22,6 @@ execute unless score #disable switch.data matches 1 run clear @a[tag=!detached]
 execute if score #disable switch.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
 
 # Other stuff
-team empty switch.no_pvp
 execute in switch:game run spawnpoint @a 0 70 0
 xp set @a[tag=!detached] 0 levels
 xp set @a[tag=!detached] 0 points

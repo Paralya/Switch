@@ -7,7 +7,7 @@
 #			switch:modes/warden_escape/start
 #
 
-team join switch.no_pvp @a[tag=!detached]
+gamerule minecraft:pvp false
 scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true

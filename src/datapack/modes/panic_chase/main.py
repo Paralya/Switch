@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_modes_calls, write_no_drop
+from ..emit import badge, write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -163,6 +163,8 @@ team add {ns}.temp.hunter {{"text":"[Hunter]","color":"red"}}
 team add {ns}.temp.mouse {{"text":"[Mouse]","color":"blue"}}
 team modify {ns}.temp.hunter color red
 team modify {ns}.temp.mouse color blue
+team modify {ns}.temp.hunter prefix ["",{badge("hunter")}," "]
+team modify {ns}.temp.mouse prefix ["",{badge("mouse")}," "]
 team modify {ns}.temp.hunter friendlyFire false
 team modify {ns}.temp.mouse friendlyFire false
 team modify {ns}.temp.hunter nametagVisibility never

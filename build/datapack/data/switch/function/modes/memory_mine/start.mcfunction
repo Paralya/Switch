@@ -7,7 +7,7 @@
 #
 
 execute as @a[tag=!detached] run gamemode adventure @s
-team join switch.no_pvp @a[tag=!detached]
+gamerule minecraft:pvp false
 effect give @a[tag=!detached] saturation infinite 255 true
 function switch:utils/set_dynamic_time
 

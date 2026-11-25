@@ -3,6 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
+from ..emit import badge
 from .recap import write_recap
 
 
@@ -43,11 +44,13 @@ WOOL_COLORS: tuple[str, ...] = (
 	"light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",
 )
 
-# Race ranking teams: (suffix label, color) for positions 1..10, then the "10+" bucket
+# Race ranking teams: (label of the team name and of its rank_<label> badge, team name color) for positions 1..25, then the "25+" bucket
 RANKING_TEAMS: tuple[tuple[str, str], ...] = (
-	("1st", "#FFE700"), ("2nd", "#C0C0C0"), ("3rd", "#CD7F32"), ("4th", "#696969"),
-	("5th", "#696969"), ("6th", "#696969"), ("7th", "#696969"), ("8th", "#696969"),
-	("9th", "#696969"), ("10th", "#696969"),
+	("1st", "#FFE700"), ("2nd", "#C0C0C0"), ("3rd", "#CD7F32"), ("4th", "#696969"), ("5th", "#696969"),
+	("6th", "#696969"), ("7th", "#696969"), ("8th", "#696969"), ("9th", "#696969"), ("10th", "#696969"),
+	("11th", "#696969"), ("12th", "#696969"), ("13th", "#696969"), ("14th", "#696969"), ("15th", "#696969"),
+	("16th", "#696969"), ("17th", "#696969"), ("18th", "#696969"), ("19th", "#696969"), ("20th", "#696969"),
+	("21st", "#696969"), ("22nd", "#696969"), ("23rd", "#696969"), ("24th", "#696969"), ("25th", "#696969"),
 )
 
 
@@ -130,10 +133,10 @@ scoreboard players operation #secs {ns}.data %= #60 {ns}.data
 		f'team add {ns}.temp.{i} {{"text":"[{label}]","color":"{color}"}}'
 		for i, (label, color) in enumerate(RANKING_TEAMS, start=1)
 	)
-	team_collision: str = "\n".join(f"team modify {ns}.temp.{i} collisionRule never" for i in range(1, 11))
+	team_collision: str = "\n".join(f"team modify {ns}.temp.{i} collisionRule never" for i in range(1, len(RANKING_TEAMS) + 1))
 	team_suffix: str = "\n".join(
-		f'team modify {ns}.temp.{i} suffix {{"text":" [{label}]","color":"{color}"}}'
-		for i, (label, color) in enumerate(RANKING_TEAMS, start=1)
+		f'team modify {ns}.temp.{i} suffix [" ",{badge(f"rank_{label}")}]'
+		for i, (label, _) in enumerate(RANKING_TEAMS, start=1)
 	)
 	write_function(f"{path}/racing_start_setup", f"""
 scoreboard objectives add {ns}.temp dummy
@@ -168,12 +171,12 @@ scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 
 team add {ns}.temp.kart {{"text":"[Kart]"}}
 {team_add}
-team add {ns}.temp.10+ {{"text":"[10+th]","color":"#9200DF"}}
+team add {ns}.temp.25+ {{"text":"[25+th]","color":"#9200DF"}}
 team modify {ns}.temp.kart collisionRule never
 {team_collision}
-team modify {ns}.temp.10+ collisionRule never
+team modify {ns}.temp.25+ collisionRule never
 {team_suffix}
-team modify {ns}.temp.10+ suffix {{"text":" [10+th]","color":"#9200DF"}}
+team modify {ns}.temp.25+ suffix [" ",{badge("rank_25plus")}]
 
 ## Number of checkpoints and laps per map
 scoreboard players set #total_laps {ns}.data 3
@@ -510,6 +513,8 @@ team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
 team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
 team modify {ns}.temp.red color red
 team modify {ns}.temp.blue color blue
+team modify {ns}.temp.red prefix ["",{badge("red")}," "]
+team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
 team modify {ns}.temp.red friendlyFire true
 team modify {ns}.temp.blue friendlyFire true
 team modify {ns}.temp.red nametagVisibility hideForOtherTeams
@@ -517,9 +522,9 @@ team modify {ns}.temp.blue nametagVisibility hideForOtherTeams
 scoreboard players set #next_role {ns}.data 0
 """)
 
-	# /no_pvp_start (shared pitch_creep / warden_escape /start head: no-pvp team, 1 life, buff effects, day)
+	# /no_pvp_start (shared pitch_creep / warden_escape /start head: pvp off, 1 life, buff effects, day)
 	write_function(f"{path}/no_pvp_start", f"""
-team join {ns}.no_pvp @a[tag=!detached]
+gamerule minecraft:pvp false
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true

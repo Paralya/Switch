@@ -39,7 +39,22 @@ team remove switch.temp.7
 team remove switch.temp.8
 team remove switch.temp.9
 team remove switch.temp.10
-team remove switch.temp.10+
+team remove switch.temp.11
+team remove switch.temp.12
+team remove switch.temp.13
+team remove switch.temp.14
+team remove switch.temp.15
+team remove switch.temp.16
+team remove switch.temp.17
+team remove switch.temp.18
+team remove switch.temp.19
+team remove switch.temp.20
+team remove switch.temp.21
+team remove switch.temp.22
+team remove switch.temp.23
+team remove switch.temp.24
+team remove switch.temp.25
+team remove switch.temp.25+
 
 data remove storage switch:main respawn_states
 

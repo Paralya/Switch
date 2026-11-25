@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_modes_calls
+from ..emit import badge, write_modes_calls
 from .translations import write_translations
 
 
@@ -119,6 +119,10 @@ team modify {ns}.temp.red color red
 team modify {ns}.temp.blue color blue
 team modify {ns}.temp.green color green
 team modify {ns}.temp.yellow color yellow
+team modify {ns}.temp.red prefix ["",{badge("red")}," "]
+team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
+team modify {ns}.temp.green prefix ["",{badge("green")}," "]
+team modify {ns}.temp.yellow prefix ["",{badge("yellow")}," "]
 team modify {ns}.temp.red friendlyFire true
 team modify {ns}.temp.blue friendlyFire true
 team modify {ns}.temp.green friendlyFire true

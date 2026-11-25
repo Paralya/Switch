@@ -18,7 +18,6 @@ effect give @s saturation infinite 0 true
 effect give @s regeneration 10 255 true
 gamemode adventure @s
 clear @s
-team join switch.no_pvp @s
 xp set @s 0 levels
 xp set @s 0 points
 

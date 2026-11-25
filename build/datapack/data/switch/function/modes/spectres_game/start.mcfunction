@@ -57,6 +57,8 @@ team add switch.temp.visible {"text":"[Visible]","color":"#1FA83C"}
 team add switch.temp.spectre {"text":"[Spectre]","color":"#FFE60A"}
 team modify switch.temp.visible color dark_green
 team modify switch.temp.spectre color yellow
+team modify switch.temp.visible prefix ["",{"text": "聋","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.spectre prefix ["",{"text": "职","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 scoreboard players set #next_role switch.data 0
 scoreboard players set #next_player_id switch.data 0
 scoreboard objectives add switch.games_not_being_spectre dummy

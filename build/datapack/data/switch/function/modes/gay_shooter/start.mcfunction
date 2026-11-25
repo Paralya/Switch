@@ -30,6 +30,8 @@ team add switch.temp.gays {"text":"[Guys]","color":"#FF8FD8"}
 team add switch.temp.shooters {"text":"[Shooters]","color":"#AEBBD0"}
 team modify switch.temp.gays color light_purple
 team modify switch.temp.shooters color gray
+team modify switch.temp.gays prefix ["",{"text": "聁","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.shooters prefix ["",{"text": "聂","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.gays friendlyFire false
 team modify switch.temp.shooters friendlyFire false
 team modify switch.temp.gays collisionRule never

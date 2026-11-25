@@ -31,6 +31,13 @@ def register_sounds(mode: str, ns: str) -> None:
 
 
 # Functions
+def badge(badge_id: str) -> str:
+	""" Text component of the TAB badge `assets/textures/switch_badges/<badge_id>.png`, which text_renders turns into a font glyph.
+	Height 9 draws the texture 1:1, and ascent 7 centers its 5 px letters on the 7 px ones of the name. `#FFFFFF` (src/recolor.py rewrites `white`) and a transparent `shadow_color` keep the team color and the TAB text shadow off its baked colors.
+	Text after it in a list inherits its glyph-only font and draws as missing boxes, so a list opens on a `""` root. """
+	return f'{{"render":"switch_badges:{badge_id}","height":9,"ascent":7,"color":"#FFFFFF","shadow_color":0}}'
+
+
 def skinned_weapons(bow_infinity: bool = True) -> tuple[tuple[str, ...], tuple[str, ...]]:
 	""" The skinned pvp weapons shared by pitchout and pitch_creep: (4 diamond swords, 3 bows),
 	one item string per skin, so a kit can roll a random one into a single Variants slot.

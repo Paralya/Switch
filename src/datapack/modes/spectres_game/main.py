@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_modes_calls, write_time_xp_bar
+from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .kits import revive_visible_kit, spectre_kit, visible_kit
 from .translations import write_translations
 
@@ -435,6 +435,8 @@ team add {ns}.temp.visible {{"text":"[Visible]","color":"dark_green"}}
 team add {ns}.temp.spectre {{"text":"[Spectre]","color":"yellow"}}
 team modify {ns}.temp.visible color dark_green
 team modify {ns}.temp.spectre color yellow
+team modify {ns}.temp.visible prefix ["",{badge("visible")}," "]
+team modify {ns}.temp.spectre prefix ["",{badge("spectre")}," "]
 scoreboard players set #next_role {ns}.data 0
 scoreboard players set #next_player_id {ns}.data 0
 scoreboard objectives add {ns}.games_not_being_spectre dummy

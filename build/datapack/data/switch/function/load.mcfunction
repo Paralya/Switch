@@ -71,15 +71,12 @@ stopwatch create switch:game_clock
 stopwatch restart switch:game_clock
 scoreboard players set #clock_secs switch.data 0
 
-team add switch.no_pvp {"text":"[No PvP]"}
 team add switch.detached {"text":"[Detached]","color":"#6B788F"}
 team add switch.tutorial {"text":"[Tutorial]","color":"#FFE60A"}
-team modify switch.no_pvp friendlyFire false
-team modify switch.no_pvp color white
 team modify switch.detached friendlyFire false
 team modify switch.detached color gray
-team modify switch.detached prefix {"text":"[Lobby] ","color":"#6B788F"}
-team modify switch.tutorial prefix {"text":"[Tutorial] ","color":"#FFE60A"}
+team modify switch.detached prefix ["",{"text": "耡","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.tutorial prefix ["",{"text": "耢","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.tutorial color gold
 
 gamerule minecraft:max_command_sequence_length 2147483647

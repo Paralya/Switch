@@ -40,6 +40,7 @@ scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
 team add switch.temp.inspector {"text":"[Inspector]","color":"#2EFF8B"}
 team modify switch.temp.inspector color green
+team modify switch.temp.inspector prefix ["",{"text": "聍","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 
 team add switch.temp.sidebar.5 {"text":"[Sidebar 5]"}
 team add switch.temp.sidebar.4 {"text":"[Sidebar 4]"}

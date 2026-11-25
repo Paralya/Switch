@@ -4,7 +4,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
-from ..emit import write_modes_calls, write_no_drop
+from ..emit import badge, write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -579,6 +579,8 @@ team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
 team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
 team modify {ns}.temp.red color red
 team modify {ns}.temp.blue color blue
+team modify {ns}.temp.red prefix ["",{badge("red")}," "]
+team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
 team modify {ns}.temp.red friendlyFire false
 team modify {ns}.temp.blue friendlyFire false
 team modify {ns}.temp.red collisionRule never

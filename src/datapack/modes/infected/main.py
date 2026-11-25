@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_modes_calls, write_time_xp_bar
+from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -216,6 +216,8 @@ team add {ns}.temp.human {{"text":"[Human]","color":"light_purple"}}
 team add {ns}.temp.zombie {{"text":"[Zombie]","color":"dark_green"}}
 team modify {ns}.temp.human color light_purple
 team modify {ns}.temp.zombie color dark_green
+team modify {ns}.temp.human prefix ["",{badge("human")}," "]
+team modify {ns}.temp.zombie prefix ["",{badge("zombie")}," "]
 team modify {ns}.temp.human friendlyFire false
 team modify {ns}.temp.zombie friendlyFire false
 team modify {ns}.temp.human nametagVisibility never

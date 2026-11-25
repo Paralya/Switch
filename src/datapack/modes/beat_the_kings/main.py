@@ -3,7 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
-from ..emit import write_modes_calls, write_time_xp_bar
+from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -56,6 +56,8 @@ team add {ns}.temp.civil {{"text":"[Civil]","color":"gray"}}
 team add {ns}.temp.king {{"text":"[King]","color":"dark_purple"}}
 team modify {ns}.temp.civil color gray
 team modify {ns}.temp.king color dark_purple
+team modify {ns}.temp.civil prefix ["",{badge("civil")}," "]
+team modify {ns}.temp.king prefix ["",{badge("king")}," "]
 scoreboard players set #next_role {ns}.data 0
 execute as @a[tag=!detached,sort=random] at @s run function {path}/roles/main
 

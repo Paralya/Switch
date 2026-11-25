@@ -36,6 +36,8 @@ team add switch.temp.hunter {"text":"[Hunter]","color":"#FF3347"}
 team add switch.temp.mouse {"text":"[Mouse]","color":"#2E9BFF"}
 team modify switch.temp.hunter color red
 team modify switch.temp.mouse color blue
+team modify switch.temp.hunter prefix ["",{"text": "聇","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.mouse prefix ["",{"text": "聈","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.hunter friendlyFire false
 team modify switch.temp.mouse friendlyFire false
 team modify switch.temp.hunter nametagVisibility never

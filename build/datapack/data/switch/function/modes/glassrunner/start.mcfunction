@@ -12,9 +12,11 @@
 ## Teams
 team add switch.glassrunner.red {"text":"[Red]","color":"#FF3347"}
 team modify switch.glassrunner.red color red
+team modify switch.glassrunner.red prefix ["",{"text": "耽","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.glassrunner.red friendlyFire false
 team add switch.glassrunner.blue {"text":"[Blue]","color":"#2E9BFF"}
 team modify switch.glassrunner.blue color blue
+team modify switch.glassrunner.blue prefix ["",{"text": "耾","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.glassrunner.blue friendlyFire false
 
 effect give @a[tag=!detached] saturation infinite 255 true

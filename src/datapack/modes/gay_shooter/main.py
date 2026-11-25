@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import write_modes_calls
+from ..emit import badge, write_modes_calls
 from .translations import write_translations
 
 
@@ -158,6 +158,8 @@ team add {ns}.temp.gays {{"text":"[Guys]","color":"light_purple"}}
 team add {ns}.temp.shooters {{"text":"[Shooters]","color":"gray"}}
 team modify {ns}.temp.gays color light_purple
 team modify {ns}.temp.shooters color gray
+team modify {ns}.temp.gays prefix ["",{badge("guys")}," "]
+team modify {ns}.temp.shooters prefix ["",{badge("shooters")}," "]
 team modify {ns}.temp.gays friendlyFire false
 team modify {ns}.temp.shooters friendlyFire false
 team modify {ns}.temp.gays collisionRule never

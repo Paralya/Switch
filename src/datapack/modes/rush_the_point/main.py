@@ -3,7 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit
-from ..emit import write_modes_calls, write_time_xp_bar
+from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .kits import build_kits
 from .translations import write_translations
 
@@ -433,6 +433,8 @@ team add {ns}.rush_the_point.red {{"text":"[Red]","color":"red"}}
 team add {ns}.rush_the_point.blue {{"text":"[Blue]","color":"blue"}}
 team modify {ns}.rush_the_point.red color red
 team modify {ns}.rush_the_point.blue color blue
+team modify {ns}.rush_the_point.red prefix ["",{badge("red")}," "]
+team modify {ns}.rush_the_point.blue prefix ["",{badge("blue")}," "]
 team modify {ns}.rush_the_point.red nametagVisibility hideForOtherTeams
 team modify {ns}.rush_the_point.blue nametagVisibility hideForOtherTeams
 team modify {ns}.rush_the_point.red friendlyFire false

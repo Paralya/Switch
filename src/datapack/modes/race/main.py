@@ -3,6 +3,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from .._common.main import RANKING_TEAMS
 from ..emit import write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -308,6 +309,7 @@ scoreboard players add #add {ns}.data 1
 """)
 
 	# /classement/main
+	team_joins: str = "\n".join(f"team join {ns}.temp.{i} @a[scores={{{ns}.temp.classement={i}}}]" for i in range(1, len(RANKING_TEAMS) + 1))
 	write_function(f"{path}/classement/main", f"""
 # Définition du classement selon le nombre de checkpoints passés
 scoreboard players set @a[tag=!detached] {ns}.temp.classement 1
@@ -320,17 +322,8 @@ execute as @a[tag=!detached] run function {ns}:modes/race/classement/try
 
 
 # Attribution des places
-team join {ns}.temp.1 @a[scores={{{ns}.temp.classement=1}}]
-team join {ns}.temp.2 @a[scores={{{ns}.temp.classement=2}}]
-team join {ns}.temp.3 @a[scores={{{ns}.temp.classement=3}}]
-team join {ns}.temp.4 @a[scores={{{ns}.temp.classement=4}}]
-team join {ns}.temp.5 @a[scores={{{ns}.temp.classement=5}}]
-team join {ns}.temp.6 @a[scores={{{ns}.temp.classement=6}}]
-team join {ns}.temp.7 @a[scores={{{ns}.temp.classement=7}}]
-team join {ns}.temp.8 @a[scores={{{ns}.temp.classement=8}}]
-team join {ns}.temp.9 @a[scores={{{ns}.temp.classement=9}}]
-team join {ns}.temp.10 @a[scores={{{ns}.temp.classement=10}}]
-team join {ns}.temp.10+ @a[scores={{{ns}.temp.classement=11..}}]
+{team_joins}
+team join {ns}.temp.25+ @a[scores={{{ns}.temp.classement=26..}}]
 execute as @a[tag=!detached] run scoreboard players operation @s {ns}.temp.pv_classement = @s {ns}.temp.classement
 
 
@@ -978,6 +971,7 @@ function {ns}:modes/race/stop_cleanup
 """)
 
 	# /stop_cleanup
+	team_removals: str = "\n".join(f"team remove {ns}.temp.{i}" for i in range(1, len(RANKING_TEAMS) + 1))
 	write_function(f"{path}/stop_cleanup", f"""
 scoreboard objectives remove {ns}.temp
 scoreboard objectives remove {ns}.temp.old_speed
@@ -1004,17 +998,8 @@ scoreboard objectives remove {ns}.effects.last
 scoreboard objectives remove {ns}.effects.timer
 
 team remove {ns}.temp.kart
-team remove {ns}.temp.1
-team remove {ns}.temp.2
-team remove {ns}.temp.3
-team remove {ns}.temp.4
-team remove {ns}.temp.5
-team remove {ns}.temp.6
-team remove {ns}.temp.7
-team remove {ns}.temp.8
-team remove {ns}.temp.9
-team remove {ns}.temp.10
-team remove {ns}.temp.10+
+{team_removals}
+team remove {ns}.temp.25+
 
 data remove storage {ns}:main respawn_states
 """)
@@ -1239,6 +1224,10 @@ execute if score #votes {ns}.data >= #votes_max {ns}.data run function {ns}:mode
 """)
 
 	# /vote_for_collisions (translation ref rewritten)
+	collisions_always: str = "\n".join(
+		f"execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.{i} collisionRule always"
+		for i in range(1, len(RANKING_TEAMS) + 1)
+	)
 	write_function(f"{path}/vote_for_collisions", f"""
 scoreboard players set @s {ns}.temp.vote_collisions 1
 
@@ -1253,17 +1242,8 @@ scoreboard players add #votes_max {ns}.data 1
 execute if score #votes {ns}.data >= #votes_max {ns}.data run scoreboard players set @a[tag=!detached] {ns}.temp.vote_collisions 1
 function {ns}:modes/race/translations/vote_for_collisions
 execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.kart collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.1 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.2 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.3 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.4 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.5 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.6 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.7 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.8 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.9 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.10 collisionRule always
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.10+ collisionRule always
+{collisions_always}
+execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.25+ collisionRule always
 """)
 
 	# /xp_bar

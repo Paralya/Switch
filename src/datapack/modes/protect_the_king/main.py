@@ -3,7 +3,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
-from ..emit import write_modes_calls, write_time_xp_bar
+from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
 
@@ -195,6 +195,10 @@ team modify {ns}.temp.red_king color dark_red
 team modify {ns}.temp.blue_king color dark_blue
 team modify {ns}.temp.red color red
 team modify {ns}.temp.blue color blue
+team modify {ns}.temp.red_king prefix ["",{badge("red_king")}," "]
+team modify {ns}.temp.blue_king prefix ["",{badge("blue_king")}," "]
+team modify {ns}.temp.red prefix ["",{badge("red")}," "]
+team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
 team modify {ns}.temp.red collisionRule never
 team modify {ns}.temp.blue collisionRule never
 scoreboard players set #next_role {ns}.data 0

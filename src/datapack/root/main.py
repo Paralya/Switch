@@ -2,6 +2,8 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ..modes.emit import badge
+
 
 # Top-level "switch:*" functions that don't belong to a deeper subsystem.
 # (load / tick are handled by write_load_file / write_tick_file in src/link.py)
@@ -177,15 +179,12 @@ stopwatch create {ns}:game_clock
 stopwatch restart {ns}:game_clock
 scoreboard players set #clock_secs {ns}.data 0
 
-team add {ns}.no_pvp {{"text":"[No PvP]"}}
 team add {ns}.detached {{"text":"[Detached]","color":"dark_gray"}}
 team add {ns}.tutorial {{"text":"[Tutorial]","color":"yellow"}}
-team modify {ns}.no_pvp friendlyFire false
-team modify {ns}.no_pvp color white
 team modify {ns}.detached friendlyFire false
 team modify {ns}.detached color gray
-team modify {ns}.detached prefix {{"text":"[Lobby] ","color":"dark_gray"}}
-team modify {ns}.tutorial prefix {{"text":"[Tutorial] ","color":"yellow"}}
+team modify {ns}.detached prefix ["",{badge("lobby")}," "]
+team modify {ns}.tutorial prefix ["",{badge("tutorial")}," "]
 team modify {ns}.tutorial color gold
 
 gamerule minecraft:max_command_sequence_length 2147483647

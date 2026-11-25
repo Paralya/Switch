@@ -37,6 +37,10 @@ team modify switch.temp.red color red
 team modify switch.temp.blue color blue
 team modify switch.temp.green color green
 team modify switch.temp.yellow color yellow
+team modify switch.temp.red prefix ["",{"text": "耽","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.blue prefix ["",{"text": "耾","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.green prefix ["",{"text": "聅","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+team modify switch.temp.yellow prefix ["",{"text": "聆","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.red friendlyFire true
 team modify switch.temp.blue friendlyFire true
 team modify switch.temp.green friendlyFire true
