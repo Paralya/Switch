@@ -20,7 +20,7 @@ class OverlayPart(NamedTuple):
 	x: tuple[int, int]
 	""" Model x span of the plane, in units of 4 GUI pixels. """
 	u: tuple[float, float]
-	""" Horizontal UV span in `lobby.png` (320 x 192 px, 20 px per UV unit). """
+	""" Horizontal UV span in one frame of `lobby.png` (320 x 192 px, 20 px per UV unit). """
 	translation: tuple[int, int]
 
 
@@ -28,6 +28,9 @@ PARTS: dict[str, OverlayPart] = {
 	"lobby": OverlayPart(slot=0, x=(-16, 32), u=(0, 9.6), translation=(72, 16)),
 	"lobby_wing": OverlayPart(slot=26, x=(2, 32), u=(9.6, 15.6), translation=(48, 52)),
 }
+
+ANIMATION: JsonDict = {"height": 192, "frametime": 5, "interpolate": True}
+""" `lobby.png` stacks its 320 x 192 frames vertically: without `height` the client cuts square frames. Model UVs address a single frame. """
 
 HIDDEN: JsonDict = {"scale": [0, 0, 0]}
 """ Every display but the GUI, should a player end up holding a part or dropping it. """
@@ -37,7 +40,7 @@ def write_lobby_gui() -> None:
 	""" Register the overlay texture and one item model per part. """
 	ns: str = Mem.ctx.project_id
 	texture: str = f"{ns}:item/gui/lobby"
-	Mem.ctx.assets[ns].textures["item/gui/lobby"] = Texture(source_path=f"{ROOT}/textures/item/gui/lobby.png")
+	Mem.ctx.assets[ns].textures["item/gui/lobby"] = Texture(source_path=f"{ROOT}/textures/item/gui/lobby.png", mcmeta={"animation": ANIMATION})
 
 	for name, part in PARTS.items():
 		Mem.ctx.assets[ns].models[f"item/gui/{name}"] = Model(stp.json_dump({
