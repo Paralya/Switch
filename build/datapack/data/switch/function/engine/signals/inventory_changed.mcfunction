@@ -13,6 +13,9 @@ advancement revoke @s only switch:inventory_changed
 tag @s[tag=switch.layout.active,tag=!detached] add switch.layout.dirty
 execute if entity @s[tag=switch.layout.dirty] unless score @s switch.layout.cd matches 1.. run scoreboard players set @s switch.layout.cd 20
 
+# Put back a lobby overlay piece taken by the mouse
+execute if entity @s[tag=detached,tag=!switch.lobby_setup] run function switch:player/restore_lobby_gui
+
 # Launch inventory_changed signal to the modes listening to it
 execute if data storage switch:main {current_game:"beat_the_kings"} in switch:game run function switch:modes/beat_the_kings/calls/inventory_changed
 execute if data storage switch:main {current_game:"capture_the_flag"} in switch:game run function switch:modes/capture_the_flag/calls/inventory_changed

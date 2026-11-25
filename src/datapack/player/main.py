@@ -179,12 +179,27 @@ function {ns}:stats/util_update_player
 function {ns}:player/tutorial/start
 """)
 
+	# /restore_lobby_gui: a piece leaves its slot to the cursor, the hotbar or the ground, and `clear` also empties the cursor
+	# Each `clear` or `item replace` on a player fires inventory_changed at once: {ns}.lobby_setup keeps this function from running again mid-write
+	in_place: str = " ".join(f'if items entity @s inventory.{part.slot} *[item_model="{ns}:gui/{name}"]' for name, part in OVERLAY_PARTS.items())
+	write_function(f"{path}/restore_lobby_gui", f"""
+execute {in_place} run return 0
+execute unless items entity @s inventory.* *[custom_data~{{"{ns}":{{"jump":true}}}}] run return 0
+
+tag @s add {ns}.lobby_setup
+clear @s *[custom_data~{{"{ns}":{{"lobby_gui":true}}}}]
+execute as @e[type=item,distance=..4] if items entity @s contents *[custom_data~{{"{ns}":{{"lobby_gui":true}}}}] run kill @s
+function {ns}:player/setup_lobby_inventory
+""")
+
 	# /setup_lobby_inventory
 	overlay_lines: str = "\n".join(
 		f'item replace entity @s inventory.{part.slot} with paper[item_model="{ns}:gui/{name}",max_stack_size=1,tooltip_display={{hide_tooltip:true}},custom_data={{"{ns}":{{"lobby_gui":true}}}}]'
 		for name, part in OVERLAY_PARTS.items()
 	)
 	write_function(f"{path}/setup_lobby_inventory", f"""
+tag @s add {ns}.lobby_setup
+
 item replace entity @s[advancements={{{ns}:visible/jump_dripstone=false}}] inventory.3 with dripstone_block[item_name={{"text":"Dripstone Jump","color":"gold"}},lore=[{{"text":"by AirDox","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_dripstone":true}}}},tooltip_style="failure"]
 item replace entity @s[advancements={{{ns}:visible/jump_dripstone=true}}] inventory.3 with dripstone_block[item_name={{"text":"Dripstone Jump","color":"gold"}},lore=[{{"text":"by AirDox","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_dripstone":true}}}},tooltip_style="success"]
 
@@ -229,6 +244,8 @@ item replace entity @s[advancements={{{ns}:visible/jump_obsidian=true}}] invento
 
 # Practice mode items (toggle + action items if enabled)
 function {ns}:player/practice/give_items
+
+tag @s remove {ns}.lobby_setup
 """)
 
 	# /tick

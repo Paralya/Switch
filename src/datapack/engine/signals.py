@@ -21,6 +21,9 @@ advancement revoke @s only {ns}:inventory_changed
 tag @s[tag={ns}.layout.active,tag=!detached] add {ns}.layout.dirty
 execute if entity @s[tag={ns}.layout.dirty] unless score @s {ns}.layout.cd matches 1.. run scoreboard players set @s {ns}.layout.cd 20
 
+# Put back a lobby overlay piece taken by the mouse
+execute if entity @s[tag=detached,tag=!{ns}.lobby_setup] run function {ns}:player/restore_lobby_gui
+
 # Launch inventory_changed signal to the modes listening to it
 {listeners}""")
 

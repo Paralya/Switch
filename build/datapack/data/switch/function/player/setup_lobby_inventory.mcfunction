@@ -1,10 +1,13 @@
 
 #> switch:player/setup_lobby_inventory
 #
-# @executed	as @a[sort=random] & at @s
+# @executed	as the player & at current position
 #
-# @within	switch:player/tick_detach
+# @within	switch:player/restore_lobby_gui
+#			switch:player/tick_detach
 #
+
+tag @s add switch.lobby_setup
 
 item replace entity @s[advancements={switch:visible/jump_dripstone=false}] inventory.3 with dripstone_block[item_name={"text":"Dripstone Jump","color":"#FFA600"},lore=[{"text":"by AirDox","color":"#AEBBD0","italic":false}],custom_data={"switch":{"jump":true,"jump_dripstone":true}},tooltip_style="failure"]
 item replace entity @s[advancements={switch:visible/jump_dripstone=true}] inventory.3 with dripstone_block[item_name={"text":"Dripstone Jump","color":"#FFA600"},lore=[{"text":"by AirDox","color":"#AEBBD0","italic":false}],custom_data={"switch":{"jump":true,"jump_dripstone":true}},tooltip_style="success"]
@@ -51,4 +54,6 @@ item replace entity @s inventory.26 with paper[item_model="switch:gui/lobby_wing
 
 # Practice mode items (toggle + action items if enabled)
 function switch:player/practice/give_items
+
+tag @s remove switch.lobby_setup
 
