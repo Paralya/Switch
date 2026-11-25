@@ -5,6 +5,7 @@ from stewbeet import Mem, write_function
 
 from ...resource_pack.lobby_gui import PARTS as OVERLAY_PARTS
 from .jump_timer import write_jump_timer_functions
+from .jumps import LOBBY_ITEMS
 from .layout import write_layout_functions
 from .practice import write_practice_functions
 from .stats_storage import write_stats_storage
@@ -147,6 +148,9 @@ execute if score @s[tag=!detached] {ns}.reconnect matches -600.. run function {n
 function {ns}:player/translations/joined
 execute unless score @s {ns}.reconnect matches -600.. run function {ns}:player/trigger/detach/main
 
+# A lobby inventory saved by another datapack version gets the current jump items
+execute if items entity @s[tag=detached] inventory.* *[custom_data~{{"{ns}":{{"jump":true}}}}] run function {ns}:player/setup_lobby_jumps
+
 # Prevent calling this function again
 scoreboard players operation @s {ns}.reconnect = #score {ns}.reconnect
 """)
@@ -192,6 +196,18 @@ execute as @e[type=item,distance=..4] if items entity @s contents *[custom_data~
 function {ns}:player/setup_lobby_inventory
 """)
 
+	# /setup_lobby_jumps: safe to call at any time, since rewriting an unchanged jump item fires no inventory_changed
+	jump_lines: str = "\n".join(
+		f'item replace entity @s[advancements={{{ns}:visible/jump_{key}={done}}}] inventory.{slot} with {item}[item_name={{"text":"{name}","color":"{color}"}},lore=[{{"text":"by {authors}","color":"gray","italic":false}}],item_model="{ns}:jump/{key}_{state}",custom_data={{"{ns}":{{"jump":true,"jump_{key}":true}}}},tooltip_style="{style}"]'
+		for key, slot, item, name, color, authors in LOBBY_ITEMS
+		for done, state, style in (("false", "todo", "failure"), ("true", "done", "success"))
+	)
+	write_function(f"{path}/setup_lobby_jumps", jump_lines)
+	write_function(f"{ns}:load", f"""
+# Lobby inventories saved by another datapack version get the current jump items
+execute as @a[tag=detached] if items entity @s inventory.* *[custom_data~{{"{ns}":{{"jump":true}}}}] run function {ns}:player/setup_lobby_jumps
+""")
+
 	# /setup_lobby_inventory
 	overlay_lines: str = "\n".join(
 		f'item replace entity @s inventory.{part.slot} with paper[item_model="{ns}:gui/{name}",max_stack_size=1,tooltip_display={{hide_tooltip:true}},custom_data={{"{ns}":{{"lobby_gui":true}}}}]'
@@ -200,44 +216,7 @@ function {ns}:player/setup_lobby_inventory
 	write_function(f"{path}/setup_lobby_inventory", f"""
 tag @s add {ns}.lobby_setup
 
-item replace entity @s[advancements={{{ns}:visible/jump_dripstone=false}}] inventory.3 with dripstone_block[item_name={{"text":"Dripstone Jump","color":"gold"}},lore=[{{"text":"by AirDox","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_dripstone":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_dripstone=true}}] inventory.3 with dripstone_block[item_name={{"text":"Dripstone Jump","color":"gold"}},lore=[{{"text":"by AirDox","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_dripstone":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_pink=false}}] inventory.4 with pink_concrete[item_name={{"text":"Pink Jump","color":"light_purple"}},lore=[{{"text":"by OfChara","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_pink":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_pink=true}}] inventory.4 with pink_concrete[item_name={{"text":"Pink Jump","color":"light_purple"}},lore=[{{"text":"by OfChara","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_pink":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_bricks=false}}] inventory.5 with bricks[item_name={{"text":"Bricks Jump","color":"#BC4A3C"}},lore=[{{"text":"by Thitanas","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_bricks":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_bricks=true}}] inventory.5 with bricks[item_name={{"text":"Bricks Jump","color":"#BC4A3C"}},lore=[{{"text":"by Thitanas","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_bricks":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_green=false}}] inventory.10 with lime_concrete[item_name={{"text":"Green Jump","color":"green"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_green":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_green=true}}] inventory.10 with lime_concrete[item_name={{"text":"Green Jump","color":"green"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_green":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_white=false}}] inventory.11 with white_concrete[item_name={{"text":"White Jump","color":"white"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_white":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_white=true}}] inventory.11 with white_concrete[item_name={{"text":"White Jump","color":"white"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_white":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_blue=false}}] inventory.12 with blue_concrete[item_name={{"text":"Blue Jump","color":"blue"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_blue":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_blue=true}}] inventory.12 with blue_concrete[item_name={{"text":"Blue Jump","color":"blue"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_blue":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_yellow=false}}] inventory.13 with yellow_concrete[item_name={{"text":"Yellow Jump","color":"yellow"}},lore=[{{"text":"by ArtiGrrr","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_yellow":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_yellow=true}}] inventory.13 with yellow_concrete[item_name={{"text":"Yellow Jump","color":"yellow"}},lore=[{{"text":"by ArtiGrrr","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_yellow":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_red=false}}] inventory.14 with red_concrete[item_name={{"text":"Red Jump","color":"red"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_red":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_red=true}}] inventory.14 with red_concrete[item_name={{"text":"Red Jump","color":"red"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_red":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_brown=false}}] inventory.15 with brown_concrete[item_name={{"text":"Brown Jump","color":"#8B4513"}},lore=[{{"text":"by OfChara","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_brown":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_brown=true}}] inventory.15 with brown_concrete[item_name={{"text":"Brown Jump","color":"#8B4513"}},lore=[{{"text":"by OfChara","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_brown":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_purple=false}}] inventory.16 with purple_concrete[item_name={{"text":"Purple Jump","color":"light_purple"}},lore=[{{"text":"by AirDox","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_purple":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_purple=true}}] inventory.16 with purple_concrete[item_name={{"text":"Purple Jump","color":"light_purple"}},lore=[{{"text":"by AirDox","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_purple":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_duality=false}}] inventory.21 with copper_block[item_name={{"text":"Duality Jump","color":"#B87333"}},lore=[{{"text":"by Stoupy / AirDox / OfChara","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_duality":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_duality=true}}] inventory.21 with copper_block[item_name={{"text":"Duality Jump","color":"#B87333"}},lore=[{{"text":"by Stoupy / AirDox / OfChara","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_duality":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_graviglitch=false}}] inventory.22 with suspicious_gravel[item_name={{"text":"GraviGlitch Jump","color":"#676767"}},lore=[{{"text":"by OfChara / Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_graviglitch":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_graviglitch=true}}] inventory.22 with suspicious_gravel[item_name={{"text":"GraviGlitch Jump","color":"#676767"}},lore=[{{"text":"by OfChara / Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_graviglitch":true}}}},tooltip_style="success"]
-
-item replace entity @s[advancements={{{ns}:visible/jump_obsidian=false}}] inventory.23 with crying_obsidian[item_name={{"text":"Obsidian Jump","color":"dark_gray"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_obsidian":true}}}},tooltip_style="failure"]
-item replace entity @s[advancements={{{ns}:visible/jump_obsidian=true}}] inventory.23 with crying_obsidian[item_name={{"text":"Obsidian Jump","color":"dark_gray"}},lore=[{{"text":"by Stoupy","color":"gray","italic":false}}],custom_data={{"{ns}":{{"jump":true,"jump_obsidian":true}}}},tooltip_style="success"]
+function {ns}:player/setup_lobby_jumps
 
 # Overlay drawn over the whole inventory screen and the effects sidebar (see src/resource_pack/lobby_gui.py)
 {overlay_lines}

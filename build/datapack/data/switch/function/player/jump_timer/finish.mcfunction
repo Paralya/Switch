@@ -20,8 +20,9 @@
 # @args		jump (string)
 #
 
-# Grant the jump completion advancement
+# Grant the jump completion advancement, which lights its star in the lobby inventory
 $advancement grant @s only switch:visible/jump_$(jump)
+function switch:player/setup_lobby_jumps
 
 # Stop the timer (querying the exact final time) and compute the time display digits
 function switch:player/jump_timer/query

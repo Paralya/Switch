@@ -19,3 +19,21 @@ The timer ids match the {ns}.lobby_respawn scores, the names and colors match th
 and the start line blocks sit 1 block in front of the jump tp points (see tick_detach respawn coords).
 """
 
+
+LOBBY_ITEMS: list[tuple[str, int, str, str, str, str]] = [
+	("dripstone", 3, "dripstone_block", "Dripstone Jump", "gold", "AirDox"),
+	("pink", 4, "pink_concrete", "Pink Jump", "light_purple", "OfChara"),
+	("bricks", 5, "bricks", "Bricks Jump", "#BC4A3C", "Thitanas"),
+	("green", 10, "lime_concrete", "Green Jump", "green", "Stoupy"),
+	("white", 11, "white_concrete", "White Jump", "white", "Stoupy"),
+	("blue", 12, "blue_concrete", "Blue Jump", "blue", "Stoupy"),
+	("yellow", 13, "yellow_concrete", "Yellow Jump", "yellow", "ArtiGrrr"),
+	("red", 14, "red_concrete", "Red Jump", "red", "Stoupy"),
+	("brown", 15, "brown_concrete", "Brown Jump", "#8B4513", "OfChara"),
+	("purple", 16, "purple_concrete", "Purple Jump", "light_purple", "AirDox"),
+	("duality", 21, "copper_block", "Duality Jump", "#B87333", "Stoupy / AirDox / OfChara"),
+	("graviglitch", 22, "suspicious_gravel", "GraviGlitch Jump", "#676767", "OfChara / Stoupy"),
+	("obsidian", 23, "crying_obsidian", "Obsidian Jump", "dark_gray", "Stoupy"),
+]
+""" Jump items of the lobby inventory: (key, inventory slot, item, name, name color, authors). """
+

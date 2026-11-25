@@ -243,3 +243,6 @@ data remove storage switch:layout stale[{n:"switch.layout.ab8b96f5"}]
 data remove storage switch:layout stale[{n:"switch.layout.06d28cdc"}]
 execute if data storage switch:layout stale[0] run function switch:player/layout/prune with storage switch:layout stale[0]
 
+# Lobby inventories saved by another datapack version get the current jump items
+execute as @a[tag=detached] if items entity @s inventory.* *[custom_data~{"switch":{"jump":true}}] run function switch:player/setup_lobby_jumps
+

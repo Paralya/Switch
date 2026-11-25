@@ -139,8 +139,9 @@ function {ns}:player/jump_timer/compute_display
 
 	# /finish (macro: jump key, called by tick_detach when reaching a jump end with an active timer for it)
 	write_function(f"{path}/finish", f"""
-# Grant the jump completion advancement
+# Grant the jump completion advancement, which lights its star in the lobby inventory
 $advancement grant @s only {ns}:visible/jump_$(jump)
+function {ns}:player/setup_lobby_jumps
 
 # Stop the timer (querying the exact final time) and compute the time display digits
 function {ns}:player/jump_timer/query

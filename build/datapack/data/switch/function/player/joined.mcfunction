@@ -36,6 +36,9 @@ execute if score @s[tag=!detached] switch.reconnect matches -600.. run function 
 function switch:player/translations/joined
 execute unless score @s switch.reconnect matches -600.. run function switch:player/trigger/detach/main
 
+# A lobby inventory saved by another datapack version gets the current jump items
+execute if items entity @s[tag=detached] inventory.* *[custom_data~{"switch":{"jump":true}}] run function switch:player/setup_lobby_jumps
+
 # Prevent calling this function again
 scoreboard players operation @s switch.reconnect = #score switch.reconnect
 
