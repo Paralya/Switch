@@ -46,12 +46,7 @@ team modify switch.temp.sidebar.3 suffix [{"text":"Time remaining: "},{"text":"1
 function switch:modes/_common/sidebar_setup
 
 # Choix des rôles + give d'items
-team add switch.rush_the_point.red {"text":"[Red]","color":"#FF3347"}
-team add switch.rush_the_point.blue {"text":"[Blue]","color":"#2E9BFF"}
-team modify switch.rush_the_point.red color red
-team modify switch.rush_the_point.blue color blue
-team modify switch.rush_the_point.red prefix ["",{"text": "耽","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
-team modify switch.rush_the_point.blue prefix ["",{"text": "耾","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+function switch:modes/_common/setup_teams_red_blue {team:"rush_the_point"}
 team modify switch.rush_the_point.red nametagVisibility hideForOtherTeams
 team modify switch.rush_the_point.blue nametagVisibility hideForOtherTeams
 team modify switch.rush_the_point.red friendlyFire false

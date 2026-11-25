@@ -4,7 +4,7 @@
 from stewbeet import Mem, write_function
 
 from ...kits import Kit, KitItem
-from ..emit import badge, write_modes_calls, write_no_drop
+from ..emit import write_modes_calls, write_no_drop
 from .translations import write_translations
 
 
@@ -575,12 +575,7 @@ scoreboard players set #TEAM_FISH {ns}.data 0
 	write_function(f"{path}/teams_tp/setup", f"""
 function {ns}:modes/fish_fight/translations/teams_tp_setup
 
-team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
-team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
-team modify {ns}.temp.red color red
-team modify {ns}.temp.blue color blue
-team modify {ns}.temp.red prefix ["",{badge("red")}," "]
-team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
+function {ns}:modes/_common/setup_teams_red_blue {{team:"temp"}}
 team modify {ns}.temp.red friendlyFire false
 team modify {ns}.temp.blue friendlyFire false
 team modify {ns}.temp.red collisionRule never

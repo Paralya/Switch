@@ -26,7 +26,12 @@ function switch:modes/_common/recap/start/damage
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
-function switch:modes/_common/setup_teams_red_blue
+function switch:modes/_common/setup_teams_red_blue {team:"temp"}
+team modify switch.temp.red friendlyFire true
+team modify switch.temp.blue friendlyFire true
+team modify switch.temp.red nametagVisibility hideForOtherTeams
+team modify switch.temp.blue nametagVisibility hideForOtherTeams
+scoreboard players set #next_role switch.data 0
 execute as @a[tag=!detached,sort=random] at @s run function switch:modes/layers_2_teams/team_and_give
 execute as @a[tag=!detached] run gamemode survival @s
 

@@ -29,16 +29,11 @@ scoreboard objectives add switch.temp.killed_yellow teamkill.yellow
 scoreboard objectives setdisplay list switch.health
 
 # Choix des teams + give d'items
-team add switch.temp.red {"text":"[Red]","color":"#FF3347"}
-team add switch.temp.blue {"text":"[Blue]","color":"#2E9BFF"}
+function switch:modes/_common/setup_teams_red_blue {team:"temp"}
 team add switch.temp.green {"text":"[Green]","color":"#2EFF8B"}
 team add switch.temp.yellow {"text":"[Yellow]","color":"#FFE60A"}
-team modify switch.temp.red color red
-team modify switch.temp.blue color blue
 team modify switch.temp.green color green
 team modify switch.temp.yellow color yellow
-team modify switch.temp.red prefix ["",{"text": "耽","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
-team modify switch.temp.blue prefix ["",{"text": "耾","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.green prefix ["",{"text": "聅","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.yellow prefix ["",{"text": "聆","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.temp.red friendlyFire true

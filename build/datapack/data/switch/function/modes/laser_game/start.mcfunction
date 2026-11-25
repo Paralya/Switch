@@ -6,14 +6,9 @@
 # @within	switch:modes/laser_game/calls/start
 #
 
-team add switch.laser_game.blue {"text":"[Blue]","color":"#2E9BFF"}
-team add switch.laser_game.red {"text":"[Red]","color":"#FF3347"}
-team modify switch.laser_game.blue color blue
-team modify switch.laser_game.blue prefix ["",{"text": "耾","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
+function switch:modes/_common/setup_teams_red_blue {team:"laser_game"}
 team modify switch.laser_game.blue seeFriendlyInvisibles true
 team modify switch.laser_game.blue nametagVisibility never
-team modify switch.laser_game.red color red
-team modify switch.laser_game.red prefix ["",{"text": "耽","font": "switch:renders","color":"#FFFFFF","shadow_color":0}," "]
 team modify switch.laser_game.red seeFriendlyInvisibles true
 team modify switch.laser_game.red nametagVisibility never
 

@@ -84,7 +84,12 @@ function {ns}:modes/_common/recap/start/damage
 scoreboard objectives setdisplay list {ns}.health
 
 # Choix des teams + give d'items
-function {ns}:modes/_common/setup_teams_red_blue
+function {ns}:modes/_common/setup_teams_red_blue {{team:"temp"}}
+team modify {ns}.temp.red friendlyFire true
+team modify {ns}.temp.blue friendlyFire true
+team modify {ns}.temp.red nametagVisibility hideForOtherTeams
+team modify {ns}.temp.blue nametagVisibility hideForOtherTeams
+scoreboard players set #next_role {ns}.data 0
 execute as @a[tag=!detached,sort=random] at @s run function {path}/team_and_give
 execute as @a[tag=!detached] run gamemode survival @s
 """)

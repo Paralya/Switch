@@ -111,16 +111,11 @@ scoreboard objectives add {ns}.temp.killed_yellow teamkill.yellow
 scoreboard objectives setdisplay list {ns}.health
 
 # Choix des teams + give d'items
-team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
-team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
+function {ns}:modes/_common/setup_teams_red_blue {{team:"temp"}}
 team add {ns}.temp.green {{"text":"[Green]","color":"green"}}
 team add {ns}.temp.yellow {{"text":"[Yellow]","color":"yellow"}}
-team modify {ns}.temp.red color red
-team modify {ns}.temp.blue color blue
 team modify {ns}.temp.green color green
 team modify {ns}.temp.yellow color yellow
-team modify {ns}.temp.red prefix ["",{badge("red")}," "]
-team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
 team modify {ns}.temp.green prefix ["",{badge("green")}," "]
 team modify {ns}.temp.yellow prefix ["",{badge("yellow")}," "]
 team modify {ns}.temp.red friendlyFire true

@@ -2,7 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
-from ..emit import badge, write_modes_calls
+from ..emit import write_modes_calls
 from .translations import write_translations
 
 
@@ -207,14 +207,9 @@ execute unless score @s {ns}.temp.shield matches 1.. run scoreboard players add 
 
 	# /start (translation ref rewritten)
 	write_function(f"{path}/start", f"""
-team add {ns}.laser_game.blue {{"text":"[Blue]","color":"blue"}}
-team add {ns}.laser_game.red {{"text":"[Red]","color":"red"}}
-team modify {ns}.laser_game.blue color blue
-team modify {ns}.laser_game.blue prefix ["",{badge("blue")}," "]
+function {ns}:modes/_common/setup_teams_red_blue {{team:"laser_game"}}
 team modify {ns}.laser_game.blue seeFriendlyInvisibles true
 team modify {ns}.laser_game.blue nametagVisibility never
-team modify {ns}.laser_game.red color red
-team modify {ns}.laser_game.red prefix ["",{badge("red")}," "]
 team modify {ns}.laser_game.red seeFriendlyInvisibles true
 team modify {ns}.laser_game.red nametagVisibility never
 

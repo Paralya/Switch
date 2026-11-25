@@ -252,7 +252,12 @@ function {ns}:modes/sheepwars/translations/start
 execute if score #APOCALYPSE_GAME {ns}.data matches 1 as @a[tag=!detached] at @s run playsound entity.wither.death ambient @s
 
 # Choix des teams + give d'items
-function {ns}:modes/_common/setup_teams_red_blue
+function {ns}:modes/_common/setup_teams_red_blue {{team:"temp"}}
+team modify {ns}.temp.red friendlyFire true
+team modify {ns}.temp.blue friendlyFire true
+team modify {ns}.temp.red nametagVisibility hideForOtherTeams
+team modify {ns}.temp.blue nametagVisibility hideForOtherTeams
+scoreboard players set #next_role {ns}.data 0
 execute as @a[tag=!detached] run gamemode adventure @s
 execute as @a[tag=!detached,sort=random] at @s run function {ns}:modes/sheepwars/team_and_give
 """)

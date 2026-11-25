@@ -189,16 +189,11 @@ bossbar set {ns}.temp.blue_king players @a[tag=!detached]
 # Choix des rôles + give d'items
 team add {ns}.temp.red_king {{"text":"[Red King]","color":"dark_red"}}
 team add {ns}.temp.blue_king {{"text":"[Blue King]","color":"dark_blue"}}
-team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
-team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
 team modify {ns}.temp.red_king color dark_red
 team modify {ns}.temp.blue_king color dark_blue
-team modify {ns}.temp.red color red
-team modify {ns}.temp.blue color blue
 team modify {ns}.temp.red_king prefix ["",{badge("red_king")}," "]
 team modify {ns}.temp.blue_king prefix ["",{badge("blue_king")}," "]
-team modify {ns}.temp.red prefix ["",{badge("red")}," "]
-team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
+function {ns}:modes/_common/setup_teams_red_blue {{team:"temp"}}
 team modify {ns}.temp.red collisionRule never
 team modify {ns}.temp.blue collisionRule never
 scoreboard players set #next_role {ns}.data 0

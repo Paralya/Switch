@@ -506,20 +506,14 @@ execute unless entity @a[tag=!detached,gamemode=!spectator] run scoreboard playe
 execute if score #game_state {ns}.data matches 1..3 run scoreboard players set #remaining_time {ns}.data 0
 """)
 
-	# /setup_teams_red_blue (shared Red/Blue team creation for the 2-team modes layers_2_teams / sheepwars:
-	# create both teams, friendly fire on, hide enemy nametags, then reset the role counter)
+	# /setup_teams_red_blue {team} (creates {ns}.<team>.red and {ns}.<team>.blue with their name, color and badge; each mode sets its own team rules)
 	write_function(f"{path}/setup_teams_red_blue", f"""
-team add {ns}.temp.red {{"text":"[Red]","color":"red"}}
-team add {ns}.temp.blue {{"text":"[Blue]","color":"blue"}}
-team modify {ns}.temp.red color red
-team modify {ns}.temp.blue color blue
-team modify {ns}.temp.red prefix ["",{badge("red")}," "]
-team modify {ns}.temp.blue prefix ["",{badge("blue")}," "]
-team modify {ns}.temp.red friendlyFire true
-team modify {ns}.temp.blue friendlyFire true
-team modify {ns}.temp.red nametagVisibility hideForOtherTeams
-team modify {ns}.temp.blue nametagVisibility hideForOtherTeams
-scoreboard players set #next_role {ns}.data 0
+$team add {ns}.$(team).red {{"text":"[Red]","color":"red"}}
+$team add {ns}.$(team).blue {{"text":"[Blue]","color":"blue"}}
+$team modify {ns}.$(team).red color red
+$team modify {ns}.$(team).blue color blue
+$team modify {ns}.$(team).red prefix ["",{badge("red")}," "]
+$team modify {ns}.$(team).blue prefix ["",{badge("blue")}," "]
 """)
 
 	# /no_pvp_start (shared pitch_creep / warden_escape /start head: pvp off, 1 life, buff effects, day)

@@ -25,9 +25,6 @@ function {ns}:modes/_common/no_pvp_start
 execute in {ns}:game run gamerule minecraft:show_death_messages false
 execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
 execute in {ns}:game run gamerule minecraft:keep_inventory true
-execute in {ns}:game run gamerule minecraft:show_death_messages false
-execute in {ns}:game run gamerule minecraft:natural_health_regeneration false
-execute in {ns}:game run gamerule minecraft:keep_inventory true
 
 ## Placement de la map et des joueurs + give d'items
 scoreboard players set #dont_regenerate {ns}.data 1
