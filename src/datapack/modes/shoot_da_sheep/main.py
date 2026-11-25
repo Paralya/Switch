@@ -107,7 +107,7 @@ execute unless data entity @s {{HurtTime:0s}} run function {ns}:utils/safe_kill
 
 	# /start (translation ref rewritten)
 	write_function(f"{path}/start", f"""
-team join {ns}.no_pvp @a[tag=!detached]
+gamerule minecraft:pvp false
 effect give @a[tag=!detached] saturation infinite 255 true
 function {ns}:utils/set_dynamic_time
 

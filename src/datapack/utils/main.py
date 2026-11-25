@@ -166,7 +166,6 @@ execute unless score #disable {ns}.data matches 1 run clear @a[tag=!detached]
 execute if score #disable {ns}.data matches 1 run clear @a[tag=!detached,tag=!convention.debug]
 
 # Other stuff
-team empty {ns}.no_pvp
 execute in {ns}:game run spawnpoint @a 0 70 0
 xp set @a[tag=!detached] 0 levels
 xp set @a[tag=!detached] 0 points

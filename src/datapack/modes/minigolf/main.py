@@ -134,8 +134,7 @@ function {path}/xp_bar
 	# /start
 	write_function(f"{path}/start", f"""
 execute as @a[tag=!detached] run gamemode spectator @s
-team join {ns}.no_pvp @a[tag=!detached]
-team modify {ns}.no_pvp seeFriendlyInvisibles false
+gamerule minecraft:pvp false
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 function {ns}:utils/set_dynamic_time
