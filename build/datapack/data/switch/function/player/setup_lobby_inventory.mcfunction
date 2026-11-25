@@ -45,6 +45,10 @@ item replace entity @s[advancements={switch:visible/jump_graviglitch=true}] inve
 item replace entity @s[advancements={switch:visible/jump_obsidian=false}] inventory.23 with crying_obsidian[item_name={"text":"Obsidian Jump","color":"#6B788F"},lore=[{"text":"by Stoupy","color":"#AEBBD0","italic":false}],custom_data={"switch":{"jump":true,"jump_obsidian":true}},tooltip_style="failure"]
 item replace entity @s[advancements={switch:visible/jump_obsidian=true}] inventory.23 with crying_obsidian[item_name={"text":"Obsidian Jump","color":"#6B788F"},lore=[{"text":"by Stoupy","color":"#AEBBD0","italic":false}],custom_data={"switch":{"jump":true,"jump_obsidian":true}},tooltip_style="success"]
 
+# Overlay drawn over the whole inventory screen and the effects sidebar (see src/resource_pack/lobby_gui.py)
+item replace entity @s inventory.0 with paper[item_model="switch:gui/lobby",max_stack_size=1,tooltip_display={hide_tooltip:true},custom_data={"switch":{"lobby_gui":true}}]
+item replace entity @s inventory.26 with paper[item_model="switch:gui/lobby_wing",max_stack_size=1,tooltip_display={hide_tooltip:true},custom_data={"switch":{"lobby_gui":true}}]
+
 # Practice mode items (toggle + action items if enabled)
 function switch:player/practice/give_items
 

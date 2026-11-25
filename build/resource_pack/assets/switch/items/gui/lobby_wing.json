@@ -1,0 +1,7 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "switch:item/gui/lobby_wing"
+	},
+	"oversized_in_gui": true
+}

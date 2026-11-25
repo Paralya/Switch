@@ -1,0 +1,41 @@
+{
+	"textures": {
+		"layer0": "switch:item/gui/lobby",
+		"particle": "switch:item/gui/lobby"
+	},
+	"elements": [
+		{
+			"from": [2,-16,15.9375],
+			"to": [32,32,16],
+			"faces": {"south": {"uv": [9.6,0,15.6,16],"texture": "#layer0"}}
+		}
+	],
+	"display": {
+		"gui": {
+			"translation": [48,52,-76],
+			"scale": [4,4,4]
+		},
+		"firstperson_righthand": {
+			"scale": [0,0,0]
+		},
+		"firstperson_lefthand": {
+			"scale": [0,0,0]
+		},
+		"thirdperson_righthand": {
+			"scale": [0,0,0]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0,0,0]
+		},
+		"ground": {
+			"scale": [0,0,0]
+		},
+		"head": {
+			"scale": [0,0,0]
+		},
+		"fixed": {
+			"scale": [0,0,0]
+		}
+	},
+	"gui_light": "front"
+}
