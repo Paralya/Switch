@@ -133,7 +133,6 @@ scoreboard players operation #secs {ns}.data %= #60 {ns}.data
 		f'team add {ns}.temp.{i} {{"text":"[{label}]","color":"{color}"}}'
 		for i, (label, color) in enumerate(RANKING_TEAMS, start=1)
 	)
-	team_collision: str = "\n".join(f"team modify {ns}.temp.{i} collisionRule never" for i in range(1, len(RANKING_TEAMS) + 1))
 	team_suffix: str = "\n".join(
 		f'team modify {ns}.temp.{i} suffix [" ",{badge(f"rank_{label}")}]'
 		for i, (label, _) in enumerate(RANKING_TEAMS, start=1)
@@ -149,7 +148,6 @@ scoreboard objectives add {ns}.temp.dx dummy
 scoreboard objectives add {ns}.temp.dy dummy
 scoreboard objectives add {ns}.temp.dz dummy
 scoreboard objectives add {ns}.temp.id dummy
-scoreboard objectives add {ns}.temp.vote_collisions dummy
 scoreboard objectives add {ns}.temp.change_map dummy
 scoreboard objectives add {ns}.temp.checkpoint dummy
 scoreboard objectives add {ns}.temp.classement dummy
@@ -169,12 +167,8 @@ scoreboard players set @a[tag=!detached] {ns}.checkpoint 0
 scoreboard players set @a[tag=!detached] {ns}.lap 1
 scoreboard objectives setdisplay sidebar {ns}.temp.sidebar
 
-team add {ns}.temp.kart {{"text":"[Kart]"}}
 {team_add}
 team add {ns}.temp.25+ {{"text":"[25+th]","color":"#9200DF"}}
-team modify {ns}.temp.kart collisionRule never
-{team_collision}
-team modify {ns}.temp.25+ collisionRule never
 {team_suffix}
 team modify {ns}.temp.25+ suffix [" ",{badge("rank_25plus")}]
 

@@ -12,7 +12,6 @@ execute if score #race_seconds switch.data matches 3.. unless score @s switch.re
 execute if score #race_seconds switch.data matches 3.. if data entity @s SelectedItem.components."minecraft:custom_data".switch.hard_respawn run function switch:modes/race/checkpoints/respawn/hard
 
 # Manage Votes
-execute unless score @s switch.temp.vote_collisions matches 1 if data entity @s SelectedItem.components."minecraft:custom_data".switch.enable_collisions run function switch:modes/race/vote_for_collisions
 execute unless score @s switch.temp.change_map matches 1 if data entity @s SelectedItem.components."minecraft:custom_data".switch.change_map run function switch:modes/race/vote_for_change_map
 
 # Playsounds

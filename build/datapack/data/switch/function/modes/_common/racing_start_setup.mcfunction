@@ -16,7 +16,6 @@ scoreboard objectives add switch.temp.dx dummy
 scoreboard objectives add switch.temp.dy dummy
 scoreboard objectives add switch.temp.dz dummy
 scoreboard objectives add switch.temp.id dummy
-scoreboard objectives add switch.temp.vote_collisions dummy
 scoreboard objectives add switch.temp.change_map dummy
 scoreboard objectives add switch.temp.checkpoint dummy
 scoreboard objectives add switch.temp.classement dummy
@@ -36,7 +35,6 @@ scoreboard players set @a[tag=!detached] switch.checkpoint 0
 scoreboard players set @a[tag=!detached] switch.lap 1
 scoreboard objectives setdisplay sidebar switch.temp.sidebar
 
-team add switch.temp.kart {"text":"[Kart]"}
 team add switch.temp.1 {"text":"[1st]","color":"#FFE700"}
 team add switch.temp.2 {"text":"[2nd]","color":"#C0C0C0"}
 team add switch.temp.3 {"text":"[3rd]","color":"#CD7F32"}
@@ -63,33 +61,6 @@ team add switch.temp.23 {"text":"[23rd]","color":"#696969"}
 team add switch.temp.24 {"text":"[24th]","color":"#696969"}
 team add switch.temp.25 {"text":"[25th]","color":"#696969"}
 team add switch.temp.25+ {"text":"[25+th]","color":"#9200DF"}
-team modify switch.temp.kart collisionRule never
-team modify switch.temp.1 collisionRule never
-team modify switch.temp.2 collisionRule never
-team modify switch.temp.3 collisionRule never
-team modify switch.temp.4 collisionRule never
-team modify switch.temp.5 collisionRule never
-team modify switch.temp.6 collisionRule never
-team modify switch.temp.7 collisionRule never
-team modify switch.temp.8 collisionRule never
-team modify switch.temp.9 collisionRule never
-team modify switch.temp.10 collisionRule never
-team modify switch.temp.11 collisionRule never
-team modify switch.temp.12 collisionRule never
-team modify switch.temp.13 collisionRule never
-team modify switch.temp.14 collisionRule never
-team modify switch.temp.15 collisionRule never
-team modify switch.temp.16 collisionRule never
-team modify switch.temp.17 collisionRule never
-team modify switch.temp.18 collisionRule never
-team modify switch.temp.19 collisionRule never
-team modify switch.temp.20 collisionRule never
-team modify switch.temp.21 collisionRule never
-team modify switch.temp.22 collisionRule never
-team modify switch.temp.23 collisionRule never
-team modify switch.temp.24 collisionRule never
-team modify switch.temp.25 collisionRule never
-team modify switch.temp.25+ collisionRule never
 team modify switch.temp.1 suffix [" ",{"text": "耣","font": "switch:renders","color":"#FFFFFF","shadow_color":0}]
 team modify switch.temp.2 suffix [" ",{"text": "耤","font": "switch:renders","color":"#FFFFFF","shadow_color":0}]
 team modify switch.temp.3 suffix [" ",{"text": "耥","font": "switch:renders","color":"#FFFFFF","shadow_color":0}]

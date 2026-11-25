@@ -182,14 +182,3 @@ tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"selector":"@s","color":"gre
 tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"green"}},{{"text":" voted to change map ["}},{{"score":{{"name":"#votes","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"/"}},{{"score":{{"name":"#votes_max","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"]"}}]
 """)
 
-	# /vote_for_collisions
-	write_function(f"{path}/vote_for_collisions", rf"""
-# French
-tellraw @a[scores={{{ns}.lang=0}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" a voté pour activer les collisions joueurs ["}},{{"score":{{"name":"#votes","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"/"}},{{"score":{{"name":"#votes_max","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"]"}}]
-execute if score #votes {ns}.data >= #votes_max {ns}.data run tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["\n",{{"nbt":"ParalyaWarning","storage":"{ns}:main","interpret":true}},{{"text":" Collisions entre joueurs activées !\n"}}]
-
-# English
-tellraw @a[scores={{{ns}.lang=1}},tag=!detached] [{{"selector":"@s","color":"red"}},{{"text":" voted to enable player collisions ["}},{{"score":{{"name":"#votes","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"/"}},{{"score":{{"name":"#votes_max","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"]"}}]
-execute if score #votes {ns}.data >= #votes_max {ns}.data run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["\n",{{"nbt":"ParalyaWarning","storage":"{ns}:main","interpret":true}},{{"text":" Player collisions enabled!\n"}}]
-""")
-

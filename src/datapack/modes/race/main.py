@@ -876,7 +876,6 @@ execute if score #race_seconds {ns}.data matches 3.. unless score @s {ns}.respaw
 execute if score #race_seconds {ns}.data matches 3.. if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.hard_respawn run function {ns}:modes/race/checkpoints/respawn/hard
 
 # Manage Votes
-execute unless score @s {ns}.temp.vote_collisions matches 1 if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.enable_collisions run function {ns}:modes/race/vote_for_collisions
 execute unless score @s {ns}.temp.change_map matches 1 if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.change_map run function {ns}:modes/race/vote_for_change_map
 
 # Playsounds
@@ -983,7 +982,6 @@ scoreboard objectives remove {ns}.temp.dx
 scoreboard objectives remove {ns}.temp.dy
 scoreboard objectives remove {ns}.temp.dz
 scoreboard objectives remove {ns}.temp.id
-scoreboard objectives remove {ns}.temp.vote_collisions
 scoreboard objectives remove {ns}.temp.change_map
 scoreboard objectives remove {ns}.temp.checkpoint
 scoreboard objectives remove {ns}.temp.classement
@@ -997,7 +995,6 @@ scoreboard objectives remove {ns}.lap
 scoreboard objectives remove {ns}.effects.last
 scoreboard objectives remove {ns}.effects.timer
 
-team remove {ns}.temp.kart
 {team_removals}
 team remove {ns}.temp.25+
 
@@ -1015,7 +1012,6 @@ execute if score #detect_end {ns}.data matches 0 as @e[type=marker,tag={ns}.chec
 execute if score #detect_end {ns}.data matches 0 as @a[tag=!detached,scores={{{ns}.right_click=1..}}] run function {ns}:modes/race/right_click
 
 # Start fixes -7
-execute if score #race_seconds {ns}.data matches -7..-1 run team join {ns}.temp.kart @e[tag={ns}.vehicle]
 execute if score #race_seconds {ns}.data matches -7..-1 as @e[tag={ns}.vehicle] run data modify entity @s NoAI set value 1b
 execute if score #race_seconds {ns}.data matches -7..-1 as @e[tag={ns}.vehicle] run tp @s @s
 execute if score #race_seconds {ns}.data matches ..-8 if score #map_type {ns}.data matches 0 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
@@ -1221,29 +1217,6 @@ scoreboard players add #votes_max {ns}.data 1
 function {ns}:modes/race/translations/vote_for_change_map
 
 execute if score #votes {ns}.data >= #votes_max {ns}.data run function {ns}:modes/race/restart_game
-""")
-
-	# /vote_for_collisions (translation ref rewritten)
-	collisions_always: str = "\n".join(
-		f"execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.{i} collisionRule always"
-		for i in range(1, len(RANKING_TEAMS) + 1)
-	)
-	write_function(f"{path}/vote_for_collisions", f"""
-scoreboard players set @s {ns}.temp.vote_collisions 1
-
-scoreboard players set #votes {ns}.data 0
-scoreboard players set #votes_max {ns}.data 0
-execute store result score #votes {ns}.data if entity @a[scores={{{ns}.temp.vote_collisions=1}}]
-execute store result score #votes_max {ns}.data if entity @a[tag=!detached,gamemode=!spectator]
-scoreboard players operation #votes_max {ns}.data /= #2 {ns}.data
-scoreboard players add #votes_max {ns}.data 1
-
-
-execute if score #votes {ns}.data >= #votes_max {ns}.data run scoreboard players set @a[tag=!detached] {ns}.temp.vote_collisions 1
-function {ns}:modes/race/translations/vote_for_collisions
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.kart collisionRule always
-{collisions_always}
-execute if score #votes {ns}.data >= #votes_max {ns}.data run team modify {ns}.temp.25+ collisionRule always
 """)
 
 	# /xp_bar

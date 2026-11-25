@@ -13,7 +13,6 @@ execute if score #detect_end switch.data matches 0 as @e[type=marker,tag=switch.
 execute if score #detect_end switch.data matches 0 as @a[tag=!detached,scores={switch.right_click=1..}] run function switch:modes/race/right_click
 
 # Start fixes -7
-execute if score #race_seconds switch.data matches -7..-1 run team join switch.temp.kart @e[tag=switch.vehicle]
 execute if score #race_seconds switch.data matches -7..-1 as @e[tag=switch.vehicle] run data modify entity @s NoAI set value 1b
 execute if score #race_seconds switch.data matches -7..-1 as @e[tag=switch.vehicle] run tp @s @s
 execute if score #race_seconds switch.data matches ..-8 if score #map_type switch.data matches 0 run scoreboard players set @e[tag=shopping_kart.kart] shopping_kart.engine 0
