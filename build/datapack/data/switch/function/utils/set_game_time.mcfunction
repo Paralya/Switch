@@ -10,4 +10,7 @@
 #
 
 $time of switch:game set $(ticks)
+execute store result score #sky_variant switch.data run random value 0..2
+execute if score #sky_variant switch.data matches 1.. run time of switch:game add 1
+execute if score #sky_variant switch.data matches 2 run time of switch:game add 1
 

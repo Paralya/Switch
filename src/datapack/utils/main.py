@@ -192,9 +192,12 @@ execute store result storage {ns}:temp game_time.ticks int 6000 run random value
 function {ns}:utils/set_game_time with storage {ns}:temp game_time
 """)
 
-	# /set_game_time {ticks}
+	# /set_game_time {ticks}, plus 0 to 2 ticks that pick one of the moment's three sky palettes (resource_pack/sky.py)
 	write_function(f"{path}/set_game_time", f"""
 $time of {ns}:game set $(ticks)
+execute store result score #sky_variant {ns}.data run random value 0..2
+execute if score #sky_variant {ns}.data matches 1.. run time of {ns}:game add 1
+execute if score #sky_variant {ns}.data matches 2 run time of {ns}:game add 1
 """)
 
 	# /sqrt
