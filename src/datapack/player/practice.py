@@ -53,13 +53,15 @@ execute if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.p
 # If the toggle item is missing from the inventory, the player dropped it out: toggle the practice mode
 # (unless the practice items were never given, e.g. inventories saved before this feature existed: just give them)
 scoreboard players set #has_toggle {ns}.data 0
-execute store success score #has_toggle {ns}.data if items entity @s inventory.* *[custom_data~{{"{ns}":{{"practice_toggle":true}}}}]
+execute store success score #has_toggle {ns}.data if items entity @s container.* *[custom_data~{{"{ns}":{{"practice_toggle":true}}}}]
+execute if items entity @s player.cursor *[custom_data~{{"{ns}":{{"practice_toggle":true}}}}] run scoreboard players set #has_toggle {ns}.data 1
 execute if score #has_toggle {ns}.data matches 0 if entity @s[tag={ns}.practice_given] run return run function {ns}:player/practice/toggle
 execute if score #has_toggle {ns}.data matches 0 run return run function {ns}:player/practice/give_items
 
 # If practice mode is enabled and an action item is missing, re-give the practice items
 execute unless entity @s[tag={ns}.practice] run return 1
-execute store result score #practice_count {ns}.data if items entity @s inventory.* *[custom_data~{{"{ns}":{{"practice_action":true}}}}]
+execute store result score #practice_count {ns}.data if items entity @s container.* *[custom_data~{{"{ns}":{{"practice_action":true}}}}]
+execute if items entity @s player.cursor *[custom_data~{{"{ns}":{{"practice_action":true}}}}] run scoreboard players add #practice_count {ns}.data 1
 execute unless score #practice_count {ns}.data matches 3 run function {ns}:player/practice/give_items
 """)
 
