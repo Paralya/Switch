@@ -129,6 +129,7 @@ function {ns}:shop/initialize_shop_scores
 function {ns}:player/username_change/check
 
 # Update advancements just in case
+execute if entity @s[advancements={{{ns}:tutorial=true,{ns}:a_switch=false}}] run function {ns}:player/tutorial/grant_root
 function {ns}:advancements/update_percentages
 
 # Update player storage

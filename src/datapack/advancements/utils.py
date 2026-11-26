@@ -125,7 +125,7 @@ def visible_advancements() -> None:
 		Mem.ctx.data[ns].advancements[f"visible/categories/ends/{id}"] = end
 
 
-# Difficulty/category parent nodes shown under the tutorial root: name -> (icon, title, description)
+# Difficulty/category parent nodes shown under the root: name -> (icon, title, description)
 CATEGORY_PARENTS: dict[str, tuple[str, str, str]] = {
 	"easy": ("minecraft:lime_dye", "Easy", "25 Saphirs par succès"),
 	"medium": ("minecraft:yellow_dye", "Medium", "50 Saphirs par succès"),
@@ -150,7 +150,7 @@ def category_advancements() -> None:
 			},
 			"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 			"requirements": [["requirement"]],
-			"parent": f"{ns}:tutorial",
+			"parent": f"{ns}:a_switch",
 		})
 		adv.encoder = lambda x: stp.json_dump(x, max_level=2)
 		Mem.ctx.data[ns].advancements[f"visible/categories/{name}"] = adv

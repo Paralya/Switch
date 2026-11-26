@@ -8,7 +8,7 @@
 
 team leave @s
 scoreboard players reset @s switch.tutorial
-advancement grant @s only switch:tutorial
+advancement grant @s only switch:a_switch
 execute in minecraft:overworld run tp @s 0 69.69 0
 clear @s
 

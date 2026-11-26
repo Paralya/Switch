@@ -17,6 +17,7 @@ function switch:shop/initialize_shop_scores
 function switch:player/username_change/check
 
 # Update advancements just in case
+execute if entity @s[advancements={switch:tutorial=true,switch:a_switch=false}] run function switch:player/tutorial/grant_root
 function switch:advancements/update_percentages
 
 # Update player storage

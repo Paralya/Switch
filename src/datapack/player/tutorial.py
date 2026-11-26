@@ -11,11 +11,19 @@ def write_tutorial() -> None:
 	write_function(f"{path}/tutorial/finish", f"""
 team leave @s
 scoreboard players reset @s {ns}.tutorial
-advancement grant @s only {ns}:tutorial
+advancement grant @s only {ns}:a_switch
 execute in minecraft:overworld run tp @s 0 69.69 0
 clear @s
 
 function {ns}:stats/util_update_player
+""")
+
+	# /tutorial/grant_root: for a player who finished the tutorial before {ns}:a_switch was the root, without announcing it in chat
+	write_function(f"{path}/tutorial/grant_root", f"""
+execute store result score #show_advancement_messages {ns}.data run gamerule minecraft:show_advancement_messages
+gamerule minecraft:show_advancement_messages false
+advancement grant @s only {ns}:a_switch
+execute if score #show_advancement_messages {ns}.data matches 1 run gamerule minecraft:show_advancement_messages true
 """)
 
 	# /tutorial/next_dialogue
@@ -91,6 +99,7 @@ clear @s
 loot replace entity @s armor.head loot {ns}:get_username
 execute at @s run playsound ui.toast.challenge_complete ambient @s
 
+advancement revoke @s only {ns}:a_switch
 advancement revoke @s only {ns}:tutorial
 
 # Empty title (fix for LunarClient first title not showing up)

@@ -21,6 +21,7 @@ clear @s
 loot replace entity @s armor.head loot switch:get_username
 execute at @s run playsound ui.toast.challenge_complete ambient @s
 
+advancement revoke @s only switch:a_switch
 advancement revoke @s only switch:tutorial
 
 # Empty title (fix for LunarClient first title not showing up)

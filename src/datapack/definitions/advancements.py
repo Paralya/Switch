@@ -10,8 +10,8 @@ def write_advancements() -> None:
 	ns: str = Mem.ctx.project_id
 	advancements = Mem.ctx.data[ns].advancements
 
-	# Root of the visible advancement tree
-	advancements["tutorial"] = set_json_encoder(Advancement({
+	# Root of the visible advancement tree: tabs follow Identifier order, path first, so "a_switch" comes before every other pack's root
+	advancements["a_switch"] = set_json_encoder(Advancement({
 		"display": {
 			"icon": {"id": "minecraft:command_block"},
 			"title": {"text": "Switch", "color": "yellow"},
@@ -22,6 +22,12 @@ def write_advancements() -> None:
 			"announce_to_chat": True,
 			"hidden": False,
 		},
+		"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
+		"requirements": [["requirement"]],
+	}))
+
+	# Kept without display so saved progress still loads, it tells who finished the tutorial before "a_switch" existed
+	advancements["tutorial"] = set_json_encoder(Advancement({
 		"criteria": {"requirement": {"trigger": "minecraft:impossible"}},
 		"requirements": [["requirement"]],
 	}))

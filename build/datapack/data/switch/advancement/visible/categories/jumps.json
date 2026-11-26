@@ -14,5 +14,5 @@
 	"requirements": [
 		["requirement"]
 	],
-	"parent": "switch:tutorial"
+	"parent": "switch:a_switch"
 }
