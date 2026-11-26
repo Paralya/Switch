@@ -22,6 +22,7 @@ execute unless entity @s[team={ns}.tutorial] run function {ns}:player/practice/d
 
 # Selon l'état du jeu, on exécute les fonctions correspondantes
 scoreboard players add @s {ns}.alive 0
+execute unless entity @s[team={ns}.tutorial] if score #engine_state {ns}.data matches 0 run function {ns}:engine/voting_time/player_join
 execute unless entity @s[team={ns}.tutorial] if score #engine_state {ns}.data matches 2 run function {ns}:engine/voting_time/player_join
 execute unless entity @s[team={ns}.tutorial] if score #engine_state {ns}.data matches 3 run scoreboard players set #reconnect {ns}.data 0
 execute unless entity @s[team={ns}.tutorial] if score #engine_state {ns}.data matches 3 run function {ns}:engine/signals/joined

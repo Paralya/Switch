@@ -7,11 +7,11 @@
 #			switch:player/trigger/attach/real_attach
 #
 
-clear @s[tag=!convention.debug]
+clear @s
 effect clear @s
-gamemode spectator @s[tag=!convention.debug]
-tp @s[tag=!convention.debug] 0 169 0
-tp @s[tag=!convention.debug] @r[tag=!detached]
+gamemode spectator @s
+execute in switch:game run tp @s 0 69 0
+execute in switch:game run tp @s @r[tag=!detached,distance=0.1..]
 
 function switch:engine/voting_time/message
 
