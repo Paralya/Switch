@@ -21,6 +21,7 @@ execute if score #now_secs switch.data > #clock_secs switch.data run function sw
 execute if score #tick switch.data matches 20.. run function switch:second
 
 # Engine : games ticks, start, stop
+execute if score #intro_active switch.data matches 1 run function switch:engine/launch_game/intro/tick
 execute if score #engine_state switch.data matches 3 run function switch:engine/signals/tick
 execute if score #engine_state switch.data matches 0 if entity @a[tag=!detached] run function switch:engine/start
 execute unless score #engine_state switch.data matches 0 unless entity @a[tag=!detached] run function switch:engine/stop

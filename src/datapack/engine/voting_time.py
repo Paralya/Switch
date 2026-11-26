@@ -47,7 +47,7 @@ execute if data storage {ns}:temp copy[0] run function {ns}:engine/voting_time/a
 gamerule minecraft:send_command_feedback false
 scoreboard players set #engine_state {ns}.data 2
 scoreboard players set #voting_timer {ns}.data 399
-schedule clear {ns}:engine/launch_game/launch
+scoreboard players set #intro_launch {ns}.data 0
 
 # Round 1: vote between groups of games (8 slots: 7 groups + random)
 scoreboard players set #vote_round {ns}.data 1

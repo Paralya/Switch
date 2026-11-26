@@ -287,6 +287,7 @@ execute if score #now_secs {ns}.data > #clock_secs {ns}.data run function {ns}:s
 execute if score #tick {ns}.data matches 20.. run function {ns}:second
 
 # Engine : games ticks, start, stop
+execute if score #intro_active {ns}.data matches 1 run function {ns}:engine/launch_game/intro/tick
 execute if score #engine_state {ns}.data matches 3 run function {ns}:engine/signals/tick
 execute if score #engine_state {ns}.data matches 0 if entity @a[tag=!detached] run function {ns}:engine/start
 execute unless score #engine_state {ns}.data matches 0 unless entity @a[tag=!detached] run function {ns}:engine/stop

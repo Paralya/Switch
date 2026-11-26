@@ -127,28 +127,58 @@ function {ns}:engine/launch_game/resolve_group
 	# /launch_game/transition (the winning game is known: its intro card covers the screen, then the game launches behind it)
 	write_function(f"{path}/launch_game/transition", f"""
 function {ns}:engine/launch_game/intro/start with storage {ns}:main
-schedule function {ns}:engine/launch_game/launch {LAUNCH_TICK}t
+scoreboard players set #intro_launch {ns}.data 1
 """)
 
-	# /launch_game/intro/start (the card times itself from the tick it is applied on, so only its sounds are scheduled)
+	# /launch_game/intro/start (the card times itself on the client, so the server follows the wall clock to stay with it under lag)
 	card_adds: str = "\n".join(
 		f"$posteffect add @a[tag=!detached,scores={{{ns}.lang={score}}}] {ns}:{intro_effect_path('$(current_game)', lang)}"
 		for score, lang in enumerate(LANG_PRETEXT)
 	)
-	rule_sounds: str = "\n".join(f"schedule function {ns}:engine/launch_game/intro/rule {tick}t append" for tick in RULE_TICKS)
+	rule_counts: str = "\n".join(
+		f'execute if data storage {ns}:main {{current_game:"{mode.id}"}} run scoreboard players set #intro_rules {ns}.data {len(mode.rules.fr)}'
+		for mode in MODES if mode.rules.fr
+	)
 	write_function(f"{path}/launch_game/intro/start", f"""
 {card_adds}
 execute as @a[tag=!detached] at @s run playsound minecraft:entity.ender_dragon.flap ambient @s ~ ~ ~ 1 0.6
 
-schedule function {ns}:engine/launch_game/intro/title {TITLE_TICK}t
-{rule_sounds}
-schedule function {ns}:engine/launch_game/intro/reveal {REVEAL_TICK}t
-schedule function {ns}:engine/launch_game/intro/stop {INTRO_TICKS + 20}t
+scoreboard players set #intro_rules {ns}.data 0
+{rule_counts}
+scoreboard players set #intro_launch {ns}.data 0
+scoreboard players set #intro_step {ns}.data 0
+scoreboard players set #intro_ticks {ns}.data 0
+scoreboard players set #intro_active {ns}.data 1
+stopwatch create {ns}:intro
+stopwatch restart {ns}:intro
 """)
-	write_function(f"{path}/launch_game/intro/title", "execute as @a[tag=!detached] at @s run playsound minecraft:item.mace.smash_ground_heavy ambient @s ~ ~ ~ 0.8 1")
-	write_function(f"{path}/launch_game/intro/rule", "execute as @a[tag=!detached] at @s run playsound minecraft:ui.button.click ambient @s ~ ~ ~ 0.5 1.4")
-	write_function(f"{path}/launch_game/intro/reveal", "execute as @a[tag=!detached] at @s run playsound minecraft:item.trident.riptide_1 ambient @s ~ ~ ~ 0.5 1.4")
-	write_function(f"{path}/launch_game/intro/stop", f"execute as @a run function {ns}:engine/launch_game/intro/remove")
+
+	# /launch_game/intro/tick (the stopwatch is the clock; the tick count only keeps the intro going if the command is missing)
+	rule_events: list[tuple[int, str]] = [
+		(tick, f"execute if score #intro_rules {ns}.data matches {index + 1}.. as @a[tag=!detached] at @s run playsound minecraft:ui.button.click ambient @s ~ ~ ~ 0.5 1.4")
+		for index, tick in enumerate(RULE_TICKS)
+	]
+	events: list[tuple[int, str]] = sorted([
+		(LAUNCH_TICK, f"execute if score #intro_launch {ns}.data matches 1 run function {ns}:engine/launch_game/launch"),
+		(TITLE_TICK, "execute as @a[tag=!detached] at @s run playsound minecraft:item.mace.smash_ground_heavy ambient @s ~ ~ ~ 0.8 1"),
+		*rule_events,
+		(REVEAL_TICK, "execute as @a[tag=!detached] at @s run playsound minecraft:item.trident.riptide_1 ambient @s ~ ~ ~ 0.5 1.4"),
+		(INTRO_TICKS + 20, f"execute as @a run function {ns}:engine/launch_game/intro/remove\nscoreboard players set #intro_active {ns}.data 0"),
+	])
+	steps: str = "\n".join(
+		f"execute if score #intro_step {ns}.data matches {step} if score #intro_cs {ns}.data matches {tick * 5}.. run function {ns}:engine/launch_game/intro/step_{step}"
+		for step, (tick, _) in enumerate(events)
+	)
+	write_function(f"{path}/launch_game/intro/tick", f"""
+scoreboard players add #intro_ticks {ns}.data 1
+scoreboard players operation #intro_cs {ns}.data = #intro_ticks {ns}.data
+scoreboard players operation #intro_cs {ns}.data *= #5 {ns}.data
+execute store result score #intro_sw {ns}.data run stopwatch query {ns}:intro 100
+scoreboard players operation #intro_cs {ns}.data > #intro_sw {ns}.data
+{steps}
+""")
+	for step, (_, command) in enumerate(events):
+		write_function(f"{path}/launch_game/intro/step_{step}", f"{command}\nscoreboard players add #intro_step {ns}.data 1")
 
 	# /launch_game/intro/remove (as a player: `posteffect clear` would also take off the effects of other packs)
 	write_function(f"{path}/launch_game/intro/remove", "\n".join(

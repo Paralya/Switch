@@ -7,7 +7,7 @@
 gamerule minecraft:send_command_feedback false
 scoreboard players set #engine_state switch.data 2
 scoreboard players set #voting_timer switch.data 399
-schedule clear switch:engine/launch_game/launch
+scoreboard players set #intro_launch switch.data 0
 
 # Round 1: vote between groups of games (8 slots: 7 groups + random)
 scoreboard players set #vote_round switch.data 1

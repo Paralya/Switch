@@ -93,7 +93,7 @@ time of minecraft:overworld set 6000
 
 scoreboard players set #engine_state {ns}.data -1
 schedule clear {ns}:engine/voting_time/tick
-schedule clear {ns}:engine/launch_game/launch
+scoreboard players set #intro_launch {ns}.data 0
 """)
 
 	# /force_start_macro

@@ -3,7 +3,7 @@
 #
 # @executed	as @a
 #
-# @within	switch:engine/launch_game/intro/stop [ as @a ]
+# @within	switch:engine/launch_game/intro/step_6 [ as @a ]
 #			switch:player/joined
 #
 
