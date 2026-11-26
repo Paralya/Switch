@@ -127,6 +127,24 @@ execute if score #process_end {ns}.data matches 1 if entity @a[scores={{{ns}.ali
 execute if score #process_end {ns}.data matches 1 unless entity @a[scores={{{ns}.alive=2}}] run tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" End of mini-game! No player has completed the race in the allotted time!"}}]
 """)
 
+	# /record_new (macro: the record that was just beaten)
+	write_function(f"{path}/record_new", rf"""
+# French
+$tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Nouveau record de $(seconds),$(tens)$(units) secondes par $(player) !","color":"yellow"}}]
+
+# English
+$tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" New record of $(seconds).$(tens)$(units) seconds by $(player)!","color":"yellow"}}]
+""")
+
+	# /record_tellraw (macro: the record standing when the race starts)
+	write_function(f"{path}/record_tellraw", rf"""
+# French
+$tellraw @a[scores={{{ns}.lang=0}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Record actuel de $(seconds),$(tens)$(units) secondes détenu par $(player)","color":"yellow"}}]
+
+# English
+$tellraw @a[scores={{{ns}.lang=1}},tag=!detached] ["",{{"nbt":"Paralya","storage":"{ns}:main","interpret":true}},{{"text":" Current record of $(seconds).$(tens)$(units) seconds held by $(player)","color":"yellow"}}]
+""")
+
 	# /restart_game
 	write_function(f"{path}/restart_game", rf"""
 # French

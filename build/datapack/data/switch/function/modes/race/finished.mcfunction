@@ -12,6 +12,7 @@ scoreboard players operation #digit switch.data %= #100 switch.data
 
 scoreboard players set @s switch.alive 2
 function switch:modes/race/translations/finished
+function switch:modes/race/record_save with storage switch:main
 execute if score #remaining_time switch.data matches 61.. run scoreboard players set #remaining_time switch.data 60
 scoreboard players add @s switch.temp.checkpoint 1000000
 scoreboard players operation @s switch.temp.checkpoint -= #race_ticks switch.data

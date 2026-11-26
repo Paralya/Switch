@@ -43,3 +43,6 @@ scoreboard players set #map_type switch.data 0
 execute if data storage switch:main {map:"boat_race_1"} run scoreboard players set #map_type switch.data 1
 execute if data storage switch:main {map:"boat_race_2"} run scoreboard players set #map_type switch.data 1
 
+# Record of the map
+function switch:modes/race/record_tellraw with storage switch:main
+

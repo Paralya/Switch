@@ -360,6 +360,7 @@ scoreboard players operation #digit {ns}.data %= #100 {ns}.data
 
 scoreboard players set @s {ns}.alive 2
 function {ns}:modes/race/translations/finished
+function {path}/record_save with storage {ns}:main
 execute if score #remaining_time {ns}.data matches 61.. run scoreboard players set #remaining_time {ns}.data 60
 scoreboard players add @s {ns}.temp.checkpoint 1000000
 scoreboard players operation @s {ns}.temp.checkpoint -= #race_ticks {ns}.data
@@ -858,6 +859,40 @@ function {ns}:utils/safe_kill_macro {{selector:"@e[tag={ns}.checkpoint]"}}
 execute if score #process_end {ns}.data matches 200 run function {ns}:engine/restart
 """)
 
+	# /record_save (executed as the finisher, macro: the current map)
+	write_function(f"{path}/record_save", f"""
+execute if score #test_mode {ns}.data matches 1 run return 0
+
+# Time of the run in hundredths of a second
+scoreboard players operation #time {ns}.data = #race_seconds {ns}.data
+scoreboard players operation #time {ns}.data *= #100 {ns}.data
+scoreboard players operation #time {ns}.data += #digit {ns}.data
+
+scoreboard players set #record {ns}.data 2147483647
+$execute if data storage {ns}:records race.$(map).time store result score #record {ns}.data run data get storage {ns}:records race.$(map).time
+execute if score #time {ns}.data >= #record {ns}.data run return 0
+
+# Save it
+scoreboard players operation #tens {ns}.data = #digit {ns}.data
+scoreboard players operation #tens {ns}.data /= #10 {ns}.data
+scoreboard players operation #units {ns}.data = #digit {ns}.data
+scoreboard players operation #units {ns}.data %= #10 {ns}.data
+$execute store result storage {ns}:records race.$(map).time int 1 run scoreboard players get #time {ns}.data
+$execute store result storage {ns}:records race.$(map).seconds int 1 run scoreboard players get #race_seconds {ns}.data
+$execute store result storage {ns}:records race.$(map).tens int 1 run scoreboard players get #tens {ns}.data
+$execute store result storage {ns}:records race.$(map).units int 1 run scoreboard players get #units {ns}.data
+loot replace entity @s hotbar.0 loot {ns}:get_username
+$data modify storage {ns}:records race.$(map).player set from entity @s Inventory[0].components."minecraft:profile".name
+clear @s
+execute as @a[tag=!detached] at @s run playsound ui.toast.challenge_complete ambient @s ~ ~ ~ 0.5
+$function {path}/translations/record_new with storage {ns}:records race.$(map)
+""")
+
+	# /record_tellraw (macro: the current map)
+	write_function(f"{path}/record_tellraw", f"""
+$execute if data storage {ns}:records race.$(map) run function {path}/translations/record_tellraw with storage {ns}:records race.$(map)
+""")
+
 	# /restart_game (translation ref rewritten)
 	write_function(f"{path}/restart_game", f"""
 function {ns}:modes/race/translations/restart_game
@@ -952,6 +987,9 @@ schedule function {ns}:modes/race/post_load 9s
 scoreboard players set #map_type {ns}.data 0
 execute if data storage {ns}:main {{map:"boat_race_1"}} run scoreboard players set #map_type {ns}.data 1
 execute if data storage {ns}:main {{map:"boat_race_2"}} run scoreboard players set #map_type {ns}.data 1
+
+# Record of the map
+function {path}/record_tellraw with storage {ns}:main
 """)
 
 	# /stop
