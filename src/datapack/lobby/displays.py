@@ -341,9 +341,9 @@ function {ns}:player/detached_action_bar
 # Jumps best times leaderboards
 {jump_display_lines}
 
-# Black holes (lobby and tutorial area)
-execute positioned 0 69 0 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000001 run summon item_display ~ ~ ~ {{UUID:uuid("20180612-2024-2025-2026-000000000001"),item:{{id:"stone",count:1,components:{{"item_model":"{ns}:bg_black_hole"}}}},Tags:["{ns}.black_hole_lobby"],transformation:{{scale:[-300f,-200f,-300f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}},view_range:4.0f}}
-execute positioned -500 69 -500 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000002 run summon item_display ~ ~ ~ {{UUID:uuid("20180612-2024-2025-2026-000000000002"),item:{{id:"stone",count:1,components:{{"item_model":"{ns}:bg_black_hole"}}}},Tags:["{ns}.black_hole_tutorial"],transformation:{{scale:[-100f,-100f,-100f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}},view_range:4.0f}}
+# Black holes (lobby and tutorial area), width and height only size the culling box: past 204800 cubic blocks Sodium never culls them
+execute positioned 0 69 0 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000001 run summon item_display ~ ~ ~ {{UUID:uuid("20180612-2024-2025-2026-000000000001"),item:{{id:"stone",count:1,components:{{"item_model":"{ns}:bg_black_hole"}}}},Tags:["{ns}.black_hole_lobby"],transformation:{{scale:[-300f,-200f,-300f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}},view_range:4.0f,width:300f,height:200f}}
+execute positioned -500 69 -500 if loaded ~ ~ ~ unless entity 20180612-2024-2025-2026-000000000002 run summon item_display ~ ~ ~ {{UUID:uuid("20180612-2024-2025-2026-000000000002"),item:{{id:"stone",count:1,components:{{"item_model":"{ns}:bg_black_hole"}}}},Tags:["{ns}.black_hole_tutorial"],transformation:{{scale:[-100f,-100f,-100f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}},view_range:4.0f,width:100f,height:100f}}
 
 # Minigames stats, one player check per alley slice: a slice nobody is near runs once more to kill its boards, then stays idle
 {"\n\n".join(alley_checks)}
