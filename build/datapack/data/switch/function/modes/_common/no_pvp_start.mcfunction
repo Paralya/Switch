@@ -11,5 +11,5 @@ gamerule minecraft:pvp false
 scoreboard players set @a[tag=!detached] switch.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
-time set 18000
+time of switch:game set 18000
 

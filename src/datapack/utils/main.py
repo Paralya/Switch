@@ -186,12 +186,15 @@ $tp $(selector) 0 -10000 0
 $kill $(selector)
 """)
 
-	# /set_dynamic_time
+	# /set_dynamic_time (dawn, noon, dusk or midnight; sheepwars draws without midnight, its night comes from a sheep)
 	write_function(f"{path}/set_dynamic_time", f"""
-execute store result score #random {ns}.data run random value 0..2
-execute if score #random {ns}.data matches 0 run time set 0
-execute if score #random {ns}.data matches 1 run time set 6000
-execute if score #random {ns}.data matches 2 run time set 12000
+execute store result storage {ns}:temp game_time.ticks int 6000 run random value 0..3
+function {ns}:utils/set_game_time with storage {ns}:temp game_time
+""")
+
+	# /set_game_time {ticks}
+	write_function(f"{path}/set_game_time", f"""
+$time of {ns}:game set $(ticks)
 """)
 
 	# /sqrt

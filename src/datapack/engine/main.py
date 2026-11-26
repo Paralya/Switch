@@ -89,7 +89,7 @@ scoreboard players set #engine_state {ns}.data 3
 scoreboard players set #disable {ns}.data 1
 execute in {ns}:game run function {ns}:engine/stop
 
-time set 6000
+time of minecraft:overworld set 6000
 
 scoreboard players set #engine_state {ns}.data -1
 schedule clear {ns}:engine/voting_time/tick

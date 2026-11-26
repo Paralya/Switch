@@ -190,6 +190,7 @@ team modify {ns}.tutorial color gold
 gamerule minecraft:max_command_sequence_length 2147483647
 forceload add 0 0
 execute in {ns}:game run forceload add 0 0
+time of minecraft:overworld set 6000
 
 
 ## Storage

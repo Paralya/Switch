@@ -6,7 +6,7 @@
 # @within	switch:modes/bombardement/calls/start
 #
 
-time set 6000
+function switch:utils/set_dynamic_time
 effect give @a[tag=!detached] weakness infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 

@@ -6,6 +6,7 @@
 # @within	switch:modes/_common/pvp_arena/start_common
 #			switch:modes/beat_the_kings/start
 #			switch:modes/boat_race/start
+#			switch:modes/bombardement/start
 #			switch:modes/build_battle/start
 #			switch:modes/capture_the_flag/start
 #			switch:modes/cigogne/start
@@ -13,12 +14,15 @@
 #			switch:modes/creeper_apocalypse/start
 #			switch:modes/de_a_coudre/start
 #			switch:modes/feed_fast/start
+#			switch:modes/fireblast/start
 #			switch:modes/fish_fight/start
 #			switch:modes/gay_shooter/start
+#			switch:modes/glassrunner/start
 #			switch:modes/layers_2_teams/start
 #			switch:modes/layers_4_teams/start
 #			switch:modes/memory_mine/start
 #			switch:modes/minigolf/start
+#			switch:modes/mlg_a_coudre/start
 #			switch:modes/moutron/start
 #			switch:modes/murder_mystery/start
 #			switch:modes/one_shot/start
@@ -29,7 +33,6 @@
 #			switch:modes/race/start
 #			switch:modes/replicate_the_build/start
 #			switch:modes/rush_the_point/start_common
-#			switch:modes/sheepwars/start
 #			switch:modes/shoot_da_sheep/start
 #			switch:modes/simultaneous_jump/start
 #			switch:modes/snowball_painter/start
@@ -40,8 +43,6 @@
 #			switch:modes/traitors_game/start
 #
 
-execute store result score #random switch.data run random value 0..2
-execute if score #random switch.data matches 0 run time set 0
-execute if score #random switch.data matches 1 run time set 6000
-execute if score #random switch.data matches 2 run time set 12000
+execute store result storage switch:temp game_time.ticks int 6000 run random value 0..3
+function switch:utils/set_game_time with storage switch:temp game_time
 

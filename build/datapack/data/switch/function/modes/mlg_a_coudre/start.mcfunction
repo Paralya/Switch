@@ -15,7 +15,7 @@ kill @e[type=item]
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 difficulty normal
-time set 6000
+function switch:utils/set_dynamic_time
 weather clear
 
 ## Téléportation des joueurs

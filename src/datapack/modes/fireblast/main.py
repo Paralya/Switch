@@ -111,7 +111,7 @@ effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] night_vision infinite 255 true
 effect give @a[tag=!detached] glowing infinite 255 true
-time set 6000
+function {ns}:utils/set_dynamic_time
 
 execute in {ns}:game run gamerule minecraft:keep_inventory true
 execute in {ns}:game run gamerule minecraft:block_drops false

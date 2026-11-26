@@ -6,6 +6,6 @@
 # @within	switch:modes/glassrunner/tick
 #
 
-time set 18000
+time of switch:game set 18000
 function switch:modes/glassrunner/translations/apocalypse_start
 

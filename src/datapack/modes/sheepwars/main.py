@@ -222,7 +222,8 @@ effect give @a[tag=!detached] hunger 3 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] slowness 5 255 true
-function {ns}:utils/set_dynamic_time
+execute store result storage {ns}:temp game_time.ticks int 6000 run random value 0..2
+function {ns}:utils/set_game_time with storage {ns}:temp game_time
 
 ## Chargement de la map
 function {ns}:maps/choose_map_for {{id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}}
@@ -398,10 +399,10 @@ execute if score #sheepwars_night {ns}.data matches 0 if entity @e[type=sheep,ta
 function {ns}:modes/sheepwars/translations/tick
 execute if score #sheepwars_night {ns}.data matches 1 run tag @e[type=sheep,tag=sheepwars.intergalactique,tag=!sheepwars.intertag] add sheepwars.intertag
 execute if score #sheepwars_night {ns}.data matches 1 as @a[tag=!detached] at @s run playsound entity.wither.spawn ambient @s
-execute if score #sheepwars_night {ns}.data matches 1 run time set 18000
+execute if score #sheepwars_night {ns}.data matches 1 run time of {ns}:game set 18000
 execute if score #sheepwars_night {ns}.data matches 1 run scoreboard players set #sheepwars_night {ns}.data 2
 execute if score #sheepwars_night {ns}.data matches 2 unless entity @e[type=sheep,tag=sheepwars.intergalactique] run scoreboard players set #sheepwars_night {ns}.data 3
-execute if score #sheepwars_night {ns}.data matches 3 run time set 6000
+execute if score #sheepwars_night {ns}.data matches 3 run time of {ns}:game set 6000
 execute if score #sheepwars_night {ns}.data matches 3 run scoreboard players set #sheepwars_night {ns}.data 0
 
 

@@ -6,6 +6,6 @@
 # @within	switch:modes/glassrunner/tick
 #
 
-time set 6000
+time of switch:game set 6000
 scoreboard players set #glassrunner.apocalypse switch.data 0
 

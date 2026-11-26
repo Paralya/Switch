@@ -17,7 +17,7 @@ team modify switch.glassrunner.blue friendlyFire false
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] jump_boost infinite 3 true
-time set 6000
+function switch:utils/set_dynamic_time
 
 ## Téléportation des joueurs dans quatres coins + give d'items
 function switch:maps/choose_map_for {id:"glassrunner", maps:["glassrunner"]}

@@ -82,6 +82,7 @@ team modify switch.tutorial color gold
 gamerule minecraft:max_command_sequence_length 2147483647
 forceload add 0 0
 execute in switch:game run forceload add 0 0
+time of minecraft:overworld set 6000
 
 ## Storage
 # tellraw @a ["\n",{"nbt":"Paralya","storage":"switch:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"#00E5FF"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"switch.data"},"color":"#00E5FF"},{"text":"ème joueur a rejoindre !"}]

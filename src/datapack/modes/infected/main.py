@@ -181,7 +181,7 @@ function {ns}:modes/infected/translations/second_start
 	# /start (translation ref rewritten)
 	write_function(f"{path}/start", f"""
 ## Placement de la map et des joueurs
-time set 18000
+time of {ns}:game set 18000
 function {ns}:maps/choose_map_for {{id:"infected", maps:["area_51","ancienne_egypte_2013","old_japan_apocalypse","lost_graveyard_remastered"]}}
 execute as @a[tag=!detached] run function {ns}:modes/infected/death/early_respawn
 

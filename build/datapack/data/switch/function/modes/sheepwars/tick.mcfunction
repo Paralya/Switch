@@ -30,10 +30,10 @@ execute if score #sheepwars_night switch.data matches 0 if entity @e[type=sheep,
 function switch:modes/sheepwars/translations/tick
 execute if score #sheepwars_night switch.data matches 1 run tag @e[type=sheep,tag=sheepwars.intergalactique,tag=!sheepwars.intertag] add sheepwars.intertag
 execute if score #sheepwars_night switch.data matches 1 as @a[tag=!detached] at @s run playsound entity.wither.spawn ambient @s
-execute if score #sheepwars_night switch.data matches 1 run time set 18000
+execute if score #sheepwars_night switch.data matches 1 run time of switch:game set 18000
 execute if score #sheepwars_night switch.data matches 1 run scoreboard players set #sheepwars_night switch.data 2
 execute if score #sheepwars_night switch.data matches 2 unless entity @e[type=sheep,tag=sheepwars.intergalactique] run scoreboard players set #sheepwars_night switch.data 3
-execute if score #sheepwars_night switch.data matches 3 run time set 6000
+execute if score #sheepwars_night switch.data matches 3 run time of switch:game set 6000
 execute if score #sheepwars_night switch.data matches 3 run scoreboard players set #sheepwars_night switch.data 0
 
 ## Détection de fin de partie

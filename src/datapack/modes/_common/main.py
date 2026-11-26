@@ -510,13 +510,13 @@ $team modify {ns}.$(team).red prefix ["",{badge("red")}," "]
 $team modify {ns}.$(team).blue prefix ["",{badge("blue")}," "]
 """)
 
-	# /no_pvp_start (shared pitch_creep / warden_escape /start head: pvp off, 1 life, buff effects, day)
+	# /no_pvp_start (shared pitch_creep / warden_escape /start head: pvp off, 1 life, buff effects, night)
 	write_function(f"{path}/no_pvp_start", f"""
 gamerule minecraft:pvp false
 scoreboard players set @a[tag=!detached] {ns}.alive 1
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
-time set 18000
+time of {ns}:game set 18000
 """)
 
 	# /remove_movement_objectives (shared fish_fight / pitchout /stop cleanup of the run-tracking objectives)

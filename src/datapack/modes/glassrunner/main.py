@@ -83,7 +83,7 @@ team modify {ns}.glassrunner.blue friendlyFire false
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] jump_boost infinite 3 true
-time set 6000
+function {ns}:utils/set_dynamic_time
 
 ## Téléportation des joueurs dans quatres coins + give d'items
 function {ns}:maps/choose_map_for {{id:"glassrunner", maps:["glassrunner"]}}
@@ -338,13 +338,13 @@ scoreboard players operation #count {ns}.data %= #2 {ns}.data
 
 	# /apocalypse/end
 	write_function(f"{path}/apocalypse/end", f"""
-time set 6000
+time of {ns}:game set 6000
 scoreboard players set #glassrunner.apocalypse {ns}.data 0
 """)
 
 	# /apocalypse/start (translation ref rewritten)
 	write_function(f"{path}/apocalypse/start", f"""
-time set 18000
+time of {ns}:game set 18000
 function {ns}:modes/glassrunner/translations/apocalypse_start
 """)
 

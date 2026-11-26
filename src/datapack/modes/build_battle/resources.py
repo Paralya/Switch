@@ -4,6 +4,7 @@ from beet import BlockTag
 from beet.contrib.worldgen import Dimension
 from stewbeet.core import Mem, set_json_encoder
 
+from ...definitions.dimensions import void_generator
 from ..emit import register_structures
 
 
@@ -12,20 +13,8 @@ def write_resources() -> None:
 	ns: str = Mem.ctx.project_id
 	switch = Mem.ctx.data[ns]
 
-	# Flat-void dimension the build_battle plots live in (Dimension type registered in load_datapack_json)
-	switch[Dimension]["build_battle"] = set_json_encoder(Dimension({
-		"type": "minecraft:overworld",
-		"generator": {
-			"type": "minecraft:flat",
-			"settings": {
-				"biome": "minecraft:the_void",
-				"lakes": False,
-				"features": False,
-				"layers": [],
-				"structure_overrides": [],
-			},
-		},
-	}))
+	# Flat-void dimension the build_battle plots live in, on the games' clock (Dimension type registered in load_datapack_json)
+	switch[Dimension]["build_battle"] = set_json_encoder(Dimension(void_generator(f"{ns}:game")))
 
 	# Blocks players are not allowed to build on / that count as "ground"
 	switch.block_tags["build_battle_antiground"] = set_json_encoder(BlockTag({"values": [

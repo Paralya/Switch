@@ -10,7 +10,8 @@ effect give @a[tag=!detached] hunger 3 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness 5 255 true
 effect give @a[tag=!detached] slowness 5 255 true
-function switch:utils/set_dynamic_time
+execute store result storage switch:temp game_time.ticks int 6000 run random value 0..2
+function switch:utils/set_game_time with storage switch:temp game_time
 
 ## Chargement de la map
 function switch:maps/choose_map_for {id:"sheepwars", maps:["sheepwars_dirigeables","survival_boat","sheepwars_bonbons","sheepwars_plateforme","sheepwars_ilots","sheepwars_colored_sheeps"]}

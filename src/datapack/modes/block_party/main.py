@@ -27,7 +27,7 @@ effect give @a[tag=!detached] resistance infinite 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] speed infinite 3 true
-time set 18000
+time of {ns}:game set 18000
 
 ## Téléportation des joueurs
 scoreboard players set #do_spreadplayers {ns}.data 1

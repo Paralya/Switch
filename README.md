@@ -36,6 +36,7 @@ Documents (Google Sheet) :
 	- [Conventions de code](#conventions-de-code)
 	- [Garde-fous](#garde-fous)
 	- [Workflow Git](#workflow-git)
+	- [Crédits](#crédits)
 
 <br>
 
@@ -340,4 +341,8 @@ Deux règles s'appuient sur des listes explicites qui ne doivent que diminuer :
   - `perf(engine): ⚡️ Réduction du coût du tick`
   - `build: 🚀 Built with latest StewBeet version`
 - Les releases sont publiées avec `python upload.py` (nécessite `~/stewbeet/credentials.yml`).
+
+## Crédits
+
+- Le shader d'aurore du ciel s'inspire de ["Auroras" par nimitz](https://www.shadertoy.com/view/XtGGRt) (Shadertoy, licence CC BY-NC-SA 3.0 par défaut).
 

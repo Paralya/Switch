@@ -216,7 +216,7 @@ gamerule minecraft:locator_bar false
 effect give @a[tag=!detached] saturation infinite 255 true
 effect give @a[tag=!detached] regeneration 5 255 true
 effect give @a[tag=!detached] weakness infinite 255 true
-time set 18000
+time of {ns}:game set 18000
 
 # Choose map and start cinematic
 scoreboard players set #do_spreadplayers {ns}.data 0

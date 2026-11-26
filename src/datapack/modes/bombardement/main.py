@@ -18,7 +18,7 @@ def write_mode():
 
 	# /start
 	write_function(f"{path}/start", f"""
-time set 6000
+function {ns}:utils/set_dynamic_time
 effect give @a[tag=!detached] weakness infinite 255 true
 effect give @a[tag=!detached] saturation infinite 255 true
 
