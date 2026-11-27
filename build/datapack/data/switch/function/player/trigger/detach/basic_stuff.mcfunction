@@ -13,6 +13,7 @@ function switch:player/jump_timer/cancel
 function switch:player/practice/disable
 function switch:player/layout/deactivate
 effect clear @s
+function switch:engine/ambiance/remove
 function switch:utils/reset_attributes
 effect give @s saturation infinite 0 true
 effect give @s regeneration 10 255 true

@@ -15,6 +15,7 @@ function {ns}:player/jump_timer/cancel
 function {ns}:player/practice/disable
 function {ns}:player/layout/deactivate
 effect clear @s
+function {ns}:engine/ambiance/remove
 function {ns}:utils/reset_attributes
 effect give @s saturation infinite 0 true
 effect give @s regeneration 10 255 true
