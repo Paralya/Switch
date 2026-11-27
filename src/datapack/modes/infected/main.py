@@ -2,6 +2,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ....resource_pack.ambiance import ambiance_effect_path
 from ..emit import badge, write_modes_calls, write_time_xp_bar
 from .translations import write_translations
 
@@ -514,7 +515,8 @@ execute unless score @s {ns}.temp.infection matches 2.. run scoreboard players a
 
 	# /death/zombie_give
 	write_function(f"{path}/death/zombie_give", f"""
-# A dead zombie comes back through here too, and only a player turning into one gets the card
+# A dead zombie comes back through here too, and only a player turning into one gets the card, over the ambiance
+posteffect add @s {ns}:{ambiance_effect_path("infected")}
 execute unless entity @s[team={ns}.temp.zombie] run function {ns}:engine/role_card/infected/zombie
 team join {ns}.temp.zombie @s
 scoreboard players reset @s {ns}.temp.infection

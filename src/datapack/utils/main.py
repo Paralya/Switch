@@ -171,6 +171,7 @@ xp set @a[tag=!detached] 0 levels
 xp set @a[tag=!detached] 0 points
 effect clear @a[tag=!detached]
 team leave @a[tag=!detached]
+execute as @a run function {ns}:engine/ambiance/remove
 """)
 
 	# /safe_kill

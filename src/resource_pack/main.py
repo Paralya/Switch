@@ -1,5 +1,6 @@
 
 # Imports
+from .ambiance import write_ambiances
 from .intro.card import write_intro_effects
 from .intro.role import write_role_effects
 from .intro.text import Glyph, vanilla_glyphs
@@ -21,6 +22,7 @@ def load_resource_pack_json() -> None:
 	glyphs: dict[str, Glyph] = vanilla_glyphs()
 	write_intro_effects(glyphs)
 	write_role_effects(glyphs)
+	write_ambiances()
 	write_textures()
 	write_lobby_gui()
 	write_jump_icons()

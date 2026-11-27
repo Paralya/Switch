@@ -6,9 +6,10 @@
 # @within	switch:player/tick
 #
 
-# A post effect is saved with the player, so leaving during a card would bring it back
+# A post effect is saved with the player, so leaving during a card or a game would bring it back
 function switch:engine/launch_game/intro/remove
 function switch:engine/role_card/remove
+function switch:engine/ambiance/remove
 
 # Add 0 to every shop score
 function switch:shop/initialize_shop_scores

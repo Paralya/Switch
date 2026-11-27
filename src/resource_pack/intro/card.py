@@ -17,6 +17,9 @@ from .text import LINE_HEIGHT, TEXT_WIDTH, Glyph, text_texture
 BLUR_SIZE: tuple[int, int] = (480, 270)
 """ Size of the blurred backdrop targets. A target size is absolute, never relative to the screen. """
 
+BLUR_TARGETS: JsonDict = {name: {"width": BLUR_SIZE[0], "height": BLUR_SIZE[1]} for name in ("blur", "blur_swap")}
+""" The targets `blur_passes` writes, to declare in the chain running them. """
+
 
 # Functions
 def write_intro_effects(glyphs: dict[str, Glyph]) -> None:
@@ -40,8 +43,8 @@ def write_intro_effects(glyphs: dict[str, Glyph]) -> None:
 					{"sampler_name": "Depth", "target": "minecraft:main", "use_depth_buffer": True},
 					{"sampler_name": "Text", "location": f"{ns}:{effect_id}", "width": TEXT_WIDTH, "height": LINE_HEIGHT * len(lines)},
 				],
-				pre_passes=blur_passes(ns),
-				targets={name: {"width": BLUR_SIZE[0], "height": BLUR_SIZE[1]} for name in ("blur", "blur_swap")},
+				pre_passes=blur_passes(f"{ns}:post/copy"),
+				targets=BLUR_TARGETS,
 			)
 
 
@@ -63,11 +66,11 @@ def hex_floats(color: str) -> list[float]:
 	return [int(color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
 
 
-def blur_passes(ns: str) -> list[JsonDict]:
-	""" Passes filling the `blur` target: the frame shrunk to BLUR_SIZE, then two rounds of the vanilla box blur. """
+def blur_passes(shrink_shader: str) -> list[JsonDict]:
+	""" Passes filling the `blur` target: the frame shrunk to BLUR_SIZE through `shrink_shader`, then two rounds of the vanilla box blur. """
 	passes: list[JsonDict] = [{
 		"vertex_shader": SCREENQUAD_VERTEX_SHADER,
-		"fragment_shader": f"{ns}:post/copy",
+		"fragment_shader": shrink_shader,
 		"inputs": [{"sampler_name": "In", "target": "minecraft:main", "bilinear": True}],
 		"output": "blur",
 	}]

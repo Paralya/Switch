@@ -1,0 +1,53 @@
+{
+	"targets": {
+		"clock": {
+			"width": 1,
+			"height": 1,
+			"persistent": true,
+			"clear_color": 0
+		},
+		"clock_next": {
+			"width": 1,
+			"height": 1
+		},
+		"swap": {}
+	},
+	"passes": [
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/clock",
+			"inputs": [
+				{"sampler_name": "Clock","target": "clock"}
+			],
+			"output": "clock_next"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "clock_next"}
+			],
+			"output": "clock"
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/grade",
+			"inputs": [
+				{"sampler_name": "Clock","target": "clock_next"},
+				{"sampler_name": "In","target": "minecraft:main"}
+			],
+			"output": "swap",
+			"uniforms": {
+				"GradeConfig": [{"name": "Tint","type": "vec3","value": [0.85,0.95,1.0]},{"name": "Vignette","type": "float","value": 0.75},{"name": "Desaturate","type": "float","value": 0.35},{"name": "Breath","type": "float","value": 0.06}]
+			}
+		},
+		{
+			"vertex_shader": "minecraft:core/screenquad",
+			"fragment_shader": "switch:post/copy",
+			"inputs": [
+				{"sampler_name": "In","target": "swap"}
+			],
+			"output": "minecraft:main"
+		}
+	]
+}

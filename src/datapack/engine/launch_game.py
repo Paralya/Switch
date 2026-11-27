@@ -1,6 +1,7 @@
 # Imports
 from stewbeet import Mem, write_function
 
+from ...resource_pack.ambiance import AMBIANCES, ambiance_effect_path
 from ...resource_pack.intro.card import intro_effect_path
 from ...resource_pack.intro.shader import INTRO_TICKS, LAUNCH_TICK, REVEAL_TICK, RULE_TICKS, TITLE_TICK
 from ..modes.catalogue import DISABLED_MODES, MODES
@@ -163,7 +164,14 @@ stopwatch restart {ns}:intro
 		(TITLE_TICK, "execute as @a[tag=!detached] at @s run playsound minecraft:item.mace.smash_ground_heavy ambient @s ~ ~ ~ 0.8 1"),
 		*rule_events,
 		(REVEAL_TICK, "execute as @a[tag=!detached] at @s run playsound minecraft:item.trident.riptide_1 ambient @s ~ ~ ~ 0.5 1.4"),
-		(INTRO_TICKS + 20, f"execute as @a run function {ns}:engine/launch_game/intro/remove\nscoreboard players set #intro_active {ns}.data 0"),
+		(INTRO_TICKS + 20, "\n".join((
+			f"execute as @a run function {ns}:engine/launch_game/intro/remove",
+			f"scoreboard players set #intro_active {ns}.data 0",
+			*(
+				f'execute if score #engine_state {ns}.data matches 3 if data storage {ns}:main {{current_game:"{mode.id}"}} run posteffect add @a[tag=!detached] {ns}:{ambiance_effect_path(mode.ambiance)}'
+				for mode in MODES if mode.ambiance
+			),
+		))),
 	])
 	steps: str = "\n".join(
 		f"execute if score #intro_step {ns}.data matches {step} if score #intro_cs {ns}.data matches {tick * 5}.. run function {ns}:engine/launch_game/intro/step_{step}"
@@ -184,6 +192,9 @@ scoreboard players operation #intro_cs {ns}.data > #intro_sw {ns}.data
 	write_function(f"{path}/launch_game/intro/remove", "\n".join(
 		f"posteffect remove @s {ns}:{intro_effect_path(mode.id, lang)}" for mode in (*MODES, *DISABLED_MODES) for lang in LANG_PRETEXT
 	))
+
+	# /ambiance/remove (as a player)
+	write_function(f"{ns}:engine/ambiance/remove", "\n".join(f"posteffect remove @s {ns}:{ambiance_effect_path(ambiance)}" for ambiance in AMBIANCES))
 
 	# /launch_game/resolve_group
 	write_function(f"{path}/launch_game/resolve_group", f"""

@@ -118,9 +118,10 @@ give @s oak_sign[item_name={{"text":"Friends Cube - far away"}},block_entity_dat
 
 	# /joined
 	write_function(f"{path}/joined", f"""
-# A post effect is saved with the player, so leaving during a card would bring it back
+# A post effect is saved with the player, so leaving during a card or a game would bring it back
 function {ns}:engine/launch_game/intro/remove
 function {ns}:engine/role_card/remove
+function {ns}:engine/ambiance/remove
 
 # Add 0 to every shop score
 function {ns}:shop/initialize_shop_scores

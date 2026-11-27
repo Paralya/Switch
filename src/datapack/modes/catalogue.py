@@ -38,6 +38,7 @@ MODES: tuple[ModeSpec, ...] = (
 			),
 		),
 		accent="#2ee6d6",
+		ambiance="neon",
 		rules=Localized(
 			fr=("Tirez sur les ennemis et les bases bonus", "L'équipe avec le plus de points gagne"),
 			en=("Shoot the enemies and the bonus bases", "The team with the most points wins"),
@@ -52,6 +53,7 @@ MODES: tuple[ModeSpec, ...] = (
 			en=("Survive the wardens in", "a closed arena."),
 		),
 		accent="#1fa3a8",
+		ambiance="dark",
 		rules=Localized(
 			fr=("Restez discrets : les wardens écoutent", "Soyez le dernier en vie"),
 			en=("Stay quiet: the wardens are listening", "Be the last one alive"),

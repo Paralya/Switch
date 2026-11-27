@@ -119,6 +119,9 @@ class ModeSpec:
 	rules: Localized
 	""" Up to three short lines of the intro card telling how to play, ex: ("Ne vous arrêtez jamais de courir",) """
 
+	ambiance: str | None = None
+	""" Post effect every player of the game sees from the end of the intro card to the end of the game, a key of resource_pack/ambiance.py AMBIANCES. """
+
 	roles: tuple[RoleSpec, ...] = ()
 	""" Roles announced on a personal card, the mode calling each card function when it hands the role out. """
 
