@@ -10,7 +10,9 @@ function switch:stats/async/work_loop_player_stats
 function switch:stats/async/work_loop_player_stats
 function switch:stats/async/work_loop_player_stats
 
-# Loop through the rest of the values
-execute if data storage switch:temp played[0] run schedule function switch:stats/async/loop_player_stats 1t
-execute unless data storage switch:temp played[0] run schedule function switch:stats/async/register_new_player_stats 1t replace
+# Loop until the top 15 is sorted
+execute if data storage switch:temp played[0] unless data storage switch:temp new_played[14] run return run schedule function switch:stats/async/loop_player_stats 1t
+
+# Commit in this same tick: a sort started before a delayed commit would empty every leaderboard
+function switch:stats/async/register_new_player_stats
 

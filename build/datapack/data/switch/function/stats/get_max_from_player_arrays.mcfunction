@@ -1,7 +1,7 @@
 
 #> switch:stats/get_max_from_player_arrays
 #
-# @within	switch:stats/_player_stats_loop_body
+# @within	switch:stats/async/work_loop_player_stats
 #			switch:stats/get_max_from_player_arrays
 #
 
